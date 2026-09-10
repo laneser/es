@@ -810,11 +810,14 @@ void run_cmds()
 
 void heart_beat()
 {
-	int idle_dump;
+	int idle_dump, i;
 
 	if (hb_tick< MAX_TICK) {
 		hb_tick++;
-		if ( cmd_top != cmd_bottom )
+		//	一次把指令佇列清完，而不是每次心跳只吐一個。
+		//	心跳是一秒一次，只吐一個的話每個指令最多要等一秒才有反應。
+		//	上限取佇列大小，避免指令本身又推進新指令（alias 展開之類）時空轉。
+		for( i = 0; i < 32 && cmd_top != cmd_bottom; i++ )
 			run_cmds();
 		//else
 		//	cmd_buffer_mode = 0;
