@@ -42,7 +42,7 @@
 #include <net/daemons.h>
 #include <logs.h>
 
-#define MANY_TRY "±§Ç¸, ÄãÊÔÌ«¶à´ÎÁË.\n"
+#define MANY_TRY "æŠ±æ­‰, ä½ è©¦å¤ªå¤šæ¬¡äº†.\n"
 
 //  Prototyping
 void logon(object ob);
@@ -83,7 +83,7 @@ void logon(object ob)
         return;
 
     cat(C_WELCOME);
-    printf("\t\t¶«·½¹ÊÊÂÒÑ¾­Á¬ĞøÖ´ĞĞÁË %s ¡£\n\n", format_c_time(uptime(), 1));
+    printf("\t\tæ±æ–¹æ•…äº‹å·²ç¶“é€£çºŒåŸ·è¡Œäº† %s ã€‚\n\n", format_c_time(uptime(), 1));
     if ( uptime() < 43200 ) extra = options["EXTRA_USERS"] ;
         else extra = 0;
     if( options["USER_LIST"] ) write(wrap(active_users(0))+"\n");
@@ -113,7 +113,7 @@ protected void get_name(string str, object ob, int count)
 
     // Did they supply anything?
     if( !str || str=="" ) {
-        write( "\nÄãÖÁÉÙÒªÊäÈëÒ»µã¶«Î÷...\n\n" );
+        write( "\nä½ è‡³å°‘è¦è¼¸å…¥ä¸€é»æ±è¥¿...\n\n" );
         write( LOGIN_PROMPT );
         if( count>2 ) {
             write( MANY_TRY );
@@ -125,13 +125,13 @@ protected void get_name(string str, object ob, int count)
     }
 
     if( options["ADMIN_LOCK"] && !member_group(str, "admin") ) {
-        write("\n¶«·½¹ÊÊÂÏÖÔÚÔİÊ±ÏŞÖÆÖ»ÓĞ¡¸ÏµÍ³¹ÜÀíÕß¡¹ÒÔÉÏµÄÊ¹ÓÃÕß²ÅÄÜ½øÈë¡£\n");
+        write("\næ±æ–¹æ•…äº‹ç¾åœ¨æš«æ™‚é™åˆ¶åªæœ‰ã€Œç³»çµ±ç®¡ç†è€…ã€ä»¥ä¸Šçš„ä½¿ç”¨è€…æ‰èƒ½é€²å…¥ã€‚\n");
         ob->remove_user();
         return;
     }
 
     if( options["ARCH_LOCK"] && !member_group(str, "admin") && !member_group(str, "arch") ) {
-        write("\n¶«·½¹ÊÊÂÏÖÔÚÔİÊ±ÏŞÖÆÖ»ÓĞ¡¸´óÎ×Ê¦¡¹ÒÔÉÏµÄÊ¹ÓÃÕß²ÅÄÜ½øÈë¡£\n");
+        write("\næ±æ–¹æ•…äº‹ç¾åœ¨æš«æ™‚é™åˆ¶åªæœ‰ã€Œå¤§å·«å¸«ã€ä»¥ä¸Šçš„ä½¿ç”¨è€…æ‰èƒ½é€²å…¥ã€‚\n");
         ob->remove_user();
         return;
     }
@@ -139,7 +139,7 @@ protected void get_name(string str, object ob, int count)
     if( options["WIZ_LOCK"] && !member_group(str, "admin") &&
         (file_size(user_path(str))!=-2) ) {
 //		!PROMOTION_D->in_wiz_list(str) ) {
-        write("\n¶«·½¹ÊÊÂÏÖÔÚÔİÊ±ÏŞÖÆÖ»ÓĞ¡¸Î×Ê¦¡¹ÒÔÉÏµÄÊ¹ÓÃÕß²ÅÄÜ½øÈë¡£\n");
+        write("\næ±æ–¹æ•…äº‹ç¾åœ¨æš«æ™‚é™åˆ¶åªæœ‰ã€Œå·«å¸«ã€ä»¥ä¸Šçš„ä½¿ç”¨è€…æ‰èƒ½é€²å…¥ã€‚\n");
         ob->remove_user();
         return;
     }
@@ -154,8 +154,8 @@ protected void get_name(string str, object ob, int count)
         urs = filter_array(users()+all_inventory(NETDEAD), "check_players", this_object());
 #ifndef OPEN_CHAT_ROOM
         if( (sizeof(urs)>=options["MAX_USERS"]+extra) ) {
-            write("\n\n\t±§Ç¸à¸...  ¶«·½¹ÊÊÂÏÖÔÚ¿ÍÂú."+
-            "\n\n\tÇëµÈ»áÔÙÊÔ, ÏÈÈ¥¿´µãÊé°É! \n\n");
+            write("\n\n\tæŠ±æ­‰å–”...  æ±æ–¹æ•…äº‹ç¾åœ¨å®¢æ»¿."+
+            "\n\n\tè«‹ç­‰æœƒå†è©¦, å…ˆå»çœ‹é»æ›¸å§! \n\n");
             ob->remove_user();
             return;
         }
@@ -167,7 +167,7 @@ protected void get_name(string str, object ob, int count)
     }
 
     if( strlen(str) > 12 ) {
-        write("ÄãµÄÓ¢ÎÄÃû×Ö²»ÄÜ³¬¹ı 12 ¸ö×ÖÄ¸.\n");
+        write("ä½ çš„è‹±æ–‡åå­—ä¸èƒ½è¶…é 12 å€‹å­—æ¯.\n");
         write(LOGIN_PROMPT);
         if( count>2 ) {
             write( MANY_TRY );
@@ -181,8 +181,8 @@ protected void get_name(string str, object ob, int count)
     str = lower_case(str);
     for(i = 0; i < strlen(str); i++) {
         if( str[i] < 'a' || str[i] > 'z' ) {
-            write("ÄãµÄÃû×ÖÖ»ÄÜÓĞ a-z Ö®¼äµÄÓ¢ÎÄ×ÖÄ¸.\n" +
-                "ÇëÖØĞÂÊäÈëÒ»´Î: ");
+            write("ä½ çš„åå­—åªèƒ½æœ‰ a-z ä¹‹é–“çš„è‹±æ–‡å­—æ¯.\n" +
+                "è«‹é‡æ–°è¼¸å…¥ä¸€æ¬¡: ");
             if( count>2 ) {
                 write( MANY_TRY );
                 ob->remove_user();
@@ -197,12 +197,12 @@ protected void get_name(string str, object ob, int count)
     if( !file_exists(user_data_file(ob, str) + SAVE_EXTENSION) ) {
         // Could be a new player, confirm it!
         if (IS_CHAT_ROOM) {
-            write("\nÕâ¸ö½ÇÉ«²»´æÔÚ.\nÇëµÈES½ÏÉÙÈËÊ±ÔÙÀ´½¨Á¢ĞÂ½ÇÉ«.\n");
+            write("\né€™å€‹è§’è‰²ä¸å­˜åœ¨.\nè«‹ç­‰ESè¼ƒå°‘äººæ™‚å†ä¾†å»ºç«‹æ–°è§’è‰².\n");
             ob->remove_user();
             return;
         } else {
-            write("\n\"" + capitalize(str) + "\" Õâ¸ö½ÇÉ«²»´æÔÚ.\n" +
-                "ÄãÈ·¶¨ÒªÓÃÕâ¸öÃû×Ö? (y/n) [y] ");
+            write("\n\"" + capitalize(str) + "\" é€™å€‹è§’è‰²ä¸å­˜åœ¨.\n" +
+                "ä½ ç¢ºå®šè¦ç”¨é€™å€‹åå­—? (y/n) [y] ");
             input_to("choice", 2, ob, str);
             return;
         }
@@ -257,14 +257,14 @@ protected void get_password(string pass, object ob, int count)
     if ( !ob ) return;
     write("\n");
     if( !check_password(pass, ob) && (string)ob->query("name") != "guest" ) {
-        write("±§Ç¸, ÃÜÂë´íÎó.\n");
+        write("æŠ±æ­‰, å¯†ç¢¼éŒ¯èª¤.\n");
         if( count > 2 ) {
             write("\n"+MANY_TRY);
             ob->set("passwd_fail", ({ query_ip_name(ob), time() }) );
             ob->remove_user();
             return;
         }
-        write("ÇëÖØĞÂÊäÈëÄãµÄÃÜÂë: ");
+        write("è«‹é‡æ–°è¼¸å…¥ä½ çš„å¯†ç¢¼: ");
         input_to("get_password", 3, ob, count + 1);
         return;
     }
@@ -272,8 +272,8 @@ protected void get_password(string pass, object ob, int count)
     // This code checks to see if the user is in hibernation.
     hibernate = ob->query("hibernate");
     if( hibernate && time() < hibernate ) {
-        write("\n\n\tß× ? Äã²»ÊÇ·¢ÊÄËµÒªÅ¬Á¦ÓÃ¹¦, ÔÚ " + ctime(hibernate) +
-              " Ö®Ç°\n\t¶¼²» LOGIN Âğ ?? ¿ì !! ¿ìÈ¥¿´Êé¡£\n\n");
+        write("\n\n\tå’¦ ? ä½ ä¸æ˜¯ç™¼èª“èªªè¦åŠªåŠ›ç”¨åŠŸ, åœ¨ " + ctime(hibernate) +
+              " ä¹‹å‰\n\téƒ½ä¸ LOGIN å— ?? å¿« !! å¿«å»çœ‹æ›¸ã€‚\n\n");
         ob->remove_user();
         return;
     }
@@ -294,8 +294,8 @@ protected void get_password(string pass, object ob, int count)
 //  If ONE_GUEST is defined in /include/login.h, only permit one guest login.
 #ifdef ONE_GUEST
             if ((string)ob->query("name") == "guest") {
-                write("±§Ç¸, ÏßÉÏÒÑ¾­ÓĞÒ»¸ö Guest ÁË.\n" +
-                    "Çë´ı»áÔÙÊÔ, »òÊÇÖØĞÂ½¨Á¢Ò»¸ö½ÇÉ«." +
+                write("æŠ±æ­‰, ç·šä¸Šå·²ç¶“æœ‰ä¸€å€‹ Guest äº†.\n" +
+                    "è«‹å¾…æœƒå†è©¦, æˆ–æ˜¯é‡æ–°å»ºç«‹ä¸€å€‹è§’è‰²." +
                     "\n\n");
                 call_out("remove_copy",1, this_player());
                 return;
@@ -307,8 +307,8 @@ protected void get_password(string pass, object ob, int count)
             }
 #endif /* ONE_GUEST */
 
-            write("\nÁíÒ»¸öÄã»¹ÔÚÓÎÏ·ÖĞ. ");
-            write("ÄãÒª°ÑËûÌß³öÈ¥Âğ?? (y/n): ");
+            write("\nå¦ä¸€å€‹ä½ é‚„åœ¨éŠæˆ²ä¸­. ");
+            write("ä½ è¦æŠŠä»–è¸¢å‡ºå»å—?? (y/n): ");
             input_to("exec_old_copy", 2, ob);
             return;
         }
@@ -327,7 +327,7 @@ protected void get_password(string pass, object ob, int count)
             ENTER_D->check_okip(body);
         }
         else {
-            write("ÖØĞÂÁ¬ÏßÊ§°Ü...\n");
+            write("é‡æ–°é€£ç·šå¤±æ•—...\n");
             ob->remove();
         }
         return;
@@ -359,7 +359,7 @@ void login_new_copy(object ob)
     if( !ob->restore_body() ) {
         write(@TEXT
 
-ÒòÎªÄ³Ğ©Ô­ÒòÏµÍ³ÎŞ·¨ÔØÈëÄãµÄÈËÎï×ÊÁÏ£¬ÇëÓÃ Email Í¨ÖªÎ×Ê¦¡£
+å› ç‚ºæŸäº›åŸå› ç³»çµ±ç„¡æ³•è¼‰å…¥ä½ çš„äººç‰©è³‡æ–™ï¼Œè«‹ç”¨ Email é€šçŸ¥å·«å¸«ã€‚
 
 TEXT
         );
@@ -373,7 +373,7 @@ TEXT
         body->delete("stop_heal");
         enter_world(ob);
     } else {
-        write("ÉíÌåÁ¬½áÊ§°Ü.....\n");
+        write("èº«é«”é€£çµå¤±æ•—.....\n");
         ob->remove();
     }
 }
@@ -387,7 +387,7 @@ void exec_old_copy(string s, object user)
         // If not a wizard and neither a guest, login new copy
         if( !wizardp((object)user->BODY_OB) &&
             (string)user->query("name") != "guest") {
-            write("ÄÇ¾Í.... ÏÂ´ÎÔÙÀ´°É!\n");
+            write("é‚£å°±.... ä¸‹æ¬¡å†ä¾†å§!\n");
             user->remove();
             return;
         }
@@ -416,8 +416,8 @@ void exec_old_copy(string s, object user)
 #endif /* FORCE_EXEC */
 
     tell_object(user->BODY_OB,
-        "\nÓĞÈË´Ó " +
-        query_ip_name(user) + " È¡´úÁËÄãµÄÈËÎï.\n");
+        "\næœ‰äººå¾ " +
+        query_ip_name(user) + " å–ä»£äº†ä½ çš„äººç‰©.\n");
     tmp = new(OBJECT);
 
     //  Exec them into any old object
@@ -426,11 +426,11 @@ void exec_old_copy(string s, object user)
     tmp->remove();
 
     if( user->connect() ) {
-        write("ÖØĞÂÁ¬ÏßÍê±Ï\n");
+        write("é‡æ–°é€£ç·šå®Œç•¢\n");
         ENTER_D->check_okip(user->BODY_OB);
     }
     else
-        write("ÖØĞÂÁ¬ÏßÊ§°Ü.\n");
+        write("é‡æ–°é€£ç·šå¤±æ•—.\n");
 
     link->remove();
     return;
@@ -451,7 +451,7 @@ protected void enter_world(object user)
     bad_pass = (mixed *)user->query("passwd_fail");
     if( bad_pass ) {
         tell_object( player,
-            "\nWARNING: ÓĞÈËì¶ " + ctime(bad_pass[1]) + " ´Ó " + bad_pass[0] + " ¡õÊÔÁ¬ÏßÊ§°Ü¡£\n");
+            "\nWARNING: æœ‰äººæ–¼ " + ctime(bad_pass[1]) + " å¾ " + bad_pass[0] + " â–¡è©¦é€£ç·šå¤±æ•—ã€‚\n");
         user->set("passwd_fail",0);
     }
 
@@ -483,12 +483,12 @@ protected void enter_world(object user)
     ENTER_D->check_stats(player);
     // Check for top player list, added by Annihilator.
     TOPPLAYER_D->log_player(player);
-    write( "Ä¿Ç°È¨ÏŞ£º" + DOMAIN_D->query_domain_level(player) + "\n");
+    write( "ç›®å‰æ¬Šé™ï¼š" + DOMAIN_D->query_domain_level(player) + "\n");
 
 /*
     log_file("log_rec",extract(ctime(time()), 4, 18) +" : "+ player->query("name") +
-         " as "+file_name(player)+"\n   ´Ó " + query_ip_name(player)+
-         " Á¬Ïß½øÈë¶«·½¹ÊÊÂ. \n\n");
+         " as "+file_name(player)+"\n   å¾ " + query_ip_name(player)+
+         " é€£ç·šé€²å…¥æ±æ–¹æ•…äº‹. \n\n");
 */
 }
 
@@ -498,14 +498,21 @@ protected int check_password(string pass, object ob)
 
     // Try to restore our connection object from saved file.
     if (!ob->restore()) {
-        write("ÎŞ·¨½«Á¬ÏßÎï¼ş»¹Ô­.\n");
+        write("ç„¡æ³•å°‡é€£ç·šç‰©ä»¶é‚„åŸ.\n");
         ob->remove();
         return 0;
     }
 
     password = ob->PASS;
-    if(password == crypt(pass, password))
-        return 1;
+    switch( verify_password(pass, password) ) {
+        case 2:
+            //  èˆŠé©…å‹•æ™‚ä»£çš„é›œæ¹Šï¼Œé©—éå°±é †æ‰‹å‡ç´šæˆ SHA512
+            ob->set("password", crypt(pass, 0));
+            ob->save_data();
+            return 1;
+        case 1:
+            return 1;
+    }
 
     return 0;
 }
@@ -522,13 +529,13 @@ protected void choice(string choice, object user, string name)
     if( !choice || choice=="" ) choice = "y";
 
     if( choice[0]=='N' || choice[0]=='n') {
-        write("ÇëÖØĞÂÊäÈëÄãµÄ½ÇÉ«ĞÕÃû: ");
+        write("è«‹é‡æ–°è¼¸å…¥ä½ çš„è§’è‰²å§“å: ");
         input_to("get_name", 2, user);
         return;
     }
 
     if ( choice[0]!='y' && choice[0]!='Y' ) {
-        write("ÇëÊäÈë \"y\" »ò \"n\":[y] ");
+        write("è«‹è¼¸å…¥ \"y\" æˆ– \"n\":[y] ");
         input_to("choice", user, name);
         return;
     }
@@ -560,7 +567,7 @@ protected void choice(string choice, object user, string name)
 //  the banish daemon for use of a banished name.
 #ifdef BANISHED_NAMES
     if( BANISH_D->check_banned_name(name) ) {
-        write("ÒòÎªÄ³Ğ©Ô­Òò, Äã²»ÄÜÊ¹ÓÃÕâ¸öÃû×Ö\n\n" +
+        write("å› ç‚ºæŸäº›åŸå› , ä½ ä¸èƒ½ä½¿ç”¨é€™å€‹åå­—\n\n" +
             LOGIN_PROMPT);
         input_to("get_name", 2, user);
         return;
@@ -601,7 +608,7 @@ void check_email(object user)
     mail_stat = (mapping) MAILER_D->mail_status(user->NAME);
     toread = mail_stat["unread"];
     if (toread)
-        printf("\nÄãÓĞ %d ·âÎ´¶ÁµÄĞÅ¼ş.\n\n", toread);
+        printf("\nä½ æœ‰ %d å°æœªè®€çš„ä¿¡ä»¶.\n\n", toread);
 }
 
 //  If online user display is selected, this function displays
@@ -617,7 +624,7 @@ string active_users(int irc)
     who = filter_array(who, "filter_invis", this_object());
 
     if( !who || !sizeof(who) )
-        return (!irc? "¶«·½¹ÊÊÂÏÖÔÚÃ»ÈË." : "ÁÄÌìÊÒÏÖÔÚÃ»ÈË.");
+        return (!irc? "æ±æ–¹æ•…äº‹ç¾åœ¨æ²’äºº." : "èŠå¤©å®¤ç¾åœ¨æ²’äºº.");
 
     who = map_array(who, "switch_name", this_object());
     who = uniq_array(who);
@@ -628,9 +635,9 @@ string active_users(int irc)
             who[sizeof(who)-1] + ".";
 
     if( !irc )
-      return "Ä¿Ç°ÔÚÏßÉÏµÄÍæ¼Ò: " + output + "\n¹²ÓĞ: " + sizeof(who) + " ¸öÍæ¼Ò.  (ÉÏÏŞ : "+(options["MAX_USERS"]+extra)+" ÈË)";
+      return "ç›®å‰åœ¨ç·šä¸Šçš„ç©å®¶: " + output + "\nå…±æœ‰: " + sizeof(who) + " å€‹ç©å®¶.  (ä¸Šé™ : "+(options["MAX_USERS"]+extra)+" äºº)";
     else
-      return "Ä¿Ç°ÔÚÁÄÌìÊÒµÄÈË: " + output + "\n¹²ÓĞ: " + sizeof(who) + " ¸öÍæ¼Ò.";
+      return "ç›®å‰åœ¨èŠå¤©å®¤çš„äºº: " + output + "\nå…±æœ‰: " + sizeof(who) + " å€‹ç©å®¶.";
 }
 
 protected int filter_invis(object who)

@@ -179,7 +179,7 @@ protected int check_password(string pass)
 	password = (string)active["new"]->PASS;
 
 	// Compared inputed password with stored character password
-	if(password != crypt(pass, password))  return 0;
+	if(!verify_password(pass, password))  return 0;
 	return 1;
 }
 
@@ -235,7 +235,7 @@ protected void enter_world()
 			query_ip_name(this_player())+" ["+
 			extract(ctime(time()), 4, 15)+"]\n");
 		inv = users();
-		tmp = sprintf("[ %s(%s) ±äÉí³É %s(%s) .]\n",
+		tmp = sprintf("[ %s(%s) è®Šèº«æˆ %s(%s) .]\n",
 								active["old"]->query("c_name"),
 								capitalize(active["old"]->query("name")),
 								active["new"]->query("c_name"),
@@ -275,14 +275,14 @@ protected void complete_entry(string str)
 	}
 
 	if(active["same"]) {
-		write(chinese_mode?"ÉíÌå¸üĞÂÍê±Ï¡£\n":"Transfer complete.\n");
+		write(chinese_mode?"èº«é«”æ›´æ–°å®Œç•¢ã€‚\n":"Transfer complete.\n");
 		if(!active["old"]->query("npc"))
 			write((string)this_player()->write_prompt(1));
 		active["new"]->BODY_OB->init_setup();
 	} else {
-			write("Äã±äÉí³É" +
-			  active["new"]->BODY_OB->query("c_name") + "¡£\n");
-		say(active["old"]->query("c_name") + "±äÉí³É" +
+			write("ä½ è®Šèº«æˆ" +
+			  active["new"]->BODY_OB->query("c_name") + "ã€‚\n");
+		say(active["old"]->query("c_name") + "è®Šèº«æˆ" +
 			active["new"]->query("c_name") + ".\n",
 			({ active["old"], active["new"] }));
 		active["new"]->BODY_OB->init_setup();

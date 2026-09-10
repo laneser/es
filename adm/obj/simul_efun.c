@@ -67,6 +67,7 @@
 #include "/adm/simul_efun/tell_room.c"
 #include "/adm/simul_efun/tilde_path.c"
 #include "/adm/simul_efun/uniq_array.c"
+#include "/adm/simul_efun/verify_password.c"
 #include "/adm/simul_efun/unique_mapping.c"
 #include "/adm/simul_efun/update_file.c"
 #include "/adm/simul_efun/vt100.c"

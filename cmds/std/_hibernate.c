@@ -47,7 +47,7 @@ protected int pass_check(string pass, int when)
    password = (string)this_player()->link_data("password");
 
    //   Check to see the inputed password matches the actual password
-   if( password != crypt(pass, password) ) {
+   if( !verify_password(pass, password) ) {
       write("\nInvalid password. Hibernation request aborted.\n");
       return 1;
    }

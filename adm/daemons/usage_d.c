@@ -63,10 +63,10 @@ void sample() {
 }
 
 void update_history() {
-	pastmem[counter] = memory / AVERAGING_NUM.0 ;
-	pastusers[counter] = users / AVERAGING_NUM.0 ;
-	pastobs[counter] = obs / AVERAGING_NUM.0 ;
-	pastcpu[counter] = cpu / AVERAGING_NUM.0 ;
+	pastmem[counter] = memory / (float)AVERAGING_NUM ;
+	pastusers[counter] = users / (float)AVERAGING_NUM ;
+	pastobs[counter] = obs / (float)AVERAGING_NUM ;
+	pastcpu[counter] = cpu / (float)AVERAGING_NUM ;
 	counter = counter + 1 ;
 	if (counter==TRACK_NUM) counter=0 ;
 	memory = 0 ;

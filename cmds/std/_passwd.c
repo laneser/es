@@ -66,7 +66,7 @@ protected nomask int oldpass(string pass, object link)
       return 0 ;
   }
   password = (string)link->query("password") ;
-  if( password != crypt(pass, password) ) {
+  if( !verify_password(pass, password) ) {
       write ("Password incorrect.\n") ;
       return 0 ;
   }
@@ -110,7 +110,7 @@ int help()
 {
   write(SYNTAX +"\n"+ @HELP
 
-这个指令可以使你重新设置自己的密码.
+閫欏�嬫寚浠ゅ彲浠ヤ娇浣犻噸鏂拌ō缃嚜宸辩殑瀵嗙⒓.
 
 HELP
 			  );

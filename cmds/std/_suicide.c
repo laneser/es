@@ -9,7 +9,7 @@
 #include <config.h>
 #include <mudlib.h>
 #include <logs.h>
-#define mssg ({ "Àä¿áÎŞÇé", "²ĞÈÌĞ°¶ñ", "±©Á¦ÑªĞÈ", "Òõºİ½ÆÕ©", "¶ûÓİÎÒÕ©", })
+#define mssg ({ "å†·é…·ç„¡æƒ…", "æ®˜å¿é‚ªæƒ¡", "æš´åŠ›è¡€è…¥", "é™°ç‹ ç‹¡è©", "çˆ¾è™æˆ‘è©", })
 
 inherit DAEMON ;
 
@@ -23,28 +23,28 @@ int cmd_suicide()
 	//	Block any attempts by wizards to suicide
 	if(wizardp(this_player())) {
 		write(
-			"Î×Ê¦²»ÄÜ×ÔÉ±£¬Èç¹ûÄã²»Ïë¼ÌĞøµ±Î×Ê¦£¬Çë mail ¸ø God¡£\n");
+			"å·«å¸«ä¸èƒ½è‡ªæ®ºï¼Œå¦‚æœä½ ä¸æƒ³ç¹¼çºŒç•¶å·«å¸«ï¼Œè«‹ mail çµ¦ Godã€‚\n");
 		return 1;
 	}
 
 	// 	Prevent someone from suiciding the Guest character
 	if((string)this_player()->query("name") == "guest") {
 		write(
-			"·Ã¿Í²»ÄÜ×ÔÉ±£¬²»È»±ğÈË¾Í²»ÄÜÓÃÁË¡£\n");
+			"è¨ªå®¢ä¸èƒ½è‡ªæ®ºï¼Œä¸ç„¶åˆ¥äººå°±ä¸èƒ½ç”¨äº†ã€‚\n");
 		return 1;
 	}
 
 	//	Check to see if the command's busy flag is set
 	if(busy) {
 		write(
-			"×ÔÉ±Ö¸ÁîÍ¬Ê±Ö»ÄÜÓĞÒ»¸öÈËÓÃ£¬ÏÖÔÚÓĞÆäËûÈËÕıÔÚ¿¼ÂÇµ±ÖĞ£¬ÇëÉÔºò¡£\n");
+			"è‡ªæ®ºæŒ‡ä»¤åŒæ™‚åªèƒ½æœ‰ä¸€å€‹äººç”¨ï¼Œç¾åœ¨æœ‰å…¶ä»–äººæ­£åœ¨è€ƒæ…®ç•¶ä¸­ï¼Œè«‹ç¨å€™ã€‚\n");
 		return 1;
 	}
 
 	busy = 1;				//  Set busy flag on
 	write(
-		"Èç¹ûÄã×ÔÉ±µÄ»°£¬»á°ÑÄãÕâ¸öÈËÎïµÄ×ÊÁÏµµÓÀÔ¶É¾³ıµô£¬ÄãÈ·¶¨\n"
-		"Òª½áÊøÕâ¸öÈËÎïÂğ£¿ [y/n] ");
+		"å¦‚æœä½ è‡ªæ®ºçš„è©±ï¼ŒæœƒæŠŠä½ é€™å€‹äººç‰©çš„è³‡æ–™æª”æ°¸é åˆªé™¤æ‰ï¼Œä½ ç¢ºå®š\n"
+		"è¦çµæŸé€™å€‹äººç‰©å—ï¼Ÿ [y/n] ");
 	input_to("confirm_suicide");
 
 	return 1;
@@ -54,13 +54,13 @@ protected int confirm_suicide(string str)
 {
 	if(!str || member_array(lower_case(str), ({ "yes", "y" })) == -1) {
 		write(
-			"ºÜºÃ£¬ÁôµÃÇàÉ½ÔÚ£¬²»ÅÂÃ»²ñÉÕ¡ª¡ªºÃËÀ²»ÈçÀµ»îÖø¡£\n");
+			"å¾ˆå¥½ï¼Œç•™å¾—é’å±±åœ¨ï¼Œä¸æ€•æ²’æŸ´ç‡’â€”â€”å¥½æ­»ä¸å¦‚è³´æ´»è‘—ã€‚\n");
 		busy = 0;
 		return 1;
 	}
 
 	write(
-		"\nÎªÁË°²È«Æğ¼û£¬ÇëÊäÈëÄúµÄÃÜÂëÈ·ÈÏ: ");
+		"\nç‚ºäº†å®‰å…¨èµ·è¦‹ï¼Œè«‹è¼¸å…¥æ‚¨çš„å¯†ç¢¼ç¢ºèª: ");
 	input_to("pass_check", 1);
 
 	return 1;
@@ -81,19 +81,19 @@ protected int pass_check(string str)
 	password = ((object)this_player()->query_link())->query("password");
 
 	//	Check to see the inputed password matches the actual password
-	if(password != crypt(str, password)) {
+	if(!verify_password(str, password)) {
 		write(
-			"ÃÜÂë´íÎó¡£\n");
+			"å¯†ç¢¼éŒ¯èª¤ã€‚\n");
 		return 1;
 	}
 
 	write(
-		"ºÃ°É£¬¾ÍÈçÄãËùÔ¸¡£\n"
-		"Ò»µÀÉÁµçÓÉÌì¶ø½µ£¬È»ááÄãµÄÑÛÇ°Ò»Æ¬ÆáºÚ....¡£\n");
+		"å¥½å§ï¼Œå°±å¦‚ä½ æ‰€é¡˜ã€‚\n"
+		"ä¸€é“é–ƒé›»ç”±å¤©è€Œé™ï¼Œç„¶å¾Œä½ çš„çœ¼å‰ä¸€ç‰‡æ¼†é»‘....ã€‚\n");
 
 	tell_room(environment(),
-		"Ò»µÀÉÁµçÍ»È»´ÓÌì¶ø½µ£¬Ö±Ö±µÄ´òÔÚ"+this_player()->query("c_name")+
-		"µÄÍ·ÉÏ£¬\nÉÁ¹â¹ıáá£¬µØÉÏÖ»Ê£ÏÂÒ»¶Ñ»Ò¡£",
+		"ä¸€é“é–ƒé›»çªç„¶å¾å¤©è€Œé™ï¼Œç›´ç›´çš„æ‰“åœ¨"+this_player()->query("c_name")+
+		"çš„é ­ä¸Šï¼Œ\né–ƒå…‰éå¾Œï¼Œåœ°ä¸Šåªå‰©ä¸‹ä¸€å †ç°ã€‚",
 		this_player());
 
 	//	Save the players attributes before file transfer
@@ -130,7 +130,7 @@ protected int pass_check(string str)
     for( i=0 ; i<sizeof(usrs); i++ ) {
       if( !environment(usrs[i]) || usrs[i]==this_player() ) continue;
       tell_object( usrs[i],
-        sprintf("Ò»¸ö½Ğ×ö %s (%s) µÄÉµ¹ÏÖÕì¶ÈÌÊÜ²»ÁËÕâ¸ö\n%sµÄÊÀ½ç£¬¸Õ¸Õ×ÔÎÒÁË¶ÏÁË!\n",
+        sprintf("ä¸€å€‹å«åš %s (%s) çš„å‚»ç“œçµ‚æ–¼å¿å—ä¸äº†é€™å€‹\n%sçš„ä¸–ç•Œï¼Œå‰›å‰›è‡ªæˆ‘äº†æ–·äº†!\n",
           this_player()->query("c_name"), this_player()->query("name"),
           mssg[random(5)] ) );
     }
@@ -145,9 +145,9 @@ protected int pass_check(string str)
 
 int help() {
 	write(@HELP
-Ê¹ÓÃ¸ñÊ½: suicide
+ä½¿ç”¨æ ¼å¼: suicide
 
-Õâ¸öÖ¸Áî½«É¾³ıÄãµÄ×ÊÁÏ£¬ÇëÈÏÕæ¿¼ÂÇ£¬Ğ¡ĞÄÊ¹ÓÃ£¡
+é€™å€‹æŒ‡ä»¤å°‡åˆªé™¤ä½ çš„è³‡æ–™ï¼Œè«‹èªçœŸè€ƒæ…®ï¼Œå°å¿ƒä½¿ç”¨ï¼
 HELP
 );
 	return 1;
