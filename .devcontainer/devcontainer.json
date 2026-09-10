@@ -1,0 +1,19 @@
+{
+  "name": "es-mud-fluffos",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": { "FLUFFOS_VERSION": "v2026.0901.0" }
+  },
+  "workspaceFolder": "/mudlib",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/mudlib,type=bind,consistency=cached",
+  "forwardPorts": [8888],
+  "portsAttributes": { "8888": { "label": "MUD telnet", "onAutoForward": "silent" } },
+  "overrideCommand": true,
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools"],
+      "settings": { "files.encoding": "utf8", "files.eol": "\n" }
+    }
+  },
+  "postCreateCommand": "driver --version || true"
+}
