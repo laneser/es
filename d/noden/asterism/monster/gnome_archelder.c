@@ -184,7 +184,7 @@ int cast_help()
 { 
     object victim, monster, env;
     string victim_name, *hunt_list;
-    int i,j,ran,vickar,vicint,ref;
+    int i,j,ran,vickar,vicint,refn;
 
     env = environment(this_object());       
     hunt_list = this_object()->query("hunt_list");
@@ -210,12 +210,12 @@ int cast_help()
     i =30-vicint ;
     j =30-vickar ;
     
-    if( i+j < 1 )  ref = 1 ;
-    else ref = random(i+j) ; 
+    if( i+j < 1 )  refn = 1 ;
+    else refn = random(i+j) ; 
     ran = random(60) ;
     
                             
-    if ( ran < ref  )
+    if ( ran < refn  )
        { 
           if(random(2)==0)                  
               command("cast sleet on "+victim_name); 

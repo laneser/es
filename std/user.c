@@ -999,16 +999,26 @@ void die()
 	string *names, name;
 	int i, res;
 //write("die\n");
+	//	防重入：die() 只要在中途拋出執行期錯誤，heart_beat 就會每秒重新
+	//	呼叫它，屍體也就每秒複製一具。旗標必須在「做任何事之前」就立起來，
+	//	立在中段是不夠的 —— 錯誤往往發生在中段之前。
+	//	link_data() 不能單獨當防護：連線一中斷（link 為 0）它就一律回 0。
+	//	底下每個「其實沒死」的分支都會在 return 前把旗標清掉。
+	if( link_data("dead") || query_temp("dying") )  return;
+	set_temp( "dying", 1 );
+
 	//	Set the user's killer variable
 	killer = query("last_attacker");
 	if (!killer) killer = previous_object() ;
 
 	// The monster kill top-list stuff.
-	if( !wizardp(this_object()) && killer->query("npc") )
+	//	killer 可能是 0（毒發、溺水、跌落這類沒有兇手的死法），
+	//	新版驅動的 userp() 收到 0 會直接拋錯而不是回 0，一律先擋掉。
+	if( !wizardp(this_object()) && killer && killer->query("npc") )
 		"/adm/daemons/npc_kills"->add_kills( base_name(killer) );
 
 	// If a high lv killed a low lv (lv < 5) player, let him die!
-        if( this_object()->query_level()<5 && userp(killer) && query("last_attacker") ) {
+        if( this_object()->query_level()<5 && killer && userp(killer) && query("last_attacker") ) {
 		tell_room(killer,"東方故事的諸神發出一陣怒吼:可惡的"+
 			killer->query("c_name")+"竟敢PK低等級玩家, 去死吧!\n");
 		killer->receive_damage(1000);
@@ -1019,11 +1029,9 @@ void die()
 	if( wizardp(this_object()) && query("immortal")) {
 		write("( 你的巫師身份及不朽的魔力使你免於死亡。 )\n");
 		set("hit_points", (int)query("max_hp"));
+		delete_temp("dying");
 		return;
 	}
-
-	//	If the user is already dead ... stop death call.
-	if( link_data("dead") )  return;
 
 	//	If PK in PK zone won't die  .. add by Ruby
 	if( (env = environment(this_object())) && env->query("PK_ZONE")
@@ -1036,6 +1044,7 @@ void die()
 		sprintf("%s的體力耗盡，輸了這場戰鬥。\n",(string)this_object()->query("c_name")) ,
         	this_object()
         );
+		delete_temp("dying");
 		return;
 	}
 	}

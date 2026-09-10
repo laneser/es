@@ -52,7 +52,7 @@ int cast_help()
 { 
     object victim;
     string name;
-    int i,j,ran,vickar,vicint,ref;
+    int i,j,ran,vickar,vicint,refn;
     victim = query_attacker();
     vicint = victim->query_perm_stat("int") ;
     vickar = victim->query_perm_stat("kar") ;
@@ -60,15 +60,15 @@ int cast_help()
     i =30-vicint ;
     j =30-vickar ;
     
-    if( i+j < 1 )  ref = 1 ;
-    else ref = random(i+j) ; 
+    if( i+j < 1 )  refn = 1 ;
+    else refn = random(i+j) ; 
 
     ran = random(50) ;
                             
     if ( (int)this_object()->query("spell_points")< 300 )   
          this_object()->set("spell_points",600);
 
-    if ( ran < ref  )
+    if ( ran < refn  )
        {
           name=victim->query("name");
           command("cast lightning on "+name); 

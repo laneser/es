@@ -7,14 +7,18 @@
 mixed resolv_ref( mixed a )
 {
 	mixed ret;
-	string ref;
+	//	'ref' 在 FluffOS 2019 以後是保留字（用來宣告傳參考的參數），
+	//	不能再拿來當變數名，否則整個檔案編譯失敗 —— 這個 daemon 被
+	//	/cmds/object 與 /cmds/open 下大量命令 inherit，一失敗就連帶 33 個檔案掛掉。
+	//	注意 query("ref") / set("ref/"...) 用的是字串鍵，不受影響。
+	string refn;
 
 	if( !stringp( a ) ) return a;
-	if( !sscanf( a, "#%s", ref ) ) return a;
-	if( ref == "#" ) return this_player()-> query( "cwf" );
+	if( !sscanf( a, "#%s", refn ) ) return a;
+	if( refn == "#" ) return this_player()-> query( "cwf" );
 	ret = this_player()-> query( "ref" );
 	if( !mapp( ret ) ) return a;
-	ret = ret[ref];
+	ret = ret[refn];
 	if( undefinedp( ret ) ) return a;
 	return ret;
 }
