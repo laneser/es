@@ -73,8 +73,14 @@ mudlib 的錯誤處理器會把中文的「執行時段錯誤」連同完整呼�
 但同類問題還散落在「還沒被執行到」的程式碼裡，改舊檔時要留意：
 
 - **`message()` 的第四個參數（排除名單）只接受 object 或 array**，不再接受 `0`。
-  舊碼慣用省略參數表示「不排除任何人」，光 `tell_room()` 全樹就有 2561 個呼叫點。
-  已在 `/adm/simul_efun/message.c` 統一規範化，新程式照常省略即可。
+  注意分寸：**省略不傳是合法的**（`tell_object()` 就只傳三個參數），明確傳 `0` 才會炸。
+  會踩到的是 `varargs` 函式 —— 參數沒給時它是 `0`，卻照樣被當第四個參數傳下去。
+  已在 `/adm/simul_efun/tell_room.c` 規範化（全樹有 95 個只給兩個參數的呼叫點），
+  `say()` / `shout()` 本來就自己處理了。
+  **`/adm/simul_efun/message.c` 是陷阱**：它看起來是個覆寫 `message()` 的 simul_efun，
+  但它根本沒被 `/adm/obj/simul_efun.c` include，改它不會有任何效果。
+  同樣未被 include 的還有 `cat.1208.c`、`data.1208.c`、`help.c`、`lines.c`。
+  改 simul_efun 之前先確認它在聚合檔裡。
 - **`ref` 是保留字**（宣告傳參考的參數用），不能當變數或函式名；`new`、`array` 同理。
   症狀是 `syntax error, unexpected L_REF`。
 - **`userp()` / `wizardp()` 收到 0 會拋錯**，不再靜靜回 0。凡是可能為空的物件
