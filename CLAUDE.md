@@ -67,6 +67,36 @@ mudlib 的錯誤處理器會把中文的「執行時段錯誤」連同完整呼�
 那是這個 lib 最有效的除錯入口。載入物件有副作用（daemon 會啟動、房間會 clone 出 NPC），
 所以掃描要在測試環境做。
 
+### log 怎麼讀
+
+錯誤散在三個地方，寫入者不同，行為也不同：
+
+| 檔案 | 誰寫的 | 內容 |
+|---|---|---|
+| `log/debug.log` | **driver** | 執行期錯誤（master 的 `error_handler()` 回傳值）、編譯警告 |
+| `d/<領域>/log`、`/u/<巫師>/log` | mudlib（`master::log_error()`） | 編譯錯誤與警告，**按領域/巫師分類** |
+| `log/lint` | mudlib（`lint_d`） | 全站掃描結果 |
+
+兩者都已加上時間戳（`error_handler()` 另外會標出觸發錯誤的玩家）。
+
+**陷阱：driver 執行中不要 `rm log/debug.log`。** driver 持有那個檔案的 handle，
+刪掉之後它會繼續寫向已刪除的 inode，檔案不會重建，之後的錯誤全部看不到，
+一直到重啟為止。要清它必須連帶重啟 driver。
+mudlib 寫的那些（領域 log、`log/lint`）用的是 `write_file()`，每次開關檔案，
+執行中刪掉會自動重建，很安全。
+
+比起清掉重看，更好的做法是**留著檔案比對差異**，這樣不會丟掉歷史：
+
+```
+cp d/adventurer/log /tmp/before
+# ...重現問題...
+diff /tmp/before d/adventurer/log
+```
+
+領域 log 特別值得翻，它把錯誤依領域分好了。實例：`d/adventurer/log` 指出
+`_yubi.c:58` 的 `if( !me->query_attacker(); )` 多了一個分號 —— 那個檔案
+從 1990 年代起就沒有編譯成功過。
+
 ## FluffOS 2019+ 的破壞性變更
 
 這個 mudlib 是 MudOS 0.9.20 時代的產物，新驅動在好幾個地方變嚴格了。下列都已修好，

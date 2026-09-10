@@ -55,7 +55,7 @@ int cmd_hang(string arg)
 	
 	if( !sp_cost || (int)me->query("spell_points") < (sp_cost + 1) )
 		return notify_fail("你的精神太差了，無法專心進行絞殺！\n");
-        if( !me->query_attacker(); ) { 
+        if( !me->query_attacker() ) { 
 
    	tell_object( me, set_color( 
 		"你偷偷摸摸的繞到" + target->query("c_name") + "後，準備隨時給它一個絞殺..\n\n", "HIY",me) );

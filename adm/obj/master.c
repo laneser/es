@@ -259,13 +259,24 @@ string standard_trace(mapping error, int caught)
 // The mudlib runtime error handler.
 string error_handler( mapping error, int caught )
 {
+    string trace, who, name;
+
+    trace = standard_trace(error, caught);
+
+    who = "";
     if (this_player(1)) {
         this_player(1)->set_temp("error", error);
-        tell_object(this_player(1), standard_trace(error, caught));
+        //  給玩家看的版本不加時間戳，畫面上那是雜訊
+        tell_object(this_player(1), trace);
+        if (stringp(name = (string)this_player(1)->query("name")))
+            who = " <" + name + ">";
     }
 
     // whatever we return goes to the debug.log
-    return standard_trace(error, caught);
+    //  寫進 debug.log 的版本補上時間與觸發者：沒有時間戳就無法分辨
+    //  一則錯誤是剛才那次操作造成的，還是幾小時前留下來的。
+    return sprintf("\n===== %s%s =====%s",
+        ctime(time()), who, trace);
 }
 // The master object is asked if it is ok to shadow object ob. Use
 // previous_object() to find out who is asking.
@@ -366,6 +377,10 @@ void log_error( string file, string message )
           "log_error: " + home + "log is a directory\n" );
         home = LOG_DIR;
     }
+    //  補上時間戳：這些檔案會一直累積，新舊記錄混在一起時
+    //  （尤其驅動換版前後格式也不同）根本分不出哪一則是這次跑出來的。
+    message = sprintf("[%s] %s", extract(ctime(time()), 4, 18), message);
+
     if( !write_file( home + "log", message ) )
         write( "master: log_error failed to write log: "
         +home+"log\n(message:"+message);
