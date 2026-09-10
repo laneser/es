@@ -50,18 +50,18 @@ int cmd_zap(string str) {
    }
  
    tell_room(environment(this_player()),
-	(string)this_player()->query("c_name") + "·¢³öÒ»µÀÉÁµç£¬Ö±Ö±µÄÅüÔÚ" +
+	(string)this_player()->query("c_name") + "ç™¼å‡ºä¸€é“é–ƒé›»ï¼Œç›´ç›´çš„åŠˆåœ¨" +
 	(string)target->query("c_name") + 
-	"ÉíÉÏ.\n", ({ this_player(), target }));
+	"èº«ä¸Š.\n", ({ this_player(), target }));
  
    if(target != this_player())
    tell_object(target,
-	(string)this_player()->query("c_name") + "Í»È»·¢³öÒ»µÀÉÁµç£¬" +
-	"Ö±Ö±µÄÅüÔÚÄãÉíÉÏ£¬ÄãÍ»È»ÑÛÇ°Ò»ºÚ ...\n");
+	(string)this_player()->query("c_name") + "çªç„¶ç™¼å‡ºä¸€é“é–ƒé›»ï¼Œ" +
+	"ç›´ç›´çš„åŠˆåœ¨ä½ èº«ä¸Šï¼Œä½ çªç„¶çœ¼å‰ä¸€é»‘ ...\n");
 
    if(target != this_player())
-   write("ÄãÕÙ»½ÌìÀ×£¬·Ö½â" + (string)target->query("c_name") + ".\n");
-   else write("ÄãÕÙ»½ÌìÀ×ÅüÄã×Ô¼º.\n");
+   write("ä½ å¬å–šå¤©é›·ï¼Œåˆ†è§£" + (string)target->query("c_name") + ".\n");
+   else write("ä½ å¬å–šå¤©é›·åŠˆä½ è‡ªå·±.\n");
  
    target->receive_damage( 2000 );	// Overkill  <grin>
 

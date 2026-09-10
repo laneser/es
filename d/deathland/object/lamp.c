@@ -3,14 +3,14 @@
 inherit OBJECT;
 void create()
 {
-set_name("Lamp","ÓÍµÆ");
-set("c_short","Ò»ÕµÓÍµÆ");
+set_name("Lamp","æ²¹ç‡ˆ");
+set("c_short","ä¸€ç›æ²¹ç‡ˆ");
 set("c_long",@Lamp
-Ò»ÕµÓÍµÆ,ËÆºõÓĞ¹ÉÉñÆæµÄÁ¦Á¿
+ä¸€ç›æ²¹ç‡ˆ,ä¼¼ä¹æœ‰è‚¡ç¥å¥‡çš„åŠ›é‡
 Lamp
 );
 set("id",({"lamp"}));
-set( "unit", "Õµ");
+set( "unit", "ç›");
 set("weight", 1);
  set("value", ({ 5, "silver" }));
 }

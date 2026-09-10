@@ -6,17 +6,17 @@ void create ()
 {
     ::create();
     set_level(6);
-    set_name( "small bat", "Ğ¡òùòğ" );
+    set_name( "small bat", "å°è™è " );
     add ("id", ({ "bat"}) ); 
-    set_short( "Ğ¡òùòğ" );
+    set_short( "å°è™è " );
     set_long(@LONG
-Ò»Ö»µ¹¹ÒÔÚ±ÚÉÏµÄĞ¡òùòğ¡£        
+ä¸€éš»å€’æ›åœ¨å£ä¸Šçš„å°è™è ã€‚        
 LONG
     );
     set_natural_armor(30,2);
     set_natural_weapon( 9,3,5 );
     set ("weight", 50);
-    set ("unit", "Ö»");
-    set_c_verbs( ({ "%s×¥%s", "%sÒ§%s", }) );
-    set_c_limbs( ({ "Í·", "³á°ò", "ÉíÌå" }) );
+    set ("unit", "åª");
+    set_c_verbs( ({ "%sæŠ“%s", "%så’¬%s", }) );
+    set_c_limbs( ({ "é ­", "ç¿…è†€", "èº«é«”" }) );
 }

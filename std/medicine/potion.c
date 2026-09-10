@@ -8,7 +8,7 @@ void create()
 {
 	medicine::create();
 	set("can_drink", 1);
-	set("unit", "Æ¿");
+	set("unit", "ç“¶");
 }
 
 void set_healing(int heal)
@@ -47,7 +47,7 @@ void drink(object me)
 	if( me->query_attacker() && ( kar < random(kar+5) ) ) {
 		heal /= 2;
 		tell_object( me, 
-			"µ«ÊÇ²»Ð¡ÐÄ½¦ÁËÒ»´ó°ë³öÀ´....\n" );
+			"ä½†æ˜¯ä¸å°å¿ƒæ¿ºäº†ä¸€å¤§åŠå‡ºä¾†....\n" );
 	}
 	me->receive_healing( heal );
 }

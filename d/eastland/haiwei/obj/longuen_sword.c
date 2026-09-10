@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "Sword of Longuen", "ÁúÔ¨Ö®½£" );
+	set_name( "Sword of Longuen", "é¾æ·µä¹‹åŠ" );
 	add( "id", ({ "longuen", "sword" }) );
-	set_short( "Sword of Longuen", "ÁúÔ¨Ö®½£" );
+	set_short( "Sword of Longuen", "é¾æ·µä¹‹åŠ" );
 	set_long(
 		"You see a longsword with freezing blue blade.\n",
-		"ÕâÊÇÒ»°ÑÓÐÖøÒìÑùÉîÀ¶É«½£ÈÐÑúÖøº®¹âµÄ¹Å½££¬½£±úÉÏ¿ÌÖøËÄ¸ö×­×Ö¡¸ÁúÔ¨Éñ½£¡¹¡£\n" );
-	set( "unit", "°Ñ" );
+		"é€™æ˜¯ä¸€æŠŠæœ‰è‘—ç•°æ¨£æ·±è—è‰²åŠåˆƒæ¼¾è‘—å¯’å…‰çš„å¤åŠï¼ŒåŠæŸ„ä¸Šåˆ»è‘—å››å€‹ç¯†å­—ã€Œé¾æ·µç¥žåŠã€ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 100 );
@@ -31,11 +31,11 @@ int weapon_hit( object victim, int damage )
 	sp = owner->query("spell_points");
 	if( random(intelligence)>=15 && sp > 20 ) {
 		tell_object( owner, can_read_chinese(owner)?
-			"\nÄãµÄÁúÔ¨Ö®½£Í»È»·¢³öÒ»µÀÇà×ÏÉ«µÄ»¡¹â£¬½£Éí±ä³ÉÃ÷¾µÒ»°ãµÄÒøÉ«£¡\n\n":
+			"\nä½ çš„é¾æ·µä¹‹åŠçªç„¶ç™¼å‡ºä¸€é“é’ç´«è‰²çš„å¼§å…‰ï¼ŒåŠèº«è®Šæˆæ˜Žé¡ä¸€èˆ¬çš„éŠ€è‰²ï¼\n\n":
 			"\nYour Taior Sword glows in a purple aura, and its blade becomes silvery!\n\n" );
 		tell_room( environment(owner), ({
 			"\n" + owner->query("cap_name") + "'s Taior Sword glows in a purple aura, and its blade becomes silvery!\n\n",
-			"\n" + owner->query("c_cap_name") + "µÄÁúÔ¨Ö®½£Í»È»·¢³öÒ»µÀÇà×ÏÉ«µÄ»¡¹â£¬½£Éí±ä³ÉÃ÷¾µÒ»°ãµÄÒøÉ«£¡\n\n"}),
+			"\n" + owner->query("c_cap_name") + "çš„é¾æ·µä¹‹åŠçªç„¶ç™¼å‡ºä¸€é“é’ç´«è‰²çš„å¼§å…‰ï¼ŒåŠèº«è®Šæˆæ˜Žé¡ä¸€èˆ¬çš„éŠ€è‰²ï¼\n\n"}),
 			owner );
 		victim->receive_special_damage( "divine", intelligence * 3);
 		owner->add( "spell_points", -20 );
@@ -47,13 +47,13 @@ int stop_wield( object player )
 {
 	if( (int)player->query("alignment") < 2000 ) {
 		notify_fail( can_read_chinese(player)?
-			"ÁúÔ¨Ö®½£ËÆºõ·¢³öÒ»¹ÉÁ¦Á¿£¬Ê¹ÄãÎÞ·¨¼ÝÔ¦Ëü¡£\n":
+			"é¾æ·µä¹‹åŠä¼¼ä¹Žç™¼å‡ºä¸€è‚¡åŠ›é‡ï¼Œä½¿ä½ ç„¡æ³•é§•é¦­å®ƒã€‚\n":
 			"You feel the power of the Taior Sword rejects you.\n" );
 		return 1;
 	}
 	if( (int)player->query_skill("longblade") < 100 ) {
 		notify_fail( can_read_chinese(player)?
-			"ÁúÔ¨Ö®½£ËÆºõ·¢³öÒ»¹ÉÁ¦Á¿£¬Ê¹ÄãÎÞ·¨¼ÝÔ¦Ëü¡£\n":
+			"é¾æ·µä¹‹åŠä¼¼ä¹Žç™¼å‡ºä¸€è‚¡åŠ›é‡ï¼Œä½¿ä½ ç„¡æ³•é§•é¦­å®ƒã€‚\n":
 			"You feel the power of the Taior Sword rejects you.\n" );
 		return 1;
 	}

@@ -20,11 +20,11 @@ int cmd_search(string arg)
 
 	if(!this_player()->query("vision")) 
 		return notify_fail(
-			"ÄãÏÖÔÚÊ²÷áÒ²¿´²»¼û£¬Ã»ÓĞ°ì·¨ËÑË÷¡£\n");
+			"ä½ ç¾åœ¨ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ï¼Œæ²’æœ‰è¾¦æ³•æœç´¢ã€‚\n");
 
 	env = environment( this_player() );
 	if( !env ) return notify_fail( 
-		"ÕâÀïÒ»Æ¬ĞéÎŞ£¬ÎŞ´ÓËÑË÷Æğ....\n");
+		"é€™è£¡ä¸€ç‰‡è™›ç„¡ï¼Œç„¡å¾æœç´¢èµ·....\n");
 
 	if( !arg || arg=="" ) arg = "here";
 	if( (msg= env->query("search_desc/"+arg)) ) {
@@ -33,15 +33,15 @@ int cmd_search(string arg)
 	&& (reagent = (mapping)env->query("reagents")) ) {
 		// Healers can get reagents in some place.
 		write( 
-			"ÄãÕÒÁËÓÖÕÒ£¬²¢Ã»ÓĞ·¢ÏÖÈÎºÎ¶«Î÷¡£\n");
+			"ä½ æ‰¾äº†åˆæ‰¾ï¼Œä¸¦æ²’æœ‰ç™¼ç¾ä»»ä½•æ±è¥¿ã€‚\n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name") + "ÔÚÕâÀïËÄ´¦ËÑË÷£¬²»ÖªµÀÔÚÕÒĞ©Ê²÷á£¿\n",
+			this_player()->query("c_name") + "åœ¨é€™è£¡å››è™•æœç´¢ï¼Œä¸çŸ¥é“åœ¨æ‰¾äº›ä»€éº¼ï¼Ÿ\n",
 		    this_player() );
 	} else {
 		write( 
-			"ÄãÕÒÁËÓÖÕÒ£¬²¢Ã»ÓĞ·¢ÏÖÈÎºÎ¶«Î÷¡£\n");
+			"ä½ æ‰¾äº†åˆæ‰¾ï¼Œä¸¦æ²’æœ‰ç™¼ç¾ä»»ä½•æ±è¥¿ã€‚\n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name") + "ÔÚÕâÀïËÄ´¦ËÑË÷£¬²»ÖªµÀÔÚÕÒĞ©Ê²÷á£¿\n" ,
+			this_player()->query("c_name") + "åœ¨é€™è£¡å››è™•æœç´¢ï¼Œä¸çŸ¥é“åœ¨æ‰¾äº›ä»€éº¼ï¼Ÿ\n" ,
 		    this_player() );
 	}
 
@@ -50,9 +50,9 @@ int cmd_search(string arg)
 
 int help() {
 	write (@HELP
-Ê¹ÓÃ¸ñÊ½: search <Ä¿±ê>
+ä½¿ç”¨æ ¼å¼: search <ç›®æ¨™>
 
-Õâ¸öÖ¸Áî½«ËÑË÷ËÄÖÜ»ò<Ä¿±ê>£¬ÊÇ½âÃÕÊÖ¶ÎÖ®Ò».
+é€™å€‹æŒ‡ä»¤å°‡æœç´¢å››å‘¨æˆ–<ç›®æ¨™>ï¼Œæ˜¯è§£è¬æ‰‹æ®µä¹‹ä¸€.
 HELP
 );
 	return 1 ;

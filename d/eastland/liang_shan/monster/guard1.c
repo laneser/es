@@ -9,12 +9,12 @@ void create ()
 
         ::create();
         set_level(12);
-        set_name( "xxxx guard", "Ïº±ø" );
+        set_name( "xxxx guard", "è¦å…µ" );
         add ("id", ({ "xxxx", "guard" }) );
-        set_short( "xxxx guard","Ïº±ø ");
-        set("unit","Î»");
+        set_short( "xxxx guard","è¦å…µ ");
+        set("unit","ä½");
         set_long("",
-           " Ïº±ø¸ºÔğ±£»¤Áú¹¬µÄ°²È«£¬ÔÚÁú¹¬µÄ¸÷¸ö½ÇÂä¶¼¿É¿´µ½Ëû¡£\n"
+           " è¦å…µè² è²¬ä¿è­·é¾å®®çš„å®‰å…¨ï¼Œåœ¨é¾å®®çš„å„å€‹è§’è½éƒ½å¯çœ‹åˆ°ä»–ã€‚\n"
         );
         set_perm_stat("str", 16);
         set_perm_stat("dex", 16);
@@ -26,8 +26,8 @@ void create ()
         set ("gender", "male");
         set("wealth/silver",50);
         set ("race", "monster");
-        set_c_verbs(({"%ÓÃ%sÏò%s¿³È¥","ÓÃ%sÏò%s´ÌÈ¥"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","Ñü²¿"}));
+        set_c_verbs(({"%ç”¨%så‘%sç å»","ç”¨%så‘%såˆºå»"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","è…°éƒ¨"}));
         wield_weapon(TWEAPON"guard_dagger");
         equip_armor(TARMOR"guard_mail1");
 }

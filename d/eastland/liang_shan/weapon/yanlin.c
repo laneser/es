@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("yanling blade","Ñãôáµ¶");
+       set_name("yanling blade","é›ç¿åˆ€");
        add("id",({"blade"}) );
-       set_short("Ñãôáµ¶");
+       set_short("é›ç¿åˆ€");
 	   set_long(
-           "ÕâÊÇÂÌÁÖºÃºº×îÏ²°®µÄµ¶×Ó£¬ÒòÎªËü·Ç³£ºÃÊ¹£¬ÍşÁ¦Ò²²»´í£®\n"
+           "é€™æ˜¯ç¶ æ—å¥½æ¼¢æœ€å–œæ„›çš„åˆ€å­ï¼Œå› ç‚ºå®ƒéå¸¸å¥½ä½¿ï¼Œå¨åŠ›ä¹Ÿä¸éŒ¯ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
         set("type","longblade");
 	set( "min_damage", 15 );

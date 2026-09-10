@@ -10,13 +10,13 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "White Wuchang", "°×ÎÞ³£" );
+	set_name( "White Wuchang", "ç™½ç„¡å¸¸" );
 	add( "id", ({ "wuchang" }) );
-	set_short( "White Wuchang", "°×ÎÞ³£" );
+	set_short( "White Wuchang", "ç™½ç„¡å¸¸" );
 	set_long(
 		"You see the White Wuchang, agent of the Death.\n",
-		"Äã¿´µ½Ò»¸öÁ³É«²Ô°×£¬ÃæÎÞ±íÇéµÄ°×ÒÂ¹ÖÈË£¬Õâ¾ÍÊÇÀ´×ÔµØÓüµÄ¹´»êÊ¹Õß\n"
-		"°×ÎÞ³££¬ËûºÍÁíÒ»Î»ºÚÎÞ³£¸ºÔð½«ËÀÈ¥µÄÍö»ê´øµ½ÑÖÍõÃæÇ°ÊÜÉó¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹è‡‰è‰²è’¼ç™½ï¼Œé¢ç„¡è¡¨æƒ…çš„ç™½è¡£æ€ªäººï¼Œé€™å°±æ˜¯ä¾†è‡ªåœ°ç„çš„å‹¾é­‚ä½¿è€…\n"
+		"ç™½ç„¡å¸¸ï¼Œä»–å’Œå¦ä¸€ä½é»‘ç„¡å¸¸è² è²¬å°‡æ­»åŽ»çš„äº¡é­‚å¸¶åˆ°é–»çŽ‹é¢å‰å—å¯©ã€‚\n"
 	);
 	set( "gender", "male" );
 }
@@ -31,15 +31,15 @@ void start_death(object ghost)
 		"Black Wuchang says: Hmm... another one dies, what a day ....\n"
 		"Black Wuchang's figure fades and disappears.\n"
 		"With only one second, Black Wuchang returns with another ghost.\n",
-		"ºÚÎÞ³£ËµµÀ: ÓÖÓÐÈËËÀµôÁË£¬½ñÌìÊÇÊ²÷áÈÕ×Ó .....\n"
-		"ºÚÎÞ³£µÄÉíÓ°ÏûÊ§ÔÚÒ»Æ¬ëüëüµÄÎíÆøÖÐ¡£\n"
-		"Ö»Ò»Õ£ÑÛµÄ¹¦·ò£¬ºÚÎÞ³£ÓÖÓÃÌúÁ´ÍÏÖøÁíÒ»¸ö¹í»ê´ÓÒ»Æ¬ÎíÆøÖÐ³öÏÖ¡£\n" }),
+		"é»‘ç„¡å¸¸èªªé“: åˆæœ‰äººæ­»æŽ‰äº†ï¼Œä»Šå¤©æ˜¯ä»€éº¼æ—¥å­ .....\n"
+		"é»‘ç„¡å¸¸çš„èº«å½±æ¶ˆå¤±åœ¨ä¸€ç‰‡æœ¦æœ¦çš„éœ§æ°£ä¸­ã€‚\n"
+		"åªä¸€çœ¨çœ¼çš„åŠŸå¤«ï¼Œé»‘ç„¡å¸¸åˆç”¨éµéˆæ‹–è‘—å¦ä¸€å€‹é¬¼é­‚å¾žä¸€ç‰‡éœ§æ°£ä¸­å‡ºç¾ã€‚\n" }),
 		this_object() );
 	tell_object(ghost, can_read_chinese(ghost)?
-		"\nÄã¿´µ½Ò»¸öÓÖ¸ßÓÖÊÝµÄºÚÉ«ÈËÓ°£¬ÎÞÉùÎÞÏ¢µØ×ßµ½ÄãµÄÉí±ß ....\n"
-		"\nºÚÎÞ³£ËµµÀ: ÄãÒÑ¾­ËÀÁË£¬ËæÎÒ¸°ÒõË¾ÊÜÉó°É¡£\n"
-		"\nºÚÎÞ³£½«Ò»ÌõÓÖ´ÖÓÖÖØµÄÌú¡õÍùÄãÍ·ÉÏÒ»Ì×£¬ºÜ´Ö±©µØÍÏÖøÄãÏòÇ°×ß¡£\n"
-		"\nÄãÖ»¼ûÑÛÇ°Ðí¶àÔÆÎíÏñµ¶Ò»Ñù¹Î¹ýÄãµÄÁ³£¬È»áá³öÏÖÁËÒ»×ùÊ¯ÇÅ ....\n":
+		"\nä½ çœ‹åˆ°ä¸€å€‹åˆé«˜åˆç˜¦çš„é»‘è‰²äººå½±ï¼Œç„¡è²ç„¡æ¯åœ°èµ°åˆ°ä½ çš„èº«é‚Š ....\n"
+		"\né»‘ç„¡å¸¸èªªé“: ä½ å·²ç¶“æ­»äº†ï¼Œéš¨æˆ‘èµ´é™°å¸å—å¯©å§ã€‚\n"
+		"\né»‘ç„¡å¸¸å°‡ä¸€æ¢åˆç²—åˆé‡çš„éµâ–¡å¾€ä½ é ­ä¸Šä¸€å¥—ï¼Œå¾ˆç²—æš´åœ°æ‹–è‘—ä½ å‘å‰èµ°ã€‚\n"
+		"\nä½ åªè¦‹çœ¼å‰è¨±å¤šé›²éœ§åƒåˆ€ä¸€æ¨£åˆ®éŽä½ çš„è‡‰ï¼Œç„¶å¾Œå‡ºç¾äº†ä¸€åº§çŸ³æ©‹ ....\n":
 		"\nYou see a tall slim figure appears behind you silently ....\n"
 		"\nBlack Wuchang says: YOU HAVE DIED, MORTAL ONE.\n"
 		"\nBlack Wuchang put a heavy iron chain on your neck and draw you forth.\n"
@@ -52,8 +52,8 @@ void start_death(object ghost)
 void death1(object ghost)
 {
 	tell_object(ghost, can_read_chinese(ghost)?
-		"\nºÚÎÞ³£ËµµÀ: ¹í×ä£¬ÎÒ´øÀ´ÁËÒ»¸öÍö»ê£¬Äã½øÈ¥Í¨±¨Ò»Éù£¡\n"
-		"\nºÚÎÞ³£×ªÍ·¶ÔÄãËµµÀ: ºÃºÃÔÚÕâÀï´ôÖø£¬¹ýÁËÄÎºÎÇÅ¾ÍÊÇÒõ¼äÁË¡£\n":
+		"\né»‘ç„¡å¸¸èªªé“: é¬¼å’ï¼Œæˆ‘å¸¶ä¾†äº†ä¸€å€‹äº¡é­‚ï¼Œä½ é€²åŽ»é€šå ±ä¸€è²ï¼\n"
+		"\né»‘ç„¡å¸¸è½‰é ­å°ä½ èªªé“: å¥½å¥½åœ¨é€™è£¡å‘†è‘—ï¼ŒéŽäº†å¥ˆä½•æ©‹å°±æ˜¯é™°é–“äº†ã€‚\n":
 		"\nBlack Wuchang says: Guards, I have brought a new ghost, announce it!\n"
 		"\nBlack Wuchang turns to you and says: WAIT HERE.\n" );
 	call_out( "death2", 30, ghost );
@@ -61,7 +61,7 @@ void death1(object ghost)
 void death2(object ghost)
 {
      tell_object(ghost,can_read_chinese(ghost)?
-     "\n¸úÖøÎÒÀ´,ºÚÎÞ³£ËµµÀ,\n":
+     "\nè·Ÿè‘—æˆ‘ä¾†,é»‘ç„¡å¸¸èªªé“,\n":
      "\n Follow me,Black wuchang says.\n"
      );                     
     
@@ -71,8 +71,8 @@ void death2(object ghost)
 void death3(object ghost)
 {
 	tell_object(ghost, can_read_chinese(ghost)?
-		"\n¹í×äËµµÀ: ËãÄãÔËÆøºÃ£¬É­ÂÞµî»¹ÔÚÕûÐÞµ±ÖÐ£¬»ØÑô¼äÈ¥°É£¡\n"
-		"\n¹í×ä×¥ÆðÄãÍùÔÆÎíÖÐÒ»¶ª£¬Ò»ÕóÌìÐýµØ×ªÖ®áá£¬ÄãÓÖ¼ûµ½Ò»Æ¬ÊìÏ¤µÄ¾°Ïó ...\n":
+		"\né¬¼å’èªªé“: ç®—ä½ é‹æ°£å¥½ï¼Œæ£®ç¾…æ®¿é‚„åœ¨æ•´ä¿®ç•¶ä¸­ï¼Œå›žé™½é–“åŽ»å§ï¼\n"
+		"\né¬¼å’æŠ“èµ·ä½ å¾€é›²éœ§ä¸­ä¸€ä¸Ÿï¼Œä¸€é™£å¤©æ—‹åœ°è½‰ä¹‹å¾Œï¼Œä½ åˆè¦‹åˆ°ä¸€ç‰‡ç†Ÿæ‚‰çš„æ™¯è±¡ ...\n":
 		"\nHell Guard says: THE HELL IS NOT READY FOR GHOSTS, GO BACK!\n"
 		"\nHell Guard throw you into the moar, you see something familiar ....\n" );
 	ghost->move(REVIVE_ROOM);

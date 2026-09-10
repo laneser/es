@@ -4,20 +4,20 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "fire dragon whip", "»ğÁú±Ş" );
+	set_name( "fire dragon whip", "ç«é¾é­" );
 	add( "id", ({ "whip" }) );
-	set_short(  "»ğÁú±Ş" );
+	set_short(  "ç«é¾é­" );
 	set_long(
-	  "ÕâÊÇÒ»Ìõ»ğºìÉ«»ğÁú±Ş£¬Æ½³£ÊÇ¹©ÔÚÓÒµî£¬Óöµ½µĞÈËÊ±¿ÉÄÃÀ´¶ÔµĞ£¬\n"+
-	  "³äÂúÁËÒ»ÖÖÆæÌØµÄÄ§Á¦¡£\n"
+	  "é€™æ˜¯ä¸€æ¢ç«ç´…è‰²ç«é¾é­ï¼Œå¹³å¸¸æ˜¯ä¾›åœ¨å³æ®¿ï¼Œé‡åˆ°æ•µäººæ™‚å¯æ‹¿ä¾†å°æ•µï¼Œ\n"+
+	  "å……æ»¿äº†ä¸€ç¨®å¥‡ç‰¹çš„é­”åŠ›ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "weight", 30 );
         set("nosecond",1);
 	setup_weapon( "whip", 20, 10,20);
 	set( "value", ({ 340, "silver" }) );
 //        set( "hit_func", "special_hit" );
-        set_verbs(({"%sË¦Ïò%s","%s¾íÏò%s","%s»ÓÏò%s"}));
+        set_verbs(({"%sç”©å‘%s","%så·å‘%s","%sæ®å‘%s"}));
 
 }
 
@@ -30,11 +30,11 @@ int special_hit(object victim)
         if( victim->query("stop_attack") ) return 0;
 
         tell_object( victim,
-          "\n»ğÁú±Ş¿ìËÙµÄÎèÖø£¬±ŞÓ°»¯³ÉÒ»Ìõ»ğÁúÏòÄãÆËÀ´!!\n\n");
+          "\nç«é¾é­å¿«é€Ÿçš„èˆè‘—ï¼Œé­å½±åŒ–æˆä¸€æ¢ç«é¾å‘ä½ æ’²ä¾†!!\n\n");
         tell_object( holder, 
-          "\nÄã¼±ËÙµÄÎèÖø»ğÁú±Ş£¬±ŞÓ°»¯³ÉÒ»Ìõ»ğÁúÏòµĞÈËÆËÈ¥ !!\n\n");
+          "\nä½ æ€¥é€Ÿçš„èˆè‘—ç«é¾é­ï¼Œé­å½±åŒ–æˆä¸€æ¢ç«é¾å‘æ•µäººæ’²å» !!\n\n");
         tell_room( environment(holder),
-          "\n»ğÁú±Ş¿ìËÙµÄÎèÖø£¬±ŞÓ°»¯³ÉÒ»Ö»»ğÁúÏò" + victim->query("c_name") +"ÆËÈ¥ !!\n\n"
+          "\nç«é¾é­å¿«é€Ÿçš„èˆè‘—ï¼Œé­å½±åŒ–æˆä¸€éš»ç«é¾å‘" + victim->query("c_name") +"æ’²å» !!\n\n"
 	, ({ victim, holder }));
         victim->receive_special_damage("fire",8+random(10));
         return 1;

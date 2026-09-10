@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Mithril Axe","¾Ş¸«");
+       set_name("Mithril Axe","å·¨æ–§");
        add("id",({"axe",}) );
-       set_short("Ã×ËÕÀï¾Ş¸«");
+       set_short("ç±³è˜‡é‡Œå·¨æ–§");
        set_long(
-           "°«ÈËÓÃµÄÃ×ËÕÀï¾Ş¸«\n"
+           "çŸ®äººç”¨çš„ç±³è˜‡é‡Œå·¨æ–§\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 22 );
     	set("type","axe");
     	set("bleeding",10);

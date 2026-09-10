@@ -6,11 +6,11 @@ void create ()
 {
 	::create();
 	set_level(1);
-	set_name( "little girl", "СŮ��" );
+	set_name( "little girl", "小女孩" );
 	add( "id", ({ "girl", }) );
-	set_short( "СŮ��" );
+	set_short( "小女孩" );
 	set_long( @C_LONG
-������ʮ�ֿɰ���СŮ����һֱ������΢Ц��
+看起來十分可愛的小女孩，一直對著你微笑。
 C_LONG
 	);
 	set_perm_stat( "dex", 5 );
@@ -21,7 +21,7 @@ C_LONG
 	set_perm_stat( "karma", 5);
    set( "race", "human" );
 	set ("gender", "female");
-	set ("unit", "��" );
+	set ("unit", "個" );
 	set_natural_weapon( 10, 5, 10 );
 	set_natural_armor( 10, 10 );
 	set_skill("dodge",100);
@@ -37,9 +37,9 @@ void change( object what, object player )
     ob->move( environment(what) );
     tell_object( player,@ALONG
      
-СŮ�����һ��: �ɶ�! ������ʶ���ˣ�ֻ���ֳ��ҵ�����Ŀ!
-СŮ��ͻȻҡ��һ���һֻ���µĶ�ħ��
-  ��ħ���һ��: ������!
+小女孩大叫一聲: 可惡! 竟被你識破了，只好現出我的真面目!
+小女孩突然搖身一變成一隻可怕的惡魔。
+  惡魔大叫一聲: 受死吧!
 
 ALONG
       );       

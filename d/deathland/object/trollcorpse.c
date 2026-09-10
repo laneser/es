@@ -8,7 +8,7 @@ void create()
 {
     object *stuff;
     ::create();
-    ::set_name("troll","æﬁ»À");
+    ::set_name("troll","Â∑®‰∫∫");
     set("weight",1000);
     set("troll_corpse",1);
     set("load",1000);

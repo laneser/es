@@ -52,7 +52,7 @@ int cmd_score(string who)
 
 	me = this_player();
 	if( who && wizardp(me) && !(me=find_player(who)) )
-		return notify_fail("Ã»ÓĞÕâÎ»ÈËÎï¡£\n");
+		return notify_fail("æ²’æœ‰é€™ä½äººç‰©ã€‚\n");
 
 	// basic data.
 	level = (int)me->query_level();
@@ -60,7 +60,7 @@ int cmd_score(string who)
 	exp = (int)me->query_experience();
 	ali = (int)me->query("alignment");
 
-	line = set_color(sprintf("¡¾ %2d ¡¿%s (%s)\n\n",
+	line = set_color(sprintf("ã€ %2d ã€‘%s (%s)\n\n",
 		level, 
 		me->query("short"), 
 		capitalize((string)me->query("name"))),
@@ -87,48 +87,48 @@ int cmd_score(string who)
 //			cond_str = sprintf("%s %s", cond_str, to_chinese(cond_name[i]));
 		}
 	}
-	if( cond_str == "" ) cond_str = "Õı³£";
+	if( cond_str == "" ) cond_str = "æ­£å¸¸";
 
 	// print all data.
 
-	line += sprintf(" ×´  Ì¬ :   %s\n", set_color(sprintf("%s%s(%s)£¬%sËê£¬%s¡£",
+	line += sprintf(" ç‹€  æ…‹ :   %s\n", set_color(sprintf("%s%s(%s)ï¼Œ%sæ­²ï¼Œ%sã€‚",
 		to_chinese(race), to_chinese(class1), to_chinese(gender),
 		chinese_number(age), cond_str), "HIC") );
 
-	if( spouse ) line += sprintf(" Åä  Å¼ :   %s\n", set_color(spouse, "HIM"));
+	if( spouse ) line += sprintf(" é…  å¶ :   %s\n", set_color(spouse, "HIM"));
 
-	line += sprintf(" ¾­  Ñé :   %s\n", set_color(exp, "HIY"));
-	line += sprintf(" Õó  Óª :   %s\n", STATS_D->alignment_string(ali));
-	line += sprintf(" ×´  ¿ö :   %s\n\n", STATS_D->body_status_string(me));
+	line += sprintf(" ç¶“  é©— :   %s\n", set_color(exp, "HIY"));
+	line += sprintf(" é™£  ç‡Ÿ :   %s\n", STATS_D->alignment_string(ali));
+	line += sprintf(" ç‹€  æ³ :   %s\n\n", STATS_D->body_status_string(me));
 
 //	write("\n");
 	if( perm = (int)me->query("max_hp") ) {
 		current = (int)me->query("hit_points");
-		line += sprintf(" Ìå  Á¦ : %8s \t/ %s\n",
+		line += sprintf(" é«”  åŠ› : %8s \t/ %s\n",
 			set_color(current, query_attr_color(current, perm)),
 			set_color(perm, "HIG"));
 	}
 	if( perm = (int)me->query("max_sp") ) {
 		current = (int)me->query("spell_points");
-		line += sprintf(" ¾«ÉñÁ¦ : %8s \t/ %s\n",
+		line += sprintf(" ç²¾ç¥åŠ› : %8s \t/ %s\n",
 			set_color(current , query_attr_color(current, perm)),
 			set_color(perm, "HIG"));
 	}
 	if( perm = (int)me->query("max_fp") ) {
 		current = (int)me->query("force_points");
-		line += sprintf(" ÄÚ  Á¦ : %8s \t/ %s\n",
+		line += sprintf(" å…§  åŠ› : %8s \t/ %s\n",
 			set_color(current,	query_attr_color(current, perm)),
 			set_color(perm, "HIG"));
 	}
 	if( perm = (int)me->query("max_tp") ) {
 		current = (int)me->query("talk_points");
-		line += sprintf(" ½»Ì¸Á¦ : %8s \t/ %s\n\n",
+		line += sprintf(" äº¤è«‡åŠ› : %8s \t/ %s\n\n",
 			set_color(current ,query_attr_color(current, perm)),
 			set_color(perm, "HIG"));
 	}
 /*	if( perm = (int)me->query("max_ap") ) {
 		current = (int)me->query("action_points");
-		line += sprintf(" ĞĞ¶¯Á¦ : %8s \t/ %s\n\n",
+		line += sprintf(" è¡Œå‹•åŠ› : %8s \t/ %s\n\n",
 			set_color(current ,query_attr_color(current, perm)),
 			set_color(perm, "HIG"));
 	}
@@ -147,7 +147,7 @@ int cmd_score(string who)
 	line += "\n ";
 
 	if( !wealth || !sizeof(wealth) )
-		line += "ÄãÏÖÔÚÉíÎŞ·ÖÎÄ¡£\n";
+		line += "ä½ ç¾åœ¨èº«ç„¡åˆ†æ–‡ã€‚\n";
 	else {
 		coins = sort_array(keys(wealth), "sort_coins", this_object());
 		money = 0;
@@ -157,7 +157,7 @@ int cmd_score(string who)
 			line +=	set_color(to_chinese(coins[i] + " coin") + "\t\t" + wealth[coins[i]], clr) + "\n ";
 			money += coinvalue(coins[i]) * wealth[coins[i]];
 		}
-		if( money < 1 ) line += "ÄãÏÖÔÚÉíÎŞ·ÖÎÄ¡£\n";
+		if( money < 1 ) line += "ä½ ç¾åœ¨èº«ç„¡åˆ†æ–‡ã€‚\n";
 	}
 	write(line);
 	return 1;
@@ -175,10 +175,10 @@ int sort_coins(string s1, string s2)
 int help()
 {
 	write(@HELP
-Ö¸Áî¸ñÊ½£ºscore <¶ÔÏó>
+æŒ‡ä»¤æ ¼å¼ï¼šscore <å°è±¡>
 
-Õâ¸öÖ¸ÁîÈÃÄã²é¿´×Ô¼º»ò¶ÔÏóµÄ×´¿ö¼ò±¨(ÏŞÎ×Ê¦)£¬Èç¹ûÄãÒª²é¿´¼¼ÄÜ£¬ÇëÓÃ
-skills Ö¸Áî¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ æŸ¥çœ‹è‡ªå·±æˆ–å°è±¡çš„ç‹€æ³ç°¡å ±(é™å·«å¸«)ï¼Œå¦‚æœä½ è¦æŸ¥çœ‹æŠ€èƒ½ï¼Œè«‹ç”¨
+skills æŒ‡ä»¤ã€‚
 
 HELP
 );

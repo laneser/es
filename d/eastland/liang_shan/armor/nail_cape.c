@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("nail cape", "ÆßĞÇ´ò¶¤ÔíÂŞÅÛ");
+        set_name("nail cape", "ä¸ƒæ˜Ÿæ‰“é‡˜çš‚ç¾…è¢");
         add( "id", ({ "cloak","cape" }) );
-        set_short("nail cape","ÆßĞÇ´ò¶¤ÔíÂŞÅÛ");
+        set_short("nail cape","ä¸ƒæ˜Ÿæ‰“é‡˜çš‚ç¾…è¢");
         set_long(
                 "This is cape with some nails on it.\n",
-                "ÕâÊÇÒ»¼ş¿í´óµÄ»¤ÅÛ£¬Ò»µãÒ²²»»á·Áº¦ĞĞ¶¯£¬ÉÏÃæ¶¤ÁËĞ©×°ÊÎµÄ¶¤×Ó£®\n"
+                "é€™æ˜¯ä¸€ä»¶å¯¬å¤§çš„è­·è¢ï¼Œä¸€é»ä¹Ÿä¸æœƒå¦¨å®³è¡Œå‹•ï¼Œä¸Šé¢é‡˜äº†äº›è£é£¾çš„é‡˜å­ï¼\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "cloth" );
         set( "armor_class", 5 );

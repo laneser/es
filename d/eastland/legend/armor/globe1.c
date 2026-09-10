@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-    set_name( "occult globe", "ÇàÁé»¤¶ÜÔ²Çò" );
+    set_name( "occult globe", "é’éˆè­·ç›¾åœ“çƒ" );
     add( "id", ({ "globe", }) );
-    set_short( "ÇàÁé»¤¶ÜÔ²Çò" );
+    set_short( "é’éˆè­·ç›¾åœ“çƒ" );
     set_long(@LONG 
-    Ò»¸öÇò×´µÄ·´ÎïÖÊ,ÏñÊÇÒ»ÖÖ»¤¶Ü²úÉúÆ÷¡£
+    ä¸€å€‹çƒç‹€çš„åç‰©è³ª,åƒæ˜¯ä¸€ç¨®è­·ç›¾ç”¢ç”Ÿå™¨ã€‚
 LONG      );
-    set( "unit", "ÖÖ" );
+    set( "unit", "ç¨®" );
     set( "type", "globe" );
     set( "material", "element" );
     set( "defense_bonus", 10 );

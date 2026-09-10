@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Shinning amulet", "ÉÁÉÁ·¢¹âµÄ»¤Éí·û");
+        set_name("Shinning amulet", "é–ƒé–ƒç™¼å…‰çš„è­·èº«ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short( "ÉÁÉÁ·¢¹âµÄ»¤Éí·û");
+        set_short( "é–ƒé–ƒç™¼å…‰çš„è­·èº«ç¬¦");
         set_long(
-                " Ò»¸öÉÁÉÁ·¢¹âµÄ»¤Éí·û\n"
+                " ä¸€å€‹é–ƒé–ƒç™¼å…‰çš„è­·èº«ç¬¦\n"
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "misc" );
         set("material","cloth") ;
         set( "armor_class", 0 );

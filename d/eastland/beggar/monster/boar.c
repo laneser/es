@@ -6,11 +6,11 @@ void create()
 {
         ::create();
 	set_level(6);
-	set_name( "fat boar", "Ò°Öí" );
+	set_name( "fat boar", "é‡è±¬" );
         add ("id", ({ "boar","fat" }) );
-        set_short( "Ò°Öí" );
+        set_short( "é‡è±¬" );
 	set_long(@C_LONG
-ÕâÍ·Ò°ÖíÊµÔÚºÜÅÖ,ÅÖµ½Äã¼¸ºõ°ÑËüÎóÈÏÎª±ğÈËËÇÑøµÄÖí¡£\n"
+é€™é ­é‡è±¬å¯¦åœ¨å¾ˆèƒ–,èƒ–åˆ°ä½ å¹¾ä¹æŠŠå®ƒèª¤èªç‚ºåˆ¥äººé£¼é¤Šçš„è±¬ã€‚\n"
 C_LONG
 	);
         set("lvlimit",10);
@@ -18,9 +18,9 @@ C_LONG
 	set_perm_stat( "str", 5 );
 	set_perm_stat( "dex", 2 );
         set( "race", "beast" );
-	set( "unit", "Í·" );
+	set( "unit", "é ­" );
         set_natural_armor(2,2);
 	set_natural_weapon( 9,5,8 );
-	set_c_verbs( ({ "%sµÍÍ·ÃÍ³å£¬×²Ïò%s", "%sÔÚµØÉÏÒ»¹ö£¬ÓÃÑÀ³İÍù%s¶¥È¥" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Æ¨¹É" }) );
+	set_c_verbs( ({ "%sä½é ­çŒ›è¡ï¼Œæ’å‘%s", "%såœ¨åœ°ä¸Šä¸€æ»¾ï¼Œç”¨ç‰™é½’å¾€%sé ‚å»" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å±è‚¡" }) );
 }

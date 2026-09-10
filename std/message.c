@@ -1,47 +1,47 @@
 /*
-Message: ÓÃÀ´¼ò»¯Ò»Ð©³£¼û¶¯×÷Ñ¶Ï¢µÄÐ´×÷
+Message: ç”¨ä¾†ç°¡åŒ–ä¸€äº›å¸¸è¦‹å‹•ä½œè¨Šæ¯çš„å¯«ä½œ
 Wrote by EGA, 11-21-1994
-Ìí¼Ó¹Øì¶ÑÓ³ÙÐ§¹ûµÄÑÝ³ö	/EGA, 3-8-1995
+æ·»åŠ é—œæ–¼å»¶é²æ•ˆæžœçš„æ¼”å‡º	/EGA, 3-8-1995
 */
 
 /* Document
 NAME
-	emote - ½«Ò»¸ö¶¯×÷µÄÐðÊö×ª»»³ÉÊÊµ±µÄÎÄ×Ö´«ËÍ¸øÔÚ³¡µÄÈË
+	emote - å°‡ä¸€å€‹å‹•ä½œçš„æ•˜è¿°è½‰æ›æˆé©ç•¶çš„æ–‡å­—å‚³é€çµ¦åœ¨å ´çš„äºº
 	
 SYNOPSIS
 	varargs void emote( string format, object me, 
 						object where, object victim);
 DESCRIPTION
-	format ÊÇÒ»¸öÌØÊâ¸ñÊ½µÄ×Ö´®, ÀïÃæÒÔ $NS, $NO µÈ·ûºÅ´ú±í¶¯×÷
-	ÕßµÄÃû×Ö¡¢¶¯×÷¶ÔÏóµÄÃû×ÖµÈ¡£emote »á¸ù¾ÝááÃæµÄ¸÷¸ö²ÎÊý¶ÔÕâ¸ö
-	×Ö´®×öÊÊµ±µÄ´ú»», ²¢½«´¦ÀíááµÄÑ¶Ï¢ËÍ¸ø me, victim, ÒÔ¼° where
-	ÀïµÄËùÓÐÈË¡£
-	me ÊÇ¶¯×÷Õß, victim ÔòÊÇ¶¯×÷µÄ¶ÔÏó, where ÔòÊÇ¶¯×÷·¢ÉúµÄ·¿¼ä
+	format æ˜¯ä¸€å€‹ç‰¹æ®Šæ ¼å¼çš„å­—ä¸², è£¡é¢ä»¥ $NS, $NO ç­‰ç¬¦è™Ÿä»£è¡¨å‹•ä½œ
+	è€…çš„åå­—ã€å‹•ä½œå°è±¡çš„åå­—ç­‰ã€‚emote æœƒæ ¹æ“šå¾Œé¢çš„å„å€‹åƒæ•¸å°é€™å€‹
+	å­—ä¸²åšé©ç•¶çš„ä»£æ›, ä¸¦å°‡è™•ç†å¾Œçš„è¨Šæ¯é€çµ¦ me, victim, ä»¥åŠ where
+	è£¡çš„æ‰€æœ‰äººã€‚
+	me æ˜¯å‹•ä½œè€…, victim å‰‡æ˜¯å‹•ä½œçš„å°è±¡, where å‰‡æ˜¯å‹•ä½œç™¼ç”Ÿçš„æˆ¿é–“
 	
-	victim ¿ÉÒÔÂÔÈ¥, ´ËÊ± $NO, $GO Á½¸ö²ÎÊý½«²»»áÉúÐ§¡£
+	victim å¯ä»¥ç•¥åŽ», æ­¤æ™‚ $NO, $GO å…©å€‹åƒæ•¸å°‡ä¸æœƒç”Ÿæ•ˆã€‚
 	
-	where Óë victim ¿ÉÒÔÒ»ÆðÂÔÈ¥, ´ËÊ± where ½«×Ô¶¯±»Éè¶¨Îª me 
-	ËùÔÚµÄ·¿¼ä¡£
+	where èˆ‡ victim å¯ä»¥ä¸€èµ·ç•¥åŽ», æ­¤æ™‚ where å°‡è‡ªå‹•è¢«è¨­å®šç‚º me 
+	æ‰€åœ¨çš„æˆ¿é–“ã€‚
 	
-	format Àï¿ÉÓÃµÄ²ÎÊýÈçÏÂ:
-	$NS		me µÄÃû×Ö
-	$NO		victim µÄÃû×Ö
-	$GS		me µÄ´úÃû´Ê, ÒÀÐÔ±ðÎªËû¡¢Ëý»òËü
-	$GO		victim µÄ´úÃû´Ê
+	format è£¡å¯ç”¨çš„åƒæ•¸å¦‚ä¸‹:
+	$NS		me çš„åå­—
+	$NO		victim çš„åå­—
+	$GS		me çš„ä»£åè©ž, ä¾æ€§åˆ¥ç‚ºä»–ã€å¥¹æˆ–å®ƒ
+	$GO		victim çš„ä»£åè©ž
 	
-	ÒªÊ¹ÓÃ emote º¯Êý, Äã±ØÐëÔÚÄãµÄ object ÖÐ
+	è¦ä½¿ç”¨ emote å‡½æ•¸, ä½ å¿…é ˆåœ¨ä½ çš„ object ä¸­
 	inherit "/std/message.c";
-	Èç¹ûÄãÏÈÇ°Ôø¾­ include <mudlib> µÄ»°, ÄãÒ²¿ÉÒÔÐ´³É:
+	å¦‚æžœä½ å…ˆå‰æ›¾ç¶“ include <mudlib> çš„è©±, ä½ ä¹Ÿå¯ä»¥å¯«æˆ:
 	inherit MESSAGE;
-	¸öÈË±È½ÏÍÆ¼öááÕß¡£
+	å€‹äººæ¯”è¼ƒæŽ¨è–¦å¾Œè€…ã€‚
                
 EXAMPLE
-	emote( "$NSÌ§Æð$GSµÄ½Å, Ïò$NOµÄÆ¨Æ¨ÖØÖØµØÌßÏÂÈ¥\n", ppla, 
+	emote( "$NSæŠ¬èµ·$GSçš„è…³, å‘$NOçš„å±å±é‡é‡åœ°è¸¢ä¸‹åŽ»\n", ppla, 
 			environment(ppla), pplb );
-	ppla ½«»á¿´µ½: ÄãÌ§ÆðÁËÄãµÄ½Å, Ïò pplb µÄÆ¨Æ¨ÖØÖØµØÌßÏÂÈ¥
-	pplb Ôò»á¿´µ½: ppla Ì§ÆðÁËËûµÄ½Å, ÏòÄãµÄÆ¨Æ¨ÖØÖØµØÌßÏÂÈ¥
-	Èç¹û ppla ÊÇÄÐµÄ»°, ·¿¼äÖÐµÄÆäËûÈËÔò»á¿´µ½: ppla Ì§ÆðÁËËûµÄ½Å, 
-		Ïò pplb µÄÆ¨¹ÉÖØÖØµØÌßÏÂÈ¥
+	ppla å°‡æœƒçœ‹åˆ°: ä½ æŠ¬èµ·äº†ä½ çš„è…³, å‘ pplb çš„å±å±é‡é‡åœ°è¸¢ä¸‹åŽ»
+	pplb å‰‡æœƒçœ‹åˆ°: ppla æŠ¬èµ·äº†ä»–çš„è…³, å‘ä½ çš„å±å±é‡é‡åœ°è¸¢ä¸‹åŽ»
+	å¦‚æžœ ppla æ˜¯ç”·çš„è©±, æˆ¿é–“ä¸­çš„å…¶ä»–äººå‰‡æœƒçœ‹åˆ°: ppla æŠ¬èµ·äº†ä»–çš„è…³, 
+		å‘ pplb çš„å±è‚¡é‡é‡åœ°è¸¢ä¸‹åŽ»
 	
 SEE ALSO
 	emote_message
@@ -51,7 +51,7 @@ SEE ALSO
 NAME
 	emote_message_me
 	emote_message_victim
-	emote_message_other - ½«Ò»¸ö¶¯×÷µÄÐðÊö×ª»»³ÉÊÊµ±µÄÎÄ×Ö
+	emote_message_other - å°‡ä¸€å€‹å‹•ä½œçš„æ•˜è¿°è½‰æ›æˆé©ç•¶çš„æ–‡å­—
 	
 SYNOPSIS
 	varargs string emote_message_me( string format, object me, 
@@ -61,23 +61,23 @@ SYNOPSIS
 	varargs string emote_message_other( string format, object me, 
 						object where, object victim);
 DESCRIPTION
-	Óë emote ÏàÍ¬, emote_message_xx »á½« format ÀïµÄ×Ö´®×öÊÊµ±µÄ
-	´ú»»¡£²»¹ý²¢²»»á½«Ñ¶Ï¢Ö±½Ó³öÈ¥, ¶øÊÇ×÷ÎªÒ»¸ö´«»ØÖµ, ÈÃºô½ÐËü
-	µÄÎ×Ê¦×Ô¼º´¦Àí¡£
-	emote_message_me Ëù´«»ØµÄÊÇÓÉ me Ëù»á¿´µ½Ñ¶Ï¢
-	emote_message_victim Ëù´«»ØµÄÔòÊÇÓÉ victim Ëù»á¿´µ½Ñ¶Ï¢
-	emote_message_other Ëù´«»ØµÄÔòÊÇÔÚ³¡µÄÅÔ¹ÛÕßËù»á¿´µ½Ñ¶Ï¢
+	èˆ‡ emote ç›¸åŒ, emote_message_xx æœƒå°‡ format è£¡çš„å­—ä¸²åšé©ç•¶çš„
+	ä»£æ›ã€‚ä¸éŽä¸¦ä¸æœƒå°‡è¨Šæ¯ç›´æŽ¥å‡ºåŽ», è€Œæ˜¯ä½œç‚ºä¸€å€‹å‚³å›žå€¼, è®“å‘¼å«å®ƒ
+	çš„å·«å¸«è‡ªå·±è™•ç†ã€‚
+	emote_message_me æ‰€å‚³å›žçš„æ˜¯ç”± me æ‰€æœƒçœ‹åˆ°è¨Šæ¯
+	emote_message_victim æ‰€å‚³å›žçš„å‰‡æ˜¯ç”± victim æ‰€æœƒçœ‹åˆ°è¨Šæ¯
+	emote_message_other æ‰€å‚³å›žçš„å‰‡æ˜¯åœ¨å ´çš„æ—è§€è€…æ‰€æœƒçœ‹åˆ°è¨Šæ¯
 	
-	ÓÐÊ±ºò, Ò»¸ö¶¯×÷µÄ¶ÔÏó¿ÉÄÜÓÐºÜ¶à¸ö¶ø·ÇÒ»¸ö, ´ËÊ± emote ¾ÍÎÞ
-	·¨Ê¹ÓÃ¡£Äã±ØÐë¶ÔÃ¿¸ö¶¯×÷µÄ¶ÔÏó×öÒ»´Î emote_message_victim()
-	ÒÔÆä´«»ØÖµ×ö tell_object() µÄ¶¯×÷²ÅÄÜµÃµ½ÕýÈ·µÄ½á¹û¡£
+	æœ‰æ™‚å€™, ä¸€å€‹å‹•ä½œçš„å°è±¡å¯èƒ½æœ‰å¾ˆå¤šå€‹è€Œéžä¸€å€‹, æ­¤æ™‚ emote å°±ç„¡
+	æ³•ä½¿ç”¨ã€‚ä½ å¿…é ˆå°æ¯å€‹å‹•ä½œçš„å°è±¡åšä¸€æ¬¡ emote_message_victim()
+	ä»¥å…¶å‚³å›žå€¼åš tell_object() çš„å‹•ä½œæ‰èƒ½å¾—åˆ°æ­£ç¢ºçš„çµæžœã€‚
 	
-	emote_message ÏµÁÐµÄº¯ÊýÒ²¿ÉÒÔÊ¡ÂÔµô where Óë victim, ²»¹ý
-	µ±ÄãÊ¡µô victim Ê±, emote_message_victim »á´«»Ø¿Õ×Ö´®¡£ÒòÎª
-	Ã»ÓÐ¶¯×÷µÄ¶ÔÏóÁË¡£
+	emote_message ç³»åˆ—çš„å‡½æ•¸ä¹Ÿå¯ä»¥çœç•¥æŽ‰ where èˆ‡ victim, ä¸éŽ
+	ç•¶ä½ çœæŽ‰ victim æ™‚, emote_message_victim æœƒå‚³å›žç©ºå­—ä¸²ã€‚å› ç‚º
+	æ²’æœ‰å‹•ä½œçš„å°è±¡äº†ã€‚
 	
-	ÁíÍâ, me Óë victim Á½¸ö±äÊý¿ÉÒÔ·ÅÈë¡¸·ÇÉúÎï¡¹µÄÎï¼þ, µ«ÊÇ´Ë
-	Ê± format ×Ö´®ÖÐÈôÓÐ$GS, $GO Á½¸ö²ÎÊý, ½á¹û½«ÎÞ·¨Ô¤ÁÏ¡£
+	å¦å¤–, me èˆ‡ victim å…©å€‹è®Šæ•¸å¯ä»¥æ”¾å…¥ã€Œéžç”Ÿç‰©ã€çš„ç‰©ä»¶, ä½†æ˜¯æ­¤
+	æ™‚ format å­—ä¸²ä¸­è‹¥æœ‰$GS, $GO å…©å€‹åƒæ•¸, çµæžœå°‡ç„¡æ³•é æ–™ã€‚
 	
 SEE ALSO
 	emote
@@ -100,72 +100,72 @@ varargs	void	step_room_msg( mixed room, string message, mixed exclude,
 				object me, object player);
 
 //VARIBLES
-mapping	gender = (["male" : "Ëû", "female" : "Ëý", "neuter" : "Ëü" ]);
+mapping	gender = (["male" : "ä»–", "female" : "å¥¹", "neuter" : "å®ƒ" ]);
 
 varargs	void	emote( string format, object me, object where, object victim)
 {
 	string	me_message, victim_message, other_message;
 	
 	if	(where && victim)	{
-//ÌîÈëÐÐ¶¯ÕßµÄÃû×Ö
-		me_message = replace_string( format, "$NS", "Äã");
+//å¡«å…¥è¡Œå‹•è€…çš„åå­—
+		me_message = replace_string( format, "$NS", "ä½ ");
 		victim_message = replace_string( format, "$NS", me->query("c_name") );
 		other_message = replace_string( format, "$NS", me->query("c_name") );
-//ÌîÈëÐÐ¶¯¶ÔÏóµÄÃû×Ö
+//å¡«å…¥è¡Œå‹•å°è±¡çš„åå­—
 		me_message = replace_string( me_message, "$NO", victim->query("c_name") );
-		victim_message = replace_string( victim_message, "$NO", "Äã");
+		victim_message = replace_string( victim_message, "$NO", "ä½ ");
 		other_message = replace_string( other_message, "$NO", victim->query("c_name") );
-//ÌîÈëÐÐ¶¯ÕßµÄÐÔ±ð
-		me_message = replace_string( me_message, "$GS", "Äã" );
+//å¡«å…¥è¡Œå‹•è€…çš„æ€§åˆ¥
+		me_message = replace_string( me_message, "$GS", "ä½ " );
 		victim_message = replace_string( victim_message, "$GS", gender[me->query("gender")] );
 		other_message = replace_string( other_message, "$GS", gender[me->query("gender")] );
-//ÌîÈë¶¯×÷¶ÔÏóµÄÐÔ±ð
+//å¡«å…¥å‹•ä½œå°è±¡çš„æ€§åˆ¥
 		me_message = replace_string( me_message, "$GO", gender[victim->query("gender")] );
 		victim_message = replace_string( victim_message, "$GO", gender[victim->query("gender")] );
-		other_message = replace_string( other_message, "$GO", "Äã" );
-//·¢ËÍÑ¶Ï¢¸øÔÚ³¡µÄÈË
+		other_message = replace_string( other_message, "$GO", "ä½ " );
+//ç™¼é€è¨Šæ¯çµ¦åœ¨å ´çš„äºº
 		tell_object( me, me_message );
 		tell_object( victim, victim_message );
 		tell_room( where, other_message, ({me, victim}) );
 	}
 	else if (!victim)
 	{
-//ÌîÈëÐÐ¶¯ÕßµÄÃû×Ö
-		me_message = replace_string( format, "$NS", "Äã");
+//å¡«å…¥è¡Œå‹•è€…çš„åå­—
+		me_message = replace_string( format, "$NS", "ä½ ");
 		other_message = replace_string( format, "$NS", me->query("c_name") );
-//ÌîÈëÐÐ¶¯ÕßµÄÐÔ±ð
-		me_message = replace_string( me_message, "$GS", "Äã" );
+//å¡«å…¥è¡Œå‹•è€…çš„æ€§åˆ¥
+		me_message = replace_string( me_message, "$GS", "ä½ " );
 		other_message = replace_string( other_message, "$GS", gender[me->query("gender")] );
-//·¢ËÍÑ¶Ï¢¸øÔÚ³¡µÄÈË
+//ç™¼é€è¨Šæ¯çµ¦åœ¨å ´çš„äºº
 		if (!where)	where = environment(me);
 		tell_object( me, me_message );
 		tell_room( where, other_message, me );
 	}
 }
 
-// emote_message_me: ´«»ØÒ»¸ö¸ø¶¯×÷Õß±¾ÉíµÄÑ¶Ï¢
+// emote_message_me: å‚³å›žä¸€å€‹çµ¦å‹•ä½œè€…æœ¬èº«çš„è¨Šæ¯
 varargs	string	emote_message_me( string format, object me, object where, object victim)
 {
 	string	me_message;
-	mapping	gender = (["male" : "Ëû", "female" : "Ëý", "netural" : "Ëü" ]);
+	mapping	gender = (["male" : "ä»–", "female" : "å¥¹", "netural" : "å®ƒ" ]);
 	
 	
 	if (!format || !me) return "";
 	if	(where && victim)	{
-		me_message = replace_string( format, "$NS", "Äã");
+		me_message = replace_string( format, "$NS", "ä½ ");
 		me_message = replace_string( me_message, "$NO", victim->query("c_name") );
-		me_message = replace_string( me_message, "$GS", "Äã" );
+		me_message = replace_string( me_message, "$GS", "ä½ " );
 		me_message = replace_string( me_message, "$GO", gender[victim->query("gender")] );
 	}
 	else if (!victim)
 	{
-		me_message = replace_string( format, "$NS", "Äã");
-		me_message = replace_string( me_message, "$GS", "Äã" );
+		me_message = replace_string( format, "$NS", "ä½ ");
+		me_message = replace_string( me_message, "$GS", "ä½ " );
 	}
 	return me_message;
 }
 
-// emote_message_victim: ´«»ØÒ»¸ö¸ø¶¯×÷¶ÔÏóµÄÑ¶Ï¢
+// emote_message_victim: å‚³å›žä¸€å€‹çµ¦å‹•ä½œå°è±¡çš„è¨Šæ¯
 varargs	string	emote_message_victim( string format, object me, object where, object victim)
 {
 	string	victim_message;
@@ -173,7 +173,7 @@ varargs	string	emote_message_victim( string format, object me, object where, obj
 	if (!format || !me) return "";	
 	if	(where && victim)	{
 		victim_message = replace_string( format, "$NS", me->query("c_name") );
-		victim_message = replace_string( victim_message, "$NO", "Äã");
+		victim_message = replace_string( victim_message, "$NO", "ä½ ");
 		victim_message = replace_string( victim_message, "$GS", gender[me->query("gender")] );
 		victim_message = replace_string( victim_message, "$GO", gender[victim->query("gender")] );
 	}
@@ -184,7 +184,7 @@ varargs	string	emote_message_victim( string format, object me, object where, obj
 	return victim_message;
 }
 
-// emote_message_other: ´«»ØÒ»¸ö¸øÅÔ¹ÛÕßµÄÑ¶Ï¢
+// emote_message_other: å‚³å›žä¸€å€‹çµ¦æ—è§€è€…çš„è¨Šæ¯
 varargs	string	emote_message_other( string format, object me, object where, object victim)
 {
 	string	other_message;
@@ -194,7 +194,7 @@ varargs	string	emote_message_other( string format, object me, object where, obje
 		other_message = replace_string( format, "$NS", me->query("c_name") );
 		other_message = replace_string( other_message, "$NO", victim->query("c_name") );
 		other_message = replace_string( other_message, "$GS", gender[me->query("gender")] );
-		other_message = replace_string( other_message, "$GO", "Äã" );
+		other_message = replace_string( other_message, "$GO", "ä½ " );
 	}
 	else if (!victim)
 	{

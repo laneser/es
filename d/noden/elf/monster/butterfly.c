@@ -6,17 +6,17 @@ void create ()
 {               
        ::create();
        set_level(1);
-       set_name( "butterfly", "ºûµû" );
-        set_short( "ºûµû" );
-       set("unit","Ö»");
+       set_name( "butterfly", "è´è¶" );
+        set_short( "è´è¶" );
+       set("unit","åª");
         set_long(
-       "ÕâÊÇÒ»Ö»ÃÀÀöµÄÀ¥³æ£¬´Ë¿ÌÕıÔÚ»¨¶äÉÏÇá¿ìµÄ·ÉÎèÖø\n"
+       "é€™æ˜¯ä¸€éš»ç¾éº—çš„æ˜†èŸ²ï¼Œæ­¤åˆ»æ­£åœ¨èŠ±æœµä¸Šè¼•å¿«çš„é£›èˆè‘—\n"
                         );
        set_perm_stat("dex", 3);
        set ("natural_weapon_class1", 5);
        set ("natural_min_damage1",1);
        set ("natural_max_damage1", 3);
        set ("natural_armor_class", 5);
-       set_c_verbs(({"%sÓÃËüµÄ³á°òÏò%sÆË»÷"}));
-       set_c_limbs(({"ÉíÌå","Í·²¿"}));
+       set_c_verbs(({"%sç”¨å®ƒçš„ç¿…è†€å‘%sæ’²æ“Š"}));
+       set_c_limbs(({"èº«é«”","é ­éƒ¨"}));
 }

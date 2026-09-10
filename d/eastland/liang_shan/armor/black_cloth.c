@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("black cloth","ÔíÖ±×º");
+    set_name("black cloth","çš‚ç›´ç¶´");
     add("id",({"cloth"}) );
-    set_short( "black cloth","ÔíÖ±×º");
+    set_short( "black cloth","çš‚ç›´ç¶´");
 	set_long(
 		"This is a black cloth \n",
-		"ÕâÊÇÒ»¼şÊ½Ñù¼òµ¥µÄºÚÒÂ£¬Í¨³£ÊÇ×öĞ¡ÉúÒâµÄÈËÔÚ´©£®\n"
+		"é€™æ˜¯ä¸€ä»¶å¼æ¨£ç°¡å–®çš„é»‘è¡£ï¼Œé€šå¸¸æ˜¯åšå°ç”Ÿæ„çš„äººåœ¨ç©¿ï¼\n"
 		
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 60 );
 	set( "type", "body" );
 	set( "armor_class", 15 );

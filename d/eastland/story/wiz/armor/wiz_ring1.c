@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("The Archmaster's ring","»¤¹úÊ¦¡õ½ä");
+        set_name("The Archmaster's ring","è­·åœ‹å¸«â–¡æˆ’");
         add( "id", ({ "ring" }) );
-        set_short( "»¤¹úÊ¦¡õ½ä");
+        set_short( "è­·åœ‹å¸«â–¡æˆ’");
         set_long(@C_LONG
-Ò»Ö»¾§Ó¨ÌŞÍ¸²»Ê±ÉÁÒ«ÖøÎå²ÊÏéÔÆµÄ½äÖ¸¡£
+ä¸€éš»æ™¶ç‘©å‰”é€ä¸æ™‚é–ƒè€€è‘—äº”å½©ç¥¥é›²çš„æˆ’æŒ‡ã€‚
 C_LONG
         );
-        set( "unit","Ö»");
+        set( "unit","åª");
         set( "type", "finger" );
         set( "material","element");
         set( "defense_bonus", 5 );

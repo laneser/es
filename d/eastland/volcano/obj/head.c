@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "head", "ÈËÍ·" );
-	set_short( "ÈËÍ·" );
+	set_name( "head", "äººé ­" );
+	set_short( "äººé ­" );
 	set_long(
-		"ÕâÊÇÒ»¸öÃ°ÏÕÕßµÄÍ·¡£\n"
+		"é€™æ˜¯ä¸€å€‹å†’éšªè€…çš„é ­ã€‚\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "value", ({ 1, "silver" }) );
         call_out("disappear",300,this_object());
@@ -21,6 +21,6 @@ void disappear(object ob)
   object owner;
   owner=environment(this_object());
   if (!owner)
-    printf("Õâ¸îÏÂÀ´µÄÈËÍ·ÒòÊ±¼ä¶ø·ç»¯µôÁË¡£\n"); 
+    printf("é€™å‰²ä¸‹ä¾†çš„äººé ­å› æ™‚é–“è€Œé¢¨åŒ–æ‰äº†ã€‚\n"); 
   remove(); 
 }

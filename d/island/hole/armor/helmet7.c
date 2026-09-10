@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Holy helm","Ê¥¹Ú" );
+	set_name( "Holy helm","è–å† " );
 	add( "id", ({ "helm","helmet" }) );
-	set_short( "Ê¥¹Ú" );
+	set_short( "è–å† " );
 	set_long(@LONG
-	µñ¿ÌÀú´úÊ¥ÕßÖ®ÃûµÄÍ·¹Ú£¬´÷ÔÚÍ·ÉÏ¿ÉÒÔÊÜµ½
-	Ê¥ÕßµÄ±£»¤¡£
+	é›•åˆ»æ­·ä»£è–è€…ä¹‹åçš„é ­å† ï¼Œæˆ´åœ¨é ­ä¸Šå¯ä»¥å—åˆ°
+	è–è€…çš„ä¿è­·ã€‚
 LONG
 		);
-	set( "unit","¶¥" );
+	set( "unit","é ‚" );
 	set( "weight",50 );
 	set( "type","head" );
 	set( "material","light_metal" );

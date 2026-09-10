@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("battle mirror", "»¤ĞÄ¾µ");
+        set_name("battle mirror", "è­·å¿ƒé¡");
         add( "id", ({ "mirror" }) );
-        set_short("battle mirror", "»¤ĞÄ¾µ");
+        set_short("battle mirror", "è­·å¿ƒé¡");
         set_long(
                 "a mirror for knights .\n",
-                "¹ÒÔÚĞØÇ°·ÀÓù¹¥»÷µÄĞ¡¾µ×Ó£¬ËãÊÇ»¤Éí·ûµÄÒ»ÖÖ...\n"
+                "æ›åœ¨èƒ¸å‰é˜²ç¦¦æ”»æ“Šçš„å°é¡å­ï¼Œç®—æ˜¯è­·èº«ç¬¦çš„ä¸€ç¨®...\n"
         );
-        set( "unit", "¿é");
+        set( "unit", "å¡Š");
         set( "type", "misc" );
         set( "material", "light_metal");
         set( "armor_class", 0);

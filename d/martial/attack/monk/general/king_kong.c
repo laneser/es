@@ -1,4 +1,4 @@
-// ÉÙÁÖËÂÆßÊ®¶þ¾ø¼¼¡¸½ð¸ÕÕÈ·¨¡¹
+// å°‘æž—å¯ºä¸ƒåäºŒçµ•æŠ€ã€Œé‡‘å‰›æ–æ³•ã€
 inherit "/d/martial/attack/modify";
 
 void special_attack(object ob1, object victim)
@@ -9,18 +9,18 @@ void special_attack(object ob1, object victim)
   if ( !ob1->query_attackers() || !victim )
        return ;
   tell_object( victim,
-       sprintf("%s´óºÈÒ»Éù£¬Â¶³ö½ð¸Õ·¨Ïñ£¬¶ÔÄãÖØÖØÒ»»÷£¬ÁîÄãÌÛÍ´ÄÑµ±\n\n",(string)ob1->query("c_name")) );
+       sprintf("%så¤§å–ä¸€è²ï¼Œéœ²å‡ºé‡‘å‰›æ³•åƒï¼Œå°ä½ é‡é‡ä¸€æ“Šï¼Œä»¤ä½ ç–¼ç—›é›£ç•¶\n\n",(string)ob1->query("c_name")) );
                            
   tell_room( environment(ob1),
-       sprintf("\n\n%s´óºÈÒ»Éù£¬Â¶³ö½ð¸Õ·¨Ïñ£¬ÕòÉãµ±³¡£¬ºáÕÈÒ»»Ó½«%s»÷µÃÒ¡Ò¡»Î»Î£¬Õ¾²»×¡½Å¡£\n\n",(string)ob1->query("c_name"),(string)victim->query("c_name")),
+       sprintf("\n\n%så¤§å–ä¸€è²ï¼Œéœ²å‡ºé‡‘å‰›æ³•åƒï¼ŒéŽ®æ”ç•¶å ´ï¼Œæ©«æ–ä¸€æ®å°‡%sæ“Šå¾—æ–æ–æ™ƒæ™ƒï¼Œç«™ä¸ä½è…³ã€‚\n\n",(string)ob1->query("c_name"),(string)victim->query("c_name")),
        ({ victim, ob1 }) );
                             
   tell_object( ob1,
-       sprintf("\n\nÄãÔËÆð½ð¸ÕÕÈ·¨µÄ¾ø¼¼£¬½«%sÒ»»÷·É³ö¡£\n\n",(string)victim->query("c_name")) );
+       sprintf("\n\nä½ é‹èµ·é‡‘å‰›æ–æ³•çš„çµ•æŠ€ï¼Œå°‡%sä¸€æ“Šé£›å‡ºã€‚\n\n",(string)victim->query("c_name")) );
 
   victim->block_attack(2);                          
   victim->set_temp("msg_stop_attack",
-          "( ÄãÊÜµ½½ð¸ÕÕÈ·¨µÄÕðÌÀ£¬Ò»Ê±ÎÞ·¨¶¯µ¯£¡ )\n)" );
+          "( ä½ å—åˆ°é‡‘å‰›æ–æ³•çš„éœ‡æ¹¯ï¼Œä¸€æ™‚ç„¡æ³•å‹•å½ˆï¼ )\n)" );
   victim->receive_damage(damage);
 
   if (wizardp(ob1))
@@ -41,11 +41,11 @@ varargs int can_use(object me, object victim, object weapon)
 }
 
 string *attack_msg = ({
-        "Ì¤ÉÏÒ»²½£¬%sÏò%s»÷È¥£¬¾¢ÊÆÊ®·ÖÇ¿¾¢",
-        "Ê¹³öÒ»ÕÐ¡ºÉ¨µ´ÈºÄ§¡»£¬%sÂÓµØ¶ø³ö£¬Ö±É¨%s",
-        "»Ó¶¯%s£¬Ò»Ê±³¾ÍÁ·ÉÑï£¬ÈýµÀÕÈÓ°Í¸³ö£¬ÆËÏò%s",
-        "´óºÈÒ»Éù£¬%sÖÐ¹¬Ö±Èë£¬ÕÈ¼â´øÖøÒ»Õó¾¢·ç£¬¹¥Ïò%s",
-        "Ë«ÊÖ³Ö%sÊ¹³ö×îÇ¿Ò»Ê½¡º½ð¸Õ·üÄ§¡»£¬ÄÚÁ¦ÈçÅÅÉ½µ¹º£°ã×ÔÕÈÍ·Ó¿Ïò%s",
+        "è¸ä¸Šä¸€æ­¥ï¼Œ%så‘%sæ“ŠåŽ»ï¼Œå‹å‹¢ååˆ†å¼·å‹",
+        "ä½¿å‡ºä¸€æ‹›ã€ŽæŽƒè•©ç¾¤é­”ã€ï¼Œ%sæŽ åœ°è€Œå‡ºï¼Œç›´æŽƒ%s",
+        "æ®å‹•%sï¼Œä¸€æ™‚å¡µåœŸé£›æšï¼Œä¸‰é“æ–å½±é€å‡ºï¼Œæ’²å‘%s",
+        "å¤§å–ä¸€è²ï¼Œ%sä¸­å®®ç›´å…¥ï¼Œæ–å°–å¸¶è‘—ä¸€é™£å‹é¢¨ï¼Œæ”»å‘%s",
+        "é›™æ‰‹æŒ%sä½¿å‡ºæœ€å¼·ä¸€å¼ã€Žé‡‘å‰›ä¼é­”ã€ï¼Œå…§åŠ›å¦‚æŽ’å±±å€’æµ·èˆ¬è‡ªæ–é ­æ¹§å‘%s",
 });
 
 int *hits = ({ 30, 35, 30, 45, 50 });
@@ -87,6 +87,6 @@ varargs string query_attack_msg(object me, object victim, int type)
 {
 	if( !type ) return 0;
         if( (int)me->query("force_points") < query_need_fp() )
-        return attack_msg[random(5)]+"µ«ÊÇ³öÊÖÊ±ÏÔµÃÄÚÁ¦²»×ã";
+        return attack_msg[random(5)]+"ä½†æ˜¯å‡ºæ‰‹æ™‚é¡¯å¾—å…§åŠ›ä¸è¶³";
         return attack_msg[random(5)];
 }

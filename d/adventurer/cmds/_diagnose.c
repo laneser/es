@@ -13,15 +13,15 @@ int cmd_diagnose(string arg)
  
  
         if( this_player()->query_level() < 5 )
-                return notify_fail("Äãµ½µ×Ïë¸ÉÂïÀ²?\n");
+                return notify_fail("ä½ åˆ°åº•æƒ³å¹¹å˜›å•¦?\n");
         if ( !arg || arg == "" ||
              !(dest = present(arg,environment(this_player()))) ) 
-                return notify_fail("ÄãÒª°ïË­Õï¶Ï ?\n");
+                return notify_fail("ä½ è¦å¹«èª°è¨ºæ–· ?\n");
  
         if ( ! living(dest) )
-                return notify_fail("Õâ¸ö¶«Î÷Ã»ÓĞÉúÃü¡£\n");
+                return notify_fail("é€™å€‹æ±è¥¿æ²’æœ‰ç”Ÿå‘½ã€‚\n");
         if ( (skill = this_player()->query_skill("diagnose")) == 0 ) 
-                return notify_fail ("Äã²¢Ã»ÓĞÑ§¹ıÕï¶ÏµÄ¼¼ÄÜ¡£\n");
+                return notify_fail ("ä½ ä¸¦æ²’æœ‰å­¸éè¨ºæ–·çš„æŠ€èƒ½ã€‚\n");
         conds = (mapping)dest->query("conditions");
         acups = (mapping)dest->query_temp("acup_effect");
         cond_str = "";
@@ -34,7 +34,7 @@ int cmd_diagnose(string arg)
                 }
  
         }
-        if ( cond_str == "" ) cond_str = "Õı³£";
+        if ( cond_str == "" ) cond_str = "æ­£å¸¸";
         acup_str = "";
         if ( sizeof(acups) ) {
                 acup_name = keys(acups);
@@ -45,13 +45,13 @@ int cmd_diagnose(string arg)
                 }
  
         }
-        if ( acup_str == "" ) acup_str = "Ã»ÓĞ°ë¸ö";
+        if ( acup_str == "" ) acup_str = "æ²’æœ‰åŠå€‹";
  
         hp = dest->query("hit_points");
         max_hp = dest->query("max_hp");
-        if(!max_hp) return notify_fail("Õâ¸öÉúÎïÓĞÎÊÌâ,ÇëÁ¬ÂçÎ×Ê¦¡£\n") ;
+        if(!max_hp) return notify_fail("é€™å€‹ç”Ÿç‰©æœ‰å•é¡Œ,è«‹é€£çµ¡å·«å¸«ã€‚\n") ;
  
-//   ¼¼ÄÜ³¬¹ı 80 ¾Í²»ÒÔ 5 Îª½×²ã±íÊ¾          
+//   æŠ€èƒ½è¶…é 80 å°±ä¸ä»¥ 5 ç‚ºéšå±¤è¡¨ç¤º          
         if( skill < 80 )       
           { 
             referance = (20 * hp) / max_hp;
@@ -60,17 +60,17 @@ int cmd_diagnose(string arg)
         else
             referance = (hp * 100) / max_hp  ;
         
-//   ¼ÓÈëÎó²îÖµ        
+//   åŠ å…¥èª¤å·®å€¼        
         diff = 51 - skill/2 ;
         diff = random(diff);
  
         if(random(2)==1)
-          { der = "¸º" ; 
+          { der = "è² " ; 
             referance -= diff ; 
            }
         else
           {
-            der = "Õı" ;
+            der = "æ­£" ;
             referance += diff ;
            } 
            
@@ -85,20 +85,20 @@ int cmd_diagnose(string arg)
                referance = 0 ;  
            }
         if(wizardp(this_player()))
-           write( sprintf("Îó²îÔ¼Îª%s %d %% \n",der,diff) ) ;
+           write( sprintf("èª¤å·®ç´„ç‚º%s %d %% \n",der,diff) ) ;
  
         if( dest != this_player())
           {
             tell_object(dest,
-                sprintf("%sÈÆÖøÄã»ÎÁËÒ»È¦, ×ìÀï²»ÖªµÀàÖ¹¾Ğ©Ê²÷á¶«Î÷¡£\n",
+                sprintf("%sç¹è‘—ä½ æ™ƒäº†ä¸€åœˆ, å˜´è£¡ä¸çŸ¥é“å˜€å’•äº›ä»€éº¼æ±è¥¿ã€‚\n",
                    this_player()->query("c_name"))
                    );
            }
         else
-            return notify_fail("ÒªÖªµÀ×Ô¼ºµÄ×´¿ö, ´ò Score ¾ÍºÃÀ² !!\n") ;          
+            return notify_fail("è¦çŸ¥é“è‡ªå·±çš„ç‹€æ³, æ‰“ Score å°±å¥½å•¦ !!\n") ;          
  
-        write( sprintf( "%sÏÖÔÚµÄÌåÁ¦Ô¼Ê£ÏÂ%d %% , Ä¿Ç°µÄÉíÌå×´¿ö %s \n"
-                        "ÕıÔÚ×÷ÓÃÖĞµÄÕë¾ÄĞ§¹û: %s¡£\n"
+        write( sprintf( "%sç¾åœ¨çš„é«”åŠ›ç´„å‰©ä¸‹%d %% , ç›®å‰çš„èº«é«”ç‹€æ³ %s \n"
+                        "æ­£åœ¨ä½œç”¨ä¸­çš„é‡ç¸æ•ˆæœ: %sã€‚\n"
                 ,dest->query("c_name"),referance,cond_str,acup_str));
         return 1;
 }

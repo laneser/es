@@ -5,15 +5,15 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "Personel Room", "ÈËÊÂÊÒ" );
+	set_short( "Personel Room", "äººäº‹å®¤" );
 	set_long(
 			"This is the Personel Room, for announcing promotion, demotion,\n"
 		"sponsoring news. The board is for posting news only, no flame here\n"
 		"please. If you have opinions, please contact to a archwizard instead.\n"
 		"West of here is the Archwizard Office.\n",
-			"ÕâÀïÊÇÈËÊÂÊÒ£¬ÓÃÀ´·¢²¼ÓĞ¹ØÎ×Ê¦ÉıÖ°¡¢½µÖ°¡¢ÈÎÓÃµÈÏûÏ¢¡£Õâ¸ö\n"
-		"ÁôÑÔ°å´¿×÷´óÎ×Ê¦·¢²¼ÏûÏ¢ÓÃ£¬Èç¹û¶ÔÈËÊÂÒì¶¯ÓĞÒâ¼û»ò¿´·¨£¬Çëµ±Ãæ\n"
-		"ÕÒ´óÎ×Ê¦Ì¸¡£ÍùÎ÷¿ÉÒÔ»Øµ½´óÎ×Ê¦°ì¹«ÊÒ¡£\n"
+			"é€™è£¡æ˜¯äººäº‹å®¤ï¼Œç”¨ä¾†ç™¼å¸ƒæœ‰é—œå·«å¸«å‡è·ã€é™è·ã€ä»»ç”¨ç­‰æ¶ˆæ¯ã€‚é€™å€‹\n"
+		"ç•™è¨€æ¿ç´”ä½œå¤§å·«å¸«ç™¼ä½ˆæ¶ˆæ¯ç”¨ï¼Œå¦‚æœå°äººäº‹ç•°å‹•æœ‰æ„è¦‹æˆ–çœ‹æ³•ï¼Œè«‹ç•¶é¢\n"
+		"æ‰¾å¤§å·«å¸«è«‡ã€‚å¾€è¥¿å¯ä»¥å›åˆ°å¤§å·«å¸«è¾¦å…¬å®¤ã€‚\n"
 	);
 	set( "light", 1 );
 	set( "exits", ([

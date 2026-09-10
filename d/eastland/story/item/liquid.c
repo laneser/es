@@ -6,14 +6,14 @@ inherit OBJECT;
 int left_times=3;
 void create()
 {
-        set_name("poison liquid","¡¸ÎÄÖë¡¹¶¾Òº");
+        set_name("poison liquid","ã€Œæ–‡è››ã€æ¯’æ¶²");
         add( "id" , ({ "liquid" }) );
-        set_short( "¡¸ÎÄÖë¡¹¶¾Òº");
+        set_short( "ã€Œæ–‡è››ã€æ¯’æ¶²");
         set_long(@C_LONG
-Ò»Ð©ÓÉ¡¸ÎÄÖë¡¹ÉíÉÏ´ÙÉãÈ¡³öÀ´µÄ¶¾Òº¡£¾ÝËµ£¬Õâ¶¾ÒºÄÜ½â°Ù¶¾£¬»òÐíÄã¿ÉÒÔºÈºÈ
-¿´(drink_liquid)ÒÔÖÎÄãÉíÉÏËùÖÐµÄ¶¾¡£
+ä¸€äº›ç”±ã€Œæ–‡è››ã€èº«ä¸Šä¿ƒæ”å–å‡ºä¾†çš„æ¯’æ¶²ã€‚æ“šèªªï¼Œé€™æ¯’æ¶²èƒ½è§£ç™¾æ¯’ï¼Œæˆ–è¨±ä½ å¯ä»¥å–å–
+çœ‹(drink_liquid)ä»¥æ²»ä½ èº«ä¸Šæ‰€ä¸­çš„æ¯’ã€‚
 C_LONG  );      
-        set("unit","¶Ñ");
+        set("unit","å †");
         set("weight",10);
         set("drink_liquid",1);
         set("no_sale",1);
@@ -29,16 +29,16 @@ int do_drink(string arg)
     player=this_player();
     left_times--;
     if( !player->query("conditions/simple_poison") ) {
-       write("°¦Ñ½£¬ÄãºÈÁË¶¾ÒºÖ®áá¾ÓÈ»ÖÐ¶¾ÁË£¡\n");
+       write("å”‰å‘€ï¼Œä½ å–äº†æ¯’æ¶²ä¹‹å¾Œå±…ç„¶ä¸­æ¯’äº†ï¼\n");
        (CONDITION_PREFIX + "simple_poison")->apply_effect( player, 10 , 5 );
        return 1;
     }
     tell_object( player, 
-       "ÄãºÈÏÂ¡¸ÎÄÖë¡¹¶¾ÒºÖ®áá£¬ÓÉì¶ÒÔ¶¾¹¥¶¾£¬Ë²¼äÁîÄãËùÖÐµÄ¶¾ÍêÈ«±»½â³ýÁË£¡\n");
+       "ä½ å–ä¸‹ã€Œæ–‡è››ã€æ¯’æ¶²ä¹‹å¾Œï¼Œç”±æ–¼ä»¥æ¯’æ”»æ¯’ï¼Œçž¬é–“ä»¤ä½ æ‰€ä¸­çš„æ¯’å®Œå…¨è¢«è§£é™¤äº†ï¼\n");
     SIMPLE_POISON->remove_effect(player);
     player->add("hit_points",-10);
     if (left_times<0) {
-       write("µ±ÄãºÈÍêÕâÒ»¿ÚÊ±£¬È´·¢ÏÖÒÑ¾­Ã»ÓÐÊ£ÏÂÀ´µÄ¶¾ÒºÁË£¡\n");
+       write("ç•¶ä½ å–å®Œé€™ä¸€å£æ™‚ï¼Œå»ç™¼ç¾å·²ç¶“æ²’æœ‰å‰©ä¸‹ä¾†çš„æ¯’æ¶²äº†ï¼\n");
        this_object()->remove();
     }
     return 1;

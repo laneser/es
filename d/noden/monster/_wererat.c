@@ -4,10 +4,10 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(3);
-	ob->set_name( "wererat", "鼠人" );
-   ob->set_short( "鼠人" );
+	ob->set_name( "wererat", "榧犱汉" );
+   ob->set_short( "榧犱汉" );
 	ob->set_long(
-		"这家伙长得一副獐头鼠目的样子，身上长满棕黑色的毛。\n"
+		"閫欏偄浼欓暦寰椾竴鍓崘闋紶鐩殑妯ｅ瓙锛岃韩涓婇暦婊挎榛戣壊鐨勬瘺銆俓n"
 	);
 	ob->set( "gender", "male" );
 	ob->set( "alignment", -400 );

@@ -6,16 +6,16 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name("guardian of auction Co.", "������˾����");
+	set_name("guardian of auction Co.", "拍賣公司守衛");
         add ("id", ({ "guard","guardian","troll" }) );
-	set_short( "������˾����");
+	set_short( "拍賣公司守衛");
 	set_long(@LONG
-�㿴��һ���Ӵ�Ĺֺ�����Ҫ���ɣ������Ǵ�˵�еĹ������ˡ�������˾�ص�
-ʹ��ǿ���ħ����ħ������ٻ�������Ϊ������˾�ػ��Ӵ�ĲƸ���ͷ�Լ򵥵���
-ʮ�־���������ǧ��Ҫ�������⣬��Ϊ��ֻҪ����һ���ƣ��Ϳ��ܰ����⡣
+你看到一個龐大的怪漢，不要懷疑，他就是傳說中的怪力巨人。拍賣公司特地
+使用強大的魔法從魔界把他召喚出來，為拍賣公司守護龐大的財富，頭腦簡單的他
+十分盡責，所以你千萬不要打歪主意，因為他只要隨手一巴掌，就可能把你打扁。
 LONG
 	);
-	set( "unit", "��" );
+	set( "unit", "個" );
 	set( "alignment", -600 );
 	set_perm_stat( "str",30);
 	set_perm_stat( "dex", 24 );
@@ -40,6 +40,6 @@ void die()
 	killer->add("wealth/silver",money);
 	environment(this_object())->delete("money");
 	::die(1);
-	tell_object(killer,"���������ᣬ��Ͽ��������������Ǯ ....\n"
-		"��õ��� "+money+" ö���ҡ�\n");
+	tell_object(killer,"打死守衛後，你趕快搜括保險箱裡的錢 ....\n"
+		"你得到了 "+money+" 枚銀幣。\n");
 }

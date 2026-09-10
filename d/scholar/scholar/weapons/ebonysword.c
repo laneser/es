@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "Ebony Sword", "½¹éä½£" );
+	set_name( "Ebony Sword", "ç„¦æ®¤åŠ" );
 	add( "id", ({ "sword" }) );
-	set_short( "Ebony Sword", "½¹éä½£" );
+	set_short( "Ebony Sword", "ç„¦æ®¤åŠ" );
 	set_long(
 		"You see a black longsword with a smell of burning spices.\n",
-		"ÕâÊÇÒ»°ÑÍ¨Ìå³ÊÄ«ºÚÉ«µÄ½££¬Äã°Ñ½£ÈĞÏòÖøÁÁ¹â´¦Ò»ÕÕ£¬¾¹ÊÇ°ëµã\n"
-		"¹âÔóÒ²Ã»ÓĞ£¬ÈÔÊÇÄ«É«Ò»Æ¬¡£ÄãÒşÔ¼¿ÉÒÔĞáµ½½£ÉíÉ¢·¢³öÒ»¹ÉÉÕ°¬\n"
-		"²İµÄ½¹Î¶¡£\n"
+		"é€™æ˜¯ä¸€æŠŠé€šé«”å‘ˆå¢¨é»‘è‰²çš„åŠï¼Œä½ æŠŠåŠåˆƒå‘è‘—äº®å…‰è™•ä¸€ç…§ï¼Œç«Ÿæ˜¯åŠé»\n"
+		"å…‰æ¾¤ä¹Ÿæ²’æœ‰ï¼Œä»æ˜¯å¢¨è‰²ä¸€ç‰‡ã€‚ä½ éš±ç´„å¯ä»¥å—…åˆ°åŠèº«æ•£ç™¼å‡ºä¸€è‚¡ç‡’è‰¾\n"
+		"è‰çš„ç„¦å‘³ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 60 );
 	setup_weapon( "longblade", 30, 24, 30 );
 	set( "bleeding", 10 );

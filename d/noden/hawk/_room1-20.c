@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("С��");
+	ob->set_short("小屋");
 	ob->set_long( @LONG_DESCRIPTION
-����һ��װ�κܼ�ª��С�ݣ�������ɨ����Ǭ���ģ����Ұ���Ҳ����
-����ģ����������ס����һλ�������ʵ���ࡡ�
+這是一間裝飾很簡陋的小屋，不過打掃的滿乾淨的，而且擺設也滿有
+格調的，或許在這居住的是一位很有氣質的人唷。
 LONG_DESCRIPTION
 	);
 

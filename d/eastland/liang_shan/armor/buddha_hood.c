@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("buddha hood", "ÂéÂŞ¡õ×Ö¶¥½í");
+        set_name("buddha hood", "éº»ç¾…â–¡å­—é ‚å·¾");
         add( "id", ({ "hood" }) );
-        set_short( "buddha hood", "ÂéÂŞ¡õ×Ö¶¥½í");
+        set_short( "buddha hood", "éº»ç¾…â–¡å­—é ‚å·¾");
         set_long(
                 "A hood with a buddha mark .\n",
-                "ÕâÊÇÒ»¶¥ÂéÉ´½í£¬ÉÏÓĞÒ»¸öºìÉ«µÄ¡õ×Ö£¬¾İËµ¿ÉÒÔÑ¹ÖÆÌåÄÚ·è¿ñµÄ \n"
-                "ÊŞĞÔ£®ËùÒÔËÎ½­ÌØµØ½«ËüÉÍ¸øÀîåÓ£®\n"
+                "é€™æ˜¯ä¸€é ‚éº»ç´—å·¾ï¼Œä¸Šæœ‰ä¸€å€‹ç´…è‰²çš„â–¡å­—ï¼Œæ“šèªªå¯ä»¥å£“åˆ¶é«”å…§ç˜‹ç‹‚çš„ \n"
+                "ç¸æ€§ï¼æ‰€ä»¥å®‹æ±Ÿç‰¹åœ°å°‡å®ƒè³çµ¦æé€µï¼\n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "cloth");
         set( "armor_class", 6 );

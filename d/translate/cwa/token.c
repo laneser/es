@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()  {
 	seteuid(getuid());
-	set_name("token","È¨ÕÈ");
-	set_short("Token of CWA elder","É«ÀÇĞ­»áÈ¨ÕÈ");
+	set_name("token","æ¬Šæ–");
+	set_short("Token of CWA elder","è‰²ç‹¼å”æœƒæ¬Šæ–");
 	set_long(
 "",
-"Õâ°ÑÈ¨ÕÈÉÏ¸½ÓĞÉ«ÀÇÖ®ÉñÖí°Ë½äµÄ·¨Á¦, ÇëÓÃ help token À´\n" +
-"²éÑ°ÓĞ¹Ø´ËÈ¨ÕÈµÄÏà¹Ø×ÊÁÏ\n" 
+"é€™æŠŠæ¬Šæ–ä¸Šé™„æœ‰è‰²ç‹¼ä¹‹ç¥è±¬å…«æˆ’çš„æ³•åŠ›, è«‹ç”¨ help token ä¾†\n" +
+"æŸ¥å°‹æœ‰é—œæ­¤æ¬Šæ–çš„ç›¸é—œè³‡æ–™\n" 
 	);
-	set("unit", "°Ñ");
+	set("unit", "æŠŠ");
 	set("prevent_drop",1);
 }
 
@@ -44,7 +44,7 @@ int kick_member(string str)  {
 	tell_object(dest, this_player()->query("cap_name")+" kicked you out of CWA!\n");
 	tell_room(environment(this_player()), ({
 this_player()->query("cap_name")+" kicks "+dest->query("cap_name")+" out of CWA!\n", 
-dest->query("c_cap_name")+"±»"+this_player()->query("c_cap_name")+"Ìß³öÉ«ÀÇĞ­»á!\n"
+dest->query("c_cap_name")+"è¢«"+this_player()->query("c_cap_name")+"è¸¢å‡ºè‰²ç‹¼å”æœƒ!\n"
 	}), ({this_player(), dest}));
 
 // LOG into CWA log file
@@ -79,17 +79,17 @@ int make_member(string str)  {
 
 	if (!living(dest) || ((int)dest->query("npc")==1))
 		return notify_fail(can_read_chinese()? 
-"ÄãÖ»ÄÜÈÃÍæ¼Ò¼ÓÈëÉ«ÀÇĞ­»á.\n" :
+"ä½ åªèƒ½è®“ç©å®¶åŠ å…¥è‰²ç‹¼å”æœƒ.\n" :
 "Only players are allowed to join CWA.\n");
 
 	if (dest->query("CWA"))
 		return notify_fail(can_read_chinese()?
-"´ËÈËÒÑ¾­ÊÇÉ«ÀÇĞ­»áµÄ»áÔ±ÁË.\n" :
+"æ­¤äººå·²ç¶“æ˜¯è‰²ç‹¼å”æœƒçš„æœƒå“¡äº†.\n" :
 "This player is already a member of CWA.\n");
 
 	if (dest->query("WKA"))
 		return notify_fail(can_read_chinese()?
-dest->query("c_cap_name")+"ÊÇµĞÈË! ²»ÒªÈÃËü»ì½øÀ´µ±ÄÚ¼é!\n" :
+dest->query("c_cap_name")+"æ˜¯æ•µäºº! ä¸è¦è®“å®ƒæ··é€²ä¾†ç•¶å…§å¥¸!\n" :
 dest->query("cap_name")+" has joined WKA already! Don't let IT join CWA to be a spy!\n");
 
 	dest->set("CWA",1);
@@ -100,7 +100,7 @@ this_player()->query("cap_name")+" has made you an member of CWA!\n"
 	);
         tell_room(environment(this_player()), ({
 this_player()->query("cap_name")+" lets "+dest->query("cap_name")+" join CWA!\n",
-this_player()->query("c_cap_name")+"ÈÃ"+dest->query("c_cap_name")+"¼ÓÈëÉ«ÀÇĞ­»á!\n"
+this_player()->query("c_cap_name")+"è®“"+dest->query("c_cap_name")+"åŠ å…¥è‰²ç‹¼å”æœƒ!\n"
         }), ({this_player(), dest}));
 
 //Log into CWA log file

@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "red mail", "ºìÁÛ¼×" );
+	set_name( "red mail", "ç´…é±—ç”²" );
 	add( "id", ({ "mail" }) );
-	set_short( "ºìÁÛ¼×" );
+	set_short( "ç´…é±—ç”²" );
 	set_long( 
              @LONG
-Õâ¼şÁÛ¼×ÊÇÉîº£¹ÖÓãÉíÉÏµÄÁÛÆ¬ÓÃÌì²ÏË¿·ìÖÆ¶ø³É¡£
+é€™ä»¶é±—ç”²æ˜¯æ·±æµ·æ€ªé­šèº«ä¸Šçš„é±—ç‰‡ç”¨å¤©è ¶çµ²ç¸«è£½è€Œæˆã€‚
 LONG
 	);
-	set( "unit", "Ì×" );
+	set( "unit", "å¥—" );
 	set( "type", "body" );
 	set( "material", "light_metal");
 	set( "armor_class", 23 );

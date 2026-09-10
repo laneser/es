@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name("Ant Queen", "ÒÏºó");
+	set_name("Ant Queen", "èŸ»åŽ");
 	add( "id", ({ "ant", "queen" }) );
-	set_short("ÒÏºó");
+	set_short("èŸ»åŽ");
 	set_long(
-		"¹ÖÒÏÖ®Íõ£¬ÓµÓÐÊ®·ÖÅÓ´óµÄÉíÇû£¬²»Í£µÄ²úÏÂÒÏÂÑ¡£\n"
+		"æ€ªèŸ»ä¹‹çŽ‹ï¼Œæ“æœ‰ååˆ†é¾å¤§çš„èº«è»€ï¼Œä¸åœçš„ç”¢ä¸‹èŸ»åµã€‚\n"
 	);
 	set( "max_hp",600);
 	set( "hit_points",600);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
    set( "race", "insect" );
 	set( "alignment", 1000 );
 	set_natural_weapon( 38, 20, 30 );
@@ -23,9 +23,9 @@ void create()
 	set_perm_stat("dex",10);
 	set_perm_stat("con",30);
 	set( "weight", 900);
-	set( "c_death_msg", "%s¼â½ÐÒ»Éù£¬¶¶ÁË¼¸ÏÂ²»¶¯ÁË ....\n" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å" }) );
-	set_c_verbs( ({ "%sºÝºÝµÄÍù%sÒ§ÏÂÈ¥" }) );
+	set( "c_death_msg", "%så°–å«ä¸€è²ï¼ŒæŠ–äº†å¹¾ä¸‹ä¸å‹•äº† ....\n" );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³" }) );
+	set_c_verbs( ({ "%sç‹ ç‹ çš„å¾€%så’¬ä¸‹åŽ»" }) );
 	set( "tactic_func", "call_help");
 	set( "alt_corpse", MOYADA"obj/ant_corpse1" );
 	set( "exp_reward", 14000 );
@@ -50,7 +50,7 @@ int call_help()
     while( i-- )
       if( !ants[i]->query_attackers() ) {
         tell_room( env, 
-          ants[i]->query("c_name")+"´óº°: Îª±£»¤ÎÒÃÇµÄÍõ¶øÕ½!\n"
+          ants[i]->query("c_name")+"å¤§å–Š: ç‚ºä¿è­·æˆ‘å€‘çš„çŽ‹è€Œæˆ°!\n"
           , ants[i]
         );
         ants[i]->kill_ob(victim);

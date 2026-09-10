@@ -11,14 +11,14 @@ int eungon(object me, int level)
 	
 	weapon = (object)me->query("weapon1");
 	if( !weapon || (string)weapon->query("type") != "longblade" ) {
-		tell_object(me,"Äã²¢Î´×°±¸ÊÊºÏµÄÎäÆ÷¡£\n");
+		tell_object(me,"ä½ ä¸¦æœªè£å‚™é©åˆçš„æ­¦å™¨ã€‚\n");
 		return 0;
 	}
 
-	tell_object(me,set_color(sprintf("\nÄãÄ¬ÄîĞÄ·¨£¬»º»ºµØ´ß¶¯ÕæÆøÁ÷×ªÈ«Éí£¬×¼±¸Ê¹³ö¡¸%s¡¹!!\n",to_chinese(GONFU_NAME) )		    ,"HIR") );
+	tell_object(me,set_color(sprintf("\nä½ é»˜å”¸å¿ƒæ³•ï¼Œç·©ç·©åœ°å‚¬å‹•çœŸæ°£æµè½‰å…¨èº«ï¼Œæº–å‚™ä½¿å‡ºã€Œ%sã€!!\n",to_chinese(GONFU_NAME) )		    ,"HIR") );
 
 	tell_room( environment(me), 
-		sprintf("%sÍ»È»Á³ÉÏ·ºÆğºì¹â£¬»º»º½«%s¾ÙÆğ£¬×¼±¸Ê¹ÓÃ%s¡£\n",me->query("c_name"),weapon->query("short"),to_chinese(GONFU_NAME) )
+		sprintf("%sçªç„¶è‡‰ä¸Šæ³›èµ·ç´…å…‰ï¼Œç·©ç·©å°‡%sèˆ‰èµ·ï¼Œæº–å‚™ä½¿ç”¨%sã€‚\n",me->query("c_name"),weapon->query("short"),to_chinese(GONFU_NAME) )
 		, me);
 
 	me->set("attack_skill", MARTIAL_NAME);
@@ -42,10 +42,10 @@ void release_gonfu(object me)
         if( me->query_temp("gonfu_top") )
             me->set_temp("gonfu_top",0);
 	tell_object(me, 
-		set_color( sprintf("\n\nÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ%s¡£\n",to_chinese(GONFU_NAME) ),"HIR") );
+		set_color( sprintf("\n\nä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨%sã€‚\n",to_chinese(GONFU_NAME) ),"HIR") );
  
  	tell_room( environment(me),
- 		sprintf("%sÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n",me->query("c_name") )
+ 		sprintf("%sè¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n",me->query("c_name") )
  		, me);
  
 	me->delete("attack_skill");

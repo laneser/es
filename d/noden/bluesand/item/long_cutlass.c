@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "long cutlass", "³¤Íäµ¶" );
+	set_name( "long cutlass", "é•·å½åˆ€" );
 	add( "id", ({ "cutlass" }) );
-   set_short( "³¤Íäµ¶" );
+   set_short( "é•·å½åˆ€" );
 	set_long(
-		"Ò»°Ñ³¤¶ø¾«ÖÂµÄÍäµ¶£¬Ëü¿´ÆğÀ´Ê®·ÖÈñÀû¡£\n"
+		"ä¸€æŠŠé•·è€Œç²¾ç·»çš„å½åˆ€ï¼Œå®ƒçœ‹èµ·ä¾†ååˆ†éŠ³åˆ©ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weapon_class", 18 );
 	set( "min_damage", 10 );

@@ -10,13 +10,13 @@ void create()
 {
 	::create();
 	set_level(9);
-	set_name("ghoul", "ÂÌÉ«Ê³Ê¬¹í");
-   set_short( "ÂÌÉ«Ê³Ê¬¹í");
+	set_name("ghoul", "ç¶ è‰²é£Ÿå±é¬¼");
+   set_short( "ç¶ è‰²é£Ÿå±é¬¼");
 	set_long(
-		"Õâ¸öÊ³Ê¬¹í³¤µÃÓÖ³óÓÖÐ×£¬Æ¤·ôð¤ºôºôµÄ£¬ÎÅÆðÀ´»¹ÓÐÒ»¹É³ôÎ¶¡£\n"
+		"é€™å€‹é£Ÿå±é¬¼é•·å¾—åˆé†œåˆå…‡ï¼Œçš®è†šé»å‘¼å‘¼çš„ï¼Œèžèµ·ä¾†é‚„æœ‰ä¸€è‚¡è‡­å‘³ã€‚\n"
 	);
    set( "race", "undead" );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "alignment", -600 );
    set( "exp_reward", 2530 );
    set( "max_hp", 350 );
@@ -27,8 +27,8 @@ void create()
 	set( "tactic_func", "emit_poison" );
 	set( "wealth/gold", 25 );
 	wield_weapon("/d/noden/item/bronze_claw");
-	set_c_verbs( ({ "%sÕÅ¿ª´ó×ì£¬Íù%sÒ§È¥", "%sÓÃð¤ºôºôµÄÊÖÍù%sÒ»×¥",
-		"%sÌ§ÍÈÍù%sÌßÈ¥" }) );
+	set_c_verbs( ({ "%så¼µé–‹å¤§å˜´ï¼Œå¾€%så’¬åŽ»", "%sç”¨é»å‘¼å‘¼çš„æ‰‹å¾€%sä¸€æŠ“",
+		"%sæŠ¬è…¿å¾€%sè¸¢åŽ»" }) );
 }
 
 int emit_poison()
@@ -38,12 +38,12 @@ int emit_poison()
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
    if( random(20)<5) {
             tell_room( environment(this_object()),
-                    "Ê³Ê¬¹í´Ó×ì°ÍÅç³öÒ»¹ÉÂÌÉ«µÄ³ôÆø£¬¸ÕºÃÅçÔÚÄãµÄÃæÇ° ....\n",
+                    "é£Ÿå±é¬¼å¾žå˜´å·´å™´å‡ºä¸€è‚¡ç¶ è‰²çš„è‡­æ°£ï¼Œå‰›å¥½å™´åœ¨ä½ çš„é¢å‰ ....\n",
 			this_object() );
 		(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 15, 6 );
 	} else {
             tell_room( environment(this_object()),
-                    "Ê³Ê¬¹í·¢³öÒ»Õó¡¸ÍÛ...À­...À­...¡¹µÄ¹Ö½Ð£¡\n",
+                    "é£Ÿå±é¬¼ç™¼å‡ºä¸€é™£ã€Œå“‡...æ‹‰...æ‹‰...ã€çš„æ€ªå«ï¼\n",
 			this_object() );
             (CONDITION_PREFIX + "confused")->apply_effect( victim, 12, 5 );
 	}

@@ -4,13 +4,13 @@ inherit DAEMON;
 
 string *c_illusion =({
 
-"´ÓÊÖÌ«Òõ·Î¾­µÄÖÐ¸®Ñ¨Á÷¹ý¡¢ÔÆÃÅ¡¢Ìì¸®¡¢ÏÀ°×¡¢³ßÔó¡¢¿××îÑ¨...\n",
+"å¾žæ‰‹å¤ªé™°è‚ºç¶“çš„ä¸­åºœç©´æµéŽã€é›²é–€ã€å¤©åºœã€ä¿ ç™½ã€å°ºæ¾¤ã€å­”æœ€ç©´...\n",
 
-"³å¹ýÄãµÄÒþ¾Ê¡¢´ó¶¼¡¢Ì«°×¡¢¹«Ëï¡¢ÉÌÇñ¡¢ÈýÒõ½»Ñ¨£¬Í¨ÍùÉÙº£Ñ¨...\n",
+"è¡éŽä½ çš„éš±è‡¼ã€å¤§éƒ½ã€å¤ªç™½ã€å…¬å­«ã€å•†é‚±ã€ä¸‰é™°äº¤ç©´ï¼Œé€šå¾€å°‘æµ·ç©´...\n",
 
-"Á÷ÏòÄãµÄ¼«Èª¡¢ÇàÁé¡¢ÉÙº£¡¢ÁéµÀ¡¢Í¨ÀïÑ¨¡£\n", 
+"æµå‘ä½ çš„æ¥µæ³‰ã€é’éˆã€å°‘æµ·ã€éˆé“ã€é€šè£¡ç©´ã€‚\n", 
 
-"Í¨¹ýÁËÉñ·â¡¢ÁéÐæ¡¢Éñ²Ø¡¢¡õÖÐ¡¢Óá\¸®£¬Á÷ÏòÊÖÉÙÑôÈý½¹¾­µÄ¹Û³åÑ¨¡£\n",
+"é€šéŽäº†ç¥žå°ã€éˆå¢Ÿã€ç¥žè—ã€â–¡ä¸­ã€ä¿žåºœï¼Œæµå‘æ‰‹å°‘é™½ä¸‰ç„¦ç¶“çš„è§€è¡ç©´ã€‚\n",
 
 });
 
@@ -21,7 +21,7 @@ void do_heal(object player, int skill, int degree, int ok)
 	fp = (int)player->query("force_points");
 	if( !ok && degree < 10 && skill > random(degree*degree*2) && fp > 10 ) {
 		message("illusion", can_read_chinese(player)?
-			"Ò»¹ÉÕæÆø"+c_illusion[random(sizeof(c_illusion))]:
+			"ä¸€è‚¡çœŸæ°£"+c_illusion[random(sizeof(c_illusion))]:
 			"You feel some colorful illusions around you.\n", player);
 		hp = (int)player->query("hit_points");
 		max = (int)player->query("max_hp");
@@ -40,11 +40,11 @@ void do_heal(object player, int skill, int degree, int ok)
 		player->delete_temp("block_message");
 		player->delete_temp("gonfu_busy");
 		tell_object( player, can_read_chinese(player)?
-			"...... \nÄãÉîÉîµÄÎüÁËÒ»¿ÚÆø£¬½áÊøÁËÔË¹¦\ÁÆÉË£¬ÄãÕ¾ÁËÆðÀ´¡£\n\n":
+			"...... \nä½ æ·±æ·±çš„å¸äº†ä¸€å£æ°£ï¼ŒçµæŸäº†é‹åŠŸç™‚å‚·ï¼Œä½ ç«™äº†èµ·ä¾†ã€‚\n\n":
 			"And then you see the scene surrounding you come solid, you awake.\n" );
 		tell_room( environment(player), ({
 			player->query("cap_name")+" opens eyes, looks around, and then stands up.\n",
-			player->query("c_cap_name")+"ÉñÇåÆøË¬µØÕ¾ÁËÆðÀ´¡£\n"}), player);
+			player->query("c_cap_name")+"ç¥žæ¸…æ°£çˆ½åœ°ç«™äº†èµ·ä¾†ã€‚\n"}), player);
 		call_out("heal_again", degree*10, player);
 	}
 }
@@ -56,32 +56,32 @@ int enhant(object me)
 	chinese_mode = can_read_chinese(me);
 	if( !skill = (int)me->query_skill("chutan") ) {
 		tell_object( me, chinese_mode?
-			"Äã²»»áÔË¹¦ÁÆÉËµÄÐÄ·¨¡£\n":
+			"ä½ ä¸æœƒé‹åŠŸç™‚å‚·çš„å¿ƒæ³•ã€‚\n":
 			"You don't know method!\n");
 		return 0;
 	}
 
 	if( me->query_attackers() ) {
 		tell_object( me, chinese_mode?
-			"ÔÚÕ½¶·ÖÐÔË¹¦ÁÆÉË? ÏëËÀÂð!\n":
+			"åœ¨æˆ°é¬¥ä¸­é‹åŠŸç™‚å‚·? æƒ³æ­»å—Ž!\n":
 			"You are combating, can't do that!\n");
 		return 0;
 	}
 
 	if( me->query_temp("scholar_heal") ) {
 		tell_object( me, chinese_mode?
-			"Äã×îºÃÐÝÏ¢Ò»ÏÂÔÙÔË¹¦\ÁÆÉË¡£\n":
+			"ä½ æœ€å¥½ä¼‘æ¯ä¸€ä¸‹å†é‹åŠŸç™‚å‚·ã€‚\n":
 			"You would better take a rest.\n");
 		return 0;
 	}
 	
 	tell_object( me, chinese_mode?
-		"Äã×øÁËÏÂÀ´, ½«¾«ÉñÔËÖÁ¿ÕÁéÖ®¾³... Äã¿ªÊ¼ÔË¹¦\ÁÆÉË¡£\n":
+		"ä½ åäº†ä¸‹ä¾†, å°‡ç²¾ç¥žé‹è‡³ç©ºéˆä¹‹å¢ƒ... ä½ é–‹å§‹é‹åŠŸç™‚å‚·ã€‚\n":
 		"You sit down, try to chutan for heal....\n");
 
 	tell_room( environment(me), ({
 		me->query("cap_name")+" sits down and starts to heal cycle.\n",
-		me->query("c_cap_name")+"ÅÌÍÈ¶ø×ø£¬¿ªÊ¼ÔË¹¦\ÁÆÉË...¡£\n"}), me );
+		me->query("c_cap_name")+"ç›¤è…¿è€Œåï¼Œé–‹å§‹é‹åŠŸç™‚å‚·...ã€‚\n"}), me );
 		
 	if( !wizardp(me) ) {
 		me->set_temp("block_command", 1);

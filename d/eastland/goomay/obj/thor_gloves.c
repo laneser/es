@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Thunder's gloves", "À×ÉñÊÖÌ×" );
+	set_name( "Thunder's gloves", "é›·ç¥æ‰‹å¥—" );
 	add( "id", ({ "gloves" }) );
-	set_short( "a Thunder's gloves", "À×ÉñÊÖÌ×" );
+	set_short( "a Thunder's gloves", "é›·ç¥æ‰‹å¥—" );
 	set_long(
 		"You see a pair of golden gloves with strange magic.\n",
-		"ÕâÊÇÒ»Ë«½ğÉ«µÄÊÖÌ×£¬¾İËµËüÊÇÀ×ÉñµÄ×î°®£¬´÷ÉÏËü£¬À×Éñ¶¼»á¶ÔÄãÈİÇéÈı·Ö¡£\n"
+		"é€™æ˜¯ä¸€é›™é‡‘è‰²çš„æ‰‹å¥—ï¼Œæ“šèªªå®ƒæ˜¯é›·ç¥çš„æœ€æ„›ï¼Œæˆ´ä¸Šå®ƒï¼Œé›·ç¥éƒ½æœƒå°ä½ å®¹æƒ…ä¸‰åˆ†ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
         set("material","monk");
 	set( "type", "hands" );
 	set( "weight", 40 );

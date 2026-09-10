@@ -5,16 +5,16 @@ inherit POTION;
 void create()
 {
 	potion::create();
-	set_name( "hawtor chicken soup", "»ªÍÓ¼¦ÌÀ" );
+	set_name( "hawtor chicken soup", "è¯é™€é›æ¹¯" );
 	add( "id", ({ "soup" }) );
-	set_short( " hawtor chicken soup", "»ªÍÓ¼¦ÌÀ" );
+	set_short( " hawtor chicken soup", "è¯é™€é›æ¹¯" );
 	set_long(
 		"The chicken soup,maybe you can drink it.\n",
-		"Ò»¹Ş»ªÍÓ¼¦ÌÀ,¿´ÆğÀ´Ê®·ÖÁîÈËÄÑÒÔÏÂ¡õµ«ÊÇËÆºõÊÇÒ»ÖÖ²¹Ò©\n"
+		"ä¸€ç½è¯é™€é›æ¹¯,çœ‹èµ·ä¾†ååˆ†ä»¤äººé›£ä»¥ä¸‹â–¡ä½†æ˜¯ä¼¼ä¹æ˜¯ä¸€ç¨®è£œè—¥\n"
 	);
 	set_healing( 100 );
 	set( "no_sale", 1 );
-	set( "unit", "¹Ş" );
+	set( "unit", "ç½" );
 	set( "weight", 30 );
 	set( "value", ({ 750, "silver" }) );
 	set( "medication", 40 );

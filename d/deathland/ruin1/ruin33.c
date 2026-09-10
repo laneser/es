@@ -7,12 +7,12 @@ inherit ROOM;
 void create()
 {
 	 ::create();
-     set_short("the ruin","ÒÅ¼£");
+     set_short("the ruin","éºè¹Ÿ");
      set_long(@Long
 Long
 ,@CLong
-ÕâÀïËÆºõÕâ×ù¹Å´úÒÅ¼£µÄÖĞĞÄ .ËäÈ»Õâ¸öµØ·½ÒÑ¾­ÆÆ°Ü²»¿°ÁË ,µ«ÊÇÄãÒÀÈ»ÄÜ¹»¸Ğ
-¾õµ½ÒÔÇ°·±»ªµÄ¾°Ïñ .
+é€™è£¡ä¼¼ä¹é€™åº§å¤ä»£éºè¹Ÿçš„ä¸­å¿ƒ .é›–ç„¶é€™å€‹åœ°æ–¹å·²ç¶“ç ´æ•—ä¸å ªäº† ,ä½†æ˜¯ä½ ä¾ç„¶èƒ½å¤ æ„Ÿ
+è¦ºåˆ°ä»¥å‰ç¹è¯çš„æ™¯åƒ .
 CLong
 );
      set("objects",([
@@ -40,7 +40,7 @@ int to_north()
 {
     if (present("wight")) {
       write(can_read_chinese() ?
-            "Äã±»Ô¹Áéµ²×¡ÁËÈ¥Â· .\n" :
+            "ä½ è¢«æ€¨éˆæ“‹ä½äº†å»è·¯ .\n" :
             "you are blocked by the wight.\n"
            );
       return 1;     

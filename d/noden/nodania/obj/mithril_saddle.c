@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "mithril saddle", "Ã×ËÕÀïÂí°°" );
+	set_name( "mithril saddle", "ç±³è˜‡é‡Œé¦¬é" );
 	add( "id", ({ "saddle" }) );
-	set_short(  "Ã×ËÕÀïÂí°°" );
+	set_short(  "ç±³è˜‡é‡Œé¦¬é" );
 	set_long(
-		"ÕâÊÇÒ»¸±Ã×ËÕÀïÖÆÂí°°£¬ÆïÊ¿ÃÇ¶¼»áÎª×Ô¼ºµÄ°®ÂíÑ¡ÔñÊæÊÊµÄÂí°°¡£\n" 
+		"é€™æ˜¯ä¸€å‰¯ç±³è˜‡é‡Œåˆ¶é¦¬éï¼Œé¨å£«å€‘éƒ½æœƒç‚ºè‡ªå·±çš„æ„›é¦¬é¸æ“‡èˆ’é©çš„é¦¬éã€‚\n" 
 		);
 	set( "type", "saddle" );
 	set( "material", "light_metal" );

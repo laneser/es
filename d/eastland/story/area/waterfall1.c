@@ -5,12 +5,12 @@ int on_war=0;
 void create()
 {
         ::create();
-	set_short("ÑªÆÙ²¼");
+	set_short("è¡€ç€‘å¸ƒ");
 	set_long( @LONG
-ÕâÀï¾ÍÊÇ´«ËµÖĞµÄÑªÆÙ²¼£¬ÁıÕÖÔÚÒ»ÍÅºìÎíÀï¡£ÔÚÆÙ²¼ÉÏÁ÷ÖøµÃÊÇÏÊÑª£¬·ÉĞº
-¶øÏÂÓÌÈçÒ»Ä¨ºìÉ«µÄÆ¥Á·£¬ÔÚ»è°µºÁÎŞÁÁ¹âÖ®ÏÂ£¬Òæ·¢ÏÔµÃ¸ü¼Óº§ÈË¡£´«ËµÖĞ£¬Ñª
-ÆÙ²¼¾ßÓĞÖØÉúµÄÄÜÁ¦£¬ÄãÖ»Òª°Ñ¡õÌåÂñ(bury)ÔÚÕâÀï£¬ÄÇ¡õÌå¾Í»áÓĞ»ú»áµÃµ½ĞÂµÄ
-ÉúÃü£¬ÁîÈË²»¿ÉË¼Òé¡£
+é€™è£¡å°±æ˜¯å‚³èªªä¸­çš„è¡€ç€‘å¸ƒï¼Œç± ç½©åœ¨ä¸€åœ˜ç´…éœ§è£¡ã€‚åœ¨ç€‘å¸ƒä¸Šæµè‘—å¾—æ˜¯é®®è¡€ï¼Œé£›ç€‰
+è€Œä¸‹çŒ¶å¦‚ä¸€æŠ¹ç´…è‰²çš„åŒ¹ç·´ï¼Œåœ¨æ˜æš—æ¯«ç„¡äº®å…‰ä¹‹ä¸‹ï¼Œç›Šç™¼é¡¯å¾—æ›´åŠ é§­äººã€‚å‚³èªªä¸­ï¼Œè¡€
+ç€‘å¸ƒå…·æœ‰é‡ç”Ÿçš„èƒ½åŠ›ï¼Œä½ åªè¦æŠŠâ–¡é«”åŸ‹(bury)åœ¨é€™è£¡ï¼Œé‚£â–¡é«”å°±æœƒæœ‰æ©Ÿæœƒå¾—åˆ°æ–°çš„
+ç”Ÿå‘½ï¼Œä»¤äººä¸å¯æ€è­°ã€‚
 LONG
 	);
 	set( "exits", ([ 
@@ -34,29 +34,29 @@ int do_bury(string arg)
 {
    object player,corpse;
    string name,pname;
-   if ( !arg ) return notify_fail("ÄãÒªÂñÊ²÷á¶«Î÷£¿\n");
+   if ( !arg ) return notify_fail("ä½ è¦åŸ‹ä»€éº¼æ±è¥¿ï¼Ÿ\n");
    player=this_player();
    corpse=present(arg,player);
-   if ( !corpse ) return notify_fail("ÄãÃ»ÓĞÄÇÑù¶«Î÷¡£\n");
+   if ( !corpse ) return notify_fail("ä½ æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n");
    name=corpse->query("c_name");
    pname=player->query("c_name");
    if ( ( !corpse->query("chicorpse") ) || on_war ) {
-      tell_object(player,sprintf("Äã°Ñ%sÂñÔÚÑªÆÙ²¼ÀïÈ´Ã»·¢ÉúÈÎºÎÊÂÇé¡£\n",name));      
-      tell_room(this_object(),sprintf("%s°Ñ%sÂñÔÚÑªÆÙ²¼ÀïÈ´Ã»·¢ÉúÈÎºÎÊÂÇé¡£\n",pname,name),player);
+      tell_object(player,sprintf("ä½ æŠŠ%såŸ‹åœ¨è¡€ç€‘å¸ƒè£¡å»æ²’ç™¼ç”Ÿä»»ä½•äº‹æƒ…ã€‚\n",name));      
+      tell_room(this_object(),sprintf("%sæŠŠ%såŸ‹åœ¨è¡€ç€‘å¸ƒè£¡å»æ²’ç™¼ç”Ÿä»»ä½•äº‹æƒ…ã€‚\n",pname,name),player);
       corpse->remove();
       return 1;           
    }
    corpse->remove();
    on_war=1;
-   tell_object(player,sprintf("ÄãÂñÔÚÑªÆÙ²¼ÀïµÄ%sÍ»È»·¢ÉúÁË±ä»¯£¡\n\n",name));     
-   tell_room(player,sprintf("%sÀíÔÚÑªÆÙ²¼ÀïµÄ%sÍ»È»·¢ÉúÁË±ä»¯£¡\n\n",pname,name),player);
+   tell_object(player,sprintf("ä½ åŸ‹åœ¨è¡€ç€‘å¸ƒè£¡çš„%sçªç„¶ç™¼ç”Ÿäº†è®ŠåŒ–ï¼\n\n",name));     
+   tell_room(player,sprintf("%sç†åœ¨è¡€ç€‘å¸ƒè£¡çš„%sçªç„¶ç™¼ç”Ÿäº†è®ŠåŒ–ï¼\n\n",pname,name),player);
    call_out("count1",5,name);
    return 1;
 }
 void count1(string name)
 {
    tell_room(this_object(),set_color(sprintf(
-     "ºöÈ»¼ä£¬ÑªÆÙ²¼ÀïµÄ%s»îÁË¹ıÀ´£¡ÄãĞÄÀïÉÁ¹ıÄªÃûµÄ¿Ö¾å...\n\n",name),"HIR"));
+     "å¿½ç„¶é–“ï¼Œè¡€ç€‘å¸ƒè£¡çš„%sæ´»äº†éä¾†ï¼ä½ å¿ƒè£¡é–ƒéè«åçš„ææ‡¼...\n\n",name),"HIR"));
    call_out("count2",10);
 }
 void count2() 

@@ -9,15 +9,15 @@ void init()
 
 void create()
 {
-        set_name( "apple", "Æ»¹û" );
+        set_name( "apple", "è˜‹æžœ" );
         add( "id", ({ "apple" }) );
-        set_short( "Æ»¹û" );
+        set_short( "è˜‹æžœ" );
         set_long(@C_LONG
-ÕâÊÇÒ»¸öºìÆ»¹û£¬¿´ÆðÀ´Ê®·ÖÐÂÏÊÃÀÎ¶£¬³Ô(eat)ÁËËüÒÔááÏë±Ø
-ÄÜÌáÕñÒ»Ð©¾«Éñ°É !!
+é€™æ˜¯ä¸€å€‹ç´…è˜‹æžœï¼Œçœ‹èµ·ä¾†ååˆ†æ–°é®®ç¾Žå‘³ï¼Œåƒ(eat)äº†å®ƒä»¥å¾Œæƒ³å¿…
+èƒ½ææŒ¯ä¸€äº›ç²¾ç¥žå§ !!
 C_LONG
 		);
-   		set("unit","¿Å");
+   		set("unit","é¡†");
    		set("weight", 10);
    		set("value",({40, "silver"}) );
 }
@@ -25,10 +25,10 @@ C_LONG
 int eat_food(string arg)
 {
 	if( !arg || arg != "apple") return 0;
-	write( "ÄãÀÇÍÌ»¢¡õµØ¿ÐµôÁËÒ»¿ÅÆ»¹û£¬¾õµÃ³Ý¼ÕÁôÏã...:)\n"
+	write( "ä½ ç‹¼åžè™Žâ–¡åœ°å•ƒæŽ‰äº†ä¸€é¡†è˜‹æžœï¼Œè¦ºå¾—é½’é °ç•™é¦™...:)\n"
 	);
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"ÈýÁ½ÏÂ¾Í¿ÐµôÁËÒ»¿ÅÆ»¹û£¬Äã¶¼¿´´ôÁË...\n"
+		this_player()->query("c_name")+"ä¸‰å…©ä¸‹å°±å•ƒæŽ‰äº†ä¸€é¡†è˜‹æžœï¼Œä½ éƒ½çœ‹å‘†äº†...\n"
 		, this_player()
 	);
 	this_player()->receive_healing(5);

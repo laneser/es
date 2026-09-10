@@ -8,19 +8,19 @@ void create()
 {
     ::create();
     set_level(19);
-    set_name( "Mr. soothsayer", "ÉñËãĞ¡¹Ï" );
+    set_name( "Mr. soothsayer", "ç¥ç®—å°ç“œ" );
     add( "id",({"soothsayer"}) );
-    set_short( "½­ºşÊõÊ¿ ÉñËãĞ¡¹Ï");
+    set_short( "æ±Ÿæ¹–è¡“å£« ç¥ç®—å°ç“œ");
     set_long(@LONG
-ÉñËãĞ¡¹Ï¿´ÆğÀ´Ô¼ÄªËÄ¡¢ÎåÊ®ËêÄê¼Í,Ëû¹ıÄ¿²»Íü¸üÉúµÃÒ»¶ÔÌìÑÛÍ¨¡£ËûÉúÆ½×êÑĞ
-²·óßÖ®Ñ§,¿ÉÎ½ÉÏÍ¨ÌìÎÄÏÂÍ¨µØÀí, ·²ÊÇÊ²÷áÒ×¾­Ö®ÀàµÄ¶ÔËû¶øÑÔ¼òÖ±ÊÇĞ¡¶ù¿Æ¡£
-ËûÌú¿ÚÖ±¶Ï,ÏÊÓĞÊ§Îó,ËùÒÔºÜ¶àÈËÀ´ÇóËû¿ªÒ»½ğ¿Úµ«ÍùÍùÎŞ¹¦¶ø·µ,ÒòÎªËû×ÜÊÇÍÆ
-ËµÎŞÔµ¡£Ëû×î½ü×íĞÄì¶Õó·¨Ö®Ñ§,Èç¹ûÄãÄÜÍ¶ËûËùºÃ, Ëµ²»¶¨Ëû°ïÄãËãÒ»¶ÎÄã¾Í»ñ
-Òæ·ÇÇ³¡£ÉñËãĞ¡¹ÏÒ²Ï²»¶ÈÈÄÖµÄµØ·½,Ò»Ìıµ½Ø¤°ïÓĞ¸ö¼À×æ´óµä¾ÍÅÜÀ´, ²»ÖªµÀËû
-ÊÇ²»ÊÇ±ğÓĞÆóÍ¼¡£
+ç¥ç®—å°ç“œçœ‹èµ·ä¾†ç´„è«å››ã€äº”åæ­²å¹´ç´€,ä»–éç›®ä¸å¿˜æ›´ç”Ÿå¾—ä¸€å°å¤©çœ¼é€šã€‚ä»–ç”Ÿå¹³é‘½ç ”
+åœç­®ä¹‹å­¸,å¯è¬‚ä¸Šé€šå¤©æ–‡ä¸‹é€šåœ°ç†, å‡¡æ˜¯ä»€éº¼æ˜“ç¶“ä¹‹é¡çš„å°ä»–è€Œè¨€ç°¡ç›´æ˜¯å°å…’ç§‘ã€‚
+ä»–éµå£ç›´æ–·,é®®æœ‰å¤±èª¤,æ‰€ä»¥å¾ˆå¤šäººä¾†æ±‚ä»–é–‹ä¸€é‡‘å£ä½†å¾€å¾€ç„¡åŠŸè€Œè¿”,å› ç‚ºä»–ç¸½æ˜¯æ¨
+èªªç„¡ç·£ã€‚ä»–æœ€è¿‘é†‰å¿ƒæ–¼é™£æ³•ä¹‹å­¸,å¦‚æœä½ èƒ½æŠ•ä»–æ‰€å¥½, èªªä¸å®šä»–å¹«ä½ ç®—ä¸€æ®µä½ å°±ç²
+ç›Šéæ·ºã€‚ç¥ç®—å°ç“œä¹Ÿå–œæ­¡ç†±é¬§çš„åœ°æ–¹,ä¸€è½åˆ°ä¸å¹«æœ‰å€‹ç¥­ç¥–å¤§å…¸å°±è·‘ä¾†, ä¸çŸ¥é“ä»–
+æ˜¯ä¸æ˜¯åˆ¥æœ‰ä¼åœ–ã€‚
 LONG
             );
-    set("unit","Î»");
+    set("unit","ä½");
     set("race","human");      
     set("class","scholar");
     set("age",47);
@@ -65,7 +65,7 @@ LONG
 int accept_item(object me,object item)
 {
     tell_room( environment(this_object()),
-       "ÉñËãĞ¡¹ÏÊÇ²»ÎªÀûÓÕµÄ¡£\n");
+       "ç¥ç®—å°ç“œæ˜¯ä¸ç‚ºåˆ©èª˜çš„ã€‚\n");
     item->remove() ;
     return 1;
 }
@@ -82,8 +82,8 @@ void make_angry(object obj)
     env=environment(obj);
     obj->set("hit_points",(int)obj->query("max_hp"));
     tell_room(env,C_NAME(obj)+
-      "¿ÚÀïÄîÄîÓĞ´Ê:¡¸Éñ¶÷Èçº£ÌìÍşÈçÔÀÏµÏµ¾ØÃ¦ÂŞ......¡¹\n"+
-      C_NAME(obj)+"´óºÈÒ»Éù´Ó±³áá·É³öËÄ¿Ú·É½£,Ë³ÊÆÔ¾Æğ×¥ÆğÒ»±ú !!\n\n\n\n");
+      "å£è£¡å”¸å”¸æœ‰è©:ã€Œç¥æ©å¦‚æµ·å¤©å¨å¦‚å¶½ç¹«ç³»çŸ©å¿™ç¾…......ã€\n"+
+      C_NAME(obj)+"å¤§å–ä¸€è²å¾èƒŒå¾Œé£›å‡ºå››å£é£›åŠ,é †å‹¢èºèµ·æŠ“èµ·ä¸€æŸ„ !!\n\n\n\n");
     obj->wield_weapon(DWEAPON"god_killed_sword4");
     obj->set("exp_reward",35735) ;
     obj->set("wealth/gold",800);
@@ -132,17 +132,17 @@ int my_tactic()
      switch( sizeof((mixed *)this_object()->query_temp("party_members"))){
      case 2:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ÑÛ¼ûÊÆÁ¦¹Âµ¥,ì¶ÊÇÊ©Õ¹Á½ÒÇÎ¢³¾Õó\n");
+                  C_NAME(this_object())+"çœ¼è¦‹å‹¢åŠ›å­¤å–®,æ–¼æ˜¯æ–½å±•å…©å„€å¾®å¡µé™£\n");
                command("embattle two at "+name); 
             return 0;
      case 3:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸¿´ÌìµØÈËÈı²ÅÕó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçœ‹å¤©åœ°äººä¸‰æ‰é™£ã€!\n");
                command("embattle three at "+name);
             return 0;
      case 4:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"Ê©Õ¹ËÄÏóè¯çáÕó\n");
+                  C_NAME(this_object())+"æ–½å±•å››è±¡ç’‡ç’£é™£\n");
                command("embattle four at "+name);  
             return 0;
      default :
@@ -151,8 +151,8 @@ int my_tactic()
     }
     if ( victim->query("npc") ) {
         tell_room( environment(this_object()),
-           this_object()->query("c_name")+"ÕĞÀ´Ò»µÀÉÁµç°Ñ"
-           +victim->query("c_name")+"»¯Îª»Ò¾¡....\n");
+           this_object()->query("c_name")+"æ‹›ä¾†ä¸€é“é–ƒé›»æŠŠ"
+           +victim->query("c_name")+"åŒ–ç‚ºç°ç›¡....\n");
            victim->remove();
     }
     return 0;

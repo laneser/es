@@ -12,33 +12,33 @@ int cmd_clot(string arg)
 	mixed bleed;
 
 	if( !arg || arg=="" || !(dest = present(arg, environment(this_player()))) )
-		return notify_fail( "ÄãÒªÌæË­Ö¹Ñª£¿\n" ); 
+		return notify_fail( "ä½ è¦æ›¿èª°æ­¢è¡€ï¼Ÿ\n" ); 
 
-	if( !living(dest) ) return notify_fail( "ÄÇ¸ö¡¸¶«Î÷¡¹²»»áÁ÷Ñª¡£\n" );
+	if( !living(dest) ) return notify_fail( "é‚£å€‹ã€Œæ±è¥¿ã€ä¸æœƒæµè¡€ã€‚\n" );
 
 	if( dest->query("ghost") ) return notify_fail( 
-		sprintf("Ì«³ÙÁË .... %sÒÑ¾­ËÀÁË¡£\n" ,dest->query("c_name")));
+		sprintf("å¤ªé²äº† .... %så·²ç¶“æ­»äº†ã€‚\n" ,dest->query("c_name")));
         
         if( dest->query("no_clot") ) return notify_fail(
-                sprintf("%sĞ¦Öø¶ÔÄãËµ:Ğ»Ğ»ÄãµÄºÃÒâ, ²»¹ıÎÒÏëÓĞ±ØÒªÊ±, ÎÒ×Ô¼º¶¯ÊÖ¿ÉÄÜ±È½ÏºÃ¡£\n",dest->query("c_name") )
+                sprintf("%sç¬‘è‘—å°ä½ èªª:è¬è¬ä½ çš„å¥½æ„, ä¸éæˆ‘æƒ³æœ‰å¿…è¦æ™‚, æˆ‘è‡ªå·±å‹•æ‰‹å¯èƒ½æ¯”è¼ƒå¥½ã€‚\n",dest->query("c_name") )
            );     
         
 	if( dest->query_temp("clotted") ) return notify_fail( 
-		 sprintf("%sµÄÉË¿ÚÒÑ¾­Ö¹Ñª´¦Àí¹ıÁË¡£\n" ,dest->query("c_name")));
+		 sprintf("%sçš„å‚·å£å·²ç¶“æ­¢è¡€è™•ç†éäº†ã€‚\n" ,dest->query("c_name")));
 
 	if( !(bleed = dest->query("conditions/bleeding")) )
 		return notify_fail( 
-			sprintf("%s²¢Ã»ÓĞÊ§ÑªµÄÇéĞÎ¡£\n" ,dest->query("c_name")));
+			sprintf("%sä¸¦æ²’æœ‰å¤±è¡€çš„æƒ…å½¢ã€‚\n" ,dest->query("c_name")));
 
 	skill = (int)this_player()->query_skill( "clotting");
-	if( !skill ) return notify_fail( "Äã²¢Ã»ÓĞÑ§¹ıÖ¹ÑªµÄ¼¼ÄÜ¡£\n" );
+	if( !skill ) return notify_fail( "ä½ ä¸¦æ²’æœ‰å­¸éæ­¢è¡€çš„æŠ€èƒ½ã€‚\n" );
 
-	write( sprintf("ÄãÌæ%sµÄÉË¿Ú½øĞĞÖ¹Ñª ....\n" ,dest->query("c_name")));
+	write( sprintf("ä½ æ›¿%sçš„å‚·å£é€²è¡Œæ­¢è¡€ ....\n" ,dest->query("c_name")));
         if (dest !=this_player())
 	tell_object( dest, 
-		sprintf("%sÌæÄãµÄÉË¿ÚÖ¹Ñª .... Äã¾õµÃºÃ¶àÁË£¡\n" ,this_player()->query("c_name")));
+		sprintf("%sæ›¿ä½ çš„å‚·å£æ­¢è¡€ .... ä½ è¦ºå¾—å¥½å¤šäº†ï¼\n" ,this_player()->query("c_name")));
 	tell_room( environment(this_player()), 
-		sprintf("%sÌæ%sµÄÉË¿ÚÖ¹Ñª¡£\n",
+		sprintf("%sæ›¿%sçš„å‚·å£æ­¢è¡€ã€‚\n",
 			this_player()->query("c_name"),dest->query("c_name")),
 		({ this_player(), dest }) );
 	if( dest!=this_player() )
@@ -65,10 +65,10 @@ int help()
 {
     write(
     @C_HELP
-Ö¸Áî¸ñÊ½: clot <Ä³ÈË>
+æŒ‡ä»¤æ ¼å¼: clot <æŸäºº>
 
-Õâ¸öÖ¸ÁîÈÃÄãÌæÄ³¸öÈËÎï( »ò NPC )µÄÉË¿ÚÖ¹Ñª£¬ÓĞ¹ØÖ¹ÑªµÄÏ¸½ÚÓëÏŞÖÆÇë²Î
-¿¼ help clotting¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ æ›¿æŸå€‹äººç‰©( æˆ– NPC )çš„å‚·å£æ­¢è¡€ï¼Œæœ‰é—œæ­¢è¡€çš„ç´°ç¯€èˆ‡é™åˆ¶è«‹åƒ
+è€ƒ help clottingã€‚
 C_HELP
 	);
     return 1;

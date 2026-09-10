@@ -1,41 +1,41 @@
 #d/thief/hall/thief_board.c
-ob_data (["last_location":0,"silent_look":1,"c_short.text":"Ğ¡ÍµÁôÑÔ°å","cap_name":"Board","id":({"board","bulletin board",}),"c_name":"ÁôÑÔ°å","long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_cap_name":"ÁôÑÔ°å","name":"board","short":"@@query_short","short.text":"Thief's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
+ob_data (["last_location":0,"silent_look":1,"c_short.text":"å°å·ç•™è¨€æ¿","cap_name":"Board","id":({"board","bulletin board",}),"c_name":"ç•™è¨€æ¿","long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_cap_name":"ç•™è¨€æ¿","name":"board","short":"@@query_short","short.text":"Thief's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
 ","long":"@@query_long",])
-messages ({(["poster":"Fat","time":879685657,"body":"Hi Í¬ÈÊÃÇ¡£
-Hi Hi Í¬ÈÊÃÇ¡£ÓĞË­±³´Ì³É¹¦¹ıÂğ£¿Òª¶àÉÙ¼¶£¿
-Hi Í¬ÈÊÃÇ¡£
-Hi Hi Í¬ÈÊÃÇ¡£
-ÓĞË­±³´Ì³É¹¦¹ıÂğ£¿Òª¶àÉÙ¼¶£¿
-","title":"±³´Ì","id":688,]),(["poster":"Fat","time":880205094,"title":"< no title >","body":"  ÍµÇÔ   :  25  ( 25)
-½ñÌìÖÕÓÚÄÜÍµfarmerÀÖ!
+messages ({(["poster":"Fat","time":879685657,"body":"Hi åŒä»å€‘ã€‚
+Hi Hi åŒä»å€‘ã€‚æœ‰èª°èƒŒåˆºæˆåŠŸéå—ï¼Ÿè¦å¤šå°‘ç´šï¼Ÿ
+Hi åŒä»å€‘ã€‚
+Hi Hi åŒä»å€‘ã€‚
+æœ‰èª°èƒŒåˆºæˆåŠŸéå—ï¼Ÿè¦å¤šå°‘ç´šï¼Ÿ
+","title":"èƒŒåˆº","id":688,]),(["poster":"Fat","time":880205094,"title":"< no title >","body":"  å·ç«Š   :  25  ( 25)
+ä»Šå¤©çµ‚æ–¼èƒ½å·farmeræ¨‚!
 YA!!!
-","id":689,]),(["poster":"Renmin","time":880716773,"body":"Ê²Ã´Ê±ºòĞ¡µÜ¿ÉÒÔ³ÉÎª½ã½ãÒ»Ñù°¡£¡
-","title":"¹§Ï²½ã½ãÁË","id":690,]),(["poster":"Cucci","time":880982294,"title":"toÍ¬ĞĞ","body":" ¡¾  5 ¡¿Ç¿µÁÃÃ Óê (Cucci)
+","id":689,]),(["poster":"Renmin","time":880716773,"body":"ä»€éº¼æ™‚å€™å°å¼Ÿå¯ä»¥æˆç‚ºå§å§ä¸€æ¨£å•Šï¼
+","title":"æ­å–œå§å§äº†","id":690,]),(["poster":"Cucci","time":880982294,"title":"toåŒè¡Œ","body":" ã€  5 ã€‘å¼·ç›œå¦¹ é›¨ (Cucci)
 ya!
-","id":691,]),(["poster":"Cucci","time":881071017,"body":"±³´Ì 20 Ò²²»ĞĞ£¬backstab toad,shake
+","id":691,]),(["poster":"Cucci","time":881071017,"body":"èƒŒåˆº 20 ä¹Ÿä¸è¡Œï¼Œbackstab toad,shake
 sigh
-","title":"±³´Ì","id":692,]),(["poster":"Cucci","time":881237237,"title":"to fat","body":"       ±³´Ì            2               67
+","title":"èƒŒåˆº","id":692,]),(["poster":"Cucci","time":881237237,"title":"to fat","body":"       èƒŒåˆº            2               67
 but can use.shake
 ","id":693,]),(["poster":"Laeng","time":881605717,"body":"hp
-±³´Ì³É¹¦,½ñÌì³É¹¦Èı´ÎÁË,²»¹ı²»ÊÇºÜ´óÉËº¦
-ÎÒÏÖÔÚµÈ¼¶2,¼¼ÄÜÊÇ30
-ÓÃÖ®Ç°×îºÃÄÜhid
-","title":"< no title >","id":694,]),(["poster":"Laeng","time":881606366,"body":"ÊÇhide
+èƒŒåˆºæˆåŠŸ,ä»Šå¤©æˆåŠŸä¸‰æ¬¡äº†,ä¸éä¸æ˜¯å¾ˆå¤§å‚·å®³
+æˆ‘ç¾åœ¨ç­‰ç´š2,æŠ€èƒ½æ˜¯30
+ç”¨ä¹‹å‰æœ€å¥½èƒ½hid
+","title":"< no title >","id":694,]),(["poster":"Laeng","time":881606366,"body":"æ˜¯hide
 ","title":"< no title >","id":695,]),(["poster":"Cucci","time":881692451,"title":"thank all","body":"thank
-¿ÉÒÔÓÃÁËbackstab
-ÓĞÒ»°ëµÄ»ú»áÖĞ¡£
+å¯ä»¥ç”¨äº†backstab
+æœ‰ä¸€åŠçš„æ©Ÿæœƒä¸­ã€‚
         xixi
-","id":696,]),(["poster":"Cana","time":883469320,"body":"Çë²»ÒªÄÃ´¢²ØÊÒµÄ×°±¸
-¿¨ÄÃ
-","title":"< no title >","id":699,]),(["poster":"Cana","time":883503193,"title":"< no title >","body":"¸÷Î»Í¬°ûÇëÓÃÍêÎäÆ÷×°±¸·ÅÔÚ´¢²ØÊÒ£¬Áô¸øÆäËûÍæ¼ÒÓÃ
-¿¨ÄÃÏò¸÷Î»Íæ¼ÒÖÂĞ»
-","id":700,]),(["poster":"Ne","time":884396717,"body":"ÎÒÊÇĞÂÈË.¶à¶àÖ¸½Ì
-","title":"< no title >","id":701,]),(["poster":"An","time":884399483,"title":"< no title >","body":"ÎÒÊÇĞÂÈË.¶à¶àÖ¸½Ì
-","id":702,]),(["poster":"Cucci","time":885359048,"body":"ÎÒµÄ¶«¶«·ÅÔÚguild ²»ÒªÄÃÅ¶
+","id":696,]),(["poster":"Cana","time":883469320,"body":"è«‹ä¸è¦æ‹¿å„²è—å®¤çš„è£å‚™
+å¡æ‹¿
+","title":"< no title >","id":699,]),(["poster":"Cana","time":883503193,"title":"< no title >","body":"å„ä½åŒèƒè«‹ç”¨å®Œæ­¦å™¨è£å‚™æ”¾åœ¨å„²è—å®¤ï¼Œç•™çµ¦å…¶ä»–ç©å®¶ç”¨
+å¡æ‹¿å‘å„ä½ç©å®¶è‡´è¬
+","id":700,]),(["poster":"Ne","time":884396717,"body":"æˆ‘æ˜¯æ–°äºº.å¤šå¤šæŒ‡æ•™
+","title":"< no title >","id":701,]),(["poster":"An","time":884399483,"title":"< no title >","body":"æˆ‘æ˜¯æ–°äºº.å¤šå¤šæŒ‡æ•™
+","id":702,]),(["poster":"Cucci","time":885359048,"body":"æˆ‘çš„æ±æ±æ”¾åœ¨guild ä¸è¦æ‹¿å“¦
 thank
-","title":"to all","id":703,]),(["poster":"Lwf","time":885500759,"title":"hi","body":"Çë¶à¹ØÕÕ
-","id":704,]),(["poster":"Eros","time":886515197,"body":"Çë½ÌÄÄÀïÉı±³´ÌµÄµÈ¼¶?
+","title":"to all","id":703,]),(["poster":"Lwf","time":885500759,"title":"hi","body":"è«‹å¤šé—œç…§
+","id":704,]),(["poster":"Eros","time":886515197,"body":"è«‹æ•™å“ªè£¡å‡èƒŒåˆºçš„ç­‰ç´š?
 thanks
 ","title":"< no title >","id":705,]),})
 id_ref 705

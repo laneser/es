@@ -1,6 +1,6 @@
 #std/user.c
 auto_load ({})
-ob_data (["ghost":0,"hit_points":25,"invis":0,"critical_med_res":"@@query_critical_med_res","last_save":885028144,"vision":"@@query_vision","c_name":"Ä°ÉúÈË","id":({"noname",}),"npc":0,"snoopable":0,"invisible":0,"shell":"none","user":1,"max_hp":25,"name":"noname","weight":600,"short":"@@query_short","title":"Ä°ÉúÈË","linkdead":"@@query_linkdead",])
+ob_data (["ghost":0,"hit_points":25,"invis":0,"critical_med_res":"@@query_critical_med_res","last_save":885028144,"vision":"@@query_vision","c_name":"é™Œç”Ÿäºº","id":({"noname",}),"npc":0,"snoopable":0,"invisible":0,"shell":"none","user":1,"max_hp":25,"name":"noname","weight":600,"short":"@@query_short","title":"é™Œç”Ÿäºº","linkdead":"@@query_linkdead",])
 alias ([])
 xverb ([])
 level 1

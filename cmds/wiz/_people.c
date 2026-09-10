@@ -31,7 +31,7 @@ create()
 
 	for (divide = "", c_divide = "", i = 0 ; i<38 ; i++ ) {
 		divide += "=-";
-		c_divide += "¡ª";
+		c_divide += "â€”";
 	}
 	divide += "\n";
 	c_divide += "\n";
@@ -82,7 +82,7 @@ int cmd_people(string arg)
 
 	lines += chinese_mode?
 		sprintf("%s%-13s%-12s%-10s%-5s%-5s%-20s\n%s",c_divide,
-		"ÐÕÃû", "Éí·Ý", "ÁìÓò", "·¢´ô", "ÄêÁä", "Î»ÖÃ", c_divide):
+		"å§“å", "èº«ä»½", "é ˜åŸŸ", "ç™¼å‘†", "å¹´é½¡", "ä½ç½®", c_divide):
 		sprintf("%s%-13s%-12s%-10s%-5s%-5s%-20s\n%s",divide,
 		"Name", "Position", "Domain", "Zz", "Age", "Location",divide);
 

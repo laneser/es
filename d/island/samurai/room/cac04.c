@@ -6,10 +6,10 @@ inherit ROOM;
 void create()
 {
    ::create();
-   set_short( "��ɪ˹·" );
+   set_short( "亞瑟斯路" );
    set_long(@ANGEL
-��������ɪ˹·�ϣ�����һ������Ĵ�·����·�����ü�Ӳ�Ļ���ʯ���ģ���
-·�ı����ǿ���Ĺ㳡��    
+你走在亞瑟斯路上，這是一個寬廣的大路，其路面是用堅硬的花崗石做的，道
+路的北邊是寬廣的廣場．    
 ANGEL
    
          );
@@ -23,8 +23,8 @@ ANGEL
                      "keyword" : ({"door","iron door"}),
                      "status"  : "closed",
                      "name"    : "Iron Door",
-                     "c_name"  : "��դ��",
-                     "c_disc"  : "һ��������դ��\n"
+                     "c_name"  : "鐵柵門",
+                     "c_disc"  : "一個鐵做的柵門\n"
                      ]) );       
          reset();                     
 }

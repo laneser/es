@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Shovel", "²ù×Ó");
+	set_name("Shovel", "éŸå­");
 	add ("id",({ "shovel" }) );
-	set_short("Ğ¡²ù×Ó");
+	set_short("å°éŸå­");
 	set_long(
-            "Ò»°ÑĞ¡²ù×Ó£¬¿ÉÓÃÀ´ÍÚáÈ(dig)¡£\n"
+            "ä¸€æŠŠå°éŸå­ï¼Œå¯ç”¨ä¾†æŒ–å´›(dig)ã€‚\n"
 	);
 	set( "weapon_class", 10 );
         set( "type", "dagger" );
@@ -16,7 +16,7 @@ void create()
 	set( "max_damage", 5 );
 	set( "weight", 20 );
 	set( "value", ({ 10, "silver" }) );
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 }
 
 void init()
@@ -29,7 +29,7 @@ int to_dig(string str)
         object obj1, obj2;
         
         if ( !str || str=="" )
-          write("ÄãÒªÍÚÄÄ ?\n");
+          write("ä½ è¦æŒ–å“ª ?\n");
         else {
           obj1=environment(this_object());
           if (living(obj1)) {
@@ -37,9 +37,9 @@ int to_dig(string str)
             if ((int)obj2->query("dig")==1) 
               obj2->to_find_dig(str);
             else
-              write("ÕâÀï²»ÄÜÍÚ£¡\n");
+              write("é€™è£¡ä¸èƒ½æŒ–ï¼\n");
           }
-          else return notify_fail("ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");  
+          else return notify_fail("ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");  
         }
         return 1;
 }

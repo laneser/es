@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name("copper bracers", "»ÆÍ­ÊÖ»·");
+	set_name("copper bracers", "é»ƒéŠ…æ‰‹ç’°");
    add( "id", ({ "bracers" }) );
-	set_short( "»ÆÍ­ÊÖ»·" );
+	set_short( "é»ƒéŠ…æ‰‹ç’°" );
         set_long(
 @C_LONG
-ÕâÊÇ»ÆÍ­´òÔìµÄÊÖ»·£¬ÄÃÆğÀ´ÓĞºñÖØµÄ¸Ğ¾õ¡£
+é€™æ˜¯é»ƒéŠ…æ‰“é€ çš„æ‰‹ç’°ï¼Œæ‹¿èµ·ä¾†æœ‰åšé‡çš„æ„Ÿè¦ºã€‚
 C_LONG
         );
-	set( "unit", "¸ö");
+	set( "unit", "å€‹");
         set( "type", "hands" );
 	set( "material", "heavy_metal" );
 	set( "armor_class", 4 );

@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Queen's helmet","ÓñÊ¤" );
+     set_name( "Queen's helmet","ç‰å‹" );
      add( "id",({ "helmet", }) );
-     set_short( "ÓñÊ¤" );
+     set_short( "ç‰å‹" );
      set_long(@C_LONG
-ÓñÊ¤ËäÈ»ËãÊÇ¸¾ÈËµÄÊ×ÊÎ£¬È´Èç´©¶úµÄ»·£¬ÄĞÅ®½Ô¿É´÷¡£
+ç‰å‹é›–ç„¶ç®—æ˜¯å©¦äººçš„é¦–é£¾ï¼Œå»å¦‚ç©¿è€³çš„ç’°ï¼Œç”·å¥³çš†å¯æˆ´ã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "¶¥");
+     set( "unit", "é ‚");
      set( "type", "head" );
      set( "material","element" );
      set( "armor_class",6 );

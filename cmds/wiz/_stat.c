@@ -26,7 +26,7 @@ int cmd_stat(string name)
 
 	ob = get_object(name);
 	if (!ob || !living(ob))
-		return notify_fail("Ã»ÓÐÕâÖÖ¶«Î÷....¡£\n");
+		return notify_fail("æ²’æœ‰é€™ç¨®æ±è¥¿....ã€‚\n");
 
 	printf(inverse("[ %2d ]")+bold(" %s\n\n"), ob->query_level(),
 		ob->query("short"));
@@ -36,27 +36,27 @@ int cmd_stat(string name)
 	tempstr = ob->query("race");
 	
 	if( tempstr ) write(
-		"×´  Ì¬: "+to_chinese(tempstr)+to_chinese(ob->query("class"))+
+		"ç‹€  æ…‹: "+to_chinese(tempstr)+to_chinese(ob->query("class"))+
 			"(" + to_chinese(ob->query("gender")) + ")\n" );
 
 	if( (spouse=ob->query("spouse")) )
-		write ("Åä  Å¼: "+capitalize(spouse)+"\n");
+		write ("é…  å¶: "+capitalize(spouse)+"\n");
 
 	if( !exp_reward = ob->query("exp_reward") )
 		exp_reward = (int)ob->query_experience() / (ob->query_level() + 10);
-	write("¾­  Ñé: "+ob->query_experience() + " (" + exp_reward + ")\n");
-	write("Ì½ÏÕ¶È: "+ob->query_explore_points()+" µã\n");
-	write("Õó  Óª: "+(int)ob->query("alignment") + " (" 
+	write("ç¶“  é©—: "+ob->query_experience() + " (" + exp_reward + ")\n");
+	write("æŽ¢éšªåº¦: "+ob->query_explore_points()+" é»ž\n");
+	write("é™£  ç‡Ÿ: "+(int)ob->query("alignment") + " (" 
 			+ STATS_D->alignment_string(ob->query("alignment"))+ ") \n");
 
 	if( ob->query("max_hp") ) write( 
-		"\nÌå  Á¦: "+ob->query("hit_points")+"/"+ ob->query("max_hp")+"\n");
+		"\né«”  åŠ›: "+ob->query("hit_points")+"/"+ ob->query("max_hp")+"\n");
 	if( ob->query("max_sp") ) write( 
-		"·¨  Á¦: "+ob->query("spell_points")+"/"+ob->query("max_sp")+"\n");
+		"æ³•  åŠ›: "+ob->query("spell_points")+"/"+ob->query("max_sp")+"\n");
 	if( ob->query("max_fp") ) write( 
-		"ÄÚ  Á¦: "+ob->query("force_points")+"/"+ob->query("max_fp")+"\n");
+		"å…§  åŠ›: "+ob->query("force_points")+"/"+ob->query("max_fp")+"\n");
         if( ob->query("max_tp") ) write( 
-		"½»Ì¸ÄÜÁ¦: "+ob->query("talk_points")+"/"+ob->query("max_tp")+"\n");
+		"äº¤è«‡èƒ½åŠ›: "+ob->query("talk_points")+"/"+ob->query("max_tp")+"\n");
 
 	write( "\n" );
 	statnames = STATS_D->query_stat_names();
@@ -70,22 +70,22 @@ int cmd_stat(string name)
 
 	ob->calc_weapon_class();
 	ob->calc_armor_class();
-	printf("·À»¤µÈ¼¶: \t%d\t\t¶îÍâ·ÀÓù: \t%d\n",
+	printf("é˜²è­·ç­‰ç´š: \t%d\t\té¡å¤–é˜²ç¦¦: \t%d\n",
 		ob->query("armor_class"), ob->query("defense_bonus") );
 	printf( 
-		"Ö÷ÒªÎäÆ÷µÈ¼¶: \t%d\t\tÉËº¦Á¦·¶Î§: \t%d - %d\n",
+		"ä¸»è¦æ­¦å™¨ç­‰ç´š: \t%d\t\tå‚·å®³åŠ›ç¯„åœ: \t%d - %d\n",
 		ob->query("weapon_class1"),
 		ob->query("min_damage1"),
 		ob->query("max_damage1") );
 	printf( 
-		"´ÎÒªÎäÆ÷µÈ¼¶: \t%d\t\tÉËº¦Á¦·¶Î§: \t%d - %d\n\n",
+		"æ¬¡è¦æ­¦å™¨ç­‰ç´š: \t%d\t\tå‚·å®³åŠ›ç¯„åœ: \t%d - %d\n\n",
 		ob->query("weapon_class2"),
 		ob->query("min_damage2"),
 		ob->query("max_damage2") );
 
 	wealth = ob->query("wealth") ;
 	if (!wealth) {
-		write ("ÉíÎÞ·ÖÎÄ¡£\n");
+		write ("èº«ç„¡åˆ†æ–‡ã€‚\n");
 	} else {
 		coins = keys(wealth) ;
 		list = sort_array(coins,"sort_coins",this_object()) ;
@@ -98,7 +98,7 @@ int cmd_stat(string name)
 				flag=1 ;
 			}
 		}
-		if (flag==0) write( "ÉíÎÞ·ÖÎÄ¡£\n");
+		if (flag==0) write( "èº«ç„¡åˆ†æ–‡ã€‚\n");
 	}
 
 	skills = ob->query_skills() ;

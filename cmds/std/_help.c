@@ -89,7 +89,7 @@ int call_help (string path, string topic)
 				return 1;
 				break;
 			case STD_CMDS :
-				group = "Íæ¼ÒÀàÃüÁî";
+				group = "ç©å®¶é¡å‘½ä»¤";
 				break;
 			case WIZ_CMDS :
 				group = "Developer Command";
@@ -111,7 +111,7 @@ int call_help (string path, string topic)
 				break;
 		}
 		write ("---------------------------------------------------\n");
-		write ("ÓĞ¹Ø "+topic+" µÄÃüÁî ("+group+")\n");
+		write ("æœ‰é—œ "+topic+" çš„å‘½ä»¤ ("+group+")\n");
 		write ("---------------------------------------------------\n");
 
 		if(!ob) {
@@ -259,13 +259,13 @@ int cmd_help(string topic)
 		if(function_exists("help",ob))
 		{
 			write ("---------------------------------------------------\n");
-			write ("ÕâÊÇÓĞ¹Ø "+topic+" µÄ°ïÖú(Object Help)\n");
+			write ("é€™æ˜¯æœ‰é—œ "+topic+" çš„å¹«åŠ©(Object Help)\n");
 			write ("---------------------------------------------------\n");
 			ob->help();
 			return 1;
 		}
 	}
-	write("Ã»ÓĞÕâÃüÁîµÄ°ïÖúÅ¶£¬ÊÇ·ñÊäÈë´íÎóÄØ£¿\n");
+	write("æ²’æœ‰é€™å‘½ä»¤çš„å¹«åŠ©å“¦ï¼Œæ˜¯å¦è¼¸å…¥éŒ¯èª¤å‘¢ï¼Ÿ\n");
 	return 1;
 }
 

@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "tailess tiger", "ÎŞÎ²»¢" );
+	set_name( "tailess tiger", "ç„¡å°¾è™" );
 	add( "id", ({ "tiger" }) );
-	set_short( "ÎŞÎ²»¢" );
+	set_short( "ç„¡å°¾è™" );
 	set_long(@C_LONG
-Ò»Ö»¿ÉĞ¦µÄÀÏ»¢, ËüµÄÎ²°ÍÕû¸ö²»¼ûÁË¡£²»¹ıÄã×îºÃ»¹ÊÇ²»ÒªµôÒÔÇáĞÄ¡£
+ä¸€éš»å¯ç¬‘çš„è€è™, å®ƒçš„å°¾å·´æ•´å€‹ä¸è¦‹äº†ã€‚ä¸éä½ æœ€å¥½é‚„æ˜¯ä¸è¦æ‰ä»¥è¼•å¿ƒã€‚
 C_LONG
 	);
-	set("unit","Ö»");
+	set("unit","åª");
 	set_perm_stat( "str", 20 );
 	set_perm_stat( "dex", 17 );
 	set_perm_stat( "int", 10 );
@@ -30,6 +30,6 @@ C_LONG
     set_natural_weapon( 60, 10, 25 );
 	set("alignment", -500 );
 
-	set_c_verbs( ({ "%sĞ×ÃÍµØÏò%sÒ»¿ÚÒ§È¥", "%sÑ¸ËÙµØÆËÏò%s" }) );
-	set_c_limbs( ({ "µÄÍ·", "µÄÉíÌå", "µÄ½Å" }) );
+	set_c_verbs( ({ "%så…‡çŒ›åœ°å‘%sä¸€å£å’¬å»", "%sè¿…é€Ÿåœ°æ’²å‘%s" }) );
+	set_c_limbs( ({ "çš„é ­", "çš„èº«é«”", "çš„è…³" }) );
 }

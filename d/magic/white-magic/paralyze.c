@@ -14,7 +14,7 @@ int cast(int level, string target)
 	chinese_mode = can_read_chinese(me);
 	
 	if( (int)me->query_skill("white-magic") < query_need_skill(level) ) {
-  		tell_object( me,"ÄãµÄ°×Ä§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n");
+  		tell_object( me,"ä½ çš„ç™½é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n");
 		return 0;
 	}
 	
@@ -22,7 +22,7 @@ int cast(int level, string target)
 	else dest = present( target, environment(me) );
 	if( !dest || dest==this_player() || dest->query("no_attack")
 	|| dest->stop_attack() ) {
-	  tell_object( me,"Òª¶ÔË­Ê¹ÓÃÂé±ÔÊõ£¿\n");
+	  tell_object( me,"è¦å°èª°ä½¿ç”¨éº»ç—ºè¡“ï¼Ÿ\n");
 	  return 0;
 	}
 	if( me->query("npc") && me->query("magic_delay") )
@@ -31,9 +31,9 @@ int cast(int level, string target)
 	    delay_time = 3+level;
 	me->block_attack(delay_time);
 	me->set_temp("cast_busy", 1);
-	write("Äã¿ªÊ¼Ò÷ËÐ°×Ä§·¨ÖÐÂé±ÔÊõµÄÖäÎÄ....¡£\n");
+	write("ä½ é–‹å§‹åŸèª¦ç™½é­”æ³•ä¸­éº»ç—ºè¡“çš„å’’æ–‡....ã€‚\n");
 	tell_room( environment(me),
-		me->query("c_name") + "¿ªÊ¼ÒÔÒ»ÖÖ³Ù»ºµÄÉùÒôÒ÷ËÐÖäÎÄ....¡£\n",
+		me->query("c_name") + "é–‹å§‹ä»¥ä¸€ç¨®é²ç·©çš„è²éŸ³åŸèª¦å’’æ–‡....ã€‚\n",
 		me );
 		
 	dest->kill_ob(me);
@@ -49,20 +49,20 @@ void effect(int level, object caster, object dest)
     
     caster->set_temp("cast_busy", 0);
     if( !dest ) {
-      tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­ËÀÁË¡£\n");
+      tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“æ­»äº†ã€‚\n");
       return;
     }
     env = environment(caster);
     if( !env || !present( dest, env ) ) {
-      tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­²»ÔÚÕâÀïÁË¡£\n");
+      tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“ä¸åœ¨é€™è£¡äº†ã€‚\n");
       return;
     }
 	if( dest->query_temp("effect/paralyze") ) {
 		tell_object( dest,
-		    "Ò»ÍÅÒ«ÑÛµÄ·ÛºìÉ«¹âÃ¢ÁýÕÖÖøÄã£¬µ«ÊÇÄã¾õµÃ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n");
+		    "ä¸€åœ˜è€€çœ¼çš„ç²‰ç´…è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½†æ˜¯ä½ è¦ºå¾—ä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n");
 	} else {
 		tell_object( dest,
-			"Ò»ÍÅÒ«ÑÛµÄ·ÛºìÉ«¹âÃ¢ÁýÕÖÖøÄã£¬Äã¾õµÃÈ«Éí¼¡Èâ¿ªÊ¼±äµÃ½©Ó² ....¡£\n"
+			"ä¸€åœ˜è€€çœ¼çš„ç²‰ç´…è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ è¦ºå¾—å…¨èº«è‚Œè‚‰é–‹å§‹è®Šå¾—åƒµç¡¬ ....ã€‚\n"
 		);
 		boost = (int)dest->query_stat("dex") / 2;
 		duration = (level+1) * 15 + (int)caster->query_stat("pie") * 3;
@@ -71,7 +71,7 @@ void effect(int level, object caster, object dest)
 		call_out( "expire", duration, dest, boost );
 	}
 	tell_room( environment(dest),
-		"Ò»ÍÅÒ«ÑÛµÄ·ÛºìÉ«¹âÃ¢ÁýÕÖÖø"+dest->query("c_name")+"£¬È»ááÖð½¥É¢È¥¡£\n",
+		"ä¸€åœ˜è€€çœ¼çš„ç²‰ç´…è‰²å…‰èŠ’ç± ç½©è‘—"+dest->query("c_name")+"ï¼Œç„¶å¾Œé€æ¼¸æ•£åŽ»ã€‚\n",
 		dest );
 }
 
@@ -79,7 +79,7 @@ void effect(int level, object caster, object dest)
 void expire( object player, int boost )
 {
     if( !player ) return;
-	tell_object( player,"Äã¾õµÃÈ«Éí¼¡ÈâÓÖÖØÐÂ»Øµ½ÄãµÄÒâÖ¾¿ØÖÆÖ®ÏÂ ....¡£\n");
+	tell_object( player,"ä½ è¦ºå¾—å…¨èº«è‚Œè‚‰åˆé‡æ–°å›žåˆ°ä½ çš„æ„å¿—æŽ§åˆ¶ä¹‹ä¸‹ ....ã€‚\n");
 	player->modify_stat("dex", boost);
 	player->set_temp("effect/paralyze", 0 );
 }

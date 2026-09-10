@@ -9,19 +9,19 @@ void create()
 	::create();
 	set_level(15);
 	//seteuid(getuid());
-	set_name( "Dwarf miner guard", "°«ÈË¿ó¹¤ÊØÎÀ" );
+	set_name( "Dwarf miner guard", "çŸ®äººç¤¦å·¥å®ˆè¡›" );
 	add ("id", ({"dwarf", "guard"}) );
-	set_short( "a dwarf miner", "°«ÈË¿ó¹¤ÊØÎÀ" );
+	set_short( "a dwarf miner", "çŸ®äººç¤¦å·¥å®ˆè¡›" );
 	set_long(
 	"a guard is protecting miners.\n",
-	"Ò»¸ö°«ÈË¿ó¹¤ÊØÎÀ.ÓÉì¶°«ÈË¿ó¿ÓÀï³äÂúÖøÎ£ÏÕ,»ÊÊÒÌØ±ğ´Ó»Ê¼ÒÊØÎÀÖĞ\n"
-	"Ìô³öİ¼Ó¢,À´±£»¤¿ó¹¤µÄ°²È«.\n"
+	"ä¸€å€‹çŸ®äººç¤¦å·¥å®ˆè¡›.ç”±æ–¼çŸ®äººç¤¦å‘è£¡å……æ»¿è‘—å±éšª,çš‡å®¤ç‰¹åˆ¥å¾çš‡å®¶å®ˆè¡›ä¸­\n"
+	"æŒ‘å‡ºèè‹±,ä¾†ä¿è­·ç¤¦å·¥çš„å®‰å…¨.\n"
 	);
 
     set("alignment",400);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 18 );
 	set_perm_stat( "str", 23 );
 	set_perm_stat( "int", 17 );
@@ -39,7 +39,7 @@ void create()
     set ("chat_chance", 5);
 	set ("chat_output", ({
 //             "Guard says: Dont attack the miners\n",
-	    "¿ó¹¤ÊØÎÀËµ:²»Òª¹¥»÷¿ó¹¤.\n",
+	    "ç¤¦å·¥å®ˆè¡›èªª:ä¸è¦æ”»æ“Šç¤¦å·¥.\n",
 	    }) );
 	wield_weapon(Weapon"/lance01");
 	equip_armor(Armour"/plate05");

@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Dwarvern mithril ringmail","°«ÈËÃ×ËÕÀí»·¼×");
+        set_name("Dwarvern mithril ringmail","çŸ®äººç±³è˜‡ç†ç’°ç”²");
         add("id",({"ringmail"}) );
-         set_short( "a dwarvern mirhril ringmail","°«ÈËÃ×ËÕÀí»·¼×");
+         set_short( "a dwarvern mirhril ringmail","çŸ®äººç±³è˜‡ç†ç’°ç”²");
 	set_long(
 "This is a suit of ringmail made of mithril meterial,which can  \n"
 "protect your body against opponent's attacks.\n",
-"ÕâÊÇÒ»¸±ÓÉÃ×ËÕÀí½ğÊôÔìµÄ»·¼×,¿ÉÒÔ±£»¤ÄãµÖ¿¹µĞÈËµÄ¹¥»÷\n"
+"é€™æ˜¯ä¸€å‰¯ç”±ç±³è˜‡ç†é‡‘å±¬é€ çš„ç’°ç”²,å¯ä»¥ä¿è­·ä½ æŠµæŠ—æ•µäººçš„æ”»æ“Š\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 220 );
 	set( "type", "body" );
 	set( "material", "light_metal" );

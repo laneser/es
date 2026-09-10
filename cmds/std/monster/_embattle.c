@@ -42,31 +42,31 @@ void check_eight(object me,string other)
   object leader,*total_party;
 
   if (!leader = present(other,environment(me))) {
-     tell_object(me,"Î¹ !! ÄãÔÚÕâÀïÒªºÍË­½áÕó ?\n");
+     tell_object(me,"å–‚ !! ä½ åœ¨é€™è£¡è¦å’Œèª°çµé™£ ?\n");
      return;
   }
   if (me->query_temp("other_party_leader")) {
-    tell_object(me,"ÄãÏÖÔÚ¾Í¿ÉÒÔ·¢¶¯°ËØÔÓÎÁúÕóÁË¡£\n");
+    tell_object(me,"ä½ ç¾åœ¨å°±å¯ä»¥ç™¼å‹•å…«å¦æ¸¸é¾é™£äº†ã€‚\n");
     return;
   }
   if (me->query_temp("depend_on_eight")) {
-     tell_object(me,"ÄãÏÖÔÚÒª¿¿±ðÈËÀ´·¢¶¯ÕóÊÆ¡£\n");
+     tell_object(me,"ä½ ç¾åœ¨è¦é åˆ¥äººä¾†ç™¼å‹•é™£å‹¢ã€‚\n");
      return;
   }
   if ((string)leader->query_temp("leader") != (string)leader->query("name")) {
-     tell_object(me,"Äã±ØÐëºÍÁíÒ»¶ÓÎéµÄÁìµ¼ÈËºÏ×÷£¬²»ÊÇËæ±ãÂÒÕÒ¡£\n");
+     tell_object(me,"ä½ å¿…é ˆå’Œå¦ä¸€éšŠä¼çš„é ˜å°Žäººåˆä½œï¼Œä¸æ˜¯éš¨ä¾¿äº‚æ‰¾ã€‚\n");
      return;
   }
   if ((string)leader->query("class")!="scholar") {
-     tell_object(me,"ÒªÊ©Õ¹°ËØÔÓÎÁúÕó±ØÐëºÍÁíÒ»ÊéÉúËùÁìµ¼µÄ¶ÓÎé½áÕó¡£\n");
+     tell_object(me,"è¦æ–½å±•å…«å¦æ¸¸é¾é™£å¿…é ˆå’Œå¦ä¸€æ›¸ç”Ÿæ‰€é ˜å°Žçš„éšŠä¼çµé™£ã€‚\n");
      return;
   }
   if ( (string)me->query_temp("leader") != (string)me->query("name")) {
-     tell_object(me,"°¦ ¡« ÓÖ²»ÊÇÄãÁìµ¼×÷Õ½£¬ÏÂÊ²÷áÃüÁîÂï ...\n");
+     tell_object(me,"å”‰ ï½ž åˆä¸æ˜¯ä½ é ˜å°Žä½œæˆ°ï¼Œä¸‹ä»€éº¼å‘½ä»¤å˜› ...\n");
      return;
   }
   if( (int)me->query("stop_attack")>0 ) {
-     tell_object(me,"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓÐÍê³É£¬ÎÞ·¨²¼Õó¡£ )\n");
+     tell_object(me,"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•ä½ˆé™£ã€‚ )\n");
      return;
   }
   for( i=0;i<sizeof(total_party=(mixed *)me->query_temp("party_members"));i++ )
@@ -75,13 +75,13 @@ void check_eight(object me,string other)
            member++;
      }
   if (member!=4) {
-    tell_object(me,"ÄãµÄ¶ÓÎé²»µ½ËÄ¸öÈË»¹ÏëÍæ°ËØÔÓÎÁúÕó¡£\n");
+    tell_object(me,"ä½ çš„éšŠä¼ä¸åˆ°å››å€‹äººé‚„æƒ³çŽ©å…«å¦æ¸¸é¾é™£ã€‚\n");
     return;
   }
   leader->set_temp("other_party_leader",me);
   me->set_temp("depend_on_eight",leader);
-  tell_object(leader,(string)me->query("c_name")+"ºÍÄãÐÎ³É°ËØÔÁ¬Ëø¹ØÏµ¡£\n");
-  tell_object(me,"°ËØÔÓÎÁúÕóÁ¬ËøÍê³É¡£\n");
+  tell_object(leader,(string)me->query("c_name")+"å’Œä½ å½¢æˆå…«å¦é€£éŽ–é—œä¿‚ã€‚\n");
+  tell_object(me,"å…«å¦æ¸¸é¾é™£é€£éŽ–å®Œæˆã€‚\n");
   return ;
 }
 
@@ -92,17 +92,17 @@ void party_disband(object me)
   if (other=me->query_temp("other_party_leader")) {
     other->delete_temp("depend_on_eight");
     me->delete_temp("other_party_leader");
-    tell_object(me,"½â¿ª°ËØÔÓÎÁúÕóÁ¬Ëø¹ØÏµ¡£\n");
-    tell_object(other,"½â¿ª°ËØÔÓÎÁúÕóÁ¬Ëø¹ØÏµ¡£\n");
+    tell_object(me,"è§£é–‹å…«å¦æ¸¸é¾é™£é€£éŽ–é—œä¿‚ã€‚\n");
+    tell_object(other,"è§£é–‹å…«å¦æ¸¸é¾é™£é€£éŽ–é—œä¿‚ã€‚\n");
   }
   else if (other=me->query_temp("depend_on_eight")) {
     other->delete_temp("other_party_leader");
     me->delete_temp("depend_on_eight");
-    tell_object(other,"½â¿ª°ËØÔÓÎÁúÕóÁ¬Ëø¹ØÏµ¡£\n");
-    tell_object(me,"½â¿ª°ËØÔÓÎÁúÕóÁ¬Ëø¹ØÏµ¡£\n");
+    tell_object(other,"è§£é–‹å…«å¦æ¸¸é¾é™£é€£éŽ–é—œä¿‚ã€‚\n");
+    tell_object(me,"è§£é–‹å…«å¦æ¸¸é¾é™£é€£éŽ–é—œä¿‚ã€‚\n");
   }
   else
-    write("ÄãÒª½âÉ¢É¶ ?\n");
+    write("ä½ è¦è§£æ•£å•¥ ?\n");
   return; 
 }
 
@@ -137,30 +137,30 @@ int cmd_embattle(string str)
         }
 
 	if (!me->query(SCHOLAR_EMBATTLE_SKILL+name)) 
-                return notify_fail("ß×£¿ÄãÌý¹ýÕâÖÖÕó·¨Âð£¿\n");
+                return notify_fail("å’¦ï¼Ÿä½ è½éŽé€™ç¨®é™£æ³•å—Žï¼Ÿ\n");
 
 	if (!(victim = present(who,environment(me))))
-		return notify_fail("Î¹ !! ÄãÒª±âÈËÖÁÉÙÒ²ÒªÕÒºÃ¶ÔÏó°É !!\n");
+		return notify_fail("å–‚ !! ä½ è¦æ‰äººè‡³å°‘ä¹Ÿè¦æ‰¾å¥½å°è±¡å§ !!\n");
 
         if ( victim->query("user") ) {
             if( !member_group((string)me->query("name"), "admin") &&
                     (victim->query_level()<5 || me->query_level()<5) )
-            return notify_fail("ÔÚ¶«·½¹ÊÊÂÖÐÎå¼¶ÒÔÏÂµÄÍæ¼Ò²»×¼ PK ºÍ PK ±ðÈË¡£\n");
+            return notify_fail("åœ¨æ±æ–¹æ•…äº‹ä¸­äº”ç´šä»¥ä¸‹çš„çŽ©å®¶ä¸æº– PK å’Œ PK åˆ¥äººã€‚\n");
         }
 
         if ((int)victim->query("no_attack"))
-            return notify_fail("±ðÇá¾ÙÍý¶¯£¬Õâ¸ö¶«¶«²»ÄÜÉ±¾ÍÊÇ²»ÄÜÉ± !!\n");
+            return notify_fail("åˆ¥è¼•èˆ‰å¦„å‹•ï¼Œé€™å€‹æ±æ±ä¸èƒ½æ®ºå°±æ˜¯ä¸èƒ½æ®º !!\n");
 
 	if ( (string)me->query_temp("leader") != (string)me->query("name"))
-		return notify_fail("°¦ ¡« ÓÖ²»ÊÇÄãÁìµ¼×÷Õ½£¬ÏÂÊ²÷áÃüÁîÂï ... Ã»ÈËÀíÄãºÜôÜ°É¡£\n");
+		return notify_fail("å”‰ ï½ž åˆä¸æ˜¯ä½ é ˜å°Žä½œæˆ°ï¼Œä¸‹ä»€éº¼å‘½ä»¤å˜› ... æ²’äººç†ä½ å¾ˆç³—å§ã€‚\n");
 
 	if( (int)me->query("stop_attack")>0 )
 		return notify_fail (
-			"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓÐÍê³É£¬ÎÞ·¨²¼Õó¡£ )\n");
+			"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•ä½ˆé™£ã€‚ )\n");
 
 	if( environment(me)->query("no_embattle"))
 		return notify_fail( 
-			"ÄãÕý×¼±¸ÁÐÕóÊ±£¬¾¹È»·¢ÏÖÕâÀïÊÇ¸öÄÑÒÔÁÐÕóµÄ¾øµØ¡£\n");
+			"ä½ æ­£æº–å‚™åˆ—é™£æ™‚ï¼Œç«Ÿç„¶ç™¼ç¾é€™è£¡æ˜¯å€‹é›£ä»¥åˆ—é™£çš„çµ•åœ°ã€‚\n");
 
         if( me->query_temp("embattle_busy") ) {
           if( !me->query_attacker() )
@@ -168,7 +168,7 @@ int cmd_embattle(string str)
           else if( member_array(me->query_temp("embattle_victim"),me->query_attackers(),flag)==-1 )
             delete_embattle_effect(me);
           else 
-            return notify_fail("ÄãÄ¿Ç°ÕýÃ¦ÖøÍÆ¶¯ÕóÊÆ£¬Ã»¿ÕÏë±ðµÄÊÂÇé¡£\n");
+            return notify_fail("ä½ ç›®å‰æ­£å¿™è‘—æŽ¨å‹•é™£å‹¢ï¼Œæ²’ç©ºæƒ³åˆ¥çš„äº‹æƒ…ã€‚\n");
         }
 
         switch(name) {
@@ -185,9 +185,9 @@ int cmd_embattle(string str)
 int check_party(object me,object victim)
 {
    if (me->query_temp("depend_on_eight"))
-     return notify_fail("ÄãÏÖÔÚ±ØÐëµÈÁíÒ»ÈËÆô¶¯ÕóÊÆ¡£\n");
+     return notify_fail("ä½ ç¾åœ¨å¿…é ˆç­‰å¦ä¸€äººå•Ÿå‹•é™£å‹¢ã€‚\n");
    if (!me->query_temp("other_party_leader"))
-     return notify_fail("Ê©Õ¹°ËØÔÓÎÁúÕóÐèÒªÁ½¸ö¶ÔÎéÒ»Æð²¼Õó¡£\n");
+     return notify_fail("æ–½å±•å…«å¦æ¸¸é¾é™£éœ€è¦å…©å€‹å°ä¼ä¸€èµ·ä½ˆé™£ã€‚\n");
    (SCHOLAR_EMBATTLE_DIR+"eight")->start_embattle(me,victim);
    return 1;
 }
@@ -195,18 +195,18 @@ int check_party(object me,object victim)
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: embattle <ÕóÊÆÃû³Æ> at <¹¥»÷Ä¿±ê>
+æŒ‡ä»¤æ ¼å¼: embattle <é™£å‹¢åç¨±> at <æ”»æ“Šç›®æ¨™>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´ÍÆ¶¯ÕóÊÆ¡£Ò»°ãÀ´ËµÒ»¸öÓÉÊéÉúÎª¶ÓÎéÁìµ¼ÈËµÄµ¥Ò»¶ÓÎé
-¼´¿ÉÔËÓÃÕó·¨¹¥µÐ£¬Õó·¨ÔË×÷Ê±£¬¿ÉÒÔÔö¼Ó¶ÓÎéµÄ·ÀÓùÁ¦¼°ÆÆ»µÁ¦£¬²»¹ýÄã
-Ò²¿ÉÄÜ±»µÐÈË·¢ÏÖÆÆÕÀ»òÓÐÈËÁÙÕóÍÑÌÓ¶øÊ¹µÃÕó·¨Ê§Ð§¡£
-Î¨Ò»µÄÀýÍâÊÇµ±ÄãÒªÊ©Õ¹°ËØÔÕóÊ±£¬ÐèÒª°´ÕÕÏÂÁÐ²½Öè£º
-1. ÐèÒªÁ½×éËÄÈË×é³ÉµÄ¶ÓÎé£¬µ±È»ÊÇÊéÉúÁì¶Ó¡£
-2. Ò»¸öÊéÉúÏÈÏÂ embattle eight with <another leader name>
-3. ÁíÒ»ÕæÕýÆô¶¯ÕóÊ½µÄÊéÉúÏÂ embattle eight at <victim name>
-4. ¼ÙÈçÃ»´íÎó,Ôò°ËØÔÓÎÁúÕó»á¿ªÊ¼ÔË×÷¡£
-5. ÏëÒªÊ¹Á½¸ö¶ÓÎéµÄ¹ØÏµ²ðÉ¢£¬¿ÉÓÃ embattle eight disband
-Äã¿ÉÒÔÓÃ embattles Ö¸Áî»ØÏëÄã»¹¼ÇµÃµÄÕóÊÆ¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æŽ¨å‹•é™£å‹¢ã€‚ä¸€èˆ¬ä¾†èªªä¸€å€‹ç”±æ›¸ç”Ÿç‚ºéšŠä¼é ˜å°Žäººçš„å–®ä¸€éšŠä¼
+å³å¯é‹ç”¨é™£æ³•æ”»æ•µï¼Œé™£æ³•é‹ä½œæ™‚ï¼Œå¯ä»¥å¢žåŠ éšŠä¼çš„é˜²ç¦¦åŠ›åŠç ´å£žåŠ›ï¼Œä¸éŽä½ 
+ä¹Ÿå¯èƒ½è¢«æ•µäººç™¼ç¾ç ´ç¶»æˆ–æœ‰äººè‡¨é™£è„«é€ƒè€Œä½¿å¾—é™£æ³•å¤±æ•ˆã€‚
+å”¯ä¸€çš„ä¾‹å¤–æ˜¯ç•¶ä½ è¦æ–½å±•å…«å¦é™£æ™‚ï¼Œéœ€è¦æŒ‰ç…§ä¸‹åˆ—æ­¥é©Ÿï¼š
+1. éœ€è¦å…©çµ„å››äººçµ„æˆçš„éšŠä¼ï¼Œç•¶ç„¶æ˜¯æ›¸ç”Ÿé ˜éšŠã€‚
+2. ä¸€å€‹æ›¸ç”Ÿå…ˆä¸‹ embattle eight with <another leader name>
+3. å¦ä¸€çœŸæ­£å•Ÿå‹•é™£å¼çš„æ›¸ç”Ÿä¸‹ embattle eight at <victim name>
+4. å‡å¦‚æ²’éŒ¯èª¤,å‰‡å…«å¦æ¸¸é¾é™£æœƒé–‹å§‹é‹ä½œã€‚
+5. æƒ³è¦ä½¿å…©å€‹éšŠä¼çš„é—œä¿‚æ‹†æ•£ï¼Œå¯ç”¨ embattle eight disband
+ä½ å¯ä»¥ç”¨ embattles æŒ‡ä»¤å›žæƒ³ä½ é‚„è¨˜å¾—çš„é™£å‹¢ã€‚
 C_HELP
 		);
     return 1;

@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "buskins", "¶ÌÍ³Ñ¥" );
-	set_short( "¶ÌÍ³Ñ¥" );
+	set_name( "buskins", "çŸ­çµ±é´" );
+	set_short( "çŸ­çµ±é´" );
 	set_long(
-		"ÕâË«¶ÌÍ³Ñ¥ÓĞÖøºñºñµÄµ×²¿£¬ÊÊºÏ³¤Í¾°ÏÉæµÄÈË´©Öø¡£\n"
+		"é€™é›™çŸ­çµ±é´æœ‰è‘—åšåšçš„åº•éƒ¨ï¼Œé©åˆé•·é€”è·‹æ¶‰çš„äººç©¿è‘—ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "feet" );
 	set( "material", "leather");
 	set( "armor_class", 4 );

@@ -5,15 +5,15 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "large ghost", "ÉñáÍ" );
+	set_name( "large ghost", "ç¥åµ¬" );
 	add( "id", ({ "ghost" }) );
-	set_short( "ÉñáÍ" );
+	set_short( "ç¥åµ¬" );
 	set_long(@LONG
-ÉñáÍ³¤µÃÈËµÄÁ³£¬Ò°ÊŞµÄÉí×Ó£¬È´Ö»ÓĞÒ»Ö»ÊÖÒ»Ö»½Å¡£
+ç¥åµ¬é•·å¾—äººçš„è‡‰ï¼Œé‡ç¸çš„èº«å­ï¼Œå»åªæœ‰ä¸€éš»æ‰‹ä¸€éš»è…³ã€‚
 LONG
 	);
-	set( "unit", "¸ö" );
-        set( "race","¹í");
+	set( "unit", "å€‹" );
+        set( "race","é¬¼");
 	set( "alignment", -300 );
 	set_natural_armor(50,25);
 	set_natural_weapon(40,18,30);
@@ -36,7 +36,7 @@ int my_tactic()
     object victim;
     if ( !victim=query_attacker() ) return 0;
     if ( random(5) > 1 ) return 0;
-    tell_room(environment(),"´ÓÉñáÍµÄÉíÉÏÅç³öÂÌÉ«µÄÒºÌå£¡\n");
+    tell_room(environment(),"å¾ç¥åµ¬çš„èº«ä¸Šå™´å‡ºç¶ è‰²çš„æ¶²é«”ï¼\n");
     hurt_all("poison",60);
     return 1;    
 }

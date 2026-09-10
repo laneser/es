@@ -6,9 +6,9 @@ inherit ROOM;
 void create()
 {
 	::create();
-set_short("The Royal Dwarf graveyard","°«ÈË»ÊÁê");
+set_short("The Royal Dwarf graveyard","çŸ®äººçš‡é™µ");
   set_long(@Long
-ÕâÀïÊÇ°«ÈË»ÊÊÒµÄÄ¹³¡,Ä¹³¡ÀïÂñ²ØÖøÀú´ú¹úÍõÒÔ¼°ËûµÄ¼ÒÈË.
+é€™è£¡æ˜¯çŸ®äººçš‡å®¤çš„å¢“å ´,å¢“å ´è£¡åŸ‹è—è‘—æ­·ä»£åœ‹çŽ‹ä»¥åŠä»–çš„å®¶äºº.
 Long
 );
 set("exits",([
@@ -31,11 +31,11 @@ void summon(object player,object box)
 {
      if ( !query("falady") )
        tell_object(player,
-       "ËÆºõÃ»ÓÐÉõ÷áÁé»êÏÖÔÚÄÜ±»ÄãÕÐ»½µÄ.\n"
+       "ä¼¼ä¹Žæ²’æœ‰ç”šéº¼éˆé­‚ç¾åœ¨èƒ½è¢«ä½ æ‹›å–šçš„.\n"
        );       
      else {
        tell_room(this_object(),
-       "Ò»¸öÄ£ºýµÄÆøÌåÖð½¥³ÉÐÎ....\n");
+       "ä¸€å€‹æ¨¡ç³Šçš„æ°£é«”é€æ¼¸æˆå½¢....\n");
        set("falady",0);
        call_out("falady_appear_1",3,player,box);
        }
@@ -47,7 +47,7 @@ void falady_appear_1(object player,object box)
 {
      object monster;
      tell_room(this_object(),
-     "·¨À­µÚµÄÁé»ê³öÏÖÁË...\n");
+     "æ³•æ‹‰ç¬¬çš„éˆé­‚å‡ºç¾äº†...\n");
      monster=new(Monster"/falady");
      monster->move(this_object());
      call_out("falady_appear_2",2,player,box,monster);
@@ -58,24 +58,24 @@ void falady_appear_2(object player,object box,object monster)
 {
    if ( environment(player) != this_object() )  {
      tell_room(this_object(),
-     "·¨À­µÚ¿´ÁË¿´ËÄÖÜ,È»ááÏûÊ§ÁË.\n"
+     "æ³•æ‹‰ç¬¬çœ‹äº†çœ‹å››å‘¨,ç„¶å¾Œæ¶ˆå¤±äº†.\n"
      );
      monster->remove();
      set("falady",1);
      } 
    else if ( ! box->query("quest_item/queen_amulet") ){
      tell_object(player,
-     "·¨À­µÚ¿´ÁË¿´Äã,Ëµ:ÎªÊ²÷áÒª´òÈÅÎÒÄØ?\n");
+     "æ³•æ‹‰ç¬¬çœ‹äº†çœ‹ä½ ,èªª:ç‚ºä»€éº¼è¦æ‰“æ“¾æˆ‘å‘¢?\n");
      tell_room(this_object(),
-     "·¨À­µÚ¿´ÁË¿´,È»ááÏûÊ§ÁË.\n"
+     "æ³•æ‹‰ç¬¬çœ‹äº†çœ‹,ç„¶å¾Œæ¶ˆå¤±äº†.\n"
      );
      monster->remove();
      set("falady",1);
      }
    else {
      tell_object(player,
-     "·¨À­µÚ¿´ÁË¿´ÄãËµ:ÎÒµÄÄ¸Ç×ÒªÄãÀ´¿´ÎÒµÄ??\n"
-     "ÎÒÒ²ºÜÏëÈ¥¿´ÎÒµÄÄ¸Ç×,µ«ÊÇÎÒÎÞ·¨Ç××ÔÀë¿ªÕâÀï, Äã±ØÐë°ÑÎÒ´øµ½ÎÒÄ¸Ç×ÄÇÀïÈ¥.\n"
+     "æ³•æ‹‰ç¬¬çœ‹äº†çœ‹ä½ èªª:æˆ‘çš„æ¯è¦ªè¦ä½ ä¾†çœ‹æˆ‘çš„??\n"
+     "æˆ‘ä¹Ÿå¾ˆæƒ³åŽ»çœ‹æˆ‘çš„æ¯è¦ª,ä½†æ˜¯æˆ‘ç„¡æ³•è¦ªè‡ªé›¢é–‹é€™è£¡, ä½ å¿…é ˆæŠŠæˆ‘å¸¶åˆ°æˆ‘æ¯è¦ªé‚£è£¡åŽ».\n"
      );
      set("falady",0);
      }

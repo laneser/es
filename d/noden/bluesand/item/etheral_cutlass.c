@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "etheral cutlass", "µØÓüÍäµ¶" );
+	set_name( "etheral cutlass", "åœ°ç„å½åˆ€" );
 	add( "id", ({ "cutlass" }) );
-   set_short( "µØÓüÍäµ¶" );
+   set_short( "åœ°ç„å½åˆ€" );
 	set_long(
-		"Ò»°ÑÉÁË¸ÖøÓÄ°µ¹âÔÎµÄÍäµ¶£¬ÄÃÔÚÊÖÉÏÇáÆ®Æ®µÄ£¬¸Ğ¾õ²»µ½ÖØÁ¿¡£\n"
+		"ä¸€æŠŠé–ƒçˆè‘—å¹½æš—å…‰æšˆçš„å½åˆ€ï¼Œæ‹¿åœ¨æ‰‹ä¸Šè¼•é£„é£„çš„ï¼Œæ„Ÿè¦ºä¸åˆ°é‡é‡ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
    set( "type", "shortblade" );
 	set( "weapon_class", 21 );
 	set( "min_damage", 9 );

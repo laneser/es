@@ -2,7 +2,7 @@
 
 inherit ARMOR;
 
-string C_NAME="Ä§ÉñëÖ¼×";
+string C_NAME="é­”ç¥è„›ç”²";
 
 void create()
 {
@@ -10,9 +10,9 @@ void create()
         add( "id", ({ "leggings" }) );
         set_short( C_NAME );
         set_long(
-                "ÎŞÃûëÖ¼×¡£\n"
+                "ç„¡åè„›ç”²ã€‚\n"
         );
-        set( "unit", "¸±" );
+        set( "unit", "å‰¯" );
         set( "type", "legs" );
         set( "material", "knight");
         set( "armor_class", 15);

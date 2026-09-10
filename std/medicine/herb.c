@@ -23,22 +23,22 @@ int apply(object me, object dest)
 
 	if( me->query_attacker() || dest->query_attacker() ) {
 		tell_object(me, can_read_chinese(me)?
-			"( Äã²»ÄÜÔÚÕ½¶·ÖÐ·óÕâÖÖÒ©£¬»òÌæÕ½¶·ÖÐµÄÈË·óÕâÖÖÒ©¡£ )\n":
+			"( ä½ ä¸èƒ½åœ¨æˆ°é¬¥ä¸­æ•·é€™ç¨®è—¥ï¼Œæˆ–æ›¿æˆ°é¬¥ä¸­çš„äººæ•·é€™ç¨®è—¥ã€‚ )\n":
 			"You can't do this while you or your patient is fighting!\n" );
 		return 0;
 	}
 
 	if( dest->query_temp("bandaged") ) {
 		tell_object( me, can_read_chinese(me)?
-			"Äã±ØÐëÏÈ°Ñ±Á´ø²ðµô£¬²ÅÄÜ·óÒ©¡£\n":
+			"ä½ å¿…é ˆå…ˆæŠŠç¹ƒå¸¶æ‹†æŽ‰ï¼Œæ‰èƒ½æ•·è—¥ã€‚\n":
 			"You can't apply herbs when the wounds are bandaged.\n");
 		return 0;
 	}
 
 	if( (int)dest->query("hit_points") >= (int)dest->query("max_hp") ) {
 		tell_object( me, can_read_chinese(me)?
-			(me==dest? "Äã":(string)dest->query("c_name"))+
-			"Ò»µãÉËÒ²Ã»ÓÐ£¬»¹ÊÇÊ¡Ê¡°É¡£\n" :
+			(me==dest? "ä½ ":(string)dest->query("c_name"))+
+			"ä¸€é»žå‚·ä¹Ÿæ²’æœ‰ï¼Œé‚„æ˜¯çœçœå§ã€‚\n" :
 			(me==dest? "You":(string)dest->query("cap_name"))+
 			" doesn't seems to need that.\n" );
 		return 0;

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("scholar cape", "¾üÊ¦»¤ÅÛ");
+        set_name("scholar cape", "è»å¸«è­·è¢");
         add( "id", ({ "cloak","cape" }) );
-        set_short("scholar cape","¾üÊ¦»¤ÅÛ");
+        set_short("scholar cape","è»å¸«è­·è¢");
         set_long(
                 "This is a cape for great scholars only.\n",
-                "ÕâÊÇÒ»¼şĞÍÊ½¸ß¹ÅµÄ³¤ÅÛ£¬ÉÏÃæĞ´ÁËÒ»Ğ©ÍäÍäÇúÇúµÄòòò½ÎÄ×Ö£®\n"
+                "é€™æ˜¯ä¸€ä»¶å‹å¼é«˜å¤çš„é•·è¢ï¼Œä¸Šé¢å¯«äº†ä¸€äº›å½å½æ›²æ›²çš„èŒèšªæ–‡å­—ï¼\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "scholar" );
         set( "armor_class", 6 );

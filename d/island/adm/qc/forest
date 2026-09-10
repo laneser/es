@@ -1,23 +1,23 @@
 
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1. ¹âÓ¥Òí( /d/island/forest/obj/shield1.c ) )
+1. å…‰é·¹ç¿¼( /d/island/forest/obj/shield1.c ) )
    6     1      40       ok     leather     tsunami
    *8    *4    ( for daemon, mage, healer)
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1. Ê÷À×Ö÷Ô¿ ½òÃû÷È( /d/island/forest/weapon/key.c )
+1. æ¨¹é›·ä¸»é‘° æ´¥åé­…( /d/island/forest/weapon/key.c )
   45     25    *45      100        0        tsunami
   ( for knight only)
-2. Ê÷À×Ö÷Ô¿ Áú»Ê  ( /d/island/forest/weapon/key1.c )
+2. æ¨¹é›·ä¸»é‘° é¾çš‡  ( /d/island/forest/weapon/key1.c )
   35     20    *35      100        0        tsunami 
   ( for scholar only)
-3. Ê÷À×Ö÷Ô¿ ´¬Ëë  ( /d/island/forest/weapon/key2.c )
+3. æ¨¹é›·ä¸»é‘° èˆ¹ç©—  ( /d/island/forest/weapon/key2.c )
   30     18     32      100        0        tsunami
   ( for mage, healer, thief)
 

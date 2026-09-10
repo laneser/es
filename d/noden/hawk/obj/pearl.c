@@ -5,15 +5,15 @@ inherit OBJECT;
 void create()
 {
 	seteuid(getuid());
-        set_name("pearl", "»ÃÄ§Öé");
+        set_name("pearl", "å¹»é­”ç ");
         add( "id", ({ "pearl","daemon pearl" }) );
-        set_short( "»ÃÄ§Öé" );
+        set_short( "å¹»é­”ç " );
         set("long",@LONG
-ÕâÊÇÈö°ÍÍÂ¿¨ÓÃËþÄ·Ä·ÃØÊõËùÖÆÔì³öÀ´µÄ±¦Öé£¬¾ÝËµÓÐ½µ·üÄ§ÎïµÄÉñÆæÁ¦Á¿¡£
+é€™æ˜¯æ’’å·´åå¡ç”¨å¡”å§†å§†ç§˜è¡“æ‰€è£½é€ å‡ºä¾†çš„å¯¶ç ï¼Œæ“šèªªæœ‰é™ä¼é­”ç‰©çš„ç¥žå¥‡åŠ›é‡ã€‚
 LONG
         );
         set( "weight", 5 );
-        set( "unit", "¿Å" );
+        set( "unit", "é¡†" );
 }
 
 void init()
@@ -33,9 +33,9 @@ int to_say(string s)
                 return 0;
 
         tell_object(this_player(),@LONG
-ÄãÊÖÖÐµÄ±¦Öé·¢³öÒ»µÀ¹âÃ¢ÕÕÔÚÊ³ÈâÊÞµÄÉíÉÏ¡£
+ä½ æ‰‹ä¸­çš„å¯¶ç ç™¼å‡ºä¸€é“å…‰èŠ’ç…§åœ¨é£Ÿè‚‰ç¸çš„èº«ä¸Šã€‚
 
-Äã¿ÉÒÔ¸Ï¿ìÆóÍ¼È¥¿ØÖÆ(control)Ëü
+ä½ å¯ä»¥è¶•å¿«ä¼åœ–åŽ»æŽ§åˆ¶(control)å®ƒ
 LONG
         );
         this_player()->set_temp("control_flesh",1);

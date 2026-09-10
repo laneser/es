@@ -8,34 +8,34 @@ void create()  {
 	set_name("pig8");
 	set("race","human");
 	set("gender","male");
-	set_short("The evil pig", "Öí°Ë½ä");
+	set_short("The evil pig", "è±¬å…«æˆ’");
 	set_long(
 "\n",
-"Öí°Ë½äÊÇÉ«ÀÇÐ­»áµÄÊØ»¤Éñ. ËüÓÐÔ²Ô²µÄÉíÌå, ´ó´óµÄ¶ú¶ä, É«ÃÐÃÐµÄ\n"+
-"×ìÁ³. ²¢²»Ê±´Ó×ì½ÅÁ÷³öÒùµ´µÄÍÙÒº! ÈÃÄã¿´ÁË¾õµÃÊ®·ÖÊæ·þ, ºÜÏë¹Ä\n"+
-"ÆðÓÂÆø, ÉÏÇ°¸úËü±§±§!\n"
+"è±¬å…«æˆ’æ˜¯è‰²ç‹¼å”æœƒçš„å®ˆè­·ç¥ž. å®ƒæœ‰åœ“åœ“çš„èº«é«”, å¤§å¤§çš„è€³æœµ, è‰²çœ¯çœ¯çš„\n"+
+"å˜´è‡‰. ä¸¦ä¸æ™‚å¾žå˜´è…³æµå‡ºæ·«è•©çš„å”¾æ¶²! è®“ä½ çœ‹äº†è¦ºå¾—ååˆ†èˆ’æœ, å¾ˆæƒ³é¼“\n"+
+"èµ·å‹‡æ°£, ä¸Šå‰è·Ÿå®ƒæŠ±æŠ±!\n"
 	);
 	set("no_attack",1);
 	set("chat_chance",5);
 	set("chat_output",({
 "Pig8 says to you with its EVIL looking face:Believe in me and you'll\n"+
 "have a permanent life!\n",
-"Öí°Ë½äÉ«ÃÐÃÐµÄ¶ÔÄãËµµÀ£ºÐÅÎÒÕßµÃÓÀÉú!\n"
+"è±¬å…«æˆ’è‰²çœ¯çœ¯çš„å°ä½ èªªé“ï¼šä¿¡æˆ‘è€…å¾—æ°¸ç”Ÿ!\n"
 	}));
 }
 
 void init()  {
 	if ((int)this_player()->query("CWA") == 1) {
 		write(can_read_chinese()?
-"Äã´óÀÏÔ¶¾ÍÌýµ½É«ÀÇÊØ»¤ÉñÖí°Ë½äÇ×ÇÐµØ¶ÔÄãËµ£º"+this_player()->query("c_cap_name")+"! ÎÒµÄ×ÓÃñ! »¶Ó­Äã»Ø¼Ò!\n" :
+"ä½ å¤§è€é å°±è½åˆ°è‰²ç‹¼å®ˆè­·ç¥žè±¬å…«æˆ’è¦ªåˆ‡åœ°å°ä½ èªªï¼š"+this_player()->query("c_cap_name")+"! æˆ‘çš„å­æ°‘! æ­¡è¿Žä½ å›žå®¶!\n" :
 "Welcome HOME! "+this_player()->query("cap_name")+"! My lovely child!\n");
 		tell_room(environment(this_player()), ({
 "Let's stand up to welcome "+this_player()->query("cap_name")+"'s coming\n",
-"Öí°Ë½äÐË·ÜµØËµµÀ£ºÈÃÎÒÃÇÆðÁ¢¹ÄÕÆ»¶Ó­É«ÀÇÓ¢ÐÛ"+this_player()->query("c_cap_name")+"µÄµ½À´!\n"}),
+"è±¬å…«æˆ’èˆˆå¥®åœ°èªªé“ï¼šè®“æˆ‘å€‘èµ·ç«‹é¼“æŽŒæ­¡è¿Žè‰²ç‹¼è‹±é›„"+this_player()->query("c_cap_name")+"çš„åˆ°ä¾†!\n"}),
 		this_player());
 	} else {
 		write(can_read_chinese()?
-"Äã»¹Î´Ì¤½ø´óÌü, ¾ÍÌýµÀÖí°Ë½äµÄÉùÒô£º"+this_player()->query("c_cap_name")+"! ÎÒ×¢ÒâÄãºÜ¾ÃÁË! ÏñÄãÕâ÷áÉ«µÄÈËÓ¦¸Ã¸Ï¿ì¼ÓÈëÎÒÃÇÉñÊ¥µÄÉ«ÀÇÐ­»á!\n" :
+"ä½ é‚„æœªè¸é€²å¤§å»³, å°±è½é“è±¬å…«æˆ’çš„è²éŸ³ï¼š"+this_player()->query("c_cap_name")+"! æˆ‘æ³¨æ„ä½ å¾ˆä¹…äº†! åƒä½ é€™éº¼è‰²çš„äººæ‡‰è©²è¶•å¿«åŠ å…¥æˆ‘å€‘ç¥žè–çš„è‰²ç‹¼å”æœƒ!\n" :
 "I've been watching you for a loooong time! "+this_player()->query("cap_name")+"! I think ppl\nas color as you better join us CWA ASAP!\n");
 	}
 

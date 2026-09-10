@@ -1,11 +1,11 @@
-                    player Ê¹ÓÃµÄProperties 
+                    player ä½¿ç”¨çš„Properties 
                     -----------------------
 
-User Ê¹ÓÃ±ê×¼ living Ëù°üº¬µÄËùÓĞ Props ÒÔ¼°ÏÂÃæÒ»Ğ©ÌØÊâµÄ Props¡£
+User ä½¿ç”¨æ¨™æº– living æ‰€åŒ…å«çš„æ‰€æœ‰ Props ä»¥åŠä¸‹é¢ä¸€äº›ç‰¹æ®Šçš„ Propsã€‚
 
-£ªÒÔÏÂËùÓĞ Properties ËùĞèÉè¶¨µÄÖµ¶¼¿ÉÒÔ "@@funcname" À´È¡´ú¡£
-  ÏµÍ³½«ÒÔ func_name Ëù´«»ØµÄÖµ×÷Îª Properties ËùĞèµÄÖµ¡£
-·¶ÀıÈçÏÂ:
+ï¼Šä»¥ä¸‹æ‰€æœ‰ Properties æ‰€éœ€è¨­å®šçš„å€¼éƒ½å¯ä»¥ "@@funcname" ä¾†å–ä»£ã€‚
+  ç³»çµ±å°‡ä»¥ func_name æ‰€å‚³å›çš„å€¼ä½œç‚º Properties æ‰€éœ€çš„å€¼ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set("light","@@test_light");
 int test_light()
 {
@@ -16,118 +16,118 @@ int test_light()
 
 "age"
 ------
-Éè¶¨Öµ¡£
-Éè¶¨ player ÔÚ mud µÄ»î¶¯Ê±¼ä¡£
+è¨­å®šå€¼ã€‚
+è¨­å®š player åœ¨ mud çš„æ´»å‹•æ™‚é–“ã€‚
 
 "ghost"
 -------
-Éè¶¨Öµ¡£
-µ± ÖµÎª 0£¬ user ÊÇ alive ×´Ì¬£¬·´Ö®£¬Ôò user is dead 
-, ¶øÇÒ±ä³É¹í¡£
+è¨­å®šå€¼ã€‚
+ç•¶ å€¼ç‚º 0ï¼Œ user æ˜¯ alive ç‹€æ…‹ï¼Œåä¹‹ï¼Œå‰‡ user is dead 
+, è€Œä¸”è®Šæˆé¬¼ã€‚
 
 "guild"
 -------
-Éè¶¨×Ö´®¡£
-Éè¶¨¹«»áÎï¼ş¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®šå…¬æœƒç‰©ä»¶ã€‚
 
 "class"
 --------
-Éè¶¨×Ö´®¡£
-Éè¶¨ user ËùÊô¹«»á¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®š user æ‰€å±¬å…¬æœƒã€‚
 
 "wizard"
 --------
-Éè¶¨Öµ¡£
-ÖµÎª 1£¬´Ë user Îª wizard£¬·´Ö®£¬Ôò·ñ¡£
+è¨­å®šå€¼ã€‚
+å€¼ç‚º 1ï¼Œæ­¤ user ç‚º wizardï¼Œåä¹‹ï¼Œå‰‡å¦ã€‚
 
 "ip"
 -----
-Éè¶¨×Ö´®¡£
-¼ÇÂ¼ user ÉÏ´Î login µÄ ip address¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨˜éŒ„ user ä¸Šæ¬¡ login çš„ ip addressã€‚
 
 "cwd"
 ------
-Éè¶¨×Ö´®¡£
-¼ÇÂ¼ user ÏÖ½ñ¹¤×÷Ä¿Â¼¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨˜éŒ„ user ç¾ä»Šå·¥ä½œç›®éŒ„ã€‚
 
 "PATH"
 -------
-Éè¶¨×Ö´®ÕóÁĞ¡£
-Éè¶¨ user µÄ cmd path¡£
+è¨­å®šå­—ä¸²é™£åˆ—ã€‚
+è¨­å®š user çš„ cmd pathã€‚
 
 
 "reply"
 -------
-Éè¶¨×Ö´®¡£
-¼ÇÂ¼ user reply µÄ¶ÔÏó¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨˜éŒ„ user reply çš„å°è±¡ã€‚
 
 "inactive"
 ----------
-Éè¶¨Öµ¡£
-Éè¶¨ÊÇ·ñÎª inactive ×´Ì¬¡£
-ÖµÎª1,  Ôòuser ´¦ì¶²»¿É»î¶¯×´Ì¬¡£
+è¨­å®šå€¼ã€‚
+è¨­å®šæ˜¯å¦ç‚º inactive ç‹€æ…‹ã€‚
+å€¼ç‚º1,  å‰‡user è™•æ–¼ä¸å¯æ´»å‹•ç‹€æ…‹ã€‚
 
 "blind"
 -------
-Éè¶¨Öµo
-Éè¶¨ user ÊÇ·ñÎª blind ×´Ì¬¡£
-ÖµÎª 1£¬ÔòÎª blind¡£
+è¨­å®šå€¼o
+è¨­å®š user æ˜¯å¦ç‚º blind ç‹€æ…‹ã€‚
+å€¼ç‚º 1ï¼Œå‰‡ç‚º blindã€‚
 
 "last_location"
 ---------------
-Éè¶¨×Ö´®¡£
-Éè¶¨ user ÉÏ´ÎËùÔÚµÄÎ»Ö·¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®š user ä¸Šæ¬¡æ‰€åœ¨çš„ä½å€ã€‚
 
 "brief"
 -------
-Éè¶¨Öµ¡£
-ÖµÎª 1£¬ÔòÏÔÊ¾¼ò¶ÌÄ£Ê½£¬·´Ö®£¬Ôò·ñ¡£
+è¨­å®šå€¼ã€‚
+å€¼ç‚º 1ï¼Œå‰‡é¡¯ç¤ºç°¡çŸ­æ¨¡å¼ï¼Œåä¹‹ï¼Œå‰‡å¦ã€‚
 
 
 "spouse"
 --------
-Éè¶¨×Ö´®¡£
-Éè¶¨ user's °éÂÂ¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®š user's ä¼´ä¾¶ã€‚
 
 "announce"
 ----------
-Éè¶¨×Ö´®¡£
-Éè¶¨×Ö´®Îª "ON" or "OFF"¡£
-Éè¶¨ ONÊ±, ¿ÉÒÔ¿´µ½ user login ¡¢ user net-dead ºÍ user logout¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®šå­—ä¸²ç‚º "ON" or "OFF"ã€‚
+è¨­å®š ONæ™‚, å¯ä»¥çœ‹åˆ° user login ã€ user net-dead å’Œ user logoutã€‚
 
 "wimpy"
 -------
-Éè¶¨Öµ¡£
-Éè¶¨µ± hp ½µµ½ËùÉè¶¨µÄÖµÒÔÏÂ£¬ÔÚ×÷Õ½ÖĞ»á×Ô¶¯ÌÓÅÜ¡£
+è¨­å®šå€¼ã€‚
+è¨­å®šç•¶ hp é™åˆ°æ‰€è¨­å®šçš„å€¼ä»¥ä¸‹ï¼Œåœ¨ä½œæˆ°ä¸­æœƒè‡ªå‹•é€ƒè·‘ã€‚
 
 "wimpydir"
 ----------
-Éè¶¨×Ö´®¡£
-Éè¶¨ wimpy Ê±£¬ÌÓÅÜµÄ·½Ïò¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®š wimpy æ™‚ï¼Œé€ƒè·‘çš„æ–¹å‘ã€‚
 
 "quest"
 -------
-Éè¶¨Ò» Mapping of (quests and their value)¡£
-ÖµÎª 1£¬±íÊ¾´Ë user ÒÑ¾­Íê³É¸Ã quest¡£
-Àı: set("quest/smith", 1);£¬±íÊ¾ÒÑÍê³É smith's quest¡£
+è¨­å®šä¸€ Mapping of (quests and their value)ã€‚
+å€¼ç‚º 1ï¼Œè¡¨ç¤ºæ­¤ user å·²ç¶“å®Œæˆè©² questã€‚
+ä¾‹: set("quest/smith", 1);ï¼Œè¡¨ç¤ºå·²å®Œæˆ smith's questã€‚
 
 "snoopable"
 -----------
-Éè¶¨Öµ¡£
-Éè¶¨Îª 1 Ê±£¬´Ë user Îª¿É snoopable£¬·´Ö®£¬ÔòÖ»ÓĞ admins ¿É snoop
-¸Ã user¡£
+è¨­å®šå€¼ã€‚
+è¨­å®šç‚º 1 æ™‚ï¼Œæ­¤ user ç‚ºå¯ snoopableï¼Œåä¹‹ï¼Œå‰‡åªæœ‰ admins å¯ snoop
+è©² userã€‚
 
 "shell"
 --------
-Éè¶¨×Ö´®¡£
+è¨­å®šå­—ä¸²ã€‚
  shell is a string which holds the user's interactive shell.  If none
 is presently in use, it is set as "none".
  
 
 "full_vision"
 --------------
-Éè¶¨Öµ¡£
-Éè¶¨ÁÁ¶ÈµÄµÈ¼¶£¬ ÓÃÀ´¾ö¶¨ user ÔÚºÚ°µÖĞÊÇ·ñ¶¼ÄÜ¿´µÄµ½¡£
+è¨­å®šå€¼ã€‚
+è¨­å®šäº®åº¦çš„ç­‰ç´šï¼Œ ç”¨ä¾†æ±ºå®š user åœ¨é»‘æš—ä¸­æ˜¯å¦éƒ½èƒ½çœ‹çš„åˆ°ã€‚
 
 
 "infravision"
@@ -138,26 +138,26 @@ with infravision when the room is dark.
 
 "loudness"
 -----------
-Éè¶¨Öµ¡£
+è¨­å®šå€¼ã€‚
  loudness is an integer used by the say command to determine how
 comparibly loud you sound to others in the room (See the say command).
  
 
 "special_say"
 -------------
-Éè¶¨×Ö´®¡£
-½« say ¸Ä±ä³ÉÄãÏëÌæ»»µÄ×Ö´®¡£
-Àı: set("special_say", "growl");£¬ÄÇ÷áµ±Äã say hello£¬½«»áÏÔÊ¾
-"***** growls: hello" ¡£
+è¨­å®šå­—ä¸²ã€‚
+å°‡ say æ”¹è®Šæˆä½ æƒ³æ›¿æ›çš„å­—ä¸²ã€‚
+ä¾‹: set("special_say", "growl");ï¼Œé‚£éº¼ç•¶ä½  say helloï¼Œå°‡æœƒé¡¯ç¤º
+"***** growls: hello" ã€‚
 
 "no_follow"
 -----------
-Éè¶¨Öµ¡£
-µ±ÖµÎª 1£¬¿É·ÀÖ¹ user/object ÀûÓÃ user's ×·×ÙÏµÍ³×·×Ù¡£ 
+è¨­å®šå€¼ã€‚
+ç•¶å€¼ç‚º 1ï¼Œå¯é˜²æ­¢ user/object åˆ©ç”¨ user's è¿½è¹¤ç³»çµ±è¿½è¹¤ã€‚ 
 
 "force_to_look"
 --------------
-Éè¶¨Öµ¡£
+è¨­å®šå€¼ã€‚
  Force_to_look is an integer which is 1 if the user was
 last forced to look by an lfun, and 0 otherwise. If force_to_look is
 1, then the look command checks the brief property (ie, when the
@@ -166,8 +166,8 @@ user moves) otherwise it does not (ie, when he types "look").
 
 "home_dir"
 ----------
-Éè¶¨×Ö´®¡£
-Éè¶¨¹¤×÷Ä¿Â¼¡£
+è¨­å®šå­—ä¸²ã€‚
+è¨­å®šå·¥ä½œç›®éŒ„ã€‚
 
 
                                  By Kitten...1994/9/24

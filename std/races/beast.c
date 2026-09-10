@@ -34,10 +34,10 @@ void setup_race_body()
 //	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 7);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%sÒ»×¦×¥Ïò%s", "%sÃÍõß%sÒ»ÍÈ",
-		"%sÕÅ¿ÚÍù%s´óÁ¦Ò§ÏÂ", "%sÆËÏò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×óÍÈ", "ÓÒÍÈ", "²±×Ó", "ááĞÄ",
-		"¸¹²¿", "Ç°½Å", "áá½Å", "Í·²¿", }) );
+	body->set_c_verbs( ({ "%sä¸€çˆªæŠ“å‘%s", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%så¼µå£å¾€%så¤§åŠ›å’¬ä¸‹", "%sæ’²å‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è…¿", "å³è…¿", "è„–å­", "å¾Œå¿ƒ",
+		"è…¹éƒ¨", "å‰è…³", "å¾Œè…³", "é ­éƒ¨", }) );
 }
 
 // These functions are used for race Beast.

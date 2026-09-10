@@ -6,24 +6,24 @@ void create ()
 {               
        ::create();
        set_level(16);
-       set_name( set_color("Crab","HIR"),set_color("Ğ¡ó¦Ğ·","HIR") );
+       set_name( set_color("Crab","HIR"),set_color("å°èƒèŸ¹","HIR") );
        add("id",({"crab"}) );
-       set_short( set_color("Ğ¡ó¦Ğ·","HIR") );
-       set("unit","Ö»");
+       set_short( set_color("å°èƒèŸ¹","HIR") );
+       set("unit","åª");
        set_long(set_color("
     
-      ¡È        ¡È
-     ¡õ ¡Ñ  ¡Ñ ¡õ
-    ¡¶\\©Ø¡ª©Ø/¡¶    ¡¡Ò»Ö»È«Éí³àºìµÄĞ¡ó¦Ğ·£¬ËüÕıÏòÄãìÅÖøËüµÄÁ½¸ö´ó
-    ¡¶£ü    ¡õ¡¶¡¡¡¡   ¾Şòü¡£
-     ¡õ¡ª¡ª¡ª¡õ
+      âˆª        âˆª
+     â–¡ âŠ™  âŠ™ â–¡
+    ã€Š\\â”´â€”â”´/ã€Š    ã€€ä¸€éš»å…¨èº«èµ¤ç´…çš„å°èƒèŸ¹ï¼Œå®ƒæ­£å‘ä½ ç‚«è‘—å®ƒçš„å…©å€‹å¤§
+    ã€Šï½œ    â–¡ã€Šã€€ã€€   å·¨è¯ã€‚
+     â–¡â€”â€”â€”â–¡
 
 
        \n","HIR"));
        set_perm_stat("str",25);
        set_natural_armor(75,0);
        set_natural_weapon(27,18,29);
-       set_c_verbs(({"%sÓÃËüµÄ¾ŞòüÏò%s¹¥»÷"}));
-       set_c_limbs(({"ÉíÌå","Í·²¿","¿Ç"}));
+       set_c_verbs(({"%sç”¨å®ƒçš„å·¨è¯å‘%sæ”»æ“Š"}));
+       set_c_limbs(({"èº«é«”","é ­éƒ¨","æ®¼"}));
 }
 

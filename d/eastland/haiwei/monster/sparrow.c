@@ -6,19 +6,19 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "sparrow", "ÂéÈ¸" );
-	set_short( "ÂéÈ¸" );
+	set_name( "sparrow", "éº»é›€" );
+	set_short( "éº»é›€" );
 	set_long(
-		"Äã¿´µ½Ò»Ö»Ğ¡Ğ¡µÄÂéÈ¸ÔÚµØÉÏÌøÔ¾Öø£¬ËÆºõ²»ÅÂÉúÈË½Ó½ü¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»å°å°çš„éº»é›€åœ¨åœ°ä¸Šè·³èºè‘—ï¼Œä¼¼ä¹ä¸æ€•ç”Ÿäººæ¥è¿‘ã€‚\n"
 	);
 	set_perm_stat( "dex", 4 );
 
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "natural_weapon_class1", 2 );
 	set( "natural_min_damage1", 2 );
 	set( "natural_max_damage1", 2 );
 	set( "alignment", -100 );
-	set_c_verbs( ({ "%sÍùÏÂ¸©³å£¬ÓÃ×ì°Í×Ä%s", "%sÓÃ×¦×ÓÍù%s×¥ÏÂ" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
+	set_c_verbs( ({ "%så¾€ä¸‹ä¿¯è¡ï¼Œç”¨å˜´å·´å•„%s", "%sç”¨çˆªå­å¾€%sæŠ“ä¸‹" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
 #include <replace_mob.h>
 }

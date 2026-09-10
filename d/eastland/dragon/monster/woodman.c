@@ -9,15 +9,15 @@ void create ()
 
         ::create();
         set_level(11);
-        set_name( "draconian woodman", "ÁúÈËéÔ·ò" );
+        set_name( "draconian woodman", "é¾äººæ¨µå¤«" );
         add ("id", ({ "draconian", "woodman"}) );
-        set_short( " ÁúÈËéÔ·ò");
-        set("unit","Î»");
+        set_short( " é¾äººæ¨µå¤«");
+        set("unit","ä½");
         set("alignment",100);
         set("weight",400);
         set("wealth/gold",50);
         set_long(
-           "ÁúÈËéÔ·òÊÇÒ»¸÷ÇÚ·ÜµÄ¹¤×÷Õß¡£\n"
+           "é¾äººæ¨µå¤«æ˜¯ä¸€å„å‹¤å¥®çš„å·¥ä½œè€…ã€‚\n"
         );
         set_perm_stat("int", 15);
         set_perm_stat("dex", 16);
@@ -33,11 +33,11 @@ void create ()
         set ("gender", "male");
         set_skill("axe",60);
         set_skill("parry",80);
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
       
         set("chat_chance",3);
         set("chat_output",({
-          "éÔ·òËµ£º°¦!ÎÒµÄ¾Æñ«ÓÖ·¸ÁË£¬ÎÒÕæÏëºÈ³ÂÄêÅ®¶ùºì¡£\n",
+          "æ¨µå¤«èªªï¼šå”‰!æˆ‘çš„é…’ç™®åˆçŠ¯äº†ï¼Œæˆ‘çœŸæƒ³å–é™³å¹´å¥³å…’ç´…ã€‚\n",
            }));
        
         dagger= new(Lditem"axe");
@@ -54,16 +54,16 @@ int accept_item(object ob1,object ob2)
     object ob3,ob4;
     if (!ob2|| (int)(ob2->query("layuter_beer"))!=1) return 0;
     if ((int)(ob2->query("layuter_beer"))==1){
-    tell_object(ob1,"·Ç³£¸ĞĞ»ÄãÎªÎÒ´øÀ´µÄ¾Æ£¬¹âÊÇ¾ÆÏã¾ÍÁîÎÒµÄ¾Æ³æ´ó×÷¡£\n");    
+    tell_object(ob1,"éå¸¸æ„Ÿè¬ä½ ç‚ºæˆ‘å¸¶ä¾†çš„é…’ï¼Œå…‰æ˜¯é…’é¦™å°±ä»¤æˆ‘çš„é…’èŸ²å¤§ä½œã€‚\n");    
     if (ob3=(present("axe",this_object()))){
       tell_object(ob1,
-         "ÎÒÉíÉÏÃ»Ê²÷áÖµÇ®µÄ¶«Î÷£¬µ«ÊÇÕâ°Ñ¸«Í·ÒÔ¸úÁËÎÒ¶şÊ®ÄêÁË£¬µ«ÒÀ¾É·æÀûÎŞ±È£¬¾Í°ÑËüµ±×÷ÀñÎïËÍ¸øÄã¡£\n"
+         "æˆ‘èº«ä¸Šæ²’ä»€éº¼å€¼éŒ¢çš„æ±è¥¿ï¼Œä½†æ˜¯é€™æŠŠæ–§é ­ä»¥è·Ÿäº†æˆ‘äºŒåå¹´äº†ï¼Œä½†ä¾èˆŠé‹’åˆ©ç„¡æ¯”ï¼Œå°±æŠŠå®ƒç•¶ä½œç¦®ç‰©é€çµ¦ä½ ã€‚\n"
          );        
          ob3->move(environment(this_object()));
         this_player()->set_explore("eastland#4");
        }
     ob2->remove();
-    tell_room(environment(ob1), "éÔ·ò×øÔÚÒÎ×ÓÉÏ¿ªÊ¼ºÈÖø¾Æ.\n");       
+    tell_room(environment(ob1), "æ¨µå¤«ååœ¨æ¤…å­ä¸Šé–‹å§‹å–è‘—é…’.\n");       
    }
    
 }

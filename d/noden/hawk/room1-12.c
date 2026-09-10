@@ -6,12 +6,12 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("Í¨Íù¾üÓªµÄÐ¡Â·");
+        set_short("é€šå¾€è»ç‡Ÿçš„å°è·¯");
         set_outside("noden");
         set_long( @LONG_DESCRIPTION
-Äã¿ÉÒÔ¿´µ½Ðí¶à¾üÓª (military building)´£Á¢ÔÚÐ¡Â·µÄÁ½ÅÔ£¬ÍùÄÏÊÇÄñ
-ÈË×åÀÏÈËÃÇºÍ¾Û¾ÓµÄµØ·½¡£ËÆºõ»¹ÓÐÒ»¶°¸ß¸ßµÄ½¨ÖþÎï£¬²»ÖªµÀÊÇÉ¶¶«¶«¡£²»
-¹ýÄã¿ÉÄÜ¿ÉÒÔ´ÓÅÔ±ßµÄÂ¥ÌÝÅÀÉÏÈ¥¿´¿´¡£
+ä½ å¯ä»¥çœ‹åˆ°è¨±å¤šè»ç‡Ÿ (military building)çŸ—ç«‹åœ¨å°è·¯çš„å…©æ—ï¼Œå¾€å—æ˜¯é³¥
+äººæ—è€äººå€‘å’Œèšå±…çš„åœ°æ–¹ã€‚ä¼¼ä¹Žé‚„æœ‰ä¸€æ£Ÿé«˜é«˜çš„å»ºç¯‰ç‰©ï¼Œä¸çŸ¥é“æ˜¯å•¥æ±æ±ã€‚ä¸
+éŽä½ å¯èƒ½å¯ä»¥å¾žæ—é‚Šçš„æ¨“æ¢¯çˆ¬ä¸ŠåŽ»çœ‹çœ‹ã€‚
 LONG_DESCRIPTION
         );
         set( "exits", ([
@@ -19,7 +19,7 @@ LONG_DESCRIPTION
         "east" : HAWK"room1-11"
               ]) );
         set("c_item_desc",([
-                "building":"ÕâÊÇÒ»¶°²»Ôõ÷áÏÔÑÛµÄ¾üÓª£¬µ«ÊÇÒþÔ¼¿ÉÒÔÌýµ½Á·±øµÄßººÈÉù¡£\n",
+                "building":"é€™æ˜¯ä¸€æ£Ÿä¸æ€Žéº¼é¡¯çœ¼çš„è»ç‡Ÿï¼Œä½†æ˜¯éš±ç´„å¯ä»¥è½åˆ°ç·´å…µçš„å†å–è²ã€‚\n",
                         ]) );
     reset();
 }//end of creat
@@ -31,10 +31,10 @@ void init()
 
 int to_climb(string s)
 {
-        if ( (s != "ladder") && (s != "Â¥ÌÝ") ) return 0;
+        if ( (s != "ladder") && (s != "æ¨“æ¢¯") ) return 0;
         tell_room(environment(this_player()),
-                "Äã¿´µ½"+this_player()->query("c_name")+
-                "ÏñÎÚ¹êÒ»ÑùÑØÖøÂ¥ÌÝÂýÂýÍùÉÏÅÀ!\n",this_player());
+                "ä½ çœ‹åˆ°"+this_player()->query("c_name")+
+                "åƒçƒé¾œä¸€æ¨£æ²¿è‘—æ¨“æ¢¯æ…¢æ…¢å¾€ä¸Šçˆ¬!\n",this_player());
         this_player()->move_player(HAWK"room1-19","SNEAK");
         return 1;
 }

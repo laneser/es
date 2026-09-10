@@ -8,10 +8,10 @@ void create()
 
 	::create();
 	set_level(5);
-	set_name( "beggar", "ÆòØ¤" );
-	set_short( "ÆòØ¤" );
+	set_name( "beggar", "ä¹ä¸" );
+	set_short( "ä¹ä¸" );
 	set_long(
-		"Õâ¸öÓÖ³ôÓÖÔàµÄÆòØ¤ÕıÌ°À·µÄÍûÖøÄãµÄ¿Ú´ü¡£\n"
+		"é€™å€‹åˆè‡­åˆé«’çš„ä¹ä¸æ­£è²ªå©ªçš„æœ›è‘—ä½ çš„å£è¢‹ã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "alignment", -400 );
@@ -37,12 +37,12 @@ int my_tactic()
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
 	if( victim->query("stop_attack") ) return 0;
 	tell_object( victim, 
-		"ÆòØ¤Í»È»·ÉÆğÒ»½Å£¬°ÑÄãÌß·­Ò»¸ö¸ú¶·£¡\n");
+		"ä¹ä¸çªç„¶é£›èµ·ä¸€è…³ï¼ŒæŠŠä½ è¸¢ç¿»ä¸€å€‹è·Ÿæ–—ï¼\n");
 	tell_room( environment(), 
-		"ÆòØ¤Í»È»·ÉÆğÒ»½Å£¬°Ñ" + victim->query("c_name") + "Ìß·­Ò»¸ö¸ú¶·£¡\n",
+		"ä¹ä¸çªç„¶é£›èµ·ä¸€è…³ï¼ŒæŠŠ" + victim->query("c_name") + "è¸¢ç¿»ä¸€å€‹è·Ÿæ–—ï¼\n",
 		({ victim, this_object() }) );
 	victim->block_attack(6);
 	victim->set_temp("msg_stop_attack", 
-		"( ÄãÏÖÔÚË¤µ¹ÔÚµØ£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+		"( ä½ ç¾åœ¨æ‘”å€’åœ¨åœ°ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
 	return 1;
 }

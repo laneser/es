@@ -2,7 +2,7 @@
 
 inherit ARMOR;
 
-string C_NAME="ĞÇÔÂÖ®Ê¯Ó¢¶Ü";
+string C_NAME="æ˜Ÿæœˆä¹‹çŸ³è‹±ç›¾";
 
 void create()
 {
@@ -10,9 +10,9 @@ void create()
         add( "id", ({ "shield" }) );
         set_short( C_NAME );
         set_long(
-                "ÎŞÃûÖ®¶Ü¡£\n"
+                "ç„¡åä¹‹ç›¾ã€‚\n"
         );
-        set( "unit", "Ãæ" );
+        set( "unit", "é¢" );
         set( "type", "shield" );
         set( "material" ,"knight");
         set( "armor_class", 20 );

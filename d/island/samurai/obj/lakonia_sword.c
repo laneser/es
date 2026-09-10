@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "lakonia sword", "À­¿ËÄá°²½£" );
+        set_name( "lakonia sword", "æ‹‰å…‹å°¼å®‰åŠ" );
         add( "id",({ "sword" }) );
-        set_short( "lakonia sword", "À­¿ËÄá°²½£" );
+        set_short( "lakonia sword", "æ‹‰å…‹å°¼å®‰åŠ" );
         set_long(@AAA
-ÕâÊÇÒ»°ÑÓÃÀ­¿ËÄá°²½ğÊôËùÔìµÄ³¤½£
+é€™æ˜¯ä¸€æŠŠç”¨æ‹‰å…‹å°¼å®‰é‡‘å±¬æ‰€é€ çš„é•·åŠ
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 26 );
         set( "type", "longblade" );
 //        set( "bleeding", 15 );

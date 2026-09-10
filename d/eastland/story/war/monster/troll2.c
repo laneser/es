@@ -5,17 +5,17 @@ void create()
 {
 	::create();
 	set_level(17);
-	set_name( "Troll warrior", "¾ŞÈË×åÕ½Ê¿" );
+	set_name( "Troll warrior", "å·¨äººæ—æˆ°å£«" );
 	add( "id", ({ "warrior","troll" }) );
-	set_short( "¾ŞÈË×åÕ½Ê¿" );
+	set_short( "å·¨äººæ—æˆ°å£«" );
 	set_long(@LONG
-Ò»Î»Ğ×ÃÍµÄ¾ŞÈË×åÕ½Ê¿¡£ËûÈ«ÉíÇà½î±©ÏÖ£¬Ò»Ë«ºÚŞÖŞÖµÄ´Ö×³ÊÖ±Û£¬²»ÏÂÇ§°Ù¸ö°Ì
-ºÛ¡£
+ä¸€ä½å…‡çŒ›çš„å·¨äººæ—æˆ°å£«ã€‚ä»–å…¨èº«é’ç­‹æš´ç¾ï¼Œä¸€é›™é»‘æ‹—æ‹—çš„ç²—å£¯æ‰‹è‡‚ï¼Œä¸ä¸‹åƒç™¾å€‹ç–¤
+ç—•ã€‚
 LONG
 	);
-	set( "unit", "Î»" );
+	set( "unit", "ä½" );
 	set( "weight",1300);
-        set( "race","¾ŞÈË");
+        set( "race","å·¨äºº");
 	set( "gender","male");
 	set( "alignment", -500 );
 	set_natural_armor(60,30);

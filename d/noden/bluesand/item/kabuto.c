@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "kabuto", "Í·¿ø" );
-   set_short( "ÈÕÊ½Í·¿ø" );
+	set_name( "kabuto", "é ­ç›”" );
+   set_short( "æ—¥å¼é ­ç›”" );
 	set_long(
-		"ÕâÊÇÒ»¶¥ÈÕÊ½µÄÍ·¿ø£¬ÉÏÃæÓĞÒ»¶Ô»ÆÍ­×ö³ÉµÄÂ¹½ÇÊÎ¡£\n"
+		"é€™æ˜¯ä¸€é ‚æ—¥å¼çš„é ­ç›”ï¼Œä¸Šé¢æœ‰ä¸€å°é»ƒéŠ…åšæˆçš„é¹¿è§’é£¾ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
 	set( "weight", 80 );
 	set( "type", "head" );
 	set( "material", "light_metal");

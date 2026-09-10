@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "dwarf sentry", "¹Û²ìÕ¾ÉÚ±ø" );
+	set_name( "dwarf sentry", "è§€å¯Ÿç«™å“¨å…µ" );
 	add("id",({"guard","sentry","dwarf"}) );
-   set_short( "¹Û²ìÕ¾ÉÚ±ø" );
+   set_short( "è§€å¯Ÿç«™å“¨å…µ" );
 	set_long(
-		"Ò»¸ö°«ÈËÉÚ±ø,ËûÕı¹ÌÊØÖøËûµÄ¸ÚÎ»,ÑÏËàµÄËûÕıÃæÎŞ±íÇéµØ¼àÊÓÖø\n"
-		"É½Â·ÉÏÀ´ÍùµÄÈËÈº¡£\n" );
+		"ä¸€å€‹çŸ®äººå“¨å…µ,ä»–æ­£å›ºå®ˆè‘—ä»–çš„å´—ä½,åš´è‚…çš„ä»–æ­£é¢ç„¡è¡¨æƒ…åœ°ç›£è¦–è‘—\n"
+		"å±±è·¯ä¸Šä¾†å¾€çš„äººç¾¤ã€‚\n" );
 	set( "gender", "male" );
 	set( "race", "dwarf" );
 	set( "alignment", 400 );
@@ -51,7 +51,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-      guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i]
+      guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i]
       );
       guard[i]->kill_ob(victim);
     }

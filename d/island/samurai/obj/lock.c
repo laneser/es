@@ -1,6 +1,6 @@
 /*
- * Ô­×÷Õß£ºMercury (1995.1)
- * ÐÞ¸ÄÕß£ºIshige (1995.12)
+ * åŽŸä½œè€…ï¼šMercury (1995.1)
+ * ä¿®æ”¹è€…ï¼šIshige (1995.12)
  */
 
 #include <mudlib.h>
@@ -10,16 +10,16 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("Blade Lock","µ¶Ëø");
+       set_name("Blade Lock","åˆ€éŽ–");
        add("id",({"lock","blade"}) );
-       set_short("µ¶Ëø");
+       set_short("åˆ€éŽ–");
 	   set_long(@AAA
-ÕâÊÇÒ»°ÑÐÎ×´Ïàµ±Ææ¹ÖµÄµ¶£¬ºÃÏñÓÐÊ²÷áÌØÊâ¹¦ÓÃ
+é€™æ˜¯ä¸€æŠŠå½¢ç‹€ç›¸ç•¶å¥‡æ€ªçš„åˆ€ï¼Œå¥½åƒæœ‰ä»€éº¼ç‰¹æ®ŠåŠŸç”¨
 AAA
 
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "second",1);
  	set( "weapon_class", 40 );
         set("type","longblade");
@@ -49,23 +49,23 @@ int sword_damage(object victim,int damage)
 { case 0:			 
  {    
      tell_object(holder,
-     "\nÄã½«ÊÖÉÏµÄµ¶ËøÉä³ö£¬½«µÐÈËµÄÎäÆ÷¿Û×¡\n\n");
+     "\nä½ å°‡æ‰‹ä¸Šçš„åˆ€éŽ–å°„å‡ºï¼Œå°‡æ•µäººçš„æ­¦å™¨æ‰£ä½\n\n");
      tell_room(environment(holder),
-      "\n"+holder->query("c_cap_name")+"½«ÊÖÉÏµÄµ¶ËøÉä³ö£¬½«"+victim->query("c_cap_name")+"µÄÎäÆ÷¿Û×¡\n\n",
+      "\n"+holder->query("c_cap_name")+"å°‡æ‰‹ä¸Šçš„åˆ€éŽ–å°„å‡ºï¼Œå°‡"+victim->query("c_cap_name")+"çš„æ­¦å™¨æ‰£ä½\n\n",
       holder);
     victim->receive_damage(dam);
     victim->set("last_attacker",holder);
     victim->block_attack(6);
     victim->set_temp("msg_stop_attack",
-    "( ÄãÊÖÉÏµÄÎäÆ÷±»µ¶Ëø¿ÛËÀÁË£¬ÄãÎÞ·¨³öÊÖ¹¥»÷!! )\n");
+    "( ä½ æ‰‹ä¸Šçš„æ­¦å™¨è¢«åˆ€éŽ–é‡¦æ­»äº†ï¼Œä½ ç„¡æ³•å‡ºæ‰‹æ”»æ“Š!! )\n");
     return dam;
  }
  case 1:   
  {
       tell_object(holder,
-      "\nÄãÊÖÉÏµÄµ¶Ëø·¢³öÒ«ÑÛµÄ¹âÃ¢·ÉÕ¶ÏòµÐÈË\n\n");
+      "\nä½ æ‰‹ä¸Šçš„åˆ€éŽ–ç™¼å‡ºè€€çœ¼çš„å…‰èŠ’é£›æ–¬å‘æ•µäºº\n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_cap_name")+"ÊÖÉÏµÄµ¶Ëø·¢³öÒ«ÑÛµÄ¹âÃ¢·ÉÕ¶µÐÈË\n\n",
+      "\n"+holder->query("c_cap_name")+"æ‰‹ä¸Šçš„åˆ€éŽ–ç™¼å‡ºè€€çœ¼çš„å…‰èŠ’é£›æ–¬æ•µäºº\n\n",
       holder);
       victim->receive_damage(dam+random(15));
       victim->set("last_attacker",holder);

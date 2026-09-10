@@ -3,16 +3,16 @@
 inherit WEAPON;
 void create()
 {
-   set_name("shortsword","Ğ¡¶Ìµ¶");
+   set_name("shortsword","å°çŸ­åˆ€");
    add("id",({"sword"}) );
-   set_short("Ğ¡¶Ìµ¶");
+   set_short("å°çŸ­åˆ€");
        set_long(
 @C_LONG
-    Ğ¡¶ø¶ÛµÄĞ¡µ¶×Ó¡£
+    å°è€Œéˆçš„å°åˆ€å­ã€‚
 C_LONG
         );
 
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 6 );
     set("type","shortblade");
         set( "min_damage", 2 );

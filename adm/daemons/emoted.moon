@@ -262,20 +262,20 @@ string cap_it(string str, int do_cap)
 }
 string c_objective(string gender)
 {
-        if (gender == "male") return "Ëû" ;
-        if (gender == "female") return "Ëı" ;
-        return "Ëü" ;
+        if (gender == "male") return "ä»–" ;
+        if (gender == "female") return "å¥¹" ;
+        return "å®ƒ" ;
 }
 string c_possessive(string gender)
 {
-        if (gender == "male") return "ËûµÄ" ;
-        if (gender == "female") return "ËıµÄ" ;
-        return "ËüµÄ" ;
+        if (gender == "male") return "ä»–çš„" ;
+        if (gender == "female") return "å¥¹çš„" ;
+        return "å®ƒçš„" ;
 }
 
 string c_you(object who)
 {
-        return ((string)who->query("gender") == "female") ? "Äã" : "Äã" ;
+        return ((string)who->query("gender") == "female") ? "ä½ " : "ä½ " ;
 }
 
 // make the substitutions for the various $variables
@@ -349,10 +349,10 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
 					if ( kind == e_me ) 
                                                 name = "yourself";
 					else if ( kind == c_me)
-						name = c_you(me)+"×Ô¼º" ;
+						name = c_you(me)+"è‡ªå·±" ;
 					else if ( kind == c_others || kind ==c_target )
 							if (!mo) {
-								mo = c_objective((string)me->query("gender"))+"×Ô¼º";
+								mo = c_objective((string)me->query("gender"))+"è‡ªå·±";
 							}
 					else if ( kind == e_others || kind == e_target ) {
 							if (!mo) {
@@ -385,7 +385,7 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
                                         pronoun = "yours";
 				}
                                 else if (kind == c_me ) {
-                                        pronoun = c_you(me)+"µÄ";
+                                        pronoun = c_you(me)+"çš„";
 				}
                                 else {
                                         pronoun = ( kind >4 ) ?
@@ -403,7 +403,7 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
 					pronoun = c_possessive((string)target->query("gender"));
 				}
                                 else {
-					pronoun = ( kind > 4 ) ? c_you(target)+"µÄ" : "yours" ;
+					pronoun = ( kind > 4 ) ? c_you(target)+"çš„" : "yours" ;
 				}
                                 words[j] = cap_it(pronoun, do_cap) + remainder;
 				break;
@@ -413,11 +413,11 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
                                         pronoun = "your";
 				}
                                 else if (kind == c_me) {
-                                        pronoun = c_you(me)+"µÄ" ;
+                                        pronoun = c_you(me)+"çš„" ;
 				}
                                 else {
                                         pronoun = ( kind > 4 ) ?
-						(string)me->query("c_name")+"µÄ" :
+						(string)me->query("c_name")+"çš„" :
 						apostrophed((string)me->query("name")) ;
 				}
 				words[j] = cap_it(pronoun, do_cap) + remainder;
@@ -426,13 +426,13 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
 			case 'g' :
 			if ( ((kind == e_target) || (kind == c_target) ||
 			     (kind == e_me) || (kind == c_me)) && (me == target)) {
-				pronoun = c_you(target)+"µÄ" ;
+				pronoun = c_you(target)+"çš„" ;
 				} else if (target == me) {
 					pronoun = (kind > 4) ? c_possessive((string)me->query("gender")) :
 							possessive((string)target->query("gender")) ;
 					} else {
 						pronoun = ( kind > 4 ) ?
-							   (string)target->query("c_name")+"µÄ" :
+							   (string)target->query("c_name")+"çš„" :
 							   apostrophed((string)target->query("name")) ;
 						}
 			words[j] = cap_it(pronoun, do_cap) + remainder;
@@ -486,7 +486,7 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
 					pronoun = "your";
 				}
                                 else if ( kind == c_me ) {
-					pronoun = c_you(me)+"µÄ";
+					pronoun = c_you(me)+"çš„";
 				}
 				else {
 					pronoun = ( kind >4 ) ? c_possessive((string)me->query("gender")) : possessive((string)me->query("gender")) ;
@@ -499,7 +499,7 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
                                         pronoun = "your";
 				}
                                 else if ( kind == c_target ) {
-                                        pronoun = c_you(target)+"µÄ" ;
+                                        pronoun = c_you(target)+"çš„" ;
 				}
                                 else {
 					pronoun = ( kind > 4 ) ? c_possessive((string)target->query("gender")) : possessive((string)target->query("gender")) ;
@@ -512,7 +512,7 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
 					pronoun = (target == me) ? "yourself" : "you";
 				}
                                 else if (kind == c_me) {
-					pronoun = (target == me) ? c_you(me)+"×Ô¼º" : c_you(me) ;
+					pronoun = (target == me) ? c_you(me)+"è‡ªå·±" : c_you(me) ;
 				}
                                 else {
 					pronoun = ( kind > 4 ) ? c_objective((string)me->query("gender")) : objective((string)me->query("gender"));
@@ -531,7 +531,7 @@ string substitute(string verb, string verb2, int kind, string rest, string *word
                                                 pronoun = "yourself";
 					}
 					else if ((kind == c_me) && (target == me)) {
-						pronoun = c_you(target)+"×Ô¼º" ;
+						pronoun = c_you(target)+"è‡ªå·±" ;
 						}
                                         else {
 						pronoun = ( kind > 4) ? c_objective((string)target->query("gender")) : objective((string)target->query("gender"));
@@ -685,7 +685,7 @@ varargs void do_emote(string verb, string verb2, string rest, mapping entry, obj
                                 write("c_others:\n" + c_result + "\n");
 			}
 			if(chat_flag){
-        message("channel:chat" , HIC+"¡¾ÏĞÁÄ¡¿" + c_result + NOR+"\n" , users());
+        message("channel:chat" , HIC+"ã€é–’èŠã€‘" + c_result + NOR+"\n" , users());
 			} else {
 				tell_room( environment(me), 
 					c_result+"\n" , 
@@ -734,7 +734,7 @@ varargs int parse(string command, string rest, int test)
   	 if(head) target = find_player(head);
 //zyz add it for chat*
 		if(chat_flag == 1){		
-			if(!target)  return notify_fail("ÄãÒª¶ÔË­×ö¶¯×÷¡£\n");
+			if(!target)  return notify_fail("ä½ è¦å°èª°åšå‹•ä½œã€‚\n");
 		}else {
 			if(!target)  target = present(head, environment(me));
 			}

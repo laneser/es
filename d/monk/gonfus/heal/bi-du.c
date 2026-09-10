@@ -15,39 +15,39 @@ varargs int eungon(object me, int level)
 
 	if( me->query_temp("monk_poison") ) {
 		tell_object( me, 
-			"Äã¸Õ±Æ¹ý¶¾£¬Ã»Á¦ÔÙ×öÒ»´Î¡£\n" );
+			"ä½ å‰›é€¼éŽæ¯’ï¼Œæ²’åŠ›å†åšä¸€æ¬¡ã€‚\n" );
 		return 0;
 	}
 
 	if( !me->query("conditions/"+COND_NAME) ) {
 		tell_object( me, 
-			"Äã²¢Ã»ÓÐÖÐ¶¾µÄÇéÐÎ¡£\n");
+			"ä½ ä¸¦æ²’æœ‰ä¸­æ¯’çš„æƒ…å½¢ã€‚\n");
 		return 0;
 	}
 
 	if( me->query_attackers() ) {
 		tell_object( me,
-			"ÔÚÕ½¶·ÖÐÔË¹¦\±Æ¶¾? ÏëËÀÂð?\n");
+			"åœ¨æˆ°é¬¥ä¸­é‹åŠŸé€¼æ¯’? æƒ³æ­»å—Ž?\n");
 		return 0;
 	}
 
 	if( !skill = (int)me->query_skill("force-stun") ) {
 		tell_object( me,
-			"Äã²¢Ã»ÓÐÑ§¹ýÑ¨µÀÑ§µÄ¼¼ÄÜ¡£\n");
+			"ä½ ä¸¦æ²’æœ‰å­¸éŽç©´é“å­¸çš„æŠ€èƒ½ã€‚\n");
 		return 0;
 	}
 
 	fp = (int)me->query("force_points");
 	if( !fp || fp < query_fp_cost() ) {
 		tell_object( me,
-			"ÄãµÄÄÚÁ¦²»¹»£¬²»ÄÜ¹»ÔË¹¦\±Æ¶¾¡£\n");
+			"ä½ çš„å…§åŠ›ä¸å¤ ï¼Œä¸èƒ½å¤ é‹åŠŸé€¼æ¯’ã€‚\n");
 		return 0;	
 	}
 	tell_object( me, 
-		"ÄãÏëÇå³þÑ¨µÀÔËÐÐºÍÈ«ÉíÂöÂç·Ö²¼£¬ÔËÆðÉíÉÏÄÚÁ¦£¬ÆóÍ¼±Æ³öËùÖÐÖ®¶¾ ....\n");
+		"ä½ æƒ³æ¸…æ¥šç©´é“é‹è¡Œå’Œå…¨èº«è„ˆçµ¡åˆ†ä½ˆï¼Œé‹èµ·èº«ä¸Šå…§åŠ›ï¼Œä¼åœ–é€¼å‡ºæ‰€ä¸­ä¹‹æ¯’ ....\n");
 
 	tell_room( environment(me), 
-		me->query("c_name")+"ÔËÆðÉñ¹¦\£¬ÆóÍ¼±Æ³öÉíÉÏµÄ¶¾ËØ¡£\n" , me );
+		me->query("c_name")+"é‹èµ·ç¥žåŠŸ\ï¼Œä¼åœ–é€¼å‡ºèº«ä¸Šçš„æ¯’ç´ ã€‚\n" , me );
 
 	me->set_temp("block_command", 1);
 	me->set_temp("block_defense", 1);
@@ -68,24 +68,24 @@ void result(object me)
 
 	if( !poison = (mixed)me->query( "conditions/" + COND_NAME ) ) {
 		tell_object( me,
-			"ÄãµÄ¶¾¸Õ¸Õ½âÁË¡£\n");
+			"ä½ çš„æ¯’å‰›å‰›è§£äº†ã€‚\n");
 		return;
 	}
 
 	if ( sizeof(poison) != 3 ) {
 		log_file("Monk_bidu","Error poison index find in "+me->query("name")+"\n");
 		me->delete("conditions/"+ COND_NAME);
-		tell_object( me, "ÄãÖÐµÄ¶¾ºÜÆæÌØ !! ÇëÍ¨ÖªÎ×Ê¦ !!\n");
+		tell_object( me, "ä½ ä¸­çš„æ¯’å¾ˆå¥‡ç‰¹ !! è«‹é€šçŸ¥å·«å¸« !!\n");
 		return;
 	}
 	skill = (int)me->query_skill("force-stun");
 	if( skill/2 + random(skill/2) > 5 * poison[1] * poison[2] / poison[0] ) {
 		tell_object( me,
-			"Äã³É¹¦\µÄ½«ÌåÄÚµÄ¶¾±Æ³öÌåÍâÁË!\n");
+			"ä½ æˆåŠŸçš„å°‡é«”å…§çš„æ¯’é€¼å‡ºé«”å¤–äº†!\n");
 		SIMPLE_POISON->remove_effect(me);
 	} else {
 		tell_object( me,
-			"Äã¹¦\Á¦²»¹»£¬ËùÑ§ÓÐÏÞ£¬Ö»±Æ³öÁËÒ»²¿·ÝµÄ¶¾ËØ....\n");
+			"ä½ åŠŸåŠ›ä¸å¤ ï¼Œæ‰€å­¸æœ‰é™ï¼Œåªé€¼å‡ºäº†ä¸€éƒ¨ä»½çš„æ¯’ç´ ....\n");
 		// make the result random case.
 		switch( random(3) ) {
 			case 1 : poison[0] *= 2; break;
@@ -96,7 +96,7 @@ void result(object me)
 	}
 
 	tell_room( environment(me), 
-		me->query("c_name")+"ÎüÁËÒ»¿ÚÆø, Õ¾ÁËÆðÀ´¡£\n", me );
+		me->query("c_name")+"å¸äº†ä¸€å£æ°£, ç«™äº†èµ·ä¾†ã€‚\n", me );
 	me->set_temp("monk_poison", 1);
 	call_out("depoison_again", 120-skill/2, me);
 }
@@ -105,6 +105,6 @@ void depoison_again(object player)
 {
 	if( !player ) return;
 	tell_object( player, 
-		"Äã¸Ðµ½ÄãµÄÄÚÁ¦³äÅæ, ÓÖÄÜ±Æ¶¾ÁË¡£\n");
+		"ä½ æ„Ÿåˆ°ä½ çš„å…§åŠ›å……æ²›, åˆèƒ½é€¼æ¯’äº†ã€‚\n");
 	player->delete_temp("monk_poison");
 }

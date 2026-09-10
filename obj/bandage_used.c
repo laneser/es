@@ -8,12 +8,12 @@ inherit OBJECT;
 void create()
 {
 #include <compress_obj.h>
-	set_name( "bandage", "±Á´ø" );
-	set_short( "±Á´ø (Ê¹ÓÃÖĞ)" );
+	set_name( "bandage", "ç¹ƒå¸¶" );
+	set_short( "ç¹ƒå¸¶ (ä½¿ç”¨ä¸­)" );
 	set_long(
-		"±Á´øÊÇÒ»ÖÖ³£¼ûµÄ¡¢ÓÃÀ´Ê¹ÊÜÉËµÄÈË¼Ó¿ì»Ö¸´ËÙ¶ÈµÄÒ½Ò©ÓÃÆ·¡£\n"
+		"ç¹ƒå¸¶æ˜¯ä¸€ç¨®å¸¸è¦‹çš„ã€ç”¨ä¾†ä½¿å—å‚·çš„äººåŠ å¿«æ¢å¾©é€Ÿåº¦çš„é†«è—¥ç”¨å“ã€‚\n"
 	);
-	set( "unit", "¾í" );
+	set( "unit", "å·" );
 	set( "weight", 5 );
 	set( "in_use", 1 );
 	set( "prevent_drop", 1 );
@@ -33,7 +33,7 @@ int do_remove(string arg)
 	// for fix the bug of user quit or suicide.
 	if( ob && living(ob) ) {
 		if( !id(arg) || !query("in_use") ) return 0;
-		tell_object(ob,"Äã½«±Á´ø²ğÏÂÀ´¶ªµô¡£\n");
+		tell_object(ob,"ä½ å°‡ç¹ƒå¸¶æ‹†ä¸‹ä¾†ä¸Ÿæ‰ã€‚\n");
 		ob->delete_temp("bandaged");
 		BANDAGED->remove_effect(ob);
 	}
@@ -56,7 +56,7 @@ void expire(object obj)
 		remove();
 		return;
 	}
-	tell_object(ob,"ÄãµÄ±Á´ø±»ÏÊÑª½şÍ¸ÁË¡£\n");
+	tell_object(ob,"ä½ çš„ç¹ƒå¸¶è¢«é®®è¡€æµ¸é€äº†ã€‚\n");
 	do_remove("bandage");
 	return;
 }

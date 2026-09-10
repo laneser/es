@@ -1,39 +1,39 @@
 #d/knight/fortress/knight_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÆïÊ¿ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"é¨å£«ç•™è¨€æ¿",])
 messages ({(["id":96,"body":"superise....
 10/12 have 50 Beejoe in linkdead user
 what's the matter ??????
-","title":"< no title >","time":781966506,"poster":"Death",]),(["id":97,"body":"   ¶ÔÑ½!!Ôõ÷á»ØÊÂ???
+","title":"< no title >","time":781966506,"poster":"Death",]),(["id":97,"body":"   å°å‘€!!æ€éº¼å›äº‹???
 ","title":"< no title >","time":782021638,"poster":"Limay",]),(["id":98,"title":"< no title >","body":"         Here is boop
    
        poor help clear war been killes by warlord ...........
 
-         give some ÕÆÉù°É
+         give some æŒè²å§
 
       papapspapapapa
 ","time":782065783,"poster":"Boop",]),(["id":99,"body":"when i mount horse ........ then Oops!! there r something wrong ...
 
 
 . HELP
-","title":"²»ÄÜÆïÂíÁË","time":782084435,"poster":"Binbin",]),(["id":100,"body":"
+","title":"ä¸èƒ½é¨é¦¬äº†","time":782084435,"poster":"Binbin",]),(["id":100,"body":"
 
 ","title":"< no title >","time":782115904,"poster":"Boop",]),(["id":101,"body":"  mail 25 no say anything ..sorry
 
        Boop was here ................
       
                                          Lv 19 Boop......
-","title":"< no title >","time":782115969,"poster":"Boop",]),(["id":102,"title":"< no title >","body":"ÄÄ¸öÎ×Ê¦orÉñÄÜ°ïÎÒ.....
+","title":"< no title >","time":782115969,"poster":"Boop",]),(["id":102,"title":"< no title >","body":"å“ªå€‹å·«å¸«orç¥èƒ½å¹«æˆ‘.....
 my old login YISHIN is have some bug and can't suicide....
 plz kill his file for me......
 thx.......
 ","time":782135113,"poster":"Aq",]),(["id":103,"title":"< no title >","body":"I am August....hahaha
 I am Weak hahahhahhah
 I am ahhahahahah
-","time":782158486,"poster":"August",]),(["id":104,"title":"MY Ìá¿î¿¨  :~~~~(","body":"ÎØÎØÎØ....ÎÒµÄÌá¿î¿¨ºÍÅåµ¶µôÁËÀ²....Åäµ¶ÓÃ verify ¿ÉÒÔÄÃ»ØÀ´....
+","time":782158486,"poster":"August",]),(["id":104,"title":"MY ææ¬¾å¡  :~~~~(","body":"å—šå—šå—š....æˆ‘çš„ææ¬¾å¡å’Œä½©åˆ€æ‰äº†å•¦....é…åˆ€ç”¨ verify å¯ä»¥æ‹¿å›ä¾†....
 hp
-¿ÉÊÇÌá¿î¿¨....ÎØÎØÎØ....ºÃ¶àÇ®Ò®....
+å¯æ˜¯ææ¬¾å¡....å—šå—šå—š....å¥½å¤šéŒ¢è€¶....
 
 Gorilla
 ","time":782159284,"poster":"Gorilla",]),(["id":105,"body":"to gorilla:

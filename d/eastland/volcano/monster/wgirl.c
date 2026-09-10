@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name( "The girl", "矮灵族小女孩" );
+	set_name( "The girl", "鐭潏鏃忓皬濂冲" );
 	add( "id", ({ "girl" }) );
-	set_short( "矮灵族小女孩" );
+	set_short( "鐭潏鏃忓皬濂冲" );
 	set_long(
-                "一个矮灵族的小女孩正在玩扮家家酒。\n"
+                "涓�鍊嬬煯闈堟棌鐨勫皬濂冲姝ｅ湪鐜╂壆瀹跺閰掋�俓n"
 	);
 	set( "race", "dwarf" );
 	set( "gender", "female" );

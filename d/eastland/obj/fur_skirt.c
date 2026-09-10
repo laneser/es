@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "fur skirt", "ÊŞÆ¤È¹×Ó" );
+	set_name( "fur skirt", "ç¸çš®è£™å­" );
 	add( "id", ({ "skirt" }) );
-   set_short( "ÊŞÆ¤È¹×Ó" );
+   set_short( "ç¸çš®è£™å­" );
 	set_long(
-		"ÕâÊÇÒ»¼ş°¹ÔàµÄÊŞÆ¤È¹×Ó£¬ÉÏÃæµÄÃ«Æ¤¶«µôÒ»¿é£¬Î÷ÍºÒ»¿é£¬Ê®·ÖÄÑ¿´¡£\n"
+		"é€™æ˜¯ä¸€ä»¶éª¯é«’çš„ç¸çš®è£™å­ï¼Œä¸Šé¢çš„æ¯›çš®æ±æ‰ä¸€å¡Šï¼Œè¥¿ç¦¿ä¸€å¡Šï¼Œååˆ†é›£çœ‹ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "legs" );
 	set( "material", "leather" );
 	set( "weight", 60 );

@@ -1,14 +1,14 @@
 
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1. ÁúÁÛ¶Ü( /d/noden/moyada/obj/dragon_shield )
+1. é¾é±—ç›¾( /d/noden/moyada/obj/dragon_shield )
   *9     2     150       ok      h_metal      mad
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1. Ìı»°µÄËÀÉñÁ­µ¶( /d/noden/moyada/obj/death_scythe )
+1. è½è©±çš„æ­»ç¥é®åˆ€( /d/noden/moyada/obj/death_scythe )
  *42    *25    *45      150        0          mad

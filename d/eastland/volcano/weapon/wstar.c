@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("wraith morningstar","°«ÁéÁ÷ĞÇ¡õ");
+       set_name("wraith morningstar","çŸ®éˆæµæ˜Ÿâ–¡");
        add("id",({"morningstar","star"}) );
-       set_short("°«ÁéÁ÷ĞÇ¡õ");
+       set_short("çŸ®éˆæµæ˜Ÿâ–¡");
        set_long(
-           "Ò»°Ñ°«ÁéÁ÷ĞÇ¡õ\n"
+           "ä¸€æŠŠçŸ®éˆæµæ˜Ÿâ–¡\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class",27 );
         set( "type","chain");
 	set( "min_damage", 13 );

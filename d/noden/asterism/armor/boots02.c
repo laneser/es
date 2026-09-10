@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Obsidian boots", "ºÚê×Ê¯³¤Ñ¥");
+        set_name("Obsidian boots", "é»‘æ›œçŸ³é•·é´");
         add( "id", ({ "boots" }) );
-        set_short( "ºÚê×Ê¯³¤Ñ¥");
+        set_short( "é»‘æ›œçŸ³é•·é´");
         set_long(
-                "ÕâÊÇÒ»Ë«ºÚê×Ê¯³¤Ñ¥.\n"
+                "é€™æ˜¯ä¸€é›™é»‘æ›œçŸ³é•·é´.\n"
         );
-        set("unit","Ë«");
+        set("unit","é›™");
         set( "type", "feet" );
         set("material","element") ;
         set( "armor_class", 6 );

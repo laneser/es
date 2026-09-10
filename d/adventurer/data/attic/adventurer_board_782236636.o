@@ -1,26 +1,26 @@
 #d/adventurer/hall/adv_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Adventurer's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶Ã°ÏÕÕß¹«»áÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÈÎºÎÈË¶¼»¶Ó­ÔÚÕâÀïÁôÑÔ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"Ã°ÏÕÕßÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Adventurer's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼å†’éšªè€…å…¬æœƒæ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤ä»»ä½•äººéƒ½æ­¡è¿åœ¨é€™è£¡ç•™è¨€ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"å†’éšªè€…ç•™è¨€æ¿",])
 messages ({(["id":143,"title":"< no title >","body":"
-	Hi! ´ó¼ÒºÃ...¾²¼ÅÖ®ÇïÔÚ´ËÏñ¸÷Î»ÎÊºÃ:)
+	Hi! å¤§å®¶å¥½...éœå¯‚ä¹‹ç§‹åœ¨æ­¤åƒå„ä½å•å¥½:)
 
-	½ñÌìÊÔÒ»ÊÔÑÇÄ¬...Ã»ÓĞÉ¶»ªÁ¦µÄ´ó·¨Ñ½??Ö»Í½È»¶ÑÆğÁËÒ»¶ÑÇïµÄ¡õÌå..ÕæÊÇÖóº×·ÙÇÙ:~~~
+	ä»Šå¤©è©¦ä¸€è©¦äºé»˜...æ²’æœ‰å•¥è¯åŠ›çš„å¤§æ³•å‘€??åªå¾’ç„¶å †èµ·äº†ä¸€å †ç§‹çš„â–¡é«”..çœŸæ˜¯ç…®é¶´ç„šç´:~~~
 
-	ÏÂ´ÎÊÔÊÔĞÏÀÏµùºÃÁË...ccc
+	ä¸‹æ¬¡è©¦è©¦é‚¢è€çˆ¹å¥½äº†...ccc
 
-	Ñ§ÆÚÖĞ²»ÄÜ»¨Ì«¶àÊ±¼ä train ½ÅÉ« ...ËùÒÔ¿ÉÄÜ»á´ôÔÚ level ¡õ ºÜ¾Ã...Ï£Íû¸÷Î»Ê¦ĞÖÊ¦½ãÃÇ
+	å­¸æœŸä¸­ä¸èƒ½èŠ±å¤ªå¤šæ™‚é–“ train è…³è‰² ...æ‰€ä»¥å¯èƒ½æœƒå‘†åœ¨ level â–¡ å¾ˆä¹…...å¸Œæœ›å„ä½å¸«å…„å¸«å§å€‘
 
-	ÄÇÌìÔÚ 
-es Ä³½ÇÂä¿´¼û ÇïÊ± ...Òª¶ÔÇïĞ¦Ğ¦ ...²»Òª²»ÀíÇï...ÕâÑùÇï»áºÜÉËĞÄà¡  ^~
+	é‚£å¤©åœ¨ 
+es æŸè§’è½çœ‹è¦‹ ç§‹æ™‚ ...è¦å°ç§‹ç¬‘ç¬‘ ...ä¸è¦ä¸ç†ç§‹...é€™æ¨£ç§‹æœƒå¾ˆå‚·å¿ƒå”·  ^~
 
 					sincery
-						¾²¼ÅÖ®Çï (automn
+						éœå¯‚ä¹‹ç§‹ (automn
 
 
-","time":782163248,"poster":"Autumn",]),(["id":144,"title":"< no title >","body":"ÎªÉõ÷áÎÒÍê³ÉÁËÈÎÎñÒ»£¬µ«ÓÃQUESTSÊ±£¬ËµÎŞÍê³ÉÈÎºÎÈÎÎñ£¿£¿
-µ«Ö®Ç°ÓĞÏÖÊ¾
+","time":782163248,"poster":"Autumn",]),(["id":144,"title":"< no title >","body":"ç‚ºç”šéº¼æˆ‘å®Œæˆäº†ä»»å‹™ä¸€ï¼Œä½†ç”¨QUESTSæ™‚ï¼Œèªªç„¡å®Œæˆä»»ä½•ä»»å‹™ï¼Ÿï¼Ÿ
+ä½†ä¹‹å‰æœ‰ç¾ç¤º
 ","time":782176694,"poster":"Tong",]),(["id":145,"body":"
 ","title":"< no title >","time":782236630,"poster":"Sutanic",]),(["id":146,"body":"
 ","title":"< no title >","time":782236630,"poster":"Sutanic",]),(["id":147,"body":"

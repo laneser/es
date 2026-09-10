@@ -4,16 +4,16 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-	set_name("poison pestle","¶¾ÍõÒ©èÆ");
+	set_name("poison pestle","æ¯’çŽ‹è—¥æµ");
         add("id",({"mace","pestle"}) );
-       	set_short("¶¾ÍõÒ©èÆ");
+       	set_short("æ¯’çŽ‹è—¥æµ");
        	set_long(@LONG
-Õâ±¾ÊÇ¶¾ÍõÉ³ÎÞÎ¶µÄÎäÆ÷, ²»ÖªÎªºÎÁ÷Âäµ½ÍõÒ©Ê¦ÊÖÖÐ,
-ÕûÖ§èÆÉÏÉÁË¸ÖøÇàÂÌÉ«µÄÁ×¹â, ÏÔµÃ¼«Îª¹îÒì¡£
+é€™æœ¬æ˜¯æ¯’çŽ‹æ²™ç„¡å‘³çš„æ­¦å™¨, ä¸çŸ¥ç‚ºä½•æµè½åˆ°çŽ‹è—¥å¸«æ‰‹ä¸­,
+æ•´æ”¯æµä¸Šé–ƒçˆè‘—é’ç¶ è‰²çš„ç£·å…‰, é¡¯å¾—æ¥µç‚ºè©­ç•°ã€‚
 LONG
         );
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 36 );
         set("type","blunt");
 	set( "min_damage", 13 );
@@ -22,7 +22,7 @@ LONG
 	set( "value", ({ 350, "gold" }) );
 //        set("hit_func","blunt_damage");
 //        set("special_damage",15);
-//        set("special_c_msg","±¬³öÒ»´óÅî¿Ö²ÀµÄÁ×¹â,ÁýÕÖ×¡µÐÈË.\n\n");
+//        set("special_c_msg","çˆ†å‡ºä¸€å¤§è“¬ææ€–çš„ç£·å…‰,ç± ç½©ä½æ•µäºº.\n\n");
 }
 /*
 int blunt_damage(object victim,int damage)
@@ -47,9 +47,9 @@ int blunt_damage(object victim,int damage)
 		victim->receive_special_damage( "poison" , dam );
 		victim->set("last_attacker", holder );
 		tell_object( holder,
-			"\nÄãµÄ"+query("c_name")+c_msg);
+			"\nä½ çš„"+query("c_name")+c_msg);
 		tell_room( environment(holder), 
-			holder->query("c_cap_name") + "µÄ" + query("c_name") + c_msg,
+			holder->query("c_cap_name") + "çš„" + query("c_name") + c_msg,
 			holder );
 		damage_count=0;
 		return dam;

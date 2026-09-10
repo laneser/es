@@ -4,14 +4,14 @@ void create(object ob)
 {
         if ( !ob ) return ;
         ob->set_level(12);
-        ob->set_name( "cheetah", "Ó¡¶È±ª\ " );
-        ob->set_short( "Ó¡¶È±ª\ " );
+        ob->set_name( "cheetah", "å°åº¦è±¹\ " );
+        ob->set_short( "å°åº¦è±¹\ " );
         ob->set_long(@C_LONG
-ÕâÊÇÒ»Ö»ÓÐÖøÆ¯ÁÁÃ«Æ¤£¬ÐÞ³¤ÉíÇýµÄ¶¯Îï¡£ËüµÄ¶¯×÷·Ç³£µØ¿ì£¬
-ÊÇÒ»ÖÖ¾ßÓÐÎ£ÏÕÐÔµÄÈâÊ³¶¯Îï¡£
+é€™æ˜¯ä¸€åªæœ‰è‘—æ¼‚äº®æ¯›çš®ï¼Œä¿®é•·èº«é©…çš„å‹•ç‰©ã€‚å®ƒçš„å‹•ä½œéžå¸¸åœ°å¿«ï¼Œ
+æ˜¯ä¸€ç¨®å…·æœ‰å±éšªæ€§çš„è‚‰é£Ÿå‹•ç‰©ã€‚
 C_LONG
         );
-        ob->set("unit","Í·");
+        ob->set("unit","é ­");
         ob->set_perm_stat( "str", 18 );
         ob->set_perm_stat( "dex", 20 );
         ob->set_perm_stat( "int", 10 );
@@ -24,11 +24,11 @@ C_LONG
             ([ "weakest":40, "ganglion":30 ]) );
         
         ob->set( "killer", 1);
-        ob->set( "c_kill_msg", "Í»È»¼ä£¬Ó¡¶È±ª\´ÓÊ÷ÉÏÏòÄãÃÍÆËÁË¹ýÀ´ !!!!!" );
+        ob->set( "c_kill_msg", "çªç„¶é–“ï¼Œå°åº¦è±¹å¾žæ¨¹ä¸Šå‘ä½ çŒ›æ’²äº†éŽä¾† !!!!!" );
         ob->set( "alignment", -400 );
         ob->set_natural_weapon(35,13,23);
         ob->set_natural_armor(63,30);
 
-        ob->set_c_verbs( ({ "%sÓÃËüµÄÀû×¦Ïò%s×¥È¥", "%sÑ¸ËÙµØÆËÏò%s" }) );
-        ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å²¿"}) );
+        ob->set_c_verbs( ({ "%sç”¨å®ƒçš„åˆ©çˆªå‘%sæŠ“åŽ»", "%sè¿…é€Ÿåœ°æ’²å‘%s" }) );
+        ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³éƒ¨"}) );
 }

@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name( "cityguard", "Èôá°³ÇÎÀ±ø" );
+	set_name( "cityguard", "è‹¥åµåŸè¡›å…µ" );
 	add( "id", ({ "guard" }) );
-	set_short( "Èôá°³ÇÎÀ±ø" );
+	set_short( "è‹¥åµåŸè¡›å…µ" );
 	set_long(
-		"Äã¿´µ½Ò»¸ö±£»¤Èôá°³ÇÎÀ±ø¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹ä¿è­·è‹¥åµåŸè¡›å…µã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "race", "human" );

@@ -29,7 +29,7 @@ void effect(object player)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !sizeof(cond_data)==2 ) return;
 	tell_object(player,
-		set_color("Äã¾õµÃÄãµÄÁ¦Á¿ÉÔÉÔ»Ø¸´ÁË¡£\n","HIY",player));
+		set_color("ä½ è¦ºå¾—ä½ çš„åŠ›é‡ç¨ç¨å›å¾©äº†ã€‚\n","HIY",player));
 	msg = player->query_temp("poison_msg");
 	if ( msg )
 		tell_room(environment(player),sprintf(msg,player->query("c_name")),player);
@@ -49,7 +49,7 @@ void effect(object player)
 void remove_effect(object player)
 {
 	tell_object(player, 
-		set_color("Äã¾õµÃºÃ¶àÁË ....\n","HIC",player));
+		set_color("ä½ è¦ºå¾—å¥½å¤šäº† ....\n","HIC",player));
 	player->delete("weak");
 	player->delete("conditions/" + EFFECT_NAME );
 	player->delete_temp("poison_msg");
@@ -63,7 +63,7 @@ void apply_effect(object player, int frequency, int difference)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !cond_data ) {
 		tell_object(player, 
-			    set_color("ÄãÈ«Éí·¢Èí,Ê¹²»³öÁ¦À´!!\n","HIR",player));
+			    set_color("ä½ å…¨èº«ç™¼è»Ÿ,ä½¿ä¸å‡ºåŠ›ä¾†!!\n","HIR",player));
 		player->set( "conditions/" + EFFECT_NAME, ({ frequency, difference }) );
 	        player->modify_stat("str",-difference);
 		player->set("weak",difference);
@@ -71,7 +71,7 @@ void apply_effect(object player, int frequency, int difference)
 		cond_data[0]++;
 		cond_data[1]++;
 		tell_object(player,
-		set_color("Äã¸Ğµ½ÔÎÍ·×ªÏò£¬ËÆºõÔ½À´Ô½Ã»Á¦ÁË£¡\n","HIM",player));
+		set_color("ä½ æ„Ÿåˆ°æšˆé ­è½‰å‘ï¼Œä¼¼ä¹è¶Šä¾†è¶Šæ²’åŠ›äº†ï¼\n","HIM",player));
 		player->set( "conditions/" + EFFECT_NAME, cond_data );
 //		str=(int) (player->query_perm_stat("str")) -
 //		    (int) (player->query_stat("str")) -(int) cond_data[1];

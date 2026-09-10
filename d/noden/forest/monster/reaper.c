@@ -6,17 +6,17 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_level(8);
-	set_name( "small reaper", "Ğ¡Ê÷Ñı" );
+	set_name( "small reaper", "å°æ¨¹å¦–" );
 	add ("id", ({ "reaper", }) );
-	set_short( "Ğ¡Ê÷Ñı" );
+	set_short( "å°æ¨¹å¦–" );
 	set_long( @C_LONG
-Ëü¿´ÆğÀ´¾ÍÏñÊÇÒ»¿ÃÃ»ÓĞÖ¦Ò¶µÄÊ÷, ÊÖÀïÄÃÖø¶Ìµ¶, ÓÃ¿´ÆğÀ´ÏñÊÇÊ÷
-¸ùµÄ½Å×ßÂ·¡£¿´À´¿ÉÄÜºÜÄÑÓ¦¸¶¡£
+å®ƒçœ‹èµ·ä¾†å°±åƒæ˜¯ä¸€æ£µæ²’æœ‰æè‘‰çš„æ¨¹, æ‰‹è£¡æ‹¿è‘—çŸ­åˆ€, ç”¨çœ‹èµ·ä¾†åƒæ˜¯æ¨¹
+æ ¹çš„è…³èµ°è·¯ã€‚çœ‹ä¾†å¯èƒ½å¾ˆé›£æ‡‰ä»˜ã€‚
 C_LONG
 	);
 	set( "alignment", -200 );
     set( "race", "human" );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
     set( "aggressive", 1);
     set_skill( "longblade", 40);
     set( "wealth/silver", 20 );
@@ -32,6 +32,6 @@ C_LONG
 	set_natural_armor( 40, 10 );
 	set_natural_weapon( 10, 3, 6 );
     set ("weight", 550);
-    set_c_limbs( ({ "ÏñÉíÌåµÄÊ÷¸É", "ÏñÊÖ½ÅµÄÖ¦¸É", "Ïñ½ÅµÄÊ÷¸ù"}) );
+    set_c_limbs( ({ "åƒèº«é«”çš„æ¨¹å¹¹", "åƒæ‰‹è…³çš„æå¹¹", "åƒè…³çš„æ¨¹æ ¹"}) );
     wield_weapon( OBJ"blade" );
 }

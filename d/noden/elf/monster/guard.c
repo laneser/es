@@ -9,13 +9,13 @@ void create ()
 
         ::create();
         set_level(10);
-        set_name( "Elf guard", "¾«ÁéÊØÎÀ" );
+        set_name( "Elf guard", "ç²¾éˆå®ˆè¡›" );
         add ("id", ({ "elf", "guard" }) );
-        set_short( "¾«ÁéÊØÎÀ" );
-        set("unit","Î»");
+        set_short( "ç²¾éˆå®ˆè¡›" );
+        set("unit","ä½");
         set_long(
-           " ¾«ÁéÊØÎÀ¸ºÔð±£»¤¾«Áé´åµÄ°²È«£¬ÔÚ¾«Áé×åµÄ»úÒªµØ·½\n"
-           "¶¼ÓÐËûµÄ×Ù¼££¬ËûÊÇÎ»Ç¿Á¦Õ½Ê¿£¬ÇëÎðÇáÊÓËûµÄ´æÔÚ¡£\n"
+           " ç²¾éˆå®ˆè¡›è² è²¬ä¿è­·ç²¾éˆæ‘çš„å®‰å…¨ï¼Œåœ¨ç²¾éˆæ—çš„æ©Ÿè¦åœ°æ–¹\n"
+           "éƒ½æœ‰ä»–çš„è¹¤è·¡ï¼Œä»–æ˜¯ä½å¼·åŠ›æˆ°å£«ï¼Œè«‹å‹¿è¼•è¦–ä»–çš„å­˜åœ¨ã€‚\n"
         );
         set_perm_stat("str", 15);
         set_perm_stat("dex", 14);
@@ -27,8 +27,8 @@ void create ()
         set ("gender", "male");
         set("wealth/silver",50);
         set ("race", "elf");
-        set_c_verbs(({"%ÓÃ%sÏò%s¿³È¥","ÓÃ%sÏò%s´ÌÈ¥"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_verbs(({"%ç”¨%så‘%sç åŽ»","ç”¨%så‘%såˆºåŽ»"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         dagger= new(LWEAPON"guard_sword");
         dagger->move(this_object());

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("waterlily boots", "ÅºË¿²½ÔÆÂÄ");
+        set_name("waterlily boots", "è—•çµ²æ­¥é›²å±¥");
         add( "id", ({ "boots" }) );
-        set_short("ÅºË¿²½ÔÆÂÄ");
+        set_short("è—•çµ²æ­¥é›²å±¥");
         set_long(
-                "ÕâÊÇÓÉÁ«ÅºµÄÏËÎ¬ËùÖÆ³ÉµÄĞ¬×Ó£¬ÖÊÇá¶øÇÒÊ®·ÖÄÍÓÃ£®\n"
+                "é€™æ˜¯ç”±è“®è—•çš„çº–ç¶­æ‰€è£½æˆçš„é‹å­ï¼Œè³ªè¼•è€Œä¸”ååˆ†è€ç”¨ï¼\n"
         );
         set( "no_sale",1);
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "element");
         set( "armor_class", 7 );

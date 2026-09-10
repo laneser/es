@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Bronz Bracer","ÇàÍ­»¤Íó" );
+	set_name( "Bronz Bracer","é’éŠ…è­·è…•" );
 	add( "id",({ "bracer" }) );
-	set_short( "ÇàÍ­»¤Íó" );
+	set_short( "é’éŠ…è­·è…•" );
 	set_long(@LONG
-	ÕâÊÇÒ»¸±ÓÃÇàÍ­´òÔìµÄ»¤Íó£¬¿ÉÒÔÈ·±£ÄãÔÙÕ½
-	¶·ÖĞ²»»áÒòÎªÊÖÍóÊÜÉË¶øÉ¥Ê§Õ½¶·Á¦¡£
+	é€™æ˜¯ä¸€å‰¯ç”¨é’éŠ…æ‰“é€ çš„è­·è…•ï¼Œå¯ä»¥ç¢ºä¿ä½ å†æˆ°
+	é¬¥ä¸­ä¸æœƒå› ç‚ºæ‰‹è…•å—å‚·è€Œå–ªå¤±æˆ°é¬¥åŠ›ã€‚
 LONG
            );
-	set( "unit","¸±" );
+	set( "unit","å‰¯" );
 	set( "weight",50 );
 	set( "type","hands" );
 	set( "material","heavy_metal" );

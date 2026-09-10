@@ -5,15 +5,15 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("green-dragon glaive ","ÇàÁúÙÈÔÂµ¶");
+       set_name("green-dragon glaive ","é’é¾åƒæœˆåˆ€");
        add("id",({"glaive","green-dragon",}) );
-       set_short("ÇàÁúÙÈÔÂµ¶");
+       set_short("é’é¾åƒæœˆåˆ€");
 	   set_long(@C_LONG
-ÕâÊÇÎäÊ¥¹Ø¹«ËùÓÃµÄÇàÁúÙÈÔÂµ¶£¬ÆÆ»µÁ¦Ïàµ±´ó£¬µ«Ã»ÓĞ¹ıÈËµÄÁ¦Á¿
-ÊÇÄÃ²»¶¯µÄ
+é€™æ˜¯æ­¦è–é—œå…¬æ‰€ç”¨çš„é’é¾åƒæœˆåˆ€ï¼Œç ´å£åŠ›ç›¸ç•¶å¤§ï¼Œä½†æ²’æœ‰éäººçš„åŠ›é‡
+æ˜¯æ‹¿ä¸å‹•çš„
 C_LONG	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 48 );
         set("type","longblade");
 	set( "min_damage", 30 );

@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("���˴�������");
+	ob->set_short("矮人村落的入口");
 	ob->set_long( @LONG_DESCRIPTION
-�����߾��ǰ��˵Ĵ�ׯ.һЩ�����ǵ�С�������˾�ס������.����Թ��ı���,
-�����Ѿ�����û��ս����.
+往北邊就是矮人的村莊.一些矮人們的小孩與老人居住在那裡.由於迷宮的保護,
+這裡已經多年沒有戰爭了.
 LONG_DESCRIPTION
 	);
 

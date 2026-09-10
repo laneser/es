@@ -10,11 +10,11 @@ void init()
 void create()
 {
 #include <compress_obj.h>
-	set_name("xo","£Ø£Ï");
+	set_name("xo","ï¼¸ï¼¯");
    	add( "id" , ({ "wine" }) );
-	set_short("£Ø£Ï");
-	set_long("£Ø£Ï£¬»¹Òª½âÊÍÂğ£¿ºÈÁË¾ÍÊÇÁË¡£\n");
-   	set("unit","±­");
+	set_short("ï¼¸ï¼¯");
+	set_long("ï¼¸ï¼¯ï¼Œé‚„è¦è§£é‡‹å—ï¼Ÿå–äº†å°±æ˜¯äº†ã€‚\n");
+   	set("unit","æ¯");
    	set("weight", 10);
    	set("value",({30, "silver"}) );
 }
@@ -23,13 +23,13 @@ int quaff_potion(string arg)
 {
 	if( !arg || !id(arg) ) return 0;
 	write(@ALONG
-ÄãºÈÏÂÒ»±­£Ø£Ï¡£¸Ğµ½Í·ÓĞµãÔÎÔÎµÄ£¬µ«ÊÇÓĞÒ»ÖÖĞË·ÜµÄ¸Ğ¾õ¡£
-Äã¸ßĞËµÃ³ªÆğ¸èÀ´...
+ä½ å–ä¸‹ä¸€æ¯ï¼¸ï¼¯ã€‚æ„Ÿåˆ°é ­æœ‰é»æšˆæšˆçš„ï¼Œä½†æ˜¯æœ‰ä¸€ç¨®èˆˆå¥®çš„æ„Ÿè¦ºã€‚
+ä½ é«˜èˆˆå¾—å”±èµ·æ­Œä¾†...
 ALONG
  	        );
 	tell_room( environment(this_player()),
-		this_player()->query("c_name")+"ºÈÏÂÒ»±­£Ø£Ï£¬È»áá×íŞ¹"
-		"Ş¹µÄ³ªÆğ¸èÀ´.....»¹ÕæÄÑÌı!!\n" , this_player()
+		this_player()->query("c_name")+"å–ä¸‹ä¸€æ¯ï¼¸ï¼¯ï¼Œç„¶å¾Œé†‰è–°"
+		"è–°çš„å”±èµ·æ­Œä¾†.....é‚„çœŸé›£è½!!\n" , this_player()
 	);
 	remove();
 	return 1;

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Combat Robe","Õ½¶··¨ÅÛ");
+    set_name("Combat Robe","æˆ°é¬¥æ³•è¢");
     add("id",({"robe"}) );
-    set_short("Õ½¶··¨ÅÛ");
+    set_short("æˆ°é¬¥æ³•è¢");
     set_long(@LONG
-ÕâÊÇ¼şÇáÇÉ¾«ÖÂµÄ·¨ÅÛ¡£
+é€™æ˜¯ä»¶è¼•å·§ç²¾ç·»çš„æ³•è¢ã€‚
 LONG
             );
-    set("unit","¼ş");
+    set("unit","ä»¶");
     set("type","body");
     set("material","wood");
     set("armor_class",21);

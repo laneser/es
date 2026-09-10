@@ -14,14 +14,14 @@ varargs int move_player(object me,mixed dest, mixed message, string dir)
 	
 	prev = environment(me);
 	if( !res = me->move(dest) ) {
-		tell_object(me, "( ÄãÁôÔÚÔ­µØ.... )\n");
+		tell_object(me, "( ä½ ç•™åœ¨åŸåœ°.... )\n");
 		return res;
 	}
 
 	if( me->query_attackers() && (int)me->clean_up_attackers() == 0) {
 		me->set_temp("last_attack_skill", 0);
 		//write("combat test6!\n");
-		tell_object(me, "Õ½¶·½áÊøÁË.¡¡\n");
+		tell_object(me, "æˆ°é¬¥çµæŸäº†.ã€€\n");
 	}
 
 	if(message == "SLIENCE") return 0;

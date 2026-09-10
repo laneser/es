@@ -8,10 +8,10 @@ void create()
 
 	::create();
 	set_level(8);
-	set_name( "Konchi", "空智" );
+	set_name( "Konchi", "绌烘櫤" );
 	add( "id", ({ "bonze" }) );
-	set_short( "游方和尚空智" );
-	set_long("空智和尚正在四处云游，并且寻找多年前失散的师弟空慧。\n");
+	set_short( "閬婃柟鍜屽皻绌烘櫤" );
+	set_long("绌烘櫤鍜屽皻姝ｅ湪鍥涜檿闆查亰锛屼甫涓斿皨鎵惧骞村墠澶辨暎鐨勫斧寮熺┖鎱с�俓n");
 	set( "gender", "male" );
 	set( "race", "human" );
 	set_perm_stat( "int", 15 );

@@ -7,14 +7,14 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-	set_name( "iron club", "ÌúÝðÞ¼¹Ç¶ä" );
+	set_name( "iron club", "éµè’ºè—œéª¨æœµ" );
 	add( "id", ({ "club", "iron_club" }) );
-	set_short( "ÌúÝðÞ¼¹Ç¶ä" );
+	set_short( "éµè’ºè—œéª¨æœµ" );
 	set_long(@C_LONG
-ÕâÊÇÐþÌúÌØÖÆµÄ¾ÞÐÍÀÇÑÀ°ô£¬ÆÆ»µÁ¦Ïàµ±´ó£¬µ«Èç¹ûÃ»ÓÐ¹ýÈËµÄÁ¦Á¿
-ÊÇÄÃ²»¶¯µÄ£¬ÆáºÚµÄ°ôÉí¶¤ÖøÎÞÊýÀ¶É­É­µÄÀû³Ý£¬Ê¹ÄãÁªÏëµ½µØÓüµÄµ¶É½¡£
+é€™æ˜¯çŽ„éµç‰¹è£½çš„å·¨åž‹ç‹¼ç‰™æ£’ï¼Œç ´å£žåŠ›ç›¸ç•¶å¤§ï¼Œä½†å¦‚æžœæ²’æœ‰éŽäººçš„åŠ›é‡
+æ˜¯æ‹¿ä¸å‹•çš„ï¼Œæ¼†é»‘çš„æ£’èº«é‡˜è‘—ç„¡æ•¸è—æ£®æ£®çš„åˆ©é½’ï¼Œä½¿ä½ è¯æƒ³åˆ°åœ°ç„çš„åˆ€å±±ã€‚
 C_LONG);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 190 );
@@ -41,10 +41,10 @@ int emit_poison(object victim)
 		return 0;
         victim->set("last_attacker",holder);
         victim->receive_special_damage("none", 16+random(9) );
-        tell_object(holder,set_color( "Äã»ÓÎèÌúÝðÞ¼¹Ç¶ä´òÏòµÐÈË£¬Ò»Æ¬Ñª¹â´ÓµÐÈËÑªÈâ¡õºýµÄÉË¿ÚÓ¿³ö.....\n"
+        tell_object(holder,set_color( "ä½ æ®èˆžéµè’ºè—œéª¨æœµæ‰“å‘æ•µäººï¼Œä¸€ç‰‡è¡€å…‰å¾žæ•µäººè¡€è‚‰â–¡ç³Šçš„å‚·å£æ¹§å‡º.....\n"
         ,"HIR",holder));
         tell_room(environment(holder),set_color(holder->query("c_name")+
-        "»ÓÎèÌúÝðÞ¼¹Ç¶ä´òÏòµÐÈË£¬Ò»Æ¬Ñª¹â´ÓµÐÈËÑªÈâ¡õºýµÄÉË¿ÚÓ¿³ö.....\n","HIR",holder),holder);
+        "æ®èˆžéµè’ºè—œéª¨æœµæ‰“å‘æ•µäººï¼Œä¸€ç‰‡è¡€å…‰å¾žæ•µäººè¡€è‚‰â–¡ç³Šçš„å‚·å£æ¹§å‡º.....\n","HIR",holder),holder);
     (CONDITION_PREFIX + "bleeding")->apply_effect(victim,6,8,8);
     holder->set("hit_points",(int)holder->query("hit_points")-5);
     damage_count=0;

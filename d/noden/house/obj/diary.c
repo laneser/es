@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "old diary", "ÆÆ¾ÉÈÕ¼Ç" );
+	set_name( "old diary", "ç ´èˆŠæ—¥è¨˜" );
 	add( "id", ({ "diary" }) );
-   set_short( "ÆÆ¾ÉÈÕ¼Ç" );
+   set_short( "ç ´èˆŠæ—¥è¨˜" );
 	set_long(
-		"Õâ±¾ÈÕ¼Ç¿´ÆğÀ´ÓĞ¼¸°ÙÄêµÄËêÔÂÁË£¬Äã¿ÉÒÔ¶Á¶Á¿´(read)¡£\n"
+		"é€™æœ¬æ—¥è¨˜çœ‹èµ·ä¾†æœ‰å¹¾ç™¾å¹´çš„æ­²æœˆäº†ï¼Œä½ å¯ä»¥è®€è®€çœ‹(read)ã€‚\n"
 	);
-	set( "unit", "±¾" );
+	set( "unit", "æœ¬" );
 	set( "weight", 5 );
 	set( "useless" );
 }

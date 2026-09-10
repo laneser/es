@@ -26,8 +26,8 @@ int pull_lever(object room,string str)
       if ( ! undefinedp(all_exits[new_direction]) ) break;
       }
     room->set("direction",new_direction);
-    write( "µ±ÄãÀ­¶¯ÍÆ¸ËµÄÊ±ºò,µØÉÏµÄÌú¹ì»º»ºµÄÓÉ"+ to_chinese(pre_direction)+
-     "×ªÏò"+to_chinese(new_direction)+"·½\n"); 
+    write( "ç•¶ä½ æ‹‰å‹•æ¨æ†çš„æ™‚å€™,åœ°ä¸Šçš„éµè»Œç·©ç·©çš„ç”±"+ to_chinese(pre_direction)+
+     "è½‰å‘"+to_chinese(new_direction)+"æ–¹\n"); 
 
     return 1;
 }

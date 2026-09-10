@@ -12,8 +12,8 @@ inherit DAEMON ;
 int cmd_tell()
 {
 	write( can_read_chinese()?
-		"ÄãÏÖÔÚµÄ×´Ì¬Ã»ÓĞ×ã¹»µÄÄÜÁ¦´«´ïÑ¶Ï¢¸øÈÎºÎÈË£¬Èç¹ûÄãÒª±¨¸æ\n"
-		"³ÌÊ½µÄ bug £¬ÇëÓÃ wizcall Ö¸Áî¡£\n":
+		"ä½ ç¾åœ¨çš„ç‹€æ…‹æ²’æœ‰è¶³å¤ çš„èƒ½åŠ›å‚³é”è¨Šæ¯çµ¦ä»»ä½•äººï¼Œå¦‚æœä½ è¦å ±å‘Š\n"
+		"ç¨‹å¼çš„ bug ï¼Œè«‹ç”¨ wizcall æŒ‡ä»¤ã€‚\n":
 		"As a ghost, you do not have the strength to tell anyone.\n"
 		"If it is an error report, you may use the \"wizcall\" command.\n");
 	return 1;

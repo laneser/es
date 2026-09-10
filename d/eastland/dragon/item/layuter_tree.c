@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "occult tree", "ÉñÃØÊ÷" );
+        set_name( "occult tree", "ç¥ç§˜æ¨¹" );
         add( "id",({ "tree", "layuter_tree" }) );
-        set_short( "ÉñÃØÊ÷" );
+        set_short( "ç¥ç§˜æ¨¹" );
         set_long(
-            "ÕâÊÇÒ»¿Ã»áËæÖøÊ±¹âµÄ×ª»»£¬ÒÔÎåĞĞÖ®ÊõÒÆ¶¯µÄÊ÷¡£\n"
+            "é€™æ˜¯ä¸€æ£µæœƒéš¨è‘—æ™‚å…‰çš„è½‰æ›ï¼Œä»¥äº”è¡Œä¹‹è¡“ç§»å‹•çš„æ¨¹ã€‚\n"
         );
-        set( "unit", "¿Ã");
+        set( "unit", "æ£µ");
         set( "weight", 18000 );
         set( "value", ({ 0, "gold" }) );
 }

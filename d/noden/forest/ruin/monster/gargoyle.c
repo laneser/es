@@ -8,18 +8,18 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_level(9);
-	set_name( "Gargoyle", "Ê¯Ïñ¹í" );
+	set_name( "Gargoyle", "çŸ³åƒé¬¼" );
 	add ("id", ({ "gargoyle", }) );
-	set_short( "Ê¯Ïñ¹í" );
+	set_short( "çŸ³åƒé¬¼" );
 	set_long( @C_LONG
-ÄÜÊ¹ÓÃ±³²¿µÄ³á°òÔÚÌì¿ÕÖĞ·ÉÏè, ²»¹ı±È½ÏÏ²»¶¾Ó×¡ÔÚºÚ°µµÄ½ÇÂä¡£»áÊ¹ÓÃ
-Í·ÉÏµÄÁ½Ö»½Ç, ¹¥»÷µĞÈË¡£
+èƒ½ä½¿ç”¨èƒŒéƒ¨çš„ç¿…è†€åœ¨å¤©ç©ºä¸­é£›ç¿”, ä¸éæ¯”è¼ƒå–œæ­¡å±…ä½åœ¨é»‘æš—çš„è§’è½ã€‚æœƒä½¿ç”¨
+é ­ä¸Šçš„å…©éš»è§’, æ”»æ“Šæ•µäººã€‚
 C_LONG
 	);
 	set( "alignment", -250 );
     set( "gender", "male" );
     set( "race", "daemon" );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
     set( "killer", 1);
 	set_perm_stat( "dex", 14 );
 	set_perm_stat( "str", 16 );
@@ -36,8 +36,8 @@ C_LONG
 	set_natural_weapon( 40, 10, 18 );
 	set_natural_armor( 55, 10 );
     set("weight", 550);
-    set_c_limbs( ({ "µÄÉíÌå", "µÄÍ·", "µÄ½Å", "µÄ½Ç"}) );
-    set_c_verbs( ({ "%sÓÃ½Ç´Ì%s", "%sÌß%s", "%s×²%s",}) ); 
+    set_c_limbs( ({ "çš„èº«é«”", "çš„é ­", "çš„è…³", "çš„è§’"}) );
+    set_c_verbs( ({ "%sç”¨è§’åˆº%s", "%sè¸¢%s", "%sæ’%s",}) ); 
 }
 
 void die()

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Black Mace","ºÚÉ«¶¤Í·¡õ");
+        set_name("Black Mace","é»‘è‰²é‡˜é ­â–¡");
         add("id",({"mace",}) );
-       set_short("ºÚÉ«¶¤Í·¡õ");
+       set_short("é»‘è‰²é‡˜é ­â–¡");
        set_long(
-         "ÓÉÃ×ËÕÀíºÍÒø»ìºÏÖÆ³ÉµÄºÚÉ«¶¤Í·¡õ.\n"
+         "ç”±ç±³è˜‡ç†å’ŒéŠ€æ··åˆè£½æˆçš„é»‘è‰²é‡˜é ­â–¡.\n"
                );
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
     set("type","blunt");
 	set( "min_damage", 19 );

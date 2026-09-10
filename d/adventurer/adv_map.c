@@ -14,18 +14,18 @@ void create()
 	set_class_name("adventurer");
 	set_size( 7, 7 );
 #include <compress_obj.h>
-	set_name("map", "µØÍ¼");
-	set_short("Ã°ÏÕ×¨ÓÃµØÍ¼");
+	set_name("map", "åœ°åœ–");
+	set_short("å†’éšªå°ˆç”¨åœ°åœ–");
 	set_long(@LONG
-ÕâÊÇÒ»ÕÅÊ®·ÖÖøÃûµÄÃ°ÏÕÕß×¨ÓÃµØÍ¼£¬ÓÉÒ»Î»µ±Äê·¢ÏÖÍ¨Íù¶«·½´ó¹ú
-µÄÎ°´óÃ°ÏÕÕßËù»æÖÆ¶ø³É¡£¶ÔÄêÇàµÄÃ°ÏÕÕß¿ÉÒÔÌá¹©ºÜ´óµÄ°ïÖú£¬Çë
-²ÎÔÄ\ help map ÒÔ»ñµÃ½øÒ»²½µÄËµÃ÷¡£
+é€™æ˜¯ä¸€å¼µååˆ†è‘—åçš„å†’éšªè€…å°ˆç”¨åœ°åœ–ï¼Œç”±ä¸€ä½ç•¶å¹´ç™¼ç¾é€šå¾€æ±æ–¹å¤§åœ‹
+çš„å‰å¤§å†’éšªè€…æ‰€ç¹ªè£½è€Œæˆã€‚å°å¹´é’çš„å†’éšªè€…å¯ä»¥æä¾›å¾ˆå¤§çš„å¹«åŠ©ï¼Œè«‹
+åƒé–±\ help map ä»¥ç²å¾—é€²ä¸€æ­¥çš„èªªæ˜ã€‚
 LONG
 	);
 
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set( "weight", 5 );
-	set( "extra_look", "$N´øÖøÃ°ÏÕÕß×¨ÓÃµÄÄ§·¨µØÍ¼¡£\n");
+	set( "extra_look", "$Nå¸¶è‘—å†’éšªè€…å°ˆç”¨çš„é­”æ³•åœ°åœ–ã€‚\n");
 }
 
 void init()
@@ -49,12 +49,12 @@ int do_check(string str)
 	int my_level, dest_level;
 
 	if( !str || str=="" || !(dest= present(str, environment(this_player()))) )
-		return notify_fail("Ö¸Áî¸ñÊ½: check <¹ÖÎï>\n");
+		return notify_fail("æŒ‡ä»¤æ ¼å¼: check <æ€ªç‰©>\n");
 	my_level = (int)this_player()->query_level();
 	dest_level = (int)dest->query_level();
-	if( my_level < dest_level ) write("¶Ô·½µÄµÈ¼¶±ÈÄã¸ß¡£\n");
-	if( my_level == dest_level ) write("¶Ô·½ºÍÄãÍ¬µÈ¼¶¡£\n");
-	if( my_level > dest_level ) write("¶Ô·½µÄµÈ¼¶±ÈÄãµÍ¡£\n");
+	if( my_level < dest_level ) write("å°æ–¹çš„ç­‰ç´šæ¯”ä½ é«˜ã€‚\n");
+	if( my_level == dest_level ) write("å°æ–¹å’Œä½ åŒç­‰ç´šã€‚\n");
+	if( my_level > dest_level ) write("å°æ–¹çš„ç­‰ç´šæ¯”ä½ ä½ã€‚\n");
 	return 1;
 }
 
@@ -67,7 +67,7 @@ int do_fellows()
 int do_chat(string arg)
 {
 	if( !arg )
-		return notify_fail("ÄãÏë¶ÔÆäËüÃ°ÏÕÕßËµÊ²÷á£¿\n");
+		return notify_fail("ä½ æƒ³å°å…¶å®ƒå†’éšªè€…èªªä»€éº¼ï¼Ÿ\n");
 	return guild_ob::guild_line(arg);
 }
 
@@ -81,10 +81,10 @@ int info(string arg)
 		case "topics":
 		default: 
 write( @C_TOPICS
-Ã°ÏÕÕß¹«»áÊÇÒ»¸öÊôì¶ËùÓĞÈËµÄ¹«»á£¬Äã¿ÉÒÔÓÃ info Ö¸ÁîÈ¡µÃÓĞ¹ØÒÔÏÂÖ÷ÌâµÄ×Ê
-Ñ¶:
-    history    - ÓĞ¹ØÃ°ÏÕÕß¹«»áµÄÀúÊ·¡£
-    commands   - ÓĞ¹ØÃ°ÏÕÕßÄÜÊ¹ÓÃµÄÌØÊâÖ¸Áî¡£
+å†’éšªè€…å…¬æœƒæ˜¯ä¸€å€‹å±¬æ–¼æ‰€æœ‰äººçš„å…¬æœƒï¼Œä½ å¯ä»¥ç”¨ info æŒ‡ä»¤å–å¾—æœ‰é—œä»¥ä¸‹ä¸»é¡Œçš„è³‡
+è¨Š:
+    history    - æœ‰é—œå†’éšªè€…å…¬æœƒçš„æ­·å²ã€‚
+    commands   - æœ‰é—œå†’éšªè€…èƒ½ä½¿ç”¨çš„ç‰¹æ®ŠæŒ‡ä»¤ã€‚
     
 C_TOPICS
 			);

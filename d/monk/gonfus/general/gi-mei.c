@@ -9,16 +9,16 @@ int eungon(object me, int level)
 {
 	if( (int)me->query("load") > (int)me->query("max_load") ) {
 		tell_object( me, 
-			"ÄãĞ¯´øÌ«¶à¶«Î÷, ÎŞ·¨Ê©Õ¹Éí·¨!\n" );
+			"ä½ æ”œå¸¶å¤ªå¤šæ±è¥¿, ç„¡æ³•æ–½å±•èº«æ³•!\n" );
 		return 0;
 	}
 	tell_object(me, 
-		"\n¡ºÉíÃğÃğ¼º£¬¼ÅÃğÎªÀÖ¡»ÄãÈ«ÉíÔË¹¦\£¬×¼±¸Ê¹³ö¡¸"+
-		to_chinese(GONFU_NAME)+"¡¹!!\n" );
+		"\nã€èº«æ»…æ»…å·±ï¼Œå¯‚æ»…ç‚ºæ¨‚ã€ä½ å…¨èº«é‹åŠŸ\ï¼Œæº–å‚™ä½¿å‡ºã€Œ"+
+		to_chinese(GONFU_NAME)+"ã€!!\n" );
 
 	tell_room( environment(me), 
 		me->query("c_name")+
-		"ÇáÌ¾Ò»Éù£¬Ë«ÕÆºÏÊ®£¬×¼±¸Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n", me);
+		"è¼•å˜†ä¸€è²ï¼Œé›™æŒåˆåï¼Œæº–å‚™ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n", me);
 
 	me->set("defense_skill", MARTIAL_NAME); 
 	me->set_temp("gonfu_busy",1);
@@ -39,11 +39,11 @@ void release_gonfu(object me)
 	if( me->query_temp("gonfu_top") )
 	    me->set_temp("gonfu_top",0);
 	tell_object(me, 
-		"\n\nÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n" );
+		"\n\nä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n" );
  
  	tell_room( environment(me),
  		me->query("c_name")+
- 		"ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½Í£¹¦¡£\n", me);
+ 		"è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼åœåŠŸã€‚\n", me);
  
 // 	me->delete("attack_skill");
 	me->delete("defense_skill");

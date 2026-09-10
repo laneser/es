@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("gold crown", "×Ï½ğ¹Ú");
+        set_name("gold crown", "ç´«é‡‘å† ");
         add( "id", ({ "crown" }) );
-        set_short("×Ï½ğ¹Ú");
+        set_short("ç´«é‡‘å† ");
         set_long(
-                "Õâ¸ö¹ÚÃáÄÜÊ¹ÈË´÷ÉÏÖ®ááÓĞÄª´óµÄÈÙÒ«¡£\n"
+                "é€™å€‹å† å†•èƒ½ä½¿äººæˆ´ä¸Šä¹‹å¾Œæœ‰è«å¤§çš„æ¦®è€€ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "head" );
         set( "material", "element");
         set( "armor_class", 8 );

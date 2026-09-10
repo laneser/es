@@ -6,11 +6,11 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("Cold oil","Àä¶³ÓÍ");
+    set_name("Cold oil","å†·å‡æ²¹");
     add("id",({"oil",}));
-    set_short("a cold oil","Àä¶³ÓÍ");
+    set_short("a cold oil","å†·å‡æ²¹");
     set_long("a cold oil, you can apply it.\n",
-             "Àä¶³ÓÍ,Äã¿ÉÒÔÊÔÖø°ÑËüÍ¿(apply)ÔÚÉíÉÏ.\n");
+             "å†·å‡æ²¹,ä½ å¯ä»¥è©¦è‘—æŠŠå®ƒå¡—(apply)åœ¨èº«ä¸Š.\n");
     set("weight",1);
     set("no_sale",1);
     set("value",({ 1,"copper"}) );
@@ -30,8 +30,8 @@ int to_apply(string str)
     set("applied",1);
     set("prevent_drop",1);
     set("extra_look","$N seems apply some special thing");
-    set("c_extra_look","$NÉíÉÏËÆºõÍ¿ÖøÒ»ÖÖÀäÀäµÄ¶«Î÷.\n");
+    set("c_extra_look","$Nèº«ä¸Šä¼¼ä¹å¡—è‘—ä¸€ç¨®å†·å†·çš„æ±è¥¿.\n");
     set("invisible",1);
-    write("Äã°ÑÓÍÍ¿µ½ÉíÉÏ.\n"); 
+    write("ä½ æŠŠæ²¹å¡—åˆ°èº«ä¸Š.\n"); 
     return 1;
 }

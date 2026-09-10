@@ -6,16 +6,16 @@ void create()
 {
   ::create();
   set_level(16);
-  set_name("woman", "ÂèÂèÉ£");
+  set_name("woman", "åª½åª½æ¡‘");
   add( "id", ({ "woman" }) );
-  set_short("ÂèÂèÉ£");
+  set_short("åª½åª½æ¡‘");
   set_long(@C_LONG
-Ò»Î»ÉÏÁËÄê¼ÍµÄÂèÂèÉ£¡£ÂèÂèÉ£ÏÖÔÚÕı´òÖø³à½Å£¬ĞÁÇÚµØÔÚ¾®±ß±ßÏ´ÒÂ·ş±ßºÍÅÔ±ß
-µÄ¸¾ÈËÁÄÌì¡£¶Ôì¶³õµ½´ËµØµÄÄã¶øÑÔ£¬»òĞí¿ÉÒÔÏòËıÃÇ´òÌı¸öÊ²÷áÏûÏ¢Ò²Ëµ²»¶¨¡£  
+ä¸€ä½ä¸Šäº†å¹´ç´€çš„åª½åª½æ¡‘ã€‚åª½åª½æ¡‘ç¾åœ¨æ­£æ‰“è‘—èµ¤è…³ï¼Œè¾›å‹¤åœ°åœ¨äº•é‚Šé‚Šæ´—è¡£æœé‚Šå’Œæ—é‚Š
+çš„å©¦äººèŠå¤©ã€‚å°æ–¼åˆåˆ°æ­¤åœ°çš„ä½ è€Œè¨€ï¼Œæˆ–è¨±å¯ä»¥å‘å¥¹å€‘æ‰“è½å€‹ä»€éº¼æ¶ˆæ¯ä¹Ÿèªªä¸å®šã€‚  
 C_LONG  
     );
   set( "race", "human" );
-  set( "unit", "¸ö" );
+  set( "unit", "å€‹" );
   set( "gender", "female");
   set_natural_weapon(30,18,33);
   set_natural_armor( 70, 18 );
@@ -26,14 +26,14 @@ C_LONG
   set_perm_stat( "dex", 22 );
   set_perm_stat( "pie", 18 );
   set( "inquiry", ([
-     "´å³¤":"@@ask_captain",
+     "æ‘é•·":"@@ask_captain",
   ]) );
   set( "tactic_func", "my_attack" );
 }
 void ask_captain(object asker)
 {
 write(@C_LONG
-ÂèÂèÉ£µÀ£ºà¸£¬´å³¤µÄ¼Ò¾ÍÔÚÇ°Ãæ²»Ô¶´¦µÄ°«·¿×Ó¡£°¦£¬¿ÉÁ¯µÄ´å³¤£®£®
+åª½åª½æ¡‘é“ï¼šå–”ï¼Œæ‘é•·çš„å®¶å°±åœ¨å‰é¢ä¸é è™•çš„çŸ®æˆ¿å­ã€‚å”‰ï¼Œå¯æ†çš„æ‘é•·ï¼ï¼
 C_LONG
      );
 }
@@ -41,9 +41,9 @@ int my_attack()
 {
   object victim;
   if( random(20)>7 || !(victim= query_attacker()) ) return 0;
-  tell_object(victim,"ÂèÂèÉ£ÄÃÆğËıµÄÏ´ÒÂË¢ÍùÄãÃæÃÅÒ»¶ª\n");
+  tell_object(victim,"åª½åª½æ¡‘æ‹¿èµ·å¥¹çš„æ´—è¡£åˆ·å¾€ä½ é¢é–€ä¸€ä¸Ÿ\n");
   tell_room(environment(this_object()),sprintf(
-       "ÂèÂèÉ£ÄÃÆğËıµÄÏ´ÒÂË¢Íù%sÃæÃÅÒ»¶ª\n",victim->query("c_name")),victim);
+       "åª½åª½æ¡‘æ‹¿èµ·å¥¹çš„æ´—è¡£åˆ·å¾€%sé¢é–€ä¸€ä¸Ÿ\n",victim->query("c_name")),victim);
   victim->receive_damage(10);
   return 0;
 }

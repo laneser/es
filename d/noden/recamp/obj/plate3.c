@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "gin plate", "½á¾§îø¼×");
+        set_name( "gin plate", "çµæ™¶é§ç”²");
         add( "id", ({ "plate" }) );
-        set_short("gin plate", "½á¾§îø¼×");
+        set_short("gin plate", "çµæ™¶é§ç”²");
         set_long(@AAA
-ÕâÊÇÒ»¼şÒÔÊ¯Ó¢¾§Ê¯´òÔì¶ø³É£¬´©ÉÏËüÏÔµÄÓ¢×Ë»À·¢£¬¹âÃ¢ËÄÉä¡£
+é€™æ˜¯ä¸€ä»¶ä»¥çŸ³è‹±æ™¶çŸ³æ‰“é€ è€Œæˆï¼Œç©¿ä¸Šå®ƒé¡¯çš„è‹±å§¿ç…¥ç™¼ï¼Œå…‰èŠ’å››å°„ã€‚
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 35 );
         set( "defense_bonus", 10 );

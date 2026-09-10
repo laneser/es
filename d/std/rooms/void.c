@@ -15,11 +15,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "The Void", "Ò»Æ¬ĞéÎŞ" );
+	set_short( "The Void", "ä¸€ç‰‡è™›ç„¡" );
 	set_long(
 		"You are in the void.\n"
 		"There is nothingness everywhere and you cannot stand it!\n",
-		"ÄãÏÖÔÚÉí´¦Ò»Æ¬ĞéÎŞµÄ¿Õ¼ä£¬¾ÙÄ¿Ëù¼°¶¼ÊÇÒ»Æ¬»ÒÃÉÃÉµÄÒõÓ°\n"
-		"ºÍ¿Õ°×¡£\n");
+		"ä½ ç¾åœ¨èº«è™•ä¸€ç‰‡è™›ç„¡çš„ç©ºé–“ï¼Œèˆ‰ç›®æ‰€åŠéƒ½æ˜¯ä¸€ç‰‡ç°æ¿›æ¿›çš„é™°å½±\n"
+		"å’Œç©ºç™½ã€‚\n");
 	set("light", 1);
 }

@@ -7,18 +7,18 @@ void create ()
 
 	::create();
     set_level(15);
-    set_name("Shi Tsen","Ê±Ç¨");
+    set_name("Shi Tsen","æ™‚é·");
     add("id",({"thief","shi","tsen"}) );
-    set_short("Ê±Ç¨");
+    set_short("æ™‚é·");
 	set_long(@C_LONG
-¸ßÌÆÖÝÈËÊ¿£¬ÍâºÅ¹ÄÉÏÔé£¬ÊÖ½ÅÁé±ã£¬µÁÇÔ³ÉÐÔ£¬ÐÐÊÂ»ú¾¯£¬ÎªÁºÉ½²´¾üÖÐ±¨»úÃÜ
-²½¾üÍ·Áì£®¿´µ½ËûÄã²»½û×¥½ôÄãµÄÇ®°ü£®
+é«˜å”å·žäººå£«ï¼Œå¤–è™Ÿé¼“ä¸Šèš¤ï¼Œæ‰‹è…³éˆä¾¿ï¼Œç›œç«Šæˆæ€§ï¼Œè¡Œäº‹æ©Ÿè­¦ï¼Œç‚ºæ¢å±±æ³Šè»ä¸­å ±æ©Ÿå¯†
+æ­¥è»é ­é ˜ï¼Žçœ‹åˆ°ä»–ä½ ä¸ç¦æŠ“ç·Šä½ çš„éŒ¢åŒ…ï¼Ž
 C_LONG
 	);
     set("alignment",-400);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",23);
     set_perm_stat( "str",20);
     set_perm_stat( "int",19);
@@ -48,7 +48,7 @@ int steal()
   c_name =victim->query("c_name");
   if (random(10)<2) { 
   tell_room(environment(this_object()),
-  "\nÊ±Ç¨Ò»Ë¦ÊÖ£¬Éä³öÒ»°Ñ½ðÇ®ïÚ¹¥»÷µÐÈË....\n\n"
+  "\næ™‚é·ä¸€ç”©æ‰‹ï¼Œå°„å‡ºä¸€æŠŠé‡‘éŒ¢é¢æ”»æ“Šæ•µäºº....\n\n"
 );
   victim->receive_special_damage("none",10);
   victim->add("wealth/gold",1);
@@ -56,7 +56,7 @@ return 1;
 }
   if (random(10)<2 && victim->query("wealth/gold")>10) {
   tell_room(environment(this_object()),
-  "\nÊ±Ç¨Íµ×ßÁË"+c_name+"Ò»Ð©Ç®£¬Ë³±ãÉÍËûÒ»°ÍÕÆ....\n\n"
+  "\næ™‚é·å·èµ°äº†"+c_name+"ä¸€äº›éŒ¢ï¼Œé †ä¾¿è³žä»–ä¸€å·´æŽŒ....\n\n"
 );
   victim->receive_special_damage("evil",8);
   victim->set("wealth/gold",(int)(victim->query("wealth/gold"))-10);

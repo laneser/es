@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Black Chainmail","ºÚÉ«îø¼×" );
+	set_name( "Black Chainmail","é»‘è‰²é§ç”²" );
 	add( "id", ({ "chainmail","mail" }) );
-	set_short( "ºÚÉ«îø¼×" );
+	set_short( "é»‘è‰²é§ç”²" );
 	set_long(@LONG
-	ÎÚÆßÄ¨ºÚµÄÒ»¼ş»¤¼×£¬¿´²»³öÊÇÉõ÷á²ÄÁÏ×öµÄ
+	çƒä¸ƒæŠ¹é»‘çš„ä¸€ä»¶è­·ç”²ï¼Œçœ‹ä¸å‡ºæ˜¯ç”šéº¼ææ–™åšçš„
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",100 );
 	set( "type","body" );
 	set( "material","light_metal" );

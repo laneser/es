@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("short plate","òáòæÈË¶Ì¼×");
+        set_name("short plate","èœ¥èœ´äººçŸ­ç”²");
         add("id",({"plate"}) );
-         set_short("òáòæÈË¶Ì¼×");
+         set_short("èœ¥èœ´äººçŸ­ç”²");
 	set_long(@LONG
-ÆÕÍ¨òáòæÈË°®´©µÄ¶Ì¼×£¬ºÃÏñÄ³ÖÖÊŞ÷ëÖÆ³ÉµÄ¡£
+æ™®é€šèœ¥èœ´äººæ„›ç©¿çš„çŸ­ç”²ï¼Œå¥½åƒæŸç¨®ç¸éºŸè£½æˆçš„ã€‚
 LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 75 );
 	set( "type", "body" );
 	set( "material", "leather" );

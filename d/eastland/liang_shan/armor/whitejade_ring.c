@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("white jade ring","ÑòÖ¬ÖéÓñ»·");
+        set_name("white jade ring","ç¾Šè„‚ç ç‰ç’°");
         add("id",({"ring"}) );
-         set_short( "white jade ring","ÑòÖ¬ÖéÓñ»·");
+         set_short( "white jade ring","ç¾Šè„‚ç ç‰ç’°");
 	set_long(
 "This is a ring made of white jade . \n"
-"ÕâÊÇÑòÖ¬°×ÓñËùÖÆ³ÉµÄÖ¸»·,¾ßÓĞ·Ç·²µÄ·ÀÓùÁ¦\n"
+"é€™æ˜¯ç¾Šè„‚ç™½ç‰æ‰€è£½æˆçš„æŒ‡ç’°,å…·æœ‰éå‡¡çš„é˜²ç¦¦åŠ›\n"
 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "finger" );
 	set( "material","scholar");

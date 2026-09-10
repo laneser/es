@@ -16,15 +16,15 @@ void create ()
 
 	::create();
 	set_level(19);
-	set_name( "hong chigon", "ºéÆß¹«" );
+	set_name( "hong chigon", "æ´ªä¸ƒå…¬" );
 	add ("id", ({ "hong", "chigon", "beggar chief", "beggar", "chief" }) );
-	set_short( "Hong Chigon the Beggar Chief", "¾ÅÖ¸ÉñØ¤ºéÆß¹«" );
+	set_short( "Hong Chigon the Beggar Chief", "ä¹æŒ‡ç¥ä¸æ´ªä¸ƒå…¬" );
 	set_long(
 		"Hong Chigon is the legendary beggar and he is the leader of the\n"
 		"beggar's gang. He likes eating very much and is always looking for\n"
 		"delicious foods.\n",
-		"ºéÆß¹«ÊÇ´«ËµÖĞØ¤°ïµÄÀÏ°ïÖ÷£¬Ëû·Ç³£Ï²»¶³Ô£¬³£³£ÅÜ±éÌìÏÂÑ°ÕÒ¸÷ÖÖÕä\n"
-		"ÆæÃÀÎ¶¡£\n"
+		"æ´ªä¸ƒå…¬æ˜¯å‚³èªªä¸­ä¸å¹«çš„è€å¹«ä¸»ï¼Œä»–éå¸¸å–œæ­¡åƒï¼Œå¸¸å¸¸è·‘éå¤©ä¸‹å°‹æ‰¾å„ç¨®ç\n"
+		"å¥‡ç¾å‘³ã€‚\n"
 	);
 	set_perm_stat( "dex", 30 );
 	set_perm_stat( "str", 30 );
@@ -44,15 +44,15 @@ void create ()
 	set ("chat_chance", 40);
 	set ("att_chat_output", ({
 		"Chigon cackles and says: Let's me teach you how to fight, Kids!\n",
-		"ºéÆß¹«¹ş¹ş´óĞ¦: Ğ¡ÍÃáÌ×Ó£¬ÈÃÀÏ½Ğ»¯×ÓÖ¸µãÄã¼¸ÊÖ¡£\n",
+		"æ´ªä¸ƒå…¬å“ˆå“ˆå¤§ç¬‘: å°å…”å´½å­ï¼Œè®“è€å«åŒ–å­æŒ‡é»ä½ å¹¾æ‰‹ã€‚\n",
 		"Chigon turns around while striking you with palms.\n",
-		"ºéÆß¹«×ªÉí±³¶ÔÖøÄã£¬ÊÖÕÆÏòááÍÆ³ö£¬ËµµÀ: ÕâÕĞ½Ğ¡¸ÉñÁú°ÚÎ²¡¹¡£\n",
+		"æ´ªä¸ƒå…¬è½‰èº«èƒŒå°è‘—ä½ ï¼Œæ‰‹æŒå‘å¾Œæ¨å‡ºï¼Œèªªé“: é€™æ‹›å«ã€Œç¥é¾æ“ºå°¾ã€ã€‚\n",
 		"Chigon mumbers: Hmmm... should I beat you so easily?\n",
-		"ºéÆß¹«³ÁÒ÷µÀ: ßí... ÒªÓÃÄÄÒ»ÕĞ²Å²»»áÊ§ÊÖ´òËÀÄã... £¿\n",
+		"æ´ªä¸ƒå…¬æ²‰åŸé“: å””... è¦ç”¨å“ªä¸€æ‹›æ‰ä¸æœƒå¤±æ‰‹æ‰“æ­»ä½ ... ï¼Ÿ\n",
 		"Chigon smiles and says: Good, it would be a match if you fight with my children.\n",
-		"ºéÆß¹«ËµµÀ: ²»´í£¬ÄãÔÙÁ·¼¸Äê¾Í¿ÉÒÔºÍÎÒÍ½¶ù¹ù¾¸¹ıÕĞÍæÍæ¡£\n",
+		"æ´ªä¸ƒå…¬èªªé“: ä¸éŒ¯ï¼Œä½ å†ç·´å¹¾å¹´å°±å¯ä»¥å’Œæˆ‘å¾’å…’éƒ­é–éæ‹›ç©ç©ã€‚\n",
 		"Chigon get a chicken from his bag, chews a piece of it and put the chicken in bag again.\n",
-		"ºéÆß¹«´ÓÈİ²»ÆÈµØ´Ó»³ÀïÈ¡³öÒ»¸ù¼¦ÍÈ£¬Ò§ÁËÒ»¿ÚÓÖ·Å»Ø»³ÖĞ¡£\n"
+		"æ´ªä¸ƒå…¬å¾å®¹ä¸è¿«åœ°å¾æ‡·è£¡å–å‡ºä¸€æ ¹é›è…¿ï¼Œå’¬äº†ä¸€å£åˆæ”¾å›æ‡·ä¸­ã€‚\n"
 	}) );
 
 	bo = new("/obj/example/weapon/bo");

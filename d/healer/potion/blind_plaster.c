@@ -5,15 +5,15 @@ inherit MEDICINE;
 
 void create()
 {
-	set_name("blind plaster", "Ã÷Ä¿¸à" );
+	set_name("blind plaster", "æ˜ç›®è†" );
 	add( "id", ({"plaster"}) );
-	set_short("Ã÷Ä¿¸à");
+	set_short("æ˜ç›®è†");
 	set_long(
-		"ÕâÊÇÓÃÀ´ÖÎÁÆÇáÎ¢ÑÛ¾¦ÉËº¦µÄÒ©¸à, °ÑËûÍ¿(apply)ÔÚÑÛ¾¦ÉÏ¿ÉÒÔ¸ÄÉÆ\n"
-		"Ê§Ã÷µÄ×´¿ö, Èç¹ûÉËµÄÌ«ÖØ, »¹ÊÇÒª¿¿ÊÖÊõÒ½ÁÆ¡£\n"
+		"é€™æ˜¯ç”¨ä¾†æ²»ç™‚è¼•å¾®çœ¼ç›å‚·å®³çš„è—¥è†, æŠŠä»–å¡—(apply)åœ¨çœ¼ç›ä¸Šå¯ä»¥æ”¹å–„\n"
+		"å¤±æ˜çš„ç‹€æ³, å¦‚æœå‚·çš„å¤ªé‡, é‚„æ˜¯è¦é æ‰‹è¡“é†«ç™‚ã€‚\n"
 	);
 	set( "can_apply", 1 );
-	set( "unit", "·İ" );
+	set( "unit", "ä»½" );
 	set( "weight", 20 );
 	set( "value", ({ 100, "silver" }) );
 }
@@ -23,17 +23,17 @@ int apply(object player)
 	int degree;
 	if( !(degree=player->query("blind")) ) return 0;
 	if( degree > 5) {
-	  tell_object(player, "ÄãµÄÑÛÉËÌ«ÖØ, ·óÒ©ÒÑ¾­Ã»ÓÃÁË, ÕÒÒ½Éú¶¯ÊÖÊõ°É¡£\n");
+	  tell_object(player, "ä½ çš„çœ¼å‚·å¤ªé‡, æ•·è—¥å·²ç¶“æ²’ç”¨äº†, æ‰¾é†«ç”Ÿå‹•æ‰‹è¡“å§ã€‚\n");
 	  return 1;
 	}  
 	degree--;
 	if (degree<1) { 
 	  player->delete("blind");
-	  tell_object(player, "ÄãµÄÑÛ¾¦ÓÖÄÜ¿´µ½¶«Î÷ÁË¡£\n");
+	  tell_object(player, "ä½ çš„çœ¼ç›åˆèƒ½çœ‹åˆ°æ±è¥¿äº†ã€‚\n");
 	}  
 	else {
 	  player->set("blind",degree);
-	  tell_object(player,"ÄãµÄÑÛ¾¦ºÃÁËÒ»Ğ©, µ«ÈÔ¿´²»Çå³ş¡£\n");
+	  tell_object(player,"ä½ çš„çœ¼ç›å¥½äº†ä¸€äº›, ä½†ä»çœ‹ä¸æ¸…æ¥šã€‚\n");
 	}  
 	return 1;
 }

@@ -6,8 +6,8 @@ int be_cut;
 void create()
 {
     ::create();
-    ::set_name("advanturer","Ã°ÏÕÕß");
-    set_c_open_long("ÕâÊÇÃ°ÏÕÕßµÄÒÅÌå£¬Äã¿ÉÒÔ¸î(cut)ÏÂËûµÄÍ·×öÎªÕ½ÀûÆ·¡£\n");
+    ::set_name("advanturer","å†’éšªè€…");
+    set_c_open_long("é€™æ˜¯å†’éšªè€…çš„éºé«”ï¼Œä½ å¯ä»¥å‰²(cut)ä¸‹ä»–çš„é ­åšç‚ºæˆ°åˆ©å“ã€‚\n");
     set("weight",800);
     set("load",1000);
     be_cut=0;
@@ -24,20 +24,20 @@ int cut_head(string arg)
    object wep,obj,*item;
 
    if (!arg || arg!="head")
-      return notify_fail("ÄãÒª¸îÉ¶?\n");
+      return notify_fail("ä½ è¦å‰²å•¥?\n");
 
    if (be_cut)
       return notify_fail(
-         "Õâ¸öÃ°ÏÕÕßµÄÍ·ÒÑ¾­±»¸î×ßÁË¡£\n");
+         "é€™å€‹å†’éšªè€…çš„é ­å·²ç¶“è¢«å‰²èµ°äº†ã€‚\n");
    item=all_inventory(this_player());
    for (i=0;i<sizeof(item);i++)
      if ((string)item[i]->query("name")=="sharp knife") {
-       write("ÄãÓÃÄãÊÖÖĞµÄÈñÀûĞ¡µ¶°ÑÃ°ÏÕÕßµÄÍ·´Ó¡õÌåÉÏ¸îÁËÏÂÀ´¡£\n");
+       write("ä½ ç”¨ä½ æ‰‹ä¸­çš„éŠ³åˆ©å°åˆ€æŠŠå†’éšªè€…çš„é ­å¾â–¡é«”ä¸Šå‰²äº†ä¸‹ä¾†ã€‚\n");
        obj=new(OOBJ"head");
        obj->move(this_player());
        be_cut=1;
        return 1;
      }
-   write("ÄãÃ»ÓĞÊÊµ±µÄ¹¤¾ß¿ÉÒÔ°ÑÍ·¸îÏÂÀ´¡£\n");
+   write("ä½ æ²’æœ‰é©ç•¶çš„å·¥å…·å¯ä»¥æŠŠé ­å‰²ä¸‹ä¾†ã€‚\n");
    return 1;
 }

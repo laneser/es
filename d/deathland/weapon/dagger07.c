@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("holy dagger","ÉñÊ¥Ø°Ê×");
+       set_name("holy dagger","ç¥è–åŒ•é¦–");
        add("id",({"dagger",}) );
-       set_short("a holy dagger","ÉñÊ¥Ø°Ê×");
+       set_short("a holy dagger","ç¥è–åŒ•é¦–");
        set_long(
            "A dagger enchanted holy power.\n",
-           "Ò»°Ñ¸½ÓĞÉñÊ¥Á¦Á¿Ø°Ê×.\n"
+           "ä¸€æŠŠé™„æœ‰ç¥è–åŠ›é‡åŒ•é¦–.\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
     set("type","dagger");
 	set( "min_damage", 22 );

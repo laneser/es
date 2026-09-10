@@ -1,79 +1,79 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"���԰�","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"���԰�","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"����һ�����԰壬ר���˱��� BUGS ����ϸ�÷���ο� help board��
-��� ES ����춴�ҵģ����ϣ���κ��˶��ڴ˱��������ֵ� BUGS ��
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ���԰�",])
-messages ({(["id":158,"body":"�� !! û�� ...
-ֻ�Ǿ������ !! Ϊʲ���������ǳ���������?
-�ѵ���ֻ�����ǽ��ݻ�??
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"這是一個留言板，專供人報告 BUGS 。詳細用法請參看 help board。
+由於 ES 是屬於大家的，因此希望任何人都在此報告所發現的 BUGS 。
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS 留言板",])
+messages ({(["id":158,"body":"啊 !! 沒事 ...
+只是覺的奇怪 !! 為什麼麒麟牙是長刃型武器?
+難道這隻麒麟是劍齒虎??
 
-","title":"û��","time":773592249,"poster":"Periodic",]),(["id":159,"title":"< no title >","body":"     ho is knight, when i set tactic siege
+","title":"沒事","time":773592249,"poster":"Periodic",]),(["id":159,"title":"< no title >","body":"     ho is knight, when i set tactic siege
 
-     ��������k scythe ���� tactic siege,������һ���������tactic siege
+     我有兩次k scythe 都用 tactic siege,當最後一擊如果是用tactic siege
 
-     k ���Ļ�,�����������������scythe, or corpse(for other mob)...bug
+     k 死的話,都會出現兩把聽話的scythe, or corpse(for other mob)...bug
 
      and system will tell you\" you have no heart beat\" loh
 
                                                                 ho..7,9
 
-","time":773695858,"poster":"Ho",]),(["id":160,"body":"Ϊʲ��ǰ��������Ҵ����ϵ����ܶ�������൱���ص��˺�,����ֻ�ܲ�����?
-���Ѿ�������ǿ�Ĺ�������,�벻Ҫ�����ķ�����Ҳ��ǿ����?
+","time":773695858,"poster":"Ho",]),(["id":160,"body":"為什麼前天和昨天我打刑老爹還能對他造成相當嚴重的傷害,今天只能擦到他?
+他已經有這麼強的攻擊力了,請不要把他的防禦力也變強好嗎?
 ","title":"23 hsin have bug","time":774003349,"poster":"Vivian",]),(["id":161,"body":"On Tue Jul 12, Vivian wrote:
-> Ϊʲ��ǰ��������Ҵ����ϵ����ܶ�������൱���ص��˺�,����ֻ�ܲ�����?
-> ���Ѿ�������ǿ�Ĺ�������,�벻Ҫ�����ķ�����Ҳ��ǿ����?
+> 為什麼前天和昨天我打刑老爹還能對他造成相當嚴重的傷害,今天只能擦到他?
+> 他已經有這麼強的攻擊力了,請不要把他的防禦力也變強好嗎?
 
-  ��֪��Ү !! Ӧ��û��ȥ������ !! ���������
+  不知道耶 !! 應該沒人去改他吧 !! 會改他的人
 
-�⼸�춼�������ߣ������ ... ��Ҫ�����ɹ� :P)
+這幾天都很少上線，所以嘍 ... 不要疑神疑鬼 :P)
 
-				���[�Ͻ�����]
+				茹比[趕進度中]
 
-","title":"Re: 23 hsin have bug","time":774025397,"poster":"Ruby",]),(["id":162,"body":"����modemʹ����...�����ϸ���޷������Լ��ʺ�connect here..
-Ҳ��˷���,ES����һ��BBS,�����ڽ�������������....
-����,�ѡ�stty pass8������Ķ������ڳ�ʽ��ò��Ѱ�...
-ϣ�������������.....
-��Ϊ�����ڶ��Ǿ��ɵ繤��BBSNet������...ʵ�ں���...
-ϣ����......��...֪���ҵ���˼�ͺ�..:p
+","title":"Re: 23 hsin have bug","time":774025397,"poster":"Ruby",]),(["id":162,"body":"我是modem使用者...最近因細故無法經由自己帳號connect here..
+也因此發現,ES不像一般BBS,可以在進入後輸入中文....
+我想,把『stty pass8』這類的東東加在程式裡該不難吧...
+希望神能體諒這點.....
+因為我現在都是經由電工的BBSNet過來的...實在很慢...
+希望能......呵...知道我的意思就好..:p
 ","title":"< no title >","time":774063314,"poster":"Pure",]),(["id":163,"body":"On Tue Jul 12, Vivian wrote:
-> Ϊʲ��ǰ��������Ҵ����ϵ����ܶ�������൱���ص��˺�,����ֻ�ܲ�����?
-> ���Ѿ�������ǿ�Ĺ�������,�벻Ҫ�����ķ�����Ҳ��ǿ����?
+> 為什麼前天和昨天我打刑老爹還能對他造成相當嚴重的傷害,今天只能擦到他?
+> 他已經有這麼強的攻擊力了,請不要把他的防禦力也變強好嗎?
  
-���ϵ�˵, ���, Vivian ��������ǿ, ������������?
+邢老爹說, 奇怪, Vivian 昨天這麼強, 今天怎麼變菜了?
  
  
 ","title":"Re: 23 hsin have bug","time":774071204,"poster":"Elon",]),(["id":164,"title":"< no title >","body":"  
-β�����..
-      �ɲ��������鷿����Щ��ֽ...������дд..
-                             βС��Tick
+尾大的神..
+      可不可以在書房上賣些白紙...讓我們寫寫..
+                             尾小的Tick
 ","time":774118708,"poster":"Tick",]),(["id":165,"title":"Re: < no title >","body":"On Thu Jul 14, Tick wrote:
 >   
-> β�����..
->       �ɲ��������鷿����Щ��ֽ...������дд..
->                              βС��Tick
+> 尾大的神..
+>       可不可以在書房上賣些白紙...讓我們寫寫..
+>                              尾小的Tick
 
-д����?
+寫情書?
 
 -Elon was here.
-","time":774155420,"poster":"Elon",]),(["id":166,"body":"��ǰ����һʱ���鼤������Les �� suicide ����
-����������������Les ������ע��
-ȴ���ֲ�����Les ������ע��Ү
-˵�� Les is restricted ����
-������ɣ��ʹ�Ruby �ˣ�Ҳû����
-лл
+","time":774155420,"poster":"Elon",]),(["id":166,"body":"我前幾天一時心情激動，把Les 給 suicide 掉了
+可是我後來又想用Les 來重新註冊
+卻發現不能用Les 來重新註冊耶
+說是 Les is restricted 哩！
+幫幫解決吧，問過Ruby 了，也沒法子
+謝謝
 
-","title":"Les's restriction????","time":774214547,"poster":"Loop",]),(["id":167,"body":"����ɾ�� dogboy and doggirl's married record that is just a joke and ���� for marriage
+","title":"Les's restriction????","time":774214547,"poster":"Loop",]),(["id":167,"body":"建議刪除 dogboy and doggirl's married record that is just a joke and 恥辱 for marriage
 
-","title":"< no title >","time":774220090,"poster":"Knew",]),(["id":168,"body":"��������dongua when type hp and score can't see ����ֵ but can see ����ֵ . please help me......
-","title":"����������ֵ","time":774490074,"poster":"Dongua",]),(["id":169,"title":"< no title >","body":"    to ��ʦor ��:
-����ȥk priest ʱ,bobby defend ������skills 100 Ӧ�ù������ᱻ������!
-����ȴ����ͨ�������˺ü���!
-�ɷ�鿴�Ƿ���bug.
+","title":"< no title >","time":774220090,"poster":"Knew",]),(["id":168,"body":"我是書生dongua when type hp and score can't see 內力值 but can see 法力值 . please help me......
+","title":"看不到內力值","time":774490074,"poster":"Dongua",]),(["id":169,"title":"< no title >","body":"    to 巫師or 神:
+今天去k priest 時,bobby defend 我他的skills 100 應該攻擊不會被穿過吧!
+但我卻被普通攻擊打了好幾下!
+可否查看是否有bug.
                         lama 
-","time":774602690,"poster":"Lama",]),(["id":170,"title":"�����𻵵��� mail ����","body":"
-    �����𻵵��� mail ����
+","time":774602690,"poster":"Lama",]),(["id":170,"title":"檔案損壞的請 mail 給我","body":"
+    檔案損壞的請 mail 給我
 
-                           ���
+                           茹比
  .
 ","time":774612988,"poster":"Ruby",]),(["id":171,"body":" Real and Yueh is my char, I use oknow to set okip,
 so the okip is quadra8.src.ncu.edu.tw
@@ -95,123 +95,123 @@ now i set both. thanks maverick again.
 
 [A[A[A[A[A[A[A[B[B[B[B[B[C[C[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[B[B[B[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D.
 ","title":"Real's okip is ok","time":774713152,"poster":"Real",]),(["id":173,"title":"file crash","body":"
-��λ ES ����Һ� :
+各位 ES 的玩家好 :
 
-    ǰ���� ES �ַ��� crash �¼���һ�������ģ�������\�಻�ҵ��˵ĵ���
+    前幾天 ES 又發生 crash 事件，一如以往的，又有許多不幸的人的檔案
 
-�⵽�ƻ�������������飬�������ϵͳ�� crash ��ͬʱ������д�� backup
+遭到破壞，經過大神詳查，發現由於系統在 crash 的同時曾嘗試寫入 backup
 
-file !! ����� crash ������������ backup file ������\���� .... Ҳ����
+file !! 故這次 crash 的犧牲者們連 backup file 都被蓋掉了 .... 也就是
 
-˵�����Ǹ����������� .... �����������ֱ���
+說，我們跟他們永別了 .... 真令人無奈又悲傷
 
-    ��� ES ��û�б�����Ӳ�������� lost ���ĵ����޷����� ... �ܱ�Ǹ !!
+    由於 ES 並沒有備份用硬碟，所以 lost 掉的檔案無法補回 ... 很抱歉 !!
 
-���Ƕ������� !! �������һ�ʹ�����������ֲ������������ǲ��ָܻ��ɹ��� !
+我們都盡力了 !! 接下來我會和大神商量如何彌補，不過，總是不能恢復舊觀了 !
 
-��һ�εĸ� file crash �� player ˵����Ǹ ....
+再一次的跟 file crash 的 player 說聲抱歉 ....
 
-                                        �޿��κε� ���
+                                        無可奈何的 茹比
 
-","time":774815168,"poster":"Ruby",]),(["id":174,"title":"һ������ !! ��Ҫ��ҵ����","body":"
-�� !! ���� ES ����Ҵ�Һ� :
+","time":774815168,"poster":"Ruby",]),(["id":174,"title":"一個建議 !! 需要大家的意見","body":"
+嗨 !! 所有 ES 的玩家大家好 :
 
-     ES ������һ��ѧ���ˣ����ѧ�ڽ����ᣬ����\�����ѷ׷��⵽���ң�
+     ES 開張了一個學期了，這個學期結束後，有許多朋友紛紛遭到不幸，
 
-���������������ѹ����£�Ҳ�����˼�λʮ��Ϊͬѧ�ǵ�ѧҵ�����ʦ����
+發生了這種令人難過的事，也引起了幾位十分為同學們的學業著想的師長的
 
-ע�⡣�⼸�죬����ӵ��˼�ͨѯ�ʵĵ绰���������Ƕ� ES �����弰���
+注意。這幾天，大神接到了幾通詢問的電話，大致上是對 ES 的意義及其存
 
-�����������֣���Ȼ���в����Ż���������ջ� ES �����ߡ�
+在與否進行研討，當然其中不乏放話建議計中收回 ES 機器者。
 
-    �������ǵ� ES �Ǽ�ס�ڼ��еĻ����ϣ� ES �Լ���һ��Ӳ��Ҳû�У�
+    現在我們的 ES 是寄住在計中的機器上， ES 自己連一顆硬碟也沒有，
 
-����\ֻҪУ��һ�����£� ES �ͻ����١����޴������ -- �ʺű�ȡ������
+或許只要校方一聲令下， ES 就會面臨□骨無存的命運 -- 帳號被取消、所
 
-�е���ɱ�� ... �� backup ��û�а취 �������ج�Σ�ֻҪ�м���������
+有檔案殺掉 ... 連 backup 都沒有辦法 。而這個噩夢，只要有幾個有力人
 
-ʿ���棬�ͻ�����ʵ��
+士出面，就會變成事實。
 
-    ���ԣ� ES ��Ҫ�Լ��Ļ�����Ӳ�� !!
+    所以， ES 需要自己的機器和硬碟 !!
 
-    ���죬��������������������ʱ���ҵ�һ�������𲻾�ǰ Wind ����
+    今天，當大神和我聊起這個問題時，我第一個就想起不久前 Wind 開的
 
-һ����Ц -- �շ�ʽ�� MUD !! ÿ�����ڴ�������ʱ��ͬʱ���� 100 NT
+一個玩笑 -- 收費式的 MUD !! 每個人在創造新人時，同時劃撥 100 NT
 
-�� MUD �������ʺţ��ȵ���ʦ(�����)����ע���ᣬ�ſ��������ȼ���
+到 MUD 的郵政帳號，等到巫師(或大神)幫你註冊後，才可以提升等級到
 
-level 5 ���ϣ�ÿ����(���������ʦ)��Ҫ�ɽ�ע��ѣ�ֱ�����ǳﵽ��Ҫ
+level 5 以上，每個人(包含神和巫師)都要繳交註冊費，直到我們籌到需要
 
-�Ŀ���Ϊֹ������������ʺ����� players �以��ѡ���������Ϲ��ܣ���ʦ
+的款項為止，而這個郵政帳號則由 players 間互相選舉三人以上共管，巫師
 
-����񲻵ü��������
+與大神不得加入管理。
 
-    ���ݴ�����ԵĹ��㣬������Ӳ�������Ҫ 200,000 NT (��ʮ��)������
+    根據大神粗略的估算，機器加硬碟大概需要 200,000 NT (二十萬)，我們
 
-��Ҫ 2000 �� char �������������룬��������ܰ쵽�Ļ������������е�
+需要 2000 個 char 就能完成這個夢想，如果我們能辦到的話，至少有下列的
 
-�ô� :
+好處 :
 
-    1. ͬʱ login �����������䵽 100 ��
+    1. 同時 login 人數可以擴充到 100 人
 
-    2. Multi-login ����ȡ��
+    2. Multi-login 限制取消
 
-    3. �и�����ȵ�ϵͳ
+    3. 有更快更穩的系統
 
-    4. ���õ���У���Ĵ�ѹ
+    4. 不用擔心校方的打壓
 
-    5. ES �İ�ͼ���Դ������
+    5. ES 的版圖可以大幅擴充
 
-    6. ����Ϊ��ҵ����Ϻ� ES ����ȫ����
+    6. 可以為玩家的資料和 ES 做安全備份
 
-    7. �շ�������һ������ȡ�����츣ѧ��ѧ��
+    7. 收費期滿，一切限制取消，造福學弟學妹
 
-��һ��ֻҪ 100 NT !! �����Ϊ��� ��
+這一切只要 100 NT !! 大家認為如何 ？
 
-    ֻ�Ǹ����������飬��Ҫ��ҵ�����������޳ɻ��Ƿ��� ...
+    只是個初步的提議，需要大家的意見，不論贊成或是反對 ...
 
-�ڴ���� reply  .....
-
-
-                                ���
+期待你的 reply  .....
 
 
-","time":774815327,"poster":"Ruby",]),(["id":175,"title":"re ruby's idea","body":"��ʵ�ǿ��е�,�Ҽǵ���·�ϵ� okbriage    ever need pay money when  you ���� for help to buy machine :)
+                                茹比
+
+
+","time":774815327,"poster":"Ruby",]),(["id":175,"title":"re ruby's idea","body":"其實是可行得,我記的網路上的 okbriage    ever need pay money when  you 助冊 for help to buy machine :)
 but if   open to 100 player have enough mob can k ?  so need more large area 
 money i think is more easy 
 if neeed money to registar then  at leat i need pay one char  
 for each guild :P 
 but when buy machine who to care it ?? 
-and when god gradaduate how to deal with that �豸 ? 
+and when god gradaduate how to deal with that 設備 ? 
 i i say money is more easy 
 
 hope ES haev a better home  and better future   
 ps : so please open monk guild soon ok ? ^_^
 ","time":774818071,"poster":"Tycoon",]),(["id":177,"body":"
-     ���޳��շ�ʽ�ķ���������� ,
-     ���Ϊ�Լ��ĸ������� ,
-     100 Ԫʵ���㲻�˶��� ......
+     我贊成收費式的方法購買機器 ,
+     大家為自己的福利著想 ,
+     100 元實在算不了多少 ......
 
 
-     ����� Crash ����ź�����ҵ��� ,
-     ϣ�������Щ���������� ,
-     �����ܷ���ȫ�������ŵ� File ?
-     ��Ȼ�޷�����ԭ�������´��� ...
+     至於因 Crash 造成遺憾的玩家檔案 ,
+     希望大神快些作出決定來 ,
+     還有能否完全砍掉殘餘的 File ?
+     不然無法再以原人物重新創設 ...
 
-     лл��λ������ʦ������ 
-         ϣ�� ES ���������� 
+     謝謝諸位大神巫師的辛勞 
+         希望 ES 的明天會更好 
 
 
-                               ������ٵ� Son :~~
-","title":" ����շѼ��������","time":774838270,"poster":"Sonii",]),(["id":179,"body":"
+                               檔案損毀的 Son :~~
+","title":" 關於收費及檔案損毀","time":774838270,"poster":"Sonii",]),(["id":179,"body":"
 
- ����ϲ�� ES , ����Ը�⸶��һЩЩʹ ES ���� ...
+ 我們喜愛 ES , 我們願意付出一些些使 ES 更好 ...
 
-      �������� :
+      聯合署名 :
 
         Mineral , Roria , Pallas , Tu , Sd , Wd , Wang , Solid , Crew ,
         Poem , Fos , Lica , Te , Tea , Rock , Lik , Kla , Akira , Kenwahl ,
         Pure , Windsad , Jj , Terryh , Nancy ...
 
-","title":"����֧����Ҹ��ѵĽ���","time":774846797,"poster":"Pallas",]),})
+","title":"我們支持玩家付費的建議","time":774846797,"poster":"Pallas",]),})
 id_ref 191

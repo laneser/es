@@ -2,14 +2,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("heavy plate","ÖØĞÍ¿ø¼×");
+        set_name("heavy plate","é‡å‹ç›”ç”²");
         add("id",({"plate"}) );
-        set_short( "heavy plate","ÖØĞÍ¿ø¼×");
+        set_short( "heavy plate","é‡å‹ç›”ç”²");
         set( "no_sale",1);
         set_long(
-                "ÕâÊÇÒ»Ì×ÄãËù¿´¹ı×î¼á¹ÌÄÍÓÃµÄ¿ø¼×£¬Èç¹û²»ÊÇÌì¸³"+
-                "ÉñÁ¦¿ÖÅÂ´©ÆğÀ´¾ÍÁ¬¶¯¶¼²»ÄÜ¶¯ÂŞ¡£\n" );
-        set( "unit", "¼ş" );
+                "é€™æ˜¯ä¸€å¥—ä½ æ‰€çœ‹éæœ€å …å›ºè€ç”¨çš„ç›”ç”²ï¼Œå¦‚æœä¸æ˜¯å¤©è³¦"+
+                "ç¥åŠ›ææ€•ç©¿èµ·ä¾†å°±é€£å‹•éƒ½ä¸èƒ½å‹•ç¾…ã€‚\n" );
+        set( "unit", "ä»¶" );
         set( "weight", 410 );
         set( "type", "body" );
 	set("armor_class", 30 );

@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("orb ring", "µØ¾«Ë®¾§½äÖ¸");
+        set_name("orb ring", "åœ°ç²¾æ°´æ™¶æˆ’æŒ‡");
         add( "id", ({ "ring" }) );
-        set_short( "µØ¾«Ë®¾§½äÖ¸");
+        set_short( "åœ°ç²¾æ°´æ™¶æˆ’æŒ‡");
         set_long(
-                "Ò»Ö»Ë®¾§½äÖ¸¡£´ÓºÜ¾ÃÇ°Æğ£¬Ëü¾ÍÊÇµØ¾«³¤ÀÏÔºÊ×Ï¯µÄĞÅÎï¡£\n"
+                "ä¸€éš»æ°´æ™¶æˆ’æŒ‡ã€‚å¾å¾ˆä¹…å‰èµ·ï¼Œå®ƒå°±æ˜¯åœ°ç²¾é•·è€é™¢é¦–å¸­çš„ä¿¡ç‰©ã€‚\n"
         );
-        set("unit","Ö»");
+        set("unit","åª");
         set( "type", "finger" );
         set("material","element");
         set( "armor_class", 0 );

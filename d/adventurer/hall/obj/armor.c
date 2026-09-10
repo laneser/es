@@ -5,20 +5,20 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-	set_name("unknow armor","Î´Öª·À¾ß");
-	set_short("Î´Öª·À¾ß");
+	set_name("unknow armor","æœªçŸ¥é˜²å…·");
+	set_short("æœªçŸ¥é˜²å…·");
 	set( "long","@@query_long");
 	set( "weight","@@query_weight");
 	set( "no_sale", 1);
-	set( "c_skin_name","Ã«Æ¤");
+	set( "c_skin_name","æ¯›çš®");
 	set( "extra_ids",({}));
 }
 
 string query_long()
 {
 	if ( (string) this_object()->query("c_skin_name") != "skin" )
-		return "ÕâÊÇÒ»" + (string) this_object()->query("unit") + "ÓÃ" + (string)this_object()->query("c_skin_name") +"µÄÆ¤×ö³ÉµÄ"
-		 +(string)this_object()->query("add_name")+ "¡£\n";
+		return "é€™æ˜¯ä¸€" + (string) this_object()->query("unit") + "ç”¨" + (string)this_object()->query("c_skin_name") +"çš„çš®åšæˆçš„"
+		 +(string)this_object()->query("add_name")+ "ã€‚\n";
 	else
-		return "ÕâÊÇÒ»¼şÎ´Íê³ÉµÄ·À¾ß¡£\n";	
+		return "é€™æ˜¯ä¸€ä»¶æœªå®Œæˆçš„é˜²å…·ã€‚\n";	
 }

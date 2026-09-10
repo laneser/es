@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "ancient tail armor", "���β��" );
+	set_name( "ancient tail armor", "蚩尤尾甲" );
 	add( "id", ({ "tail","armor" }) );
-	set_short( "���β��" );
+	set_short( "蚩尤尾甲" );
 	set_long(
-		"����һ�׷�����ֹ����β�ף��ഫ�ǹ�ʱ��ȴ�ս�Ƶ�ʱ����\n"
-	        "��������ӵ�зǷ��ķ��������ƺ�����������Ϊ��֪��������\n"
+		"這是一套泛著奇怪光澤的尾甲，相傳是古時蚩尤大戰黃帝時所穿\n"
+	        "著，不但擁有非凡的防禦力，似乎還有其他不為人知的力量。\n"
 	);
-	set( "unit", "��" );
+	set( "unit", "套" );
 	set( "type", "tail" );
         set("material","leather");
 	set( "weight", 120 );
@@ -26,10 +26,10 @@ int stop_equip()
        if ((int)holder->query("alignment")>-1200)
         {
         tell_room( environment(holder), 
-         holder->query("c_cap_name")+"��Ҫ�������β�ף���β��ͻȻ�������������ܿ��ơ�\n"
+         holder->query("c_cap_name")+"想要穿上蚩尤尾甲，但尾甲突然猛烈跳動而不受控制。\n"
 		, ({holder}) );
         tell_object( holder,
-         "����Ҫ�������β�ף���β�׷���ǿ���а����ʹ���޷���Ը��\n");
+         "你想要穿上蚩尤尾甲，但尾甲發出強大的邪惡抗力使你無法如願。\n");
 		return 1;
 	}
         return 0;

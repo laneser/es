@@ -6,10 +6,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("��Ӥ��");
+	set_short("育嬰室");
 	set_long( @C_LONG_DESCRIPTION
-���￴�����ǹ��ϵ���Ӥ�ң��ö�ֻС�������ڿ���������������һ��
-�ƺ�ɫ��Һ��ι��С���ϵĿ��С�
+這裡看起來是怪蟻的育嬰室，好多隻小螞蟻正在哭著，工蟻們正把一種
+黃褐色的液體喂入小螞蟻的口中。
 C_LONG_DESCRIPTION
 	);
 	set( "exits", ([

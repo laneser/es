@@ -37,27 +37,27 @@ int cmd_hp()
 	msg = "";
 		if( max = me->query("max_hp") ) {
 			flag = me->query("hit_points");
-			msg = sprintf(sprintf(" Ìå  Á¦  :   %s/%s",set_color("%4d", query_color(flag,max))
+			msg = sprintf(sprintf(" é«”  åŠ›  :   %s/%s",set_color("%4d", query_color(flag,max))
 				,set_color("%4d\n", "HIC")), flag, max);
 		}
 		if( max = me->query("max_sp") ) {
 			flag = me->query("spell_points");
-			msg = sprintf(sprintf("%s ¾«ÉñÁ¦  :   %s/%s",msg,set_color("%4d", query_color(flag,max))
+			msg = sprintf(sprintf("%s ç²¾ç¥žåŠ›  :   %s/%s",msg,set_color("%4d", query_color(flag,max))
 				,set_color("%4d\n", "HIC")),flag, max);
 		}
 		if( max = me->query("max_fp") ) {
 			flag = me->query("force_points");
-			msg = sprintf(sprintf("%s ÄÚ  Á¦  :   %s/%s",msg,set_color("%4d", query_color(flag,max))
+			msg = sprintf(sprintf("%s å…§  åŠ›  :   %s/%s",msg,set_color("%4d", query_color(flag,max))
 				,set_color("%4d\n", "HIC")),flag, max);
 		}
 		if( max = me->query("max_tp") ) {
 			flag = me->query("talk_points");
-			msg = sprintf(sprintf("%s½»Ì¸ÄÜÁ¦ :   %s/%s",msg,set_color("%4d", query_color(flag,max))
+			msg = sprintf(sprintf("%säº¤è«‡èƒ½åŠ› :   %s/%s",msg,set_color("%4d", query_color(flag,max))
 				,set_color("%4d\n", "HIC")), flag, max);
 		}
 /*		if( max = me->query("max_ap") ) {
 			flag = me->query("action_points");
-			msg = sprintf(sprintf("%sÐÐ¶¯ÄÜÁ¦ :   %s/%s",msg,set_color("%4d", query_color(flag,max))
+			msg = sprintf(sprintf("%sè¡Œå‹•èƒ½åŠ› :   %s/%s",msg,set_color("%4d", query_color(flag,max))
 				,set_color("%4d\n", "HIC")), flag, max);
 		}
 */
@@ -71,8 +71,8 @@ int cmd_hp()
                 cond_str = sprintf("%s %s", cond_str, to_chinese(cond_name[i]));
   	       }
 	   }
-	if( cond_str == "" ) cond_str = " Õý ³£";
-	msg = sprintf("%s ×´  Ì¬  :   %s\n",msg,cond_str);
+	if( cond_str == "" ) cond_str = " æ­£ å¸¸";
+	msg = sprintf("%s ç‹€  æ…‹  :   %s\n",msg,cond_str);
 
         acups = (mapping)me->query_temp("acup_effect");
         if((string)me->query("class")=="healer")
@@ -89,8 +89,8 @@ int cmd_hp()
                               USE_POINTS->query_effect_c_name(acup_name[i]));
                        }
               }
-           if ( acup_str == "" ) acup_str = " Ã»ÓÐ°ë¸ö" ;
-           msg = sprintf("%sÕë¾ÄÐ§ÓÃ :   %s\n",msg,acup_str);
+           if ( acup_str == "" ) acup_str = " æ²’æœ‰åŠå€‹" ;
+           msg = sprintf("%sé‡ç¸æ•ˆç”¨ :   %s\n",msg,acup_str);
            }        
         
         me->quick_message(msg);
@@ -99,9 +99,9 @@ int cmd_hp()
 
 int help() {
 	write (@HELP
-Ê¹ÓÃ¸ñÊ½: hp
+ä½¿ç”¨æ ¼å¼: hp
 
-Õâ¸öÖ¸Áî½«ÏÔÊ¾ÄãµÄÌåÁ¦¡¢·¨Á¦¡¢½»Ì¸Á¦µÈ¸÷Ïî»ù±¾Öµ.
+é€™å€‹æŒ‡ä»¤å°‡é¡¯ç¤ºä½ çš„é«”åŠ›ã€æ³•åŠ›ã€äº¤è«‡åŠ›ç­‰å„é …åŸºæœ¬å€¼.
 HELP
 );
 	return 1 ;

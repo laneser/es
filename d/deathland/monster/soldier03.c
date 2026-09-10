@@ -8,20 +8,20 @@ void create ()
 	::create();
 	//seteuid( getuid() );
  set_level(14);
- set_name("dwarf teacher","°«ÈËÕ½¶·½ÌÊ¦");
+ set_name("dwarf teacher","çŸ®äººæˆ°é¬¥æ•™å¸«");
  add ("id", ({ "teacher","dwarf"}) );
  set_short( "a dwarf teacher",
-           "°«ÈËÕ½¶·½ÌÊ¦");
+           "çŸ®äººæˆ°é¬¥æ•™å¸«");
  set_long(@LONG
 A dwarf teacher,his fighting skill is very good.
 LONG
     ,@C_LONG
-°«ÈËÕ½¶·½ÌÊ¦",ËûµÄÕ½¶·¼¼ÇÉ·Ç³£µØºÃ,ËùÒÔ¸ºÔğ½Ìµ¼ĞÂ±øµÄ»ù±¾Õ½¶·½ÌÁ·.    
+çŸ®äººæˆ°é¬¥æ•™å¸«",ä»–çš„æˆ°é¬¥æŠ€å·§éå¸¸åœ°å¥½,æ‰€ä»¥è² è²¬æ•™å°æ–°å…µçš„åŸºæœ¬æˆ°é¬¥æ•™ç·´.    
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",13);
     set_perm_stat( "str",22);
     set_perm_stat( "int",21);

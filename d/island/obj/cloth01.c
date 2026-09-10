@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Hai-nen pallium","Áù×æôÂôÄ");
+    set_name("Hai-nen pallium","å…­ç¥–è¢ˆè£Ÿ");
     add("id",({"cloth","pallium"}) );
     set_short("@@color");
 	set_long(@C_LONG
-ÓÉÁù×æ´«ÏÂÀ´µÄôÂôÄ£¬ËäÈ»Äê´ú¾ÃÔ¶£¬µ«ÊÇÈÔÈ»²»ÏÔ³Â¾ÉµÄÑù×Ó£¬ÓÉì¶¾­¹ı
-Àú´ú¼Ì³Ğ¸ßÉ®µÄ¼Ó³Ö£¬Ê¹µÃÕâ¼şôÂôÄ¾ßÓĞÉñÊ¥µÄ·À»¤Á¦¡£ ( Odin,Inc )	
+ç”±å…­ç¥–å‚³ä¸‹ä¾†çš„è¢ˆè£Ÿï¼Œé›–ç„¶å¹´ä»£ä¹…é ï¼Œä½†æ˜¯ä»ç„¶ä¸é¡¯é™³èˆŠçš„æ¨£å­ï¼Œç”±æ–¼ç¶“é
+æ­·ä»£ç¹¼æ‰¿é«˜åƒ§çš„åŠ æŒï¼Œä½¿å¾—é€™ä»¶è¢ˆè£Ÿå…·æœ‰ç¥è–çš„é˜²è­·åŠ›ã€‚ ( Odin,Inc )	
 C_LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 80 );
 	set( "type", "body" );
 	set( "armor_class", 36 );
@@ -28,4 +28,4 @@ C_LONG
 	
 }
 string color()
-  { return set_color("Áù×æôÂôÄ","HIC"); } 
+  { return set_color("å…­ç¥–è¢ˆè£Ÿ","HIC"); } 

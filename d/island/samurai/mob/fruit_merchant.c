@@ -7,12 +7,12 @@ void create ()
 {
         ::create();
         set_level(6);
-        set_name( "fruit merchant","Ë®¹û··" );
+        set_name( "fruit merchant","æ°´æœè²©" );
         add ("id", ({ "merchant"}) );
-        set_short( "fruit merchant","Ë®¹û··");
-        set("unit","Î»");
+        set_short( "fruit merchant","æ°´æœè²©");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇÒ»¸öÂôË®¹ûµÄĞ¡··£¬Äã¿ÉÒÔÎÊËû¹Øì¶¼ÛÇ®(price)µÄÊÂ
+é€™æ˜¯ä¸€å€‹è³£æ°´æœçš„å°è²©ï¼Œä½ å¯ä»¥å•ä»–é—œæ–¼åƒ¹éŒ¢(price)çš„äº‹
 ANGEL
         );
         set_inventory( ({
@@ -26,7 +26,7 @@ ANGEL
         set ("gender", "male");
         set("wealth/gold",7);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 }
 
 void init()

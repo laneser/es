@@ -71,7 +71,7 @@ object's description.  Otherwise, ask the room for its description.
 	if (!str || !stringp (str)) {
 // do we have an environment?  If not, write the default message
 		if (!env) {
-			write (chinese_mode?"ÕâÀïÒ»Æ¬ÐéÎÞçÎÃì£¬¿´²»µ½ÈÎºÎ¶«Î÷¡£\n":"There is nothing to see here.\n");
+			write (chinese_mode?"é€™è£¡ä¸€ç‰‡è™›ç„¡ç¸¹æ¸ºï¼Œçœ‹ä¸åˆ°ä»»ä½•æ±è¥¿ã€‚\n":"There is nothing to see here.\n");
 			return 1;
 		}
 /*
@@ -113,7 +113,7 @@ write (LANGUAGE_D->garble_string(look_in_room (env, (int)viewingOb->query_temp (
 				if (((!pointerp (hidden_doors) || (int)hidden_doors[0] != 1 ||
 					member_array (str, hidden_doors) == -1))
 					&& doors[str]["status"] != "open") {
-				write (chinese_mode?"ÄÇ±ßµÄÃÅ¹Ø×¡ÁË¡£\n":"The door is closed.\n");
+				write (chinese_mode?"é‚£é‚Šçš„é–€é—œä½äº†ã€‚\n":"The door is closed.\n");
 				return 1;
 				}
 			}
@@ -167,7 +167,7 @@ string living_description (object ob)
 		race = ob->query("race");
 		raceat = to_chinese(race);
 		gender = (string)ob->query("gender");
-		genat = (viewingOb == ob)?"Äã":to_chinese(subjective(gender));
+		genat = (viewingOb == ob)?"ä½ ":to_chinese(subjective(gender));
 	} else {
 		race = (string)ob->query("race");
 		raceat = article(race) + " " + race;
@@ -184,7 +184,7 @@ string living_description (object ob)
 		}
 
 	if (stringp (race) && race != "")
-		reg += chinese_mode? genat + "µÄÖÖ×åÊÇ" + raceat + "¡£\n":
+		reg += chinese_mode? genat + "çš„ç¨®æ—æ˜¯" + raceat + "ã€‚\n":
 			genat + " " + raceat + ".\n";
 
 	reg += genat + (chinese_mode? STATS_D->c_status_string(ob): STATS_D->status_string(ob)) + "\n";
@@ -193,16 +193,16 @@ string living_description (object ob)
 	i = sizeof (inv);
 	if (i) {
 		reg += chinese_mode?
-			genat + "ÉíÉÏÐ¯´øÖø:\n":
+			genat + "èº«ä¸Šæ”œå¸¶è‘—:\n":
 			capitalize(genat) + " carrying:\n";
 		while (i--) {
 			short = (string)inv[i]->query (SHORT_DESCRIPTION);
 			if (short) {
 				reg += "    " + short;
 				if( inv[i]->query("wielded") )
-					reg += chinese_mode? " (ÎäÆ÷)" : " (wielded)";
+					reg += chinese_mode? " (æ­¦å™¨)" : " (wielded)";
 				if( inv[i]->query("equipped") )
-					reg += chinese_mode? " (»¤¼×)" : " (equipped)";
+					reg += chinese_mode? " (è­·ç”²)" : " (equipped)";
 				reg += ".\n";
 			}
 		}
@@ -240,7 +240,7 @@ varargs string item_description (string str, object user, int infra, string inn)
 			it = present (str, inob);
 			if ((int)inob->query_is_closed() && (int)inob->query ("opaque"))
 				return chinese_mode?
-				"Äã²¢Ã»ÓÐÍ¸ÊÓµÄÌØÒì¹¦\ÄÜ¡£\n":
+				"ä½ ä¸¦æ²’æœ‰é€è¦–çš„ç‰¹ç•°åŠŸèƒ½ã€‚\n":
 				"Just how do you propose looking in a closed container?\n";
 		}
 	}
@@ -250,7 +250,7 @@ varargs string item_description (string str, object user, int infra, string inn)
 		it = present(str, env);
    
 	if (it && !can_see (viewingOb, it))
-		return chinese_mode?"ÕâÀïÃ»ÓÐÄÇÑù¶«Î÷¡£\n":"I don't see that here.\n";
+		return chinese_mode?"é€™è£¡æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n":"I don't see that here.\n";
 
 	if (infra && it && objectp(it))
 		if (living (it) || it->query ("hot"))
@@ -279,18 +279,18 @@ varargs string item_description (string str, object user, int infra, string inn)
 			}
 		}
 		else return chinese_mode?
-			"ÕâÀïÃ»ÓÐÈÎºÎ¶«Î÷¡£\n":
+			"é€™è£¡æ²’æœ‰ä»»ä½•æ±è¥¿ã€‚\n":
 			"There is nothing to see here.\n";
 	}
 
 	if (!ret || ret == "")
-		return chinese_mode? "ÄãÏë¿´Ê²÷á£¿\n": "I don't see that here.\n";
+		return chinese_mode? "ä½ æƒ³çœ‹ä»€éº¼ï¼Ÿ\n": "I don't see that here.\n";
 
 	if (it) {
 		if (it != viewingOb) {
 			if (living (it))
 				tell_object( it,
-					user->query("c_name") + "Õý¶¢ÖøÄã¿´£¬²»ÖªµÀÓÐÊ²÷áÆóÍ¼....¡£\n");
+					user->query("c_name") + "æ­£ç›¯è‘—ä½ çœ‹ï¼Œä¸çŸ¥é“æœ‰ä»€éº¼ä¼åœ–....ã€‚\n");
 			foo = it->query("name");
 			if (!foo) foo = it->query(SHORT_DESCRIPTION) ;
 			if (!foo) foo = "something";
@@ -305,7 +305,7 @@ varargs string look_at_item (string str, object user, string inn)
 {
 //Check if the user is blind.
 	if ((int)user->query ("blind"))      
-		return chinese_mode?"ÄãÒÑ¾­Ï¹ÁË£¬Ê²÷áÒ²¿´²»¼û¡£\n":"You are blind and cannot see.\n";
+		return chinese_mode?"ä½ å·²ç¶“çžŽäº†ï¼Œä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n":"You are blind and cannot see.\n";
    
 //Check to see if the user can see.
 	if ((int)user->query ("vision"))
@@ -322,7 +322,7 @@ varargs string look_at_item (string str, object user, string inn)
 			return item_description (str, user, 1);
    
 //Guess there is no light here, then.
-	return chinese_mode?"ÕâÀïÒ»Æ¬ÆáºÚ£¬ÉìÊÖ²»¼ûÎåÖ¸¡£\n"
+	return chinese_mode?"é€™è£¡ä¸€ç‰‡æ¼†é»‘ï¼Œä¼¸æ‰‹ä¸è¦‹äº”æŒ‡ã€‚\n"
 	:"It is dark and you can't see a thing.\n";
 }
 
@@ -332,7 +332,7 @@ varargs string look_in_room (object room, int flag)
 {
 	//Check to see if the user is blind
 	if (viewingOb->query("blind"))
-		return chinese_mode?"ÄãÒÑ¾­Ï¹ÁË£¬Ê²÷áÒ²¿´²»¼û¡£\n":"You are blind and cannot see.\n";
+		return chinese_mode?"ä½ å·²ç¶“çžŽäº†ï¼Œä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n":"You are blind and cannot see.\n";
 
 //Check to see if the room can be seen.
   if (room->query("no_vision"))
@@ -347,7 +347,7 @@ varargs string look_in_room (object room, int flag)
     return lit_room_description (room, 1, flag);
    
 	//Looks like there isn't any light here.
-	return chinese_mode?"ÕâÀïÒ»Æ¬ÆáºÚ£¬ÉìÊÖ²»¼ûÎåÖ¸¡£\n"
+	return chinese_mode?"é€™è£¡ä¸€ç‰‡æ¼†é»‘ï¼Œä¼¸æ‰‹ä¸è¦‹äº”æŒ‡ã€‚\n"
 	:"It is dark and you can't see a thing.\n";
 }
 
@@ -406,7 +406,7 @@ and their statuses will be displayed in the room. */
 			while (i--)
 			{
 				if(chinese_mode)
-					long = sprintf( "%s    %s±ßµÄ%s(%s)ÊÇ%sµÄ¡£\n", long, to_chinese(dirs[i]),
+					long = sprintf( "%s    %sé‚Šçš„%s(%s)æ˜¯%sçš„ã€‚\n", long, to_chinese(dirs[i]),
 					doors[dirs[i]]["c_name"], doors[dirs[i]]["name"], 
 					to_chinese(doors[dirs[i]]["status"]) );
 				else
@@ -441,22 +441,22 @@ exits will be displayed or not. */
 	    i = sizeof (dirs);
 		switch (i) {
 		case 0:
-			long += (chinese_mode?"\tÕâ¡õÃ»ÓÐÈÎºÎÃ÷ÏÔµÄ³ö¿Ú¡£\n"
+			long += (chinese_mode?"\té€™â–¡æ²’æœ‰ä»»ä½•æ˜Žé¡¯çš„å‡ºå£ã€‚\n"
 								 :"\tThere are no obvious exits.\n");
 			break;
 		case 1:
-			long += (chinese_mode?"\tÕâÀïÎ¨Ò»µÄ³ö¿ÚÊÇ: "+dirs[0]+"¡£\n"
+			long += (chinese_mode?"\té€™è£¡å”¯ä¸€çš„å‡ºå£æ˜¯: "+dirs[0]+"ã€‚\n"
 								 :"\tThe only obvious exit is "+dirs[0]+".\n");
 			break;
 		case 2:
-			long += (chinese_mode?"\t´ÓÕâÀïÄã¿ÉÒÔÍù "+dirs[0]+" »òÍù "+dirs[1]+"¡£\n"
+			long += (chinese_mode?"\tå¾žé€™è£¡ä½ å¯ä»¥å¾€ "+dirs[0]+" æˆ–å¾€ "+dirs[1]+"ã€‚\n"
 								 :"\tThe obvious exits are "+dirs[0]+" and "+dirs[1]+".\n");
 			break;
 		default:
       		if(!chinese_mode)
 				long += "\tObvious exits are " + implode (dirs[0..(i-2)], ", ") + " and " + dirs[i-1] + ".\n";
 			else
-				long += "\t´ÓÕâÀïÄã¿ÉÒÔÍù " + implode(dirs[0..(i-2)], "¡¢") + " »òÍù " + dirs[i-1] + "¡£\n";
+				long += "\tå¾žé€™è£¡ä½ å¯ä»¥å¾€ " + implode(dirs[0..(i-2)], "ã€") + " æˆ–å¾€ " + dirs[i-1] + "ã€‚\n";
 		}
 	}
 
@@ -564,7 +564,7 @@ string process_contents (mixed *contents, int flag)
 		if (i > 1) {
 			obj = match[ninv[loop]][0];
 			tmp = chinese_mode?
-				sprintf ("%s%s%s (%s)", convert_c_number(i), (unit=obj->query("unit"))?unit:"¸ö",
+				sprintf ("%s%s%s (%s)", convert_c_number(i), (unit=obj->query("unit"))?unit:"å€‹",
 					ninv[loop], obj->query("name")):
 				sprintf ("%s %s", capitalize(convert_number(i)), pluralize(ninv[loop]));
 		} 
@@ -612,10 +612,10 @@ string convert_number(int num) {
 string convert_c_number(int num) {
   if (!c_number)
     c_number = ({
-"Ò»", "Á½", "Èý", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å", "Ê®", "Ê®Ò»", "Ê®¶þ",
-"Ê®Èý", "Ê®ËÄ", "Ê®Îå", "Ê®Áù", "Ê®Æß", "Ê®°Ë", "Ê®¾Å", "¶þÊ®" });
+"ä¸€", "å…©", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹", "å", "åä¸€", "åäºŒ",
+"åä¸‰", "åå››", "åäº”", "åå…­", "åä¸ƒ", "åå…«", "åä¹", "äºŒå" });
    
-  return ((num > 20) ? "Ðí\¶à" : c_number[num - 1]);
+  return ((num > 20) ? "è¨±å¤š" : c_number[num - 1]);
 }
 
 int help() {

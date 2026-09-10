@@ -4,14 +4,14 @@ inherit MESSAGE;
 
 void	create()
 {
-	set_name("firework", "ÑÌ»ğ");
-	set_short( "ÑÌ»ğ");
+	set_name("firework", "ç…™ç«");
+	set_short( "ç…™ç«");
 	set_long( @CLONG
-ÕâÊÇÒ»¸öÑÌ»ğ, µãÈ¼ (light) Ëü, Äã½«»á»ñµÃ\Ğí¶àÀÖÈ¤¡£
+é€™æ˜¯ä¸€å€‹ç…™ç«, é»ç‡ƒ (light) å®ƒ, ä½ å°‡æœƒç²å¾—è¨±å¤šæ¨‚è¶£ã€‚
 CLONG
     );
 	set("id", ({"firework"}));
-	set("unit", "¸ö" );
+	set("unit", "å€‹" );
 	set( "weight", 10 );
 	set( "value", ({ 500, "silver" }) );
 }
@@ -30,23 +30,23 @@ int		do_light(string s)
 	object *usr;
 	int	i, user_number;
 	
-	if (!s) return notify_fail( "ÄãÏëµãÈ¼Ê²÷á?\n" );
+	if (!s) return notify_fail( "ä½ æƒ³é»ç‡ƒä»€éº¼?\n" );
 	if ( (!ob = present(s)) || (ob != this_object())) 
-		return notify_fail( "ÕâÀïÃ»ÓĞÕâÖÖ¶«Î÷\n" );
+		return notify_fail( "é€™è£¡æ²’æœ‰é€™ç¨®æ±è¥¿\n" );
 		
 	color = random (6);
 	switch (color) {
-		case 0  : s1= "HIR"; s2= "ºì"; break;
-		case 1  : s1= "HIM"; s2= "·Ûºì"; break;
-		case 2  : s1= "HIY"; s2= "»Æ"; break;
-		case 3  : s1= "HIG"; s2= "ÂÌ"; break;
-		case 4  : s1= "HIB"; s2= "À¶"; break;
-		case 5  : s1= "HIC"; s2= "×Ï"; break;
-		default : s1= "HIR"; s2= "ºì";
+		case 0  : s1= "HIR"; s2= "ç´…"; break;
+		case 1  : s1= "HIM"; s2= "ç²‰ç´…"; break;
+		case 2  : s1= "HIY"; s2= "é»ƒ"; break;
+		case 3  : s1= "HIG"; s2= "ç¶ "; break;
+		case 4  : s1= "HIB"; s2= "è—"; break;
+		case 5  : s1= "HIC"; s2= "ç´«"; break;
+		default : s1= "HIR"; s2= "ç´…";
 	}
-	emote( "$NS½«ÑÌ»ğµãÖø, È»ááÑÚ×¡¶ú¶äÑ¸ËÙµØ¶ãµ½Ò»±ß¡£\n", 
+	emote( "$NSå°‡ç…™ç«é»è‘—, ç„¶å¾Œæ©ä½è€³æœµè¿…é€Ÿåœ°èº²åˆ°ä¸€é‚Šã€‚\n", 
 			this_player() );
-	cmsg = "Åé£¡µÄÒ»Éù£¬Ò»Ã¶ÃÀÀöµÄ"+ s2 + "É«ÑÌ»ğÔÚÌì¿ÕÖĞ±ÅÉä¿ªÀ´¡£\n";
+	cmsg = "ç °ï¼çš„ä¸€è²ï¼Œä¸€æšç¾éº—çš„"+ s2 + "è‰²ç…™ç«åœ¨å¤©ç©ºä¸­è¿¸å°„é–‹ä¾†ã€‚\n";
     			
     usr = users();
     user_number = sizeof(usr);

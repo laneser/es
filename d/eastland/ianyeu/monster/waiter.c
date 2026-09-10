@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(6);
-   set_name( "waiter", "µêĞ¡¶ş" );
-   set_short( "µêĞ¡¶ş" );
+   set_name( "waiter", "åº—å°äºŒ" );
+   set_short( "åº—å°äºŒ" );
 	set_long(
-        "Äã¿´µ½Ò»¸öÃæ´øÎ¢Ğ¦, ²»¶ÏÕĞºô¿ÍÈË×øÏÂ(sit down)µÄµêĞ¡¶ş¡£\n"
+        "ä½ çœ‹åˆ°ä¸€å€‹é¢å¸¶å¾®ç¬‘, ä¸æ–·æ‹›å‘¼å®¢äººåä¸‹(sit down)çš„åº—å°äºŒã€‚\n"
 	);
 	set( "race", "halfling" );
 	set( "gender", "male" );
    set( "exp_reward", 111 );
-// ÀÁµÃµ÷×´Ì¬:P
+// æ‡¶å¾—èª¿ç‹€æ…‹:P
    set( "wealth/copper", 10 );
 	set_inventory( ({
            ({ IANOBJ"lamb", 10, 10 }),

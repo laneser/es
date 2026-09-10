@@ -6,12 +6,12 @@ void create ()
 {
 	::create();
 	set_level(1);
-	set_name( "dancing torcher", "ÌøÌøµÄ»ğ°Ñ" );
+	set_name( "dancing torcher", "è·³è·³çš„ç«æŠŠ" );
 	add( "id", ({ "torcher" }) );
-	set_short("ÌøÌøµÄ»ğ°Ñ");
+	set_short("è·³è·³çš„ç«æŠŠ");
 	set_long(@CLONG
-ÕâÊÇÒ»°ÑÆæÌØµÄ»ğ°Ñ£¬ËüÊÇ°¬°ØÂ³Ë¹ÄêÇáÊ±ÔÚĞŞĞĞÖĞµÃµ½µÄÎïÆ·,
-ÆÄ¾ßÁéĞÔµÄËüÒÑ¾­³ÉÁË°¬°ØÂ³Ë¹µÄ³èÎïÁË¡£
+é€™æ˜¯ä¸€æŠŠå¥‡ç‰¹çš„ç«æŠŠï¼Œå®ƒæ˜¯è‰¾æŸé­¯æ–¯å¹´è¼•æ™‚åœ¨ä¿®è¡Œä¸­å¾—åˆ°çš„ç‰©å“,
+é —å…·éˆæ€§çš„å®ƒå·²ç¶“æˆäº†è‰¾æŸé­¯æ–¯çš„å¯µç‰©äº†ã€‚
 CLONG
                );
    set( "race", "undead" );
@@ -20,9 +20,9 @@ CLONG
 	set( "unbleeding", 1);
    set( "block_aim", ({ "vascular", "ganglion" }) );
     set( "alt_corpse", "/obj/torch" );
-    set_c_verbs(({ "%sÓÃÍ·ÉÏµÄ»ğÑæÉÕ%s", "%sÓÃÉíÌå×²%s" }));
-    set_c_limbs(({ "ÉíÌå", "Í·²¿" }));
-    set("c_death_msg","%sÍ»È»ºÁÎŞÉúÆøµØÌÉÔÚµØÉÏ... ²»¶¯ÁË¡£\n");
+    set_c_verbs(({ "%sç”¨é ­ä¸Šçš„ç«ç„°ç‡’%s", "%sç”¨èº«é«”æ’%s" }));
+    set_c_limbs(({ "èº«é«”", "é ­éƒ¨" }));
+    set("c_death_msg","%sçªç„¶æ¯«ç„¡ç”Ÿæ°£åœ°èººåœ¨åœ°ä¸Š... ä¸å‹•äº†ã€‚\n");
 	set("moving", 1 );
 	set("speed", 30 );
 	set("patrol", ({ "north", "south", "west", "west", "east", "east",
@@ -42,7 +42,7 @@ int stop_attack()
    master = present( "ebbruce", environment() );
    if( !master ) return 0;
    tell_room( environment(),
-          "°¬°ØÂ³Ë¹ºÈµÀ: ¾¹¸ÒÆÛ¸ºÎÒµÄ³èÎï! ²»ÒªÃüÁË?\n" );
+          "è‰¾æŸé­¯æ–¯å–é“: ç«Ÿæ•¢æ¬ºè² æˆ‘çš„å¯µç‰©! ä¸è¦å‘½äº†?\n" );
    tmp = query_temp( "protectors" );
    if( !tmp || member_array( master, tmp )==-1 ) {
         add_temp( "protectors", ({ master }) );

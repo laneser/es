@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "sweet herb", "¸Ê²İ" );
+	set_name( "sweet herb", "ç”˜è‰" );
        set("no_sale",1);
 	add("id",({"herb"}));
-	set_short( "¸Ê²İ" );
+	set_short( "ç”˜è‰" );
 	set_long(
-		"¸Ê²İÒ©ĞÔÎÂºÍ, ÔÚÄ³Ğ©Ò©·½ÖĞÊÇ²»¿ÉÈ±µÄÒ©Òı¡£Äã¿ÉÒÔ³¢³¢(taste)¿´¡£\n"
+		"ç”˜è‰è—¥æ€§æº«å’Œ, åœ¨æŸäº›è—¥æ–¹ä¸­æ˜¯ä¸å¯ç¼ºçš„è—¥å¼•ã€‚ä½ å¯ä»¥åšåš(taste)çœ‹ã€‚\n"
 	);
 	set( "ident", "SWEET_HERB" );
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
         set( "weight", 2);
 	set( "savour","sweet");
          set( "value",({50, "silver" }) );

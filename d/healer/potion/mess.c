@@ -7,15 +7,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name("messed substance", "ÀÃÄà");
+	set_name("messed substance", "çˆ›æ³¥");
 	add("id", ({ "substance", "mess" }) );
-	set_short("some messed substance", "ÀÃÄà" );
+	set_short("some messed substance", "çˆ›æ³¥" );
 	set_long(
 		"You see some messed substance of green and brown. It smells\n"
 		"stink....\n",
-		"Äã¿´µ½Ò»ÍÅ»Æ»ÆÂÌÂÌµÄÀÃÄà£¬ÎÅÆğÀ´ÓĞ¹É¶ñ³ô¡£\n" );
+		"ä½ çœ‹åˆ°ä¸€åœ˜é»ƒé»ƒç¶ ç¶ çš„çˆ›æ³¥ï¼Œèèµ·ä¾†æœ‰è‚¡æƒ¡è‡­ã€‚\n" );
         set( "weight", 1 );
-	set( "unit", "ÍÅ" );
+	set( "unit", "åœ˜" );
 	set( "useless", 1 );
 	set( "prevent_insert", 1 );
 	call_out("decay", 50);

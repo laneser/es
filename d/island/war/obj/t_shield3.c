@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-  set_name("Ratten shield","ÌÙÅÆ¶Ü");
+  set_name("Ratten shield","è—¤ç‰Œç›¾");
   add("id",({"ratten","shield"}) );
-  set_short("ÌÙÅÆ¶Ü");
+  set_short("è—¤ç‰Œç›¾");
   set_long(@LONG
-Õâ¾ÍÊÇÀûÓÃÌÙÌõ±à³ÉµÄ¶ÜÅÆ¡£
+é€™å°±æ˜¯åˆ©ç”¨è—¤æ¢ç·¨æˆçš„ç›¾ç‰Œã€‚
 LONG
           );
-  set("unit","Ãæ");
+  set("unit","é¢");
   set("type","shield");
   set("material","cloth");
   set("armor_class",4);

@@ -34,10 +34,10 @@ void setup_race_body()
 //	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 7);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%sÕñ¶¯ÅÓ´óµÄ³á°ò, ´òÏò%s", "%sÉì×¦×¥Ïò%s",
-		"%sÕÅ¿ÚÍù%sÒ§ÏÂ", "%sÓÃÎ²°ÍÉ¨Ïò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ÐØ", "×óÍÈ", "ÓÒÍÈ",
-		"²±×Ó", "ááÐÄ", "Ð¡¸¹", "³á°ò", "Î²°Í", }) );
+	body->set_c_verbs( ({ "%sæŒ¯å‹•é¾å¤§çš„ç¿…è†€, æ‰“å‘%s", "%sä¼¸çˆªæŠ“å‘%s",
+		"%så¼µå£å¾€%så’¬ä¸‹", "%sç”¨å°¾å·´æŽƒå‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"è„–å­", "å¾Œå¿ƒ", "å°è…¹", "ç¿…è†€", "å°¾å·´", }) );
 
 	// The default tactic function.
 	if( !userp(body) ) body->set("tactic_func", "fire_breath");
@@ -53,14 +53,14 @@ int fire_breath()
 	if( !victim = (object)me->query_attacker() ) return 0;
 	if( !present(victim, environment(me)) ) return 0;
 	tell_object(victim, can_read_chinese(victim)?
-		sprintf(set_color("\n%sÍ»È»ÕÅ¿ÚÍùÄãÉíÉÏÅç³ö×ÆÈÈ»ð¡õ!!\n\n", "HIR", victim),
+		sprintf(set_color("\n%sçªç„¶å¼µå£å¾€ä½ èº«ä¸Šå™´å‡ºç¼ç†±ç«â–¡!!\n\n", "HIR", victim),
 			me->query("c_name")):
 		sprintf(set_color("\n%s breathe at you!!\n\n", "HIR", victim),
 			me->query("cap_name")) );
 	tell_room(environment(me), ({
 		sprintf("\n%s breathe at %s!!\n\n", me->query("cap_name"),
 			victim->query("name")), 
-		sprintf("\n%sÍ»È»ÕÅ¿ÚÍù%sÉíÉÏÅç³ö×ÆÈÈ»ð¡õ!!\n\n",
+		sprintf("\n%sçªç„¶å¼µå£å¾€%sèº«ä¸Šå™´å‡ºç¼ç†±ç«â–¡!!\n\n",
 			me->query("c_name"), victim->query("c_name")) }),
 		({ me, victim }) );
 	victim->receive_special_damage("fire", (int)me->query_level()*4);

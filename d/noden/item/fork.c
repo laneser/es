@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
 	seteuid(getuid());
-	set_name( "hay fork", "µ¾²İ²æ" );
+	set_name( "hay fork", "ç¨»è‰å‰" );
 	add( "id", ({ "fork" }) );
-   set_short( "µ¾²İ²æ" );
+   set_short( "ç¨»è‰å‰" );
 	set_long(
-		"Ò»°ÑÓÃÀ´½«µ¾²İ¶Ñ³ÉÒ»¶ÑµÄ²İ²æ¡£\n"
+		"ä¸€æŠŠç”¨ä¾†å°‡ç¨»è‰å †æˆä¸€å †çš„è‰å‰ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "thrusting" );
 	set( "weapon_class", 3 );
 	set( "min_damage", 3 );

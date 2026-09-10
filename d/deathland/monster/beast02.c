@@ -9,12 +9,12 @@ void create()
     
 	::create();
 	set_level(18);
-	set_name( "Beast of Swamp", "ÕÓÔóÊØ»¤ÊÞ" );
+	set_name( "Beast of Swamp", "æ²¼æ¾¤å®ˆè­·ç¸" );
 	add("id",({"beast"}));
-	set_short( "Beast of Swamp", "ÕÓÔóÊØ»¤ÊÞ" );
+	set_short( "Beast of Swamp", "æ²¼æ¾¤å®ˆè­·ç¸" );
 	set_long(
 		"a great beast protecting the swamp.\n",
-		"Ò»Ö»ÊØ»¤Öø»Ò°µµºÕÓÔóµÄ¾Þ´óÊ¥ÊÞ.\n"
+		"ä¸€éš»å®ˆè­·è‘—ç°æš—å³¶æ²¼æ¾¤çš„å·¨å¤§è–ç¸.\n"
 	);
 	set( "alignment", 800 );
 	set_perm_stat( "dex", 25 );
@@ -40,9 +40,9 @@ int my_tactic()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
     else {
-      tell_object(victim, "ÊØ»¤ÊÞÍ»È»Ò§Äã.\n" );
+      tell_object(victim, "å®ˆè­·ç¸çªç„¶å’¬ä½ .\n" );
       tell_room(environment(this_object()),
-          "ÊØ»¤ÊÞÍ»È»Ò§"+victim->query("c_name")+".\n"
+          "å®ˆè­·ç¸çªç„¶å’¬"+victim->query("c_name")+".\n"
           ,({victim,this_object(),}) );
       victim->receive_damage( 35 + random(25) );
       report(this_object(),victim);

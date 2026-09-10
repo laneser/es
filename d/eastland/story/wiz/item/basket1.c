@@ -3,13 +3,13 @@
 inherit OBJECT;
 void create()
 {
-        set_name("golden basket","½ğÉ«Àº×Ó");
+        set_name("golden basket","é‡‘è‰²ç±ƒå­");
         add( "id" , ({ "basket" }) );
         set_short( "@@query_short");
         set_long(@C_LONG
-Ò»¸ö´¿½ğ´òÔìµÄÀº×Ó£¬ÓĞµãÏñ¹·ÁıÖ®ÀàµÄ£¬¿ÉÒÔ×°(package)¶¯Îï¡£
+ä¸€å€‹ç´”é‡‘æ‰“é€ çš„ç±ƒå­ï¼Œæœ‰é»åƒç‹—ç± ä¹‹é¡çš„ï¼Œå¯ä»¥è£(package)å‹•ç‰©ã€‚
 C_LONG  );      
-        set("unit","¸ö");
+        set("unit","å€‹");
         set("weight",50);
         set("basket_used",0);
         set("no_sale",1);
@@ -25,18 +25,18 @@ int do_package(string arg)
     player=this_player();
     env=environment(player);
     if ( !arg || (!dog=present(arg,env)) )
-       return notify_fail("ÕâÀïÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+       return notify_fail("é€™è£¡æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
     if ( query("basket_used") )
-       return notify_fail("ÕâÀº×ÓÒÑ¾­×°ÁË¶«Î÷ÁË¡£\n");
+       return notify_fail("é€™ç±ƒå­å·²ç¶“è£äº†æ±è¥¿äº†ã€‚\n");
     if ( !dog->query("lucky") ) 
-       return notify_fail("²»ÄÜ×°ÕâÑù¶«Î÷¡£\n"); 
-    tell_object(player,"Äã¸§Ãş¼ªÀûµÄÍ·£¬²¢°ÑËü×°½øÀº×ÓÀï¡£ÄãĞÄÀïÍ·ÏëÏë£¬»¹ÊÇ°ÑËü¹é»¹¸øÖ÷ÈË°É¡£\n");
+       return notify_fail("ä¸èƒ½è£é€™æ¨£æ±è¥¿ã€‚\n"); 
+    tell_object(player,"ä½ æ’«æ‘¸å‰åˆ©çš„é ­ï¼Œä¸¦æŠŠå®ƒè£é€²ç±ƒå­è£¡ã€‚ä½ å¿ƒè£¡é ­æƒ³æƒ³ï¼Œé‚„æ˜¯æŠŠå®ƒæ­¸é‚„çµ¦ä¸»äººå§ã€‚\n");
     dog->remove();
     set("basket_used",1);
     return 1;
 }
 string query_short()
 {
-    return sprintf("½ğÉ«Àº×Ó%s", (query("basket_used") ? " (×°Öø°×¹·¼ªÀû)" :
+    return sprintf("é‡‘è‰²ç±ƒå­%s", (query("basket_used") ? " (è£è‘—ç™½ç‹—å‰åˆ©)" :
         "") );
 }

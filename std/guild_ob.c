@@ -102,7 +102,7 @@ int list_guild_members()
 	usr = sort_array( usr, "sort_members", this_object() );
 	if( sizeof(usr) ) {
 		owner->quick_message(
-             "Ä¿Ç°¹²ÓĞ " + sizeof(usr) + " Î»"+to_chinese(class_name)+"Á¬ÏßÖĞ:\n"
+             "ç›®å‰å…±æœ‰ " + sizeof(usr) + " ä½"+to_chinese(class_name)+"é€£ç·šä¸­:\n"
 			 "==================================\n");
 		for( i=0; i<sizeof(usr); i++ )
 			owner->quick_message(
@@ -110,7 +110,7 @@ int list_guild_members()
 					usr[i]->query("short"), capitalize(usr[i]->query("name")) ) );
 	} else 
 		owner->quick_message(
-			"ËÆºõÃ»ÓĞÈÎºÎ"+to_chinese(class_name)+"¹«»áµÄ³ÉÔ±ÔÚÏßÉÏ....¡£\n");
+			"ä¼¼ä¹æ²’æœ‰ä»»ä½•"+to_chinese(class_name)+"å…¬æœƒçš„æˆå“¡åœ¨ç·šä¸Š....ã€‚\n");
 	return 1;
 }
 
@@ -123,7 +123,7 @@ int guild_line(string msg)
 	string color;
 
 	if( !msg ) return notify_fail(
-		"ÄãÒª¶Ô±¾¹«»áµÄÍ¬°éËµÊ²÷á£¿\n");
+		"ä½ è¦å°æœ¬å…¬æœƒçš„åŒä¼´èªªä»€éº¼ï¼Ÿ\n");
 	usr = filter_array( users(), "filter_member", this_object() );
 	if( sizeof(usr) )
 		for( i=0; i<sizeof(usr); i++ )

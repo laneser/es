@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "chain vest", "îø¼×±³ĞÄ" );
+	set_name( "chain vest", "é§ç”²èƒŒå¿ƒ" );
 	add( "id", ({ "vest" }) );
-	set_short( "îø¼×±³ĞÄ" );
+	set_short( "é§ç”²èƒŒå¿ƒ" );
 	set_long(
-		"Ò»¼şÇá±ã¶øÓÖÓĞÁ¼ºÃ±£»¤Ğ§¹ûµÄîø¼×±³ĞÄ¡£\n"
+		"ä¸€ä»¶è¼•ä¾¿è€Œåˆæœ‰è‰¯å¥½ä¿è­·æ•ˆæœçš„é§ç”²èƒŒå¿ƒã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "material", "light_metal");
 	set( "armor_class", 17 );

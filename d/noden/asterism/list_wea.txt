@@ -1,42 +1,42 @@
-µµ°¸Ãû           ÎäÆ÷Ãû         Wc  Max Min wgt. val    ±¸×¢
+æª”æ¡ˆå           æ­¦å™¨å         Wc  Max Min wgt. val    å‚™è¨»
 
 blacksword     blacksword       35  35  25  100  5000   the same to echo's 
-                  ºÚ½£                                 but no mob wield it yet
+                  é»‘åŠ                                 but no mob wield it yet
 blunt01       stone hammer      23  26  15  240  770 
-                Ê¯ÖÆ³¤¡õ  
+                çŸ³åˆ¶é•·â–¡  
 blunt02       brass hammer      20  24  11  240  790    two-handed
-                »ÆÍ­¾Ş¡õ
+                é»ƒéŠ…å·¨â–¡
 dwarven      dwarven dagger     24  26  18  120  1120  
-  _dagger       °«ÈËØ°Ê×  
+  _dagger       çŸ®äººåŒ•é¦–  
 long_whip      long whip        20  19  17  110  840   
-                 ³¤±Ş
+                 é•·é­
 
 longsword01  halfling longsword 22  23  15  180  1420
-               °ëÉíÈË³¤½£
+               åŠèº«äººé•·åŠ
 longsword02  brone longsword    23  25  17  190  1720
-               Çà¸Ö³¤½£
+               é’é‹¼é•·åŠ
 longsword03  silver sword       27  29  20  160  2500
-                Òø½£
+                éŠ€åŠ
 longsword04  obsidian sword     38  39  28  240  4444
-              ºÚê×Ê¯³¤½£
+              é»‘æ›œçŸ³é•·åŠ
 
 sad_dagger    sad dagger        20  21  13  110   820
-              ±¯ÉËØ°Ê×
+              æ‚²å‚·åŒ•é¦–
 scalpel        scalpel          24  24  15   32  1900
-               ÊÖÊõµ¶
+               æ‰‹è¡“åˆ€
 short_whip   short whip         25  25  18   80   840   
-               Ñ±ÊŞ±Ş
+               é¦´ç¸é­
 small_dagger small dagger       5   7   3    50    50
-               Ğ¡Ø°Ê×
+               å°åŒ•é¦–
 small_knife  small knife        5   7   3    50    64
-                Ğ¡µ¶   
+                å°åˆ€   
 small_pick    toy spear         3   6   2    70    44
-               Íæ¾ßÃ© 
+               ç©å…·èŒ… 
 
 staff        magic staff       25  20  14    90   400 
-                ·¨ÕÈ
+                æ³•æ–
 
 wand02       sleet wand        23  22  14    40  1500    cold:35 
-               ±ù¾§ÕÈ
+               å†°æ™¶æ–
 wand03      ultimate wand      40  37  24    50  5000    receive_dam(55)
-               ÓÀºãÖ®ÕÈ                              cost 30sp per sp.attack
+               æ°¸æ†ä¹‹æ–                              cost 30sp per sp.attack

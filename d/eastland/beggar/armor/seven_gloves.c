@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "seven gloves", "Æß²ÊÔÆÌ×" );
+	set_name( "seven gloves", "ä¸ƒå½©é›²å¥—" );
 	add( "id", ({ "seven","gloves" }) );
-	set_short( "seven gloves", "Æß²ÊÔÆÌ×" );
+	set_short( "seven gloves", "ä¸ƒå½©é›²å¥—" );
 	set_long(@C_LONG
-ÕâÊÇÒ»Ë«ÓÉÖÇ»Û²İ±àÖ¯¶ø³ÉµÄÊÖÌ×£¬¾İËµ´÷ÉÏËü¿ÉÒÔÔö¼ÓÄãµÄÖÇ»ÛÅ¶ !!
+é€™æ˜¯ä¸€é›™ç”±æ™ºæ…§è‰ç·¨ç¹”è€Œæˆçš„æ‰‹å¥—ï¼Œæ“šèªªæˆ´ä¸Šå®ƒå¯ä»¥å¢åŠ ä½ çš„æ™ºæ…§å“¦ !!
 C_LONG
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
         set("material","cloth");
 	set( "type", "hands" );
 	set( "weight", 40 );

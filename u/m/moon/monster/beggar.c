@@ -8,12 +8,12 @@ void create()
 
         ::create();
         set_level(13);
-        set_name( "beggar", "Á÷ÀËµÄÆòØ¤" );
+        set_name( "beggar", "æµæµªçš„ä¹ä¸" );
         add( "id", ({ "beggar" }) );
-        set_short( "Á÷ÀËµÄÆòØ¤" );
+        set_short( "æµæµªçš„ä¹ä¸" );
         set_long(
-         "ËûÊÇÒ»Î»Ë«Ä¿Ê§Ã÷, ÒÂÉÀñÜñÚµÄÀÏÈË, ´ÓËû½ôËøµÄÃ¼Óî, \n"
-         "Äã¿ÉÒÔ¶Ï¶¨, ËûÒ»¶¨¾­ÊÜ¹ı¾Ş´óµÄÄ¥ÄÑ!\n"
+         "ä»–æ˜¯ä¸€ä½é›™ç›®å¤±æ˜, è¡£è¡«è¥¤è¤¸çš„è€äºº, å¾ä»–ç·Šé–çš„çœ‰å®‡, \n"
+         "ä½ å¯ä»¥æ–·å®š, ä»–ä¸€å®šç¶“å—éå·¨å¤§çš„ç£¨é›£!\n"
         );
         seteuid(getuid());
         set( "alignment", 0 );
@@ -31,7 +31,7 @@ void create()
         set( "exp_reward",100);
         set( "patrol", ({ "east", "east", "west", "west", 
                           "west", "west", "east", "east" } ));
-        set("chat_output",({"ÆòØ¤°§ÇóµÀ: ÄÄÎ»´óÒ¯Ê©ÉáµãÇ®¸øÎÒ°¡...\n"}));
+        set("chat_output",({"ä¹ä¸å“€æ±‚é“: å“ªä½å¤§çˆºæ–½æ¨é»éŒ¢çµ¦æˆ‘å•Š...\n"}));
         set( "chat_chance", 40 );
 //        wield_weapon( "/d/moorth/obj/shortsword" );
 
@@ -39,7 +39,7 @@ void create()
             "story" : "@@ask_story",
 //            "reward" : "@@ask_reward",
 //            "inform" : "@@ask_inform",
-//            "army" : "ÎÒÃÇµÄ´ó¾üÕı×¼±¸½ø¹¥Åµ´ïÄáÑÇ³Ç, ÒªÃü¿ìÉÁ°É!\n" 
+//            "army" : "æˆ‘å€‘çš„å¤§è»æ­£æº–å‚™é€²æ”»è«¾é”å°¼äºåŸ, è¦å‘½å¿«é–ƒå§!\n" 
           ]) );
 }
 
@@ -69,27 +69,27 @@ int do_give(string str)
      {
          command("slap "+my_name);
          command("grin "+my_name);
-         command("say ±ğÒÔÎªÎÒÊÇÏ¹×Ó¾ÍÏëÃÉÎÒ, Ã»ÃÅ.....");
+         command("say åˆ¥ä»¥ç‚ºæˆ‘æ˜¯çå­å°±æƒ³è’™æˆ‘, æ²’é–€.....");
          command("spit "+my_name);
          return 1;
       }
      if(!me->debit(s2,num))
-        return notify_fail("ÄãÃ»ÄÇÃ´¶àÇ®  \n");     
+        return notify_fail("ä½ æ²’é‚£éº¼å¤šéŒ¢  \n");     
      if(s2!="gold")
      {
-         command("say Ğ»Ğ»ÁË£¬ ²»¹ı»¹ÊÇ½ğ²Ó²ÓµÄºÃ¿´..");
+         command("say è¬è¬äº†ï¼Œ ä¸éé‚„æ˜¯é‡‘ç‡¦ç‡¦çš„å¥½çœ‹..");
          return 1;
      }
      if(num<50)
      {
-          command("say Ğ»Ğ»ÁË!");
+          command("say è¬è¬äº†!");
           return 1;
      }
-       command("say Äã¿ÉÕæÊÇ¸öºÃĞÄÈË°¡...");
+       command("say ä½ å¯çœŸæ˜¯å€‹å¥½å¿ƒäººå•Š...");
        command("sigh "+my_name);
-       tell_object(me,"ÀÏÆòØ¤¼ÌĞøËµµÀ: Òª²»ÊÇ¾­ÀúÁËÄÇĞ©ÊÂ(story), \n"
-                      +"ÎÒÒ²²»»áÂÙÂäµ½ÕâÖÖµØ²½! \n");
-       command("say Ãü¿à°¡...");
+       tell_object(me,"è€ä¹ä¸ç¹¼çºŒèªªé“: è¦ä¸æ˜¯ç¶“æ­·äº†é‚£äº›äº‹(story), \n"
+                      +"æˆ‘ä¹Ÿä¸æœƒæ·ªè½åˆ°é€™ç¨®åœ°æ­¥! \n");
+       command("say å‘½è‹¦å•Š...");
        command("cry "+my_name);
        me->set_temp("paid",num);
        return 1;
@@ -99,14 +99,14 @@ int ask_story(object who)
 {
    if( (int)who->query_level()<5 ) {
      command("sigh "+who->query("name"));
-     write( "È»ºóËµ: Äã»¹Ğ¡, °ï²»ÁËÎÒÃ¦µÄ!\n" );
+     write( "ç„¶å¾Œèªª: ä½ é‚„å°, å¹«ä¸äº†æˆ‘å¿™çš„!\n" );
      return 1;
    } else {
    tell_object( who, @LONG
-    ¼ÈÈ»ÄãÕâÃ´ºÃĞÄ, ÎÒ¾Í¸æËßÄã°É...
-    µ±ÄêÎÒÊÇ¹ÅÃ·ÕòÓĞÃûµÄ´ó²ÆÖ÷, ºÃ½á½»½­ºşÉÏ¸÷·½ÒåÊ¿,
-    ½­ºşÉÏÈË³Æ²ñ´ó¹ÙÈË, Ğí¶àÓ¢ĞÛºÀ½Ü¶¼Ä½ÃûÍ¶±¼ÎÒ
-    xixixi ³ÌĞò»¹Ã»±àºÃ, .. :D
+    æ—¢ç„¶ä½ é€™éº¼å¥½å¿ƒ, æˆ‘å°±å‘Šè¨´ä½ å§...
+    ç•¶å¹´æˆ‘æ˜¯å¤æ¢…é®æœ‰åçš„å¤§è²¡ä¸», å¥½çµäº¤æ±Ÿæ¹–ä¸Šå„æ–¹ç¾©å£«,
+    æ±Ÿæ¹–ä¸Šäººç¨±æŸ´å¤§å®˜äºº, è¨±å¤šè‹±é›„è±ªå‚‘éƒ½æ…•åæŠ•å¥”æˆ‘
+    xixixi ç¨‹åºé‚„æ²’ç·¨å¥½, .. :D
 LONG
      );
      return 1;
@@ -117,11 +117,11 @@ LONG
 int accept_item(object who,object item)
 {  
 /*  
-       command("say Äã¿ÉÕæÊÇ¸öºÃĞÄÈË°¡...");
+       command("say ä½ å¯çœŸæ˜¯å€‹å¥½å¿ƒäººå•Š...");
        command("sigh "+who->query("name"));
-       tell_object(who,"ÀÏÆòØ¤¼ÌĞøËµµÀ: Òª²»ÊÇ¾­ÀúÁËÄÇĞ©ÊÂ(story), \n"
-                      +"ÎÒÒ²²»»áÂÙÂäµ½ÕâÖÖµØ²½! \n");
-       command("say Ãü¿à°¡...");
+       tell_object(who,"è€ä¹ä¸ç¹¼çºŒèªªé“: è¦ä¸æ˜¯ç¶“æ­·äº†é‚£äº›äº‹(story), \n"
+                      +"æˆ‘ä¹Ÿä¸æœƒæ·ªè½åˆ°é€™ç¨®åœ°æ­¥! \n");
+       command("say å‘½è‹¦å•Š...");
        command("cry "+who->query("name"));
        return 0;
   */  
@@ -144,7 +144,7 @@ void die()
    if(killer->query_temp("paid")>=50)
    {
      tell_object( killer,
-      "\nÄã³ÃÖÜÎ§ÈË²»×¢ÒâÍµÍµ´ÓÊ¬ÌåÀïÄÃ³ö¾Æ´ü!\n");
+      "\nä½ è¶å‘¨åœäººä¸æ³¨æ„å·å·å¾å±é«”è£¡æ‹¿å‡ºé…’è¢‹!\n");
 
      ob1=new("/obj/wineskin");
      ob1->move(killer);

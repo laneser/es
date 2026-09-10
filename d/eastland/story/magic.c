@@ -8,7 +8,7 @@ void report( object attacker, object victim )
    message= "/adm/daemons/statsd"->status_string(victim);
    c_message= "/adm/daemons/statsd"->c_status_string(victim);
    tell_object( victim,
-     sprintf("( Äã %s )\n",c_message) );
+     sprintf("( ä½  %s )\n",c_message) );
 }
 void damn_player(object victim)
 {
@@ -20,12 +20,12 @@ void damn_player(object victim)
    if (wea1) wea1->unwield(1);
    if (wea2) wea2->unwield(1);
    if (!damn) {
-       tell_object(victim,"\n°¦Ñ½£¬Ò»ÌõºÚÉ«µÄÓ°×Ó¸½ÖøÔÚÄãÉíÉÏ£¡\n\n\n");
+       tell_object(victim,"\nå”‰å‘€ï¼Œä¸€æ¢é»‘è‰²çš„å½±å­é™„è‘—åœ¨ä½ èº«ä¸Šï¼\n\n\n");
        damn=new(SPITEM"evil");
        damn->move(victim);
        damn->trigger();
    } else {
        damn->reset_duration(); 
-       tell_object(victim,"\nÄãËùÊÜµÄ×çÖä¼ÓÉîÁË£¡£¡\n\n");
+       tell_object(victim,"\nä½ æ‰€å—çš„è©›å’’åŠ æ·±äº†ï¼ï¼\n\n");
    }   
 }                                                                                                

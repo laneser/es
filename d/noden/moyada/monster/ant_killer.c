@@ -8,14 +8,14 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name("killer ant", "É±ÈËÒÏ");
+	set_name("killer ant", "æ®ºäººèŸ»");
 	add( "id", ({ "ant"}) );
-   set_short("É±ÈËÒÏ");
+   set_short("æ®ºäººèŸ»");
 	set_long(
-		"Ò»Ö»ºÜĞ×¶ñµÄ¾ŞÒÏ£¬×îºÃÔÚËü¿´ÉÏÄãÖ®Ç°¸Ï¿ìÁï°É¡£\n"
+		"ä¸€éš»å¾ˆå…‡æƒ¡çš„å·¨èŸ»ï¼Œæœ€å¥½åœ¨å®ƒçœ‹ä¸Šä½ ä¹‹å‰è¶•å¿«æºœå§ã€‚\n"
 	);
    set( "race", "insect" );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
    set( "exp_reward", 247 );
 	set( "alignment", -120 );
    set( "max_hp", 150 );
@@ -29,11 +29,11 @@ void create()
 	set_natural_armor( 16, 4 );
 	set_perm_stat("str", 6);
 	set_perm_stat("dex", 8);
-	set( "c_death_msg", "%s¼â½ĞÒ»Éù£¬¶¶ÁË¼¸ÏÂ²»¶¯ÁË ....\n" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å" }) );
-	set_c_verbs( ({ "%sºİºİµÄÍù%sÒ§ÏÂÈ¥" }) );
-	setenv( "C_MIN", "Ò»Ö»$NÅÀÁË¹ıÀ´¡£" );
-	setenv( "C_MOUT", "$NÍù$D±ßÅÀ×ßÁË¡£" );
+	set( "c_death_msg", "%så°–å«ä¸€è²ï¼ŒæŠ–äº†å¹¾ä¸‹ä¸å‹•äº† ....\n" );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³" }) );
+	set_c_verbs( ({ "%sç‹ ç‹ çš„å¾€%så’¬ä¸‹å»" }) );
+	setenv( "C_MIN", "ä¸€éš»$Nçˆ¬äº†éä¾†ã€‚" );
+	setenv( "C_MOUT", "$Nå¾€$Dé‚Šçˆ¬èµ°äº†ã€‚" );
 	set("alt_corpse", MOYADA"obj/ant_corpse1" );
 }
 
@@ -43,9 +43,9 @@ int big_bite()
 
 	if( random(20)>3 || !(victim = query_attacker()) ) return 0;
     tell_object(  victim,
-        "É±ÈËÒÏÅÀµ½ÄãµÄ½ÅÉÏ£¬ºİºİµÄÒ»¿ÚÒ§ÏÂ£¬Äã¸Ğµ½Ò»Õó¾çÍ´£¡\n" );
+        "æ®ºäººèŸ»çˆ¬åˆ°ä½ çš„è…³ä¸Šï¼Œç‹ ç‹ çš„ä¸€å£å’¬ä¸‹ï¼Œä½ æ„Ÿåˆ°ä¸€é™£åŠ‡ç—›ï¼\n" );
     tell_room( environment(this_object()), 
-"É±ÈËÒÏÅÀµ½"+victim->query("c_name")+"µÄ½ÅÉÏ£¬ºİºİµÄÒ»¿ÚÒ§ÏÂ£¡\n",
+"æ®ºäººèŸ»çˆ¬åˆ°"+victim->query("c_name")+"çš„è…³ä¸Šï¼Œç‹ ç‹ çš„ä¸€å£å’¬ä¸‹ï¼\n",
 		({ this_object(), victim }) );
 	SIMPLE_POISON->apply_effect( victim, 4, 5 );
 	return 1;

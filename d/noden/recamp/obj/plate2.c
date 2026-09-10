@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "Turtle plate", "º£¹êÕ½¼×");
+        set_name( "Turtle plate", "æµ·é¾œæˆ°ç”²");
         add( "id", ({ "plate" }) );
-        set_short("Turtle plate", "º£¹êÕ½¼×");
+        set_short("Turtle plate", "æµ·é¾œæˆ°ç”²");
         set_long(@AAA
-ÕâÊÇÒ»¼şÒÔÌØÊâ¹ê¼×´òÔì¶ø³É£¬ÏÔµÄºñÖØÉòÎÈ¡£
+é€™æ˜¯ä¸€ä»¶ä»¥ç‰¹æ®Šé¾œç”²æ‰“é€ è€Œæˆï¼Œé¡¯çš„åšé‡æ²ˆç©©ã€‚
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 40 );
         set( "defense_bonus", 10 );

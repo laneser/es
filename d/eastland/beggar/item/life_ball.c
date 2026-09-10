@@ -7,17 +7,17 @@ inherit OBJECT;
 
 void create()
 {
-        set_name( "life ball", "ÔªÆøÓñ" );
+        set_name( "life ball", "å…ƒæ°£ç‰" );
         add( "id", ({ "ball" }) );
-        set_short( "ÔªÆøÓñ" );
+        set_short( "å…ƒæ°£ç‰" );
         set_long(@C_LONG
-ÕâÊÇÒ»¿Å¾§Ó©ÌŞÍ¸µÄÉúÃüÔ²Çò¡£ÔªÆøÓñÊÇÓÉ¡ºìôÌÃ ÀÏÔº³¤¡»¶àÄêÑĞ¾¿³¤Éú²»ÀÏÖ®Êõ
-Ğ¡³ÉááµÄ²úÎï¡£¾İÀÏÔº³¤Í¸Â¶, Äã¿ÉÒÔ°ÑÄãµÄÉúÃüÁ¦Öü´æ( install )ÔÚÕâÒ»¿ÅĞ¡Ğ¡
-µÄÔ²ÇòÀï;¼ÙÒÔÊ±ÈÕ,ÄãÓÖ¿ÉÒÔ´ÓÔ²ÇòÖĞÈ¡³ö( release )ÉúÃüÁ¦;³ı´ËÖ®Íâ,Äã»¹¿ÉÒÔ
-¼ì²é( exam )¿´Ô²ÇòÊÇ·ñÓĞÉúÃüÁ¦,ÕâÊµÔÚÊÇÒ»¼şºÜÆæÃîµÄÊÂÇé¡£
+é€™æ˜¯ä¸€é¡†æ™¶è¢å‰”é€çš„ç”Ÿå‘½åœ“çƒã€‚å…ƒæ°£ç‰æ˜¯ç”±ã€ç¥ å ‚ è€é™¢é•·ã€å¤šå¹´ç ”ç©¶é•·ç”Ÿä¸è€ä¹‹è¡“
+å°æˆå¾Œçš„ç”¢ç‰©ã€‚æ“šè€é™¢é•·é€éœ², ä½ å¯ä»¥æŠŠä½ çš„ç”Ÿå‘½åŠ›è²¯å­˜( install )åœ¨é€™ä¸€é¡†å°å°
+çš„åœ“çƒè£¡;å‡ä»¥æ™‚æ—¥,ä½ åˆå¯ä»¥å¾åœ“çƒä¸­å–å‡º( release )ç”Ÿå‘½åŠ›;é™¤æ­¤ä¹‹å¤–,ä½ é‚„å¯ä»¥
+æª¢æŸ¥( exam )çœ‹åœ“çƒæ˜¯å¦æœ‰ç”Ÿå‘½åŠ›,é€™å¯¦åœ¨æ˜¯ä¸€ä»¶å¾ˆå¥‡å¦™çš„äº‹æƒ…ã€‚
 C_LONG        
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "weight", 20 );
         set("no_sale",1);
 }
@@ -35,11 +35,11 @@ int install_ball(string arg)
    int my_hp,my_int,my_ali,times;
    
    if( !arg )
-      return notify_fail("ÄãÒª install Ê²÷á¶«Î÷?\n");
+      return notify_fail("ä½ è¦ install ä»€éº¼æ±è¥¿?\n");
          
    me=this_player();
    if( !(ball=present( arg, me )) )
-      return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+      return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
    if ( ball->query("name")!="life ball" )
       return notify_fail("Syntax <install ball>\n");
    
@@ -50,16 +50,16 @@ int install_ball(string arg)
       
                
       if ( ( times > 0 ) && ( ball->query("master") != ( me->query("name")) ) )
-          return notify_fail( "\n¶Ô²»Æğ,Õâ¿ÅÔªÆøÓñµÄÖ÷ÈË²»ÊÇÄã¡£\n"); 
+          return notify_fail( "\nå°ä¸èµ·,é€™é¡†å…ƒæ°£ç‰çš„ä¸»äººä¸æ˜¯ä½ ã€‚\n"); 
       
       if ( my_hp < COST_HP ) 
-          return notify_fail( "\nÒòÎªÄãÌ«ĞéÈõÁË¶øÎŞ·¨°ÑÉúÃüÁ¦×¢ÈëÔ²ÇòÀï.....\n");    
+          return notify_fail( "\nå› ç‚ºä½ å¤ªè™›å¼±äº†è€Œç„¡æ³•æŠŠç”Ÿå‘½åŠ›æ³¨å…¥åœ“çƒè£¡.....\n");    
       
       if ( times > TIME_QUOTA -1  )
-          return notify_fail( "\nà¸,Õâ¿ÅÔªÆøÓñÒÑ¾­ÍêÈ«³äÂúÁËÉúÃüÁ¦......\n"); 
+          return notify_fail( "\nå–”,é€™é¡†å…ƒæ°£ç‰å·²ç¶“å®Œå…¨å……æ»¿äº†ç”Ÿå‘½åŠ›......\n"); 
       
       if ( ball->query("install_wait") )
-         return notify_fail( "\nÇë²»Òª²ÙÖ®¹ı¼±,Çë´ı»á¶ùÔÙ×¢ÈëÄãµÄÉúÃüÁ¦.....\n");
+         return notify_fail( "\nè«‹ä¸è¦æ“ä¹‹éæ€¥,è«‹å¾…æœƒå…’å†æ³¨å…¥ä½ çš„ç”Ÿå‘½åŠ›.....\n");
              
       me->add( "hit_points", -COST_HP );
       times=times+1;    
@@ -69,7 +69,7 @@ int install_ball(string arg)
       ball->set("install_wait",1);    
       ball->set("install_times",times);
       tell_object(me,set_color(
-         "\nÕâ¿ÅÔªÆøÓñÒ»¹²ÎüÊÕÁËÄã "+times+" ´ÎµÄÉúÃüÁ¦.......\n","HIG"));
+         "\né€™é¡†å…ƒæ°£ç‰ä¸€å…±å¸æ”¶äº†ä½  "+times+" æ¬¡çš„ç”Ÿå‘½åŠ›.......\n","HIG"));
       call_out( "install_out", INTERVAL , ball);
    return 1;
 }
@@ -77,7 +77,7 @@ int install_ball(string arg)
 void install_out(object ball)
 {
      tell_object( environment( ball ),set_color(
-          "\nÔªÆøÓñ¼«ĞèÒªÄãµÄÉúÃüÁ¦.....\n","HIW")); 
+          "\nå…ƒæ°£ç‰æ¥µéœ€è¦ä½ çš„ç”Ÿå‘½åŠ›.....\n","HIW")); 
      ball->delete("install_wait");   
 }
 
@@ -87,19 +87,19 @@ int release_ball(string arg)
     int times;
     
     if( !arg )
-         return notify_fail("ÄãÒª release Ê²÷á¶«Î÷?\n");
+         return notify_fail("ä½ è¦ release ä»€éº¼æ±è¥¿?\n");
     me=this_player();
     if( !(ball=present( arg, me )) )
-        return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+        return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
     if ( ball->query("name")!="life ball" )
         return notify_fail("Syntax <release ball>\n");
     times=ball->query("install_times");
       
     if ( times < 1 ) 
-       return notify_fail( "\nà¸,Õâ¿ÅÔªÆøÓñºÁÎŞÉúÃüÁ¦¿ÉÑÔ....\n");               
+       return notify_fail( "\nå–”,é€™é¡†å…ƒæ°£ç‰æ¯«ç„¡ç”Ÿå‘½åŠ›å¯è¨€....\n");               
 
     if ( ball->query("release_wait") )
-       return notify_fail( "\nÇë´ı»á¶ùÔÙ´ÓÔªÆøÓñÀïÈ¡³öÉúÃüÁ¦........\n");
+       return notify_fail( "\nè«‹å¾…æœƒå…’å†å¾å…ƒæ°£ç‰é‡Œå–å‡ºç”Ÿå‘½åŠ›........\n");
     
     if ( ball->query("master") == ( me->query("name")) )
       me->receive_healing( 48 );
@@ -108,7 +108,7 @@ int release_ball(string arg)
     times=times-1;
     ball->set("install_times",times);
     tell_object(me,set_color(
-       "\nÔªÆøÓñÀïÍ·µÄÉúÃüÁ¦Ê¹Äã¸Ğµ½Ò»ÕóÎÂÅ¯,Äã»¹·¢ÏÖÔªÆøÓñÁôÏÂ "+times+" ´ÎÉúÃüÁ¦¿ÉÒÔÈ¡³ö.....\n","HIC"));
+       "\nå…ƒæ°£ç‰é‡Œé ­çš„ç”Ÿå‘½åŠ›ä½¿ä½ æ„Ÿåˆ°ä¸€é™£æº«æš–,ä½ é‚„ç™¼ç¾å…ƒæ°£ç‰ç•™ä¸‹ "+times+" æ¬¡ç”Ÿå‘½åŠ›å¯ä»¥å–å‡º.....\n","HIC"));
     ball->set("release_wait",1);   
     call_out( "release_out",INTERVAL,ball);
     return 1;
@@ -124,11 +124,11 @@ int exam_ball(string arg)
    int times;
    
    if( !arg )
-         return notify_fail("ÄãÒª exam Ê²÷á¶«Î÷?\n");
+         return notify_fail("ä½ è¦ exam ä»€éº¼æ±è¥¿?\n");
             
    me=this_player();
    if( !(ball=present( arg, me )) )
-      return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+      return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
    if ( ball->query("name")!="life ball" )
       return notify_fail("Syntax <exam ball>\n");
    
@@ -136,8 +136,8 @@ int exam_ball(string arg)
    if ( times==0 )
       ball->set("master","???");
       
-   tell_object(me,"\nÕâ¿ÅÉúÃüÔ²ÇòµÄÖ÷ÈËÊÇ "+ball->query("master")+
-       " ¶øÇÒÒÑ¾­±»×¢ÈëÁË "+times+" ´ÎÉúÃüÁ¦ÁË......\n");
+   tell_object(me,"\né€™é¡†ç”Ÿå‘½åœ“çƒçš„ä¸»äººæ˜¯ "+ball->query("master")+
+       " è€Œä¸”å·²ç¶“è¢«æ³¨å…¥äº† "+times+" æ¬¡ç”Ÿå‘½åŠ›äº†......\n");
    
    return 1;
 }             

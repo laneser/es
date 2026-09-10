@@ -4,20 +4,20 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "wraith dagger", "°«ÁéÖ®Ø°" );
+	set_name( "wraith dagger", "çŸ®éˆä¹‹åŒ•" );
 	add( "id", ({ "dagger" }) );
-	set_short( "°«ÁéÖ®Ø°" );
+	set_short( "çŸ®éˆä¹‹åŒ•" );
 	set_long(
-		"ÕâÊÇÒ»°Ñ°«ÁéÖ®Ø°£¬ÉÏÃæÕ´ÂúÁËÑª¼££¬¶øÇÒÓÐÒ»ÖÖÎÞ·¨ÐÎÈÝµÄÄ§Á¦¡£\n"
+		"é€™æ˜¯ä¸€æŠŠçŸ®éˆä¹‹åŒ•ï¼Œä¸Šé¢æ²¾æ»¿äº†è¡€è·¡ï¼Œè€Œä¸”æœ‰ä¸€ç¨®ç„¡æ³•å½¢å®¹çš„é­”åŠ›ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 40 );
 	setup_weapon( "dagger", 35, 19, 33 );
 	set( "value", ({ 1500, "silver" }) );
         set( "second", 1 );
 //	set("hit_func","evil_damage");
 	set("special_damage",8);
-	set("special_msg","Éä³öÒ»µÀÑª¹â£¬´ÌÈëµÐÈËµÄÁé»ê¡£\n");
+	set("special_msg","å°„å‡ºä¸€é“è¡€å…‰ï¼Œåˆºå…¥æ•µäººçš„éˆé­‚ã€‚\n");
 }
 
 int evil_damage(object victim,int damage)
@@ -31,7 +31,7 @@ int evil_damage(object victim,int damage)
     vic_ali= (int) victim->query("alignment");
     dam = (int) query("special_damage") ;
     if ( my_ali > vic_ali &&  my_ali > -3000 ) {
-      tell_object(holder,"°«ÁéÖ®Ø°Éä³öÒ»µÀÑª¹â£¬È´ÉËµ½ÁËÄã×Ô¼º¡£\n\n");
+      tell_object(holder,"çŸ®éˆä¹‹åŒ•å°„å‡ºä¸€é“è¡€å…‰ï¼Œå»å‚·åˆ°äº†ä½ è‡ªå·±ã€‚\n\n");
       holder->receive_special_damage("evil",dam+random(20));
       victim->set("last_attacker", holder );
       return 0;
@@ -45,9 +45,9 @@ int evil_damage(object victim,int damage)
         victim->set("last_attacker", holder );
         if( !msg ) return 0;
         tell_object( holder,
-           "\nÄãµÄ"+query("c_name")+msg+"\n");
+           "\nä½ çš„"+query("c_name")+msg+"\n");
         tell_room( environment(holder),
-           holder->query("c_name") + "µÄ"+query("c_name")+msg+"\n",
+           holder->query("c_name") + "çš„"+query("c_name")+msg+"\n",
            holder );
         if ( vic_ali < 0 )
             return dam;

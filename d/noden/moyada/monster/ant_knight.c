@@ -7,15 +7,15 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name("ant knight", "ÆïÊ¿ÒÏ");
+	set_name("ant knight", "é¨å£«èŸ»");
 	add( "id", ({ "ant" }) );
-	set_short("ÆïÊ¿ÒÏ");
+	set_short("é¨å£«èŸ»");
 	set_long(
-		"ÆïÊ¿ÒÏÊÇ±È±øÒÏ¸ü¾ßÕ½Á¦µÄ¾ŞÒÏ£¬¹â¿´ÄÇÁ½Æ¬¾Ş´óµÄÑÀ³İ¾ÍÁîÄãĞÄº®¡£\n"
+		"é¨å£«èŸ»æ˜¯æ¯”å…µèŸ»æ›´å…·æˆ°åŠ›çš„å·¨èŸ»ï¼Œå…‰çœ‹é‚£å…©ç‰‡å·¨å¤§çš„ç‰™é½’å°±ä»¤ä½ å¿ƒå¯’ã€‚\n"
 	);
 	set( "max_hp",250);
 	set( "hit_points",250);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
    set( "race", "insect" );
 	set( "alignment", 200 );
 	set_natural_weapon( 26, 11, 22 );
@@ -24,8 +24,8 @@ void create()
 	set_perm_stat("dex",21);
 	set_perm_stat("con",24);
 	set( "weight", 100);
-	set( "c_death_msg", "%s¼â½ĞÒ»Éù£¬¶¶ÁË¼¸ÏÂ²»¶¯ÁË ....\n" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å" }) );
-	set_c_verbs( ({ "%sºİºİµÄÍù%sÒ§ÏÂÈ¥" }) );
+	set( "c_death_msg", "%så°–å«ä¸€è²ï¼ŒæŠ–äº†å¹¾ä¸‹ä¸å‹•äº† ....\n" );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³" }) );
+	set_c_verbs( ({ "%sç‹ ç‹ çš„å¾€%så’¬ä¸‹å»" }) );
 	set( "alt_corpse", MOYADA"obj/ant_corpse1" );
 }

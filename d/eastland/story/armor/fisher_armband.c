@@ -1,15 +1,15 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "lock armband","ÂÒ»·»·" );
+     set_name( "lock armband","äº‚ç’°ç’°" );
      add( "id",({ "armband" }) );
-     set_short( "ÂÒ»·»·" );
+     set_short( "äº‚ç’°ç’°" );
      set_long(@C_LONG
-ÂÒ»·»·Ô­ÊÇÓÃÀ´Ëø×¡ÄÇĞ©×ï´ó¶ñ¼«µÄÈË£¬Ò»µ©±»Ì×ÉÏ£¬¾öÎŞÕõÍÑÖ®Àí£¬ÓÀÔ¶ÊÜÆäïÀ
-ÖÆ£¬²¢ÇÒÈ«ÉíÔâÊÜ»ğÑæÒ»°ãµÄÍ´³ş¡£
+äº‚ç’°ç’°åŸæ˜¯ç”¨ä¾†é–ä½é‚£äº›ç½ªå¤§æƒ¡æ¥µçš„äººï¼Œä¸€æ—¦è¢«å¥—ä¸Šï¼Œæ±ºç„¡æ™è„«ä¹‹ç†ï¼Œæ°¸é å—å…¶éŒ®
+åˆ¶ï¼Œä¸¦ä¸”å…¨èº«é­å—ç«ç„°ä¸€èˆ¬çš„ç—›æ¥šã€‚
 C_LONG
      );
-     set( "unit","Ë«" );
+     set( "unit","é›™" );
      set( "weight",100 );
      set( "type","arms" );
      set( "material","heavy_metal" );
@@ -32,13 +32,13 @@ int do_remove(string arg)
     return 0;     
     if ( player->query("alignment") > 0 )
     return 0;
-    write("\nÂÒ»·»·½ô½ô¿Û×¡ÄãµÄË«ÊÖ£¬ÁîÄãÎŞ·¨ÕõÍÑ£¡\n\n");
+    write("\näº‚ç’°ç’°ç·Šç·Šæ‰£ä½ä½ çš„é›™æ‰‹ï¼Œä»¤ä½ ç„¡æ³•æ™è„«ï¼\n\n");
     return 1;
 }
 int equip_ring()
 {
      if ( this_player()->query("alignment") > 0 ) return 1;
-     write("\n\nÂÒ»·»·ºöÈ»Ïñ¸ö»ğÌ¿Ò»°ã£¬×ÆÍ´ÁËÄãµÄË«ÊÖ£¡\n\n\n\n");
+     write("\n\näº‚ç’°ç’°å¿½ç„¶åƒå€‹ç«ç‚­ä¸€èˆ¬ï¼Œç¼ç—›äº†ä½ çš„é›™æ‰‹ï¼\n\n\n\n");
      this_player()->add("hit_points",-100);
      set("armor_class",1);
      set("defense_bonus",1);

@@ -9,12 +9,12 @@ void create()
 	::create();
 	set_level(18);
 	add( "id", ({ "elf","taxman", "shilufu"}) );
- set_name( "elf taxman shilufu" , "¾«ÁéË°¹Ù Ï£Â¶Ü½");
-		set_short("¾«ÁéË°¹Ù Ï£Â¶Ü½");
+ set_name( "elf taxman shilufu" , "ç²¾éˆç¨…å®˜ å¸Œéœ²èŠ™");
+		set_short("ç²¾éˆç¨…å®˜ å¸Œéœ²èŠ™");
 	        set_long(@LONG
-ËıÊÇµºÉÏÉÙÊıµÄ¾«Áé£¬ÒòÎªËıÊ®·ÖÁéÇÉ£¬ËùÒÔ´åÀïÎ¯ÍĞËıÀ´×öÕâ¸ö
-³ÔÁ¦²»ÌÖºÃµÄ¹¤×÷£¬ËıµÄÌØ¼¼ÊÇÒşĞÎÀ´²éË°£¬´åÀïµÄÍ¶»ú·İ×Ó´ó¶à
-³Ô¹ıËıµÄ¿àÍ·¡£
+å¥¹æ˜¯å³¶ä¸Šå°‘æ•¸çš„ç²¾éˆï¼Œå› ç‚ºå¥¹ååˆ†éˆå·§ï¼Œæ‰€ä»¥æ‘è£¡å§”è¨—å¥¹ä¾†åšé€™å€‹
+åƒåŠ›ä¸è¨å¥½çš„å·¥ä½œï¼Œå¥¹çš„ç‰¹æŠ€æ˜¯éš±å½¢ä¾†æŸ¥ç¨…ï¼Œæ‘è£¡çš„æŠ•æ©Ÿä»½å­å¤§å¤š
+åƒéå¥¹çš„è‹¦é ­ã€‚
 LONG
 	);
 	set( "race", "elf" );
@@ -50,9 +50,9 @@ do_kill(string arg)
 string c_call(object who)
 {
 	if ((string)who->query("gender") == "female")
-	return (!who->query("spouse")) ? "Ğ¡½ã" : "Ì«Ì«" ;
+	return (!who->query("spouse")) ? "å°å§" : "å¤ªå¤ª" ;
 	else
-	return (!who->query("spouse")) ? "Ë§¸ç" : "ÏÈÉú" ;
+	return (!who->query("spouse")) ? "å¸¥å“¥" : "å…ˆç”Ÿ" ;
 }
 
 void check_wealth(object ob)
@@ -68,7 +68,7 @@ void check_wealth(object ob)
 	if(wizardp(ob) )
 	 {
 		tell_room( env, 
-		"\nÏ£Â¶Ü½µÀÁË¸öÍò¸£: ĞÁ¿àÄúÁË, "+name+"´ó´ó¡£\n\n" ,
+		"\nå¸Œéœ²èŠ™é“äº†å€‹è¬ç¦: è¾›è‹¦æ‚¨äº†, "+name+"å¤§å¤§ã€‚\n\n" ,
 		this_object() );
 		return;
 	}
@@ -88,12 +88,12 @@ void check_wealth(object ob)
 	        
                 	
 		tell_room( env,@LONG
-ÄãÇ°·½Ò»Õó²¨¶¯£¬¾«ÁéË°¹Ù Ï£Â¶Ü½µÄÉíÓ°Í»È»¸¡ÏÖ³öÀ´¡£		
+ä½ å‰æ–¹ä¸€é™£æ³¢å‹•ï¼Œç²¾éˆç¨…å®˜ å¸Œéœ²èŠ™çš„èº«å½±çªç„¶æµ®ç¾å‡ºä¾†ã€‚		
 LONG
     );
     
                 set("player_invisible",0);
-		tell_room(env,"Ï£Â¶Ü½Î¢Ğ¦ËµµÀ£º¡º"+c_call(ob)+"±»ÎÒ×¥µ½ÁËà¡£¡¾èµã½¨Éè¾­·Ñ°É£¡¡»\n\n",
+		tell_room(env,"å¸Œéœ²èŠ™å¾®ç¬‘èªªé“ï¼šã€"+c_call(ob)+"è¢«æˆ‘æŠ“åˆ°äº†å”·ï¼æé»å»ºè¨­ç¶“è²»å§ï¼ã€\n\n",
 		this_object() );
 		
 		types = keys(money);
@@ -111,12 +111,12 @@ LONG
         	ob->set( "bank_balance", bank );
 
 		tell_object( ob, 
-	"°µ²ØÁËÄÇ÷á¶àÇ®£¬Äã×Ô¼º¶¼¾õµÃ²»ºÃÒâË¼£¬×Ô¶¯×Ô·¢µÄ¾è³öÁËÈı·ÖÖ®Ò»µÄÇ®\n");
+	"æš—è—äº†é‚£éº¼å¤šéŒ¢ï¼Œä½ è‡ªå·±éƒ½è¦ºå¾—ä¸å¥½æ„æ€ï¼Œè‡ªå‹•è‡ªç™¼çš„æå‡ºäº†ä¸‰åˆ†ä¹‹ä¸€çš„éŒ¢\n");
 	      call_out( "do_inv" , 10 );
 	} 
 	else {
 	tell_room( env, 
-		"Ï£Â¶Ü½Ğ¦ÖøËµ: " + ((string)ob->query("c_name"))[0..1]+c_call(ob)+"£¬ÄúÊÇÀ´¹Û¹âµÄÂğ£¿\n",
+		"å¸Œéœ²èŠ™ç¬‘è‘—èªª: " + ((string)ob->query("c_name"))[0..1]+c_call(ob)+"ï¼Œæ‚¨æ˜¯ä¾†è§€å…‰çš„å—ï¼Ÿ\n",
 		this_object() );
 		
 		}
@@ -124,7 +124,7 @@ LONG
 }
 void do_inv()
 {
-   tell_room(environment(),"¾«ÁéË°¹Ù Ï£Â¶Ü½µÄÉíÓ°½¥½¥µÄµ­È¥£¬´ÓÄãµÄÃæÇ°ÏûÊ§\n");
+   tell_room(environment(),"ç²¾éˆç¨…å®˜ å¸Œéœ²èŠ™çš„èº«å½±æ¼¸æ¼¸çš„æ·¡å»ï¼Œå¾ä½ çš„é¢å‰æ¶ˆå¤±\n");
    set("player_invisible",1);
    return;
 }

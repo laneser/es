@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Blood sucker","ÊÈÑª");
+        set_name("Blood sucker","å—œè¡€");
         add ("id", ({"sucker","blood","dagger" }) );
-        set_short("ÊÈÑª");
+        set_short("å—œè¡€");
         set_long(@LONG
-Ò»°ÑÍ¨ÌåÓÉ²»ÖªÃûÑªºìÉ«¾§ÌåÖÆ³ÉµÄÆß¡õ³¤Ø°Ê×¡£
+ä¸€æŠŠé€šé«”ç”±ä¸çŸ¥åè¡€ç´…è‰²æ™¶é«”åˆ¶æˆçš„ä¸ƒâ–¡é•·åŒ•é¦–ã€‚
 LONG
         );
-        set("unit","°Ñ");
+        set("unit","æŠŠ");
         setup_weapon("dagger",30,1,1);
         set("weight", 70);
         set("wield_func","wield_dagger");
@@ -51,9 +51,9 @@ int special(object victim,int damage)
     degree=my_int-vic_kar;
     if( random(100) > 20+degree ) return 0;
                
-    tell_object(holder,set_color(sprintf("ÄãÊÖÖÐµÄÊÈÑª¿ªÊ¼·è¿ñµØÎüÈ¡%sµÄÏÊÑª£¡£¡\n\n\n",vname),"HIR"));
-    tell_object(victim,set_color(sprintf("\n%sÊÖÖÐµÄÊÈÑª¿ªÊ¼·è¿ñµØÊ¼ÎüÈ¡ÄãµÄÏÊÑª£¡£¡\n\n",hname),"HIR"));
-    tell_room(env,set_color(sprintf("%sÊÖÖÐµÄÊÈÑª¿ªÊ¼ÎüÈ¡%sµÄÏÊÑª£¡£¡\n",hname,vname),"HIR"),
+    tell_object(holder,set_color(sprintf("ä½ æ‰‹ä¸­çš„å—œè¡€é–‹å§‹ç˜‹ç‹‚åœ°å¸å–%sçš„é®®è¡€ï¼ï¼\n\n\n",vname),"HIR"));
+    tell_object(victim,set_color(sprintf("\n%sæ‰‹ä¸­çš„å—œè¡€é–‹å§‹ç˜‹ç‹‚åœ°å§‹å¸å–ä½ çš„é®®è¡€ï¼ï¼\n\n",hname),"HIR"));
+    tell_room(env,set_color(sprintf("%sæ‰‹ä¸­çš„å—œè¡€é–‹å§‹å¸å–%sçš„é®®è¡€ï¼ï¼\n",hname,vname),"HIR"),
                   ({ victim,holder }) );     
     (CONDITION_PREFIX + "bleeding")->apply_effect(victim,10,1);
     holder->receive_healing(25);

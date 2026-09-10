@@ -1,8 +1,8 @@
 #d/monk/guild/monk_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Monk's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÎäÉ®¹«»áÁôÑÔ°å",])
-messages ({(["id":8,"title":"< no title >","body":"what is monk's ÌØÉ«? 
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Monk's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿",])
+messages ({(["id":8,"title":"< no title >","body":"what is monk's ç‰¹è‰²? 
 
 Ruby and I now try make that!
 
@@ -14,148 +14,148 @@ PLZ post here! maybe we will accept ur suggests! :)
 ","time":779349036,"poster":"Angel",]),(["id":9,"title":"< no title >","body":"i hope change some new title for all monks...
 If u feel some title is funny , interesting or powerful
 plzpost here! :)
-","time":779358053,"poster":"Angel",]),(["id":11,"title":"ÌìĞÄ","body":"hi!
-  ÎÒÍê³ÉÁËÌìĞÄÈÎÎñ..ËûËµÒªhealËûÔ¸ÀÍ..whyÖ»ÊÇ¶¢ÖøÎÒ¿´....
-¶¼²»healer me ...cry......
-","time":779372491,"poster":"Ls",]),(["id":12,"title":"< no title >","body":"   ÉÙÁÖ¿ªÄ»ÖÁ½ñ, ¸ÄÁË²»ÉÙ....
-   µ«...info skills ÊÇ²»ÊÇÒ²Ë³±ã¸ÄÒ»¸Ä ?
-   ÓĞĞ©¼¼ÇÉ¶¼²»¼ûÁËÒ®...:P
+","time":779358053,"poster":"Angel",]),(["id":11,"title":"å¤©å¿ƒ","body":"hi!
+  æˆ‘å®Œæˆäº†å¤©å¿ƒä»»å‹™..ä»–èªªè¦healä»–é¡˜å‹..whyåªæ˜¯ç›¯è‘—æˆ‘çœ‹....
+éƒ½ä¸healer me ...cry......
+","time":779372491,"poster":"Ls",]),(["id":12,"title":"< no title >","body":"   å°‘æ—é–‹å¹•è‡³ä»Š, æ”¹äº†ä¸å°‘....
+   ä½†...info skills æ˜¯ä¸æ˜¯ä¹Ÿé †ä¾¿æ”¹ä¸€æ”¹ ?
+   æœ‰äº›æŠ€å·§éƒ½ä¸è¦‹äº†è€¶...:P
 
-","time":779374627,"poster":"Uksir",]),(["id":13,"body":" Ğ¡É®ÓĞ¸öĞ¡Ğ¡µÄ½¨ÒéÀ²...:)
- \" °µÆ÷ \" ÕâÏî¹¦\·ò¿É·ñ¼ÓÈëÎäÉ®¹«»áÄØ ?  
-  [DÓÖ, title ·½Ãæ, 
- ÉÙÁÖËÂµÄ·Ö½×ÆäÊµ»¹Âù¶àµÄ, Èç Ë×¼ÒµÜ×Ó...Ò»Ö±µ½ĞÄìøÌÃ...¶¼ÊÇ.....
- ²»ÖªµÀ Angel Ğè²»ĞèÒªÕâ·½ÃæµÄ×ÊÁÏ ? Ğ¡É®ÊÖ±ßÓĞ´óÂ½áÔÉ½ÉÙÁÖËÂµÄÒ»Ğ©×ÊÁÏ.....
+","time":779374627,"poster":"Uksir",]),(["id":13,"body":" å°åƒ§æœ‰å€‹å°å°çš„å»ºè­°å•¦...:)
+ \" æš—å™¨ \" é€™é …åŠŸå¤«å¯å¦åŠ å…¥æ­¦åƒ§å…¬æœƒå‘¢ ?  
+  [Dåˆ, title æ–¹é¢, 
+ å°‘æ—å¯ºçš„åˆ†éšå…¶å¯¦é‚„è »å¤šçš„, å¦‚ ä¿—å®¶å¼Ÿå­...ä¸€ç›´åˆ°å¿ƒç¦ªå ‚...éƒ½æ˜¯.....
+ ä¸çŸ¥é“ Angel éœ€ä¸éœ€è¦é€™æ–¹é¢çš„è³‡æ–™ ? å°åƒ§æ‰‹é‚Šæœ‰å¤§é™¸åµ©å±±å°‘æ—å¯ºçš„ä¸€äº›è³‡æ–™.....
 
- ÖúÎä°²....^_^...
+ åŠ©æ­¦å®‰....^_^...
 
-","title":"½¨Òé(Ğ¡Ğ¡µÄ)","time":779507239,"poster":"Uksir",]),(["id":14,"title":"about keep-flower","body":"hi angel:
-  ÎÂÏ° ÌìÁú°Ë²¿ found ,
-at Î÷²ØºÍÉĞ use keep-flower vs ÉÙÁÖ monk's keep flower
+","title":"å»ºè­°(å°å°çš„)","time":779507239,"poster":"Uksir",]),(["id":14,"title":"about keep-flower","body":"hi angel:
+  æº«ç¿’ å¤©é¾å…«éƒ¨ found ,
+at è¥¿è—å’Œå°š use keep-flower vs å°‘æ— monk's keep flower
 
-found really Äé»¨Ö¸ is only µãÑ¨ ²»ÉËÈË
+found really æ‹ˆèŠ±æŒ‡ is only é»ç©´ ä¸å‚·äºº
 mabye can let keep-flwer be only can stun :P
 or now 3 kind of 72 skill all too same
-","time":779528161,"poster":"Gogo",]),(["id":15,"body":"  ²»ÖªµÀ¸÷Î»µÀÓĞ¶Ô¼ÓÈë°µÆ÷µ½ÎäÉ®¹«»áµÄ¿´·¨ÈçºÎ ?
-  ÔÚÏÂÒÔÎª, °µÆ÷×ÜÀàÓÉĞ¡µÄÎÃĞëÕë....µ½´óµÄÈçÌúµ¨ Ö®ÀàµÄ....±ä»¯²»ÉÙ
-   ÇÒ·¢°µÆ÷µÄÊÖ·¨, ¸üÊÇ°üÂŞÍòÏó....ºÜÓĞÈ¤Å¶..:)
-   ²»ÖªµÀ¿Ú·ñ¿¼ÂÇ¼ÓÈë°µÆ÷ ?
+","time":779528161,"poster":"Gogo",]),(["id":15,"body":"  ä¸çŸ¥é“å„ä½é“æœ‰å°åŠ å…¥æš—å™¨åˆ°æ­¦åƒ§å…¬æœƒçš„çœ‹æ³•å¦‚ä½• ?
+  åœ¨ä¸‹ä»¥ç‚º, æš—å™¨ç¸½é¡ç”±å°çš„èšŠé ˆé‡....åˆ°å¤§çš„å¦‚éµè†½ ä¹‹é¡çš„....è®ŠåŒ–ä¸å°‘
+   ä¸”ç™¼æš—å™¨çš„æ‰‹æ³•, æ›´æ˜¯åŒ…ç¾…è¬è±¡....å¾ˆæœ‰è¶£å“¦..:)
+   ä¸çŸ¥é“å£å¦è€ƒæ…®åŠ å…¥æš—å™¨ ?
 
-  Ğ¡É® uksir °Ù°İ...:)  and °Ù°Ü...:(
+  å°åƒ§ uksir ç™¾æ‹œ...:)  and ç™¾æ•—...:(
 
-","title":"°µí¬!!","time":779534086,"poster":"Uksir",]),(["id":16,"body":"
-¼ÈÈ»ÓĞµãÑ¨....ºÎ²»¼ÓÈë\"Ò»Ö¸ìø\"×öÎª72¾ø¼¼?..
-¿ÉÒÔ±ÈÒ»°ãµãÑ¨»¹Ç¿...ÕâÑù¸úkeep-finger²»¾Í¿ÉÒÔ·ÖÁË?
-I think need µãÑ¨ and ËÌ¾­skills high :P
+","title":"æš—æ†©!!","time":779534086,"poster":"Uksir",]),(["id":16,"body":"
+æ—¢ç„¶æœ‰é»ç©´....ä½•ä¸åŠ å…¥\"ä¸€æŒ‡ç¦ª\"åšç‚º72çµ•æŠ€?..
+å¯ä»¥æ¯”ä¸€èˆ¬é»ç©´é‚„å¼·...é€™æ¨£è·Ÿkeep-fingerä¸å°±å¯ä»¥åˆ†äº†?
+I think need é»ç©´ and é Œç¶“skills high :P
 
-ĞÂ»éÓä¿ìÖĞ.....»¹ÊÇÏëÄîºÍÉĞÉú»î..:P
+æ–°å©šæ„‰å¿«ä¸­.....é‚„æ˜¯æƒ³å¿µå’Œå°šç”Ÿæ´»..:P
 ","title":"suggestion","time":779539221,"poster":"Fos",]),(["id":17,"body":"On Wed Sep 14, Fos wrote:
-> ¼ÈÈ»ÓĞµãÑ¨....ºÎ²»¼ÓÈë\"Ò»Ö¸ìø\"×öÎª72¾ø¼¼?..
-> ¿ÉÒÔ±ÈÒ»°ãµãÑ¨»¹Ç¿...ÕâÑù¸úkeep-finger²»¾Í¿ÉÒÔ·ÖÁË?
-> I think need µãÑ¨ and ËÌ¾­skills high :P
+> æ—¢ç„¶æœ‰é»ç©´....ä½•ä¸åŠ å…¥\"ä¸€æŒ‡ç¦ª\"åšç‚º72çµ•æŠ€?..
+> å¯ä»¥æ¯”ä¸€èˆ¬é»ç©´é‚„å¼·...é€™æ¨£è·Ÿkeep-fingerä¸å°±å¯ä»¥åˆ†äº†?
+> I think need é»ç©´ and é Œç¶“skills high :P
 > 
-> ĞÂ»éÓä¿ìÖĞ.....»¹ÊÇÏëÄîºÍÉĞÉú»î..:P
+> æ–°å©šæ„‰å¿«ä¸­.....é‚„æ˜¯æƒ³å¿µå’Œå°šç”Ÿæ´»..:P
 
-    ÈıÖÖ¾ø¼¼ÒÔáá»áÓĞ¹¦\ÄÜÉÏµÄ²î±ğ£¬ÆäÖĞÄí»¨Ö¸»á±È½ÏÖØµãÑ¨£¬
+    ä¸‰ç¨®çµ•æŠ€ä»¥å¾Œæœƒæœ‰åŠŸèƒ½ä¸Šçš„å·®åˆ¥ï¼Œå…¶ä¸­æ»èŠ±æŒ‡æœƒæ¯”è¼ƒé‡é»ç©´ï¼Œ
 
-ÕâÊÇÒÑ¾­ÓĞµÄ¹¹Ïë£¬¶øÇÒÕıÔÚ½øĞĞÖĞ
+é€™æ˜¯å·²ç¶“æœ‰çš„æ§‹æƒ³ï¼Œè€Œä¸”æ­£åœ¨é€²è¡Œä¸­
 
-					Èã±È
+					èŒ¹æ¯”
 ","title":"Re: suggestion","time":779556846,"poster":"Ruby",]),(["id":18,"body":"On Wed Sep 14, Uksir wrote:
->  Ğ¡É®ÓĞ¸öĞ¡Ğ¡µÄ½¨ÒéÀ²...:)
->  \" °µÆ÷ \" ÕâÏî¹¦\·ò¿É·ñ¼ÓÈëÎäÉ®¹«»áÄØ ?  
->   [DÓÖ, title ·½Ãæ, 
->  ÉÙÁÖËÂµÄ·Ö½×ÆäÊµ»¹Âù¶àµÄ, Èç Ë×¼ÒµÜ×Ó...Ò»Ö±µ½ĞÄìøÌÃ...¶¼ÊÇ.....
->  ²»ÖªµÀ Angel Ğè²»ĞèÒªÕâ·½ÃæµÄ×ÊÁÏ ? Ğ¡É®ÊÖ±ßÓĞ´óÂ½áÔÉ½ÉÙÁÖËÂµÄÒ»Ğ©×ÊÁÏ.....
+>  å°åƒ§æœ‰å€‹å°å°çš„å»ºè­°å•¦...:)
+>  \" æš—å™¨ \" é€™é …åŠŸå¤«å¯å¦åŠ å…¥æ­¦åƒ§å…¬æœƒå‘¢ ?  
+>   [Dåˆ, title æ–¹é¢, 
+>  å°‘æ—å¯ºçš„åˆ†éšå…¶å¯¦é‚„è »å¤šçš„, å¦‚ ä¿—å®¶å¼Ÿå­...ä¸€ç›´åˆ°å¿ƒç¦ªå ‚...éƒ½æ˜¯.....
+>  ä¸çŸ¥é“ Angel éœ€ä¸éœ€è¦é€™æ–¹é¢çš„è³‡æ–™ ? å°åƒ§æ‰‹é‚Šæœ‰å¤§é™¸åµ©å±±å°‘æ—å¯ºçš„ä¸€äº›è³‡æ–™.....
 > 
->  ÖúÎä°²....^_^...
+>  åŠ©æ­¦å®‰....^_^...
 > 
 =======================================
-1. °µÆ÷.. Monk use this »á²»»áÓĞÉËÌìºÍ? :p.....
-so ....... ÎÒÔÙ¿´¿´À²! :p
+1. æš—å™¨.. Monk use this æœƒä¸æœƒæœ‰å‚·å¤©å’Œ? :p.....
+so ....... æˆ‘å†çœ‹çœ‹å•¦! :p
 
-2. ·Ö½×?! good! plz post here or mail to me! :) thanks
-  ÎÒÏ£Íûmonk title can more good than now! :)
+2. åˆ†éš?! good! plz post here or mail to me! :) thanks
+  æˆ‘å¸Œæœ›monk title can more good than now! :)
 
-exercise µÄºÄÊ±ÊÇºÜ·³ÈËµÄ! but.... ÎÒÃÇ»á·¢Õ¹Ò»Ì×ÓöÇ¿ÔòÇ¿µÄ72 ¾ø¼¼.... so .
-","title":"Re: ½¨Òé(Ğ¡Ğ¡µÄ)","time":779564981,"poster":"Angel",]),(["id":19,"title":"ËÌ¾­","body":"this skill is the basic skill of monk 
-from É¨µØÉ® we know anyway ,ÎäÑ§ and monk's ´È±¯ is against
+exercise çš„è€—æ™‚æ˜¯å¾ˆç…©äººçš„! but.... æˆ‘å€‘æœƒç™¼å±•ä¸€å¥—é‡å¼·å‰‡å¼·çš„72 çµ•æŠ€.... so .
+","title":"Re: å»ºè­°(å°å°çš„)","time":779564981,"poster":"Angel",]),(["id":19,"title":"é Œç¶“","body":"this skill is the basic skill of monk 
+from æƒåœ°åƒ§ we know anyway ,æ­¦å­¸ and monk's æ…ˆæ‚² is against
 so when study 72 skill need often songin
 
 hope can add more in songin 
 and some account as 
-±©ìå¶È: when it reach one degree then need often songin to 
-¼õµÍ it or will ÉËº¦×Ô¼º as -1 ÊôĞÔ
+æš´æˆ¾åº¦: when it reach one degree then need often songin to 
+æ¸›ä½ it or will å‚·å®³è‡ªå·± as -1 å±¬æ€§
 and when useing 72 skill then this number will increasing
 
-ÎûÎû then any monk need often songin ÂŞ
+å˜»å˜» then any monk need often songin ç¾…
 ","time":779606654,"poster":"Gogo",]),(["id":20,"body":"
-¹ş¹ş ÎÒÏëµ½Ò»¸ö monk's new skill
-ÓĞµãÀàËÆ disarm but different much
+å“ˆå“ˆ æˆ‘æƒ³åˆ°ä¸€å€‹ monk's new skill
+æœ‰é»é¡ä¼¼ disarm but different much
 
-²»¹ÜÕûÑù ÎªÁËÄÇµ½×°±¸ÎäÆ÷±ØĞè´ò´òÉ±É± ÓĞ
-Î¥ monk's ×ÚÖ¼
+ä¸ç®¡æ•´æ¨£ ç‚ºäº†é‚£åˆ°è£å‚™æ­¦å™¨å¿…éœ€æ‰“æ‰“æ®ºæ®º æœ‰
+é• monk's å®—æ—¨
 
-Ò²Ğí\¿ÉÒÔÏñ¿Õ¶È´óÊ¦Ò»Ñø È°»¯ÊÀÈË »ñµÄĞŞÂŞµ¶
-ÄÇÒÔááÒ»ÈºÈË Ò²²»ÓÃÈ¥Æ´ËÀ k Rashudi
-´ó¼ÒÒ»ÆğÀ´½Ì»¯ÕâÖ»ÀÏÉ«ÀÇ,Ò²Ğí\¿ÉÒÔÍçÊ¯µãÍ· ·ÅÏÂº®±ùÕÈ
+ä¹Ÿè¨±å¯ä»¥åƒç©ºåº¦å¤§å¸«ä¸€é¤Š å‹¸åŒ–ä¸–äºº ç²çš„ä¿®ç¾…åˆ€
+é‚£ä»¥å¾Œä¸€ç¾¤äºº ä¹Ÿä¸ç”¨å»æ‹¼æ­» k Rashudi
+å¤§å®¶ä¸€èµ·ä¾†æ•™åŒ–é€™éš»è€è‰²ç‹¼,ä¹Ÿè¨±å¯ä»¥é ‘çŸ³é»é ­ æ”¾ä¸‹å¯’å†°æ–
 
-¾­ÑéµãÔ½¶àµÄ mob , ĞèÒª½Ï´óµÄÄÍĞÄ,
+ç¶“é©—é»è¶Šå¤šçš„ mob , éœ€è¦è¼ƒå¤§çš„è€å¿ƒ,
 
-¶øÇÒ¼ÇÈ»ÈË¼ÒÒÑ·ÅÏÂÍÀµ¶
-ÄãÒ²²»ÄÜ³ÃÈËÖ®Î£
-Ö»ºÃµÈËüÖØÉú 
-or ÈÄÁËËü°É:)
+è€Œä¸”è¨˜ç„¶äººå®¶å·²æ”¾ä¸‹å± åˆ€
+ä½ ä¹Ÿä¸èƒ½è¶äººä¹‹å±
+åªå¥½ç­‰å®ƒé‡ç”Ÿ 
+or é¥’äº†å®ƒå§:)
 
-this skill mabye can add one ËÌ¾­ skill too 
+this skill mabye can add one é Œç¶“ skill too 
 
-ÎÒ¿ÉÊÇË¯¾õÇ°Ïë³öÀ´µÄà¸ ^_^
-","title":"·ÅÏÂÍÀµ¶","time":779780877,"poster":"Gogo",]),(["id":21,"body":"  ÈÎÂö, ¶½Âö, ÒõÎ¬, ÑôÎ¬, Òõ¡õ, Ñô¡õ, ³åÂö ´øÂö
+æˆ‘å¯æ˜¯ç¡è¦ºå‰æƒ³å‡ºä¾†çš„å–” ^_^
+","title":"æ”¾ä¸‹å± åˆ€","time":779780877,"poster":"Gogo",]),(["id":21,"body":"  ä»»è„ˆ, ç£è„ˆ, é™°ç¶­, é™½ç¶­, é™°â–¡, é™½â–¡, è¡è„ˆ å¸¶è„ˆ
 
-","title":"Ææ¾­°ËÂö","time":779787461,"poster":"Uksir",]),(["id":22,"body":"  ÊÖÌ«Òõ·Î¾­ ×ãÌ«ÒõÆ¢¾­ ×ãÉÙÒõĞÄ¾­ ×ãÉÙÒõÉö¾­ 
- ÊÖØÊÒõĞÄ°ü¾­ ×ãØÊÒõ¸Î¾­
- ÊÖÑôÃ÷´ó³¦¾­ ×ãÑôÃ÷Î¸¾­ ÊÖÌ«ÑôĞ¡³¦¾­ ×ãÌ«Ñô°òë×¾­ 
- ÊÖÉÙÑôÈı½¹¾­ ×ãÉÙÑôµ¨¾­ 
+","title":"å¥‡ç¶“å…«è„ˆ","time":779787461,"poster":"Uksir",]),(["id":22,"body":"  æ‰‹å¤ªé™°è‚ºç¶“ è¶³å¤ªé™°è„¾ç¶“ è¶³å°‘é™°å¿ƒç¶“ è¶³å°‘é™°è…ç¶“ 
+ æ‰‹å¥é™°å¿ƒåŒ…ç¶“ è¶³å¥é™°è‚ç¶“
+ æ‰‹é™½æ˜å¤§è…¸ç¶“ è¶³é™½æ˜èƒƒç¶“ æ‰‹å¤ªé™½å°è…¸ç¶“ è¶³å¤ªé™½è†€èƒ±ç¶“ 
+ æ‰‹å°‘é™½ä¸‰ç„¦ç¶“ è¶³å°‘é™½è†½ç¶“ 
 
- (½ö¹©¸÷Î»´óµÂ²Î¿¼)
- Ğ¡É® ÎŞÃû ºÏÊ® °İÉÏ
+ (åƒ…ä¾›å„ä½å¤§å¾·åƒè€ƒ)
+ å°åƒ§ ç„¡å åˆå æ‹œä¸Š
 
-","title":"Õı¾­Ê®¶şÂö","time":779787772,"poster":"Uksir",]),(["id":23,"body":"To dear wizs ....
+","title":"æ­£ç¶“åäºŒè„ˆ","time":779787772,"poster":"Uksir",]),(["id":23,"body":"To dear wizs ....
          I am poor Solid ..... And now i want to suggest some
 thing about 72 skills to you all ...
- 1. 72 skills ÎÒÈÏÎªÊÇÒ»¶¨ÒªÓĞ²î±ğµÄ .....(Õâ»°ÓĞµã·Ï)
- 2.Áú×¦ÊÖ:²»·ÁÔö¼Ó something like ... make mobs bleeding
- 3.°ãÈôÕÆ:Ôö¼ÓÄÚÁ¦ÕğÉËµÄĞ§¹û
- 4.Äí»¨Ö¸:²»ÓÃ¶àËµÁË ... autostun is powerful loh ....
+ 1. 72 skills æˆ‘èªç‚ºæ˜¯ä¸€å®šè¦æœ‰å·®åˆ¥çš„ .....(é€™è©±æœ‰é»å»¢)
+ 2.é¾çˆªæ‰‹:ä¸å¦¨å¢åŠ  something like ... make mobs bleeding
+ 3.èˆ¬è‹¥æŒ:å¢åŠ å…§åŠ›éœ‡å‚·çš„æ•ˆæœ
+ 4.æ»èŠ±æŒ‡:ä¸ç”¨å¤šèªªäº† ... autostun is powerful loh ....
 
-   Ğ¡Òâ¼û ..............
+   å°æ„è¦‹ ..............
                                Solid   9/17
 ","title":"about 72 skills","time":779798208,"poster":"Solid",]),(["id":24,"body":"On Sat Sep 17, Solid wrote:
 > To dear wizs ....
 >          I am poor Solid ..... And now i want to suggest some
 > thing about 72 skills to you all ...
->  1. 72 skills ÎÒÈÏÎªÊÇÒ»¶¨ÒªÓĞ²î±ğµÄ .....(Õâ»°ÓĞµã·Ï)
->  2.Áú×¦ÊÖ:²»·ÁÔö¼Ó something like ... make mobs bleeding
->  3.°ãÈôÕÆ:Ôö¼ÓÄÚÁ¦ÕğÉËµÄĞ§¹û
->  4.Äí»¨Ö¸:²»ÓÃ¶àËµÁË ... autostun is powerful loh ....
+>  1. 72 skills æˆ‘èªç‚ºæ˜¯ä¸€å®šè¦æœ‰å·®åˆ¥çš„ .....(é€™è©±æœ‰é»å»¢)
+>  2.é¾çˆªæ‰‹:ä¸å¦¨å¢åŠ  something like ... make mobs bleeding
+>  3.èˆ¬è‹¥æŒ:å¢åŠ å…§åŠ›éœ‡å‚·çš„æ•ˆæœ
+>  4.æ»èŠ±æŒ‡:ä¸ç”¨å¤šèªªäº† ... autostun is powerful loh ....
 > 
->    Ğ¡Òâ¼û ..............
+>    å°æ„è¦‹ ..............
 >                                Solid   9/17
 
-    ¹ş¹ş !! ÕæÇÉ !! ÎÒÕıÔÚ×öÄØ !! ¹¹Ïë¸úÄãµÄÒ»Ñù£¬
+    å“ˆå“ˆ !! çœŸå·§ !! æˆ‘æ­£åœ¨åšå‘¢ !! æ§‹æƒ³è·Ÿä½ çš„ä¸€æ¨£ï¼Œ
 
-    ¸Ğ¾õÕæºÃ£¬ÇëÓĞ¿Õ¶à¶à½¨Òé :P)
+    æ„Ÿè¦ºçœŸå¥½ï¼Œè«‹æœ‰ç©ºå¤šå¤šå»ºè­° :P)
 
-				Èã±È
-","title":"Re: about 72 skills","time":779804678,"poster":"Ruby",]),(["id":25,"title":"< no title >","body":" ÉÏĞÇÆÚÎåloginÊ±,·¢ÏÖËùÓĞ¼¼ÄÜ¶¼¹éÁãÁË....!! ÊôĞÔÒ²±äµÃ²»Ò»Ñù...!!
- Ï£ÍûÉñÄÜ¾¡¿ì°ïÃ¦»Ö¸´,¸Ğ¼¤²»¾¡.....Thanks....:PP
+				èŒ¹æ¯”
+","title":"Re: about 72 skills","time":779804678,"poster":"Ruby",]),(["id":25,"title":"< no title >","body":" ä¸Šæ˜ŸæœŸäº”loginæ™‚,ç™¼ç¾æ‰€æœ‰æŠ€èƒ½éƒ½æ­¸é›¶äº†....!! å±¬æ€§ä¹Ÿè®Šå¾—ä¸ä¸€æ¨£...!!
+ å¸Œæœ›ç¥èƒ½å„˜å¿«å¹«å¿™æ¢å¾©,æ„Ÿæ¿€ä¸ç›¡.....Thanks....:PP
 ","time":779941585,"poster":"Strong",]),(["id":27,"title":"anout exercise","body":"hi all monk!
 
 Kyoko say only if u login as IRC's bug
 then u use exercise will got error!
 
 so..
-Èç¹ûÄãÒÔÕı³£µÄ·½Ê½login... ¶øÊ¹ÓÃexercise got error.....
+å¦‚æœä½ ä»¥æ­£å¸¸çš„æ–¹å¼login... è€Œä½¿ç”¨exercise got error.....
 then plz report here!
 thanks
 ","time":780326221,"poster":"Angel",]),(["id":30,"body":"To dear Wizs .....
@@ -164,7 +164,7 @@ thanks
      please help me ... check my file ....
      thanks .......
 ","title":"bug !","time":780418293,"poster":"Solid",]),(["id":31,"title":"I cant exercise too......","body":"         Wiz....i cant exercise in guild too....
-         i login after reboot...not from IRC Å¶...
-          °İÍĞĞŞÒ»ÏÂ...Ğ»Ğ»ÂŞ.....^o^
+         i login after reboot...not from IRC å“¦...
+          æ‹œè¨—ä¿®ä¸€ä¸‹...è¬è¬ç¾….....^o^
 ","time":780474575,"poster":"Road",]),})
 id_ref 46

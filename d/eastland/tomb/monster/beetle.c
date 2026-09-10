@@ -6,22 +6,22 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name( "bamboo beetle", "Ëñ¹ê" );
+	set_name( "bamboo beetle", "ç­é¾œ" );
 	add("id", ({"beetle"}) );
-	set_short( "Ëñ¹ê" );
+	set_short( "ç­é¾œ" );
 	set_long(
-		"Ò»Ö»Ğ¡Ëñ¹ê¡£\n"
+		"ä¸€éš»å°ç­é¾œã€‚\n"
 	);
 	set_perm_stat( "str", 5 );
 
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", 150 );
 	set( "natural_weapon_class1", 5 );
 	set( "natural_min_damage1", 4);
 	set( "natural_max_damage1", 8);
 	set( "chat_chance", 15 );
 	set( "chat_output", ({
-		"Ğ¡Ëñ¹ê·ÉÑ½·ÉµÄ£¬ÁîÄãÏëÆğĞ¡Ê±ºò¡£\n" }) );
-	set_c_verbs( ({ "%sÓÃ½ÇÍù%sÒ»¶¥", "%sÕÅ¿ª´óÑÀ£¬Íù%sÒ§È¥" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å²¿", "¼×¿Ç" }) );
+		"å°ç­é¾œé£›å‘€é£›çš„ï¼Œä»¤ä½ æƒ³èµ·å°æ™‚å€™ã€‚\n" }) );
+	set_c_verbs( ({ "%sç”¨è§’å¾€%sä¸€é ‚", "%så¼µé–‹å¤§ç‰™ï¼Œå¾€%så’¬å»" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³éƒ¨", "ç”²æ®¼" }) );
 }

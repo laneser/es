@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("obsidian platemail", "ºÚê×Ê¯îøëĞ");
+        set_name("obsidian platemail", "é»‘æ›œçŸ³é§å†‘");
         add( "id", ({ "platemail" }) );
-        set_short( "ºÚê×Ê¯îøëĞ");
+        set_short( "é»‘æ›œçŸ³é§å†‘");
         set_long(
-                "ÕâÊÇÒ»¼şÓÉºÚê×Ê¯ÖÆµÄîøëĞ¡£\n"
+                "é€™æ˜¯ä¸€ä»¶ç”±é»‘æ›œçŸ³åˆ¶çš„é§å†‘ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set("material","element");
         set( "armor_class", 35 );

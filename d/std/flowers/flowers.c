@@ -5,19 +5,19 @@ inherit OBJECT;
 int bee_out=0;
 void create()
 {
-        set_name("amazing flower", "ÆæÒìÖ®»¨");
+        set_name("amazing flower", "å¥‡ç•°ä¹‹èŠ±");
         add ("id",({ "flower"}));
-        set_short("ÆæÒìÖ®»¨");
+        set_short("å¥‡ç•°ä¹‹èŠ±");
         set_long(
-                 "ÕâÊÇÒ»¶ä¾ßÓĞÆß²Ê»¨°êµÄ»¨¡£\n"
-                 "ËüµÄ»¨ÓïÊÇ£ºÃ»ÓĞ²»¿ÉÄÜµÄÊÂ¡£\n"
-                 "Õâ¶ä»¨ÉÏ»¹ÏµÖøÒ»ÕÅĞ¡¿¨Æ¬¡£\n");
-        set("unit", "¶ä");
+                 "é€™æ˜¯ä¸€æœµå…·æœ‰ä¸ƒå½©èŠ±ç“£çš„èŠ±ã€‚\n"
+                 "å®ƒçš„èŠ±èªæ˜¯ï¼šæ²’æœ‰ä¸å¯èƒ½çš„äº‹ã€‚\n"
+                 "é€™æœµèŠ±ä¸Šé‚„ç³»è‘—ä¸€å¼µå°å¡ç‰‡ã€‚\n");
+        set("unit", "æœµ");
         set( "weight", 1 );
         set ("value", ({ 10, "silver" }) );
         set("message","BLANK");
 	set("no_sale",1);
-	set("c_smell","Ò»ÕóÇß±ÇµÄÜ°ÏãÖ±Í¸ÈëÄãµÄĞÄ·¿£¬ÁîÄã¸Ğ¾õ¾«ÉñÕñ·ÜÈ«ÉíÊæÌ¹¡£");
+	set("c_smell","ä¸€é™£æ²é¼»çš„é¦¨é¦™ç›´é€å…¥ä½ çš„å¿ƒæˆ¿ï¼Œä»¤ä½ æ„Ÿè¦ºç²¾ç¥æŒ¯å¥®å…¨èº«èˆ’å¦ã€‚");
 
 }
 void init()
@@ -32,10 +32,10 @@ string get_c_sex(object who)
 	string sex;
 	sex=who->query("gender");
 	if (sex=="male")
-	  return "ËûµÄ"; 
+	  return "ä»–çš„"; 
         if (sex=="female")
-          return "ËıµÄ";
-	return "ËüµÄ" ;
+          return "å¥¹çš„";
+	return "å®ƒçš„" ;
 }
 int look_card(string arg)
 {
@@ -43,8 +43,8 @@ int look_card(string arg)
 	return 0;
 
 	write(
-		"ÕâÊÇÒ»ÕÅÆ®ÖøÇåĞÂ»¨ÏãµÄ½à°×Ğ¡¿¨Æ¬£¬Ëü¿ÉÒÔÎªÈËÃÇ´«ËÍ¸üÖ±½ÓµÄĞÄÒâ¡£\n"
-		"Äã¿ÉÒÔÊÔÖø¶ÁËü»òĞ´Ğ©Ê²÷á¡£\n" );
+		"é€™æ˜¯ä¸€å¼µé£„è‘—æ¸…æ–°èŠ±é¦™çš„æ½”ç™½å°å¡ç‰‡ï¼Œå®ƒå¯ä»¥ç‚ºäººå€‘å‚³é€æ›´ç›´æ¥çš„å¿ƒæ„ã€‚\n"
+		"ä½ å¯ä»¥è©¦è‘—è®€å®ƒæˆ–å¯«äº›ä»€éº¼ã€‚\n" );
 	return 1;
 }
 int write_msg(string arg)
@@ -53,18 +53,18 @@ int write_msg(string arg)
 	object target;
 	if ( !arg || arg=="" || sscanf(arg,"%s on %s",msg,item) != 2) 
 	  return notify_fail(
-			"ÒªĞ´Ğ©Ê²÷áÄØ£¿ Syntax : write <message> on <flower>.\n" );
+			"è¦å¯«äº›ä»€éº¼å‘¢ï¼Ÿ Syntax : write <message> on <flower>.\n" );
 	target = present(item, this_player());
 	if(!target)
-		return notify_fail("ÄãÃ»ÓĞÕâÖÖ»¨....¡£\n");
+		return notify_fail("ä½ æ²’æœ‰é€™ç¨®èŠ±....ã€‚\n");
 	
 	if ((string)target->query("message") != "BLANK")
           return notify_fail(
-			"ÕâÕÅ¿¨Æ¬ÉÏÒÑ¾­Ğ´ÉÏ×ÖÁË£¬àÅ !! ²Á²»µô !! »»Ò»ÕÅ°É !!\n" );
+			"é€™å¼µå¡ç‰‡ä¸Šå·²ç¶“å¯«ä¸Šå­—äº†ï¼Œå—¯ !! æ“¦ä¸æ‰ !! æ›ä¸€å¼µå§ !!\n" );
 	target->set("message",msg);
-	write("ÄãÔÚ"+(string)target->query("c_cap_name")+"µÄ¿¨Æ¬ÉÏĞ´µÀ£º"+msg+"\n" );
+	write("ä½ åœ¨"+(string)target->query("c_cap_name")+"çš„å¡ç‰‡ä¸Šå¯«é“ï¼š"+msg+"\n" );
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"±³¶ÔÖøÄã£¬ÔÚ"+get_c_sex(this_player())+"»¨¿¨ÉÏÍ¿Í¿Ä¨Ä¨¡£\n",
+		this_player()->query("c_name")+"èƒŒå°è‘—ä½ ï¼Œåœ¨"+get_c_sex(this_player())+"èŠ±å¡ä¸Šå¡—å¡—æŠ¹æŠ¹ã€‚\n",
 		this_player() );
 	
 	return 1;
@@ -76,19 +76,19 @@ int read_msg(string arg)
 	object target;
         if ( !arg || arg=="")
           return notify_fail(
-			"Òª¶ÁÊ²÷áÄØ£¿ Syntax : read <flower>\n" );
+			"è¦è®€ä»€éº¼å‘¢ï¼Ÿ Syntax : read <flower>\n" );
         target = present(arg, this_player());
         if(!target)
-                return notify_fail("ÄãÃ»ÓĞÕâÖÖ»¨....¡£\n");
+                return notify_fail("ä½ æ²’æœ‰é€™ç¨®èŠ±....ã€‚\n");
 
 	msg=target->query("message");
         if ( !msg || msg=="BLANK" )
           return notify_fail(
-		(string)target->query("c_cap_name")+"ÉÏÏµÖøÒ»ÕÅ¿Õ°×¿¨Æ¬£¬ÉÏÃæÊ²÷á¶¼Ã»Ğ´¡£\n" );
+		(string)target->query("c_cap_name")+"ä¸Šç³»è‘—ä¸€å¼µç©ºç™½å¡ç‰‡ï¼Œä¸Šé¢ä»€éº¼éƒ½æ²’å¯«ã€‚\n" );
 
-	write(target->query("c_cap_name")+"µÄ¿¨Æ¬ÉÏĞ´Öø £º "+msg+"\n" );
+	write(target->query("c_cap_name")+"çš„å¡ç‰‡ä¸Šå¯«è‘— ï¼š "+msg+"\n" );
         tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"±³¶ÔÖøÄã£¬×¨ĞÄµÄ¶ÁÖø"+get_c_sex(this_player())+"»¨¿¨¡£\n",
+		this_player()->query("c_name")+"èƒŒå°è‘—ä½ ï¼Œå°ˆå¿ƒçš„è®€è‘—"+get_c_sex(this_player())+"èŠ±å¡ã€‚\n",
                 this_player() );
 	return 1;
 }
@@ -98,25 +98,25 @@ int smell_me(string arg)
         object target;
         if ( !arg || arg=="")
           return notify_fail(
-		"ÒªÎÅÊ²÷áÄØ£¿ Syntax : smell <flower>\n" );
+		"è¦èä»€éº¼å‘¢ï¼Ÿ Syntax : smell <flower>\n" );
         target = present(arg, this_player());
         if(!target)
-                return notify_fail("ÄãÃ»ÓĞÕâÖÖ»¨....¡£\n");
+                return notify_fail("ä½ æ²’æœ‰é€™ç¨®èŠ±....ã€‚\n");
 
         c_msg=target->query("c_smell");
 	msg  =target->query("smell");
-	write("Äã°ÑÄãµÄ"+target->query("c_cap_name")+"´Õ½ü±Ç¶Ë£¬"+c_msg+"\n" );
+	write("ä½ æŠŠä½ çš„"+target->query("c_cap_name")+"æ¹Šè¿‘é¼»ç«¯ï¼Œ"+c_msg+"\n" );
         tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"ÇáÇáµÄÎÅÖø"+get_c_sex(this_player())+target->query("c_cap_name")+"¡£\n",
+		this_player()->query("c_name")+"è¼•è¼•çš„èè‘—"+get_c_sex(this_player())+target->query("c_cap_name")+"ã€‚\n",
                 this_player() );
 
 	if (random(20)==10 && !bee_out)
 	{
-	write("Í»È»Ò»Ö»ÃÛ·ä´Ó»¨Àï·É³öÀ´£¬ÔÚÄãµÄ±Ç×ÓÉÏó§ÁËÒ»ÏÂ£¬ÍÛ !! ºÃÍ´ !! ±Ç×ÓÖ×ÆğÀ´ÁË !!\n" );
+	write("çªç„¶ä¸€éš»èœœèœ‚å¾èŠ±è£¡é£›å‡ºä¾†ï¼Œåœ¨ä½ çš„é¼»å­ä¸Šè«äº†ä¸€ä¸‹ï¼Œå“‡ !! å¥½ç—› !! é¼»å­è…«èµ·ä¾†äº† !!\n" );
 	this_player()->receive_damage(5);
        (CONDITION_PREFIX + "simple_poison")->apply_effect( this_player(), 5, 3 );
         tell_room( environment(this_player()), 
-		"Í»È»£¬Ò»Ö»ÃÛ·ä´Ó"+this_player()->query("c_name")+"µÄ»¨Àï·É³öÀ´£¬ÔÚ"+get_c_sex(this_player())+"±Ç×ÓÉÏó§ÁËÒ»ÏÂ£¬"+get_c_sex(this_player())+"±Ç×ÓÂíÉÏÖ×ÁËÆğÀ´ !! \n",
+		"çªç„¶ï¼Œä¸€éš»èœœèœ‚å¾"+this_player()->query("c_name")+"çš„èŠ±è£¡é£›å‡ºä¾†ï¼Œåœ¨"+get_c_sex(this_player())+"é¼»å­ä¸Šè«äº†ä¸€ä¸‹ï¼Œ"+get_c_sex(this_player())+"é¼»å­é¦¬ä¸Šè…«äº†èµ·ä¾† !! \n",
                 this_player() );
 		bee_out=1;
 	}

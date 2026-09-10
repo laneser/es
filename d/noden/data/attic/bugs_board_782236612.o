@@ -1,12 +1,12 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
-messages ({(["id":468,"body":"ÎªºÎÎÒÔÚÉÌµêtry ËşĞÍ¶Ü, ËüÏÔÊ¾¼´Ê¹ÎÒÓ²´©ÆğÀ´Ò²Ã»¶à´óĞ§¹û,
-µ«Êµ¼ÊÉÏ´©ÆğÀ´È´Ë³Àû´©ÉÏ??
-¸ÃÏàĞÅÄÄ¸ö?
-","title":"about ËşĞÍ¶Ü","time":782225078,"poster":"Longfly",]),(["id":469,"body":"
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
+messages ({(["id":468,"body":"ç‚ºä½•æˆ‘åœ¨å•†åº—try å¡”å‹ç›¾, å®ƒé¡¯ç¤ºå³ä½¿æˆ‘ç¡¬ç©¿èµ·ä¾†ä¹Ÿæ²’å¤šå¤§æ•ˆæœ,
+ä½†å¯¦éš›ä¸Šç©¿èµ·ä¾†å»é †åˆ©ç©¿ä¸Š??
+è©²ç›¸ä¿¡å“ªå€‹?
+","title":"about å¡”å‹ç›¾","time":782225078,"poster":"Longfly",]),(["id":469,"body":"
 ","title":"< no title >","time":782236604,"poster":"Sutanic",]),(["id":470,"body":"
 ","title":"< no title >","time":782236604,"poster":"Sutanic",]),(["id":471,"body":"
 ","title":"< no title >","time":782236604,"poster":"Sutanic",]),(["id":472,"body":"

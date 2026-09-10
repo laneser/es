@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("wineskin","Å£Æ¤¾Æ´ü");
+        set_name("wineskin","ç‰›çš®é…’è¢‹");
 	add( "id", ({ "skin" }) );
-        set_short("¾Æ´ü");
+        set_short("é…’è¢‹");
         set( "weight", 10);
         set( "value", ({ 0, "coin" }));
-        set("long", "Ò»¸öÅ£Æ¤·ìµÄ´ó¾Æ´ü£¬´ó¸Å×°µÃ°Ë¡¢¾ÅÉýµÄ¾Æ¡£\n");
-        set("unit", "¸ö");
+        set("long", "ä¸€å€‹ç‰›çš®ç¸«çš„å¤§é…’è¢‹ï¼Œå¤§æ¦‚è£å¾—å…«ã€ä¹å‡çš„é…’ã€‚\n");
+        set("unit", "å€‹");
 	set("no_sale",1);
 }
 
@@ -29,16 +29,16 @@ int to_drink(string arg)
         if( !arg || arg=="" || arg !="wine")
         {
                 tell_object(this_player(),
-                "ÄãÏë¸ÉÊ²Ã´?\n"
+                "ä½ æƒ³å¹¹ä»€éº¼?\n"
                 );
         }
 	else 
 	{
 	        tell_object(this_player(),
-        	"ÄãÒ»ÑöÍ·,¹¾àà¹¾ààµØºÈÁË¼¸¿Ú¾Æ.\n");
+        	"ä½ ä¸€ä»°é ­,å’•åš•å’•åš•åœ°å–äº†å¹¾å£é…’.\n");
         
         tell_room( environment( me ),
-                me->query("c_name")+"Ò»ÑöÍ·,¹¾àà¹¾ààµØºÈÁË¼¸¿Ú¾Æ£®\n"
+                me->query("c_name")+"ä¸€ä»°é ­,å’•åš•å’•åš•åœ°å–äº†å¹¾å£é…’ï¼Ž\n"
                 , me);
 
 	maxhp = (int)me->query("max_hp");

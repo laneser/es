@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Brass huge hammer", "»ÆÍ­¾Þé³");
+        set_name("Brass huge hammer", "é»ƒéŠ…å·¨æ§Œ");
         add ("id",({ "hammer" }) );
-        set_short("»ÆÍ­¾Þé³");
+        set_short("é»ƒéŠ…å·¨æ§Œ");
         set_long(
-            "ÕâÊÇÒ»°Ñ»ÆÍ­¾Þé³¡£\n"
+            "é€™æ˜¯ä¸€æŠŠé»ƒéŠ…å·¨æ§Œã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 20 );
         set( "type", "blunt" );
         set( "nosecond",1);

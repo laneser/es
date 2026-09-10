@@ -3,14 +3,14 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("sound_raise_sword","ÒôÉýÖ®½£ ");
+    set_name("sound_raise_sword","éŸ³å‡ä¹‹åŠ ");
     add("id",({"sword"}) );
-    set_short("sound_raise_sword","ÒôÉýÖ®½£ ");
+    set_short("sound_raise_sword","éŸ³å‡ä¹‹åŠ ");
            set_long(@AAA
-ÕâÊÇÒ»°Ñº¬ÓÐ¿ØÖÆ´óÆø¾«ÁéÁ¦Á¿µÄ¶Ì½£,½£ÉíÉÏ¿ÌÓÐÖøºÍ´óÆø¾«Áé¶¨ÆõÔ¼µÄ·¨Ó¡
+é€™æ˜¯ä¸€æŠŠå«æœ‰æŽ§åˆ¶å¤§æ°£ç²¾éˆåŠ›é‡çš„çŸ­åŠ,åŠèº«ä¸Šåˆ»æœ‰è‘—å’Œå¤§æ°£ç²¾éˆå®šå¥‘ç´„çš„æ³•å°
 AAA
         );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("second",1);
     set("weapon_class",40);
     set("type","shortblade");
@@ -19,7 +19,7 @@ AAA
     set("weight",150);
     set("value",({120,"gold"}));
 //    set("hit_func","sound_damage");
-    set("special_c_msg","µÄÒôÉýÖ®½£Í»È»¼ä¿ªÊ¼ÎËÎË×÷Ïì !! \n\nÒôÉýÖ®½£µÄ½£Éí·¢³öÒ»µÀ³å»÷²¨£¬»÷ÏòµÐÈËµÄÒªº¦!!\n\n");
+    set("special_c_msg","çš„éŸ³å‡ä¹‹åŠçªç„¶é–“é–‹å§‹å—¡å—¡ä½œéŸ¿ !! \n\néŸ³å‡ä¹‹åŠçš„åŠèº«ç™¼å‡ºä¸€é“è¡æ“Šæ³¢ï¼Œæ“Šå‘æ•µäººçš„è¦å®³!!\n\n");
 }
 
 int sound_damage(object victim,int damage)
@@ -40,7 +40,7 @@ int sound_damage(object victim,int damage)
                 victim->receive_damage( dam );
                 victim->set("last_attacker", holder );
                 tell_object( holder, 
-                        "\nÄã"+c_msg );
+                        "\nä½ "+c_msg );
                 tell_room( environment(holder), 
                         holder->query("c_name") + c_msg,
                         holder );

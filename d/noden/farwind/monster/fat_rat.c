@@ -6,17 +6,17 @@ void create()
 {
 	::create();
 	set_level(3);
-	set_name( "fat rat", "ÅÖÀÏÊó" );
+	set_name( "fat rat", "èƒ–è€é¼ " );
 	add( "id", ({ "rat" }) );
-	set_short( "ÅÖÀÏÊó" );
+	set_short( "èƒ–è€é¼ " );
 	set_long(
-		"Ò»Ö»¼«·ÊµÄ´óÀÏÊó£¬¿´ÆğÀ´ÏñÊÇÒ»Í·Öí¡£\n"
+		"ä¸€éš»æ¥µè‚¥çš„å¤§è€é¼ ï¼Œçœ‹èµ·ä¾†åƒæ˜¯ä¸€é ­è±¬ã€‚\n"
 	);
 	set_perm_stat("dex", 2 );
 	set_perm_stat("str", 5 );
 
-	set_c_verbs( ({ "%sÓÃ×¦×ÓÂÒ×¥%s", "%sÕÅ×ìÍù%sÒ§ÏÂ" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ááÍÈ", "Î²°Í" }) );
+	set_c_verbs( ({ "%sç”¨çˆªå­äº‚æŠ“%s", "%så¼µå˜´å¾€%så’¬ä¸‹" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰çˆª", "å¾Œè…¿", "å°¾å·´" }) );
 
 	set( "natural_armor_class", 10 );
 	set( "natural_weapon_class1", 4 );

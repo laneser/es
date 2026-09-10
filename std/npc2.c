@@ -90,7 +90,7 @@ varargs int move_player(mixed dest, mixed message, string dir)
 	prev = environment();
 
 	if( res = move(dest) != MOVE_OK ) {
-		write("(ÄãÁôÔÚÔ­µØ !!)\n");
+		write("(ä½ ç•™åœ¨åŸåœ° !!)\n");
 		return res;
 	}
 
@@ -182,7 +182,7 @@ void heart_beat()
 		if ( obj = (object)this_object()->query("pursued")) {
 		if( present( obj, environment()) ) {
 			tell_object(obj,
-				sprintf("%sÓÖ¼ÌĞø¹¥»÷Äã!\n", query("c_name")));
+				sprintf("%såˆç¹¼çºŒæ”»æ“Šä½ !\n", query("c_name")));
 			obj->kill_ob(this_object());
 		}
 		delete("in_pursuit");
@@ -279,7 +279,7 @@ varargs protected void die(int silent)
 
 	// Announce the sad facts of life and non-life.
 	if( !silent ) {
-		write("ÄãËÀÁË.\n");
+		write("ä½ æ­»äº†.\n");
 		COMBAT_D->report_death();
 	}
 
@@ -314,7 +314,7 @@ void kill_reward(object killer)
 	} else {
 		killer->gain_experience(exp);
 	tell_object(killer,
-		sprintf("ÄãµÃµ½ %d µã¾­ÑéÖµ¡£\n", exp));
+		sprintf("ä½ å¾—åˆ° %d é»ç¶“é©—å€¼ã€‚\n", exp));
 	}
 	return;
 }
@@ -336,7 +336,7 @@ void relay_message(string class1, string str)
 	object victim;
 
 	if( !str || str == "" ) return;
-	if( sscanf(str,"%s(%s)×ßÁË¹ıÀ´¡£", tmp,name)==2 ) {
+	if( sscanf(str,"%s(%s)èµ°äº†éä¾†ã€‚", tmp,name)==2 ) {
 		name = lower_case(name);
 		victim = present(name, environment(this_object()));
 		if( !victim || victim->query("npc") || victim->query("no_attack") )
@@ -347,15 +347,15 @@ void relay_message(string class1, string str)
 			if( random(100) > (int)victim->query_stat("kar") ) {
 					tell_object(victim, ( (tmp=query("c_killer_msg")) ?
 						sprintf("%s\n", tmp):
-						sprintf("Í»È»£¬Äã·¢ÏÖ %s Õı²»»³ºÃÒâµÄÍùÄãÕâÀï³å¹ıÀ´....\n", query("short")) ) );
+						sprintf("çªç„¶ï¼Œä½ ç™¼ç¾ %s æ­£ä¸æ‡·å¥½æ„çš„å¾€ä½ é€™è£¡è¡éä¾†....\n", query("short")) ) );
 				kill_ob(victim);
 			} else {
 				tell_object(victim,
-					sprintf("Äã¸Ğ¾õ %s ËÆºõÕı²»»³ºÃÒâµÄ¿´ÖøÄã...\n", query("short")));
+					sprintf("ä½ æ„Ÿè¦º %s ä¼¼ä¹æ­£ä¸æ‡·å¥½æ„çš„çœ‹è‘—ä½ ...\n", query("short")));
 			}
 	}
 
-	if( query("pursuing") && sscanf(str,"%s(%s)Íù%s±ßÀë¿ª¡£", tmp,name, direction)==3) {
+	if( query("pursuing") && sscanf(str,"%s(%s)å¾€%sé‚Šé›¢é–‹ã€‚", tmp,name, direction)==3) {
 		name = lower_case(name);
 		victim = find_living(name);
 		if( victim && attackers && member_array(victim, attackers) > -1 ) {
@@ -381,13 +381,13 @@ void init()
 			kill_ob( ob );
 			if( !this_object()->catch_huntee(ob) )
 				tell_room( environment(),
-					sprintf("%s½ĞµÀ: ¿É¶ñ£¬ÓÖÊÇÄã£¡\n", query("c_name")) ,
+					sprintf("%så«é“: å¯æƒ¡ï¼Œåˆæ˜¯ä½ ï¼\n", query("c_name")) ,
 					this_object() );
 		} else
 		if( query("killer") && kill_ob(this_player()) ) {
 				write( (tmp=query("c_killer_msg"))?
 					sprintf("%s\n", tmp):
-					sprintf("Í»È»£¬Äã¿´µ½ %s ÏòÄã³åÁË¹ıÀ´!\n", query("c_name")) );
+					sprintf("çªç„¶ï¼Œä½ çœ‹åˆ° %s å‘ä½ è¡äº†éä¾†!\n", query("c_name")) );
 		}
 
  		// If heartbeat is turned off ... turn it back on.

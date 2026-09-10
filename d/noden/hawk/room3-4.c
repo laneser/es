@@ -6,11 +6,11 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("���˼�̳");
+        set_short("鳥人祭壇");
         set_outside("noden");
         set_long( @LONG_DESCRIPTION
-����������������Ҫ��ʥ�أ��߸ߵĴ��������֮�ǵ���㡣������
-һ����ֻ���������޾��İ���������Ʈ翵ĸо����㲻���е������
+這裡是鳥人族最重要的聖地，高高的矗立在天空之城的最頂點。你往下
+一望，只看到無窮無盡的白霧，虛無飄緲的感覺讓你不禁有點腳軟。
 LONG_DESCRIPTION
         );
         set( "exits", ([
@@ -34,8 +34,8 @@ int to_jump()
         if (!present("valor amulet",this_player() ))
         {
                 tell_object(this_player(),@LONG
-��о�����������������Ҳң�Ѫ��ζһ����ĳ���ӿ����Ϊ��������ȫ
-��������ǲ�����ȥ�����ˡ�
+你感覺到競技場底下陰風慘慘，血腥味一陣陣的朝你湧來，為了生命安全
+你決定還是不跳下去送死了。
 LONG
                 );
 	return 1;
@@ -44,7 +44,7 @@ LONG
         if ( lev < 17 )
         {
                 tell_object(this_player(),
-                        "������᲻Ҫ̫�嶯���ԣ���Ҫ�����\n" );
+                        "年紀輕輕不要太沖動，乖，不要亂跳嘛。\n" );
                 return 1;
         }
         if (alig < 0)

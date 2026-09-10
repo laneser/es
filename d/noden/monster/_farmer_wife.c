@@ -5,11 +5,11 @@ void create(object ob)
 	object ob1;
     if ( !ob ) return ;
 	ob->set_level(1);
-	ob->set_name( "farmer's wife", "ÅÖÅ©·òµÄÆÞ×Ó" );
+	ob->set_name( "farmer's wife", "èƒ–è¾²å¤«çš„å¦»å­" );
 	ob->add( "id", ({ "farmer", "wife" }) );
-   ob->set_short( "ÅÖÅ©·òµÄÆÞ×Ó" );
+   ob->set_short( "èƒ–è¾²å¤«çš„å¦»å­" );
 	ob->set_long(
-		"ÅÖÅ©·òµÄÆÞ×ÓÒ²Ò»ÑùºÜÅÖ....²»¹ýËûµÄÏÈÉúËÆºõ²¢²»Õâ÷áÈÏÎª¡£\n"
+		"èƒ–è¾²å¤«çš„å¦»å­ä¹Ÿä¸€æ¨£å¾ˆèƒ–....ä¸éŽä»–çš„å…ˆç”Ÿä¼¼ä¹Žä¸¦ä¸é€™éº¼èªç‚ºã€‚\n"
 	);
 	ob->set( "max_hp", 35 );
 	ob->set( "hit_points", 35 );

@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "wraith sword", "°«ÁéÖ®½£" );
+	set_name( "wraith sword", "çŸ®éˆä¹‹åŠ" );
 	add( "id", ({ "sword" }) );
-	set_short( "°«ÁéÖ®½£" );
+	set_short( "çŸ®éˆä¹‹åŠ" );
 	set_long(
-                "ÕâÊÇÒ»°ÑÓÃ»ğÉ½ÑÒ´òÔìµÄ±¦½££¬ÓµÓĞÏàµ±´óµÄÆÆ»µÁ¦¡£\n" );
-	set( "unit", "°Ñ" );
+                "é€™æ˜¯ä¸€æŠŠç”¨ç«å±±å²©æ‰“é€ çš„å¯¶åŠï¼Œæ“æœ‰ç›¸ç•¶å¤§çš„ç ´å£åŠ›ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 130 );
@@ -32,12 +32,12 @@ int weapon_hit( object victim, int damage )
         if (vic_kar*2 > my_kar*3) return 0;
                 owner->set("spell_points",sp-3);
 		tell_object( owner, 
-		"\nÄãµÄ°«ÁéÖ®½£·Å³öÒ»Æ¬ºìÉ«¹âÃ¢£¬ëÊÕÖÖø"+victim->query("c_name")+"£¬"+victim->query("c_name")+"¸Ğ¾õµ½ÎŞ±ÈµÄÖËÈÈ¡£\n\n");
+		"\nä½ çš„çŸ®éˆä¹‹åŠæ”¾å‡ºä¸€ç‰‡ç´…è‰²å…‰èŠ’ï¼Œæœ§ç½©è‘—"+victim->query("c_name")+"ï¼Œ"+victim->query("c_name")+"æ„Ÿè¦ºåˆ°ç„¡æ¯”çš„ç‚™ç†±ã€‚\n\n");
 		tell_object( victim, 
-		owner->query("c_name") + "µÄ°«ÁéÖ®½£·Å³öÒ»Æ¬ºìÉ«¹âÃ¢£¬Äã±»ëÊÕÖÔÚÖËÈÈµÄ¹âÃ¢Àï\n");
+		owner->query("c_name") + "çš„çŸ®éˆä¹‹åŠæ”¾å‡ºä¸€ç‰‡ç´…è‰²å…‰èŠ’ï¼Œä½ è¢«æœ§ç½©åœ¨ç‚™ç†±çš„å…‰èŠ’è£¡\n");
 		tell_room( environment(owner),
-			owner->query("c_name") + "µÄ°«ÁéÖ®½£·Å³öÒ»Æ¬ºìÉ«¹âÃ¢ëÊÕÖ"
-			+ victim->query("c_name")+" £¡\n",
+			owner->query("c_name") + "çš„çŸ®éˆä¹‹åŠæ”¾å‡ºä¸€ç‰‡ç´…è‰²å…‰èŠ’æœ§ç½©"
+			+ victim->query("c_name")+" ï¼\n",
 			({ victim, owner }) );
 	victim->receive_special_damage( "fire", 10 );
 	return 10;

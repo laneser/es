@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "white bracers", "°×ÔÆÊ¯ÊÖîË" );
+	set_name( "white bracers", "ç™½é›²çŸ³æ‰‹é‡§" );
 	add( "id", ({ "bracers" }) );
-	set_short( "°×ÔÆÊ¯ÊÖîË" );
+	set_short( "ç™½é›²çŸ³æ‰‹é‡§" );
 	set_long(
-		"ÕâÊÇÒ»¶ÔÓÃÄ³ÖÖ²»ÖªÃûµÄ°×Ê¯Í·Ôì³öµÄÊÖ»·£¬¿´ÆğÀ´Ïàµ±ÖØ¡£\n"
+		"é€™æ˜¯ä¸€å°ç”¨æŸç¨®ä¸çŸ¥åçš„ç™½çŸ³é ­é€ å‡ºçš„æ‰‹ç’°ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶é‡ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "hands" );
 	set( "armor_class", 5 );
         set("material","stone");

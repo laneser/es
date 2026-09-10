@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(18);
-	set_name( "shadow beast", "»ÃÓ°Ä§ÊÞ" );
+	set_name( "shadow beast", "å¹»å½±é­”ç¸" );
 	add("id",({"beast"}));
-	set_short( "an shadow beast", "»ÃÓ°Ä§ÊÞ" );
+	set_short( "an shadow beast", "å¹»å½±é­”ç¸" );
 	set_long(
 		"a terrible shadow beast.\n",
-		"Ò»¸öÁîÈË¾åÅÂµÄ»ÃÓ°Ä§ÊÞ ,Ã»ÓÐÈËÖªµÀËüµÄÀ´Àú.\n"
+		"ä¸€å€‹ä»¤äººæ‡¼æ€•çš„å¹»å½±é­”ç¸ ,æ²’æœ‰äººçŸ¥é“å®ƒçš„ä¾†æ­·.\n"
 	);
 	set( "alignment", -1000 );
 	set_perm_stat( "dex", 23 );
@@ -36,9 +36,9 @@ int my_tactic()
 
 	if( random(20)>5 || !(victim= query_attacker()) ) return 0;
     else {
-      tell_object(victim, "»ÃÓ°Ä§ÊÞÍ»È»Ò§Äã.\n" );
+      tell_object(victim, "å¹»å½±é­”ç¸çªç„¶å’¬ä½ .\n" );
       tell_room(environment(this_object()),
-          "»ÃÓ°Ä§ÊÞÍ»È»Ò§"+victim->query("c_name")+".\n"
+          "å¹»å½±é­”ç¸çªç„¶å’¬"+victim->query("c_name")+".\n"
           ,({victim,this_object(),}) );
       victim->receive_damage( 40 + random(50) );
       report(this_object(),victim);

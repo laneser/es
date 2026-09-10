@@ -12,12 +12,12 @@ void init()
 
 void create()
 {
-	set_name("fish meat","»Æ½ğÃÎ»ÃÀğÓãµÄÈâ");
+	set_name("fish meat","é»ƒé‡‘å¤¢å¹»é¯‰é­šçš„è‚‰");
 	add( "id" , ({ "meat","fish" }) );
-   set_short("»Æ½ğÃÎ»ÃÀğÓãµÄÈâ");
-   set_long( "ÍâÆ¤ÉÁÒ«ÖøÃÀÀöµÄ½ğÉ«¹âÃ¢£¬ÄÚ²ãÊÇ°ëÍ¸Ã÷µÄÓãÈâ£¬¾İËµÊÇ\n"
-             "ÈË¼äµÄÕäÎ¶¡£\n" );
-   	set("unit","¿é");
+   set_short("é»ƒé‡‘å¤¢å¹»é¯‰é­šçš„è‚‰");
+   set_long( "å¤–çš®é–ƒè€€è‘—ç¾éº—çš„é‡‘è‰²å…‰èŠ’ï¼Œå…§å±¤æ˜¯åŠé€æ˜çš„é­šè‚‰ï¼Œæ“šèªªæ˜¯\n"
+             "äººé–“çš„çå‘³ã€‚\n" );
+   	set("unit","å¡Š");
    	set("weight", 15);
 	call_out("not_fresh", FRESH_TIME, this_object() );
 	set("is_fresh",1);
@@ -27,18 +27,18 @@ int eat_food(string arg)
 {
 	if( !arg || arg != "fish" ) return 0;
 	if( !query("is_fresh") ) {
-        write("Äã³ÔµôÒ»¿é¸¯ÀÃÁËµÄÓãÈâ¡£\n");
+        write("ä½ åƒæ‰ä¸€å¡Šè…çˆ›äº†çš„é­šè‚‰ã€‚\n");
         tell_room( environment(this_player()),
-           this_player()->query("c_name")+"³ÔµôÒ»¿é¸¯»µÁËµÄÓãÈâ¡£\n"
+           this_player()->query("c_name")+"åƒæ‰ä¸€å¡Šè…å£äº†çš„é­šè‚‰ã€‚\n"
                    , this_player()
 		);
        (CONDITION_PREFIX + "sick")->apply_effect(this_player(),15,2,5);
 	} else {
         write(
-                "ÄãÓä¿ìµØ³ÔµôÕâÒ»¿éÉúÓãÈâ, ÇåÌğµÄ×ÌÎ¶ÔÚ¿ÚÖĞÂıÂıÀ©É¢....:)\n" );
+                "ä½ æ„‰å¿«åœ°åƒæ‰é€™ä¸€å¡Šç”Ÿé­šè‚‰, æ¸…ç”œçš„æ»‹å‘³åœ¨å£ä¸­æ…¢æ…¢æ“´æ•£....:)\n" );
         tell_room( environment(this_player()),
-                     this_player()->query("c_name")+"³ÔµôÁËÒ»¿éÉúÓãÈâ£¬¿´Æğ"
-                "À´¾«Éñ´óÕñ...\n", this_player()
+                     this_player()->query("c_name")+"åƒæ‰äº†ä¸€å¡Šç”Ÿé­šè‚‰ï¼Œçœ‹èµ·"
+                "ä¾†ç²¾ç¥å¤§æŒ¯...\n", this_player()
 		);
            this_player()->receive_healing( 40+random(10) );
 	}
@@ -51,12 +51,12 @@ void not_fresh(object what)
 	object owner;
 	owner = environment(what);
 	what->set ("value", ({ 1, "silver" }));
-   what->set_short( "¸¯»µµÄÓãÈâ" );
-   what->set_long( "Õâ¿éÓãÈâÒÑ¾­¸¯»µÁË£¬·¢³öÒ»¹ÉÄÑÎÅµÄÆøÎ¶¡£\n" );
+   what->set_short( "è…å£çš„é­šè‚‰" );
+   what->set_long( "é€™å¡Šé­šè‚‰å·²ç¶“è…å£äº†ï¼Œç™¼å‡ºä¸€è‚¡é›£èçš„æ°£å‘³ã€‚\n" );
 	what->set("is_fresh",0);
    if ( !owner ) { remove(); return ; }
    if( !living(owner) ) { remove() ; return; }
    write(
-        "ÄãÎÅµ½Ò»¹É³ôÎ¶´«À´, ºÃÏñÊÇÊ²÷á¶«Î÷»µÁËµÄÑù×Ó¡£\n"
+        "ä½ èåˆ°ä¸€è‚¡è‡­å‘³å‚³ä¾†, å¥½åƒæ˜¯ä»€éº¼æ±è¥¿å£äº†çš„æ¨£å­ã€‚\n"
 	);
 }

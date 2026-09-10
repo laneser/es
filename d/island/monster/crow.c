@@ -6,19 +6,19 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name( "black crow", "ÎÚÑ»" );
+	set_name( "black crow", "çƒé´‰" );
 	add( "id", ({ "crow" }) );
-	set_short( "ÎÚÑ»" );
+	set_short( "çƒé´‰" );
 	set_long(@LONG
-ÕâÖ»ÎÚÑ»·Ç³£³³£¬ÈÃÄãÓĞÒ»¹É°ÑËüÒ»½ÅõßËÀµÄ³å¶¯¡£
+é€™éš»çƒé´‰éå¸¸åµï¼Œè®“ä½ æœ‰ä¸€è‚¡æŠŠå®ƒä¸€è…³è¸¹æ­»çš„è¡å‹•ã€‚
 LONG
 	);
 	set_perm_stat( "dex", 3 );
 
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "natural_weapon_class1", 3 );
 	set( "natural_min_damage1", 3 );
 	set( "natural_max_damage1", 5 );
-	set_c_verbs( ({ "%sÍùÏÂ¸©³å£¬ÓÃ×ì°Í×Ä%s", "%sÓÃ×¦×ÓÍù%s×¥ÏÂ" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
+	set_c_verbs( ({ "%så¾€ä¸‹ä¿¯è¡ï¼Œç”¨å˜´å·´å•„%s", "%sç”¨çˆªå­å¾€%sæŠ“ä¸‹" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
 }

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-      set_name("Royal ring","Ê÷À×Íõ½ä");
+      set_name("Royal ring","æ¨¹é›·ç‹æˆ’");
       add("id",({"ring"}) );
-      set_short("Ê÷À×Íõ½ä");
+      set_short("æ¨¹é›·ç‹æˆ’");
       set_long(@LONG
-ÕâÊÇÊ÷À×Íõ×åÖĞ´ú±í×î¸ßÈ¨Á¦µÄÏóáçĞÅÎï£¡
+é€™æ˜¯æ¨¹é›·ç‹æ—ä¸­ä»£è¡¨æœ€é«˜æ¬ŠåŠ›çš„è±¡å¾µä¿¡ç‰©ï¼
 LONG
               );
-      set("unit","Ã¶");
+      set("unit","æš");
       set("type","finger");
       set("material","light_metal");
       set("armor_class",0);

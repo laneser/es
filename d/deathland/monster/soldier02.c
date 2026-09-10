@@ -9,16 +9,16 @@ void create ()
 	::create();
 	//seteuid( getuid() );
  set_level(12);
- set_name("dwarf scout","°«ÈË³âºî"); 
+ set_name("dwarf scout","çŸ®äººæ–¥ä¾¯"); 
  add ("id", ({ "scout","dwarf"}) );
- set_short( "°«ÈË³âºî");
+ set_short( "çŸ®äººæ–¥ä¾¯");
 	set_long(@LONG
-Õâ°«ÈË³âºîÕıÔÚ½ÓÊÜÑÏ¸ñÕì²éÑµÁ·.
+é€™çŸ®äººæ–¥ä¾¯æ­£åœ¨æ¥å—åš´æ ¼åµæŸ¥è¨“ç·´.
 LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",13);
     set_perm_stat( "str",15);
     set_perm_stat( "int",8);

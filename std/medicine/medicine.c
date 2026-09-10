@@ -27,10 +27,10 @@ int do_eat(string arg)
 	if( !query("can_eat") ) return 0;
 	if( !id(arg) ) return 0;
 	if( environment() && environment() != this_player() ) return 0;
-	write(sprintf("ƒ„≥‘œ¬“ª%s%s°£\n",query("unit"),query("c_name")));
+	write(sprintf("‰Ω†ÂêÉ‰∏ã‰∏Ä%s%s„ÄÇ\n",query("unit"),query("c_name")));
 
 	tell_room( environment(this_player()), 
-		sprintf("%s≥‘œ¬“ª%s%s°£\n",this_player()->query("c_name"),query("unit"),query("c_name")),
+		sprintf("%sÂêÉ‰∏ã‰∏Ä%s%s„ÄÇ\n",this_player()->query("c_name"),query("unit"),query("c_name")),
 		this_player() );
 	if( med = (int)query("medication") )
 		this_player()->add("medication_resistance", med);
@@ -47,10 +47,10 @@ int do_drink(string arg)
 	if( !query("can_drink") ) return 0;
 	if( !id(arg) ) return 0;
 	if( environment() && environment()!=this_player() ) return 0;
-	write(sprintf("ƒ„∫»œ¬“ª%s%s°£\n",query("unit"),query("c_name")));
+	write(sprintf("‰Ω†Âñù‰∏ã‰∏Ä%s%s„ÄÇ\n",query("unit"),query("c_name")));
 
 	tell_room( environment(this_player()), 
-		sprintf("%s∫»œ¬“ª%s%s°£\n",this_player()->query("c_name"),query("unit"),query("c_name")),
+		sprintf("%sÂñù‰∏ã‰∏Ä%s%s„ÄÇ\n",this_player()->query("c_name"),query("unit"),query("c_name")),
 		this_player() );
 	if( med = (int)query("medication") )
 		this_player()->add("medication_resistance", med);
@@ -70,7 +70,7 @@ int do_apply(string arg)
 	me = this_player();
 
 	if( !arg || arg=="" ) return notify_fail( 
-		"÷∏¡Ó∏Ò Ω: apply <“©∆∑> [at <ƒ≥»À>]\n");
+		"Êåá‰ª§Ê†ºÂºè: apply <Ëó•ÂìÅ> [at <Êüê‰∫∫>]\n");
 
 	if( sscanf(arg, "%s at %s", str, dest) != 2 ) str = arg;
 	if( !id(str) ) return 0;
@@ -78,22 +78,22 @@ int do_apply(string arg)
 	if( !dest ) act_ob = me;
 	else if( !act_ob = present(dest, environment(me)) )
 		return notify_fail( 
-			"ƒ„“™ÃÊÀ≠µƒ…Àø⁄∑Û“©£ø\n");
+			"‰Ω†Ë¶ÅÊõøË™∞ÁöÑÂÇ∑Âè£Êï∑Ëó•Ôºü\n");
 
 	// modify by Kyoko, for making a system about all medicine.
 	if( !this_object()->apply(me, act_ob) ) return 0;
 
 	if( act_ob == me ) {
-		write(sprintf("ƒ„Ω´%s∑Û‘⁄…Àø⁄…œ°£\n",query("c_name")));
+		write(sprintf("‰Ω†Â∞á%sÊï∑Âú®ÂÇ∑Âè£‰∏ä„ÄÇ\n",query("c_name")));
 		tell_room( environment(me), 
-			sprintf("%sΩ´“ª–©%s∑Û‘⁄◊‘º∫µƒ…Àø⁄…œ°£\n",me->query("c_name"),query("c_name")), me);
+			sprintf("%sÂ∞á‰∏Ä‰∫õ%sÊï∑Âú®Ëá™Â∑±ÁöÑÂÇ∑Âè£‰∏ä„ÄÇ\n",me->query("c_name"),query("c_name")), me);
 	} else {
-		write(sprintf("ƒ„Ω´%s∑Û‘⁄%sµƒ…Àø⁄…œ°£\n",query("c_name"),act_ob->query("c_name")));
+		write(sprintf("‰Ω†Â∞á%sÊï∑Âú®%sÁöÑÂÇ∑Âè£‰∏ä„ÄÇ\n",query("c_name"),act_ob->query("c_name")));
 
 		tell_object( act_ob,
-			sprintf("%sΩ´%s∑Û‘⁄ƒ„µƒ…Àø⁄…œ°£\n",me->query("c_name"),query("c_name")));
+			sprintf("%sÂ∞á%sÊï∑Âú®‰Ω†ÁöÑÂÇ∑Âè£‰∏ä„ÄÇ\n",me->query("c_name"),query("c_name")));
 		tell_room( environment(me), 
-			sprintf("%s‘⁄%sµƒ…Àø⁄∑Û…œ%s°£\n",me->query("c_name"),act_ob->query("c_name"),query("c_name")),
+			sprintf("%sÂú®%sÁöÑÂÇ∑Âè£Êï∑‰∏ä%s„ÄÇ\n",me->query("c_name"),act_ob->query("c_name"),query("c_name")),
 			  ({ me, act_ob }));
 	}
 	remove();

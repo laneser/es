@@ -103,47 +103,47 @@ varargs string get_list(int flag)
 	int i,day, hour, *savedata,size_list;
 	string msg;
 
-	if( !sizeof(top_list) ) return 	"ħ���ȼ����а�Ŀǰ�ǿյġ�\n";
+	if( !sizeof(top_list) ) return 	"魔法等級排行榜目前是空的。\n";
 	size_list=sizeof(top_list);
 	if ((flag==1)&&(size_list>SIZE)) size_list=SIZE;
-	msg = "�ۺ�ħ���ȼ����а�ǰ " + size_list + " ��:\n";
-	msg += sprintf(" ����  �������           �ȼ�          ����ʱ��                    ħ���ȼ�\n");
+	msg = "綜合魔法等級排行榜前 " + size_list + " 名:\n";
+	msg += sprintf(" 名次  玩家姓名           等級          上線時間                    魔法等級\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels[top_list[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d �� %2d Сʱ %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d 天 %2d 小時 %20d\n",i+1, 
 			top_list[i], savedata[1], day, hour, savedata[0] );
 	}
-	msg += "\nԪ��ħ���ȼ����а�ǰ " + size_list + " ��:\n";
-	msg += sprintf(" ����  �������           �ȼ�          ����ʱ��                    ħ���ȼ�\n");
+	msg += "\n元素魔法等級排行榜前 " + size_list + " 名:\n";
+	msg += sprintf(" 名次  玩家姓名           等級          上線時間                    魔法等級\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels1[top_list1[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d �� %2d Сʱ %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d 天 %2d 小時 %20d\n",i+1, 
 			top_list1[i], savedata[1], day, hour, savedata[0] );
 	}
-	msg += "\n��ħ���ȼ����а�ǰ " + size_list + " ��:\n";
-	msg += sprintf(" ����  �������           �ȼ�          ����ʱ��                    ħ���ȼ�\n");
+	msg += "\n黑魔法等級排行榜前 " + size_list + " 名:\n";
+	msg += sprintf(" 名次  玩家姓名           等級          上線時間                    魔法等級\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels2[top_list2[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d �� %2d Сʱ %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d 天 %2d 小時 %20d\n",i+1, 
 			top_list2[i], savedata[1], day, hour, savedata[0] );
 	}
-	msg += "\n����ħ���ȼ����а�ǰ " + size_list + " ��:\n";
-	msg += sprintf(" ����  �������           �ȼ�          ����ʱ��                    ħ���ȼ�\n");
+	msg += "\n雜項魔法等級排行榜前 " + size_list + " 名:\n";
+	msg += sprintf(" 名次  玩家姓名           等級          上線時間                    魔法等級\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels3[top_list3[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d �� %2d Сʱ %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d 天 %2d 小時 %20d\n",i+1, 
 			top_list3[i], savedata[1], day, hour, savedata[0] );
 	}
 

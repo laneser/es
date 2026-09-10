@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Diamond Ring","Î¬ÄÉË¹°××ê" );
+	set_name( "Diamond Ring","ç¶­ç´æ–¯ç™½é‘½" );
         add( "id", ({ "ring","diamond ring" }) );
-	set_short( "Î¬ÄÉË¹°××ê" );
+	set_short( "ç¶­ç´æ–¯ç™½é‘½" );
         set_long(
-                "ÕâÊÇÏ£À°ÔÂÉñÎ¬ÄÉË¹µÄ½äÖ¸£¬ÆäÉÏËùÏâµÄ°××êÊÇÈË¼ä¾øÎŞ½öÓĞµÄ¡£\n"
+                "é€™æ˜¯å¸Œè‡˜æœˆç¥ç¶­ç´æ–¯çš„æˆ’æŒ‡ï¼Œå…¶ä¸Šæ‰€é‘²çš„ç™½é‘½æ˜¯äººé–“çµ•ç„¡åƒ…æœ‰çš„ã€‚\n"
         );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
 	set("material","adv");
         set( "type", "finger" );
         set( "armor_class",0 );

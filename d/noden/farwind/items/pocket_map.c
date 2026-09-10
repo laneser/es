@@ -7,11 +7,11 @@ void create()
 	seteuid( getuid() );
 	set_size( 7, 7 );
 #include <compress_obj.h>
-	set_name( "map", "µØÍ¼" );
-	set_short( "Ä§·¨µØÍ¼" );
+	set_name( "map", "åœ°åœ–" );
+	set_short( "é­”æ³•åœ°åœ–" );
 	set_long(@CLONG
-ÕâÊÇÒ»ÕÅÄ§·¨µØÍ¼£¬Äã¿ÉÒÔ read map ¿´µØÍ¼ÄÚÈİ£¬»òÓÃ
-read legend ¿´µØÍ¼ÉÏ·ûºÅËù´ú±íµÄÒâÒå¡£
+é€™æ˜¯ä¸€å¼µé­”æ³•åœ°åœ–ï¼Œä½ å¯ä»¥ read map çœ‹åœ°åœ–å…§å®¹ï¼Œæˆ–ç”¨
+read legend çœ‹åœ°åœ–ä¸Šç¬¦è™Ÿæ‰€ä»£è¡¨çš„æ„ç¾©ã€‚
 CLONG
 	);
 	set( "virtual_server", "/d/noden/virtual/noden_server" );

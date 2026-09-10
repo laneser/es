@@ -107,7 +107,7 @@ void report( object caster, object victim )
 
    if( living( victim ) )
      tell_object( victim, 
-       "( Äã"+message+" )\n" );
+       "( ä½ "+message+" )\n" );
 }
 
 int check_level(object caster, object victim, int one)
@@ -117,18 +117,18 @@ int check_level(object caster, object victim, int one)
 		return 1;
 	if( one ) {
 		tell_object( caster, set_color(
-			"ÒÔÖîÉñÖ®Ãû, Äã²»¿ÉÒÔ¹¥»÷Õâ¸öÈË¡£\n","HIY",caster) );
+			"ä»¥è«¸ç¥žä¹‹å, ä½ ä¸å¯ä»¥æ”»æ“Šé€™å€‹äººã€‚\n","HIY",caster) );
 		tell_object( victim, set_color(
-			sprintf("%s(%s)³¢ÊÔ¹¥»÷Äã, µ«ÊÇÍòÄÜµÄÌìÉñ×èÖ¹ÁËËû²¢¸øÓè¾¯¸æ¡£\n",
+			sprintf("%s(%s)å˜—è©¦æ”»æ“Šä½ , ä½†æ˜¯è¬èƒ½çš„å¤©ç¥žé˜»æ­¢äº†ä»–ä¸¦çµ¦äºˆè­¦å‘Šã€‚\n",
 				caster->query("c_cap_name"), caster->query("name")), "HIC", victim));
 		tell_room( environment( victim ), 
-			sprintf("%s(%s)³¢ÊÔ¹¥»÷%s(%s), µ«ÊÇÍòÄÜµÄÌìÉñ×èÖ¹ÁËËû²¢¸øÓè¾¯¸æ¡£\n",
+			sprintf("%s(%s)å˜—è©¦æ”»æ“Š%s(%s), ä½†æ˜¯è¬èƒ½çš„å¤©ç¥žé˜»æ­¢äº†ä»–ä¸¦çµ¦äºˆè­¦å‘Šã€‚\n",
 				caster->query("c_cap_name"), caster->query("name"),
 				victim->query("c_name"), victim->query("name")) ,
 				({ caster, victim }));
 	} else
 		tell_object( victim, set_color(
-			"ÌìÉÏÍ»È»´«À´Ò»ÕóºêÁÁµÄÉùÒô: ÄãµÄµÈ¼¶Ì«µÍÁË£¬²»ÄÜ±» PK¡£\n"
-			"ÍòÄÜµÄÌìÉñÎ°´óµÄÄ§Á¦ÈÃÄãÃâì¶ÊÜµ½ÉËº¦¡£\n", "HIC", victim));
+			"å¤©ä¸Šçªç„¶å‚³ä¾†ä¸€é™£å®äº®çš„è²éŸ³: ä½ çš„ç­‰ç´šå¤ªä½Žäº†ï¼Œä¸èƒ½è¢« PKã€‚\n"
+			"è¬èƒ½çš„å¤©ç¥žå‰å¤§çš„é­”åŠ›è®“ä½ å…æ–¼å—åˆ°å‚·å®³ã€‚\n", "HIC", victim));
 	return 0;
 }

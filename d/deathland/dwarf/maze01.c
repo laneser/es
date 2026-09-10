@@ -6,14 +6,14 @@ inherit ROOM;
 void create()
 {
   ::create();
-  set_short("the dwarf maze","ÃÔ¹¬");
+  set_short("the dwarf maze","è¿·å®®");
   set_long(@Long
 Long
 ,@CLong
-Ò»¸öºÜ´óµÄÃÔ¹¬(maze)¶´Ñ¨,¶«Î÷ÄÏ±±¶¼ÓĞÍ¨Â·,µ«ÊÇÃ¿¸öÍ¨µÀÉÏËÆºõ¶¼ÓĞÄ§·¨
-ÕÏ±Ú,°«ÈËÎªÁËÄÜ°²°²È«È«µØÉú»îÖø,°Ñ×Ô¼ºµÄ´åÂä½¨Öşì¶Õâ¸öÍğÈçÃÔ¹¬µÄ´ó¶´Ö®ÖĞ
-,³ıÁË°«ÈË×Ô¼ºÄÜ¹»¿ìËÙÇÒ°²È«µØ×ßµ½×Ô¼ºµÄ´åÂäÍâ,ËÆºõÒªµ½°«ÈË´åÂäÊÇÒ»¼şÀ§ÄÑ
-µÄÊÂ.
+ä¸€å€‹å¾ˆå¤§çš„è¿·å®®(maze)æ´ç©´,æ±è¥¿å—åŒ—éƒ½æœ‰é€šè·¯,ä½†æ˜¯æ¯å€‹é€šé“ä¸Šä¼¼ä¹éƒ½æœ‰é­”æ³•
+éšœå£,çŸ®äººç‚ºäº†èƒ½å®‰å®‰å…¨å…¨åœ°ç”Ÿæ´»è‘—,æŠŠè‡ªå·±çš„æ‘è½å»ºç¯‰æ–¼é€™å€‹å®›å¦‚è¿·å®®çš„å¤§æ´ä¹‹ä¸­
+,é™¤äº†çŸ®äººè‡ªå·±èƒ½å¤ å¿«é€Ÿä¸”å®‰å…¨åœ°èµ°åˆ°è‡ªå·±çš„æ‘è½å¤–,ä¼¼ä¹è¦åˆ°çŸ®äººæ‘è½æ˜¯ä¸€ä»¶å›°é›£
+çš„äº‹.
 CLong
 );
 set("exits",([
@@ -43,10 +43,10 @@ int maze_1e()
       return 0; 
     else {
       this_player()->set_temp("dwarf_echomaze/m1",1);
-      write("ÄãÍ¨¹ıÄ§·¨ÕÏ±Úµ½´ïÒ»¸öĞÂµÄµØ·½\n");
-      say( this_player()->query("short")+"Íù¶«Í¨¹ıÄ§·¨ÕÏ±Ú\n");
+      write("ä½ é€šéé­”æ³•éšœå£åˆ°é”ä¸€å€‹æ–°çš„åœ°æ–¹\n");
+      say( this_player()->query("short")+"å¾€æ±é€šéé­”æ³•éšœå£\n");
       this_player()->move_player(Deathland"/dwarf/maze02","SNEAK","");
-      say( this_player()->query("short")+"´ÓÎ÷±ß×ßÁË¹ıÀ´.\n");
+      say( this_player()->query("short")+"å¾è¥¿é‚Šèµ°äº†éä¾†.\n");
 
       }
     return 1;
@@ -58,10 +58,10 @@ int maze_1n()
       return 0; 
     else {
       this_player()->set_temp("dwarf_echomaze/m1",2);
-      write("ÄãÍ¨¹ıÄ§·¨ÕÏ±Úµ½´ïÒ»¸öĞÂµÄµØ·½\n");
-      say( this_player()->query("short")+"Íù±±Í¨¹ıÄ§·¨ÕÏ±Ú\n");
+      write("ä½ é€šéé­”æ³•éšœå£åˆ°é”ä¸€å€‹æ–°çš„åœ°æ–¹\n");
+      say( this_player()->query("short")+"å¾€åŒ—é€šéé­”æ³•éšœå£\n");
       this_player()->move_player(Deathland"/dwarf/maze02","SNEAK","");
-      say( this_player()->query("short")+"´ÓÄÏ±ß×ßÁË¹ıÀ´.\n");
+      say( this_player()->query("short")+"å¾å—é‚Šèµ°äº†éä¾†.\n");
       }
     return 1;
 }
@@ -72,10 +72,10 @@ int maze_1s()
       return 0; 
     else {
       this_player()->set_temp("dwarf_echomaze/m1",3);
-      write("ÄãÍ¨¹ıÄ§·¨ÕÏ±Úµ½´ïÒ»¸öĞÂµÄµØ·½\n");
-      say( this_player()->query("short")+"ÍùÄÏÍ¨¹ıÄ§·¨ÕÏ±Ú\n");
+      write("ä½ é€šéé­”æ³•éšœå£åˆ°é”ä¸€å€‹æ–°çš„åœ°æ–¹\n");
+      say( this_player()->query("short")+"å¾€å—é€šéé­”æ³•éšœå£\n");
       this_player()->move_player(Deathland"/dwarf/maze02","SNEAK","");
-      say( this_player()->query("short")+"´Ó±±±ß×ßÁË¹ıÀ´.\n");
+      say( this_player()->query("short")+"å¾åŒ—é‚Šèµ°äº†éä¾†.\n");
       }
     return 1; 
 }

@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("ghost-killed spell","ÃğÄ§·û");
+        set_name("ghost-killed spell","æ»…é­”ç¬¦");
         add( "id" , ({ "spell" }) );
-        set_short( "ÃğÄ§·û");
+        set_short( "æ»…é­”ç¬¦");
         set_long(@C_LONG
-ÉÏÃæĞ´ÖøÒ»¶Ñòòò½ÎÄ£¬»¹ÓĞÒ»ĞĞÁ¥ÎÄ£¬ÄÇÁ¥ÎÄµÄÒâË¼ÊÇ(spell_use)¡£
+ä¸Šé¢å¯«è‘—ä¸€å †èŒèšªæ–‡ï¼Œé‚„æœ‰ä¸€è¡Œéš¸æ–‡ï¼Œé‚£éš¸æ–‡çš„æ„æ€æ˜¯(spell_use)ã€‚
 C_LONG  );      
-        set("unit","ÕÅ");
+        set("unit","å¼µ");
         set("weight",10);
         set("no_sale",1);
         set("value", ({10, "silver"}) );
@@ -25,8 +25,8 @@ int do_spell(string arg)
     player=this_player();
     env=environment(player);
     tell_room(env,sprintf(
-      "ÃğÄ§·û×Ô%sÊÖÖĞ·ÉÆğ£¬Ğı¼´ÏûÊ§ì¶µØÉÏ¡£\n",player->query("c_name")),player);
-    tell_object(player,"\nÃğÄ§·û×ÔÄãÊÖÖĞ·ÉÆğ£¬Ğı¼´ÏûÊ§ì¶µØÉÏ¡£\n\n");
+      "æ»…é­”ç¬¦è‡ª%sæ‰‹ä¸­é£›èµ·ï¼Œæ—‹å³æ¶ˆå¤±æ–¼åœ°ä¸Šã€‚\n",player->query("c_name")),player);
+    tell_object(player,"\næ»…é­”ç¬¦è‡ªä½ æ‰‹ä¸­é£›èµ·ï¼Œæ—‹å³æ¶ˆå¤±æ–¼åœ°ä¸Šã€‚\n\n");
     env->set("trap_set",1);
     this_object()->remove();
     return 1;

@@ -4,16 +4,16 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "Meditate monk", "ÉòË¼µÄºÍÉĞ" );
+	set_name( "Meditate monk", "æ²ˆæ€çš„å’Œå°š" );
 	add ("id", ({ "monk", }) );
-	set_short( "ÉòË¼µÄºÍÉĞ" );
+	set_short( "æ²ˆæ€çš„å’Œå°š" );
 	set_long(
-    	"Ò»¸ö°²¾²µÄºÍÉĞ£¬ËûÕı²»ÖªµÀÔÚÏëĞ©Ê²÷á£¿\n"
+    	"ä¸€å€‹å®‰éœçš„å’Œå°šï¼Œä»–æ­£ä¸çŸ¥é“åœ¨æƒ³äº›ä»€éº¼ï¼Ÿ\n"
     );
 	set("alignment", 100);
 	set("gender", "male");
 	set("race", "human");
-	set("unit", "¸ö");
+	set("unit", "å€‹");
 	set_perm_stat("str", 12);
 	set_perm_stat("int", 15);
 	set_perm_stat("dex", 16);

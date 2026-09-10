@@ -3,11 +3,11 @@
 inherit OBJECT;
 void create()
 {
-        set_name("blue ring", "²ØÇàÉ«µÄÓÕ»ó");
+        set_name("blue ring", "è—é’è‰²çš„èª˜æƒ‘");
 	seteuid(getuid());
         add( "id", ({ "blue ring","ring" }) );
-        set_short( "²ØÇàÉ«µÄÓÕ»ó" );
-        set("long","ÕâÊÇÒ»Ã¶ÇàÂÌÉ«µÄ½äÖ¸£¬ÉÏÃæ¿ÌÖø£ºÎ¬¶àÎá°®\n");
+        set_short( "è—é’è‰²çš„èª˜æƒ‘" );
+        set("long","é€™æ˜¯ä¸€æšé’ç¶ è‰²çš„æˆ’æŒ‡ï¼Œä¸Šé¢åˆ»è‘—ï¼šç¶­å¤šå¾æ„›\n");
         set( "weight", 3 );
-        set( "unit", "Ã¶" );
+        set( "unit", "æš" );
 }

@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("С��");
+	ob->set_short("小徑");
 	ob->set_long( @LONG_DESCRIPTION
-��������������һƬ�����С����ܵĲ�������ʹ�㼸����Ҫ��Զס�����˼��ɾ�,
-���ٻص��Ƿ��ŵ����硣
+你現在正漫步在一片樹林中。四周的蟬鳴鳥聲使你幾乎想要永遠住在這人間仙境,
+不再回到那紛擾的世界。
 LONG_DESCRIPTION
 	);
 

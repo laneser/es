@@ -29,7 +29,7 @@ int cmd_overview(string arg)
 	memory = 0;
 	for ( i = 0 ; i < j ; i++) 
 			memory += memory_info(ob[i]) ;
-	write(sprintf("%s :\t %d \t������ռ\t %d \tbyte .\n",arg,j,memory) );
+	write(sprintf("%s :\t %d \t個，共佔\t %d \tbyte .\n",arg,j,memory) );
 	return 1;
 }
 int filter_user(object ob)
@@ -69,7 +69,7 @@ int filter_other(object ob)
 
 int help()
 {
-write("����һ������������Ŀǰ�����Ĺ��ߣ��ܺ�ʱ�䣬ҪС��ʹ�á�\n"
-"	������Ŀ : user ,mob ,room, item, other .\n");
+write("這是一個分析記憶體目前用量的工具，很耗時間，要小心使用。\n"
+"	分析項目 : user ,mob ,room, item, other .\n");
 	return 1;
 }

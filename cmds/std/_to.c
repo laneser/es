@@ -24,7 +24,7 @@ int cmd_to( string a )
 	a = ( a ? (a + " ") : "" );
 	strs[name] = a;
 	write( can_read_chinese()?
-		"ÇëÊäÈëÖ¸ÁîÁĞµÄÆäâÅ²¿·İ: " + a + "...\n":
+		"è«‹è¼¸å…¥æŒ‡ä»¤åˆ—çš„å…¶é¤˜éƒ¨ä»½: " + a + "...\n":
 		"Input rest of command: " + a + "...\n" );
 	this_player()-> edit( TMP_FILE, "done", this_object() );
 	return 1;
@@ -47,10 +47,10 @@ mixed done()
 int help()
 {
 	write ( @HELP
-Ê¹ÓÃ¸ñÊ½: to <Ö¸Áî>
+ä½¿ç”¨æ ¼å¼: to <æŒ‡ä»¤>
 
-¿ÉÒÔÒ»´ÎÊäÈë¶àĞĞµÄÎÄ×Ö»òÖ¸Áî,
-Èçsay¡¢tell¡¢describe¡¢replyµÈ.
+å¯ä»¥ä¸€æ¬¡è¼¸å…¥å¤šè¡Œçš„æ–‡å­—æˆ–æŒ‡ä»¤,
+å¦‚sayã€tellã€describeã€replyç­‰.
 HELP
 	);
 	return 1 ;

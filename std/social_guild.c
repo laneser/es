@@ -59,7 +59,7 @@ int do_join(string arg)
 	ob = this_player();
 	if( this_social_guild->is_guild_member(ob) )
 		return notify_fail( chinese_mode?
-			"ÄãÒÑ¾­ÊÇ±¾Ğ­»áµÄ»áÔ±ÁË£¡\n":
+			"ä½ å·²ç¶“æ˜¯æœ¬å”æœƒçš„æœƒå“¡äº†ï¼\n":
 			"You are already a member of this social guild!\n");
 
 	// Check if the player is a wizard or didn't join other guilds yet.
@@ -67,7 +67,7 @@ int do_join(string arg)
       return (int)this_social_guild->join_player(ob);
 	else 
 	  return notify_fail( chinese_mode?
-		"ÄãÒÑ¾­¼ÓÈëÁËÌ«¶àĞ­»áÁË£¬ÇëÄãÏÈÍË³öÒ»Ğ©Ğ­»á£¡\n":
+		"ä½ å·²ç¶“åŠ å…¥äº†å¤ªå¤šå”æœƒäº†ï¼Œè«‹ä½ å…ˆé€€å‡ºä¸€äº›å”æœƒï¼\n":
 		"You have joined too many social guilds already!\n"
 	  );
 }
@@ -75,7 +75,7 @@ int do_join(string arg)
 int do_verify()
 {
 	notify_fail( can_read_chinese()?
-		"¶Ô²»Æğ£¬Äã²»ÊÇÕâ¸öĞ­»áµÄ»áÔ±¡£\n":
+		"å°ä¸èµ·ï¼Œä½ ä¸æ˜¯é€™å€‹å”æœƒçš„æœƒå“¡ã€‚\n":
 		"Sorry, but you are not out social guild member.\n" );
 	return (int)this_social_guild->check_token( this_player() );
 }
@@ -87,10 +87,10 @@ int do_help(string arg)
 	chinese_mode = can_read_chinese();
 	switch(arg) {
 		case "guild": if(chinese_mode) write( @C_USAGE_GUILD
-ÔÚÕâÀïÄã¿ÉÒÔÊ¹ÓÃÒÔÏÂµÄÖ¸Áî£¬Ã¿Ò»¸öÖ¸Áî¶¼ÓĞ¸üÏê¾¡µÄËµÃ÷( ÇëÓÃ "help <Ö¸Áî>" ):
+åœ¨é€™è£¡ä½ å¯ä»¥ä½¿ç”¨ä»¥ä¸‹çš„æŒ‡ä»¤ï¼Œæ¯ä¸€å€‹æŒ‡ä»¤éƒ½æœ‰æ›´è©³ç›¡çš„èªªæ˜( è«‹ç”¨ "help <æŒ‡ä»¤>" ):
 
-	join     - ¼ÓÈëÕâ¸öĞ­»á¡£
-	verify   - È·ÈÏÉí·Ö£¬»òÈ¡»ØÒÅÊ§µÄĞ­»áĞÅÎï¡£
+	join     - åŠ å…¥é€™å€‹å”æœƒã€‚
+	verify   - ç¢ºèªèº«åˆ†ï¼Œæˆ–å–å›éºå¤±çš„å”æœƒä¿¡ç‰©ã€‚
 
 C_USAGE_GUILD
 			); else write( @USAGE_GUILD

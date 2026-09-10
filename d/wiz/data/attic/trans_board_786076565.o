@@ -1,7 +1,7 @@
 #d/wiz/trans_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Board of Translation","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÖĞÓ¢ÎÄ·­ÒëÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Board of Translation","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ä¸­è‹±æ–‡ç¿»è­¯ç•™è¨€æ¿",])
 messages ({(["id":24,"title":"< no title >","body":"Kobold are small little creatures that .. doesn't do much..
 Hobgoblin and Gobblins are cousins and they are about
 the same size(Hobgoblin is just a little larger). The main
@@ -12,70 +12,70 @@ may not even have a tribe they belong to ..
 
 Devianth.
 ","time":779599021,"poster":"Devianth",]),(["id":25,"title":"< no title >","body":"oh, so,. as I remembered.. Goblins are chaotic evil, right?
-","time":779599054,"poster":"Devianth",]),(["id":26,"body":"Á½ÒÇ¡¢ËÄÏó¡¢°ËØÔµÄÓ¢ÎÄ....
-Èç¹ûÃ»ÓĞ...Ö»ºÃÖ±·­ÁË.....:P
-","title":"plz help..:P","time":779913919,"poster":"Stasia",]),(["id":27,"title":"about Ì«¼«..","body":"hmm.. I need to chech these from an enclyclopedia..... which I
+","time":779599054,"poster":"Devianth",]),(["id":26,"body":"å…©å„€ã€å››è±¡ã€å…«å¦çš„è‹±æ–‡....
+å¦‚æœæ²’æœ‰...åªå¥½ç›´ç¿»äº†.....:P
+","title":"plz help..:P","time":779913919,"poster":"Stasia",]),(["id":27,"title":"about å¤ªæ¥µ..","body":"hmm.. I need to chech these from an enclyclopedia..... which I
 don't have at home.... neither do I know where they are in the
 huge huge liberaries' system... so.... hmm... for now..:
 
-Ì«¼« : Tai-Chi
-Á½ÒÇ : The Two Extremas - Yingyang
-ËÄÏñ : The four directions? .. hmm.. ºÎÎ½ËÄÏñ°¡? :P
-°ËØÔ : The eight who
-¡õ
+å¤ªæ¥µ : Tai-Chi
+å…©å„€ : The Two Extremas - Yingyang
+å››åƒ : The four directions? .. hmm.. ä½•è¬‚å››åƒå•Š? :P
+å…«å¦ : The eight who
+â–¡
 
-","time":780018636,"poster":"Devianth",]),(["id":28,"title":"Cont. tÌ«¼«","body":"°ËØÔ : The eight divine diagrams of prophecy..
+","time":780018636,"poster":"Devianth",]),(["id":28,"title":"Cont. tå¤ªæ¥µ","body":"å…«å¦ : The eight divine diagrams of prophecy..
 these are just ... for suggestion.. not exactly right.
 ","time":780018757,"poster":"Devianth",]),(["id":29,"body":"The following might apply..
  
-Á½ÒÇÖ¸»· : The Yingyang Rings  <- Ò»¶Ô
+å…©å„€æŒ‡ç’° : The Yingyang Rings  <- ä¸€å°
            The Rings of the two Extremas, Ying and Yang
-ËÄÏóĞşÅÛ : The Quaspect Robe
-           The Robe of the four aspect, a, b, c, and d  <-×Ô¼º²é²é°É.
-°ËØÔĞşĞ¬ : The Octrophet Shoes
+å››è±¡ç„è¢ : The Quaspect Robe
+           The Robe of the four aspect, a, b, c, and d  <-è‡ªå·±æŸ¥æŸ¥å§.
+å…«å¦ç„é‹ : The Octrophet Shoes
            The Shoes of the eight divine diagrams.
  
-¾üÊ¦ : Military Advisor, Advisor, ...... hmm.. consultant?? nop..
+è»å¸« : Military Advisor, Advisor, ...... hmm.. consultant?? nop..
        What word did they used in ROTK?
  
  
-´ïÎÄ
-","title":"Cont. Ì«¼«..","time":780022427,"poster":"Devianth",]),(["id":30,"title":"hmm..","body":"°Ë¹ÒÕÆ½Ğ×ö dojo..
-²»ÒªÎÊÎÒÎªÊ²÷á.. Ö»ÊÇ¸ÕºÃ¿´µ½Ò»ÕÅ¹ã¸æµ¥.. 
+é”æ–‡
+","title":"Cont. å¤ªæ¥µ..","time":780022427,"poster":"Devianth",]),(["id":30,"title":"hmm..","body":"å…«æ›æŒå«åš dojo..
+ä¸è¦å•æˆ‘ç‚ºä»€éº¼.. åªæ˜¯å‰›å¥½çœ‹åˆ°ä¸€å¼µå»£å‘Šå–®.. 
 
 -Elon was here.
-","time":780557177,"poster":"Elon",]),(["id":31,"body":"[CºÇºÇ, is'nt Dojo = µÀ³¡???
-hmm.. go ask the ÎäÊı teacher some other day...
+","time":780557177,"poster":"Elon",]),(["id":31,"body":"[Cå‘µå‘µ, is'nt Dojo = é“å ´???
+hmm.. go ask the æ­¦æ•¸ teacher some other day...
 ","title":"Dojo?","time":780650400,"poster":"Devianth",]),(["id":32,"title":"Re: Dojo?","body":"On Tue Sep 27, Devianth wrote:
-> [CºÇºÇ, is'nt Dojo = µÀ³¡???
-> hmm.. go ask the ÎäÊı teacher some other day...
+> [Cå‘µå‘µ, is'nt Dojo = é“å ´???
+> hmm.. go ask the æ­¦æ•¸ teacher some other day...
 
-¸úÄãËµÎÒÊÇ¿´¹ã¸æµ¥µÄÂï..
+è·Ÿä½ èªªæˆ‘æ˜¯çœ‹å»£å‘Šå–®çš„å˜›..
 
-","time":780718535,"poster":"Elon",]),(["id":33,"body":"1.×ÏË®¾§(in deathland):Ó¦¸ÃÊÇamethyst¶ø·Çpurple crystal.
-2.ÂÌÓñ½äÖ¸(in goomay):Ruby´ó¸ÅÊÇÏëÕÒjadeÒÔÍâµÄÓñ°É?ÓÃnephrite(ÈíÓñ,ÉÁÓñ)±È½ÏºÃ
-,emeraldÊÇÂÌ±¦Ê¯Ò®!
-3.ôä´ä¡õ¼×:Ó¦¸ÃÊÇÒ»ÖÖ½ğÏß´©ÓñÆ¬µÄ»¤¼×,ÆäÊµËüÓĞ¸öºÃÍæµÄÃû×Ö__
-ÖéñàÓñÏ»,µä¹Ê¾Í²»ËµÁË,Ó¦Îª...ºÙºÙ.
+","time":780718535,"poster":"Elon",]),(["id":33,"body":"1.ç´«æ°´æ™¶(in deathland):æ‡‰è©²æ˜¯amethystè€Œépurple crystal.
+2.ç¶ ç‰æˆ’æŒ‡(in goomay):Rubyå¤§æ¦‚æ˜¯æƒ³æ‰¾jadeä»¥å¤–çš„ç‰å§?ç”¨nephrite(è»Ÿç‰,é–ƒç‰)æ¯”è¼ƒå¥½
+,emeraldæ˜¯ç¶ å¯¶çŸ³è€¶!
+3.ç¿¡ç¿ â–¡ç”²:æ‡‰è©²æ˜¯ä¸€ç¨®é‡‘ç·šç©¿ç‰ç‰‡çš„è­·ç”²,å…¶å¯¦å®ƒæœ‰å€‹å¥½ç©çš„åå­—__
+ç è¥¦ç‰åŒ£,å…¸æ•…å°±ä¸èªªäº†,æ‡‰ç‚º...å˜¿å˜¿.
 
           Sincerely your mad...
-","title":"Ò»Ğ©eqµÄÕıÃû","time":780812603,"poster":"Mad",]),(["id":34,"body":"On Thu Sep 29, Mad wrote:
-> 1.×ÏË®¾§(in deathland):Ó¦¸ÃÊÇamethyst¶ø·Çpurple crystal.
-> 2.ÂÌÓñ½äÖ¸(in goomay):Ruby´ó¸ÅÊÇÏëÕÒjadeÒÔÍâµÄÓñ°É?ÓÃnephrite(ÈíÓñ,ÉÁÓñ)±È½ÏºÃ
-> ,emeraldÊÇÂÌ±¦Ê¯Ò®!
-> 3.ôä´ä¡õ¼×:Ó¦¸ÃÊÇÒ»ÖÖ½ğÏß´©ÓñÆ¬µÄ»¤¼×,ÆäÊµËüÓĞ¸öºÃÍæµÄÃû×Ö__
-> ÖéñàÓñÏ»,µä¹Ê¾Í²»ËµÁË,Ó¦Îª...ºÙºÙ.
+","title":"ä¸€äº›eqçš„æ­£å","time":780812603,"poster":"Mad",]),(["id":34,"body":"On Thu Sep 29, Mad wrote:
+> 1.ç´«æ°´æ™¶(in deathland):æ‡‰è©²æ˜¯amethystè€Œépurple crystal.
+> 2.ç¶ ç‰æˆ’æŒ‡(in goomay):Rubyå¤§æ¦‚æ˜¯æƒ³æ‰¾jadeä»¥å¤–çš„ç‰å§?ç”¨nephrite(è»Ÿç‰,é–ƒç‰)æ¯”è¼ƒå¥½
+> ,emeraldæ˜¯ç¶ å¯¶çŸ³è€¶!
+> 3.ç¿¡ç¿ â–¡ç”²:æ‡‰è©²æ˜¯ä¸€ç¨®é‡‘ç·šç©¿ç‰ç‰‡çš„è­·ç”²,å…¶å¯¦å®ƒæœ‰å€‹å¥½ç©çš„åå­—__
+> ç è¥¦ç‰åŒ£,å…¸æ•…å°±ä¸èªªäº†,æ‡‰ç‚º...å˜¿å˜¿.
 > 
 >           Sincerely your mad...
-      ºÇºÇ... ËÀÈË´©µÄ¶«¶«ÓÖÓĞÉ¶½û¼ÉÁË ? Ö±Ëµ°¡..
+      å‘µå‘µ... æ­»äººç©¿çš„æ±æ±åˆæœ‰å•¥ç¦å¿Œäº† ? ç›´èªªå•Š..
       
                                 Indra ..
-","title":"Re: Ò»Ğ©eqµÄÕıÃû","time":780942951,"poster":"Indra",]),(["id":36,"title":"< no title >","body":"Hello Mad,
+","title":"Re: ä¸€äº›eqçš„æ­£å","time":780942951,"poster":"Indra",]),(["id":36,"title":"< no title >","body":"Hello Mad,
  
 Here's the final version... take it or leave it
  
-\"ÁºµÀ : Îá¼ÒÓĞÅ®´Ö³¤³É, ²ØÔÚÉî¹ëÈË²»Öª,
-            ¿ÉÁ¯Ã«ÔôÊÓÃ£Ã£, ÄªÃû´¹ÏÑÎŞÑÎÉ«¡£\"
+\"æ¢é“ : å¾å®¶æœ‰å¥³ç²—é•·æˆ, è—åœ¨æ·±é–¨äººä¸çŸ¥,
+            å¯æ†æ¯›è³Šè¦–èŒ«èŒ«, è«åå‚æ¶ç„¡é¹½è‰²ã€‚\"
  
 \"Liang mutters: As my coarse and unrefined girl grows day by day,
 locking behind the darkest shadows in her room, I wonder why that
@@ -101,52 +101,52 @@ stick them in...
   note, don't you need \"+\" at the end of every sentence\" ? hmm.. programing
   is easier now :) */
  
-           \"¿ÉºŞµÄÒùÔôÔÚ°ëÄêÇ°É±ÁËÎÒµÄĞÂ»éÆŞ×Óo\\n\\n\"
-           \"Îå¸ö¶àÔÂÒÔÀ´,ÎÒÌ¤±é¸÷µØ,È´Ê¼ÖÕÎŞ·¨·¢ÏÖÆä×Ù!\\n\\n\"
-           \"ÌıËµËûÓÖ»Øµ½´Ë´å,ÈÃÎÒÓöµ½·ÇÇ§µ¶Íò¹Ğ²»¿É!!!\\n\\n\"
-           \"Ì©É½´óÈËËµÔø¼û¹ıËûµÄ±³Ó°,Äã¿ÉÒÔÈ¥ÎÊÎÊo\\n\\n\"
-           \"²»¹ı,ÓÉì¶Ë¼ÄîÅ®¶ù¹ıÉî---³ıÁË°®ÆŞµÄ¹ëÃûÍâ,\\n\\n\"
-           \"ÔÀ¸¸ÊÇ²»»áÓĞ·´Ó¦µÄ!\\n\\n\" }),
+           \"å¯æ¨çš„æ·«è³Šåœ¨åŠå¹´å‰æ®ºäº†æˆ‘çš„æ–°å©šå¦»å­o\\n\\n\"
+           \"äº”å€‹å¤šæœˆä»¥ä¾†,æˆ‘è¸éå„åœ°,å»å§‹çµ‚ç„¡æ³•ç™¼ç¾å…¶è¹¤!\\n\\n\"
+           \"è½èªªä»–åˆå›åˆ°æ­¤æ‘,è®“æˆ‘é‡åˆ°éåƒåˆ€è¬å‰®ä¸å¯!!!\\n\\n\"
+           \"æ³°å±±å¤§äººèªªæ›¾è¦‹éä»–çš„èƒŒå½±,ä½ å¯ä»¥å»å•å•o\\n\\n\"
+           \"ä¸é,ç”±æ–¼æ€å¿µå¥³å…’éæ·±---é™¤äº†æ„›å¦»çš„é–¨åå¤–,\\n\\n\"
+           \"å²³çˆ¶æ˜¯ä¸æœƒæœ‰åæ‡‰çš„!\\n\\n\" }),
  
         \"cut\" : ({
            \"Sir, you wanna cut something? Sorry, I don't lend out my family\\n\"
            \"heirlooming blade. But Liang borrowed my other blade yesterday;\\n\"
            \"maybe you would like to look into Liang's place?\\n\",
  
-/*note, ºÃÆæ¹Öà¸..how would the hunter know it's under liang's bed..
+/*note, å¥½å¥‡æ€ªå–”..how would the hunter know it's under liang's bed..
   it should be for players to figure that out.. no hint is necessary.*/
  
-           \"´óÏÀ,ÄãÒªÇĞÈâ°¡?ÎÒµÄ¼Ò´«±¦µ¶²»ÄÜÍâ½èàŞ!\\n\"
-           \"µ«ÊÇ×òÈÕÁº²®Ä¸ÏòÎÒ½èÁË±ğµÄµ¶;¿ÉÄÜ²ØÔÚ´²µ×°É?\\n\\n\" })
+           \"å¤§ä¿ ,ä½ è¦åˆ‡è‚‰å•Š?æˆ‘çš„å®¶å‚³å¯¶åˆ€ä¸èƒ½å¤–å€Ÿå™¢!\\n\"
+           \"ä½†æ˜¯æ˜¨æ—¥æ¢ä¼¯æ¯å‘æˆ‘å€Ÿäº†åˆ¥çš„åˆ€;å¯èƒ½è—åœ¨åºŠåº•å§?\\n\\n\" })
  
  
 Brought to you by Devianth, who else. (c)'94
-","title":"to Mad","time":781522156,"poster":"Devianth",]),(["id":38,"body":"µÈÎÒ×öÍêÄãÀ´ÊÔÊÔÀ²!
-Èç¹û°Ñ\"´²\"Õâ¸öHintÈ¥µô,Íæ¼Ò¿Ï¶¨¾ø¶Ô»áÉ±ÁËÎÒ:P
+","title":"to Mad","time":781522156,"poster":"Devianth",]),(["id":38,"body":"ç­‰æˆ‘åšå®Œä½ ä¾†è©¦è©¦å•¦!
+å¦‚æœæŠŠ\"åºŠ\"é€™å€‹Hintå»æ‰,ç©å®¶è‚¯å®šçµ•å°æœƒæ®ºäº†æˆ‘:P
 
-                         Ğ°¶ñÍõmad...
+                         é‚ªæƒ¡ç‹mad...
 
-","title":"About the hint: bed","time":781523978,"poster":"Mad",]),(["id":39,"title":"< no title >","body":"ÇëÎÊ\"²èÅï\"Ó¢ÎÄÈçºÎÆ´?
+","title":"About the hint: bed","time":781523978,"poster":"Mad",]),(["id":39,"title":"< no title >","body":"è«‹å•\"èŒ¶æ£š\"è‹±æ–‡å¦‚ä½•æ‹¼?
 
 
-[Asorry,ÀÁµÄ²é!Ô½À´Ô½ÀÁÁË:P
+[Asorry,æ‡¶çš„æŸ¥!è¶Šä¾†è¶Šæ‡¶äº†:P
 
            Sincerely your mad...
 ","time":782379458,"poster":"Mad",]),(["id":40,"body":"
     Dear all:
-        ÇëÎÊÒ»ÏÂ,Ó¡¶ÈÈË(»Ø½ÌÍ½?)ÓÃÀ´²øÍ·µÄÍ·²¼¸ÃÈçºÎ·­ ?
-      àÅ,Ã»¿´¹ı.
+        è«‹å•ä¸€ä¸‹,å°åº¦äºº(å›æ•™å¾’?)ç”¨ä¾†çºé ­çš„é ­å¸ƒè©²å¦‚ä½•ç¿» ?
+      å—¯,æ²’çœ‹é.
                           Indra .
-","title":"< no title >","time":782388963,"poster":"Indra",]),(["id":41,"title":"..","body":"²èÅï.. Tea Booth
+","title":"< no title >","time":782388963,"poster":"Indra",]),(["id":41,"title":"..","body":"èŒ¶æ£š.. Tea Booth
 
-ÖĞ¶«µÄÍ·½í.. turban 
+ä¸­æ±çš„é ­å·¾.. turban 
 
- °İÍĞ.. ÎÒÒ²Òª¿¿×ÖµäµÄÒ®... :b
+ æ‹œè¨—.. æˆ‘ä¹Ÿè¦é å­—å…¸çš„è€¶... :b
 
 Devianth.
 ","time":782617893,"poster":"Devianth",]),(["id":42,"body":"To Fos :
-       1. ±ù²Ï: ice-cold silkworm 
-       2. Ò»Ğ©Ğ¡¶¯Îï:
+       1. å†°è ¶: ice-cold silkworm 
+       2. ä¸€äº›å°å‹•ç‰©:
           badger, beaver, [D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[Darmadillo[D[D[D[D[D[D[D[D[D         [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Carmadillo, duckbill(platypus),
           guinea pig, hedgehog(porcupine), koala, mole,
           mongoose, and otter .
@@ -156,12 +156,12 @@ Devianth.
 ice-cold silkworm? how about just iceworm? :)
 
 -Elon was here.
-","time":782678426,"poster":"Elon",]),(["id":44,"body":"ºÇºÇ, Ice-cold reminds me of some kind of food or drink.. 
+","time":782678426,"poster":"Elon",]),(["id":44,"body":"å‘µå‘µ, Ice-cold reminds me of some kind of food or drink.. 
 
-such as : ±ù²Ï¼¦Î²¾Æ - Ice-cold Silkworm Special :b    or
+such as : å†°è ¶é›å°¾é…’ - Ice-cold Silkworm Special :b    or
           Ice-cold filter draft beer :)
 so.. agree with elon :)
 
-Ğ¡¶¯Îï°¡.. ¸Ğ¾õÉÏ, ºÃÏñ¾ÍÊÇ×ö³öÀ´¸ø k µÄ.. »á×Ô¼º¶¯¶¯, ÅÜÅÜ, »¹ÊÇ±È½ÏºÃ..
+å°å‹•ç‰©å•Š.. æ„Ÿè¦ºä¸Š, å¥½åƒå°±æ˜¯åšå‡ºä¾†çµ¦ k çš„.. æœƒè‡ªå·±å‹•å‹•, è·‘è·‘, é‚„æ˜¯æ¯”è¼ƒå¥½..
 ","title":"ice-cold?","time":782702664,"poster":"Devianth",]),})
 id_ref 56

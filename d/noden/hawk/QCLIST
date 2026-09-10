@@ -1,59 +1,59 @@
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1.ºÚÉ«½ôÉíÒÂ (/d/noden/hawk/armor/black_suit.c)
+1.é»‘è‰²ç·Šèº«è¡£ (/d/noden/hawk/armor/black_suit.c)
   33	5	90      evil:10   thief			
 			fire:-15			
 			backstab:10                  
 			sneak:-15
 
-2.ÖÚÉñÖ®ÀñÔŞ (/d/noden/hawk/armor/gift.c)
+2.çœ¾ç¥ä¹‹ç¦®è®š (/d/noden/hawk/armor/gift.c)
   20	40	120	*	 *
 
-3.Ê¥¹â¶Ü (/d/noden/hawk/armor/shield2.c)
+3.è–å…‰ç›¾ (/d/noden/hawk/armor/shield2.c)
   6/8	3/6	100	*	 mage
 
-4.Á÷ĞÇ±Û»· (/d/noden/hawk/armor/star_arm.c)
+4.æµæ˜Ÿè‡‚ç’° (/d/noden/hawk/armor/star_arm.c)
   4	 2	 30		 element
 			riding: 5
 			tactic: 5
 
-5.ÏÊºìÉ«»¤Éí·û (/d/noden/hawk/armor/crimson_amulet.c)
+5.é®®ç´…è‰²è­·èº«ç¬¦ (/d/noden/hawk/armor/crimson_amulet.c)
   0	*8	 10		 leather      
 			target: 15
 			int: -1	
 
-6.ÏÊºìÉ«½äÖ¸ (/d/noden/hawk/armor/crimson_ring.c)
+6.é®®ç´…è‰²æˆ’æŒ‡ (/d/noden/hawk/armor/crimson_ring.c)
   0	*7	 10	
 
 			
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1.Ìì¿ÕÖ®½£ (/d/noden/hawk/weapon/skysword.c)
+1.å¤©ç©ºä¹‹åŠ (/d/noden/hawk/weapon/skysword.c)
   35 	18	35	130	  NO			
-			ÌØ¹¥: electric 20 ¡« 32
+			ç‰¹æ”»: electric 20 ï½ 32
 
-2.ÓÄÚ¤È¨ÕÈ (/d/noden/hawk/weapon/wand.c)
+2.å¹½å†¥æ¬Šæ– (/d/noden/hawk/weapon/wand.c)
   *35	10	25	 70	  NO
-			ÌØ¹¥: evil 40 ¡« 50
+			ç‰¹æ”»: evil 40 ï½ 50
 
-3.¾£¼¬³¤½£ (/d/noden/hawk/weapon/sword.c)
+3.èŠæ£˜é•·åŠ (/d/noden/hawk/weapon/sword.c)
   *40	17	40	210	  *20
 	
-4.¼ÅÈ»³¤±Ş (/d/noden/hawk/weapon/whip.c)
+4.å¯‚ç„¶é•·é­ (/d/noden/hawk/weapon/whip.c)
   *35 15-*25   30-*40	90	  NO
 	
-5.ÏÊºìÉ«È¨ÕÈ (/d/noden/hawk/weapon/crimson_scepter.c)
+5.é®®ç´…è‰²æ¬Šæ– (/d/noden/hawk/weapon/crimson_scepter.c)
   28	*16	 *27	150	  NO	
-			ÌØ¹¥: please read file ...
+			ç‰¹æ”»: please read file ...
 
-6.ÏÊºìÉ«³¤½£ (/d/noden/hawk/weapon/crimson_sword.c)
+6.é®®ç´…è‰²é•·åŠ (/d/noden/hawk/weapon/crimson_sword.c)
   18	 9	 18	100	  NO
-			ÌØ¹¥: fire: int
+			ç‰¹æ”»: fire: int
 
-7.ìİÊ¯³¤½£ (/d/noden/hawk/weapon/stone_sword.c)
+7.ç‡§çŸ³é•·åŠ (/d/noden/hawk/weapon/stone_sword.c)
   24	11	 12	110	  NO
-  			ÌØ¹¥: break armor
+  			ç‰¹æ”»: break armor

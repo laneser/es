@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("Color Wolf Association", "É«ÀÇ¾ãÀÖ²¿" );
+	set_short("Color Wolf Association", "è‰²ç‹¼ä¿±æ¨‚éƒ¨" );
 	set_long(
 "You are in Club of Color Wolf Association\n",
-"Õâ¡õÊÇÉ«ÀÇ¾ãÀÖ²¿\n"
+"é€™â–¡æ˜¯è‰²ç‹¼ä¿±æ¨‚éƒ¨\n"
 	);
 	set( "light",1 );
 	set( "exits", ([

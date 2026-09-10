@@ -8,5 +8,5 @@ void create()
 	set_save_file("knight_board");
 	set_location("/d/knight/fortress/knight_guild");
 	set ("short.text", "Knight's bulletin board");
-	set ("c_short.text", "ÆïÊ¿ÁôÑÔ°å");
+	set ("c_short.text", "é¨å£«ç•™è¨€æ¿");
 }

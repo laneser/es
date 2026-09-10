@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("iron headband", "¹¿Í·Ìú½ç³ß");
+        set_name("iron headband", "ç®é ­éµç•Œå°º");
         add( "id", ({ "headband" }) );
-        set_short( "iron headband", "¹¿Í·Ìú½ä³ß");
+        set_short( "iron headband", "ç®é ­éµæˆ’å°º");
         set_long(
                 "A iron headband for travelling monks .\n",
-                "ÓÎ·½É®ÂÂËù´÷µÄ»¤¾ß£¬ÒòÎª´÷ÆğÀ´²»Êæ·ş£¬¹Ê¿ÉÌá¸ß×¢ÒâÁ¦\n"
+                "éŠæ–¹åƒ§ä¾¶æ‰€æˆ´çš„è­·å…·ï¼Œå› ç‚ºæˆ´èµ·ä¾†ä¸èˆ’æœï¼Œæ•…å¯æé«˜æ³¨æ„åŠ›\n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "monk");
         set( "armor_class", 7 );

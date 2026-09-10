@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "tanyu leggings", "ÌìÓğ»¤Ï¥");
+        set_name( "tanyu leggings", "å¤©ç¾½è­·è†");
         add( "id", ({ "leggings" }) );
-        set_short("tanyu leggings", "ÌìÓğ»¤Ï¥");
+        set_short("tanyu leggings", "å¤©ç¾½è­·è†");
         set_long(@AAA
-ÕâÊÇÌìÓğ½£ÅÉÌØÓĞµÄ»¤Ï¥
+é€™æ˜¯å¤©ç¾½åŠæ´¾ç‰¹æœ‰çš„è­·è†
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "legs" );
         set( "armor_class", 7 );
         set( "defense_bonus", 3 );

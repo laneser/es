@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cloth","´Ö²¼ÒÂ");
+        set_name("cloth","ç²—å¸ƒè¡£");
        add("id",({"cloth","clothing"}) );
-        set_short("a clothing","²¼ÒÂ");
+        set_short("a clothing","å¸ƒè¡£");
 	set_long(
          "This plate seems heavy and enhanced with holy power.\n",
-          "ÕâÊÇÒ»¼þºÜÆÕÍ¨µÄ²¼ÒÂ\n"
+          "é€™æ˜¯ä¸€ä»¶å¾ˆæ™®é€šçš„å¸ƒè¡£\n"
 	         );
-	set( "unit", "¼þ" );
+	set( "unit", "ä»¶" );
         set("weight",10);
 	set( "type", "body" );
        set("material", "cloth");

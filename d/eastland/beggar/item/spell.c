@@ -11,15 +11,15 @@ void create()
 {
         seteuid(getuid());
 #include <compress_obj.h>
-        set_name( "spell", "¾Û½£Êõ" );
+        set_name( "spell", "èšåŠè¡“" );
         add( "id", ({ "spell" }) );
-        set_short( "¾Û½£Êõ" );
+        set_short( "èšåŠè¡“" );
         set_long(@C_LONG
-¾Û½£Êõ¿ÉÒÔÈÃÄãÔËÓÃ¾«ÉñºÍÄÚÁ¦Äı¾Û( concentrate longsword or shortsword )
-³öÒ»°Ñ±¦ÈĞ¡£
+èšåŠè¡“å¯ä»¥è®“ä½ é‹ç”¨ç²¾ç¥å’Œå…§åŠ›å‡èš( concentrate longsword or shortsword )
+å‡ºä¸€æŠŠå¯¶åˆƒã€‚
 C_LONG        
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set("weight", 1 );
         set("prevent_drop", 1);
         set("prevent_get",1);
@@ -43,24 +43,24 @@ int cast_spell(string str)
       name=me->query("c_name");
      
       if( str!="shortsword"&&str!="longsword" )
-          return notify_fail( "ß×,ÄãÕâ±¿µ°µ½µ×Òª¾ÛÊ²÷áÑùµÄ½£À²??\n");
+          return notify_fail( "å’¦,ä½ é€™ç¬¨è›‹åˆ°åº•è¦èšä»€éº¼æ¨£çš„åŠå•¦??\n");
       
       if ( query("used") )
-          return notify_fail( "\nÄãĞèÒªĞİÏ¢Ò»ÏÂ²ÅÄÜÄı¾Û¾«Éñ........ \n");
+          return notify_fail( "\nä½ éœ€è¦ä¼‘æ¯ä¸€ä¸‹æ‰èƒ½å‡èšç²¾ç¥........ \n");
       
       if ( MP(me) < COST_MP )       
-          return notify_fail( "\nÄãÃ»ÓĞÄı¾Û×ã¹»µÄ¾«ÉñÁ¦.......\n"); 
+          return notify_fail( "\nä½ æ²’æœ‰å‡èšè¶³å¤ çš„ç²¾ç¥åŠ›.......\n"); 
       
       if ( FP(me) < COST_FP )
-          return notify_fail( "\nÄãÃ»ÓĞÄı¾Û×ã¹»µÄÄÚÁ¦.....\n");
+          return notify_fail( "\nä½ æ²’æœ‰å‡èšè¶³å¤ çš„å…§åŠ›.....\n");
       
       set("used",1);
       me->add( "spell_points", -COST_MP );
       me->add( "force_points", -COST_FP );
       tell_object(me,
-         set_color("\nÏÅ!ÄãÒÔ¾«ÉñºÍÄÚÁ¦»¯³öÒ»°Ñ½£....\n","HIW")); 
+         set_color("\nåš‡!ä½ ä»¥ç²¾ç¥å’Œå…§åŠ›åŒ–å‡ºä¸€æŠŠåŠ....\n","HIW")); 
       tell_room(environment(me),
-         "\nÏÅ!"+name+"ÒÔ¾«ÉñºÍÄÚÁ¦»¯³öÒ»°Ñ½£....\n",me);
+         "\nåš‡!"+name+"ä»¥ç²¾ç¥å’Œå…§åŠ›åŒ–å‡ºä¸€æŠŠåŠ....\n",me);
       
       seteuid( getuid ( this_object() ) );
       if (str=="longsword"){
@@ -79,13 +79,13 @@ int cast_spell(string str)
 void vanish_out1(object obj)
 {
      tell_object(environment(this_object()),set_color(
-        "\n½¥½¥µØ,ÄãÒÔÁéÆø»¯³öÀ´µÄ½£²»ÔÙ¸½ÓĞÈÎºÎÁéÆø¶øÒªÏûÊ§ÁË........\n","HIW"));
+        "\næ¼¸æ¼¸åœ°,ä½ ä»¥éˆæ°£åŒ–å‡ºä¾†çš„åŠä¸å†é™„æœ‰ä»»ä½•éˆæ°£è€Œè¦æ¶ˆå¤±äº†........\n","HIW"));
      tell_room(environment(obj),
-        "\n½¥½¥µØ,"+name+"ÒÔÁéÆø»¯³öÀ´µÄ½£²»ÔÙ¸½ÓĞÈÎºÎÁéÆø¶øÒªÏûÊ§ÁË........\n",obj);  
+        "\næ¼¸æ¼¸åœ°,"+name+"ä»¥éˆæ°£åŒ–å‡ºä¾†çš„åŠä¸å†é™„æœ‰ä»»ä½•éˆæ°£è€Œè¦æ¶ˆå¤±äº†........\n",obj);  
 }
 void vanish_out2()
 {
      tell_object(environment(this_object()),
-        "\nÄãÓÖÄı¾Û×ã¹»µÄ¾«ÉñºÍÄÚÁ¦ÁË.....\n");
+        "\nä½ åˆå‡èšè¶³å¤ çš„ç²¾ç¥å’Œå…§åŠ›äº†.....\n");
      delete("used");
 }

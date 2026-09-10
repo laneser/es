@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "highsteel shortsword", "¾«¸Ö¶Ì½£" );
+	set_name( "highsteel shortsword", "ç²¾é‹¼çŸ­åŠ" );
 	add( "id", ({ "shortsword", "sword" }) );
-	set_short( "a highsteel shortsword", "¾«¸Ö¶Ì½£" );
+	set_short( "a highsteel shortsword", "ç²¾é‹¼çŸ­åŠ" );
 	set_long(
 		"You see an excellent shortsword made of highsteel.\n",
-		"ÕâÊÇÒ»°ÑÇ§´¸°Ù¡õ£¬´¿¸Ö¶Í³ÉµÄ¶Ì½££¬ÊÇ±¾Õò½£Â®µÄ¾«Æ·¡£\n"
+		"é€™æ˜¯ä¸€æŠŠåƒéŒ˜ç™¾â–¡ï¼Œç´”é‹¼é›æˆçš„çŸ­åŠï¼Œæ˜¯æœ¬é®åŠå»¬çš„ç²¾å“ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 90 );
 	setup_weapon( "shortblade", 25, 11, 22 );
 //	set( "bleeding", 5 );

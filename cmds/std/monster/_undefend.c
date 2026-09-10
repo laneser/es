@@ -24,15 +24,15 @@ int cmd_undefend(string str)
 	me = this_player();
 	foo = (object *)me->query_temp("protectees");
 	if( sizeof(foo) < 1 )
-		return notify_fail("ÄãÏÖÔÚ²¢Ã»ÓĞ±£»¤ÈÎºÎÈË¡£\n");
+		return notify_fail("ä½ ç¾åœ¨ä¸¦æ²’æœ‰ä¿è­·ä»»ä½•äººã€‚\n");
 	done = 0;
 	for( i=sizeof(foo)-1; i>=0; i-- ) {
 		if ( !foo[i] ) continue ;
 		if( !foo[i]->id(str) ) continue;
-		write(sprintf("ÄãÍ£Ö¹±£»¤%s(%s)¡£\n", foo[i]->query("c_name"),
+		write(sprintf("ä½ åœæ­¢ä¿è­·%s(%s)ã€‚\n", foo[i]->query("c_name"),
 				foo[i]->query("name")));
 		tell_object( foo[i], 
-			sprintf("%s(%s)Í£Ö¹±£»¤Äã¡£\n", me->query("c_name"),
+			sprintf("%s(%s)åœæ­¢ä¿è­·ä½ ã€‚\n", me->query("c_name"),
 				me->query("name")));
 		tmp = foo[i]->query_temp("protectors");
 		tmp -= ({ me });
@@ -52,7 +52,7 @@ int cmd_undefend(string str)
 			me->set_temp("protectees", tmp);
 		} else me->delete_temp("protectees");
 	} else return notify_fail( 
-		"ÄãÏÖÔÚ²¢Ã»ÓĞ±£»¤ÈÎºÎ½Ğ×ö " + str + " µÄÈË¡£\n");
+		"ä½ ç¾åœ¨ä¸¦æ²’æœ‰ä¿è­·ä»»ä½•å«åš " + str + " çš„äººã€‚\n");
 	return 1;
 }
 

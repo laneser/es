@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "skull glaive", "¹íÍ·µ¶" );
+	set_name( "skull glaive", "é¬¼é ­åˆ€" );
 	add( "id", ({ "glaive" }) );
-   set_short( "¹íÍ·µ¶" );
+   set_short( "é¬¼é ­åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÉòÖØµÄ´óµ¶£¬µ¶±úÉÏ¿ÌÖøÒ»¸öĞ×¶ñÕøÄüµÄ¹íÍ·¡£\n"
+		"é€™æ˜¯ä¸€æŠŠæ²ˆé‡çš„å¤§åˆ€ï¼Œåˆ€æŸ„ä¸Šåˆ»è‘—ä¸€å€‹å…‡æƒ¡çŒ™ç°çš„é¬¼é ­ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 150 );
 	setup_weapon( "longblade", 26, 11, 29 );
 	set( "bleeding", 5 );

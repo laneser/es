@@ -1,6 +1,6 @@
 /*
- * Ô­×÷Õß£ºMercury (1995.1)
- * ÐÞ¸ÄÕß£ºIshige (1995.12)
+ * åŽŸä½œè€…ï¼šMercury (1995.1)
+ * ä¿®æ”¹è€…ï¼šIshige (1995.12)
  */
 #include <mudlib.h>
 
@@ -8,16 +8,16 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Evil Sword","Ñýµ¶´åÓê");
+	set_name("Evil Sword","å¦–åˆ€æ‘é›¨");
 	add("id",({"sword"}) );
-	set_short("Evil Sword","Ñýµ¶´åÓê");
+	set_short("Evil Sword","å¦–åˆ€æ‘é›¨");
 	set_long(@AAA
-ÕâÊÇÒ»°Ñ´«ËµÖÐµÄ¡¸Ñýµ¶´åÓê¡¹£¬µ¶ÉíÉÏ·º³öÒ»¹É¹îÒìµÄ¹âÃ¢¡£¾ÝËµ
-´Ëµ¶Òþº¬ÓÐÎÞ±ÈÇ¿´óµÄÉñÃØÁ¦Á¿£¬µ«ÊÇÏëÒªÊ¹ÓÃÕâÖÖÁ¦Á¿±ØÐëÒÔ×Ô¼º
-µÄÉúÃü×÷Îª½»»»¡£
+é€™æ˜¯ä¸€æŠŠå‚³èªªä¸­çš„ã€Œå¦–åˆ€æ‘é›¨ã€ï¼Œåˆ€èº«ä¸Šæ³›å‡ºä¸€è‚¡è©­ç•°çš„å…‰èŠ’ã€‚æ“šèªª
+æ­¤åˆ€éš±å«æœ‰ç„¡æ¯”å¼·å¤§çš„ç¥žç§˜åŠ›é‡ï¼Œä½†æ˜¯æƒ³è¦ä½¿ç”¨é€™ç¨®åŠ›é‡å¿…é ˆä»¥è‡ªå·±
+çš„ç”Ÿå‘½ä½œç‚ºäº¤æ›ã€‚
 AAA
 );
-	set("unit","°Ñ");
+	set("unit","æŠŠ");
 	set("weapon_class",45);
 	set("type","longblade");
 	set("min_damage",25);
@@ -25,8 +25,8 @@ AAA
 	set("weight",170);
 	set("value",({130,"gold"}));
 	set("hit_func","sword_damage");
-	set("special_c_msg","¿ªÊ¼ÎüÈ¡³Öµ¶ÕßµÄÉúÃüÁ¦£¡£¡ \n"
-        "Ñýµ¶´åÓêµ¶ÉíÉÏ·¢³öÒ»µÀÇ¿ÁÒµÄ¹âÃ¢£¬ÉäÈëµÐÈËµÄÐÄÔà£¡£¡£¡\n");
+	set("special_c_msg","é–‹å§‹å¸å–æŒåˆ€è€…çš„ç”Ÿå‘½åŠ›ï¼ï¼ \n"
+        "å¦–åˆ€æ‘é›¨åˆ€èº«ä¸Šç™¼å‡ºä¸€é“å¼·çƒˆçš„å…‰èŠ’ï¼Œå°„å…¥æ•µäººçš„å¿ƒè‡Ÿï¼ï¼ï¼\n");
 }
 
 int sword_damage(object victim,int damage)
@@ -35,7 +35,7 @@ int sword_damage(object victim,int damage)
 	int my_kar,dam;
 	string c_msg,msg; 
 	
-	/*ÓÉì¶»áËðºÄ³Öµ¶Õß×Ô¼ºµÄ HP£¬Òò´ËÓÐ½Ï¸ßµÄ damage. */
+	/*ç”±æ–¼æœƒæè€—æŒåˆ€è€…è‡ªå·±çš„ HPï¼Œå› æ­¤æœ‰è¼ƒé«˜çš„ damage. */
 	dam = 30;
 
 	if( !victim ) return 0;
@@ -49,9 +49,9 @@ int sword_damage(object victim,int damage)
 		holder->receive_damage( 5+random(10) );
 		victim->receive_special_damage( "none",dam );
 		victim->set("last_attacker", holder );
-		tell_object( holder,"\nÄãµÄ"+query("c_name")+c_msg+"\n");
+		tell_object( holder,"\nä½ çš„"+query("c_name")+c_msg+"\n");
 		tell_room( environment(holder),
-		holder->query("c_name") + "µÄ"+query("c_name")+c_msg+"\n",
+		holder->query("c_name") + "çš„"+query("c_name")+c_msg+"\n",
 		holder );
 		return dam;
 	}

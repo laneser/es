@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("carver", "²Ëµ¶");
+        set_name("carver", "èœåˆ€");
         add ("id",({ "carver"}) );
-        set_short( "²Ëµ¶" );
+        set_short( "èœåˆ€" );
         set_long(
-            "ÕâÊÇÒ»°ÑÇĞ²Ëµ¶\n"
+            "é€™æ˜¯ä¸€æŠŠåˆ‡èœåˆ€\n"
         );
-        set("unit","°Ñ");
+        set("unit","æŠŠ");
         set( "weapon_class", 6 );
         set( "type", "shortblade" );
         set( "min_damage", 2 );

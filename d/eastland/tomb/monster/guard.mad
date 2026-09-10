@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name( "tomb guard","墓地守卫" );
+	set_name( "tomb guard","澧撳湴瀹堣" );
 	add( "id", ({ "guard" }) );
-	set_short( "墓地守卫" );
+	set_short( "澧撳湴瀹堣" );
 	set_long(
-		"一个保护墓地不被外人入侵的守卫。\n"
+		"涓�鍊嬩繚璀峰鍦颁笉琚浜哄叆渚电殑瀹堣銆俓n"
 	);
 	set( "gender", "male" );
 	set( "alignment", 400 );

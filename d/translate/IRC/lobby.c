@@ -7,7 +7,7 @@ void create()
 {
 	::create();
 	set("light", 1);
-    set_short( "Lobby","´óÌü" );
+    set_short( "Lobby","å¤§å»³" );
     set_long(
 @LONG
 You are in a square shaped, somewhat crude room. There are two
@@ -16,8 +16,8 @@ office is to the west. You can hear some noise coming from the south.
  
 LONG
 @C_LONG
-ÕâÊÇÒ»¼ä³ÂÉè¼òµ¥µÄ·½ĞÎ´óÌü. ÔÚ±±, ¶«Á½¸ö·½Ïò¸÷ÓĞÒ»¸öÍêÈ«Ïà
-Í¬µÄ½ğÊôÃÅ. Î÷±ßÊÇÓÊ¾Ö. ÄÏ·½µÄ·¿¼äÒşÔ¼´«À´ÈËÉù.
+é€™æ˜¯ä¸€é–“é™³è¨­ç°¡å–®çš„æ–¹å½¢å¤§å»³. åœ¨åŒ—, æ±å…©å€‹æ–¹å‘å„æœ‰ä¸€å€‹å®Œå…¨ç›¸
+åŒçš„é‡‘å±¬é–€. è¥¿é‚Šæ˜¯éƒµå±€. å—æ–¹çš„æˆ¿é–“éš±ç´„å‚³ä¾†äººè².
  
 C_LONG
     );

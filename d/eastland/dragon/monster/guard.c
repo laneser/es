@@ -9,16 +9,16 @@ void create ()
 
         ::create();
         set_level(18);
-        set_name( "draconian guard", "ÁúÈËÊØÎÀ" );
+        set_name( "draconian guard", "é¾äººå®ˆè¡›" );
         add ("id", ({ "draconian", "guard" }) );
-        set_short( " ÁúÈËÊØÎÀ");
-        set("unit","Î»");
+        set_short( " é¾äººå®ˆè¡›");
+        set("unit","ä½");
         set("alignment",-400);
         set("weight",400);
         set("wealth/gold",100);
         set_long(@C_LONG
-ÁúÈË×å¾ÝËµÊÇ¹Å´úÁúÓëÈËÔÓ½»ËùÉú³öµÄÖÖ×å£¬¶øÁúÈËÊØÎÀÔòÊÇ´Ó×åÈËÖÐ¾«Ñ¡
-³ö×î²»¾ßÓÐÁúÖ®ÑªÍ³µÄÕ½Ê¿£¬ÐÔÇé½ÏÎÂºÍ½ÏÄÜ¹µÍ¨¡£
+é¾äººæ—æ“šèªªæ˜¯å¤ä»£é¾èˆ‡äººé›œäº¤æ‰€ç”Ÿå‡ºçš„ç¨®æ—ï¼Œè€Œé¾äººå®ˆè¡›å‰‡æ˜¯å¾žæ—äººä¸­ç²¾é¸
+å‡ºæœ€ä¸å…·æœ‰é¾ä¹‹è¡€çµ±çš„æˆ°å£«ï¼Œæ€§æƒ…è¼ƒæº«å’Œè¼ƒèƒ½æºé€šã€‚
 C_LONG
         );
         set_perm_stat("int", 20);
@@ -39,7 +39,7 @@ C_LONG
         set_skill("block",100);
         
         set("tactic_func","sleet_tactic");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
       
         dagger= new(Lditem"guardsword");
         dagger->move(this_object());

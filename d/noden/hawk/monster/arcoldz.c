@@ -4,14 +4,14 @@ void create()
 {
         ::create();
         set_level(19);
-        set_name( "Thief Arcold", "��͵ �ǿ�" );
+        set_name( "Thief Arcold", "神偷 亞寇" );
         add ("id", ({ "arcold","thief"}) );
         set ("class","theif");
-        set_short( "��͵ �ǿ�" );
+        set_short( "神偷 亞寇" );
         set_long(@C_LONG
-�㿴��һ������ʮ�ֿɰ�����Ů�����ʮ�߰������ҵ���ͣ�ȫ��������ɫ
-��װ���������������⺷�汸������ע�⵽����������һֻ��Ϊ�����Ľ�ɫ
-���꣬�ѵ���ʧ���Ծõ���������
+你看到一名長得十分可愛的少女，大概十七八歲左右的年紀，全身穿著黑色
+勁裝，看起來清秀與剽悍兼備，你又注意到她手上拿了一隻極為罕見的金色
+扁鑽，難道是失傳以久的鑲金扁鑽嗎？
 C_LONG
         );
         set( "race", "imp" );
@@ -54,7 +54,7 @@ void report(object holder, object victim )
 {
    seteuid(getuid());
    tell_object( victim,
-   sprintf("( ��%s )\n","/adm/daemons/statsd"->status_string(victim)));
+   sprintf("( 你%s )\n","/adm/daemons/statsd"->status_string(victim)));
 }
 
 void backstab(object ob)
@@ -67,9 +67,9 @@ void backstab(object ob)
         if( !env || !present(ob, env) ) return;
         tell_object( ob,
 "
-�ǿ�ͻȻ���㱳��ð����˫��ɱ�����أ����������곯�㱳��û�з���
-���ĵط��ݺݵĴ�����ȥ����е�һ���ʹ���ƺ��ǿܵı��������ܵ���
-�൱����˺�
+亞寇突然從你背後冒出，雙眼殺機重重，手拿著扁鑽朝你背後沒有防備
+到的地方狠狠的刺了下去，你感到一陣劇痛，似乎亞寇的背刺讓你受到了
+相當大的傷害
 \n");
         ob->receive_special_damage( "evil" , 30 + random(20));
         report(ob,ob);
@@ -86,10 +86,10 @@ void die()
         set( "death_msg","%s\n");
         tell_room(environment(),
 "
-����˵Ĵ��ǿܵ�ʬ�����ó���������������꣬�������ϰ��棬����
-�������ķ�â���ף�����Ȳ��ϴ�˵�е������꣬����ϸ��������ѱ�
-�꣬�ۣ�����Ľ�ɫӣ����Ȼ�Ƕƽ��....
+你高興的從亞寇的屍體中拿出金光閃閃的鑲金扁鑽，拿在手上把玩，用手
+試試它的鋒芒，咦，好像比不上傳說中的鑲金扁鑽，你仔細地瞧瞧這把扁
+鑽，哇！上面的金色櫻花竟然是鍍金的....
 
-һ��֮�����ְѱ��궪������\n\n");
+一氣之下你又把扁鑽丟到地上\n\n");
 	set("alt_corpse",WEAPON"dagger01.c");
 }

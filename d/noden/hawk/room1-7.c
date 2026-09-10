@@ -6,11 +6,11 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("³ÇÃÅ¼ì²éÉÚ");
+        set_short("åŸé–€æª¢æŸ¥å“¨");
         set_light(1);
         set_long( @LONG_DESCRIPTION
-Äã¿´µ½Ò»¸ö½ä±¸É­ÑÏµÄ¾¯±¸ÉÚ£¬Ò»¶ÑÄñÍ·ÈËÉí£¬³¤Öø¿íÀ«³á°ò£¬½ÅÉÏÓĞÖø
-ÀÏÓ¥°ãµÄÀû×¦µÄÕ½Ê¿ÕıÉÏÏÂ´òÁ¿ÖøÄã£¬¿´À´ÄãÏëÒªÍ¨¹ıÕâ±ß²»ÊÇ¼ş¼òµ¥µÄÊÂ¡£
+ä½ çœ‹åˆ°ä¸€å€‹æˆ’å‚™æ£®åš´çš„è­¦å‚™å“¨ï¼Œä¸€å †é³¥é ­äººèº«ï¼Œé•·è‘—å¯¬é—Šç¿…è†€ï¼Œè…³ä¸Šæœ‰è‘—
+è€é·¹èˆ¬çš„åˆ©çˆªçš„æˆ°å£«æ­£ä¸Šä¸‹æ‰“é‡è‘—ä½ ï¼Œçœ‹ä¾†ä½ æƒ³è¦é€šéé€™é‚Šä¸æ˜¯ä»¶ç°¡å–®çš„äº‹ã€‚
 LONG_DESCRIPTION
         );
         set("objects", ([
@@ -33,14 +33,14 @@ int to_bottom(string str)
 {
         if (!str || str=="west" || str=="northeast" )
                 return 0;
-        write("°¡! ²»ºÃ....\n\n");
+        write("å•Š! ä¸å¥½....\n\n");
         tell_room(environment(this_player()),
-                "Äã¿´µ½ÓĞÈËÊ§×ãÁË!\n",this_player());
+                "ä½ çœ‹åˆ°æœ‰äººå¤±è¶³äº†!\n",this_player());
         this_player()->receive_damage(70);
         this_player()->move_player(HAWK"room1-18","SNEAK");
         tell_room(environment(this_player()),
-                "Äã¿´µ½"+(string)this_player()->query("c_name")+
-                "´Ó¸ßËÊµÄ¾ø±ÚÉÏË¤ÏÂÀ´!\n"+
-                "¾¹È»Ã»ËÀ! ÕæÊÇÃü´ó°¡!\n",this_player());
+                "ä½ çœ‹åˆ°"+(string)this_player()->query("c_name")+
+                "å¾é«˜è³çš„çµ•å£ä¸Šæ‘”ä¸‹ä¾†!\n"+
+                "ç«Ÿç„¶æ²’æ­»! çœŸæ˜¯å‘½å¤§å•Š!\n",this_player());
         return 1;
 }

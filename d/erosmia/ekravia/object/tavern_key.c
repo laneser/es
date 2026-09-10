@@ -5,11 +5,11 @@ void	create()
 {
 //	::create();
 	set_name("small copper key");
-	set_short("Í­ÖÆĞ¡Ô¿³×");
-	set_long("ÕâÊÇÒ»°ÑÍ­×öµÄĞ¡Ô¿³×, Ô¿³×±úÉÏ¿ÌÖøµÏÅµÂÃµêµÄ±ê¼Ç¡£\n");
+	set_short("éŠ…è£½å°é‘°åŒ™");
+	set_long("é€™æ˜¯ä¸€æŠŠéŠ…åšçš„å°é‘°åŒ™, é‘°åŒ™æŸ„ä¸Šåˆ»è‘—è¿ªè«¾æ—…åº—çš„æ¨™è¨˜ã€‚\n");
 	add( "id", ({"key", "copper key"}) );
 	set( "weight", 0);
-	set( "unit", "°Ñ");
+	set( "unit", "æŠŠ");
 	set( "value", 0);
 }
 

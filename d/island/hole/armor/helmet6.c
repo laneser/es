@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Dragon Turban","»ğÁúĞëÍ·½í" );
+	set_name( "Dragon Turban","ç«é¾é¬šé ­å·¾" );
 	add( "id", ({ "turban" }) );
-	set_short( "»ğÁúĞëÍ·½í" );
+	set_short( "ç«é¾é¬šé ­å·¾" );
 	set_long(@LONG
-	»ğÁúĞëËùÖÆ³ÉµÄÍ·½í£¬ÄÜ¿¿ÁúµÄÁ¦Á¿¼õÉÙ»ğµÄÉËº¦¡£
+	ç«é¾é¬šæ‰€è£½æˆçš„é ­å·¾ï¼Œèƒ½é é¾çš„åŠ›é‡æ¸›å°‘ç«çš„å‚·å®³ã€‚
 LONG
 		);
-	set( "unit","Ìõ" );
+	set( "unit","æ¢" );
 	set( "weight",15 );
 	set( "type","head" );
 	set( "material","leather" );

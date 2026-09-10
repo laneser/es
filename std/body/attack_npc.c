@@ -179,7 +179,7 @@ int kill_ob(object victim)
 
 	if( this_object()->query("player_invisible") ) {
 		this_object()->set("player_invisible", 0);
-		tell_room(environment(),sprintf("ÄãµÄÇ°·½Ò»Õó²¨¶¯£¬%sµÄÉíÓ°Í»È»¸¡ÏÖ³öÀ´¡£\n",this_object()->query("c_name")),
+		tell_room(environment(),sprintf("ä½ çš„å‰æ–¹ä¸€é™£æ³¢å‹•ï¼Œ%sçš„èº«å½±çªç„¶æµ®ç¾å‡ºä¾†ã€‚\n",this_object()->query("c_name")),
 			  this_object());
 	}
 	attackers += ({ victim });
@@ -246,7 +246,7 @@ void run_away()
 	if( !direction || !womble[direction] )
  		direction = keys(womble)[random(sizeof(womble))];
 	tell_object( this_object(),
-		sprintf("Äã³¢ÊÔÍù %s ·½ÌÓÅÜ...\n", to_chinese(direction)));
+		sprintf("ä½ å˜—è©¦å¾€ %s æ–¹é€ƒè·‘...\n", to_chinese(direction)));
 	this_object()->force_me(sprintf("go %s", direction));
 	return;
 }
@@ -446,7 +446,7 @@ varargs void execute_attack(int second_attack)
 			}
 		}
 
-		// ¿ÕÊÖÈë°×ÈÐºõ ??         rate : 34%        added by almuhara.
+		// ç©ºæ‰‹å…¥ç™½åˆƒä¹Ž ??         rate : 34%        added by almuhara.
 		if( (parry_apply = (int)victim->query_skill("unarmed-parry")) && (tmp = query("weapon1"))
 		    && !(tmp = victim->query("weapon1")) ) {
 			n = (int)this_object()->query_stat("dex")*2 - dex;
@@ -519,10 +519,10 @@ varargs void execute_attack(int second_attack)
 			else old_damage = 0;
 		} else old_damage = -1;
 
-		write( "ÄãÒ»»÷µÃÊÖ£¬¼ÌÐø½ø¹¥£¡\n");
+		write( "ä½ ä¸€æ“Šå¾—æ‰‹ï¼Œç¹¼çºŒé€²æ”»ï¼\n");
 
 		tell_room( environment(),
-			sprintf("%sÒ»»÷µÃÊÖ£¬×¥×¡»ú»á¼ÌÐø¹¥»÷!\n", query("c_name")) ,
+			sprintf("%sä¸€æ“Šå¾—æ‰‹ï¼ŒæŠ“ä½æ©Ÿæœƒç¹¼çºŒæ”»æ“Š!\n", query("c_name")) ,
 			this_object() );
 
 		if( (int)victim->query("hit_points") < 1 )
@@ -586,7 +586,7 @@ void continue_attack()
 	// Call the clean_up_attackers function to see who's left. If it returns
 	// 0, then there's no one left.
 	if( clean_up_attackers() == 0 ) {//write("combat test1!\n");
-		tell_object(this_object(),"Õ½¶·½áÊøÁË.\n"); /* No attackers in the room */
+		tell_object(this_object(),"æˆ°é¬¥çµæŸäº†.\n"); /* No attackers in the room */
 		any_attack = 0;
 		return;
 	}
@@ -597,7 +597,7 @@ void continue_attack()
                 if( msg = query_temp("msg_stop_attack") )
                         write( msg );
                 else write (
-                        "( Äã»¹Ã»ÓÐÍê³ÉÉÏÒ»¸ö¶¯×÷£¬Ê§È¥Ò»´Î¹¥»÷»ú»á )\n");
+                        "( ä½ é‚„æ²’æœ‰å®Œæˆä¸Šä¸€å€‹å‹•ä½œï¼Œå¤±åŽ»ä¸€æ¬¡æ”»æ“Šæ©Ÿæœƒ )\n");
 		return;
 	}
 

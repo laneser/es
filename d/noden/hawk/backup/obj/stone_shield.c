@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "flinty shield", "ËíÊ¯¶Ü" );
+	set_name( "flinty shield", "éš§çŸ³ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "ËíÊ¯¶Ü" );
+	set_short( "éš§çŸ³ç›¾" );
 	set_long(
-		"ÕâÊÇÒ»ÃæÓÃ°µºìÉ«ÑÒÊ¯×ö³ÉµÄ¶Ü£¬Ëü¿´ÆğÀ´ºÜÖØ¡£\n"
+		"é€™æ˜¯ä¸€é¢ç”¨æš—ç´…è‰²å²©çŸ³åšæˆçš„ç›¾ï¼Œå®ƒçœ‹èµ·ä¾†å¾ˆé‡ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "stone");
 	set( "armor_class", 5 );

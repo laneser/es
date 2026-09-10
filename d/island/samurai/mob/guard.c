@@ -6,12 +6,12 @@ void create ()
 {
         ::create();
         set_level(10);
-        set_name( "gray samurai", "»ÒÒÂÎäÊ¿" );
+        set_name( "gray samurai", "ç°è¡£æ­¦å£«" );
         add ("id", ({ "samurai","gray"}) );
-        set_short( "gray samurai","»ÒÒÂÎäÊ¿");
-        set("unit","Î»");
+        set_short( "gray samurai","ç°è¡£æ­¦å£«");
+        set("unit","ä½");
         set_long(@AAA
-»ÒÒÂÎäÊ¿ÊÇÎäÊ¿ÍÅÖĞµÈ¼¶×îµÍµÄÎäÊ¿£¬×¨ÃÅ¸ºÔğÊØÎÀ¼°Ñ²ÂßµÄ¹¤×÷
+ç°è¡£æ­¦å£«æ˜¯æ­¦å£«åœ˜ä¸­ç­‰ç´šæœ€ä½çš„æ­¦å£«ï¼Œå°ˆé–€è² è²¬å®ˆè¡›åŠå·¡é‚çš„å·¥ä½œ
 AAA
         );
         set_perm_stat("str", 15);
@@ -26,7 +26,7 @@ AAA
         set ("gender", "male");
         set("wealth/silver",60);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(MOBJ"east_feather_blade.c");
         equip_armor(MOBJ"samurai_chainmail.c");

@@ -3,15 +3,15 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "Mahogany Kirs","ÌÒÄ¾¶Ìµ¶" );
+	set_name( "Mahogany Kirs","æ¡ƒæœ¨çŸ­åˆ€" );
 	add( "id",({ "kirs" }) );
-	set_short( "ÌÒÄ¾¶Ìµ¶" );
+	set_short( "æ¡ƒæœ¨çŸ­åˆ€" );
 	set_long(@LONG
-	ÕâÊÇÒ»°ÑÓÃÌÒÄ¾Ï÷³ÉµÄ½££¬¾ßÓĞÕ¶Ñı³ıÄ§µÄ¹¦ÓÃ¡£Èç¹ûÄã
-	¾õµÃË­ÊÇĞ°Ä§£¬Ö»Òª½«Õâ¶Ìµ¶¶ª(throw)ÏòËû¾Í¿ÉÒÔÁË¡£
+	é€™æ˜¯ä¸€æŠŠç”¨æ¡ƒæœ¨å‰Šæˆçš„åŠï¼Œå…·æœ‰æ–¬å¦–é™¤é­”çš„åŠŸç”¨ã€‚å¦‚æœä½ 
+	è¦ºå¾—èª°æ˜¯é‚ªé­”ï¼Œåªè¦å°‡é€™çŸ­åˆ€ä¸Ÿ(throw)å‘ä»–å°±å¯ä»¥äº†ã€‚
 LONG
 		);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "weight",50 );
 	setup_weapon( "dagger",15,10,18 );
 	set( "value",({ 10,"gold" }) );
@@ -31,27 +31,27 @@ int to_throw(string arg)
 	if( !arg || sscanf(arg,"%s to %s",weapon,target)!=2 )
 		return notify_fail( "Usage: throw <item> to <target>\n" );
 	if( weapon!="kirs" )
-		return notify_fail( "ÄãÈ·¶¨Òª°ÑÕâÑù¶«Î÷¶ª³öÈ¥£¿\n" );
+		return notify_fail( "ä½ ç¢ºå®šè¦æŠŠé€™æ¨£æ±è¥¿ä¸Ÿå‡ºå»ï¼Ÿ\n" );
 	if( target!="vampire" )
-		return notify_fail( "ÄãÍ»È»¾õµÄ×öÕâÖÖÊÂºÜÈ±µÂ£¬ËùÒÔÏÂ²»ÁËÊÖ¡£\n" );
+		return notify_fail( "ä½ çªç„¶è¦ºçš„åšé€™ç¨®äº‹å¾ˆç¼ºå¾·ï¼Œæ‰€ä»¥ä¸‹ä¸äº†æ‰‹ã€‚\n" );
 	if( !(victim=present("kill_vampire1",env)) )
-		return notify_fail( "ÕâÀï²¢Ã»ÓĞÎüÑª¹í£¬ÔÙËÄ´¦ÕÒÕÒ°É!\n" );
+		return notify_fail( "é€™è£¡ä¸¦æ²’æœ‰å¸è¡€é¬¼ï¼Œå†å››è™•æ‰¾æ‰¾å§!\n" );
 	if( undefinedp(this_object()->query("charge")) ){
-	tell_object( holder,"Äã½«¶Ìµ¶ÉäÏòÎüÑª¹í£¬µ«ÊÇºÜ¿ÉÏ§µÄÃ»ÉäÖĞ¡£\n" );
+	tell_object( holder,"ä½ å°‡çŸ­åˆ€å°„å‘å¸è¡€é¬¼ï¼Œä½†æ˜¯å¾ˆå¯æƒœçš„æ²’å°„ä¸­ã€‚\n" );
 	this_object()->remove();	
 	return 1;
 	}
 	if( victim->query("hurt") )
-		return notify_fail( "Ò»°ÑÏÊºìµÄ¶Ìµ¶ÒÑ¾­²åÔÚÎüÑª¹íÉíÉÏÁË£¬Ã»±ØÒª²åµÚ¶ş°Ñ¡£\n" );
+		return notify_fail( "ä¸€æŠŠé®®ç´…çš„çŸ­åˆ€å·²ç¶“æ’åœ¨å¸è¡€é¬¼èº«ä¸Šäº†ï¼Œæ²’å¿…è¦æ’ç¬¬äºŒæŠŠã€‚\n" );
 	me=holder->query( "c_name" );
 	tell_object( holder,set_color(
-	"\nÄãÊÖÖĞµÄÌÒÄ¾½£»¯³ÉÒ»µÀºì¹âÏòÎüÑª¹í¼²Éä¶øÈ¥£¬ÕıÖĞÎüÑª¹íµÄĞÄÔà¡£\n\n","HIR") );
+	"\nä½ æ‰‹ä¸­çš„æ¡ƒæœ¨åŠåŒ–æˆä¸€é“ç´…å…‰å‘å¸è¡€é¬¼ç–¾å°„è€Œå»ï¼Œæ­£ä¸­å¸è¡€é¬¼çš„å¿ƒè‡Ÿã€‚\n\n","HIR") );
 	tell_room( env,set_color(
-	"\n"+me+"ÊÖÖĞµÄÌÒÄ¾½£»¯³ÉÒ»µÀºì¹âÏòÎüÑª¹í¼²Éä¶øÈ¥£¬ÕıÖĞÎüÑª¹íµÄĞÄÔà¡£\n\n","HIR"),holder );
+	"\n"+me+"æ‰‹ä¸­çš„æ¡ƒæœ¨åŠåŒ–æˆä¸€é“ç´…å…‰å‘å¸è¡€é¬¼ç–¾å°„è€Œå»ï¼Œæ­£ä¸­å¸è¡€é¬¼çš„å¿ƒè‡Ÿã€‚\n\n","HIR"),holder );
 	victim->receive_damage( 3000 );
 	victim->set( "conditions/bleeding",({ 2,10,500 }) );
 	victim->set( "hurt",1 );
-	tell_room( env,"\nÎüÑª¹íÍ´¿àµÄÉëÒ÷ÖøËµ£ºÏë²»µ½ÄãÓÃÕâÖÖ±°ÁÓµÄÊÖ¶Î¶Ô¸¶ÎÒ£¡\n\n" );
+	tell_room( env,"\nå¸è¡€é¬¼ç—›è‹¦çš„å‘»åŸè‘—èªªï¼šæƒ³ä¸åˆ°ä½ ç”¨é€™ç¨®å‘åŠ£çš„æ‰‹æ®µå°ä»˜æˆ‘ï¼\n\n" );
 	this_object()->remove();
 	return 1;
 }

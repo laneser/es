@@ -9,13 +9,13 @@ void create()
 {
         ::create();
         set_level(9);
-        set_name("ice zombie", "¹í¡õ");
+        set_name("ice zombie", "é¬¼â–¡");
 	add( "id", ({ "zombie", }) );
-        set_short("¹í¡õ");
+        set_short("é¬¼â–¡");
         set_long(
-                "ËüÊÇÒõÐþ±ùÓÃÐ°ÊõºÏ³ÉµÄ½©Ê¬£¬Ò»Éí¡õ¶¾ÁîÈËÎÅÖ®É«±ä¡£\n"
+                "å®ƒæ˜¯é™°çŽ„å†°ç”¨é‚ªè¡“åˆæˆçš„æ®­å±ï¼Œä¸€èº«â–¡æ¯’ä»¤äººèžä¹‹è‰²è®Šã€‚\n"
         );
-        set( "unit", "¾ß" );
+        set( "unit", "å…·" );
 	set( "alignment", -600 );
         set( "pursuing", 1 );
         set( "killer", 1 );
@@ -35,13 +35,13 @@ int emit_poison()
         if( random(20)>4 || !(victim= query_attacker()) ) return 0;
         if( random(10)<5 ) {
                 tell_room( environment(this_object()), 
-                        "¹í¡õ´Ó×ì°ÍÅç³öÒ»¹ÉÑªºìÉ«µÄ³ôÆø£¬Äã¸Ðµ½Ò»ÕóÔÎÑ£ ....\n",
+                        "é¬¼â–¡å¾žå˜´å·´å™´å‡ºä¸€è‚¡è¡€ç´…è‰²çš„è‡­æ°£ï¼Œä½ æ„Ÿåˆ°ä¸€é™£æšˆçœ© ....\n",
                         this_object() );
                 (CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 15,6 );
 
 	} else {
                 tell_room( environment(this_object()), 
-                        "¹í¡õ·¢³öÒ»´®¼âÈñµÄË»ºðÉù£¬ÄãµÄÄÔ×ÓÒ»Õó´ÌÍ´£¡\n",
+                        "é¬¼â–¡ç™¼å‡ºä¸€ä¸²å°–éŠ³çš„å˜¶å¼è²ï¼Œä½ çš„è…¦å­ä¸€é™£åˆºç—›ï¼\n",
                         this_object() );
                 (CONDITION_PREFIX + "confused")->apply_effect( victim, 15, 5 );
 	}

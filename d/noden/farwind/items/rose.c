@@ -10,11 +10,11 @@ void init()
 
 void create(){
 
-	set_name("Rose wine","ц╣╧Е╨Л╬ф");
+	set_name("Rose wine","Г▌╚Г▒╟Г╢┘И┘▓");
 	add( "id" , ({ "rose","wine" }) );
-	set_short( "ц╣╧Е╨Л╬ф" );
-	set_long( "уБйг╢сю╤иЁ╦шилхк╢╕бРю╢╣дц╣╧Е╨Л╬ф\n" );
-   	set("unit","╠╜");
+	set_short( "Г▌╚Г▒╟Г╢┘И┘▓" );
+	set_long( "И─≥Ф≤╞Е╬·Х≈█Ф╡≥Ф╦╞Е∙├Д╨╨Х≥∙Х╡╥Д╬├Г └Г▌╚Г▒╟Г╢┘И┘▓\n" );
+   	set("unit","Ф²╞");
    	set("weight", 10);
    	set("value",({20, "silver"}) );
 }
@@ -24,12 +24,12 @@ int quaff_potion(string arg)
 
 	if( arg != "rose" ) return 0;
 	write( can_read_chinese()?
-		"дЦ╨хобр╩╠╜ц╣╧Е╨Л╬фё╛╦п╣╫й╝╥ж╣дйФ╥Ч║ё\n":
+		"Д╫═Е√²Д╦▀Д╦─Ф²╞Г▌╚Г▒╟Г╢┘И┘▓О╪▄Ф└÷Е┬╟Е█│Е┬├Г └Х┬▓Ф°█Ц─┌\n":
 		"You drink a cup of Rose Red wine....\n"
 	);
 	tell_room( environment(this_player()), ({
 		this_player()->query("cap_name")+" drink an nice chinese wine....\n",
-		this_player()->query("c_cap_name")+"╨хобр╩╠╜ц╣╧Е╨Л╬фё╛гАгА╣ь╠уиояш╬╕ё╛╨цоЯ╨эйФ╥Ч╣дяЫвс║ё║ё\n"}),
+		this_player()->query("c_cap_name")+"Е√²Д╦▀Д╦─Ф²╞Г▌╚Г▒╟Г╢┘И┘▓О╪▄Х╪∙Х╪∙Е°╟И√┴Д╦┼Г°╪Г²⌡О╪▄Е╔╫Е┐▐Е╬┬Х┬▓Ф°█Г └Ф╗ёЕ╜░Ц─┌Ц─┌\n"}),
 		this_player() );
 
 	remove();

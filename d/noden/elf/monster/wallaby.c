@@ -6,11 +6,11 @@ void create()
 {
         ::create();
         set_level(1);
-        set_name( "wallaby", "Ğ¡´üÊó" );
-        set_short( "Ğ¡´üÊó" );
-        set("unit","Ö»");
+        set_name( "wallaby", "å°è¢‹é¼ " );
+        set_short( "å°è¢‹é¼ " );
+        set("unit","åª");
         set_long(
-        "Äã¿´¼ûÒ»Ö»¿É°®µÄ¶¯ÎïÔÚ²İÔ­ÉÏ±Ä±ÄÌøÌøµØÓÎÍæÖø\n"  
+        "ä½ çœ‹è¦‹ä¸€éš»å¯æ„›çš„å‹•ç‰©åœ¨è‰åŸä¸Šè¹¦è¹¦è·³è·³åœ°éŠç©è‘—\n"  
         );
         set_perm_stat("str", 3);
         set_perm_stat("dex", 3);
@@ -18,6 +18,6 @@ void create()
         set ("natural_min_damage1", 2);
         set ("natural_max_damage1", 3);
         set ("natural_armor_class", 5);
-        set_c_verbs(({"%sÓÃËüµÄááÍÈÏò%sÌßÈ¥","%sÓÃËüµÄÈ­Í·Ïò%s¹¥»÷"}));
-        set_c_limbs(({"ÉíÌå","¶ú¶ä","½Å²¿","Í·²¿"}));      
+        set_c_verbs(({"%sç”¨å®ƒçš„å¾Œè…¿å‘%sè¸¢å»","%sç”¨å®ƒçš„æ‹³é ­å‘%sæ”»æ“Š"}));
+        set_c_limbs(({"èº«é«”","è€³æœµ","è…³éƒ¨","é ­éƒ¨"}));      
 }

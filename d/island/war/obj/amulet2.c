@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Platinum Amulet","°×½ğ»ÕÕÂ" );
+	set_name( "Platinum Amulet","ç™½é‡‘å¾½ç« " );
 	add( "id", ({ "amulet" }) );
-	set_short( "°×½ğ»ÕÕÂ" );
+	set_short( "ç™½é‡‘å¾½ç« " );
 	set_long(@LONG
-	¹Å´ú½×¼¶µÄ»ÕÕÂÖ®Ò»£¬¾ÍÌåÖÆÁ÷´«ÏÂÀ´µÄ±¦Îï
-	£¬ÖÁ½ñÈÔ¾ãÓĞ¸ß¹óµÄ¼ÛÖµ¡£
+	å¤ä»£éšç´šçš„å¾½ç« ä¹‹ä¸€ï¼Œå°±é«”åˆ¶æµå‚³ä¸‹ä¾†çš„å¯¶ç‰©
+	ï¼Œè‡³ä»Šä»ä¿±æœ‰é«˜è²´çš„åƒ¹å€¼ã€‚
 LONG
            );
-	set( "unit","Ã¶" );
+	set( "unit","æš" );
 	set( "weight",5 );
 	set( "type","misc" );
 	set( "material","element" );

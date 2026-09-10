@@ -1,16 +1,16 @@
 
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-Ä¿Ç°ÎŞÎï¼şĞèÈÏÖ¤¡£
+ç›®å‰ç„¡ç‰©ä»¶éœ€èªè­‰ã€‚
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1. µØÓüÍäµ¶( /d/noden/bluesand/item/etheral_cutlass )
+1. åœ°ç„å½åˆ€( /d/noden/bluesand/item/etheral_cutlass )
   21     9      16      *5        0           mad
-2. Ñıµ¶´åÕı( /d/noden/bluesand/item/murasame )
+2. å¦–åˆ€æ‘æ­£( /d/noden/bluesand/item/murasame )
  *45    18     *47      90      *20           mad
 

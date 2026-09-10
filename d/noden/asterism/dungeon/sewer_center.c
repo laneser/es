@@ -19,8 +19,8 @@ string *TRASH_DESC = ({ "trash mes1\n" , "trash msg2\n" ,}) ;
 void create()
 {
       ::create() ;
-      set_short("下水道功能控制室") ;
-      set_long("这不是个玩家能到或应该到的地方,如果你来到了,请向wizard报告。\n") ;
+      set_short("涓嬫按閬撳姛鑳芥帶鍒跺") ;
+      set_long("閫欎笉鏄�嬬帺瀹惰兘鍒版垨鎳夎┎鍒扮殑鍦版柟,濡傛灉浣犱締鍒颁簡,璜嬪悜wizard鍫卞憡銆俓n") ;
       set("light",0) ;
     
       reset() ;

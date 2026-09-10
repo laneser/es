@@ -5,14 +5,14 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "holy guard","Ê¥µØÊØÎÀ" );
+        set_name( "holy guard","è–åœ°å®ˆè¡›" );
         add ("id", ({ "guard" }) );
-        set_short( "Ê¥µØÊØÎÀ");
-        set("unit","Î»");
+        set_short( "è–åœ°å®ˆè¡›");
+        set("unit","ä½");
         set("alignment",400);
         set("wealth/gold",50);
         set_long(
-"Äã¿´µ½Ò»Î»Ê¥µØÊØÎÀ£¬ÉñÌ¬×¯ÑÏËàÄÂµØÊØÎÀÖøÕâ¶ù¡£\n"
+"ä½ çœ‹åˆ°ä¸€ä½è–åœ°å®ˆè¡›ï¼Œç¥æ…‹èŠåš´è‚…ç©†åœ°å®ˆè¡›è‘—é€™å…’ã€‚\n"
         );
         set_perm_stat("int", 20);
         set_perm_stat("dex", 20);
@@ -23,6 +23,6 @@ void create()
         set_natural_armor( 72, 20 );
         set ("gender", "male");
         set("special_defense",(["all":10,"none":10]));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 	equip_armor("/d/eastland/tomb/armors/helmet1");
 }

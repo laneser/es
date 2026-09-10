@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("occult ring", "ÉñÃØ½äÖ¸");
+        set_name("occult ring", "ç¥ç§˜æˆ’æŒ‡");
         add( "id", ({ "ring" }) );
-        set_short("ÉñÃØ½äÖ¸");
+        set_short("ç¥ç§˜æˆ’æŒ‡");
         set_long(
-                "ÕâÊÇÒÔÁúÈË×åÌØÓĞµÄÖäÊõÊ©ÒÔÉñÃØµÄ½ğÊôÉÏÖÆ³ÉµÄ½äÖ¸¡£\n"
+                "é€™æ˜¯ä»¥é¾äººæ—ç‰¹æœ‰çš„å’’è¡“æ–½ä»¥ç¥ç§˜çš„é‡‘å±¬ä¸Šè£½æˆçš„æˆ’æŒ‡ã€‚\n"
         );
-	set("unit","Ö»");
+	set("unit","åª");
         set( "type", "finger" );
         set( "material" ,"light_metal" );
         set( "armor_class", 0 );

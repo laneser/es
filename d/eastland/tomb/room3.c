@@ -5,19 +5,19 @@ int bury,paper,pick;
 void create()
 {
 	::create();
-	set_short( "µØÏÂÊ¯ÊÒ" );
+	set_short( "åœ°ä¸‹çŸ³å®¤" );
 	set_long( 
 @C_LONG_DESCRIPTION
-Äã½øÈëÁËÒ»¸öĞ¡Ğ¡µÄÊ¯ÊÒ£¬ÓëÇ°ÃæµÄÊ¯ÊÒ±ÈÆğÀ´£¬Õâ¶ùÕæÊÇĞ¡µÄÎ¢²»×ãµÀ¡£»·¹ËËÄÖÜ¿Õ
-ÎŞÒ»Îï¡£¿¦.....ÄãËÆºõ²Èµ½Ê²÷á¶«Î÷£¬¶¨¾¦Ò»¿´£¬ÏÅ.....ÊÇ¾ß÷¼÷Ã¡£ËüÉíÉÏµÄ·şÊÎÑùÊ½¹Å
-ÆÓ£¬ÉíÅÔ»¹É¢ÂäÁËÒ»Ğ©¹¤¾ß£¬²»ÖªµÀÎªÊ²÷áËÀÔÚÕâ¶ù¡£
+ä½ é€²å…¥äº†ä¸€å€‹å°å°çš„çŸ³å®¤ï¼Œèˆ‡å‰é¢çš„çŸ³å®¤æ¯”èµ·ä¾†ï¼Œé€™å…’çœŸæ˜¯å°çš„å¾®ä¸è¶³é“ã€‚ç’°é¡§å››å‘¨ç©º
+ç„¡ä¸€ç‰©ã€‚å–€.....ä½ ä¼¼ä¹è¸©åˆ°ä»€éº¼æ±è¥¿ï¼Œå®šç›ä¸€çœ‹ï¼Œåš‡.....æ˜¯å…·éª·é«ã€‚å®ƒèº«ä¸Šçš„æœé£¾æ¨£å¼å¤
+æ¨¸ï¼Œèº«æ—é‚„æ•£è½äº†ä¸€äº›å·¥å…·ï¼Œä¸çŸ¥é“ç‚ºä»€éº¼æ­»åœ¨é€™å…’ã€‚
 C_LONG_DESCRIPTION
 	);
 
 	set( "exits", ([ 
 		"east" : TOMB"/room1",  ]) );
 	set( "item_desc" , ([
-		"skeleton" : "Ò»¾ßº§ÈËµÄ÷¼÷Ã\£¬Ò²Ğí\Äã¿ÉÒÔËÑË÷Ò»ÏÂ¡£\n" ]) );
+		"skeleton" : "ä¸€å…·é§­äººçš„éª·é«\ï¼Œä¹Ÿè¨±ä½ å¯ä»¥æœç´¢ä¸€ä¸‹ã€‚\n" ]) );
 	reset();	
 }
 
@@ -45,7 +45,7 @@ int search_skeleton(string str)
 	if ( str == "skeleton" ) {
 		if ( paper ) return 0;
 		tell_object( player, 
-			"ÔÚÄã×ĞÏ¸ËÑÑ°áá£¬·¢ÏÖÁËÒ»ÕÅÑòÆ¤Ö½¡£\n");
+			"åœ¨ä½ ä»”ç´°æœå°‹å¾Œï¼Œç™¼ç¾äº†ä¸€å¼µç¾Šçš®ç´™ã€‚\n");
 		new(ITEM"/paper1")->move(player);
 		paper = 1;
 		return 1;
@@ -53,7 +53,7 @@ int search_skeleton(string str)
 	else if ( str == "tools" || str == "tool" ) {
 		if ( pick ) return 0;	
 		tell_object( player,
-			"Äã·­ÁË·­ÄÇĞ©¹¤¾ß£¬Ö»Ê£ÏÂÒ»°ÑÊ®×Ö¸äÊÇ¿°ÓÃµÄ¡£\n");
+			"ä½ ç¿»äº†ç¿»é‚£äº›å·¥å…·ï¼Œåªå‰©ä¸‹ä¸€æŠŠåå­—é¬æ˜¯å ªç”¨çš„ã€‚\n");
 		new("/d/noden/moyada/obj/pick")->move( environment(player) );
 		pick = 1;
 		return 1;
@@ -68,17 +68,17 @@ int bury_skeleton(string str)
 	player = this_player();
 	
 	if ( !str || str == "")
-		return notify_fail("ÂñÉ¶??\n");
+		return notify_fail("åŸ‹å•¥??\n");
 	if ( bury ) return 1;
 	if ( str == "skeleton" ) {
 		if ( !present( "pick" , player ) ) {
 			tell_object( player, 
-				"ÄãÃ»ÓĞÊÊµ±µÄ¹¤¾ß£¬Ïë¿ÕÊÖÈëÓ²Ê¯Âğ£¿£¿\n"
+				"ä½ æ²’æœ‰é©ç•¶çš„å·¥å…·ï¼Œæƒ³ç©ºæ‰‹å…¥ç¡¬çŸ³å—ï¼Ÿï¼Ÿ\n"
 				);
 			return 1;
 			}	
 		else tell_object( player, 
-			"ÔÚÄãºÃºÃµØ°²ÔáÁËº¡¹Çáá£¬¾¹È»·¢ÏÖº¡¹ÇÏÂ²ØÁË·â¶Ìº¯¼°Ò»¿ÅÆæÒìµÄÖé×Ó¡£\n"
+			"åœ¨ä½ å¥½å¥½åœ°å®‰è‘¬äº†éª¸éª¨å¾Œï¼Œç«Ÿç„¶ç™¼ç¾éª¸éª¨ä¸‹è—äº†å°çŸ­å‡½åŠä¸€é¡†å¥‡ç•°çš„ç å­ã€‚\n"
 			);
 			new(ITEM"/orbkey")->move( player );
 			new(ITEM"/paper2")->move( player );
@@ -86,5 +86,5 @@ int bury_skeleton(string str)
                         this_player()->set_explore("eastland#34");
 			return 1;
 		}
-	else return notify_fail("ÂñÉ¶??\n");
+	else return notify_fail("åŸ‹å•¥??\n");
 }

@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "gold legging","½ğ»¤Ï¥");
+        set_name( "gold legging","é‡‘è­·è†");
         add( "id", ({ "legging" }) );
-        set_short("Gold legging", "½ğ»¤Ï¥");
+        set_short("Gold legging", "é‡‘è­·è†");
         set_long(@AAA
-ÕâÊÇÒ»¼şÓÃ¹óÖØ½ğÊô´òÔì¶ø³ÉµÄ½ğ»¤Ï¥£¬Ìá¹©ÑÏÃÜµÄ±£»¤¡£
+é€™æ˜¯ä¸€ä»¶ç”¨è²´é‡é‡‘å±¬æ‰“é€ è€Œæˆçš„é‡‘è­·è†ï¼Œæä¾›åš´å¯†çš„ä¿è­·ã€‚
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "legs" );
         set( "armor_class", 5 );
         set("material","heavy_metal");

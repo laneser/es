@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "steel hook", "¸Ö¹³" );
+	set_name( "steel hook", "é‹¼é‰¤" );
 	add( "id", ({ "hook" }) );
-   set_short( "¸Ö¹³" );
+   set_short( "é‹¼é‰¤" );
 	set_long(
-		"Õâ¸ö¸Ö¹³ÉÏÓĞÒ»¸ö±£»¤ÊÖ²¿µÄÌúÌ×£¬²»ÖªµÀÎªÊ²÷áº£µÁ¶¼Ï²»¶ÓÃÕâÖÖÎäÆ÷£¿\n"
+		"é€™å€‹é‹¼é‰¤ä¸Šæœ‰ä¸€å€‹ä¿è­·æ‰‹éƒ¨çš„éµå¥—ï¼Œä¸çŸ¥é“ç‚ºä»€éº¼æµ·ç›œéƒ½å–œæ­¡ç”¨é€™ç¨®æ­¦å™¨ï¼Ÿ\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	setup_weapon( "unarmed", 21, 9, 28 );
 	set( "weight", 50 );
 	set( "value", ({ 940, "silver" }) );

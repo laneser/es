@@ -5,15 +5,15 @@ inherit SARM"OR";
 
 void create()
 {
-     set_name( "Queen's shoes","ĞåË¿²ÊÑ¥" );
+     set_name( "Queen's shoes","ç¹¡çµ²å½©é´" );
      add( "id",({ "shoes","boots" }) );
-     set_short( "ĞåË¿²ÊÑ¥" );
+     set_short( "ç¹¡çµ²å½©é´" );
      set_long(@C_LONG
-Ò»Ë«ÓÃË¿ÁÏ·ìÖÆ¶ø³ÉµÄĞ¬×Ó£¬ÔÙÈ¾ÒÔÆß²ÊÑÕÉ«£¬·Ç³£ºÃ¿´¡£
+ä¸€é›™ç”¨çµ²æ–™ç¸«è£½è€Œæˆçš„é‹å­ï¼Œå†æŸ“ä»¥ä¸ƒå½©é¡è‰²ï¼Œéå¸¸å¥½çœ‹ã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "Ë«");
+     set( "unit", "é›™");
      set( "type", "feet" );
      set( "material","cloth" );
      set( "the_one",1);

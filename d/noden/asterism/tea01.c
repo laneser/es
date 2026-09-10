@@ -5,11 +5,11 @@ void create()
     ::create();
     seteuid(getuid());
     set("id", ({ "tea" , "herb tea" }) ) ;
-    set_name("herb tea","Çà²İ²è");
-    set_short("a cup of herb tea","Çà²İ²è");
+    set_name("herb tea","é’è‰èŒ¶");
+    set_short("a cup of herb tea","é’è‰èŒ¶");
     set_long("The tea was made from secret prescribtion of the Otonashi's.\n",
-    "ÕâÊÇÓÉÇ§²İ¼ÒÃÜ´«Åä·½ÖÆ³ÉµÄÇà²İ²è¡£É¶£¿......Ë­ĞÕÇ§²İ£¿\n"
-    "àÅ......ÎªÁËÉí¼ÒĞÔÃüÖøÏë£¬²»ÖªµÀµÄ¾Í²»Òª¶àÎÊ°É!!\n");
+    "é€™æ˜¯ç”±åƒè‰å®¶å¯†å‚³é…æ–¹è£½æˆçš„é’è‰èŒ¶ã€‚å•¥ï¼Ÿ......èª°å§“åƒè‰ï¼Ÿ\n"
+    "å—¯......ç‚ºäº†èº«å®¶æ€§å‘½è‘—æƒ³ï¼Œä¸çŸ¥é“çš„å°±ä¸è¦å¤šå•å§!!\n");
     set("tp",80);
     set("value",({ 50,"silver" }) ) ;
     set("amount",0) ;

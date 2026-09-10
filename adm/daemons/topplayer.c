@@ -63,19 +63,19 @@ varargs string get_list(int chinese_mode)
 	string msg;
 
 	if( !sizeof(top_list) ) return chinese_mode?
-		"Íæ¼ÒÅÅĞĞ°ñÄ¿Ç°ÊÇ¿ÕµÄ¡¡\n": "The Top Player List is currently empty.\n";
+		"ç©å®¶æ’è¡Œæ¦œç›®å‰æ˜¯ç©ºçš„ã€€\n": "The Top Player List is currently empty.\n";
 	msg = chinese_mode?
-		"Íæ¼ÒÅÅĞĞ°ñÇ° " + sizeof(top_list) + " Ãû:\n":
+		"ç©å®¶æ’è¡Œæ¦œå‰ " + sizeof(top_list) + " å:\n":
 		"The Top " + sizeof(top_list) + " Players:\n\n";
 	msg += chinese_mode?
-		sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä              Score\n"):
+		sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“              Score\n"):
 		sprintf(" Rank    Name             Level            Age                Score\n");
 	for(i=0; i<sizeof(top_list); i++) {
 		savedata = exps[top_list[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += chinese_mode?
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list[i], savedata[1], day, hour, savedata[0] ):
 			sprintf("  %2d. %20-s %2d %10d days %2d hours %20d\n",i+1, 
 			top_list[i], savedata[1], day, hour, savedata[0] );

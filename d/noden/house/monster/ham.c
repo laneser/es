@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "ham", "»ğÍÈ" );
-   set_short( "»ğÍÈ" );
+	set_name( "ham", "ç«è…¿" );
+   set_short( "ç«è…¿" );
 	set_long(
-		"Äã¿´µ½Ò»¸ù¡¸·ËÒÄËùË¼¡¹µÄ»ğÍÈÆ¯¸¡ÔÚ¿ÕÖĞ....¡£\n"
+		"ä½ çœ‹åˆ°ä¸€æ ¹ã€ŒåŒªå¤·æ‰€æ€ã€çš„ç«è…¿æ¼‚æµ®åœ¨ç©ºä¸­....ã€‚\n"
 	);
    set( "race", "undead" );
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	set( "alignment", -100 );
 	set( "natural_defense_bonus", 5 );
 	set( "natural_weapon_class1", 2 );
@@ -20,6 +20,6 @@ void create()
    set( "unbleeding", 1 );
    set( "block_aim", ({ "vascular", "ganglion" }) );
 	set_skill( "dodge", 5 );
-	set_c_verbs( ({ "%sÅ¤ÖøÉí×Ó×ªÁË¼¸È¦£¬Ïò%s³åÈ¥" }) );
-	set_c_limbs( ({ "ÉíÌå" }) );
+	set_c_verbs( ({ "%sæ‰­è‘—èº«å­è½‰äº†å¹¾åœˆï¼Œå‘%sè¡å»" }) );
+	set_c_limbs( ({ "èº«é«”" }) );
 }

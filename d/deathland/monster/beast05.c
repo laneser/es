@@ -9,12 +9,12 @@ void create()
 	::create();
 	set_level(12);
 	seteuid(getuid());
-	set_name( "Cold Beast", "º®ÊŞ" );
+	set_name( "Cold Beast", "å¯’ç¸" );
 	add("id",({"beast"}));
-	set_short( "Cold Beast", "º®ÊŞ" );
+	set_short( "Cold Beast", "å¯’ç¸" );
 	set_long(
 		"cold beast.\n",
-		"Ò»Ö»Ææ¹ÖµÄÉúÎï, Ö»Òª¿¿½üËü¾Í»á¸Ğ¾õº®Àä.\n"
+		"ä¸€éš»å¥‡æ€ªçš„ç”Ÿç‰©, åªè¦é è¿‘å®ƒå°±æœƒæ„Ÿè¦ºå¯’å†·.\n"
 	);
 	set("max_hp",350);
 	set("hit_points",350);
@@ -54,7 +54,7 @@ void cold(int call_again)
      for(i=0;i<sizeof(player);i++) 
        if ( living(player[i]) && player[i]!=npc ) {
          tell_object(player[i],
-         "´Óº®ÊŞµÄÉíÉÏ·¢³öµÄÀä¿ÕÆø¶³ÉËÁËÄã.\n"
+         "å¾å¯’ç¸çš„èº«ä¸Šç™¼å‡ºçš„å†·ç©ºæ°£å‡å‚·äº†ä½ .\n"
          ); 
          player[i]->receive_special_damage("cold",10+random(20));
          call_again=0;

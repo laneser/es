@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Dwarven elder cape", "°«ÈËÅû·ç");
+        set_name("Dwarven elder cape", "çŸ®äººæŠ«é¢¨");
         add( "id", ({ "cape" }) );
-        set_short( "°«ÈËÅû·ç");
+        set_short( "çŸ®äººæŠ«é¢¨");
         set_long(
-                "ÕâÊÇ°«ÈË×å×¨ÓÃµÄÅû·ç£¬ËûËù´ú±íµÄÊÇÉç»áµØÎ»¡£ \n"
+                "é€™æ˜¯çŸ®äººæ—å°ˆç”¨çš„æŠ«é¢¨ï¼Œä»–æ‰€ä»£è¡¨çš„æ˜¯ç¤¾æœƒåœ°ä½ã€‚ \n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set("material","cloth") ;
         set( "armor_class", 7 );

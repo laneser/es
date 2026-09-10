@@ -4,16 +4,16 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "rhinoceros horn", "Ï¬Å£½Ç" );
+	set_name( "rhinoceros horn", "çŠ€ç‰›è§’" );
               set("no_sale",1);
 	add( "id", ({ "horn" }) );
-	set_short( "a rhinoceros horn", "Ï¬Å£½Ç" );
+	set_short( "a rhinoceros horn", "çŠ€ç‰›è§’" );
 	set_long(
 		"You see a horn of rhinoceros, used to be a kind of reagent.\n",
-		"ÕâÊÇÏ¬Å£Í·ÉÏµÄ½Ç£¬´ÓÇ°ÈËÃÇÍùÍù½«ËüÄÃÀ´µ±×÷Õä¹óµÄÒ©²Ä¡£Äã¿ÉÒÔ³¢³¢(taste)¿´¡£\n"
+		"é€™æ˜¯çŠ€ç‰›é ­ä¸Šçš„è§’ï¼Œå¾å‰äººå€‘å¾€å¾€å°‡å®ƒæ‹¿ä¾†ç•¶ä½œçè²´çš„è—¥æã€‚ä½ å¯ä»¥åšåš(taste)çœ‹ã€‚\n"
 	);
 	set( "ident", "RHINOCEROS_HORN" );
-	set( "unit", "Ö¦" );
+	set( "unit", "æ" );
         set( "weight", 4 );
 	set( "effect","weak");
 	set( "frequency",3);

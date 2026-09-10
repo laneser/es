@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
        ::create();
-       set_short( "¿Ý\¾®ÖÐ" );
+       set_short( "æž¯äº•ä¸­" );
        set_long( @C_LONG_DESC
-ÄãÔÚÒ»¸ö¿Ý\¾®ÖÐ£¬ËÄÖÜ¶¼ÊÇÂúÊÇÇàÌ¦µÄ¾®±Ú£¬ÓÉì¶³¤ÆÚµÄÇ¬ºÔ£¬Õû¸ö
-¾®µ×¶¼ÊÇÒ»ÌõÌõµÄÁÑ·ì£¬Ïë±Ø¾®Ë®ÊÇ´ÓÆäÖÐµÄÄ³Ð©ÁÑ·ìÁ÷³öÈ¥µÄ¡£
+ä½ åœ¨ä¸€å€‹æž¯äº•ä¸­ï¼Œå››å‘¨éƒ½æ˜¯æ»¿æ˜¯é’è‹”çš„äº•å£ï¼Œç”±æ–¼é•·æœŸçš„ä¹¾æ¶¸ï¼Œæ•´å€‹
+äº•åº•éƒ½æ˜¯ä¸€æ¢æ¢çš„è£‚ç¸«ï¼Œæƒ³å¿…äº•æ°´æ˜¯å¾žå…¶ä¸­çš„æŸäº›è£‚ç¸«æµå‡ºåŽ»çš„ã€‚
 C_LONG_DESC
        );
        set("exits",([
@@ -27,8 +27,8 @@ int explore_crack()
 {
     if( !(this_player()->query_quest_level("Tenshin's herb")) ) return 0;
     tell_object(this_player(),@ALONG
-ÄãÐ¡ÐÄµÄ²ìÌ½ËÄÖÜµÄ¾®±Ú£¬·¢ÏÖÆäÖÐÓÐÒ»¸öÁÑ·ì(crack)ºÃÏñÓÐÉúÎï
-½ø³öµÄºÛ¼£....»òÐí\Äã¿ÉÒÔ´©¹ýÈ¥(pass)¿´¿´¡£
+ä½ å°å¿ƒçš„å¯ŸæŽ¢å››å‘¨çš„äº•å£ï¼Œç™¼ç¾å…¶ä¸­æœ‰ä¸€å€‹è£‚ç¸«(crack)å¥½åƒæœ‰ç”Ÿç‰©
+é€²å‡ºçš„ç—•è·¡....æˆ–è¨±ä½ å¯ä»¥ç©¿éŽåŽ»(pass)çœ‹çœ‹ã€‚
 ALONG
     );
     return 1;
@@ -39,9 +39,9 @@ int pass_crack(string arg)
     
     if( !(this_player()->query_quest_level("Tenshin's herb")) ) return 0;
     if( !arg || arg!="crack" )    
-      return notify_fail( "Í¨¹ýÊ²÷á£¿\n" );
+      return notify_fail( "é€šéŽä»€éº¼ï¼Ÿ\n" );
     tell_object(this_player(),
-      "ÄãÓÃÁ¦Ò»¼·£¬¾¹È»´©¹ýÁÑ·ìµ½´ïÁíÒ»¸öµØ·½¡£\n" 
+      "ä½ ç”¨åŠ›ä¸€æ“ ï¼Œç«Ÿç„¶ç©¿éŽè£‚ç¸«åˆ°é”å¦ä¸€å€‹åœ°æ–¹ã€‚\n" 
     );
     this_player()->move_player( SAULIN"under_well2", "SNEAK" );
     return 1;

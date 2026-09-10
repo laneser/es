@@ -4,11 +4,11 @@ inherit WEAPON ;
 
 void create()
 {
-	set_name("staff of rule", "ÊØ½ä¹÷");
+	set_name("staff of rule", "å®ˆæˆ’æ£");
 	add ("id", ({ "staff" }) );
-	set_short( "ÊØ½ä¹÷" );
+	set_short( "å®ˆæˆ’æ£" );
 	set_long(
-		"ÕâÊÇÉÙÁÖµÄ½äÂÉÔºÖ´ÊÂÉ®ËùÓÃµÄ·¨¹÷£¬´ú±íÁËÉÙÁÖËÂµÄ½äÂÉ¡£\n"
+		"é€™æ˜¯å°‘æ—çš„æˆ’å¾‹é™¢åŸ·äº‹åƒ§æ‰€ç”¨çš„æ³•æ£ï¼Œä»£è¡¨äº†å°‘æ—å¯ºçš„æˆ’å¾‹ã€‚\n"
 	);
 	set("type", "bo");
 	set("weapon_class", 25);

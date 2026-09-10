@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "balance beam", "´ó¸Ë³Ó" );
+	set_name( "balance beam", "å¤§æ¡¿ç§¤" );
 	add( "id", ({ "beam" }) );
-	set_short( "a balance beam", "´ó¸Ë³Ó" );
+	set_short( "a balance beam", "å¤§æ¡¿ç§¤" );
 	set_long(
 		"You see a balance beam for trading.\n",
-		"ÕâÊÇÒ»°Ñ´óºÅµÄ¸Ë³Ó£¬×¨ÃÅÓÃÀ´³ÓÌØ´óºÅµÄ»õÎïÓÃµÄ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠå¤§è™Ÿçš„æ¡¿ç§¤ï¼Œå°ˆé–€ç”¨ä¾†ç§¤ç‰¹å¤§è™Ÿçš„è²¨ç‰©ç”¨çš„ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 200 );
 	setup_weapon( "polearm", 25, 15, 30 );
 	set( "value", ({ 420, "silver" }) );

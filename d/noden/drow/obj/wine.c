@@ -5,20 +5,20 @@ inherit POTION;
 void create()
 {
         potion::create();
-        set_name( "wine","Êõ¾Æ");
+        set_name( "wine","è¡“é…’");
         add( "id", ({ "wine" }) );
-        set_short( "Êõ¾Æ");
+        set_short( "è¡“é…’");
         set_long(
 @C_LONG
-ÕâÊÇÒ»¹ŞÓÉÀÏ´å³¤Ëùµ÷ÖÆµÄÊõ¾Æ£¬ÎÅÆğÀ´ÓĞ¹ÉÅ¨ÓôµÄÒ©Î¶£¬¿ÉÄÜ
-¶Ôì¶ÉíÌåÓĞ²¡Í´µÄÈË£¬¾ßÓĞ²»ÉÙµÄÁÆĞ§°É¡£
+é€™æ˜¯ä¸€ç½ç”±è€æ‘é•·æ‰€èª¿è£½çš„è¡“é…’ï¼Œèèµ·ä¾†æœ‰è‚¡æ¿ƒéƒçš„è—¥å‘³ï¼Œå¯èƒ½
+å°æ–¼èº«é«”æœ‰ç—…ç—›çš„äººï¼Œå…·æœ‰ä¸å°‘çš„ç™‚æ•ˆå§ã€‚
 C_LONG
         );
 // so high ???
 // set_healing(250);
    set_healing(100);
         set( "no_sale", 1 );
-        set( "unit", "¹Ş");
+        set( "unit", "ç½");
         set( "weight", 40 );
         set( "value", ({ 700, "silver" }) );
         set( "medication",10 );

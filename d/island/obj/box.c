@@ -5,12 +5,12 @@ inherit CONTAINER;
 void create()
 {
         ::create();
-        set_name("Paper box", "×ÖÖ½İä");
+        set_name("Paper box", "å­—ç´™è”");
         set("id",({ "box"}));
-        set_short("×ÖÖ½İä");
+        set_short("å­—ç´™è”");
         set_c_open_long(@LONG
-ÕâÊÇ×¨ÃÅÓÃÀ´»ØÊÕÊÕ¾İµÄ×ÊÔ´»ØÊÕÏä£¬Çë´ó¼ÒÒªÓĞ»·±£¸ÅÄî£¬
-Îğ½«·ÇÊÕ¾İÎïÆ·Í¶Èë(put)¡£        
+é€™æ˜¯å°ˆé–€ç”¨ä¾†å›æ”¶æ”¶æ“šçš„è³‡æºå›æ”¶ç®±ï¼Œè«‹å¤§å®¶è¦æœ‰ç’°ä¿æ¦‚å¿µï¼Œ
+å‹¿å°‡éæ”¶æ“šç‰©å“æŠ•å…¥(put)ã€‚        
 LONG
         );
         set( "weight", 20);
@@ -46,8 +46,8 @@ int do_put(string arg)
        if ( id+" in box" == arg || id+" into box"==arg );
        {
           obj[i]->remove();
-          write("½ĞÄã²»Òª¶ª»¹Ëµ²»Ìı! Ã»ÊÕ!");
-          tell_room(environment(this_player()), this_player()->query("c_name")+"µÄ"+name+"±»Ã»ÊÕÁË!",this_player());
+          write("å«ä½ ä¸è¦ä¸Ÿé‚„èªªä¸è½! æ²’æ”¶!");
+          tell_room(environment(this_player()), this_player()->query("c_name")+"çš„"+name+"è¢«æ²’æ”¶äº†!",this_player());
           return 1 ;
         }
         }
@@ -65,7 +65,7 @@ int do_put(string arg)
        
         else
         {
-          write("ÄãÒª¸ÉÊ²÷á!?");
+          write("ä½ è¦å¹¹ä»€éº¼!?");
           return 1;
         }
        } 

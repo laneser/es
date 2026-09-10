@@ -8,10 +8,10 @@ void create()
 
 	::create();
 	set_level(5);
-	set_name("servant", "仆役");
-	set_short("仆役");
+	set_name("servant", "鍍曞焦");
+	set_short("鍍曞焦");
 	set_long(
-		"一个看起来很普通的仆役，负责接待贵宾。\n"
+		"涓�鍊嬬湅璧蜂締寰堟櫘閫氱殑鍍曞焦锛岃矤璨帴寰呰泊璩撱�俓n"
 	);
 	set( "gender", "male" );
 	set( "race", "human" );

@@ -10,24 +10,24 @@ void create ()
 
         ::create();
         set_level(17);
-        set_name( "Zhan Hsin", "ÕÅÇà" );
+        set_name( "Zhan Hsin", "å¼µé’" );
         add ("id", ({ "zhan", "hsin" }) );
-        set_short( "ÕÅÇà");
+        set_short( "å¼µé’");
         set( "race" , "elf" );
-        set("unit","Î»");
+        set("unit","ä½");
         set("alignment",100);
         set("weight",400);
         set("wealth/silver",500);
         set_long(
-           "ÃÏÖİÈË£¬ÍâºÅ²ËÔ°×Ó£¬ÉîºÃÈ­Êõ£¬ÊÖ½Å»î±ã£¬Ô­ÔÚ¹âÃ÷ËÂÖÖ²Ë£¬ÏÖÎª\n"
-           "ÁºÉ½²´¾Æµê´òÌıÏûÏ¢Ñû½ÓÀ´±öÍ·Áì¡£\n"
+           "å­Ÿå·äººï¼Œå¤–è™Ÿèœåœ’å­ï¼Œæ·±å¥½æ‹³è¡“ï¼Œæ‰‹è…³æ´»ä¾¿ï¼ŒåŸåœ¨å…‰æ˜å¯ºç¨®èœï¼Œç¾ç‚º\n"
+           "æ¢å±±æ³Šé…’åº—æ‰“è½æ¶ˆæ¯é‚€æ¥ä¾†è³“é ­é ˜ã€‚\n"
         );
         set_perm_stat("int", 20);
         set_perm_stat("dex", 25);
         set_perm_stat("str",25);
         set_perm_stat("kar",30);
         set( "chat_chance",8);  
-        set("chat_output",({"ÕÅÇàĞ¦µÀ: ÈË¿ÍÒª²»Òª³Ôµã¶«Î÷??\n"}));
+        set("chat_output",({"å¼µé’ç¬‘é“: äººå®¢è¦ä¸è¦åƒé»æ±è¥¿??\n"}));
         set("max_hp",500);
         set("hit_points",500);
         set("natural_defense_bonus",30);
@@ -65,8 +65,8 @@ int my_tactic()
    if (random(20)<15) return 0;
    if (!query_attacker()) return 0;       
 	tell_room(environment(this_object()),
-	    "\nÕÅÇà´Ó»³ÖĞÌÍ³ö¼¸¸ö°ü×Ó£¬ËµµÀ: ¿Í¹ÙÂıÓÃ......."
-	    "\nÄã½ÓÁË¹ıÈ¥¿ªĞÄµØ³Ô½«ÆğÀ´£¬ÍêÈ«Íü¼ÇÁËÕ½¶·µÄÊÂ......\n");
+	    "\nå¼µé’å¾æ‡·ä¸­æå‡ºå¹¾å€‹åŒ…å­ï¼Œèªªé“: å®¢å®˜æ…¢ç”¨......."
+	    "\nä½ æ¥äº†éå»é–‹å¿ƒåœ°åƒå°‡èµ·ä¾†ï¼Œå®Œå…¨å¿˜è¨˜äº†æˆ°é¬¥çš„äº‹......\n");
 	this_object()->receive_healing(10);
 //	add("hit_points",10);
    	attackers=all_inventory(environment(this_object()));

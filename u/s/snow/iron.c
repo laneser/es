@@ -5,13 +5,13 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-          set_name( "iron", "ìÙ¶·" );
+          set_name( "iron", "ç†¨æ–—" );
           add( "id", ({ "iron" }) );
-     set_short( "ìÙ¶·" );
+     set_short( "ç†¨æ–—" );
 	set_long(
-                 "Ò»¸öÆÕÆÕÍ¨Í¨µÄìÙ¶·£¬ÉÏÃæ¿Ì×Å¡°¶à¶àÔù¡±Èı¸ö´ó×Ö£¡\n"
+                 "ä¸€å€‹æ™®æ™®é€šé€šçš„ç†¨æ–—ï¼Œä¸Šé¢åˆ»è‘—â€œå¤šå¤šè´ˆâ€ä¸‰å€‹å¤§å­—ï¼\n"
 	);
-          set( "unit", "¸ö" );
+          set( "unit", "å€‹" );
 	set( "material", "cloth");
 	set( "weight", 10 );
 	set( "value", ({ 24, "silver" }) );

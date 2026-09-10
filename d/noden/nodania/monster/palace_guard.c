@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name("palace guard", "皇宫侍卫");
+	set_name("palace guard", "鐨囧渚嶈");
 	add( "id", ({ "guard" }) );
-	set_short("皇宫侍卫");
+	set_short("鐨囧渚嶈");
 	set_long(
-		"这位骑士正守卫著诺达尼亚王宫，他看起来十分以此工作为荣。\n"
+		"閫欎綅楱庡＋姝ｅ畧琛涜憲璜鹃仈灏间簽鐜嬪锛屼粬鐪嬭捣渚嗗崄鍒嗕互姝ゅ伐浣滅偤姒�俓n"
 	);
 	set_perm_stat("str", 20 );
 	set_perm_stat("dex", 20 );

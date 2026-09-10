@@ -5,15 +5,15 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "Lizardman Soldier", "òáòæÈËÊ¿±ø" );
+	set_name( "Lizardman Soldier", "èœ¥èœ´äººå£«å…µ" );
 	add( "id", ({ "lizardman","soldier" }) );
-	set_short( "Lizardman Soldier", "òáòæÈËÊ¿±ø" );
+	set_short( "Lizardman Soldier", "èœ¥èœ´äººå£«å…µ" );
 	set_long(@LONG
-Äã¿´µ½Ò»Î»³õ´ÎÉÏÕ½³¡µÄÊ¿±ø£¬¿´ËûÉµÀïÉµÆøµÄÑù×Ó£¬ÊÖ»¹²»Í£µØ·¢
-¶¶£¬ºÜÄÑÏëÏñËûÊÇÒ»Î»¾üÈË¡£
+ä½ çœ‹åˆ°ä¸€ä½åˆæ¬¡ä¸Šæˆ°å ´çš„å£«å…µï¼Œçœ‹ä»–å‚»é‡Œå‚»æ°£çš„æ¨£å­ï¼Œæ‰‹é‚„ä¸åœåœ°ç™¼
+æŠ–ï¼Œå¾ˆé›£æƒ³åƒä»–æ˜¯ä¸€ä½è»äººã€‚
 LONG
 		);
-	set( "unit","Ãû" );
+	set( "unit","å" );
 	set( "race","lizardman" );
 	set( "gender","male" );
 	set( "alignment", -300 );
@@ -29,8 +29,8 @@ LONG
 	set_skill( "parry",50 );
 	set( "chat_chance",20 );
 	set( "att_chat_output",({
-	"\nòáòæÈËÊ¿±ø´ó½Ğ£º¡º±ğ±ÆÎÒ£¬ÎÒ²»ÏëÉ±º¦Äã£¡¡»\n\n",
-	"\nòáòæÈËÊ¿±øËµµÀ£º¡º¶ªÏÂÄãµÄÎäÆ÷Í¶½µ°É£¬ÎÒ²»»áÉËº¦ÄãµÄ£¡¡»\n\n" }) );
+	"\nèœ¥èœ´äººå£«å…µå¤§å«ï¼šã€åˆ¥é€¼æˆ‘ï¼Œæˆ‘ä¸æƒ³æ®ºå®³ä½ ï¼ã€\n\n",
+	"\nèœ¥èœ´äººå£«å…µèªªé“ï¼šã€ä¸Ÿä¸‹ä½ çš„æ­¦å™¨æŠ•é™å§ï¼Œæˆ‘ä¸æœƒå‚·å®³ä½ çš„ï¼ã€\n\n" }) );
 	wield_weapon( IWARO"shortsword" );
 	equip_armor( IWARO"cloth2" );
 	equip_armor( IWARO"kepi" );

@@ -33,10 +33,10 @@ void setup_race_body()
 
 	// These variables are used for /adm/daemons/combat_d.c
 /*
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ",
-		"%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ÐØ", "×óÍÈ", "ÓÒÍÈ",
-		"²±×Ó", "×ó¼ç", "ÓÒ¼ç", "ááÐÄ", "Ð¡¸¹", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"è„–å­", "å·¦è‚©", "å³è‚©", "å¾Œå¿ƒ", "å°è…¹", }) );
 */
 	// Shapeshifter will drop all when be scared.
 	remove_call_out("drop_eq");
@@ -107,7 +107,7 @@ void drop_eq()
 	// only user has this property.
 	if( !userp(this_object()) || this_object()->query_linkdead() ) return;
 
-	tell_object(this_object(),"Í»È»¡¸ºä¡¹µÄÒ»Éù´Ó±³áá´«À´, ÄãÏÅÁËÒ»´óÌø¡£\n");
+	tell_object(this_object(),"çªç„¶ã€Œè½Ÿã€çš„ä¸€è²å¾žèƒŒå¾Œå‚³ä¾†, ä½ åš‡äº†ä¸€å¤§è·³ã€‚\n");
 	inv = all_inventory( this_object() );
 	if( sizeof(inv) ) {
 		if( this_object()->query_temp("mounting") ) command("dismount");

@@ -6,11 +6,11 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Death Scythe", "ËÀÉñÁ­µ¶");
+    set_name("Death Scythe", "æ­»ç¥é®åˆ€");
     add ("id",({ "scythe" }) );
-    set_short("ËÀÉñÁ­µ¶");
-    set_long("Ò»°ÑºÜÊ®·Ö·æÀûµÄ´óÁ­µ¶£¬¾İËµÊÇËÀÉñĞÄ°®µÄÎäÆ÷¡£\n");
-    set("unit", "°Ñ");
+    set_short("æ­»ç¥é®åˆ€");
+    set_long("ä¸€æŠŠå¾ˆååˆ†é‹’åˆ©çš„å¤§é®åˆ€ï¼Œæ“šèªªæ˜¯æ­»ç¥å¿ƒæ„›çš„æ­¦å™¨ã€‚\n");
+    set("unit", "æŠŠ");
     set("weapon_class", 42);
     set("type", "longblade");
     set("min_damage", 25);

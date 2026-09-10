@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Huge Axe","¾ÞÁé¸«");
+       set_name("Huge Axe","å·¨éˆæ–§");
        add("id",({"axe",}) );
-       set_short("¾ÞÁé¸«");
+       set_short("å·¨éˆæ–§");
        set_long(
-           "×ó»¤ÎÀ£­×óÇà³ÇÓÃµÄÒ»°Ñ¸«Í·\n"
+           "å·¦è­·è¡›ï¼å·¦é’åŸŽç”¨çš„ä¸€æŠŠæ–§é ­\n"
      	);
 	
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 45 );
         set("type","axe");
         set("bleeding",8);
@@ -22,7 +22,7 @@ void create()
 	set( "value", ({ 300, "gold" }) );
 //	set("hit_func","axe_damage");
         set("special_damage",20);
-        set("special_msg","»Ó³öÒ»µÀÆÆ¿ÕÆøÁ÷Ö±´ÌÈëµÐÈËµÄ·ÀÓùÖÐÐÄ.\n");
+        set("special_msg","æ®å‡ºä¸€é“ç ´ç©ºæ°£æµç›´åˆºå…¥æ•µäººçš„é˜²ç¦¦ä¸­å¿ƒ.\n");
 }
 
 int axe_damage(object victim,int damage)
@@ -39,9 +39,9 @@ int axe_damage(object victim,int damage)
 	if( !(dam = (int)query("special_damage")) ) return 0;
         if ((int)holder->query_skill("axe")<80) {
           tell_object(holder,
-              "\nÄãÃãÇ¿»Ó¶¯µÄ¾ÞÁé¸«Ëù²úÉúµÄÆøÁ÷²»Ð¡ÐÄÉËµ½ÁË×Ô¼º.\n\n");
+              "\nä½ å‹‰å¼·æ®å‹•çš„å·¨éˆæ–§æ‰€ç”¢ç”Ÿçš„æ°£æµä¸å°å¿ƒå‚·åˆ°äº†è‡ªå·±.\n\n");
           tell_room(environment(holder),
-              "\n"+holder->query("c_name")+"µÄ¾ÞÁé¸«Ëù²úÉúµÄÆøÁ÷²»Ð¡ÐÄÉËµ½ÁË×Ô¼º.\n\n",
+              "\n"+holder->query("c_name")+"çš„å·¨éˆæ–§æ‰€ç”¢ç”Ÿçš„æ°£æµä¸å°å¿ƒå‚·åˆ°äº†è‡ªå·±.\n\n",
               holder );
           holder->receive_damage(dam);
           return dam;
@@ -52,9 +52,9 @@ int axe_damage(object victim,int damage)
 	if( !c_msg ) c_msg = msg;
 	if( !msg ) return 0;
 	tell_object( holder, 
-		"\nÄãµÄ"+query("c_name")+c_msg+"\n");
+		"\nä½ çš„"+query("c_name")+c_msg+"\n");
 	tell_room( environment(holder),
-	holder->query("c_name") + "µÄ"+query("c_name")+msg+"\n",
+	holder->query("c_name") + "çš„"+query("c_name")+msg+"\n",
 		holder );
 	return dam;
 	

@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Silver longsword", "Òø½£");
+        set_name("Silver longsword", "éŠ€åŠ");
         add ("id",({ "sword" }) );
-        set_short("Òø½£");
+        set_short("éŠ€åŠ");
         set_long(
-            "ÕâÊÇÒøÖÆµÄ½££¬×Ô¹Å´«ÑÔÒøÖÆÆ·ÌìÉú´øÓĞÉñÊ¥µÄÁ¦Á¿¡£\n"
+            "é€™æ˜¯éŠ€è£½çš„åŠï¼Œè‡ªå¤å‚³è¨€éŠ€è£½å“å¤©ç”Ÿå¸¶æœ‰ç¥è–çš„åŠ›é‡ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 27 );
         set( "type", "longblade" );
         set( "min_damage", 20);

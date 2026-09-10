@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "six-bag beggar", "Áù´üµÜ×Ó" );
+	set_name( "six-bag beggar", "å…­è¢‹å¼Ÿå­" );
 	set("id",({"six","beggar"}));
-	set_short( "Ø¤°ï Áù´üµÜ×Ó" );
+	set_short( "ä¸å¹« å…­è¢‹å¼Ÿå­" );
 	set_long(@C_LONG
-Áù´üµÜ×ÓÕıÔÚĞÁ¿àµÄÁ·´ò¹·Õó·¨¡£
+å…­è¢‹å¼Ÿå­æ­£åœ¨è¾›è‹¦çš„ç·´æ‰“ç‹—é™£æ³•ã€‚
 C_LONG
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set_perm_stat( "str", 22 );
 	set_perm_stat( "dex", 13 );
 	set_skill( "dodge", 70 );

@@ -1,136 +1,136 @@
 #d/monk/guild/monk_board.c
-ob_data (["hit_points":1,"endurance_points":1,"c_short.text":"ÎäÉ®¹«»áÁôÑÔ°å","id":({"board","bulletin board",}),"c_long":"@@query_c_long","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","short.text":"ÎäÉ®¹«»áÁôÑÔ°å","talk_points":1,"last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","force_points":1,"c_cap_name":"ÁôÑÔ°å","spell_points":1,"name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
-messages ({(["poster":"Oo","time":826342251,"body":"poor me...ÕÒÁËÒ»,¶ş¸öĞ¡Ê±ÔÚÉÙÁÖ»¹ÕÒ²»µ½ÖÚÉúÔº
-¡õ¡õF,ÎÒÏÈ·ÅÆúÈ¥ÕÖÈËÁË
-","title":"21 about ÖÚÉúÔº..:<","id":657,]),(["poster":"Joke","time":826399731,"title":"< no title >","body":" hmm....keep-flower specail and force-stun why can't block player...and also healer's ÃéÉñ¾­........Ï£ÍûÄÜ¸ÄÒ»ÏÂ...Ğ»Ğ»
-","id":658,]),(["poster":"Living","time":826447610,"body":"monk ¹«»áÎªÊ²÷áÓĞÄÇ÷á¶à¹«²¼À¸
-º¦ÎÒ¿´°ëÌì²Å¿´Íê......
-µÚÒ»´Î¹àË®   ^_^
-","title":"< no title >","id":659,]),(["poster":"Lancelot","time":826455505,"body":"ÇëÎÊ¾ÅÑôÔõ÷áÑ§ÎÃTZ
+ob_data (["hit_points":1,"endurance_points":1,"c_short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","id":({"board","bulletin board",}),"c_long":"@@query_c_long","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","talk_points":1,"last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","force_points":1,"c_cap_name":"ç•™è¨€æ¿","spell_points":1,"name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
+messages ({(["poster":"Oo","time":826342251,"body":"poor me...æ‰¾äº†ä¸€,äºŒå€‹å°æ™‚åœ¨å°‘æ—é‚„æ‰¾ä¸åˆ°çœ¾ç”Ÿé™¢
+â–¡â–¡F,æˆ‘å…ˆæ”¾æ£„å»ç½©äººäº†
+","title":"21 about çœ¾ç”Ÿé™¢..:<","id":657,]),(["poster":"Joke","time":826399731,"title":"< no title >","body":" hmm....keep-flower specail and force-stun why can't block player...and also healer's ç„ç¥ç¶“........å¸Œæœ›èƒ½æ”¹ä¸€ä¸‹...è¬è¬
+","id":658,]),(["poster":"Living","time":826447610,"body":"monk å…¬æœƒç‚ºä»€éº¼æœ‰é‚£éº¼å¤šå…¬ä½ˆæ¬„
+å®³æˆ‘çœ‹åŠå¤©æ‰çœ‹å®Œ......
+ç¬¬ä¸€æ¬¡çŒæ°´   ^_^
+","title":"< no title >","id":659,]),(["poster":"Lancelot","time":826455505,"body":"è«‹å•ä¹é™½æ€éº¼å­¸èšŠTZ
 AT S11=70 v1
          l
-","title":"< no title >","id":660,]),(["poster":"Vincent","time":826680697,"title":"re:22","body":"        hmmmmmm........keep-flower special and force-stun µÄ block »ØºÏ
-     ÊÇ random µÄ, ËùÒÔÒ²Ğí\µ±Ê±µÄ random µÄÖµ< 2 ÕâÑù¾Íµ²²»µ½¶Ô·½ÁË¡£
-      ÎÒÏëÕâÓ¦¸Ã²»ÊÇ bug.....
+","title":"< no title >","id":660,]),(["poster":"Vincent","time":826680697,"title":"re:22","body":"        hmmmmmm........keep-flower special and force-stun çš„ block å›åˆ
+     æ˜¯ random çš„, æ‰€ä»¥ä¹Ÿè¨±ç•¶æ™‚çš„ random çš„å€¼< 2 é€™æ¨£å°±æ“‹ä¸åˆ°å°æ–¹äº†ã€‚
+      æˆ‘æƒ³é€™æ‡‰è©²ä¸æ˜¯ bug.....
                                                  Sincerely your Vincent..
 ","id":661,]),(["poster":"Indra","time":826699917,"body":"   Dear All :
-        Vincent ÉıÈÎÖÁÏÍÕß, ÓĞÊ²÷ámonk guild µÄÎÊÌâ
-      ÇëÖ±½ÓºÍËû·´Ó¦.....
-      µ«ÊÇÇë²»ÒªÎªÄÑËû..
+        Vincent å‡ä»»è‡³è³¢è€…, æœ‰ä»€éº¼monk guild çš„å•é¡Œ
+      è«‹ç›´æ¥å’Œä»–åæ‡‰.....
+      ä½†æ˜¯è«‹ä¸è¦ç‚ºé›£ä»–..
                          Indra.
-","title":"¾ÉÏûÏ¢..","id":662,]),(["poster":"Angel","time":826712888,"body":"On Wed Mar 13, Indra wrote:
+","title":"èˆŠæ¶ˆæ¯..","id":662,]),(["poster":"Angel","time":826712888,"body":"On Wed Mar 13, Indra wrote:
 >    Dear All :
->         Vincent ÉıÈÎÖÁÏÍÕß, ÓĞÊ²÷ámonk guild µÄÎÊÌâ
->       ÇëÖ±½ÓºÍËû·´Ó¦.....
->       µ«ÊÇÇë²»ÒªÎªÄÑËû..
+>         Vincent å‡ä»»è‡³è³¢è€…, æœ‰ä»€éº¼monk guild çš„å•é¡Œ
+>       è«‹ç›´æ¥å’Œä»–åæ‡‰.....
+>       ä½†æ˜¯è«‹ä¸è¦ç‚ºé›£ä»–..
 >                          Indra.
 ===========================
-  Vincent ¼ÓÓÍ°É!
-³¯Monk Guild µÄArch Wiz Ç°½ø°É!:)
-  ²»»á¾ÅÑôÉñ¹¦\µÄMonk ¼ÓÓÍÀ²!
-","title":"Re: ¾ÉÏûÏ¢..","id":663,]),(["poster":"Vincent","time":826717435,"body":"On Wed Mar 13, Angel wrote:
+  Vincent åŠ æ²¹å§!
+æœMonk Guild çš„Arch Wiz å‰é€²å§!:)
+  ä¸æœƒä¹é™½ç¥åŠŸçš„Monk åŠ æ²¹å•¦!
+","title":"Re: èˆŠæ¶ˆæ¯..","id":663,]),(["poster":"Vincent","time":826717435,"body":"On Wed Mar 13, Angel wrote:
 > On Wed Mar 13, Indra wrote:
 > >    Dear All :
-> >         Vincent ÉıÈÎÖÁÏÍÕß, ÓĞÊ²÷ámonk guild µÄÎÊÌâ
-> >       ÇëÖ±½ÓºÍËû·´Ó¦.....
-> >       µ«ÊÇÇë²»ÒªÎªÄÑËû..
+> >         Vincent å‡ä»»è‡³è³¢è€…, æœ‰ä»€éº¼monk guild çš„å•é¡Œ
+> >       è«‹ç›´æ¥å’Œä»–åæ‡‰.....
+> >       ä½†æ˜¯è«‹ä¸è¦ç‚ºé›£ä»–..
 > >                          Indra.
 > ===========================
->   Vincent ¼ÓÓÍ°É!
-> ³¯Monk Guild µÄArch Wiz Ç°½ø°É!:)
->   ²»»á¾ÅÑôÉñ¹¦\µÄMonk ¼ÓÓÍÀ²!
-ºÇºÇºÇ.....²»¸Ò²»¸Ò, µ«µ±¾¡Á¦Îª monk Ä±¸£Àû...:P
-","title":"Re: Re: ¾ÉÏûÏ¢..","id":664,]),(["poster":"Oo","time":826764921,"title":"29 ¿ÉºŞµÄpker..","body":"     ÄÇÈº¿ÉºŞµÄpker,²»ÖªºÍÎÒÓĞºÎ¡õ³ğ´óºŞ£¬¾¹³ÃÎÒ×òÌìÈ¥Ïµ°ì×÷inactiveÊ±,°ÑÎÒÉ±ËÀÎå´Î,ÈÃÎÒ°×°×ËğÊ§ÁËËÄ°ÙÍò¾­Ñé,ÈÃÎÒÏàµ±²»Ë¬.
-    ÎÒ²»ÔÚºõÈË¼ÒËµÎÒpoor»òstupid...·´ÕıÒÔáá¿´µ½pker,·ÇÎÒËÀ£¬±ãÄã¡õ...ºß
-","id":665,]),(["poster":"Freeze","time":826770261,"title":"Re: Re: Re: ¾ÉÏûÏ¢..","body":"On Wed Mar 13, Vincent wrote:
+>   Vincent åŠ æ²¹å§!
+> æœMonk Guild çš„Arch Wiz å‰é€²å§!:)
+>   ä¸æœƒä¹é™½ç¥åŠŸçš„Monk åŠ æ²¹å•¦!
+å‘µå‘µå‘µ.....ä¸æ•¢ä¸æ•¢, ä½†ç•¶ç›¡åŠ›ç‚º monk è¬€ç¦åˆ©...:P
+","title":"Re: Re: èˆŠæ¶ˆæ¯..","id":664,]),(["poster":"Oo","time":826764921,"title":"29 å¯æ¨çš„pker..","body":"     é‚£ç¾¤å¯æ¨çš„pker,ä¸çŸ¥å’Œæˆ‘æœ‰ä½•â–¡ä»‡å¤§æ¨ï¼Œç«Ÿè¶æˆ‘æ˜¨å¤©å»ç³»è¾¦ä½œinactiveæ™‚,æŠŠæˆ‘æ®ºæ­»äº”æ¬¡,è®“æˆ‘ç™½ç™½æå¤±äº†å››ç™¾è¬ç¶“é©—,è®“æˆ‘ç›¸ç•¶ä¸çˆ½.
+    æˆ‘ä¸åœ¨ä¹äººå®¶èªªæˆ‘pooræˆ–stupid...åæ­£ä»¥å¾Œçœ‹åˆ°pker,éæˆ‘æ­»ï¼Œä¾¿ä½ â–¡...å“¼
+","id":665,]),(["poster":"Freeze","time":826770261,"title":"Re: Re: Re: èˆŠæ¶ˆæ¯..","body":"On Wed Mar 13, Vincent wrote:
 > On Wed Mar 13, Angel wrote:
 > > On Wed Mar 13, Indra wrote:
 > > >    Dear All :
-> > >         Vincent ÉıÈÎÖÁÏÍÕß, ÓĞÊ²÷ámonk guild µÄÎÊÌâ
-> > >       ÇëÖ±½ÓºÍËû·´Ó¦.....
-> > >       µ«ÊÇÇë²»ÒªÎªÄÑËû..
+> > >         Vincent å‡ä»»è‡³è³¢è€…, æœ‰ä»€éº¼monk guild çš„å•é¡Œ
+> > >       è«‹ç›´æ¥å’Œä»–åæ‡‰.....
+> > >       ä½†æ˜¯è«‹ä¸è¦ç‚ºé›£ä»–..
 > > >                          Indra.
 > > ===========================
-> >   Vincent ¼ÓÓÍ°É!
-> > ³¯Monk Guild µÄArch Wiz Ç°½ø°É!:)
-> >   ²»»á¾ÅÑôÉñ¹¦\µÄMonk ¼ÓÓÍÀ²!
-> ºÇºÇºÇ.....²»¸Ò²»¸Ò, µ«µ±¾¡Á¦Îª monk Ä±¸£Àû...:P
- Õâ»¹²»¼òµ¥, Ö»Òª½«ÈçÀ´ÉñÕÆ´«ÏÂÀ´¾ÍºÃÁË...
-ÎÒÏë´ó¼ÒÒ»¶¨»áºÜ¿ªĞÄµÄ,
+> >   Vincent åŠ æ²¹å§!
+> > æœMonk Guild çš„Arch Wiz å‰é€²å§!:)
+> >   ä¸æœƒä¹é™½ç¥åŠŸçš„Monk åŠ æ²¹å•¦!
+> å‘µå‘µå‘µ.....ä¸æ•¢ä¸æ•¢, ä½†ç•¶ç›¡åŠ›ç‚º monk è¬€ç¦åˆ©...:P
+ é€™é‚„ä¸ç°¡å–®, åªè¦å°‡å¦‚ä¾†ç¥æŒå‚³ä¸‹ä¾†å°±å¥½äº†...
+æˆ‘æƒ³å¤§å®¶ä¸€å®šæœƒå¾ˆé–‹å¿ƒçš„,
     ^_^                 
-","id":666,]),(["poster":"True","time":826770894,"title":"< no title >","body":"àË!!!
+","id":666,]),(["poster":"True","time":826770894,"title":"< no title >","body":"å—¨!!!
 pat oo~~~~~~~don't cry~~~
 i die too......but only one time.....
-ÏÂ´ÎÁªºÏ°É!!
-Ò»¶¨¶ÂËÀËûÃÇ!!!
+ä¸‹æ¬¡è¯åˆå§!!
+ä¸€å®šå µæ­»ä»–å€‘!!!
 ","id":667,]),(["poster":"Oo","time":826793912,"title":"Re: < no title >","body":"On Thu Mar 14, True wrote:
-> àË!!!
+> å—¨!!!
 > pat oo~~~~~~~don't cry~~~
 > i die too......but only one time.....
-> ÏÂ´ÎÁªºÏ°É!!
-> Ò»¶¨¶ÂËÀËûÃÇ!!!
+> ä¸‹æ¬¡è¯åˆå§!!
+> ä¸€å®šå µæ­»ä»–å€‘!!!
 
   thank true....i can't cary..only feel es has a big change during the 2 years...feel so bitterly disappointed.....but i can't excuse these pkers....
 ","id":668,]),(["poster":"Cgb","time":826854175,"body":"pkers?
-ÉÙÁÖ¾ÍÊÇÒªÎ¬»¤ÎäÁÖÕıÒå
-Çëwiz´ó´ó°ïÃ¦Ğ´¸ö¿ÉÒÔpost¶ñÈËÅÅĞĞ°ñµÄ°ñµ¥
-°ñÉÏÓĞÃûµÄ¶ñÈË, ÉÙÁÖµÜ×ÓÓĞÒåÎñ½«Ö®×¥»ØÉÙÁÖÃæ±ÚË¼¹ı  :P
+å°‘æ—å°±æ˜¯è¦ç¶­è­·æ­¦æ—æ­£ç¾©
+è«‹wizå¤§å¤§å¹«å¿™å¯«å€‹å¯ä»¥postæƒ¡äººæ’è¡Œæ¦œçš„æ¦œå–®
+æ¦œä¸Šæœ‰åçš„æƒ¡äºº, å°‘æ—å¼Ÿå­æœ‰ç¾©å‹™å°‡ä¹‹æŠ“å›å°‘æ—é¢å£æ€é  :P
 ","title":"< no title >","id":669,]),(["poster":"Cage","time":826859226,"body":"On Fri Mar 15, Cgb wrote:
 > pkers?
-> ÉÙÁÖ¾ÍÊÇÒªÎ¬»¤ÎäÁÖÕıÒå
-> Çëwiz´ó´ó°ïÃ¦Ğ´¸ö¿ÉÒÔpost¶ñÈËÅÅĞĞ°ñµÄ°ñµ¥
-> °ñÉÏÓĞÃûµÄ¶ñÈË, ÉÙÁÖµÜ×ÓÓĞÒåÎñ½«Ö®×¥»ØÉÙÁÖÃæ±ÚË¼¹ı  :P
+> å°‘æ—å°±æ˜¯è¦ç¶­è­·æ­¦æ—æ­£ç¾©
+> è«‹wizå¤§å¤§å¹«å¿™å¯«å€‹å¯ä»¥postæƒ¡äººæ’è¡Œæ¦œçš„æ¦œå–®
+> æ¦œä¸Šæœ‰åçš„æƒ¡äºº, å°‘æ—å¼Ÿå­æœ‰ç¾©å‹™å°‡ä¹‹æŠ“å›å°‘æ—é¢å£æ€é  :P
 
-ºÇºÇºÇ pk É±ÈËÅÅĞĞ°ñ :)
-pkerÒ²Ò»¶¨»áÏ²»¶µÄ:)
+å‘µå‘µå‘µ pk æ®ºäººæ’è¡Œæ¦œ :)
+pkerä¹Ÿä¸€å®šæœƒå–œæ­¡çš„:)
 ","title":"Re: < no title >","id":670,]),(["poster":"Yueh","time":826860137,"body":"On Fri Mar 15, Cgb wrote:
 > pkers?
-> ÉÙÁÖ¾ÍÊÇÒªÎ¬»¤ÎäÁÖÕıÒå
-> Çëwiz´ó´ó°ïÃ¦Ğ´¸ö¿ÉÒÔpost¶ñÈËÅÅĞĞ°ñµÄ°ñµ¥
-> °ñÉÏÓĞÃûµÄ¶ñÈË, ÉÙÁÖµÜ×ÓÓĞÒåÎñ½«Ö®×¥»ØÉÙÁÖÃæ±ÚË¼¹ı  :P
+> å°‘æ—å°±æ˜¯è¦ç¶­è­·æ­¦æ—æ­£ç¾©
+> è«‹wizå¤§å¤§å¹«å¿™å¯«å€‹å¯ä»¥postæƒ¡äººæ’è¡Œæ¦œçš„æ¦œå–®
+> æ¦œä¸Šæœ‰åçš„æƒ¡äºº, å°‘æ—å¼Ÿå­æœ‰ç¾©å‹™å°‡ä¹‹æŠ“å›å°‘æ—é¢å£æ€é  :P
 
-  ¶ñÈËÅÅĞĞ°ñ? ¿´Ë­±»À×´ò²»¾ÍÖªµÀÁË
+  æƒ¡äººæ’è¡Œæ¦œ? çœ‹èª°è¢«é›·æ‰“ä¸å°±çŸ¥é“äº†
 Yueh
-","title":"Re: < no title >","id":671,]),(["poster":"Oo","time":826862961,"body":"   Excuse me??..²»ÖªÎÒÃÇºÍÉĞÄÜ²»ÄÜ°ïÍæ¼ÒÀ´ÔË¹¦\or±Æã¾r,»òµãÑ¨Ö»Ñª....ÎÒ¾õµÃÕâÑù±È½ÏÏñÉÙÁÖ¸ßÉ®..ºÇºÇ
-only suggest,can ²»ÄñÎÒ..:P
+","title":"Re: < no title >","id":671,]),(["poster":"Oo","time":826862961,"body":"   Excuse me??..ä¸çŸ¥æˆ‘å€‘å’Œå°šèƒ½ä¸èƒ½å¹«ç©å®¶ä¾†é‹åŠŸ\oré€¼æ†”r,æˆ–é»ç©´åªè¡€....æˆ‘è¦ºå¾—é€™æ¨£æ¯”è¼ƒåƒå°‘æ—é«˜åƒ§..å‘µå‘µ
+only suggest,can ä¸é³¥æˆ‘..:P
                                              Oo
 ","title":"16 some suggest..:)","id":672,]),(["poster":"Lilia","time":826868247,"body":"On Thu Mar 14, Freeze wrote:
 > On Wed Mar 13, Vincent wrote:
 > > On Wed Mar 13, Angel wrote:
 > > > On Wed Mar 13, Indra wrote:
 > > > >    Dear All :
-> > > >         Vincent ÉıÈÎÖÁÏÍÕß, ÓĞÊ²÷ámonk guild µÄÎÊÌâ
-> > > >       ÇëÖ±½ÓºÍËû·´Ó¦.....
-> > > >       µ«ÊÇÇë²»ÒªÎªÄÑËû..
+> > > >         Vincent å‡ä»»è‡³è³¢è€…, æœ‰ä»€éº¼monk guild çš„å•é¡Œ
+> > > >       è«‹ç›´æ¥å’Œä»–åæ‡‰.....
+> > > >       ä½†æ˜¯è«‹ä¸è¦ç‚ºé›£ä»–..
 > > > >                          Indra.
 > > > ===========================
-> > >   Vincent ¼ÓÓÍ°É!
-> > > ³¯Monk Guild µÄArch Wiz Ç°½ø°É!:)
-> > >   ²»»á¾ÅÑôÉñ¹¦\µÄMonk ¼ÓÓÍÀ²!
-> > ºÇºÇºÇ.....²»¸Ò²»¸Ò, µ«µ±¾¡Á¦Îª monk Ä±¸£Àû...:P
->  Õâ»¹²»¼òµ¥, Ö»Òª½«ÈçÀ´ÉñÕÆ´«ÏÂÀ´¾ÍºÃÁË...
-> ÎÒÏë´ó¼ÒÒ»¶¨»áºÜ¿ªĞÄµÄ,
+> > >   Vincent åŠ æ²¹å§!
+> > > æœMonk Guild çš„Arch Wiz å‰é€²å§!:)
+> > >   ä¸æœƒä¹é™½ç¥åŠŸçš„Monk åŠ æ²¹å•¦!
+> > å‘µå‘µå‘µ.....ä¸æ•¢ä¸æ•¢, ä½†ç•¶ç›¡åŠ›ç‚º monk è¬€ç¦åˆ©...:P
+>  é€™é‚„ä¸ç°¡å–®, åªè¦å°‡å¦‚ä¾†ç¥æŒå‚³ä¸‹ä¾†å°±å¥½äº†...
+> æˆ‘æƒ³å¤§å®¶ä¸€å®šæœƒå¾ˆé–‹å¿ƒçš„,
 >     ^_^                 
 
-ºÇºÇºÇ .... ÄÇÉ«¹íºÍÉĞÃÇ²»¾Í½üËÆÎŞµĞÁË£¿
+å‘µå‘µå‘µ .... é‚£è‰²é¬¼å’Œå°šå€‘ä¸å°±è¿‘ä¼¼ç„¡æ•µäº†ï¼Ÿ
 
-","title":"Re: Re: Re: Re: ¾ÉÏûÏ¢..","id":673,]),(["poster":"Lilia","time":826868301,"body":"On Fri Mar 15, Yueh wrote:
+","title":"Re: Re: Re: Re: èˆŠæ¶ˆæ¯..","id":673,]),(["poster":"Lilia","time":826868301,"body":"On Fri Mar 15, Yueh wrote:
 > On Fri Mar 15, Cgb wrote:
 > > pkers?
-> > ÉÙÁÖ¾ÍÊÇÒªÎ¬»¤ÎäÁÖÕıÒå
-> > Çëwiz´ó´ó°ïÃ¦Ğ´¸ö¿ÉÒÔpost¶ñÈËÅÅĞĞ°ñµÄ°ñµ¥
-> > °ñÉÏÓĞÃûµÄ¶ñÈË, ÉÙÁÖµÜ×ÓÓĞÒåÎñ½«Ö®×¥»ØÉÙÁÖÃæ±ÚË¼¹ı  :P
+> > å°‘æ—å°±æ˜¯è¦ç¶­è­·æ­¦æ—æ­£ç¾©
+> > è«‹wizå¤§å¤§å¹«å¿™å¯«å€‹å¯ä»¥postæƒ¡äººæ’è¡Œæ¦œçš„æ¦œå–®
+> > æ¦œä¸Šæœ‰åçš„æƒ¡äºº, å°‘æ—å¼Ÿå­æœ‰ç¾©å‹™å°‡ä¹‹æŠ“å›å°‘æ—é¢å£æ€é  :P
 > 
->   ¶ñÈËÅÅĞĞ°ñ? ¿´Ë­±»À×´ò²»¾ÍÖªµÀÁË
+>   æƒ¡äººæ’è¡Œæ¦œ? çœ‹èª°è¢«é›·æ‰“ä¸å°±çŸ¥é“äº†
 > Yueh
 
-²»×¼À²£¬Î×Ê¦±È½Ï»µµÄËµ .... *grin* ....
+ä¸æº–å•¦ï¼Œå·«å¸«æ¯”è¼ƒå£çš„èªª .... *grin* ....
 
-","title":"Re: Re: < no title >","id":674,]),(["poster":"Dogs","time":826876793,"body":"ÎÒÕâÖ»dogs »¹Ğ¡µÄÊ±ºî±»À×ÅüËÀ¹ısob....sob
+","title":"Re: Re: < no title >","id":674,]),(["poster":"Dogs","time":826876793,"body":"æˆ‘é€™éš»dogs é‚„å°çš„æ™‚ä¾¯è¢«é›·åŠˆæ­»ésob....sob
 ","title":"< no title >","id":675,]),(["poster":"Lilia","time":826911776,"title":"Re: < no title >","body":"On Fri Mar 15, Dogs wrote:
-> ÎÒÕâÖ»dogs »¹Ğ¡µÄÊ±ºî±»À×ÅüËÀ¹ısob....sob
+> æˆ‘é€™éš»dogs é‚„å°çš„æ™‚ä¾¯è¢«é›·åŠˆæ­»ésob....sob
 
 *spank dogs*
 

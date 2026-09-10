@@ -35,14 +35,14 @@ errors whenever you post a message on your new bulletin board.
     2a.  Add your new domain to the DOMAIN_LIST.
          Example:
 
-            #define DOMAIN_LIST ({ "Fooland", "frogs", "central" })
+ï¿½           #define DOMAIN_LIST ({ "Fooland", "frogs", "central" })
 
     2b.  Add your new domain dir to the DOMAIN_DIRS list.
          Example:
 
            #define DOMAIN_DIRS ({ "Fooland", "grid", "std", "central" })
 
-     2c.  [Optional] Modify the LEVEL_LIST, ENTRY_LEVEL, and
+ï¿½    2c.  [Optional] Modify the LEVEL_LIST, ENTRY_LEVEL, and
          MIN_SPONSOR_LEVEL to suit your tastes and preferences.
 
 3.  Set up the domain directory and files.
@@ -101,7 +101,7 @@ Part 2 - Installing the bulletin board.
     4a.  Modify the call to set_attic_dir so that it points to your attic
          directory.  Example:  set_attic_dir ("/d/central/data/attic") ;
 
-     4b.  Modify the call to set_save_dir so that it points to the data
+ï¿½    4b.  Modify the call to set_save_dir so that it points to the data
          subdirectory of your domain directory.
          Example:  set_save_dir("/d/central/data") ;
 

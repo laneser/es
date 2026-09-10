@@ -70,7 +70,7 @@ varargs void revive(int skip)
 	link->set("dead", 0);
 
 	if( !link->switch_body() ) {
-		write("Ôã¸â !! ÐÎÌå×ª»»·¢Éú´íÎó£¬ÇëÁ¢¿ÌÍ¨ÖªÉñ»òÎ×Ê¦ !!\n");
+		write("ç³Ÿç³• !! å½¢é«”è½‰æ›ç™¼ç”ŸéŒ¯èª¤ï¼Œè«‹ç«‹åˆ»é€šçŸ¥ç¥žæˆ–å·«å¸« !!\n");
 		return;
 	}
 
@@ -94,9 +94,9 @@ varargs void revive(int skip)
 //  Add action_points, by Iris
 	body->set("action_points",300);
 	tell_object(body,
-		"Äã¾õµÃÒ»ÕóÔÎÑ££¬¸Ð¾õ×Ô¼ºÓÖ»Øµ½ÁËÊìÏ¤µÄÉíÌåÀï¡£\n");
+		"ä½ è¦ºå¾—ä¸€é™£æšˆçœ©ï¼Œæ„Ÿè¦ºè‡ªå·±åˆå›žåˆ°äº†ç†Ÿæ‚‰çš„èº«é«”è£¡ã€‚\n");
 	tell_room( environment(),
-		(string)body->query("c_name") + "µÄÓ°×ÓÉÁÁË¼¸ÉÁ£¬±äµÃºÍËÄÖÜµÄ¾°ÎïÒ»ÑùÇåÎú¡£\n" ,
+		(string)body->query("c_name") + "çš„å½±å­é–ƒäº†å¹¾é–ƒï¼Œè®Šå¾—å’Œå››å‘¨çš„æ™¯ç‰©ä¸€æ¨£æ¸…æ™°ã€‚\n" ,
 		({ body }) );
 	body->save_me();
 	"/adm/daemons/backup"->user_backup(body);
@@ -119,7 +119,7 @@ varargs int move_player(mixed dest, string message, string dir)
 	prev = environment( this_object() );
 
 	if( res = move(dest) != MOVE_OK ) {
-		tell_object(this_object(),"ÄãÁôÔÚÔ­µØ¡£\n");
+		tell_object(this_object(),"ä½ ç•™åœ¨åŽŸåœ°ã€‚\n");
 		return res;
 	}
 
@@ -135,10 +135,10 @@ varargs int move_player(mixed dest, string message, string dir)
 	if(!query("invisible")) {
 		if(message == 0 || message == "") {
 			tell_room(prev,
-				query("c_name") + "µÄ¹í»êÆ®Ïò" + to_chinese(dir) + "·½¡£\n" ,
+				query("c_name") + "çš„é¬¼é­‚é£„å‘" + to_chinese(dir) + "æ–¹ã€‚\n" ,
 				({ this_object() }));
 			tell_room( environment(),
-				query("c_name") + "µÄ¹í»êÆ®ÁË¹ýÀ´¡£\n" ,
+				query("c_name") + "çš„é¬¼é­‚é£„äº†éŽä¾†ã€‚\n" ,
 				({ this_object() }));
 		} else {
                         if( pointerp(message) ) {
@@ -151,7 +151,7 @@ varargs int move_player(mixed dest, string message, string dir)
 			} else {
 				tell_room(prev, message + "\n", ({ this_object() }));
 				tell_room( environment(),
-					  query("c_name") + "µÄ¹í»êÆ®ÁË¹ýÀ´¡£\n" ,
+					  query("c_name") + "çš„é¬¼é­‚é£„äº†éŽä¾†ã€‚\n" ,
 					  ({ this_object() }));
 			}
 
@@ -169,7 +169,7 @@ void create()
 {
 	set("weight", 0);
 	set("max_load", 0);
-	set_name("ghost","Ä³ÈËµÄ¹í»ê");
+	set_name("ghost","æŸäººçš„é¬¼é­‚");
 	set("short", "@@query_short");
 	set("vision", "@@query_vision") ;
 	set("ghost", 1);
@@ -205,7 +205,7 @@ int quit(string str) {
     EVENT->add_online_user(0,capitalize((string)this_object()->query("name")) );
 	set("last_on", time());
 	ANNOUNCE->announce_user(this_object(), 1);
-	say(query("c_name") + " Àë¿ª ES »Øµ½²Ð¿áµÄÏÖÊµÁË.\n");
+	say(query("c_name") + " é›¢é–‹ ES å›žåˆ°æ®˜é…·çš„ç¾å¯¦äº†.\n");
 
 #ifdef QUIT_LOG
 	log_file(QUIT_LOG, query("name") +": quit\t\t" +
@@ -249,12 +249,12 @@ int query_ghost()
 //  The ghost's short description
 string query_short()
 {
-	if(!link) return "Ò»¸öÄ£ºýµÄ°×Ó°";
-	if(!link->query("c_name"))  return "Ò»¸öÄ£ºýµÄ°×Ó°";
+	if(!link) return "ä¸€å€‹æ¨¡ç³Šçš„ç™½å½±";
+	if(!link->query("c_name"))  return "ä¸€å€‹æ¨¡ç³Šçš„ç™½å½±";
 
 	if(interactive(this_object()))
-		return link->query("c_name") + "µÄ¹í»ê";
-	else return link->query("c_name") + "µÄ¹í»ê [¶ÏÏßÖÐ...]";
+		return link->query("c_name") + "çš„é¬¼é­‚";
+	else return link->query("c_name") + "çš„é¬¼é­‚ [æ–·ç·šä¸­...]";
 }
 
 void setup_ghost() {
@@ -264,7 +264,7 @@ void setup_ghost() {
 	set("cap_name", link->query("name"));
 	set("c_name", link->query("c_name"));
 	set("id", ({ "ghost", "mist", link->query("name"), query("cap_name") }) );
-	set("long", sprintf("Õâ¸öÄ£ºýµÄÓ°×Ó¿´ÆðÀ´ÏñÊÇ%sµÄ¹í»ê¡£\n",link->query("c_name")));
+	set("long", sprintf("é€™å€‹æ¨¡ç³Šçš„å½±å­çœ‹èµ·ä¾†åƒæ˜¯%sçš„é¬¼é­‚ã€‚\n",link->query("c_name")));
 }
 
 nomask protected int cmd_hook(string cmd)

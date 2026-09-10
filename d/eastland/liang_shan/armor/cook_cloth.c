@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("cook cloth","ÓÍÄåµÄ³øÊ¦·ş");
+    set_name("cook cloth","æ²¹è†©çš„å»šå¸«æœ");
     add("id",({"cloth"}) );
-    set_short( "cook cloth","ÓÍÄåµÄ³øÊ¦·ş");
+    set_short( "cook cloth","æ²¹è†©çš„å»šå¸«æœ");
 	set_long(
 		"???\n",
-		"ÕâÊÇÒ»¼ş¿´À´ºÜÓÍÄåµÄ³øÊ¦¹¤×÷·ş,É¢·¢³öÒ»¹ÉÄÑÎÅÖ®ÆøÎ¶\n"
+		"é€™æ˜¯ä¸€ä»¶çœ‹ä¾†å¾ˆæ²¹è†©çš„å»šå¸«å·¥ä½œæœ,æ•£ç™¼å‡ºä¸€è‚¡é›£èä¹‹æ°£å‘³\n"
 	);
     set( "no_sale",1);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 180 );
 	set( "type", "body" );
 	set( "armor_class", 25 );

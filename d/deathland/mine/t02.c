@@ -6,11 +6,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-  set_short("On the Stair","½×ÌİÉÏ");
+  set_short("On the Stair","éšæ¢¯ä¸Š");
   set_long(@Long
 Long
 ,@CLong
-Äã×¢Òâµ½ÄãÕıÕ¾ÔÚ½×ÌİÉÏ, ÕâÊÇÒ»¸ö¶«Î÷ÏòµÄ½×Ìİ.  
+ä½ æ³¨æ„åˆ°ä½ æ­£ç«™åœ¨éšæ¢¯ä¸Š, é€™æ˜¯ä¸€å€‹æ±è¥¿å‘çš„éšæ¢¯.  
 CLong
 );
 set("exits",([

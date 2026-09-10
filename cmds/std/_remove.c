@@ -10,7 +10,7 @@ int cmd_remove(string str)
 	string name;
 	int i, class1 ;
 
-  	notify_fail("Ğ¶ÏÂÊ²÷á×°±¸£¿\n");
+  	notify_fail("å¸ä¸‹ä»€éº¼è£å‚™ï¼Ÿ\n");
 	if(!str || str == "")  return 0;
 
 	// Added by Annihilator@Eastern.Stories 10-28-93
@@ -25,19 +25,19 @@ int cmd_remove(string str)
 				continue;
 			ob[i]->unequip();
 		}
-		write( "ÄãĞ¶ÏÂÉíÉÏ×°ÅäµÄËùÓĞ»¤¼×¡£\n" );
+		write( "ä½ å¸ä¸‹èº«ä¸Šè£é…çš„æ‰€æœ‰è­·ç”²ã€‚\n" );
 		write("Ok.\n");
 		return 1;
 	}
 
 	obj = present(str,this_player()) ;
 	if( !obj )
-		return notify_fail("ÄãÉíÉÏÃ»ÓĞÈÎºÎ½Ğ×÷ "+str+" µÄ¶«Î÷¡£\n"
+		return notify_fail("ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•å«ä½œ "+str+" çš„æ±è¥¿ã€‚\n"
 		) ;
 
 	class1 = obj->query("armor_class");
 	if ( undefinedp(class1) && undefinedp(obj->query("defense_bonus")) ) 
-		return notify_fail("ÄÇ²»ÊÇ»¤¼×¡£\n") ;
+		return notify_fail("é‚£ä¸æ˜¯è­·ç”²ã€‚\n") ;
 
 	if (obj->query("equipped")) {
 // Unequip it in this case.
@@ -50,17 +50,17 @@ int cmd_remove(string str)
 		return 1 ;
 	}
 
-	return notify_fail("Äã²¢Ã»ÓĞ°Ñ"+obj->query("short")+"×°±¸ÔÚÉíÉÏ¡£\n"
+	return notify_fail("ä½ ä¸¦æ²’æœ‰æŠŠ"+obj->query("short")+"è£å‚™åœ¨èº«ä¸Šã€‚\n"
 	) ;
 }
 
 int help() {
 	write (@HELP
-Ê¹ÓÃ¸ñÊ½: remove <·À¾ßÃû>
+ä½¿ç”¨æ ¼å¼: remove <é˜²å…·å>
 
-ÍÑµôÒÑ×°±¸µÄ·À¾ß.
+è„«æ‰å·²è£å‚™çš„é˜²å…·.
 
-Ïà¹ØÖ¸Áî: wear, wield, unwield
+ç›¸é—œæŒ‡ä»¤: wear, wield, unwield
 HELP
 );
 	return 1 ;

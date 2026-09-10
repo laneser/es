@@ -114,16 +114,16 @@ protected object create_ghost()
 #endif
 
 	tell_room( old,
-		"�㿴��һ�ư�ɫ��Ӱ�Ӵ�"+(string)ghost->query("c_name") + "�ġ�����Ʈ��\n"
+		"你看到一縷白色的影子從"+(string)ghost->query("c_name") + "的□體中飄起。\n"
 	);
 
 	if(environment(ghost) != old) {
 		tell_room( old,
-			"��Ӱ����Ʈ����գ�Ȼ����ʧ�ˡ�\n"
+			"白影緩緩飄向天空，然後消失了。\n"
 		);
 
 		tell_room(environment(ghost),
-			"�㿴��һ�ư�ɫ��Ӱ�Ӵӿ����г��֡�\n" ,
+			"你看到一縷白色的影子從空氣中出現。\n" ,
 			ghost );
 	}
 

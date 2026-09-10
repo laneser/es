@@ -1,87 +1,87 @@
 #d/healer/building/healer_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ĞĞÒ½ÕßÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"è¡Œé†«è€…ç•™è¨€æ¿",])
 messages ({(["id":337,"title":"< no title >","body":"ss
-","time":782288799,"poster":"Jschen",]),(["id":338,"title":"< no title >","body":"ÎÒ¾õµÃºÜÆæ¹Ö....ÎªÉõ÷áÎÒ½ñÌìcast Á½¸öProtect ..both ²»³¬¹ıÊ®·ÖÖÓ....
-ÊÇbug »¹ÊÇhealer ÓÖ±»¸ÄÈõÁË....*sigh*
-ÈôÊÇbug hope wiz or god can fix it ..
-if it mean healer ÓÖ±»¸ÄÈõÁË...*sigh* new healer don't study protect oh ... 
+","time":782288799,"poster":"Jschen",]),(["id":338,"title":"< no title >","body":"æˆ‘è¦ºå¾—å¾ˆå¥‡æ€ª....ç‚ºç”šéº¼æˆ‘ä»Šå¤©cast å…©å€‹Protect ..both ä¸è¶…éååˆ†é˜....
+æ˜¯bug é‚„æ˜¯healer åˆè¢«æ”¹å¼±äº†....*sigh*
+è‹¥æ˜¯bug hope wiz or god can fix it ..
+if it mean healer åˆè¢«æ”¹å¼±äº†...*sigh* new healer don't study protect oh ... 
 
-½ñÌìÔçÉÏÕûÕûÒ»¸öÔçÉÏÖ»ÓĞ3 healer ...*sigh*
-ÊÇhealer ¸ÃÔâÌÔÌ­ÁËÂğ??
-²»¸´¼ûÍùÈÕhealer guild µÄÊ¢¿ö
+ä»Šå¤©æ—©ä¸Šæ•´æ•´ä¸€å€‹æ—©ä¸Šåªæœ‰3 healer ...*sigh*
+æ˜¯healer è©²é­æ·˜æ±°äº†å—??
+ä¸å¾©è¦‹å¾€æ—¥healer guild çš„ç››æ³
 *sigh*
 ","time":782288865,"poster":"Dey",]),(["id":339,"title":"reboot","body":"1 minutes reboot
-","time":782288889,"poster":"Did",]),(["id":340,"body":"healer ¸ÃÔâÌÔÌ­Âğ....??
+","time":782288889,"poster":"Did",]),(["id":340,"body":"healer è©²é­æ·˜æ±°å—....??
 after reboot .... healer no weapon so can't k anything ...
 so can't get any eq ...!!
 (party with others) bandage no use ... protect no use ...what healer can do neh
 
 i guess what i can do is wait healer have more useful skills ...
-²»È»...healer can do what neh ...
-ps: medical : we can make ½â¶¾ and ÂÌÌ¦..
-but healer have skill heva the same effect ..hope more Ò© for us to make .. !!
-","title":"< no title >","time":782289336,"poster":"Dey",]),(["id":341,"body":"ÏÖÔÚÓÖ½«Ö»Ê£2 healers loh ...
+ä¸ç„¶...healer can do what neh ...
+ps: medical : we can make è§£æ¯’ and ç¶ è‹”..
+but healer have skill heva the same effect ..hope more è—¥ for us to make .. !!
+","title":"< no title >","time":782289336,"poster":"Dey",]),(["id":341,"body":"ç¾åœ¨åˆå°‡åªå‰©2 healers loh ...
 *deep sigh*
 Dey sigh here ..!!
-","title":"< no title >","time":782289484,"poster":"Dey",]),(["id":342,"title":"< no title >","body":"healer ¸ÃÌÔÌ­Âğ???²»»á°É!!ÎÒºÍSee party ´òµÃºÜ¿ìÀÖ°¡!!!Ö»ÊÇhealer ¹¥»÷Á¦ÊµÔÚÌ«ÈõÁË....
-ÎÒ¾õµÃÈç¹ûÎÒµÄ¶ÓÎéÀïÓĞ¸öÒ»´úÉñÒ½»¹ÊÇ²»´í´íµÄ,ÏÂ´Î¿ÉÒÔÕÒÎÒparty ÊÔÊÔ¿´.....:P
-µ«ÏÈ¾öÌõ¼şÊÇÒªµÈÎÒÄÃµ½ºÃÎäÆ÷!!!
+","title":"< no title >","time":782289484,"poster":"Dey",]),(["id":342,"title":"< no title >","body":"healer è©²æ·˜æ±°å—???ä¸æœƒå§!!æˆ‘å’ŒSee party æ‰“å¾—å¾ˆå¿«æ¨‚å•Š!!!åªæ˜¯healer æ”»æ“ŠåŠ›å¯¦åœ¨å¤ªå¼±äº†....
+æˆ‘è¦ºå¾—å¦‚æœæˆ‘çš„éšŠä¼è£¡æœ‰å€‹ä¸€ä»£ç¥é†«é‚„æ˜¯ä¸éŒ¯éŒ¯çš„,ä¸‹æ¬¡å¯ä»¥æ‰¾æˆ‘party è©¦è©¦çœ‹.....:P
+ä½†å…ˆæ±ºæ¢ä»¶æ˜¯è¦ç­‰æˆ‘æ‹¿åˆ°å¥½æ­¦å™¨!!!
 
                                 Death grins evily
-","time":782324310,"poster":"Death",]),(["id":343,"title":"< no title >","body":"µÈmage or monk bah...
-×Ô¼º´òµÄ»°,1.5 hours can get ivory dagger...
-(Èç¹ûÃ»ÈË¸úÄãÇÀµÄ»° ...)
+","time":782324310,"poster":"Death",]),(["id":343,"title":"< no title >","body":"ç­‰mage or monk bah...
+è‡ªå·±æ‰“çš„è©±,1.5 hours can get ivory dagger...
+(å¦‚æœæ²’äººè·Ÿä½ æ¶çš„è©± ...)
 :PP
 ","time":782355101,"poster":"Jj",]),(["id":344,"title":"test","body":"test ..
 ","time":782365574,"poster":"Pure",]),(["id":346,"body":"Sorry Sorry ... !!
-×òÌìĞÄÇéÌ«²îÁË...!!
-Ò»Õû¸öÔçÉÏÖ»ÓĞ3 healers....!!
+æ˜¨å¤©å¿ƒæƒ…å¤ªå·®äº†...!!
+ä¸€æ•´å€‹æ—©ä¸Šåªæœ‰3 healers....!!
 so complain here ... !! really Sorry !!
 but some i say is true neh .. !!
 Hope God and Wiz can check about that .. !!
 Ps: Bandage not no use .,.. !! 
-    it is Ã»¶à´óÓÃ´¦...!!
-","title":"< no title >","time":782400069,"poster":"Dey",]),(["id":347,"body":"ºÇºÇ...Ïëµ½Ò»¸öĞ¡¼¼ÇÉ...²»·À¿ÉÒÔ¶à×öĞ©Ò©°¡...Èç´ó²¹¾Æ...Ò©¾Æ..Éß±Ş¾Æ
-»¹ÓĞ´ó»¹µ¤Ğ¡»¹µ¤°¡...¿ÉÒÔÓÃÒ»Ğ©Ê¬ÌåÔÙ¼ÓÉÏÒ»Ğ©¾ÆÀà..»¹ÓĞ»¨°¡..»ìÒ»»ìÒ»Ğ©ÌáÉñÒ©...¼ÓHP...¼Óstr...¼Ócon..¼ÓDEXµÄÒ©°¡..
-È»ááÒ²¿ÉÒÔ¡õ¼¯¶¾ÎïµÄÊ¬Ìå..ÖÆ³É¡¡posion plaster..À´¶¾¹ÖÎï°¡...
-Ò²¿ÉÒÔÓÃ¶¾ÎïÑ§À´¿ØÖÆÊÇ·ñ¿ÉÒÔÖÆ³É...Ò²¿ÉÒÔ·ÖµÈ¼¶µÄ¶¾¡¡plaster°¡...
-»¹ÓĞÕë¾Ä..¿ÉÒÔ°ï±ğÈËÕë..ÕëÒ»ÏÂ¿ÉÒÔ»Ø¸´1/2*skillsÖµµÄHP or MP or TP...ºÇºÇ..Í¬aidºÇºÇ...È»áá»¹¿ÉÒÔ
-ÉÔÎ¢ÖÎÁÆÒ»ÏÂ³ÔÒ©³Ôµ½²»Êæ·ş...ºÇºÇ..
-²»ÖªÕâĞ©½¨Òé´óÉñÃÇ¾õµÃÈçºÎ£¿
+    it is æ²’å¤šå¤§ç”¨è™•...!!
+","title":"< no title >","time":782400069,"poster":"Dey",]),(["id":347,"body":"å‘µå‘µ...æƒ³åˆ°ä¸€å€‹å°æŠ€å·§...ä¸é˜²å¯ä»¥å¤šåšäº›è—¥å•Š...å¦‚å¤§è£œé…’...è—¥é…’..è›‡é­é…’
+é‚„æœ‰å¤§é‚„ä¸¹å°é‚„ä¸¹å•Š...å¯ä»¥ç”¨ä¸€äº›å±é«”å†åŠ ä¸Šä¸€äº›é…’é¡..é‚„æœ‰èŠ±å•Š..æ··ä¸€æ··ä¸€äº›æç¥è—¥...åŠ HP...åŠ str...åŠ con..åŠ DEXçš„è—¥å•Š..
+ç„¶å¾Œä¹Ÿå¯ä»¥â–¡é›†æ¯’ç‰©çš„å±é«”..è£½æˆã€€posion plaster..ä¾†æ¯’æ€ªç‰©å•Š...
+ä¹Ÿå¯ä»¥ç”¨æ¯’ç‰©å­¸ä¾†æ§åˆ¶æ˜¯å¦å¯ä»¥è£½æˆ...ä¹Ÿå¯ä»¥åˆ†ç­‰ç´šçš„æ¯’ã€€plasterå•Š...
+é‚„æœ‰é‡ç¸..å¯ä»¥å¹«åˆ¥äººé‡..é‡ä¸€ä¸‹å¯ä»¥å›å¾©1/2*skillså€¼çš„HP or MP or TP...å‘µå‘µ..åŒaidå‘µå‘µ...ç„¶å¾Œé‚„å¯ä»¥
+ç¨å¾®æ²»ç™‚ä¸€ä¸‹åƒè—¥åƒåˆ°ä¸èˆ’æœ...å‘µå‘µ..
+ä¸çŸ¥é€™äº›å»ºè­°å¤§ç¥å€‘è¦ºå¾—å¦‚ä½•ï¼Ÿ
 
-","title":"< no title >","time":782408046,"poster":"King",]),(["id":348,"title":"< no title >","body":"    ×òÌìºÍdeath, boop, boom party È¥´ò¾«ÁéÍõ,ÕæµÄ·¢ÏÖhealer»¹ÊÇºÜÓĞÓÃµÄ,
-ĞÄÖĞÕæµÄºÜ×Ô±°,ËùÒÔhealer²»ÒªÍı×Ô·Æ±¡,
-ÄãÃÇ»¹ÊÇºÜÇ¿µÄ,¼ÓÓÍÅ¶!!^_^
-","time":782449076,"poster":"Adad",]),(["id":349,"title":"< no title >","body":"   ¾´¸æÇé·ò mela.......
-Äãº¦æªÉí×ß»ğÈëÄ§,Ãô½İ¶Èµ±³¡½µ10µã,ÎÒ........ÎÒ........
-ÎÒÒªºÍÄã¶Ï¾ø¹ØÏµ,ÎØ...........................
-","time":782450113,"poster":"Adad",]),(["id":350,"title":"< no title >","body":"mela Ïë²»µ½Äã¾ÓÈ»ÍµÍµpk ÎÒ´óæ¢adad.
-ÄãµÄÎªÈË.......:(
-mercury ÒÑ×ÔÉ±ºÍÄãÍÑÀë»éÒö¹ØÏ¤
-ÏÂ´ÎÔÙ¼ûÄãÄã¾ÍÊÇÎÒµÄµĞÈËÁË
+","title":"< no title >","time":782408046,"poster":"King",]),(["id":348,"title":"< no title >","body":"    æ˜¨å¤©å’Œdeath, boop, boom party å»æ‰“ç²¾éˆç‹,çœŸçš„ç™¼ç¾healeré‚„æ˜¯å¾ˆæœ‰ç”¨çš„,
+å¿ƒä¸­çœŸçš„å¾ˆè‡ªå‘,æ‰€ä»¥healerä¸è¦å¦„è‡ªè²è–„,
+ä½ å€‘é‚„æ˜¯å¾ˆå¼·çš„,åŠ æ²¹å“¦!!^_^
+","time":782449076,"poster":"Adad",]),(["id":349,"title":"< no title >","body":"   æ•¬å‘Šæƒ…å¤« mela.......
+ä½ å®³å¦¾èº«èµ°ç«å…¥é­”,æ•æ·åº¦ç•¶å ´é™10é»,æˆ‘........æˆ‘........
+æˆ‘è¦å’Œä½ æ–·çµ•é—œä¿‚,å—š...........................
+","time":782450113,"poster":"Adad",]),(["id":350,"title":"< no title >","body":"mela æƒ³ä¸åˆ°ä½ å±…ç„¶å·å·pk æˆ‘å¤§å§Šadad.
+ä½ çš„ç‚ºäºº.......:(
+mercury å·²è‡ªæ®ºå’Œä½ è„«é›¢å©šå§»é—œæ‚‰
+ä¸‹æ¬¡å†è¦‹ä½ ä½ å°±æ˜¯æˆ‘çš„æ•µäººäº†
 
-                    ÓöÈË²»ÊçµÄmercury¾ø±Ê
+                    é‡äººä¸æ·‘çš„mercuryçµ•ç­†
 
 ","time":782450596,"poster":"Lulu",]),(["id":351,"title":"< no title >","body":"aiii...
-ÎÒ²»ÖªµÀÔÚÊéÉú´ò×øÊ± k Ëû»á×ß»ğÈëÄ§......<sigh>
-ÎÒÕæµÄ²»ÊÇ¹ÊÒâµÄÀ²!...:(
-Adad ¶Ô²»ÆğÀ²....
-                    Mela [âã»ÚÖĞ]
-Mercury ....aii.....ÎŞÁ³ÓëÄãÖØĞŞ¾ÉºÃ....
-bye bye ÁË..
+æˆ‘ä¸çŸ¥é“åœ¨æ›¸ç”Ÿæ‰“åæ™‚ k ä»–æœƒèµ°ç«å…¥é­”......<sigh>
+æˆ‘çœŸçš„ä¸æ˜¯æ•…æ„çš„å•¦!...:(
+Adad å°ä¸èµ·å•¦....
+                    Mela [æ‡ºæ‚”ä¸­]
+Mercury ....aii.....ç„¡è‡‰èˆ‡ä½ é‡ä¿®èˆŠå¥½....
+bye bye äº†..
 ","time":782456888,"poster":"Mela",]),(["id":352,"title":"about exercise","body":"
-ÎÒÒÔÇ°¾Í ½ĞÄãÃÇÖúÒâ help exercise 
-µ±³õÓĞ chunt and exercise 
-and ÎÒ¶¼²»¸Ò use exercise if for that 
+æˆ‘ä»¥å‰å°± å«ä½ å€‘åŠ©æ„ help exercise 
+ç•¶åˆæœ‰ chunt and exercise 
+and æˆ‘éƒ½ä¸æ•¢ use exercise if for that 
 
-monk and scholars ×ÔÇó¶à¸£ÁË. 
+monk and scholars è‡ªæ±‚å¤šç¦äº†. 
 
  even u hide in ur guild , u still mabye be attack 
 
-ps : ×îºÃ even mage in meditate be attack will lost too :P
-ÄÇ´ó¼Ò¶¼Íæ knight or healer ºÃÁË
+ps : æœ€å¥½ even mage in meditate be attack will lost too :P
+é‚£å¤§å®¶éƒ½ç© knight or healer å¥½äº†
 ","time":782458349,"poster":"Gogo",]),(["id":353,"body":" To dearth: ( not death ho..)
          
            You get my all money ....plz give back...............
@@ -89,8 +89,8 @@ ps : ×îºÃ even mage in meditate be attack will lost too :P
       2000 silver and 25 gold ..........i m lv 4 Boor
 ","title":"< no title >","time":782499257,"poster":"Boor",]),(["id":354,"body":"  as the title!!
 
-","title":"so ¶ñÁÓ.........µÈËÀ°É!","time":782542507,"poster":"Adad",]),(["id":355,"title":"< no title >","body":". ¹ş¹ş...ËÀmelaÖÕì¶µÄµ½±¨Ó¦ÁË....
-. Ì«¸ßĞËÁË...
+","title":"so æƒ¡åŠ£.........ç­‰æ­»å§!","time":782542507,"poster":"Adad",]),(["id":355,"title":"< no title >","body":". å“ˆå“ˆ...æ­»melaçµ‚æ–¼çš„åˆ°å ±æ‡‰äº†....
+. å¤ªé«˜èˆˆäº†...
 ","time":782572540,"poster":"Flc",]),(["id":356,"body":"
 ","title":"< no title >","time":782719217,"poster":"Ttt",]),(["id":357,"body":"
 ","title":"< no title >","time":782719217,"poster":"Ttt",]),})

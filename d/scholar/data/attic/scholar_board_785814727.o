@@ -1,91 +1,91 @@
 #d/scholar/scholar/scholar_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Scholar's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÊéÉúÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Scholar's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"æ›¸ç”Ÿç•™è¨€æ¿",])
 messages ({(["id":116,"title":"About Unknow","body":"To all Scholars....
   The Old Unknow is: No check Mob's Defense Bonus. So Strong 
 is strong, weak is weak... And If msg out -> 100% hit.
 Now: Check Mob's defense bonus: 100% - 50% random and maybe cant hit
-or ´©Í¸ armor.... So Even Last (5) maybe damage less than (1) bcz Defense Bonus
+or ç©¿é€ armor.... So Even Last (5) maybe damage less than (1) bcz Defense Bonus
 And other check.... 
-  Now I am finding any new Gonfu for Scholars. Thank you for your ÈÌÄÍ¡£
+  Now I am finding any new Gonfu for Scholars. Thank you for your å¿è€ã€‚
                                                            -Kyoko.
-","time":782899858,"poster":"Kyoko",]),(["id":117,"title":"Ğ»Ğ»!!","body":"    Ğ»Ğ»´óÉñ¼°Î×Ê¦ÃÇµÄÅ¬Á¦,ÄãÃÇÕæµÄºÜĞÁ¿à,
-¼ÓÓÍ,and¿ìÀÖÒ»µã°É!!^_^
+","time":782899858,"poster":"Kyoko",]),(["id":117,"title":"è¬è¬!!","body":"    è¬è¬å¤§ç¥åŠå·«å¸«å€‘çš„åŠªåŠ›,ä½ å€‘çœŸçš„å¾ˆè¾›è‹¦,
+åŠ æ²¹,andå¿«æ¨‚ä¸€é»å§!!^_^
 ","time":782917321,"poster":"Adad",]),(["id":118,"title":"< no title >","body":" really thx god and wizard,,,,,
 ","time":782917730,"poster":"Bigcat",]),(["id":119,"title":"< no title >","body":" i leave the bag for u in it has sword and ball.....
                                   your sincerely helen.....
  to pipit...my best friend....:)
 ","time":782946034,"poster":"Helen",]),(["id":120,"title":"< no title >","body":"i am guile lah......
-my gonfus È«²»¼ûÁË........
-Ê¤ÏÂÂÖÖ¸µãÑ¨?????????????
+my gonfus å…¨ä¸è¦‹äº†........
+å‹ä¸‹è¼ªæŒ‡é»ç©´?????????????
 can fix it???????
 today i train gonfus again.....but my gonfus all 0.....
 please fix it........very thanks!!
 my unknow old level is 25 neh......
 but now......
 ","time":782957063,"poster":"Guile",]),(["id":121,"title":"about unknow","body":"
-   àÅ,ÕÕÉñÕâ÷á½²,Ã¿Ò»Ê½ËùÔì³ÉµÄÉËº¦ÊÇ²»Ò»¶¨,
-   Èç¹û, unknow µÈ¼¶Ô½¸ßÊÇ´ú±íÆäËü¼¸Ê½³öÏÖ»ú
-   ÂÊÔ½¸ß,ÄÇ»¹ÓĞ±ØÒªÒªÁ· unknow Âğ ?ÎÒÎªÊ²÷á
-   »áÕâ÷á½²,ÒòÎªÎÒºÍÒ»¸öÊéÉú party k mob,Ëû
-   Ëù¶Ô mob Ôì³ÉµÄÉËº¦»á´óì¶ÎÒ,¶øÎÒ unknow 
-   µÄµÈ¼¶Ô¶³¬¹ıËû,ÄÇÎÒÁ· unknow Ëù»¨µÄÊ±¼ä
-   ²»¾Í°×·ÑÂğ?
+   å—¯,ç…§ç¥é€™éº¼è¬›,æ¯ä¸€å¼æ‰€é€ æˆçš„å‚·å®³æ˜¯ä¸ä¸€å®š,
+   å¦‚æœ, unknow ç­‰ç´šè¶Šé«˜æ˜¯ä»£è¡¨å…¶å®ƒå¹¾å¼å‡ºç¾æ©Ÿ
+   ç‡è¶Šé«˜,é‚£é‚„æœ‰å¿…è¦è¦ç·´ unknow å— ?æˆ‘ç‚ºä»€éº¼
+   æœƒé€™éº¼è¬›,å› ç‚ºæˆ‘å’Œä¸€å€‹æ›¸ç”Ÿ party k mob,ä»–
+   æ‰€å° mob é€ æˆçš„å‚·å®³æœƒå¤§æ–¼æˆ‘,è€Œæˆ‘ unknow 
+   çš„ç­‰ç´šé è¶…éä»–,é‚£æˆ‘ç·´ unknow æ‰€èŠ±çš„æ™‚é–“
+   ä¸å°±ç™½è²»å—?
    
-                          ²»½âµÄ moon 
+                          ä¸è§£çš„ moon 
 
 ","time":782964570,"poster":"Moon",]),(["id":122,"title":"Re: about unknow","body":"On Mon Oct 24, Moon wrote:
->    àÅ,ÕÕÉñÕâ÷á½²,Ã¿Ò»Ê½ËùÔì³ÉµÄÉËº¦ÊÇ²»Ò»¶¨,
->    Èç¹û, unknow µÈ¼¶Ô½¸ßÊÇ´ú±íÆäËü¼¸Ê½³öÏÖ»ú
->    ÂÊÔ½¸ß,ÄÇ»¹ÓĞ±ØÒªÒªÁ· unknow Âğ ?ÎÒÎªÊ²÷á
->    »áÕâ÷á½²,ÒòÎªÎÒºÍÒ»¸öÊéÉú party k mob,Ëû
->    Ëù¶Ô mob Ôì³ÉµÄÉËº¦»á´óì¶ÎÒ,¶øÎÒ unknow 
->    µÄµÈ¼¶Ô¶³¬¹ıËû,ÄÇÎÒÁ· unknow Ëù»¨µÄÊ±¼ä
->    ²»¾Í°×·ÑÂğ?
+>    å—¯,ç…§ç¥é€™éº¼è¬›,æ¯ä¸€å¼æ‰€é€ æˆçš„å‚·å®³æ˜¯ä¸ä¸€å®š,
+>    å¦‚æœ, unknow ç­‰ç´šè¶Šé«˜æ˜¯ä»£è¡¨å…¶å®ƒå¹¾å¼å‡ºç¾æ©Ÿ
+>    ç‡è¶Šé«˜,é‚£é‚„æœ‰å¿…è¦è¦ç·´ unknow å— ?æˆ‘ç‚ºä»€éº¼
+>    æœƒé€™éº¼è¬›,å› ç‚ºæˆ‘å’Œä¸€å€‹æ›¸ç”Ÿ party k mob,ä»–
+>    æ‰€å° mob é€ æˆçš„å‚·å®³æœƒå¤§æ–¼æˆ‘,è€Œæˆ‘ unknow 
+>    çš„ç­‰ç´šé è¶…éä»–,é‚£æˆ‘ç·´ unknow æ‰€èŠ±çš„æ™‚é–“
+>    ä¸å°±ç™½è²»å—?
 >    
->                           ²»½âµÄ moon 
+>                           ä¸è§£çš„ moon 
 > 
 Sorry, I say Dam = Default - Random(DB/2) - DB/2
   And Default of each increases as Line Function, It means \"Maybe\" less,
 But As Probability say, \"average\" is More ......
-  And Level Up ÃüÖĞ & ´©Í¸ÂÊ¾ù»á up ... Maybe Later I will make more different when level up.
+  And Level Up å‘½ä¸­ & ç©¿é€ç‡å‡æœƒ up ... Maybe Later I will make more different when level up.
                                                       -Kyoko.
 ","time":782965452,"poster":"Kyoko",]),(["id":123,"body":"
-        ×öÁËÒ»µãĞŞÕı£¬ÒÔááÓ¦¸ÃÖ»ÓĞÔÚÕ½¶·ÖĞ²Å»áÔì³É×ß»ğÈëÄ§£¬
+        åšäº†ä¸€é»ä¿®æ­£ï¼Œä»¥å¾Œæ‡‰è©²åªæœ‰åœ¨æˆ°é¬¥ä¸­æ‰æœƒé€ æˆèµ°ç«å…¥é­”ï¼Œ
 
-ÖĞ¶¾ºÍÁ÷ÑªÓ¦¸Ã¶¼²»»áÓ°ÏìÁË ...
+ä¸­æ¯’å’Œæµè¡€æ‡‰è©²éƒ½ä¸æœƒå½±éŸ¿äº† ...
 
-        ËùÒÔ ... ×ß»ğÈëÄ§ == ±»Íµ K ÁË
+        æ‰€ä»¥ ... èµ°ç«å…¥é­” == è¢«å· K äº†
 
-                                        Èã±È
+                                        èŒ¹æ¯”
 >
-","title":"< no title >","time":783008827,"poster":"Ruby",]),(["id":125,"title":"¼ÓÓÍ","body":"   µÚ29ÆªÁË,¼ÓÓÍ!!!
+","title":"< no title >","time":783008827,"poster":"Ruby",]),(["id":125,"title":"åŠ æ²¹","body":"   ç¬¬29ç¯‡äº†,åŠ æ²¹!!!
 
-","time":783151646,"poster":"Adad",]),(["id":126,"title":"Ò®!!!30Æª!!","body":"   :p
+","time":783151646,"poster":"Adad",]),(["id":126,"title":"è€¶!!!30ç¯‡!!","body":"   :p
 as the title!^_^
-","time":783151681,"poster":"Adad",]),(["id":127,"title":"about scholar gonfus","body":"ÎÒÏëÊéÉúµÄ¹¥»÷Ö÷Á¦Ó¦²»ÊÇÎŞÃû½£·¨ÁË,
-¹¥»÷Ä£Ê½²»ÏñÒÔÇ°ÁË, ÃüÓÖÃ» monk ³¤, Ãô½İÓÖ¸ß²»µ½ÄÄ.
- ÆÚ´ıĞÂ¶«¶«
-²»Á·ÎŞÃûÁË, ·´ÕıÒ²Ó¦¿ì reopen lo
+","time":783151681,"poster":"Adad",]),(["id":127,"title":"about scholar gonfus","body":"æˆ‘æƒ³æ›¸ç”Ÿçš„æ”»æ“Šä¸»åŠ›æ‡‰ä¸æ˜¯ç„¡ååŠæ³•äº†,
+æ”»æ“Šæ¨¡å¼ä¸åƒä»¥å‰äº†, å‘½åˆæ²’ monk é•·, æ•æ·åˆé«˜ä¸åˆ°å“ª.
+ æœŸå¾…æ–°æ±æ±
+ä¸ç·´ç„¡åäº†, åæ­£ä¹Ÿæ‡‰å¿« reopen lo
 
 ","time":783225618,"poster":"Laputa",]),(["id":128,"body":"I forget that how many attributes can a scholar reach...
 Can anyone tell me ? Thank you in advance.
-","title":"about attributes","time":783287096,"poster":"Miring",]),(["id":129,"title":"< no title >","body":"      .ÒÔÇ°ÊéÉú»¹ºÅ³Æ×Ô¸ø×Ô×ã..ÏÖÔÚÍêÈ«¸Ä¹Ø..
-.ÏÖÔÚµÄÉúÉúÓöµ½reboot ÄÜ×öÉ¶ÄØ??
+","title":"about attributes","time":783287096,"poster":"Miring",]),(["id":129,"title":"< no title >","body":"      .ä»¥å‰æ›¸ç”Ÿé‚„è™Ÿç¨±è‡ªçµ¦è‡ªè¶³..ç¾åœ¨å®Œå…¨æ”¹é—œ..
+.ç¾åœ¨çš„ç”Ÿç”Ÿé‡åˆ°reboot èƒ½åšå•¥å‘¢??
 ","time":783335211,"poster":"Honeys",]),(["id":130,"title":"Re: < no title >","body":"On Fri Oct 28, Honeys wrote:
->       .ÒÔÇ°ÊéÉú»¹ºÅ³Æ×Ô¸ø×Ô×ã..ÏÖÔÚÍêÈ«¸Ä¹Ø..
-> .ÏÖÔÚµÄÉúÉúÓöµ½reboot ÄÜ×öÉ¶ÄØ??
-   ºÇºÇºÇºÇºÇºÇ,µ±È»ÊÇ¸Ï¿ìÂò½£ÇÀmusashiµÄ×°±¸Ñ½!!^_^
-","time":783341555,"poster":"Adad",]),(["id":131,"body":"½ñÌìµ½¸÷¹«»á¹äÁËÒ»ÏÂ, ·¢ÏÖÊéÉúÔ½À´Ô½¿ÉÁ¯ÁË
-²»½ö max skill ±»µ÷µÍ, ÌáÉı skill ËùĞè¾­ÑéÖµÒ²±»´ó·ùÌá¸ß
-ºÜÉÙ¿´µ½ÓĞÄÇÒ»¸ö¹«»áÓĞÄÇ÷á¶à 300~500 % exp µÄ skills
-ÒÔÇ°ÊéÉúÕæµÄÊÇºÜÇ¿Ã»´íÁ½¸öÊéÉú finish dragon quest ´Â´ÂÓĞâÅÁË
-¿´µ½ÊéÉúÏÖÔÚµÄÇé¿ö, ²»ÖªÊéÉú´æÔÚµÄ¼ÛÖµÎªºÎ?
-Æ½¡õ²»ÖªĞŞ¸Ä¹«»á (°ümax skill and skill exp) µÄ¸ù¾İÎªºÎ?
-skill level ²»½öµÍ¶øÇÒĞèºÄµô¸ü¶àµÄ¾­Ñé
-ßİ¡õVÀ´Ô½ÄÜÌå»áµ½ÊéÉú¹«»áÊÇÈçºÎµÄ²»ÍêÕûÁË
-±Ø¾¹.
+>       .ä»¥å‰æ›¸ç”Ÿé‚„è™Ÿç¨±è‡ªçµ¦è‡ªè¶³..ç¾åœ¨å®Œå…¨æ”¹é—œ..
+> .ç¾åœ¨çš„ç”Ÿç”Ÿé‡åˆ°reboot èƒ½åšå•¥å‘¢??
+   å‘µå‘µå‘µå‘µå‘µå‘µ,ç•¶ç„¶æ˜¯è¶•å¿«è²·åŠæ¶musashiçš„è£å‚™å‘€!!^_^
+","time":783341555,"poster":"Adad",]),(["id":131,"body":"ä»Šå¤©åˆ°å„å…¬æœƒé€›äº†ä¸€ä¸‹, ç™¼ç¾æ›¸ç”Ÿè¶Šä¾†è¶Šå¯æ†äº†
+ä¸åƒ… max skill è¢«èª¿ä½, æå‡ skill æ‰€éœ€ç¶“é©—å€¼ä¹Ÿè¢«å¤§å¹…æé«˜
+å¾ˆå°‘çœ‹åˆ°æœ‰é‚£ä¸€å€‹å…¬æœƒæœ‰é‚£éº¼å¤š 300~500 % exp çš„ skills
+ä»¥å‰æ›¸ç”ŸçœŸçš„æ˜¯å¾ˆå¼·æ²’éŒ¯å…©å€‹æ›¸ç”Ÿ finish dragon quest ç¶½ç¶½æœ‰é¤˜äº†
+çœ‹åˆ°æ›¸ç”Ÿç¾åœ¨çš„æƒ…æ³, ä¸çŸ¥æ›¸ç”Ÿå­˜åœ¨çš„åƒ¹å€¼ç‚ºä½•?
+å¹³â–¡ä¸çŸ¥ä¿®æ”¹å…¬æœƒ (åŒ…max skill and skill exp) çš„æ ¹æ“šç‚ºä½•?
+skill level ä¸åƒ…ä½è€Œä¸”éœ€è€—æ‰æ›´å¤šçš„ç¶“é©—
+å’»â–¡Vä¾†è¶Šèƒ½é«”æœƒåˆ°æ›¸ç”Ÿå…¬æœƒæ˜¯å¦‚ä½•çš„ä¸å®Œæ•´äº†
+å¿…ç«Ÿ.
 
-","title":"°§µ¿ÊéÉú","time":783389685,"poster":"Laputa",]),})
+","title":"å“€æ‚¼æ›¸ç”Ÿ","time":783389685,"poster":"Laputa",]),})
 id_ref 143

@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
         seteuid(getuid());
-        set_name( "dragon god drumstick", "ÁúÉñ¹Äé³" );
+        set_name( "dragon god drumstick", "é¾ç¥é¼“æ§Œ" );
         add( "id",({ "drumstick"}) );
-        set_short( "ÁúÉñ¹Äé³" );
+        set_short( "é¾ç¥é¼“æ§Œ" );
         set_long(
-            "Õâ°Ñ¹Äé³¿ÉÒÔ»÷(beat)¹Ä(drum)¡£\n"
+            "é€™æŠŠé¼“æ§Œå¯ä»¥æ“Š(beat)é¼“(drum)ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set("no_sale",1);
         set( "weapon_class", 23 );
         set( "type", "blunt" );
@@ -30,7 +30,7 @@ int to_beat(string str)
 {  
    object owner,env,mob;
    
-   if(!str||str=="") return notify_fail("ÄãÒªÇÃÊ²÷á??\n");
+   if(!str||str=="") return notify_fail("ä½ è¦æ•²ä»€éº¼??\n");
    if(str!="drum") return 0 ;
     
    owner=environment(this_object());
@@ -38,17 +38,17 @@ int to_beat(string str)
    
    env=environment(this_player());
    if(!(env->query("beat_control")))
-         { return notify_fail("Õâ¶ùÃ»ÓĞºÏÊÊµÄ¹Ä¿ÉÒÔÇÃ¡£\n") ; }
+         { return notify_fail("é€™å…’æ²’æœ‰åˆé©çš„é¼“å¯ä»¥æ•²ã€‚\n") ; }
    if(this_object()->query("once_beat"))
-        { return notify_fail("Õâ¸ù¹Äé³ÒÑ¾­±»ÇÃÀÃÁË¡£\n") ; }
+        { return notify_fail("é€™æ ¹é¼“æ§Œå·²ç¶“è¢«æ•²çˆ›äº†ã€‚\n") ; }
 
    this_object()->set("once_beat",1) ;
    mob=find_object_or_load(Ldmonster"dragon");   
    
    if(present(mob,env))
-        {return notify_fail("¹ÄÉù´ó×÷µ«Ã»ÓĞÈÎºÎÊÂ·¢Éú\n"); }
+        {return notify_fail("é¼“è²å¤§ä½œä½†æ²’æœ‰ä»»ä½•äº‹ç™¼ç”Ÿ\n"); }
    mob->move(env);
-   write("´ÓºşµÄÖĞÑë£¬Ò»Ö»¾ŞÁú»º»ºµØ´ÓºşÖĞÉıÆğ£¬ËüµÄÕøÅ¡ĞÍÌ¬£¬ÁîÈËÍû¶øÉú¾å\n");
+   write("å¾æ¹–çš„ä¸­å¤®ï¼Œä¸€éš»å·¨é¾ç·©ç·©åœ°å¾æ¹–ä¸­å‡èµ·ï¼Œå®ƒçš„çŒ™æ“°å‹æ…‹ï¼Œä»¤äººæœ›è€Œç”Ÿæ‡¼\n");
    this_player()->set_explore("eastland#5");
    return 1; 
 }

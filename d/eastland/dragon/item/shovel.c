@@ -4,11 +4,11 @@ inherit WEAPON;
 void create()
 {
     seteuid(getuid());
-	set_name("Silver Shovel", "Òø²ù×Ó");
+	set_name("Silver Shovel", "éŠ€éŸå­");
 	add ("id",({ "shovel" }) );
-	set_short("Òø²ù×Ó");
+	set_short("éŠ€éŸå­");
 	set_long(
-            "Ò»°ÑÒø²ù×Ó£¬¿ÉÓÃÀ´ÍÚáÈ(dig)¡£\n"
+            "ä¸€æŠŠéŠ€éŸå­ï¼Œå¯ç”¨ä¾†æŒ–å´›(dig)ã€‚\n"
 	);
 	set( "weapon_class", 10 );
 	set( "type", "blunt" );
@@ -16,7 +16,7 @@ void create()
 	set( "max_damage", 2 );
 	set( "weight", 20 );
 	set( "value", ({ 50, "silver" }) );
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 }
 
 void init()
@@ -38,14 +38,14 @@ int to_dig(string str)
             if (((int)obj2->query("layuter_dig")==1)&&((int)obj2->query("beer_control")==1)) 
               {
                obj2->set("beer_control",0);
-               write("ÄãÍÚµ½Ò»Æ¿³ÂÄêÅ®¶ùºì\n");
+               write("ä½ æŒ–åˆ°ä¸€ç“¶é™³å¹´å¥³å…’ç´…\n");
                   ob3=new(Lditem"beer");
                   ob3->move(obj2);
               }
             else
-              write("ÄãÔÚÕâÀïÍÚÁËºÜ¾Ã£¬¿ÉÊÇÍÚ²»µ½ÈÎºÎ¶«Î÷£¡\n");
+              write("ä½ åœ¨é€™è£¡æŒ–äº†å¾ˆä¹…ï¼Œå¯æ˜¯æŒ–ä¸åˆ°ä»»ä½•æ±è¥¿ï¼\n");
           }
-          else return notify_fail("ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");  
+          else return notify_fail("ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");  
         }
         return 1;
 }

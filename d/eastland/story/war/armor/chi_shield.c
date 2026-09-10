@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Chi-eu's shield","µØÓüÖ®¶Ü");
+        set_name("Chi-eu's shield","åœ°ç„ä¹‹ç›¾");
         add("id",({"shield"}) );
-        set_short("µØÓüÖ®¶Ü");
+        set_short("åœ°ç„ä¹‹ç›¾");
 	set_long(@C_LONG
-Ò»¼şÓÃ²¼ÁÏ·ìÖÆ¶ø³ÉµÄ¶ÜÅÆ£¬ÉÏÃæÕ´ÂúÁËĞí¶àÑª×ÕºÍµ¶í½µÄºÛ¼£¡£
+ä¸€ä»¶ç”¨å¸ƒæ–™ç¸«è£½è€Œæˆçš„ç›¾ç‰Œï¼Œä¸Šé¢æ²¾æ»¿äº†è¨±å¤šè¡€æ¼¬å’Œåˆ€æ–«çš„ç—•è·¡ã€‚
 C_LONG	         );
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "weight",70 );
 	set( "type", "shield" );
         set("material","cloth");

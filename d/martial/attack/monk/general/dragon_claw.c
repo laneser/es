@@ -2,12 +2,12 @@ inherit "/d/martial/attack/modify";
 
 void special_attack(object ob1,object victim)
 
-// ��צ�ֵ��ع�ԭ���� player �� int ���, ȴ�� dragon-claw �� lv �޹ء�
-// ������ĳ����, ����͵�
+// 龍爪手的特攻原來與 player 的 int 相關, 卻與 dragon-claw 的 lv 無關。
+// 現在則改成相關, 由最低的
 //     "/std/conditions/bleeding"->apply_effect( victim, 0, 0 )
-//                 ��
+//                 到
 //     "/std/conditions/bleeding"->apply_effect( victim, 7, 8 )
-// �� dragon-claw �� lv �������...
+// 與 dragon-claw 的 lv 成正相關...
 
 {
 	int lv ;
@@ -17,14 +17,14 @@ void special_attack(object ob1,object victim)
 	}
 
 tell_object( victim,
- (string)ob1->query("c_name")+"�ġ���צ�֡�ץ�������Ѫ�ܣ�һʱѪ���Ľ���\n\n");
+ (string)ob1->query("c_name")+"的『龍爪手』抓破了你的血管，一時血花四濺！\n\n");
 
 tell_room( environment(ob1), 
- "\n\n"+(string)ob1->query("c_name")+"ͻȻ����һץ��ץ����" + (string)victim->query("c_name") + "��Ѫ�ܣ�ʹ��Ѫ����ע��\n",
+ "\n\n"+(string)ob1->query("c_name")+"突然奮力一抓，抓斷了" + (string)victim->query("c_name") + "的血管，使他血流如注！\n",
 ({ victim, ob1 }) );
 
 write(
-"\n\n��ʹ����צ�ֵľ�������һץ����" + (string)victim->query("c_name") +"ץ��Ѫ����ע��\n\n" );
+"\n\n你使出龍爪手的絕技奮力一抓，把" + (string)victim->query("c_name") +"抓得血流如注！\n\n" );
 
         lv = (int)(ob1->query("monk_gonfu/dragon-claw"));
         "/std/conditions/bleeding"->apply_effect( victim, lv / 5, lv / 4 );
@@ -65,21 +65,21 @@ varargs int can_use(object me, object victim, object weapon)
 }
 
 string *attack_msg = ({
-	"%s̤��һ����������%sץ�����������������Ѽ�",
-	"%sʹ����צ����һ�С�����ʽ����˫�����϶��£�ץ��%s",
-	"%s˫��Ȧת��ʹ����צ���е�һ�С�����ʽ����ץ��%s",
-	"%s˫�����籩�꣬����ʹ�������硹����׽Ӱ����ʽ������ץ��%s",
-	"%s������ץ�������˻���һ����Ӱ����צ���裬ץ��%s",
-	"%s������̽������Ю��һ�󾢷磬ץ��%s��һ��Ϭ���ġ�����ʽ��",
-	"%s�������ϣ���צ�־��С����١�������ɪ������ʹ����ץ��%s",
-	"%sһ����Х��ʹ����צ�ֵ�������ʽ�������������项��ץ��%s",
+	"%s踏上一步，右手向%s抓將下來，勁道凌厲已極",
+	"%s使出龍爪手中一招「搶珠式」，雙手自上而下，抓向%s",
+	"%s雙手圈轉，使出龍爪手中的一招「撈月式」，抓向%s",
+	"%s雙手如狂風暴雨，連續使出「捕風」、「捉影」二式，奮力抓向%s",
+	"%s連續五抓，整個人化成一道龍影，龍爪急舞，抓向%s",
+	"%s左手虛探，右手挾著一陣勁風，抓向%s，一招犀利的「□雲式」",
+	"%s縱身而上，龍爪手絕招「撫琴」、「鼓瑟」連續使出，抓向%s",
+	"%s一聲清嘯，使出龍爪手的最後兩式「批亢」「□虛」，抓向%s",
 });
 
 int *hits = ({  90, 100, 102, 142, 112, 139, 140, 184 });
 int *pens = ({  58, 80, 100, 134, 90, 88, 114, 165 });
 int *dams = ({  26, 31, 33, 40, 42, 42, 50, 61 });
-// ����:        1  .9  .75 .58 .41 .27 .17 .10   type*10+lvl(max 25)*4 
-// ����ֵ:      27  30  32  34  36  37  39  41  
+// 機率:        1  .9  .75 .58 .41 .27 .17 .10   type*10+lvl(max 25)*4 
+// 期望值:      27  30  32  34  36  37  39  41  
 
 varargs int hit_modify(int hit, object me, object victim, object weapon,int type)
 {
@@ -113,6 +113,6 @@ varargs string query_attack_msg(object me, object victim, int type)
 {
 	if( type < 1 || type > 8 ) return 0;
         if( (int)me->query("force_points") < query_need_fp() )
-        return attack_msg[type-1]+"���ǳ���ʱ�Ե���������"; 
+        return attack_msg[type-1]+"但是出手時顯得內力不足"; 
 	return attack_msg[type-1];
 }

@@ -4,7 +4,7 @@ inherit MONSTER;
 void create()
 {
     ::create();
-    set("pname","²âÊÔ");
+    set("pname","æ¸¬è©¦");
     set( "tactic_func", "my_tactic" );
 }
 int stop_attack()
@@ -17,7 +17,7 @@ int stop_attack()
 int catch_huntee( object who )
 {
     if ( !query("tail") )
-        tell_object(environment(),sprintf("%s½ĞµÀ: ¿É¶ñ£¬ÓÖÊÇÄã£¡\n"
+        tell_object(environment(),sprintf("%så«é“: å¯æƒ¡ï¼Œåˆæ˜¯ä½ ï¼\n"
         ,query("pname")));
     return 1;
 }
@@ -46,7 +46,7 @@ int my_tactic()
       if ( (other=query("other")) && (!other->query_attacker()) ) {
          env1=environment();
          env2=environment(other);        
-         tell_room(env1,sprintf("\n%sÊÜµ½µĞÈËµÄ¹¥»÷£¬Ò»³Ô½ôÂíÉÏµ÷Í·¹ıÀ´£¡ \n\n",
+         tell_room(env1,sprintf("\n%så—åˆ°æ•µäººçš„æ”»æ“Šï¼Œä¸€åƒç·Šé¦¬ä¸Šèª¿é ­éä¾†ï¼ \n\n",
               query("short")));
          move(env2);
          other->move(env1);        
@@ -61,7 +61,7 @@ void die()
     if ( other=query("other") ) 
        other->set("hit_points",0);
     find_object_or_load(SAREA"room_h")->rr();
-    tell_room(environment(),sprintf("%s¿È³ö¼¸¿ÚÏÊÑª£¬Èíµ¹ÔÚµØ ... ÑÛ¿´»î²»³ÉÁË¡£\n"
+    tell_room(environment(),sprintf("%så’³å‡ºå¹¾å£é®®è¡€ï¼Œè»Ÿå€’åœ¨åœ° ... çœ¼çœ‹æ´»ä¸æˆäº†ã€‚\n"
        ,query("pname")));
     ::die(1);
 }

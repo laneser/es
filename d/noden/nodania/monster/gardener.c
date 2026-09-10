@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level( 3 );
-	set_name( "old gardener", "ÀÏÔ°¶¡" );
+	set_name( "old gardener", "è€åœ’ä¸" );
 	add( "id", ({ "gardener" }) );
-	set_short( "ÀÏÔ°¶¡" );
+	set_short( "è€åœ’ä¸" );
 	set_long(
-		"ÕâÎ»Ô°¶¡µÄÄê¼ÍÒÑ¾­ºÜÀÏÁË£¬µ«ÊÇËûÈÔÈ»ĞÁÇÚµØÔÚĞŞ¼ô»¨Ä¾¡£\n"
+		"é€™ä½åœ’ä¸çš„å¹´ç´€å·²ç¶“å¾ˆè€äº†ï¼Œä½†æ˜¯ä»–ä»ç„¶è¾›å‹¤åœ°åœ¨ä¿®å‰ªèŠ±æœ¨ã€‚\n"
 	);
 	set( "race", "centaur" );
 	set( "gender", "male" );

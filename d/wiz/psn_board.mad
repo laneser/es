@@ -8,5 +8,5 @@ void create()
 	set_save_file("psn_board");
 	set_location("/d/wiz/personel");
 	set( "short.text", "Board of Personel");
-	set( "c_short.text", "ÈËÊÂÒì¶¯ÁôÑÔ°å" );
+	set( "c_short.text", "äººäº‹ç•°å‹•ç•™è¨€æ¿" );
 }

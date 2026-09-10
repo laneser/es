@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("ice sting","±ù´Ì");
+        set_name("ice sting","å†°åˆº");
         add("id",({"sting"}) );
-       set_short("±ù´Ì");
+       set_short("å†°åˆº");
        set_long(
-         "ÕâÊÇÓÃ±ù¾§ÖÆ³ÉµÄ·æÀû¶ÌÈĞ±øÆ÷£¬Í¸Ã÷µÄ·æÈĞÏÔµÃ²»±ÈÑ°³£¡£\n");
+         "é€™æ˜¯ç”¨å†°æ™¶è£½æˆçš„é‹’åˆ©çŸ­åˆƒå…µå™¨ï¼Œé€æ˜çš„é‹’åˆƒé¡¯å¾—ä¸æ¯”å°‹å¸¸ã€‚\n");
 
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 14 );
 	set("type","shortblade");
         set( "min_damage", 8 );

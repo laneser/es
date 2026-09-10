@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "sound_blade", "ïÉÃùµ¶" );
+        set_name( "sound_blade", "é”é³´åˆ€" );
         add( "id",({ "bladed","sword","sound_sword" }) );
-        set_short( "sound_blade", "ïÉÃùµ¶" );
+        set_short( "sound_blade", "é”é³´åˆ€" );
         set_long(@AAA
-ÕâÊÇÒ»°Ñ½£Éí±¡ÇÒ³¤µÄÈÕ±¾µ¶,ÔÚ½£ïÉ´¦¿ÌÓĞÒ»¸öĞŞ×Ö,±íÊ¾ÕâÊÇÎäÊ¿
-¶Ó³¤Ô¼ĞŞµÄÅäµ¶
+é€™æ˜¯ä¸€æŠŠåŠèº«è–„ä¸”é•·çš„æ—¥æœ¬åˆ€,åœ¨åŠé”è™•åˆ»æœ‰ä¸€å€‹ä¿®å­—,è¡¨ç¤ºé€™æ˜¯æ­¦å£«
+éšŠé•·ç´„ä¿®çš„é…åˆ€
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 35 );
         set( "type", "longblade" );
         set( "min_damage", 20 );

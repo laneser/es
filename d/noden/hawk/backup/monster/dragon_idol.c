@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(17);
-	set_name( "dragon idol", "ÁúĞÎ¿şÀÜ" );
+	set_name( "dragon idol", "é¾å½¢å‚€å„¡" );
 	add( "id", ({ "idol", "dragon" }) );
-	set_short( "ÁúĞÎ¿şÀÜ" );
+	set_short( "é¾å½¢å‚€å„¡" );
 	set_long(
-		"Äã¿´µ½Ò»¸ö¾Ş´óµÄÁúĞÎ¿şÀÜ£¬ËüµÄËÄÖ«ËÆºõ±»Ò»Ğ©¿´²»¼ûµÄÏßÇ£¶¯Öø¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹å·¨å¤§çš„é¾å½¢å‚€å„¡ï¼Œå®ƒçš„å››è‚¢ä¼¼ä¹è¢«ä¸€äº›çœ‹ä¸è¦‹çš„ç·šç‰½å‹•è‘—ã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "race", "dragon" );
 	set( "alignment", -1100 );
 	set_natural_armor( 90, 40 );
@@ -23,8 +23,8 @@ void create()
 	set( "max_hp", 1300 );
 	set( "tactic_func", "my_tactic" );
 	set( "wealth/gold", 200 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Î²°Í" }) );
-	set_c_verbs( ({ "%sÕÅ×ìÍù%sÃÍÒ§", "ÓÃ¾Ş×¦×¥Ïò%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å°¾å·´" }) );
+	set_c_verbs( ({ "%så¼µå˜´å¾€%sçŒ›å’¬", "ç”¨å·¨çˆªæŠ“å‘%s" }) );
 }
 
 int my_tactic()
@@ -33,7 +33,7 @@ int my_tactic()
 
 	if( random(20)<3 ) {
 		tell_room( environment(this_object()), 
-			"\nÁúĞÎ¿şÀÜ·¢³öÒ»Éù¿ÉÅÂµÄºğ½ĞÉù£¬´Ó¿ÚÖĞÅç³öĞí\¶àºÚÉ«µÄÆøÌå....¡£\n\n",
+			"\né¾å½¢å‚€å„¡ç™¼å‡ºä¸€è²å¯æ€•çš„å¼å«è²ï¼Œå¾å£ä¸­å™´å‡ºè¨±å¤šé»‘è‰²çš„æ°£é«”....ã€‚\n\n",
 			this_object() );
 		victim = query_attackers();
 		victim->receive_special_damage( "magic", 50 );

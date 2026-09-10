@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "wand", ""+HIR"ÁÒ»ğÖ®ÕÈ"+NOR"" );
+        set_name( "wand", ""+HIR"çƒˆç«ä¹‹æ–"+NOR"" );
         add( "id", ({ "wand" }) );
-        set_short( "ÁÒ»ğÕÈ" );
+        set_short( "çƒˆç«æ–" );
         set_long(@CLONG
-ÕâÊÇÒ»°ÑÁÒ»ğÕÈ£¬Ò»ÖÖÆÕÍ¨µÈ¼¶²»´íµÄÎäÆ÷¡£
+é€™æ˜¯ä¸€æŠŠçƒˆç«æ–ï¼Œä¸€ç¨®æ™®é€šç­‰ç´šä¸éŒ¯çš„æ­¦å™¨ã€‚
 CLONG
                 );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "type", "wand" );
         set( "weapon_class", 10 );
         set( "min_damage", 5 );
@@ -25,5 +25,5 @@ CLONG
         set( "max_charge", 10 );
         set( "special_damage_type", "fire" );
         set( "special_damage", 15 );
-        set( "special_c_msg", ""+HIR"Ã°³öÁÒ»ğ·¢³öÎŞÈÈÁ¿"+NOR"" );
+        set( "special_c_msg", ""+HIR"å†’å‡ºçƒˆç«ç™¼å‡ºç„¡ç†±é‡"+NOR"" );
 }

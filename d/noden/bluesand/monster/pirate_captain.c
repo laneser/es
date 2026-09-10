@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(12);
-	set_name( "austard", "°ÂË¹Ëþ" );
+	set_name( "austard", "å¥§æ–¯å¡”" );
 	add( "id", ({ "captain" }) );
-   set_short( "°ÂË¹Ëþ´¬³¤" );
+   set_short( "å¥§æ–¯å¡”èˆ¹é•·" );
 	set_long(
-		"°ÂË¹Ëþ´¬³¤ÊÇÅÉÇø¿Ë´¬³¤µÄµÜµÜ£¬²»¹ýËûÃÇµÄÐÔÇé½ØÈ»²»Í¬£¬ÅÉÇø¿ËÎªÁË\n"
-		"Éú»îÈ¥ÌæÈË¿ªÉÌ´¬£¬°ÂË¹ËþÏÖÔÚÔòÊÇÒ»¸öº£µÁÍ·×Ó¡£\n"
+		"å¥§æ–¯å¡”èˆ¹é•·æ˜¯æ´¾å€å…‹èˆ¹é•·çš„å¼Ÿå¼Ÿï¼Œä¸éŽä»–å€‘çš„æ€§æƒ…æˆªç„¶ä¸åŒï¼Œæ´¾å€å…‹ç‚ºäº†\n"
+		"ç”Ÿæ´»åŽ»æ›¿äººé–‹å•†èˆ¹ï¼Œå¥§æ–¯å¡”ç¾åœ¨å‰‡æ˜¯ä¸€å€‹æµ·ç›œé ­å­ã€‚\n"
 	);
 	set( "race", "lizardman" );
 	set( "gender", "male" );
@@ -47,7 +47,7 @@ void die()
    ::die(1);
 	if ( (string)killer->query("class") == "adventurer" ) {
 	   tell_object( killer, set_color(
-	        "ÄãÄÃÆðÐÂÔÂÍäµ¶°Ñ°ÂË¹ËþµÄÍ·Ò»µ¶Õ¶ÏÂ£¡\n", "CYN", killer) );
+	        "ä½ æ‹¿èµ·æ–°æœˆå½Žåˆ€æŠŠå¥§æ–¯å¡”çš„é ­ä¸€åˆ€æ–¬ä¸‹ï¼\n", "CYN", killer) );
 	   head = new("/d/noden/bluesand/item/head");
 	   head->move(environment(killer));
 	}

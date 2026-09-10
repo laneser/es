@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name( "white horse", "°×É«Âí" );
+	set_name( "white horse", "ç™½è‰²é¦¬" );
 	add( "id", ({ "horse" }) );
-	set_short( "°×É«Âí" );
+	set_short( "ç™½è‰²é¦¬" );
 	set_long(
-		"ÕâÊÇÒ»Æ¥¸ß´ó¡¢Ç¿×³µÄ°×É«Âí£¬Í¨³£ÒÔ°×ÂíÎª×ùÆïµÄÆïÊ¿µØÎ»¶¼²»µÍ¡£\n" );
-	set( "unit", "Æ¥" );
+		"é€™æ˜¯ä¸€åŒ¹é«˜å¤§ã€å¼·å£¯çš„ç™½è‰²é¦¬ï¼Œé€šå¸¸ä»¥ç™½é¦¬ç‚ºåº§é¨çš„é¨å£«åœ°ä½éƒ½ä¸ä½ã€‚\n" );
+	set( "unit", "åŒ¹" );
 	set_perm_stat( "str", 19 );
 	set_perm_stat( "int", 7 );
 	set( "natural_armor_class", 50 );
@@ -21,8 +21,8 @@ void create()
 	set( "natural_max_damage1", 21 );
 	set( "alignment", 100 );
 	set( "max_load", 2100 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ááÍÈ", "Î²°Í" }) );
-	set_c_verbs( ({ "%sÌ§ÆğááÍÈ£¬Íù%sÒ»Ìß", "%sÈËÁ¢ÆğÀ´£¬ÓÃÇ°Ö«ÔÚ%sÒ»ÕóÉÏÂÒµÅ" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å¾Œè…¿", "å°¾å·´" }) );
+	set_c_verbs( ({ "%sæŠ¬èµ·å¾Œè…¿ï¼Œå¾€%sä¸€è¸¢", "%säººç«‹èµ·ä¾†ï¼Œç”¨å‰è‚¢åœ¨%sä¸€é™£ä¸Šäº‚è¹¬" }) );
 
 	equip_armor("/d/noden/nodania/obj/mithril_saddle" );
 }

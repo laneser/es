@@ -10,14 +10,14 @@ string book_color();
 
 void create()
 {       
-	set_name("balance_amulet","½ø²Æ·û" );
+	set_name("balance_amulet","é€²è²¡ç¬¦" );
         add("id",({"amulet"}));
-	set_short("½ø²Æ·û");
+	set_short("é€²è²¡ç¬¦");
 	set_long(@LONG
-Ò»ÕÅ´óºìÉ«µÄ·û¡õ£¬ÉÏÃæÓ¡ÖøÄà½ğËÄ¸ö´ó×Ö¡ºÕĞ²Æ½ø±¦¡»¡£Äã¿ÉÒÔ³¢ÊÔÈ¥Ê¹ÓÃÕâÕÅ
-·û¡õ£¬²»ÖªµÀ»áÓĞÊ²÷áÊÂÇé·¢Éú¡£(use balance_amulet)¡£
+ä¸€å¼µå¤§ç´…è‰²çš„ç¬¦â–¡ï¼Œä¸Šé¢å°è‘—æ³¥é‡‘å››å€‹å¤§å­—ã€æ‹›è²¡é€²å¯¶ã€ã€‚ä½ å¯ä»¥å˜—è©¦å»ä½¿ç”¨é€™å¼µ
+ç¬¦â–¡ï¼Œä¸çŸ¥é“æœƒæœ‰ä»€éº¼äº‹æƒ…ç™¼ç”Ÿã€‚(use balance_amulet)ã€‚
 LONG);
-	set("unit","ÕÅ");
+	set("unit","å¼µ");
 }
 
 void init()
@@ -43,10 +43,10 @@ void second_msg(object me,object ob)
     ob->remove();
   }
   tell_room(environment(me),sprintf("%s%s%s%s%s%s",
-    set_color("\nÒ»Õó¿ñ·ç°ÑËùÓĞÈËÉíÉÏµÄÇ®±Ò¶¼¾íµ½ÌìÉÏ....\n","HIB"),
-    set_color("°×½ğ±Ò    ","HIW"),set_color("½ğ±Ò    ","HIY"),
-    set_color("Òø±Ò    ","CYAN"),set_color("Í­±Ò    ","YEL"),
-    set_color("ÂúÌì·ÉÎè£¬È»áá¾ÍÈ«²¿ÏûÊ§²»¼ûÁË...........\n\n","HIB"))
+    set_color("\nä¸€é™£ç‹‚é¢¨æŠŠæ‰€æœ‰äººèº«ä¸Šçš„éŒ¢å¹£éƒ½æ²åˆ°å¤©ä¸Š....\n","HIB"),
+    set_color("ç™½é‡‘å¹£    ","HIW"),set_color("é‡‘å¹£    ","HIY"),
+    set_color("éŠ€å¹£    ","CYAN"),set_color("éŠ…å¹£    ","YEL"),
+    set_color("æ»¿å¤©é£›èˆï¼Œç„¶å¾Œå°±å…¨éƒ¨æ¶ˆå¤±ä¸è¦‹äº†...........\n\n","HIB"))
     );
   here = filter_array(all_inventory(environment(me)),"fil_ppl",this_object());
   for(i=0;i<sizeof(here);i++) {
@@ -74,16 +74,16 @@ int do_balance(string arg)
   if (!(ob=present(arg,this_player())))
     return 0;
   if (this_player()->query_level() < 9 ) {
-    tell_object(this_player(),"ÄãÒòÎªÄÜÁ¦²»×ã¶øÎŞ·¨Ê¹ÓÃÕâÑùÎïÆ·¡£\n");
+    tell_object(this_player(),"ä½ å› ç‚ºèƒ½åŠ›ä¸è¶³è€Œç„¡æ³•ä½¿ç”¨é€™æ¨£ç‰©å“ã€‚\n");
     return 1;
   }
     
   tell_object(this_player(),set_color(
-    "\nÄãÇáÇáµØ°Ñ·û¡õËºÁË¿ªÀ´£¬Ö»¼ûÎå²ÊÏéÔÆ´ØÓµ£¬Ìì·ÅÒì¹âÕÖ×¡ÕâÀïµÄÃ¿Ò»¸öÈË..\n\n","HIY")
+    "\nä½ è¼•è¼•åœ°æŠŠç¬¦â–¡æ’•äº†é–‹ä¾†ï¼Œåªè¦‹äº”å½©ç¥¥é›²ç°‡æ“ï¼Œå¤©æ”¾ç•°å…‰ç½©ä½é€™è£¡çš„æ¯ä¸€å€‹äºº..\n\n","HIY")
     );
       
   tell_room(environment(this_player()),set_color(sprintf(
-    "\n%sÄãÇáÇáµØ°Ñ·û¡õËºÁË¿ªÀ´£¬Ö»¼ûÎå²ÊÏéÔÆ´ØÓµ£¬Ìì·ÅÒì¹âÕÖ×¡ÕâÀïµÄÃ¿Ò»¸öÈË..\n\n",
+    "\n%sä½ è¼•è¼•åœ°æŠŠç¬¦â–¡æ’•äº†é–‹ä¾†ï¼Œåªè¦‹äº”å½©ç¥¥é›²ç°‡æ“ï¼Œå¤©æ”¾ç•°å…‰ç½©ä½é€™è£¡çš„æ¯ä¸€å€‹äºº..\n\n",
     this_player()->query("c_name")),"HIY"),this_player());
   this_player()->set_temp("block_command",1);     
   call_out("second_msg",3,this_player(),ob);

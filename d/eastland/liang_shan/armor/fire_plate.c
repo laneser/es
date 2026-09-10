@@ -3,14 +3,14 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("Fire-Cloud war armor","»ğÔÆÕ½¼×");
+        set_name("Fire-Cloud war armor","ç«é›²æˆ°ç”²");
         add("id",({"armor"}) );
-        set_short( "a red-shining armor","»ğÔÆÕ½¼×");
+        set_short( "a red-shining armor","ç«é›²æˆ°ç”²");
         set_long(
 "This is a red, shining war armor which is sparkling wiht little fire.\n",
-"ÕâÊÇÒ»¼ş»ğºìÉ«µÄÕ½¼×£¬²»Ê±ÉÁÒ«ÖøĞ¡Ğ¡µÄ»ğ»¨¡£\n"
+"é€™æ˜¯ä¸€ä»¶ç«ç´…è‰²çš„æˆ°ç”²ï¼Œä¸æ™‚é–ƒè€€è‘—å°å°çš„ç«èŠ±ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight",180 );
         set( "type", "body" );
         set( "armor_class", 31 );

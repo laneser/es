@@ -6,22 +6,22 @@ int filled;
 
 void create()
 {
-	set_name( "Empty Bottle","¿ÕÆ¿×Ó" );
+	set_name( "Empty Bottle","ç©ºç“¶å­" );
 	add( "id",({ "bottle" }) );
-	set_short( "¿ÕÆ¿×Ó" );
+	set_short( "ç©ºç“¶å­" );
 	set_long( "@@query_long" );
 	set( "weight",5 );
-	set( "unit","¸ö");
+	set( "unit","å€‹");
 	filled=0;
 }           
 
 string long()
 {
 	if( filled )
-		return "Æ¿×ÓÀïÃæ×°ÖøĞ©ÇåË®¡£\n";
+		return "ç“¶å­è£¡é¢è£è‘—äº›æ¸…æ°´ã€‚\n";
 	
 	else 
-		return "Ò»¸ö¿ÕÆ¿×Ó£¬Ó¦¸Ã¿ÉÒÔÄÃÀ´×°Ë®¡£\n";
+		return "ä¸€å€‹ç©ºç“¶å­ï¼Œæ‡‰è©²å¯ä»¥æ‹¿ä¾†è£æ°´ã€‚\n";
 }
 
 int query_filled(){ return filled; }
@@ -33,17 +33,17 @@ int fill_water(string arg)
 	object env;
 	
 	if( !arg || arg!="bottle" )
-		return notify_fail( "ÓÃÊ²÷á×°Ë®£¿\n" );
+		return notify_fail( "ç”¨ä»€éº¼è£æ°´ï¼Ÿ\n" );
 	if( filled )
-		return notify_fail( "Æ¿×ÓÒÑ¾­×°ÂúË®ÁË¡£\n" );
+		return notify_fail( "ç“¶å­å·²ç¶“è£æ»¿æ°´äº†ã€‚\n" );
 	env=environment(this_object());
 	if( living(env) ) env=environment(env);
 	
 	if( !env->query( "water_source" ) )
-		return notify_fail( "Õâ¶ùµÄË®²»ºÏÊÊ¡£\n" );
+		return notify_fail( "é€™å…’çš„æ°´ä¸åˆé©ã€‚\n" );
 	
 	filled=1;
-	write( "ÄãºÜ¿ìµØ½«Æ¿×Ó×°ÂúË®¡£\n" );
+	write( "ä½ å¾ˆå¿«åœ°å°‡ç“¶å­è£æ»¿æ°´ã€‚\n" );
 	return 1;
 }
 	

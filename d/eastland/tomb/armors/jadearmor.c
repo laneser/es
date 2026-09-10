@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("Cold jade armor","ĞşÌìÓñ¼×");
+        set_name("Cold jade armor","ç„å¤©ç‰ç”²");
         add("id",({"armor","jade"}) );
-        set_short( "ĞşÌìÓñ¼×");
+        set_short( "ç„å¤©ç‰ç”²");
         set_long(
-"ÕâÊÇÒ»¼şÉîÂÌÉ«µÄÓñ¼×£¬Äã¿ÉÒÔ¸Ğ¾õµ½ËüÍ¸ÖøË¿Ë¿µÄº®Òâ¡£\n"
+"é€™æ˜¯ä¸€ä»¶æ·±ç¶ è‰²çš„ç‰ç”²ï¼Œä½ å¯ä»¥æ„Ÿè¦ºåˆ°å®ƒé€è‘—çµ²çµ²çš„å¯’æ„ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight", 80 );
         set( "type", "body" );
         set( "armor_class", 37 );

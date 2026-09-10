@@ -7,18 +7,18 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(13);
-	set_name( "guard of Moyada", "ÄªÑÇ´ïÊØÎÀ" );
+	set_name( "guard of Moyada", "è«äºé”å®ˆè¡›" );
 	add ("id", ({ "guard", }) );
-	set_short( "ÄªÑÇ´ïÊØÎÀ" );
+	set_short( "è«äºé”å®ˆè¡›" );
 	set_long( @C_LONG
-±£»¤ÄªÑÇ´ïµÄÊØÎÀ, ·ÀÖ¹¹ÖÎïºÍĞ°¶ñµÄÈËÇÖÈë, ´©Öø¿´ÆğÀ´ÏñÄ§·¨Ê¦¡£
+ä¿è­·è«äºé”çš„å®ˆè¡›, é˜²æ­¢æ€ªç‰©å’Œé‚ªæƒ¡çš„äººä¾µå…¥, ç©¿è‘—çœ‹èµ·ä¾†åƒé­”æ³•å¸«ã€‚
 C_LONG
 	);
 	set( "alignment", 1200 );
 	set( "class", "mage");
     set( "gender", "male" );
     set( "race", "human" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 17 );
 	set_perm_stat( "str", 15 );
 	set_perm_stat( "int", 22 );
@@ -65,7 +65,7 @@ int cast_spell()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-        "ÄªÑÇ´ïµÄÊØÎÀ´óº°: Ò»ÆğÎª±£»¤ÄªÑÇ´ï¶øÕ½!\n" , guard[i]
+        "è«äºé”çš„å®ˆè¡›å¤§å–Š: ä¸€èµ·ç‚ºä¿è­·è«äºé”è€Œæˆ°!\n" , guard[i]
       );
       guard[i]->kill_ob(victim);
     }

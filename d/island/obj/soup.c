@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("Soup of Shark's Fin","Óã³áÌÀ");
+    set_name("Soup of Shark's Fin","é­šç¿…æ¹¯");
     set("id",({"soup","Soup"}) );
-    set_short("Óã³áÌÀ");
+    set_short("é­šç¿…æ¹¯");
     set_long(@LONG
-ÕâÊÇÒ»´óÍëÏãÅçÅç£¬ÈÈÌÚÌÚµÄÇåÌÀ£¡
+é€™æ˜¯ä¸€å¤§ç¢—é¦™å™´å™´ï¼Œç†±é¨°é¨°çš„æ¸…æ¹¯ï¼
 LONG
              );
-    set("unit","´óÍë");
+    set("unit","å¤§ç¢—");
     set("weight",10);
     set("value",({5,"copper"}) );
 }

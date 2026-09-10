@@ -2,26 +2,26 @@
 
 inherit OBJECT;
 
-mapping item_name=([ "leit_amulet":"À³ÌØµÄ»¤Éí·û(leit_amulet)",
-                     "explorer_bell":"Ì½ÏÕÕßÖ®Áå(explorer_bell)",
-                     "crystal_card":"Ë®¾§¿¨Æ¬(crystal_card)",
-                     "black_bottle":"ºÚÉ«Æ¿×Ó(black_bottle)",
-                     "study_book":"ÑĞ¾¿ĞÄµÃ(study_book)",
-                     "ancient_bottle":"¹Å´úÆ¿×Ó(ancient_bottle)",
-                     "summon_pepper":"ÕĞ»êºú½··Û(summon_pepper)",
-                     "grey_mushroom":"»ÒÉ«Ä¢¹½(grey_mushroom)",
-                     "doctor_headband":"°²ç÷À­µÄ·¢ÊÎ(doctor_headband)", 
-                     "queen_amulet":"»ÊºóµÄ»¤Éí·û(queen_amulet)",
+mapping item_name=([ "leit_amulet":"èŠç‰¹çš„è­·èº«ç¬¦(leit_amulet)",
+                     "explorer_bell":"æ¢éšªè€…ä¹‹éˆ´(explorer_bell)",
+                     "crystal_card":"æ°´æ™¶å¡ç‰‡(crystal_card)",
+                     "black_bottle":"é»‘è‰²ç“¶å­(black_bottle)",
+                     "study_book":"ç ”ç©¶å¿ƒå¾—(study_book)",
+                     "ancient_bottle":"å¤ä»£ç“¶å­(ancient_bottle)",
+                     "summon_pepper":"æ‹›é­‚èƒ¡æ¤’ç²‰(summon_pepper)",
+                     "grey_mushroom":"ç°è‰²è˜‘è‡(grey_mushroom)",
+                     "doctor_headband":"å®‰çªæ‹‰çš„é«®é£¾(doctor_headband)", 
+                     "queen_amulet":"çš‡åçš„è­·èº«ç¬¦(queen_amulet)",
                    ]);
 void create()
 {
-  set_name("Black Box of Molader","ÄªÀ­µÂµÄºÚºĞ×Ó");
+  set_name("Black Box of Molader","è«æ‹‰å¾·çš„é»‘ç›’å­");
   add("id",({"box"}));
-  set_short("Black Box of Molader","ÄªÀ­µÂµÄºÚºĞ×Ó");
+  set_short("Black Box of Molader","è«æ‹‰å¾·çš„é»‘ç›’å­");
   set("long","@@long_description");
   set("quest_item",([]) );
   set("quest_action",([]) );
-  set( "unit", "¸ö");
+  set( "unit", "å€‹");
   set("weight", 0);
   set("prevent_drop",1);
 }
@@ -46,9 +46,9 @@ string long_description()
      int i;
      string long_1;
      mixed names;
-     long_1 = "ÕâÊÇÒ»¸öÌØÊâµÄºÚÉ«ºĞ×Ó, ÀïÃæ¿ÉÒÔ´æ·ÅÒ»Ğ©½â¾öÈÎÎñµÄÌØÊâÎïÆ·.\n"+
-           "Äã¿ÉÒÔÓÃ <box_check> È¥¿´Ä¿Ç°ÔÚºÚºĞ×ÓÀïÃæµÄ¶«Î÷.\n"+
-           "Ä¿Ç°ÄãºÚºĞ×ÓÀïÃæÓĞ...\n" ;
+     long_1 = "é€™æ˜¯ä¸€å€‹ç‰¹æ®Šçš„é»‘è‰²ç›’å­, è£¡é¢å¯ä»¥å­˜æ”¾ä¸€äº›è§£æ±ºä»»å‹™çš„ç‰¹æ®Šç‰©å“.\n"+
+           "ä½ å¯ä»¥ç”¨ <box_check> å»çœ‹ç›®å‰åœ¨é»‘ç›’å­è£¡é¢çš„æ±è¥¿.\n"+
+           "ç›®å‰ä½ é»‘ç›’å­è£¡é¢æœ‰...\n" ;
      names=keys(query("quest_item"));
      for(i=0;i<sizeof(names);i++) 
          long_1 += query("quest_item/"+names[i])? item_name[names[i]]+"\n":"";  
@@ -68,14 +68,14 @@ int check_item(string str)
         call_other(this_object(),"look_"+name[i],this_player());   
         return 1;
         }
-    write("ÄãµÄºÚºĞ×ÓÃ»ÓĞÕâÏî¶«Î÷.\n");
+    write("ä½ çš„é»‘ç›’å­æ²’æœ‰é€™é …æ±è¥¿.\n");
     return 1;
 }
 
 void look_leit_amulet(object who)
 {
      tell_object(who,
-     "ÕâÊÇÀ³ÌØµÄ»¤Éí·û. ÉÏÃæĞ´ÂúÁËÒ»Ğ©ÆæÌØµÄÎÄ×Ö, Ó¦¸ÃÊÇÒ»ÖÖÉñÊ¥µÄ×£¸£.\n"
+     "é€™æ˜¯èŠç‰¹çš„è­·èº«ç¬¦. ä¸Šé¢å¯«æ»¿äº†ä¸€äº›å¥‡ç‰¹çš„æ–‡å­—, æ‡‰è©²æ˜¯ä¸€ç¨®ç¥è–çš„ç¥ç¦.\n"
      );
      return;
 }
@@ -83,9 +83,9 @@ void look_leit_amulet(object who)
 void look_explorer_bell(object who)
 {
      tell_object(who,
-     "Ò»¸ö°«ÈËÌ½ÏÕ¼ÒµÄÒÅÎï, ËÆºõ¿ÉÒÔÖ¸ÒıÄãµ½Ò»¸öÉñÃØµÄµØ·½.\n"
-     +(query("quest_action/invoke_bell")? "(ÒÑ±»Ê©Õ¹¹ıÌØ±ğÄ§·¨µÄ)"
-      : "(±»²»¿ÉÖªÁ¦Á¿Ëù·â±ÕÖø)" ) + "\n"
+     "ä¸€å€‹çŸ®äººæ¢éšªå®¶çš„éºç‰©, ä¼¼ä¹å¯ä»¥æŒ‡å¼•ä½ åˆ°ä¸€å€‹ç¥ç§˜çš„åœ°æ–¹.\n"
+     +(query("quest_action/invoke_bell")? "(å·²è¢«æ–½å±•éç‰¹åˆ¥é­”æ³•çš„)"
+      : "(è¢«ä¸å¯çŸ¥åŠ›é‡æ‰€å°é–‰è‘—)" ) + "\n"
      );
      return;
 }
@@ -93,8 +93,8 @@ void look_explorer_bell(object who)
 void look_crystal_card(object who)
 {
      tell_object(who,
-     "Ò»ÕÅË®¾§ÖÆµÄÌØÊâ¿¨Æ¬, ³ıÁË»á·¢³öµ­µ­µÄ×Ï¹âÍâ, ËÆºõ³ÖĞøÖøÔÚ·ÅÉäÒ»\n"
-     "ÖÖÌØ±ğµÄÉäÏß.\n"
+     "ä¸€å¼µæ°´æ™¶åˆ¶çš„ç‰¹æ®Šå¡ç‰‡, é™¤äº†æœƒç™¼å‡ºæ·¡æ·¡çš„ç´«å…‰å¤–, ä¼¼ä¹æŒçºŒè‘—åœ¨æ”¾å°„ä¸€\n"
+     "ç¨®ç‰¹åˆ¥çš„å°„ç·š.\n"
      );
      return;
 }
@@ -106,8 +106,8 @@ void look_black_bottle(object who)
      if ( (i=query("quest_action/muse_filled")) )
      c_muse=call_other(Deathland"/dwarf/daemon/muse","muse_color",i);
      tell_object(who,
-     "Ò»¸ö¾İËµ¿ÉÒÔÊ¢×°Ò»ÇĞÒºÌåµÄºÚÉ«Æ¿×Ó.(Ä¿Ç°"
-     +( i ?"Ëù×°µÄÊÇ"+c_muse+"É«µÄÃıË¼ÈªË®":"ÊÇ¿ÕµÄ" )+")\n"
+     "ä¸€å€‹æ“šèªªå¯ä»¥ç››è£ä¸€åˆ‡æ¶²é«”çš„é»‘è‰²ç“¶å­.(ç›®å‰"
+     +( i ?"æ‰€è£çš„æ˜¯"+c_muse+"è‰²çš„è¬¬æ€æ³‰æ°´":"æ˜¯ç©ºçš„" )+")\n"
      );
      return ;
 }
@@ -115,10 +115,10 @@ void look_black_bottle(object who)
 void look_ancient_bottle(object who)
 {
      tell_object(who,
-     "Ò»¸öÉñÃØµÄ¹Å´úÄ§·¨Æ¿×Ó."+( !query("quest_action/charge_bottle")?   
-     "(ÉĞÎ´±»×¢ÈëÁ¦Á¿)\n": "(¿É½ûïÀÁé»êµÄ)"+( query("quest_action/bottle_lock")?
-     "(Ä¿Ç°ÀïÃæÓĞ"+(string)query("quest_action/bottle_lock")+"µÄÁé»ê)":"")+"\n"
-     "Äã¿ÉÒÔÓÃÕâÆ¿×ÓÀ´½ûïÀ(durance)Áé»ê,Ò²¿ÉÒÔ°ÑÁé»ê´ÓÆ¿×ÓÀïÊÍ·Å(release)³öÀ´.\n"
+     "ä¸€å€‹ç¥ç§˜çš„å¤ä»£é­”æ³•ç“¶å­."+( !query("quest_action/charge_bottle")?   
+     "(å°šæœªè¢«æ³¨å…¥åŠ›é‡)\n": "(å¯ç¦éŒ®éˆé­‚çš„)"+( query("quest_action/bottle_lock")?
+     "(ç›®å‰è£¡é¢æœ‰"+(string)query("quest_action/bottle_lock")+"çš„éˆé­‚)":"")+"\n"
+     "ä½ å¯ä»¥ç”¨é€™ç“¶å­ä¾†ç¦éŒ®(durance)éˆé­‚,ä¹Ÿå¯ä»¥æŠŠéˆé­‚å¾ç“¶å­è£¡é‡‹æ”¾(release)å‡ºä¾†.\n"
      ) );
      return;
 }
@@ -126,7 +126,7 @@ void look_ancient_bottle(object who)
 void look_study_book(object who)
 {
      tell_object(who,
-     "Ò»±¾ÉÏÃæĞ´ÂúÁËÆæÆæ¹Ö¹ÖÎÄ×ÖµÄÊé, ËÆºõÊÇÒ»±¾ÑĞ¾¿ĞÄµÃ.\n"
+     "ä¸€æœ¬ä¸Šé¢å¯«æ»¿äº†å¥‡å¥‡æ€ªæ€ªæ–‡å­—çš„æ›¸, ä¼¼ä¹æ˜¯ä¸€æœ¬ç ”ç©¶å¿ƒå¾—.\n"
      );
      return;
 }
@@ -134,7 +134,7 @@ void look_study_book(object who)
 void look_summon_pepper(object who)
 {
      tell_object(who,
-     "Ò»Æ¿Ææ¹ÖµÄºú½··Û, ¾İËµ¿ÉÒÔÕĞ»½(summon)ËÀÈ¥µÄÁé»ê(spirit).\n" 
+     "ä¸€ç“¶å¥‡æ€ªçš„èƒ¡æ¤’ç²‰, æ“šèªªå¯ä»¥æ‹›å–š(summon)æ­»å»çš„éˆé­‚(spirit).\n" 
      );
      return;
 }
@@ -142,7 +142,7 @@ void look_summon_pepper(object who)
 void look_grey_mushroom(object who)
 {
      tell_object(who,
-     "´ÓÕÓÔóÕªÀ´µÄ»ÒÉ«Ä¢¹½.\n"
+     "å¾æ²¼æ¾¤æ‘˜ä¾†çš„ç°è‰²è˜‘è‡.\n"
      );
      return ;
 }
@@ -150,8 +150,8 @@ void look_grey_mushroom(object who)
 void look_doctor_headband(object who)
 {
      tell_object(who,
-     "ÕâÊÇ°²ç÷À­µÄ·¢ÊÎ,ËÆºõÄÜ¹»´ú±íÖøÄãÊÇ°²ç÷À­µÄÊ¹Õß.Äã¿ÉÒÔ°ÑËüÕ¹Ê¾(show)\n"
-     "¸ø±ğÈË¿´ÒÔÖ¤ÊµÄãµÄÉí·İ.\n"
+     "é€™æ˜¯å®‰çªæ‹‰çš„é«®é£¾,ä¼¼ä¹èƒ½å¤ ä»£è¡¨è‘—ä½ æ˜¯å®‰çªæ‹‰çš„ä½¿è€….ä½ å¯ä»¥æŠŠå®ƒå±•ç¤º(show)\n"
+     "çµ¦åˆ¥äººçœ‹ä»¥è­‰å¯¦ä½ çš„èº«ä»½.\n"
      );
      return;
 }
@@ -159,7 +159,7 @@ void look_doctor_headband(object who)
 void look_queen_amulet(object who)
 {
      tell_object(who,
-     "ÕâÊÇ»ÊºóÀòÀòË¿µÄ»¤Éí·û, ÊÇ»ÊºóÄÃ¸øÄãÈ¥ÕÒËû¶ù×ÓÊ±, Ö¤ÊµÄãµÄÉí·İÓÃµÄ.\n"
+     "é€™æ˜¯çš‡åè‰è‰çµ²çš„è­·èº«ç¬¦, æ˜¯çš‡åæ‹¿çµ¦ä½ å»æ‰¾ä»–å…’å­æ™‚, è­‰å¯¦ä½ çš„èº«ä»½ç”¨çš„.\n"
      );
      return;
 }
@@ -170,10 +170,10 @@ int to_drink(string str)
      if ( ! query("quest_action/muse_filled") ) return 0;
      if ( str=="water" || str=="bottle")
         write(
-        "ÄãÈ·¶¨ÒªºÈÏÂÕâÆ¿×ÓÄÚµÄÈªË®Âğ??ÕâÈªË®ÄãÍêÍêÈ«È«²»ÖªµÀËüµÄĞÔÖÊÓë³É·İ\n"
-        "µ«ÊÇÈç¹ûÄãÒÑ¾­ÁË½âËüµÄÌØĞÔµÄ»°, ¾ÍºÈ°É! ·ñÔòÃ»ÓĞÈË»á±£Ö¤ÓĞÉõ÷áÊÂÇé\n"
-        "»á·¢Éú.\n"
-        "ÓÃ < drink bottle_water > È¥ºÈÏÂÕâÈªË®°É!!\n"
+        "ä½ ç¢ºå®šè¦å–ä¸‹é€™ç“¶å­å…§çš„æ³‰æ°´å—??é€™æ³‰æ°´ä½ å®Œå®Œå…¨å…¨ä¸çŸ¥é“å®ƒçš„æ€§è³ªèˆ‡æˆä»½\n"
+        "ä½†æ˜¯å¦‚æœä½ å·²ç¶“ç­è§£å®ƒçš„ç‰¹æ€§çš„è©±, å°±å–å§! å¦å‰‡æ²’æœ‰äººæœƒä¿è­‰æœ‰ç”šéº¼äº‹æƒ…\n"
+        "æœƒç™¼ç”Ÿ.\n"
+        "ç”¨ < drink bottle_water > å»å–ä¸‹é€™æ³‰æ°´å§!!\n"
         ); 
      else if ( str=="bottle_water") 
         call_other(Deathland"/dwarf/daemon/muse","drink_bottle_muse",this_player(),this_object() );
@@ -190,8 +190,8 @@ int to_durance(string str)
     if ( ! query("quest_action/charge_bottle") ) return 0;
     if ( (p_str=query("quest_action/bottle_lock")) ) 
         {
-          c_str= (p_str=="leit")?"À³ÌØ":"·¨À­µÚ";
-          write("ÄãµÄÆ¿×ÓÀïÒÑ¾­½ûïÀ"+c_str+"µÄÁé»êÁË.\n");
+          c_str= (p_str=="leit")?"èŠç‰¹":"æ³•æ‹‰ç¬¬";
+          write("ä½ çš„ç“¶å­è£¡å·²ç¶“ç¦éŒ®"+c_str+"çš„éˆé­‚äº†.\n");
           return 1; 
         }
     monster=all_inventory(environment(this_player()));
@@ -212,16 +212,16 @@ int to_release(string str)
     if (!str||(str!="leit" && str!="falady") ) return 0;
     if ( ! query("quest_action/charge_bottle") ) return 0;
     if ( ! (p_str=query("quest_action/bottle_lock")) ) return 0;
-    c_str= (p_str=="leit")?"À³ÌØ":"·¨À­µÚ";
+    c_str= (p_str=="leit")?"èŠç‰¹":"æ³•æ‹‰ç¬¬";
     if (p_str!=str) {
-    write("ÄãµÄÆ¿×ÓÀïµÄÁé»êÊÇ"+c_str+".\n");
+    write("ä½ çš„ç“¶å­è£¡çš„éˆé­‚æ˜¯"+c_str+".\n");
       return 1;
       }
     
     if ( ( room=environment(this_player()) )->query("echo_special_place") ) 
       call_other(room,"release",this_player(),this_object()); 
     else {
-     write(c_str+"µÄÁé»ê±»ÊÍ·Åáá, Ò»ÏÂ×Ó¾ÍÏûÊ§µÄÎŞÓ°ÎŞ×ÙÁË.\n");
+     write(c_str+"çš„éˆé­‚è¢«é‡‹æ”¾å¾Œ, ä¸€ä¸‹å­å°±æ¶ˆå¤±çš„ç„¡å½±ç„¡è¹¤äº†.\n");
      delete("quest_action/bottle_lock");  
      }
    return 1;  
@@ -234,10 +234,10 @@ int to_mix(string str)
       if ( ! query("quest_item/grey_mushroom") ) 
         return 0;
       if ( ! (color=query("quest_action/muse_filled") ) ) {
-        write("ÄãÃ»ÓĞ×°ÃıË¼ÈªË®.\n");
+        write("ä½ æ²’æœ‰è£è¬¬æ€æ³‰æ°´.\n");
         return 1;
         }
-      write("Äã°ÑÄ¢¹½¶ªÈë×°ÂúÃıË¼ÈªË®µÄÆ¿×ÓÄÚ»ìºÏ.\n");
+      write("ä½ æŠŠè˜‘è‡ä¸Ÿå…¥è£æ»¿è¬¬æ€æ³‰æ°´çš„ç“¶å­å…§æ··åˆ.\n");
       set("quest_action/mixed",1);
       return 1;    
       }
@@ -261,7 +261,7 @@ int to_show(string str)
         call_other(monster[i],"show_headband",player);
         return 1;
         }
-    write("Äã°Ñ·¢ÊÎÄÃ³öÀ´Õ¹Ê¾.\n");
+    write("ä½ æŠŠé«®é£¾æ‹¿å‡ºä¾†å±•ç¤º.\n");
     return 1;
 }
 
@@ -273,6 +273,6 @@ int to_summon(string str)
     if ( ( room=environment(this_player()) )->query("echo_special_summon") ) 
       call_other(room,"summon",this_player(),this_object());    
     else 
-      write("Äã³¢ÊÔÔÚÕâÀíÕĞ»½Áé»ê, µ«ÊÇÃ»ÓĞÈÎºÎÊÂÇé·¢Éú.\n");
+      write("ä½ å˜—è©¦åœ¨é€™ç†æ‹›å–šéˆé­‚, ä½†æ˜¯æ²’æœ‰ä»»ä½•äº‹æƒ…ç™¼ç”Ÿ.\n");
     return 1;  
 }

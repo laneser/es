@@ -5,14 +5,14 @@ inherit MEDICINE;
 
 void create()
 {
-	set_name("moss plaster", "ÂÌÌ¦¸à" );
+	set_name("moss plaster", "ç¶ è‹”è†" );
 	add( "id", ({"plaster"}) );
-	set_short("ÂÌÌ¦¸à");
+	set_short("ç¶ è‹”è†");
 	set_long(
-		"ÕâÊÇÓÃÀ´Ö¹ÑªÓÃµÄÂÌÌ¦¸à£¬½«Ëü·ó(apply)ÔÚÉË¿ÚÉÏ¿ÉÒÔÖ¹Ñª¡£\n"
+		"é€™æ˜¯ç”¨ä¾†æ­¢è¡€ç”¨çš„ç¶ è‹”è†ï¼Œå°‡å®ƒæ•·(apply)åœ¨å‚·å£ä¸Šå¯ä»¥æ­¢è¡€ã€‚\n"
 	);
 	set( "can_apply", 1 );
-	set( "unit", "ÍÅ" );
+	set( "unit", "åœ˜" );
 	set( "weight", 40 );
 	set( "value", ({ 50, "silver" }) );
 }

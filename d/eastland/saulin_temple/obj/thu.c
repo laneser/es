@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("king-kong thu","½ğ¸ÕèÆ");
+    set_name("king-kong thu","é‡‘å‰›æµ");
     add("id",({"mace","thu"}) );
-    set_short("½ğ¸ÖèÆ");
+    set_short("é‡‘é‹¼æµ");
     set_long(
-		"ÓÉ½ğ¸ÕÉ°ºÍºÚÒø»ìºÏÖÆ³ÉµÄ½ğ¸ÕèÆ, Ïà´«ÊÇ´óÁ¦½ğ¸ÕÓÃÀ´½µÄ§·üÑıµÄ·¨Æ÷¡£\n"
+		"ç”±é‡‘å‰›ç ‚å’Œé»‘éŠ€æ··åˆè£½æˆçš„é‡‘å‰›æµ, ç›¸å‚³æ˜¯å¤§åŠ›é‡‘å‰›ç”¨ä¾†é™é­”ä¼å¦–çš„æ³•å™¨ã€‚\n"
     );
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 37 );
 	set("type","bo");
 	set( "min_damage", 15 );

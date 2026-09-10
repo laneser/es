@@ -4,14 +4,14 @@ inherit WEAPON;
         
 void create()
 {        
-     set_name("silver axe","Òø¸«");
+     set_name("silver axe","éŠ€æ–§");
      add("id",({"silver","axe"}) );
-     set_short("Òø¸«");
+     set_short("éŠ€æ–§");
      set_long(@C_LONG
-ÕâÊÇÒ»°ÑĞ¡ÇÉ¾«ÖÂµÄÒøÖÆÒø¸«¡£
+é€™æ˜¯ä¸€æŠŠå°å·§ç²¾ç·»çš„éŠ€è£½éŠ€æ–§ã€‚
 C_LONG
      );
-     set("unit","±ú");
+     set("unit","æŸ„");
      setup_weapon( "axe", 45, 30, 47 );
      set( "weight", 250 );
      set("second",1);
@@ -27,7 +27,7 @@ int stop_wield()
         return 0;
      else {
         notify_fail(
-          "Äã»¹²»¹»ÉÆÁ¼Ê¹µÃÒø¸«²»ÌıÄãµÄÖ¸»Ó£¬ÁîÄãÎÕ²»×¡Ëü¡£\n\n");
+          "ä½ é‚„ä¸å¤ å–„è‰¯ä½¿å¾—éŠ€æ–§ä¸è½ä½ çš„æŒ‡æ®ï¼Œä»¤ä½ æ¡ä¸ä½å®ƒã€‚\n\n");
         return 1;
      }
 }                                                                                                                                                                       

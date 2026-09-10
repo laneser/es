@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("a white letter","ĞÅ¼ş");
+        set_name("a white letter","ä¿¡ä»¶");
         add( "id" , ({ "a white letter" }) );
-        set_short( "ĞÅ¼ş");
+        set_short( "ä¿¡ä»¶");
         set_long(@C_LONG
-ÕâÊÇÒ»·â°×É«µÄĞÅ¼ş,ÉÏÃæĞ´ÓĞÆ½¼ÙÃûºÍÆ¬¼ÙÃû,²»°µÎÄ×ÖµÄÈË¿ÉÊÇ¿´²»¶®¡£
+é€™æ˜¯ä¸€å°ç™½è‰²çš„ä¿¡ä»¶,ä¸Šé¢å¯«æœ‰å¹³å‡åå’Œç‰‡å‡å,ä¸æš—æ–‡å­—çš„äººå¯æ˜¯çœ‹ä¸æ‡‚ã€‚
 C_LONG  );      
-        set("unit","·â");
+        set("unit","å°");
         set("weight",5);
         set("no_sale",1);
         set("value", ({1, "silver"}) );

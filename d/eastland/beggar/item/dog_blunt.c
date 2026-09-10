@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("dog blunt","´ò¹·°ô");
+        set_name("dog blunt","æ‰“ç‹—æ£’");
         add( "id" , ({ "dog blunt" }) );
-        set_short( "´ò¹·°ô");
+        set_short( "æ‰“ç‹—æ£’");
         set_long(@C_LONG
-ÕâÊÇÒ»¸ùÔµÓÍÓÍµÄ´ò¹·°ô,Ïóáç°ïÖ÷µÄµØÎ»¡£
+é€™æ˜¯ä¸€æ ¹ç·£æ²¹æ²¹çš„æ‰“ç‹—æ£’,è±¡å¾µå¹«ä¸»çš„åœ°ä½ã€‚
 C_LONG  );      
-        set("unit","¸ù");
+        set("unit","æ ¹");
         set("weight",1);
         set("no_sale",1);
         set("value", ({1, "silver"}) );

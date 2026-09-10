@@ -5,14 +5,14 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "Lizardman Lifeguard", "òáòæÈË½ûÎÀ¾ü" );
+	set_name( "Lizardman Lifeguard", "èœ¥èœ´äººç¦è¡›è»" );
 	add( "id", ({ "lizardman","guard","lifeguard" }) );
-	set_short( "Lizardman Soldier", "òáòæÈË½ûÎÀ¾ü" );
+	set_short( "Lizardman Soldier", "èœ¥èœ´äººç¦è¡›è»" );
 	set_long(@LONG
-    Äã¿´µ½µÄÊÇÒ»Î»±£ÎÀÍõ¹¬µÄÎÀ±ø¡£
+    ä½ çœ‹åˆ°çš„æ˜¯ä¸€ä½ä¿è¡›ç‹å®®çš„è¡›å…µã€‚
 LONG
 		);
-	set( "unit","Ãû" );
+	set( "unit","å" );
 	set( "race","lizardman" );
 	set( "gender","male" );
 	set( "alignment",500 );
@@ -28,8 +28,8 @@ LONG
 	set( "tactic","melee" );
 	set( "chat_chance",10 );
 	set( "att_chat_output",({
-	"òáòæÈËÎÀ±øËµ£º±ğÔÚÕâÀïÍÀÉ±ÎÒ×åÈË£¬·ñÔòÎÒ²»»á·Å¹ıÄãµÄ£¡\n",
-	"òáòæÈËÎÀ±øËµ£ºÃ»ÊÂµÄ±ğÔÚÕâÀï¶ºÁô£¬È¥±ğµÄµØ·½×¬¾­ÑéÖµ°É£¡\n" }) );
+	"èœ¥èœ´äººè¡›å…µèªªï¼šåˆ¥åœ¨é€™è£¡å± æ®ºæˆ‘æ—äººï¼Œå¦å‰‡æˆ‘ä¸æœƒæ”¾éä½ çš„ï¼\n",
+	"èœ¥èœ´äººè¡›å…µèªªï¼šæ²’äº‹çš„åˆ¥åœ¨é€™è£¡é€—ç•™ï¼Œå»åˆ¥çš„åœ°æ–¹è³ºç¶“é©—å€¼å§ï¼\n" }) );
 	wield_weapon( HWEAPON"lance2" );
 	equip_armor( HARMOR"tail2" );
 	equip_armor( HARMOR"plate8" );

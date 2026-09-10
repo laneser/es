@@ -12,14 +12,14 @@ void create()
         seteuid( getuid() );
         set_class_name("demogorgon");
 #include <compress_obj.h>
-        set_name("spellsword", "Ä§Éñ½£");
+        set_name("spellsword", "é­”ç¥åŠ");
 //      add( "id", ({ "sword" }) );
-        set( "unit", "°Ñ" );
-        set_short("Ä§Éñ½£");
+        set( "unit", "æŠŠ" );
+        set_short("é­”ç¥åŠ");
         set_long( @LONG
-ÕâÊÇĞ°¶ñµÄÏóÕ÷£¬ÀïÃæ¼ÇÔØÁË´ÓÇ°Ğ°¶ñÖ®ÉñµÄ´«Ëµ
-Èç¹ûÄãÏëÖªµÀ¹ØÓÚËüµÄ´«Ëµ£¬¿ÉÓÃ
-        "help spellbook" Ö¸Áî¡£
+é€™æ˜¯é‚ªæƒ¡çš„è±¡å¾µï¼Œè£¡é¢è¨˜è¼‰äº†å¾å‰é‚ªæƒ¡ä¹‹ç¥çš„å‚³èªª
+å¦‚æœä½ æƒ³çŸ¥é“é—œæ–¼å®ƒçš„å‚³èªªï¼Œå¯ç”¨
+        "help spellbook" æŒ‡ä»¤ã€‚
 LONG
         );
 
@@ -29,7 +29,7 @@ LONG
         set( "max_damage", 60 );
         set( "wield_func", "wield_sword" );
         set( "weight", 10 );
-        set( "extra_look", "$NÊÖÖĞµÄÄ§Éñ½£·¢Ö®Ò»ÖÖÀ¶¹â¡£\n")
+        set( "extra_look", "$Næ‰‹ä¸­çš„é­”ç¥åŠç™¼ä¹‹ä¸€ç¨®è—å…‰ã€‚\n")
 }
 
 void init()
@@ -52,14 +52,14 @@ int do_comrades()
         usr = sort_array( usr, "sort_mages", this_object() );
         n = sizeof(usr);
         if( n ) {
-                write( sprintf("Ä¿Ç°¹²ÓĞ %d Î»Ä§½£Ê¹Á¬ÏßÖĞ:\n==================================\n",n));
+                write( sprintf("ç›®å‰å…±æœ‰ %d ä½é­”åŠä½¿é€£ç·šä¸­:\n==================================\n",n));
                 for( i=0; i<n; i++ )
                                 printf( "[ %2d | %2d ] %s (%s)\n", usr[i]->query_level(),
                                         usr[i]->query("spell_levels/guild"),
                                         usr[i]->query("short"), capitalize(usr[i]->query("name"))
                                 );
         } else
-                write( "ËÆºõÃ»ÓĞÈÎºÎÄ§½£Ê¹¹«»áµÄ³ÉÔ±ÔÚÏßÉÏ....¡£\n");
+                write( "ä¼¼ä¹æ²’æœ‰ä»»ä½•é­”åŠä½¿å…¬æœƒçš„æˆå“¡åœ¨ç·šä¸Š....ã€‚\n");
         return 1;
 }
 sort_mages( object u1, object u2 )
@@ -79,7 +79,7 @@ int filter_mages( object plr )
 
 int do_chat(string arg)
 {
-        if( !arg ) return notify_fail("ÄãÏë¶ÔÆäËüÄ§½£Ê¹ËµÊ²÷á£¿\n");
+        if( !arg ) return notify_fail("ä½ æƒ³å°å…¶å®ƒé­”åŠä½¿èªªä»€éº¼ï¼Ÿ\n");
 
         return guild_ob::guild_line(arg);
 }
@@ -91,14 +91,14 @@ int do_chat(string arg)
 
         if( !id(arg) ) return 0;
         me = this_player();
-                printf("     Ä§·¨ÖÖÀà     ÊìÁ·µÈ¼¶            Ä§·¨¾­Ñé\n");
+                printf("     é­”æ³•ç¨®é¡     ç†Ÿç·´ç­‰ç´š            é­”æ³•ç¶“é©—\n");
                 for( i=0; i<sizeof(MAGIC_TYPES); i++ )
                         printf("     %8s        %2d        %15d\n",
                                 to_chinese(MAGIC_TYPES[i]),
                                 me->query("spell_levels/"+MAGIC_TYPES[i]),
                                 me->query("spell_exps/"+MAGIC_TYPES[i])
                         );
-                printf("×ÛºÏ(Æ½¾ù)Ä§·¨µÈ¼¶ : %2d\n", me->query("spell_levels/guild"));
+                printf("ç¶œåˆ(å¹³å‡)é­”æ³•ç­‰ç´š : %2d\n", me->query("spell_levels/guild"));
 
         return 1;
 }

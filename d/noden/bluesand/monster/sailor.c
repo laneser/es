@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name( "sailor", "水手" );
-   set_short( "水手" );
+	set_name( "sailor", "姘存墜" );
+   set_short( "姘存墜" );
 	set_long(
-		"你看到一名粗壮、浑身肌肉的水手，他对你视若无睹。\n"
+		"浣犵湅鍒颁竴鍚嶇矖澹�佹妇韬倢鑲夌殑姘存墜锛屼粬灏嶄綘瑕栬嫢鐒＄澒銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

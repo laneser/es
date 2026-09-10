@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Wind Chainmail","Ä§·çÖ®îø");
+    set_name("Wind Chainmail","é­”é¢¨ä¹‹é§");
     add("id",({ "chainmail","mail"}) );
-    set_short("Ä§·çÖ®îø");
+    set_short("é­”é¢¨ä¹‹é§");
     set_long(@LONG
-ÕâÊÇÄ§×åÀûÓÃ¹ÅÄ§·¨Ëù´´Ôì³öÀ´µÄ¾«ÖÂîø¼×.
+é€™æ˜¯é­”æ—åˆ©ç”¨å¤é­”æ³•æ‰€å‰µé€ å‡ºä¾†çš„ç²¾ç·»é§ç”².
 LONG
             );
-    set("unit","¼ş");
+    set("unit","ä»¶");
     set("type","body");
     set("material","element");
     set("armor_class",25);

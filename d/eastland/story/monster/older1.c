@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "wing older", "ÓğÃñÀÏÕß" );
+	set_name( "wing older", "ç¾½æ°‘è€è€…" );
 	add( "id", ({ "older" }) );
-	set_short( "ÓğÃñÀÏÕß" );
+	set_short( "ç¾½æ°‘è€è€…" );
 	set_long(@C_LONG
-Ò»Î»ÄêËêºÜ´óµÄÓğÃñ×åÈË£¬ËûÔÚºÍÒ»ÅÔµÄÀÏÕßÌ¸Ìì¡£
+ä¸€ä½å¹´æ­²å¾ˆå¤§çš„ç¾½æ°‘æ—äººï¼Œä»–åœ¨å’Œä¸€æ—çš„è€è€…è«‡å¤©ã€‚
 C_LONG
         );
-        set( "race","ÓğÃñ" );
+        set( "race","ç¾½æ°‘" );
 	set( "gender", "male" );
 	set( "alignment", 100 );
         set_natural_armor(65,2);

@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("black mithril plate","ºÚÉ«Ã×ËÕÀíîø¼×");
+        set_name("black mithril plate","é»‘è‰²ç±³è˜‡ç†é§ç”²");
         add("id",({"plate","platemail"}) );
-         set_short( "a black mithril plate","ºÚÉ«Ã×ËÕÀíîø¼×");
+         set_short( "a black mithril plate","é»‘è‰²ç±³è˜‡ç†é§ç”²");
 	set_long(
 "This is a suit of plate worn by molader royality ,which can  \n"
 "protect your body against opponent's attacks.\n",
-"ÕâÊÇÒ»¸±°«ÈËÍõ×åÀú´úÏà´«µÄîø¼×,¿ÉÒÔ±£»¤ÄãµÖ¿¹µĞÈËµÄ¹¥»÷\n"
+"é€™æ˜¯ä¸€å‰¯çŸ®äººç‹æ—æ­·ä»£ç›¸å‚³çš„é§ç”²,å¯ä»¥ä¿è­·ä½ æŠµæŠ—æ•µäººçš„æ”»æ“Š\n"
 	);
 	set("no_sale",1);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 350 );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );

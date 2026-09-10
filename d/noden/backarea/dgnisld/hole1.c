@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set( "light", 0 ) ;
-	set_short( "small hole", "小洞" ) ;
+	set_short( "small hole", "灏忔礊" ) ;
 	set_long(
 	    "Inside of the small hole, it's very dark and adust!\n"
 	"The enterence is broken. There seems be a exit forward.\n",
-	    "十分狭窄的洞，既乾燥又阴暗。入口已经毁了，前方不远\n"
-	"好像有出口。\n"
+	    "鍗佸垎鐙圭獎鐨勬礊锛屾棦涔剧嚗鍙堥櫚鏆椼�傚叆鍙ｅ凡缍撴瘈浜嗭紝鍓嶆柟涓嶉仩\n"
+	"濂藉儚鏈夊嚭鍙ｃ�俓n"
         ) ;
         
     	set( "objects", ([ "bats_king" : DGNISLD"monster/large_bat.c",

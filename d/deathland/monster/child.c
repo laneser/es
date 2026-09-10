@@ -8,17 +8,17 @@ void create()
 	
 	::create();
 	set_level(4);
-	set_name( "Dwarf child", "°«ÈËĞ¡º¢" );
+	set_name( "Dwarf child", "çŸ®äººå°å­©" );
 	add ("id", ({ "child", "dwarf", }) );
-	set_short( "Dwarf child", "°«ÈËĞ¡º¢" );
+	set_short( "Dwarf child", "çŸ®äººå°å­©" );
 	set_long(
 	"   \n",
-    "µ±Äã×¢ÊÓËûÊ±£¬ËûÍ»È»»ØÍ·ÏòÄã×÷¹íÁ³¡£\n");
+    "ç•¶ä½ æ³¨è¦–ä»–æ™‚ï¼Œä»–çªç„¶å›é ­å‘ä½ ä½œé¬¼è‡‰ã€‚\n");
 
     set( "alignment",-10);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "str", 5 );
 	set ("wealth", ([ "silver": 5 ]) );
 	set_natural_weapon(2,1,4);

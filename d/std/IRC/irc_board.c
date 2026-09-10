@@ -9,6 +9,6 @@ void create()
     set_location("d/std/IRC/lobby") ;
     set("short.text", "chatroom board");
     set("long.text", "This is a board for chat room. You can leave suggestions here as well. Use help board for help on usage.\n");
-    set("c_short.text", "ÁÄÌìÊÒÁôÑÔ°å");
-    set("c_long.text", "ÁÄÌì, ¹àË®¼Ó½¨Òé°å¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£\n");
+    set("c_short.text", "èŠå¤©å®¤ç•™è¨€æ¿");
+    set("c_long.text", "èŠå¤©, çŒæ°´åŠ å»ºè­°æ¿ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚\n");
 }

@@ -8,14 +8,14 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("A empty room", "�ɾ�");
+	set_short("A empty room", "仙境");
 	set_long( @LONG_DESCRIPTION
 This is a simple room created by roommaker.
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-����������һ���羰������ɽ�£�����������һ��Ƭ�̲�����Ĳݵأ���һ
-�㱡������������վ��ɽ�¶��ϣ���ǰ�Ǽ��øߴ������������һ��С��������
-�»���ĥ�ù⻬Բ����ʯͷ�������Ρ�
+你現在來到一處風景優美的山坡，放眼四周是一大片綠草如茵的草地，被一
+層薄霧覆蓋著，你站在山坡頂上，面前是幾棵高大的老樹環繞著一個小池塘，樹
+下還有磨得光滑圓亮的石頭當作座椅。
 C_LONG_DESCRIPTION
 	);
             set("exits",([

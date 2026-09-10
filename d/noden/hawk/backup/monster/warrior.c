@@ -8,11 +8,11 @@ void create()
 {
 	::create();
 	set_level(12);
-	set_name("hawkman warrior", "ÄñÈË×åÕ½Ê¿");
+	set_name("hawkman warrior", "é³¥äººæ—æˆ°å£«");
 	add( "id", ({"hawkman", "warrior"}) );
-	set_short("ÄñÈË×åÕ½Ê¿");
+	set_short("é³¥äººæ—æˆ°å£«");
 	set_long(
-		"Äã¿´µ½Ò»Î»ÄñÈË×åµÄÕ½Ê¿£¬ËûÕıÓÃÒ»¿éÆÆ²¼ÔÚ²Á¶Ü¡£\n"
+		"ä½ çœ‹åˆ°ä¸€ä½é³¥äººæ—çš„æˆ°å£«ï¼Œä»–æ­£ç”¨ä¸€å¡Šç ´å¸ƒåœ¨æ“¦ç›¾ã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "race", "hawkman" );

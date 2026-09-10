@@ -1,4 +1,4 @@
-// OpiumPoppy.c		ó¿ËÚ
+// OpiumPoppy.c		ç½Œç²Ÿ
 //
 //			Lilia
 
@@ -8,12 +8,12 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("Opium poppy", "ó¿ËÚ");
+    set_name("Opium poppy", "ç½Œç²Ÿ");
     add("id", ({"opium", "poppy"}));
-    set_short("ó¿ËÚ");
-    set_long("Õâ¶ä»¨¾ÍÊÇ´«ËµÖĞµÄó¿ËÚ»¨£¬ÊÇÌáÁ¶¶¾Æ·µÄÔ­ÁÏ¡£\n");
+    set_short("ç½Œç²Ÿ");
+    set_long("é€™æœµèŠ±å°±æ˜¯å‚³èªªä¸­çš„ç½Œç²ŸèŠ±ï¼Œæ˜¯æç…‰æ¯’å“çš„åŸæ–™ã€‚\n");
     set("ident", "OPIUM");
-    set("unit", "¶ä");
+    set("unit", "æœµ");
     set("weight", 4);
     set("no_sale", 1);
 }

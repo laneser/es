@@ -19,7 +19,7 @@ void create()
 {
         ::create();
         set_level(4);
-        set_name( "talus", "ËşÂåË¹" );
+        set_name( "talus", "å¡”æ´›æ–¯" );
 add("id",({"traveller"}));
         set_short( "@@short", "@@c_short" );
         set_long( "@@long", "@@c_long" );
@@ -53,7 +53,7 @@ void reset()
     figure=1;
     power=10;
     write(can_read_chinese()?
-    "ËşÂåË¹Éì¸öÀÁÑü, ¿´¿´ËÄÖÜ, \"Ã»ÊÂÁË? ÄÇÎÒË¯ÁË.\"\n":
+    "å¡”æ´›æ–¯ä¼¸å€‹æ‡¶è…°, çœ‹çœ‹å››å‘¨, \"æ²’äº‹äº†? é‚£æˆ‘ç¡äº†.\"\n":
     "Talus looks around, yawning, \"Nothing else? Then I will sleep.\"\n");
     return;
 }
@@ -73,16 +73,16 @@ victim=query("last_attacker");
 /* pattern 1, psionic attack */
         if (random(1)+1) {
         write(can_read_chinese(victim)?
-        "ºöÈ», Äã·¢ÏÖ×Ô¼ºÉíÔÚÒ»¸ö»ğÉ½¿ÚÅÔ, ¹öÌÌµÄÑÒ½¬ÔÚÄãËÄÖÜ·­¹öÖø.\n"+
-        "ËşÂåË¹µÄÉùÒôÔÚÄãÄÔº£ÖĞÏìÆğ: ¹ş¹ş¹ş¹ş¹ş... ÄãµÄËÀÆÚµ½ÁË.\n"+
-        "Ö»¼ûÒ»¹ÉÈÜÑÒ´òÔÚÄãÉíÉÏ. ÄãÏëÒªÉÁ¶ã, È´·¢ÏÖ×Ô¼ºÎŞ·¨¶¯µ¯.\n":
+        "å¿½ç„¶, ä½ ç™¼ç¾è‡ªå·±èº«åœ¨ä¸€å€‹ç«å±±å£æ—, æ»¾ç‡™çš„å²©æ¼¿åœ¨ä½ å››å‘¨ç¿»æ»¾è‘—.\n"+
+        "å¡”æ´›æ–¯çš„è²éŸ³åœ¨ä½ è…¦æµ·ä¸­éŸ¿èµ·: å“ˆå“ˆå“ˆå“ˆå“ˆ... ä½ çš„æ­»æœŸåˆ°äº†.\n"+
+        "åªè¦‹ä¸€è‚¡æº¶å²©æ‰“åœ¨ä½ èº«ä¸Š. ä½ æƒ³è¦é–ƒèº², å»ç™¼ç¾è‡ªå·±ç„¡æ³•å‹•å½ˆ.\n":
         "Suddenly, your surrounding changes: you are standing besides\n"+
         "a volcano, lava stirs around you. Talus speaks inside your mind:\n"+
         "Die! Die! Die!. You see lava moves towards you, and trying to\n"+
         "run away from it, but found you are unable to move.\n");
 tell_room(environment(this_object()),({
-        "Äã¿´¼û"+(string)victim->query("c_name")+"´ô´ôµÄÕ¾Öø, ËÆºö±»Ê²÷á"+
-        "Á¦Á¿¿ØÖÆ×¡ÁË.\n",
+        "ä½ çœ‹è¦‹"+(string)victim->query("c_name")+"å‘†å‘†çš„ç«™è‘—, ä¼¼å¿½è¢«ä»€éº¼"+
+        "åŠ›é‡æ§åˆ¶ä½äº†.\n",
         "You see "+(string)victim->query("cap_name")+" stands there idly."+
         " Seems to be distracted by something.\n" }),
         ({this_object(),victim}));
@@ -92,15 +92,15 @@ tell_room(environment(this_object()),({
 /* pattern 2, the invisible air blade */
         else {
         tell_room(environment(this_object()),({
-        "ËşÂåË¹¸ß¾ÙË«ÊÖ, Ö»¼ûËÄÖÜµÄ¿ÕÆøÑ¸ËÙµØÁ÷¶¯.\n",
+        "å¡”æ´›æ–¯é«˜èˆ‰é›™æ‰‹, åªè¦‹å››å‘¨çš„ç©ºæ°£è¿…é€Ÿåœ°æµå‹•.\n",
         "Talus raises his hands, you see the air around him moved rapidly.\n"
         }), this_object());
         write(can_read_chinese(victim)?
-        "Ò»°ÑÎŞĞÎµÄµ¶ºİºİµØ¿³ÔÚÄãÉíÉÏ, ÄãÍ´¿àµØÍùááÍË.\n":
+        "ä¸€æŠŠç„¡å½¢çš„åˆ€ç‹ ç‹ åœ°ç åœ¨ä½ èº«ä¸Š, ä½ ç—›è‹¦åœ°å¾€å¾Œé€€.\n":
         "An invisible blade hacks you hard, you jerk and move backward.\n");
         tell_room(environment(this_object()),({
-        (string)victim->query("c_name")+"ºÃÏñ±»Ê²÷á¶«Î÷¿³µ½ËÆµÄ, ºÜÍ´¿àµØ"+
-        "ÍùááÍË.\n",
+        (string)victim->query("c_name")+"å¥½åƒè¢«ä»€éº¼æ±è¥¿ç åˆ°ä¼¼çš„, å¾ˆç—›è‹¦åœ°"+
+        "å¾€å¾Œé€€.\n",
         "You see "+(string)victim->query("cap_name")+" jerks backward in"+
 " great pain, seems to be hitted by something.\n"}),({this_object(),victim}));
         victim->receive_damage(damage);
@@ -114,16 +114,16 @@ void ask_gital()
 {
     if (sleep) {
         write(can_read_chinese()?
-        "ËûÔÚË¯¾õ!\n":"He is sleeping.\n");
+        "ä»–åœ¨ç¡è¦º!\n":"He is sleeping.\n");
         return;
     }
     tell_room(environment(),({
         "Talus said: Gital? I am here because I want to get him out.\n"+
         "Talus sighs deeply.\n"+
         "But that evil mage is too powerful and sneaky, he said finally.\n",
-        "ËşÂåË¹Ëµ: Gital? ÎÒÖ®ËùÒÔÁôÔÚÕâÀï¾ÍÊÇÒªÏë°ì·¨°ÑËûÅª³öÀ´.\n"+
-        "          Ë­ÏşµÃÄÇÄ§Å®Ì«À÷º¦ÁË....\n"+
-        "ËşÂåË¹ÖØÖØµÄÌ¾ÁËÒ»¿ÚÆø.\n"
+        "å¡”æ´›æ–¯èªª: Gital? æˆ‘ä¹‹æ‰€ä»¥ç•™åœ¨é€™è£¡å°±æ˜¯è¦æƒ³è¾¦æ³•æŠŠä»–å¼„å‡ºä¾†.\n"+
+        "          èª°æ›‰å¾—é‚£é­”å¥³å¤ªå²å®³äº†....\n"+
+        "å¡”æ´›æ–¯é‡é‡çš„å˜†äº†ä¸€å£æ°£.\n"
         }), this_object());
         return;
 }
@@ -132,14 +132,14 @@ void ask_clue()
 {
     if (sleep) {
         write(can_read_chinese()?
-        "ËûÔÚË¯¾õ!\n":"He is sleeping.\n");
+        "ä»–åœ¨ç¡è¦º!\n":"He is sleeping.\n");
         return;
     }
     tell_room(environment(),({
     "Talus shrugs, then said: sure, you can try to open the gate.\n"+
     "                         just follow the colors of the rainbow.\n",
-    "ËşÂåË¹ËÊËÊ¼ç, ËµµÀ: Ò²ºÃ, ÄãÊÔÊÔ°É. ¿ªÃÅ·¨ÆäÊµºÜ¼òµ¥, ÕÕÖø²Êºç\n"+
-    "                     µÄÑÕÉ«×¼Ã»´í.\n"
+    "å¡”æ´›æ–¯è³è³è‚©, èªªé“: ä¹Ÿå¥½, ä½ è©¦è©¦å§. é–‹é–€æ³•å…¶å¯¦å¾ˆç°¡å–®, ç…§è‘—å½©è™¹\n"+
+    "                     çš„é¡è‰²æº–æ²’éŒ¯.\n"
         }),this_object());
     clue=1;
         return;
@@ -149,13 +149,13 @@ void help_me(object who)
 {
     if (sleep) {
         write(can_read_chinese()?
-        "ËûÔÚË¯¾õ!\n":"He is sleeping.\n");
+        "ä»–åœ¨ç¡è¦º!\n":"He is sleeping.\n");
         return;
     }
     if (!clue) {
         tell_room(environment(),({
     "Talus said: why should I help you? Who do you think you are?\n",
-    "ËşÂåË¹ÄªÃûÆæÃîµÄ¿´ÖøÄãËµµÀ: ÎÒ°ïÄã¸ÉÂï?\n",
+    "å¡”æ´›æ–¯è«åå¥‡å¦™çš„çœ‹è‘—ä½ èªªé“: æˆ‘å¹«ä½ å¹¹å˜›?\n",
     }), this_object());
     return;
     }
@@ -164,8 +164,8 @@ void help_me(object who)
     "Talus sighs, \"Help you? I have a hard time to even help myself.\n"+
     "              but anyhow, here is a figure, maybe it will be of\n"+
     "              use to you. The name of the creature is Tio.\n",
-    "ËşÂåË¹Ì¾Ï¢µÀ: °ïÄã? ÎÒ¶¼×ÔÉíÄÑ±£ÁË. ÕâÑù°É, ÎÒÕâÓĞÒ»¸öĞ¡µñÏñ.\n"+
-    "              Äã´øÖø, Ëµ²»¶¨ÓĞÓÃ. ËüµÄÃû×Ö½Ğ Tio.\n",
+    "å¡”æ´›æ–¯å˜†æ¯é“: å¹«ä½ ? æˆ‘éƒ½è‡ªèº«é›£ä¿äº†. é€™æ¨£å§, æˆ‘é€™æœ‰ä¸€å€‹å°é›•åƒ.\n"+
+    "              ä½ å¸¶è‘—, èªªä¸å®šæœ‰ç”¨. å®ƒçš„åå­—å« Tio.\n",
         }),this_object());
 /*code to give the ppl who asked this question a figure*/
     figure=0;
@@ -175,7 +175,7 @@ void help_me(object who)
     tell_room(environment(), ({
     "Talus shakes his head helplessly and said, I wish I could help.\n"+
     "   but there is nothing I can do now.\n",
-    "ËşÂåË¹Ò¡Ò¡Í·µÀ: ÎÒÒ²ºÜÏë°ïÄã, ¿ÉÊÇÎÒÊµÔÚÊÇÎŞÄÜÎªÁ¦ÁË.\n",
+    "å¡”æ´›æ–¯æ–æ–é ­é“: æˆ‘ä¹Ÿå¾ˆæƒ³å¹«ä½ , å¯æ˜¯æˆ‘å¯¦åœ¨æ˜¯ç„¡èƒ½ç‚ºåŠ›äº†.\n",
     }),this_object());
     return;
     }
@@ -192,29 +192,29 @@ int wake_me(string str)
 {
     if (!str || str=="") {
         write(can_read_chinese()?
-        "½ĞĞÑË­?\n":"Wake who?\n");
+        "å«é†’èª°?\n":"Wake who?\n");
         return 1;
     }
 /* this part is really dumb... but heck.. if they killed him... */
     if (str!="talus") {
         write(can_read_chinese()?
-        "ÄãÒª½ĞĞÑµÄÈË²»ÔÚÕâÀï.\n":
+        "ä½ è¦å«é†’çš„äººä¸åœ¨é€™è£¡.\n":
         "The one you want to wake up is not here.\n");
         return 1;
     }
     if (!sleep) {
         write(can_read_chinese()?
-        "ËşÂåË¹ºÜ²»ÄÍ·³µØËµ: ÎÒÔç¾ÍĞÑÁË, ÄãÓĞÊÂ¿ì½²°É!\n":
+        "å¡”æ´›æ–¯å¾ˆä¸è€ç…©åœ°èªª: æˆ‘æ—©å°±é†’äº†, ä½ æœ‰äº‹å¿«è¬›å§!\n":
         "Talus shouted to you: I am already awake! stat your business!\n");
         return 1;
     }
     write(can_read_chinese()?
-    "ÄãÒ¡Ò¡ËşÂåË¹, Ö»¼ûËûÉì¸öÀÁÑü×øÁËÆğÀ´, ËµµÀ: ÄãÕÒÎÒ?\n":
+    "ä½ æ–æ–å¡”æ´›æ–¯, åªè¦‹ä»–ä¼¸å€‹æ‡¶è…°åäº†èµ·ä¾†, èªªé“: ä½ æ‰¾æˆ‘?\n":
     "You shaked Talus slightly. He awakes and sits up.\n"+
     "Then he looks at you, \"Looking for me?\"\n");
     tell_room(environment(),({
     (string)this_player()->query("name")+" wakes Talus up.\n",
-    (string)this_player()->query("c_name")+"°ÑËşÂåË¹½ĞĞÑ.\n"
+    (string)this_player()->query("c_name")+"æŠŠå¡”æ´›æ–¯å«é†’.\n"
     }), ({this_object(),this_player()}));
     sleep=0;
     return 1;
@@ -233,9 +233,9 @@ string short()
 string c_short()
 {
     if (sleep) {
-        return "³ÁË¯ÖĞµÄÂÃÕß.";
+        return "æ²‰ç¡ä¸­çš„æ—…è€….";
     }
-    return "Ã°ÏÕ¼ÒËşÂåË¹.";
+    return "å†’éšªå®¶å¡”æ´›æ–¯.";
 }
  
 string long()
@@ -265,7 +265,7 @@ string c_long()
 int kill_ob(object victim)
 {
     write(can_read_chinese()?
-    "ËşÂåË¹´ÓË¯ÃÎÖĞ¾ªĞÑ, ´ó½Ğ, ÍÛÀÕ, ¸Ò³ÃÎÒË¯ÖøÊ±´òÎÒ, ÄãÍêÁË!\n":
+    "å¡”æ´›æ–¯å¾ç¡å¤¢ä¸­é©šé†’, å¤§å«, å“‡å‹’, æ•¢è¶æˆ‘ç¡è‘—æ™‚æ‰“æˆ‘, ä½ å®Œäº†!\n":
     "Talus jumps up, and yells, Go to HELL you jerk, dare you\n"+
     "attack me during my sleep!\n");
     sleep=0;
@@ -284,21 +284,21 @@ int shake_me(string str)
     }
     if (!sleep) {
         write(can_read_chinese()?
-        "Î¹... Ò¡É¶À².. ÎÒÔç¾ÍĞÑÁË! ËşÂåË¹²»ÄÍ·³µÄËµµÀ.\n":
+        "å–‚... æ–å•¥å•¦.. æˆ‘æ—©å°±é†’äº†! å¡”æ´›æ–¯ä¸è€ç…©çš„èªªé“.\n":
         "Talus shouted to you: I am already awake! Stop shaking me!\n");
         return 1;
     }
     write(can_read_chinese()?
-    "ÄãºÜÓÃÁ¦µÄ°ÑËşÂåË¹Ò¡ĞÑ, ËûÒ»Á³²»Ë¬µÄ¿´ÖøÄã.\n":
+    "ä½ å¾ˆç”¨åŠ›çš„æŠŠå¡”æ´›æ–¯æ–é†’, ä»–ä¸€è‡‰ä¸çˆ½çš„çœ‹è‘—ä½ .\n":
     "Talus stares at you as you shakes him up violently.\n");
     tell_room(environment(),({
     "Talus awakes and stares at "+(string)this_player()->query("cap_name")+
     " angrily.\n",
-    (string)this_player()->query("c_name")+" ÓÃÁ¦µÄ°ÑËşÂåË¹Ò¡ĞÑ, Ö»¼ûËşÂåË¹Ò»Á³²»Ë¬µÄµÉÖøËû.\n"
+    (string)this_player()->query("c_name")+" ç”¨åŠ›çš„æŠŠå¡”æ´›æ–¯æ–é†’, åªè¦‹å¡”æ´›æ–¯ä¸€è‡‰ä¸çˆ½çš„çªè‘—ä»–.\n"
     }), ({this_object(),this_player()}) );
     tell_room(environment(), ({
     "Talus said coldly, \"stat your business and be gone.\"\n",
-    "ËşÂåË¹ÀäÀäµÄËµµÀ, \"Äã½ĞĞÑÎÒµÀµ×Òª¸ÉÂï?\"\n"
+    "å¡”æ´›æ–¯å†·å†·çš„èªªé“, \"ä½ å«é†’æˆ‘é“åº•è¦å¹¹å˜›?\"\n"
     }), this_object());
     power=25;
     return 1;

@@ -3,16 +3,16 @@
 # By Ruby@Eastern.Stories at 12/26 1994.
 
 mob: rat
-short ÀÏÊó
+short è€é¼ 
 name rat
-c_name ÀÏÊó
-long ÕâÊÇÒ»Ö»ÓÖÔàÓÖĞ¡µÄÀÏÊó¡£\n
-unit Ö»
+c_name è€é¼ 
+long é€™æ˜¯ä¸€éš»åˆé«’åˆå°çš„è€é¼ ã€‚\n
+unit åª
 #CMD0 ID ({ "mice" })
 #CMD1 SET set_level(1)
 #CMD2 SET set_perm_stat("dex", 3)
 #CMD3 SET set_perm_stat("int", 2)
 #CMD4 SET set_perm_stat("kar", 2)
-#CMD5 SET set_c_verbs( ({ "%sÕÅ×ìÍù%sÒ»Ò§", "%sÓÃËüµÄ×¦×Ó×¥%s" }) )
-#CMD6 SET set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ááÍÈ", "Î²°Í" }) )
+#CMD5 SET set_c_verbs( ({ "%så¼µå˜´å¾€%sä¸€å’¬", "%sç”¨å®ƒçš„çˆªå­æŠ“%s" }) )
+#CMD6 SET set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰çˆª", "å¾Œè…¿", "å°¾å·´" }) )
 

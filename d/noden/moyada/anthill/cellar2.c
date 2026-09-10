@@ -7,10 +7,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("ÒÏÑ¨");
+	set_short("èŸ»ç©´");
 	set_long( @C_LONG_DESCRIPTION
-ÄãÔÚ¶´Ñ¨µÄÖĞ¼ä£¬¶«ÄÏ±ßÓĞÒ»¸öÆ½ÉìµÄ¶´Ñ¨£¬¼¸Ö»±øÒÏÕıÔÚÄãÉíÅÔÅÀÉÏÅÀÏÂ
-ËÆºõÔÚÈ·ÈÏÄãÊÇ·ñÊÇËüÃÇµÄÍ¬Àà£¬Äã»¹¿ÉÒÔ¼ÌĞøÅÀ(climb down)ÏÂÈ¥¿´¿´¡£
+ä½ åœ¨æ´ç©´çš„ä¸­é–“ï¼Œæ±å—é‚Šæœ‰ä¸€å€‹å¹³ä¼¸çš„æ´ç©´ï¼Œå¹¾éš»å…µèŸ»æ­£åœ¨ä½ èº«æ—çˆ¬ä¸Šçˆ¬ä¸‹
+ä¼¼ä¹åœ¨ç¢ºèªä½ æ˜¯å¦æ˜¯å®ƒå€‘çš„åŒé¡ï¼Œä½ é‚„å¯ä»¥ç¹¼çºŒçˆ¬(climb down)ä¸‹å»çœ‹çœ‹ã€‚
 C_LONG_DESCRIPTION
 	);
 	set( "exits", ([
@@ -40,9 +40,9 @@ void init()
 int to_climb( string str )
 {
     if( !str || str=="" )
-      return notify_fail("ÄãÒªÅÀÄÄ¸ö·½Ïò?\n");
+      return notify_fail("ä½ è¦çˆ¬å“ªå€‹æ–¹å‘?\n");
     if( str != "down" && str != "up" )
-      return notify_fail("ÄÇ¸ö·½Ïò²»Í¨À²!\n");
+      return notify_fail("é‚£å€‹æ–¹å‘ä¸é€šå•¦!\n");
     if( str == "down" )
       to_climb_down( this_player(), MOYADA"anthill/cellar3", 
         MOYADA"anthill/dump", 35, 10 );

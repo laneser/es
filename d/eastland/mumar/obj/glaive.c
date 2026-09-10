@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "highsteel glaive", "Çà¸Ö´óµ¶" );
+	set_name( "highsteel glaive", "é’é‹¼å¤§åˆ€" );
 	add( "id", ({ "glaive" }) );
-	set_short( "a highsteel glaive", "Çà¸Ö´óµ¶" );
+	set_short( "a highsteel glaive", "é’é‹¼å¤§åˆ€" );
 	set_long(
 		"You see a huge, heavy highsteel glaive. This is the regular\n"
 		"weapon of soldiers guarding the Mumar Keep.\n",
-		"ÕâÊÇÒ»°Ñ¾Ş´ó¡¢ÉòÖØµÄÇà¸Ö´óµ¶£¬ÊùÊØ±ß½®µÄÊ¿±øµÄÖÆÊ½ÎäÆ÷¡£\n"
+		"é€™æ˜¯ä¸€æŠŠå·¨å¤§ã€æ²ˆé‡çš„é’é‹¼å¤§åˆ€ï¼Œæˆå®ˆé‚Šç–†çš„å£«å…µçš„åˆ¶å¼æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weapon_class", 28 );
 	set( "min_damage", 16 );

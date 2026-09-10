@@ -41,7 +41,7 @@
 inherit "/adm/daemons/timezone";
 inherit DAEMON;
 
-#define c_dvd "¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª\n"
+#define c_dvd "â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”\n"
 
 
 // sort array doesn't allow the optional argument the way filter array
@@ -74,7 +74,7 @@ int cmd_who( string arg )
                         list = filter_array(users()+all_inventory(netdead), "filter_users", this_object());
                         list = sort_array(list, "sort_users", this_object());
 
-                        lines += "¡ò À¶Ìì  \t\t\t\t\t( " + ctime( time() ) + " )\n";
+                        lines += "â— è—å¤©  \t\t\t\t\t( " + ctime( time() ) + " )\n";
 
                         lines += c_dvd;
 
@@ -99,7 +99,7 @@ int cmd_who( string arg )
                                         }
                                 }
                                 field1=
-                                        sprintf( "¡¾ %s ¡¿%s%s (%s)", to_chinese(c_domain_level),
+                                        sprintf( "ã€ %s ã€‘%s%s (%s)", to_chinese(c_domain_level),
                                                 (list_wiz[i]->query_temp("IRC_USER")?"#":" "),
                                                 title,
                                                 capitalize((string)list_wiz[i]->query("name")) );
@@ -109,19 +109,19 @@ int cmd_who( string arg )
                                                 capitalize( (string)list_wiz[i]->link_data("name") ) );
 
                                 if( list_wiz[i]->query("make-up") && wizardp(this_player()))
-                                        field1 += sprintf( " [ÓÉ %s »¯×°]",
+                                        field1 += sprintf( " [ç”± %s åŒ–è£]",
                                                 capitalize( (string)list_wiz[i]->link_data("name") ) );
 
                                 if (in_edit(list_wiz[i]) || in_input(list_wiz[i]))
-                                        field1 += " (±à¼­ÖĞ)";
+                                        field1 += " (ç·¨è¼¯ä¸­)";
                         
                                 if( !field1) field1= "(null)";
 
                                 val = query_idle( list_wiz[i] );
                                 if( val >= 3600 )
-                                        field1 += "[·¢´ô " + val/3600 + " Ğ¡Ê±]";
+                                        field1 += "[ç™¼å‘† " + val/3600 + " å°æ™‚]";
                                 else if( val >= 60 )
-                                        field1 += "[·¢´ô " + val/60 + " ·ÖÖÓ]";
+                                        field1 += "[ç™¼å‘† " + val/60 + " åˆ†é˜]";
                                 lines += sprintf("%65-s\n", field1 );
                         }
                         i = sizeof(list);
@@ -129,41 +129,41 @@ int cmd_who( string arg )
                         field1 = ""; field2 = "";
                                 if( !(title = list[i]->query(WHO_TITLE)) ) title = list[i]->query("short");
                                 field1= 
-                                        sprintf( "¡¾ %2d ¡¿%s%s (%s)", list[i]->query_level()+list[i]->query("level"),
+                                        sprintf( "ã€ %2d ã€‘%s%s (%s)", list[i]->query_level()+list[i]->query("level"),
                                                 ( list[i]->query_linkdead() ? "*" : (list[i]->query_temp("IRC_USER")?"#":" ")),
                                                 title,
                                                 capitalize((string)list[i]->query("name")) );
 
                                 if( list[i]->query("npc") && wizardp(this_player()))
-                                        field1 += sprintf( " [ÓÉ %s ²Ù×İÖĞ]",
+                                        field1 += sprintf( " [ç”± %s æ“ç¸±ä¸­]",
                                         capitalize( (string)list[i]->link_data("name") ) );
 
                                 if( list[i]->query("make-up") && wizardp(this_player()) )
-                                        field1 += sprintf( " [ÓÉ %s »¯×°]",
+                                        field1 += sprintf( " [ç”± %s åŒ–è£]",
                                         ( list[i]->query_linkdead() ? 
                                                 capitalize( (string)list[i]->query("org_name") ) :
                                                 capitalize( (string)list[i]->link_data("name")) )
                                                 );
 
                                 if (in_edit(list[i]) || in_input(list[i]))
-                                        field1 += " (±à¼­ÖĞ)";
+                                        field1 += " (ç·¨è¼¯ä¸­)";
 /*
                                 if ( list[i]->query_linkdead() )
-                                        field1 += " (¶ÏÏßÖĞ)";
+                                        field1 += " (æ–·ç·šä¸­)";
 */
                                 if( !field1) field1= "(null)";
 
                                 val = ( list[i]->query_linkdead() ? 0 : query_idle( list[i] ));
                                 if( val >= 3600 )
-                                        field1 += "[·¢´ô " + val/3600 +" Ğ¡Ê±]";
+                                        field1 += "[ç™¼å‘† " + val/3600 +" å°æ™‚]";
                                 else if( val >= 60 )
-                                        field1 += "[·¢´ô " + val/60 + " ·ÖÖÓ]";
+                                        field1 += "[ç™¼å‘† " + val/60 + " åˆ†é˜]";
                                 lines += sprintf("%65-s %s\n", field1, wizardp(list[i])? "<wiz>":"");
                         }
                         lines += c_dvd;
                         lines += 
-                                "Ä¿Ç°¹²ÓĞ " + (sizeof(list_wiz)+sizeof(list)) + " Î»Ê¹ÓÃÕßÁ¬ÏßÖĞ¡£";
-                        lines += "\tÏµÍ³¸ºµ£: " + query_load_average() + "\n";
+                                "ç›®å‰å…±æœ‰ " + (sizeof(list_wiz)+sizeof(list)) + " ä½ä½¿ç”¨è€…é€£ç·šä¸­ã€‚";
+                        lines += "\tç³»çµ±è² æ“”: " + query_load_average() + "\n";
                         this_player()->more(explode(lines, "\n"), 0, 1);                
                 return 1;
             // linkdead option
@@ -173,11 +173,11 @@ int cmd_who( string arg )
                         else list = all_inventory(netdead);
                         list = filter_array(list,"deadp",this_object());
                         if( !sizeof(list) ) {
-                                printf("%s%s%s",c_dvd,"Ä¿Ç°Ã»ÓĞ¶ÏÏßµÄÍæ¼Ò¡£\n",c_dvd);
+                                printf("%s%s%s",c_dvd,"ç›®å‰æ²’æœ‰æ–·ç·šçš„ç©å®¶ã€‚\n",c_dvd);
                             return 1;
                         }
                         list = sort_array(list, "sort_users", this_object());
-                        printf("%s%s%s",c_dvd,"  Ä¿Ç°¶ÏÏßµÄÍæ¼ÒÓĞ: \n",c_dvd);
+                        printf("%s%s%s",c_dvd,"  ç›®å‰æ–·ç·šçš„ç©å®¶æœ‰: \n",c_dvd);
                         i = sizeof(list);
                         while( i-- ) write(capitalize(geteuid(list[i]))+"\n");
                         write(c_dvd);
@@ -203,24 +203,24 @@ int cmd_who( string arg )
         list = filter_array(users()+all_inventory(netdead), "filter_users", this_object());
 // sort_array costs LOTS of eval cost, commeneted out by Annihilator (05/31/95)
 //      list = sort_array(list, "sort_users", this_object());
-        write( "\n¡ò À¶Ìì  \t\t\t\t( " + ctime( time() ) + " )\n");
+        write( "\nâ— è—å¤©  \t\t\t\t( " + ctime( time() ) + " )\n");
         write(c_dvd);
-        msg = "Î×Ê¦ : ";
+        msg = "å·«å¸« : ";
         i = sizeof(list_wiz); 
         while( i-- ) 
                 msg = sprintf("%s%s, ", msg, list_wiz[i]->query("name"));
                                         
         write(iwrap(msg, 70));
-        msg = "Íæ¼Ò : ";
+        msg = "ç©å®¶ : ";
         i = sizeof(list);
         while( i-- ) 
                 msg = sprintf("%s%s%s%s, ", msg, interactive(list[i]) ? "" : "*",
                                 list[i]->query_temp("chat_user") ? "#" : "",
                                 list[i]->query("name") );
         write(iwrap(msg, 70)+c_dvd);
-        printf("Ä¿Ç°¹²ÓĞ %d Î»Ê¹ÓÃÕßÁ¬ÏßÖĞ¡£",(sizeof(list_wiz)+sizeof(list)));
+        printf("ç›®å‰å…±æœ‰ %d ä½ä½¿ç”¨è€…é€£ç·šä¸­ã€‚",(sizeof(list_wiz)+sizeof(list)));
 
-        printf( "\tÏµÍ³¸ºµ£ : %s \n\n",query_load_average());
+        printf( "\tç³»çµ±è² æ“” : %s \n\n",query_load_average());
         return 1;
 }
 
@@ -286,10 +286,10 @@ int deadp(object who)
 int help()
 {
         write ( @HELP
-Ê¹ÓÃ¸ñÊ½: who <-l»ò-d>
+ä½¿ç”¨æ ¼å¼: who <-læˆ–-d>
 
-ÁĞ³öµ±Ç°ÔÚÏßµÄÍæ¼ÒÓëÎ×Ê¦.
-¼ÓÈë-l²ÎÊı¿ÉÁĞ³ö¸üÏêÏ¸µÄ×ÊÁÏ£¬¼ÓÈë-d¿ÉÁĞ³öÒÑ¾­¶ÏÏßµÄÍæ¼Ò.
+åˆ—å‡ºç•¶å‰åœ¨ç·šçš„ç©å®¶èˆ‡å·«å¸«.
+åŠ å…¥-låƒæ•¸å¯åˆ—å‡ºæ›´è©³ç´°çš„è³‡æ–™ï¼ŒåŠ å…¥-då¯åˆ—å‡ºå·²ç¶“æ–·ç·šçš„ç©å®¶.
 HELP
         );
         return 1 ;

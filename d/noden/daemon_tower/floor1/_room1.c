@@ -2,9 +2,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("¶ñÄ§ËşÄÚ");
+	ob->set_short("æƒ¡é­”å¡”å…§");
 	ob->set_long( @C_LONG_DESCRIPTION
-ÕâÀïÊÇ¶ñÄ§ËşµÄµÚÒ»¸ö·¿¼ä.
+é€™è£¡æ˜¯æƒ¡é­”å¡”çš„ç¬¬ä¸€å€‹æˆ¿é–“.
 C_LONG_DESCRIPTION
 	);
 	ob->set( "exits", ([ 

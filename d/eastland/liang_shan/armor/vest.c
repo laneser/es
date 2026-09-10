@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("cell vest","¸ñ×Ó²¼±³ĞÄ");
+    set_name("cell vest","æ ¼å­å¸ƒèƒŒå¿ƒ");
     add("id",({"cell","vest"}) );
-    set_short( "cell vest","¸ñ×Ó²¼±³ĞÄ");
+    set_short( "cell vest","æ ¼å­å¸ƒèƒŒå¿ƒ");
 	set_long(
 		"This is a suit of vest \n",
-		"ÕâÊÇÒ»¼ş¸ñ×Ó»¨ÎÆµÄĞ¡±³ĞÄ£®\n"
+		"é€™æ˜¯ä¸€ä»¶æ ¼å­èŠ±ç´‹çš„å°èƒŒå¿ƒï¼\n"
 		
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 50 );
 	set( "type", "body" );
 	set( "armor_class", 20 );

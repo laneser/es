@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "Troll beast", "¾ŞÉñÊŞ" );
+	set_name( "Troll beast", "å·¨ç¥ç¸" );
 	add( "id", ({ "beast" }) );
-	set_short( "¾ŞÉñÊŞ" );
+	set_short( "å·¨ç¥ç¸" );
 	set_long(@LONG
-Ò»Ö»¿ÚÕÅâ²ÑÀµÄ¾ŞÈË×åÒ°ÊŞ£¬¾­¹ıÁË³¤¾ÃµÄÑµÁ·£¬¸»ÓĞºÜÇ¿µÄ¹¥»÷Á¦¡£
+ä¸€éš»å£å¼µç ç‰™çš„å·¨äººæ—é‡ç¸ï¼Œç¶“éäº†é•·ä¹…çš„è¨“ç·´ï¼Œå¯Œæœ‰å¾ˆå¼·çš„æ”»æ“ŠåŠ›ã€‚
 LONG
 	);
-	set( "unit", "Ö»" );
-	set( "race","¾ŞÈË");
+	set( "unit", "åª" );
+	set( "race","å·¨äºº");
 	set( "alignment", -100 );
 	set_natural_armor(60,15);
 	set_natural_weapon(40,8,20);
@@ -24,9 +24,9 @@ LONG
 	set_skill( "unarmed-parry", 60 );
         set_skill( "unarm", 100 );
         set_c_verbs( ({
-             "%sÕÅ¿ªÀ«¿ÚÏò%sÒ§È¥",
-             "%s»Ó¶¯Àû×¦×¥Ïò%s"}) );
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÑÀ" }) );
+             "%så¼µé–‹é—Šå£å‘%så’¬å»",
+             "%sæ®å‹•åˆ©çˆªæŠ“å‘%s"}) );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç‰™" }) );
         set("tactic_func","my_tactic");
 }
 int my_tactic()
@@ -36,8 +36,8 @@ int my_tactic()
      if ( !victim=query_attacker() ) return 0;
      if ( random(10) > 1 ) return 0;
      name=victim->query("c_name");
-     tell_room(environment(),sprintf("¾ŞÉñÊŞÕÅ¿ªÀ«¿ÚÍù%sÉíÉÏÒ»Ò§£¡\n",name),victim);
-     tell_object(victim,"¾ŞÉñÊŞÕÅ¿ªÀ«¿ÚÍùÄãÉíÉÏÒ»Ò§£¡\n\n");
+     tell_room(environment(),sprintf("å·¨ç¥ç¸å¼µé–‹é—Šå£å¾€%sèº«ä¸Šä¸€å’¬ï¼\n",name),victim);
+     tell_object(victim,"å·¨ç¥ç¸å¼µé–‹é—Šå£å¾€ä½ èº«ä¸Šä¸€å’¬ï¼\n\n");
      (CONDITION_PREFIX + "simple_poison")->apply_effect(victim,5,5);
      return 1;
 }

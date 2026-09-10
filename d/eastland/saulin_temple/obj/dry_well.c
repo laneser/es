@@ -6,12 +6,12 @@ void create()
 {
 	object gourd;
 	::create();
-	set_name("Well", "��");
-	set_short("��");
+	set_name("Well", "井");
+	set_short("井");
 	set("id", ({"well"}) );
 	set_c_open_long(@C_LONG
-���ߵ�����������һ������ѽ! ��ˮ���Ѿ�Ǭ�ˣ�����Ǭ�ѵ������γ�һ����
-�ݺ�Ĵ�졣��Ӧ�ÿ�����(climb)�¾��׿�����
+你走到井邊望井裡一看，哎呀! 井水都已經乾了，井底乾裂的泥土形成一條條
+縱橫的大縫。你應該可以爬(climb)下井底看看。
 C_LONG
 	);
 	

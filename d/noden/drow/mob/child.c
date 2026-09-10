@@ -5,18 +5,18 @@ void create()
 {
         ::create();
         set_level(6);
-        set_name( "Drow  child", "ºÚ°µ¾«ÁéĞ¡º¢" );
+        set_name( "Drow  child", "é»‘æš—ç²¾éˆå°å­©" );
         add ("id", ({ "child", "drow", }) );
-        set_short( "Drow  child", "ºÚ°µ¾«ÁéĞ¡º¢" );
+        set_short( "Drow  child", "é»‘æš—ç²¾éˆå°å­©" );
         set_long(
 @C_LONG
-ÕâÊÇ¸öÌÔÆøµÄĞ¡º¢×Ó£¬ÓÉËûĞØÇ°µÄĞ¡ÎÆÕÂÄãÖªµÀËûÊÇ¸ö¹ó×å¡£
+é€™æ˜¯å€‹æ·˜æ°£çš„å°å­©å­ï¼Œç”±ä»–èƒ¸å‰çš„å°ç´‹ç« ä½ çŸ¥é“ä»–æ˜¯å€‹è²´æ—ã€‚
 C_LONG
               );
         set( "alignment",70);
         set( "gender", "male" );
         set( "race", "drow" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set_perm_stat( "str", 5 );
         set ("wealth", ([ "silver": 30 ]) );
         set_natural_weapon(3,2,5);

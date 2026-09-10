@@ -44,7 +44,7 @@ int cmd_home( string pl_name )
   if( environment(this_player()) &&
       file_name(environment(this_player())) == home) {
   	  write(
-  	    "»ØÄÄÒ»¸ö¼Ò°¡? Äã±¾À´¾ÍÔÚ¼ÒÀïÁË¡£\n");
+  	    "å›žå“ªä¸€å€‹å®¶å•Š? ä½ æœ¬ä¾†å°±åœ¨å®¶è£¡äº†ã€‚\n");
       return 1; 
   }
  
@@ -60,9 +60,9 @@ int cmd_home( string pl_name )
     if( !tmp_home ||
     	(int)this_player()->move_player(tmp_home, "SNEAK") != MOVE_OK )
       return notify_fail(
-     	"ÄãÁôÔÚÔ­µØ¡£\n");
+     	"ä½ ç•™åœ¨åŽŸåœ°ã€‚\n");
   } else if( (int)this_player()->move_player(home, "SNEAK") != MOVE_OK )
-    return notify_fail("ÄãÁôÔÚÔ­µØ¡£\n");
+    return notify_fail("ä½ ç•™åœ¨åŽŸåœ°ã€‚\n");
  
 /*
   this_player()-> describe_current_room( this_player()-> query_verbose() );

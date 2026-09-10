@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "The Prayer", "����Ժ�о�ɮ" );
+	set_name( "The Prayer", "文殊院誦經僧" );
 	add( "id", ({ "prayer","monk" }) );
-	set_short(  "����Ժ�о�ɮ" );
+	set_short(  "文殊院誦經僧" );
 	set_long(
-		"�㿴��һ������������Ժ���о�ɮ�����Ŀ������૵��������صľ��ģ�\n"
+		"你看到一個少林寺文殊院的誦經僧，他的口中正喃喃地念著奇特的經文！\n"
 	);
-	set( "unit", "��" );
+	set( "unit", "名" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment",  800 );
@@ -38,8 +38,8 @@ void create()
 	set_skill( "dodge", 90 );
 	set( "chat_chance", 10 );
 	set( "att_chat_output", ({
-		"�о�ɮ����Ȱ�������˸Ͽ��������Ͷ����! �����²���Ϊ�����ǵ�!\n",
-		"�о�ɮ����Ȱ�����ຣ�ޱ�! �Ͽ����������!\n"
+		"誦經僧柔聲勸道：來人趕快放下武器投降吧! 少林寺不會為難你們的!\n",
+		"誦經僧柔聲勸道：苦海無邊! 趕快放下屠刀吧!\n"
 	}) );
 
 	wield_weapon( SAULIN_OBJ"holy_wand" );
@@ -55,8 +55,8 @@ int my_tactic()
 	if( !(victim = query_attackers()) ) return 0;
 	if( random(20)>4 ) return 0;
 	tell_room( environment(this_object()), 
-		"��ɮ�������: ���ຣ�ޱߣ���ͷ�ǰ���.....\n"
-		"\nͻȻ��һ�������ʥ������ҵ����ţ����Ǹе�һ������ľ�ʹ !\n\n"
+		"老僧口中念道: 『苦海無邊，回頭是岸』.....\n"
+		"\n突然，一道純潔的聖光貫入大家的胸膛，你們感到一陣心碎的劇痛 !\n\n"
 		, this_object()
 	);
 	for ( i=0; i < sizeof(victim) ; i++)

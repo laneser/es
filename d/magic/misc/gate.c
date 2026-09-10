@@ -8,12 +8,12 @@ object	gate_destination;
 
 void	create()
 {
-	set_name("astral gate", "ÐÇ½çÖ®ÃÅ");
+	set_name("astral gate", "æ˜Ÿç•Œä¹‹é–€");
 	add( "id", ({ "gate" }) );
-	set_short( "ÐÇ½çÖ®ÃÅ" );
+	set_short( "æ˜Ÿç•Œä¹‹é–€" );
 	set( "long", "@@query_long");
 	set( "weight", 0);
-	set( "unit", "µÀ");
+	set( "unit", "é“");
 	set( "prevent_insert", 1);
 	set( "prevent_drop", 1);
 	set( "prevent_get", 1);
@@ -31,27 +31,27 @@ void	set_destination( object dest )
 
 int		enter_gate( string s)
 {
-	if (!s)	return notify_fail( "ÄãÏë½øÈëÊ²÷á¶«Î÷?\n" );
+	if (!s)	return notify_fail( "ä½ æƒ³é€²å…¥ä»€éº¼æ±è¥¿?\n" );
 	if ( (!present(s)) || (present(s) != this_object()) )	return 0;
 // prevent bugs
 	if ( (!gate_destination) || (gate_destination->query("no_teleport")) ) 
 	{
 		tell_room( environment( this_object()), 
-			"ÔÚÄã½Ó´¥¹âÃÅÊ±, ÃÅºöÈ»¾çÁÒµØÒ¡¶¯ÆðÀ´, ·¢³öÇ¿ÁÒµÄÉÁ¹â¶øÏûÊ§¡£\n"
+			"åœ¨ä½ æŽ¥è§¸å…‰é–€æ™‚, é–€å¿½ç„¶åŠ‡çƒˆåœ°æ–å‹•èµ·ä¾†, ç™¼å‡ºå¼·çƒˆçš„é–ƒå…‰è€Œæ¶ˆå¤±ã€‚\n"
 		);
 		::remove();
 		return 0;
 	}
 	
 	this_player()->move_player( gate_destination,
-		this_player()->query("c_name") + "×ß½øÁËÐÇ½çÖ®ÃÅ" );
+		this_player()->query("c_name") + "èµ°é€²äº†æ˜Ÿç•Œä¹‹é–€" );
 	return 1;
 }
 
 int		remove()
 {
 	tell_room( environment( this_object() ), 
-		"¹âÃÅ½¥½¥µØ×ªÎª÷öµ­, ÏûÊ§ÁË¡£\n"
+		"å…‰é–€æ¼¸æ¼¸åœ°è½‰ç‚ºé»¯æ·¡, æ¶ˆå¤±äº†ã€‚\n"
 	);
 	return ::remove();
 }
@@ -60,9 +60,9 @@ string	query_long()
 {
 	string s;
 	
-	s= "¹âÃÅÓÐµãÒ¡Ò¡»Î»ÎµÄ, ¿´²»µ½ÃÅµÄ±Ë·½¡£\n";
+	s= "å…‰é–€æœ‰é»žæ–æ–æ™ƒæ™ƒçš„, çœ‹ä¸åˆ°é–€çš„å½¼æ–¹ã€‚\n";
 	if (gate_destination) {
-		s = "ÄãÍ¸¹ý¹âÃÅ, ¿´µ½ÃÅµÄÁíÒ»²à:\n";
+		s = "ä½ é€éŽå…‰é–€, çœ‹åˆ°é–€çš„å¦ä¸€å´:\n";
 		s = s + gate_destination->query("long");
 		return s;
 	}

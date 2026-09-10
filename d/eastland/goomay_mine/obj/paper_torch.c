@@ -5,11 +5,11 @@ inherit OBJECT;
 
 void create()     
 {
-	set_name( "magic_paper", "Ç§Àï»ğ" );
+	set_name( "magic_paper", "åƒé‡Œç«" );
 	set("short", "@@query_short");
 	set("long", "@@query_long");
 	set("id", ({ "paper" }));
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set("weight", 5);
 	set("fuel", 300);  // fuel is measured in seconds
 }
@@ -25,9 +25,9 @@ int light_t(string str)
 	if(!id(str)) return 0;	
 
 	if(query("light")) 
-		return notify_fail( "ÕâÕÅÇ§Àï»ğÒÑ¾­µãÖøÁË¡£\n");
+		return notify_fail( "é€™å¼µåƒè£¡ç«å·²ç¶“é»è‘—äº†ã€‚\n");
 
-	write("Äã´µÁËÒ»¿ÚÆø½«Ç§Àï»ğ¸øµãÖøÁË¡£\n");
+	write("ä½ å¹äº†ä¸€å£æ°£å°‡åƒé‡Œç«çµ¦é»è‘—äº†ã€‚\n");
 	set("light", 1);
 	this_player()->set_temp("paper/light",1);
 	call_out("burn_out", query("fuel"));
@@ -38,11 +38,11 @@ int extinguish_t(string str)
 {
 	if(!id(str)) return 0;	
 	if(!query("fuel"))
-		return notify_fail( "À´²»¼°ÁË!ÕâÕÅÇ§Àï»ğÒÑ¾­»¯Îª·É»ÒÁË¡£\n");	
+		return notify_fail( "ä¾†ä¸åŠäº†!é€™å¼µåƒè£¡ç«å·²ç¶“åŒ–ç‚ºé£›ç°äº†ã€‚\n");	
 	if(!query("light"))
-		return notify_fail("Õâ¸ùÇ§Àï»ğ»¹Ã»ÓĞµãÖø£¬ÈçºÎÏ¨Ãğ£¿\n");
+		return notify_fail("é€™æ ¹åƒé‡Œç«é‚„æ²’æœ‰é»è‘—ï¼Œå¦‚ä½•ç†„æ»…ï¼Ÿ\n");
 
-	write("Äã½«Ò¡Ò»Ò¡ÊÖ½«Ç§Àï»ğÏ¨Ãğ¡£\n");
+	write("ä½ å°‡æ–ä¸€æ–æ‰‹å°‡åƒé‡Œç«ç†„æ»…ã€‚\n");
 	set("light", 0);
 	this_player()->set_temp("paper/light",0);
 	set("fuel", remove_call_out("burn_out"));
@@ -55,7 +55,7 @@ void burn_out()
            ob = this_object();
 	owner = environment(this_object());
 	if( living(owner) ){
-		tell_object( owner,"ÄãµÄÇ§Àï»ğ»ğ¹âÉÁÁË¼¸ÏÂ£¬»¯³É»ÒÏ¨µôÁË¡£\n");
+		tell_object( owner,"ä½ çš„åƒé‡Œç«ç«å…‰é–ƒäº†å¹¾ä¸‹ï¼ŒåŒ–æˆç°ç†„æ‰äº†ã€‚\n");
        ob->remove();
        this_player()->set_temp("paper/light",0);
 	}
@@ -64,14 +64,14 @@ void burn_out()
 string query_short()
 {
 	if(query("fuel"))
-		return "Ç§Àï»ğ" + (query("light") ? " (µãÖø)" : "");
+		return "åƒé‡Œç«" + (query("light") ? " (é»è‘—)" : "");
 }
 
 
 string query_long()
 {
 	if(query("fuel"))
-		return "Ç§Àï»ğÊÇ×î¹Å´ú³£¼ûµÄËæÉí¹âÔ´£¬\n" +
-			(query("light") ? "ÕâÕÅÇ§Àï»ğÒÑ¾­µãÖøÁË£¬Äã¿ÉÒÔÏ¨Ãğ(unlight)Ëü¡£\n"
-			: "Äã¿ÉÒÔ¶ÔËü´µ(blow)¿ÚÆøµãÈ¼Ê¹ÓÃ¡£\n");
+		return "åƒé‡Œç«æ˜¯æœ€å¤ä»£å¸¸è¦‹çš„éš¨èº«å…‰æºï¼Œ\n" +
+			(query("light") ? "é€™å¼µåƒè£¡ç«å·²ç¶“é»è‘—äº†ï¼Œä½ å¯ä»¥ç†„æ»…(unlight)å®ƒã€‚\n"
+			: "ä½ å¯ä»¥å°å®ƒå¹(blow)å£æ°£é»ç‡ƒä½¿ç”¨ã€‚\n");
 }

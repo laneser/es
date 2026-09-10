@@ -4,18 +4,18 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wizard's gloves", "Î×Ê¦ÊÖÌ×" );
+	set_name( "wizard's gloves", "å·«å¸«æ‰‹å¥—" );
 	add( "id", ({ "glove", "gloves", }) );
-	set_short( "a wizard's gloves", "Î×Ê¦ÊÖÌ×" );
+	set_short( "a wizard's gloves", "å·«å¸«æ‰‹å¥—" );
 	set_long( @TOPIC
 	The pair of gloves used by wizard Rashudi. It is made by normal cloth,
 but spreads a special power of magic.
 TOPIC
     , @C_TOPIC
-	À­ĞŞµÛÏ°¹ß´÷µÄÊÖÌ×£¬ËäÈ»Ö»ÊÇÓÃÆÕÍ¨µÄ²¼×öµÄ£¬µ«É¢·¢³öÒ»¹ÉÄ§Á¦¡£
+	æ‹‰ä¿®å¸ç¿’æ…£æˆ´çš„æ‰‹å¥—ï¼Œé›–ç„¶åªæ˜¯ç”¨æ™®é€šçš„å¸ƒåšçš„ï¼Œä½†æ•£ç™¼å‡ºä¸€è‚¡é­”åŠ›ã€‚
 C_TOPIC
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "hands" );
 	set( "material", "cloth");
 	set( "armor_class", 5 );

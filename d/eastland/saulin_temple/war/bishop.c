@@ -8,19 +8,19 @@ void create()
 
         ::create();
         set_level(17);
-        set_name( "Arch bishop of evil", "ÐþÒõ½ÌÖ÷" );
+        set_name( "Arch bishop of evil", "çŽ„é™°æ•™ä¸»" );
         add ("id", ({ "bishop", "arch", }) );
-        set_short( "ÐþÒõ½ÌÖ÷" );
+        set_short( "çŽ„é™°æ•™ä¸»" );
         set_long(@C_LONG
-ËûÊÇ³ç°ÝÐ°¶ñÒõÉñµÄÐþÒõ½Ì½ÌÖ÷ÒõÐþ±ù£¬ÉúÆ½×÷¶ñ¶à¶Ë£¬²Ðº¦ÉúÁé²»¼ÆÆäÊý£¬
-×îÕðº¶ÈËÐÄµÄÊÇÁ½ÄêÇ°µÄÊýÊ®ÃûÔÐ¸¾²ÒÔâÆÊ¸¹È¡×ÓµÄÑª°¸£¬ËûÒ²ÒòÎªÕâ¼þ²Ò°¸
-¶øÔâÈ«ÌìÏÂÕýÅÉÈËÊ¿µÄ×·¼©¡£
+ä»–æ˜¯å´‡æ‹œé‚ªæƒ¡é™°ç¥žçš„çŽ„é™°æ•™æ•™ä¸»é™°çŽ„å†°ï¼Œç”Ÿå¹³ä½œæƒ¡å¤šç«¯ï¼Œæ®˜å®³ç”Ÿéˆä¸è¨ˆå…¶æ•¸ï¼Œ
+æœ€éœ‡æ†¾äººå¿ƒçš„æ˜¯å…©å¹´å‰çš„æ•¸ååå­•å©¦æ…˜é­å‰–è…¹å–å­çš„è¡€æ¡ˆï¼Œä»–ä¹Ÿå› ç‚ºé€™ä»¶æ…˜æ¡ˆ
+è€Œé­å…¨å¤©ä¸‹æ­£æ´¾äººå£«çš„è¿½ç·ã€‚
 C_LONG
                  );
 	set("alignment",-2000);
 	set( "gender", "male" );
 	set( "race", "daemon" );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set("monk_value",80);
         set_perm_stat( "str", 20 );
         set_perm_stat( "int", 25 );
@@ -46,7 +46,7 @@ void report( object attacker, object victim )
    seteuid(getuid());
    c_message= "/adm/daemons/statsd"->c_status_string(victim);
    tell_object( victim,
-      "( Äã"+c_message+" )\n"
+      "( ä½ "+c_message+" )\n"
    );
 }
 
@@ -60,7 +60,7 @@ int cast_spell()
 
     if( random(10) < 4 ) {
       tell_room( environment(this_object()), 
-        "\nÐþÒõ½ÌÖ÷Åç³ö³öÒ»ÍÅ±ùÎí£¬ÕÖÏò"+c_name+"\n\n"
+        "\nçŽ„é™°æ•™ä¸»å™´å‡ºå‡ºä¸€åœ˜å†°éœ§ï¼Œç½©å‘"+c_name+"\n\n"
        );
       victim->receive_special_damage("ice", 23+random(12));
       report(this_object(),victim);

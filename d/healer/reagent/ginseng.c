@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "ginseng", "ÈË²Î" );
-	set_short( "a ginseng", "ÈË²Î" );
+	set_name( "ginseng", "äººåƒ" );
+	set_short( "a ginseng", "äººåƒ" );
 	set_long(
 		"You see a ginseng which are used as reagents the most.\n",
-		"ÕâÊÇÒ»¸ùÓÃÀ´×öÒ©²ÄµÄÈË²Î¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ˜¯ä¸€æ ¹ç”¨ä¾†åšè—¥æçš„äººåƒã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "GINSENG" );
          set("no_sale",1);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
         set( "weight", 2 );
 	set( "savour","bitter");
 

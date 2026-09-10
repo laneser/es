@@ -1,91 +1,91 @@
-»ğÉ½£º (-)±íÓëÒ»°ãÉè¼ÆÆ½,(+)±í¸ßì¶Ò»°ãÉè¼Æ,(*)±í´ïÉÏÏŞ
+ç«å±±ï¼š (-)è¡¨èˆ‡ä¸€èˆ¬è¨­è¨ˆå¹³,(+)è¡¨é«˜æ–¼ä¸€èˆ¬è¨­è¨ˆ,(*)è¡¨é”ä¸Šé™
  
-ÎäÆ÷ÁĞ±í£º
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨åˆ—è¡¨ï¼š
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-¾ŞÁé¸«   axe1.c       45(+) 28(+) 40(-) axe  bleeding8
-¹Çµ¶     blade1.c      8     6     9    lb
-É¨°Ñ     broom.c      10     5    15    blt
-Íæ¾ßØ°Ê× dagger01.c    4     4     7    dag
-°«ÁéØ°Ê× dagger02.c   35(+) 19(+) 33(+) dag               second
-Ñ§ÕßÖ®Ø° dagger03.c   28    18(+) 25    dag
-»­»ê¶Ì½£ ghostsword.c 42(+) 25(+) 37(+) sb
-»¤Éí³¤Ç¹ lance.c      25    10    23    jou
-°«Áé¶Ì½£ shortsword1  35(+) 10    30    sb                second
-ÇàË®¶Ì½£ shortsword2  40(+) 23(+) 36(+) sb                second
-ºÚ³¤Ã¬   spear1.c     40(+) 20(-) 40(+) thr
-ÆÆ±ùÕÈ   staff1.c     28    15(-) 28    blu
-Áú½£     sword1.c     45(+) 30(*) 50(+) lb   cold
-°«ÁéÈ¨ÕÈ w_staff.c    30    15(-) 30    blu
-¿ñ·çÕÈ   wand1.c      35(+) 17(+) 30(+) wand energy80
-³¤ÀÏ·¨ÕÈ wand2.c      41(+) 19(+) 35(+) wand energy80
-°«ÁéÖ®¸« waxe.c       31    22    35    axe  bleeding10
-Íæ¾ßÇ¹   wgun.c        5     5    10    dag
-÷è÷ë±Ş   whip1.c      20     9    18    whip
-»ğÁú±Ş   whip2.c      20    10    20    whip
-»ğÉñ±Ş   whip3.c      20    10    20    whip
-°«ÁéÁ÷ĞÇ wstar.c      27    13    30    cha
-¹ÕÕÈ     wstick.c     10     5    15    blt
-°«ÁéÖ®½£ wsword.c     25    15    20    lb   fire10
+å·¨éˆæ–§   axe1.c       45(+) 28(+) 40(-) axe  bleeding8
+éª¨åˆ€     blade1.c      8     6     9    lb
+æƒæŠŠ     broom.c      10     5    15    blt
+ç©å…·åŒ•é¦– dagger01.c    4     4     7    dag
+çŸ®éˆåŒ•é¦– dagger02.c   35(+) 19(+) 33(+) dag               second
+å­¸è€…ä¹‹åŒ• dagger03.c   28    18(+) 25    dag
+ç•«é­‚çŸ­åŠ ghostsword.c 42(+) 25(+) 37(+) sb
+è­·èº«é•·æ§ lance.c      25    10    23    jou
+çŸ®éˆçŸ­åŠ shortsword1  35(+) 10    30    sb                second
+é’æ°´çŸ­åŠ shortsword2  40(+) 23(+) 36(+) sb                second
+é»‘é•·çŸ›   spear1.c     40(+) 20(-) 40(+) thr
+ç ´å†°æ–   staff1.c     28    15(-) 28    blu
+é¾åŠ     sword1.c     45(+) 30(*) 50(+) lb   cold
+çŸ®éˆæ¬Šæ– w_staff.c    30    15(-) 30    blu
+ç‹‚é¢¨æ–   wand1.c      35(+) 17(+) 30(+) wand energy80
+é•·è€æ³•æ– wand2.c      41(+) 19(+) 35(+) wand energy80
+çŸ®éˆä¹‹æ–§ waxe.c       31    22    35    axe  bleeding10
+ç©å…·æ§   wgun.c        5     5    10    dag
+éº’éºŸé­   whip1.c      20     9    18    whip
+ç«é¾é­   whip2.c      20    10    20    whip
+ç«ç¥é­   whip3.c      20    10    20    whip
+çŸ®éˆæµæ˜Ÿ wstar.c      27    13    30    cha
+æŸºæ–     wstick.c     10     5    15    blt
+çŸ®éˆä¹‹åŠ wsword.c     25    15    20    lb   fire10
  
-Ãû³Æ     µµÃû         AC    DB    ÖÖÀà ÌØ·À                  ±¸×¢
+åç¨±     æª”å         AC    DB    ç¨®é¡ ç‰¹é˜²                  å‚™è¨»
 ======== ============ ===== ===== ==== ===================== ================
-Í·¿ø£º
-°«ÁéÍ·¿ø helmet1.c¡¡   6     1    ele  engery5
-×Ï½ğ¹Ú   helmet2.c     8(-)  0    ele  engery5
-ÓãÆ¤Ã±   helmet3.c     6     2    lea  electric5
+é ­ç›”ï¼š
+çŸ®éˆé ­ç›” helmet1.cã€€   6     1    ele  engery5
+ç´«é‡‘å†    helmet2.c     8(-)  0    ele  engery5
+é­šçš®å¸½   helmet3.c     6     2    lea  electric5
  
-îø¼×£º
-Æíµ»ÕßÅÛ cloth1.c     11     0    clo
-Ñ§ÕßÖ®ÅÛ cloth2.c     11     0    clo
-Ö´ÊÂÖ®ÅÛ cloth3.c     13     0    clo
-°«Áé³¤ÀÏ cloth4.c     20     8(+) clo
-ºìÉ«¶Ç¶µ dudo1.c       7     0    clo
-À¶É«¶Ç¶µ dudo2.c       8     0    clo
-°«Áé»¤¼× mail1.c      27     6(-) ele  mental5
-»ğÉ½ÁÛ¼× mail2.c      13     0    sto
-»ğÉ½Ëø¼× mail3.c      18     0    sto
-»ğÉ½îø¼× mail4.c      23     1    sto  fire5 cold-2
-»ğÉ½îøëĞ mail5.c      28     0    sto  fire10 cold-5
-»Æ½ğË÷×Ó mail6.c      35(-)  6(-) hvm  mental10
-Ñ©¿ø     mail7.c      28     5    hvm  cold20 fire-5
-ºìÁÛ¼×   mail8.c      23     5    ltm  energy15 cold-5
+é§ç”²ï¼š
+ç¥ˆç¦±è€…è¢ cloth1.c     11     0    clo
+å­¸è€…ä¹‹è¢ cloth2.c     11     0    clo
+åŸ·äº‹ä¹‹è¢ cloth3.c     13     0    clo
+çŸ®éˆé•·è€ cloth4.c     20     8(+) clo
+ç´…è‰²è‚šå…œ dudo1.c       7     0    clo
+è—è‰²è‚šå…œ dudo2.c       8     0    clo
+çŸ®éˆè­·ç”² mail1.c      27     6(-) ele  mental5
+ç«å±±é±—ç”² mail2.c      13     0    sto
+ç«å±±é–ç”² mail3.c      18     0    sto
+ç«å±±é§ç”² mail4.c      23     1    sto  fire5 cold-2
+ç«å±±é§å†‘ mail5.c      28     0    sto  fire10 cold-5
+é»ƒé‡‘ç´¢å­ mail6.c      35(-)  6(-) hvm  mental10
+é›ªç›”     mail7.c      28     5    hvm  cold20 fire-5
+ç´…é±—ç”²   mail8.c      23     5    ltm  energy15 cold-5
  
-±Û»·£º
-Æíµ»ÊÖ»· armband1.c    2     0    ltm
-°«Áé±Û»· armband2.c    4(-)  4(-) ele
-Ë®±Û»·   armband3.c    2     4(-) ele  fire 10 cold-5
+è‡‚ç’°ï¼š
+ç¥ˆç¦±æ‰‹ç’° armband1.c    2     0    ltm
+çŸ®éˆè‡‚ç’° armband2.c    4(-)  4(-) ele
+æ°´è‡‚ç’°   armband3.c    2     4(-) ele  fire 10 cold-5
  
-»¤ÊÖ£º
-°«ÁéÊÖÌ× glove1.c      4(-)  3    ele
-¹¤×÷ÊÖÌ× glove2.c      3     4(-) clo
+è­·æ‰‹ï¼š
+çŸ®éˆæ‰‹å¥— glove1.c      4(-)  3    ele
+å·¥ä½œæ‰‹å¥— glove2.c      3     4(-) clo
  
-ëÖ¼×£º
-°«ÁéëÖ¼× legging1.c    5     2    ele  evil5
-ºÚ°µëÖ¼× legging2.c    7     3(-) ltm  evil5
-Á÷ÔÆëÖ¼× legging3.c    6     4(+) ele  electiric5
+è„›ç”²ï¼š
+çŸ®éˆè„›ç”² legging1.c    5     2    ele  evil5
+é»‘æš—è„›ç”² legging2.c    7     3(-) ltm  evil5
+æµé›²è„›ç”² legging3.c    6     4(+) ele  electiric5
  
-Ğ¬×Ó£º
-²¼Ğ¬     boots1.c      5     0    clo
-°«ÁéĞ¬   boots2.c      8(-)  2    ele  fire 5
-²½ÔÆÑ¥   boots3.c      7     5(*) ele  cold 5
+é‹å­ï¼š
+å¸ƒé‹     boots1.c      5     0    clo
+çŸ®éˆé‹   boots2.c      8(-)  2    ele  fire 5
+æ­¥é›²é´   boots3.c      7     5(*) ele  cold 5
  
-¶ÜÅÆ£º
-°«Áé¶Ü   shield1.c     4     6(-) ele  magic5
-¡õ¶Ü     shield2.c     8(-)  5    hvm  evil15,mental-5 block+5
+ç›¾ç‰Œï¼š
+çŸ®éˆç›¾   shield1.c     4     6(-) ele  magic5
+â–¡ç›¾     shield2.c     8(-)  5    hvm  evil15,mental-5 block+5
  
-Åû·ç£º
-°«ÁéÅû·ç cloak1.c      4     5    ele  divine 5
-ÂÌ¶·Åñ   cloak2.c      5     6(-) mage cold30,fire-10,ele20 blackmagic+10,ele+5
-ÎäÕß¶·Åñ cloak3.c      8(-)  0    clo  energy10,electric-5
+æŠ«é¢¨ï¼š
+çŸ®éˆæŠ«é¢¨ cloak1.c      4     5    ele  divine 5
+ç¶ æ–—ç¯·   cloak2.c      5     6(-) mage cold30,fire-10,ele20 blackmagic+10,ele+5
+æ­¦è€…æ–—ç¯· cloak3.c      8(-)  0    clo  energy10,electric-5
  
-»¤·û£º
-°«Áé»¤·û amulet1.c     0     5    ele  acid 5
-»ğ»¤Éí·û amulet2.c     0     8(+) lea  fire 13
-ÉñÊ¥»¤·û amulet3.c     0     6(-) lea  evil 10
+è­·ç¬¦ï¼š
+çŸ®éˆè­·ç¬¦ amulet1.c     0     5    ele  acid 5
+ç«è­·èº«ç¬¦ amulet2.c     0     8(+) lea  fire 13
+ç¥è–è­·ç¬¦ amulet3.c     0     6(-) lea  evil 10
  
-½äÖ¸£º
-°«Áé½äÖ¸ ring1.c       0     6(-) ele  poison5
-Éºº÷½äÖ¸ ring2.c       0     7(+) ele
-µÁÔô½äÖ¸ ring3.c       0     4    thi  sneak,steal,backstab,hide+5
-°«Áé¼ÀË¾ ring4.c       0     6(-) ele  evil15
+æˆ’æŒ‡ï¼š
+çŸ®éˆæˆ’æŒ‡ ring1.c       0     6(-) ele  poison5
+çŠç‘šæˆ’æŒ‡ ring2.c       0     7(+) ele
+ç›œè³Šæˆ’æŒ‡ ring3.c       0     4    thi  sneak,steal,backstab,hide+5
+çŸ®éˆç¥­å¸ ring4.c       0     6(-) ele  evil15

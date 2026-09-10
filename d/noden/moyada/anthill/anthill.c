@@ -6,19 +6,19 @@ void to_climb_up( object player, string dest, int need )
     skill = player->query_skill("climbing");
     skill += 5;
     if( random(need) < skill ) {
-      tell_object( player,"ÄãÐ¡ÐÄÒíÒíµÄÅÀÁËÉÏÈ¥¡£\n");
+      tell_object( player,"ä½ å°å¿ƒç¿¼ç¿¼çš„çˆ¬äº†ä¸ŠåŽ»ã€‚\n");
       tell_room( environment(player), 
-        player->query("c_name")+"ÅÀÁËÉÏÈ¥¡£\n", player
+        player->query("c_name")+"çˆ¬äº†ä¸ŠåŽ»ã€‚\n", player
       );
       player->move_player( dest, "SNEAK" );
       tell_room( environment(player),
-        player->query("c_name")+"ÅÀÁËÉÏÀ´¡£\n" , player
+        player->query("c_name")+"çˆ¬äº†ä¸Šä¾†ã€‚\n" , player
       );
     } else {
       tell_object( player,
-        "Äã³¢ÊÔÖøÅÀÉÏÈ¥£¬½á¹ûÓÖ»¬ÁËÏÂÀ´¡£\n");
+        "ä½ å˜—è©¦è‘—çˆ¬ä¸ŠåŽ»ï¼Œçµæžœåˆæ»‘äº†ä¸‹ä¾†ã€‚\n");
       tell_room( environment(player), 
-        player->query("c_name")+"³¢ÊÔÖøÅÀÉÏÈ¥£¬½á¹ûÓÖ»¬ÁËÏÂÀ´¡£\n" , player
+        player->query("c_name")+"å˜—è©¦è‘—çˆ¬ä¸ŠåŽ»ï¼Œçµæžœåˆæ»‘äº†ä¸‹ä¾†ã€‚\n" , player
       );
     }
 }
@@ -28,25 +28,25 @@ void to_climb_down( object player, string dest1, string dest2, int need, int dam
     int skill;
     skill = player->query_skill("climbing");
     if( skill > need && (random(100) < skill) ) {
-      tell_object( player,"ÄãÐ¡ÐÄÒíÒíµÄÅÀÁËÏÂÈ¥¡£\n" );
+      tell_object( player,"ä½ å°å¿ƒç¿¼ç¿¼çš„çˆ¬äº†ä¸‹åŽ»ã€‚\n" );
       tell_room( environment(player),
-        player->query("c_name")+"ÅÀÁËÏÂÈ¥¡£\n", player
+        player->query("c_name")+"çˆ¬äº†ä¸‹åŽ»ã€‚\n", player
       );
       player->move_player( dest1, "SNEAK" );
       tell_room( environment(player), 
-        player->query("c_cap_name")+"ÅÀÁËÏÂÀ´¡£\n", player
+        player->query("c_cap_name")+"çˆ¬äº†ä¸‹ä¾†ã€‚\n", player
       );
     } else {
-      tell_object( player,"Äã³¢ÊÔÖøÅÀÏÂÈ¥£¬½á¹ûÒ»²»Ð¡ÐÄµôÁËÏÂÈ¥¡£Åö! ºÃÍ´!\n" 
+      tell_object( player,"ä½ å˜—è©¦è‘—çˆ¬ä¸‹åŽ»ï¼Œçµæžœä¸€ä¸å°å¿ƒæŽ‰äº†ä¸‹åŽ»ã€‚ç¢°! å¥½ç—›!\n" 
       );
       tell_room( environment(player),
-        player->query("c_name")+"³¢ÊÔÖøÅÀÏÂÈ¥£¬½á¹ûµôÁËÏÂÈ¥¡£\n", player
+        player->query("c_name")+"å˜—è©¦è‘—çˆ¬ä¸‹åŽ»ï¼ŒçµæžœæŽ‰äº†ä¸‹åŽ»ã€‚\n", player
       );
       player->move_player( dest2, "SNEAK" );
       player->receive_damage(damage);
       "/d/magic/magic"->report( this_object(), player );
       tell_room( environment(player),
-        player->query("c_name")+"µôÁËÏÂÀ´¡£\n", player
+        player->query("c_name")+"æŽ‰äº†ä¸‹ä¾†ã€‚\n", player
       );
     }
 }

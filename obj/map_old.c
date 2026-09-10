@@ -4,14 +4,14 @@ inherit "std/map";
 void create()
 {
 	seteuid( getuid() );
-	set_name( "map", "µØÍ¼" );
-	set_short( "a magical map", "Ä§·¨µØÍ¼" );
+	set_name( "map", "åœ°åœ–" );
+	set_short( "a magical map", "é­”æ³•åœ°åœ–" );
 	set_long(
 		"This is a magical map of the realms of Noden Kingdom. You can either\n"
 		"\"read map\" to see the map or \"read legend\" to see what the symbol\n"
 		"on the map means.\n",
-		"ÕâÊÇÒ»ÕÅÄ§·¨µØÍ¼£¬Äã¿ÉÒÔ read map ¿´µØÍ¼ÄÚÈİ£¬»òÓÃ\n"
-		"read legend ¿´µØÍ¼ÉÏ·ûºÅËù´ú±íµÄÒâÒå¡£\n"
+		"é€™æ˜¯ä¸€å¼µé­”æ³•åœ°åœ–ï¼Œä½ å¯ä»¥ read map çœ‹åœ°åœ–å…§å®¹ï¼Œæˆ–ç”¨\n"
+		"read legend çœ‹åœ°åœ–ä¸Šç¬¦è™Ÿæ‰€ä»£è¡¨çš„æ„ç¾©ã€‚\n"
 	);
 	set_size( 7, 7 );
 	set( "virtual_server", "/d/noden/virtual/noden_server" );

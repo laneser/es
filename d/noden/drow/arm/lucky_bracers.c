@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("lucky-bracers","ĞÒÔËÊÖïí");
+        set_name("lucky-bracers","å¹¸é‹æ‰‹é²");
         add( "id", ({"bracers" }) );
-   set_short("ĞÒÔËÊÖïí");
+   set_short("å¹¸é‹æ‰‹é²");
         set_long(
-"ÕâÊÇÒ»¸öÄÜ´ø¸øÄãĞÒÔËµÄÆ¯ÁÁÊÖïí£¬¿ÉÊÇ£¬ºÃÏñÖ»ÓĞ¸øÒ»Ğ©²»ÊØÕıµÀµÄÈË£®£®\n"
+"é€™æ˜¯ä¸€å€‹èƒ½å¸¶çµ¦ä½ å¹¸é‹çš„æ¼‚äº®æ‰‹é²ï¼Œå¯æ˜¯ï¼Œå¥½åƒåªæœ‰çµ¦ä¸€äº›ä¸å®ˆæ­£é“çš„äººï¼ï¼\n"
                 );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set ( "type", "hands" );
    set("armor_class",5);
       set("defense_bonus",3);

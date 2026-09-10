@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Fire Scale Arms","»ğ÷ë»¤±Û" );
+	set_name( "Fire Scale Arms","ç«éºŸè­·è‡‚" );
 	add( "id",({ "arms" }) );
-	set_short( "»ğ÷ë»¤±Û" );
+	set_short( "ç«éºŸè­·è‡‚" );
 	set_long(@LONG
-	ÕâÊÇÒ»¶Ô±Û»·£¬Ã¿¸ö±Û»·ÉÏ¶¼ÏâÖøÒ»Æ¬»ğ÷è÷ë
-	µÄÁÛÆ¬¡£
+	é€™æ˜¯ä¸€å°è‡‚ç’°ï¼Œæ¯å€‹è‡‚ç’°ä¸Šéƒ½é‘²è‘—ä¸€ç‰‡ç«éº’éºŸ
+	çš„é±—ç‰‡ã€‚
 LONG
            );
-	set( "unit","Ë«" );
+	set( "unit","é›™" );
 	set( "weight",50 );
 	set( "type","arms" );
 	set( "material","leather" );

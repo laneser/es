@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("water armband", "Ë®±Û»·");
+        set_name("water armband", "æ°´è‡‚ç’°");
         add( "id", ({ "armband" }) );
-        set_short( "Ë®±Û»·");
+        set_short( "æ°´è‡‚ç’°");
         set_long(
-                "Õâ¸ö±Û»·ÄËÊÇÁúÍõÓÃÄ§Á¦½«Ë®Ö®¾«Á¶ÖÆ¶ø³É¡£\n"
+                "é€™å€‹è‡‚ç’°ä¹ƒæ˜¯é¾ç‹ç”¨é­”åŠ›å°‡æ°´ä¹‹ç²¾ç…‰åˆ¶è€Œæˆã€‚\n"
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "arms" );
         set( "material", "element");
         set( "armor_class", 2 );

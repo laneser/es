@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wind gloves","·çÉñÌ×");
+        set_name("wind gloves","é¢¨ç¥å¥—");
         add("id",({"gloves"}) );
-        set_short("·çÉñÌ×");
+        set_short("é¢¨ç¥å¥—");
 	set_long(@C_LONG
-Ò»¼şÉÏĞåÔÆ¶äµÄ´¿°×É«ÊÖÌ×£¬ÀàËÆÓÃ²ÏË¿±àÖ¯¶ø³ÉµÄ¡£
+ä¸€ä»¶ä¸Šç¹¡é›²æœµçš„ç´”ç™½è‰²æ‰‹å¥—ï¼Œé¡ä¼¼ç”¨è ¶çµ²ç·¨ç¹”è€Œæˆçš„ã€‚
 C_LONG	         );
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight",40 );
 	set( "type", "hands" );
         set("material","cloth");

@@ -11,32 +11,32 @@ int cmd_clot(string arg)
 	mixed bleed;
 
 	if( !arg || arg=="" || !(dest = present(arg, environment(this_player()))) )
-		return notify_fail( "��Ҫ��˭ֹѪ��\n");
+		return notify_fail( "你要替誰止血？\n");
 
-	if( !living(dest) ) return notify_fail("�Ǹ���������������Ѫ��\n");
+	if( !living(dest) ) return notify_fail("那個「東西」不會流血。\n");
 
 //	if( dest==this_player() ) return notify_fail( chinese_mode?
-//		"�㲻�ܶ��Լ�ʩ�м��ȡ�\n": "You can't aid yourself.\n" );
+//		"你不能對自己施行急救。\n": "You can't aid yourself.\n" );
 
 	if( dest->query("ghost") ) return notify_fail( 
-		"̫���� .... "+dest->query("c_name")+"�Ѿ����ˡ�\n");
+		"太遲了 .... "+dest->query("c_name")+"已經死了。\n");
 
 	if( dest->query_temp("clotted") ) return notify_fail(
-		dest->query("c_name") + "���˿��Ѿ�ֹѪ�������ˡ�\n");
+		dest->query("c_name") + "的傷口已經止血處理過了。\n");
 
 	if( !(bleed = dest->query("conditions/bleeding")) )
 		return notify_fail(
-			dest->query("c_name") + "��û��ʧѪ�����Ρ�\n");
+			dest->query("c_name") + "並沒有失血的情形。\n");
 
 	skill = (int)this_player()->query_skill( "clotting");
-	if( !skill ) return notify_fail("�㲢û��ѧ��ֹѪ�ļ��ܡ�\n");
+	if( !skill ) return notify_fail("你並沒有學過止血的技能。\n");
 
 	write(
-		"����" + dest->query("c_name") + "���˿ڽ���ֹѪ ....\n");
+		"你替" + dest->query("c_name") + "的傷口進行止血 ....\n");
 	tell_object( dest, 
-		this_player()->query("c_name") + "������˿�ֹѪ .... ����úö��ˣ�\n");
+		this_player()->query("c_name") + "替你的傷口止血 .... 你覺得好多了！\n");
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name") + "��" + dest->query("c_name") + "���˿�ֹѪ��\n",
+		this_player()->query("c_name") + "替" + dest->query("c_name") + "的傷口止血。\n",
 		({ this_player(), dest }) );
 	if( dest!=this_player() )
 		this_player()->add( "alignment", 25 );
@@ -62,10 +62,10 @@ int help()
 {
     write(can_read_chinese()?
     @C_HELP
-ָ���ʽ: clot <ĳ��>
+指令格式: clot <某人>
 
-���ָ��������ĳ������( �� NPC )���˿�ֹѪ���й�ֹѪ��ϸ�����������
-�� help clotting��
+這個指令讓你替某個人物( 或 NPC )的傷口止血，有關止血的細節與限制請參
+考 help clotting。
 C_HELP
     :@HELP
 Usage: clot <someone>

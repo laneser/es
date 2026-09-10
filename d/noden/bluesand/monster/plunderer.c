@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level(8);
-	set_name( "pirate warrior", "海盗战士" );
+	set_name( "pirate warrior", "娴风洔鎴板＋" );
 	add( "id", ({ "pirate", "warrior" }) );
-   set_short( "海盗战士" );
+   set_short( "娴风洔鎴板＋" );
 	set_long(
-		"你看到一个海盗战士，他的眼睛正四处搜索，想要找一些不怕死的家伙打架。\n"
+		"浣犵湅鍒颁竴鍊嬫捣鐩滄埌澹紝浠栫殑鐪肩潧姝ｅ洓铏曟悳绱紝鎯宠鎵句竴浜涗笉鎬曟鐨勫偄浼欐墦鏋躲�俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

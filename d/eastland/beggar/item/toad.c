@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("fire toad","Óñ»ğó¸òÜ");
-        set_short( "Óñ»ğó¸òÜ");
+        set_name("fire toad","ç‰ç«èŸ¾èœ");
+        set_short( "ç‰ç«èŸ¾èœ");
         set_long(@C_LONG
-Ò»Ö»Ç¬±ñµÄÓñ»ğó¸òÜ,ËÆºõ¿ÉÒÔ×öÒ©Òı¡£
+ä¸€éš»ä¹¾ç™Ÿçš„ç‰ç«èŸ¾èœ,ä¼¼ä¹å¯ä»¥åšè—¥å¼•ã€‚
 C_LONG  );      
-        set("unit","Ö»");
+        set("unit","åª");
         set("weight",1);
         set("no_sale",1);
 }

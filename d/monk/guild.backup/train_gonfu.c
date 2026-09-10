@@ -71,8 +71,8 @@ void view_catalog()
 
 	chinese_mode = can_read_chinese();
 	printf( "%-31s  %-12s %-7s\n",
-		chinese_mode? "ÎäÑ§Ãû³Æ": "Gonfu", chinese_mode? "ÎäÊõ·ÖÀà": "level",
-		chinese_mode? "ËùĞè¼¼ÄÜÖµ":"skill levels" );
+		chinese_mode? "æ­¦å­¸åç¨±": "Gonfu", chinese_mode? "æ­¦è¡“åˆ†é¡": "level",
+		chinese_mode? "æ‰€éœ€æŠ€èƒ½å€¼":"skill levels" );
 	write( "=====================================================================\n");
 	gonfus = query_gonfus();
 	s = keys(gonfus);
@@ -98,28 +98,28 @@ int do_train(string arg)
 	chinese_mode = can_read_chinese();
 	if( !arg || arg=="" )
 		return notify_fail( chinese_mode?
-			"Ö¸Áî¸ñÊ½: train <¹¦\·òÃû³Æ>\n": "Syntax: train <gonfu>\n" ); 
+			"æŒ‡ä»¤æ ¼å¼: train <åŠŸå¤«åç¨±>\n": "Syntax: train <gonfu>\n" ); 
 
 	if( type != "general" )
 		tmp2 = (string *)me->query("monk_gonfu/"+type);
 	if( (type == "general" && !undefinedp(me->query("monk_gonfu/"+arg))) ||
 		(tmp2 && member_array(arg, tmp2) != -1) ) {
 		write( chinese_mode?
-			"Õâ¸ö¹¦\·òÄãÒÑ¾­Ñ§»áÁË£¬²»ĞèÒªÔÙÑ§Ò»´Î!\n":
+			"é€™å€‹åŠŸå¤«ä½ å·²ç¶“å­¸æœƒäº†ï¼Œä¸éœ€è¦å†å­¸ä¸€æ¬¡!\n":
 			"You have already learned this gonfu, you dont need train again.\n" );
 		return 1;
 	}
 
 	if( !gonfu_exist(arg) ) {
 		write ( chinese_mode?
-			"±¾ÊÒ²¢²»´«ÊÚÄãËùÒªÑ§µÄÄÇÌ×¹¦\·ò! (´ò´í×ÖÁË°É) \n":
+			"æœ¬å®¤ä¸¦ä¸å‚³æˆä½ æ‰€è¦å­¸çš„é‚£å¥—åŠŸå¤«! (æ‰“éŒ¯å­—äº†å§) \n":
 			"Sorry, you cannot learn such gonfu here.\n" );
 		return 1;
 	}
 	
 	if( !check_skill(me, arg) ) {
 		write( chinese_mode?
-			"ÄãµÄ¼¼ÄÜÔìÒè²»×ã£¬ÔÙÁ·¼¸ÄêÔÙÀ´°É! \n":
+			"ä½ çš„æŠ€èƒ½é€ è©£ä¸è¶³ï¼Œå†ç·´å¹¾å¹´å†ä¾†å§! \n":
 			"Sorry, you cannot learn such gonfu because your skill is lower.\n" );
 		return 1;
 	}	
@@ -128,13 +128,13 @@ int do_train(string arg)
 	tmp = exp - (int)me->query_exp_stock();
 	if( tmp > 0 ) {
 		write( chinese_mode?
-			"ÄãÏÖÔÚÒªÑ§´ËÎäÊõ£¬»¹ĞèÒª "+tmp+" µã¾­Ñé¡£\n":
+			"ä½ ç¾åœ¨è¦å­¸æ­¤æ­¦è¡“ï¼Œé‚„éœ€è¦ "+tmp+" é»ç¶“é©—ã€‚\n":
 			"You need "+tmp+" experience to train the gonfus.\n" );
 		return 1;
 	}
 
 	write( chinese_mode?
-		" *** ¾­¹ıÒ»·¬¿àÁ·£¬ÄãÖÕì¶Ñ§µ½ÁË "+ to_chinese(arg) + " *** \n":
+		" *** ç¶“éä¸€ç•ªè‹¦ç·´ï¼Œä½ çµ‚æ–¼å­¸åˆ°äº† "+ to_chinese(arg) + " *** \n":
 		"After training hard with the books, you finally learn "+arg+" !\n");
 
 	if( type == "general" )

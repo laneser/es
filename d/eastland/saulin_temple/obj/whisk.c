@@ -3,12 +3,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "whisk", "É¨°Ñ");
+        set_name( "whisk", "æƒæŠŠ");
         add ("id",({ "whisk"}) );
-        set_short("É¨°Ñ");
-        set("unit", "°Ñ");
+        set_short("æƒæŠŠ");
+        set("unit", "æŠŠ");
         set_long(
-            "ÕâÊÇÒ»°ÑºÜÆÕÍ¨µÄÖñÉ¨°Ñ¡£\n"
+            "é€™æ˜¯ä¸€æŠŠå¾ˆæ™®é€šçš„ç«¹æƒæŠŠã€‚\n"
         );
         set( "weapon_class", 5 );
         set( "type", "blunt" );

@@ -5,18 +5,18 @@ void create()
 {
         ::create();
         set_level(1);
-        set_name( "cockroach", "ó¯òë" );
-        set_short( "ó¯òë" );
+        set_name( "cockroach", "èŸ‘è‚" );
+        set_short( "èŸ‘è‚" );
         set_long(
-                "Ò»Ö»ó¯òë£¬ÈÃÄã¾õµÃ¶ñĞÄ¡£\n"
+                "ä¸€éš»èŸ‘è‚ï¼Œè®“ä½ è¦ºå¾—å™å¿ƒã€‚\n"
         );
         set_perm_stat("dex", 5 );
         set_perm_stat("str", 1 );
         set( "alignment" , -100 );
-        set_c_verbs( ({ "%sÕÅ×ìÍù%sÒ§ÏÂ" }) );
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå","´¥½Ç" }) );
+        set_c_verbs( ({ "%så¼µå˜´å¾€%så’¬ä¸‹" }) );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”","è§¸è§’" }) );
  
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set( "natural_armor_class", 8 );
         set( "max_hp", 20 );
         set( "hit_points", 1 );

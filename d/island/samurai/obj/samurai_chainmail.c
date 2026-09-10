@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_chainmail", "ÎäÊ¿îø¼×");
+        set_name( "samurai_chainmail", "æ­¦å£«é§ç”²");
         add( "id", ({ "chainmail" }) );
-        set_short("samurai_chainmail", "ÎäÊ¿îø¼×");
+        set_short("samurai_chainmail", "æ­¦å£«é§ç”²");
         set_long(@AAA
-Ò»¸öµÍµÈ¼¶ÎäÊ¿Ëù´©µÄîø¼×£¬Ó¦ÎªÕâÊÇµÍµÈ¼¶ÎäÊ¿µÄ×°±¸ 
-ËùÒÔÒ²²»ÄÜÌá¹©Ê²÷áºÃ·À»¤Á¦
+ä¸€å€‹ä½ç­‰ç´šæ­¦å£«æ‰€ç©¿çš„é§ç”²ï¼Œæ‡‰ç‚ºé€™æ˜¯ä½ç­‰ç´šæ­¦å£«çš„è£å‚™ 
+æ‰€ä»¥ä¹Ÿä¸èƒ½æä¾›ä»€éº¼å¥½é˜²è­·åŠ›
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 15 );
         set( "defense_bonus", 3 );

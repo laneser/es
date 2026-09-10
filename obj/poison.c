@@ -5,11 +5,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "poison pouch", "¶¾Ò©°ü" );
+	set_name( "poison pouch", "æ¯’è—¥åŒ…" );
 	add( "id", ({ "pouch", "poison" }) );
-	set_short( "¶¾Ò©°ü" );
+	set_short( "æ¯’è—¥åŒ…" );
 	set_long(
-		"ÕâÊÇÒ»°ü¶¾Ò©·Û£¬Èç¹ûÄãÒªÊ¹ÓÃÕâ°ü¶¾Ò©£¬ÓÃ poison <Ä³ÈË>¡£\n" );
+		"é€™æ˜¯ä¸€åŒ…æ¯’è—¥ç²‰ï¼Œå¦‚æœä½ è¦ä½¿ç”¨é€™åŒ…æ¯’è—¥ï¼Œç”¨ poison <æŸäºº>ã€‚\n" );
 	set( "weight", 20 );
 	set( "value", ({ 300, "silver" }) );
 }
@@ -24,16 +24,16 @@ int do_poison(string arg)
 	object dest;
 
 	if( !arg || arg=="" || !(dest = present(arg, environment(this_player()))) )
-		return notify_fail("ÄãÒªÓÃ¶¾Ò©º¦Ë­£¿\n");
-	if( !living(dest) ) return notify_fail("×öÕâÖÖÊÂÇéÒ»µãÒâÒåÒ²Ã»ÓĞ....¡£\n");
+		return notify_fail("ä½ è¦ç”¨æ¯’è—¥å®³èª°ï¼Ÿ\n");
+	if( !living(dest) ) return notify_fail("åšé€™ç¨®äº‹æƒ…ä¸€é»æ„ç¾©ä¹Ÿæ²’æœ‰....ã€‚\n");
 	if ( userp(dest) && (int)dest->query_level()< 5 )
-		return notify_fail("Äã²»ÄÜÏİº¦µÍµÈ¼¶Íæ¼Ò¡£\n");
+		return notify_fail("ä½ ä¸èƒ½é™·å®³ä½ç­‰ç´šç©å®¶ã€‚\n");
 	call_other( CONDITION_PREFIX"simple_poison", "apply_effect", dest, 10, 20 );
-	write(sprintf("Äã°Ñ¶¾Ò©·ÛÈ÷ÔÚ%sÉíÉÏ£¡\n",dest->query("short")));
+	write(sprintf("ä½ æŠŠæ¯’è—¥ç²‰ç‘åœ¨%sèº«ä¸Šï¼\n",dest->query("short")));
 	tell_object( dest, 
-		    sprintf("%s°ÑÒ»°ü¶¾Ò©·ÛÈ÷ÔÚÄãÉíÉÏ£¡\n",this_player()->query("c_name")));
+		    sprintf("%sæŠŠä¸€åŒ…æ¯’è—¥ç²‰ç‘åœ¨ä½ èº«ä¸Šï¼\n",this_player()->query("c_name")));
 	tell_room( environment(this_player()), 
-		  sprintf("%s°ÑÒ»°ü¶¾Ò©·ÛÈ÷ÔÚ%sÉíÉÏ£¡\n",
+		  sprintf("%sæŠŠä¸€åŒ…æ¯’è—¥ç²‰ç‘åœ¨%sèº«ä¸Šï¼\n",
 			  this_player()->query("c_name"),
 			  dest->query("short")),
 		({ this_player(), dest }) );

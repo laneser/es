@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "white_headband", "°×Í·½í");
+        set_name( "white_headband", "ç™½é ­å·¾");
         add( "id", ({ "headband","white" }) );
-        set_short("white_headband", "°×Í·½í");
+        set_short("white_headband", "ç™½é ­å·¾");
         set_long(@AAA
-Ò»¸ö°×É«µÄÍ·½í,ÉÏÃæ»¹ÓĞÒ»¹Éº¹³ôÎ¶
+ä¸€å€‹ç™½è‰²çš„é ­å·¾,ä¸Šé¢é‚„æœ‰ä¸€è‚¡æ±—è‡­å‘³
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "head" );
         set( "armor_class", 5 );
         set( "defense_bonus", 2 );

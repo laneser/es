@@ -14,12 +14,12 @@ int help()
 {
         write(@HELP_TEXT
 Syntax	: auction on/off
-	´ò¿ª/¹ØµôÅÄÂô¹ã²¥Íø
+	æ‰“é–‹/é—œæ‰æ‹è³£å»£æ’­ç¶²
 	: auction <something> for <price>
-	ÅÄÂôÉíÉÏµÄÄ³Ò»¼şÎïÆ·¡£Æğ¼Û price Ã¶Òø±Ò¡£Èç¹ûÄã¶¨µÄÆğ¼ÛÌ«µÍ£¬
-	ÅÄÂô¹«Ë¾»áÌæÄã¶¨¸öºÃ¼Û¸ñ¡£
+	æ‹è³£èº«ä¸Šçš„æŸä¸€ä»¶ç‰©å“ã€‚èµ·åƒ¹ price æšéŠ€å¹£ã€‚å¦‚æœä½ å®šçš„èµ·åƒ¹å¤ªä½ï¼Œ
+	æ‹è³£å…¬å¸æœƒæ›¿ä½ å®šå€‹å¥½åƒ¹æ ¼ã€‚
 	: auction <price>
-	³ö <price> Ã¶Òø±ÒÇÀ±êÕıÔÚÅÄÂôµÄÅÄÂôÆ·¡£
+	å‡º <price> æšéŠ€å¹£æ¶æ¨™æ­£åœ¨æ‹è³£çš„æ‹è³£å“ã€‚
 
 HELP_TEXT
 );
@@ -35,7 +35,7 @@ int check_auction()
 {
 	if (auction_now) {
 //	if ( find_call_out("count_down") != -1 ) {
-		write("¶Ô²»Æğ£¬ÕıÔÚÅÄÂôÎïÆ·ÖĞ£¬ÇëÉÔºò !!\n");
+		write("å°ä¸èµ·ï¼Œæ­£åœ¨æ‹è³£ç‰©å“ä¸­ï¼Œè«‹ç¨å€™ !!\n");
 		return 0;
 	}
 	return 1;
@@ -51,20 +51,20 @@ int boardcast(string msg)
                 for( i=sizeof(usr)-1; i >= 0; i-- ) {
 			if (!usr[i]->query("seller_channel")) continue;
 			usr[i]->quick_message(
-				sprintf(set_color("[ÅÄÂôÍÃÅ®ÀÉ] :","HIY",usr[i])+" %s \n",msg),usr[i]);
+				sprintf(set_color("[æ‹è³£å…”å¥³éƒ] :","HIY",usr[i])+" %s \n",msg),usr[i]);
 		}
         return 1;
 }
 int channel_on()
 {
         this_player()->set("seller_channel",1);
-        write(set_color("ÄãµÄ¶ú±ß´«À´Ò»ÕóÆæ¹ÖµÄÉùÒô£º»¶Ó­ÊÕÌıÅÄÂô¹ã²¥Íø ..\n","HIY",this_player()));
+        write(set_color("ä½ çš„è€³é‚Šå‚³ä¾†ä¸€é™£å¥‡æ€ªçš„è²éŸ³ï¼šæ­¡è¿æ”¶è½æ‹è³£å»£æ’­ç¶² ..\n","HIY",this_player()));
         return 1;
 }
 int channel_off()
 {
         this_player()->delete("seller_channel");
-	write(set_color("ÄãÅ¤Å¤ÄãµÄ¶ú¶ä£¬¹ØµôÅÄÂô¹ã²¥ÍøµÄÔëÒô ..\n","HIY",this_player()));
+	write(set_color("ä½ æ‰­æ‰­ä½ çš„è€³æœµï¼Œé—œæ‰æ‹è³£å»£æ’­ç¶²çš„å™ªéŸ³ ..\n","HIY",this_player()));
         return 1;
 }
 
@@ -77,7 +77,7 @@ void count_down(int timer, int price)
  	}
 
 	if ( nullp(custom) ) {
-		boardcast("ÍÛ .. Âô·½ Quit ÁË .. ÅÄÂôÈ¡Ïû ..");
+		boardcast("å“‡ .. è³£æ–¹ Quit äº† .. æ‹è³£å–æ¶ˆ ..");
 		if ( !nullp(auc_item) )
 			auc_item->delete("prevent_get");
 		auction_now = 0;
@@ -86,15 +86,15 @@ void count_down(int timer, int price)
 	}
 
 	if ( nullp(auc_item) ) {
-                boardcast("ÍÛ .. ÅÄÂôÆ·ÏûÊ§ÁË .. ÅÄÂôÈ¡Ïû ..");
+                boardcast("å“‡ .. æ‹è³£å“æ¶ˆå¤±äº† .. æ‹è³£å–æ¶ˆ ..");
                 auction_now = 0;
                 buyer = 0;
                 return ;
 	}
 	if ( timer<3 ) {
 		boardcast(
-//			  sprintf("%s±êÊÛµÄ%sÒ»¼ş£¬µÚ %d ´Îº°¼Û %d Ã¶Òø±Ò !! Çë³ö¼Û !!",
-			  sprintf("%sÒ»¼ş£¬µÚ %d ´Îº°¼Û %d Ã¶Òø±Ò !! Çë³ö¼Û !!",
+//			  sprintf("%sæ¨™å”®çš„%sä¸€ä»¶ï¼Œç¬¬ %d æ¬¡å–Šåƒ¹ %d æšéŠ€å¹£ !! è«‹å‡ºåƒ¹ !!",
+			  sprintf("%sä¸€ä»¶ï¼Œç¬¬ %d æ¬¡å–Šåƒ¹ %d æšéŠ€å¹£ !! è«‹å‡ºåƒ¹ !!",
 //				  custom->query("c_name"),
 				  auc_item->query("short"),
 				  timer,price));
@@ -106,36 +106,36 @@ void count_down(int timer, int price)
 		if ((int)buyer->query("wealth/silver") > price ) {
 
 			buyer->add("wealth/silver",-price);
-//              boardcast(sprintf("%sÒ»¼ş !! ÒÔ %d Ã¶Òø±ÒÂô¸ø%s£¬Ğ»Ğ»»İ¹Ë !!",
-                boardcast(sprintf("%sÒ»¼ş !! ÒÔ %d Ã¶Òø±ÒÂô³ö£¬Ğ»Ğ»»İ¹Ë !!",
+//              boardcast(sprintf("%sä¸€ä»¶ !! ä»¥ %d æšéŠ€å¹£è³£çµ¦%sï¼Œè¬è¬æƒ é¡§ !!",
+                boardcast(sprintf("%sä¸€ä»¶ !! ä»¥ %d æšéŠ€å¹£è³£å‡ºï¼Œè¬è¬æƒ é¡§ !!",
 				  auc_item->query("short"),price,
 //				  buyer->query("c_name")
 				  ));
 		if (custom) {				  
                 	tell_object(custom,
-			sprintf("ÄãÂôµôÁËÄãµÄ%s£¬¿Ûµô 50 %% µÄÅÄÂô²î¶î£¬ÄãµÃµ½ÁË %d Ã¶Òø±Ò !! \n",
+			sprintf("ä½ è³£æ‰äº†ä½ çš„%sï¼Œæ‰£æ‰ 50 %% çš„æ‹è³£å·®é¡ï¼Œä½ å¾—åˆ°äº† %d æšéŠ€å¹£ !! \n",
 				auc_item->query("c_name"),val + (price-val)/2));
                         custom->add("wealth/silver",val + ( price-val)/2);
 		}
 		tell_object(buyer,
-			"Ò»Ö»´÷ÖøÈã±È¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÒ»¼ş¶«Î÷¶ªÔÚÄãÃæÇ°£¬\nÓÖ¡¸ßİ¡«¡«¡¹µÄÒ»ÉùÅÜµôÁË¡£\n");
+			"ä¸€éš»æˆ´è‘—èŒ¹æ¯”å¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä¸€ä»¶æ±è¥¿ä¸Ÿåœ¨ä½ é¢å‰ï¼Œ\nåˆã€Œå’»ï½ï½ã€çš„ä¸€è²è·‘æ‰äº†ã€‚\n");
 		tell_room(environment(buyer),
-			sprintf("Ò»Ö»´÷ÖøÄ³Ä³¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÒ»¼ş¶«Î÷¶ª¸ø%s£¬\nÈ»ááÓÖ·ÉÒ²ËÆµÄÅÜÁË¡£\n",buyer->query("c_name")),buyer);
+			sprintf("ä¸€éš»æˆ´è‘—æŸæŸå¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä¸€ä»¶æ±è¥¿ä¸Ÿçµ¦%sï¼Œ\nç„¶å¾Œåˆé£›ä¹Ÿä¼¼çš„è·‘äº†ã€‚\n",buyer->query("c_name")),buyer);
 		
 		environment(auc_item)->add("money",(price-val)/2);
 		auc_item->move(environment(buyer));
 
 		} else {
-		tell_object(buyer,"Ò»¸öºäÀ×ËÆµÄÉùÒôÔÚÄãµÄ¶ú±ßÏìÆğ£ºÄãÏëÆÛÆ­Î°´óµÄÅÄÂô¹«Ë¾Âğ£¿¸øÄãÒ»µã½ÌÑµ !!\n");
+		tell_object(buyer,"ä¸€å€‹è½Ÿé›·ä¼¼çš„è²éŸ³åœ¨ä½ çš„è€³é‚ŠéŸ¿èµ·ï¼šä½ æƒ³æ¬ºé¨™å‰å¤§çš„æ‹è³£å…¬å¸å—ï¼Ÿçµ¦ä½ ä¸€é»æ•™è¨“ !!\n");
                 environment(auc_item)->add("money",(int)buyer->query("wealth/silver")-1);
 		buyer->set("wealth/silver",0);
                 if (custom ) {
                 	tell_object(custom,
-			"Ò»Ö»´÷ÖøÈã±È¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÒ»¼ş¶«Î÷¶ªÔÚÄãÃæÇ°£¬\nÓÖ¡¸ßİ¡«¡«¡¹µÄÒ»ÉùÅÜµôÁË¡£\n"
-			"Õæµ¹Ã¹£¬Óöµ½Ò»¸öÃ»Ç®µÄ±¿Æ­×Ó£¬¶«Î÷»¹ÔÚµ«ÊÇÅÄÂôÊ§°ÜÁË !!\n");
+			"ä¸€éš»æˆ´è‘—èŒ¹æ¯”å¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä¸€ä»¶æ±è¥¿ä¸Ÿåœ¨ä½ é¢å‰ï¼Œ\nåˆã€Œå’»ï½ï½ã€çš„ä¸€è²è·‘æ‰äº†ã€‚\n"
+			"çœŸå€’é»´ï¼Œé‡åˆ°ä¸€å€‹æ²’éŒ¢çš„ç¬¨é¨™å­ï¼Œæ±è¥¿é‚„åœ¨ä½†æ˜¯æ‹è³£å¤±æ•—äº† !!\n");
 
                 	tell_room(environment(custom),
-			sprintf("Ò»Ö»´÷ÖøÄ³Ä³¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÒ»¼ş¶«Î÷¶ª¸ø%s£¬\nÈ»ááÓÖ·ÉÒ²ËÆµÄÅÜÁË¡£\n",custom->query("c_name")),custom);
+			sprintf("ä¸€éš»æˆ´è‘—æŸæŸå¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä¸€ä»¶æ±è¥¿ä¸Ÿçµ¦%sï¼Œ\nç„¶å¾Œåˆé£›ä¹Ÿä¼¼çš„è·‘äº†ã€‚\n",custom->query("c_name")),custom);
                 	auc_item->move(environment(custom));
 		}
 		
@@ -143,11 +143,11 @@ void count_down(int timer, int price)
 		
 	}
 	else {
-		boardcast(sprintf("%s²Å²»¹ıÂô %d Ã¶Òø±Ò£¬¾ÓÈ»Ã»ÈËÂò£¬ÕæÊÇÌ«¿ÉÁ¯ÁË !!",auc_item->query("short"),price));
-                tell_object(custom,"¹ş¹ş !! ÄãÌ«Ì°ĞÄÁË°É£¬²»ÖµÇ®µÄ¶«Î÷Ò² ...\n"
-                        "Ò»Ö»´÷ÖøÈã±È¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÒ»¼ş¶«Î÷¶ªÔÚÄãÃæÇ°£¬\nÓÖ¡¸ßİ¡«¡«¡¹µÄÒ»ÉùÅÜµôÁË¡£\n");
+		boardcast(sprintf("%sæ‰ä¸éè³£ %d æšéŠ€å¹£ï¼Œå±…ç„¶æ²’äººè²·ï¼ŒçœŸæ˜¯å¤ªå¯æ†äº† !!",auc_item->query("short"),price));
+                tell_object(custom,"å“ˆå“ˆ !! ä½ å¤ªè²ªå¿ƒäº†å§ï¼Œä¸å€¼éŒ¢çš„æ±è¥¿ä¹Ÿ ...\n"
+                        "ä¸€éš»æˆ´è‘—èŒ¹æ¯”å¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä¸€ä»¶æ±è¥¿ä¸Ÿåœ¨ä½ é¢å‰ï¼Œ\nåˆã€Œå’»ï½ï½ã€çš„ä¸€è²è·‘æ‰äº†ã€‚\n");
                 tell_room(environment(custom),
-			sprintf("Ò»Ö»´÷ÖøÄ³Ä³¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÒ»¼ş¶«Î÷¶ª¸ø%s£¬\nÈ»ááÓÖ·ÉÒ²ËÆµÄÅÜÁË¡£\n",custom->query("c_name")),custom);
+			sprintf("ä¸€éš»æˆ´è‘—æŸæŸå¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä¸€ä»¶æ±è¥¿ä¸Ÿçµ¦%sï¼Œ\nç„¶å¾Œåˆé£›ä¹Ÿä¼¼çš„è·‘äº†ã€‚\n",custom->query("c_name")),custom);
                 auc_item->move(environment(custom));
 
 	}
@@ -173,33 +173,33 @@ int cmd_auction(string str)
         if (str == "off" ) return channel_off();
 
         if (!this_player()->query("seller_channel"))
-		return notify_fail("ÇëÏÈ´ò¿ªÅÄÂô¹ã²¥Íø¡£\n");
+		return notify_fail("è«‹å…ˆæ‰“é–‹æ‹è³£å»£æ’­ç¶²ã€‚\n");
 
 	if ((sscanf(str,"%s for %d",item,price1) != 2) && 
 	    (sscanf(str,"%d",bid_price) != 1)) return help();
 
 	if ( item ) {
 	if ( !(ob1=present (item,this_player()))) 
-		return notify_fail("ÏëÂò¿ÕÂô¿ÕÂğ£¿Äã¸ù±¾Ã»ÓĞÕâ¼ş¶«Î÷ !!\n");
+		return notify_fail("æƒ³è²·ç©ºè³£ç©ºå—ï¼Ÿä½ æ ¹æœ¬æ²’æœ‰é€™ä»¶æ±è¥¿ !!\n");
 
     if ( find_call_out("count_down") != -1 ) 
-    	return notify_fail("¶Ô²»Æğ£¬ÕıÔÚÅÄÂôÎïÆ·ÖĞ£¬ÇëÉÔºò !!\n");
+    	return notify_fail("å°ä¸èµ·ï¼Œæ­£åœ¨æ‹è³£ç‰©å“ä¸­ï¼Œè«‹ç¨å€™ !!\n");
 
 	if ( (ob1->query("prevent_drop")) || (ob1->query("no_sale")) ||
 		(ob1->query("prevent_insert")) )
-		return notify_fail("¶Ô²»Æğ !! ÕâÖÖ¶«Î÷²»ÄÜÅÄÂô !!\n");
+		return notify_fail("å°ä¸èµ· !! é€™ç¨®æ±è¥¿ä¸èƒ½æ‹è³£ !!\n");
 /*
 	if ( obs = deep_inventory(ob1) ) {
 		for ( i = sizeof(obs)-1 ; i >=0; i-- )
 			if ( obs[i]->query("no_sale") )
-				return notify_fail("ÕâÀïÃæ×°ÁË²»ÄÜÅÄÂôµÄ¶«Î÷ !!\n");
+				return notify_fail("é€™è£¡é¢è£äº†ä¸èƒ½æ‹è³£çš„æ±è¥¿ !!\n");
 	}
 */		
-        if ( price1 < 1 ) return notify_fail("Ç®Ì«¶àÂğ£¿±ğÄÖÁË ^oo^ \n");
+        if ( price1 < 1 ) return notify_fail("éŒ¢å¤ªå¤šå—ï¼Ÿåˆ¥é¬§äº† ^oo^ \n");
         custom = this_player();
         value = ob1->query("value");
     	if ( !value || !intp(value[0]) ) {
-			return notify_fail("¶Ô²»Æğ !! ÕâÖÖ¶«Î÷²»ÄÜÅÄÂô !!\n");
+			return notify_fail("å°ä¸èµ· !! é€™ç¨®æ±è¥¿ä¸èƒ½æ‹è³£ !!\n");
 	}
 	val = value[0] * coinvalue( value[1] ) / coinvalue("silver");
 	price1 = ( val > price1 ? val : price1 ) ;
@@ -210,13 +210,13 @@ int cmd_auction(string str)
 	ob1->set("prevent_get",1);
 	auction_now = 1;
                 tell_object(custom,
-			"Ò»Ö»´÷ÖøÈã±È¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬°ÑÄãµÄÅÄÂôÆ·ÇÀ×ß£¬\nÓÖ¡¸ßİ¡«¡«¡¹µÄÒ»ÉùÅÜµôÁË¡£\n");
+			"ä¸€éš»æˆ´è‘—èŒ¹æ¯”å¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼ŒæŠŠä½ çš„æ‹è³£å“æ¶èµ°ï¼Œ\nåˆã€Œå’»ï½ï½ã€çš„ä¸€è²è·‘æ‰äº†ã€‚\n");
                 tell_room(environment(custom),
-			sprintf("Ò»Ö»´÷ÖøÄ³Ä³¿ìµİ¹«Ë¾Ã±×ÓµÄÂ½ĞĞÄñ·É±¼¹ıÀ´£¬ÇÀ×ßÁË%sµÄÒ»¼ş¶«Î÷£¬\nÈ»ááÓÖ·ÉÒ²ËÆµÄÅÜÁË¡£\n",custom->query("c_name")),custom);
+			sprintf("ä¸€éš»æˆ´è‘—æŸæŸå¿«éå…¬å¸å¸½å­çš„é™¸è¡Œé³¥é£›å¥”éä¾†ï¼Œæ¶èµ°äº†%sçš„ä¸€ä»¶æ±è¥¿ï¼Œ\nç„¶å¾Œåˆé£›ä¹Ÿä¼¼çš„è·‘äº†ã€‚\n",custom->query("c_name")),custom);
 
 		boardcast(
-//			sprintf("ÌøÂ¥´óÅÄÂô !! %s±êÊÛ%s(%s)Ò»¼ş !!\nÆğ¼Û %d Ã¶Òø±Ò !! ÓĞÃ»ÓĞÈËÒª³ö¼ÛµÄ°¡£¿",
-			sprintf("ÌøÂ¥´óÅÄÂô !! %s(%s)Ò»¼ş !!\nÆğ¼Û %d Ã¶Òø±Ò !! ÓĞÃ»ÓĞÈËÒª³ö¼ÛµÄ°¡£¿",
+//			sprintf("è·³æ¨“å¤§æ‹è³£ !! %sæ¨™å”®%s(%s)ä¸€ä»¶ !!\nèµ·åƒ¹ %d æšéŠ€å¹£ !! æœ‰æ²’æœ‰äººè¦å‡ºåƒ¹çš„å•Šï¼Ÿ",
+			sprintf("è·³æ¨“å¤§æ‹è³£ !! %s(%s)ä¸€ä»¶ !!\nèµ·åƒ¹ %d æšéŠ€å¹£ !! æœ‰æ²’æœ‰äººè¦å‡ºåƒ¹çš„å•Šï¼Ÿ",
 //			  custom->query("c_name"),
 			  auc_item->query("short"),
 			  auc_item->query("name"),
@@ -229,25 +229,25 @@ int cmd_auction(string str)
 	else if ( bid_price > 0 ) {
 
 	if ( !auction_now )
-		return notify_fail("Äã³ö¼ÛÒªÂòÊ²÷á£¿ÏÖÔÚÓÖÃ»ÓĞÅÄÂô¡£\n");
+		return notify_fail("ä½ å‡ºåƒ¹è¦è²·ä»€éº¼ï¼Ÿç¾åœ¨åˆæ²’æœ‰æ‹è³£ã€‚\n");
 	if (this_player() == custom ) 
-		return notify_fail("Î¹ ! ÊÇÄãÔÚÅÄÂôÒ®£¬ÏëºåÌ§¼Û¸ñÂğ£¿\n");
+		return notify_fail("å–‚ ! æ˜¯ä½ åœ¨æ‹è³£è€¶ï¼Œæƒ³å“„æŠ¬åƒ¹æ ¼å—ï¼Ÿ\n");
 	if (this_player() == buyer )
-		return notify_fail("ÄãµÄ¼ÛÂëÒÑ¾­ÊÇ×î¸ß¼ÛÁË !!\n");
+		return notify_fail("ä½ çš„åƒ¹ç¢¼å·²ç¶“æ˜¯æœ€é«˜åƒ¹äº† !!\n");
 	if ( (int)this_player()->query("wealth/silver") < bid_price )
-		return notify_fail("ÄãÉíÉÏµÄÒø±Ò²»¹» !!\n");
+		return notify_fail("ä½ èº«ä¸Šçš„éŠ€å¹£ä¸å¤  !!\n");
         if (first) {
 	if ( bid_price <= last_price )
-		return notify_fail("Äã³öµÄ¼ÛÒª¸ßì¶µ×¼Ûà¸ !!\n");
+		return notify_fail("ä½ å‡ºçš„åƒ¹è¦é«˜æ–¼åº•åƒ¹å–” !!\n");
              first=0;
                    } else
 	if ( bid_price < last_price+50 )
-		return notify_fail("Äã³öµÄ¼ÛÒª¸ßì¶ÏÖÔÚµÄ¼Û¸ñÔÙ¼Ó 50 Ã¶Òø±Òà¸ !!\n");
+		return notify_fail("ä½ å‡ºçš„åƒ¹è¦é«˜æ–¼ç¾åœ¨çš„åƒ¹æ ¼å†åŠ  50 æšéŠ€å¹£å–” !!\n");
 	buyer = this_player();
 	if ( nullp(buyer) ) return 1;
 	last_price = bid_price;
-//	boardcast( sprintf("%s³ö¼Û %d Ã¶Òø±ÒÇÀ±ê%s !! ÓĞÃ»ÓĞÈËÒª¼Ó¼ÛµÄ£¿",
-	boardcast( sprintf("ÓĞÈË³ö¼Û %d Ã¶Òø±ÒÇÀ±ê%s !! ÓĞÃ»ÓĞÈËÒª¼Ó¼ÛµÄ£¿",
+//	boardcast( sprintf("%så‡ºåƒ¹ %d æšéŠ€å¹£æ¶æ¨™%s !! æœ‰æ²’æœ‰äººè¦åŠ åƒ¹çš„ï¼Ÿ",
+	boardcast( sprintf("æœ‰äººå‡ºåƒ¹ %d æšéŠ€å¹£æ¶æ¨™%s !! æœ‰æ²’æœ‰äººè¦åŠ åƒ¹çš„ï¼Ÿ",
 //			   buyer->query("c_name"),
 				bid_price,
 			   	auc_item->query("short")));

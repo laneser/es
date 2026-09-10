@@ -6,15 +6,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("holy_dagger", "ÉñÊ¥Ø°Ê×");
-    set_short("ÉñÊ¥Ø°Ê×");
+    set_name("holy_dagger", "ç¥è–åŒ•é¦–");
+    set_short("ç¥è–åŒ•é¦–");
     add("id", ({ "dagger" }));
     set_long(@C_LONG
-ÕâÊÇÒ»°Ñµñ×Á¾«ÃÀµÄØ°Ê×£¬Ø°ÉíÉ¢·¢ÖøÊ¥½àµÄ°×É«¹âÃ¢¡£ËäÈ»Õâ°ÑØ°Ê×¿´ÆğÀ´
-²¢²»·æÀû£¬µ«ÊÇµ±ÄãÎÕÖøËüÊ±£¬ÄãÒşÒşÔ¼Ô¼¸ĞÊÜµ½Ò»¹ÉÉñÆæµÄÁ¦Á¿¡£
+é€™æ˜¯ä¸€æŠŠé›•ç¢ç²¾ç¾çš„åŒ•é¦–ï¼ŒåŒ•èº«æ•£ç™¼è‘—è–æ½”çš„ç™½è‰²å…‰èŠ’ã€‚é›–ç„¶é€™æŠŠåŒ•é¦–çœ‹èµ·ä¾†
+ä¸¦ä¸é‹’åˆ©ï¼Œä½†æ˜¯ç•¶ä½ æ¡è‘—å®ƒæ™‚ï¼Œä½ éš±éš±ç´„ç´„æ„Ÿå—åˆ°ä¸€è‚¡ç¥å¥‡çš„åŠ›é‡ã€‚
 C_LONG
     );
-    set("unit", "°Ñ");
+    set("unit", "æŠŠ");
     set("type", "dagger");
     set("weapon_class", 40);
     set("min_damage", 25);
@@ -40,7 +40,7 @@ int holy_power(object victim, int damage)
     
     if (my_ali < vic_ali && my_ali < 400)
     {
-        tell_object(me, "ÉñÊ¥Ø°Ê×ÉÏ·¢³öÒ»µÀ²¨¶¯£¬È´ÉËµ½ÁËÄã×Ô¼º¡£\n\n");
+        tell_object(me, "ç¥è–åŒ•é¦–ä¸Šç™¼å‡ºä¸€é“æ³¢å‹•ï¼Œå»å‚·åˆ°äº†ä½ è‡ªå·±ã€‚\n\n");
         me->receive_special_damage("divine", random(40));
         victim->set("last_attacker", me);
         return 0;
@@ -52,8 +52,8 @@ int holy_power(object victim, int damage)
 	me->set("spell_points", my_sp - 10);
         victim->receive_special_damage("divine", dam);
         victim->set("last_attacker", me);
-	tell_object(me, set_color("\nÄãµÄÉñÊ¥Ø°Ê×·¢³öÒ»µÀ²¨¶¯¹¥ÏòµĞÈË£¡\n\n", "HIY"));
-        tell_room(environment(me), set_color("\n"+me->query("c_name")+"µÄÉñÊ¥Ø°Ê×·¢³öÒ»µÀ²¨¶¯¹¥ÏòµĞÈË£¡\n\n", "HIY"), me);
+	tell_object(me, set_color("\nä½ çš„ç¥è–åŒ•é¦–ç™¼å‡ºä¸€é“æ³¢å‹•æ”»å‘æ•µäººï¼\n\n", "HIY"));
+        tell_room(environment(me), set_color("\n"+me->query("c_name")+"çš„ç¥è–åŒ•é¦–ç™¼å‡ºä¸€é“æ³¢å‹•æ”»å‘æ•µäººï¼\n\n", "HIY"), me);
 
         return dam;
     }

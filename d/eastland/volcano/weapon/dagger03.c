@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "scholar dagger", "Ñ§ÕßÖ®Ø°" );
+	set_name( "scholar dagger", "å­¸è€…ä¹‹åŒ•" );
 	add( "id", ({ "dagger" }) );
-	set_short( "Ñ§ÕßÖ®Ø°" );
+	set_short( "å­¸è€…ä¹‹åŒ•" );
 	set_long(
-                "ÕâÊÇÒ»°ÑÑ§ÕßÖ®Ø°£¬ÉÏÃæ¿ÌÁËĞí\¶à×­ÎÄ¡£\n" );
-	set( "unit", "°Ñ" );
+                "é€™æ˜¯ä¸€æŠŠå­¸è€…ä¹‹åŒ•ï¼Œä¸Šé¢åˆ»äº†è¨±å¤šç¯†æ–‡ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "dagger" );
 //	set( "hit_func", "weapon_hit" );
 	set( "weight", 100 );
@@ -26,11 +26,11 @@ int weapon_hit( object victim, int damage )
 	owner = environment();
 	if( random(50)<20 ) {
 		tell_object( owner, 
-                "\nÄãµÄÑ§ÕßÖ®Ø°Æ®³öÒ»¶Î¹Å´úµÄÖäÓï¹¥»÷"+victim->query("c_name")+"\n\n");
+                "\nä½ çš„å­¸è€…ä¹‹åŒ•é£„å‡ºä¸€æ®µå¤ä»£çš„å’’èªæ”»æ“Š"+victim->query("c_name")+"\n\n");
 		tell_object( victim, 
-                owner->query("c_name") + "µÄÑ§ÕßÖ®Ø°Æ®³öÒ»¶Î¹Å´úµÄÖäÓï¹¥»÷Äã¡£\n");
+                owner->query("c_name") + "çš„å­¸è€…ä¹‹åŒ•é£„å‡ºä¸€æ®µå¤ä»£çš„å’’èªæ”»æ“Šä½ ã€‚\n");
 		tell_room( environment(owner),
-                        owner->query("c_name") + "µÄÑ§ÕßÖ®Ø°Æ®³öÒ»¶Î¹Å´úµÄÖäÓï¹¥»÷"+victim->query("c_name")+" !\n", ({victim, owner}) );
+                        owner->query("c_name") + "çš„å­¸è€…ä¹‹åŒ•é£„å‡ºä¸€æ®µå¤ä»£çš„å’’èªæ”»æ“Š"+victim->query("c_name")+" !\n", ({victim, owner}) );
 	victim->receive_special_damage( "energy", 20 );
 	return 20;
 	}

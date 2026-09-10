@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Icy shield", "º®Ë®±ù¶Ü" );
+	set_name( "Icy shield", "å¯’æ°´å†°ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "Icy shield", "º®Ë®±ù¶Ü" );
+	set_short( "Icy shield", "å¯’æ°´å†°ç›¾" );
 	set_long(
 		"??\n",
-		"ÕâÃæ¶ÜÊÇÓÉºşĞÄÉî´¦Ö®Ç§Äê¼á±ùËùÖÆ³É£¬ÉĞÎ´´¥Åö¾Í¸Ğµ½º®Àä£®\n"
+		"é€™é¢ç›¾æ˜¯ç”±æ¹–å¿ƒæ·±è™•ä¹‹åƒå¹´å …å†°æ‰€è£½æˆï¼Œå°šæœªè§¸ç¢°å°±æ„Ÿåˆ°å¯’å†·ï¼\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "elemental" );
 	set( "armor_class", 6 );

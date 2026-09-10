@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cook hat", "³øÊ¦Ã±");
+        set_name("cook hat", "å»šå¸«å¸½");
         add( "id", ({ "hat" }) );
-        set_short( "cook hat", "³øÊ¦Ã±");
+        set_short( "cook hat", "å»šå¸«å¸½");
         set_long(
                 "A hat .\n",
-                "ÕâÊÇÒ»¶¥³øÊ¦×¨ÓÃµÄÃ±×Ó£¬ÆäÉÏÕ´ÂúÓÍ¹¸\n"
+                "é€™æ˜¯ä¸€é ‚å»šå¸«å°ˆç”¨çš„å¸½å­ï¼Œå…¶ä¸Šæ²¾æ»¿æ²¹å¢\n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "cloth");
         set( "armor_class", 4 );

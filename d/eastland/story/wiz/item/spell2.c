@@ -5,9 +5,9 @@ void create()
 {
 	set("short", "@@query_short");
 	set("long", "@@query_long");
- 	set_name( "wonderful-spell", "ÍòÏà¾ãÃğÊõ" );
+ 	set_name( "wonderful-spell", "è¬ç›¸ä¿±æ»…è¡“" );
         add("id",({"wonderful"}));
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set("weight", 10);
 	set("value", ({ 5, "silver" }));
 	set("fuel", 3600); 
@@ -25,14 +25,14 @@ int cast_me(string arg)
      object player;
      player=environment();
      if ( !living(player) )
-	 return notify_fail("Çë¼ñÆğÀ´ÔÙÊ©Îª¡£\n");
+	 return notify_fail("è«‹æ’¿èµ·ä¾†å†æ–½ç‚ºã€‚\n");
      if ( !arg || arg!="wonderful" ) 
 	 return notify_fail("Syntax <cast-me wonderful>\n");
      if( query("wonderful_used") ) 
-	 return notify_fail( "ÕâÍòÏà¾ãÃğÊõÕıÔÚÊ©Õ¹ÖĞ\n");
+	 return notify_fail( "é€™è¬ç›¸ä¿±æ»…è¡“æ­£åœ¨æ–½å±•ä¸­\n");
      if( player->query_temp("wonderful_spell") )
-         return notify_fail("Äã¼º¾­Ê©Õ¹ÍòÏà¾ãÃğÊõÁË¡£\n");         
-     write("Äã¿ªÊ¼Ê©Õ¹ÍòÏà¾ãÃğÊõÊÔÖø°Ñ×Ô¼º±ä³ÉÒ»¿Å³¾°£¡£\n");
+         return notify_fail("ä½ å·±ç¶“æ–½å±•è¬ç›¸ä¿±æ»…è¡“äº†ã€‚\n");         
+     write("ä½ é–‹å§‹æ–½å±•è¬ç›¸ä¿±æ»…è¡“è©¦è‘—æŠŠè‡ªå·±è®Šæˆä¸€é¡†å¡µåŸƒã€‚\n");
      set("wonderful_used", 1);
      set("prevent_get",1);
      set("prevent_drop",1);
@@ -47,13 +47,13 @@ int uncast_me(string arg)
      object player;
      player=environment();
      if ( !living(player) )
-         return notify_fail("Çë¼ñÆğÀ´ÔÙÊ©Îª¡£\n");
+         return notify_fail("è«‹æ’¿èµ·ä¾†å†æ–½ç‚ºã€‚\n");
      if ( !arg || arg!="wonderful" )
              return notify_fail("Syntax <uncast-me wonderful>\n");
      if( !query("wonderful_used") )
-	 return notify_fail( "ÕâÍòÏà¾ãÃğÊõ»¹Î´Ê©Õ¹ÄÇÀ´µÄÖÕÖ¹£¿\n");
+	 return notify_fail( "é€™è¬ç›¸ä¿±æ»…è¡“é‚„æœªæ–½å±•é‚£ä¾†çš„çµ‚æ­¢ï¼Ÿ\n");
 	                 
-     write("ÄãÔİÊ±ÏÈÖÕÖ¹ÍòÏà¾ãÃğÊõµÄÊ©Õ¹£¬±ä»ØÔ­À´µÄÄ£Ñù¡£\n");
+     write("ä½ æš«æ™‚å…ˆçµ‚æ­¢è¬ç›¸ä¿±æ»…è¡“çš„æ–½å±•ï¼Œè®Šå›åŸä¾†çš„æ¨¡æ¨£ã€‚\n");
      set("wonderful_used", 0);
      set("prevent_get",0);
      set("prevent_drop",0);
@@ -68,26 +68,26 @@ void burn_out()
 
      owner = environment(); 
      if( living(owner) )
-        tell_object( owner,"ÍòÏà¾ãÃğÊõµÄÄÜÔ´ÒÑ¾­ºÄ¾¡ÁË£®£®\n");
+        tell_object( owner,"è¬ç›¸ä¿±æ»…è¡“çš„èƒ½æºå·²ç¶“è€—ç›¡äº†ï¼ï¼\n");
      owner->delete_temp("wonderful_spell");
      this_object()->remove();
 }
 string query_short()
 {
      if(query("fuel"))
-        return sprintf("ÍòÏó¾ãÃğÊõ%s", (query("wonderful_used") ? " (Ê¹ÓÃÖĞ)" : "") );
+        return sprintf("è¬è±¡ä¿±æ»…è¡“%s", (query("wonderful_used") ? " (ä½¿ç”¨ä¸­)" : "") );
 }
 
 string query_long()
 {
      if(query("fuel"))
 	return (@LONG
-ÍòÏà¾ãÃğÊõÊÇ½ğÊ¯ÀÏÈË¶àÄêÑĞ¾¿ÓĞĞÎÎŞĞÎµÈÎïÖÊµÄĞÄµÃ¶øÀ´µÄ¡£ÍòÏà¾ãÃğÊõÔÚì¶Òş
-²Ø×ÔÒÑµÄĞÎ×Ù±ä³É¿ÕÆøÖĞµÄ³¾°££¬²¢ÔÚ¿Õ¼ä·ÅÖøÒ»¸ö×Ô¼ºµÄ·¨ÏàÓÃÒÔÆÛÆ­µĞÈË£¬ÒÔ
-´ïµ½±£»¤×ÔÒÑµÄ¹¦ÓÃ¡£²»¹ı£¬ÓÉì¶ÑĞ¾¿µÄ²»ÍêÈ«£¬ËùÒÔÖ»ÄÜ¶ÔÄ³Ğ©ÌØ¶¨µÄ¹ÖÎï¶øÊ¹
-ÓÃ¡£Ê¹ÓÃÊ±£¬ÄãÖ»Òª¡¡(¡¡cast-me wonderful¡¡)¡¡¾Í¿ÉÒÔÁË£¬²»¹ıÇëÇĞ¼Ç£¬ÕâÊõ
-ÓĞÊ¹ÓÃµÄÊ±Ğ§£¬Èç¹ûÏë±ä»ØÖ»Ğè¡¡( uncast-me wonderful )¡¡¾Í¿ÉÒÔÁË¡£¾İ½ğÊ¯
-ÀÏÈËµÄ¹À¼Æ£¬È«²¿ÓĞ°ë¸öÊ±³½µÄÊ±Ğ§¡£
+è¬ç›¸ä¿±æ»…è¡“æ˜¯é‡‘çŸ³è€äººå¤šå¹´ç ”ç©¶æœ‰å½¢ç„¡å½¢ç­‰ç‰©è³ªçš„å¿ƒå¾—è€Œä¾†çš„ã€‚è¬ç›¸ä¿±æ»…è¡“åœ¨æ–¼éš±
+è—è‡ªå·²çš„å½¢è¹¤è®Šæˆç©ºæ°£ä¸­çš„å¡µåŸƒï¼Œä¸¦åœ¨ç©ºé–“æ”¾è‘—ä¸€å€‹è‡ªå·±çš„æ³•ç›¸ç”¨ä»¥æ¬ºé¨™æ•µäººï¼Œä»¥
+é”åˆ°ä¿è­·è‡ªå·²çš„åŠŸç”¨ã€‚ä¸éï¼Œç”±æ–¼ç ”ç©¶çš„ä¸å®Œå…¨ï¼Œæ‰€ä»¥åªèƒ½å°æŸäº›ç‰¹å®šçš„æ€ªç‰©è€Œä½¿
+ç”¨ã€‚ä½¿ç”¨æ™‚ï¼Œä½ åªè¦ã€€(ã€€cast-me wonderfulã€€)ã€€å°±å¯ä»¥äº†ï¼Œä¸éè«‹åˆ‡è¨˜ï¼Œé€™è¡“
+æœ‰ä½¿ç”¨çš„æ™‚æ•ˆï¼Œå¦‚æœæƒ³è®Šå›åªéœ€ã€€( uncast-me wonderful )ã€€å°±å¯ä»¥äº†ã€‚æ“šé‡‘çŸ³
+è€äººçš„ä¼°è¨ˆï¼Œå…¨éƒ¨æœ‰åŠå€‹æ™‚è¾°çš„æ™‚æ•ˆã€‚
 LONG
      );
 }

@@ -8,14 +8,14 @@ void init()
  
 void create()
 {
-        set_name( "fragment", "¾µ×ÓµÄËéÆ¬" );
+        set_name( "fragment", "é¡å­çš„ç¢ç‰‡" );
         add( "id", ({ "fragment" }) );
-        set_short( "¾µ×ÓµÄËéÆ¬" );
+        set_short( "é¡å­çš„ç¢ç‰‡" );
         set_long( @C_LONG
-ÕâÊÇÒ»Æ¬¾µ×ÓµÄËéÆ¬£¬·´Ó³ÖøÄãÒ»ÕÅ³äÂúÒÉ»óµÄÁ³¡£Äã¿ÉÒÔÊÔÖø°ÑËüÌù»Ø(plast)Ô­´¦¡£
+é€™æ˜¯ä¸€ç‰‡é¡å­çš„ç¢ç‰‡ï¼Œåæ˜ è‘—ä½ ä¸€å¼µå……æ»¿ç–‘æƒ‘çš„è‡‰ã€‚ä½ å¯ä»¥è©¦è‘—æŠŠå®ƒè²¼å›(plast)åŸè™•ã€‚
 C_LONG
                 );
-                set("unit","Æ¬");
+                set("unit","ç‰‡");
                 set("weight", 10);
                 set("value",({ 5, "silver"}) );
         set("no_sale", 1 );
@@ -25,16 +25,16 @@ int do_plast(string arg)
 {
     if( !arg || arg != "mirror" ) {
         tell_object(this_player(),
-                "ÄãÏë°ÑÕâËéÆ¬ÌùÔÚÄÇ¶ù£¿¡£\n" );
+                "ä½ æƒ³æŠŠé€™ç¢ç‰‡è²¼åœ¨é‚£å…’ï¼Ÿã€‚\n" );
         return 0;}
-    if ((string)environment(this_player())->query("short")=="Àî¡õµÄÊÕ²ØÊÒ" &&
+    if ((string)environment(this_player())->query("short")=="æâ–¡çš„æ”¶è—å®¤" &&
         this_player()->query_temp("look_mirror")) {
         tell_object(this_player(),
-                "Äã°ÑËéÆ¬Ìù»Ø¾µÉÏµÄ½ÇÂä£¬¾µ×Ó·¢³öÒ»ÕóÎÂÅ¯µÄ¹âÃ£¡£\n" );
+                "ä½ æŠŠç¢ç‰‡è²¼å›é¡ä¸Šçš„è§’è½ï¼Œé¡å­ç™¼å‡ºä¸€é™£æº«æš–çš„å…‰èŒ«ã€‚\n" );
         this_player()->set_temp("mirror_ok",1);
         remove();
         } else
         tell_object(this_player(),
-                "Õâ¶ùÃ»ÓĞ¾µ×Ó°¡...\n" );
+                "é€™å…’æ²’æœ‰é¡å­å•Š...\n" );
         return 1;
 }

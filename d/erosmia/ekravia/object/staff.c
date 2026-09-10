@@ -3,13 +3,13 @@ inherit WEAPON;
 
 void	create()
 {
-	set_name("staff", "¡õÕÈ");
+	set_name("staff", "â–¡æ–");
 	add( "id", ({ "staff" }) );
-	set_short("¡õÕÈ");
+	set_short("â–¡æ–");
 	set_long(
-		"Ò»°ÑÆÕÍ¨µÄ¡õÕÈ\n"
+		"ä¸€æŠŠæ™®é€šçš„â–¡æ–\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 30 );
 	set( "type", "blunt" );
 	set( "weapon_class", 10 );

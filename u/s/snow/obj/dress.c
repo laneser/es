@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
         }
-        set_name( "ice dress", "º®±ùÎèÒÂ");
+        set_name( "ice dress", "å¯’å†°èˆè¡£");
         add( "id", ({ "dress" }) );
-        set_short("ice dress", "º®±ùÎèÒÂ");
+        set_short("ice dress", "å¯’å†°èˆè¡£");
         set_long(@C_LONG
-ÕâÊÇÒ»¼şÒÔº®±ùÄı½á³ÉµÄÎèÒÂ¡£
+é€™æ˜¯ä¸€ä»¶ä»¥å¯’å†°å‡çµæˆçš„èˆè¡£ã€‚
 C_LONG
         );
-        set( "unit", "¼ş");
+        set( "unit", "ä»¶");
         set( "type", "body" );
         set( "armor_class", 150 );
         set( "defense_bonus", 150 );
@@ -37,6 +37,6 @@ int to_rest()
         me->set("spell_points",320);
         me->set("force_points",3000);
         me->set("talk_points",600);
-	write ("Ò»¹Éº®ÆøÎ§ÈÆ×ÅÄã,Äã¾õµÃ»ëÉíÊæ³©.\n");
+	write ("ä¸€è‚¡å¯’æ°£åœç¹è‘—ä½ ,ä½ è¦ºå¾—æ¸¾èº«èˆ’æš¢.\n");
         return 1;
 }

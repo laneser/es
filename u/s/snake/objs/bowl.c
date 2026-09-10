@@ -8,12 +8,12 @@ void create()
 {
 	::create();
 	seteuid(getuid());
-	set_name( "herb bowl", "Ò©²§" );
+	set_name( "herb bowl", "è—¥ç¼½" );
 	add( "id", ({ "bowl" }) );
-	set_short( "an herb bowl", "Ò©²§" );
+	set_short( "an herb bowl", "è—¥ç¼½" );
 	set_c_open_long(
-		"ÕâÊÇÒ»¸öĞĞÒ½ÕßÓÃÀ´ÑĞÄ¥²İÒ©µÄÒ©²§£¬½«ÄãÒªÑĞÄ¥µÄÒ©²Ä·Å½øÒ©²§£¬È»áá\n"
-		"ÓÃ mix Ö¸Áî¼´¿É¡£\n" );
+		"é€™æ˜¯ä¸€å€‹è¡Œé†«è€…ç”¨ä¾†ç ”ç£¨è‰è—¥çš„è—¥ç¼½ï¼Œå°‡ä½ è¦ç ”ç£¨çš„è—¥ææ”¾é€²è—¥ç¼½ï¼Œç„¶å¾Œ\n"
+		"ç”¨ mix æŒ‡ä»¤å³å¯ã€‚\n" );
 	set( "weight", 10 );
 	set( "value", ({ 100, "silver" }) );
         set( "max_load", 80 ) ;
@@ -39,7 +39,7 @@ int do_mix(string arg)
 	if( arg && !id(arg) ) return 0;
 	if( !environment() || environment()!=this_player() ) return 0;
 	inv = all_inventory();
-	if( !sizeof(inv) ) return notify_fail( "ÄãµÄÒ©²§ÀïÊ²÷áÒ²Ã»ÓĞ....¡£\n");
+	if( !sizeof(inv) ) return notify_fail( "ä½ çš„è—¥ç¼½è£¡ä»€éº¼ä¹Ÿæ²’æœ‰....ã€‚\n");
 	potion=MIX->mix(this_object());
 	weight=query("weight");
 	for(i=0; i<sizeof(inv); i++) {
@@ -55,10 +55,10 @@ int do_mix(string arg)
 	        this_player()->add("load",the_potion->query("weight") );
 		the_potion->move(this_object());
 	     }
-		write( "Äã½«Ò©²§ÀïµÄÒ©²Ä»ìºÏÄ¥Ëé£¬Åä³É" + the_potion->query("c_name") + "¡£\n"
+		write( "ä½ å°‡è—¥ç¼½è£¡çš„è—¥ææ··åˆç£¨ç¢ï¼Œé…æˆ" + the_potion->query("c_name") + "ã€‚\n"
 	 	     );
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name") + "½«Ò©²§ÀïµÄÒ©²Ä»ìºÏÄ¥Ëé¡£\n" ,
+			this_player()->query("c_name") + "å°‡è—¥ç¼½è£¡çš„è—¥ææ··åˆç£¨ç¢ã€‚\n" ,
 			this_player() );
 		set("weight",weight);	
 		return 1;
@@ -67,10 +67,10 @@ int do_mix(string arg)
 //		the_potion->move(this_object());
 //	        weight = weight + the_potion->query("weight");
 //		this_player()->add("load",the_potion->query("weight"));
-		write("Äã½«Ò©²§ÀïµÄÒ©²Ä»ìºÏÄ¥Ëé......½á¹û±ä³ÉÒ»ÍÅÀÃÄà¡£\n" );
-		write("ÄãÌ¾ÁËÒ»¿ÚÆø, ËæÊÖ°ÑÒ©²§ÀïµÄÀÃÄàÇåµô¡£\n");
+		write("ä½ å°‡è—¥ç¼½è£¡çš„è—¥ææ··åˆç£¨ç¢......çµæœè®Šæˆä¸€åœ˜çˆ›æ³¥ã€‚\n" );
+		write("ä½ å˜†äº†ä¸€å£æ°£, éš¨æ‰‹æŠŠè—¥ç¼½è£¡çš„çˆ›æ³¥æ¸…æ‰ã€‚\n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name") + "½«Ò©²§ÀïµÄÒ©²Ä»ìºÏÄ¥Ëé¡£\n" ,
+			this_player()->query("c_name") + "å°‡è—¥ç¼½è£¡çš„è—¥ææ··åˆç£¨ç¢ã€‚\n" ,
 			this_player() );
 		set("weight",weight);	
 		return 1;

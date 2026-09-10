@@ -21,14 +21,14 @@ int cmd_levels(string arg)
         write("\n");
         for( i=1; i<=MAX_PLAYER_LEVEL-1; i++ ) {
                 write( 
-                     sprintf( "µÈ¼¶ %2d : %30-s %8d µã¾­Ñé\n", i, c_titles[i-1], STATS_D->query_level_exp(i-1) ) 
+                     sprintf( "ç­‰ç´š %2d : %30-s %8d é»ç¶“é©—\n", i, c_titles[i-1], STATS_D->query_level_exp(i-1) ) 
                 );
         }
         i=MAX_PLAYER_LEVEL;
         if(this_player()->query("level")<1)
         {
                 write( 
-                      sprintf( "µÈ¼¶ %2d : %30-s %8d µã¾­Ñé\n", i, c_titles[i-1], STATS_D->query_level_exp(i-1) ) 
+                      sprintf( "ç­‰ç´š %2d : %30-s %8d é»ç¶“é©—\n", i, c_titles[i-1], STATS_D->query_level_exp(i-1) ) 
                 );
    
                return 1;
@@ -39,7 +39,7 @@ int cmd_levels(string arg)
 
         for( i=1; i<=MAX_ORG_LEVEL; i++ ) {
                 write( 
-                        sprintf( "µÈ¼¶ %2d : %30-s %8d µã¾­Ñé\n", MAX_PLAYER_LEVEL+i-1, 
+                        sprintf( "ç­‰ç´š %2d : %30-s %8d é»ç¶“é©—\n", MAX_PLAYER_LEVEL+i-1, 
                                   c_titles[i-1], NEW_GUILD->query_org_exp(i-1) ) 
                 );
         }
@@ -50,9 +50,9 @@ int cmd_levels(string arg)
 int help()
 {
                 write( @C_HELP
-Ö¸Áî¸ñÊ½: levels
+æŒ‡ä»¤æ ¼å¼: levels
 
-Õâ¸öÖ¸Áî»áÁĞ³öÒ»·İËùÓĞµÈ¼¶¸÷Ğè¶àÉÙ¾­ÑéÖµµÄÁĞ±í¡£
+é€™å€‹æŒ‡ä»¤æœƒåˆ—å‡ºä¸€ä»½æ‰€æœ‰ç­‰ç´šå„éœ€å¤šå°‘ç¶“é©—å€¼çš„åˆ—è¡¨ã€‚
 C_HELP
                 );
         return 1;

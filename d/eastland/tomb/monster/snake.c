@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name("snake", "ÇàÖñË¿");
-	set_short("ÇàÖñË¿");
+	set_name("snake", "é’ç«¹çµ²");
+	set_short("é’ç«¹çµ²");
 	set_long(
-		"Ò»Ìõ´äÂÌµÄÇàÖñË¿¡£\n"
+		"ä¸€æ¢ç¿ ç¶ çš„é’ç«¹çµ²ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "alignment", -300 );
 	set( "natural_weapon_class1", 8 );
 	set( "natural_min_damage1", 4 );
@@ -20,9 +20,9 @@ void create()
 	set( "tactic_func", "emit_poison" );
 	set( "chat_chance",15);
 	set( "chat_output", ({
-		"ÇàÖñË¿ÔÚÄãµÄ½Å±ßÓÎ×ß¡£\n" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
-	set_c_verbs( ({ "%s°ºÍ·ÕÅ×ì£¬Íù%sÒ§È¥" }) );
+		"é’ç«¹çµ²åœ¨ä½ çš„è…³é‚ŠéŠèµ°ã€‚\n" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
+	set_c_verbs( ({ "%sæ˜‚é ­å¼µå˜´ï¼Œå¾€%så’¬å»" }) );
 }
 
 int emit_poison()
@@ -31,7 +31,7 @@ int emit_poison()
 
 	if( random(15)>4 || !(victim= query_attacker()) ) return 0;
 	tell_room( environment(this_object()), 
-		"ÇàÖñË¿ÕÅ¿ª×ì°ÍÏòÄãÒ§ÏÂ£¬Äã¾õµÃÒ»Õó´ÌÍ´ ....\n",
+		"é’ç«¹çµ²å¼µé–‹å˜´å·´å‘ä½ å’¬ä¸‹ï¼Œä½ è¦ºå¾—ä¸€é™£åˆºç—› ....\n",
 		this_object() );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 20, 3 );
 	return 1;

@@ -1,5 +1,5 @@
-## 东方故事1MUD
+## 東方故事1MUD
 
-使用FluffOS v2017驱动，游戏管理员账号：admin|mudren，密码：12345
+使用FluffOS v2017驅動，遊戲管理員賬號：admin|mudren，密碼：12345
 
-如有疑问请访问交流：https://bbs.mud.ren/
+如有疑問請訪問交流：https://bbs.mud.ren/

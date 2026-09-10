@@ -30,7 +30,7 @@ void effect(object player)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !sizeof(cond_data)==2 ) return;
 	tell_object(player,
-		set_color("Äã¾õµÃÄãµÄ¼¡ÈâÉÔÎ¢·ÅËÉ,²»ÔÙÄÇ÷á½©Ó²ÁË¡£\n","HIY",player));
+		set_color("ä½ è¦ºå¾—ä½ çš„è‚Œè‚‰ç¨å¾®æ”¾é¬†,ä¸å†é‚£éº¼åƒµç¡¬äº†ã€‚\n","HIY",player));
 	msg = player->query_temp("poison_msg");
 	if ( msg )
 		tell_room(environment(player),sprintf(msg,player->query("c_name")),player);
@@ -55,7 +55,7 @@ void effect(object player)
 void remove_effect(object player)
 {
 	tell_object(player, 
-		set_color("Äã¾õµÃºÃ¶àÁË ....\n","HIC",player));
+		set_color("ä½ è¦ºå¾—å¥½å¤šäº† ....\n","HIC",player));
 	player->delete("slow");
 	player->delete("conditions/" + EFFECT_NAME );
 	player->delete_temp("poison_msg");
@@ -69,7 +69,7 @@ void apply_effect(object player, int frequency, int difference)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !cond_data ) {
 		tell_object(player, 
-			    set_color("Äã¾õµÃÈ«Éí¼¡Èâ½©Ó²,×ßÂ·¶¼ÓÐµãÀ§ÄÑ!!\n"
+			    set_color("ä½ è¦ºå¾—å…¨èº«è‚Œè‚‰åƒµç¡¬,èµ°è·¯éƒ½æœ‰é»žå›°é›£!!\n"
 			              ,"HIR",player));
 		player->set( "conditions/" + EFFECT_NAME, ({ frequency, difference }) );
 	        player->modify_stat("dex",-difference);
@@ -78,7 +78,7 @@ void apply_effect(object player, int frequency, int difference)
 		cond_data[0]++;
 		cond_data[1]++;
 		tell_object(player,
-		set_color("Äã¸Ðµ½¼¡Èâ¸ü¼Ó½©Ó²,Á¬¾ÙÊÖ¶¼ÓÐÎÊÌâ£¡\n","HIM",player));
+		set_color("ä½ æ„Ÿåˆ°è‚Œè‚‰æ›´åŠ åƒµç¡¬,é€£èˆ‰æ‰‹éƒ½æœ‰å•é¡Œï¼\n","HIM",player));
 		player->set( "conditions/" + EFFECT_NAME, cond_data );
 		player->add("slow",1);
 		player->modify_stat("dex",-1);

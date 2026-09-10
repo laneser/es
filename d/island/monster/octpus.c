@@ -10,15 +10,15 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name("octpus", "´óÕÂÓã");
+	set_name("octpus", "å¤§ç« é­š");
 	add("id",({"octpus"}));
-	set_short("´óÕÂÓã");
+	set_short("å¤§ç« é­š");
 	set_long(@LONG
-Ò»Ö»³¬´óÐÍµÄÕÂÓã£¬ËüµÄ°ËÖ»´¥ÊÖÕý²»¶ÏµÄ»Ó¶¯Öø£¬Äã»¹ÊÇÀëËü
-Ô¶µãºÃÁË¡£
+ä¸€éš»è¶…å¤§åž‹çš„ç« é­šï¼Œå®ƒçš„å…«éš»è§¸æ‰‹æ­£ä¸æ–·çš„æ®å‹•è‘—ï¼Œä½ é‚„æ˜¯é›¢å®ƒ
+é é»žå¥½äº†ã€‚
 LONG
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", -250 );
 	set("max_hp",600);
 	set("likefish",1);
@@ -29,8 +29,8 @@ LONG
 	set_skill( "unarmed" , 55 );
 	set_natural_armor(52,15);
 	set( "tactic_func", "emit_lick" );
-	set_c_limbs( ({ "Í·²¿", "´¥ÊÖ" }) );
-	set_c_verbs( ({ "%s»Ó¶¯ËüµÄ´¥ÊÖÏò%s±Þ´ò¶øÈ¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "è§¸æ‰‹" }) );
+	set_c_verbs( ({ "%sæ®å‹•å®ƒçš„è§¸æ‰‹å‘%séž­æ‰“è€ŒåŽ»" }) );
 }
 
 int emit_lick()
@@ -40,7 +40,7 @@ int emit_lick()
 	if( random(19)>3 || !(victim= query_attacker()) ) return 0;
 	else {
 	  tell_room( environment(this_object()), 
-		  "\nÕâÕÂÓãÓÃËüµÄ´¥ÊÖ°Ñ"+victim->query("c_name")+"½ô½ôµØÀ¦×¡\n\n"
+		  "\né€™ç« é­šç”¨å®ƒçš„è§¸æ‰‹æŠŠ"+victim->query("c_name")+"ç·Šç·Šåœ°æ†ä½\n\n"
 		  );
 	  victim->receive_damage(1+random(4));
 	  report(victim);	

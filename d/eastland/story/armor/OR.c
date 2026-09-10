@@ -9,16 +9,16 @@ void identify_weapon(object obj, int skill)
      string type;
 
      type = to_chinese((string)obj->query("type"));
-     write(sprintf("ÕâÊÇÒ»ÖÖ%s¡£\n",type));
+     write(sprintf("é€™æ˜¯ä¸€ç¨®%sã€‚\n",type));
      if ( obj->query("not_the_one") ) {
-        write( "ÓëÆäËµËüÊÇÎäÆ÷£¬²»ÈçËµÊÇ¼ş×°ÊÎÆ·¡£\n" );
+        write( "èˆ‡å…¶èªªå®ƒæ˜¯æ­¦å™¨ï¼Œä¸å¦‚èªªæ˜¯ä»¶è£é£¾å“ã€‚\n" );
         return ;
      }
      if ( obj->query("the_one") ) {
           if ( random(10)>2)
-             write(sprintf("Èç¹ûÄã²»ÊÇÎ×Ê¦µÄ»°£¬ÕâÑùµÄÎäÆ÷¿ÉÄÜÊÇ·²ÈËÔÚÕâ¸öÊÀ½çÉÏËùÄÜ»ñµÃ\nµÄ£¬×î¿ÉÅÂµÄÆÆ»µÁ¦Á¿£¬Ö»ÓĞÎ×Ê¦µÄÉñÁ¦·½ÄÜºÍËüÏà¿¹ºâ¡£\n"));	
+             write(sprintf("å¦‚æœä½ ä¸æ˜¯å·«å¸«çš„è©±ï¼Œé€™æ¨£çš„æ­¦å™¨å¯èƒ½æ˜¯å‡¡äººåœ¨é€™å€‹ä¸–ç•Œä¸Šæ‰€èƒ½ç²å¾—\nçš„ï¼Œæœ€å¯æ€•çš„ç ´å£åŠ›é‡ï¼Œåªæœ‰å·«å¸«çš„ç¥åŠ›æ–¹èƒ½å’Œå®ƒç›¸æŠ—è¡¡ã€‚\n"));	
           else
-             write(sprintf("¼´Ê¹ÊÇÒ»¸ö±ÏÉúÓëÎäÆ÷ÎªÎéµÄÕ½Ê¿£¬ÄÜ»ñµÃÕâÑùÒ»¼şÍêÃÀµÄÉñ±øÀûÆ÷\n¿ÉËµÊÇÉÏ±²×ÓĞŞÀ´µÄ¸£Æø¡£\n"));
+             write(sprintf("å³ä½¿æ˜¯ä¸€å€‹ç•¢ç”Ÿèˆ‡æ­¦å™¨ç‚ºä¼çš„æˆ°å£«ï¼Œèƒ½ç²å¾—é€™æ¨£ä¸€ä»¶å®Œç¾çš„ç¥å…µåˆ©å™¨\nå¯èªªæ˜¯ä¸Šè¼©å­ä¿®ä¾†çš„ç¦æ°£ã€‚\n"));
           return ;
      }
      wc = (int)obj->query("weapon_class");
@@ -28,14 +28,14 @@ void identify_weapon(object obj, int skill)
 	wc = wc/2 + random(wc);
 	dam = dam/2 + random(dam);
      }
-     if( wc <= 5 ) write( "ÓëÆäËµËüÊÇÎäÆ÷£¬²»ÈçËµÊÇ¼ş×°ÊÎÆ·¡£\n" );
-     else if( wc <= 10 ) write( "ÄÃËüµ±×÷ÎäÆ÷£¬ÃãÇ¿¿ÉÒÔ´ÕºÍÖøÊ¹ÓÃ¡£\n" );
-     else if( wc <= 15 ) write( "ËüµÄÆ·ÖÊ¿´ÆğÀ´ËÆºõÖµµÃ»¨Ç®È¥Âò¡£\n" );
-     else if( wc <= 20 ) write( "ÒÀÄãµÄ¾­Ñé£¬ÕâÑùµÄÎäÆ÷ËãµÃÉÏÊÇ¸ß¼¶Æ·¡£\n" );
-     else if( wc <= 25 ) write( "Æ¾Á¼ĞÄËµ£¬Ëü¿ÉËãµÃÉÏÊÇÒ»°ãÈËĞÄÄ¿ÖĞËùÎ½µÄ¡¸Éñ±øÀûÆ÷¡¹ÁË¡£\n" );
-     else if( wc <= 30 ) write( sprintf("Èç¹ûÄãÔÚ%sÎäÆ÷¼¼ÄÜÉÏÃ»ÓĞÏàµ±µÄÔìÒè£¬ÕâÑùµÄ\nÉñ±øÀûÆ÷¶ÔÄã¶øÑÔ£¬Ö»ÊÇÒ»¸ö²»ÇĞÊµ¼ÊµÄÃÎÏë¡£\n",type) );
-     else if( wc <= 40 ) write( sprintf("¼´Ê¹ÊÇÒ»¸ö±ÏÉúÓëÎäÆ÷ÎªÎéµÄÕ½Ê¿£¬ÄÜ»ñµÃÕâÑùÒ»¼şÍêÃÀµÄÉñ±øÀûÆ÷\n¿ÉËµÊÇÉÏ±²×ÓĞŞÀ´µÄ¸£Æø¡£\n") );
-	else write( sprintf("Èç¹ûÄã²»ÊÇÎ×Ê¦µÄ»°£¬ÕâÑùµÄÎäÆ÷¿ÉÄÜÊÇ·²ÈËÔÚÕâ¸öÊÀ½çÉÏËùÄÜ»ñµÃ\nµÄ£¬×î¿ÉÅÂµÄÆÆ»µÁ¦Á¿£¬Ö»ÓĞÎ×Ê¦µÄÉñÁ¦·½ÄÜºÍËüÏà¿¹ºâ¡£\n") );
+     if( wc <= 5 ) write( "èˆ‡å…¶èªªå®ƒæ˜¯æ­¦å™¨ï¼Œä¸å¦‚èªªæ˜¯ä»¶è£é£¾å“ã€‚\n" );
+     else if( wc <= 10 ) write( "æ‹¿å®ƒç•¶ä½œæ­¦å™¨ï¼Œå‹‰å¼·å¯ä»¥æ¹Šå’Œè‘—ä½¿ç”¨ã€‚\n" );
+     else if( wc <= 15 ) write( "å®ƒçš„å“è³ªçœ‹èµ·ä¾†ä¼¼ä¹å€¼å¾—èŠ±éŒ¢å»è²·ã€‚\n" );
+     else if( wc <= 20 ) write( "ä¾ä½ çš„ç¶“é©—ï¼Œé€™æ¨£çš„æ­¦å™¨ç®—å¾—ä¸Šæ˜¯é«˜ç´šå“ã€‚\n" );
+     else if( wc <= 25 ) write( "æ†‘è‰¯å¿ƒèªªï¼Œå®ƒå¯ç®—å¾—ä¸Šæ˜¯ä¸€èˆ¬äººå¿ƒç›®ä¸­æ‰€è¬‚çš„ã€Œç¥å…µåˆ©å™¨ã€äº†ã€‚\n" );
+     else if( wc <= 30 ) write( sprintf("å¦‚æœä½ åœ¨%sæ­¦å™¨æŠ€èƒ½ä¸Šæ²’æœ‰ç›¸ç•¶çš„é€ è©£ï¼Œé€™æ¨£çš„\nç¥å…µåˆ©å™¨å°ä½ è€Œè¨€ï¼Œåªæ˜¯ä¸€å€‹ä¸åˆ‡å¯¦éš›çš„å¤¢æƒ³ã€‚\n",type) );
+     else if( wc <= 40 ) write( sprintf("å³ä½¿æ˜¯ä¸€å€‹ç•¢ç”Ÿèˆ‡æ­¦å™¨ç‚ºä¼çš„æˆ°å£«ï¼Œèƒ½ç²å¾—é€™æ¨£ä¸€ä»¶å®Œç¾çš„ç¥å…µåˆ©å™¨\nå¯èªªæ˜¯ä¸Šè¼©å­ä¿®ä¾†çš„ç¦æ°£ã€‚\n") );
+	else write( sprintf("å¦‚æœä½ ä¸æ˜¯å·«å¸«çš„è©±ï¼Œé€™æ¨£çš„æ­¦å™¨å¯èƒ½æ˜¯å‡¡äººåœ¨é€™å€‹ä¸–ç•Œä¸Šæ‰€èƒ½ç²å¾—\nçš„ï¼Œæœ€å¯æ€•çš„ç ´å£åŠ›é‡ï¼Œåªæœ‰å·«å¸«çš„ç¥åŠ›æ–¹èƒ½å’Œå®ƒç›¸æŠ—è¡¡ã€‚\n") );
 }
 
 void identify_armor(object obj, int skill) {
@@ -64,56 +64,56 @@ void identify_armor(object obj, int skill) {
 		value = value/2 + random(value/2);
 		switch ((string)obj->query("material")) {
 			case "heavy_metal" :
-				material = "ÖØ½ğÊô´òÔìµÄ";
+				material = "é‡é‡‘å±¬æ‰“é€ çš„";
 				break;
 			case "light_metal" :
-				material = "Çá½ğÊô×é³ÉµÄ";
+				material = "è¼•é‡‘å±¬çµ„æˆçš„";
 				break;
 			case "element" :
-				material = "¿óÎïÔªËØ×ö³ÉµÄ";
+				material = "ç¤¦ç‰©å…ƒç´ åšæˆçš„";
 				break;
 			case "stone" :
-				material = "Ó²µÃÏñÊ¯Í·µÄ";
+				material = "ç¡¬å¾—åƒçŸ³é ­çš„";
 				break;
 			case "wood" :
-				material = "Ä¾Í·¶¤µÄ";
+				material = "æœ¨é ­é‡˜çš„";
 				break;
 			case "leather" :
-				material = "Æ¤¸ïÏõÖÆ³ÉµÄ";
+				material = "çš®é©ç¡è£½æˆçš„";
 				break;				
 			case "cloth" :
-				material = "²¼×öµÄ";
+				material = "å¸ƒåšçš„";
 				break;
 			default :
-				material = "¹«»á×¨ÓÃµÄ";
+				material = "å…¬æœƒå°ˆç”¨çš„";
 				break;
 		}
 		if ( obj->query("not_the_one") ) {
-                   write( sprintf("°¦....ÕâÑù%s»¤¾ßÖ»ÄÜÌá¹©Ğ©Ğí\µÄ±£»¤¡£\n",material) );		
+                   write( sprintf("å”‰....é€™æ¨£%sè­·å…·åªèƒ½æä¾›äº›è¨±çš„ä¿è­·ã€‚\n",material) );		
 		   return ;
 		}
 		if ( obj->query("the_one") ) 
                    switch(skill){
                    case 70..100:
-                       write( sprintf("ÍÛ....Õâ¼ş%s»¤¾ßÊÇÄãËù¿´¹ıµÄ£¬·À»¤Á¦×î¼ÑµÄ¡£\n",material) );		   
+                       write( sprintf("å“‡....é€™ä»¶%sè­·å…·æ˜¯ä½ æ‰€çœ‹éçš„ï¼Œé˜²è­·åŠ›æœ€ä½³çš„ã€‚\n",material) );		   
  		       return;
 		   default:   
 		      switch(random(10)){
-		      case 0..4 :write( sprintf("ÍÛ....Õâ¼ş%s»¤¾ßÊÇÄãËù¿´¹ıµÄ£¬·À»¤Á¦×î¼ÑµÄ¡£\n",material) );
+		      case 0..4 :write( sprintf("å“‡....é€™ä»¶%sè­·å…·æ˜¯ä½ æ‰€çœ‹éçš„ï¼Œé˜²è­·åŠ›æœ€ä½³çš„ã€‚\n",material) );
 		              return;
-		      case 5..8 :write( sprintf("àŞ....Õâ¼ş%s»¤¾ßµÄÆ·ÖÊ¼«¸ß£¬ÄÜÌá¹©ÑÏÃÜµÄ±£»¤¡£\n",material) );        
+		      case 5..8 :write( sprintf("å™¢....é€™ä»¶%sè­·å…·çš„å“è³ªæ¥µé«˜ï¼Œèƒ½æä¾›åš´å¯†çš„ä¿è­·ã€‚\n",material) );        
 		              return;
-		      default :write( sprintf("àÅ....Õâ¼ş%s»¤¾ß¿´ÆğÀ´ÓĞÖĞµÈÒÔÉÏµÄÆ·ÖÊ¡£\n",material) );
+		      default :write( sprintf("å—¯....é€™ä»¶%sè­·å…·çœ‹èµ·ä¾†æœ‰ä¸­ç­‰ä»¥ä¸Šçš„å“è³ªã€‚\n",material) );
 		              return;
 		      }
 		      return; 
 		   }
 		
-		if( value < 20 ) write( sprintf("°¦....ÕâÑù%s»¤¾ßÖ»ÄÜÌá¹©Ğ©Ğí\µÄ±£»¤¡£\n",material) );
-		else if( value < 40 ) write( sprintf("ß×....Õâ¼ş%s»¤¾ß¿´ÆğÀ´ËÆºõ²»ËãÌ«²î¡£\n",material) );
-		else if( value < 60 ) write( sprintf("àÅ....Õâ¼ş%s»¤¾ß¿´ÆğÀ´ÓĞÖĞµÈÒÔÉÏµÄÆ·ÖÊ¡£\n",material) );
-		else if( value < 80 ) write( sprintf("àŞ....Õâ¼ş%s»¤¾ßµÄÆ·ÖÊ¼«¸ß£¬ÄÜÌá¹©ÑÏÃÜµÄ±£»¤¡£\n",material) );
-		else write( sprintf("ÍÛ....Õâ¼ş%s»¤¾ßÊÇÄãËù¿´¹ıµÄ£¬·À»¤Á¦×î¼ÑµÄ¡£\n",material) );
+		if( value < 20 ) write( sprintf("å”‰....é€™æ¨£%sè­·å…·åªèƒ½æä¾›äº›è¨±çš„ä¿è­·ã€‚\n",material) );
+		else if( value < 40 ) write( sprintf("å’¦....é€™ä»¶%sè­·å…·çœ‹èµ·ä¾†ä¼¼ä¹ä¸ç®—å¤ªå·®ã€‚\n",material) );
+		else if( value < 60 ) write( sprintf("å—¯....é€™ä»¶%sè­·å…·çœ‹èµ·ä¾†æœ‰ä¸­ç­‰ä»¥ä¸Šçš„å“è³ªã€‚\n",material) );
+		else if( value < 80 ) write( sprintf("å™¢....é€™ä»¶%sè­·å…·çš„å“è³ªæ¥µé«˜ï¼Œèƒ½æä¾›åš´å¯†çš„ä¿è­·ã€‚\n",material) );
+		else write( sprintf("å“‡....é€™ä»¶%sè­·å…·æ˜¯ä½ æ‰€çœ‹éçš„ï¼Œé˜²è­·åŠ›æœ€ä½³çš„ã€‚\n",material) );
 }
 
 int cmd_identify(string arg)
@@ -124,15 +124,15 @@ int cmd_identify(string arg)
 
 	if( this_player()->query("stop_attack") > 0 )
 		return notify_fail( 
-			"( Äã»¹Ã»ÓĞÍê³ÉÉÏÒ»¸ö¶¯×÷£¬ÎŞ·¨¼ø¶¨ÈÎºÎÎïÆ·¡£ )\n");
+			"( ä½ é‚„æ²’æœ‰å®Œæˆä¸Šä¸€å€‹å‹•ä½œï¼Œç„¡æ³•é‘‘å®šä»»ä½•ç‰©å“ã€‚ )\n");
 
 	if( !arg || arg=="" )
 		return notify_fail( 
-			"Ö¸Áî¸ñÊ½: itentify <ÎïÆ·Ãû>\n");
+			"æŒ‡ä»¤æ ¼å¼: itentify <ç‰©å“å>\n");
 
 	if( !dest= present( arg, this_player() ) )
 		return notify_fail( 
-			"ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+			"ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 
 	this_player()->block_attack(4); 
 
@@ -143,7 +143,7 @@ int cmd_identify(string arg)
 	else if( dest->query("armor_class") || dest->query("defense_bonus") ) 
 		identify_armor(dest, skill);
 	else write( 
-		"Õâ¼ş¶«Î÷¼È²»ÊÇÎäÆ÷£¬Ò²²»ÊÇ»¤¾ß¡£\n");
+		"é€™ä»¶æ±è¥¿æ—¢ä¸æ˜¯æ­¦å™¨ï¼Œä¹Ÿä¸æ˜¯è­·å…·ã€‚\n");
 
 	return 1;
 }

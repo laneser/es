@@ -7,14 +7,14 @@ void relay_message(string class1, string msg)
 {
 	string name,str;
 	object who;
-	if (!msg || sscanf( msg, "%s(%s)×ßÁË¹ýÀ´¡£", str,name )!=2 ) return;
+	if (!msg || sscanf( msg, "%s(%s)èµ°äº†éŽä¾†ã€‚", str,name )!=2 ) return;
                 if( !who = find_player(lower_case(name)) ) return;
 	if(!who->query_temp("saulin_killer") ) return;
 	tell_room( environment(who), 
-		sprintf("%s¶ÔÖø%s´ó½Ð: Äã¾¹¸ÒÔÚËÂÄÚÉ±ÈË!!\n" ,this_object()->query("c_name"),who->query("c_name")), ({ this_object(), who })
+		sprintf("%så°è‘—%så¤§å«: ä½ ç«Ÿæ•¢åœ¨å¯ºå…§æ®ºäºº!!\n" ,this_object()->query("c_name"),who->query("c_name")), ({ this_object(), who })
 	);
 	tell_object( who, 
-		sprintf("%s¶ÔÖøÄã´ó½Ð: Äã¾¹¸ÒÔÚËÂÄÚÉ±ÈË!!\n",this_object()->query("c_name"))
+		sprintf("%så°è‘—ä½ å¤§å«: ä½ ç«Ÿæ•¢åœ¨å¯ºå…§æ®ºäºº!!\n",this_object()->query("c_name"))
 	);
 	this_object()->kill_ob(who);
 }

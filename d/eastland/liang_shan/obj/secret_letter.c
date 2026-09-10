@@ -3,14 +3,14 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("hint", "Ğ¡½õÄÒ");
-        set_short("hint", "Ğ¡½õÄÒ");
+        set_name("hint", "å°éŒ¦å›Š");
+        set_short("hint", "å°éŒ¦å›Š");
         set_long(@CLONG
-ÕâÊÇÒ»¸ö°üµÄºÜÆ¯ÁÁµÄĞÅ·â£¬Ò²ĞíÄã¿ÉÒÔ°ÑËü´ò¿ªÀ´¶ÁÀïÃæµÄÄÚÈİ
+é€™æ˜¯ä¸€å€‹åŒ…çš„å¾ˆæ¼‚äº®çš„ä¿¡å°ï¼Œä¹Ÿè¨±ä½ å¯ä»¥æŠŠå®ƒæ‰“é–‹ä¾†è®€è£¡é¢çš„å…§å®¹
 CLONG
         );
         set("id", ({"hint"}));
-        set("unit", "¸ö");
+        set("unit", "å€‹");
         set( "weight", 1 );
         set( "value", ({ 1, "silver" }) );
         set( "no_sale", 1);
@@ -27,9 +27,9 @@ int do_open(string str)
 
         if (!str || str != "hint" ) 
                 return notify_fail(
-                        "°ÑÊ²÷á¶«Î÷´ò¿ª?\n");
+                        "æŠŠä»€éº¼æ±è¥¿æ‰“é–‹?\n");
         
-        tell_object( this_player(), "ÏÖÔÚºÃÏñ»¹²»ÊÇ°Ñ½õÄÒ´ò¿ªµÄÊ±ºò¡£\n" );
+        tell_object( this_player(), "ç¾åœ¨å¥½åƒé‚„ä¸æ˜¯æŠŠéŒ¦å›Šæ‰“é–‹çš„æ™‚å€™ã€‚\n" );
         return 1;
 
 }
@@ -37,9 +37,9 @@ int do_read(string str)
 {
 if (!str || str != "hint" )
                 return notify_fail(
-                  "¶ÁÊ²÷á?\n");
+                  "è®€ä»€éº¼?\n");
                                         
-                 tell_object( this_player(), "ÄãÓ¦¸ÃÏÈ´ò¿ª½õÄÒ...\n" );
+                 tell_object( this_player(), "ä½ æ‡‰è©²å…ˆæ‰“é–‹éŒ¦å›Š...\n" );
                  return 1;
 }
 

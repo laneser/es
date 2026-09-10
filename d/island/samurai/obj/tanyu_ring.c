@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "tanyu ring", "ÌìÓğÖ¸»·");
+        set_name( "tanyu ring", "å¤©ç¾½æŒ‡ç’°");
         add( "id", ({ "ring" }) );
-        set_short("tanyu ring", "ÌìÓğÖ¸»·");
+        set_short("tanyu ring", "å¤©ç¾½æŒ‡ç’°");
         set_long(@AAA
-ÕâÊÇÌìÓğ½£ÅÉµÄÕÆÃÇĞÅÎïÖ®Ò»£¬ÌìÓğÖ¸»·
+é€™æ˜¯å¤©ç¾½åŠæ´¾çš„æŒå€‘ä¿¡ç‰©ä¹‹ä¸€ï¼Œå¤©ç¾½æŒ‡ç’°
 AAA
         );
-        set( "unit", "¸ö"); 
+        set( "unit", "å€‹"); 
         set( "type", "finger" );
         set( "armor_class", 0 );
         set( "defense_bonus", 6 );

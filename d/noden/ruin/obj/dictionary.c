@@ -11,16 +11,16 @@ void init()
 
 void create()
 {
-    set_name("Rune Dictionary", "Ä§·¨×Öµä");
+    set_name("Rune Dictionary", "é­”æ³•å­—å…¸");
     add("id", ({"dictionary", "dic"}));
-    set_short("Ä§·¨×Öµä");
+    set_short("é­”æ³•å­—å…¸");
     set_long(@C_LONG
-ÕâÊÇ´ïÌØÅ¦Ë¹ËÍ¸øÄãµÄÄ§·¨×Öµä£¬ÉÏÍ·Ğ´ÖøÃÜÃÜÂéÂéµÄÄ§×å¹ÅÎÄ×ÖºÍÏÖ´ú
-ÎÄ×ÖµÄ¶ÔÕÕ±í£¬×ÖµäµÄ×îááÃæ»¹ÓĞÖø¼¸Ò³¿Õ°×µÄ±Ê¼ÇÀ¸ (note) £¬ÈÃÄã¿ÉÒÔ¼Ç
-Â¼ÄãÑØÂ·Ëù¿´µ½µÄÌØÊâÊÂ¼£¡£ 
+é€™æ˜¯é”ç‰¹ç´æ–¯é€çµ¦ä½ çš„é­”æ³•å­—å…¸ï¼Œä¸Šé ­å¯«è‘—å¯†å¯†éº»éº»çš„é­”æ—å¤æ–‡å­—å’Œç¾ä»£
+æ–‡å­—çš„å°ç…§è¡¨ï¼Œå­—å…¸çš„æœ€å¾Œé¢é‚„æœ‰è‘—å¹¾é ç©ºç™½çš„ç­†è¨˜æ¬„ (note) ï¼Œè®“ä½ å¯ä»¥è¨˜
+éŒ„ä½ æ²¿è·¯æ‰€çœ‹åˆ°çš„ç‰¹æ®Šäº‹è¹Ÿã€‚ 
 C_LONG
 	);
-    set("unit", "±¾");
+    set("unit", "æœ¬");
     set("no_sale", 1);
     set("no_drop", 1);
 }
@@ -34,28 +34,28 @@ int do_read(string str)
     p = environment(this_object());
 
     if (str != "note")
-        return notify_fail("¶ÁÊ²÷á?\n");
+        return notify_fail("è®€ä»€éº¼?\n");
 
     lv = p->query(QUESTNAME);
     if (lv)
-        tell_object(p, "ÄãµÄ±Ê¼ÇÀ¸ÉÏÃæ»­Öø£º\n\n");
+        tell_object(p, "ä½ çš„ç­†è¨˜æ¬„ä¸Šé¢ç•«è‘—ï¼š\n\n");
     else
-	return notify_fail("ÄÇÉÏÃæÒ»Æ¬¿Õ°×£¬Ê²÷áÒ²Ã»ÓĞ¡£\n");
+	return notify_fail("é‚£ä¸Šé¢ä¸€ç‰‡ç©ºç™½ï¼Œä»€éº¼ä¹Ÿæ²’æœ‰ã€‚\n");
 
     if (lv >= 7)
-        tell_object(p, "ÀòÀòÑÅÖ®Ó¡ (Seal o Lilia)\n");
+        tell_object(p, "è‰è‰é›…ä¹‹å° (Seal o Lilia)\n");
     if (lv >= 6)    
-	tell_object(p, "Ï£ÌØË¹Ö®Ó¡ (Seal o Hades)\n");
+	tell_object(p, "å¸Œç‰¹æ–¯ä¹‹å° (Seal o Hades)\n");
     if (lv >= 5)
-        tell_object(p, "º£µØÑÇÖ®Ó¡ (Seal o Hestia)\n");
+        tell_object(p, "æµ·åœ°äºä¹‹å° (Seal o Hestia)\n");
     if (lv >= 4)
-        tell_object(p, "¸¥À×Ë¹Ö®Ó¡ (Seal o Furies)\n");
+        tell_object(p, "å¼—é›·æ–¯ä¹‹å° (Seal o Furies)\n");
     if (lv >= 3)
-        tell_object(p, "²¨Î÷·ïÖ®Ó¡ (Seal o Persephone)\n");
+        tell_object(p, "æ³¢è¥¿é³³ä¹‹å° (Seal o Persephone)\n");
     if (lv >= 2)
-        tell_object(p, "°ÍÀ­Ë¹Ö®Ó¡ (Seal o Pallas)\n");
+        tell_object(p, "å·´æ‹‰æ–¯ä¹‹å° (Seal o Pallas)\n");
     if (lv >= 1)
-        tell_object(p, "ÄÉÍ»ÄáÖ®Ó¡ (Seal o Naptune)\n");
+        tell_object(p, "ç´çªå°¼ä¹‹å° (Seal o Naptune)\n");
 
     return 1;
 }

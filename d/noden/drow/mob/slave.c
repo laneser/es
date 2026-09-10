@@ -7,13 +7,13 @@ void create ()
 
         ::create();
         set_level(6);
-        set_name("Drow slave","ºÚ°µ¾«ÁéÅ«ÒÛ" );
+        set_name("Drow slave","é»‘æš—ç²¾éˆå¥´å½¹" );
         add ("id", ({"drow", "slave" }) );
-        set_short( "ºÚ°µ¾«ÁéÅ«ÒÛ" );
-        set("unit","Î»");
+        set_short( "é»‘æš—ç²¾éˆå¥´å½¹" );
+        set("unit","ä½");
         set_long(
 @C_LONG
-ÕâÊÇ¸ö¿ÉÁ¯µÄÏÂµÈÅ«ÒÛ£¬Êİ°Í°ÍµÄÑù×ÓºÃÏñ±»¶öÁËºÜ¾ÃÁË¡£
+é€™æ˜¯å€‹å¯æ†çš„ä¸‹ç­‰å¥´å½¹ï¼Œç˜¦å·´å·´çš„æ¨£å­å¥½åƒè¢«é¤“äº†å¾ˆä¹…äº†ã€‚
 C_LONG
         );
         set_perm_stat("str", 5);
@@ -28,7 +28,7 @@ C_LONG
         set ("gender", "male");
         set("wealth/copper",80);
         set ("race", "drow");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
        set("weight" , 300);
         wield_weapon(OBJ"blunt");
         equip_armor(ARM"bracers");

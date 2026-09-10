@@ -28,11 +28,11 @@ void pseudo_hunt(object me, object player)
  	if( environment() && present(player, environment()) ) 
 		if( this_object()==me )
 			tell_room( environment(), 
-				query("c_name") + "·¢ÏÖÄãµÄÒâÍ¼£¬´ó½Ğ: ĞÖµÜÃÇ£¡¿´Çå³şÕâ¼Ò»ï£¬±ğÈÃËûÅÜÁË£¡\n",
+				query("c_name") + "ç™¼ç¾ä½ çš„æ„åœ–ï¼Œå¤§å«: å…„å¼Ÿå€‘ï¼çœ‹æ¸…æ¥šé€™å‚¢ä¼™ï¼Œåˆ¥è®“ä»–è·‘äº†ï¼\n",
 				this_object() );
 		else {
 			tell_room( environment(), 
-				query("c_name") + "³åµ½ÄãÃæÇ°£¬´óºÈ:¡¸´óµ¨µóÃñ£¬¾¹¸Òµ½Èôá°³ÇÈöÒ°£¡¡¹\n",
+				query("c_name") + "è¡åˆ°ä½ é¢å‰ï¼Œå¤§å–:ã€Œå¤§è†½åˆæ°‘ï¼Œç«Ÿæ•¢åˆ°è‹¥åµåŸæ’’é‡ï¼ã€\n",
 				this_object() );
 			if( !pointerp(attackers) || member_array(player, attackers)==-1 )
 				kill_ob(player);

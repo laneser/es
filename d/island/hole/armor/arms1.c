@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Armbands","Õ½Éñ±Û»·" );
+	set_name( "Armbands","æˆ°ç¥è‡‚ç’°" );
 	add( "id",({ "armbands" }) );
-	set_short( "Õ½Éñ±Û»·" );
+	set_short( "æˆ°ç¥è‡‚ç’°" );
 	set_long(@LONG
-	ÕâÊÇÕ½ÉñÎåÖÖÅä±¸ÖĞµÄ±Û»·¡£
+	é€™æ˜¯æˆ°ç¥äº”ç¨®é…å‚™ä¸­çš„è‡‚ç’°ã€‚
 LONG
            );
-	set( "unit","Ë«" );
+	set( "unit","é›™" );
 	set( "weight",10 );
 	set( "type","arms" );
 	set( "material","heavy_metal" );

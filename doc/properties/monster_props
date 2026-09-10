@@ -3,9 +3,9 @@
 
 "unit"
 ------
- unit is a string. In Chinese, the unit is regarded as the monster's ��λ.
-For example, if you set("unit", "ֻ"), when there is more than one monster
-in the same room, you will see "nֻxxx". The default unit is "��".
+ unit is a string. In Chinese, the unit is regarded as the monster's 單位.
+For example, if you set("unit", "只"), when there is more than one monster
+in the same room, you will see "n只xxx". The default unit is "個".
 
 
 "aggressive"

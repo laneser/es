@@ -8,12 +8,12 @@ void create()
 
 	::create();
 	set_level(12);
-	set_name("altar guard", "¼ÀÌ³ÊØÎÀ");
+	set_name("altar guard", "ç¥­å£‡å®ˆè¡›");
 	add( "id", ({"guard"}) );
-	set_short("An altar guard", "¼ÀÌ³ÊØÎÀ");
+	set_short("An altar guard", "ç¥­å£‡å®ˆè¡›");
 	set_long(
 		"You see a tall man bearing a strange looking crimson robe.\n",
-		"Õâ¸ö¼ÀÌ³ÊØÎÀ³¤µÃ¸ß¸ßÊÝÊÝµÄ£¬ÉíÉÏ»¹´©ÖøÒ»¼þ¹îÒìµÄÏÊºìÉ«»¤ÅÛ¡£\n"
+		"é€™å€‹ç¥­å£‡å®ˆè¡›é•·å¾—é«˜é«˜ç˜¦ç˜¦çš„ï¼Œèº«ä¸Šé‚„ç©¿è‘—ä¸€ä»¶è©­ç•°çš„é®®ç´…è‰²è­·è¢ã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "alignment", -500 );

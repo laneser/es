@@ -7,18 +7,18 @@ void create()
         
         ::create();
         set_level(19);
-        set_name("ice_girl","±ùÅ® Ñ©²Ë");
+        set_name("ice_girl","å†°å¥³ é›ªèœ");
         add ("id", ({ "girl", "ice","lulu" }) );
-        set_short("ice_girl", "±ùÅ® Ñ©²Ë");
+        set_short("ice_girl", "å†°å¥³ é›ªèœ");
         set_long(
-    "ËýÊÇÓÉ±ùÖ®¹úÁï³öÀ´µÄ±ùÅ®,ËýÕýÔÚÑ°ÕÒËýµÄÐÖ³¤·ÉÓ°,Äã¿É±ð\n"
-    "¿´ËýÊÇ¸öÈõÅ®×Ó¾ÍÆÛ¸ºËý,ÄÇÄã¿ÉÄÜ¾ÍÒªÕÒºÚÎÞ³£ÁÄÌìÁË!!\n"
+    "å¥¹æ˜¯ç”±å†°ä¹‹åœ‹æºœå‡ºä¾†çš„å†°å¥³,å¥¹æ­£åœ¨å°‹æ‰¾å¥¹çš„å…„é•·é£›å½±,ä½ å¯åˆ¥\n"
+    "çœ‹å¥¹æ˜¯å€‹å¼±å¥³å­å°±æ¬ºè² å¥¹,é‚£ä½ å¯èƒ½å°±è¦æ‰¾é»‘ç„¡å¸¸èŠå¤©äº†!!\n"
        );
 
         set("alignment",-1000);
         set( "gender", "female" );
         set( "race", "daemon" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set( "forgetful", 1 );
         set_perm_stat( "str", 25 );
         set_perm_stat( "int", 25 );
@@ -33,12 +33,12 @@ void create()
         set ("chat_chance",15);
         set ("chat_output", ({
              "the girl say:do u see my brother?\n",
-             "Ñ©²ËÎ¢Ð¦ÖøËµ:ÄãÖªµÀÎÒ¸ç¸ç·ÉÓ°µÄÏÂÂäÂð? \n"
+             "é›ªèœå¾®ç¬‘è‘—èªª:ä½ çŸ¥é“æˆ‘å“¥å“¥é£›å½±çš„ä¸‹è½å—Ž? \n"
             }) );
         set("special_defense",(["all":50,"none":40]) );
         set("aim_difficulty",(["critical":5,"weakest":100,"vascular":100]) );
-        set_c_verbs( ({"%s×óÊÖÒ»¸ö°ÍÕÆË¦Ïò%s","%sÒ»ÕÐ¡åÉýÁúÈ­¡å»÷Ïò%s",
-                       "%sÒ»¼Ç¡åÁÃÒõÍÈ¡åÌßÏò%s"}) );
+        set_c_verbs( ({"%så·¦æ‰‹ä¸€å€‹å·´æŽŒç”©å‘%s","%sä¸€æ‹›â€³å‡é¾æ‹³â€³æ“Šå‘%s",
+                       "%sä¸€è¨˜â€³æ’©é™°è…¿â€³è¸¢å‘%s"}) );
         set ("weight", 400);
         set_skill("dodge",100);
         set_skill("parry",100);
@@ -51,7 +51,7 @@ int att_gonfus()
     
     if( !(victim = query_attacker())  || (random(20)>2) ) return 0;
        tell_room( environment(this_object()), ({"\n",
-       "\n\nÑ©²ËË«ÊÖÒ»×¥,Ò»¿ÚÆø°Ñ"+victim->query("c_name")+"´òÁËÊ®¼¸¸ö°ÍÕÆ\n\n"
+       "\n\né›ªèœé›™æ‰‹ä¸€æŠ“,ä¸€å£æ°£æŠŠ"+victim->query("c_name")+"æ‰“äº†åå¹¾å€‹å·´æŽŒ\n\n"
         }) );
       dam= 40 + random(30);  
       victim->receive_special_damage("evil", dam );

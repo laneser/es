@@ -1,13 +1,13 @@
-º£Íş¸Û
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æµ·å¨æ¸¯
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-ÅĞ¹Ù±Ê   pen.c        22      8    18   thru               second
-ÇàÍ­ìøÕÈ staff.c      14      8    15   blt
+åˆ¤å®˜ç­†   pen.c        22      8    18   thru               second
+é’éŠ…ç¦ªæ– staff.c      14      8    15   blt
  
-Ãû³Æ              µµÃû               AC  DB ÖÖÀà ²ÄÖÊ     ÌØ·À        ±¸×¢
+åç¨±              æª”å               AC  DB ç¨®é¡ æè³ª     ç‰¹é˜²        å‚™è¨»
 ================= ================== === == ==== ======== ==========  =========
-ôä´ä½äÖ¸          jade_ring.c         0   2 fing element divine:2
-³¤ÅÛÂí¹Ó          long_garb.c         8   1 body cloth
-ôÂôÄ              pallium.c           1   3 body cloth
-Ô²¶¥Ğ¡Ã±          round_cap.c         4   0 head cloth
+ç¿¡ç¿ æˆ’æŒ‡          jade_ring.c         0   2 fing element divine:2
+é•·è¢é¦¬è¤‚          long_garb.c         8   1 body cloth
+è¢ˆè£Ÿ              pallium.c           1   3 body cloth
+åœ“é ‚å°å¸½          round_cap.c         4   0 head cloth
  

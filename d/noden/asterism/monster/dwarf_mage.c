@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "dwarf red mage", "°«ÈËºìÄ§·¨Ê¦" );
+	set_name( "dwarf red mage", "çŸ®äººç´…é­”æ³•å¸«" );
 	add("id",({"mage","dwarf"}) );
-   set_short( "°«ÈËºìÄ§·¨Ê¦" );
+   set_short( "çŸ®äººç´…é­”æ³•å¸«" );
 	set_long(
-	"Äã¿´µ½Ò»¸ö°«ÈËºìÄ§·¨Ê¦,ËûÕıÔÚÑĞ¾¿Ò»Ğ©ĞÂµÄÄ§·¨.\n"
+	"ä½ çœ‹åˆ°ä¸€å€‹çŸ®äººç´…é­”æ³•å¸«,ä»–æ­£åœ¨ç ”ç©¶ä¸€äº›æ–°çš„é­”æ³•.\n"
 	);
 	set( "gender", "male" );
 	set( "race", "dwarf" );
@@ -57,7 +57,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()),
-       guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i]
+       guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i]
         );
         guard[i]->kill_ob(victim);
       }

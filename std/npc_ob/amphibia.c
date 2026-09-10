@@ -34,9 +34,9 @@ void setup_race_body()
 
 	// These variables are used for /adm/daemons/combat_d.c
 	set_verbs( ({ "punch", "kick", "poke", "grab", }) );
-	set_c_verbs( ({ "%sÍÂÉà¾íÏò%s", "%sÃÍõß%sÒ»ÍÈ",
-		"%sÕÅ¿ÚÍù%sÅçÆø", }) );
+	set_c_verbs( ({ "%såèˆŒå·å‘%s", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%så¼µå£å¾€%så™´æ°£", }) );
 	set_limbs( ({ "face","legs", "neck", "feet", "backside",
 		"stomach", }) );
-	set_c_limbs( ({ "Í·²¿", "Ç°½Å", "áá½Å", "±³²¿", "¸¹²¿", }) );
+	set_c_limbs( ({ "é ­éƒ¨", "å‰è…³", "å¾Œè…³", "èƒŒéƒ¨", "è…¹éƒ¨", }) );
 }

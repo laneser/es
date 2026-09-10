@@ -8,16 +8,16 @@ int do_use(string str);
 void create()
 {
 		//seteuid( getuid() );
-	    set_name( "crystal orb", "Ë®¾§Çò" );
+	    set_name( "crystal orb", "æ°´æ™¶çƒ" );
         add( "id", ({ "orb"}) );
-        set_short( "Ë®¾§Çò" );
+        set_short( "æ°´æ™¶çƒ" );
 //        set_long(@LONG
-//			ÕâÊÇÒ»¿ÅË®¾§Çò£¬¹âÏßÕÕÉä½øÇòÄÚ£¬·¢É¢³öÎå²ÊµÄ¹âÃ¢¡£Ê¹Äã²»½ûÏëÊ¹ÓÃ(use) ¿´¿´¡£
+//			é€™æ˜¯ä¸€é¡†æ°´æ™¶çƒï¼Œå…‰ç·šç…§å°„é€²çƒå…§ï¼Œç™¼æ•£å‡ºäº”å½©çš„å…‰èŠ’ã€‚ä½¿ä½ ä¸ç¦æƒ³ä½¿ç”¨(use) çœ‹çœ‹ã€‚
 //			LONG );
 	set_long(@LONG
-ÕâÊÇÒ»¿ÅË®¾§Çò£¬¹âÏßÕÕÉä½øÇòÄÚ£¬·¢É¢³öÎå²ÊµÄ¹âÃ¢¡£Ê¹Äã²»½ûÏëÊ¹ÓÃ(use) ¿´¿´¡£
+é€™æ˜¯ä¸€é¡†æ°´æ™¶çƒï¼Œå…‰ç·šç…§å°„é€²çƒå…§ï¼Œç™¼æ•£å‡ºäº”å½©çš„å…‰èŠ’ã€‚ä½¿ä½ ä¸ç¦æƒ³ä½¿ç”¨(use) çœ‹çœ‹ã€‚
 LONG);
-        set("unit","¿Å");
+        set("unit","é¡†");
         set("weight", 20);
         set( "value", ({ 20, "silver" }) );
         set("no_sale",1);
@@ -31,7 +31,7 @@ void init()
 
 int help ()
 {
-return notify_fail( "Ö¸Áî¸ñÊ½: use orb to identify ¡´·À¾ß¡µ \n");
+return notify_fail( "æŒ‡ä»¤æ ¼å¼: use orb to identify ã€ˆé˜²å…·ã€‰ \n");
 }
 
 int do_use(string str)
@@ -43,24 +43,24 @@ int do_use(string str)
 	class1 = (string)this_player()->query("class");
 	if(!( wizardp(this_player()) || class1=="mage" || class1=="necromancer" ||
 		class1=="sage")) {
-		write("Äã²»ÊÇÄ§·¨Ê¦£¬²»ÖªµÀÈçºÎÊ¹ÓÃÕâ¸öË®¾§Çò¡£\n");
+		write("ä½ ä¸æ˜¯é­”æ³•å¸«ï¼Œä¸çŸ¥é“å¦‚ä½•ä½¿ç”¨é€™å€‹æ°´æ™¶çƒã€‚\n");
     		return 1;
 	}	
 	if (this_player()->query("spell_points") < USE_SP){
-		write ("ÄãµÄ·¨Á¦²»¹»£¡\n");
+		write ("ä½ çš„æ³•åŠ›ä¸å¤ ï¼\n");
 		return 1;
 	}
 	if (!this_player()->query("vision")) {
-		write("ÄãÊ²÷áÒ²¿´²»¼û¡£\n");
+		write("ä½ ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n");
 		return 1;
 	}
 	if (sscanf(str, "orb to identify %s", this1) == 1){
 		if ( !dest= present( this1, this_player() ) )
-			return notify_fail( "ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+			return notify_fail( "ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 		num=this_player()->query_skill("identify");
 		this_player()->add("spell_points", -USE_SP );
-	write("ÄãÔËÓÃ·¨Á¦Ê¹ÓÃË®¾§Çò£¬Ë®¾§Çò·¢³öÁËÒ»ÕóÒìÑùµÄ¹âÃ¢¡£\n");
-	tell_room(environment(this_player()),this_player()->query("c_name")+"ÉíÉÏµÄË®¾§Çò·¢³öÁËÒ»ÕóÒìÑùµÄ¹âÃ¢¡£\n",this_player());
+	write("ä½ é‹ç”¨æ³•åŠ›ä½¿ç”¨æ°´æ™¶çƒï¼Œæ°´æ™¶çƒç™¼å‡ºäº†ä¸€é™£ç•°æ¨£çš„å…‰èŠ’ã€‚\n");
+	tell_room(environment(this_player()),this_player()->query("c_name")+"èº«ä¸Šçš„æ°´æ™¶çƒç™¼å‡ºäº†ä¸€é™£ç•°æ¨£çš„å…‰èŠ’ã€‚\n",this_player());
 		write(identify_armor(dest,num));
 		return 1;
 	}

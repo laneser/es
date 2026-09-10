@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("gloves of power", "Á¦Á¿ÊÖÌ×");
+        set_name("gloves of power", "åŠ›é‡æ‰‹å¥—");
         add( "id", ({"gloves" }) );
-        set_short("a pair of gloves of power", "Á¦Á¿ÊÖÌ×");
+        set_short("a pair of gloves of power", "åŠ›é‡æ‰‹å¥—");
         set_long(
                 "An gloves of power.\n",
-                "Ò»Ë«Ç¿Á¦ÊÖÌ×,¿ÉÒÔÈÃÄã»Ó¶¯ÎäÆ÷¸ü¼ÓÓĞÁ¦\n"
+                "ä¸€é›™å¼·åŠ›æ‰‹å¥—,å¯ä»¥è®“ä½ æ®å‹•æ­¦å™¨æ›´åŠ æœ‰åŠ›\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "hands" );
         set( "material", "heavy_metal" );
         set( "armor_class", 3 );

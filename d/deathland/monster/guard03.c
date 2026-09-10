@@ -7,18 +7,18 @@ void create ()
 
 	::create();
     set_level(18);
-    set_name("dwarf guard","°«ÈË×îááÊØÎÀ");
+    set_name("dwarf guard","çŸ®äººæœ€å¾Œå®ˆè¡›");
     add ("id", ({ "guard","dwarf"}) );
     set_short( "a dwarf final guard",
-           "°«ÈË×îááÊØÎÀ");
+           "çŸ®äººæœ€å¾Œå®ˆè¡›");
 	set_long(@LONG
-Õâ¸ö°«ÈËÊØÎÀÕıÊØ»¤Öø°«ÈËµÄ×îááÒ»µÀ·ÀÏß,±ÜÄÑËù,
+é€™å€‹çŸ®äººå®ˆè¡›æ­£å®ˆè­·è‘—çŸ®äººçš„æœ€å¾Œä¸€é“é˜²ç·š,é¿é›£æ‰€,
 LONG
 	);
     set("alignment",400);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",  22);
     set_perm_stat( "str",  25);
     set_perm_stat( "int",  18);
@@ -47,7 +47,7 @@ LONG
     set ("weight", 350);
     set("chat_chance",10);
     set("chat_output",({
-        "ÊØÎÀËµ:Àë¿ªÕâÀï !!\n"
+        "å®ˆè¡›èªª:é›¢é–‹é€™è£¡ !!\n"
        }) );
       wield_weapon2(Weapon"/shortsword03");
       wield_weapon(Weapon"/chain01"); 

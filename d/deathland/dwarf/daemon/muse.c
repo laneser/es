@@ -18,10 +18,10 @@ void drink_muse(int color,object you)
     
     if ( correct!=color ) {
        tell_object(you,
-       "µ±ÄãºÈÏÂÕâÈªË®Ê±,ÄãµÄºíÁüºöÈ»Ò»Õó³é¡õ\n"
+       "ç•¶ä½ å–ä¸‹é€™æ³‰æ°´æ™‚,ä½ çš„å–‰åš¨å¿½ç„¶ä¸€é™£æŠ½â–¡\n"
        );
        tell_room(environment(you),
-       you->query("c_name")+"´ó½ĞÒ»Éù!!°¡......\n");
+       you->query("c_name")+"å¤§å«ä¸€è²!!å•Š......\n");
        
        you->receive_damage((int)you->query("hit_points")+10);
        return;
@@ -32,8 +32,8 @@ void drink_muse(int color,object you)
           items[i]->set("quest_action/good_poet",1);
        }   
     tell_object(you,
-      "µ±ÄãºÈÏÂÕâÈªË®Ê±,Äã¾õµÃ×Ô¼ºËÆºõ±äµÃ¸ü´ÏÃ÷ÁË, ¶øÇÒÕû¸öÈËµÄÆøÖÊÓëÄÚº­\n"
-      "¶¼´ó·ù¶ÈÌáÉıÁË, Äã¾õµÃ×Ô¼ººÃÏñ³ÉÎªÒ»¸ö¾ßÓĞ¸ß¶ÈÎÄ»¯µÄÎÄÑ§¼ÒÒ»Ñù.\n"
+      "ç•¶ä½ å–ä¸‹é€™æ³‰æ°´æ™‚,ä½ è¦ºå¾—è‡ªå·±ä¼¼ä¹è®Šå¾—æ›´è°æ˜ç­, è€Œä¸”æ•´å€‹äººçš„æ°£è³ªèˆ‡å…§æ¶µ\n"
+      "éƒ½å¤§å¹…åº¦æå‡äº†, ä½ è¦ºå¾—è‡ªå·±å¥½åƒæˆç‚ºä¸€å€‹å…·æœ‰é«˜åº¦æ–‡åŒ–çš„æ–‡å­¸å®¶ä¸€æ¨£.\n"
       );
     return;   
 }
@@ -49,13 +49,13 @@ int fill_muse_water(object you,int color)
        if ( (string)items[i]->query("name")=="Black Box of Molader" ) {
           if (!items[i]->query("quest_item/black_bottle")) {
             tell_object(you,
-            "ÄãÃ»ÓĞºÏÊÊµÄÈİÆ÷À´×°ÕâÈªË®.\n"
+            "ä½ æ²’æœ‰åˆé©çš„å®¹å™¨ä¾†è£é€™æ³‰æ°´.\n"
             );
             return 1;
             }
           items[i]->set("quest_action/muse_filled",color);
           tell_object(you,
-          "ÄãÓÃºÚÉ«Æ¿×Ó°ÑÈªË®×°Âú.\n"
+          "ä½ ç”¨é»‘è‰²ç“¶å­æŠŠæ³‰æ°´è£æ»¿.\n"
           );
           return 1;
           }
@@ -78,10 +78,10 @@ void drink_bottle_muse(object you,object box)
     
     if ( correct!=color ) {
        tell_object(you,
-       "µ±ÄãºÈÏÂÕâÈªË®Ê±,ÄãµÄºíÁüºöÈ»Ò»Õó³é¡õ\n"
+       "ç•¶ä½ å–ä¸‹é€™æ³‰æ°´æ™‚,ä½ çš„å–‰åš¨å¿½ç„¶ä¸€é™£æŠ½â–¡\n"
        );
        tell_room(environment(you),
-       you->query("c_name")+"´ó½ĞÒ»Éù!!°¡......\n");
+       you->query("c_name")+"å¤§å«ä¸€è²!!å•Š......\n");
        if ( box->query("quest_action/mixed") ) 
           you->receive_damage(10);
        else 
@@ -90,8 +90,8 @@ void drink_bottle_muse(object you,object box)
     else {
       box->set("quest_action/good_poet",1);
       tell_object(you,
-      "µ±ÄãºÈÏÂÕâÈªË®Ê±,Äã¾õµÃ×Ô¼ºËÆºõ±äµÃ¸ü´ÏÃ÷ÁË, ¶øÇÒÕû¸öÈËµÄÆøÖÊÓëÄÚº­\n"
-      "¶¼´ó·ù¶ÈÌáÉıÁË, Äã¾õµÃ×Ô¼ººÃÏñ³ÉÎªÒ»¸ö¾ßÓĞ¸ß¶ÈÎÄ»¯µÄÎÄÑ§¼ÒÒ»Ñù.\n"
+      "ç•¶ä½ å–ä¸‹é€™æ³‰æ°´æ™‚,ä½ è¦ºå¾—è‡ªå·±ä¼¼ä¹è®Šå¾—æ›´è°æ˜ç­, è€Œä¸”æ•´å€‹äººçš„æ°£è³ªèˆ‡å…§æ¶µ\n"
+      "éƒ½å¤§å¹…åº¦æå‡äº†, ä½ è¦ºå¾—è‡ªå·±å¥½åƒæˆç‚ºä¸€å€‹å…·æœ‰é«˜åº¦æ–‡åŒ–çš„æ–‡å­¸å®¶ä¸€æ¨£.\n"
       );
       }
     
@@ -104,8 +104,8 @@ void drink_bottle_muse(object you,object box)
 string muse_color(int color)
 {
    string *colors;
-   colors=({"À¶(blue)","ÂÌ(green)","ºì(red)","×Ï(purple)",
-   "³È(orange)","»Æ(yellow)","ºÚ(black)","°×(white)","ºÖ(brown)" });
+   colors=({"è—(blue)","ç¶ (green)","ç´…(red)","ç´«(purple)",
+   "æ©™(orange)","é»ƒ(yellow)","é»‘(black)","ç™½(white)","è¤(brown)" });
    
    return colors[color-1];   
 }

@@ -9,12 +9,12 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("С��");
+	set_short("小徑");
 	set_long( @LONG_DESCRIPTION
-��������������ڵ�С���ϡ�������ǰ��ʱ, ��о���
-����ƺ�������ϡ��; ������������, ��С·�϶��Ӳݴ���,
-�㲻���������Ƿ�Ϊһ�������Ĵ�ׯ! ������ע�⵽�ڶ���
-����������һ��С�ݡ�
+你正走在煙雨村內的小徑上。當你往前走時, 你感覺到
+這兒似乎是人煙稀少; 不僅屋宇疏落, 連小路上都雜草叢生,
+你不禁懷疑這是否為一個廢棄的村莊! 不過你注意到在東、
+西、北各有一間小屋。
 LONG_DESCRIPTION
 	);
 
@@ -27,8 +27,8 @@ LONG_DESCRIPTION
    create_door( "west", "east", ([
                 "keyword" : ({ "wooden door", "door" }),
                 "name" : "wooden door",
-                "c_name" : "ľ��",
-                "c_desc" : "һ�Ⱥ���ͨ��ľ��",
+                "c_name" : "木門",
+                "c_desc" : "一扇很普通的木門",
                 "status" : "locked",
                 "lock" : "IANYEU_LIANG_HOME"
         ]) );

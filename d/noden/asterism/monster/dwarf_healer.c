@@ -6,11 +6,11 @@ void create()
 	::create();
 	seteuid(getuid());
 	set_level(16);
-	set_name( "dwarf healer", "°«ÈËÒ½¹Ù" );
+	set_name( "dwarf healer", "çŸ®äººé†«å®˜" );
 	add("id",({"healer","dwarf"}) );
-   set_short( "°«ÈËÒ½¹Ù" );
+   set_short( "çŸ®äººé†«å®˜" );
 	set_long(
-		"Ò»¸öÑÏËàµÄ°«ÈËÒ½¹Ù.\n"
+		"ä¸€å€‹åš´è‚…çš„çŸ®äººé†«å®˜.\n"
 	);
 	set( "gender", "male" );
 	set( "race", "dwarf" );
@@ -45,7 +45,7 @@ void create()
         set( "tactic_func", "cast_help" ); 
 
         set("inquiry" , ([ 
-                      "ÒıÎï" : "@@astrquest" ,
+                      "å¼•ç‰©" : "@@astrquest" ,
                       "catalyst" : "@@astrquest"
                    ]) ) ;
                                                                                            
@@ -72,7 +72,7 @@ int cast_help()
      {
      if ( !guard[i]->query_attacker() ) {
       tell_room( environment(this_object()), 
-        guard[i]->query("c_name")+"´óº°: â·°éÃÇ,ÈÃÎÒ°ïÖúÄãÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n"
+        guard[i]->query("c_name")+"å¤§å–Š: å¤¥ä¼´å€‘,è®“æˆ‘å¹«åŠ©ä½ ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n"
           ,guard[i]
       );
       guard[i]->kill_ob(victim);
@@ -94,7 +94,7 @@ void relay_message(string class1 , string msg)
     object *soldier ;
     string a;
     
-    if ( sscanf(msg,"°«ÈËÊ¿±øËµµÀ£ºheal me please%s",a) != 1) {
+    if ( sscanf(msg,"çŸ®äººå£«å…µèªªé“ï¼šheal me please%s",a) != 1) {
     	::relay_message( class1, msg );
     	return ;
     }
@@ -103,8 +103,8 @@ void relay_message(string class1 , string msg)
               "is_a_soldier",this_object());
   
         tell_room(environment(this_object()),
-           "°«ÈËÒ½¹ÙËµµÀ:ºÃµÄ£¬ÎÒÂíÉÏ°ïÄãÁÆÉË¡£\n"
-           "°«ÈËÊ¿±øÉíÉÏö®Ê±·º³öÒ»µÀ°×¹â,Í¬Ê±Ê¿±øÉíÉÏµÄÉË½¥½¥ÏûÊ§¡£\n"
+           "çŸ®äººé†«å®˜èªªé“:å¥½çš„ï¼Œæˆ‘é¦¬ä¸Šå¹«ä½ ç™‚å‚·ã€‚\n"
+           "çŸ®äººå£«å…µèº«ä¸Šéœæ™‚æ³›å‡ºä¸€é“ç™½å…‰,åŒæ™‚å£«å…µèº«ä¸Šçš„å‚·æ¼¸æ¼¸æ¶ˆå¤±ã€‚\n"
            , this_object() ) ;
         for( i=0; i<sizeof(soldier); i++ ) 
              soldier[i]->receive_healing(40) ;
@@ -121,15 +121,15 @@ void astrquest(object ob)
    if( !questflag || questflag!=2 || !stepflag || stepflag <1 )
      {
        tell_room(environment(),
-                 "°«ÈËÒ½¹ÙÒ¡Ò¡Í·Ëµ:ÎÒ²»ÖªµÀ¡£\n" 
+                 "çŸ®äººé†«å®˜æ–æ–é ­èªª:æˆ‘ä¸çŸ¥é“ã€‚\n" 
                  ,this_object()  ) ;
        return ;
       }
 
    write(
-         "°«ÈËÒ½¹ÙÏëÁËÒ»ÏÂ×ÓááËµµÀ: ÎÒºÃÏñÔø¸ø¹ıÕâ÷áÒ»¸ö¶«Î÷¸øÅ·Èğ°²³¤ÀÏ,\n"
-         "    µ«ÊÇÎÒÍüÁËÔÚÄÇÕÒµ½ÄÇ¸ö¶«Î÷µÄ,Ö»¼ÇµÃÄÇ¸ö¶«Î÷½Ğ'ÓÅ²¨ÂŞ»¨'¡£\n"
-         "    ÖÁì¶ÔÚÄÇ»áÓĞ,ÎÒ¾Í²»Çå³şÁË¡£\n"
+         "çŸ®äººé†«å®˜æƒ³äº†ä¸€ä¸‹å­å¾Œèªªé“: æˆ‘å¥½åƒæ›¾çµ¦éé€™éº¼ä¸€å€‹æ±è¥¿çµ¦æ­ç‘å®‰é•·è€,\n"
+         "    ä½†æ˜¯æˆ‘å¿˜äº†åœ¨é‚£æ‰¾åˆ°é‚£å€‹æ±è¥¿çš„,åªè¨˜å¾—é‚£å€‹æ±è¥¿å«'å„ªæ³¢ç¾…èŠ±'ã€‚\n"
+         "    è‡³æ–¼åœ¨é‚£æœƒæœ‰,æˆ‘å°±ä¸æ¸…æ¥šäº†ã€‚\n"
          );
 
    

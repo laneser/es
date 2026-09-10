@@ -19,9 +19,9 @@ int cmd_time()
 
 int help() {
         write(@HELP
-使用格式: time
+浣跨敤鏍煎紡: time
 
-显示运行时间，但以游戏时代时间为时间单位.
+椤ず閬嬭鏅傞枔锛屼絾浠ラ亰鎴叉檪浠ｆ檪闁撶偤鏅傞枔鍠綅.
 HELP
                 );
         return 1;

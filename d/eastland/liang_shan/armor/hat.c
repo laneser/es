@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("broad_brimmed rain hat", "ÕÚÈÕºÚóèóÒ");
+        set_name("broad_brimmed rain hat", "é®æ—¥é»‘ç®¬ç¬ ");
         add( "id", ({ "hat" }) );
-        set_short( "broad_brimmed rain hat", "ÕÚÈÕºÚóèóÒ");
+        set_short( "broad_brimmed rain hat", "é®æ—¥é»‘ç®¬ç¬ ");
         set_long(
                 "A broad_brimmed rain hat .\n",
-                "Ò»¶¥ÕÚÑôÓÃµÄ´ó¶·óÒ£¬¿É±ÜÃâÑô¹âÖ±Éä£® \n"
+                "ä¸€é ‚é®é™½ç”¨çš„å¤§æ–—ç¬ ï¼Œå¯é¿å…é™½å…‰ç›´å°„ï¼ \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "wood");
         set( "armor_class", 5 );

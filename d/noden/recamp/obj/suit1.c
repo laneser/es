@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "Magic suit", "Ä§·¨Ñó×°");
+        set_name( "Magic suit", "é­”æ³•æ´‹è£");
         add( "id", ({ "suit" }) );
-        set_short("Magic suit", "Ä§·¨Ñó×°");
+        set_short("Magic suit", "é­”æ³•æ´‹è£");
         set_long(@AAA
-ÕâÊÇÒ»¼şÒÔÌØÊâÇá½ğÊô´òÔì¶ø³ÉµÄÄ§·¨Ñó×°£¬¿ÉÕ¹ÏÖ³öÃÔÈËµÄÉí²ÄÇúÏß¡£
+é€™æ˜¯ä¸€ä»¶ä»¥ç‰¹æ®Šè¼•é‡‘å±¬æ‰“é€ è€Œæˆçš„é­”æ³•æ´‹è£ï¼Œå¯å±•ç¾å‡ºè¿·äººçš„èº«ææ›²ç·šã€‚
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 10 );
         set( "defense_bonus", 10 );

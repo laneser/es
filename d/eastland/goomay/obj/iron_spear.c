@@ -5,15 +5,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Spear of red steel", "»ğ¸ÖÃ¬");
+        set_name("Spear of red steel", "ç«é‹¼çŸ›");
         add ("id",({ "spear" }) );
-        set_short("Spear of red steel", "»ğ¸ÖÃ¬");
+        set_short("Spear of red steel", "ç«é‹¼çŸ›");
         set_long(
             "A special spear which made by red magic steel.\n",
-            "ÕâÊÇÒ»°ÑÓÉºìÉ«Ä§·¨´ÅÌú¿ó´òÔì¶ø³ÉµÄ³¤Ã¬£¬ÉÁ¶¯Öø»ğÑæ°ã\n"+
-	    "¹âÃ¢µÄÃ¬¼â£¬ËÆºõÓĞÓëÖÚ²»Í¬µÄÁ¦Á¿¡£\n"
+            "é€™æ˜¯ä¸€æŠŠç”±ç´…è‰²é­”æ³•ç£éµç¤¦æ‰“é€ è€Œæˆçš„é•·çŸ›ï¼Œé–ƒå‹•è‘—ç«ç„°èˆ¬\n"+
+	    "å…‰èŠ’çš„çŸ›å°–ï¼Œä¼¼ä¹æœ‰èˆ‡çœ¾ä¸åŒçš„åŠ›é‡ã€‚\n"
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 25 );
         set( "type", "thrusting" );
         set( "min_damage", 10 );

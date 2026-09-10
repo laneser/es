@@ -4,19 +4,19 @@ void create(object ob)
 {
     if (!ob ) return ;
 	ob->set_level(3);
-	ob->set_name( "fat boar", "Ò°Öí" );
+	ob->set_name( "fat boar", "é‡è±¬" );
 	ob->add( "id", ({ "boar" }) );
-   ob->set_short( "Ò°Öí" );
+   ob->set_short( "é‡è±¬" );
 	ob->set_long(
-		"ÕâÍ·Ò°ÖíÊµÔÚºÜÅÖ£¬ÅÖµ½Äã¼¸ºõ°ÑËüÎóÈÏÎª±ğÈËËÇÑøµÄÖí¡£\n"
+		"é€™é ­é‡è±¬å¯¦åœ¨å¾ˆèƒ–ï¼Œèƒ–åˆ°ä½ å¹¾ä¹æŠŠå®ƒèª¤èªç‚ºåˆ¥äººé£¼é¤Šçš„è±¬ã€‚\n"
 	);
 	ob->set_perm_stat( "str", 5 );
 	ob->set_perm_stat( "dex", 2 );
    ob->set( "race", "beast" );
-	ob->set( "unit", "Í·" );
+	ob->set( "unit", "é ­" );
 	ob->set( "natural_weapon_class1", 7 );
 	ob->set( "natural_min_damage1", 3 );
 	ob->set( "natural_max_damage1", 8 );
-	ob->set_c_verbs( ({ "%sµÍÍ·ÃÍ³å£¬×²Ïò%s", "%sÔÚµØÉÏÒ»¹ö£¬ÓÃÑÀ³İÍù%s¶¥È¥" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Æ¨¹É" }) );
+	ob->set_c_verbs( ({ "%sä½é ­çŒ›è¡ï¼Œæ’å‘%s", "%såœ¨åœ°ä¸Šä¸€æ»¾ï¼Œç”¨ç‰™é½’å¾€%sé ‚å»" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å±è‚¡" }) );
 }

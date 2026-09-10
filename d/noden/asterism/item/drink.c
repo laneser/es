@@ -24,11 +24,11 @@ void disp_msg(int i);
 void create()
 {
     seteuid(getuid());
-   set_short("ÆÕÍ¨ÒûÁÏ");
-   set_long("ÕâÊÇÒ»Æ¿ÆÕÍ¨µÄÒûÁÏ, Äã¾ø¶Ô²»Ó¦¸Ã¿´µ½Ëü.\n");
+   set_short("æ™®é€šé£²æ–™");
+   set_long("é€™æ˜¯ä¸€ç“¶æ™®é€šçš„é£²æ–™, ä½ çµ•å°ä¸æ‡‰è©²çœ‹åˆ°å®ƒ.\n");
     set("drink",1);
     set("weight",5);
-    set("unit","Æ¿");  // Æ¿, ±­, ¹Þ, ´ü(?)
+    set("unit","ç“¶");  // ç“¶, æ¯, ç½, è¢‹(?)
     set("recycle",10); // recycle value, reset if needed. type is copper.
     set("tp",0);
     set("hp",0);
@@ -40,11 +40,11 @@ void create()
     set("container",1);  // container = 0 has no empty container..
     set("amount",20); // for quota.....
 /*  set drink message if need customize.. $EN = English name, $CN = Chinese
-    set("c_succ","ÄãºÈÏÂÒ»Æ¿ÒûÁÏ\n");
-    set("c_osucc","$CNºÈµôÒ»Æ¿ÒûÁÏ\n");
+    set("c_succ","ä½ å–ä¸‹ä¸€ç“¶é£²æ–™\n");
+    set("c_osucc","$CNå–æŽ‰ä¸€ç“¶é£²æ–™\n");
 */
-    set("c_fail","ÄãÊÔºÈÏÂÒ»Æ¿ÒûÁÏ, µ«ÊÇ¶¼È÷³öÀ´ÁË.\n");
-    set("c_ofail","$CNÊÔÖøºÈÏÂÒ»Æ¿ÒûÁÏ, ¿ÉÏ§¶¼È÷³öÀ´ÁË.\n");
+    set("c_fail","ä½ è©¦å–ä¸‹ä¸€ç“¶é£²æ–™, ä½†æ˜¯éƒ½ç‘å‡ºä¾†äº†.\n");
+    set("c_ofail","$CNè©¦è‘—å–ä¸‹ä¸€ç“¶é£²æ–™, å¯æƒœéƒ½ç‘å‡ºä¾†äº†.\n");
 }
  
 void init()
@@ -56,11 +56,11 @@ int check_syn(string str)
 {
     if (!str || !id(str) ) {
         return notify_fail(
-        "ºÈÊ²÷á?\n");
+        "å–ä»€éº¼?\n");
     }
     if ( environment() != this_player() ) {
         return notify_fail(
-          "ÄãÉíÉÏÃ»ÓÐÕâÖÖ¶«¶«¡£\n" );
+          "ä½ èº«ä¸Šæ²’æœ‰é€™ç¨®æ±æ±ã€‚\n" );
     }
     return this_object()->drink_me();
 }
@@ -82,13 +82,13 @@ void disp_msg(int i)
     }
 // all the IFs will be useless if code=fail, cuz fail has default.
     if (!this_object()->query("c_"+code)) {
-        my_c_msg="ÄãºÈÏÂÒ»"+c_unit+this_object()->query("c_short")+".\n";
+        my_c_msg="ä½ å–ä¸‹ä¸€"+c_unit+this_object()->query("c_short")+".\n";
     }
     else {
         my_c_msg=(string)this_object()->query("c_"+code);
     }
     if (!this_object()->query("c_o"+code)) {
-        ur_c_msg=this_player()->query("c_name")+"ºÈÏÂÒ»"+c_unit+this_object()->query("c_short")+".\n";
+        ur_c_msg=this_player()->query("c_name")+"å–ä¸‹ä¸€"+c_unit+this_object()->query("c_short")+".\n";
     }
     else {
         ur_c_msg=(string)this_object()->query("c_o"+code);
@@ -156,7 +156,7 @@ void make_empty_con(object drink)
     c_unit=(string)drink->query("unit");
  
     empty = new(EMPTY_CON+"empty");
-   empty->set_name(c_unit+"×Ó");
+   empty->set_name(c_unit+"å­");
     empty->set("recycle",val);
     empty->move(environment(drink));
 }

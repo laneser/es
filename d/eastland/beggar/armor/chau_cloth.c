@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cloth","Å¯ÒÂ");
+        set_name("cloth","æš–è¡£");
         add("id",({"cloth"}) );
-        set_short("Å¯ÒÂ");
+        set_short("æš–è¡£");
 	set_long(@C_LONG
-Õâ²»¹ıÊÇÒ»¼şÑ°³£µÄÒÂ·ş¡£
+é€™ä¸éæ˜¯ä¸€ä»¶å°‹å¸¸çš„è¡£æœã€‚
 C_LONG	         );
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight",100 );
 	set( "type", "body" );
         set("material","cloth");

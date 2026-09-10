@@ -5,15 +5,15 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("unknow sword","ÎÞÃû½£");
+       set_name("unknow sword","ç„¡ååŠ");
        add("id",({"sword"}) );
-       set_short("ÎÞÃû½£");
+       set_short("ç„¡ååŠ");
 	   set_long(@AAA
-Ò»°ÑÀÃÀÃÇÒ²»ÆðÑÛµÄ½££¬¾ÝËµÔøÊÇÒ»´ú½£ÉñÎÞÃûµÄ°®½£
+ä¸€æŠŠçˆ›çˆ›ä¸”ä¸èµ·çœ¼çš„åŠï¼Œæ“šèªªæ›¾æ˜¯ä¸€ä»£åŠç¥žç„¡åçš„æ„›åŠ
 AAA
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 45 );
     set("type","longblade");
 	set( "min_damage", 25 );
@@ -42,9 +42,9 @@ int staff_damage(object victim,int damage)
 { case 0:			 
  {    
      tell_object(holder,
-     "\nÄãÊ¹³öÎÞÃû½£·¨µÚÒ»ÊÇ ´óÄ®·ç±© £¬½£Èç·ÉÊÅµÄÁ÷ÐÇÒ»°ãÉäÏòµÐÈË\n\n");
+     "\nä½ ä½¿å‡ºç„¡ååŠæ³•ç¬¬ä¸€æ˜¯ å¤§æ¼ é¢¨æš´ ï¼ŒåŠå¦‚é£›é€çš„æµæ˜Ÿä¸€èˆ¬å°„å‘æ•µäºº\n\n");
      tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"µÄ½£Èç·ÉÊÅµÄÁ÷ÐÇÒ»°ãÉäÏòµÐÈË\n\n",
+      "\n"+holder->query("c_name")+"çš„åŠå¦‚é£›é€çš„æµæ˜Ÿä¸€èˆ¬å°„å‘æ•µäºº\n\n",
       holder);
     victim->receive_special_damage("magic",dam);
     victim->set("last_attacker",holder);
@@ -54,9 +54,9 @@ int staff_damage(object victim,int damage)
  case 1:   
  {
       tell_object(holder,
-      "\nÄãÊ¹³öÎÞÃû½£·¨µÚ¶þÊ½ ±ù³ÇÒøÑ© £¬½£ÉíÉÏ·ºÆð¶ä¶äÃ÷ÁÁµÄ½£»¨\n\n");
+      "\nä½ ä½¿å‡ºç„¡ååŠæ³•ç¬¬äºŒå¼ å†°åŸŽéŠ€é›ª ï¼ŒåŠèº«ä¸Šæ³›èµ·æœµæœµæ˜Žäº®çš„åŠèŠ±\n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"µÄ½£ÉíÉÏ·ºÆð¶ä¶äÃ÷ÁÁµÄ½£»¨´ÌÏòµÐÈË\n\n",
+      "\n"+holder->query("c_name")+"çš„åŠèº«ä¸Šæ³›èµ·æœµæœµæ˜Žäº®çš„åŠèŠ±åˆºå‘æ•µäºº\n\n",
       holder);
       victim->receive_special_damage("magic",dam+10);
       victim->set("last_attacker",holder);
@@ -66,9 +66,9 @@ int staff_damage(object victim,int damage)
  case 2:
    {
       tell_object(holder,
-      "\nÄãÊ¹³öÎÞÃû½£·¨µÚÈýÊ½ Å­ÌÎ¾ªÌì ½£ÉíÉÏ·º³öÎÞÊý½£ÆøÉäÏòµÐÈË \n\n");
+      "\nä½ ä½¿å‡ºç„¡ååŠæ³•ç¬¬ä¸‰å¼ æ€’æ¿¤é©šå¤© åŠèº«ä¸Šæ³›å‡ºç„¡æ•¸åŠæ°£å°„å‘æ•µäºº \n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"µÄ½£ÉíÉÏ·º³öÎÞÊý½£ÆøÏòµÐÈËÉäÈ¥\n\n",
+      "\n"+holder->query("c_name")+"çš„åŠèº«ä¸Šæ³›å‡ºç„¡æ•¸åŠæ°£å‘æ•µäººå°„åŽ»\n\n",
       holder);
       victim->set("last_attacker",holder);
       victim->receive_special_damage("magic",dam+15);
@@ -79,9 +79,9 @@ int staff_damage(object victim,int damage)
    {
      
      tell_object(holder,
-      "\nÄãÊ¹³öÎÞÃû½£·¨µÚËÄÊ½ »ÙÌìÃðµØ £¬ÄãÈË½£ºÏÒ»ÏòµÐÈË³åÈ¥\n\n");
+      "\nä½ ä½¿å‡ºç„¡ååŠæ³•ç¬¬å››å¼ æ¯€å¤©æ»…åœ° ï¼Œä½ äººåŠåˆä¸€å‘æ•µäººè¡åŽ»\n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"Éí½£ºÏÒ»Õû¸öÈËÏò³åµÐÈËÁË¹ýÈ¥\n\n",
+      "\n"+holder->query("c_name")+"èº«åŠåˆä¸€æ•´å€‹äººå‘è¡æ•µäººäº†éŽåŽ»\n\n",
       holder);
       victim->set("last_attacker",holder);
       victim->receive_special_damage("magic",dam+20);

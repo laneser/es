@@ -6,9 +6,9 @@ void create()
 {
 	::create();
 //	if ( !ob ) return ;
-	set_short("¶ñÄ§ËþÄÚ");
+	set_short("æƒ¡é­”å¡”å…§");
 	set_long( @C_LONG_DESCRIPTION
-ÕâÀïÊÇ¶ñÄ§ËþµÄµÚ¶þ¸ö·¿¼ä.
+é€™è£¡æ˜¯æƒ¡é­”å¡”çš„ç¬¬äºŒå€‹æˆ¿é–“.
 C_LONG_DESCRIPTION
 	);
 	set( "exits", ([ 

@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "grey key", "»ÒÉ«Ô¿³×" );
+	set_name( "grey key", "ç°è‰²é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "a grey key", "»ÒÉ«Ô¿³×" );
+	set_short( "a grey key", "ç°è‰²é‘°åŒ™" );
 	set_long(
 		"A grey key.\n",
-		"ÕâÊÇÒ»°Ñ»ÒÉ«Ô¿³×,ÓÉì¶\Ğí\¾ÃÎ´Ê¹ÓÃËùÒÔÔ­ÓĞµÄ¹âÔóÍêÈ«ÏûÍËÁË\n"
+		"é€™æ˜¯ä¸€æŠŠç°è‰²é‘°åŒ™,ç”±æ–¼è¨±ä¹…æœªä½¿ç”¨æ‰€ä»¥åŸæœ‰çš„å…‰æ¾¤å®Œå…¨æ¶ˆé€€äº†\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "ECHO_VILLAGE_ARCHDOOR" );
 	set( "weight", 5 );
 	set( "value", ({ 10, "silver" }) );

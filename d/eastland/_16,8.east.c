@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("ɳ̲");
+	ob->set_short("沙灘");
 	ob->set_long( @LONG_DESCRIPTION
-�����������˺��ߵ�ɳ̲�ϣ�һ���޼ʵĴ���Զ���ͱ����������ӣ�ʹ
-����ȴ�˷��ա�
+你現在來到了海邊的沙灘上，一望無際的大海在遠處和碧藍的天空相接，使
+人忘卻了煩惱。
 LONG_DESCRIPTION
 	);
 

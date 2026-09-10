@@ -7,13 +7,13 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "brassman", "Í­ÈË" );
+        set_name( "brassman", "éŠ…äºº" );
         add ("id", ({ "brass","monk" }) );
-        set_short( "Í­ÈË" );
-        set("unit","Î»");
+        set_short( "éŠ…äºº" );
+        set("unit","ä½");
         set_long(
 @C_LONG
-Ò»¸ö½ğ¹âÉÁÉÁµÄÍ­ÈË¡£
+ä¸€å€‹é‡‘å…‰é–ƒé–ƒçš„éŠ…äººã€‚
 C_LONG
         );
         set("hit",0);
@@ -31,7 +31,7 @@ C_LONG
         set_perm_stat("int", 20);
         set("unbleeding",1);
         set("killer",1);
-        set("c_killer_msg","Í»È»£¬Äã¿´µ½Í­ÈËÒ¡Ò¡»Î»ÎµØÏòÄã¿¿ÁË¹ıÀ´ !!");
+        set("c_killer_msg","çªç„¶ï¼Œä½ çœ‹åˆ°éŠ…äººæ–æ–æ™ƒæ™ƒåœ°å‘ä½ é äº†éä¾† !!");
         set_natural_weapon( 50, 10, 20 );
 	set_natural_armor( 50, 10 );
         set_skill("dodge", 100);
@@ -58,10 +58,10 @@ int my_tactic()
 	
 	if(((int)who->query("hit_points")*100 / (int)who->query("max_hp")) < 25) {
 		tell_object( who,
-			"Í»È»Á½¸öºìÒÂÂŞºº×ÔÇ½ÖĞ°µÃÅ×ß³ö£¬½«ÄãÌ§ÁË³öÈ¥¡£\n" );
+			"çªç„¶å…©å€‹ç´…è¡£ç¾…æ¼¢è‡ªç‰†ä¸­æš—é–€èµ°å‡ºï¼Œå°‡ä½ æŠ¬äº†å‡ºå»ã€‚\n" );
 		ob1=find_object_or_load("/d/eastland/saulin_temple/entrance");
 		tell_room(ob1,
-			sprintf("Äã¿´µ½Á½¸öºìÒÂÂŞºº½«%sÏñÌ§Öí¹«Ò»ÑùÌ§ÁË³öÀ´¡£\n",
+			sprintf("ä½ çœ‹åˆ°å…©å€‹ç´…è¡£ç¾…æ¼¢å°‡%såƒæŠ¬è±¬å…¬ä¸€æ¨£æŠ¬äº†å‡ºä¾†ã€‚\n",
 				who->query("c_name") ) );
 		who->add("monk_score",-100);
 		who->move_player(ob1,"SNEAK");
@@ -95,7 +95,7 @@ void die()
 		if ( ob1=present("club",this_object()))
 			ob1->remove();
 	if ( killer = this_object()->query("last_attacker") )
-		tell_object(killer,set_color("Ò»ÕóÇáÏì¹ıáá£¬Í­ÈË²»¶¯ÁË !!\n","HIG") );
+		tell_object(killer,set_color("ä¸€é™£è¼•éŸ¿éå¾Œï¼ŒéŠ…äººä¸å‹•äº† !!\n","HIG") );
 	call_out("remove",0);
 }
 

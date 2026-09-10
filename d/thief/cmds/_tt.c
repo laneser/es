@@ -25,7 +25,7 @@ stop_trace(object me)
 	tmp -= ({me});
 	target->set_temp("tracers",tmp);
 	me->delete_temp("trace_target");
-	tell_object(me,"ÄãÍ£Ö¹¸ú×Ù"+target->query("c_name")+"¡£\n");
+	tell_object(me,"ä½ åœæ­¢è·Ÿè¹¤"+target->query("c_name")+"ã€‚\n");
 	me->set_temp("trace_skill",0);
 }
 
@@ -36,13 +36,13 @@ int cmd_tt(string arg)
 	me = this_player();
 	if (  !(wizardp(me) || me->query("name") == "mouse") )  return 0;
 	if ( (int) me->query_temp("next_action") > time() )
-		return notify_fail("ÄãÕıÔÚ×¨ĞÄ×ö±ğµÄÊÂ!!");
+		return notify_fail("ä½ æ­£åœ¨å°ˆå¿ƒåšåˆ¥çš„äº‹!!");
 	if ( ! arg ) {
 		target = me->query_temp("trace_target");
 		if ( target )
-			write("ÄãÕıÔÚ¸ú×Ù" + target->query("c_name")+"¡£\n"); 
+			write("ä½ æ­£åœ¨è·Ÿè¹¤" + target->query("c_name")+"ã€‚\n"); 
 		else
-			write("ÄãÏÖÔÚÃ»ÓĞ¸ú×ÙÈÎºÎÈË¡£\n");
+			write("ä½ ç¾åœ¨æ²’æœ‰è·Ÿè¹¤ä»»ä½•äººã€‚\n");
 		return 1;
 	}
 	if ( arg == "none" ) {
@@ -50,7 +50,7 @@ int cmd_tt(string arg)
 		return 1;
 	}
 	if ( !(target=present(arg,environment(me))) || ! visible(target,me))
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ " + arg + " µÄÉúÎï");
+		return notify_fail("é€™è£¡æ²’æœ‰å« " + arg + " çš„ç”Ÿç‰©");
 	if ( target == me ) {
 		stop_trace(me);
 		return 1;
@@ -58,9 +58,9 @@ int cmd_tt(string arg)
 	o_target = me->query_temp("trace_target");
 	if ( o_target ) {
 	    if ( o_target != target ) 
-		return notify_fail("ÄãÕıÔÚ¸ú×ÙÁíÒ»¸öÈË,Äã±ØĞëÏÈÍ£Ö¹¸ú×ÙËû¡£\n");
+		return notify_fail("ä½ æ­£åœ¨è·Ÿè¹¤å¦ä¸€å€‹äºº,ä½ å¿…é ˆå…ˆåœæ­¢è·Ÿè¹¤ä»–ã€‚\n");
 	    else 
-		return notify_fail("ÄãÒÑ¾­ÔÚ¸ú×ÙËûÁË¡£\n");
+		return notify_fail("ä½ å·²ç¶“åœ¨è·Ÿè¹¤ä»–äº†ã€‚\n");
 	} 
 	target->add_temp("tracers",({me}) );
 	me->set_temp("trace_target",target);
@@ -68,13 +68,13 @@ int cmd_tt(string arg)
 		trace_ob = new(TRACE_OB);
 		trace_ob->move(target);
 	}
-	me->quick_message(sprintf("Äã¿ªÊ¼¸ú×Ù%s...\n",target->query("c_name")));
+	me->quick_message(sprintf("ä½ é–‹å§‹è·Ÿè¹¤%s...\n",target->query("c_name")));
 	return 1;
 }
 help()
 {
 	write(@C_HELP
-Usage : trace [ Ä³ÈË | none ]
-	¸ú×ÙÄ³¸öÍæ¼Ò, µÈµ½ÊÊµ±Ê±»úÔÙÍ»ÏÂÉ±ÊÖ.
+Usage : trace [ æŸäºº | none ]
+	è·Ÿè¹¤æŸå€‹ç©å®¶, ç­‰åˆ°é©ç•¶æ™‚æ©Ÿå†çªä¸‹æ®ºæ‰‹.
 C_HELP);
 }

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Steel Pot", "²»Õ´¹ø" );
+	set_name( "Steel Pot", "ä¸æ²¾é‹" );
 	add( "id", ({ "pot" }) );
-	set_short( "a pot", "²»Õ´¹ø" );
+	set_short( "a pot", "ä¸æ²¾é‹" );
 	set_long(
 		"??\n",
-		"ÕâÃæ¹øÊÇÓÃÄ³ÖÖÄã´ÓÃ»¼û¹ıµÄÆæÌØ½ğÊôÖÆ³ÉµÄ\n"
+		"é€™é¢é‹æ˜¯ç”¨æŸç¨®ä½ å¾æ²’è¦‹éçš„å¥‡ç‰¹é‡‘å±¬è£½æˆçš„\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "light_metal" );
 	set( "armor_class", 5 );

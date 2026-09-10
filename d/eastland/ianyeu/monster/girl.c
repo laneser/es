@@ -6,11 +6,11 @@ void create()
 {
 	::create();
    set_level(5);
-   set_name( "ru - hua", "Èç»¨" );
+   set_name( "ru - hua", "å¦‚èŠ±" );
    add( "id", ({ "girl", "liang" }) );
-   set_short( "Èç»¨" );
+   set_short( "å¦‚èŠ±" );
 	set_long(@C_LONG
-Äã¿´µ½Ò»Î»ÈİÃ²³ó¶ñ, ÂúÁ³Âé×ÓµÄÅ®º¢¡£ÄãÏë»¹ÊÇ¿ìµãÀë¿ª°É!
+ä½ çœ‹åˆ°ä¸€ä½å®¹è²Œé†œæƒ¡, æ»¿è‡‰éº»å­çš„å¥³å­©ã€‚ä½ æƒ³é‚„æ˜¯å¿«é»é›¢é–‹å§!
 C_LONG
 	);
 	set( "race", "human" );
@@ -26,7 +26,7 @@ C_LONG
 
    set( "chat_chance", 15 );
    set( "chat_output", ({
-        "Èç»¨ÇáÉùµÀ: É«ÀÇÔõ÷á»¹²»×ß?\n"
+        "å¦‚èŠ±è¼•è²é“: è‰²ç‹¼æ€éº¼é‚„ä¸èµ°?\n"
         }) );
 }
 
@@ -37,7 +37,7 @@ int stop_attack()
    mother = present( "mother", environment() );
    if( !mother ) return 0;
    tell_room( environment(),
-             "ÁºÄ¸Å­ºÈ: Ã»Á¼ĞÄµÄ¼Ò»ï, ¾¹¸ÒÆÛÎêÎÒµÄ±¦±´! È¥ËÀ°É!\n" );
+             "æ¢æ¯æ€’å–: æ²’è‰¯å¿ƒçš„å‚¢ä¼™, ç«Ÿæ•¢æ¬ºä¾®æˆ‘çš„å¯¶è²! å»æ­»å§!\n" );
    tmp = query_temp( "protectors" );
    if( !tmp || member_array( mother, tmp )==-1 ) {
         add_temp( "protectors", ({ mother }) );
@@ -52,8 +52,8 @@ void relay_message(string class1, string msg)
 {
         string who, str;
 
-        if( sscanf( msg, "%s(%s)×ßÁË¹ıÀ´¡£", str,who )==2 )
+        if( sscanf( msg, "%s(%s)èµ°äº†éä¾†ã€‚", str,who )==2 )
             tell_room( environment(this_object()), 
-                "\nÈç»¨¾ª½ĞµÀ: É«ÀÇÀ´ÁË!!\n\n" );
+                "\nå¦‚èŠ±é©šå«é“: è‰²ç‹¼ä¾†äº†!!\n\n" );
         return ;
 }

@@ -57,8 +57,8 @@ void start_war()
 	on_war = 1;
 //	call_out( "check_war", 300 );
 	announce(
-		"��Ȼ���㿴�������ը��һ�ź�ɫ���̻�����ʲ���ź� ....\n\n"
-		"��˹���������: �ܷ��������ˣ���ҳ��һ����ɳ�۴��һƱ����ѽ�� .....\n\n" );
+		"忽然，你看到天空中炸開一團紅色的煙火，像是什麼信號 ....\n\n"
+		"奧斯塔船長大叫: 傑夫被人做掉了！大家抄傢伙，到藍沙港大幹一票，衝呀！ .....\n\n" );
 	// Clone the attackers and put them to the pre-defined rooms.
 	for(i=0; i<sizeof(loc); i++ ) {
 		if( !(j= sizeof(attackers[loc[i]])) ) continue;
@@ -69,7 +69,7 @@ void start_war()
 		if( !room ) continue;
 
             tell_room( room,
-                    "�㿴��һȺ����ˮ�ִӺ������ϰ�����\n" );
+                    "你看到一群海盜水手從海里游上岸來！\n" );
 		while( j-- ) {
 			ob = new( attackers[loc[i]][j] );
 			ob->move( room );

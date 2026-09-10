@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "incantation of exorcise", "ÇıÄ§Öä" );
+	set_name( "incantation of exorcise", "é©…é­”å’’" );
 	add( "id", ({ "incantation" }) );
-	set_short( "ÇıÄ§Öä" );
+	set_short( "é©…é­”å’’" );
 	set_long(
-		"ÕâÕÅÇıÄ§ÖäÊÇÒ»ÕÅ»ÆÉ«µÄÖ½£¬ÉÏÃæ»­ÂúÍäÍäÇúÇúµÄÏßÌõºÍ·ûºÅ£¬ÒªÊ¹ÓÃ\n"
-		"ÇıÄ§Öä£¬ÓÃ zap <someone>¡£\n"
+		"é€™å¼µé©…é­”å’’æ˜¯ä¸€å¼µé»ƒè‰²çš„ç´™ï¼Œä¸Šé¢ç•«æ»¿å½å½æ›²æ›²çš„ç·šæ¢å’Œç¬¦è™Ÿï¼Œè¦ä½¿ç”¨\n"
+		"é©…é­”å’’ï¼Œç”¨ zap <someone>ã€‚\n"
 	);
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set( "weight", 5 );
 	set( "value", ({ 100, "silver" }) );
 	set( "no_sale", 1 );
@@ -27,22 +27,22 @@ int do_zap(string arg)
 	object obj;
 
 	if( !arg || arg=="" || !(obj= present(arg, environment(this_player()))) )
-		return notify_fail( "Òª¶ÔË­Ê¹ÓÃÇıÄ§Öä£¿\n");
+		return notify_fail( "è¦å°èª°ä½¿ç”¨é©…é­”å’’ï¼Ÿ\n");
 	if( base_name(obj) != "/d/noden/house/monster/devil" ) {
 		write( 
-			"ÄãÄÃ³öÇıÄ§ÖäÔÚ" + obj->query("short") + "ÃæÇ°»ÓÎè£¬²»¹ı¶Ô·½ËÆºõ²»ÊÜÓ°Ïì¡£\n");
+			"ä½ æ‹¿å‡ºé©…é­”å’’åœ¨" + obj->query("short") + "é¢å‰æ®èˆï¼Œä¸éå°æ–¹ä¼¼ä¹ä¸å—å½±éŸ¿ã€‚\n");
 
 		tell_room( environment(this_player()), 
-			this_player()->query("c_cap_name")+ "ÄÃ³öÒ»ÕÅ»ÆÉ«·ûÖäÔÚ"+obj->query("short")+"ÃæÇ°»ÓÎè¡£\n",
+			this_player()->query("c_cap_name")+ "æ‹¿å‡ºä¸€å¼µé»ƒè‰²ç¬¦å’’åœ¨"+obj->query("short")+"é¢å‰æ®èˆã€‚\n",
 			this_player() );
 		return 1;
 	} else {
-		write("ÄãÄÃ³öÇıÄ§ÖäÔÚ" + obj->query("short") + "ÃæÇ°»ÓÎè .... \n");
+		write("ä½ æ‹¿å‡ºé©…é­”å’’åœ¨" + obj->query("short") + "é¢å‰æ®èˆ .... \n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_cap_name")+ "ÄÃ³öÒ»ÕÅ»ÆÉ«·ûÖäÔÚ"+obj->query("short")+"ÃæÇ°»ÓÎè¡£\n",
+			this_player()->query("c_cap_name")+ "æ‹¿å‡ºä¸€å¼µé»ƒè‰²ç¬¦å’’åœ¨"+obj->query("short")+"é¢å‰æ®èˆã€‚\n",
 			this_player() );
 		obj->zapped();
-		write("ÄãµÄÇıÄ§ÖäÍ»È»×Ô¼º·ÉÁË³öÈ¥£¬½ô½ôÌùÔÚ" + obj->query("short") + "ÉíÉÏ£¡\n");
+		write("ä½ çš„é©…é­”å’’çªç„¶è‡ªå·±é£›äº†å‡ºå»ï¼Œç·Šç·Šè²¼åœ¨" + obj->query("short") + "èº«ä¸Šï¼\n");
 		remove();
 		return 1;
 	}

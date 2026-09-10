@@ -8,22 +8,22 @@ void create ()
 	::create();
 	//seteuid( getuid() );
     set_level(4);
-    set_name("injured soldier","°«ÈËÉË±ø");
+    set_name("injured soldier","çŸ®äººå‚·å…µ");
 add ("id", ({ "soldier","dwarf"}) );
 set_short( "a dwarf injured soldier",
-           "°«ÈËÉË±ø");
+           "çŸ®äººå‚·å…µ");
 	set_long(@LONG
 A dwarf soldier is defending the evil troll and protecting his country,but
 he is injured now
 LONG
     ,@C_LONG
-Ò»¸öÔÚÕ½¶·ÖĞÊÜÁËÉËµÄÊ¿±ø,ÉíÉÏ³äÂúÁË°ÌºÛ,¶øÇÒÄ¿Ç°È«Éí¶¼ÊÇ±Á´ø.
+ä¸€å€‹åœ¨æˆ°é¬¥ä¸­å—äº†å‚·çš„å£«å…µ,èº«ä¸Šå……æ»¿äº†ç–¤ç—•,è€Œä¸”ç›®å‰å…¨èº«éƒ½æ˜¯ç¹ƒå¸¶.
 C_LONG
 	);
     set("alignment", 20 );
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",4);
     set_perm_stat( "str",5);
     set_perm_stat( "int",3);

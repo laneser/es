@@ -8,11 +8,11 @@ void ruin_exit();
 void create()
 {
 	::create();
-    set_short("The dark cave","ºÚ°µµÄ¶´Ñ¨");
+    set_short("The dark cave","é»‘æš—çš„æ´ç©´");
     set_long(@Long
 Long
 ,@CLong
-ºÚ°µµÄ¶´Ñ¨
+é»‘æš—çš„æ´ç©´
 CLong
     );
     set("exits",([
@@ -41,7 +41,7 @@ void ruin_exit()
      for(i=0;i<sizeof(items);i++) 
         if ( (string)items[i]->query("name")== "Black Box of Molader" )
            if (items[i]->query("quest_action/invoke_bell"))
-             write("ÄãµÄÁåµ±ÔÚÕâÀïºöÈ»ÏìÁËÆğÀ´.¶«±ßºÃÏñÓĞ¸öÒşÃÜµÄ³ö¿Ú.\n");
+             write("ä½ çš„éˆ´ç•¶åœ¨é€™è£¡å¿½ç„¶éŸ¿äº†èµ·ä¾†.æ±é‚Šå¥½åƒæœ‰å€‹éš±å¯†çš„å‡ºå£.\n");
      return ;
 }
 
@@ -54,6 +54,6 @@ int to_east()
         if ( (string)items[i]->query("name")== "Black Box of Molader" )
            if (items[i]->query("quest_action/invoke_bell")) 
              return 0; 
-     write("Õâ·½ÏòÃ»ÓĞÃ÷ÏÔµÄ³ö¿Ú.\n");        
+     write("é€™æ–¹å‘æ²’æœ‰æ˜é¡¯çš„å‡ºå£.\n");        
      return 1;
 }

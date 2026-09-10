@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "black gauntlets","ºÚÉ«»¤ÊÖ");
+        set_name( "black gauntlets","é»‘è‰²è­·æ‰‹");
         add( "id", ({ "gauntlets" }) );
-        set_short("black gauntlets","ºÚÉ«»¤ÊÖ" );
+        set_short("black gauntlets","é»‘è‰²è­·æ‰‹" );
         set_long(@AAA
-Ò»¸öºÚÉ«µÄ»¤ÊÖ,ÊÇÓÃÖØ½ğÊôËùÖÆ³ÉµÄ,ËùÒÔ·Ç³£µÄÖØ,²»ÊÇÆÕÍ¨ÈË¿ÉÒÔÓÃµÄ·À¾ß
+ä¸€å€‹é»‘è‰²çš„è­·æ‰‹,æ˜¯ç”¨é‡é‡‘å±¬æ‰€è£½æˆçš„,æ‰€ä»¥éå¸¸çš„é‡,ä¸æ˜¯æ™®é€šäººå¯ä»¥ç”¨çš„é˜²å…·
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "hands" );
         set( "armor_class", 4 );
         set( "defense_bonus", 3 );

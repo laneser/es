@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("beholder globe","ÑÛÄ§»¤¶ÜÔ²Çò");
+        set_name("beholder globe","çœ¼é­”è­·ç›¾åœ“çƒ");
         add("id",({"globe"}) );
-         set_short( "a beholder globe","ÑÛÄ§»¤¶ÜÔ²Çò");
+         set_short( "a beholder globe","çœ¼é­”è­·ç›¾åœ“çƒ");
 	set_long(
-"Ò»¸öÇò×´µÄ·´ÎïÖÊ,ÏñÊÇÒ»ÖÖ»¤¶Ü²úÉúÆ÷\n"
+"ä¸€å€‹çƒç‹€çš„åç‰©è³ª,åƒæ˜¯ä¸€ç¨®è­·ç›¾ç”¢ç”Ÿå™¨\n"
 	);
 	set( "echo_chain_need",1);
-	set( "unit", "ÖÖ" );
+	set( "unit", "ç¨®" );
 	set( "weight", 110 );
 	set( "type", "globe" );
 	set( "material", "element" );

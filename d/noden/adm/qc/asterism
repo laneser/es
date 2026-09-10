@@ -1,33 +1,33 @@
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1.Ë®¾§»¤Éí·û (/d/noden/asterism/armor/amulet_g02.c)
+1.æ°´æ™¶è­·èº«ç¬¦ (/d/noden/asterism/armor/amulet_g02.c)
    0   *10       5       ok      element     mad
-2.ÉÁÉÁ·¢¹âµÄ»¤Éí·û (/d/noden/asterism/armor/amulet_h01.c)
+2.é–ƒé–ƒç™¼å…‰çš„è­·èº«ç¬¦ (/d/noden/asterism/armor/amulet_h01.c)
    0    *7       15      ok      cloth       mad
-3.ÇàÍ­»¤Éí·û (/d/noden/asterism/armor/amulet_h02.c)
+3.é’éŠ…è­·èº«ç¬¦ (/d/noden/asterism/armor/amulet_h02.c)
    0    *7       5       ok      l_metal     mad
-4.°×½ğÑ¥ (/d/noden/asterism/armor/boots03.c)
+4.ç™½é‡‘é´ (/d/noden/asterism/armor/boots03.c)
  *10     4      120      ok      h_metal     mad
-5.°×É«Æ¤¸ïÊÖÌ× (/d/noden/asterism/armor/gloves02.c)
+5.ç™½è‰²çš®é©æ‰‹å¥— (/d/noden/asterism/armor/gloves02.c)
   *5     2       60      ok      leather     mad
-6.ºÚê×Ê¯ÊÖÌ× (/d/noden/asterism/armor/gloves03.c)
+6.é»‘æ›œçŸ³æ‰‹å¥— (/d/noden/asterism/armor/gloves03.c)
   *5     3       65      ok      element     mad
-7.²øÍ·½í (/d/noden/asterism/armor/helmet03.c)
+7.çºé ­å·¾ (/d/noden/asterism/armor/helmet03.c)
    5    *5       30      ok      cloth       mad
-8.Ê¥ÅÛ (/d/noden/asterism/armor/robe01.c)
+8.è–è¢ (/d/noden/asterism/armor/robe01.c)
   35     5      170       *      cloth       mad
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1.ºÚê×Ê¯³¤½£ (/d/noden/asterism/weapon/longsword04.c)
+1.é»‘æ›œçŸ³é•·åŠ (/d/noden/asterism/weapon/longsword04.c)
  *38    *28     39      240        0         mad
-2.¶Ì±Ş (/d/noden/asterism/weapon/short_whip.c)
+2.çŸ­é­ (/d/noden/asterism/weapon/short_whip.c)
   25    *18     25       80        0         mad
-3.±ù¾§ÕÈ (/d/noden/asterism/weapon/wand02.c)
-  23    *14     22       40     ÌØ¹¥:35      mad
-4.ÓÀÉúÖ®ÕÈ (/d/noden/asterism/weapon/wand03.c)
- *40    *18    *37       90     ÌØ¹¥:55      mad
+3.å†°æ™¶æ– (/d/noden/asterism/weapon/wand02.c)
+  23    *14     22       40     ç‰¹æ”»:35      mad
+4.æ°¸ç”Ÿä¹‹æ– (/d/noden/asterism/weapon/wand03.c)
+ *40    *18    *37       90     ç‰¹æ”»:55      mad

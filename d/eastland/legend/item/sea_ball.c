@@ -6,14 +6,14 @@ inherit OBJECT;
 void create()
 {
      seteuid(getuid());
-     set_name("Sea Ball", "¶¨º£Öé");
+     set_name("Sea Ball", "å®šæµ·ç ");
      add("id", ({ "sea ball","ball" }) );
-     set_short("¶¨º£Öé");
+     set_short("å®šæµ·ç ");
      set_long(@C_LONG
-Ò»¿ÅµåÀ¶É«µÄÖé×Ó,ÒþÒþÔ¼Ô¼´«À´º£µÄÑ¶Ï¢¡£
+ä¸€é¡†é›è—è‰²çš„ç å­,éš±éš±ç´„ç´„å‚³ä¾†æµ·çš„è¨Šæ¯ã€‚
 C_LONG
      );                             
-     set( "unit", "¿Å" );
+     set( "unit", "é¡†" );
      set( "no_sale",1);
 }
 void init()
@@ -32,17 +32,17 @@ int do_roll(string arg)
     if ( !env->query("can_use_sea_ball") )
        return 0;
     if ( env->query("exits/tunnel") ) {
-       tell_object(holder,"ÕâÀï¼º¾­ÓÐÒ»ÌõÍ¨µÀ ( tunnel ) ÁË!\n");       
+       tell_object(holder,"é€™è£¡å·±ç¶“æœ‰ä¸€æ¢é€šé“ ( tunnel ) äº†!\n");       
        return 1;
     }
     if ( present("water beast",env) ) 
       return 0;
     holder->set_temp("block_command",1);
     tell_object(holder,set_color(
-        "\n\n       Äã¿ÚÖÐà«à«×ÔÓïµØÓÃÊÖÄ¦²ÁÖø¶¨º£Öé..\n\n\n",
+        "\n\n       ä½ å£ä¸­å–ƒå–ƒè‡ªèªžåœ°ç”¨æ‰‹æ‘©æ“¦è‘—å®šæµ·ç ..\n\n\n",
         "HIC"));
     tell_room(env,set_color(sprintf(
-        "\n\n       %s¿ÚÖÐà«à«×ÔÓïµØÓÃÊÖÄ¦²ÁÖø¶¨º£Öé..\n\n\n",holder->query("c_name")),
+        "\n\n       %så£ä¸­å–ƒå–ƒè‡ªèªžåœ°ç”¨æ‰‹æ‘©æ“¦è‘—å®šæµ·ç ..\n\n\n",holder->query("c_name")),
         "HIC"),holder);   
     call_out("recover1",2,holder,env);       
     return 1;
@@ -50,8 +50,8 @@ int do_roll(string arg)
 void recover1(object holder,object env)
 {
     tell_room(env,set_color(
-       "\n\n       ºöÈ»¼ä£¡£¡ºþÃæ²¨ÀË¡õÌì¡¢À×µç½»¼Ó£¬ÉõÊÇÏÕ¶ñ....\n\n"
-       "       ÄãÐÄÀïÉÁ¹ý²»ºÃµÄÔ¤¸Ð£¡£¡\n\n"
+       "\n\n       å¿½ç„¶é–“ï¼ï¼æ¹–é¢æ³¢æµªâ–¡å¤©ã€é›·é›»äº¤åŠ ï¼Œç”šæ˜¯éšªæƒ¡....\n\n"
+       "       ä½ å¿ƒè£¡é–ƒéŽä¸å¥½çš„é æ„Ÿï¼ï¼\n\n"
        ,"HIC"));
     call_out("recover2",6,holder,env);
 }    
@@ -60,15 +60,15 @@ void recover2(object holder,object env)
     object beast; 
     holder->delete_temp("block_command");
     tell_room(env,set_color( 
-       "\n\n       ºä£¡Ò»µÀÉÁµç´¹Ö±ºäÏòºþÃæ£¡£¡\n\n" 
-       "       ÔÚÉÁµç¹ýáá£¬ºþÃæÒþÒþÔ¼Ô¼µØ³öÏÖÒ»Ìõð®µÀ ( water-tunnel ) £¡£¡\n\n\n"
+       "\n\n       è½Ÿï¼ä¸€é“é–ƒé›»åž‚ç›´è½Ÿå‘æ¹–é¢ï¼ï¼\n\n" 
+       "       åœ¨é–ƒé›»éŽå¾Œï¼Œæ¹–é¢éš±éš±ç´„ç´„åœ°å‡ºç¾ä¸€æ¢ç”¬é“ ( water-tunnel ) ï¼ï¼\n\n\n"
        ,"HIC"));
     if ( !beast=present("water beast",env) ) {
        beast=new(LMONSTER"water_mob");
        beast->move(env);  
     }
     env->add("exits/tunnel",LAKE"lake1");
-    env->add("c_item_desc/water-tunnel","Ò»ÌõË®µÀ ( tunnel ),Á½ÅÔ¶¼ÊÇÕÉ¸ßµÄË®Ç½¡£\n");
+    env->add("c_item_desc/water-tunnel","ä¸€æ¢æ°´é“ ( tunnel ),å…©æ—éƒ½æ˜¯ä¸ˆé«˜çš„æ°´ç‰†ã€‚\n");
     env->set( "exit_suppress", ({
                    "tunnel"}) );
     this_object()->remove();

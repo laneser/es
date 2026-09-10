@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Silk cloth","Ë¿ÖÆÒÂ·ş");
+        set_name("Silk cloth","çµ²è£½è¡£æœ");
         add("id",({"cloth"}) );
-         set_short( "Silk cloth","Ë¿ÖÆÒÂ·ş");
+         set_short( "Silk cloth","çµ²è£½è¡£æœ");
 	set_long(
 "This is a suit of cloth made of silk meterial.and it is worn \n"
 "by Yang's bishop.\n"
-"ÕâÊÇÒ»¼şË¿ÖÆÒÂ·ş,Í¨³£ÊÇ Yang µÄÄÁÊ¦Ëù´©µÄ,Òò´ËÓĞÒ»ÖÖ±£»¤Á¦¸½ÔÚÉíÉÏ\n"
+"é€™æ˜¯ä¸€ä»¶çµ²è£½è¡£æœ,é€šå¸¸æ˜¯ Yang çš„ç‰§å¸«æ‰€ç©¿çš„,å› æ­¤æœ‰ä¸€ç¨®ä¿è­·åŠ›é™„åœ¨èº«ä¸Š\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 150 );
 	set( "type", "body" );
 	set( "material", "cloth" );

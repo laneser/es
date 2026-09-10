@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "eight belt", "°ËØÔÒõÑô´ø" );
+        set_name( "eight belt", "å…«å¦é™°é™½å¸¶" );
         add( "id", ({ "belt" }) );
-        set_short( "°ËØÔÒõÑô´ø" );
+        set_short( "å…«å¦é™°é™½å¸¶" );
         set_long(@C_LONG
-Ò»¼şĞåÖø°ËØÔÍ¼ĞÎµÄÑü´ø¡£
+ä¸€ä»¶ç¹¡è‘—å…«å¦åœ–å½¢çš„è…°å¸¶ã€‚
 C_LONG
         );
-        set( "unit", "¼ş");
+        set( "unit", "ä»¶");
         set( "type", "legs" );
         set( "material", "cloth");
         set( "armor_class", 3 );

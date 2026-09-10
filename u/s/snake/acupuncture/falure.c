@@ -28,14 +28,14 @@ int cast(int level, object target)
 	target->delete("acupuncted_pts") ;
 	target->delete_temp("acupuncted_pts") ;	
 	
-	write(  "ÄãËæµØ×øÏÂ²¢Ç£Æð"+target->query("c_name")+
-		"µÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n" );
+	write(  "ä½ éš¨åœ°åä¸‹ä¸¦ç‰½èµ·"+target->query("c_name")+
+		"çš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n" );
 	tell_room( environment(me), ({
-		me->query("c_name") + "ËæµØ×øÏÂ²¢Ç£Æð"
-		+target->query("c_name")+"µÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n"}),
+		me->query("c_name") + "éš¨åœ°åä¸‹ä¸¦ç‰½èµ·"
+		+target->query("c_name")+"çš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n"}),
 		me ,target);
         tell_object(target,me->query("c_name") + 
-                           "ËæµØ×øÏÂ²¢Ç£ÆðÄãµÄÊÖ,»º»º½«ÆøËÍ½øÀ´¡£\n" ) ;
+                           "éš¨åœ°åä¸‹ä¸¦ç‰½èµ·ä½ çš„æ‰‹,ç·©ç·©å°‡æ°£é€é€²ä¾†ã€‚\n" ) ;
 
 	call_out( "effect", delay_time, level, me, target );
 	return 1;
@@ -48,18 +48,18 @@ void effect(int level, object caster, object dest)
         caster->set_temp("cast_busy", 0);
 	if( !dest || !present(dest, environment(caster)) ) {
 	  tell_object( caster, 
-	    "²»ÖªÔõ÷áµÄ,Ò²ÐíÊÇ¾õµÃÄãÊÇ¸öÃÉ¹Å´ó·ò¡£×ÜÖ®,ÄãµÄ»¼Õß×ßµôÁË¡£\n" 
+	    "ä¸çŸ¥æ€Žéº¼çš„,ä¹Ÿè¨±æ˜¯è¦ºå¾—ä½ æ˜¯å€‹è’™å¤å¤§å¤«ã€‚ç¸½ä¹‹,ä½ çš„æ‚£è€…èµ°æŽ‰äº†ã€‚\n" 
 	  );
 	  return;
 	}
 	
 	if( dest->query_temp("effect/windex") ) {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬µ«ÊÇºÃÏñ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼Œä½†æ˜¯å¥½åƒä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n"
 		);
 	} else {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼·ÐÌÚ£¬¶øÖÜÔâµÄÈËÃÇºÃÏñ¶¼ÔÚÂý¶¯×÷µÄ×´Ì¬ÖÐ£¡\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹æ²¸é¨°ï¼Œè€Œå‘¨é­çš„äººå€‘å¥½åƒéƒ½åœ¨æ…¢å‹•ä½œçš„ç‹€æ…‹ä¸­ï¼\n"
 		);
 		speed = level ;
 		if( caster == dest )
@@ -71,8 +71,8 @@ void effect(int level, object caster, object dest)
 		call_out( "expire", duration, dest, speed );
 	}
 	tell_room( environment(dest), ({
-		"ÄãÏÅÈ»·¢ÏÖ"+dest->query("c_name")+"µÄ¶¯×÷¿ìµÃ¿äÕÅ, \n"
-		"µ½´¦¶¼ÊÇËûÒÆ¶¯ááÁôÏÂµÄ²ÐÏñ¡£\n"}),
+		"ä½ åš‡ç„¶ç™¼ç¾"+dest->query("c_name")+"çš„å‹•ä½œå¿«å¾—èª‡å¼µ, \n"
+		"åˆ°è™•éƒ½æ˜¯ä»–ç§»å‹•å¾Œç•™ä¸‹çš„æ®˜åƒã€‚\n"}),
 		dest );
 }
 
@@ -80,7 +80,7 @@ void expire( object player, int speed)
 {
     if( !player ) return;
 	tell_object( player,
-		"Äã¾õµÃÄãµÄËÙ¶ÈÂýÁËÏÂÀ´£¬Í¬Ê±ÆøÑªµÄÁ÷¶¯±äµÃ»ººÍ....¡£\n" );
+		"ä½ è¦ºå¾—ä½ çš„é€Ÿåº¦æ…¢äº†ä¸‹ä¾†ï¼ŒåŒæ™‚æ°£è¡€çš„æµå‹•è®Šå¾—ç·©å’Œ....ã€‚\n" );
 	player->modify_stat("dex", -speed);
 	player->set_temp("effect/windex", 0 );
 }

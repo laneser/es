@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("wooden stick","Ä¾Í·¹ÕÕÈ");
+       set_name("wooden stick","æœ¨é ­æŸºæ–");
        add("id",({"stick",}) );
-       set_short("Ä¾Í·¹ÕÕÈ");
+       set_short("æœ¨é ­æŸºæ–");
        set_long(
-           "ÓÃÄ¾Í·×ö³ÉµÄ¹ÕÕÈ\n"
+           "ç”¨æœ¨é ­åšæˆçš„æŸºæ–\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 7 );
     set("type","blunt");
 	set( "min_damage", 2 );

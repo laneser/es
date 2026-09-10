@@ -3,15 +3,15 @@ inherit ARMOR;
 inherit SARM"OR";
 void create()
 {
-     set_name( "cloth of God","ÓğÉñÒÂ" );
+     set_name( "cloth of God","ç¾½ç¥è¡£" );
      add( "id",({ "cloth" }) );
-     set_short( set_color("ÓğÉñÒÂ","HIY") );
+     set_short( set_color("ç¾½ç¥è¡£","HIY") );
      set_long(@C_LONG
-ÕâÊÇÒ»¼ş¾­¹ıÉñµÄÑªÏ´Àñ¶ø³ÉµÄÒÂ·ş£¬²¢¾­¹ıÌìÉñ×£¸£µÄ·À¾ß¡£
+é€™æ˜¯ä¸€ä»¶ç¶“éç¥çš„è¡€æ´—ç¦®è€Œæˆçš„è¡£æœï¼Œä¸¦ç¶“éå¤©ç¥ç¥ç¦çš„é˜²å…·ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","cloth" );
      set( "armor_class",22 );

@@ -20,7 +20,7 @@ void trap_fire()
         }
       }
    tell_room(this_object(),
-             HIR+"地上的忽然洞喷出火来,把你给灼伤了.\n"+NOR
+             HIR+"鍦颁笂鐨勫拷鐒舵礊鍣村嚭鐏締,鎶婁綘绲︾伡鍌蜂簡.\n"+NOR
              );   
    if (again) call_out("trap_fire",random(5)+1);   
 }

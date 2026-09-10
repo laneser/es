@@ -6,12 +6,12 @@ void create ()
 {
         ::create();
         set_level(12);
-        set_name( "market guard", "ÊĞ³¡¾¯ÎÀ" );
+        set_name( "market guard", "å¸‚å ´è­¦è¡›" );
         add ("id", ({ "guard"}) );
-        set_short( "market guard","ÊĞ³¡¾¯ÎÀ");
-        set("unit","Î»");
+        set_short( "market guard","å¸‚å ´è­¦è¡›");
+        set("unit","ä½");
         set_long(@AAA
-Ò»¸ö¸ºÔğÎ¬³ÖÊĞ³¡ÖÎ°²µÄ¾¯ÎÀ
+ä¸€å€‹è² è²¬ç¶­æŒå¸‚å ´æ²»å®‰çš„è­¦è¡›
 AAA
         );
         set_skill("blunt",60);
@@ -26,7 +26,7 @@ AAA
         set ("gender", "male");
         set("wealth/silver",150);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(MOBJ"club.c");
 }

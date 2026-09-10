@@ -32,20 +32,20 @@ int acu_effect(int level, object target)
 	target->delete("acupuncted_pts") ;
 	target->delete_temp("acupuncted_pts") ;	
        
-        if(target == me) targetname = "×Ô¼º" ;
+        if(target == me) targetname = "è‡ªå·±" ;
         else
         { 
           targetname = target->query("c_name") ;
           tell_object(target,sprintf(
-                     "%sËæµØ×øÏÂ²¢Ç£ÆğÄãµÄÊÖ,»º»º½«ÆøËÍ½øÀ´¡£\n",
+                     "%séš¨åœ°åä¸‹ä¸¦ç‰½èµ·ä½ çš„æ‰‹,ç·©ç·©å°‡æ°£é€é€²ä¾†ã€‚\n",
                      me->query("c_name") ) ) ;
          }
 
-	write(sprintf("ÄãÏ¯µØ×øÏÂ²¢Ç£Æğ%sµÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+	write(sprintf("ä½ å¸­åœ°åä¸‹ä¸¦ç‰½èµ·%sçš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºå»ã€‚\n",
 	               targetname));
 
 	tell_room( environment(me),sprintf( 
-		"%sËæµØ×øÏÂ²¢Ç£Æğ%sµÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+		"%séš¨åœ°åä¸‹ä¸¦ç‰½èµ·%sçš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºå»ã€‚\n",
 		 me->query("c_name"),targetname ),
 		({ me ,target }) );
 		
@@ -61,7 +61,7 @@ void effect(int level, object caster, object dest)
         caster->set_temp("cast_busy", 0);
 	if( !dest || !present(dest, environment(caster)) ) {
 	     tell_object( caster, 
-	      "²»ÖªÔõ÷áµÄ,Ò²ĞíÊÇ¾õµÃÄãÊÇ¸öÃÉ¹Å´ó·ò¡£×ÜÖ®,ÄãµÄ»¼Õß×ßµôÁË¡£\n" 
+	      "ä¸çŸ¥æ€éº¼çš„,ä¹Ÿè¨±æ˜¯è¦ºå¾—ä½ æ˜¯å€‹è’™å¤å¤§å¤«ã€‚ç¸½ä¹‹,ä½ çš„æ‚£è€…èµ°æ‰äº†ã€‚\n" 
 	         );
 	     return;
     	    }
@@ -69,13 +69,13 @@ void effect(int level, object caster, object dest)
 	if( dest->query_temp("acup_effect/"+EFFECT_ID) ) 
 	    {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬µ«ÊÇºÃÏñ²¢Ã»ÓĞÊ²÷á²»Í¬....¡£\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼Œä½†æ˜¯å¥½åƒä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n"
 		);
 	    }
 	 else
 	    {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬Í¬Ê±¸÷ÖÖ¸ĞÓ¦Í»È»ÄªÃûµÄÃôÈñÆğÀ´£¡\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼ŒåŒæ™‚å„ç¨®æ„Ÿæ‡‰çªç„¶è«åçš„æ•éŠ³èµ·ä¾†ï¼\n"
 		);
 		if( caster == dest )
 			duration = level * 50 + (int)caster->query_stat("pie") * 5;
@@ -88,7 +88,7 @@ void effect(int level, object caster, object dest)
                 skill_no = sizeof(skill_name) ;
 		eff = (level-BASIC_NEEDED+1) ;
                 if(!(skill_no)||skill_no==0) {
-                     write("¶Ô·½Ê²÷á¶¼Ã»Ñ§¹ı¡£\n") ;
+                     write("å°æ–¹ä»€éº¼éƒ½æ²’å­¸éã€‚\n") ;
                      return ;
 				}
                 for(i=0;i<skill_no;i++)
@@ -100,7 +100,7 @@ void effect(int level, object caster, object dest)
                      skills[skill_name[i]] = mod ;                           
                    }  
         	tell_room( environment(dest),sprintf(
-		    "ÄãÍ»È»¾õµÃ%sÉíÉÏÄªÃûµÄ¶à³öÁËÒ»¹É±ÆÈËµÄÓ¢Æø¡£\n",
+		    "ä½ çªç„¶è¦ºå¾—%sèº«ä¸Šè«åçš„å¤šå‡ºäº†ä¸€è‚¡é€¼äººçš„è‹±æ°£ã€‚\n",
 		    dest->query("c_name") ),dest );
 
 		dest->set_temp("acup_effect/"+EFFECT_ID, 1);
@@ -128,9 +128,9 @@ void expire(object player,mapping skill_mod)
          if(!(mod_val))
          	continue;
 /*
-   //   ²»Õı³£µÄÀíÓÉÊÇ¸Õ¸ÕÓĞ¼ÓÇ¿µÄ¼¼ÄÜÏÖÔÚÈ´ÕÒ²»µ½ÁË..     
-              tell_object(player,"ÄãµÄ¼¼ÄÜµµ°¸ËÆºõ²»Õı³£,ÇëËÙÇ¢Î×Ê¦½â¾ö¡£\n") ;
-// Õâ²¿·İ²»ÕıÈ·£¬ÒòÎªÈç¹û player skill Ì«µÍ£¬¿ÉÄÜ modify = 0;
+   //   ä¸æ­£å¸¸çš„ç†ç”±æ˜¯å‰›å‰›æœ‰åŠ å¼·çš„æŠ€èƒ½ç¾åœ¨å»æ‰¾ä¸åˆ°äº†..     
+              tell_object(player,"ä½ çš„æŠ€èƒ½æª”æ¡ˆä¼¼ä¹ä¸æ­£å¸¸,è«‹é€Ÿæ´½å·«å¸«è§£æ±ºã€‚\n") ;
+// é€™éƒ¨ä»½ä¸æ­£ç¢ºï¼Œå› ç‚ºå¦‚æœ player skill å¤ªä½ï¼Œå¯èƒ½ modify = 0;
 By Ruby@ES 96'1/27
 */
          else
@@ -139,7 +139,7 @@ By Ruby@ES 96'1/27
     player->delete_temp("acup_effect/"+EFFECT_ID);
 
     tell_object( player,
-		"ÄãÄªÃûµØ±»¼¤·¢³öÀ´µÄÇ±ÄÜ,ÓÖÄªÃûµÄ»Øµ½ÍùÈÕ³ÁÃßµÄ×´Ì¬....¡£\n" );
+		"ä½ è«ååœ°è¢«æ¿€ç™¼å‡ºä¾†çš„æ½›èƒ½,åˆè«åçš„å›åˆ°å¾€æ—¥æ²‰çœ çš„ç‹€æ…‹....ã€‚\n" );
     
     return ;	
 }

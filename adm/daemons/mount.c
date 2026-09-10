@@ -17,7 +17,7 @@ int mount(object me,object who)
 	// This beast has a master, check it.
 		if( master_name != (string)who->query("name") ) {
 			tell_object(who,
-				sprintf("ÕâÖ»%sÒÑ¾­ÓÐÖ÷ÈËÁË.¡¡\n",me->query("c_name")));
+				sprintf("é€™éš»%så·²ç¶“æœ‰ä¸»äººäº†.ã€€\n",me->query("c_name")));
 			return 1;
 	    }		
 	} 
@@ -25,15 +25,15 @@ int mount(object me,object who)
 	// This is a wild beast.
 		if( master_skill/2 + random(master_skill/2) > (int)me->query_level() * 5 ) {
 			me->set("mountable", 1);
-			tell_object(who,sprintf("ÄãÌøµ½%sµÄ±³ÉÏ£¬²¢ÇÒ³É¹¦µØ½«ËüÑ±·þÁË£¡\n",me->query("c_name") ));
+			tell_object(who,sprintf("ä½ è·³åˆ°%sçš„èƒŒä¸Šï¼Œä¸¦ä¸”æˆåŠŸåœ°å°‡å®ƒé¦´æœäº†ï¼\n",me->query("c_name") ));
 			tell_room( environment(me), 
-				sprintf("%sÌøµ½%sµÄ±³ÉÏ£¬²¢ÇÒ³É¹¦µØÑ±·þÁËËü£¡\n" ,
+				sprintf("%sè·³åˆ°%sçš„èƒŒä¸Šï¼Œä¸¦ä¸”æˆåŠŸåœ°é¦´æœäº†å®ƒï¼\n" ,
 				who->query("c_name"),me->query("c_name") ), who );
 			me->cease_all_attacks();
 		} else {
-			tell_object(who,sprintf("ÄãÆóÍ¼Ìøµ½%s±³ÉÏ£¬µ«ÊÇºÜ¿ìµØË¤ÁËÏÂÀ´£¡\n",me->query("c_name")));
+			tell_object(who,sprintf("ä½ ä¼åœ–è·³åˆ°%sèƒŒä¸Šï¼Œä½†æ˜¯å¾ˆå¿«åœ°æ‘”äº†ä¸‹ä¾†ï¼\n",me->query("c_name")));
 			tell_room( environment(me), 
-				sprintf("%sÌøµ½%sµÄ±³ÉÏ£¬µ«ÊÇºÜ¿ìµØ±»Ë¤ÁËÏÂÀ´£¡\n",
+				sprintf("%sè·³åˆ°%sçš„èƒŒä¸Šï¼Œä½†æ˜¯å¾ˆå¿«åœ°è¢«æ‘”äº†ä¸‹ä¾†ï¼\n",
 				who->query("c_name"),me->query("c_name")), who );
 			me->kill_ob(who);
 			who->block_attack(8);
@@ -42,7 +42,7 @@ int mount(object me,object who)
 	} else if( master_skill < (int)me->query_level() * 4 ) {
 	// Check if the ider is qualified.
 		tell_object(who, 
-			"ÄãµÄÆïÊõ»¹²»¹»¸ßÃ÷£¬»¹ÊÇ±ðÊÔµÄºÃ.¡¡\n");
+			"ä½ çš„é¨Žè¡“é‚„ä¸å¤ é«˜æ˜Žï¼Œé‚„æ˜¯åˆ¥è©¦çš„å¥½.ã€€\n");
 		return 1;
 	}
 	seteuid(getuid());
@@ -59,15 +59,15 @@ int mount(object me,object who)
 	mount_ob->set("hp",me->query("hit_points"));
 	if( (int)mount_ob->move(who) != MOVE_OK ) {
 		mount_ob->remove();
-		tell_object(who,"ÎÞ·¨ÆïÉÏ×ùÆï !! ÇëÍ¨ÖªÎ×Ê¦´¦Àí !\n");
+		tell_object(who,"ç„¡æ³•é¨Žä¸Šåº§é¨Ž !! è«‹é€šçŸ¥å·«å¸«è™•ç† !\n");
 		return 1;
 	}
 		
 	who->set_temp("mounting", mount_ob);
 	
-	tell_object(who,sprintf("ÄãÌøµ½%s ±³ÉÏ£¬Èç¹ûÒªÏÂÀ´£¬ÓÃ dismount¡¡\n",me->query("c_name")));
+	tell_object(who,sprintf("ä½ è·³åˆ°%s èƒŒä¸Šï¼Œå¦‚æžœè¦ä¸‹ä¾†ï¼Œç”¨ dismountã€€\n",me->query("c_name")));
 	tell_room( environment(who), 
-		sprintf("%sÌøµ½%sµÄ±³ÉÏ.¡¡\n" ,
+		sprintf("%sè·³åˆ°%sçš„èƒŒä¸Š.ã€€\n" ,
 		who->query("c_name"),me->query("c_name")), who );
          who->set("player_invisible",0);
 	inv = all_inventory(me);
@@ -103,9 +103,9 @@ int dismount(object me,object who)
 	mount_ob->set("master",(string)who->query("name"));
 	mount_ob->set("mountable",1);
 
-	tell_object(who,sprintf("Äã´Ó%sµÄ±³ÉÏÌøÁËÏÂÀ´.¡¡\n",mount_ob->query("c_name") ));
+	tell_object(who,sprintf("ä½ å¾ž%sçš„èƒŒä¸Šè·³äº†ä¸‹ä¾†.ã€€\n",mount_ob->query("c_name") ));
 	tell_room( environment(who), 
-		sprintf("%s´Ó%s µÄ±³ÉÏÌøÁËÏÂÀ´.¡¡\n" ,
+		sprintf("%så¾ž%s çš„èƒŒä¸Šè·³äº†ä¸‹ä¾†.ã€€\n" ,
 		who->query("c_name"),mount_ob->query("c_name")),
 		who );
 

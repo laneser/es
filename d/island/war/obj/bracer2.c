@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Silvery Bracer","ÒøÉ«»¤Íó" );
+	set_name( "Silvery Bracer","éŠ€è‰²è­·è…•" );
 	add( "id",({ "bracer" }) );
-	set_short( "ÒøÉ«»¤Íó" );
+	set_short( "éŠ€è‰²è­·è…•" );
 	set_long(@LONG
-	ÕâÊÇÒ»¸±ÉÁÒ«ÖøÒøÉ«¹âÃ¢µÄ»¤Íó¡£
+	é€™æ˜¯ä¸€å‰¯é–ƒè€€è‘—éŠ€è‰²å…‰èŠ’çš„è­·è…•ã€‚
 LONG
            	);
-	set( "unit","¸±" );
+	set( "unit","å‰¯" );
 	set( "weight",45 );
 	set( "type","hands" );
 	set( "material","light_metal" );

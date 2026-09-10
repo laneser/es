@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Hades Veil","ºÚµÛË¹ÃæÉ´" );
+        set_name( "Hades Veil","é»‘å¸æ–¯é¢ç´—" );
         add( "id", ({ "veil","hades veil" }) );
-        set_short( "ºÚµÛË¹ÃæÉ´" );
+        set_short( "é»‘å¸æ–¯é¢ç´—" );
         set_long(
-                "ÕâÖ»ºÚÉ«µÄÃæÉ´ÉÏÃæ»­ÂúÁËĞí¶àĞ°¶ñµÄÍ¼Ñù, ¿´À´ÏñÊÇÚ¤½çºÚ"+
-                "µÛË¹ËùÓÃµÄ¡£\n"
+                "é€™éš»é»‘è‰²çš„é¢ç´—ä¸Šé¢ç•«æ»¿äº†è¨±å¤šé‚ªæƒ¡çš„åœ–æ¨£, çœ‹ä¾†åƒæ˜¯å†¥ç•Œé»‘"+
+                "å¸æ–¯æ‰€ç”¨çš„ã€‚\n"
         );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
 	set("material","cloth");
 	set( "type", "head" );
         set( "armor_class", 1 );

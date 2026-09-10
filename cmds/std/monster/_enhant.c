@@ -18,42 +18,42 @@ int cmd_enhant(string gonfu)
 
 	if( (int)this_player()->query("stop_attack")>0 )
 		return notify_fail (can_read_chinese()?
-			"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨Ê©Õ¹ÕĞÊ½¡£ )\n":
+			"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•æ–½å±•æ‹›å¼ã€‚ )\n":
 			"( You are too busy to enhant a gonfu now. )\n"
 		);
     if( this_player()->query_temp("no_enhant") ||
         this_player()->query("no_enhant") )
       return notify_fail( can_read_chinese() ?
-        "ÄãÕı×¼±¸Ê¹ÓÃÕĞÊ½Ê±£¬¾¹È»·¢ÏÖÄãÍ»È»Íü¼ÇÆğÊÖÊ½ÁË¡£\n" :
+        "ä½ æ­£æº–å‚™ä½¿ç”¨æ‹›å¼æ™‚ï¼Œç«Ÿç„¶ç™¼ç¾ä½ çªç„¶å¿˜è¨˜èµ·æ‰‹å¼äº†ã€‚\n" :
         "You forget how to enhant any gonfu!\n"
       );
     if( environment(this_player())->query_temp("no_enhant") ||
         environment(this_player())->query("no_enhant") )
       return notify_fail( can_read_chinese() ?
-        "ÕâÀï²»ÄÜÊ¹ÓÃÈÎºÎÕĞÊ½¡£\n" :
+        "é€™è£¡ä¸èƒ½ä½¿ç”¨ä»»ä½•æ‹›å¼ã€‚\n" :
         "You can not enhant any gonfu here!\n"
       );
 	if( !(this_player()->query("gonfus/"+gonfu)) )
 	  return notify_fail( can_read_chinese()?
-		"Äã²»»áÕâÖÖ\¹¦\·ò¡£\n":
+		"ä½ ä¸æœƒé€™ç¨®åŠŸå¤«ã€‚\n":
 		"You don't know such a gonfu.\n"
 	  );
 	code = GONFU_D->find_gonfu( gonfu );
 	if( !code )
 		return notify_fail( can_read_chinese()?
-			"Ã»ÓĞÕâÖÖ¹¦·ò .... ÇëÍ¨ÖªÎ×Ê¦»òÓÃ bug Ö¸Áî±¨¸æÕĞÊ½Ãû³Æ¡£\n":
+			"æ²’æœ‰é€™ç¨®åŠŸå¤« .... è«‹é€šçŸ¥å·«å¸«æˆ–ç”¨ bug æŒ‡ä»¤å ±å‘Šæ‹›å¼åç¨±ã€‚\n":
 			"No such gonfu .... please tell a wizard or report bug.\n"
 		);
 	fp_cost = (int)code->query_fp_cost();
 	delay_time = (int)code->query_delay_time();
 	if( !fp_cost || (int)this_player()->query("force_points") < fp_cost )
 		return notify_fail( can_read_chinese()?
-			"ÄãµÄÄÚÁ¦²»¹»£¡\n":
+			"ä½ çš„å…§åŠ›ä¸å¤ ï¼\n":
 			"You don't have enough force points!\n"
 		);
     if( (string)this_player()->query_temp("gonfu_now") == gonfu )
         return notify_fail( can_read_chinese()?
-			"ÄãÒÑÔÚÊ©Õ¹Õâ¹¦\·òÁË£¡\n":
+			"ä½ å·²åœ¨æ–½å±•é€™åŠŸå¤«äº†ï¼\n":
 			"You have enhanting this gonfu!\n"
 		);
     this_player()->set_temp("gonfu_now", gonfu);
@@ -67,9 +67,9 @@ int help()
 {
 	if( can_read_chinese() )
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: enhant <ÕĞÊ½Ãû³Æ>
+æŒ‡ä»¤æ ¼å¼: enhant <æ‹›å¼åç¨±>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹ÕĞÊ½¡£Äã¿ÉÒÔÓÃ gonfus Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§»áµÄÕĞÊ½ÁĞ±í¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•æ‹›å¼ã€‚ä½ å¯ä»¥ç”¨ gonfus æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸æœƒçš„æ‹›å¼åˆ—è¡¨ã€‚
 C_HELP
 		);
 	else write ( @HELP

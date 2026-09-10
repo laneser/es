@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("silver armband", "Òø±Û»·");
+        set_name("silver armband", "éŠ€è‡‚ç’°");
         add( "id", ({"armband" }) );
-        set_short("a silver armband", "Òø±Û»·");
+        set_short("a silver armband", "éŠ€è‡‚ç’°");
         set_long(
                 "An armband used by last dwarven guard.\n",
-                "Ò»¸öÒø±Û»·,ÓĞÏàµ±ºÃµÄ·À»¤Á¦\n"
+                "ä¸€å€‹éŠ€è‡‚ç’°,æœ‰ç›¸ç•¶å¥½çš„é˜²è­·åŠ›\n"
         );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set( "type", "arms" );
         set( "material", "heavy_metal");
         set( "armor_class", 5 );

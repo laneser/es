@@ -12,7 +12,7 @@ inherit DAEMON ;
 int cmd_inventory()
 {
 	write( can_read_chinese()?
-		"你已经死了，那些身外之物「生不带来，死不带去」，忘了吧。\n":
+		"浣犲凡缍撴浜嗭紝閭ｄ簺韬涔嬬墿銆岀敓涓嶅付渚嗭紝姝讳笉甯跺幓銆嶏紝蹇樹簡鍚с�俓n":
 		"You are a ghost ... you have nothing in your possession.\n");
 	return 1;
 }

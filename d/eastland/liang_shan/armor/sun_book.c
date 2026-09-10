@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("suntsu", "Ëï×Ó±ø·¨");
+        set_name("suntsu", "å­«å­å…µæ³•");
         add( "id", ({ "book" }) );
-        set_short("Ëï×Ó±ø·¨");
+        set_short("å­«å­å…µæ³•");
         set_long(
-                "ÕâÊÇÎÅÃûì¶ÊÀµÄËï×Ó±ø·¨£¬µÃµ½Ëü¾Í»áÓµÓĞ°²°î¶¨¹úÖ®Á¦...\n"
+                "é€™æ˜¯èåæ–¼ä¸–çš„å­«å­å…µæ³•ï¼Œå¾—åˆ°å®ƒå°±æœƒæ“æœ‰å®‰é‚¦å®šåœ‹ä¹‹åŠ›...\n"
         );
-        set( "unit", "±¾");
+        set( "unit", "æœ¬");
         set( "type", "misc" );
         set( "material", "scholar");
         set( "armor_class", 0);

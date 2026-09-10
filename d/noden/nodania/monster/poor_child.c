@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name("poorman child", "穷人孩子");
+	set_name("poorman child", "绐汉瀛╁瓙");
 	add( "id", ({ "child" }) );
-	set_short("穷人孩子");
+	set_short("绐汉瀛╁瓙");
 	set_long(
-		"这个小孩子满身脏污，一双大眼睛正贪婪地望著你的口袋。\n"
+		"閫欏�嬪皬瀛╁瓙婊胯韩楂掓睓锛屼竴闆欏ぇ鐪肩潧姝ｈ勃濠湴鏈涜憲浣犵殑鍙ｈ銆俓n"
 	);
 	set_skill( "dodge", 10 );
 	set( "alignment", 150 );

@@ -1,4 +1,4 @@
 #d/wiz/RD_board.c
-ob_data (["c_short.text":"ÑĞ·¢²¿ÁôÑÔ°å","id":({"board","bulletin board",}),"c_long":"@@query_c_long","short.text":"Board of R & D","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£","last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.","c_cap_name":"ÁôÑÔ°å","name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
+ob_data (["c_short.text":"ç ”ç™¼éƒ¨ç•™è¨€æ¿","id":({"board","bulletin board",}),"c_long":"@@query_c_long","short.text":"Board of R & D","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚","last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.","c_cap_name":"ç•™è¨€æ¿","name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
 messages ({})
 id_ref 7

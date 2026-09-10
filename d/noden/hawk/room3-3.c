@@ -6,10 +6,10 @@ inherit DOORS;
 void create()
 {
         ::create();
-        set_short("ÉñÃØµÄ·¿¼ä");
+        set_short("ç¥ç§˜çš„æˆ¿é–“");
         set("no_vision",1);
         set_long( @LONG_DESCRIPTION
-ºÇºÇ....²»ÓÃĞ´....´ó¼Ò¶¼¿´²»µ½¡£
+å‘µå‘µ....ä¸ç”¨å¯«....å¤§å®¶éƒ½çœ‹ä¸åˆ°ã€‚
 LONG_DESCRIPTION
         );
         set( "exits", ([
@@ -21,8 +21,8 @@ LONG_DESCRIPTION
                 ([
                 "keyword":({"blackdoor","door"}),
                 "status":"closed",
-                "c_desc":"Ò»¸öºÚÉ«µÄÃÅ",
-                "c_name":"ºÚÓñÃÅ",
+                "c_desc":"ä¸€å€‹é»‘è‰²çš„é–€",
+                "c_name":"é»‘ç‰é–€",
                 "name":"black jade door",
                 "desc":"a black jade door",
                 ]) );
@@ -38,14 +38,14 @@ int to_bottom(string str)
 {
         if (!str || str == "east" || str=="southwest" || str=="northwest" )
                 return 0;
-        write("°¡! ²»ºÃ....\n\n");
+        write("å•Š! ä¸å¥½....\n\n");
         tell_room(environment(this_player()),
-                "Äã¿´µ½ÓĞÈËÊ§×ãÁË!\n",this_player());
+                "ä½ çœ‹åˆ°æœ‰äººå¤±è¶³äº†!\n",this_player());
         this_player()->receive_damage(120);
         this_player()->move_player(HAWK"room1-18","SNEAK");
         tell_room(environment(this_player()),
-                "Äã¿´µ½"+(string)this_player()->query("c_name")+
-                "´Ó¸ßËÊµÄ¾ø±ÚÉÏË¤ÏÂÀ´!\n"+
-                "¾¹È»Ã»ËÀ! ÕæÊÇÃü´ó°¡!\n",this_player());
+                "ä½ çœ‹åˆ°"+(string)this_player()->query("c_name")+
+                "å¾é«˜è³çš„çµ•å£ä¸Šæ‘”ä¸‹ä¾†!\n"+
+                "ç«Ÿç„¶æ²’æ­»! çœŸæ˜¯å‘½å¤§å•Š!\n",this_player());
         return 1;
 }

@@ -9,15 +9,15 @@ void create()
 {
 	::create();
    set_level(15);
-   set_name("purple centipede", "×ÏòÚò¼");
+   set_name("purple centipede", "ç´«èœˆèš£");
    add( "id", ({ "centipede" }) );
-   set_short("×ÏòÚò¼");
+   set_short("ç´«èœˆèš£");
 	set_long(
-     "Äã¿´µ½Ò»Ö»¾Þ´óµÄ×ÏòÚò¼, »ëÉí×ÏºÚ, Ò»Ë«ÉîºìµÄÑÛ¾¦Õý¶¢ÖøÄã,\n"
-     "ÁîÄã²»½ûµ¹³éÒ»¿ÚÁ¹Æø!\n"
+     "ä½ çœ‹åˆ°ä¸€éš»å·¨å¤§çš„ç´«èœˆèš£, æ¸¾èº«ç´«é»‘, ä¸€é›™æ·±ç´…çš„çœ¼ç›æ­£ç›¯è‘—ä½ ,\n"
+     "ä»¤ä½ ä¸ç¦å€’æŠ½ä¸€å£æ¶¼æ°£!\n"
 	);
    set("race","insect");
-   set( "unit", "Ìõ" );
+   set( "unit", "æ¢" );
    set( "alignment", -1000 );
    set( "exp_reward", 15562 );
    set_natural_armor( 55, 34 );
@@ -28,8 +28,8 @@ void create()
    set( "block_aim", ({ "weakest" }) );
    set( "killer", 1 );
 	set( "tactic_func", "emit_poison" );
-   set_c_limbs( ({ "Í·²¿", "ÉíÌå", "×ã²¿" }) );
-   set_c_verbs( ({ "%sµÄÎ²°ÍÉ¨Ïò%s", "%sµÄÍ·²¿×²Ïò%s" }) );
+   set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è¶³éƒ¨" }) );
+   set_c_verbs( ({ "%sçš„å°¾å·´æŽƒå‘%s", "%sçš„é ­éƒ¨æ’žå‘%s" }) );
    equip_armor( "/d/noden/tomb/obj/ankh" );
 }
 
@@ -39,13 +39,13 @@ int emit_poison(object victim)
    if( random(20)>5 || !(victim= query_attacker()) ) return 0;
 if( 2<random(20)<6 ) {
     tell_room( environment(this_object()),
-       "\n×ÏòÚò¼Í»È»¸½ÔÚÄãµÄÉíÉÏ, ºÝºÝµØÒ§ÁËÄãÒ»¿Ú...\n",
+       "\nç´«èœˆèš£çªç„¶é™„åœ¨ä½ çš„èº«ä¸Š, ç‹ ç‹ åœ°å’¬äº†ä½ ä¸€å£...\n",
 		this_object() );
    (CONDITION_PREFIX + "simple_poison")->apply_effect( victim,20,20 );
    }
    if( random(20)<3 ) {
    tell_object(victim,
-       "\n×ÏòÚò¼Í»È»Åç³öÒ»ÍÅºÚÉ«µÄÆøÌåÔÚÄãÁ³ÉÏ...\n\n" );
+       "\nç´«èœˆèš£çªç„¶å™´å‡ºä¸€åœ˜é»‘è‰²çš„æ°£é«”åœ¨ä½ è‡‰ä¸Š...\n\n" );
    (CONDITION_PREFIX + "slow")->apply_effect( victim,15, 5 );
    }
 	return 1;

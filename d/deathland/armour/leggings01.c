@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("mithril leggings", "Ã×ËÕÀïëÖ¼×");
+        set_name("mithril leggings", "ç±³è˜‡é‡Œè„›ç”²");
         add( "id", ({"leggings" }) );
-        set_short("a pair of mithril and silver leggings", "ÒøÃ×ËÕÀïëÖ¼×");
+        set_short("a pair of mithril and silver leggings", "éŠ€ç±³è˜‡é‡Œè„›ç”²");
         set_long(
                 "A pair of leggings made of mithril and silver.\n",
-                "Ò»Ë«ÓÉÃ×ËÕÀï½ğÊôÓëÒøÔì³ÉµÄëÖ¼×\n"
+                "ä¸€é›™ç”±ç±³è˜‡é‡Œé‡‘å±¬èˆ‡éŠ€é€ æˆçš„è„›ç”²\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "legs" );
         set( "material", "heavy_metal" );
         set( "armor_class", 7 );

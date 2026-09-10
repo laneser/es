@@ -17,7 +17,7 @@
 
 inherit DAEMON;
 
-#define SYNTAX	"Syntax: get [ÎïÆ· | all] <from [ÈİÆ÷]>\n"
+#define SYNTAX	"Syntax: get [ç‰©å“ | all] <from [å®¹å™¨]>\n"
 
 int cmd_get( string str )
 {
@@ -28,12 +28,12 @@ int cmd_get( string str )
 	int ammount;
 
 	if(!str || str == "")
-		return notify_fail("ÒªÄÃÊ²÷á£¿\n");
+		return notify_fail("è¦æ‹¿ä»€éº¼ï¼Ÿ\n");
 
 	this_player()-> block_attack( 2 );
 
 	if(!this_player()->query("vision"))
-		return notify_fail("ÒªÄÃÊ²÷á£¿ÄãÊ²÷áÒ²¿´²»¼û¡£\n");
+		return notify_fail("è¦æ‹¿ä»€éº¼ï¼Ÿä½ ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n");
 
 	/* Check for form "get 30 gold coins"  */
 	if( sscanf( str, "%d %s %s", ammount, type, tmp ) != 3 )
@@ -49,7 +49,7 @@ int cmd_get( string str )
 
 				if(sizeof(inv) <= 1 || sizeof(all) == 1)
 					return notify_fail(
-					"ÕâÀïÊ²÷áÒ²Ã»ÓĞ£¬ÄãÏëÄÃ×ßÊ²÷á£¿\n");
+					"é€™è£¡ä»€éº¼ä¹Ÿæ²’æœ‰ï¼Œä½ æƒ³æ‹¿èµ°ä»€éº¼ï¼Ÿ\n");
 
 				for( i = 0; i <sizeof( inv ); i++ ) {
 					if ( living(inv[i]) ) continue;
@@ -60,7 +60,7 @@ int cmd_get( string str )
 
 					if((int)inv[i]->query("prevent_get")) {
 						write(
-						sprintf("Äã²»ÄÜÄÃ×ß%s¡£\n",(string)inv[i]->query("short")));
+						sprintf("ä½ ä¸èƒ½æ‹¿èµ°%sã€‚\n",(string)inv[i]->query("short")));
 						continue;
 					}
 					res = ( int ) inv[i]-> move( this_player() );
@@ -68,27 +68,27 @@ int cmd_get( string str )
 						if( number > 0 ) {
 							if( number == 1 ) word = "coin"; else word = "coins";
 							write(
-								sprintf("Äã¼ñÆğ %d Ã¶%s¡£\n",number,to_chinese(type+" coin")));
+								sprintf("ä½ æ’¿èµ· %d æš%sã€‚\n",number,to_chinese(type+" coin")));
 							tell_room( environment(this_player()),
-								sprintf("%s¼ñÆğÒ»Ğ©%s¡£\n" ,this_player()->query("c_name"),to_chinese(type + " coin")),
+								sprintf("%sæ’¿èµ·ä¸€äº›%sã€‚\n" ,this_player()->query("c_name"),to_chinese(type + " coin")),
 								this_player() );
 							number = 0;
 						} else {
 							// Auto load items on your mounted animal.
 							if(this_player()->query_temp("mounting")) inv[i]->set("on_mounted",1);
-							if( !(unit= inv[i]->query("unit")) ) unit = "¸ö";
+							if( !(unit= inv[i]->query("unit")) ) unit = "å€‹";
 							short = inv[i]->query("short");
-							if(!short)	short = "¶«Î÷";
+							if(!short)	short = "æ±è¥¿";
 							write(
-								sprintf("Äã¼ñÆğÒ»%s%s¡£\n",unit,short));
+								sprintf("ä½ æ’¿èµ·ä¸€%s%sã€‚\n",unit,short));
 							tell_room( environment(this_player()),
-								sprintf("%s¼ñÆğÒ»%s%s¡£\n" ,
+								sprintf("%sæ’¿èµ·ä¸€%s%sã€‚\n" ,
 							this_player()-> query("c_name"),unit ,inv[i]->query("short")),
 								this_player() );
 						}
 					} else if( res==MOVE_TOO_HEAVY ) {
 						write(
-							sprintf("ÄãÄÃ²»¶¯%s£¬Ì«ÖØÁË¡£\n",inv[i]->query("short")));
+							sprintf("ä½ æ‹¿ä¸å‹•%sï¼Œå¤ªé‡äº†ã€‚\n",inv[i]->query("short")));
 					}
 				}
 				return 1;
@@ -97,17 +97,17 @@ int cmd_get( string str )
 			ob = environment( this_player() );
 			if (!ob)
 				return notify_fail(
-					"Äã²»ÄÜÔÚÒ»Æ¬ĞéÎŞÖĞ¼ñÈ¡ÈÎºÎ¶«Î÷¡£\n"
+					"ä½ ä¸èƒ½åœ¨ä¸€ç‰‡è™›ç„¡ä¸­æ’¿å–ä»»ä½•æ±è¥¿ã€‚\n"
 					);
 
 			ob = present( str, ob );
 			if( !ob ) {
 				if( ( int ) environment( this_player() )-> id( str ) )
 					return notify_fail(
-						"Õâ¶«Î÷Äã²»ÄÜÄÃ×ß¡£\n"
+						"é€™æ±è¥¿ä½ ä¸èƒ½æ‹¿èµ°ã€‚\n"
 						);
 				return notify_fail(
-					"ÕâÀïÃ»ÓĞÕâÑù¶«Î÷....¡£\n"
+					"é€™è£¡æ²’æœ‰é€™æ¨£æ±è¥¿....ã€‚\n"
 					);
 			}
 			is_money = ob-> query( "money" );
@@ -120,38 +120,38 @@ int cmd_get( string str )
 				if( ob->query("prevent_get_c_msg") )
 				  write((string)ob->query("prevent_get_c_msg"));
 				else
-				  write("Õâ¶«Î÷¡ª¡ª²»ÄÜÄÃ£¡\n");
+				  write("é€™æ±è¥¿â€”â€”ä¸èƒ½æ‹¿ï¼\n");
 			  return 1;
 			}
 			if ( living(ob) )
-				return notify_fail("¿´À´¶Ô·½²»ĞèÒªÄã±³ !!\n");
+				return notify_fail("çœ‹ä¾†å°æ–¹ä¸éœ€è¦ä½ èƒŒ !!\n");
 			res = ( int ) ob->move( this_player() );
 			if( res == MOVE_OK ) {
 				if( is_money == 1 ) {
 					if( number == 1 ) word = "coin"; else word = "coins";
 					write(
-						sprintf("Äã¼ñÆğ %d Ã¶%s¡£\n",number,to_chinese(type + " coin")));
+						sprintf("ä½ æ’¿èµ· %d æš%sã€‚\n",number,to_chinese(type + " coin")));
 					tell_room( environment(this_player()),
-						sprintf("%s¼ñÆğÒ»Ğ©%s¡£\n",this_player()->query("c_name"),to_chinese(type +" coin")),
+						sprintf("%sæ’¿èµ·ä¸€äº›%sã€‚\n",this_player()->query("c_name"),to_chinese(type +" coin")),
 						this_player() );
 				} else {
 					// Auto load items on your mounted animal.
 					if(this_player()->query_temp("mounting")) ob->set("on_mounted",1);
-					if( !(unit= ob->query("unit")) ) unit = "¸ö";
+					if( !(unit= ob->query("unit")) ) unit = "å€‹";
 					short = (string) ob->query("short");
-					if(!short)	short = "¶«Î÷";
+					if(!short)	short = "æ±è¥¿";
 					write(
-						sprintf("Äã¼ñÆğÒ»%s%s¡£\n",unit,short));
+						sprintf("ä½ æ’¿èµ·ä¸€%s%sã€‚\n",unit,short));
 					tell_room( environment(this_player()),
-						sprintf("%s¼ñÆğÒ»%s%s¡£\n",this_player()->query("c_name"),unit,ob->query("short")),
+						sprintf("%sæ’¿èµ·ä¸€%s%sã€‚\n",this_player()->query("c_name"),unit,ob->query("short")),
 						this_player() );
 				}
 				return 1;
 			}
 			if( res == MOVE_NOT_ALLOWED )
-				notify_fail("Õâ¸ö¶«Î÷Äã²»ÄÜÄÃ×ß¡£\n" );
+				notify_fail("é€™å€‹æ±è¥¿ä½ ä¸èƒ½æ‹¿èµ°ã€‚\n" );
 			else if( res == MOVE_TOO_HEAVY )
-				notify_fail( "....Ì«ÖØÁË£¬Äã°á²»¶¯¡£\n" );
+				notify_fail( "....å¤ªé‡äº†ï¼Œä½ æ¬ä¸å‹•ã€‚\n" );
 			return 0;
 		}
 	/* If we get here, it means we tried to "get 20 gold coins" or "get 20 gold" */
@@ -159,13 +159,13 @@ int cmd_get( string str )
 	tmp = type + " coins";
 	if( ammount < 1 )
 		return notify_fail(
-			"ÄÃ¸ºÊı¸öÇ®±Ò£¿±ğÒìÏëÌì¿ªÁË¡£\n");
+			"æ‹¿è² æ•¸å€‹éŒ¢å¹£ï¼Ÿåˆ¥ç•°æƒ³å¤©é–‹äº†ã€‚\n");
 	i = this_player()-> query( "wealth/" + type );
 	if( i < 0 ) return 0;
 	ob = present( tmp, environment( this_player() ) );
 	if( !ob || ob-> query_number() <ammount )
 		return notify_fail(
-			"ÕâÀïÃ»ÓĞÄÇ÷á¶àÇ®±Ò....¡£\n");
+			"é€™è£¡æ²’æœ‰é‚£éº¼å¤šéŒ¢å¹£....ã€‚\n");
 
 	/* Split the pile of coins into two, the part taken and the part left behind.*/
 	ob2 = clone_object( COINS );
@@ -179,14 +179,14 @@ int cmd_get( string str )
 		else ob->remove();
 		if( ammount == 1 ) word = "coin"; else word = "coins";
 		write(
-			sprintf("Äã¼ñÆğ %d Ã¶%s¡£\n",ammount ,to_chinese(type + " coin")));
+			sprintf("ä½ æ’¿èµ· %d æš%sã€‚\n",ammount ,to_chinese(type + " coin")));
 		tell_room( environment(this_player()),
-			sprintf("%s¼ñÆğÒ»Ğ©%s¡£\n",this_player()-> query( "c_name" ) ,to_chinese(type +" coin")),
+			sprintf("%sæ’¿èµ·ä¸€äº›%sã€‚\n",this_player()-> query( "c_name" ) ,to_chinese(type +" coin")),
 			this_player() );
 		return 1;
 	}
 	notify_fail(
-		"ÄãÒÑ¾­ÄÃ²»¶¯Õâ÷á¶àÇ®±ÒÁË£¬´æÒ»Ğ©µ½ÒøĞĞÀï°É¡£\n");
+		"ä½ å·²ç¶“æ‹¿ä¸å‹•é€™éº¼å¤šéŒ¢å¹£äº†ï¼Œå­˜ä¸€äº›åˆ°éŠ€è¡Œè£¡å§ã€‚\n");
 	ob2-> remove();
 	return 0;
 }
@@ -204,11 +204,11 @@ protected int filter_get(object obj)
 int
 help() {
   write(@HELP
-Ö¸Áî¸ñÊ½£ºget <ÎïÆ·Ãû>
-          get <ÎïÆ·Ãû form ÈİÆ÷Ãû>
+æŒ‡ä»¤æ ¼å¼ï¼šget <ç‰©å“å>
+          get <ç‰©å“å form å®¹å™¨å>
           get all
 
-ÕâÌõÖ¸Áî¿ÉÒÔÈÃÄã¼ñÆğµØÉÏ»òÈİÆ÷ÄÚµÄÎïÆ·¡£
+é€™æ¢æŒ‡ä»¤å¯ä»¥è®“ä½ æ’¿èµ·åœ°ä¸Šæˆ–å®¹å™¨å…§çš„ç‰©å“ã€‚
 HELP
 );
   return 1;

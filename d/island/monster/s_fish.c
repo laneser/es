@@ -8,18 +8,18 @@ void create ()
        ::create();
        set_level( 5 );
        set( "likefish" , 1 ) ;
-       set_name( "small fish","Ğ¡Óã" );
+       set_name( "small fish","å°é­š" );
        set ( "id", ({ "fish" }) );
-       set_short( "Ğ¡Óã" );
-       set( "unit" , "Ìõ" );
+       set_short( "å°é­š" );
+       set( "unit" , "æ¢" );
        set( "alignment" , 30 );
        set_natural_weapon( 12,5,9 );
        set_skill( "unarmed" , 15 );
        set_natural_armor( 25,8 );
        set_long(@LONG
-ÕâÊÇÒ»Ìõ¼«ÆÕÍ¨µÄĞ¡Óã£¬Çë²»ÒªÆÛ¸ºËü£¬Ğ»Ğ»£¡
+é€™æ˜¯ä¸€æ¢æ¥µæ™®é€šçš„å°é­šï¼Œè«‹ä¸è¦æ¬ºè² å®ƒï¼Œè¬è¬ï¼
 LONG
                         );
-       set_c_verbs(({"%sÓÃËüµÄÉíÌåÏò%s×²È¥"}));
-       set_c_limbs(({"Óã÷¢","Î²°Í","Í·²¿"}));
+       set_c_verbs(({"%sç”¨å®ƒçš„èº«é«”å‘%sæ’å»"}));
+       set_c_limbs(({"é­šé°­","å°¾å·´","é ­éƒ¨"}));
 }

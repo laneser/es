@@ -6,11 +6,11 @@ void create(object ob)
 
     if ( !ob ) return ;
 	ob->set_level(13);
-	ob->set_name( "swamp brownie", "ÕÓÔó¾«Áé" );
+	ob->set_name( "swamp brownie", "æ²¼æ¾¤ç²¾éˆ" );
 	ob->add( "id", ({ "brownie", "swamp" }) );
-	ob->set_short( "ÕÓÔó¾«Áé" );
+	ob->set_short( "æ²¼æ¾¤ç²¾éˆ" );
 	ob->set_long(
-		"Õâ¸öÓĞÖøÂÌÉ«Æ¤·ôµÄÕÓÔó¾«ÁéÕıÓä¿ìµØ¶ÔÖøÄãÎ¢Ğ¦¡£\n"
+		"é€™å€‹æœ‰è‘—ç¶ è‰²çš®è†šçš„æ²¼æ¾¤ç²¾éˆæ­£æ„‰å¿«åœ°å°è‘—ä½ å¾®ç¬‘ã€‚\n"
 	);
 	ob->set_perm_stat( "dex", 20 );
 	ob->set_perm_stat( "int", 20 );

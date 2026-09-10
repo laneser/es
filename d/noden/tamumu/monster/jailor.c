@@ -8,10 +8,10 @@ void create()
 
 	::create();
 	set_level(14);
-	set_name( "jailor", "¼àÓüÊØÎÀ" );
+	set_name( "jailor", "ç›£ç„å®ˆè¡›" );
 	add( "id", ({ "tamumu jailor", "tamumu" }) );
-	set_short( "ËşÄ·Ä·¼àÓüÊØÎÀ" );
-	set_long("Õâ¼Ò»ï¿´ÆğÀ´ºÜĞ×º·£¬Äã¸Ã²»»áÏëÈ¥ÈÇËû°É£¿\n"
+	set_short( "å¡”å§†å§†ç›£ç„å®ˆè¡›" );
+	set_long("é€™å‚¢ä¼™çœ‹èµ·ä¾†å¾ˆå…‡æ‚ï¼Œä½ è©²ä¸æœƒæƒ³å»æƒ¹ä»–å§ï¼Ÿ\n"
 	);
 	set( "max_hp", 400 );
 	set( "hit_points", 400 );

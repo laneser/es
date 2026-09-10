@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Silver Cloak","ÒøË¿Åû·ç" );
+	set_name( "Silver Cloak","éŠ€çµ²æŠ«é¢¨" );
 	add( "id",({ "cloak" }) );
-	set_short( "ÒøË¿Åû·ç" );
+	set_short( "éŠ€çµ²æŠ«é¢¨" );
 	set_long(@LONG
-	´«ËµÖĞÁúÆïÊ¿ÉíÉÏËùÅûµÄÄ¦µÇÅû·ç¡£
+	å‚³èªªä¸­é¾é¨å£«èº«ä¸Šæ‰€æŠ«çš„æ‘©ç™»æŠ«é¢¨ã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",40 );
 	set( "type","cloak" );
 	set( "material","knight" );

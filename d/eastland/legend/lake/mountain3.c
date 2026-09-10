@@ -5,11 +5,11 @@ inherit ROOM;
 void create()
 {
     ::create();
-    set_short( "mountain1", "É½áÛ" );
+    set_short( "mountain1", "å±±å·”" );
     set_long(@C_LONG
-ÄãÉí´¦Ò»´óÆ¬¸¡ÔÆÀï,°×Ã£Ã£µØÊ¹Äã¿´²»µ½ÈÎºÎ¶«Î÷¡£ Ô¶Ô¶ÍûÈ¥,ÒşÒşÔ¼Ô¼ÓĞ
-¼¸×ùÍ»³öÔÆ²ãµÄĞ¡É½Èº,Ğ¡É½ÈººÃËÆ´÷ÖøÒ»¶¥¶¥°×É«µÄÃ±×Ó¡£ÔÚÄãÅÔ±ßÓĞºÃÏñÓĞÒ»
-Ãæ¹â»¬µÄÇÍ±Ú ( bluff ) ¡£
+ä½ èº«è™•ä¸€å¤§ç‰‡æµ®é›²è£¡,ç™½èŒ«èŒ«åœ°ä½¿ä½ çœ‹ä¸åˆ°ä»»ä½•æ±è¥¿ã€‚ é é æœ›å»,éš±éš±ç´„ç´„æœ‰
+å¹¾åº§çªå‡ºé›²å±¤çš„å°å±±ç¾¤,å°å±±ç¾¤å¥½ä¼¼æˆ´è‘—ä¸€é ‚é ‚ç™½è‰²çš„å¸½å­ã€‚åœ¨ä½ æ—é‚Šæœ‰å¥½åƒæœ‰ä¸€
+é¢å…‰æ»‘çš„å³­å£ ( bluff ) ã€‚
 C_LONG
     );
     set( "light",1);
@@ -19,7 +19,7 @@ C_LONG
        "west":LAKE"mountain2"
     ]) );
     set("c_item_desc",([
-        "bluff":"Ò»Ãæ¹â»¬µÄÇÍ±Ú,ËÆºõÒªºÜºÃµÄ¼¼Êõ²ÅÄÜÅÀ¹ıÈ¥¡£\n"
+        "bluff":"ä¸€é¢å…‰æ»‘çš„å³­å£,ä¼¼ä¹è¦å¾ˆå¥½çš„æŠ€è¡“æ‰èƒ½çˆ¬éå»ã€‚\n"
     ]) );
     reset();
 }
@@ -32,28 +32,28 @@ int do_climb(string arg)
     object player;
     int probability;
     if ( !arg || arg != "bluff" )
-       return notify_fail("ÄãÒªÅÀÊ²÷á?\n");
+       return notify_fail("ä½ è¦çˆ¬ä»€éº¼?\n");
     player=this_player();
     probability=(int)player->query_skill("climbing")/(int)player->query_level();
     if ( probability+random(5)>7 ) {
-       tell_object(player,"ÄãÍ£Ò²²»Í£µØÒ»¿ÚÆøÅÀ¹ıÁËÇÍ±Ú¡£\n\n\n\n");
+       tell_object(player,"ä½ åœä¹Ÿä¸åœåœ°ä¸€å£æ°£çˆ¬éäº†å³­å£ã€‚\n\n\n\n");
        tell_room(environment(player),sprintf(
-          "%sÍ£Ò²²»Í£µØÒ»¿ÚÆøÅÀ¹ıÁËÇÍ±Ú¡£\n",player->query("c_name")),player);
+          "%såœä¹Ÿä¸åœåœ°ä¸€å£æ°£çˆ¬éäº†å³­å£ã€‚\n",player->query("c_name")),player);
        player->move_player(LAKE"mountain4","SNEAK");
        player->receive_damage(10);
        tell_object(player,
-          "¸ÃËÀ!ÄãÓÉì¶ÂäÏÂµÄËÙ¶ÈÌ«¿ì¶ø±»ÅÔ±ßµÄÊ÷ÌÙ¸ø¸îÉË!\n");
+          "è©²æ­»!ä½ ç”±æ–¼è½ä¸‹çš„é€Ÿåº¦å¤ªå¿«è€Œè¢«æ—é‚Šçš„æ¨¹è—¤çµ¦å‰²å‚·!\n");
        "/d/magic/magic"->report( this_object(), player );
        return 1;  
     } 
     tell_object(player,
-        "ÄãÊ¹¾¢³ÔÄÌµÄÁ¦ÆøÏëÅÀ¹ıÇÍ±Ú,È´ÒòÎªÅÊÅÀµÄ¼¼Êõ²»ºÃ»¬ÁËÏÂÀ´¡£Äã¹ö°¡¹ö"+
-        ",¹öµ½É½½ÅÏÂÈ¥ÁË!\n");
+        "ä½ ä½¿å‹åƒå¥¶çš„åŠ›æ°£æƒ³çˆ¬éå³­å£,å»å› ç‚ºæ”€çˆ¬çš„æŠ€è¡“ä¸å¥½æ»‘äº†ä¸‹ä¾†ã€‚ä½ æ»¾å•Šæ»¾"+
+        ",æ»¾åˆ°å±±è…³ä¸‹å»äº†!\n");
     tell_room(environment(player),sprintf(
-       "%sÊ¹¾¢³ÔÄÌµÄÁ¦ÆøÏëÅÀ¹ıÇÍ±Ú,È´ÒòÎªÅÊÅÀµÄ¼¼Êõ²»ºÃ»¬ÁËÏÂÀ´,¹ö°¡¹ö,¹öµ½É½½ÅÏÂÈ¥ÁË!Äã²»½ûÅõ¸¹´óĞ¦¡£\n",player->query("c_name")),player);
+       "%sä½¿å‹åƒå¥¶çš„åŠ›æ°£æƒ³çˆ¬éå³­å£,å»å› ç‚ºæ”€çˆ¬çš„æŠ€è¡“ä¸å¥½æ»‘äº†ä¸‹ä¾†,æ»¾å•Šæ»¾,æ»¾åˆ°å±±è…³ä¸‹å»äº†!ä½ ä¸ç¦æ§è…¹å¤§ç¬‘ã€‚\n",player->query("c_name")),player);
     player->move(LAKE"mountain0","SNEAK");
     player->receive_damage(10);
     "/d/magic/magic"->report( this_object(), player );
-    tell_room(environment(player),"ÓĞÄ³Ò»¸ö¶«Î÷¹öµ½ÄãµÄ½Å±ß¡«¡«\n",player);
+    tell_room(environment(player),"æœ‰æŸä¸€å€‹æ±è¥¿æ»¾åˆ°ä½ çš„è…³é‚Šï½ï½\n",player);
     return 1;    
 }

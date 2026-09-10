@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "Zhe Bao", "解宝" );
+	set_name( "Zhe Bao", "瑙ｅ" );
 	add("id",({"zhe","bao"}));
-	set_short( "解宝" );
+	set_short( "瑙ｅ" );
 	set_long(
-		"他的外号是双尾蝎，解珍是他哥哥，性烈似火，与解珍同时落草，为梁\n"
-		"山泊步军头领．如果你不想死的话，最好别去招惹他。\n"
+		"浠栫殑澶栬櫉鏄洐灏捐爫锛岃В鐝嶆槸浠栧摜鍝ワ紝鎬х儓浼肩伀锛岃垏瑙ｇ弽鍚屾檪钀借崏锛岀偤姊乗n"
+		"灞辨硦姝ヨ粛闋牁锛庡鏋滀綘涓嶆兂姝荤殑瑭憋紝鏈�濂藉垾鍘绘嫑鎯逛粬銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

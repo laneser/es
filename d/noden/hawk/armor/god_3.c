@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Jupiter armband","Çğ±ÈÌØÎÚ½ğ±Û»·" );
+        set_name( "Jupiter armband","ä¸˜æ¯”ç‰¹çƒé‡‘è‡‚ç’°" );
         add( "id", ({ "armband","jupiter armband" }) );
-        set_short( "Çğ±ÈÌØÎÚ½ğ±Û»·" );
+        set_short( "ä¸˜æ¯”ç‰¹çƒé‡‘è‡‚ç’°" );
         set_long(
-                "ÕâÊÇÇğ±ÈÌØËùÖÆµÄÆæÃî±Û»·, ÎÚ½ğ¸üÊÇ¼«Æäº±ÓĞµÄ²ÄÁÏ¡£\n"
+                "é€™æ˜¯ä¸˜æ¯”ç‰¹æ‰€åˆ¶çš„å¥‡å¦™è‡‚ç’°, çƒé‡‘æ›´æ˜¯æ¥µå…¶ç½•æœ‰çš„ææ–™ã€‚\n"
         );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set("material","thief");
         set( "type", "arms" );
         set( "armor_class", 1 );

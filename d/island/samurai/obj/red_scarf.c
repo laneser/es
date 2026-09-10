@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Red scarf", "ºìÉ«Î§½í");
+        set_name( "Red scarf", "ç´…è‰²åœå·¾");
         add( "id", ({ "scarf"}) );
-        set_short("Red scarf", "ºìÉ«Î§½í");
+        set_short("Red scarf", "ç´…è‰²åœå·¾");
         set_long(@AAA
-ÕâÊÇÒ»ÌõºìÉ«µÄÎ§½í£¬ÊÇÈÌÕß¼Ó¶û¸£ÌØ°®ÓÃµÄÎ§½í£¬¾İËµ
-ÊÇÄÈ¿¼è´è´Ç×ÊÖÖ¯¸øËûµÄ
+é€™æ˜¯ä¸€æ¢ç´…è‰²çš„åœå·¾ï¼Œæ˜¯å¿è€…åŠ çˆ¾ç¦ç‰¹æ„›ç”¨çš„åœå·¾ï¼Œæ“šèªª
+æ˜¯å¨œè€ƒç’ç’è¦ªæ‰‹ç¹”çµ¦ä»–çš„
 AAA
         );
-        set( "unit", "Ìõ"); 
+        set( "unit", "æ¢"); 
         set( "type", "misc" );
         set( "armor_class", 0 );
         set( "defense_bonus", 4 );

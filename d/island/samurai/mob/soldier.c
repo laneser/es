@@ -6,18 +6,18 @@ void create ()
 {
         ::create();
         set_level(7);
-        set_name("soldier","ÇàÄêÊ¿±ø" );
+        set_name("soldier","é’å¹´å£«å…µ" );
         add ("id", ({ "soldier","young"}) );
-        set_short( "young soidier","ÇàÄêÊ¿±ø");
-        set("unit","Î»");
+        set_short( "young soidier","é’å¹´å£«å…µ");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇÒ»¸öÎäÊ¿ÍÅÖĞµØÎ»×îµÍµÄÊ¿±ø£¬ÊÇ¸ö¸Õ¸Õ±»áçÕĞÈëÎéµÄĞÂ±ø
+é€™æ˜¯ä¸€å€‹æ­¦å£«åœ˜ä¸­åœ°ä½æœ€ä½çš„å£«å…µï¼Œæ˜¯å€‹å‰›å‰›è¢«å¾µæ‹›å…¥ä¼çš„æ–°å…µ
 ANGEL
         );
         
         set ("gender", "male");
         set("wealth/silver",50);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         wield_weapon(MOBJ"iron_blade.c");
 }

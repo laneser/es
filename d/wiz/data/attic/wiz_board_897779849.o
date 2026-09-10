@@ -1,125 +1,125 @@
 #d/wiz/wiz_board.c
-ob_data (["silent_look":1,"id":({"board","bulletin board",}),"c_name":"���԰�","long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷���ο� help board��
-������԰���Ȼ�������ʦ����ģ����κ��˶���ӭ���������ԡ�
-","load":-600,"c_cap_name":"���԰�","name":"board","short":"@@query_short","short.text":"��ʦ���԰�","long":"@@query_long",])
+ob_data (["silent_look":1,"id":({"board","bulletin board",}),"c_name":"留言板","long.text":"這是一個留言板，專供人留言紀事。詳細用法請參看 help board。
+這個留言板雖然是屬於巫師公會的，但任何人都歡迎在這裡留言。
+","load":-600,"c_cap_name":"留言板","name":"board","short":"@@query_short","short.text":"巫師留言板","long":"@@query_long",])
 messages ({(["poster":"Sage","time":896161090,"title":"< no title >","body":"hi snow
-�ܾò���
-�ҵ�killer�������ڳｨ�У�������creative����skills,��������û����Ȥ��
-������Ҫ���¿�ʼ�Լ����
-��Ҫ�������ϣ��������ʱ���ڿ�es���ļ�
-","id":1580,]),(["poster":"Snow","time":896292308,"body":"�Ұ���Ŀ¼�µ�shopɾ���ˣ��Ҳ�ϣ����һ�ο�����
-Ҳ��ϣ������/log/give��/log/CLONING�￴�������س��֣�
+很久不見
+我的killer公會正在籌建中，本來是creative負責skills,但他好象沒有興趣搞
+所以我要重新開始自己設計
+需要大量資料，所以這段時間在看es的文件
+","id":1580,]),(["poster":"Snow","time":896292308,"body":"我把你目錄下的shop刪掉了，我不希望再一次看到．
+也不希望再在/log/give和/log/CLONING裡看到你過多地出現．
 ok ?
-","title":"to creative","id":1581,]),(["poster":"Moon","time":896305162,"title":"Hi all","body":"��Һ�,
-    ��ӭSnake ����wiz ������!
-    ��Ǹ��ô��û����!
-    ʵ����̫æ,��λ����ϵͳ,�кö����Ҫ�� :(
+","title":"to creative","id":1581,]),(["poster":"Moon","time":896305162,"title":"Hi all","body":"大家好,
+    歡迎Snake 加入wiz 的行列!
+    抱歉這麼久沒上來!
+    實在是太忙,單位換新系統,有好多程序要改 :(
 To Snow:
-    ES ���ҵĻ�����û����(MudOS �� v21c2, OS �� SCO Unix 3.2.4),
-һ��¼����! �������ѵ�Linux ���Ͽ�����,û����Ƶ��reboot������,������
-����̨��̫����! :)
+    ES 在我的機器上沒法用(MudOS 是 v21c2, OS 是 SCO Unix 3.2.4),
+一登錄就死! 在我朋友的Linux 機上可以用,沒發現頻繁reboot的現象,可能是
+他那臺機太空閒! :)
 
 To Sage:
-    Killer ��֯��bug �Ͳ����Ƶĵط�һֱû��, ��Ҫ�������漰ϵͳ��
-һЩ��������,������������reboot�������,��ʱ���ǲ���Ϊ��!
-    ������ô����killer ��֯��skills, rooms, ���ϴ���ô����������?
-    ������ֻ���˵ײ�Ĺ���,������join,explore,advance,verify....
-    �����е�skills �����հ�Knight�����, �㲻����Ϊ�����Killer��֯��?
-    ��ץסʥ�˵�����һ����ҡ.
+    Killer 組織的bug 和不完善的地方一直沒改, 主要是它們涉及系統的
+一些公共程序,在現在這種老reboot的情況下,暫時還是不改為妙!
+    不過這麼久了killer 組織的skills, rooms, 和老大怎麼還是老樣子?
+    當初我只做了底層的工作,讓它能join,explore,advance,verify....
+    它所有的skills 都是照搬Knight工會的, 你不會認為這就是Killer組織吧?
+    你抓住聖人的身體一陣亂搖.
  
     
                          Moon
                              1998.5.27
-","id":1582,]),(["poster":"Moon","time":896305326,"title":"���������","body":"�����ġ����������(oscer)��no wine,i login creative
-","id":1583,]),(["poster":"Moon","time":896305463,"title":"Ah","body":"ֻ��river ��nuke��?
-river ���Ǻ�ͬ־��, ��ϧ�ܾ�û����
-","id":1584,]),(["poster":"Sage","time":896308424,"title":"to moon","body":"tmd,�汻��moon������
-killer������skills,�����������ģ��ұ����Ͳ��Ǹ���skills,������Ҫ������
-�������ڿ�es���ļ�
-����£��˷����Ҳ��ٵ绰��ȥ���ļ�
-skills�������ھ�����killer����Ҫ���ܺ��ڸ�����Ҫ���ʵ����޸�
-���У����� es���ļ�������email���ң�����ʡһʡ�绰�Ѱ�
-����snow�ϸ��ң�copyһ�ݸ���Ҳ��
-�Ҿ������������
+","id":1582,]),(["poster":"Moon","time":896305326,"title":"愛神丘比特","body":"【閒聊】愛神丘比特(oscer)：no wine,i login creative
+","id":1583,]),(["poster":"Moon","time":896305463,"title":"Ah","body":"只是river 被nuke了?
+river 還是好同志的, 可惜很就沒來了
+","id":1584,]),(["poster":"Sage","time":896308424,"title":"to moon","body":"tmd,真被你moon氣死了
+killer當初的skills,是你搞成這樣的，我本來就不是負責skills,但現在要我來搞
+所以我在看es的文件
+這個月，浪費了我不少電話費去看文件
+skills打算在在決定了killer的主要技能後，在根據需要做適當的修改
+還有，你有 es的文件，不如email給我，讓我省一省電話費吧
+假如snow肯給我，copy一份給我也行
+我絕不會給其他人
 heihei
-","id":1585,]),(["poster":"Boss","time":896326421,"body":"oscer ��һ���±���del.
+","id":1585,]),(["poster":"Boss","time":896326421,"body":"oscer 我一氣下被我del.
 laugh
-���
-����Ҫ�ظ�һ��id���԰�ħ��
+真慘
+我又要重搞一個id來試白魔法
 cry
-��һ�ָ��god!�����������Ҹ㶨��ya 
-skills Ҳ�����xixi
-���еľͿ�snow ���ҿ���!grin snow
+我一手搞的god!今天終於讓我搞定。ya 
+skills 也想好了xixi
+還有的就看snow 幫我開了!grin snow
 hahahahaha.........
 ","title":"< no title >","id":1586,]),(["poster":"Boss","time":896331642,"title":"< no title >","body":"> rmdir 1
 > Rmdir: Permission denied.
-׼������!!faint??��ô��?
+准許否認!!faint??怎麼了?
 ","id":1587,]),(["poster":"Boss","time":896332843,"title":"to snow","body":"snow god guild is no \"amd/adm\" problem!
-����ĳ�amd�����ڵ�god ��Ҳͬ����join �� ����������������!
-�����ǳ���/d/god/�ڱ�д�и㵽�����Ŀ¼!
-лл����Ҹ��˸�Ŀ¼thanks!
-","id":1588,]),(["poster":"Boss","time":896332989,"title":"to wiz","body":"�벻Ҫ��һЩ�Ҹ�player ���ļ�!thanks���з���!grin wiz
-��Щ�ļ������Թ����õ�
-","id":1589,]),(["poster":"Boss","time":896333387,"title":"to moon","body":"snow ˵����Դ�ļ�������!�벻Ҫֻ���Ź���!thanks
-�Ȱ�������!��Ȼ��reboot �Ҳ��ܹ���!thanks��
-�һ��Ǻ��������!100000 cheer moon!��ʮ���֧��!!
-����moon!!!
-","id":1590,]),(["poster":"Snow","time":896416165,"body":"�������һ�
-�ҵ���˼�����adm���amd����Ͳ��ܽ�Ŀ¼���޸�/d/god�µ��ļ��ˡ�
+就算改成amd在現在的god 中也同樣能join 或 其他工會能做的事!
+問題是出在/d/god/在編寫中搞到了這個目錄!
+謝謝你幫我搞了個目錄thanks!
+","id":1588,]),(["poster":"Boss","time":896332989,"title":"to wiz","body":"請不要考一些我改player 的文件!thanks如有發現!grin wiz
+這些文件是我試公會用的
+","id":1589,]),(["poster":"Boss","time":896333387,"title":"to moon","body":"snow 說他吧源文件給了你!請不要只故著工作!thanks
+先吧藍天搞好!不然總reboot 我不能工作!thanks。
+我還是很體諒你的!100000 cheer moon!我十萬個支持!!
+加油moon!!!
+","id":1590,]),(["poster":"Snow","time":896416165,"body":"唉，笨傢伙
+我的意思是你把adm變成amd，你就不能建目錄和修改/d/god下的文件了。
 grin boss
 papaya boss
 ","title":"re:39","id":1591,]),(["poster":"Boss","time":896419259,"title":"< no title >","body":"cry
-ľ��!!!!!!!!!!!!!!kick.flog snow. laugh
+木瓜!!!!!!!!!!!!!!kick.flog snow. laugh
 me papalize
-","id":1592,]),(["poster":"Creative","time":896493808,"body":"�����ǰ�player��ԭ����Ŀ�������Щ����������
-�����Լ�������̫��������������
-���ھ���ϴ �ĸ��棬��������
-","title":"< no title >","id":1593,]),(["poster":"Boss","time":896661811,"title":"< no title >","body":"sage Ҫ����ͷ����֪����֪����Ҫȥ��?
-֪������������!thanks
+","id":1592,]),(["poster":"Creative","time":896493808,"body":"我老是幫player，原本的目的是想多些人來玩藍天
+加上自己總是心太軟，經不起人求
+現在決心洗 心革面，重新做人
+","title":"< no title >","id":1593,]),(["poster":"Boss","time":896661811,"title":"< no title >","body":"sage 要來汕頭你們知道不知道他要去哪?
+知道的請快告訴我!thanks
 mail to jediwin@163.net
-","id":1594,]),(["poster":"Sage","time":896907682,"body":"hi,�и�����
-ϣ���ڶ�����½��һ�����ã�������monk & scholar���˲�����Զȥ��modenȥpray back
+","id":1594,]),(["poster":"Sage","time":896907682,"body":"hi,有個提議
+希望在東方大陸搞一個教堂，可以讓monk & scholar的人不用老遠去到moden去pray back
 ","title":"< no title >","id":1595,]),(["poster":"Sage","time":896907925,"body":"> cd adm
 > /d/killer/adm: permission denied
 ?
-���˼���Ȩ�޻����ˣ�
+升了級，權限還少了？
 heihei
 ","title":"< no title >","id":1596,]),(["poster":"Boss","time":896925178,"title":"< no title >","body":"> /d/god/adm: permission denied
-","id":1597,]),(["poster":"Boss","time":896925392,"title":"< no title >","body":"����Ҫ��ôתְ!һת����20v ��ϰ��ʦ�� sigh
-���ǰ��Ѷ��������!����������������¹���!
-","id":1598,]),(["poster":"Snow","time":896995839,"body":"�޳ɣ�
+","id":1597,]),(["poster":"Boss","time":896925392,"title":"< no title >","body":"公會要怎麼轉職!一轉就是20v 見習巫師了 sigh
+還是把難度增高如何!這兩個公會就做成新公會!
+","id":1598,]),(["poster":"Snow","time":896995839,"body":"贊成！
 x
 ","title":"re boss","id":1599,]),(["poster":"Snow","time":897068722,"body":"as title
-","title":"moon�������ϵ","id":1600,]),(["poster":"Snow","time":897068786,"body":"compaq���뵱��ʦ
-","title":"��ʦ����","id":1601,]),(["poster":"Snow","time":897068987,"body":"������ʦ������д��������ͷ�Ĺ��������ڼ����ȡ�
-û��д���Ҿ��ɹ��ˡ���ɲ��˾�... grin*
-moon�Ĺ����������㱨�ˣ���Ҫ�ĵ�reboot������ͽ��ftp���⡣:)
-","title":"��Ҫ֪ͨ","id":1602,]),(["poster":"Creative","time":897072726,"title":"< no title >","body":"���������ǿһ����ʿ�Ĺ���
-Ҫ��skill�м�dodge��ʹ��ʿ���Ը��õ���tactic
-���㣬��һ�������ɵ�npc������ʿ��ǹ��
-������ʽ��������β�����߳���
-�����������û���ǹ
-ս���߿�����һЩ�ر����ʽ��ǹ��һ���ߣ���ɱ���л�
-","id":1603,]),(["poster":"Snake","time":897078798,"body":"��������һ�����Ը�ҽ����ҩ��ҩ���
-ֻ���е��Ѷȣ���Щ�ٿ�
-��������һ��ҽ����ҩ�䣬like needle
-����ҽ�����Դ��˽��
-���о���ҽ�������ܰ��ˣ�Ҫ��Щ����ħ��֮��ı����Լ���like amass
-����������С��������д
-","title":"< no title >","id":1604,]),(["poster":"Sage","time":897107444,"title":"< no title >","body":"��Ѱ��дskills�ķ�����˳������monk�������书��ҲΪkiller���书��ƴ��»���
-���ڿ��ļ����У��ļ�̫����
-","id":1605,]),(["poster":"Sage","time":897107528,"title":"< no title >","body":"�������compaq̸������wiz��Ϊ�˿��ļ������Լ�
-heihei,��һ���������ݺ���̸��������֪������˭
+","title":"moon快和我聯繫","id":1600,]),(["poster":"Snow","time":897068786,"body":"compaq申請當巫師
+","title":"巫師申請","id":1601,]),(["poster":"Snow","time":897068987,"body":"所有巫師在這裡寫上你們手頭的工作，工期及進度。
+沒有寫的我就派工了。完成不了就... grin*
+moon的工作我替他彙報了，他要改掉reboot的問題和解決ftp問題。:)
+","title":"重要通知","id":1602,]),(["poster":"Creative","time":897072726,"title":"< no title >","body":"我正在想加強一下騎士的功夫
+要在skill中加dodge，使騎士可以更好地用tactic
+打算，做一個楊六郎的npc來教騎士用槍法
+基本招式有烏龍擺尾，靈蛇出洞
+騎上馬可以用回馬槍
+戰功高可以用一些特別的招式，槍扎一條線，和殺龍有悔
+","id":1603,]),(["poster":"Snake","time":897078798,"body":"本來想做一個可以給醫生存藥的藥庫的
+只是有點難度，遲些再看
+現在想做一個醫生的藥箱，like needle
+好讓醫生可以存點私貨
+還有就是醫生不能總幫人，要搞些例如魔法之類的保護自己，like amass
+還有其他的小區域正在寫
+","title":"< no title >","id":1604,]),(["poster":"Sage","time":897107444,"title":"< no title >","body":"在尋找寫skills的方法，順便增加monk的特殊武功，也為killer的武功設計打下基礎
+還在看文件當中，文件太多了
+","id":1605,]),(["poster":"Sage","time":897107528,"title":"< no title >","body":"我那天和compaq談過，當wiz是為了看文件，益自己
+heihei,我一黑龍的身份和他談，他還不知道我是誰
 heihei compaq
-","id":1606,]),(["poster":"Boss","time":897111329,"body":"compaq �뵱��ʦҪ���鿼��!grin compaq!
-","title":"< no title >","id":1607,]),(["poster":"Boss","time":897111414,"body":"�����Ҷ�ͬ���ҵ����!�Ͱ�������Ҷ�������!
-�����������Ѷ����!
-","title":"< no title >","id":1608,]),(["poster":"Snake","time":897123417,"title":"no agree","body":"�������ѶȼӴ�Ļ�
-����������͸�����
-Ҫ��npc��powerͬʱ���Ͳ���
-�����кܶ�ܺõ�quest������ס��ҵ�
-��Ҫ�Ӵ��ѶȰ����Ǹ����ˡ�����
-mud��Ϊ�������棬������������
+","id":1606,]),(["poster":"Boss","time":897111329,"body":"compaq 想當巫師要考驗考驗!grin compaq!
+","title":"< no title >","id":1607,]),(["poster":"Boss","time":897111414,"body":"如果大家都同意我的意見!就把所有玩家都來降級!
+把所有升級難度提高!
+","title":"< no title >","id":1608,]),(["poster":"Snake","time":897123417,"title":"no agree","body":"把升級難度加大的話
+玩家玩起來就更難了
+要把npc的power同時降低才行
+這裡有很多很好的quest可以留住玩家的
+不要加大難度把他們趕跑了。。。
+mud是為了讓人玩，而不是玩他們
 addoil all
 ","id":1609,]),})
 id_ref 1631

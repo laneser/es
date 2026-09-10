@@ -8,16 +8,16 @@ void create()
         object ob1,ob2;
         ::create();
         set_level(11);
-        set_name( "forsy the mine worker", "��С��" );
+        set_name( "forsy the mine worker", "礦工小四" );
         add ("id", ({"forsy","worker"}) );
-        set_short( "��С��" );
+        set_short( "礦工小四" );
         set_long(
-        "����һ������ʮ��ǿ׳�������ˣ���һ�۾Ϳ��Կ�����������\n"
-        "�����ĵܵ�С�ģ���Ϊ���Ǹ�������˫��̥��\n");
+        "他是一個長的十分強壯的年輕人，你一眼就可以看出他是獵人\n"
+        "阿三的弟弟小四，因為他們根本就是雙胞胎。\n");
 		set("alignment",400);
 		set( "gender", "male" );
 		set( "race", "orc" );
-		set( "unit", "��" );
+		set( "unit", "個" );
         set_perm_stat( "dex", 18 );
         set_perm_stat( "str", 18 );
         set_perm_stat( "int", 17 );
@@ -36,8 +36,8 @@ void create()
         equip_armor(Obj"head_cap");
 
         set( "inquiry", ([
-                "����" : "@@ask_hunter",
-                "���˰���" : "@@ask_hunter",
+                "阿三" : "@@ask_hunter",
+                "獵人阿三" : "@@ask_hunter",
 		"hunter" : "@@ask_hunter"]));
 
 }
@@ -46,16 +46,16 @@ int ask_hunter()
 {
 	object ob1;
    if( (int)this_player()->query_quest_level("Goddess_statue") != 1 ){
-       tell_object(this_player(),"С�Ŀ����������ɶ������ʶ�Ҹ���𣿡�\n" );
+       tell_object(this_player(),"小四看著你道：「啥？你認識我哥哥嗎？」\n" );
                 return 1;
 	}
 
 tell_object(this_player(),
 @C_WU
-С������һ�������ѹ����⼸������������ûؼҿ����ˣ���������
-��Ҫ�Ķ���Ҫ�����ҵ��ϰ�������������ȥ�������𣿡�
+小四嚇了一跳：「難怪我這幾天心神不寧，早該回家看看了，不過我有
+重要的東西要交給我的老闆段鐵，你幫我送去給他好嗎？」
 
-������ش�С��Ӳ������һ�žɾɵ���Ƥ��Ȼ���Ҳ�Ƶ��ܻؼ�ȥ�ˡ�
+不等你回答，小四硬塞給你一張舊舊的羊皮，然後飛也似的跑回家去了。
 C_WU
 );
 	ob1 = new( Obj"paper1" );

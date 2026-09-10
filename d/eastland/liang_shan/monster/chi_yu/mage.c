@@ -8,15 +8,15 @@ void create()
 
 	::create();
 	set_level(16);
-	set_name( "snaky Magician", "ÉßÈË·¨Ê¦" );
+	set_name( "snaky Magician", "è›‡äººæ³•å¸«" );
 	add( "id", ({ "magician" }) );
-	set_short( "ÉßÈË·¨Ê¦" );
+	set_short( "è›‡äººæ³•å¸«" );
 	set_long(@C_LONG
-ÉßÈËÆäÊµ¿ÉÒÔËµÊÇÃ»ÓĞ½ÅµÄòáòæÈË£¬ËäÃ»ÓĞòáòæÈËÄÇ÷áÇ¿×³
-µ«ÊÇÈ´ÓĞÔ¶¸ßì¶ËûÃÇµÄÖÇ»Û¡£Òò´ËÉßÈË³£³£Ò²ÊÇÓĞÁ¦µÄÊ©·¨
-Õß£¬¶øÉßÈË·¨Ê¦¸üÊÇÆäÖĞµÄÙ®Ù®Õß¡£	
+è›‡äººå…¶å¯¦å¯ä»¥èªªæ˜¯æ²’æœ‰è…³çš„èœ¥èœ´äººï¼Œé›–æ²’æœ‰èœ¥èœ´äººé‚£éº¼å¼·å£¯
+ä½†æ˜¯å»æœ‰é é«˜æ–¼ä»–å€‘çš„æ™ºæ…§ã€‚å› æ­¤è›‡äººå¸¸å¸¸ä¹Ÿæ˜¯æœ‰åŠ›çš„æ–½æ³•
+è€…ï¼Œè€Œè›‡äººæ³•å¸«æ›´æ˜¯å…¶ä¸­çš„ä½¼ä½¼è€…ã€‚	
 C_LONG	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment", -800 );
@@ -45,9 +45,9 @@ C_LONG	);
 	set("spells/flare",1);
 	set( "chat_chance", 20 );
 	set( "att_chat_output", ({
-		"[1mÉßÈË·¨Ê¦´ó½Ğ: ÄãÃÇÕâĞ©ÓŞ´ÀÎŞÖªµÄ±°Î¢ÉúÎï£¬Í¨Í¨¸øÎÒÏÂµØÓüÈ¥°É£¡[0m\n",
-		"[1mÉßÈË·¨Ê¦¶ÔÄãËµµÀ: ÏÈ»ØÈ¥½ĞÄãµÄÍ¬°é°ïÄã×¼±¸ááÊÂÔÙ½øÀ´°É£¡[0m\n",
-		"[1mÉßÈË·¨Ê¦¸ß¾ÙÊÖÖĞµÄÉßÑÛÊ¯Ö®ÕÈ£¬ËÆºõÕıÔÚÎüÈ¡ÌìµØ¼äÓÎÀëµÄÄÜÁ¿...[0m\n"
+		"[1mè›‡äººæ³•å¸«å¤§å«: ä½ å€‘é€™äº›æ„šè ¢ç„¡çŸ¥çš„å‘å¾®ç”Ÿç‰©ï¼Œé€šé€šçµ¦æˆ‘ä¸‹åœ°ç„å»å§ï¼[0m\n",
+		"[1mè›‡äººæ³•å¸«å°ä½ èªªé“: å…ˆå›å»å«ä½ çš„åŒä¼´å¹«ä½ æº–å‚™å¾Œäº‹å†é€²ä¾†å§ï¼[0m\n",
+		"[1mè›‡äººæ³•å¸«é«˜èˆ‰æ‰‹ä¸­çš„è›‡çœ¼çŸ³ä¹‹æ–ï¼Œä¼¼ä¹æ­£åœ¨å¸å–å¤©åœ°é–“éŠé›¢çš„èƒ½é‡...[0m\n"
 	}) );
         wield_weapon( "/d/noden/drow/obj/wand" );
 //        equip_armor( "/d/noden/drow/arm/a10" );
@@ -81,7 +81,7 @@ void relay_message(string class, string str)
         
         
         if( !str || str == "" ) return;
-        if( sscanf(str,"%s(%s)×ßÁË¹ıÀ´¡£", tmp,name)==2 ) {
+        if( sscanf(str,"%s(%s)èµ°äº†éä¾†ã€‚", tmp,name)==2 ) {
         name = lower_case(name);
         victim = present(name, environment(this_object()));
         if( !victim || victim->query("npc") || victim->query("no_attack")) return ;
@@ -90,16 +90,16 @@ void relay_message(string class, string str)
         
         if( !pointerp(attackers) || member_array(victim, attackers)==-1 ) {
         
-        tell_object(victim,query("c_name")+"½ĞµÀ : Í¨Í¨È¥ËÀ°É£¬Í¬Ê±²»»³ºÃÒâµÄÍùÄãÕâÀï³å¹ıÀ´....\n");
+        tell_object(victim,query("c_name")+"å«é“ : é€šé€šå»æ­»å§ï¼ŒåŒæ™‚ä¸æ‡·å¥½æ„çš„å¾€ä½ é€™è£¡è¡éä¾†....\n");
          kill_ob(victim);
          } } }
-         if( sscanf(str,"%sÍù%sÀë¿ª¡£", tmp,direction)==2) {
+         if( sscanf(str,"%så¾€%sé›¢é–‹ã€‚", tmp,direction)==2) {
          if ( query_attacker() ) return ;
          hp1 = query("max_hp")/2;
          hitp = query("hit_points");
          if ( bleed = query("conditions/bleeding") || hitp < hp1  )
          tell_room(environment(this_object()),
-         "ÉßÈË·¨Ê¦(magician)ËµµÀ: µĞÈËÒÑ¾­ÌÓ×ßÁË£¬¿ìÀ´°ïÎÒÖÎÁÆ°É.....\n",this_object());
+         "è›‡äººæ³•å¸«(magician)èªªé“: æ•µäººå·²ç¶“é€ƒèµ°äº†ï¼Œå¿«ä¾†å¹«æˆ‘æ²»ç™‚å§.....\n",this_object());
          return ;
          }        
 

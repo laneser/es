@@ -1,23 +1,23 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
-messages ({(["id":553,"title":"< no title >","body":"ÒşĞÎµÄ³É¹¦\ÂÊÔõ÷áËã? »¹ÊÇÖ»Òª×Ô¶¯¹¥»÷µÄ mob ¶¼ÎŞĞ§?
-ÏÖÔÚ invisible ²»µ«¶Ô mummy¡¢spider ÎŞĞ§
-Á¬Ò°ÀÇÒ²ÎŞĞ§..ÄÇ¾ÍÊ§È¥ÒşĞÎµÄĞ§¹ûÀ²?
-ÖÁÉÙ¶Ô low leveler ¶øÑÔ
-	Âé·³check Ò»ÏÂ..ĞÁ¿àÀ²
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
+messages ({(["id":553,"title":"< no title >","body":"éš±å½¢çš„æˆåŠŸç‡æ€éº¼ç®—? é‚„æ˜¯åªè¦è‡ªå‹•æ”»æ“Šçš„ mob éƒ½ç„¡æ•ˆ?
+ç¾åœ¨ invisible ä¸ä½†å° mummyã€spider ç„¡æ•ˆ
+é€£é‡ç‹¼ä¹Ÿç„¡æ•ˆ..é‚£å°±å¤±å»éš±å½¢çš„æ•ˆæœå•¦?
+è‡³å°‘å° low leveler è€Œè¨€
+	éº»ç…©check ä¸€ä¸‹..è¾›è‹¦å•¦
 ","time":787252656,"poster":"Tryer",]),(["id":554,"title":"Re: < no title >","body":"On Tue Dec 13, Tryer wrote:
-> ÒşĞÎµÄ³É¹¦\ÂÊÔõ÷áËã? »¹ÊÇÖ»Òª×Ô¶¯¹¥»÷µÄ mob ¶¼ÎŞĞ§?
-> ÏÖÔÚ invisible ²»µ«¶Ô mummy¡¢spider ÎŞĞ§
-> Á¬Ò°ÀÇÒ²ÎŞĞ§..ÄÇ¾ÍÊ§È¥ÒşĞÎµÄĞ§¹ûÀ²?
-> ÖÁÉÙ¶Ô low leveler ¶øÑÔ
-> 	Âé·³check Ò»ÏÂ..ĞÁ¿àÀ²
+> éš±å½¢çš„æˆåŠŸç‡æ€éº¼ç®—? é‚„æ˜¯åªè¦è‡ªå‹•æ”»æ“Šçš„ mob éƒ½ç„¡æ•ˆ?
+> ç¾åœ¨ invisible ä¸ä½†å° mummyã€spider ç„¡æ•ˆ
+> é€£é‡ç‹¼ä¹Ÿç„¡æ•ˆ..é‚£å°±å¤±å»éš±å½¢çš„æ•ˆæœå•¦?
+> è‡³å°‘å° low leveler è€Œè¨€
+> 	éº»ç…©check ä¸€ä¸‹..è¾›è‹¦å•¦
 
-    Õâ²»ÊÇ bug .. ÒşĞÎ»¹ÊÇ¶ã²»¹ıÖ÷¶¯¹¥»÷µÄ¹ÖÎï
+    é€™ä¸æ˜¯ bug .. éš±å½¢é‚„æ˜¯èº²ä¸éä¸»å‹•æ”»æ“Šçš„æ€ªç‰©
 
-					Èã±È
+					èŒ¹æ¯”
 ","time":787253095,"poster":"Ruby",]),(["id":555,"title":"< no title >","body":"dear god&wiz:
              plz kill annie file, the okip of her is wrong!!
          now i can't login with this id!!
@@ -39,84 +39,84 @@ not meno , is \"annie\" file , she okip is wrong!!
 so plz clear annie okip!!
 can?
                                    thx!!!!
-","time":787460258,"poster":"Meno",]),(["id":558,"body":"ÉíÉÏÓĞ22Òø±Ò
+","time":787460258,"poster":"Meno",]),(["id":558,"body":"èº«ä¸Šæœ‰22éŠ€å¹£
 but I type \"buy knife\"
-he say \"ÄãÉíÉÏÃ»ÓĞÊÊºÏµÄÒø±Ò\"
+he say \"ä½ èº«ä¸Šæ²’æœ‰é©åˆçš„éŠ€å¹£\"
 so I could only type \"buy spear\"he e hee
 ","title":"< no title >","time":787586732,"poster":"Keter",]),(["id":559,"body":"On Fri Dec 16, Keter wrote:
-> ÉíÉÏÓĞ22Òø±Ò
+> èº«ä¸Šæœ‰22éŠ€å¹£
 > but I type \"buy knife\"
-> he say \"ÄãÉíÉÏÃ»ÓĞÊÊºÏµÄÒø±Ò\"
+> he say \"ä½ èº«ä¸Šæ²’æœ‰é©åˆçš„éŠ€å¹£\"
 > so I could only type \"buy spear\"he e hee
 
- Hehehe ... ÀÏ°å²»ÊÇ¸úÄãÎŞÀíÈ¡ÄÖ£¬ÒòÎªÄãµÄÇ®ÕæµÄ²»¹» ... 
+ Hehehe ... è€é—†ä¸æ˜¯è·Ÿä½ ç„¡ç†å–é¬§ï¼Œå› ç‚ºä½ çš„éŒ¢çœŸçš„ä¸å¤  ... 
 
-Âò¶«Î÷Ç°ÇëÏÈ×¢Òâ :
+è²·æ±è¥¿å‰è«‹å…ˆæ³¨æ„ :
 
 > list knife
-ÔÚÕâÀïÄãÄÜÂòµ½µÄÓĞ:
-  ÍäÇúµÄĞ¡µ¶(curved knife)              70 Òø±Ò
-  Ğ¡µ¶(knife)                           10 Òø±Ò
-  ¾«ÁéĞ¡µ¶(elven knife)                  8 Òø±Ò
+åœ¨é€™è£¡ä½ èƒ½è²·åˆ°çš„æœ‰:
+  å½æ›²çš„å°åˆ€(curved knife)              70 éŠ€å¹£
+  å°åˆ€(knife)                           10 éŠ€å¹£
+  ç²¾éˆå°åˆ€(elven knife)                  8 éŠ€å¹£
 >
-Knife Ò»¹²ÓĞÈı°Ñ ... ÀÏ°åÒ»¶¨ÈÏÎªÄãÒªÂòµÚÒ»°Ñ ...
+Knife ä¸€å…±æœ‰ä¸‰æŠŠ ... è€é—†ä¸€å®šèªç‚ºä½ è¦è²·ç¬¬ä¸€æŠŠ ...
 
 	that's all ...
 
-						Èã±È
-","title":"Re: < no title >","time":787587632,"poster":"Ruby",]),(["id":561,"body":" ÇëÎ×Ê¦°ï\"oliver\" ËûÉè´íÁËIP ADDRESSS and ´Ó´Ëcan't login....**cry** 
-ÓĞÄÇÒ»Î»Ó¢Ã÷µÄÎ×Ê¦can help him...?¸Ğ¼¤²»¾¡À²!
-","title":"28 ÇëÎ×Ê¦°ï¸öĞ¡Ã¦°É!","time":787624990,"poster":"Bluebaron",]),(["id":562,"body":"On Sat Dec 17, Bluebaron wrote:
->  ÇëÎ×Ê¦°ï\"oliver\" ËûÉè´íÁËIP ADDRESSS and ´Ó´Ëcan't login....**cry** 
-> ÓĞÄÇÒ»Î»Ó¢Ã÷µÄÎ×Ê¦can help him...?¸Ğ¼¤²»¾¡À²!
+						èŒ¹æ¯”
+","title":"Re: < no title >","time":787587632,"poster":"Ruby",]),(["id":561,"body":" è«‹å·«å¸«å¹«\"oliver\" ä»–è¨­éŒ¯äº†IP ADDRESSS and å¾æ­¤can't login....**cry** 
+æœ‰é‚£ä¸€ä½è‹±æ˜çš„å·«å¸«can help him...?æ„Ÿæ¿€ä¸ç›¡å•¦!
+","title":"28 è«‹å·«å¸«å¹«å€‹å°å¿™å§!","time":787624990,"poster":"Bluebaron",]),(["id":562,"body":"On Sat Dec 17, Bluebaron wrote:
+>  è«‹å·«å¸«å¹«\"oliver\" ä»–è¨­éŒ¯äº†IP ADDRESSS and å¾æ­¤can't login....**cry** 
+> æœ‰é‚£ä¸€ä½è‹±æ˜çš„å·«å¸«can help him...?æ„Ÿæ¿€ä¸ç›¡å•¦!
 
  OK now ..
 
 							Ruby
-","title":"Re: 28 ÇëÎ×Ê¦°ï¸öĞ¡Ã¦°É!","time":787628265,"poster":"Ruby",]),(["id":563,"title":"help","body":" i am flasher!! i lost my file ..any wizard help me please ..:(
+","title":"Re: 28 è«‹å·«å¸«å¹«å€‹å°å¿™å§!","time":787628265,"poster":"Ruby",]),(["id":563,"title":"help","body":" i am flasher!! i lost my file ..any wizard help me please ..:(
 ","time":787685081,"poster":"Li",]),(["id":564,"body":"On Sun Dec 18, Li wrote:
 >  i am flasher!! i lost my file ..any wizard help me please ..:(
 
-   É±µôÁË ....
+   æ®ºæ‰äº† ....
 
-					Èã±È
-","title":"Re: help","time":787687839,"poster":"Ruby",]),(["id":565,"title":"¼ÓĞ©É«²Ê°É","body":"Èç±êÌâ, ¼ÓĞ©É«²Ê°É!
+					èŒ¹æ¯”
+","title":"Re: help","time":787687839,"poster":"Ruby",]),(["id":565,"title":"åŠ äº›è‰²å½©å§","body":"å¦‚æ¨™é¡Œ, åŠ äº›è‰²å½©å§!
 ","time":787703361,"poster":"Zoro",]),(["id":566,"title":"love wed??","body":"nothing but one wrong spelling
 love web
-","time":787705997,"poster":"Zoro",]),(["id":568,"title":"Re: ¼ÓĞ©É«²Ê°É","body":"On Sun Dec 18, Zoro wrote:
-> Èç±êÌâ, ¼ÓĞ©É«²Ê°É!
+","time":787705997,"poster":"Zoro",]),(["id":568,"title":"Re: åŠ äº›è‰²å½©å§","body":"On Sun Dec 18, Zoro wrote:
+> å¦‚æ¨™é¡Œ, åŠ äº›è‰²å½©å§!
 
-    É«²Ê£¿ Äã¿ÉÒÔÉè : set vt100 color 
+    è‰²å½©ï¼Ÿ ä½ å¯ä»¥è¨­ : set vt100 color 
 
-    ÔÙ score ¿´¿´£¬ÕâÊÇÄãÒªµÄÂğ£¿
+    å† score çœ‹çœ‹ï¼Œé€™æ˜¯ä½ è¦çš„å—ï¼Ÿ
 
-							Èã±È
+							èŒ¹æ¯”
 ","time":787718377,"poster":"Ruby",]),(["id":569,"title":"what !!?? why kill my file??","body":"
-  ÎÒÊÇËµ×ÊÁÏÎŞ·¨¶ÁÈ¡Ôõ÷á°ÑÎÒµÄµµ°¸É±ÁË£¿£¿ÎØÎØ£¡£¡ÎÒÁ·µÄºÜ¾ÃÄØ£¡£¡
+  æˆ‘æ˜¯èªªè³‡æ–™ç„¡æ³•è®€å–æ€éº¼æŠŠæˆ‘çš„æª”æ¡ˆæ®ºäº†ï¼Ÿï¼Ÿå—šå—šï¼ï¼æˆ‘ç·´çš„å¾ˆä¹…å‘¢ï¼ï¼
 ","time":787762358,"poster":"Flasher",]),(["id":570,"body":"On Sun Dec 18, Flasher wrote:
->   ÎÒÊÇËµ×ÊÁÏÎŞ·¨¶ÁÈ¡Ôõ÷á°ÑÎÒµÄµµ°¸É±ÁË£¿£¿ÎØÎØ£¡£¡ÎÒÁ·µÄºÜ¾ÃÄØ£¡£¡
+>   æˆ‘æ˜¯èªªè³‡æ–™ç„¡æ³•è®€å–æ€éº¼æŠŠæˆ‘çš„æª”æ¡ˆæ®ºäº†ï¼Ÿï¼Ÿå—šå—šï¼ï¼æˆ‘ç·´çš„å¾ˆä¹…å‘¢ï¼ï¼
 
-    okok ... ÏÂ´ÎÕÒÎÒ°É :P) ... Ò²²»ËµÇå³ş£¬»¹ÒÔÎªÊÇ¾ÉµÄÇé¿öÄØ
+    okok ... ä¸‹æ¬¡æ‰¾æˆ‘å§ :P) ... ä¹Ÿä¸èªªæ¸…æ¥šï¼Œé‚„ä»¥ç‚ºæ˜¯èˆŠçš„æƒ…æ³å‘¢
 
-					Èã±È
+					èŒ¹æ¯”
 ","title":"Re: what !!?? why kill my file??","time":787777034,"poster":"Ruby",]),(["id":571,"title":"....","body":"
 
-    ÄÇ¹øËäÈ»¿ª·Å¸ø 50 ppls,¿ÉÊÇ......big lag ~~~~~
-    so Òª²»Òª¿¼ÂÇÒ»ÏÂ¼õÉÙ ppls ÄØ?
+    é‚£é‹é›–ç„¶é–‹æ”¾çµ¦ 50 ppls,å¯æ˜¯......big lag ~~~~~
+    so è¦ä¸è¦è€ƒæ…®ä¸€ä¸‹æ¸›å°‘ ppls å‘¢?
 
-                     Ï£ÍûºÃÆ·ÖÊµÄ devil ......
+                     å¸Œæœ›å¥½å“è³ªçš„ devil ......
 
 ","time":787910793,"poster":"Devil",]),(["id":572,"title":"< no title >","body":"i am playing centaur,..
 if i hoof success,.i still will stop fighting for 2 round,..
 why?
-","time":787931011,"poster":"Hoof",]),(["id":574,"title":"poor cool","body":"sorry.... my poor cool ÉÏ´Î×ÔÉ±, µ«ÊÇ file ºÃÏñÓĞÎÊÌâ, Âé·³ delete µô cool ok? thx :)
+","time":787931011,"poster":"Hoof",]),(["id":574,"title":"poor cool","body":"sorry.... my poor cool ä¸Šæ¬¡è‡ªæ®º, ä½†æ˜¯ file å¥½åƒæœ‰å•é¡Œ, éº»ç…© delete æ‰ cool ok? thx :)
 vivian
 ","time":788065659,"poster":"Vivian",]),(["id":575,"title":"Re: poor cool","body":"On Thu Dec 22, Vivian wrote:
-> sorry.... my poor cool ÉÏ´Î×ÔÉ±, µ«ÊÇ file ºÃÏñÓĞÎÊÌâ, Âé·³ delete µô cool ok? thx :)
+> sorry.... my poor cool ä¸Šæ¬¡è‡ªæ®º, ä½†æ˜¯ file å¥½åƒæœ‰å•é¡Œ, éº»ç…© delete æ‰ cool ok? thx :)
 > vivian
 
-   É±µôÁË !!
+   æ®ºæ‰äº† !!
 
-							Èã±È
+							èŒ¹æ¯”
 ","time":788072043,"poster":"Ruby",]),})
 id_ref 587

@@ -5,9 +5,9 @@ inherit ROOM;
 void create()
 {
     ::create();
-    set_short("ÆÙ²¼¶¥¶Ë");
+    set_short("ç€‘å¸ƒé ‚ç«¯");
     set_long(@LONG
-Õâ¶ùÔÙÍù¶«×ßÒ»Ğ©£¬¾ÍÊÇ×î¸ßµãÁË£»Ô­À´ÆÙ²¼¶¥¶ËµÄÄÇÒ»Í·ÊÇÒ»¸ö´óĞüÑÂ¡£
+é€™å…’å†å¾€æ±èµ°ä¸€äº›ï¼Œå°±æ˜¯æœ€é«˜é»äº†ï¼›åŸä¾†ç€‘å¸ƒé ‚ç«¯çš„é‚£ä¸€é ­æ˜¯ä¸€å€‹å¤§æ‡¸å´–ã€‚
 LONG
             );
     set_outside("island");
@@ -25,16 +25,16 @@ void init()
 int do_search()
 {
       tell_object(this_player(),
-      "àÅ¡«¡«£¡¸ù¾İÄãÍÆ¶ÏµÄ½á¹û£¬È·ĞÅÕâÀïÓĞÅÊÅÀ(climb)¹ıµÄºÛ¼£.......\n");
+      "å—¯ï½ï½ï¼æ ¹æ“šä½ æ¨æ–·çš„çµæœï¼Œç¢ºä¿¡é€™è£¡æœ‰æ”€çˆ¬(climb)éçš„ç—•è·¡.......\n");
       return 1;
 }
 
 int do_climb( string arg)
 {
     if( !arg || arg=="" )
-      return notify_fail("ÄãÒªÅÀÄÄ¸ö·½ÏòÄØ£¿\n");
+      return notify_fail("ä½ è¦çˆ¬å“ªå€‹æ–¹å‘å‘¢ï¼Ÿ\n");
     if( arg != "down" )
-      return notify_fail("ÕâÀï¾ÍÊÇÆÙ²¼µÄ¶¥¶ËÁË£¬ÄãÒªÍùÄÄ¶ùÅÀÄØ£¿\n");
+      return notify_fail("é€™è£¡å°±æ˜¯ç€‘å¸ƒçš„é ‚ç«¯äº†ï¼Œä½ è¦å¾€å“ªå…’çˆ¬å‘¢ï¼Ÿ\n");
     if( arg == "down" )
       to_climb_down( this_player(), AREA"in2", AREA"in", 35, 15);
     return 1;

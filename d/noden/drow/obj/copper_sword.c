@@ -3,15 +3,15 @@
 inherit WEAPON;
 void create()
 {
-        set_name( "copper sword","Í­ÈĞ");
+        set_name( "copper sword","éŠ…åˆƒ");
         add( "id",({ "sword" }) );
-        set_short( "Í­ÈĞ");
+        set_short( "éŠ…åˆƒ");
         set_long(
 @CLONG
-ÕâÊÇ°ÑÓÉ´ÖÍ­Ëù´òÔìµÄ³¤½££¬ÎÕ±ú´¦»¹ÓĞÂÌÉ«µÄÍ­ĞâÔÚ¡£
+é€™æ˜¯æŠŠç”±ç²—éŠ…æ‰€æ‰“é€ çš„é•·åŠï¼Œæ¡æŸ„è™•é‚„æœ‰ç¶ è‰²çš„éŠ…é½åœ¨ã€‚
 CLONG
                 );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 18 );
         set( "type", "longblade" );
         set( "min_damage", 17 );

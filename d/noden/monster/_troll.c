@@ -4,10 +4,10 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(13);
-	ob->set_name( "troll", "ɽ�����" );
-	ob->set_short( "ɽ�����" );
+	ob->set_name( "troll", "山丘巨人" );
+	ob->set_short( "山丘巨人" );
 	ob->set_long(
-		"����ִ��ֱ��ľ��������������չ�·�ѡ�\n"
+		"這個又大又笨的巨人正守在這裡收過路費。\n"
 	);
 	ob->set_perm_stat( "str", 28 );
 	ob->set_perm_stat( "dex", 10 );
@@ -25,9 +25,9 @@ void create(object ob)
 
 	ob->set( "chat_chance", 15 );
 	ob->set( "chat_output", ({
-		"ɽ�����˵��: ������С�ӣ�\n",
-		"ɽ�����˵��: ��Ǯ����������Ȼ�е����ܵġ�\n",
-		"ɽ�����˵��: �Ҳ����ڿ���Ц���������ϵ�Ǯȫ����������\n"
+		"山丘巨人說道: 慢著，小子！\n",
+		"山丘巨人說道: 把錢留下來，不然有的你受的。\n",
+		"山丘巨人說道: 我不是在開玩笑，把你身上的錢全部留下來！\n"
 	}) );
 
 	ob->wield_weapon("/d/noden/item/morning_star");

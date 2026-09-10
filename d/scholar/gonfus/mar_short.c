@@ -17,13 +17,13 @@ int check_weapon(object me)
 
   weapon=(object)me->query("weapon1");
   if( !weapon || (string)weapon->query("type") != ("shortblade") ) {
-           tell_object(me,"Äã²¢Î´×°±¸ÊÊºÏµÄÎäÆ÷¡£\n");
+           tell_object(me,"ä½ ä¸¦æœªè£å‚™é©åˆçš„æ­¦å™¨ã€‚\n");
            tell_object(me,
-             set_color("ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n","HIY")
+             set_color("ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n","HIY")
              );
         tell_room( environment(me),
                 me->query("c_name")+
-                "ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n" , me);
+                "è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n" , me);
 
         me->delete("attack_skill");
         me->delete("defense_skill");
@@ -41,19 +41,19 @@ int enhant(object me, int level)
 	weapon = (object)me->query("weapon1");
 
         if( !weapon || (string)weapon->query("type") != ("shortblade") ) {
-           tell_object(me,"Äã²¢Î´×°±¸ÊÊºÏµÄÎäÆ÷¡£\n");
+           tell_object(me,"ä½ ä¸¦æœªè£å‚™é©åˆçš„æ­¦å™¨ã€‚\n");
            return 0;
         }
 
 	tell_object(me, 
-		"\nÄã¿ªÊ¼½«ÄÚÁ¦¾Ûì¶½£Éí, ×¼±¸Ê¹³ö¡¸"+
-		to_chinese(GONFU_NAME)+"¡¹!!\n");
+		"\nä½ é–‹å§‹å°‡å…§åŠ›èšæ–¼åŠèº«, æº–å‚™ä½¿å‡ºã€Œ"+
+		to_chinese(GONFU_NAME)+"ã€!!\n");
 
 	tell_room( environment(me),
 		"\n"+me->query("c_name")+
-		"´óºÈÒ»Éù£¬½«ÊÖÉÏµÄ"+weapon->query("short")+
-		"Ò»¶¶£¬×¼±¸Ê©Õ¹ÄÇÄÑµÃÒ»¼ûµÄ"+
-                to_chinese(GONFU_NAME)+"¡£\n" , me);
+		"å¤§å–ä¸€è²ï¼Œå°‡æ‰‹ä¸Šçš„"+weapon->query("short")+
+		"ä¸€æŠ–ï¼Œæº–å‚™æ–½å±•é‚£é›£å¾—ä¸€è¦‹çš„"+
+                to_chinese(GONFU_NAME)+"ã€‚\n" , me);
 
 	me->set("attack_skill", GONFU_DIR+GONFU_NAME); 
 	me->delete("defense_skill");
@@ -69,12 +69,12 @@ void release_gonfu(object me)
         if (!me->query_temp("gonfu_busy"))
           return;
 	tell_object(me, 
-          set_color("ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n","HIY")
+          set_color("ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n","HIY")
           );
  
  	tell_room( environment(me),
  		me->query("c_name")+
- 		"ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n" , me);
+ 		"è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n" , me);
  
 	me->delete("attack_skill");
 	me->delete("defense_skill");

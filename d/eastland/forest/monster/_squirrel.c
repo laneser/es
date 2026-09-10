@@ -4,16 +4,16 @@ void create(object ob)
 {
 		if ( ! ob ) return ;
         ob->set_level(2);
-        ob->set_name( "squirrel", "ËÉÊó" );
-        ob->set_short( "ËÉÊó" );
+        ob->set_name( "squirrel", "æ¾é¼ " );
+        ob->set_short( "æ¾é¼ " );
         ob->set_long(
-                "Äã¿´µ½Ò»Ö»ÓÐÖø³¤³¤Î²°Í£¬Áé»î´óÑÛ¾¦µÄÐ¡¶¯ÎïÔÚÖ¦Í·¼äÅÜÀ´ÅÜÈ¥¡£\n"
+                "ä½ çœ‹åˆ°ä¸€åªæœ‰è‘—é•·é•·å°¾å·´ï¼Œéˆæ´»å¤§çœ¼ç›çš„å°å‹•ç‰©åœ¨æžé ­é–“è·‘ä¾†è·‘åŽ»ã€‚\n"
         );
-        ob->set( "unit", "Ö»" );
+        ob->set( "unit", "åª" );
         ob->set_perm_stat("kar", 3 );
         ob->set_perm_stat("dex", 5 );
         ob->set_natural_weapon(4,2,3);
         ob->set_natural_armor(7,0);
-        ob->set_c_verbs( ({ "%sÓÃ×¦×ÓÍù%s×¥È¥" }) );
-        ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Î²°Í" }) );
+        ob->set_c_verbs( ({ "%sç”¨çˆªå­å¾€%sæŠ“åŽ»" }) );
+        ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å°¾å·´" }) );
 }

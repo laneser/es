@@ -5,13 +5,13 @@ inherit OBJECT;
 void create()
 {
    seteuid(getuid());
-   set_name( "mummy", "Ä¾ÄËÒÁ" );
-   set_short( "Ä¾ÄËÒÁ" );
+   set_name( "mummy", "æœ¨ä¹ƒä¼Š" );
+   set_short( "æœ¨ä¹ƒä¼Š" );
    set_long(
-	"Ò»¾ßË¶´óµÄÄ¾ÄËÒÁ, »òĞíÄã¿ÉÒÔÊÔÖø½âÆÊ(anatomise)Ëü¡£\n"
+	"ä¸€å…·ç¢©å¤§çš„æœ¨ä¹ƒä¼Š, æˆ–è¨±ä½ å¯ä»¥è©¦è‘—è§£å‰–(anatomise)å®ƒã€‚\n"
 	);
 
-   set( "unit", "¾ß" );
+   set( "unit", "å…·" );
    set( "weight", 5000 );
    set( "prevent_get", 1 );
 }
@@ -32,19 +32,19 @@ int am_corpse(string str)
    weapon = (object)this_player()->query("weapon1");
 
    if( !str || str != "mummy" )
-   return notify_fail( "ÄãÏëÒª×öÉ¶?\n" );
+   return notify_fail( "ä½ æƒ³è¦åšå•¥?\n" );
    if( !weapon || (string)weapon->query("type") != "dagger" )
-   return notify_fail( "ÄãËÆºõÈ±·¦ÊÊµ±µÄ½âÆÊ¹¤¾ß¡£\n" );
+   return notify_fail( "ä½ ä¼¼ä¹ç¼ºä¹é©ç•¶çš„è§£å‰–å·¥å…·ã€‚\n" );
    if( op_succ >= op_fail && op_succ +op_fail > 25
      && (string)this_player()->query("class") == "healer" ) {
 	heart = new( "/d/noden/tomb/obj/heart" );
 	tell_object( this_player(),
-	"ÄãĞÒÔËµØµÃµ½Ò»¿Å»Æ½ğÖ®ĞÄ!\n" );
+	"ä½ å¹¸é‹åœ°å¾—åˆ°ä¸€é¡†é»ƒé‡‘ä¹‹å¿ƒ!\n" );
 	heart->move(this_player());
    }
-     write( "Äã°ÑÄ¾ÄËÒÁÇĞÀÃÁË¡£\n" );
+     write( "ä½ æŠŠæœ¨ä¹ƒä¼Šåˆ‡çˆ›äº†ã€‚\n" );
    tell_room( environment(this_object()),
-	  "Ä¾ÄËÒÁ±»"+this_player()->query("c_name")+"ÇĞÀÃÁË¡£\n", ({ this_player() }) );
+	  "æœ¨ä¹ƒä¼Šè¢«"+this_player()->query("c_name")+"åˆ‡çˆ›äº†ã€‚\n", ({ this_player() }) );
    this_object()->remove();
    return 1;
 }

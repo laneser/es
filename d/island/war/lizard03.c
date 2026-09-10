@@ -5,15 +5,15 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "Lizardman Lieutenant","òáòæÈËÖĞÎ¾" );
+	set_name( "Lizardman Lieutenant","èœ¥èœ´äººä¸­å°‰" );
 	add( "id",({ "lizardman","lieutenant" }) );
-	set_short( "òáòæÈËÖĞÎ¾" );
+	set_short( "èœ¥èœ´äººä¸­å°‰" );
 	set_long(@LONG
-    Äã¿´µ½µÄÊÇÒ»ÎªÓ¢Æø»À·¢µÄ¾ü¹Ù£¬ËûÕı´øÁìÖøËûµÄ²¿ÏÂÔÚÕ½³¡ÉÏ
-³å·æÏİÕó£¬ËûµÄÈÎÎñ¾ÍÊÇ×èµ²µĞÈË£¬Ê¹áá·½ÓĞ³äÔ£µÄÊ±¼ä×¼±¸¡£
+    ä½ çœ‹åˆ°çš„æ˜¯ä¸€ç‚ºè‹±æ°£ç…¥ç™¼çš„è»å®˜ï¼Œä»–æ­£å¸¶é ˜è‘—ä»–çš„éƒ¨ä¸‹åœ¨æˆ°å ´ä¸Š
+è¡é‹’é™·é™£ï¼Œä»–çš„ä»»å‹™å°±æ˜¯é˜»æ“‹æ•µäººï¼Œä½¿å¾Œæ–¹æœ‰å……è£•çš„æ™‚é–“æº–å‚™ã€‚
 LONG
 		);
-	set( "unit","Ãû" );
+	set( "unit","å" );
 	set( "race","lizardman" );
 	set( "gender","male" );
 	set( "alignment", -300 );
@@ -34,7 +34,7 @@ LONG
 	set_skill( "block", 80 );
 	set( "chat_chance", 20 );
 	set( "att_chat_output",
-	({ "\nòáòæÈËÖĞÎ¾´ó½Ğ: ¿ì·ÅÏÂÎäÆ÷£¬±ğÔÙ×öÀ§ÊŞÖ®¶·ÁË£¡\n\n",}) );
+	({ "\nèœ¥èœ´äººä¸­å°‰å¤§å«: å¿«æ”¾ä¸‹æ­¦å™¨ï¼Œåˆ¥å†åšå›°ç¸ä¹‹é¬¥äº†ï¼\n\n",}) );
 	wield_weapon( IWARO"axe2" );
 	equip_armor( IWARO"shield5" );
 	equip_armor( IWARO"bracer2" );

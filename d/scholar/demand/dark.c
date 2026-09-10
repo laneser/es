@@ -35,21 +35,21 @@ void remove_effect(object me)
 int summon_me(object me)
 {
         if ( (int)me->query_skill("polemic")< LEVEL*5 ) {
-          write("ÄãµÄ±çÊõ¼¼ÄÜ²»¹»ÇýÊ¹ºÚ°µ¾«ÁéÀ´°ïÖúÄã¡£\n");
+          write("ä½ çš„è¾¯è¡“æŠ€èƒ½ä¸å¤ é©…ä½¿é»‘æš—ç²¾éˆä¾†å¹«åŠ©ä½ ã€‚\n");
           return 1;
         }
 
         if ( (int)me->query_skill("yinyanglogy")< LEVEL*3 ) {
-          write("ÄãµÄÒõÑôÑ§¼¼ÄÜ²»¹»ÇýÊ¹ºÚ°µ¾«ÁéÀ´°ïÖúÄã¡£\n");
+          write("ä½ çš„é™°é™½å­¸æŠ€èƒ½ä¸å¤ é©…ä½¿é»‘æš—ç²¾éˆä¾†å¹«åŠ©ä½ ã€‚\n");
           return 1;
         }
 
 	if ( (int)me->query("spell_points") < COST_SP ) {
-	  write("ÄãµÄ¾«Éñ²»¼ÃÁË£¬Ó¦¸ÃºÃºÃÐÝÏ¢Ò»ÏÂ¡£\n");
+	  write("ä½ çš„ç²¾ç¥žä¸æ¿Ÿäº†ï¼Œæ‡‰è©²å¥½å¥½ä¼‘æ¯ä¸€ä¸‹ã€‚\n");
 	  return 1;
 	}
         me->add("spell_points",-COST_SP);
-        tell_object(me,set_color("Äã¼¯ÖÐ¾«Éñ¿ªÊ¼ÀûÓÃÐÄÁéÁ¦Á¿ÕÙ»½ºÚ°µ¾«ÁéÀ´°ïÖúÄã¡£\n","HIW"));
+        tell_object(me,set_color("ä½ é›†ä¸­ç²¾ç¥žé–‹å§‹åˆ©ç”¨å¿ƒéˆåŠ›é‡å¬å–šé»‘æš—ç²¾éˆä¾†å¹«åŠ©ä½ ã€‚\n","HIW"));
         call_out("check_demand",1,me);
         me->set_temp("summon_busy",1);
         return 1;
@@ -61,11 +61,11 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL)
-    write("ÄãºÍºÚ°µ¾«ÁéÖ®¼äµÄÐÄÁé´«µÝÃ»ÓÐ³É¹¦\£¬ÕÙ»½Ê§°Ü¡£\n");
+    write("ä½ å’Œé»‘æš—ç²¾éˆä¹‹é–“çš„å¿ƒéˆå‚³éžæ²’æœ‰æˆåŠŸ\ï¼Œå¬å–šå¤±æ•—ã€‚\n");
   else {
-    write("ºÚ°µ¾«Áé¶ÔÄãËµ£ºÃ»ÎÊÌâ...ÎÒÂíÉÏÀ´°ïÄãÔö¼ÓÕ½¶·Ç±ÄÜ!\n");
-    tell_object(me,set_color("Ò»ÍÅºÚÎíÆ®ÁË¹ýÀ´£¬Äã¶ú±ßÌýµ½ºÚ°µ¾«Áé¶ÔÄãËµ:ÈÃÎÒÓÃ°µºÚ¶·ÆøÀ´ÌáÉýÄãµÄÕ½¶·Á¦°É ! ²»ÖªËüÏòÄãÊ©ÁËÊ²÷á·¨Êõ£¬ÄãÍ»È»¾õµÄ×Ô¼ºµÄ¾«Á¦´óÔö¡£\n","HIW"));
-    tell_room(environment(me),set_color("Äã¼ûµ½"+me->query("c_name")+"ÉñÇé×¨×¢µÄÄîÖøÒ»Ð©ÖäÓï£¬Ò»ÍÅºÚÎíÆ®ÁË¹ýÀ´£¬ÒþÒþÔ¼Ô¼¿ÉÒÔ¿´µ½Ò»Ö»ºÚ°µ¾«ÁéÕý¶Ô"+me->query("c_name")+"²»ÖªµÀÊ©Ê²÷á·¨Êõ¡£\n","HIW"),me);
+    write("é»‘æš—ç²¾éˆå°ä½ èªªï¼šæ²’å•é¡Œ...æˆ‘é¦¬ä¸Šä¾†å¹«ä½ å¢žåŠ æˆ°é¬¥æ½›èƒ½!\n");
+    tell_object(me,set_color("ä¸€åœ˜é»‘éœ§é£„äº†éŽä¾†ï¼Œä½ è€³é‚Šè½åˆ°é»‘æš—ç²¾éˆå°ä½ èªª:è®“æˆ‘ç”¨æš—é»‘é¬¥æ°£ä¾†æå‡ä½ çš„æˆ°é¬¥åŠ›å§ ! ä¸çŸ¥å®ƒå‘ä½ æ–½äº†ä»€éº¼æ³•è¡“ï¼Œä½ çªç„¶è¦ºçš„è‡ªå·±çš„ç²¾åŠ›å¤§å¢žã€‚\n","HIW"));
+    tell_room(environment(me),set_color("ä½ è¦‹åˆ°"+me->query("c_name")+"ç¥žæƒ…å°ˆæ³¨çš„å¿µè‘—ä¸€äº›å’’èªžï¼Œä¸€åœ˜é»‘éœ§é£„äº†éŽä¾†ï¼Œéš±éš±ç´„ç´„å¯ä»¥çœ‹åˆ°ä¸€éš»é»‘æš—ç²¾éˆæ­£å°"+me->query("c_name")+"ä¸çŸ¥é“æ–½ä»€éº¼æ³•è¡“ã€‚\n","HIW"),me);
     add_effect(me);
     me->set_temp("summon_rest",1);
     call_out("check_battle",LEVEL+random(LEVEL),me,mob);
@@ -76,15 +76,15 @@ void check_demand(object me)
 void check_battle(object me,object mob)
 {
   if (!me->query_attacker()) {
-    write("ºÚ°µ¾«ÁéËµ£ºÎÒµÄÅóÓÑ¡¢ÎÒ±ØÐëÒª×ßÁË£¬¼ÙÈçÐëÒªÎÒ°ïÃ¦ÇëÔÙ½ÐÎÒ¡£\n"); 
-    tell_room(environment(me),set_color("Äã¼ûµ½ºÚ°µ¾«ÁéËæÖøºÚÎíÏûÉ¢µôÁË¡£\n","HIW"));
+    write("é»‘æš—ç²¾éˆèªªï¼šæˆ‘çš„æœ‹å‹ã€æˆ‘å¿…é ˆè¦èµ°äº†ï¼Œå‡å¦‚é ˆè¦æˆ‘å¹«å¿™è«‹å†å«æˆ‘ã€‚\n"); 
+    tell_room(environment(me),set_color("ä½ è¦‹åˆ°é»‘æš—ç²¾éˆéš¨è‘—é»‘éœ§æ¶ˆæ•£æŽ‰äº†ã€‚\n","HIW"));
     remove_effect(me);
     call_out("can_summon_again",random(LEVEL),me);
     return;
   }
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL) {
-    write("ºÚ°µ¾«ÁéËµ£ºÎÒµÄÅóÓÑ¡¢ÎÒ±ØÐëÒª×ßÁË£¬¼ÙÈçÐëÒªÎÒ°ïÃ¦ÇëÔÙ½ÐÎÒ¡£\n");
-    tell_room(environment(me),set_color("Äã¼ûµ½ºÚ°µ¾«ÁéËæÖøºÚÎíÏûÉ¢µôÁË¡£\n","HIW"));
+    write("é»‘æš—ç²¾éˆèªªï¼šæˆ‘çš„æœ‹å‹ã€æˆ‘å¿…é ˆè¦èµ°äº†ï¼Œå‡å¦‚é ˆè¦æˆ‘å¹«å¿™è«‹å†å«æˆ‘ã€‚\n");
+    tell_room(environment(me),set_color("ä½ è¦‹åˆ°é»‘æš—ç²¾éˆéš¨è‘—é»‘éœ§æ¶ˆæ•£æŽ‰äº†ã€‚\n","HIW"));
     remove_effect(me);
     call_out("can_summon_again",random(LEVEL),me);
     return;

@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name( "fish soldier", "鱼兵" );
+	set_name( "fish soldier", "榄氬叺" );
 	add( "id", ({ "soldier" }) );
-	set_short( "鱼兵" );
+	set_short( "榄氬叺" );
 	set_long(
-	  "你见到一位鱼头人身的怪物，正在看守著龙宫大门。\n"
+	  "浣犺鍒颁竴浣嶉瓪闋汉韬殑鎬墿锛屾鍦ㄧ湅瀹堣憲榫嶅澶ч杸銆俓n"
 	);
 	set( "race", "monster" );
 	set( "gender", "male" );

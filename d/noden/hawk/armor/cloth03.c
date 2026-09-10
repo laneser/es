@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Hell Blessed suit","ÓÄÚ¤Ö®ÅÛ" );
+        set_name( "Hell Blessed suit","å¹½å†¥ä¹‹è¢" );
         add( "id", ({ "suit","cloth" }) );
-        set_short( "ÓÄÚ¤Ö®ÅÛ" );
+        set_short( "å¹½å†¥ä¹‹è¢" );
         set_long(
-                "Äã¿´µ½Õâ¼şÅÛ×ÓÉÏÃæĞ´ÁË¼¸¸ö×Ö: ºÚµÛË¹³öÆ·£¬Æ·ÖÊ±£Ö¤¡£\n"
+                "ä½ çœ‹åˆ°é€™ä»¶è¢å­ä¸Šé¢å¯«äº†å¹¾å€‹å­—: é»‘å¸æ–¯å‡ºå“ï¼Œå“è³ªä¿è­‰ã€‚\n"
         );
-        set( "unit", "Áì" );
+        set( "unit", "é ˜" );
         set("material","cloth");
         set( "type", "body" );
         set( "armor_class", 33 );

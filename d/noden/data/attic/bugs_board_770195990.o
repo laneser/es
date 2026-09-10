@@ -1,24 +1,24 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":69,"body":"Hi, all ....
      When explored set in ES done, we will post here....
 so, there are no explore point now loh :P.
                                         -Kyoko.
-","title":"About Explore","time":768909179,"poster":"Kyoko",]),(["id":70,"title":"²»Ëãbug, µ«....","body":"    À×Ë¼µÄdescribeÓĞ´í×Ö,.....ÕĞÄ¼¸ü¶àµÄÄêÇáÈË²Î\"¼Ò\"±£¼ÒÎÀ¹ú....
-    ÓĞ¿ÕÊ±¸ÄÒ»¸Ä°É
+","title":"About Explore","time":768909179,"poster":"Kyoko",]),(["id":70,"title":"ä¸ç®—bug, ä½†....","body":"    é›·æ€çš„describeæœ‰éŒ¯å­—,.....æ‹›å‹Ÿæ›´å¤šçš„å¹´è¼•äººåƒ\"å®¶\"ä¿å®¶è¡›åœ‹....
+    æœ‰ç©ºæ™‚æ”¹ä¸€æ”¹å§
        Rashudi
 ","time":769000537,"poster":"Rashudi",]),(["id":71,"title":"< no title >","body":"  The file anout the tree in far wind town seems disappear...please fix it...thanks.....
                              
                                     Sincerely yours
                                               mad...
 
-","time":769056418,"poster":"Lotus",]),(["id":72,"title":"about my character..... help!","body":" ÎÒµÄÈËÎïÊôĞÔ ¼¼ÄÜ Ç®Ç® È«²¿ËğÊ§µÃ!@#$%^$#@$#R
- ÎÒÒÑ¾­ÓÃ bug Ğ´ÁËÒ»·âÎÒËù¼ÇµÃµÄËğÊ§ÁË£¡ ÆäËûµÄ£¡ ÎØ~~ ÎÒ²»ÖªµÀÀ²£¡
- ÇëÎªÎÒ¼ì²ì¿´¿´£¡                         
-                                     Ğ¡Ğ¡
+","time":769056418,"poster":"Lotus",]),(["id":72,"title":"about my character..... help!","body":" æˆ‘çš„äººç‰©å±¬æ€§ æŠ€èƒ½ éŒ¢éŒ¢ å…¨éƒ¨æå¤±å¾—!@#$%^$#@$#R
+ æˆ‘å·²ç¶“ç”¨ bug å¯«äº†ä¸€å°æˆ‘æ‰€è¨˜å¾—çš„æå¤±äº†ï¼ å…¶ä»–çš„ï¼ å—š~~ æˆ‘ä¸çŸ¥é“å•¦ï¼
+ è«‹ç‚ºæˆ‘æª¢å¯Ÿçœ‹çœ‹ï¼                         
+                                     å°å°
 ","time":769068250,"poster":"Micral",]),(["id":73,"body":"rescently  play more about guest.
 quest can set okip too ?
 now i have set it too * 
@@ -46,31 +46,31 @@ it seems some bugs...
 when i kill the worker and the traveller
 when they die!! it show there r 2 die
 frank
-","time":769175671,"poster":"Frank",]),(["id":78,"title":"< no title >","body":"my \"emote\" is »µ»µ»µ»µÁË
+","time":769175671,"poster":"Frank",]),(["id":78,"title":"< no title >","body":"my \"emote\" is å£å£å£å£äº†
 i can use emote....
 buy in the alias the i set beforestill can use....
-Ææ¹Ö
-","time":769178664,"poster":"Onion",]),(["id":79,"body":"Èç¹ûÂòÁËÁ½Ö»ÒÔÉÏµÄ³èÎï...
-²»ÄÜÂôµÚ¶şÖ»...
-¶øÇÒÒ»µ«Åª¶ªÁË...
-±ğÏë½ĞËûÃÇ¸úÄã×ßÁË...
-¸ú±¾ÊÇÀ¬»ø
+å¥‡æ€ª
+","time":769178664,"poster":"Onion",]),(["id":79,"body":"å¦‚æœè²·äº†å…©éš»ä»¥ä¸Šçš„å¯µç‰©...
+ä¸èƒ½è³£ç¬¬äºŒéš»...
+è€Œä¸”ä¸€ä½†å¼„ä¸Ÿäº†...
+åˆ¥æƒ³å«ä»–å€‘è·Ÿä½ èµ°äº†...
+è·Ÿæœ¬æ˜¯åƒåœ¾
 ","title":"pet's bug","time":769265691,"poster":"Crchen",]),(["id":80,"body":"Dear Kyoko :
     Pet have a big bug !! can't order
 pet go west,board ship... or pet will lost
 that means can't carry our pet to travel !!
 Please fix it up !!
 ","title":"pet's bug","time":769272272,"poster":"Ruby",]),(["id":81,"body":"Oops... than my pet will leave me..... can let pet follow his owner fovever till his owner quit ?
-","title":"pet bug again","time":769272917,"poster":"Chiwako",]),(["id":82,"body":"Ç°¼¸Ìì¿´µ½ÓĞÈË´´ÔìÁËÒ»¶Ñlevel 1 µÄĞÂÊÖÀ´¿³ÈË,
-½á¹ûµ±È»ÊÇÒ»ÏÂ¾ÍËÀÁË,
-µ«ááÀ´»¹ÊÇÇ°ÆÍáá¼Ì, ²»¶ÏÀ´ËÍËÀ,
-µ±Ê±¿´µÄÒ»Í·ÎíË®,
-ááÀ´²ÅÖªµÀÊÇÄÇÎ»´ó¸çÏëµÇÉÏ¹ÖÎïÉ±ÈËÅÅĞĞ°ñ,
-²»¹ıÈç¹ûÕâÖÖĞĞÎªºÏ·¨,
-¿ÉÄÜÓĞÈË»áÀûÓÃÀ´Á·¹¦\,
-½¨Òé¸ÄÎªLevel 4 ÒÔÏÂ²»»á±»PK,Ò²²»ÄÜPK±ğÈË
+","title":"pet bug again","time":769272917,"poster":"Chiwako",]),(["id":82,"body":"å‰å¹¾å¤©çœ‹åˆ°æœ‰äººå‰µé€ äº†ä¸€å †level 1 çš„æ–°æ‰‹ä¾†ç äºº,
+çµæœç•¶ç„¶æ˜¯ä¸€ä¸‹å°±æ­»äº†,
+ä½†å¾Œä¾†é‚„æ˜¯å‰åƒ•å¾Œç¹¼, ä¸æ–·ä¾†é€æ­»,
+ç•¶æ™‚çœ‹çš„ä¸€é ­éœ§æ°´,
+å¾Œä¾†æ‰çŸ¥é“æ˜¯é‚£ä½å¤§å“¥æƒ³ç™»ä¸Šæ€ªç‰©æ®ºäººæ’è¡Œæ¦œ,
+ä¸éå¦‚æœé€™ç¨®è¡Œç‚ºåˆæ³•,
+å¯èƒ½æœ‰äººæœƒåˆ©ç”¨ä¾†ç·´åŠŸ\,
+å»ºè­°æ”¹ç‚ºLevel 4 ä»¥ä¸‹ä¸æœƒè¢«PK,ä¹Ÿä¸èƒ½PKåˆ¥äºº
                                Irisa
-","title":"½¨Òé:","time":769281396,"poster":"Irisa",]),(["id":83,"body":"I train my dino, I think it must has much exp, but I can't advance any skill...
+","title":"å»ºè­°:","time":769281396,"poster":"Irisa",]),(["id":83,"body":"I train my dino, I think it must has much exp, but I can't advance any skill...
 Can train pet ?
 ","title":"can pet advance","time":769290630,"poster":"Chiwako",]),(["id":84,"body":"On Thu May 19, Chiwako wrote:
 > I train my dino, I think it must has much exp, but I can't advance any skill...
@@ -78,26 +78,26 @@ Can train pet ?
 sorry !! can't train pet neh !!
 not limit by us ! but by guild ! they don't like mob join gild ...
 so ... 
-","title":"Re: can pet advance","time":769307522,"poster":"Ruby",]),(["id":85,"body":"ÎÒµÄÄñÉÏµ½´¬ÉÏáá....¾Í²»¸úÎÒ×ßÁË.....:(
-","title":"< no title >","time":769326249,"poster":"Jschen",]),(["id":86,"title":"BUG about pet...","body":"ÎÒÒªÇë³èÎï¼ÓÈëÎÒ...
-ËûÃ¿´Î¶¼Ëµ You lost your member : lee's pet dino .
-µ«ÊÇËûÓĞ¸úÀ´....
+","title":"Re: can pet advance","time":769307522,"poster":"Ruby",]),(["id":85,"body":"æˆ‘çš„é³¥ä¸Šåˆ°èˆ¹ä¸Šå¾Œ....å°±ä¸è·Ÿæˆ‘èµ°äº†.....:(
+","title":"< no title >","time":769326249,"poster":"Jschen",]),(["id":86,"title":"BUG about pet...","body":"æˆ‘è¦è«‹å¯µç‰©åŠ å…¥æˆ‘...
+ä»–æ¯æ¬¡éƒ½èªª You lost your member : lee's pet dino .
+ä½†æ˜¯ä»–æœ‰è·Ÿä¾†....
 ","time":769351027,"poster":"Lee",]),(["id":87,"title":"< no title >","body":"sorry after read 18 
 i think that's seem not bug 
-ÒòÎª³èÎïÃ¿´Î¶¼×Ô¼ºÏÈÅ×ÅÜ
-¶ø·Ç¸úÔÚÖ÷ÈËááÃæ
-²»¹ıÕâÑùËÆºõ¹Ö¹ÖµÄ
-³èÎïÎ´ÆÕÏÈÖª, ÖªµÀÖ÷ÈË½ÓÏÂÀ´ÒªÈ¥ÄÇ^_^
-¿É·ñ¸ÄÎªÖ÷ÈËÏÈ×ß¶øáá³èÎï¸ú........
+å› ç‚ºå¯µç‰©æ¯æ¬¡éƒ½è‡ªå·±å…ˆæ‹‹è·‘
+è€Œéè·Ÿåœ¨ä¸»äººå¾Œé¢
+ä¸éé€™æ¨£ä¼¼ä¹æ€ªæ€ªçš„
+å¯µç‰©æœªæ™®å…ˆçŸ¥, çŸ¥é“ä¸»äººæ¥ä¸‹ä¾†è¦å»é‚£^_^
+å¯å¦æ”¹ç‚ºä¸»äººå…ˆèµ°è€Œå¾Œå¯µç‰©è·Ÿ........
 ","time":769351427,"poster":"Dey",]),(["id":88,"body":"On Thu May 19, Irisa wrote:
-> Ç°¼¸Ìì¿´µ½ÓĞÈË´´ÔìÁËÒ»¶Ñlevel 1 µÄĞÂÊÖÀ´¿³ÈË,
-> ½á¹ûµ±È»ÊÇÒ»ÏÂ¾ÍËÀÁË,
-> µ«ááÀ´»¹ÊÇÇ°ÆÍáá¼Ì, ²»¶ÏÀ´ËÍËÀ,
-> µ±Ê±¿´µÄÒ»Í·ÎíË®,
-> ááÀ´²ÅÖªµÀÊÇÄÇÎ»´ó¸çÏëµÇÉÏ¹ÖÎïÉ±ÈËÅÅĞĞ°ñ,
-> ²»¹ıÈç¹ûÕâÖÖĞĞÎªºÏ·¨,
-> ¿ÉÄÜÓĞÈË»áÀûÓÃÀ´Á·¹¦\,
-> ½¨Òé¸ÄÎªLevel 4 ÒÔÏÂ²»»á±»PK,Ò²²»ÄÜPK±ğÈË
+> å‰å¹¾å¤©çœ‹åˆ°æœ‰äººå‰µé€ äº†ä¸€å †level 1 çš„æ–°æ‰‹ä¾†ç äºº,
+> çµæœç•¶ç„¶æ˜¯ä¸€ä¸‹å°±æ­»äº†,
+> ä½†å¾Œä¾†é‚„æ˜¯å‰åƒ•å¾Œç¹¼, ä¸æ–·ä¾†é€æ­»,
+> ç•¶æ™‚çœ‹çš„ä¸€é ­éœ§æ°´,
+> å¾Œä¾†æ‰çŸ¥é“æ˜¯é‚£ä½å¤§å“¥æƒ³ç™»ä¸Šæ€ªç‰©æ®ºäººæ’è¡Œæ¦œ,
+> ä¸éå¦‚æœé€™ç¨®è¡Œç‚ºåˆæ³•,
+> å¯èƒ½æœ‰äººæœƒåˆ©ç”¨ä¾†ç·´åŠŸ\,
+> å»ºè­°æ”¹ç‚ºLevel 4 ä»¥ä¸‹ä¸æœƒè¢«PK,ä¹Ÿä¸èƒ½PKåˆ¥äºº
 >                                Irisa
 
 ________________________________________________
@@ -108,5 +108,5 @@ ________________________________________________
                          Sincerely yours 
                                mad ...
 
-","title":"Re: ½¨Òé:","time":769480930,"poster":"M",]),})
+","title":"Re: å»ºè­°:","time":769480930,"poster":"M",]),})
 id_ref 101

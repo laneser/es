@@ -6,15 +6,15 @@ inherit ROOM;
 void create()
 {
 	::create();
-  set_short("storage room","´¢²ØÊÒ");
+  set_short("storage room","å„²è—å®¤");
   set_long(@Long
-Ò»¼äºÜ´óµÄ´¢²ØÊÒ,ÀïÃæ·ÅÖøÒ»¶ÑÔÓÆßÔÓ°ËµÄ¶«Î÷.ÓÐÒ»¸öºÜ³¤µÄÌÝ×Ó(ladder)Í¨ÏòÉÏÃæ
-,¶ø±±±ßÓÐÒ»¼äÒõ°µµÄµØÏÂÊÒ
+ä¸€é–“å¾ˆå¤§çš„å„²è—å®¤,è£¡é¢æ”¾è‘—ä¸€å †é›œä¸ƒé›œå…«çš„æ±è¥¿.æœ‰ä¸€å€‹å¾ˆé•·çš„æ¢¯å­(ladder)é€šå‘ä¸Šé¢
+,è€ŒåŒ—é‚Šæœ‰ä¸€é–“é™°æš—çš„åœ°ä¸‹å®¤
 Long
 );
 
 set("c_item_desc",([
-    "ladder":"Ò»µÀºÜ³¤µÄÌÝ×Ó.\n",
+    "ladder":"ä¸€é“å¾ˆé•·çš„æ¢¯å­.\n",
    ]) );
 set("exits",([
      "northdown":Deathland"/dwarf/pass01.c",
@@ -31,8 +31,8 @@ int to_climb(string str)
 {
   if(!str||str!="ladder") return 0;
   else {
-    write("ÄãÅÀÉÏÕâÌÝ×Ó,»¨ÁËÐí\¾ÃµÄÊ±¼ä²ÅÅÀÍêÕâ¸ö·Ç³£³¤µÄÌÝ×Ó\n");
-    say(this_player()->query("c_name")+"ÅÀÉÏÁËÌÝ×Ó\n");
+    write("ä½ çˆ¬ä¸Šé€™æ¢¯å­,èŠ±äº†è¨±ä¹…çš„æ™‚é–“æ‰çˆ¬å®Œé€™å€‹éžå¸¸é•·çš„æ¢¯å­\n");
+    say(this_player()->query("c_name")+"çˆ¬ä¸Šäº†æ¢¯å­\n");
     this_player()->move_player(Deathland"/palace/pa_0b","SNEAK","");
     return 1;
   } 

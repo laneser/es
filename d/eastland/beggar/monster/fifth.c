@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name( "five-bag beggar", "Îå´üµÜ×Ó" );
+	set_name( "five-bag beggar", "äº”è¢‹å¼Ÿå­" );
 	set("id",({"five","beggar"}));
-	set_short( "Ø¤°ï Îå´üµÜ×Ó" );
+	set_short( "ä¸å¹« äº”è¢‹å¼Ÿå­" );
 	set_long(@C_LONG
-Îå´üµÜ×ÓÕıĞÁ¿àµÄÌı´ÓÆß´üµÜ×ÓµÄÖ¸µ¼¡£
+äº”è¢‹å¼Ÿå­æ­£è¾›è‹¦çš„è½å¾ä¸ƒè¢‹å¼Ÿå­çš„æŒ‡å°ã€‚
 C_LONG
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set_perm_stat( "str", 20 );
 	set_perm_stat( "dex", 12 );
 	set_skill( "dodge", 50 );
@@ -27,6 +27,6 @@ C_LONG
 	set( "natural_min_damage2", 10 );
 	set( "natural_max_damage2", 15 );
 	set( "wealth/gold", 30 );
-	set_c_verbs( ({ "%sÌ¤²½ÏòÇ°£¬Ò»¼ÇÖ±È­´òÏò%s", "%s×óÍÈÍù%sÒ»Ìß",
-		"%sÊ¹Ò»ÕĞ¡¸É³É®°İ·ğ¡¹£¬ÓÒÈ­´òÏò%s", "%sÍùÇ°Ò»×İ£¬×ó×ãÍù%sÌßÈ¥" }) );
+	set_c_verbs( ({ "%sè¸æ­¥å‘å‰ï¼Œä¸€è¨˜ç›´æ‹³æ‰“å‘%s", "%så·¦è…¿å¾€%sä¸€è¸¢",
+		"%sä½¿ä¸€æ‹›ã€Œæ²™åƒ§æ‹œä½›ã€ï¼Œå³æ‹³æ‰“å‘%s", "%så¾€å‰ä¸€ç¸±ï¼Œå·¦è¶³å¾€%sè¸¢å»" }) );
 }

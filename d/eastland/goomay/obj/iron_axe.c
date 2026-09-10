@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "iron axe", "´ó°å¸«" );
+	set_name( "iron axe", "å¤§æ¿æ–§" );
 	add( "id", ({ "axe" }) );
-	set_short( "a iron axe", "´ó°å¸«" );
+	set_short( "a iron axe", "å¤§æ¿æ–§" );
 	set_long(
 		"You see an iron axe for cut trees.\n",
-		"ÕâÊÇÒ»°Ñ¾Ş´óµÄ°å¸«£¬ºÃÏñÒ»°Ñ´óÉÈ×Ó£¬Ã»ÓĞÁ¦ÆøµÄÈË¿ÉÄÜÄÃ²»¶¯Ëü¡£\n"
+		"é€™æ˜¯ä¸€æŠŠå·¨å¤§çš„æ¿æ–§ï¼Œå¥½åƒä¸€æŠŠå¤§æ‰‡å­ï¼Œæ²’æœ‰åŠ›æ°£çš„äººå¯èƒ½æ‹¿ä¸å‹•å®ƒã€‚\n"
 	);
 	set ("second",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 200 );
 	setup_weapon( "axe", 35, 15, 30 );
 	set( "value", ({ 420, "silver" }) );

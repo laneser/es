@@ -11,9 +11,9 @@
 #define EFFECT_NAME "exercising"
 #define DELAY       30
 
-#define C_ILLUSIONSA ({ "Ò»¹ÉÕæÆøÓÉÄãµÄÆøº£Ñ¨Á÷³ö, »º»ºµÄÁ÷Ïò±³²¿µÄÑôÌÃÑ¨...\n",\
-	"Ò»ÂÆ\Ï¸Î¢µÄÕæÆø¾­ÓÉ¶½ÂöÁ÷Ïò×ãÈıÀïÑ¨, È´ËÆºöÓöµ½ÁË×è°­¶øÎŞ·¨ÏòÇ°´ß¶¯...\n",\
-	"ËüÇ¿ÈÎËüÇ¿, Çå·ç¹ıÉ½¸Ú... ÎÒ×ÔÒ»¿ÚÕæÆø×ã, Ç§¿àÍò¿àÒ²²»¿à... \n",\
+#define C_ILLUSIONSA ({ "ä¸€è‚¡çœŸæ°£ç”±ä½ çš„æ°£æµ·ç©´æµå‡º, ç·©ç·©çš„æµå‘èƒŒéƒ¨çš„é™½å ‚ç©´...\n",\
+	"ä¸€ç¸·ç´°å¾®çš„çœŸæ°£ç¶“ç”±ç£è„ˆæµå‘è¶³ä¸‰é‡Œç©´, å»ä¼¼å¿½é‡åˆ°äº†é˜»ç¤™è€Œç„¡æ³•å‘å‰å‚¬å‹•...\n",\
+	"å®ƒå¼·ä»»å®ƒå¼·, æ¸…é¢¨éå±±å´—... æˆ‘è‡ªä¸€å£çœŸæ°£è¶³, åƒè‹¦è¬è‹¦ä¹Ÿä¸è‹¦... \n",\
 	"........\n", })
 	
 #define C_ILLUSIONSB ({ "" })
@@ -41,16 +41,16 @@ void effect(object player)
 			heal = force_effect * 2;
 			message( "illusion", 
 				C_ILLUSIONSA[random(sizeof(C_ILLUSIONSA))]+
-				"ÄãÌåÄÚµÄÆøÔËĞĞµ½ÁËµÚ" + chinese_number(cond_data[2]/4) + "¸ö´óÖÜÌì¡£\n"
+				"ä½ é«”å…§çš„æ°£é‹è¡Œåˆ°äº†ç¬¬" + chinese_number(cond_data[2]/4) + "å€‹å¤§å‘¨å¤©ã€‚\n"
 				, player );
 			if( cond_data[2] > 20 ) tell_room( environment(player), 
-				"Äã¿´µ½Ò»ÂÆ\ÂÆ\°×Æø´Ó" + player->query("c_name") + "¶¥ÉÏÃ°³ö ....¡£\n",
+				"ä½ çœ‹åˆ°ä¸€ç¸·ç¸·ç™½æ°£å¾" + player->query("c_name") + "é ‚ä¸Šå†’å‡º ....ã€‚\n",
 				player );
 		} else {
 			heal = force_effect;
 			message( "illusion", 
 				C_ILLUSIONSB[random(sizeof(C_ILLUSIONSB))]+
-				"ÄãÌåÄÚµÄÆøÔËĞĞÁËÒ»¸öĞ¡ÖÜÌì¡£\n", player );
+				"ä½ é«”å…§çš„æ°£é‹è¡Œäº†ä¸€å€‹å°å‘¨å¤©ã€‚\n", player );
 		}
 		cond_data[2]++;
 		force = (int)player->query("force_points");
@@ -73,9 +73,9 @@ void effect(object player)
 		player->delete_temp("block_defense");
 		player->delete_temp("exercising");
 		tell_object( player, 
-			"ÄãÉîÉîµØÎüÁËÒ»¿ÚÆø, ½«ÖÜÉíÔËĞĞµÄÄÚÏ¢ÊÕ»Øµ¤Ìï, Õ¾ÁËÆğÀ´¡£\n" );
+			"ä½ æ·±æ·±åœ°å¸äº†ä¸€å£æ°£, å°‡å‘¨èº«é‹è¡Œçš„å…§æ¯æ”¶å›ä¸¹ç”°, ç«™äº†èµ·ä¾†ã€‚\n" );
 		tell_room( environment(player), 
-			player->query("c_name")+ "ÉîÉîµØÎüÁËÒ»¿ÚÆø£¬Õ¾ÁËÆğÀ´¡£\n",
+			player->query("c_name")+ "æ·±æ·±åœ°å¸äº†ä¸€å£æ°£ï¼Œç«™äº†èµ·ä¾†ã€‚\n",
 			player );
 		// wizards don't need delay
 		if( wizardp(player) ) cond_data[1]=-1;
@@ -93,7 +93,7 @@ varargs void remove_effect(object player, int silent)
 	player->delete("conditions/" + EFFECT_NAME );
     if( !silent )
     	tell_object( player,
-    	             set_color("ÄãµÄÈ«ÉíÕæÆøÂıÂıµÄ»Øµ½µ¤Ìï ....\n","HIG")
+    	             set_color("ä½ çš„å…¨èº«çœŸæ°£æ…¢æ…¢çš„å›åˆ°ä¸¹ç”° ....\n","HIG")
     	           );
 }
 

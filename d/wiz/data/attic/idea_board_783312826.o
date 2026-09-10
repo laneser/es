@@ -1,33 +1,33 @@
 #d/wiz/idea_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"���԰�","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"���԰�","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Board of Ideas","c_long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷��뿴 help board��
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"�������԰�",])
-messages ({(["id":3,"body":"��һ���� ����������
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Board of Ideas","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"點子留言板",])
+messages ({(["id":3,"body":"建一座廟 廟有六個神
 Kyoko=INT ECHO=STR Lup=CON Anni=DEX ELON=Karma .....
-then...ppls ��ȥ�������� ��ǩ �Բ�ͬ���� ���ǩӰ�첻ͬ������
-����Ӱ�췶Χ�ɶ�3~-3 or 2~-2....
-so..go kyoko��ǰ�鵽һ����ǩ ���INT����3......
+then...ppls 能去廟裡燒香 抽籤 對不同的神 抽的籤影響不同的屬性
+屬性影響範圍可定3~-3 or 2~-2....
+so..go kyoko神前抽到一個爛籤 你的INT將減3......
 
-��һ��...100 silver...
-�ı佫Ӱ��һ��ʱ��....maybe as long as light 7...
-�˶�ʱ���в����س�........
+抽一次...100 silver...
+改變將影響一段時間....maybe as long as light 7...
+此段時間中不可重抽........
 
-�� ���ȥ��������.....
-�����˳�ǩ�����ǳ��е���...����Ҫ����
-","title":"< no title >","time":765230384,"poster":"Angel",]),(["id":4,"title":"< no title >","body":"Ҳ��\��̫�鷳��... ��������������Ҳ��
+或 真的去找六個神.....
+東方人抽籤問神是長有的事...有人要做嗎？
+","title":"< no title >","time":765230384,"poster":"Angel",]),(["id":4,"title":"< no title >","body":"也許廟太麻煩了... 用西方的塔羅牌也行
 
-һ�����޵�ռ��ʦ... ˮ����
-36(i can find all)�������� nodrop...Ч��ά��һ��ʱ��
-Ӱ�������ܺϽ�� 3 to -3.....
-��: fool:int-2 karma-1... bishop:phiety+2.... Sun:Str+1.....�һ����������Ƶ�������...:)
+一個美豔的佔譜師... 水晶球
+36(i can find all)張塔羅牌 nodrop...效用維持一段時間
+影響屬性總合介於 3 to -3.....
+例: fool:int-2 karma-1... bishop:phiety+2.... Sun:Str+1.....我會依照塔羅牌的特性做...:)
 Can i?!
 ","time":765312495,"poster":"Angel",]),(["id":5,"body":"On Sun Apr  3, Angel wrote:
-> Ҳ��\��̫�鷳��... ��������������Ҳ��
+> 也許廟太麻煩了... 用西方的塔羅牌也行
 > 
-> һ�����޵�ռ��ʦ... ˮ����
-> 36(i can find all)�������� nodrop...Ч��ά��һ��ʱ��
-> Ӱ�������ܺϽ�� 3 to -3.....
-> ��: fool:int-2 karma-1... bishop:phiety+2.... Sun:Str+1.....�һ����������Ƶ�������...:)
+> 一個美豔的佔譜師... 水晶球
+> 36(i can find all)張塔羅牌 nodrop...效用維持一段時間
+> 影響屬性總合介於 3 to -3.....
+> 例: fool:int-2 karma-1... bishop:phiety+2.... Sun:Str+1.....我會依照塔羅牌的特性做...:)
 > Can i?!
 Sorry ..... 
 in ES stats effect too many ways, so any thing add or dec stats must
@@ -37,21 +37,21 @@ be controlled, so it may not come true, sorry.
 I don't think it matters :) , wiz usually just goes around
 all boards and read all of them anyways.. :) anyhow..
 
-How practical is Ȱ��?
+How practical is 勸架?
 	Would Lv>10 people go around and annoy others with this
 skill just for some minute experiance? I don't think so.. Healers
 get experiance for healing for depoisening, but do healer go
 around and heal mobs, or encourage people to get poisoned for that
 single diget or at most double diget exp? No. So if the exp is 
 small enough, small means just symbolic like the heal/depoison for
-healers. Lower Lv monk can't really successfully Ȱ�� without getting attack
+healers. Lower Lv monk can't really successfully 勸架 without getting attack
 from mob or both mob and pc, and Higher Lv monk won't really disturb
 others for the exp since the exp is just symbolic. This is just like
 people will ask if others need help before joining a fight. People 
-would almost ask first before try to Ȱ��. 
+would almost ask first before try to 勸架. 
 Ruby said that the situation would be rare.. well.. This situation happens the most right after
 reboot when people have light eq. I'm sure you've all seen
-bunch of eq less pc try to kill a mob. Ȱ�� is just the right skill
+bunch of eq less pc try to kill a mob. 勸架 is just the right skill
 for that situation. ... lower lv people get killed fast.. but sometime higher level
 pc need it when attacked by even stronger mob.. say.. flesh eater? :b
 ","time":767981889,"poster":"Platino",]),(["id":7,"body":"Here are some typical sutra's titles and their English titles.
@@ -59,32 +59,32 @@ Hope they might help.. btw, the ones with \"*\" are my translations.
 so.. they might not be so accurate.
  
  
-�ľ�            Heart Sutra
-��վ�          Vajra Sutra
-ҩʦ��          Medicine Master Sutra
-����̴��        Sixth Patriarch Sutra
-�����Ӿ�        Amitabha Sutra
-���Ž̾�        Final Teaching Sutra
-��ʮ��ħ        Fifty Yin Daemon*
-�زؾ�          Earth Store Sutra
-���Ͼ�          Avatamsaka Sutra
-���Ͼ�          Shurangama Sutra
-������          Lotus Sutra
-���Ͼ���        Avatamsaka Prologue
-���Ͼ�����      Avatmsaka Preface
-��ʮ���¾�      Forty Two Chapter Sutra*
-������Ʒ        Peace & Joy Way Capter*
-������ԸƷ      Univ. Worthy's Conduct & Vow Chapter
-����Ʒ          Universal Door Chapter
-����Ʒ          Purity Way Chapter*
-����Ʒ          Worthy Head Chapter*
-����Ʒ          Brahma Way Chapter*
-�˴��˾���      Eight Awakenings of a Great Person Sutra
-�ٷ�������      Hundred Dharmas Shastra
-������          Brahma Net Sutra
-Ȱ����������    Exhortation to Bring forth Bodhi Resolve
-������          Hundred Analogies Sutra
-ҩʦ��          Medicine Master Repentance
+心經            Heart Sutra
+金剛經          Vajra Sutra
+藥師經          Medicine Master Sutra
+六祖檀經        Sixth Patriarch Sutra
+阿彌陀經        Amitabha Sutra
+佛遺教經        Final Teaching Sutra
+五十陰魔        Fifty Yin Daemon*
+地藏經          Earth Store Sutra
+華嚴經          Avatamsaka Sutra
+楞嚴經          Shurangama Sutra
+法華經          Lotus Sutra
+華嚴經疏        Avatamsaka Prologue
+華嚴經疏序      Avatmsaka Preface
+四十二章經      Forty Two Chapter Sutra*
+安樂行品        Peace & Joy Way Capter*
+普賢行願品      Univ. Worthy's Conduct & Vow Chapter
+普門品          Universal Door Chapter
+淨行品          Purity Way Chapter*
+賢首品          Worthy Head Chapter*
+梵行品          Brahma Way Chapter*
+八大人覺經      Eight Awakenings of a Great Person Sutra
+百法明門論      Hundred Dharmas Shastra
+梵網經          Brahma Net Sutra
+勸發菩提心文    Exhortation to Bring forth Bodhi Resolve
+百喻經          Hundred Analogies Sutra
+藥師懺          Medicine Master Repentance
 
 Platino..
 ","title":"Sutra List","time":768608124,"poster":"Platino",]),(["id":8,"title":"Monk Guild..","body":"Here's my suggestions..
@@ -94,279 +94,279 @@ skill named Fire_Ball for mage..
 soo..
  
 for skills.
-������\ -> �ⵤ��\ - Exterior Endurance
-�˹�\���� -> �ڹ�\, �ڵ���\ - Inner Control
-������\�� -> ���ؼ��� - Martial Art
+護體神功\ -> 外丹功\ - Exterior Endurance
+運功療傷 -> 內功\, 內丹功\ - Inner Control
+攻擊功夫 -> 攻守技巧 - Martial Art
  
-If you need the very ��\��(spell) , say ...
+If you need the very 功夫(spell) , say ...
 Inner force Vestment/Shell/Sphere,    vestment, shell, or sphere for short
 Heal Cycle, Cure Cycle,
  
 Platino.
 ","time":768811850,"poster":"Platino",]),(["id":9,"title":"Monk Guild. addition & modification","body":"Modifications to my last post.
  
-I see that �ڵ���\ is same as Inner-Force..
-So.. I guess you can use \"Heal Cycle\" for the skill �˹�\����
-\"Inner Control\" for the skill, �˹�\, and
+I see that 內丹功\ is same as Inner-Force..
+So.. I guess you can use \"Heal Cycle\" for the skill 運功療傷
+\"Inner Control\" for the skill, 運功\, and
 \"eungon\" for the verb, cast,. .. use \"eun\" for short id
  
-��Ѩ -> ���ڹ�\���� -> \"Force Stun\"
+點穴 -> 用內功麻醉 -> \"Force Stun\"
  
 Platino.
 ","time":768812634,"poster":"Platino",]),(["id":10,"body":"
-��÷����� Quest
+古梅鎮的主 Quest
 
-    ��֪���ж����˿�����÷����Ƿ��ŵģ����ڹ�÷��������С����
+    不知道有多少人看過古梅鎮的那封信的？現在古梅鎮有三個小任務，
 
-��ʵ��ֻ��������Ĳ��Զ��ѣ�����˹�÷��Ĳ����ᣬ�����ʸ�ǰ��
+其實都只是主任務的測試而已，完成了古梅鎮的測試後，就有資格前往
 
-λ춹�÷��ص׵��������ȥ��������Ŀ����ˣ�ͨ����������ǿ�ʼ
+位於古梅鎮地底的月神神殿去接受月神的考驗了，通過考驗才算是開始
 
-̤����һ����
+踏出第一步。
 
-    ������ľ����ǣ�������ʦ�������ٻ�ħ������ķ���������һ��
+    主任務的劇情是：兩個巫師發現了召喚魔法生物的方法，其中一個
 
-����̰���ı������һ����ʦ�ᣬ�����ٻ�ħ�����������ȴû���㹻
+起了貪念，在謀害了另一個巫師後，大量召喚魔法生物，可是他卻沒有足夠
 
-��ħ���������ǡ��������뿪�Լ���ס�Ĵ�Ԫ��ħ������ʧȥ��ħ������Դ��
+的魔力控制他們。而被迫離開自己居住的次元的魔法生物失去了魔法的來源，
 
-������ħ���þ������ξ����Σ�������Ǳ�����ħ���ò�������ǰ�ҵ��ؼ�
+面臨了魔力用盡而神形俱滅的危機，他們必須在魔力得不到補充前找到回家
 
-�ķ���������ħ���������ѳ����ɣ�һ��Ϊ������������Ը����а����ʦ
+的方法，所以魔法生物便分裂成兩派，一派為了延續生命，願意與邪惡巫師
 
-����( �������Ǳ�����ͼ )����һ�ɲ�ԸΪ�����������Ĵ�Ѱ���㹻��ħ��
+合作( 骨子裡是別有所圖 )，另一派不願為非作歹，便四處尋找足夠的魔法
 
-ȪԴ����һ��ħ������λ�ѹ���ʦ��������ĵ����������˹�÷�򣬲����б�
+泉源，這一派魔物在那位已故巫師有意無意的導引下來到了古梅鎮，並且託庇
 
-������֮�£�������������ǿ��ħ����а����ʦ������ħ�����ǲ���Ź���
+在月神之下，但是覬覦月神強大魔力的邪惡巫師和他的魔物們是不會放過這
 
-������ ....
+塊肥肉的 ....
 
-    Ҫ�����ҵ��������������������㣿��Ҫ�ӱ�а����ʦ���Ⱥ���������
+    要怎麼找到月神好讓她交付任務給你？怎要逃避邪惡巫師的迫害和他手下
 
-�����ص��������壿Ҫ�����ҵ���ħ������ؼҵİ취�����ᣬҪ������а���
+所把守的死亡陷阱？要怎樣找到送魔法生物回家的辦法？最後，要怎麼讓邪惡的
 
-��ʦ�õ�Ӧ�еı�Ӧ������Ҫ���ǣ�ħ�ﲻһ������а��ģ��еĻẦ��ƭ�㣬
+巫師得到應有的報應？最重要的是，魔物不一定都是邪惡的，有的會害你騙你，
 
-�����е�ȴ���������ͷ����һ�ѣ���������Ӫ��ħ�ﲻһ����������㣬ͬ����
+但是有的卻會在最後關頭拉你一把，在月神陣營的魔物不一定不會出賣你，同樣的
 
-��а����Ӫ��ħ��˵������������Ĺؼ� .... ����ֻҪɱ���ˣ����Ǳ�ƭ�ˣ�����
+在邪惡陣營的魔物說不定正是任務的關鍵 .... 所以只要殺錯了，或是被騙了，可能
 
-��Ҫ��ȥ����������һ�������³��������м�����������������ս�����ܶ��ǰ�æ�ˡ�
+都要回去被月神奚落一番再重新出發。而中間所歷經的無數場大戰，可能都是白忙了。
 
-    ���˶��������������Ȥ�𣿿�������̸̸������ֻ�ǹ��룬�����������ߵ�ϲ��
+    有人對這個大任務有興趣嗎？可以找我談談，以上只是構想，可以隨製作者的喜好
 
-�޸ġ�
+修改。
 
-                                        ���
-
-
-PS . ע�� ! ����������붫��������·�߲��ϣ��������� !!
+                                        茹比
 
 
-    ��������»�������̬����Ȥ���������������
-�Ĵ���ʦ�����Ƶ�������Ŀ�����
-					���
+PS . 注意 ! 這個構想因與東方的整體路線不合，決定放棄 !!
+
+
+    對這個故事或任務形態感興趣的人請和其他區域
+的大巫師討論移到該區域的可行性
+					茹比
 
 ","title":"< no title >","time":778350238,"poster":"Ruby",]),(["id":11,"body":"
-��÷��Ĺ���
+古梅鎮的鬼屋
 
-    �ڹ�÷����һ�����ݣ�λ춱����ŵ��Ϸ�һ������ֻ����ֻ���������
+    在古梅鎮有一座鬼屋，位於北城門的南方一格，現在只有兩隻老鼠在那裡。
 
-����һ����լ�����Ƕ�ֻվ���ſڣ����滹Ӧ�����ĺ�Ժ����������������
+這是一座老宅，我們都只站在門口，後面還應該有四合院建築，正廳和祠堂
 
-������Ҫ�������ã��͹��µĽ��ж��ԣ����������壬��������ܹ����е�
+，最重要的是祠堂，就故事的進行而言，祠堂是主體，但是如果能夠適切地
 
-���ĺ�Ժ�Ľ������ã����ܹ������й��Ľ�����񣬿��԰��Ļ��Ž�����
+把四合院的建築做好，將能夠呈現中國的建築風格，可以把文化放進來。
 
-    ���õ�������һ��ѵ���λ�����෿����ͣ���ã����Է�Щ��ʬ������
+    祠堂的正面是一大堆的牌位，兩側房間是停棺用，可以放些殭屍，或不死
 
-������顢��Ѫ������è���ȵ��е�û�еġ�������½����û�г�������
+怪物，幽靈、吸血鬼、黑貓、等等有的沒有的。東方大陸好像還沒有出產幽靈
 
-�����ĵط�����Ϊ�ź���
+厲鬼的地方，頗為遺憾。
 
-    ��������һ������ڣ�����ͨ�����µ�һ������--���溣������һ��������
+    祠堂裡有一個出入口，可以通往地下的一個區域--火焰海，這是一個有特殊
 
-���������player ֻҪ̤�뷿��ͻ���ʱ����ʧ HP������ӵ�п��ƻ������Ʒ
+房間的區域，player 只要踏入房間就會隨時間流失 HP，除非擁有剋制火焰的物品
 
-like ������������ϡ����������� .... ������Щ����йص���Ŀ���������溣
+like 萬年冰晶、冰蠶、甚至玄冰劍 .... 反正找些與冰有關的名目，這座火焰海
 
-������һ�� quest�����ǰѻ��溣������--а���ħ�ͻ��ϼң�Ҳ���Է�Щ����
+至少有一個 quest，就是把火焰海的主人--邪惡火魔送回老家，也可以放些與主
 
-quest �йص�����������Ϳ������ߵ���˼�ˡ�
+quest 有關的線索在這裡，就看製作者的巧思了。
 
-    �������ҶԹ��ݵĹ��룬ֻ��������ѣ�����κ�������Ȥ�����������Լ���
+    以上是我對鬼屋的構想，只是想想而已，如果任何人有興趣，都可以隨自己的
 
-��˼������һ��Ҫ�����棬����÷����� quest һ���ϵҲû��Ҳ����������˾�
+意思作，不一定要照上面，跟古梅鎮的主 quest 一點關係也沒有也不打緊，高興就
 
-�� !! ���� !!
+好 !! 嘻嘻 !!
 
-    �������Ȥ�͸�����
-                                        ���
+    如果有興趣就告訴我
+                                        茹比
 
 ","title":"< no title >","time":778350340,"poster":"Ruby",]),(["id":12,"body":"
-��÷����������
+古梅鎮外的鐵礦坑
 
-    ��÷��Ķ��ϼ�����Ϊ������һ����ʦ������żȻ�ģ����������õ�
+    古梅鎮的段氏家族會成為東方第一鑄劍師並不是偶然的，除了有良好的
 
-�������˲��⣬����λ춾ɹ�÷����������Ҳ����Ҫ�����أ���ͨ�����Ƴ�
+技術和人才外，他們位於舊古梅鎮外的鐵礦坑也是重要的因素，普通金屬製成
 
-���������ܲ���ħ����������������зḻ��ħ������������������������
+的武器承受不了魔法的力量，而礦坑中豐富的魔法磁鐵礦，正是製作含有特殊
 
-ħ�����������ľ��Ѳ��ϡ�
+魔法攻擊武器的絕佳材料。
 
-    �����Ӳ����ѣ�Ҳ���úܴ󣬵��������ػ��������һЩ�������
+    這個礦坑並不難，也不用很大，但是裡面守護礦物的是一些超級怪物，
 
-��ȫ����ħ���ĸ������ˣ���ͨ��������ֻ�����Щ�������Ĺ����ϵ��
+完全不怕魔法的鋼鐵巨人，普通武器打中只會刮下些鐵鏽來的怪物，火系的
 
-���Ҿ��ˡ���ϵ����ʯ���ˡ���������ˣ���Щ������Ҳ֪��������ûѪ��
+熔岩巨人、土系的岩石巨人、和黏土巨人，這些怪物想也知道絕對是沒血可
 
-���ģ�Ҫ�ô�����ȥ������������Ҫһ��һǹ���汾���ˡ���Ȼ������Щ�⣬
+流的，要拿磁鐵礦去作超級武器就要一刀一槍的真本事了。當然除了這些外，
 
-һЩ���㳡��С����ҲҪ�����������ס�
+一些陪陪場的小怪物也要出來龍套龍套。
 
-    �����ӻ�����һ��С�������⿪��÷��ڶ��������һ��������ӡ��
+    這個礦坑還藏了一件小東西，解開古梅鎮第二個任務的一個鋼鐵封印，
 
-    �����ӻ�����һ��С�������⿪��÷��ڶ��������һ��������ӡ��
+    這個礦坑還藏了一件小東西，解開古梅鎮第二個任務的一個鋼鐵封印，
 
-��ʧ���ڿ�ӵײ���һ����С���ѷ��У�Ҫ��취����Ū���� :P)
+被失落在礦坑底部的一個狹小的裂縫中，要想辦法把它弄出來 :P)
 
-    ���˶����С�������Ȥ��������ֻ�ǹ��룬�����������ߵ�ϲ��
+    有人對這個小礦坑有興趣的嗎？以上只是構想，可以隨製作者的喜好
 
-�޸ģ��������Ȥ�������̸̸��
+修改，如果有興趣，請跟我談談。
 
-                                        ���
+                                        茹比
 
 ","title":"< no title >","time":778350426,"poster":"Ruby",]),(["id":13,"body":"
-�����ص��ؾ� -- ��Ӫ
+牧馬關的守軍 -- 軍營
 
-    ��ĿǰΪֹ��������ֻ�м���������û���ؾ����ᵲ��ס��������������أ�
+    到目前為止，牧馬關只有幾個守衛，沒有守軍怎麼擋得住北方蠻族的侵略呢？
 
-��Ǿ�������һ֧ǿ��Ĳ��ӣ������� -- �����Ķ�ʮ�ž�����������ƺŵ�
+於是決定成立一支強大的部隊，番號是 -- 該死的二十九軍，由有屠夫稱號的
 
-�������������������ޱ�����������
+楊上昆領軍，監軍的是無比下流的李朋。
 
-    ����һ֧ר�Ű���Ĳ��ӣ��ӽ��������ÿ�����������������Ƕ���ǿ׳��
+    這是一支專門捱打的部隊，從將軍到伙伕每個都該死，不過他們都很強壯，
 
-��û�������������������������������˿�������Ϊ֮������ֻ���һЩ
+還沒有特殊的任務構想在這裡，建構這個區域的人可以任意為之，甚至只造出一些
 
-��ͨ�ġ�������ֻ�Ǻ�ǿ׳�Ĺ��ר�������񷢡���
+普通的、不特殊只是很強壯的怪物，專供暴力狂發□。
 
-    �������ֻҪע������ǿ��ƽ���װ��ƽ��ͺ��ˣ�Ҫ��Ҫ�����������
+    這個區域只要注意怪物的強度平衡和裝備平衡就好了，要不要增加任務可由
 
-��������������
+製作者來決定。
 
-    ������򵥵���������Ȥ�������̸̸
+    對這個簡單的區域有興趣的請跟我談談
 
-                                        ���
+                                        茹比
 ","title":"< no title >","time":778350508,"poster":"Ruby",]),(["id":14,"body":"
-����
+關外
 
-    �������������֮��ඣ���һƬ�����Ĳ�ԭ�����������ǵ���أ�����
+    關外就是牧馬關之外嘍，有一片遼闊的草原，這是牧人們的天地，西方
 
-��ɳĮ������ɳĮ�籩��ֻ��ɳĮǿ���������̶��ˣ�������һƬ����
+有沙漠，除了沙漠風暴就只有沙漠強盜和駱駝商隊了，東方是一片遼闊
 
-�������������Ķ�����һ�����ң����ĺ�������ʮ�ַ�����ϻ��м�
+的樹海，樹海的東側有一個國家，它的海上旅行十分發達，海上還有幾
 
-���󵺡���ԭ�Ա���������ľ۾ӵ��ˣ���˵����������ǰ����һλ����
+個大島。草原以北就是蠻族的聚居地了，傳說，在數百年前曾有一位蠻族
 
-����ͳһ�����е����岿�䣬������һ���۹����������·;ңԶһֱ����
+酋長統一了所有的蠻族部落，建立了一個帝國，但是由於路途遙遠一直不能
 
-֤ʵ���Ĵ��ڣ�ֱ������ǰ��һ���Ȿ��׷ɱ������������Խ�˲�ԭ�򶫷�
+證實它的存在，直到幾年前，一個遭本族追殺的蠻族王儲穿越了草原向東方
 
-�۹��Ļʵ�Ͷ�������ǲ�ȷ��������һ�������Ծõ�ȴ������ѵĹ��ҡ�
+帝國的皇帝投降，人們才確定了這麼一個存在以久但卻陷入分裂的國家。
 
-    ��춹���ĵ���̫��������������ε����˳�����·������һ���������
+    由於關外的地形太過遼闊，不熟地形的旅人常常迷路，所以一般的旅行者
 
-������һ�����������߳�����· ( ��춳����������������Ͷ���ʢ����˿��
+都藉著一條長年累月走出來的路 ( 由於常有商人在上面運送東方盛產的絲綢，
 
-���Ա���Ϊ˿· ) ���й�����أ�ÿ���ճɲ���ţ�򲻹���ʱ�򣬱�����
+所以被稱為絲路 ) 旅行關外各地，每當收成不佳牛羊不夠的時候，北方的
 
-����Ҳ������������·Ϯ��������½���׵����ľ��������ء�
-
-
-    ������һ����Ҫ���ϵ�������̫���ˣ����ÿ����ֻ����һ����������
-
-�������Ĳ����� :
-
-    ˿· -- Indra ˵���Ѿ��ڽ�����
-
-    ���ԭ -- ����
-
-    �����͸����� -- ����
-
-    ���ϵ����� -- ����
-
-    ɳĮ��δ֪�Ĺ��� -- ����
-
-    ����۹�  -- ����
-
-    ��ԭ -- ����
+蠻族也常常沿著這條路襲擊東方大陸，首當其衝的就是牧馬關。
 
 
-    ��Щ����û����ϸ�滮������˼����ֻҪ˵һ�¾Ϳ����������ˣ�
+    關外是一個須要整合的新區域，太大了，大概每個人只能作一個地形區域，
 
-���������������ܰ������߹��ᡢ����۹����ܰ���Ұ���˹��ᡢδ֪��
+可以做的部份有 :
 
-����( �����ǵ۹� )����ܰ�������ʦ���ᣬ�������µ�������Ȳ�Ҫ����
+    絲路 -- Indra 說他已經在進行了
 
-�������ᣬ���ǻ��ǿ��Կ�������
+    大草原 -- 中央
 
-   ����˼�ĸ���˵һ�¾Ϳ�����
+    樹海和高渠麗 -- 東方
 
-                                        ���
+    海上的倭島 -- 極東
 
-","title":"< no title >","time":778350579,"poster":"Ruby",]),(["id":15,"title":"< no title >","body":"�˼Ҳ��� Eastland ��.. :)
+    沙漠和未知的國度 -- 西方
 
-�Ҵ� Alaska �����������Ҫ����ԭ֮��Ķ���..
-so ��� Ruby �Ǳ߻�û����Ҫ��, �Ҿ���Ū��.
+    蠻族帝國  -- 北方
 
-�����Ѿ��е�ͼ, �й���... ����... ����...
+    冰原 -- 極北
 
-���ԼĶ�����!!!! ��������......
 
-�˼Һö������� HD ��.. *sigh*
+    這些都還沒有詳細規劃，有意思的人只要說一下就可以任意做了，
 
-ok.. ������������ҵõ��Ҿ���д..
+不過，在倭島可能包含忍者公會、蠻族帝國可能包含野蠻人公會、未知的
+
+國度( 波西亞帝國 )則可能包含鍊金師公會，賢者以下的人最好先不要考慮
+
+建立公會，但是還是可以考慮區域。
+
+   有意思的跟我說一下就可以了
+
+                                        茹比
+
+","title":"< no title >","time":778350579,"poster":"Ruby",]),(["id":15,"title":"< no title >","body":"人家不是 Eastland 的.. :)
+
+我從 Alaska 回來後有想過要做冰原之類的東東..
+so 如過 Ruby 那邊還沒有人要做, 我就來弄吧.
+
+我是已經有地圖, 有構想... 可是... 可是...
+
+電腦寄丟了啦!!!! 嗚嗚嗚嗚......
+
+人家好多區域都在 HD 裡.. *sigh*
+
+ok.. 反正電腦如果找得到我就來寫..
 
 -Elon was here.
-","time":778817502,"poster":"Elon",]),(["id":16,"body":"��������...һֱ��������������...�ڳ�ǽ��....
-���ǹ�춡����������weapon�ķ��ࡢ���������Ͳ���...�ȶ�������......
+","time":778817502,"poster":"Elon",]),(["id":16,"body":"在牧馬關...一直想做幾個弓箭手...在城牆上....
+可是關於『弓箭』這個weapon的分類、箭的數量和補充...等都是問題......
 
-����һ����������...�Ƿ���...����Ҫkey���õ�����....grin.....
-��֪�����ɲ�����.....
+想做一套手銬腳鐐...是防具...但是要key才拿得下來....grin.....
+不知這樣可不可行.....
 
-��Ȼ�й���...Ҫ��Ҫ���뵺....����ԭס��.....�� ...just ideas....:P
-","title":"my ideas...","time":778853362,"poster":"Stasia",]),(["id":17,"title":"���㴫�� VS ˮ������","body":"��Һ� ��
+既然有關外...要不要做離島....還有原住民.....嗯 ...just ideas....:P
+","title":"my ideas...","time":778853362,"poster":"Stasia",]),(["id":17,"title":"柳毅傳書 VS 水晶龍宮","body":"大家好 ：
 
-    ��֪������Ƿ�����һ�����£����㴫�� (�ֽ���Ů����) ������
+    不知道大家是否聽過一個故事－柳毅傳書 (又叫龍女牧羊) ，敘述
 
-���������ںӱ�������һ������������Ů�����Գ��������Ĺ�������Ϊ
+書生柳毅在河邊遇到了一個哭泣的牧羊女，她自稱是龍王的公主，因為
 
-�ɷ�һ��а����Ķ�����Ű���������𵽺ӱ߷��򡣲�������һ����
+丈夫－一個邪惡暴躁的惡龍王虐待而被放逐到河邊放羊。並求他帶一封信
 
-������ȥ���������ĸ���ǰ��Ӫ������������Ĵ�Ӧ�� (�������᲻��
+到龍宮去，好讓她的父親前來營救她。柳毅真的答應了 (如果是你會不會
 
-�������񾭲���) ����һ����������춰��ŵ���������Ҳ������һ��ˮ��
+把她當神經病？) ，在一番跋涉後終於把信到到龍宮，也經歷了一場水底
 
-��������С���Ȼ������������Ʊ����ж�� ...
+世界的旅行。當然，結果是善有善報惡有惡報嘍 ...
 
-    �µ�����ˮ��������Ԥ��λ���ں������� (�����������ĵط�) ��
+    新的區域－水晶龍宮，預計位置在海威港外 (或其他靠海的地方) ，
 
-��һ���󹬵��������Ϻ��з�����б������㡢�ȵȸ���ˮ�� ...
+有一座大宮殿，海龍王、蝦兵蟹將、殘暴的鯊魚、等等各種水族 ...
 
-���ж���--�������ļң�ȫ����ḻ���������� !! �ֳɵ� quest !!
+還有對手--惡龍王的家，全靠你豐富的想像力了 !! 現成的 quest !!
 
-�ֳɵ� condition ( ��ˮ�� HP ��һֱ��ʧ ) !!
+現成的 condition ( 在水裡 HP 會一直流失 ) !!
 
-    ����Ȥ�������˵һ�� !! :P)
+    有興趣的請跟我說一下 !! :P)
 
-                                        ���
+                                        茹比
 
 ","time":779383662,"poster":"Ruby",]),(["id":18,"body":"
    Dear Ruby :
 
-         Maverick seems is writting a area about a ���׳���.
+         Maverick seems is writting a area about a 海底沉船.
     Maybe u may ask a new wiz to construct the plan of ocean.
 
                                               Indra.
@@ -374,47 +374,47 @@ ok.. ������������ҵõ��Ҿ���д..
 > On Tue Sep 13, Indra wrote:
 > >    Dear Ruby :
 > > 
-> >          Maverick seems is writting a area about a ���׳���.
+> >          Maverick seems is writting a area about a 海底沉船.
 > >     Maybe u may ask a new wiz to construct the plan of ocean.
 > > 
 > >                                               Indra.
 > 
-> 	�� ... ���й�ϵ�� �ҿ���������ʲ����� ...:P)
+> 	這 ... 這有關係嗎？ 我看不出來有什麼關連 ...:P)
 > 
-> 					���
-        ����û��..���ǽ�����Ҫ�и��ػ���...�������趨��ˮ������\"ˮ\"��¥�� ?
+> 					茹比
+        好像沒有..但是建物總要有個地基啊...還是你設定的水晶宮是\"水\"中樓閣 ?
 
                                          Indra......:P
 ","title":"Re: Re: follow 15","time":779512297,"poster":"Indra",]),(["id":22,"body":"
     Dear Ruby :
         
          What i wanna say is the second sentence .
-         Ask a new wiz to comstruct the ����ƽԭ...
+         Ask a new wiz to comstruct the 海底平原...
          that's all........
 
                                Hentai Indra... ^o^ ^o^ .
-","title":"about ocean","time":779548118,"poster":"Indra",]),(["id":23,"title":"To Ruby...","body":"�ö����, Ҫ�����˲���д��ѽ?
-����������е�ֵֹ� (���ֵ�����?) �ȸ��°�
+","title":"about ocean","time":779548118,"poster":"Indra",]),(["id":23,"title":"To Ruby...","body":"好多點子, 要多少人才能寫完呀?
+關外的主意有點怪怪的 (名字的問題?) 先擱下吧
 
 --
 EGA
 ","time":779687792,"poster":"Ega",]),(["id":24,"body":"On Fri Sep 16, Ega wrote:
-> �ö����, Ҫ�����˲���д��ѽ?
-> ����������е�ֵֹ� (���ֵ�����?) �ȸ��°�
+> 好多點子, 要多少人才能寫完呀?
+> 關外的主意有點怪怪的 (名字的問題?) 先擱下吧
 > 
 > --
 > EGA
   
-    �Ҳ���Ϊ�����¸����⣬��Щ��ѧ�ϵ�����������Щû������
+    我不認為名字事個問題，這些名學上的爭論留給那些沒想像力
 
-�� MUD ��ѧ������ȥ���ԽֻҪ���˿��������������ù���
+玩 MUD 的學者宿儒去傷腦筋，只要有人肯作，而他又作得夠好
 
-û��ʲ������Ҫ���������ڵ��������� !! ������
+沒有什麼理由要擱下他奔騰的想像力的 !! 不是嗎？
 
-    ������ſں��ߵļ������֣��������ߴ�ɲ�����û���˹涨
+    至於我信口胡謅的幾個名字，區域作者大可不理，沒有人規定
 
-������һ��Ҫ���һ��������ֻ�����飬�����������ѡ�
+兩個人一定要想得一樣，構想只是提議，腦力激湯而已。
 
-						���
+						茹比
 ","title":"Re: To Ruby...","time":779722584,"poster":"Ruby",]),})
 id_ref 34

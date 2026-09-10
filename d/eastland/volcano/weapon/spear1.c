@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("long spear of Black","ºÚ³¤Ã¬");
+       set_name("long spear of Black","é»‘é•·çŸ›");
        add("id",({"spear"}) );
-       set_short("ºÚ³¤Ã¬");
+       set_short("é»‘é•·çŸ›");
        set_long(
-           "Ò»°ÑÍ¨ÌåÎÚºÚµÄ¸Ö³¤Ã¬£¬¿ÉÒÔÎŞÉùÎŞÏ¢µÄ´ÌÈëµĞÈËµÄĞÄÔà¡£\n"
+           "ä¸€æŠŠé€šé«”çƒé»‘çš„é‹¼é•·çŸ›ï¼Œå¯ä»¥ç„¡è²ç„¡æ¯çš„åˆºå…¥æ•µäººçš„å¿ƒè‡Ÿã€‚\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 40 );
         set( "type","thrusting");
 	set( "min_damage", 20 );

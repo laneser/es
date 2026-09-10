@@ -35,24 +35,24 @@ int cmd_cast (string str)
 	if( !str ) return help();
 
 	if( (int)this_player()->query_level() <20 )
-	        return notify_fail("Äãµ½µ×Ïë¸ÉÂïÀ²?\n");
+	        return notify_fail("ä½ åˆ°åº•æƒ³å¹¹å˜›å•¦?\n");
 	if( (int)this_player()->query("stop_attack")>0 )
 		return notify_fail (
-			"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨Ê©·¨¡£ )\n");
+			"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•æ–½æ³•ã€‚ )\n");
 
     if( this_player()->query_temp("cast_busy") )
         return notify_fail( 
-            "ÄãÉÏÒ»¸öÄ§·¨»¹Ã»ÓĞÍê³É£¬ÎŞ·¨Ê©·¨¡£ \n");
+            "ä½ ä¸Šä¸€å€‹é­”æ³•é‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•æ–½æ³•ã€‚ \n");
 
     if( this_player()->query_temp("slience") ||
         this_player()->query("slience") )
       return notify_fail( 
-        "ÄãÕı×¼±¸ÄîÖäÎÄÊ±£¬¾¹È»·¢ÏÖÄãÍ»È»·¢²»³öÉùÒô¡£\n" );
+        "ä½ æ­£æº–å‚™å”¸å’’æ–‡æ™‚ï¼Œç«Ÿç„¶ç™¼ç¾ä½ çªç„¶ç™¼ä¸å‡ºè²éŸ³ã€‚\n" );
 
     if( environment(this_player())->query_temp("no_cast") ||
         environment(this_player())->query("no_cast") )
       return notify_fail( 
-        "Ò»ÕóÆæ¹ÖµÄÁ¦³¡Ê¹ÄãÄî²»³öÖäÎÄ¡£\n" );
+        "ä¸€é™£å¥‡æ€ªçš„åŠ›å ´ä½¿ä½ å¿µä¸å‡ºå’’æ–‡ã€‚\n" );
     
      if ( sscanf( str, "%s %s at %s",type, spell, targname)==3  ||
           sscanf( str, "%s %s on %s",type, spell, targname)==3 ) {
@@ -60,7 +60,7 @@ int cmd_cast (string str)
 			spell = MAGIC_D->alias_spell(spell);
 		if ( undefinedp(spell_level= this_player()->query("spells/"+spell)) )
 			return notify_fail ( 
-				"Äã²»¼ÇµÃÓĞÕâÖÖ·¨Êõ¡£\n");
+				"ä½ ä¸è¨˜å¾—æœ‰é€™ç¨®æ³•è¡“ã€‚\n");
 
 	} else if ( sscanf( str, "%s at %s", spell, targname)==2 || 
 		        sscanf( str, "%s on %s", spell, targname)==2 ) {
@@ -69,37 +69,37 @@ int cmd_cast (string str)
 			spell = MAGIC_D->alias_spell(spell);
 		if( undefinedp(spell_level= this_player()->query("spells/"+spell) ) )
 			return notify_fail (
-				"Äã²»»áÕâÖÖ·¨Êõ¡£\n");
+				"ä½ ä¸æœƒé€™ç¨®æ³•è¡“ã€‚\n");
 	} else {
 		spell = str;
 		if ( MAGIC_D->alias_spell(spell) )  
 			spell = MAGIC_D->alias_spell(spell);
 		if ( undefinedp( spell_level= this_player()->query("spells/"+spell) ) )
 			return notify_fail( 
-				"Äã²»¼ÇµÃÓĞÕâÖÖ·¨Êõ¡£\n");
+				"ä½ ä¸è¨˜å¾—æœ‰é€™ç¨®æ³•è¡“ã€‚\n");
 		targname = "NONE";
 	}
 	
 	code = MAGIC_D->find_spell( spell );
 	if( !code )
 		return notify_fail(
-			"Ã»ÓĞÕâÖÖ·¨Êõ .... ÇëÍ¨ÖªÎ×Ê¦»òÓÃ bug Ö¸Áî±¨¸æ·¨ÊõÃû³Æ¡£\n");
+			"æ²’æœ‰é€™ç¨®æ³•è¡“ .... è«‹é€šçŸ¥å·«å¸«æˆ–ç”¨ bug æŒ‡ä»¤å ±å‘Šæ³•è¡“åç¨±ã€‚\n");
 
     if( !this_player()->query("vision") && targname != "NONE" )
       return notify_fail(
-	    "Äã¿´²»¼ûÄ¿±ê£¬Ôõ÷áÊ©·¨!\n" );
+	    "ä½ çœ‹ä¸è¦‹ç›®æ¨™ï¼Œæ€éº¼æ–½æ³•!\n" );
 
 if (targname != "NONE") 
 {
 	target = present(targname, environment(this_player()));
-	if (!target) return notify_fail("ÄãÏë¶ÔË­Ê©·¨£¿\n");
+	if (!target) return notify_fail("ä½ æƒ³å°èª°æ–½æ³•ï¼Ÿ\n");
 	if( (int)target->query("ghost")==1 )
-            	    return notify_fail("Õâ¸ö¿ÉÁ¯³æÒÑ¾­ËÀÁË£¬Äã»¹ÏëÔõÑù£¿\n");
+            	    return notify_fail("é€™å€‹å¯æ†èŸ²å·²ç¶“æ­»äº†ï¼Œä½ é‚„æƒ³æ€æ¨£ï¼Ÿ\n");
 }
 	if( this_player()->query("weapon1") && ( this_player()->query("weapon2") ||
 	     this_player()->query("armor/shield") ) )
 	  return notify_fail( 
-	    "ÄãÃ»¿Õ³öÈÎºÎÊÖÊ©·¨Êõ!\n");
+	    "ä½ æ²’ç©ºå‡ºä»»ä½•æ‰‹æ–½æ³•è¡“!\n");
 
 	if( !type || type == "" ) {
 //    spell_level -= (int)this_player()->query("spell_power");
@@ -116,25 +116,25 @@ if (targname != "NONE")
         case "minor"   : spell_level -= 3; break;
         case "mini"    : spell_level -= 4; break;
         default : return notify_fail( 
-          "Ã»ÓĞÕâÖÖ·¨Êõ³öÁ¦£¬ÇëÓÃ max, regular, normal, minor, mini¡£\n" );
+          "æ²’æœ‰é€™ç¨®æ³•è¡“å‡ºåŠ›ï¼Œè«‹ç”¨ max, regular, normal, minor, miniã€‚\n" );
       }
     if( spell_level < 0 ) spell_level = 0;
 	sp_cost = (int)code->query_sp_cost( this_player(), spell_level, targname );
 	if (!(this_player()->query("npc")))
 	{
 	if( sp_cost && (int)this_player()->query("spell_points") < sp_cost )
-		return notify_fail("ÄãµÄ·¨Á¦²»¹»£¡\n");
+		return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤ ï¼\n");
 
 	if( (int)this_player()->query("talk_points") < TP_COST )
-		return notify_fail("ÄãÃ»ÓĞÁ¦Á¿Äî³öÖäÎÄ£¡\n");
+		return notify_fail("ä½ æ²’æœ‰åŠ›é‡å¿µå‡ºå’’æ–‡ï¼\n");
 	
 	if( this_player()->query_attacker() ) {
 		skill = this_player()->query_skill("concentrate");
 		if( random((sp_cost>100)? 100 : sp_cost) > skill ) {
-			write("ÄãÎŞ·¨ÓĞĞ§¼¯ÖĞ¾«Éñ£¡\n");
+			write("ä½ ç„¡æ³•æœ‰æ•ˆé›†ä¸­ç²¾ç¥ï¼\n");
 
 			tell_room( environment(this_player()), 
-				this_player()->query("c_name") + "à«à«µØÄîÁËÒ»¶ÎÖäÎÄ£¬¿ÉÊÇËÆºõÎŞ·¨×¨ĞÄÄîÍê¡£\n",
+				this_player()->query("c_name") + "å–ƒå–ƒåœ°å¿µäº†ä¸€æ®µå’’æ–‡ï¼Œå¯æ˜¯ä¼¼ä¹ç„¡æ³•å°ˆå¿ƒå¿µå®Œã€‚\n",
 				this_player() );
 			this_player()->add("spell_points", -sp_cost/2);
 			this_player()->add("talk_points", -TP_COST);
@@ -153,14 +153,14 @@ if (targname != "NONE")
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: cast [³öÁ¦] <·¨ÊõÃû³Æ> [on|at] <Ä¿±ê>
+æŒ‡ä»¤æ ¼å¼: cast [å‡ºåŠ›] <æ³•è¡“åç¨±> [on|at] <ç›®æ¨™>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹·¨Êõ£¬²¢²»Ò»¶¨ËùÓĞµÄ·¨Êõ¶¼ÒªÖ¸¶¨Ä¿±ê£¬ÓĞĞ©·¨ÊõÔò»á
-×ÔĞĞÑ¡¶¨Ä¿±ê¡£Äã¿ÉÒÔÓÃ spells Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§»áµÄ·¨ÊõÁĞ±í¡£³öÁ¦¿ÉÓĞ
-¿ÉÎŞ£¬Ã»Ö¸¶¨ÔòÒÔÄ¿Ç°ÄãÉè¶¨µÄ±ê×¼³öÁ¦Îª×¼¡£Äã¿ÉÓÃspellpowerÖ¸Áî¿´ÄãÄ¿Ç°
-·¨ÊõµÄ±ê×¼³öÁ¦¡£³öÁ¦¿ÉÎª max, regular, normal, minor, mini ¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•æ³•è¡“ï¼Œä¸¦ä¸ä¸€å®šæ‰€æœ‰çš„æ³•è¡“éƒ½è¦æŒ‡å®šç›®æ¨™ï¼Œæœ‰äº›æ³•è¡“å‰‡æœƒ
+è‡ªè¡Œé¸å®šç›®æ¨™ã€‚ä½ å¯ä»¥ç”¨ spells æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸æœƒçš„æ³•è¡“åˆ—è¡¨ã€‚å‡ºåŠ›å¯æœ‰
+å¯ç„¡ï¼Œæ²’æŒ‡å®šå‰‡ä»¥ç›®å‰ä½ è¨­å®šçš„æ¨™æº–å‡ºåŠ›ç‚ºæº–ã€‚ä½ å¯ç”¨spellpoweræŒ‡ä»¤çœ‹ä½ ç›®å‰
+æ³•è¡“çš„æ¨™æº–å‡ºåŠ›ã€‚å‡ºåŠ›å¯ç‚º max, regular, normal, minor, mini ã€‚
 
-·¨ÊõÃû³Æ¿ÉÓÃ¼òĞ´´úÌæ, ÇëÓÃ info slist Ö¸ÁîÈ¥²éÔÄ¸÷·¨ÊõµÄ¼òĞ´¡£
+æ³•è¡“åç¨±å¯ç”¨ç°¡å¯«ä»£æ›¿, è«‹ç”¨ info slist æŒ‡ä»¤å»æŸ¥é–±å„æ³•è¡“çš„ç°¡å¯«ã€‚
 C_HELP
 		);
 

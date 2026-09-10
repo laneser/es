@@ -3,13 +3,13 @@ inherit WEAPON;
  
 void create()
 {
-        set_name( "huge hammer", "´ó¡õÍ·" );
+        set_name( "huge hammer", "å¤§â–¡é ­" );
         add( "id", ({ "hammer" }) );
-        set_short("´ó¡õÍ·");
+        set_short("å¤§â–¡é ­");
         set_long(
-                "ÕâÊÇÒ»Ö§ºÍÊ÷¸É²î²»¶à´óÖ»µÄ´ó¡õÍ·£¬¿´À´Ïàµ±³ÁÖØ¡£\n"
+                "é€™æ˜¯ä¸€æ”¯å’Œæ¨¹å¹¹å·®ä¸å¤šå¤§éš»çš„å¤§â–¡é ­ï¼Œçœ‹ä¾†ç›¸ç•¶æ²‰é‡ã€‚\n"
         );
-        set( "unit", "Ö§" );
+        set( "unit", "æ”¯" );
         setup_weapon( "blunt", 25, 11, 28 );
         set( "weight", 300 );
         set( "value", ({ 50, "silver" }) );

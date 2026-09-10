@@ -13,14 +13,14 @@ string *where = ({ "/d/noden/12,3.noden","/d/noden/17,8.noden",
 void create()
 {
 	::create();
-	set_short("Ê±¼äµÄ·ìÏ¶" );
+	set_short("æ™‚é–“çš„ç¸«éš™" );
 	set_long(
-		"ÄãÏÖÔÚÉí´¦ì¶Ê±¼äµÄ·ìÏ¶£¬¾ÙÄ¿Ëù¼°ÊÇ²ÓÀÃìÅÄ¿µÄÆß²Ê¹âÃ¢£¬\n"
-		"¿Õ¼äÖÐ´£Á¢ÖøÎÞÊýµÄÃÅ(door)£¬¾ÝËµ¿ÉÒÔÍ¨µ½ÊÀ½ç¸÷µØ¡£\n"
+		"ä½ ç¾åœ¨èº«è™•æ–¼æ™‚é–“çš„ç¸«éš™ï¼Œèˆ‰ç›®æ‰€åŠæ˜¯ç‡¦çˆ›ç‚«ç›®çš„ä¸ƒå½©å…‰èŠ’ï¼Œ\n"
+		"ç©ºé–“ä¸­çŸ—ç«‹è‘—ç„¡æ•¸çš„é–€(door)ï¼Œæ“šèªªå¯ä»¥é€šåˆ°ä¸–ç•Œå„åœ°ã€‚\n"
 	);
 	set("light", 1);
     set("c_item_desc",(["door":
-	"ÕâÊÇÒ»Ð©·ºÖøÆß²Ê¹âÃ¢µÄÃÅ£¬Äã¿ÉÒÔÌôÒ»ÉÈ½øÈ¥(enter)¿´¿´¡£\n"
+	"é€™æ˜¯ä¸€äº›æ³›è‘—ä¸ƒå½©å…‰èŠ’çš„é–€ï¼Œä½ å¯ä»¥æŒ‘ä¸€æ‰‡é€²åŽ»(enter)çœ‹çœ‹ã€‚\n"
      ]));
 }
 
@@ -34,18 +34,18 @@ int do_enter(string arg)
 	string move_to;
 	int hp;
         if( !arg || arg!="door" )
-            return notify_fail("½øÈëÄÄÀï£¿\n" );
-	write("ÄãÌôÁËÒ»ÉÈÃÅ×ß½øÈ¥£¬Í»È»£¬½ÅÏÂÒ»¸ö²È¿Õ....\n" );
+            return notify_fail("é€²å…¥å“ªè£¡ï¼Ÿ\n" );
+	write("ä½ æŒ‘äº†ä¸€æ‰‡é–€èµ°é€²åŽ»ï¼Œçªç„¶ï¼Œè…³ä¸‹ä¸€å€‹è¸©ç©º....\n" );
 	tell_room( this_object(),
-            this_player()->query("c_name") + "×ß½øÒ»ÉÈÃÅÀï£¬ÏûÊ§ÁË...\n",
+            this_player()->query("c_name") + "èµ°é€²ä¸€æ‰‡é–€è£¡ï¼Œæ¶ˆå¤±äº†...\n",
                 this_player() );
 	move_to = where[random(sizeof(where))];
 	this_player()->move_player( move_to, "SNEAK" );
-	write("ÄãÅö¡«µÄÒ»ÉùµøÔÚµØÉÏ£¬Ë¤µÃÆ¨¹ÉÍ´ËÀÁË ...\n");
+	write("ä½ ç¢°ï½žçš„ä¸€è²è·Œåœ¨åœ°ä¸Šï¼Œæ‘”å¾—å±è‚¡ç—›æ­»äº† ...\n");
 	this_player()->add("hit_points",-(int)this_player()->query("hit_points")/10);
-	tell_object(this_player(),sprintf("( Äã%s )\n",(string)"/adm/daemons/statsd"->status_string(this_player())));
+	tell_object(this_player(),sprintf("( ä½ %s )\n",(string)"/adm/daemons/statsd"->status_string(this_player())));
 	tell_room( move_to ,
-            this_player()->query("c_name") + "ßÝ¡«¡«µÄÒ»ÉùµôÁËÏÂÀ´£¬Ë¤µÃËÄ½Å³¯Ìì¡£\n",
+            this_player()->query("c_name") + "å’»ï½žï½žçš„ä¸€è²æŽ‰äº†ä¸‹ä¾†ï¼Œæ‘”å¾—å››è…³æœå¤©ã€‚\n",
                 this_player() );
         return 1;
 }
@@ -57,7 +57,7 @@ int receive_object(object arg)
 	if(living(arg)) return 1 ;    
 	if (base_name(arg)=="/std/statue") return 1;
 	tell_room(environment(this_player()),
-              arg->query("c_name")+"±»Ò»¸öºÚ¶´ÍÌÊÉ£¬Ë²¼ä¾ÍÏûÊ§ÁË¡£\n");
+              arg->query("c_name")+"è¢«ä¸€å€‹é»‘æ´žåžå™¬ï¼Œçž¬é–“å°±æ¶ˆå¤±äº†ã€‚\n");
 	all_inv=all_inventory(arg);
 	all_inv->remove();
 	arg->remove();

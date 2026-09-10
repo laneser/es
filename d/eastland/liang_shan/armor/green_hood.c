@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("green hood", "╩КгЮв╔╫гм╥╫М");
+        set_name("green hood", "Ф╦╬И²▓Ф┼⌠Х╖▓И═╜Е╥╬");
         add( "id", ({ "hood" }) );
-        set_short("╩КгЮв╔╫гм╥╫М");
+        set_short("Ф╦╬И²▓Ф┼⌠Х╖▓И═╜Е╥╬");
         set_long(
-                "уБйгр╩╤╔блсмсм╣дм╥╫Мё╛хГ╧ШдЦ╡╩╫ИрБ╣д╩╟ё╛уБ╣╧йг╥г╥╡╣д╥ю╬ъё╝ \n"
+                "И─≥Ф≤╞Д╦─И═┌Г╤═Ф╡╧Ф╡╧Г └И═╜Е╥╬О╪▄Е╕┌Ф·°Д╫═Д╦█Д╩▀Ф└▐Г └Х╘╠О╪▄И─≥Е─▓Ф≤╞И²·Е┤║Г └И≤╡Е┘╥О╪▌ \n"
         );
-        set("unit","╤╔");
+        set("unit","И═┌");
         set( "type", "head" );
         set( "material", "cloth");
         set( "armor_class", 7 );
@@ -19,7 +19,7 @@ void create()
         set( "weight", 50 );
 		set( "equip_func","equip_hood");
         set( "value", ({ 466, "gold" }) );
-        set( "extra_look", "$N╢ВжЬр╩╤╔блсмсм╣дм╥╫Мё╛©╢ю╢й╝╥ж©и╟╝║ё\n" );
+        set( "extra_look", "$NФ┬╢Х▒≈Д╦─И═┌Г╤═Ф╡╧Ф╡╧Г └И═╜Е╥╬О╪▄Г°▀Д╬├Е█│Е┬├Е▐╞Ф└⌡Ц─┌\n" );
 
 }
 void equip_hood()
@@ -27,10 +27,10 @@ void equip_hood()
 object holder;
     holder=this_player();
     tell_room(environment(holder),
-    holder->query("c_name")+"п║пдрМрМ╣длвиор╩╤╔блсмсм╣дм╥╫М.......\n"
+    holder->query("c_name")+"Е╟▐Е©┐Г©╪Г©╪Г └Е╔≈Д╦┼Д╦─И═┌Г╤═Ф╡╧Ф╡╧Г └И═╜Е╥╬.......\n"
     ,({holder}));
     tell_object(holder,
-    "дЦп║пдрМрМ╣длвиоуБ╤╔блсмсм╣дм╥╫М.........\n");
+    "Д╫═Е╟▐Е©┐Г©╪Г©╪Г └Е╔≈Д╦┼И─≥И═┌Г╤═Ф╡╧Ф╡╧Г └И═╜Е╥╬.........\n");
 	return ;
 }
 

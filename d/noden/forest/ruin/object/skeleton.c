@@ -5,17 +5,17 @@ inherit OBJECT;
 void create()
 {
 	seteuid( getuid() );
-	set_name("a pile of bones", "Ò»¶Ñ¿İ¹Ç");
-	set_short("É¢ÂäÔÚµØÃæÉÏµÄÒ»¶Ñ¿İ¹Ç");
+	set_name("a pile of bones", "ä¸€å †æ¯éª¨");
+	set_short("æ•£è½åœ¨åœ°é¢ä¸Šçš„ä¸€å †æ¯éª¨");
 	set_long(
-	   "Õâ¶Ñ¿İ¹Ç, ¿´À´ËÆºõÊÇÈËµÄ¹Çº¡, É¢ÔÚÕâÀï²»ÖªÒÑ¾­¹ıÁË¶àÉÙµÄËêÔÂ¡£\n");
+	   "é€™å †æ¯éª¨, çœ‹ä¾†ä¼¼ä¹æ˜¯äººçš„éª¨éª¸, æ•£åœ¨é€™è£¡ä¸çŸ¥å·²ç¶“éäº†å¤šå°‘çš„æ­²æœˆã€‚\n");
 	set("id", ({ "bones", "skeleton"}));
-	set("unit", "¶Ñ");
+	set("unit", "å †");
 	set("weight", 50 );
 	set("use_less", 1);
 	set("value", ({ 0, "silver" }) );
 	set("prevent_get", 1);
-	set("prevent_get_c_msg","ÈÃËü°²Ï¢°É! ±ğ´ò½ÁËÀÕß¡£\n");
+	set("prevent_get_c_msg","è®“å®ƒå®‰æ¯å§! åˆ¥æ‰“æ”ªæ­»è€…ã€‚\n");
 	set("prevent_insert", 1);
 	set("prevent_drop", 1);
 }
@@ -30,8 +30,8 @@ int		do_search(string s)
 	if (!s)	return 0;
     if ( s == "skeleton" || s == "bones" )
 	{
-		printf( "%s", "µ±ÄãÊÔÖø·­¿ª¹Çº¡Ê±, ËüÍ»È»¿ìËÙµØ·ç»¯ÎªÒ»¶Ñ"
-		"Ï¸É³, É¢Ê§ì¶·çÖĞ¡£\n");
+		printf( "%s", "ç•¶ä½ è©¦è‘—ç¿»é–‹éª¨éª¸æ™‚, å®ƒçªç„¶å¿«é€Ÿåœ°é¢¨åŒ–ç‚ºä¸€å †"
+		"ç´°æ²™, æ•£å¤±æ–¼é¢¨ä¸­ã€‚\n");
 		this_object()->remove();
 		return 1;
 	}

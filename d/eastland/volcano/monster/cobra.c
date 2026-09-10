@@ -8,17 +8,17 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name("cobra", "ÑÛ¾µÉß");
-	set_short("ÑÛ¾µÉß");
+	set_name("cobra", "çœ¼é¡è›‡");
+	set_short("çœ¼é¡è›‡");
 	set_long(
-		"ÕâÌõÑÛ¾µÉßÊÇÏàµ±Î£ÏÕµÄ£¬ËüÕıÅÌÔÚÄÇ¶ù£¬¿ÚÍÂÉßĞÅ¡£\n"
+		"é€™æ¢çœ¼é¡è›‡æ˜¯ç›¸ç•¶å±éšªçš„ï¼Œå®ƒæ­£ç›¤åœ¨é‚£å…’ï¼Œå£åè›‡ä¿¡ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "alignment", -500 );
         set( "killer", 1);
 	set( "tactic_func", "emit_poison" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
-	set_c_verbs( ({ "%s°ºÍ·ÕÅ×ì£¬Íù%sÒ§È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
+	set_c_verbs( ({ "%sæ˜‚é ­å¼µå˜´ï¼Œå¾€%så’¬å»" }) );
 }
 
 int emit_poison()
@@ -27,7 +27,7 @@ int emit_poison()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
 	tell_room( environment(this_object()),
-		"ÑÛ¾µÉß´Ó×ì°ÍÅç³öÒ»¹É°×É«µÄ¶¾Òº£¬¸ÕºÃÅçÔÚÄãµÄÃæÇ° ....\n",
+		"çœ¼é¡è›‡å¾å˜´å·´å™´å‡ºä¸€è‚¡ç™½è‰²çš„æ¯’æ¶²ï¼Œå‰›å¥½å™´åœ¨ä½ çš„é¢å‰ ....\n",
 		this_object() );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 5, 8 );
 	return 1;

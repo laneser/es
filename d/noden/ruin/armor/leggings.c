@@ -6,11 +6,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("magic leggins", "îøÄ§ñÉ");
-    set_short("îøÄ§ñÉ");
+    set_name("magic leggins", "é§é­”è¥ ");
+    set_short("é§é­”è¥ ");
     add("id", ({ "gloves", "gauntlets" }));
-    set_long("ÓÉîøÄ§½£µÄÄ§Á¦»Ã»¯¶ø³ÉµÄëÖ¼×¡£\n");
-    set("unit", "¼ş");
+    set_long("ç”±é§é­”åŠçš„é­”åŠ›å¹»åŒ–è€Œæˆçš„è„›ç”²ã€‚\n");
+    set("unit", "ä»¶");
     set("weight", 0);
     set("type", "legs");
     set("material", "knight");
@@ -22,7 +22,7 @@ void create()
 
 void unequip(int silent)
 {
-    tell_object(this_player(), "îøÄ§ñÉ¾Ü¾øÀë¿ªÄãµÄÉíÌå!\n");
+    tell_object(this_player(), "é§é­”è¥ æ‹’çµ•é›¢é–‹ä½ çš„èº«é«”!\n");
 }
 
 int remove()

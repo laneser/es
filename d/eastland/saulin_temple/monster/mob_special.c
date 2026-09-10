@@ -1,43 +1,43 @@
-// ¹ÖÎïµÄÌØÊâ¹¥»÷²Î¿¼ : Mobs' special attack inherit
+// æ€ªç‰©çš„ç‰¹æ®Šæ”»æ“Šåƒè€ƒ : Mobs' special attack inherit
 // Code by : Ruby of ES at 7/30/94
-// ×¢Òâ : ÒıÓÃ(inherit)±¾³ÌÊ½áá£¬ÒªÔÚ³ÌÊ½ÂëÖĞ¶¨ÒåÌØÊâ¹¥»÷µÄ²ÎÊı
-// Àı:  set("special_attack",(["damage_type" : "none","main_damage" : 10,
+// æ³¨æ„ : å¼•ç”¨(inherit)æœ¬ç¨‹å¼å¾Œï¼Œè¦åœ¨ç¨‹å¼ç¢¼ä¸­å®šç¾©ç‰¹æ®Šæ”»æ“Šçš„åƒæ•¸
+// ä¾‹:  set("special_attack",(["damage_type" : "none","main_damage" : 10,
 //                              "random_dam" : 5 , "hit_rate" : 20]));
 //      set( "tactic_func", "my_tactic" );
-// ¼°ËùĞèµÄÎÄ×ÖÑ¶Ï¢£¬°üº¬ÖĞÓ¢ÎÄµÄ enemy_msg,room_msg,room_msg2 ¹²Áù¸ö¡£
+// åŠæ‰€éœ€çš„æ–‡å­—è¨Šæ¯ï¼ŒåŒ…å«ä¸­è‹±æ–‡çš„ enemy_msg,room_msg,room_msg2 å…±å…­å€‹ã€‚
 
 #include <mudlib.h>
 inherit MONSTER;
 
-// ÏÔÊ¾±»»÷ÖĞááµÄÊÜÉËÇéĞÎ : write by Echobomber
+// é¡¯ç¤ºè¢«æ“Šä¸­å¾Œçš„å—å‚·æƒ…å½¢ : write by Echobomber
 void report( object attacker, object victim )
 {
    string message;
    seteuid(getuid());
    message= "/adm/daemons/statsd"->status_string(victim);
-   tell_object( victim,"( Äã"+message+" )\n");
+   tell_object( victim,"( ä½ "+message+" )\n");
 }
 
-// ÒÔÏÂËùÓĞÄÚ¶¨º¯Ê½¶¼¿É±»ÖØĞÂ¶¨ÒåÒÔÔö¼Ó±ä»¯ĞÔ¡£
+// ä»¥ä¸‹æ‰€æœ‰å…§å®šå‡½å¼éƒ½å¯è¢«é‡æ–°å®šç¾©ä»¥å¢åŠ è®ŠåŒ–æ€§ã€‚
 
-// Ê¹ÓÃÌØÊâ¹¥»÷Ê§°Ü¶øÔâ·´»÷µÄÌõ¼ş : fail_to_use()
+// ä½¿ç”¨ç‰¹æ®Šæ”»æ“Šå¤±æ•—è€Œé­åæ“Šçš„æ¢ä»¶ : fail_to_use()
 int fail_to_use()       { return 0; }
 
-// ÌØÊâ¹¥»÷µÄ³öÏÖ»úÂÊ  : special_hit_rate()
+// ç‰¹æ®Šæ”»æ“Šçš„å‡ºç¾æ©Ÿç‡  : special_hit_rate()
 int special_hit_rate() 
  { return (int)query("special_attack/hit_rate") ; }
 
-// ÌØÊâ¹¥»÷ËùÔì³ÉµÄÉËº¦ : special_damage()
+// ç‰¹æ®Šæ”»æ“Šæ‰€é€ æˆçš„å‚·å®³ : special_damage()
 int special_damage(object victim)
     { return (int)query("special_attack/main_damage")+
 		random(query("special_attack/random_damage")) ; }
 
-// ÌØÊâÉËº¦µÄÀàĞÍ : special_type() £¬ÏÖÓĞ 11 ÖÖ
-// Îª : fire,code,electric,energy,mental,acid,poison,magic,evil,divine,none
+// ç‰¹æ®Šå‚·å®³çš„é¡å‹ : special_type() ï¼Œç¾æœ‰ 11 ç¨®
+// ç‚º : fire,code,electric,energy,mental,acid,poison,magic,evil,divine,none
 string special_type() 
      { return (string)query("special_attack/damage_type") ; }
 
-// µÚ¶şÖÖÌØÊâ¹¥»÷Ô¤ÁôÇø : ¿ÉÒÔÔÙ¶¨ÒåÒ»ÖÖÒÔÉÏµÄÌØÊâ¹¥»÷ĞÎÌ¬
+// ç¬¬äºŒç¨®ç‰¹æ®Šæ”»æ“Šé ç•™å€ : å¯ä»¥å†å®šç¾©ä¸€ç¨®ä»¥ä¸Šçš„ç‰¹æ®Šæ”»æ“Šå½¢æ…‹
 int second_special_attack() { return 0 ; }
 
 int my_tactic()
@@ -47,7 +47,7 @@ int my_tactic()
 if( random(100) > special_hit_rate() ||
 	!(victim= query_attacker()) ) return 0;
 
-// Èç¹ûÓĞÖØĞÂ¶¨Òå fail_to_use() ! ÄÇ÷á±ğÍüÁËÒ²µÃÉè¶¨ÖĞÓ¢ÎÄµÄ fail_room_msg
+// å¦‚æœæœ‰é‡æ–°å®šç¾© fail_to_use() ! é‚£éº¼åˆ¥å¿˜äº†ä¹Ÿå¾—è¨­å®šä¸­è‹±æ–‡çš„ fail_room_msg
     if ( fail_to_use() ) {
                 tell_room( environment(), 
 			query("c_name") + query("c_fail_room_msg"),

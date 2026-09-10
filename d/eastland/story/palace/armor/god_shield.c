@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "God-Dragon shield","ÉıÁú¶Ü" );
+     set_name( "God-Dragon shield","å‡é¾ç›¾" );
      add( "id",({ "shield" }) );
-     set_short( "ÉıÁú¶Ü" );
+     set_short( "å‡é¾ç›¾" );
      set_long(@C_LONG
-Ò»Ãæ²ÁÊÃµÄºÜÇ¬¾»µÄ¶ÜÅÆ£¬ÉÏ»æÒ»Ë«ÕÅÑÀÎè×¦µÄ·ÉÁú£¬èòèòÈçÉú¡£
+ä¸€é¢æ“¦æ‹­çš„å¾ˆä¹¾æ·¨çš„ç›¾ç‰Œï¼Œä¸Šç¹ªä¸€é›™å¼µç‰™èˆçˆªçš„é£›é¾ï¼Œæ ©æ ©å¦‚ç”Ÿã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "Ãæ");
+     set( "unit", "é¢");
      set( "type", "shield" );
      set( "material","element" );
      set( "armor_class",7 );

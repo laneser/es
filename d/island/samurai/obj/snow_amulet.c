@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Snow Amulet", "±ùÑ©»¤·û");
+        set_name( "Snow Amulet", "å†°é›ªè­·ç¬¦");
         add( "id", ({ "snow","amulet" }) );
-        set_short("Snow Amulet", "±ùÑ©»¤·û");
+        set_short("Snow Amulet", "å†°é›ªè­·ç¬¦");
         set_long(@AAA
-ÕâÊÇÒ»¼şÑ©°×É«µÄ»¤Éí·û£¬ÆäÉÏ¸½ÓĞÑ©Ö®¾«ÁéµÄ×£¸£
+é€™æ˜¯ä¸€ä»¶é›ªç™½è‰²çš„è­·èº«ç¬¦ï¼Œå…¶ä¸Šé™„æœ‰é›ªä¹‹ç²¾éˆçš„ç¥ç¦
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "misc" );
         set( "armor_class", 0 );
         set( "defense_bonus", 5 );

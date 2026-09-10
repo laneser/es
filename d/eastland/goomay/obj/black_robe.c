@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "black robe", "²¶¿ì·ş" );
+	set_name( "black robe", "æ•å¿«æœ" );
 	add( "id", ({ "robe" }) );
-	set_short( "an black robe", "²¶¿ì·ş" );
+	set_short( "an black robe", "æ•å¿«æœ" );
 	set_long(
 		"You see a pliceman's black robe.\n",
-		"ÕâÊÇÒ»¼ş¹ÅÃ·Õò²¶¿ì×¨ÓÃµÄÖÆ·ş¡£\n"
+		"é€™æ˜¯ä¸€ä»¶å¤æ¢…é®æ•å¿«å°ˆç”¨çš„åˆ¶æœã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
         set("material","cloth");
 	set( "weight", 80 );

@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "white cape", "°×Åû·ç" );
+	set_name( "white cape", "ç™½æŠ«é¢¨" );
 	add( "id", ({ "cape" }) );
-	set_short(  "°×É«Åû·ç" );
+	set_short(  "ç™½è‰²æŠ«é¢¨" );
 	set_long(
-		"Õâ¼ş°×É«Åû·ç¿´ÆğÀ´ºÜÆ¯ÁÁ¶øÇÒ°º¹ó£¬ÉÏÃæÓĞÒ»¸öĞ¡Ğ¡µÄÃµ¹å±êÖ¾¡£\n"
+		"é€™ä»¶ç™½è‰²æŠ«é¢¨çœ‹èµ·ä¾†å¾ˆæ¼‚äº®è€Œä¸”æ˜‚è²´ï¼Œä¸Šé¢æœ‰ä¸€å€‹å°å°çš„ç«ç‘°æ¨™èªŒã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 50 );
 	set( "type", "cloak" );
 	set( "material" ,"cloth" );

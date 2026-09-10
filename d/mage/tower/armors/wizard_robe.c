@@ -4,19 +4,19 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wizard's robe", "Î×Ê¦Ä§ÅÛ" );
+	set_name( "wizard's robe", "å·«å¸«é­”è¢" );
 	add( "id", ({ "robe", }) );
-	set_short( "a wizard's robe", "Î×Ê¦Ä§ÅÛ");
+	set_short( "a wizard's robe", "å·«å¸«é­”è¢");
 	set_long( @LONG
 	This robe is used by wizard Rashudi. It is made by magical cloth,
 so spreads a strong power of magic.
 LONG
     , @C_LONG
-	ÕâÊÇÄ§µ¼Ê¿À­ĞŞµÛ¹ßì¶´©ÖøµÄ·ş×°£¬²»Òª¿´ËüÖ»ÊÇÓÃÆÕÍ¨µÄ²¼Ö¯³É£¬Ëü¿ÉÊÇÓµÓĞ
-³öºõÄãÒâÁÏÖ®ÍâµÄ·ÀÓùÁ¦£¬¾İËµ»¹ÄÜµÖ¿¹¸÷ÖÖÄ§·¨¡£
+	é€™æ˜¯é­”å°å£«æ‹‰ä¿®å¸æ…£æ–¼ç©¿è‘—çš„æœè£ï¼Œä¸è¦çœ‹å®ƒåªæ˜¯ç”¨æ™®é€šçš„å¸ƒç¹”æˆï¼Œå®ƒå¯æ˜¯æ“æœ‰
+å‡ºä¹ä½ æ„æ–™ä¹‹å¤–çš„é˜²ç¦¦åŠ›ï¼Œæ“šèªªé‚„èƒ½æŠµæŠ—å„ç¨®é­”æ³•ã€‚
 C_LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 45 );
 	set( "type", "body" );
 	set( "material", "cloth");

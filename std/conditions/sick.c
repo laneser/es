@@ -27,8 +27,8 @@ void effect(object player)
 	player->receive_damage( cond_data[2] );
 	player->block_attack( cond_data[2] );
 	player->set_temp("msg_stop_attack", 
-		set_color("( ÄãÈ«ÉíÉÏÏÂ¶¼²»Êæ·ş, ÎŞÁ¦¹¥»÷ )\n", "HIR", player) );
-	tell_object(player, set_color("Äã¾õµÃÍ·»èÄÔÕÍ£¬¾«Éñ²»Õñ, È«ÉíÎŞÁ¦ ....\n","HIY",player));
+		set_color("( ä½ å…¨èº«ä¸Šä¸‹éƒ½ä¸èˆ’æœ, ç„¡åŠ›æ”»æ“Š )\n", "HIR", player) );
+	tell_object(player, set_color("ä½ è¦ºå¾—é ­æ˜è…¦è„¹ï¼Œç²¾ç¥ä¸æŒ¯, å…¨èº«ç„¡åŠ› ....\n","HIY",player));
 	cond_data[1]--;
 	player->set( "conditions/" + EFFECT_NAME, cond_data );
 }
@@ -37,7 +37,7 @@ varargs void remove_effect(object player, int silent)
 {
 	if( !silent )
 		tell_object(player, 
-			set_color("Äã¾õµÃ¾«ÉñºÃ¶àÁË, Í·Ò²²»ÔÎÁË¡£\n","HIC", player));
+			set_color("ä½ è¦ºå¾—ç²¾ç¥å¥½å¤šäº†, é ­ä¹Ÿä¸æšˆäº†ã€‚\n","HIC", player));
 	player->delete("conditions/" + EFFECT_NAME );
 }
 
@@ -49,11 +49,11 @@ void apply_effect(object player, int frequency, int duration, int damage)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !cond_data ) {
 		tell_object(player, 
-			set_color("Í»È»¼ä, Äã¾õµÃÊ®·Ö²»Êæ·ş, ºÃÏñÉú²¡ÁË!\n","HIY",player) );
+			set_color("çªç„¶é–“, ä½ è¦ºå¾—ååˆ†ä¸èˆ’æœ, å¥½åƒç”Ÿç—…äº†!\n","HIY",player) );
 		player->set( "conditions/" + EFFECT_NAME, ({ frequency, duration, damage }) );
 	} else {
 		tell_object(player, 
-			set_color("ÄãµÄ²¡ÇéÔ½À´Ô½ÑÏÖØÁË....×îºÃ¸Ï¿ì¿´Ò½Éú!!\n","HIY",player) 
+			set_color("ä½ çš„ç—…æƒ…è¶Šä¾†è¶Šåš´é‡äº†....æœ€å¥½è¶•å¿«çœ‹é†«ç”Ÿ!!\n","HIY",player) 
 		);
 		// If sick and sick faster the frequency.
 		if( frequency < cond_data[0] ) cond_data[0] = frequency;

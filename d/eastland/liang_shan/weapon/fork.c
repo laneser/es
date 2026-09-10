@@ -6,14 +6,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("poisoned fork","Ò©²æ");
+       set_name("poisoned fork","è—¥å‰");
        add("id",({"fork"}) );
-       set_short("Ò©²æ");
+       set_short("è—¥å‰");
 	   set_long(
-           "ÕâÊÇÒ»°Ñ´ãÓĞ¶¾Ò©µÄÁÔ²æ£¬¼â¶Ë·¢³öÀ¶É«µÄ¹âÔó£®Ğí\¶àÁÔÈËÓÃËü´òÁÔ£®\n"
+           "é€™æ˜¯ä¸€æŠŠæ·¬æœ‰æ¯’è—¥çš„çµå‰ï¼Œå°–ç«¯ç™¼å‡ºè—è‰²çš„å…‰æ¾¤ï¼è¨±å¤šçµäººç”¨å®ƒæ‰“çµï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 17 );
         set("type","thrusting");
 	set( "min_damage", 7 );
@@ -32,7 +32,7 @@ if (random(8)>1) return 0;
 victim->set("last_attacker",holder);
 
 tell_room( environment(holder),
-"\n"+holder->query("c_name")+"µÄÒ©²æÊ¹µĞÈËµÄÁ³±ä³ÉÀ¶É«£®\n",
+"\n"+holder->query("c_name")+"çš„è—¥å‰ä½¿æ•µäººçš„è‡‰è®Šæˆè—è‰²ï¼\n",
 this_object());
 (CONDITION_PREFIX + "simple_poison")->apply_effect(victim,7,4);
 return 1;

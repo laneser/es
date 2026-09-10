@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name(" Steel helmet", "¸ß¼¶¸Ö¿ø");
+        set_name(" Steel helmet", "é«˜ç´šé‹¼ç›”");
         add( "id", ({ "helmet" }) );
-        set_short( "¸ß¼¶¸Ö¿ø");
+        set_short( "é«˜ç´šé‹¼ç›”");
         set_long(
-                "ÕâÊÇÒ»¶¥¼ìÑéºÏ¸ñµÄ¸ÖÖÆÍ·¿ø \n"
+                "é€™æ˜¯ä¸€é ‚æª¢é©—åˆæ ¼çš„é‹¼è£½é ­ç›” \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set("material","heavy_metal");
         set( "armor_class", 6 );

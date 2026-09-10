@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("�������Ϣ��");
+	ob->set_short("安洛的休息室");
 	ob->set_long( @LONG_DESCRIPTION
-���ϰ������Ϣ��,���ܿ���һ��,����һ����Ⱦ,�Ǹ��������еĺõط�.
+長老安洛的休息室,四周空無一物,而且一塵不染,是個靜心休行的好地方.
 LONG_DESCRIPTION
 	);
 

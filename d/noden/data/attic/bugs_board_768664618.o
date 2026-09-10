@@ -1,8 +1,8 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":24,"body":"Not bug ....just i dont know chat change to healer ...:)
 ","title":"< no title >","time":767143435,"poster":"Jschen",]),(["id":25,"title":"< no title >","body":"
 ","time":767407414,"poster":"Knight",]),(["id":26,"title":"< no title >","body":"God !!! Please Help Hch ....
@@ -22,16 +22,16 @@ say God can fix it ?
 When u buy items in vendor or drug store, but too heavy !
 Then, the items in vendor or drug store will vanish . (sell out)..
 see you
-","title":"< no title >","time":767800144,"poster":"Tori",]),(["id":30,"body":"  ÓĞÊ±ºòÎÒµÄspell point become zero after i use kill or cast ...sometimes not . 
+","title":"< no title >","time":767800144,"poster":"Tori",]),(["id":30,"body":"  æœ‰æ™‚å€™æˆ‘çš„spell point become zero after i use kill or cast ...sometimes not . 
 it is boring....
 Is it a BUG??
 thx.....
-","title":"about mage's spell point","time":767810809,"poster":"Onion",]),(["id":31,"title":"< no title >","body":"Ìá¿î¿¨ÎªÊ²÷á»áµô?? ËğÊ§ÁË 40000 silver ....
-È»ááÎÒ´øÖø 1200 gold and 6xxx silver µ½ bank ÎªºÎ±»¿ÛË°?? level 10 ²»ÊÇ¿ÉÒÔ´ø 
-50000 silver µÄÂğ?
-","time":767871651,"poster":"Kelvin",]),(["id":32,"title":"< no title >","body":"Ã»ÊÂÁË, bank ÖØĞÂ·¢¸øÎÒÒ»ÕÅÌá¿î¿¨ÁË....
-¿ÉÊÇÇ®ÒÑ¾­±»¼õ°ëÁË.... :~~~~
-card ¶ªÁË, Ç®»¹ÊÇËãÔÚ»§Í·ÄÚ, ¼ÓÉÏÉíÉÏ´øµÄ, ³¬¹ıÁË 50000 silver .. *cry*
+","title":"about mage's spell point","time":767810809,"poster":"Onion",]),(["id":31,"title":"< no title >","body":"ææ¬¾å¡ç‚ºä»€éº¼æœƒæ‰?? æå¤±äº† 40000 silver ....
+ç„¶å¾Œæˆ‘å¸¶è‘— 1200 gold and 6xxx silver åˆ° bank ç‚ºä½•è¢«æ‰£ç¨…?? level 10 ä¸æ˜¯å¯ä»¥å¸¶ 
+50000 silver çš„å—?
+","time":767871651,"poster":"Kelvin",]),(["id":32,"title":"< no title >","body":"æ²’äº‹äº†, bank é‡æ–°ç™¼çµ¦æˆ‘ä¸€å¼µææ¬¾å¡äº†....
+å¯æ˜¯éŒ¢å·²ç¶“è¢«æ¸›åŠäº†.... :~~~~
+card ä¸Ÿäº†, éŒ¢é‚„æ˜¯ç®—åœ¨æˆ¶é ­å…§, åŠ ä¸Šèº«ä¸Šå¸¶çš„, è¶…éäº† 50000 silver .. *cry*
 ","time":767872236,"poster":"Kelvin",]),(["id":33,"body":"I was simen ...
 when i login as simen I set okip -set now
 after set that, I quit and login again ... successful ..
@@ -73,51 +73,51 @@ hope god can help him to unset okip .....thanx ...
    BTW your passwd now changed to \"kyoko\".
    Plesae change as soon as possible.....
    Note: Never use them if you are not the user of them
-   Otherwise... hehehehe.... ±ğ¹ÖÎÒÎŞÇé¡£
+   Otherwise... hehehehe.... åˆ¥æ€ªæˆ‘ç„¡æƒ…ã€‚
                                      -Kyoko.
-","time":768221575,"poster":"Kyoko",]),(["id":38,"body":"ÏŞÖÆÃ¿¸öÈËÂò potion ÊıÄ¿µÄ¶¯»úÎÒ¿ÉÒÔÀí½â, µ«¼ÆËã·½·¨ÊµÔÚÌ«¹îÒì..
-Ò»¸ö°ëĞ¡Ê±¹ıÈ¥ÁË, ÎŞ·¨Âòµ½ÈÎºÎpotion, Ö»ÄÜÂòÏÂÒ»¸öplaster, È»ááÓÖ²»ÄÜÂòÁË..
-(ÎÒ¸ÕloginÊ±¿ÉÒÔÂòµ½Æß¹Şpotion, ÏÖÔÚÎÒÉíÉÏÖ»ÄÜ´øÈıö±¡õ ¶øÇÒÃ»ÓĞplaster,²»ÄÜÂò)
-ÕâÑùµÄ·½·¨ËÆºõ²»Ì«ºÎºÏÀí, Ö»ÓĞÈı¹ŞpotionÎŞ·¨É±´ó¹ÖÎïµÄ...
+","time":768221575,"poster":"Kyoko",]),(["id":38,"body":"é™åˆ¶æ¯å€‹äººè²· potion æ•¸ç›®çš„å‹•æ©Ÿæˆ‘å¯ä»¥ç†è§£, ä½†è¨ˆç®—æ–¹æ³•å¯¦åœ¨å¤ªè©­ç•°..
+ä¸€å€‹åŠå°æ™‚éå»äº†, ç„¡æ³•è²·åˆ°ä»»ä½•potion, åªèƒ½è²·ä¸‹ä¸€å€‹plaster, ç„¶å¾Œåˆä¸èƒ½è²·äº†..
+(æˆ‘å‰›loginæ™‚å¯ä»¥è²·åˆ°ä¸ƒç½potion, ç¾åœ¨æˆ‘èº«ä¸Šåªèƒ½å¸¶ä¸‰éœ°â–¡ è€Œä¸”æ²’æœ‰plaster,ä¸èƒ½è²·)
+é€™æ¨£çš„æ–¹æ³•ä¼¼ä¹ä¸å¤ªä½•åˆç†, åªæœ‰ä¸‰ç½potionç„¡æ³•æ®ºå¤§æ€ªç‰©çš„...
   -- Kelvin --
-","title":"About potions...","time":768279906,"poster":"Kelvin",]),(["id":39,"body":"Éñ°¡:
-     Ç°ÌìÉèÁËokip ,Ã»Ïëµ½reboot Ò»´ÎÓÖ½ø²»È¥ÁË, Éñ¿É²»¿ÉÒÔ°ïÎÒset kudo's okip to no?
-ÒòÎªÎÒÆÚÖĞ¿¼ÓÖµ½ÁË, ÏÂÖÜ»¹²»ÄÜÍæµÄ»°Ö»ºÃµÈÊî¼ÙÁË..:~~~~~~~~
-                                                       ¾²Ïã(kudo) 
+","title":"About potions...","time":768279906,"poster":"Kelvin",]),(["id":39,"body":"ç¥å•Š:
+     å‰å¤©è¨­äº†okip ,æ²’æƒ³åˆ°reboot ä¸€æ¬¡åˆé€²ä¸å»äº†, ç¥å¯ä¸å¯ä»¥å¹«æˆ‘set kudo's okip to no?
+å› ç‚ºæˆ‘æœŸä¸­è€ƒåˆåˆ°äº†, ä¸‹é€±é‚„ä¸èƒ½ç©çš„è©±åªå¥½ç­‰æš‘å‡äº†..:~~~~~~~~
+                                                       éœé¦™(kudo) 
                                               the day before mother's ay
 ","title":"< no title >","time":768280458,"poster":"Kudoi",]),(["id":40,"body":"On Sat May  7, Kelvin wrote:
-> ÏŞÖÆÃ¿¸öÈËÂò potion ÊıÄ¿µÄ¶¯»úÎÒ¿ÉÒÔÀí½â, µ«¼ÆËã·½·¨ÊµÔÚÌ«¹îÒì..
-> Ò»¸ö°ëĞ¡Ê±¹ıÈ¥ÁË, ÎŞ·¨Âòµ½ÈÎºÎpotion, Ö»ÄÜÂòÏÂÒ»¸öplaster, È»ááÓÖ²»ÄÜÂòÁË..
-> (ÎÒ¸ÕloginÊ±¿ÉÒÔÂòµ½Æß¹Şpotion, ÏÖÔÚÎÒÉíÉÏÖ»ÄÜ´øÈıö±¡õ ¶øÇÒÃ»ÓĞplaster,²»ÄÜÂò)
-> ÕâÑùµÄ·½·¨ËÆºõ²»Ì«ºÎºÏÀí, Ö»ÓĞÈı¹ŞpotionÎŞ·¨É±´ó¹ÖÎïµÄ...
+> é™åˆ¶æ¯å€‹äººè²· potion æ•¸ç›®çš„å‹•æ©Ÿæˆ‘å¯ä»¥ç†è§£, ä½†è¨ˆç®—æ–¹æ³•å¯¦åœ¨å¤ªè©­ç•°..
+> ä¸€å€‹åŠå°æ™‚éå»äº†, ç„¡æ³•è²·åˆ°ä»»ä½•potion, åªèƒ½è²·ä¸‹ä¸€å€‹plaster, ç„¶å¾Œåˆä¸èƒ½è²·äº†..
+> (æˆ‘å‰›loginæ™‚å¯ä»¥è²·åˆ°ä¸ƒç½potion, ç¾åœ¨æˆ‘èº«ä¸Šåªèƒ½å¸¶ä¸‰éœ°â–¡ è€Œä¸”æ²’æœ‰plaster,ä¸èƒ½è²·)
+> é€™æ¨£çš„æ–¹æ³•ä¼¼ä¹ä¸å¤ªä½•åˆç†, åªæœ‰ä¸‰ç½potionç„¡æ³•æ®ºå¤§æ€ªç‰©çš„...
 >   -- Kelvin --
-ÕæµÄÂğ£¿ÒÀÎÒµÄÉè¼Æ£¬Ô¼Ò»¸öĞ¡Ê±¿ÉÒÔÔÙÂòÄã¿ÉÒÔÂòµÄÉÏÏŞ£¬µ±È»Ö®¼ä±ØĞëÉõ÷á
-¶¼Ã»Âò..... ¡£
+çœŸçš„å—ï¼Ÿä¾æˆ‘çš„è¨­è¨ˆï¼Œç´„ä¸€å€‹å°æ™‚å¯ä»¥å†è²·ä½ å¯ä»¥è²·çš„ä¸Šé™ï¼Œç•¶ç„¶ä¹‹é–“å¿…é ˆç”šéº¼
+éƒ½æ²’è²·..... ã€‚
                                              -Kyoko.
-","title":"Re: About potions...","time":768284979,"poster":"Kyoko",]),(["id":41,"body":"Ğ»Ğ»´óÉñµÄ½âËµ. ¹Øì¶potionµÄÏŞÖÆÔÚÏÂÓĞÁ½µãµÄ½¨Òé:
+","title":"Re: About potions...","time":768284979,"poster":"Kyoko",]),(["id":41,"body":"è¬è¬å¤§ç¥çš„è§£èªª. é—œæ–¼potionçš„é™åˆ¶åœ¨ä¸‹æœ‰å…©é»çš„å»ºè­°:
 
-1. ¶Ôì¶Õı³£ÓÃµôµÄpotion¿É·ñÔÊĞí\ÂíÉÏ²¹»Ø? ÈçÎªÁË¾ÈÃü¶ø×Ô¼ººÈµôÈı¹Ş¿ÉÒÔÔÙÂò»ØÈı
-   ¹Ş. Õâµ±È»²»°üÀ¨ÂôÈË»òËÍÈËµÄÄÇĞ©. ·ñÔòÒÀÏÖÔÚµÄÉÏÏŞ, ²»µ½Æß¹ŞµÄpotion²»¿ÉÄÜ
-   ³Åµ½Ò»¸öĞ¡Ê±, ÓÈÆäÓĞÊ±»áÓĞÍ»·¢µÄÎ£¼±×´¿ö...
+1. å°æ–¼æ­£å¸¸ç”¨æ‰çš„potionå¯å¦å…è¨±é¦¬ä¸Šè£œå›? å¦‚ç‚ºäº†æ•‘å‘½è€Œè‡ªå·±å–æ‰ä¸‰ç½å¯ä»¥å†è²·å›ä¸‰
+   ç½. é€™ç•¶ç„¶ä¸åŒ…æ‹¬è³£äººæˆ–é€äººçš„é‚£äº›. å¦å‰‡ä¾ç¾åœ¨çš„ä¸Šé™, ä¸åˆ°ä¸ƒç½çš„potionä¸å¯èƒ½
+   æ’åˆ°ä¸€å€‹å°æ™‚, å°¤å…¶æœ‰æ™‚æœƒæœ‰çªç™¼çš„å±æ€¥ç‹€æ³...
 
-2. ¼ÈÈ»Ã¿ÈËÒÑÓĞ¹ºÂòÉÏÏŞ, ÄÇ÷áÒ©µê¿É·ñÈ¡ÏûÂô³ö×ÜÊıµÄÏŞÖÆ? Òª²»È»Ôö¼ÓÆäÂô³öÉÏÏŞ
-   Ò²¿ÉÒÔ. ÒòÎªÓĞËÄÎåÊ®ÈËÔÚÍæ, ¼ÈÊ¹ÏÖÔÚÓĞÏŞÖÆ,ÎÒ»¹ÊÇÅõ|Âò²»µ½...
+2. æ—¢ç„¶æ¯äººå·²æœ‰è³¼è²·ä¸Šé™, é‚£éº¼è—¥åº—å¯å¦å–æ¶ˆè³£å‡ºç¸½æ•¸çš„é™åˆ¶? è¦ä¸ç„¶å¢åŠ å…¶è³£å‡ºä¸Šé™
+   ä¹Ÿå¯ä»¥. å› ç‚ºæœ‰å››äº”åäººåœ¨ç©, æ—¢ä½¿ç¾åœ¨æœ‰é™åˆ¶,æˆ‘é‚„æ˜¯æ§|è²·ä¸åˆ°...
 
-  ÒÔÉÏÁ½µã(ÓÈÆäµÚÒ»µã), Çë´óÉñ²Î¿¼¿´¿´, Ğ»Ğ»  :)
+  ä»¥ä¸Šå…©é»(å°¤å…¶ç¬¬ä¸€é»), è«‹å¤§ç¥åƒè€ƒçœ‹çœ‹, è¬è¬  :)
 
  -- Kelvin --
-","title":"ÎÒµÄ½¨Òé","time":768288834,"poster":"Kelvin",]),(["id":42,"title":"About potion...","body":"¶Ô²»Æğ, ÓÖÊÇÎÒ...
-ÎÒ´Ó 6:50 µ½ 10:00, Í³¼ÆÁËÒ»ÏÂ, ×Ü¹²Ö»ÂòÁË 1 plaster, 5 white plaster, 
+","title":"æˆ‘çš„å»ºè­°","time":768288834,"poster":"Kelvin",]),(["id":42,"title":"About potion...","body":"å°ä¸èµ·, åˆæ˜¯æˆ‘...
+æˆ‘å¾ 6:50 åˆ° 10:00, çµ±è¨ˆäº†ä¸€ä¸‹, ç¸½å…±åªè²·äº† 1 plaster, 5 white plaster, 
 2 makira...
-ÊÇ²»ÊÇ¼ÆËã¹«Ê½ÓĞÎÊÌâ? Èô·ñ, ¿É·ñËµÃ÷Ò»ÏÂÊÇÈçºÎ¼ÆËãÂòpotionµÄÉÏÏŞ? Ğ»Ğ» :)
+æ˜¯ä¸æ˜¯è¨ˆç®—å…¬å¼æœ‰å•é¡Œ? è‹¥å¦, å¯å¦èªªæ˜ä¸€ä¸‹æ˜¯å¦‚ä½•è¨ˆç®—è²·potionçš„ä¸Šé™? è¬è¬ :)
   -- Kelvin --
-","time":768320676,"poster":"Kelvin",]),(["id":43,"body":"Ç×°®µÄ´óÉñ :
-   ÎªºÎ²ÅÒ»ÌìÃ»ÍæES,¸ÕLoginÈ´Ö»ÄÜÂòÏÂÁ½¾í±Á´ø 
-   ÕâÖÖÆæ¹ÖµÄ¼ÆËã·¨ÒªÔõ÷áÈÃÍæ¼Ò´æ»îÏÂÈ¥???
-   ÎªºÎ²»Ç¬´àËµÃ÷Ò»¸öÍæ¼Ò¿ÉÔÚÒ»Ğ¡Ê±ÖĞÂò¶àÉÙ¶«Î÷
-   »òÊÇÃ¿Ğ¡Ê±resetÒ»´Î
-   Äª·ÇquitÊ±Ò²½«Ö®¼ÇÂ¼ÔÚµµ°¸ÖĞ???
-   ÒÔááÔÚquitÇ°Ò»Ğ¡Ê±ÍêÈ«²»ÄÜÂò¶«Î÷²ÅĞĞ??
+","time":768320676,"poster":"Kelvin",]),(["id":43,"body":"è¦ªæ„›çš„å¤§ç¥ :
+   ç‚ºä½•æ‰ä¸€å¤©æ²’ç©ES,å‰›Loginå»åªèƒ½è²·ä¸‹å…©å·ç¹ƒå¸¶ 
+   é€™ç¨®å¥‡æ€ªçš„è¨ˆç®—æ³•è¦æ€éº¼è®“ç©å®¶å­˜æ´»ä¸‹å»???
+   ç‚ºä½•ä¸ä¹¾è„†èªªæ˜ä¸€å€‹ç©å®¶å¯åœ¨ä¸€å°æ™‚ä¸­è²·å¤šå°‘æ±è¥¿
+   æˆ–æ˜¯æ¯å°æ™‚resetä¸€æ¬¡
+   è«équitæ™‚ä¹Ÿå°‡ä¹‹è¨˜éŒ„åœ¨æª”æ¡ˆä¸­???
+   ä»¥å¾Œåœ¨quitå‰ä¸€å°æ™‚å®Œå…¨ä¸èƒ½è²·æ±è¥¿æ‰è¡Œ??
 
 ","title":"< no title >","time":768446228,"poster":"Pallas",]),(["id":44,"body":" Dear God:
 

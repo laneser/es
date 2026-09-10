@@ -44,9 +44,9 @@ int do_buy(string arg)
 	object ob, me;
 
 	me = this_player();
-	if( !arg ) return notify_fail("ÂòÊ²÷á£¿\n");
+	if( !arg ) return notify_fail("è²·ä»€éº¼ï¼Ÿ\n");
 	if( !inventory || !pointerp(inventory) || sizeof(inventory)<1 )
-		return notify_fail("¶Ô²»Æð£¬ÕâÀï²»ÂôÈÎºÎ¶«Î÷¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™è£¡ä¸è³£ä»»ä½•æ±è¥¿ã€‚\n");
 
 	if( sscanf(arg, "%s %d", name, ord)!= 2 ) {
 		name = arg;
@@ -60,33 +60,33 @@ int do_buy(string arg)
 		}
 	}
 	if( !ob ) {
-		return notify_fail("¶Ô²»Æð£¬ÕâÀï²»ÂôÕâÖÖ¶«Î÷¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™è£¡ä¸è³£é€™ç¨®æ±è¥¿ã€‚\n");
 	}
 	if( inventory[i][2] < 1 ) {
 		ob->remove();
-		return notify_fail("¶Ô²»Æð£¬ÕâÑù¶«Î÷ÒÑ¾­ÂôÍêÁË£¬Çë´ý»á¶ùÔÙÀ´¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™æ¨£æ±è¥¿å·²ç¶“è³£å®Œäº†ï¼Œè«‹å¾…æœƒå…’å†ä¾†ã€‚\n");
 	} else inventory[i][2]--;
 
 	value = ob->query("value");
 	if( !value || value[0]==0 ) {
 		ob->remove();
-		return notify_fail("¶Ô²»Æð£¬ÕâÑù¶«Î÷ÊÇ·ÇÂôÆ·¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™æ¨£æ±è¥¿æ˜¯éžè³£å“ã€‚\n");
 	}
 	if( !me->debit( value[1], value[0] ) ) {
 		ob->remove();
 		inventory[i][2]++;
-		return notify_fail("¶Ô²»Æð£¬ÕâÑù¶«Î÷ÄãÂò²»Æð¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™æ¨£æ±è¥¿ä½ è²·ä¸èµ·ã€‚\n");
 	}
 	if( ob->move(me)!=MOVE_OK ) {
 		ob->remove();
         inventory[i][2]++;
 		me->credit( value[1], value[0] );
-		return notify_fail("¶Ô²»Æð£¬ÕâÑù¶«Î÷¶ÔÄãÀ´ËµÌ«ÖØÁË¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™æ¨£æ±è¥¿å°ä½ ä¾†èªªå¤ªé‡äº†ã€‚\n");
 	}
-	if( !(unit=ob->query("unit")) ) unit = "¸ö";
-	printf("ÄãÂòÏÂÒ»%s%s¡£\n",unit,ob->query("short"));
+	if( !(unit=ob->query("unit")) ) unit = "å€‹";
+	printf("ä½ è²·ä¸‹ä¸€%s%sã€‚\n",unit,ob->query("short"));
 	tell_room( environment(me), 
-		sprintf("%sÂòÏÂÒ»%s%s¡£\n",
+		sprintf("%sè²·ä¸‹ä¸€%s%sã€‚\n",
 				me->query("c_name"),unit,ob->query("short")),
 		me );
 	return 1;
@@ -99,15 +99,15 @@ int show_menu()
 	string unit;
 
 	if( !inventory || !pointerp(inventory) || sizeof(inventory)<1 )
-		return notify_fail("¶Ô²»Æð£¬ÕâÀï²»ÂôÈÎºÎ¶«Î÷¡£\n");
+		return notify_fail("å°ä¸èµ·ï¼Œé€™è£¡ä¸è³£ä»»ä½•æ±è¥¿ã€‚\n");
 	if( c_menu_text ) write(c_menu_text + "\n");
-	else write("Äã¿ÉÒÔ¹ºÂò(buy)ÒÔÏÂµÄÎïÆ·:\n");
+	else write("ä½ å¯ä»¥è³¼è²·(buy)ä»¥ä¸‹çš„ç‰©å“:\n");
 	for( i=0; i<sizeof(inventory); i++ ) {
 		value = inventory[i][0]->query("value");
-		if ( !unit = inventory[i][0]->query("unit") ) unit = "¸ö" ;
+		if ( !unit = inventory[i][0]->query("unit") ) unit = "å€‹" ;
 		if( !value || value[0]==0 ) continue;
 		write( 
-			sprintf( "  %30-s  %5d %-10s  »¹ÓÐ %3d %-4s\n", inventory[i][0]->query("short") + " (" + 
+			sprintf( "  %30-s  %5d %-10s  é‚„æœ‰ %3d %-4s\n", inventory[i][0]->query("short") + " (" + 
 				inventory[i][0]->query("name") + ")", value[0], to_chinese(value[1]+" coin"),inventory[i][2],unit ));
 	}
 	return 1;

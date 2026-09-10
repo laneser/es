@@ -7,10 +7,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-    set_short("΢��·");
+    set_short("微風路");
 	set_long( @C_LONG_DESCRIPTION
-������������΢��·�ϡ��㳡λ���Ķ�����Զ����΢��·����
-һ·������ȥ�����ߵĽ������Ǳ���ķ�Ժ��
+你現在正走在微風路上。廣場位於你的東方不遠處，微風路向西
+一路延伸下去，北邊的建築物是本鎮的法院。
 C_LONG_DESCRIPTION
 	);
 

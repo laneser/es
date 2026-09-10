@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "tiger's bone", "»¢¹Ç" );
+	set_name( "tiger's bone", "è™éª¨" );
          set("no_sale",1);
 	add( "id", ({ "bone" }) );
-	set_short( "»¢¹Ç" );
+	set_short( "è™éª¨" );
 	set_long(
-                "ÕâÊÇÀÏ»¢µÄÍ·¹Ç, ¿ÉÒÔ×öÎªÒ»ÖÖÒ©²Ä¡£Äã¿ÉÒÔ³¢³¢(taste)¿´¡£\n"
+                "é€™æ˜¯è€è™çš„é ­éª¨, å¯ä»¥åšç‚ºä¸€ç¨®è—¥æã€‚ä½ å¯ä»¥åšåš(taste)çœ‹ã€‚\n"
 	);
     set( "ident","BONE");
-	set( "unit", "¿é" );
+	set( "unit", "å¡Š" );
         set( "weight",3 );
 	set( "savour","acidity");
 	set( "value", ({ 300, "silver" }) );

@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Dragon ring","Áú½ä" );
+     set_name( "Dragon ring","é¾æˆ’" );
      add( "id",({ "ring" }) );
-     set_short( "Áú½ä" );
+     set_short( "é¾æˆ’" );
      set_long(@C_LONG
-Ò»Ö»Ë®¾§ÖÆ³ÉµÄĞ¡ÇÉ½äÖ¸£¬½äÖ¸ÉÏµñ¿ÌÖøÒ»¸öÁúÍ·¡£
+ä¸€éš»æ°´æ™¶è£½æˆçš„å°å·§æˆ’æŒ‡ï¼Œæˆ’æŒ‡ä¸Šé›•åˆ»è‘—ä¸€å€‹é¾é ­ã€‚
 C_LONG
      );
      set( "weight",20 );
-     set( "unit", "Ö»");
+     set( "unit", "åª");
      set( "type", "finger" );
      set( "material","element" );
      set( "defense_bonus",5 );

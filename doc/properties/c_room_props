@@ -1,8 +1,8 @@
-                      ½¨Á¢·¿¼äËùÌá¹©µÄ Properties
+                      å»ºç«‹æˆ¿é–“æ‰€æä¾›çš„ Properties
                   ------------------------------------
-£ªÒÔÏÂËùÓĞ Properties ËùĞèÉè¶¨µÄÖµ¶¼¿ÉÒÔ "@@funcname" À´È¡´ú¡£
-  ÏµÍ³½«ÒÔ funcname Ëù´«»ØµÄÖµ×÷Îª Properties ËùĞèµÄÖµ¡£
-·¶ÀıÈçÏÂ:
+ï¼Šä»¥ä¸‹æ‰€æœ‰ Properties æ‰€éœ€è¨­å®šçš„å€¼éƒ½å¯ä»¥ "@@funcname" ä¾†å–ä»£ã€‚
+  ç³»çµ±å°‡ä»¥ funcname æ‰€å‚³å›çš„å€¼ä½œç‚º Properties æ‰€éœ€çš„å€¼ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set("light","@@test_light");
 int test_light()
 {
@@ -11,122 +11,122 @@ int test_light()
   return 0;	     
 }  
 
-ÒÀ´ËÉè¶¨ÔòÖ»ÓĞ female ÄÜ¿´µ½´Ë·¿¼ä¡£
+ä¾æ­¤è¨­å®šå‰‡åªæœ‰ female èƒ½çœ‹åˆ°æ­¤æˆ¿é–“ã€‚
 
   
 "exits"
 -------
-Éè¶¨Ò» Mapping of (directions and room's filenames)¡£
-Éè¶¨·¿¼äµÄ³ö¿Ú¡£
-·¶ÀıÈçÏÂ:
+è¨­å®šä¸€ Mapping of (directions and room's filenames)ã€‚
+è¨­å®šæˆ¿é–“çš„å‡ºå£ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set( "exits", ([ "north" : "/d/TMI/partyroom.c" ]) );
-Éè¶¨±±±ß³ö¿ÚÎª /d/TMI/partyroom.c
+è¨­å®šåŒ—é‚Šå‡ºå£ç‚º /d/TMI/partyroom.c
 
 add( "exits", ([ "south" : "/d/TMI/drunktank.c" ]) );
-Ôö¼ÓÄÏ±ßµÄ³ö¿Ú£¬Í¨Íù /d/TMI/drunktank.c
+å¢åŠ å—é‚Šçš„å‡ºå£ï¼Œé€šå¾€ /d/TMI/drunktank.c
 
 delete( "exits/south" );
-É¾³ıÄÏ±ßµÄ³ö¿Ú
+åˆªé™¤å—é‚Šçš„å‡ºå£
 
 
 "no_vision" , "no_vision_msg", "no_vision_c_msg"
 -----------
-Ê¹ÓÃ no_vision ¿ÉÀ¹½Ø´Ë·¿¼äµÄ long_description,¶øÒÔ 
-no_vision_c_msg ÒÔ¼° no_vision_msg È¡´ú·¿¼äµÄÖĞ¡¢Ó¢
-ĞğÊö¡£
-·¶ÀıÈçÏÂ:
+ä½¿ç”¨ no_vision å¯æ””æˆªæ­¤æˆ¿é–“çš„ long_description,è€Œä»¥ 
+no_vision_c_msg ä»¥åŠ no_vision_msg å–ä»£æˆ¿é–“çš„ä¸­ã€è‹±
+æ•˜è¿°ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set("no_vision",1);
-set("no_vision_c_msg","ÄãÉí´¦Ò»Æ¬ÔÆº£Ö®ÖĞ£¬ÎŞ·¨¿´¼ûÈÎºÎ¶«Î÷¡£");
+set("no_vision_c_msg","ä½ èº«è™•ä¸€ç‰‡é›²æµ·ä¹‹ä¸­ï¼Œç„¡æ³•çœ‹è¦‹ä»»ä½•æ±è¥¿ã€‚");
 set("no_vision_msg", "You can't see anything here.");
 
 "item_desc"
 -----------
-Éè¶¨Ò» Mapping of (name and descriptions of things)¡£
-ÀûÓÃ´Ë Prop ÎÒÃÇ¿ÉÒÔÉè¶¨Ò»Ğ©·¿¼äµÄÎïÆ·ÒÔ¼°ÎïÆ·ÃèÊö¶ø²»ĞèÒª clone
-³öÕæÕıµÄÎïÆ·¡£
-·¶ÀıÈçÏÂ:
+è¨­å®šä¸€ Mapping of (name and descriptions of things)ã€‚
+åˆ©ç”¨æ­¤ Prop æˆ‘å€‘å¯ä»¥è¨­å®šä¸€äº›æˆ¿é–“çš„ç‰©å“ä»¥åŠç‰©å“æè¿°è€Œä¸éœ€è¦ clone
+å‡ºçœŸæ­£çš„ç‰©å“ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set_long( "This is a room with a single chair in the middle" );
 set ("item_desc", ([ "chair" :
 "This chair is very rickety and would collapse if you sat in it." ]) ) ;
-ÄÇ÷á£¬Èç¹ûÓĞ players ×ß½ø´Ë·¿¼ä²¢ look chair£¬ËûÃÇ½«»á¿´µ½ 
+é‚£éº¼ï¼Œå¦‚æœæœ‰ players èµ°é€²æ­¤æˆ¿é–“ä¸¦ look chairï¼Œä»–å€‘å°‡æœƒçœ‹åˆ° 
 The chair is very rickety and would collapse if you sat in it .
-¶ø²»ĞèÒªÓĞ chair µÄÊµÌå¡£
+è€Œä¸éœ€è¦æœ‰ chair çš„å¯¦é«”ã€‚
 
 "c_item_desc"
 -------------
-Óë item_desc ÓÃ·¨ÏàÍ¬£¬µ«ÊÇÖ»ÊÊÓÃ chinese mode¡£
+èˆ‡ item_desc ç”¨æ³•ç›¸åŒï¼Œä½†æ˜¯åªé©ç”¨ chinese modeã€‚
 
 "item_func"
 -----------
-Éè¶¨Ò» Mapping of (names of things and func_name when you look )¡£
-´Ë Prop ¿ÉÉè¶¨µ± player ¿´ÎïÆ·Ê±£¬ÄãÏëÒªÈÃËû·¢ÉúÊ²÷áÊÂ¡£
-·¶ÀıÈçÏÂ:
+è¨­å®šä¸€ Mapping of (names of things and func_name when you look )ã€‚
+æ­¤ Prop å¯è¨­å®šç•¶ player çœ‹ç‰©å“æ™‚ï¼Œä½ æƒ³è¦è®“ä»–ç™¼ç”Ÿä»€éº¼äº‹ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set ("item_func", ([ "painting", "teleport" ]) ) ;
 int teleport() {
 	this_player()->move_player("/d/noden/farwind/bank.c", "SNEAK");
     return 1;
 }
-Èç´ËÉè¶¨µÄ»°£¬µ± player lookt at painting Ê±£¬´Ë player ½«»á±»´«ËÍµ½
-bank¡£¼ÙÈçÊ¹ÓÃ item_func, Ôò¿É½«ÓûĞ´ÔÚ item_desc & c_item_desc µÄÑ¶Ï¢
-£¬Ğ´ÔÚ item_func ÖĞ£¬ÇĞ¼ÉÍ¬Ê±Ê¹ÓÃ item_func ºÍ item_desc¡£
-func ±ØĞëì¶Í¬µµ°¸»òÆäËù inherit µÄµµ°¸ÖĞ±»Éè¶¨¡£
+å¦‚æ­¤è¨­å®šçš„è©±ï¼Œç•¶ player lookt at painting æ™‚ï¼Œæ­¤ player å°‡æœƒè¢«å‚³é€åˆ°
+bankã€‚å‡å¦‚ä½¿ç”¨ item_func, å‰‡å¯å°‡æ¬²å¯«åœ¨ item_desc & c_item_desc çš„è¨Šæ¯
+ï¼Œå¯«åœ¨ item_func ä¸­ï¼Œåˆ‡å¿ŒåŒæ™‚ä½¿ç”¨ item_func å’Œ item_descã€‚
+func å¿…é ˆæ–¼åŒæª”æ¡ˆæˆ–å…¶æ‰€ inherit çš„æª”æ¡ˆä¸­è¢«è¨­å®šã€‚
   
 
 "objects"
 ---------
-Éè¶¨Ò» Mapping of ( ids and filenames of objects)¡£
-Éè¶¨ÔÚ reset Ê±£¬´Ë·¿¼ä½«»á²úÉúÎïÆ·»òmobs¡£
-·¶ÀıÈçÏÂ:
+è¨­å®šä¸€ Mapping of ( ids and filenames of objects)ã€‚
+è¨­å®šåœ¨ reset æ™‚ï¼Œæ­¤æˆ¿é–“å°‡æœƒç”¢ç”Ÿç‰©å“æˆ–mobsã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set ("objects", ([ "orc" : "/obj/orc", "chair#1" : "/obj/chair",
 "chair#2" : "/obj/chair" ]) ) ;
-ÔòÔÚ reset Ê±£¬´Ë·¿¼ä½«»á²¹³ä orc ºÍÁ½ÕÅÒÎ×ÓÖĞ²»×ãÕß¡£
+å‰‡åœ¨ reset æ™‚ï¼Œæ­¤æˆ¿é–“å°‡æœƒè£œå…… orc å’Œå…©å¼µæ¤…å­ä¸­ä¸è¶³è€…ã€‚
 
 "pre_exit_func"
 ---------------
-Éè¶¨Ò» Mapping of (directions of leave and func_name before leaveing)¡£		
-ÀûÓÃ´Ë porp£¬¿ÉÒÔ¼ì²é player ÊÇ·ñ¿ÉÒÔ´ÓÉè¶¨µÄ·½ÏòÀë¿ª¡£
-·¶ÀıÈçÏÂ:
+è¨­å®šä¸€ Mapping of (directions of leave and func_name before leaveing)ã€‚		
+åˆ©ç”¨æ­¤ porpï¼Œå¯ä»¥æª¢æŸ¥ player æ˜¯å¦å¯ä»¥å¾è¨­å®šçš„æ–¹å‘é›¢é–‹ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
 set ("pre_exit_func", ([ "north" : "foo" ]) ) ;
-ÔÚ player Íù north ·½ÏòÀëÈ¥Ç°£¬»áÏÈ¼ì²é foo function 
-´«»ØÀ´µÄÖµ¡£ÈôÖµÎª 1 Ôò²»¿ÉÒÔÓÉ north Àë¿ª¡£
-func ±ØĞëì¶Í¬µµ°¸»òÆäËù inherit µÄµµ°¸ÖĞ±»Éè¶¨¡£
+åœ¨ player å¾€ north æ–¹å‘é›¢å»å‰ï¼Œæœƒå…ˆæª¢æŸ¥ foo function 
+å‚³å›ä¾†çš„å€¼ã€‚è‹¥å€¼ç‚º 1 å‰‡ä¸å¯ä»¥ç”± north é›¢é–‹ã€‚
+func å¿…é ˆæ–¼åŒæª”æ¡ˆæˆ–å…¶æ‰€ inherit çš„æª”æ¡ˆä¸­è¢«è¨­å®šã€‚
 
 "post_exit_func"
 ----------------
-Éè¶¨Ò» Mapping of (directions of leave and func_name after leaveing)¡£
-ºÍ pre_exit_func ÓÃ·¨ÏàÍ¬o Î¨Ò»²»Í¬µÄÊÇ£¬pre_exit_func ÊÇÒÆ¶¯Ç°ÅÜfunction
-£¬¶ø post_exit_func ÔòÊÇÒÆ¶¯ááÖ´ĞĞfunction¡£
-func ±ØĞëì¶Í¬µµ°¸»òÆäËù inherit µÄµµ°¸ÖĞ±»Éè¶¨¡£
+è¨­å®šä¸€ Mapping of (directions of leave and func_name after leaveing)ã€‚
+å’Œ pre_exit_func ç”¨æ³•ç›¸åŒo å”¯ä¸€ä¸åŒçš„æ˜¯ï¼Œpre_exit_func æ˜¯ç§»å‹•å‰è·‘function
+ï¼Œè€Œ post_exit_func å‰‡æ˜¯ç§»å‹•å¾ŒåŸ·è¡Œfunctionã€‚
+func å¿…é ˆæ–¼åŒæª”æ¡ˆæˆ–å…¶æ‰€ inherit çš„æª”æ¡ˆä¸­è¢«è¨­å®šã€‚
 
 "exit_c_msg", "exit_msg"
 ------------------------
-Éè¶¨Ò» Mapping of (directions and descriptions of leaveing)¡£
-Éè¶¨ÒÆ¶¯Ê±µÄÖĞ¡¢Ó¢Ñ¶Ï¢¡£
-·¶ÀıÈçÏÂ:
-set ("exit_c_msg", (["north' : "$NÓÆÏĞµØÀë¿ª¡£\n"); 
+è¨­å®šä¸€ Mapping of (directions and descriptions of leaveing)ã€‚
+è¨­å®šç§»å‹•æ™‚çš„ä¸­ã€è‹±è¨Šæ¯ã€‚
+ç¯„ä¾‹å¦‚ä¸‹:
+set ("exit_c_msg", (["north' : "$Næ‚ é–’åœ°é›¢é–‹ã€‚\n"); 
 set ("exit_msg", ([ "north" : "$N leaves slowly.\n") ;
-µ± player (kitten) ÓÉ´Ë·¿¼äÍù±±Àë¿ªÊ±£¬´Ë·¿¼äµÄÆäËû players ½«»á¿´µ½
-"×ö¿à¹¤ÖĞµÄ ¾ı ÓÆÏĞµØÀë¿ª¡£" µÄÖĞÎÄÑ¶Ï¢¡£
-"Kitten leaves slowly."  µÄÓ¢ÎÄÑ¶Ï¢¡£ 
+ç•¶ player (kitten) ç”±æ­¤æˆ¿é–“å¾€åŒ—é›¢é–‹æ™‚ï¼Œæ­¤æˆ¿é–“çš„å…¶ä»– players å°‡æœƒçœ‹åˆ°
+"åšè‹¦å·¥ä¸­çš„ å› æ‚ é–’åœ°é›¢é–‹ã€‚" çš„ä¸­æ–‡è¨Šæ¯ã€‚
+"Kitten leaves slowly."  çš„è‹±æ–‡è¨Šæ¯ã€‚ 
 
 "x_coordinate" & "y_coordinate"
 -------------------------------
-Éè¶¨Öµ¡£
-Éè¶¨µØÍ¼ÉÏ·¿¼äµÄ X¡¢Y ×ù±ê¡£
+è¨­å®šå€¼ã€‚
+è¨­å®šåœ°åœ–ä¸Šæˆ¿é–“çš„ Xã€Y åº§æ¨™ã€‚
 
 "virtual_server"
 ----------------
-Éè¶¨Öµ¡£
-ÖµÎª1, Éè¶¨´Ë·¿¼äÎª virtual_room¡£
+è¨­å®šå€¼ã€‚
+å€¼ç‚º1, è¨­å®šæ­¤æˆ¿é–“ç‚º virtual_roomã€‚
 
 "no_cast"
 ---------
-Éè¶¨Öµ¡£
-ÖµÎª1, Éè¶¨´Ë·¿¼ä²»¿ÉÊ©Ä§·¨¡£
+è¨­å®šå€¼ã€‚
+å€¼ç‚º1, è¨­å®šæ­¤æˆ¿é–“ä¸å¯æ–½é­”æ³•ã€‚
 
 "no_enhant"
-Éè¶¨Öµ¡£
-ÖµÎª1, Éè¶¨´Ë·¿¼ä²»¿ÉÊ©Õ¹Îä¹¦¡£
+è¨­å®šå€¼ã€‚
+å€¼ç‚º1, è¨­å®šæ­¤æˆ¿é–“ä¸å¯æ–½å±•æ­¦åŠŸã€‚
 
 
                                       By Kitten...1994/9/24

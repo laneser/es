@@ -4,18 +4,18 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name( "gin hwa", "¾²»ª" );
+	set_name( "gin hwa", "éœè¯" );
 	add ("id", ({ "gin", "hwa","monk" }) );
-	set_short( "¾²»ª" );
+	set_short( "éœè¯" );
 	set_long(@C_LONG
-¾²×Ö±²ÊÇÉÙÁÖ×îµÍµÄÒ»±²¡£¾²»ª½ñÄêÊ®ÎåËê£¬´ıÔÚÉÙÁÖÒ²²»¹ıÊ®Äê£¬µ«Ò»Ì× 
-ÉÙÁÖ³¤È­¿É´òµÄ²»²îÅ¶¡£
+éœå­—è¼©æ˜¯å°‘æ—æœ€ä½çš„ä¸€è¼©ã€‚éœè¯ä»Šå¹´åäº”æ­²ï¼Œå¾…åœ¨å°‘æ—ä¹Ÿä¸éåå¹´ï¼Œä½†ä¸€å¥— 
+å°‘æ—é•·æ‹³å¯æ‰“çš„ä¸å·®å“¦ã€‚
 C_LONG
 	);
     set( "alignment",50);
     set( "gender", "male" );
     set( "race", "elf" );
-    set( "unit", "Î»" );
+    set( "unit", "ä½" );
 	set_perm_stat( "dex", 10 );
 	set_perm_stat( "str", 8);
 	set_perm_stat( "int", 7 );

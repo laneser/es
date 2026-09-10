@@ -27,11 +27,11 @@ void pseudo_hunt(object me, object player)
    if( environment() && present(player, environment()) )
       if( this_object()==me )
           tell_room( environment(),
-       query("c_name") + "发现你意图不轨，二话不说，便拿家伙往你身上招呼！\n"
+       query("c_name") + "鐧肩従浣犳剰鍦栦笉杌岋紝浜岃┍涓嶈锛屼究鎷垮偄浼欏線浣犺韩涓婃嫑鍛硷紒\n"
           ,this_object() );
       else {
           tell_room( environment(), 
-       query("c_name") + "冲到你面前，大喝：『大胆刁民，竟敢到津鸣城撒野！』\n"
+       query("c_name") + "琛濆埌浣犻潰鍓嶏紝澶у枬锛氥�庡ぇ鑶藉垇姘戯紝绔熸暍鍒版触槌村煄鎾掗噹锛併�廫n"
           ,this_object() );
         if( !pointerp(attackers) || member_array(player, attackers)==-1 )
         kill_ob(player);

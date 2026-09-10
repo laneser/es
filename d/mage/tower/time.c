@@ -6,9 +6,9 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("й╠©укМ╣ю");
+        set_short("Ф≥┌Г╘╨И ╖И│⌠");
         set_long( @C_LONG_DESCRIPTION
-р╩╦Жх╔╟вд╖╥╗Ёг╣дй╠©укМ╣ю║ё
+Д╦─Е─▀Е▌╩Г≥╫И╜■ФЁ∙Е÷▌Г └Ф≥┌Г╘╨И ╖И│⌠Ц─┌
 C_LONG_DESCRIPTION
         );
 
@@ -18,8 +18,8 @@ C_LONG_DESCRIPTION
         create_door( "west", "east", ([
                 "keyword" : ({ "rusty iron door", "iron door", "door" }),
                 "name" : "rusty iron door",
-                "c_name" : "╟вд╖╥╗ж╝це",
-                "c_desc" : "р╩ихспд╖а╕╣д╟ви╚це",
+                "c_name" : "Г≥╫И╜■ФЁ∙Д╧▀И√─",
+                "c_desc" : "Д╦─Ф┴┤Ф°┴И╜■Е┼⌡Г └Г≥╫Х┴╡И√─",
                 "status" : "locked",
                 "lock" : "1"
         ]) );

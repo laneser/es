@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("huge mithril helmet", "¾ŞÃ×ËÕÀíÍ·¿ø");
+        set_name("huge mithril helmet", "å·¨ç±³è˜‡ç†é ­ç›”");
         add( "id", ({ "helmet" }) );
-        set_short( "a mithril helmet", "¾ŞÃ×ËÕÀíÍ·¿ø");
+        set_short( "a mithril helmet", "å·¨ç±³è˜‡ç†é ­ç›”");
         set_long(
                 "A huge helmet made of mithril .\n",
-                "ÕâÊÇÓÃÃ×ËÕÀí½ğÊôËùÖÆ³ÉµÄÍ·¿ø. \n"
+                "é€™æ˜¯ç”¨ç±³è˜‡ç†é‡‘å±¬æ‰€è£½æˆçš„é ­ç›”. \n"
                 
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "light_metal" );
         set( "armor_class", 7 );

@@ -13,11 +13,11 @@ void create()
 {
         ::create();
         set_level( 10 );
-        set_name( "wine shop owner", "¾ÆµêÀÏ°åÄï" );
+        set_name( "wine shop owner", "é…’åº—è€é—†å¨˜" );
         add( "id", ({ "owner" }) );
-        set_short( "¾ÆµêÀÏ°åÄï" );
+        set_short( "é…’åº—è€é—†å¨˜" );
         set_long(
-            "Ô¶·çÕòµÄ¾ÆµêÀÏ°åÄï¡£"
+            "é é¢¨é®çš„é…’åº—è€é—†å¨˜ã€‚"
         );
         set( "no_attack", 1 );
         set( "gender", "female" );
@@ -25,16 +25,16 @@ void create()
 			"menu" :@ALONG
 
 
-		ÕâÊÇÔ¶·ç¾ÆµêµÄ¼ÛÄ¿±í£¬Äú²Î¿¼¿´¿´...
+		é€™æ˜¯é é¢¨é…’åº—çš„åƒ¹ç›®è¡¨ï¼Œæ‚¨åƒè€ƒçœ‹çœ‹...
 		**********************************************
-		*                 Ô¶·ç¾Æµê                   *
+		*                 é é¢¨é…’åº—                   *
 		**********************************************
-		         ÖñÒ¶Çà(Ching)           20 silvers
-		         £Ø£Ï(XO)                30 silvers
-		         Ãµ¹åºì¾Æ(Rose wine)     20 silvers
-		         ·üÌØ¼Ó(Vodka)           30 silvers
-		       * ¿¾¼¦(Chicken) *        200 silvers
-		       * ÌØµ÷´ó²¹¾Æ(Special) *  100 silvers
+		         ç«¹è‘‰é’(Ching)           20 silvers
+		         ï¼¸ï¼¯(XO)                30 silvers
+		         ç«ç‘°ç´…é…’(Rose wine)     20 silvers
+		         ä¼ç‰¹åŠ (Vodka)           30 silvers
+		       * çƒ¤é›(Chicken) *        200 silvers
+		       * ç‰¹èª¿å¤§è£œé…’(Special) *  100 silvers
 		**********************************************
 ALONG
 		]) );
@@ -43,16 +43,16 @@ ALONG
 int have_menu()
 {
    write(@BLONG
-   		ÀÏ°åÄïµİÁËÒ»ÕÅÊÖ¹¤ÖÆµÄ²Ëµ¥¸øÄã£¬Äã¿´ÁË¿´...
+   		è€é—†å¨˜éäº†ä¸€å¼µæ‰‹å·¥åˆ¶çš„èœå–®çµ¦ä½ ï¼Œä½ çœ‹äº†çœ‹...
 		**********************************************
-		*                 Ô¶·ç¾Æµê                   *
+		*                 é é¢¨é…’åº—                   *
 		**********************************************
-		*         ÖñÒ¶Çà(Ching)           20 silvers *
-		*         £Ø£Ï(XO)                30 silvers *
-		*         Ãµ¹åºì¾Æ(Rose wine)     20 silvers *
-		*         ·üÌØ¼Ó(Vodka)           30 silvers *
-		*         ¿¾¼¦(Chicken)          200 silvers * 
-		*       * ÌØµ÷´ó²¹¾Æ(Special) *  100 silvers *
+		*         ç«¹è‘‰é’(Ching)           20 silvers *
+		*         ï¼¸ï¼¯(XO)                30 silvers *
+		*         ç«ç‘°ç´…é…’(Rose wine)     20 silvers *
+		*         ä¼ç‰¹åŠ (Vodka)           30 silvers *
+		*         çƒ¤é›(Chicken)          200 silvers * 
+		*       * ç‰¹èª¿å¤§è£œé…’(Special) *  100 silvers *
 		**********************************************
 BLONG
         );	

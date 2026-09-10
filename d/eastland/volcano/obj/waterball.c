@@ -9,15 +9,15 @@ void init()
 
 void create()
 {
-        set_name( "prevent_water ball", "±ÙË®Öé" );
+        set_name( "prevent_water ball", "é—¢æ°´ç " );
         add( "id", ({ "ball" }) );
-        set_short( "±ÙË®Öé" );
+        set_short( "é—¢æ°´ç " );
         set_long(
 @LONG
-Ò»¿ÅÓÃ¶À½ÇÊŞµÄ½ÇÄ¥ÖÆµÄ±ÙË®Öé£¬¾İËµÖ»ÒªÊÖÎÕÖøËü£¬¾Í¿É½«Ë®·Ö³öÒ»ÌõÂ·À´¡£
+ä¸€é¡†ç”¨ç¨è§’ç¸çš„è§’ç£¨è£½çš„é—¢æ°´ç ï¼Œæ“šèªªåªè¦æ‰‹æ¡è‘—å®ƒï¼Œå°±å¯å°‡æ°´åˆ†å‡ºä¸€æ¢è·¯ä¾†ã€‚
 LONG
 		);
-   		set("unit","¿Å");
+   		set("unit","é¡†");
    		set("weight", 10);
    		set("value",({10, "silver"}) );
                 set("no_sale", 1 );
@@ -28,11 +28,11 @@ int hold_ball(string arg)
     if( !arg || arg != "ball" ) return 0;
     if ((int)environment(this_player())->query("in_well")==1 ) {
     	tell_object(this_player(),
-    	    "ÄãÊÖÎÕ±ÙË®Öé£¬Ö»¼ûÑÛÇ°µÄË®×Ô¶¯·Ö³öÒ»ÌõÂ·À´¡£\n");
+    	    "ä½ æ‰‹æ¡é—¢æ°´ç ï¼Œåªè¦‹çœ¼å‰çš„æ°´è‡ªå‹•åˆ†å‡ºä¸€æ¢è·¯ä¾†ã€‚\n");
         this_player()->set_temp("likefish",1);
     } else
         tell_object(this_player(), 
-             "ÄãÊÖÎÕ±ÙË®Öé£¬£¬µ«ÊÇ²»ÊÇÓÃ´íµØ·½ÁËÄØ¡£\n" );
+             "ä½ æ‰‹æ¡é—¢æ°´ç ï¼Œï¼Œä½†æ˜¯ä¸æ˜¯ç”¨éŒ¯åœ°æ–¹äº†å‘¢ã€‚\n" );
     return 1;
 
 }

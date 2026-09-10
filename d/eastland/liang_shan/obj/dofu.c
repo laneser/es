@@ -9,12 +9,12 @@ add_action("eat_it","eat");
 }
 void create()
 {
-	set_name("dofu","ÂéÀ±¶¹¸¯");
+	set_name("dofu","éº»è¾£è±†è…");
 	add( "id" , ({ "dofu" }) );
-	set_short("dofu" , "ÂéÀ±¶¹¸¯");
-	set_long(".." , "Ëï¶þÄïÄÃÊÖµÄ¼ÓÁÏÂéÀ±¶¹¸¯£¬ºìÉ«µÄÌÀË®Æ¯¸¡Öø°×É«µÄ¶¹¸¯£¬\n"
-	"·Ç³£µÄÃÀÀö£¡Äã¾õµÃ×îºÃ³ÃÈÈ³Ô....\n");
-   	set("unit","Íë");
+	set_short("dofu" , "éº»è¾£è±†è…");
+	set_long(".." , "å­«äºŒå­ƒæ‹¿æ‰‹çš„åŠ æ–™éº»è¾£è±†è…ï¼Œç´…è‰²çš„æ¹¯æ°´æ¼‚æµ®è‘—ç™½è‰²çš„è±†è…ï¼Œ\n"
+	"éžå¸¸çš„ç¾Žéº—ï¼ä½ è¦ºå¾—æœ€å¥½è¶ç†±åƒ....\n");
+   	set("unit","ç¢—");
    	set("weight", 15);
    	set("value",({ 100, "silver" }) );
 }
@@ -24,14 +24,14 @@ int eat_it(string arg)
 {
 	object owner;
 	if ( !arg || arg!="dofu")
-	return notify_fail("³ÔÊ²÷á??\n");
+	return notify_fail("åƒä»€éº¼??\n");
 	owner = environment(this_object());
 		tell_object(owner, 
-			"ÄãäÀÁ¨»©À²µÄÍÌÏÂÒ»ÍëÂéÀ±¶¹¸¯£¬¸Ð¾õÒ»¹ÉÈÈÆøÔÚÌåÄÚÂûÑÓ¡£\n"
+			"ä½ æ·…å“©å˜©å•¦çš„åžä¸‹ä¸€ç¢—éº»è¾£è±†è…ï¼Œæ„Ÿè¦ºä¸€è‚¡ç†±æ°£åœ¨é«”å…§è”“å»¶ã€‚\n"
 		);
 		tell_room( environment(owner), 
-			owner->query("c_name")+"ÍÌÏÂÒ»´óÍëÂéÀ±¶¹¸¯£¬Á³Ò»ÏÂ×Ó±äµÄ"
-			"ºìÍ¨Í¨µÄ!!\n", owner
+			owner->query("c_name")+"åžä¸‹ä¸€å¤§ç¢—éº»è¾£è±†è…ï¼Œè‡‰ä¸€ä¸‹å­è®Šçš„"
+			"ç´…é€šé€šçš„!!\n", owner
 		);
 		owner->receive_healing( 7+random(3) );
 	remove();

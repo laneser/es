@@ -1,4 +1,4 @@
 #/d/monk/guild/monk_board.c
-ob_data (["name":"board","short":"@@query_short","short.text":"ÎäÉ®¹«»áÁôÑÔ°å","c_name":"ÁôÑÔ°å","long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£","long":"@@query_long","id":({"board","bulletin board",}),"silent_look":1,])
-messages ({(["id":1,"time":990452244,"poster":"Cach","body":"µÚÒ»¸öÀ´£¡","title":"haha",]),})
+ob_data (["name":"board","short":"@@query_short","short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","c_name":"ç•™è¨€æ¿","long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚","long":"@@query_long","id":({"board","bulletin board",}),"silent_look":1,])
+messages ({(["id":1,"time":990452244,"poster":"Cach","body":"ç¬¬ä¸€å€‹ä¾†ï¼","title":"haha",]),})
 id_ref 1

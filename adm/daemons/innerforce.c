@@ -56,21 +56,21 @@ varargs int force_apply(object me, object victim, object weapon)
 		else
                         victim->receive_damage( damage );
 		switch ( damage / 10 ) {
-			case 0 : c_msg = "ÇáÎ¢µÄ";     break;
-			case 1 : c_msg = "Ò»µã";       break;
-			case 2 : c_msg = "²»Ð¡µÄ";     break;
-			case 3 : c_msg = "ÆÄÎªÑÏÖØµÄ"; break;
-			case 4 : c_msg = "ÑÏÖØµÄ";     break;
-			case 5 : c_msg = "Ïàµ±ÑÏÖØµÄ"; break;
-			case 6 : c_msg = "Ê®·ÖÑÏÖØµÄ"; break;
-			default: c_msg = "ÖÂÃüµÄ";     break;
+			case 0 : c_msg = "è¼•å¾®çš„";     break;
+			case 1 : c_msg = "ä¸€é»ž";       break;
+			case 2 : c_msg = "ä¸å°çš„";     break;
+			case 3 : c_msg = "é —ç‚ºåš´é‡çš„"; break;
+			case 4 : c_msg = "åš´é‡çš„";     break;
+			case 5 : c_msg = "ç›¸ç•¶åš´é‡çš„"; break;
+			case 6 : c_msg = "ååˆ†åš´é‡çš„"; break;
+			default: c_msg = "è‡´å‘½çš„";     break;
 		}
 		if( damage ) {
 		  tell_object( victim,
-                         sprintf("Äã±»%sµÄÄÚÁ¦ÕðÉË, ÊÜÁË%sÄÚÉË!\n",me->query("c_name"),c_msg)
+                         sprintf("ä½ è¢«%sçš„å…§åŠ›éœ‡å‚·, å—äº†%så…§å‚·!\n",me->query("c_name"),c_msg)
 		  );
 		  tell_object( me, 
-                        sprintf("ÄãÓÃÄÚÁ¦½«%sÕðÉË, ¶Ô·½ÊÜÁË%sÄÚÉË!\n",victim->query("c_name"),c_msg)
+                        sprintf("ä½ ç”¨å…§åŠ›å°‡%séœ‡å‚·, å°æ–¹å—äº†%så…§å‚·!\n",victim->query("c_name"),c_msg)
 		  );
 		}
 	}

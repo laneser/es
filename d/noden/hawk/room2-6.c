@@ -6,7 +6,7 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("ɽ´С��");
+        set_short("山麓小徑");
         set_light(1);
         set_long( @LONG_DESCRIPTION
 LONG_DESCRIPTION

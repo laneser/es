@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "crimson ring", "ÏÊºìÉ«½äÖ¸" );
+	set_name( "crimson ring", "é®®ç´…è‰²æˆ’æŒ‡" );
 	add( "id", ({ "ring" }) );
-	set_short( "ÏÊºìÉ«½äÖ¸" );
+	set_short( "é®®ç´…è‰²æˆ’æŒ‡" );
 	set_long(
-		"ÕâÊÇÒ»¸öÏÊºìÉ«½ğÊô½äÖ¸£¬ÉÏÃæÏâÖøÒ»¿Åºì±¦Ê¯¡£\n"
+		"é€™æ˜¯ä¸€å€‹é®®ç´…è‰²é‡‘å±¬æˆ’æŒ‡ï¼Œä¸Šé¢é‘²è‘—ä¸€é¡†ç´…å¯¶çŸ³ã€‚\n"
 	);
 	set( "type", "finger" );
 	set( "material", "element");

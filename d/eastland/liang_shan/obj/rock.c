@@ -12,18 +12,18 @@ void init()
 void create()
 {
 	seteuid(getuid());
-	set_name("rock","´óÊ¯Í·");
-	set_short("´óÊ¯Í·");
+	set_name("rock","å¤§çŸ³é ­");
+	set_short("å¤§çŸ³é ­");
 	set_long(
-		"Ò»¿Å·Ç³£´óµÄÊ¯Í·£¬¿´À´Ïàµ±µÄÖØ¡£\n"
+		"ä¸€é¡†éžå¸¸å¤§çš„çŸ³é ­ï¼Œçœ‹ä¾†ç›¸ç•¶çš„é‡ã€‚\n"
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("prevent_get",1);
    	set("weight", 10000);
 }
 int move_rock()
 {
-        write("Õâ¶«Î÷ÊµÔÚÌ«ÖØÁË£¬²»¹ÜÄãÔõ÷áÅ¬Á¦¶¼ÎÞ·¨ÒÆ¶¯·ÖºÁ\n");
+        write("é€™æ±è¥¿å¯¦åœ¨å¤ªé‡äº†ï¼Œä¸ç®¡ä½ æ€Žéº¼åŠªåŠ›éƒ½ç„¡æ³•ç§»å‹•åˆ†æ¯«\n");
         return 1;	
 }
 
@@ -31,10 +31,10 @@ int kick_rock(string arg)
 {
         object st1,st2,st3,st4,st5;
         if( !arg || arg != "rock" ) return 0;
-        write("Äã·Ç³£²»Ë¬µÄÓÃÁ¦ÌßÕâ¿é´óÊ¯Í·£¬Ã»Ïëµ½¾¹È»Ò»½Å°ÑËüÌßËéÁË?\n");
+        write("ä½ éžå¸¸ä¸çˆ½çš„ç”¨åŠ›è¸¢é€™å¡Šå¤§çŸ³é ­ï¼Œæ²’æƒ³åˆ°ç«Ÿç„¶ä¸€è…³æŠŠå®ƒè¸¢ç¢Žäº†?\n");
         tell_room( environment(this_player()), 
 	this_player()->query("c_name")+
-         "·Ç³£²»Ë¬µÄÓÃÁ¦ÌßÄÇ¿é´óÊ¯Í·£¬Ã»Ïëµ½¾¹È»Ò»½Å°ÑËüÌßËéÁË?\n"
+         "éžå¸¸ä¸çˆ½çš„ç”¨åŠ›è¸¢é‚£å¡Šå¤§çŸ³é ­ï¼Œæ²’æƒ³åˆ°ç«Ÿç„¶ä¸€è…³æŠŠå®ƒè¸¢ç¢Žäº†?\n"
 			, this_player());
 	st1 = new("/d/adventurer/natural_history/stone");
 	st1->move(environment(this_object()));

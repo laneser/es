@@ -7,11 +7,11 @@ void create()
  
         ::create();
         set_level(4);
-        set_name( "new soldier", "新兵" );
+        set_name( "new soldier", "鏂板叺" );
         add( "id", ({ "soldier","rookie" }) );
-        set_short( "新兵" );
+        set_short( "鏂板叺" );
         set_long(
-                "你看到一个瘦弱但很坚定的新兵，正在操场上战斗教练。\n"
+                "浣犵湅鍒颁竴鍊嬬槮寮变絾寰堝爡瀹氱殑鏂板叺锛屾鍦ㄦ搷鍫翠笂鎴伴鏁欑反銆俓n"
         );
         set( "gender", "male" );
         set( "alignment", 100 );

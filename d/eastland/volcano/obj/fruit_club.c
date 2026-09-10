@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "fruit_club", "Ğ¡é³×Ó" );
-	set_short( "Ğ¡é³×Ó" );
+	set_name( "fruit_club", "å°æ§Œå­" );
+	set_short( "å°æ§Œå­" );
 	set_long(
-		"ÕâÊÇ×¨ÃÅÓÃÀ´ÇÃÈË²Î¹ûÓÃµÄé³×Ó¡£\n"
+		"é€™æ˜¯å°ˆé–€ç”¨ä¾†æ•²äººåƒæœç”¨çš„æ§Œå­ã€‚\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "weight", 5 );
 	set( "value", ({ 1, "silver" }) );
 }

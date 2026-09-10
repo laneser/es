@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "peg boots","¶¤Ð¬");
+        set_name( "peg boots","é‡˜éž‹");
         add( "id", ({ "boots" }) );
-        set_short("Peg boots", "¶¤Ð¬");
+        set_short("Peg boots", "é‡˜éž‹");
         set_long(@AAA
-ÕâÊÇÒ»Ë«¶¤Ð¬¡£
+é€™æ˜¯ä¸€é›™é‡˜éž‹ã€‚
 AAA
         );
-        set( "unit", "Ë«"); 
+        set( "unit", "é›™"); 
         set( "type", "feet" );
         set( "armor_class", 3 );
         set("material","light_metal");

@@ -3,14 +3,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "dragonscale sword","ÁúÁÛÖ®½£" );
+        set_name( "dragonscale sword","é¾é±—ä¹‹åŠ" );
         add( "id",({ "dragonscale","sword" }) );
-        set_short( "dragonscale sword","ÁúÁÛÖ®½£" );
+        set_short( "dragonscale sword","é¾é±—ä¹‹åŠ" );
         set_long(@AAA
-ÕâÊÇÒ»°ÑÓÃÁúµÄÁÛÆ¬´òÔìµÄ³¤½££¬Òşº¬ÕßÎŞ±ÈµÄÍşÁ¦
+é€™æ˜¯ä¸€æŠŠç”¨é¾çš„é±—ç‰‡æ‰“é€ çš„é•·åŠï¼Œéš±å«è€…ç„¡æ¯”çš„å¨åŠ›
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 27 );
 //        set( "bleeding",17 );
         set( "type", "longblade" );

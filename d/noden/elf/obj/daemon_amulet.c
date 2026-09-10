@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("daemonic amulet", "¶ñÄ§»¤Éí·û");
+        set_name("daemonic amulet", "æƒ¡é­”è­·èº«ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short( "¶ñÄ§»¤Éí·û" );
+        set_short( "æƒ¡é­”è­·èº«ç¬¦" );
         set_long(
-                "ÕâÊÇ¹Å¶ñÄ§Õ½Ê¿×¨ÓÃµÄ»¤Éí·û\n"
+                "é€™æ˜¯å¤æƒ¡é­”æˆ°å£«å°ˆç”¨çš„è­·èº«ç¬¦\n"
         );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set( "type", "misc" );
         set( "material", "heavy_metal");
         set( "armor_class", 0);

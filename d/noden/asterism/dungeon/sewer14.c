@@ -7,14 +7,14 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("halfling tower", "��ˮ�������");
+	set_short("halfling tower", "下水道的入口");
 	set_long( @LONG_DESCRIPTION
 LONG_DESCRIPTION
 		,@C_LONG_DESCRIPTION
-����ǰ�˹���ɶ���������Ϊ������ˮ��ϵͳ�� ʯǽ�ϻ谵ҡҷ�ĵƹ� , 
-Ϊ�����������ƾ����Щ����������ա���ʵ�Ļ�����ǽ, �������ߵ�ˮ��, 
-�ټ���ÿ��ʮ��������һƬ������ʯ��(slate)����������,  ����������
-��ʩ�Ĺ��ܾ��Բ�ֻ����ˮ���ѡ�
+這兒是艾斯特律恩城最引以為傲的下水道系統。 石牆上昏暗搖曳的燈光 , 
+為這個長長的甬道憑添了些許詭異的氣氛。堅實的花崗岩牆, 寬達數尺的水道, 
+再加上每隔十來步就有一片黑曜岩石板(slate)鑲在甬道壁上,  讓你覺得這個
+設施的功能絕對不只是排水而已。
 C_LONG_DESCRIPTION
 	);
 
@@ -34,7 +34,7 @@ void init()
 int look_slate(string arg)
 {
     string msg ;
-    string compared = ({ "slate" , "ʯ��" , "������ʯ��"}) ;
+    string compared = ({ "slate" , "石板" , "黑曜岩石板"}) ;
     if( member_array(arg,compared,1) < 0 ) return 0 ;
     
     msg = CENTER->slate_desc(this_player(),this_object()) ;    

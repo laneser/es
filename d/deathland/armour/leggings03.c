@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("holy leggings", "ÉñÊ¥ëÖ¼×");
+        set_name("holy leggings", "ç¥è–è„›ç”²");
         add( "id", ({"leggings" }) );
-        set_short("a pair of holy leggings", "ÉñÊ¥ëÖ¼×");
+        set_short("a pair of holy leggings", "ç¥è–è„›ç”²");
         set_long(
                 "A pair of leggings enchanted holy power.\n",
-                "Ò»Ë«ÓĞÖøÉñÊ¥Á¦Á¿µÄëÖ¼×\n"
+                "ä¸€é›™æœ‰è‘—ç¥è–åŠ›é‡çš„è„›ç”²\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "legs" );
         set( "material", "light_metal" );
         set( "armor_class", 6 );

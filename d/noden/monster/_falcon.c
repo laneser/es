@@ -4,20 +4,20 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(3);
-	ob->set_name( "falcon", "ÁÔÓ¥" );
-   ob->set_short( "ÁÔÓ¥" );
+	ob->set_name( "falcon", "çµé·¹" );
+   ob->set_short( "çµé·¹" );
 	ob->set_long(
-		"ÕâÖ»ÁÔÓ¥Õý»¢ÊÓµ¢µ¢µØ¶¢ÖøÄã£¬Ð¡ÐÄ²»Òª³ÉÎªËüµÄÁÔÎï¡£\n"
+		"é€™éš»çµé·¹æ­£è™Žè¦–è€½è€½åœ°ç›¯è‘—ä½ ï¼Œå°å¿ƒä¸è¦æˆç‚ºå®ƒçš„çµç‰©ã€‚\n"
 	);
 	ob->set_perm_stat( "str", 6 ); 
 	ob->set_perm_stat( "dex", 5 );
 	ob->set_perm_stat( "pie", 1 );
 
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set( "alignment", 150 );
 	ob->set( "natural_weapon_class1", 3 );
 	ob->set( "natural_min_damage1", 3 );
 	ob->set( "natural_max_damage1", 5 );
-	ob->set_c_verbs( ({ "%sÍùÏÂ¸©³å£¬ÓÃ×ì°Í×Ä%s", "%sÓÃ×¦×ÓÍù%s×¥ÏÂ" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
+	ob->set_c_verbs( ({ "%så¾€ä¸‹ä¿¯è¡ï¼Œç”¨å˜´å·´å•„%s", "%sç”¨çˆªå­å¾€%sæŠ“ä¸‹" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
 }

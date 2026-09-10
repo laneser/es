@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("zu-lai plate","ÈçÀ´¼×ëĞ");
+    set_name("zu-lai plate","å¦‚ä¾†ç”²å†‘");
     add("id",({"zu-lai","plate"}) );
-    set_short("ÈçÀ´¼×ëĞ");
+    set_short("å¦‚ä¾†ç”²å†‘");
 	set_long(
-	"ÕâÊÇ½ğ¸Õ½ç´óÂüİ±ÂŞ±±·½ôÉÄ¥²¿µÚ¶ş½ğ¸Õ»¤µÄ¼×ëĞ,ÓÖ³ÆÈçÀ´¼×ëĞ¡£\n" 
+	"é€™æ˜¯é‡‘å‰›ç•Œå¤§æ›¼è¼ç¾…åŒ—æ–¹ç¾¯ç£¨éƒ¨ç¬¬äºŒé‡‘å‰›è­·çš„ç”²å†‘,åˆç¨±å¦‚ä¾†ç”²å†‘ã€‚\n" 
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 150 );
         set("material","monk");
 	set( "type", "body" );

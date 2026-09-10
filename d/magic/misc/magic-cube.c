@@ -50,24 +50,24 @@ void effect( object caster, int level )
 	c_name=caster->query("c_name");
 	ob = new("/d/magic/misc/cube");
     if( level < 1 ) { 
-      tell_object( caster, set_color("Äã¿ÚÖÐÄîÄîÓÐ´Ê£¬Ò»¸ö·¢ÖøÆæÒì¹âÃ¢µÄÄ§·¨·½¿é³öÏÖÔÚÄãµÄÉíÅÔ¡£\n","HIW"));
+      tell_object( caster, set_color("ä½ å£ä¸­å”¸å”¸æœ‰è©žï¼Œä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„é­”æ³•æ–¹å¡Šå‡ºç¾åœ¨ä½ çš„èº«æ—ã€‚\n","HIW"));
 
-	  tell_room( environment(caster), sprintf("%s¿ÚÖÐÄîÄîÓÐ´Ê£¬Ò»¸ö·¢ÖøÆæÒì¹âÃ¢µÄÄ§·¨·½¿é³öÏÖÔÚËûµÄÉíÅÔ¡£\n",c_name) ,caster);
+	  tell_room( environment(caster), sprintf("%så£ä¸­å”¸å”¸æœ‰è©žï¼Œä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„é­”æ³•æ–¹å¡Šå‡ºç¾åœ¨ä»–çš„èº«æ—ã€‚\n",c_name) ,caster);
 	m_load = modify_damage(caster, 400, TYPE, 20);
 	if (m_load < 50) m_load = 50;
 	ob->set("max_load",m_load);
 	ob->move(caster);
 	} else if( level < 2 ) {
-	  tell_object( caster, set_color("Äã¿ÚÖÐÄîÄîÓÐ´Ê£¬Ò»¸ö·¢ÖøÆæÒì¹âÃ¢µÄ´óÐÍÄ§·¨·½¿é³öÏÖÔÚÄãµÄÉíÅÔ¡£\n","HIW"));
+	  tell_object( caster, set_color("ä½ å£ä¸­å”¸å”¸æœ‰è©žï¼Œä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„å¤§åž‹é­”æ³•æ–¹å¡Šå‡ºç¾åœ¨ä½ çš„èº«æ—ã€‚\n","HIW"));
 
-	  tell_room( environment(caster), sprintf("%s¿ÚÖÐÄîÄîÓÐ´Ê£¬Ò»¸ö·¢ÖøÆæÒì¹âÃ¢µÄ´óÐÍÄ§·¨·½¿é³öÏÖÔÚËûµÄÉíÅÔ¡£\n",c_name) ,caster);
+	  tell_room( environment(caster), sprintf("%så£ä¸­å”¸å”¸æœ‰è©žï¼Œä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„å¤§åž‹é­”æ³•æ–¹å¡Šå‡ºç¾åœ¨ä»–çš„èº«æ—ã€‚\n",c_name) ,caster);
 	m_load = modify_damage(caster, 600, TYPE, 30);
 	if (m_load < 50) m_load = 50;
 	ob->set("max_load",m_load);
 	ob->move(caster);
 	} else if( level < 3 ) {
-      	  tell_object( caster, set_color("Äã¿ÚÖÐÄîÄîÓÐ´Ê£¬Ò»¸ö·¢ÖøÆæÒì¹âÃ¢µÄ¾Þ´óÄ§·¨·½¿é³öÏÖÔÚÄãµÄÉíÅÔ¡£\n","HIW"));
-	  tell_room( environment(caster), sprintf("%s¿ÚÖÐÄîÄîÓÐ´Ê£¬Ò»¸ö·¢ÖøÆæÒì¹âÃ¢µÄ¾Þ´óÄ§·¨·½¿é³öÏÖÔÚËûµÄÉíÅÔ¡£\n",c_name) ,caster);
+      	  tell_object( caster, set_color("ä½ å£ä¸­å”¸å”¸æœ‰è©žï¼Œä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„å·¨å¤§é­”æ³•æ–¹å¡Šå‡ºç¾åœ¨ä½ çš„èº«æ—ã€‚\n","HIW"));
+	  tell_room( environment(caster), sprintf("%så£ä¸­å”¸å”¸æœ‰è©žï¼Œä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„å·¨å¤§é­”æ³•æ–¹å¡Šå‡ºç¾åœ¨ä»–çš„èº«æ—ã€‚\n",c_name) ,caster);
 	m_load = modify_damage(caster, 800, TYPE, 40);
 	if (m_load < 50) m_load = 50;
 	ob->set("max_load",m_load);
@@ -82,12 +82,12 @@ int cast(int level)
 	me = this_player();
 
 	if( (int)me->query_skill(TYPE) < query_need_skill(level) ) {
-	  tell_object( me, sprintf("ÄãµÄ%s¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n" ,to_chinese(TYPE)));
+	  tell_object( me, sprintf("ä½ çš„%sæŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n" ,to_chinese(TYPE)));
       return 0;
     }
 
     if( present("magic cube",me)) {
-      tell_object( me, "ÄãÒÑ¾­ÖÆÔì³öÒ»¸öÄ§·¨·½¿éÁË£¬±ðÀË·Ñ·¨Á¦ÁË¡£\n");
+      tell_object( me, "ä½ å·²ç¶“è£½é€ å‡ºä¸€å€‹é­”æ³•æ–¹å¡Šäº†ï¼Œåˆ¥æµªè²»æ³•åŠ›äº†ã€‚\n");
       return 0;
     }
 

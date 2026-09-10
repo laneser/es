@@ -62,7 +62,7 @@ object connect()
 
     err = catch( login_ob = clone_object( CONNECTION ) );
     if( err ) {
-        write( "(ÏÖÔÚ¿ÉÄÜÓĞÉñ»òÎ×Ê¦ÔÚĞŞ¸ÄÁ¬Ïß¾«Áé £¬ÇëÉÔááÔÙÊÔ¡¡)\n" );
+        write( "(ç¾åœ¨å¯èƒ½æœ‰ç¥æˆ–å·«å¸«åœ¨ä¿®æ”¹é€£ç·šç²¾éˆ ï¼Œè«‹ç¨å¾Œå†è©¦ã€€)\n" );
         write( err );
         destruct( this_object() );
     }
@@ -85,9 +85,9 @@ protected void crash( string error )
 {
     log_file( "crashes", mud_name() + " CRASHED on: " + ctime( time() ) +
       " ERROR: " + error + "\n" );
-    shout( "ÄãÍ»È»¾õµÃÒ»ÕóÆøÃÆ~~~~~~~\n" ); /* polite for the dist copy */
-    shout( "Äã²»½ûÂîµ½:ÕâÆÆ¶«Î÷£¬×ÜÊÇÔÚ×îÒª½ôµÄÊ±ºò²Åµ±£¬ºÍÎÒÓĞ³ğÂğ£¿\n" );
-    shout( "È¥ÌËWCÔÙ·Ü¶·¹ı°É¡£\n" );
+    shout( "ä½ çªç„¶è¦ºå¾—ä¸€é™£æ°£æ‚¶~~~~~~~\n" ); /* polite for the dist copy */
+    shout( "ä½ ä¸ç¦ç½µåˆ°:é€™ç ´æ±è¥¿ï¼Œç¸½æ˜¯åœ¨æœ€è¦ç·Šçš„æ™‚å€™æ‰ç•¶ï¼Œå’Œæˆ‘æœ‰ä»‡å—ï¼Ÿ\n" );
+    shout( "å»è¶ŸWCå†å¥®é¬¥éå§ã€‚\n" );
     SHUTDOWN_D-> do_shutdown( 0 );
 }
 
@@ -239,14 +239,14 @@ string standard_trace(mapping error, int caught)
 
     /* keep track of number of errors per object...if you're into that */
 
-    res = (caught) ? "´íÎóÑ¶Ï¢±»À¹½Ø: " : "";
-    res = sprintf("%s\nÖ´ĞĞÊ±¶Î´íÎó£º%s\n³ÌÊ½£º%s µÚ %i ĞĞ\nÎï¼ş: %s\n",
+    res = (caught) ? "éŒ¯èª¤è¨Šæ¯è¢«æ””æˆª: " : "";
+    res = sprintf("%s\nåŸ·è¡Œæ™‚æ®µéŒ¯èª¤ï¼š%s\nç¨‹å¼ï¼š%s ç¬¬ %i è¡Œ\nç‰©ä»¶: %s\n",
         res, error["error"],
         error["program"], error["line"],
         objectp(error["object"])?file_name(error["object"]):"none object");
 
     for (i=0, s = sizeof(error["trace"]); i < s; i++) {
-                res = sprintf("%sºô½ĞÀ´×Ô£º%s µÄ %s() µÚ %i ĞĞ£¬Îï¼ş£º %O\n",
+                res = sprintf("%så‘¼å«ä¾†è‡ªï¼š%s çš„ %s() ç¬¬ %i è¡Œï¼Œç‰©ä»¶ï¼š %O\n",
                         res,
                         error["trace"][i]["program"],
             error["trace"][i]["function"],

@@ -8,9 +8,9 @@ void create()
 {
     ::create();
     seteuid(getuid());
-    set_name("coke","可乐");
-    set_short("Coca Cola","可口可乐");
+    set_name("coke","鍙▊");
+    set_short("Coca Cola","鍙彛鍙▊");
     set_long("Gotta have a Coke!\n",
-    "可口可乐, 来一瓶吧!\n");
+    "鍙彛鍙▊, 渚嗕竴鐡跺惂!\n");
     set("tp",50);
 }

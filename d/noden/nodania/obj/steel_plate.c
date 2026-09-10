@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "steel platemail", "¸Ö¿ø¼×" );
+	set_name( "steel platemail", "é‹¼ç›”ç”²" );
 	add( "id", ({ "plate", "platemail" }) );
-	set_short( "¸Ö¿ø¼×" );
+	set_short( "é‹¼ç›”ç”²" );
 	set_long(
-		"ÕâÊÇÒ»Ì×¸ÖÖÆµÄÉòÖØ¿ø¼×£¬²»¹ıËüËäÈ»ÖØ£¬È´ÄÜÌá¹©Ïàµ±ºÃµÄ·ÀÓùÁ¦¡£\n"
+		"é€™æ˜¯ä¸€å¥—é‹¼è£½çš„æ²ˆé‡ç›”ç”²ï¼Œä¸éå®ƒé›–ç„¶é‡ï¼Œå»èƒ½æä¾›ç›¸ç•¶å¥½çš„é˜²ç¦¦åŠ›ã€‚\n"
 	);
-	set( "unit", "Ì×" );
+	set( "unit", "å¥—" );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );
 	set( "armor_class", 33 );

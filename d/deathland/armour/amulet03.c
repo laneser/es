@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("life amulet","³¤Ãü·û");
+        set_name("life amulet","é•·å‘½ç¬¦");
         add("id",({"amulet"}) );
-         set_short( "a life amulet","³¤Ãü·û");
+         set_short( "a life amulet","é•·å‘½ç¬¦");
 	set_long(
-"Í¨³£°«ÈËĞ¡º¢Ò»³öÉú,¾Í»á±»´øÉÏÕâ¸ö³¤Ãü·û,ÒÔÆÚÍûĞ¡º¢×ÓÄÜ³¤Ãü°ÙËê,½¡½¡¿µ¿µ\n"
+"é€šå¸¸çŸ®äººå°å­©ä¸€å‡ºç”Ÿ,å°±æœƒè¢«å¸¶ä¸Šé€™å€‹é•·å‘½ç¬¦,ä»¥æœŸæœ›å°å­©å­èƒ½é•·å‘½ç™¾æ­²,å¥å¥åº·åº·\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "misc" );
 	set( "material", "cloth" );

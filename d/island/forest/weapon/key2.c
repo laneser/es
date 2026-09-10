@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "Main key Janser","Ê÷À×Ö÷Ô¿");
+        set_name( "Main key Janser","æ¨¹é›·ä¸»é‘°");
         add( "id", ({ "key","janser"}) );
-        set_short( "Ê÷À×Ö÷Ô¿");
+        set_short( "æ¨¹é›·ä¸»é‘°");
         set_long(@C_LONG
-ÕâÊÇÊ÷À×Íõ¼ÒµÕ´«µÄÈı°ÑÖ÷Ô¿Ö®Ò»£¬Ò²ÊÇÑªÍ³µÄÖ¤Ã÷£¬Õ§¿´Ö»ÊÇÒ»°Ñµñ¹¤¾«Ï¸
-µÄĞ¡ÊÖÕÈ£¬Ò»µ©ºÍĞÄË¼Ï¸ÄåµÄÈËÏà¸ĞÓ¦£¬¾ÍÄÜ»»»¯³ÉÇ¿Á¦µÄ¹¥»÷ÎäÆ÷¡£
+é€™æ˜¯æ¨¹é›·ç‹å®¶å«¡å‚³çš„ä¸‰æŠŠä¸»é‘°ä¹‹ä¸€ï¼Œä¹Ÿæ˜¯è¡€çµ±çš„è­‰æ˜ï¼Œä¹çœ‹åªæ˜¯ä¸€æŠŠé›•å·¥ç²¾ç´°
+çš„å°æ‰‹æ–ï¼Œä¸€æ—¦å’Œå¿ƒæ€ç´°è†©çš„äººç›¸æ„Ÿæ‡‰ï¼Œå°±èƒ½æ›åŒ–æˆå¼·åŠ›çš„æ”»æ“Šæ­¦å™¨ã€‚
 C_LONG
         );
 
-        set("unit", "±ú" );
+        set("unit", "æŸ„" );
         set("weight", 100 );
         set("type","dagger" );
         set("weapon_class",30 );
@@ -34,14 +34,14 @@ void daemon_wield()
     set("max_damage",32);
     set("extra_look","@@color");
     tell_object( this_player(),set_color(
-       "\n¡º´¬Ëë¡»¸ĞÓ¦µ½ÄãÏ¸ÄåµÄĞÄË¼£¬¶ø·¢³öÒ«ÑÛµÄÀ¶¹â£¬»Ã»¯³ÉÒ»°ÑØ°Ê×...\n\n"
+       "\nã€èˆ¹ç©—ã€æ„Ÿæ‡‰åˆ°ä½ ç´°è†©çš„å¿ƒæ€ï¼Œè€Œç™¼å‡ºè€€çœ¼çš„è—å…‰ï¼Œå¹»åŒ–æˆä¸€æŠŠåŒ•é¦–...\n\n"
        ,"HIC") );
     tell_room( environment(this_player()),set_color(
        "\n"+this_player()->query("c_name")+
-       "ÊÖÖĞµÄÖ÷Ô¿Í»È»·¢³öÒ«ÑÛµÄÀ¶¹â£¬»¯³ÉÒ»°ÑØ°Ê×...\n\n"
+       "æ‰‹ä¸­çš„ä¸»é‘°çªç„¶ç™¼å‡ºè€€çœ¼çš„è—å…‰ï¼ŒåŒ–æˆä¸€æŠŠåŒ•é¦–...\n\n"
        ,"HIC"),this_player() );
-    set_name("Main key Janser","Ê÷À×Ö÷Ô¿¡º´¬Ëë¡»");
-    set_short("Ê÷À×Ö÷Ô¿¡º´¬Ëë¡»");
+    set_name("Main key Janser","æ¨¹é›·ä¸»é‘°ã€èˆ¹ç©—ã€");
+    set_short("æ¨¹é›·ä¸»é‘°ã€èˆ¹ç©—ã€");
     return;
     }return;
 }
@@ -51,9 +51,9 @@ void daemon_unwield()
 	object holder;
 	if ( !holder=environment(this_object()) ) return;
     if( (int)this_object()->query("wc_damaged") ){
-         tell_object( this_player(),"ÄãÊÖÖĞµÄÊ÷À×Ö÷Ô¿Í»È»¼äÇ¿¹âÒ»ÉÁ¾ÍÏûÊ§²»¼ûÁË....\n");
+         tell_object( this_player(),"ä½ æ‰‹ä¸­çš„æ¨¹é›·ä¸»é‘°çªç„¶é–“å¼·å…‰ä¸€é–ƒå°±æ¶ˆå¤±ä¸è¦‹äº†....\n");
          tell_room( environment(this_player()),
-           this_player()->query("c_name")+"ÊÖÖĞµÄÊ÷À×Ö÷Ô¿Í»È»Ç¿¹âÒ»ÉÁ¾ÍÏûÊ§ÁË....\n",
+           this_player()->query("c_name")+"æ‰‹ä¸­çš„æ¨¹é›·ä¸»é‘°çªç„¶å¼·å…‰ä¸€é–ƒå°±æ¶ˆå¤±äº†....\n",
            this_player() );
            this_object()->remove();
            return;
@@ -67,22 +67,22 @@ void daemon_unwield()
         (string)holder->query("class")==("mage") ||    
         (string)holder->query("class")==("thief") ){
    tell_object( holder,set_color(
-      "\nÄãÍÑÊÖáá£¬¡º´¬Ëë¡»ÉíÉÏµÄÀ¶¹âÖğ½¥É¢È¥£¬»Ö¸´³ÉÆ½·²µÄĞ¡Ä¾ÕÈ...\n\n"
+      "\nä½ è„«æ‰‹å¾Œï¼Œã€èˆ¹ç©—ã€èº«ä¸Šçš„è—å…‰é€æ¼¸æ•£å»ï¼Œæ¢å¾©æˆå¹³å‡¡çš„å°æœ¨æ–...\n\n"
       ,"HIC") );
    tell_room( environment(holder),set_color(
       "\n"+holder->query("c_name")+
-      "ÊÖÖĞÖ÷Ô¿µÄÀ¶¹âÖğ½¥É¢È¥.......\n\n"
+      "æ‰‹ä¸­ä¸»é‘°çš„è—å…‰é€æ¼¸æ•£å».......\n\n"
       ,"HIC"),holder );
     };
-   set_name("Main key Janser","Ê÷À×Ö÷Ô¿");
-   set_short("Ê÷À×Ö÷Ô¿");
+   set_name("Main key Janser","æ¨¹é›·ä¸»é‘°");
+   set_short("æ¨¹é›·ä¸»é‘°");
    return;
    }
 }       
 
 string color()
 {
-   return set_color("$NµÄÓÒÊÖÖĞÕıÎÕÖøÒ»±úÏ¸³¤µÄÀ¶É«Ø°Ê×£¬²»Ê±·º³öÒ«ÑÛµÄ¹âÃ¢...\n","HIC");
+   return set_color("$Nçš„å³æ‰‹ä¸­æ­£æ¡è‘—ä¸€æŸ„ç´°é•·çš„è—è‰²åŒ•é¦–ï¼Œä¸æ™‚æ³›å‡ºè€€çœ¼çš„å…‰èŠ’...\n","HIC");
 }
 
     

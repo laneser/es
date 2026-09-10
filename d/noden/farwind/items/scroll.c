@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "scroll", "¾íÖá" );
-	set_short( "È¾ÑªµÄ¾íÖá" );
+	set_name( "scroll", "å·è»¸" );
+	set_short( "æŸ“è¡€çš„å·è»¸" );
 	set_long(
 		"/adm/daemons/npc_kills"->get_list(),
 		"/adm/daemons/npc_kills"->get_list(1) );
-	set( "unit", "¾í" );
+	set( "unit", "å·" );
 	set( "weight", 5 );
 	set( "value", ({ 5, "silver" }) );
 	set( "useless", 1 );

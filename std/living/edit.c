@@ -49,7 +49,7 @@ varargs int edit (string fname, string fun, object ob, mixed args)
 		return 1;
 	}
 	write( chinese_mode?
-		"½áÊø±à¼­Ä£Ê½ÇëÔÚÒ»ĞĞµÄ¿ªÍ·´ò \".\", ²»´¢´æÀë¿ªÓÃ \"~q\", ¿´ËµÃ÷ÓÃ \"~h\"¡£\n":
+		"çµæŸç·¨è¼¯æ¨¡å¼è«‹åœ¨ä¸€è¡Œçš„é–‹é ­æ‰“ \".\", ä¸å„²å­˜é›¢é–‹ç”¨ \"~q\", çœ‹èªªæ˜ç”¨ \"~h\"ã€‚\n":
 		"To end message type \".\". To abort, type \"~q\". To view help, type \"~h\".\n");
 	write("______________________________________________________________________\n");
 	if (tmp) write (tmp);

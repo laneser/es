@@ -1,9 +1,9 @@
 // available function 
-// 	void set_duration( int ) ;	Ğ§¹û³¤¶Ì
+// 	void set_duration( int ) ;	æ•ˆæœé•·çŸ­
 // 	void set_effect( int ) ;	( 1 - 25 )
-//	void set_type( string );	ÖÖÀà( simple_poison || slow || weak )
-//	void set_difficulty( int ); 	Ê§°ÜÂÊ ( 1 - 100 )
-//	void set_time( int ); 		¿ÉÓÃ´ÎÊı ( 1 - ? )
+//	void set_type( string );	ç¨®é¡( simple_poison || slow || weak )
+//	void set_difficulty( int ); 	å¤±æ•—ç‡ ( 1 - 100 )
+//	void set_time( int ); 		å¯ç”¨æ¬¡æ•¸ ( 1 - ? )
 // form 2 
 //	void set_poison(dur,eff,kind,times,diff);
 //
@@ -73,14 +73,14 @@ void set_poison(int value1, int value2, string arg1, int value3, int value4)
 void create()
 {
 	seteuid(getuid());
-	set_name( "poison pouch", "¶¾Ò©°ü" );
+	set_name( "poison pouch", "æ¯’è—¥åŒ…" );
 	add( "id", ({ "pouch", "poison" }) );
-	set_short("¶¾Ò©°ü" );
+	set_short("æ¯’è—¥åŒ…" );
 	set_long(
-		"ÕâÊÇÒ»°ü¶¾Ò©·Û£¬Èç¹ûÄãÒªÊ¹ÓÃÕâ°ü¶¾Ò©£¬ÓÃ poison <Ä³ÈË>¡£\n" );
-	set("unit","°ü");
-	set("poison_msg","%s²»×¡³éĞî, ºÃÏñºÜÍ´¿àµÄÑù×Ó....\n");
-	set("poison_method","%s°Ñ$PÈöÏò%s");
+		"é€™æ˜¯ä¸€åŒ…æ¯’è—¥ç²‰ï¼Œå¦‚æœä½ è¦ä½¿ç”¨é€™åŒ…æ¯’è—¥ï¼Œç”¨ poison <æŸäºº>ã€‚\n" );
+	set("unit","åŒ…");
+	set("poison_msg","%sä¸ä½æŠ½è“„, å¥½åƒå¾ˆç—›è‹¦çš„æ¨£å­....\n");
+	set("poison_method","%sæŠŠ$Pæ’’å‘%s");
  	set("poison_type", "simple_poison");
 	set("poison_time", 1);
 	set("poison_duration", 5);
@@ -100,11 +100,11 @@ int do_check(string arg)
 		return 0;
 	if ( arg && member_array(arg,query("id"),0) == -1) 
 		return 0;
-	write(sprintf("Õâ%s%s»¹¿ÉÒÔÓÃ%d´Î¡£\n",this_object()->query("unit"),query("c_name"),times));
+	write(sprintf("é€™%s%sé‚„å¯ä»¥ç”¨%dæ¬¡ã€‚\n",this_object()->query("unit"),query("c_name"),times));
 	return 1;
 }
 
-// ÏÂ¶¾Ê§°Ü , return 1 else 0
+// ä¸‹æ¯’å¤±æ•— , return 1 else 0
 int checkfault(object me,object target )
 {
 	int rate,level,iq,dex,skill,kar;
@@ -132,51 +132,51 @@ int do_poison(string arg)
 	env = environment(user);
 
 /*
-	if ( times == 0 ) { // Ó¦¸Ã²»¿ÉÄÜ×ßµ½ÕâÀï
-		write( "Õâ" + query("unit") + query("c_name") + 
-			"ÒÑ¾­ÓÃÍêÁË£¬ÄãËæÊÖ°ÑËü¶ªµô¡£\n" );
+	if ( times == 0 ) { // æ‡‰è©²ä¸å¯èƒ½èµ°åˆ°é€™è£¡
+		write( "é€™" + query("unit") + query("c_name") + 
+			"å·²ç¶“ç”¨å®Œäº†ï¼Œä½ éš¨æ‰‹æŠŠå®ƒä¸Ÿæ‰ã€‚\n" );
 		remove();
 		return 1;
 	}
 */
 
 	if( !arg || arg=="" || ! (dest = present(arg,env)) )
-		return notify_fail( "ÄãÒª¶ÔË­ÏÂ¶¾? \n" ); 
+		return notify_fail( "ä½ è¦å°èª°ä¸‹æ¯’? \n" ); 
 	if( !living(dest) || dest == user ) 
-		return notify_fail( "Äã·èÀ² ? \n" );
+		return notify_fail( "ä½ ç˜‹å•¦ ? \n" );
 	if ( dest->query("no_attack") ) 
-		return notify_fail( "Äã²»ÄÜ¶ÔÕâ¼Ò»ïÏÂ¶¾¡£\n");
+		return notify_fail( "ä½ ä¸èƒ½å°é€™å‚¢ä¼™ä¸‹æ¯’ã€‚\n");
 	if ( user->query_level() < 4 )
-		return notify_fail( "Äã²»ÄÜÕâ÷á×ö¡£\n");
+		return notify_fail( "ä½ ä¸èƒ½é€™éº¼åšã€‚\n");
 
 	times--;
 	if ( checkfault(user,dest) ) { 
-		message = sprintf( (string) query("poison_method"),"Äã",dest->query("c_name") ) ; 
-		write( substr(message,"$P",query("short")) + ", µ«ÊÇÓĞµã¿ØÖÆ²»µ±..\n");
-		message = sprintf( (string) query("poison_method"),user->query("c_name"),"Äã");
-		tell_object(dest, substr(message,"$P",query("short"))+",µ«ÊÇºÃÏñÃ»Ê²÷á×÷ÓÃ¡£\n" );
+		message = sprintf( (string) query("poison_method"),"ä½ ",dest->query("c_name") ) ; 
+		write( substr(message,"$P",query("short")) + ", ä½†æ˜¯æœ‰é»æ§åˆ¶ä¸ç•¶..\n");
+		message = sprintf( (string) query("poison_method"),user->query("c_name"),"ä½ ");
+		tell_object(dest, substr(message,"$P",query("short"))+",ä½†æ˜¯å¥½åƒæ²’ä»€éº¼ä½œç”¨ã€‚\n" );
 		message = sprintf( (string) query("poison_method"), user->query("c_name"),dest->query("c_name") );
 		tell_room(environment(this_player()),
-	    substr(message,"$P",query("short")) + "²»¹ı¿´ÆğÀ´Ã»ÓĞ³É¹¦\¡£\n", ({user,dest}));
+	    substr(message,"$P",query("short")) + "ä¸éçœ‹èµ·ä¾†æ²’æœ‰æˆåŠŸ\ã€‚\n", ({user,dest}));
 
 		inv = all_inventory( env );
         	n = i = sizeof(inv);
         	while(--i) {
                 	if ( living(inv[i]) && !inv[i]->query("no_attack") &&
 			     random( inv[i]->query_perm_stat("kar") ) < 10 ){
-				tell_object(inv[i],"Äã²»Ğ¡ĞÄÎü½ø¶¾Æø....\n");
+				tell_object(inv[i],"ä½ ä¸å°å¿ƒå¸é€²æ¯’æ°£....\n");
 				inv[i]->set_temp("poison_msg",query("poison_msg"));
                      		(CONDITION_PREFIX + type) ->apply_effect(
                                 	inv[i],dur, toxic/(random(n-1) + 1) );
                 	}
         	}
 	} else {
-		message = sprintf( (string) query("poison_method"),"Äã",dest->query("c_name") ) ; 
+		message = sprintf( (string) query("poison_method"),"ä½ ",dest->query("c_name") ) ; 
 		write( substr(message,"$P",query("short"))+".\n");
-		message = sprintf( (string) query("poison_method"),user->query("c_name"),"Äã");
+		message = sprintf( (string) query("poison_method"),user->query("c_name"),"ä½ ");
 		tell_object(dest, substr(message,"$P",query("short"))+".\n" );
 		message = sprintf( (string) query("poison_method"), user->query("c_name"),dest->query("c_name") );
-		tell_room( environment(this_player()),substr(message,"$P",query("short")) + "¡£\n", ({user,dest}));
+		tell_room( environment(this_player()),substr(message,"$P",query("short")) + "ã€‚\n", ({user,dest}));
 		( CONDITION_PREFIX + type )->apply_effect(dest,dur,toxic);
 		dest->set_temp("poison_msg",query("poison_msg"));
 	}
@@ -185,7 +185,7 @@ int do_poison(string arg)
 	user->block_attack(2);
 
 	if ( times == 0 ) { 
-		write( sprintf("Õâ%sÒÑ¾­ÓÃÍêÁË£¬ÄãËæÊÖ°ÑËü¶ªµô¡£\n",query("unit"),query("c_name")) );
+		write( sprintf("é€™%så·²ç¶“ç”¨å®Œäº†ï¼Œä½ éš¨æ‰‹æŠŠå®ƒä¸Ÿæ‰ã€‚\n",query("unit"),query("c_name")) );
 		remove();
 	}
 	return 1;

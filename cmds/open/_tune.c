@@ -11,19 +11,19 @@ int cmd_tune(string arg)
 	tuned_ch = me->query("channels");
 	if( !arg ) {
 		if( !pointerp(tuned_ch) || !sizeof(tuned_ch) )
-			write("�����ڲ�û�������κ�Ƶ����\n");
+			write("你現在並沒有收聽任何頻道。\n");
 		else
-			write("������������Ƶ����" + implode(tuned_ch, ", ") + "��\n");
+			write("你現在收聽的頻道：" + implode(tuned_ch, ", ") + "。\n");
 		return 1;
 	}
 
 	if( pointerp(tuned_ch) && member_array(arg, tuned_ch)!=-1 ) {
-		write("�ر� " + arg + " Ƶ����\n");
+		write("關閉 " + arg + " 頻道。\n");
 		tuned_ch -= ({ arg });
 		me->set("channels", tuned_ch);
 		return 1;
 	} else {
-		write("Ҫ��ĳ��Ƶ��ֻҪ�ø�Ƶ��˵�����ɡ�\n");
+		write("要打開某個頻道只要用該頻道說話即可。\n");
 		return 1;
 	}
 }
@@ -31,20 +31,20 @@ int cmd_tune(string arg)
 int help(object me)
 {
 	write(@HELP
-ָ���ʽ��tune [<Ƶ������>]
+指令格式：tune [<頻道名稱>]
 
-���ָ������ѡ���Ƿ�Ҫ����ĳһƵ����ѶϢ�����û��ָ��Ƶ�����ƣ��ͻ��г�
-��Ŀǰ�����е�Ƶ�������ָ����Ƶ����ԭ�������еľͻ�ص�����֮�򿪡�
+這個指令讓你選擇是否要收聽某一頻道的訊息，如果沒有指定頻道名稱，就會列出
+你目前收聽中的頻道，如果指定了頻道，原來收聽中的就會關掉，反之打開。
 
-������һ��û�������е�Ƶ�����������Զ������򿪡�
-Ҫ��һ��Ƶ��������ֻҪ�ã�
+如果你對一個沒有收聽中的頻道講話，會自動將它打開。
+要對一個頻道講話，只要用：
 
-<Ƶ������> <ѶϢ> ....
+<頻道名稱> <訊息> ....
 
-���ӣ�
+例子：
   chat hello everyone!
   
-������� help channels ��ѯĿǰ����ЩƵ������������
+你可以用 help channels 查詢目前有哪些頻道可以收聽。
 
 see also : shout
 HELP

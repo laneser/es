@@ -6,18 +6,18 @@ void create ()
 {
         ::create();
         set_level(6);
-        set_name( "citizen","ÊĞÃñ" );
+        set_name( "citizen","å¸‚æ°‘" );
         add ("id", ({ "citizen"}) );
-        set_short( "citizen","ÊĞÃñ");
-        set("unit","Î»");
+        set_short( "citizen","å¸‚æ°‘");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇÒ»¸öÆÕÍ¨µÄÊĞÃñ£¬µ«ÓÉì¶Éú»îÔÚÒ»¸ö±¸Õ½ÌåÖÆÏÂµÄ³ÇÊĞÖĞ£¬Ò²
-ÊÇÓĞÒ»Á½ÏÂ×ÓµÄÈË
+é€™æ˜¯ä¸€å€‹æ™®é€šçš„å¸‚æ°‘ï¼Œä½†ç”±æ–¼ç”Ÿæ´»åœ¨ä¸€å€‹å‚™æˆ°é«”åˆ¶ä¸‹çš„åŸå¸‚ä¸­ï¼Œä¹Ÿ
+æ˜¯æœ‰ä¸€å…©ä¸‹å­çš„äºº
 ANGEL
         );
         
         set ("gender", "male");
         set("wealth/silver",70);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 }

@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "pearl ring", "珍珠戒指" );
+	set_name( "pearl ring", "鐝嶇彔鎴掓寚" );
 	add( "id", ({ "ring" }) );
-	set_short( "a pearl ring", "珍珠戒指" );
+	set_short( "a pearl ring", "鐝嶇彔鎴掓寚" );
 	set_long(
 		"You see a beautiful pearl ring with a big pearl on it.\n",
-		"这是一个很漂亮的珍珠戒指，上面镶著一颗大大的珍珠。\n"
+		"閫欐槸涓�鍊嬪緢婕備寒鐨勭弽鐝犳垝鎸囷紝涓婇潰閼茶憲涓�椤嗗ぇ澶х殑鐝嶇彔銆俓n"
 	);
 	set( "type", "finger" );
         set("material","stone");

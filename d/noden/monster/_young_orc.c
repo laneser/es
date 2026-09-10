@@ -4,11 +4,11 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(1);
-	ob->set_name( "little orc", "Ð¡°ëÊÞÈË" );
+	ob->set_name( "little orc", "å°åŠç¸äºº" );
 	ob->add( "id", ({ "orc" }) );
-   ob->set_short( "Ð¡°ëÊÞÈË" );
+   ob->set_short( "å°åŠç¸äºº" );
 	ob->set_long(
-		"Õâ¸öÐ¡°ëÊÞÈËÕý¶ÔÖøÄãö·ÑÀÁÑ×ì¡£\n"
+		"é€™å€‹å°åŠç¸äººæ­£å°è‘—ä½ é½œç‰™è£‚å˜´ã€‚\n"
 	);
 	ob->set_perm_stat( "str", 3 );
 	ob->set_skill( "dodge", 15 );

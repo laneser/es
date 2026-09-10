@@ -8,17 +8,17 @@ void create()
 	object ob1; 
 	::create();
 	set_level(15);
-	set_name( "golden dragon", "½ğÁú" );
+	set_name( "golden dragon", "é‡‘é¾" );
 	add ("id", ({ "dragon" }) );
-	set_short( "½ğÁú" );
+	set_short( "é‡‘é¾" );
 	set_long(
-    "½ğÁú ---- ÕâÊÇ»ÊµÛÎªÁË·ÀÖ¹ĞÄ»³²»¹ìµÄÈË½øÈëÁêÄ¹£¬¶øÃüÁî´ó¹úÊ¦  Ğ¢¹âÔÚÊ¯ÃÅ\n"
-    "ÉÏÏÂµÄ½ûÖÆËù»Ã»¯³ÉµÄÆæÊŞ¡£\n"
+    "é‡‘é¾ ---- é€™æ˜¯çš‡å¸ç‚ºäº†é˜²æ­¢å¿ƒæ‡·ä¸è»Œçš„äººé€²å…¥é™µå¢“ï¼Œè€Œå‘½ä»¤å¤§åœ‹å¸«  å­å…‰åœ¨çŸ³é–€\n"
+    "ä¸Šä¸‹çš„ç¦åˆ¶æ‰€å¹»åŒ–æˆçš„å¥‡ç¸ã€‚\n"
 	);
     set( "killer", 1 );	
     set( "alignment",500);
     set( "gender", "male" );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
 	set_perm_stat( "dex", 20 );
 	set_perm_stat( "str", 25 );
 	set_perm_stat( "int", 15 );
@@ -36,8 +36,8 @@ void create()
 	set("natural_weapon_class2",70);
 	set ("natural_min_damage2", 25);
 	set ("natural_max_damage2", 45);
-	set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
-	set_c_verbs(({"%sÓÃËüµÄÀû×¦Ïò%s×¥È¥","%sÓÃËüÄÇ³¤ÂúÀûÑÀµÄ×ì°ÍÏò%sÒ§È¥" }));
+	set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
+	set_c_verbs(({"%sç”¨å®ƒçš„åˆ©çˆªå‘%sæŠ“å»","%sç”¨å®ƒé‚£é•·æ»¿åˆ©ç‰™çš„å˜´å·´å‘%så’¬å»" }));
     set ("weight", 400);
     set ("unbleeding",1);
     

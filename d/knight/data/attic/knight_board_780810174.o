@@ -1,7 +1,7 @@
 #d/knight/fortress/knight_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"���԰�","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"���԰�","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷��뿴 help board��
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"��ʿ���԰�",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"騎士留言板",])
 messages ({(["id":1,"body":"Hi, knights:
     I might be doing the following stuffs for knight guild:
     (1) Horses, yeah, knight will be able to ride a horse while attacking
@@ -22,27 +22,27 @@ messages ({(["id":1,"body":"Hi, knights:
         when you raise your level, recieve knighthood... etc.
 
                                                      - Annihilator
-","title":"Plan on Knight Guild","time":779358852,"poster":"Annihilator",]),(["id":2,"title":"����������!!","body":"��˵�ǹ�.....����Alomar(�������� )�������Ѹ�...
-��....���Ѵ��ʻ�����..���Ҹ������ɾ�...
-���Ƿ��۸���Ӣ�ۺú�ʵ�ڲ�֪���ȡ��....�����صؽ���С�ܳﻭ��������
+","title":"Plan on Knight Guild","time":779358852,"poster":"Annihilator",]),(["id":2,"title":"比武招親羅!!","body":"話說那鍋.....咱們Alomar(死神阿修羅 )姊姊年歲已高...
+不....是已達適婚年齡..想找個如意郎君...
+但是放眼各方英雄好漢實在不知如何取捨....所以特地交代小弟籌畫比武招親
 
-�ʸ�: ����,δ��,not monk
-ʱ��: 9-17 (Friday) ���� 1:30��ʼ
-�ص�: ��÷�䶷��
-����: 1. ����̨��..˳���ǩ
-      2. ������Ϊ��
-      3. ���һֻ����û��..��һֻ����ԭ������...���Ӯ
-      4. �����ֻ����..��bebo pk Ӯ��ʤ
-      5. �������ʤ��Ҫ��Alomar�ٱ�һ��..Ӯ�˲ſ��Ա������˹�
-      6. ���������ϰ����...����������ȱ���
-      7. �����в�����ҩ�����...���ǿ�����magic..healer can heal..etc.
+資格: 男性,未婚,not monk
+時間: 9-17 (Friday) 中午 1:30開始
+地點: 古梅武鬥場
+規則: 1. 採擂臺賽..順序抽籤
+      2. 先逃走為輸
+      3. 如果一隻逃走沒死..另一隻留在原地死了...活的贏
+      4. 如果兩隻都死..跟bebo pk 贏者勝
+      5. 最後的優勝者要跟Alomar再比一場..贏了才可以抱得美人歸
+      6. 比賽完買上辦婚禮...禮金禮物請先備妥
+      7. 比賽中不得用藥或繃帶...但是可以用magic..healer can heal..etc.
    scholar can use unknow mage can use cast.......
-      8. ���������ҽ����Jschen�ṩ
+      8. 比完後免費醫療由Jschen提供
 
-����������ǰ����...mail to Alomar
-���������⼸��úô�exp..:P
-ps: �����ֳ�����
-pss: ����ĵ�wiz or God ݰ��ָ��
+請在星期五前報名...mail to Alomar
+意者請在這幾天好好存exp..:P
+ps: 可以現場報名
+pss: 請好心的wiz or God 蒞臨指導
 
 ","time":779461408,"poster":"Fos",]),(["id":3,"title":"< no title >","body":" .........hohoho.....fri is 9/16
 ","time":779483322,"poster":"Bebo",]),(["id":4,"title":"Something new on tactics","body":"As title.
@@ -50,7 +50,7 @@ pss: ����ĵ�wiz or God ݰ��ָ��
 See help tactic for more information.
 
                                                 - Annihilator.
-","time":779516643,"poster":"Annihilator",]),(["id":5,"title":"mana","body":"��ǰ tactic û��'s one main reason is mana recovery too slow 
+","time":779516643,"poster":"Annihilator",]),(["id":5,"title":"mana","body":"以前 tactic 沒用's one main reason is mana recovery too slow 
 now since have fix healer bandage skill
 so maybe now knight is funny and powerful oh
 :)
@@ -61,36 +61,36 @@ wa then scholar's tactice better than knight's
 or scholars have int 25 ya 
 
 ","time":779528515,"poster":"Gogo",]),(["id":6,"body":"Just as title...
-���ҵĸо���ƺ���Ӧ����ʧ�Ŷԣ����ڻ���ʧ������ûɶ��
+在我的感覺裡，似乎不應該消失才對，現在會消失，好像沒啥用
 
-","title":"�����ҵĶ�������ʧ","time":779642063,"poster":"Fox",]),(["id":7,"title":"ride horse ?","body":"
- �ǰ�����Ҳ������? :)
+","title":"儲藏室的東東會消失","time":779642063,"poster":"Fox",]),(["id":7,"title":"ride horse ?","body":"
+ 那半人馬也可以嗎? :)
 and how to ride horse ? is secret or need found by myself ?
 ","time":779710138,"poster":"Topgun",]),(["id":8,"body":"On Thu Sep 15, Fox wrote:
 > Just as title...
-> ���ҵĸо���ƺ���Ӧ����ʧ�Ŷԣ����ڻ���ʧ������ûɶ��
+> 在我的感覺裡，似乎不應該消失才對，現在會消失，好像沒啥用
 > 
 OK,fix it now
 _Echo_
-","title":"Re: �����ҵĶ�������ʧ","time":779779954,"poster":"Echobomber",]),(["id":9,"title":"Re: Re: �����ҵĶ�������ʧ","body":"On Sat Sep 17, Echobomber wrote:
+","title":"Re: 儲藏室的東東會消失","time":779779954,"poster":"Echobomber",]),(["id":9,"title":"Re: Re: 儲藏室的東東會消失","body":"On Sat Sep 17, Echobomber wrote:
 > On Thu Sep 15, Fox wrote:
 > > Just as title...
-> > ���ҵĸо���ƺ���Ӧ����ʧ�Ŷԣ����ڻ���ʧ������ûɶ��
+> > 在我的感覺裡，似乎不應該消失才對，現在會消失，好像沒啥用
 > > 
 > OK,fix it now
 > _Echo_
 
-��������˵����....����������ʧ...����᲻�ᱻ��?
-����...��������˲��ǻ�� eqs ���Ƕ���?
-�����һ�����Ǻ�ϲ������֪����ʦ���кμ���...�ܲ���͸¶?
+不過話又說回來....東東不會消失...雕像會不會被踢?
+還有...那以後別人不是會把 eqs 丟那兒嗎?
+關於這一點我是很喜歡，不知神巫師們有何見解...能不能透露?
 
 thx
 
-","time":779817745,"poster":"Fox",]),(["id":10,"body":"���Ҳ�Ҫ�����Ӵ����ҵ�������ĵط�,
-��һЩ���õ�װ����,��Ҫ���չ�Ļ��,
-����С��֮��ö������Ž�ȥ,�����
-�ط��е�ˮƽ����?...лл........
-                            ѩ�� ө��(Luz)
+","time":779817745,"poster":"Fox",]),(["id":10,"body":"請大家不要把歧視儲藏室當放雜物的地方,
+放一些有用的裝備嘛,不要連燒光的火把,
+精靈小刀之類得東西都放進去,讓這個
+地方有點水平好嗎?...謝謝........
+                            雪村 螢子(Luz)
 
 ","title":"< no title >","time":779964323,"poster":"Luz",]),(["id":12,"title":"< no title >","body":"Please Don't Sell EQS in Guild LAH!!!!!!
 Now all are gone ....
@@ -112,74 +112,74 @@ post here and I'll have a look.
 
                                                      - Annihilator
 ","time":780224057,"poster":"Annihilator",]),(["id":16,"title":"< no title >","body":"Dear annihilator :
-     һֻ��ɫ������kg,������,����װ�����Ѿ�������kg,
-ֻ�ܱ���ƿ kira potion,�����е����!!!
+     一隻白色馬６０kg,我騎馬,穿好裝備就已經１４４kg,
+只能背４瓶 kira potion,好像有點奇怪!!!
 
-                      ������� ����
+                      蜥蜴軍團 藏馬
 ","time":780286916,"poster":"Death",]),(["id":17,"title":"< no title >","body":"Dear annihilator :
-     ����ڶ�ֻ��ɫ���Ƕ�dismount ,����û�취����....
-     �Ҿ���Ӧ�����ϴ�һ��,�������Դ��Ƚ϶�Ķ����Ŷ�!!
-     ֻ�ǽ���......
+     如果在二隻棕色馬那兒dismount ,好像沒辦法下馬....
+     我覺得應該像上次一樣,騎馬可以帶比較多的東西才對!!
+     只是建議......
 
-                             ������� ����
-","time":780290282,"poster":"Death",]),(["id":18,"body":"        �ҵ�������--������,����ͻȻ�����Ҳ��ܴ�β�׺ͽ�ָ
-        ��֪���Ǻ�Ե��???
-                  ������� ����
+                             蜥蜴軍團 藏馬
+","time":780290282,"poster":"Death",]),(["id":18,"body":"        我的種族是--蜥蜴人,今天突然發現我不能穿尾甲和戒指
+        不知道是何緣故???
+                  蜥蜴軍團 藏馬
 
-","title":"< no title >","time":780458464,"poster":"Death",]),(["id":19,"title":"��������?","body":"Ϊʲ����ÿ����Ҫ����,��ȴ��ʾ\"Error moving mounted animal... !!\"  ?
+","title":"< no title >","time":780458464,"poster":"Death",]),(["id":19,"title":"不能騎馬?","body":"為什麼我每次想要騎馬,它卻顯示\"Error moving mounted animal... !!\"  ?
 please fix it.. :) thank you. 
 vivian
-","time":780479970,"poster":"Vivian",]),(["id":20,"title":"< no title >","body":"��ʵ�ڲ����������� guild ��, 
-����ò����׵� lv 16 , 
-�����þ��鳤��, ȴ������, 
-��ʱֻ���Һ� com ��, ���� com idle �����, �ֲ�֪���ǲ�����
-Ϊʲ��������������ʿ ?
+","time":780479970,"poster":"Vivian",]),(["id":20,"title":"< no title >","body":"我實在不敢留東西在 guild 了, 
+今天好不容易到 lv 16 , 
+想用用精靈長劍, 卻被賣了, 
+那時只有我和 com 在, 可是 com idle 後斷線, 又不知道是不是他
+為什麼總有這樣的騎士 ?
 
 ","time":780529961,"poster":"Pre",]),(["id":21,"title":"Re: < no title >","body":"On Mon Sep 26, Pre wrote:
-> ��ʵ�ڲ����������� guild ��, 
-> ����ò����׵� lv 16 , 
-> �����þ��鳤��, ȴ������, 
-> ��ʱֻ���Һ� com ��, ���� com idle �����, �ֲ�֪���ǲ�����
-> Ϊʲ��������������ʿ ?
+> 我實在不敢留東西在 guild 了, 
+> 今天好不容易到 lv 16 , 
+> 想用用精靈長劍, 卻被賣了, 
+> 那時只有我和 com 在, 可是 com idle 後斷線, 又不知道是不是他
+> 為什麼總有這樣的騎士 ?
 > 
-   �ɺ�!!!! ��������˲�Ф��ʿ  
-                ������˼��֮���������!!!!!
-         ׬ǮҲ��������!!!       ���������ϰ��֮��!
+   可恨!!!! 若真有如此不肖騎士  
+                得請雷思將之逐出本公會!!!!!
+         賺錢也不是這樣!!!       儘快清除此習慣之人!
        
-ps:���λ�߼���ʿ����Щװ���ڴ�����    ������治��
-        һ������װ����黹������
-","time":780549221,"poster":"Innocence",]),(["id":22,"title":"�뵱��ʦ������ע��!!!!","body":"��������ҶԵ���ʦ����Ը�ܸ�, Ϊ��ʹ����������, Gods ���״���
-, ���ҽ���ʦ�����뷽ʽ�ƶȻ�, �������һ����ʦ�����, ���������,
-�뽫���� mail Gods��
+ps:請各位高級騎士仍留些裝備在儲藏室    真的受益不少
+        一個用完裝備會歸還的人留
+","time":780549221,"poster":"Innocence",]),(["id":22,"title":"想當巫師的人請注意!!!!","body":"由於最近玩家對當巫師的意願很高, 為了使玩家易於申請, Gods 容易處理
+, 並且將巫師的申請方式制度化, 因此做了一份巫師申請表, 大家填完後,
+請將資料 mail Gods。
 
-1. Username                     : ����д��ʹ�õ���ʦusername��
+1. Username                     : 請填寫欲使用的巫師username。
 
-2. Email_address                : û�������ޡ�
+2. Email_address                : 沒有則填無。
 
-3. BBS_username                 : ���ĸ�BBSʹ��ʲ��username
-                                  , ��һ��Ϊ��, û�������ޡ�
+3. BBS_username                 : 在哪個BBS使用什麼username
+                                  , 以一個為主, 沒有則填無。
                                   
-4. ���������ES ���            : ���������Ķ�д��
+4. 曾經玩過的ES 玩家            : 最好有玩過的都寫。
 
-5. ��ϣ����ȡ�����緽ʽ         : 
+5. 最希望採取的連絡方式         : 
  
-6. �Ƿ������������� mud֮��ʦ   :what mud, what username
-                                 ��ְ�ơ�
+6. 是否曾經擔任其他 mud之巫師   :what mud, what username
+                                 和職稱。
  
-7. ��ʽ����                     :�Ƿ���д�� lpc or C ϵ������
-                                 �ĳ�ʽ��	
+7. 程式經驗                     :是否曾寫過 lpc or C 系列語言
+                                 的程式。	
 
-8. ���ڼƻ���                   :�κ�idea ������, Խ��ϸԽ��
-                                 �����������пա�
+8. 短期計劃書                   :任何idea 都可以, 越詳細越好
+                                 但請勿天馬行空。
                                  
-9. ���ڼƻ���                   : ��д�ɲ�д��                                
+9. 長期計劃書                   : 可寫可不寫。                                
                                  
 -----------------------------------------------------------
-PS:������û�е���Ŀ����д��, ������������հס�
+PS:如果真的沒有的項目請填寫無, 不想填則請填空白。
 ----------------------------------------------------------- 
 
 
-                                 Сè  Kitten
+                                 小貓  Kitten
                                              
 ","time":780555246,"poster":"Kitten",]),})
 id_ref 34

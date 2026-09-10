@@ -8,13 +8,13 @@ void create()
 
         ::create();
         set_level(16);
-        set_name("Juraken", "������");
+        set_name("Juraken", "裘拉根");
         add( "id", ({"pontiff"}) );
-        set_short("�������̴��˾ ������");
+        set_short("錫卡拉教大祭司 裘拉根");
         set_long(@CLONG
-����������������˳��úܸߣ�һ��������ɫ���������ϴӱ��ӵ�������һ
-���ܿ��µ��˺ۡ����������Ŀ��������ʱ��һ��Ī���ĺ���ʹ�������
-�˽⵽: ��һ��Ǹ����򵥵����
+這個叫做裘拉根的人長得很高，一臉精悍神色，他的臉上從鼻子到耳朵有一
+道很可怕的傷痕。當你和他的目光相遇的時候，一股莫名的寒意使你清楚的
+瞭解到: 這傢伙是個不簡單的人物。
 CLONG
         );
         set( "gender", "male" );
@@ -57,7 +57,7 @@ int ask_potion()
         if (this_player()->query_temp("smore_box") == 2 )
         {
                 tell_object( this_player(),@LONG
-���������������ϵ�ҩˮ������һ����һ��ף�������˵�ͳ��˹�����
+裘拉根看到你手上的藥水，臉上一陣青一陣白，二話不說就衝了過來。
 LONG
                 );
         command("kill "+this_player()->query("name") );
@@ -66,7 +66,7 @@ LONG
         else
         {
                 tell_object(this_player(),@LONG
-������˵��ɶ����˵ɶ��Ȼ���ת��ͷȥ�������ˡ�
+裘拉根說：啥？你說啥？然後就轉過頭去不理你了。
 LONG
                 );
 
@@ -82,10 +82,10 @@ void die()
         if (mistake)
         {
                 tell_room(environment(this_object()),@LONG
-������̾�˿�����˵����
-�벻���ҵļƻ�(plan)����ʧ���ˣ����˰��ˡ�
+裘拉根嘆了口氣，說到：
+想不到我的計劃(plan)還是失敗了，罷了罷了。
 
-Ȼ��Ϳ�����Ѫ�����ڵ���һ��Ҳ�����ˡ�
+然後就口吐鮮血，倒在地上一動也不動了。
 LONG
                 ,this_object() );
                 killer = query("last_attacker");

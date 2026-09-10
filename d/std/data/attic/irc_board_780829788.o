@@ -1,29 +1,29 @@
 #d/std/IRC/irc_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a board for chat room. You can leave suggestions here as well. Use help board for help on usage.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"chatroom board","c_long.text":"ÁÄÌì, ¹àË®¼Ó½¨Òé°å¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÁÄÌìÊÒÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a board for chat room. You can leave suggestions here as well. Use help board for help on usage.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"chatroom board","c_long.text":"èŠå¤©, çŒæ°´åŠ å»ºè­°æ¿ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"èŠå¤©å®¤ç•™è¨€æ¿",])
 messages ({(["id":44,"title":"Re: Re: Re: Re: < no title >","body":"On Mon Sep 26, Jschen wrote:
 > On Mon Sep 26, Elon wrote:
 > > On Sat Sep 24, Keepproblem wrote:
 > > > On Sat Sep 24, Tung wrote:
-> > > > ¶Ô£¬²»×¼¹àË®....
-> > > ÔŞ³É, ÔÙÓĞ¹àË®Õß·£ Post ÇéÉ«ÎÄÑ§ 100 Æª
+> > > > å°ï¼Œä¸æº–çŒæ°´....
+> > > è´Šæˆ, å†æœ‰çŒæ°´è€…ç½° Post æƒ…è‰²æ–‡å­¸ 100 ç¯‡
 > > 
-> > ÄãËµµÄ²»Ëã.. ÎÒËµµÄËã.
-> > ²»×¼¹àË®.
+> > ä½ èªªçš„ä¸ç®—.. æˆ‘èªªçš„ç®—.
+> > ä¸æº–çŒæ°´.
 > > :)
 > > 
 > > -Elon was here.
 > 
->   ËûËµµÄ²»Ëã...ÄãËµµÄÒ²²»Ëã....ÎÒËµµÄ²ÅËã...
->   ºÇºÇ....ÇëÎğ¹àË®...:P
->   Ğ»Ğ»¡õµÄºÏ×÷...:)
+>   ä»–èªªçš„ä¸ç®—...ä½ èªªçš„ä¹Ÿä¸ç®—....æˆ‘èªªçš„æ‰ç®—...
+>   å‘µå‘µ....è«‹å‹¿çŒæ°´...:P
+>   è¬è¬â–¡çš„åˆä½œ...:)
 > 
-> °ËÔÆ(Jschen)
-   Ëµ²»×¼¹àË®»¹¹àÁËÕâ÷á¶àÆª....
-   Ã¿¸öÈË·£¡¸¸øBocoÒ»Íò¸öÒø±Ò¡¹ÒÔÊ¾³Í½ä !
-  PS: µ±×÷ÊÇ¾È¼Ã ¿ÉÁ¯µÄBoco ºÃÁË....
-                                           ÓĞµãÇîÓÖ²»»áÌ«ÇîµÄ Boco
+> å…«é›²(Jschen)
+   èªªä¸æº–çŒæ°´é‚„çŒäº†é€™éº¼å¤šç¯‡....
+   æ¯å€‹äººç½°ã€Œçµ¦Bocoä¸€è¬å€‹éŠ€å¹£ã€ä»¥ç¤ºæ‡²æˆ’ !
+  PS: ç•¶ä½œæ˜¯æ•‘æ¿Ÿ å¯æ†çš„Boco å¥½äº†....
+                                           æœ‰é»çª®åˆä¸æœƒå¤ªçª®çš„ Boco
 ","time":780577909,"poster":"Boco",]),(["id":45,"body":"bug lah!!! cant recycle light ball.....:P
 
 
@@ -31,8 +31,8 @@ messages ({(["id":44,"title":"Re: Re: Re: Re: < no title >","body":"On Mon Sep 2
 > bug lah!!! cant recycle light ball.....:P
 > 
 > 
-Õâ°Ú\Ã÷ÁËÊÇÔÚ¹àË®..
-·£ÄãÈı±­.. :)
+é€™æ“ºæ˜ç­æ˜¯åœ¨çŒæ°´..
+ç½°ä½ ä¸‰æ¯.. :)
 
 -Elon was here.
 ","time":780718713,"poster":"Elon",]),(["id":47,"body":"

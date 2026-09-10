@@ -8,11 +8,11 @@ inherit DOORS;
 void create()
 {
 	::create();
-    set_short("΢��·");
+    set_short("微風路");
 	set_long( @LONG_DESCRIPTION
-������������΢��·�ϡ��㳡λ����������Զ����΢��·��
-һ·������ȥ�����ߵĽ������Ǳ���Ψһ����꣬�ϱ�����һ�����
-�Ľ������ƺ����ϵ�ɢ����ǿ�ҵ�ħ����
+你現在正走在微風路上。廣場位於你的西方不遠處，微風路向東
+一路延伸下去，北邊的建築物是本鎮唯一的書店，南邊則是一棟奇怪
+的建築，似乎不斷地散發著強烈的魔法。
 LONG_DESCRIPTION
 	);
 
@@ -27,8 +27,8 @@ LONG_DESCRIPTION
     create_door("north","south",
     	 ([  "keyword" : ({"wooden","door"}),
 		     "name"    : "wooden door",
-		     "c_name"  : "ľ��",
-		     "c_desc"  : "����һ�ȿɰ���Сľ�ţ����Ϲ���һ����������",		
+		     "c_name"  : "木門",
+		     "c_desc"  : "這是一扇可愛的小木門，門上掛了一個書店的招牌",		
 		     "status"  : "open",
 		]) );
     reset();

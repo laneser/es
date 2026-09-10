@@ -6,13 +6,13 @@ void create ()
 {
         ::create();
         set_level(16);
-        set_name( "black samurai", "ºÚÒÂÎäÊ¿" );
+        set_name( "black samurai", "é»‘è¡£æ­¦å£«" );
         add ("id", ({ "samurai","black"}) );
-        set_short("ºÚÒÂÎäÊ¿");
-        set("unit","Î»");
+        set_short("é»‘è¡£æ­¦å£«");
+        set("unit","ä½");
         set_long(@ANGEL
-ºÚÒÂÎäÊ¿ÊÇÎäÊ¿ÍÅ¸ºÔğÊØ±¸±ß¾³µÄÎäÊ¿£¬ÊÇ¸öÒÔËÀÊØ½®ÍÁÎªÀíÄîµÄÎäÊ¿£¬Ò²ÊÇÊ®±øÎÀµÄ
-ĞÄ¸¹
+é»‘è¡£æ­¦å£«æ˜¯æ­¦å£«åœ˜è² è²¬å®ˆå‚™é‚Šå¢ƒçš„æ­¦å£«ï¼Œæ˜¯å€‹ä»¥æ­»å®ˆç–†åœŸç‚ºç†å¿µçš„æ­¦å£«ï¼Œä¹Ÿæ˜¯åå…µè¡›çš„
+å¿ƒè…¹
 ANGEL
         );
         set("killer",1);
@@ -29,7 +29,7 @@ ANGEL
         set ("gender", "male");
         set("wealth/silver",350);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(IWARO"steel_sword.c");
         equip_armor(IWARO"samurai_vest.c");

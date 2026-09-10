@@ -29,7 +29,7 @@ void init()
 	if( (int)this_player()->query("war_score") > (int)query("war_score") 
 	&& this_player()->query("knighthood") ) {
 		tell_room( environment(this_player()),
-            sprintf("%s¹§¾´µØÁ¢Õý£¬Ïò%sÐÐÁË¸ö¾üÀñ£º¡¸%s´óÈË£¡¡¹\n",
+            sprintf("%sæ­æ•¬åœ°ç«‹æ­£ï¼Œå‘%sè¡Œäº†å€‹è»ç¦®ï¼šã€Œ%så¤§äººï¼ã€\n",
 		query("c_name"),this_player()->query("c_name"),to_chinese( this_player()->query("knighthood") ) )
 	          );
 	}
@@ -48,17 +48,17 @@ int order_me(string arg)
 
 	wealth = master->query("wealth/silver");
 	if (wealth < query("war_score") ) return 
-		notify_fail("ÄãÉíÉÏµÄÇ®²»×ãÒÔÖ§¸¶ËûµÄÐ½Ë®¡£\n");
-	if (!id(arg)) return notify_fail("ÄãÏëÃüÁîË­ÌýÄãÖ¸»Ó?\n");
+		notify_fail("ä½ èº«ä¸Šçš„éŒ¢ä¸è¶³ä»¥æ”¯ä»˜ä»–çš„è–ªæ°´ã€‚\n");
+	if (!id(arg)) return notify_fail("ä½ æƒ³å‘½ä»¤èª°è½ä½ æŒ‡æ®?\n");
 	if (!master->query("knighthood"))
-		return notify_fail("ÄãÃ»ÓÐ·â¾ô, Æ¾Ê²÷áÃüÁî±ðÈË?\n");
+		return notify_fail("ä½ æ²’æœ‰å°çˆµ, æ†‘ä»€éº¼å‘½ä»¤åˆ¥äºº?\n");
 	if ( master->query("war_score")<query("war_score")*10)
-		return notify_fail("ÄãµÄÕ½¹¦²»¹», Ã»×Ê¸ñÃüÁîËû¡£\n");
+		return notify_fail("ä½ çš„æˆ°åŠŸä¸å¤ , æ²’è³‡æ ¼å‘½ä»¤ä»–ã€‚\n");
 	if ( master->query_temp("now_guard") ) 
-		return notify_fail("ÄãÒÑ¾­ÓÐÒ»¸öÌùÉíÊÌÎÀÁË, »¹ÏëÔõÑù?\n");	
+		return notify_fail("ä½ å·²ç¶“æœ‰ä¸€å€‹è²¼èº«ä¾è¡›äº†, é‚„æƒ³æ€Žæ¨£?\n");	
 	if (!query("body_guard")) {
 		write(this_object()->query("c_name")+
-		"ËµµÀ:ÊôÏÂÓÐÖ°ÔðÔÚÉí, ÎÞ·¨¸úËæ´óÈË¡£\n");
+		"èªªé“:å±¬ä¸‹æœ‰è·è²¬åœ¨èº«, ç„¡æ³•è·Ÿéš¨å¤§äººã€‚\n");
 		return 1;
 	}
 	eqs=all_inventory(this_object());
@@ -70,7 +70,7 @@ int order_me(string arg)
 	}	
 	master->set_temp("now_guard",1);
 	tell_room(environment(master),sprintf(
-	"%sËµµÀ:×ñÃü, ÔÚÏÂÏòÀ×Ë¼¶Ó³¤±¨±¸áá, ¾ÍÌý´Ó%s´óÈËÖ¸»Ó¡£\n%s¼±¼±Ã¦Ã¦µÄÀë¿ªÁË¡£\n",
+	"%sèªªé“:éµå‘½, åœ¨ä¸‹å‘é›·æ€éšŠé•·å ±å‚™å¾Œ, å°±è½å¾ž%så¤§äººæŒ‡æ®ã€‚\n%sæ€¥æ€¥å¿™å¿™çš„é›¢é–‹äº†ã€‚\n",
 	this_object()->query("c_name"),
 	master->query("c_name"),
 	this_object()->query("c_name"))
@@ -79,7 +79,7 @@ int order_me(string arg)
 	new_guard->set_master(master,this_object());
 	new_guard->set( "natural_armor_class", 0 );
 	new_guard->move_player(environment(master),"");
-	write ( sprintf("ÄãÄÃ³ö%dÃ¶Òø±Ò¸øÄãµÄÊÌÎÀµ±ËûµÄ³ö²î·Ñ:p\n",
+	write ( sprintf("ä½ æ‹¿å‡º%dæžšéŠ€å¹£çµ¦ä½ çš„ä¾è¡›ç•¶ä»–çš„å‡ºå·®è²»:p\n",
 		query("war_score") ) );
 	master->set("wealth/silver",wealth-query("war_score") );	
 	this_object()->remove();

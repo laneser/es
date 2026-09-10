@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "elven shield", "¾«Áé¶Ü");
+        set_name( "elven shield", "ç²¾éˆç›¾");
         add( "id", ({ "shield" }) );
-        set_short( "¾«Áé¶Ü" );
+        set_short( "ç²¾éˆç›¾" );
         set_long(
-                "ÕâÊÇ¾«ÁéÍõÓÃÌØÊâµÄ½ğÊôËùÖÆ³ÉµÄ¶Ü£¬¶ÜÉÏÓĞÖø¾«ÁéµÄ \n"
-                "µÄ±êÖÄ¡£\n"
+                "é€™æ˜¯ç²¾éˆç‹ç”¨ç‰¹æ®Šçš„é‡‘å±¬æ‰€è£½æˆçš„ç›¾ï¼Œç›¾ä¸Šæœ‰è‘—ç²¾éˆçš„ \n"
+                "çš„æ¨™å¹Ÿã€‚\n"
         );
-        set( "unit", "Ãæ"); 
+        set( "unit", "é¢"); 
         set( "type", "shield" );
         set( "material", "light_metal");
         set( "armor_class", 8 );

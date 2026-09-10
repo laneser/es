@@ -20,51 +20,51 @@ int cmd_lock (string str)
 	int i;
 
 	if( !str || str == "" )
-		return notify_fail( "ÄãÒªËøÉÏÄÄÒ»¸öÃÅ£¿\n");
+		return notify_fail( "ä½ è¦é–ä¸Šå“ªä¸€å€‹é–€ï¼Ÿ\n");
 
 	env = environment(this_player());
 
 	if(!env) return 0;
 	dir = env->query_door(str);
-	if( !dir ) return notify_fail("ÄãÒªËøÉÏÄÄÒ»¸öÃÅ£¿\n");
+	if( !dir ) return notify_fail("ä½ è¦é–ä¸Šå“ªä¸€å€‹é–€ï¼Ÿ\n");
 
 	//	Get the door mapping from the environment.
 	doors = env->query("doors");
 
 	if(!doors)
-		return notify_fail("ÕâÀïÃ»ÓĞÃÅ¿ÉÒÔËø....\n");
+		return notify_fail("é€™è£¡æ²’æœ‰é–€å¯ä»¥é–....\n");
 
 	//	Check to see if we have the key.
 	all_keys = filter_array(all_inventory(this_player()), "find_keys",
 		this_object());
 
 	if( !all_keys || sizeof(all_keys) < 1 )
-		return notify_fail("ÄãÉíÉÏÃ»ÓĞÈÎºÎÔ¿³×¡£\n");
+		return notify_fail("ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•é‘°åŒ™ã€‚\n");
 
 	//	Get array of existing door directions.
 	tmp = keys( doors );
 
 	//  Check to see if the user can actually see.
 	if(!this_player()->query("vision")) {
-		write("ÄãÔÚºÚ°µÖĞÃşË÷ÕÒÔ¿³×¿×....\n");
+		write("ä½ åœ¨é»‘æš—ä¸­æ‘¸ç´¢æ‰¾é‘°åŒ™å­”....\n");
 		dir = tmp[ random(sizeof(tmp)) ];
 	}
 
 	if(!doors[dir])
-		return notify_fail("ÄãÒªËøÉÏÄÄÒ»¸öÃÅ£¿\n");
+		return notify_fail("ä½ è¦é–ä¸Šå“ªä¸€å€‹é–€ï¼Ÿ\n");
 
 	//	Check to see if the door actually has a lock.
 	if(!doors[dir]["lock"] || doors[dir]["lock"] == "none")
-		return notify_fail(doors[dir]["c_name"] + "ÉÏÃ»ÓĞÔ¿³×¿×¡£\n");
+		return notify_fail(doors[dir]["c_name"] + "ä¸Šæ²’æœ‰é‘°åŒ™å­”ã€‚\n");
 
 	//	Now check and see if the door is actually unlocked.
 	if(doors[dir]["status"] == "locked")
-		return notify_fail(doors[dir]["c_name"] + "ÒÑ¾­ËøÉÏÁË¡£\n");
+		return notify_fail(doors[dir]["c_name"] + "å·²ç¶“é–ä¸Šäº†ã€‚\n");
 
 	//	Hmmm...make sure the door is closed, too.
 
 	if(doors[dir]["status"] == "open")
-		return notify_fail("Äã±ØĞëÏÈ½«" + doors[dir]["c_name"] + "¹ØÉÏ¡£\n");
+		return notify_fail("ä½ å¿…é ˆå…ˆå°‡" + doors[dir]["c_name"] + "é—œä¸Šã€‚\n");
 
 	//	See if the key fits.
 	for( i=0; i<sizeof(all_keys); i++ )
@@ -75,16 +75,16 @@ int cmd_lock (string str)
 
 	if( !key )
 		return notify_fail(
-			"ÄãÊÔ¹ıÉíÉÏËùÓĞµÄÔ¿³×£¬µ«ÊÇÃ»ÓĞÒ»°ÑÄÜ½«" + doors[dir]["c_name"] + "ËøÉÏ¡£\n");
+			"ä½ è©¦éèº«ä¸Šæ‰€æœ‰çš„é‘°åŒ™ï¼Œä½†æ˜¯æ²’æœ‰ä¸€æŠŠèƒ½å°‡" + doors[dir]["c_name"] + "é–ä¸Šã€‚\n");
 
 	//	Okay...lock the door, and update its linked mirror lock.
 
 	env->set_status(dir, "locked");
 	env->update_link(dir);
 
-	write("ÄãÓÃ" + key->query("short") + "°Ñ" + doors[dir]["c_name"] + "ËøÉÏ¡£\n");
+	write("ä½ ç”¨" + key->query("short") + "æŠŠ" + doors[dir]["c_name"] + "é–ä¸Šã€‚\n");
 	tell_room( env,
-		(string)this_player()->query("c_name") + "°Ñ" + doors[dir]["name"] + "ËøÉÏ¡£\n",
+		(string)this_player()->query("c_name") + "æŠŠ" + doors[dir]["name"] + "é–ä¸Šã€‚\n",
 		this_player() );
 
 	return 1;
@@ -97,7 +97,7 @@ int help() {
 	write( @C_HELP
 Syntax: lock [object] with [optional desc] key
 
-Õâ¸öÃüÁî¿ÉÒÔÈÃÄãÓÃÌØ¶¨µÄÔ¿³×°ÑÃÅËøÉÏ£¬µ±È»£¬Äã±ØĞëÏÈÕÒµ½Ô¿³×¡£
+é€™å€‹å‘½ä»¤å¯ä»¥è®“ä½ ç”¨ç‰¹å®šçš„é‘°åŒ™æŠŠé–€é–ä¸Šï¼Œç•¶ç„¶ï¼Œä½ å¿…é ˆå…ˆæ‰¾åˆ°é‘°åŒ™ã€‚
 C_HELP
 );
 return 1; }

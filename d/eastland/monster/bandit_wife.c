@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(9);
-	set_name( "bandit's wife", "ÍÁ·ËµÄÆŞ×Ó" );
+	set_name( "bandit's wife", "åœŸåŒªçš„å¦»å­" );
 	add( "id", ({ "wife" }) );
-	set_short( "ÍÁ·ËµÄÆŞ×Ó" );
+	set_short( "åœŸåŒªçš„å¦»å­" );
 	set_long(@C_LONG
-Äã¿´µ½Ò»Î»ÃÀÀöµÄÉÙ¸¾£¬ËıµÄ×°Êø¿´ÆğÀ´ÏñÊÇÓĞÇ®ÈË¼ÒµÄĞ¡½ã£¬²»¹ı
-ËıµÄÃ¼Ä¿Ö®¼äÈ´´øÖø¼¸·Ö¡õº·ÉñÉ«¡£
+ä½ çœ‹åˆ°ä¸€ä½ç¾éº—çš„å°‘å©¦ï¼Œå¥¹çš„è£æŸçœ‹èµ·ä¾†åƒæ˜¯æœ‰éŒ¢äººå®¶çš„å°å§ï¼Œä¸é
+å¥¹çš„çœ‰ç›®ä¹‹é–“å»å¸¶è‘—å¹¾åˆ†â–¡æ‚ç¥è‰²ã€‚
 C_LONG
 	);
 	set( "race", "human" );
@@ -38,7 +38,7 @@ int stop_attack()
 	husband = present( "bandit", environment() );
 	if( !husband ) return 0;
 	tell_room( environment(),
-		"ÍÁ·ËÍ¦ÉíÉÏÇ°£¬ºÈµÀ: ³ôĞ¡×Ó£¬¸ÒÆÛ¸ºÎÒÀÏÆÅ£¿¿´µ¶£¡\n");
+		"åœŸåŒªæŒºèº«ä¸Šå‰ï¼Œå–é“: è‡­å°å­ï¼Œæ•¢æ¬ºè² æˆ‘è€å©†ï¼Ÿçœ‹åˆ€ï¼\n");
 	tmp = query_temp( "protectors" );
 	if( !tmp || member_array( husband, tmp )==-1 ) {
 		add_temp( "protectors", ({ husband }) );

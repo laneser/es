@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("asbestos net","Ê¯ÃŞÍø");
+        set_name("asbestos net","çŸ³æ£‰ç¶²");
         add("id",({"net","cloak"}) );
-        set_short("Ê¯ÃŞÍø");
+        set_short("çŸ³æ£‰ç¶²");
         set_long(
-"ÕâÊÇÒ»¼şÊ¯ÃŞÍø£¬Äã¾õµÃ´©ÉÏÕâÍæÒâ¶ù²»»áºÜÊæ·ş¡£\n"
+"é€™æ˜¯ä¸€ä»¶çŸ³æ£‰ç¶²ï¼Œä½ è¦ºå¾—ç©¿ä¸Šé€™ç©æ„å…’ä¸æœƒå¾ˆèˆ’æœã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight", 100 );
         set( "type", "cloak" );
         set( "material", "element" );

@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("ѵ����");
+	ob->set_short("訓練場");
 	ob->set_long( @LONG_DESCRIPTION
-������һƬ�ܴ�Ŀյ�.����ʿ�����ڴ˵ؽ����ϸ��ս��ģ��ѵ��
+這裡是一片很大的空地.矮人士兵正在此地接受嚴格的戰場模擬訓練
 LONG_DESCRIPTION
 	);
 

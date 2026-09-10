@@ -4,16 +4,16 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name( "gin ping", "¾²Æ½" );
+	set_name( "gin ping", "éœå¹³" );
 	add ("id", ({ "gin", "ping","monk" }) );
-	set_short( "¾²Æ½" );
+	set_short( "éœå¹³" );
 	set_long(
-"¾²Æ½Äê·½Ê®¶ş£¬µ½ÉÙÁÖ¸ÕÑ§»áÒ»µã»ù±¾µÄÈ­½Å¹¦\·ò£¬×îÅÂÍµÀÁÊ±±»×¥µ½¡£\n"
+"éœå¹³å¹´æ–¹åäºŒï¼Œåˆ°å°‘æ—å‰›å­¸æœƒä¸€é»åŸºæœ¬çš„æ‹³è…³åŠŸå¤«ï¼Œæœ€æ€•å·æ‡¶æ™‚è¢«æŠ“åˆ°ã€‚\n"
 	);
     set( "alignment",10);
     set( "gender", "male" );
     set( "race", "imp" );
-    set( "unit", "Î»" );
+    set( "unit", "ä½" );
 	set_perm_stat( "dex", 10 );
 	set_perm_stat( "str", 7 );
 	set_perm_stat( "int", 10 );

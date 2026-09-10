@@ -11,14 +11,14 @@ void init()
 void create()
 {
         
-	set_name("Sugar Swallow-Nest","¡¸±ùÌÇÑàÎÑ¡¹");
+	set_name("Sugar Swallow-Nest","ã€Œå†°ç³–ç‡•çª©ã€");
 	add( "id" , ({ "nest","sugar swallow-nest" }) );
-        set_short(set_color("¡¸±ùÌÇÑàÎÑ¡¹","HIY"));
+        set_short(set_color("ã€Œå†°ç³–ç‡•çª©ã€","HIY"));
         set_long(@C_LONG
-Ò»Íë¾«ÐÄµ÷ÖÆµÄ²¹Æ·£¬àÅ£¬ºÈÏÂËü(drink_me nest)Ïë±ØÄÜÈÃÄãÉñÇåÆøË¬¡£
+ä¸€ç¢—ç²¾å¿ƒèª¿è£½çš„è£œå“ï¼Œå—¯ï¼Œå–ä¸‹å®ƒ(drink_me nest)æƒ³å¿…èƒ½è®“ä½ ç¥žæ¸…æ°£çˆ½ã€‚
 C_LONG
 	);
-   	set("unit","Íë");
+   	set("unit","ç¢—");
    	set("weight", 50);
    	set("value",({ 450, "gold" }) );
 }
@@ -27,27 +27,27 @@ int eat_food(string arg)
 {
         
     if( !arg || ( arg != "nest") && ( arg != "sugar swallow-nest" ) ) {
-        tell_object(this_player(),"ÇëÓÃ ( drink_me nest )¡£\n");
+        tell_object(this_player(),"è«‹ç”¨ ( drink_me nest )ã€‚\n");
         return 1;
     }
     this_player()->add_temp("drink_nest_times",1);
     if( this_player()->query_temp("drink_nest_times")>5 ) {
        tell_object(this_player(),
-         "Ó´Ñ½£¬ÄãºÈÏÂÁËÕâÒ»Íë"+set_color("¡¸±ùÌÇÑàÎÑ¡¹","HIY")+"Ö®áá¾õµÃ²»´ó¶Ô¾¢£¬¿´À´ÊÇ²¹¹ýÍ·ÁË¡«¡«\n");
-       tell_room( environment(this_player()),"Ó´Ñ½£¬"+
+         "å–²å‘€ï¼Œä½ å–ä¸‹äº†é€™ä¸€ç¢—"+set_color("ã€Œå†°ç³–ç‡•çª©ã€","HIY")+"ä¹‹å¾Œè¦ºå¾—ä¸å¤§å°å‹ï¼Œçœ‹ä¾†æ˜¯è£œéŽé ­äº†ï½žï½ž\n");
+       tell_room( environment(this_player()),"å–²å‘€ï¼Œ"+
          this_player()->query("c_name")+
-         "ºÈÒ»Íë"+set_color("¡¸±ùÌÇÑàÎÑ¡¹","HIY")+"Ö®áá¿ªÊ¼ÓÐµã¹Ö¹ÖµÄ£¬¿´À´ÊÇ²¹¹ýÍ·ÁË¡«¡«\n",
+         "å–ä¸€ç¢—"+set_color("ã€Œå†°ç³–ç‡•çª©ã€","HIY")+"ä¹‹å¾Œé–‹å§‹æœ‰é»žæ€ªæ€ªçš„ï¼Œçœ‹ä¾†æ˜¯è£œéŽé ­äº†ï½žï½ž\n",
          this_player());
        this_player()->delete_temp("drink_nest_times");
        CONFUSED->apply_effect(this_player(),20,1);    
        remove();
        return 1;
     }
-    tell_room( environment(this_player()),"ÄãÕ¾ÔÚÅÔ±ßÁ÷¿ÚË®µØ¿´Öø"+
-        this_player()->query("c_name")+"ºÈÏÂÒ»Íë"+set_color("¡¸±ùÌÇÑàÎÑ¡¹","HIY")+"¡«¡«\n", 
+    tell_room( environment(this_player()),"ä½ ç«™åœ¨æ—é‚Šæµå£æ°´åœ°çœ‹è‘—"+
+        this_player()->query("c_name")+"å–ä¸‹ä¸€ç¢—"+set_color("ã€Œå†°ç³–ç‡•çª©ã€","HIY")+"ï½žï½ž\n", 
          this_player());
     tell_object( this_player(),
-        "ÄãÂú×ãµØºÈÏÂÒ»Íë"+set_color("¡¸±ùÌÇÑàÎÑ¡¹","HIY")+"¡£àÅ£¬ºÃºÈ¡«¡«\n");
+        "ä½ æ»¿è¶³åœ°å–ä¸‹ä¸€ç¢—"+set_color("ã€Œå†°ç³–ç‡•çª©ã€","HIY")+"ã€‚å—¯ï¼Œå¥½å–ï½žï½ž\n");
     this_player()->set("hit_points",this_player()->query("max_hp"));
     this_player()->set("spell_points",this_player()->query("max_sp"));
     remove();

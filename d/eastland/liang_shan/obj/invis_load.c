@@ -6,17 +6,17 @@ inherit OBJECT;
 int create()
 {
 	seteuid(getuid());
-	set_name("invis_obj", "ÒşĞÎÎï¼ş");
-	set_short("invis_obj" ,"ÒşĞÎÎï¼ş");
+	set_name("invis_obj", "éš±å½¢ç‰©ä»¶");
+	set_short("invis_obj" ,"éš±å½¢ç‰©ä»¶");
         set_long(
-                 "quest ĞèÒªµÄ¶«Î÷( Çë¿´skeleton.c )....\n");
+                 "quest éœ€è¦çš„æ±è¥¿( è«‹çœ‹skeleton.c )....\n");
 	
-	set("unit","¼ş");
+	set("unit","ä»¶");
         set( "invisible" ,1);
         set("weight",200);
 	set("value",({ 0, "silver"}) );
 	set("prevent_drop",1);
-        set( "extra_look", "$NÕıºÍÒ»Ğ©ÈË£¬³ÔÁ¦µÄÌ§ÖøÒ»¾ß¾Ş´óµÄ÷Ç÷Ã\¡£\n" );
+        set( "extra_look", "$Næ­£å’Œä¸€äº›äººï¼ŒåƒåŠ›çš„æŠ¬è‘—ä¸€å…·å·¨å¤§çš„é«‘é«\ã€‚\n" );
 }
 
 void init()
@@ -28,11 +28,11 @@ void init()
 
 string query_short()
 {
-  return query("Title")+"[Ì§ÖøÒ»¾ß¾Ş´ó÷Ç÷Ã\]" ;
+  return query("Title")+"[æŠ¬è‘—ä¸€å…·å·¨å¤§é«‘é«\]" ;
 }
 int to_quit()
 {
-      write("ÄãÃÇ»¹ÔÚ°á¶«Î÷à¸£¬ÏÈ°ÑËü·ÅÏÂ°É...\n");
+      write("ä½ å€‘é‚„åœ¨æ¬æ±è¥¿å–”ï¼Œå…ˆæŠŠå®ƒæ”¾ä¸‹å§...\n");
       return 1;    
 }
 int to_drop(string arg)
@@ -41,23 +41,23 @@ int to_drop(string arg)
      object *usr,me,inv,obj;
      string str;
      
-     if( !arg || lower_case(arg) != "skeleton" ) return notify_fail("°ÑÊ²÷á·ÅÏÂ?\n");
+     if( !arg || lower_case(arg) != "skeleton" ) return notify_fail("æŠŠä»€éº¼æ”¾ä¸‹?\n");
      me=this_player();
      usr = (mixed *)me->query_temp("party_members");
      num = sizeof(usr);
     
      if ( (string)me->query_temp("leader") != (string)me->query("name") ) {
-	       write("Ö»ÓĞ¶ÓÎéµÄÁìµ¼Õß£¬²ÅÄÜÏÂÃüÁîà¸¡£\n");
+	       write("åªæœ‰éšŠä¼çš„é ˜å°è€…ï¼Œæ‰èƒ½ä¸‹å‘½ä»¤å–”ã€‚\n");
 	       return 1;
 	       }
 	       for( i=0; i<sizeof(usr); i++ )
 	       {       
-	       str = ((usr[i]->query_temp("carry_skeleton",1))?("Ò»£¬¶ş£¬Èı....ÄãÈçÊÍÖØ¸ºµØ°ÑÕâ¾ß¾Ş´ó÷Ç÷Ã\·ÅÏÂ...\n"):"");
+	       str = ((usr[i]->query_temp("carry_skeleton",1))?("ä¸€ï¼ŒäºŒï¼Œä¸‰....ä½ å¦‚é‡‹é‡è² åœ°æŠŠé€™å…·å·¨å¤§é«‘é«æ”¾ä¸‹...\n"):"");
 	       usr[i]->delete_temp("carry_skeleton");
 	       tell_object(usr[i],str );
 	       }
-	tell_room(environment(me),"Äã¿´µ½"+me->query("c_name")+"ºÍËûµÄ¶ÓÓÑ\n"
-		"½«Ò»¼şÅÓÈ»´óÎï¶ªµ½µØÉÏ\n", usr);
+	tell_room(environment(me),"ä½ çœ‹åˆ°"+me->query("c_name")+"å’Œä»–çš„éšŠå‹\n"
+		"å°‡ä¸€ä»¶é¾ç„¶å¤§ç‰©ä¸Ÿåˆ°åœ°ä¸Š\n", usr);
         obj = new("/d/eastland/liang_shan/obj/skeleton");
         obj->move(environment(me));
 	for( i=0; i<sizeof(usr); i++ )

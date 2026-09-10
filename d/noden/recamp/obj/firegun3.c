@@ -7,13 +7,13 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-  set_name("fire gun", "Éñ»ğÇ¹");
+  set_name("fire gun", "ç¥ç«æ§");
   add("id", ({"fire gun","gun"}) );
-  set_short("fire gun","Éñ»ğÇ¹");
+  set_short("fire gun","ç¥ç«æ§");
   set_long(
-   "Ò»°ÑÆæÃîµÄÇ¹¡£\n"
+   "ä¸€æŠŠå¥‡å¦™çš„æ§ã€‚\n"
   );
-  set( "unit", "°Ñ" );
+  set( "unit", "æŠŠ" );
   set( "weapon_class", 45 );
   set( "type","polearm");
   set( "min_damage", 15 );

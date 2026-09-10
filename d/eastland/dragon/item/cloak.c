@@ -3,11 +3,11 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("occult cloak", " ÉñÃØÅû·ç");
+        set_name("occult cloak", " ç¥ç§˜æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short("ÉñÃØÅû·ç");
-        set_long(" ÉñÃØÅû·ç\n");
-        set("unit","¼ş");
+        set_short("ç¥ç§˜æŠ«é¢¨");
+        set_long(" ç¥ç§˜æŠ«é¢¨\n");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material" , "element");
         set( "armor_class", 8 );

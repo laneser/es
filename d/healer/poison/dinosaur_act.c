@@ -5,20 +5,20 @@ inherit "/d/healer/poison.c";
 void create()
 {
         seteuid(getuid());
-        set_name("dinosaur_act","¶«Ê©Ğ§ò­");
+        set_name("dinosaur_act","æ±æ–½æ•ˆé¡°");
         add("id",({"dino","dinosaur_act"}));
-        set_short("¶«Ê©Ğ§ò­");
+        set_short("æ±æ–½æ•ˆé¡°");
         set_long(
-        "ÕâÊÇÒ»ÖÖ´øÓĞ¶ñ³ôµÄÒ©·Û, ¾İËµÖĞ¶¾µÄÈË»áÅ»ÍÂ²»Ö¹,\n"
-        "Äã¿ÉÒÔÓÃ poison <someone> ¶ÔÄ³ÈËÏÂ¶¾;ÓÃ check ¼ì²éÊ£âÅµÄ·İÁ¿¡£\n"
+        "é€™æ˜¯ä¸€ç¨®å¸¶æœ‰æƒ¡è‡­çš„è—¥ç²‰, æ“šèªªä¸­æ¯’çš„äººæœƒå˜”åä¸æ­¢,\n"
+        "ä½ å¯ä»¥ç”¨ poison <someone> å°æŸäººä¸‹æ¯’;ç”¨ check æª¢æŸ¥å‰©é¤˜çš„ä»½é‡ã€‚\n"
         );
-        set( "unit", "ºĞ" );
+        set( "unit", "ç›’" );
         set_duration(10);
         set_effect(10);
         set_type("simple_poison");
         set_times(3);
         set_difficulty(65);
-        set("poison_msg","%sÍÂÁËÄãÒ»Éí.... ¶ñ~~~~\n");
-        set("poison_method","%s´ÓºĞ×ÓÀïÕ´ÁËÒ»Ğ©$P, µ¯Ïò%s");
+        set("poison_msg","%såäº†ä½ ä¸€èº«.... æƒ¡~~~~\n");
+        set("poison_method","%så¾ç›’å­è£¡æ²¾äº†ä¸€äº›$P, å½ˆå‘%s");
 }
 

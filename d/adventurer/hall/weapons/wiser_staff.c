@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("wiser staff", "ÖÇÕßÖ®ÕÈ");
+	set_name("wiser staff", "æ™ºè€…ä¹‹æ–");
 	add( "id", ({ "staff" }) );
-	set_short("a wiser staff", "ÖÇÕßÖ®ÕÈ");
+	set_short("a wiser staff", "æ™ºè€…ä¹‹æ–");
 	set_long(
 		"This is a wiser staff. Old adventurers love such staff as\n"
 		"their weapon.\n",
-		"ÕâÊÇÒ»°ÑÖÇÕßÖ®ÕÈ£¬Í¨³£ÊÇÄêÀÏµÄÃ°ÏÕÕßÓÃÀ´·ÀÉíµÄÎäÆ÷¡£\n"
+		"é€™æ˜¯ä¸€æŠŠæ™ºè€…ä¹‹æ–ï¼Œé€šå¸¸æ˜¯å¹´è€çš„å†’éšªè€…ç”¨ä¾†é˜²èº«çš„æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 	set( "weapon_class", 20 );
 	set( "min_damage", 8 );

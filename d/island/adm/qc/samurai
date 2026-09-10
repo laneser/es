@@ -1,58 +1,58 @@
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------------
-1.À×µçÕ½¼× ( /d/island/samurai/obj/nei_vest.c )
- *37     6      110    *À×:10   elemental  
+1.é›·é›»æˆ°ç”² ( /d/island/samurai/obj/nei_vest.c )
+ *37     6      110    *é›·:10   elemental  
 
-2.À×µçÉñ¶Ü ( /d/island/samurai/obj/nei_shield.c )
-   8     6      100    *À×:6    elemental
+2.é›·é›»ç¥ç›¾ ( /d/island/samurai/obj/nei_shield.c )
+   8     6      100    *é›·:6    elemental
 
-3.À×µçÅû·ç ( /d/island/samurai/obj/nei_cloak.c )
-   7     5       30    *À×:7      cloth
+3.é›·é›»æŠ«é¢¨ ( /d/island/samurai/obj/nei_cloak.c )
+   7     5       30    *é›·:7      cloth
 
-4.Ò¹Ó°Åû·ç ( /d/island/samurai/obj/night_cloak.c )
-   5     4       90   *±ù:10 ¾«:10  leather
+4.å¤œå½±æŠ«é¢¨ ( /d/island/samurai/obj/night_cloak.c )
+   5     4       90   *å†°:10 ç²¾:10  leather
 
-5.¾ÕĞÎ¼Ò»Õ ( /d/island/samurai/obj/mark.c )
-   0     6       30    *»ğ:20   elemental
+5.èŠå½¢å®¶å¾½ ( /d/island/samurai/obj/mark.c )
+   0     6       30    *ç«:20   elemental
 
-6.ºìÉ«Î§½í ( /d/island/samurai/obj/red_scarf.c )
-   0     4       20    *»ğ:20     cloth
+6.ç´…è‰²åœå·¾ ( /d/island/samurai/obj/red_scarf.c )
+   0     4       20    *ç«:20     cloth
 
-8.ÌìÓğ»¤Éí·ü ( /d/island/samurai/obj/tanyu_amulet.c )
-   0     5       20   *±ù»ğÀ×:10   light_metal
+8.å¤©ç¾½è­·èº«ä¼ ( /d/island/samurai/obj/tanyu_amulet.c )
+   0     5       20   *å†°ç«é›·:10   light_metal
 
-9.Ë®ĞÇÖ®±Ê ( /d/island/samurai/obj/mercury_pen.c )
+9.æ°´æ˜Ÿä¹‹ç­† ( /d/island/samurai/obj/mercury_pen.c )
  *80   *20       *1  extra_con:1970  none 
-      (´ËÏîÎïÆ·Ã»ÓĞĞ´ÍêÈ«)
+      (æ­¤é …ç‰©å“æ²’æœ‰å¯«å®Œå…¨)
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------------
-1.Ñıµ¶´åÓê ( /d/island/samurai/obj/evil_sword.c )
+1.å¦–åˆ€æ‘é›¨ ( /d/island/samurai/obj/evil_sword.c )
  *45    *25    *47      170         0 
    
-2.µ¶Ëø ( /d/island/samurai/obj/lock.c )
+2.åˆ€é– ( /d/island/samurai/obj/lock.c )
  *40     15     40      200         0
 
-3.·ÉÑàÖ®½£ ( /d/island/samurai/obj/swallow_sword.c )
+3.é£›ç‡•ä¹‹åŠ ( /d/island/samurai/obj/swallow_sword.c )
  *38     15     37      130         0
 
-4.À×Éñ½£ ( /d/island/samurai/obj/sword2.c )
+4.é›·ç¥åŠ ( /d/island/samurai/obj/sword2.c )
  *42     17    *42      150         0
 
-5.ÎŞÃû½£ ( /d/island/samurai/obj/unknow.c )
+5.ç„¡ååŠ ( /d/island/samurai/obj/unknow.c )
  *45    *25    *45      110         0
 
-6.ÒôÉıÖ®½£ ( /d/island/samurai/obj/sound.c )
+6.éŸ³å‡ä¹‹åŠ ( /d/island/samurai/obj/sound.c )
  *40     17    *40      150         0
 
-7.Ê®×ÖÇ¹ ( /d/island/samurai/obj/cross_lance.c )
+7.åå­—æ§ ( /d/island/samurai/obj/cross_lance.c )
  *36     15     38      250         0
 
-8.Ñ©Ö®ÑÕ ( /d/island/smurai/obj/snow_dagger.c )
+8.é›ªä¹‹é¡ ( /d/island/smurai/obj/snow_dagger.c )
  *39     15    *33       90         0
 
 

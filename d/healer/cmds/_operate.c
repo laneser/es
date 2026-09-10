@@ -11,10 +11,10 @@ int rate;
 
 
 string *messages =({
-"·¢ÏÖ»¼ÕßÑª¹ÜÆÆÁÑÁË, ¼±Ã¦ÓÃÖ¹ÑªÇ¯Ö¹Ñª¡£\n",
-"Ï¸ĞÄµÄ½«ÒÑ¾­»µËÀµÄ×éÖ¯Ï¸°ûÇĞ³ı¡£\n",
-"ÓÃÄ÷×Ó½«ÉË¿ÚÖĞµÄÒìÎïĞ®ÁË³öÀ´¡£\n",
-"½«ÄÚ³öÑªµÄµØ·½Ğ¡ĞÄµÄ·ìºÏÆğÀ´¡£\n",});
+"ç™¼ç¾æ‚£è€…è¡€ç®¡ç ´è£‚äº†, æ€¥å¿™ç”¨æ­¢è¡€é‰—æ­¢è¡€ã€‚\n",
+"ç´°å¿ƒçš„å°‡å·²ç¶“å£æ­»çš„çµ„ç¹”ç´°èƒåˆ‡é™¤ã€‚\n",
+"ç”¨é‘·å­å°‡å‚·å£ä¸­çš„ç•°ç‰©æŒ¾äº†å‡ºä¾†ã€‚\n",
+"å°‡å…§å‡ºè¡€çš„åœ°æ–¹å°å¿ƒçš„ç¸«åˆèµ·ä¾†ã€‚\n",});
 
 int cmd_operate(string arg)
 {
@@ -27,14 +27,14 @@ int cmd_operate(string arg)
         me = this_player();
         
         if( !me->query_skill("operation") ) 
-          return notify_fail ("ÄãÃ»Ñ§¹ıÊÖÊõÑ§, ²»¸Ò¶¯ÊÖ¡£\n");
+          return notify_fail ("ä½ æ²’å­¸éæ‰‹è¡“å­¸, ä¸æ•¢å‹•æ‰‹ã€‚\n");
         weapon = (object) me->query("weapon1");
         
         if ( (!weapon) || (string)weapon->query("type")!="dagger" )
-          return notify_fail ("ÄãÃ»ÓĞ×°±¸ÊÊµ±µÄ¹¤¾ß, Ã»°ì·¨½øĞĞÊÖÊõ¡£\n");
+          return notify_fail ("ä½ æ²’æœ‰è£å‚™é©ç•¶çš„å·¥å…·, æ²’è¾¦æ³•é€²è¡Œæ‰‹è¡“ã€‚\n");
           
         if( me->query("stop_attack")!=0) 
-             return notify_fail( "ÄãµÄÉÏ¸ö¶¯×÷»¹Ã»Íê³É,ÎŞ·¨¶¯ÊÖÊõ¡£\n" );
+             return notify_fail( "ä½ çš„ä¸Šå€‹å‹•ä½œé‚„æ²’å®Œæˆ,ç„¡æ³•å‹•æ‰‹è¡“ã€‚\n" );
 
     	if( !arg || arg=="" ) return help();
         
@@ -60,19 +60,19 @@ int cmd_operate(string arg)
            if (corpse_here==1) break;
         }       
         if(! (dest=find_player(arg) ) ) 
-             return notify_fail("Ã»ÓĞÕâ¸öÈË´æÔÚ, ´ò´í×ÖÁË°É?\n");
+             return notify_fail("æ²’æœ‰é€™å€‹äººå­˜åœ¨, æ‰“éŒ¯å­—äº†å§?\n");
         if( ( (int)dest->query("ghost")!= 1 ) )
-             return notify_fail(dest->query("c_name")+"»îµÄºÃºÃµÄ, ÄãÊÇÔÚÖäËûÔçËÀÂğ?\n");     
+             return notify_fail(dest->query("c_name")+"æ´»çš„å¥½å¥½çš„, ä½ æ˜¯åœ¨å’’ä»–æ—©æ­»å—?\n");     
         if( corpse_here==0) 
-             return notify_fail(dest->query("c_name")+"µÄÉíÌå²¢²»ÔÚÕâÀï, ÄãÏë°ïËû¶¯ÊÖÊõ, È´ĞÄÓĞâÅ¶øÁ¦²»×ã¡£\n");
+             return notify_fail(dest->query("c_name")+"çš„èº«é«”ä¸¦ä¸åœ¨é€™è£¡, ä½ æƒ³å¹«ä»–å‹•æ‰‹è¡“, å»å¿ƒæœ‰é¤˜è€ŒåŠ›ä¸è¶³ã€‚\n");
         inv2= all_inventory(inv[i]);
         if(sizeof(inv2)!=0) 
-             return notify_fail("ÄãÒªÏÈ°Ñ²¡»¼ÉíÉÏµÄÀÛ×¸ÄÃµô²Å·½±ã¶¯ÊÖÊõ¡£\n");
+             return notify_fail("ä½ è¦å…ˆæŠŠç—…æ‚£èº«ä¸Šçš„ç´¯è´…æ‹¿æ‰æ‰æ–¹ä¾¿å‹•æ‰‹è¡“ã€‚\n");
         if (dest->query_temp("operate")) 
-             return notify_fail("ÒÑ¾­ÓĞÈËÔÚÌæËû¶¯ÊÖÊõÁË, ÄãÏÖÔÚ½øÈ¥²åÒ»½ÅÖ»»áÔ½°ïÔ½Ã¦¡£\n");     
+             return notify_fail("å·²ç¶“æœ‰äººåœ¨æ›¿ä»–å‹•æ‰‹è¡“äº†, ä½ ç¾åœ¨é€²å»æ’ä¸€è…³åªæœƒè¶Šå¹«è¶Šå¿™ã€‚\n");     
         sp= (int) me->query("spell_points");
         if (sp<200) 
-             return notify_fail("ÄãÏÖÔÚ¾«ÉñÁ¦²»¹», ÎŞ·¨¼¯ÖĞ¾«Éñ½øĞĞÊÖÊõ¡£\n");
+             return notify_fail("ä½ ç¾åœ¨ç²¾ç¥åŠ›ä¸å¤ , ç„¡æ³•é›†ä¸­ç²¾ç¥é€²è¡Œæ‰‹è¡“ã€‚\n");
         
         sp = sp - 200;
         this_player()->set("spell_points",sp);
@@ -104,43 +104,43 @@ int operate_living(string patient,string target)
      
      doctor = this_player();
      pat = present(patient,environment(doctor));
-     if (pat == doctor) { tell_object(doctor,"Äã²»ÄÜÌæ×Ô¼º¶¯ÊÖÊõ¡£\n");
+     if (pat == doctor) { tell_object(doctor,"ä½ ä¸èƒ½æ›¿è‡ªå·±å‹•æ‰‹è¡“ã€‚\n");
                           return 1;
                         }  
      if (!pat || !living(pat) || !visible(pat,doctor)) {
-        tell_object(doctor,"ÄãÒª°ïË­¿ªµ¶??");
+        tell_object(doctor,"ä½ è¦å¹«èª°é–‹åˆ€??");
         return 1;
      }   
      skill=doctor->query_skill("operation");
      sp = doctor->query("spell_points");
      if (lower_case(target) == "eye") {
        if ( sp < 30) {
-         tell_object(doctor,"ÄãµÄ¾«ÉñÁ¦²»¹», ²»ÄÜ¶¯ÊÖÊõ¡£\n");
+         tell_object(doctor,"ä½ çš„ç²¾ç¥åŠ›ä¸å¤ , ä¸èƒ½å‹•æ‰‹è¡“ã€‚\n");
          return 1;
        }  
        if (!pat->query("blind")) {
-         tell_object(doctor,"ËûµÄÑÛ¾¦Õı³£µÄºÜ, ²»ĞèÒªÒ½ÁÆ¡£\n");
+         tell_object(doctor,"ä»–çš„çœ¼ç›æ­£å¸¸çš„å¾ˆ, ä¸éœ€è¦é†«ç™‚ã€‚\n");
          return 1;
        }  
-       tell_room(environment(doctor),doctor->query("c_name")+"¿ªÊ¼Ìæ"+
-                 pat->query("c_name")+"µÄÑÛ¾¦¶¯ÊÖÊõ¡£\n",({doctor,pat}));
-       tell_object(doctor,"Äã¿ªÊ¼Ìæ"+pat->query("c_name")+"µÄÑÛ¾¦¶¯ÊÖÊõ¡£\n");
-       tell_object(pat,doctor->query("c_name")+"¿ªÊ¼ÌæÄãµÄÑÛ¾¦¶¯ÊÖÊõ¡£\n");          
+       tell_room(environment(doctor),doctor->query("c_name")+"é–‹å§‹æ›¿"+
+                 pat->query("c_name")+"çš„çœ¼ç›å‹•æ‰‹è¡“ã€‚\n",({doctor,pat}));
+       tell_object(doctor,"ä½ é–‹å§‹æ›¿"+pat->query("c_name")+"çš„çœ¼ç›å‹•æ‰‹è¡“ã€‚\n");
+       tell_object(pat,doctor->query("c_name")+"é–‹å§‹æ›¿ä½ çš„çœ¼ç›å‹•æ‰‹è¡“ã€‚\n");          
        sp -= 30;
        doctor->set("spell_points",sp);
        degree=pat->query("blind");
        degree=degree - ( skill/20);
        if ( degree > 0 ) { 
          pat->set("blind",degree);    
-         tell_object(doctor,"ÄãµÄ²¡»¼¾­ÄãÊÖÊõáá, ²¡ÇéËÆºõÓĞĞ©ºÃ×ª, µ«ÈÔÎ´È¬Óú¡£\n");
-         tell_object(pat,"Äã¾õµÃÄãµÄÑÛ¾¦ÔÚÊÖÊõááËÆºõºÃÁËÒ»Ğ©, µ«ÈÔÈ»¿´²»Çå³ş¶«Î÷¡£\n");
+         tell_object(doctor,"ä½ çš„ç—…æ‚£ç¶“ä½ æ‰‹è¡“å¾Œ, ç—…æƒ…ä¼¼ä¹æœ‰äº›å¥½è½‰, ä½†ä»æœªç—Šç™’ã€‚\n");
+         tell_object(pat,"ä½ è¦ºå¾—ä½ çš„çœ¼ç›åœ¨æ‰‹è¡“å¾Œä¼¼ä¹å¥½äº†ä¸€äº›, ä½†ä»ç„¶çœ‹ä¸æ¸…æ¥šæ±è¥¿ã€‚\n");
        } else {
          pat->delete("blind");
-         tell_object(doctor, "ÄãµÄ»¼ÕßÒÑ¾­ÍêÈ«¿µ¸´ÁË¡£\n");
-         tell_object(pat, "ÄãµÄÊÓÁ¦ÒÑ¾­ÍêÈ«»Ö¸´, ÖÕì¶ÔÙ´ÎÖØ¼û¹âÃ÷¡£\n");
+         tell_object(doctor, "ä½ çš„æ‚£è€…å·²ç¶“å®Œå…¨åº·å¾©äº†ã€‚\n");
+         tell_object(pat, "ä½ çš„è¦–åŠ›å·²ç¶“å®Œå…¨æ¢å¾©, çµ‚æ–¼å†æ¬¡é‡è¦‹å…‰æ˜ã€‚\n");
        }     
      } else {
-       tell_object(doctor,"ÄãÏëÒª¶Ô»¼ÕßÄÄÀï¿ªµ¶?"); 
+       tell_object(doctor,"ä½ æƒ³è¦å°æ‚£è€…å“ªè£¡é–‹åˆ€?"); 
        return 1;
      }  
          
@@ -160,19 +160,19 @@ void op_step1(object healer,object corpse,object weapon,string patient)
         return;
      }    
      if (!corpse) {
-         //      write("Ê¬Ìå³öÁËÎÊÌâ, ÊÖÊõÊ§°Ü\n");
+         //      write("å±é«”å‡ºäº†å•é¡Œ, æ‰‹è¡“å¤±æ•—\n");
                op_fail(healer,patient);
      }
      name = corpse->query("short");
-     if (name=="¸¯ÀÃµÄÊ¬Ìå" || name=="º¡¹Ç" || name=="¿İ¹Ç") {
+     if (name=="è…çˆ›çš„å±é«”" || name=="éª¸éª¨" || name=="æ¯éª¨") {
          op_fail(healer,patient); 
          return;
      }    
-     tell_object(healer, "ÄãĞ¡ĞÄµÄÓÃÊÖÖĞµÄ"+weapon->query("c_name")+
-                         "½«»¼ÕßĞØ²¿»®¿ªÒ»µÀ¿ª¿Ú, ²¢Á¢¿Ì½«Ëü¹Ì¶¨¡£\n");
+     tell_object(healer, "ä½ å°å¿ƒçš„ç”¨æ‰‹ä¸­çš„"+weapon->query("c_name")+
+                         "å°‡æ‚£è€…èƒ¸éƒ¨åŠƒé–‹ä¸€é“é–‹å£, ä¸¦ç«‹åˆ»å°‡å®ƒå›ºå®šã€‚\n");
      tell_room(environment(healer),healer->query("c_name")+
-               "ÊìÁ·µÄÓÃÊÖÖĞµÄ"+weapon->query("c_name")+
-               "½«»¼ÕßĞØ²¿»®¿ªÒ»µÀ¿ª¿Ú, ²¢Á¢¿Ì½«Ëü¹Ì¶¨¡£\n",healer);                    
+               "ç†Ÿç·´çš„ç”¨æ‰‹ä¸­çš„"+weapon->query("c_name")+
+               "å°‡æ‚£è€…èƒ¸éƒ¨åŠƒé–‹ä¸€é“é–‹å£, ä¸¦ç«‹åˆ»å°‡å®ƒå›ºå®šã€‚\n",healer);                    
      call_out("op_step2",2,healer,corpse,weapon,patient);
 }     
 
@@ -204,11 +204,11 @@ void op_step2(object healer,object corpse,object weapon,string patient)
         return;
      }   
      if (!corpse) {
-            //   write("Ê¬Ìå³öÁËÎÊÌâ, ÊÖÊõÊ§°Ü\n");
+            //   write("å±é«”å‡ºäº†å•é¡Œ, æ‰‹è¡“å¤±æ•—\n");
                op_fail(healer,patient);
      }
      name = corpse->query("short");
-     if (name=="¸¯ÀÃµÄÊ¬Ìå" || name=="º¡¹Ç" || name=="¿İ¹Ç") {
+     if (name=="è…çˆ›çš„å±é«”" || name=="éª¸éª¨" || name=="æ¯éª¨") {
        //write(name);
        op_fail(healer,patient);                    
        return;
@@ -220,7 +220,7 @@ void op_step2(object healer,object corpse,object weapon,string patient)
                          }  
 
      i = random(sizeof(messages));
-     tell_object(healer, "Äã"+messages[i]);
+     tell_object(healer, "ä½ "+messages[i]);
      tell_room(environment(healer),healer->query("c_name")+messages[i],healer);
      call_out("op_step2",2,healer,corpse,weapon,patient);
 }     
@@ -241,9 +241,9 @@ void op_fail(object healer,string patient)
        healer->set("op_fail_count",1);
    }        
    healer->delete_temp("block_command");
-   tell_object(healer,"Äã·¢ÏÖÄãµÄ»¼ÕßÍêÈ«Ê§È¥ÉúÃü¼£Ïñ, ÒÑ¾­»ØÌì·¦ÊõÁË¡£\n");
+   tell_object(healer,"ä½ ç™¼ç¾ä½ çš„æ‚£è€…å®Œå…¨å¤±å»ç”Ÿå‘½è·¡åƒ, å·²ç¶“å›å¤©ä¹è¡“äº†ã€‚\n");
    tell_room(environment(healer),healer->query("c_name")+
-             "Ò»Á³ÍÇÉ¥µÄ±íÇé, »º»ºµÄ·ÅÏÂÊÖÖĞµÄÊÖÊõµ¶, ¿ÉÄÜÊÇÊÖÊõÊ§°ÜÁË¡£\n",healer);
+             "ä¸€è‡‰é ¹å–ªçš„è¡¨æƒ…, ç·©ç·©çš„æ”¾ä¸‹æ‰‹ä¸­çš„æ‰‹è¡“åˆ€, å¯èƒ½æ˜¯æ‰‹è¡“å¤±æ•—äº†ã€‚\n",healer);
 }
 
 int op_success(object healer,string patient,object corpse)
@@ -256,9 +256,9 @@ int op_success(object healer,string patient,object corpse)
       
    healer->delete_temp("block_command");
    
-   if (!patient) return notify_fail("ÊÖÊõ¹ı³Ì³öÁËµã²î´í, ÇëÍ¨ÖªÎ×Ê¦´¦Àí¡£\n");
+   if (!patient) return notify_fail("æ‰‹è¡“éç¨‹å‡ºäº†é»å·®éŒ¯, è«‹é€šçŸ¥å·«å¸«è™•ç†ã€‚\n");
    dest=find_player(patient);
-   if (!dest) return notify_fail("ÊÖÊõ¹ı³Ì³öÁËµã²î´í, ÇëÍ¨ÖªÎ×Ê¦´¦Àí¡£\n");
+   if (!dest) return notify_fail("æ‰‹è¡“éç¨‹å‡ºäº†é»å·®éŒ¯, è«‹é€šçŸ¥å·«å¸«è™•ç†ã€‚\n");
 
    if (succ_count=(int)healer->query("op_succ_count")) {
        succ_count++;
@@ -266,58 +266,58 @@ int op_success(object healer,string patient,object corpse)
    } else {
        healer->set("op_succ_count",1);
    }
-   tell_object(healer,"ÊÖÊõÖÕì¶Íê³É, ¿ªÊ¼·ìºÏÉË¿Ú¡£\n");
+   tell_object(healer,"æ‰‹è¡“çµ‚æ–¼å®Œæˆ, é–‹å§‹ç¸«åˆå‚·å£ã€‚\n");
    tell_room(environment(healer),healer->query("c_name")+
-             "¿ªÊ¼·ìºÏÉË¿Ú, ÊÖÊõÒÑ¾­½«½üÍê³É¡£\n",healer);
-   tell_object(healer,"ÄãÀÛÁË¸öÂúÉí´óº¹, ÖÕì¶Íê³ÉÁËÕâ´ÎÊÖÊõ¡£\n");
+             "é–‹å§‹ç¸«åˆå‚·å£, æ‰‹è¡“å·²ç¶“å°‡è¿‘å®Œæˆã€‚\n",healer);
+   tell_object(healer,"ä½ ç´¯äº†å€‹æ»¿èº«å¤§æ±—, çµ‚æ–¼å®Œæˆäº†é€™æ¬¡æ‰‹è¡“ã€‚\n");
    tell_room(environment(healer),healer->query("c_name")+
-             "ÀÛÁË¸öÂúÉí´óº¹, ÖÕì¶Íê³ÉÁËÕâ´ÎÊÖÊõ¡£\n",healer);
+             "ç´¯äº†å€‹æ»¿èº«å¤§æ±—, çµ‚æ–¼å®Œæˆäº†é€™æ¬¡æ‰‹è¡“ã€‚\n",healer);
    corpse->remove();
    decrease_count=0;
    if (random(rate)<50) {
      dest->set_perm_stat("str",(int)dest->query_perm_stat("str")-1);
      decrease_count++;
-     decrease_stats="Á¦Á¿";
+     decrease_stats="åŠ›é‡";
    }    
    if (random(rate)<50) {
      dest->set_perm_stat("int",(int)dest->query_perm_stat("int")-1);
-     if (decrease_count>0) decrease_stats=decrease_stats+"¡¢ÖÇ»Û";
-     else decrease_stats="ÖÇ»Û";
+     if (decrease_count>0) decrease_stats=decrease_stats+"ã€æ™ºæ…§";
+     else decrease_stats="æ™ºæ…§";
      decrease_count++;
    }
    if (random(rate)<50) {
      dest->set_perm_stat("dex",(int)dest->query_perm_stat("dex")-1);
-     if (decrease_count>0) decrease_stats=decrease_stats+"¡¢Ãô½İ";
-     else decrease_stats="Ãô½İ";
+     if (decrease_count>0) decrease_stats=decrease_stats+"ã€æ•æ·";
+     else decrease_stats="æ•æ·";
      decrease_count++;
    }       
    if (random(rate)<50) {
      dest->set_perm_stat("con",(int)dest->query_perm_stat("con")-1);
-     if (decrease_count>0) decrease_stats=decrease_stats+"¡¢ÌåÖÊ";
-     else decrease_stats="ÌåÖÊ";
+     if (decrease_count>0) decrease_stats=decrease_stats+"ã€é«”è³ª";
+     else decrease_stats="é«”è³ª";
      decrease_count++;
    }
    if (random(rate)<50) {
      dest->set_perm_stat("pie",(int)dest->query_perm_stat("pie")-1);
-     if (decrease_count>0) decrease_stats=decrease_stats+"¡¢ò¯³Ï";
-     else decrease_stats="ò¯³Ï";
+     if (decrease_count>0) decrease_stats=decrease_stats+"ã€è™”èª ";
+     else decrease_stats="è™”èª ";
      decrease_count++;
    }
    if (random(rate)<50) {
      dest->set_perm_stat("kar",(int)dest->query_perm_stat("kar")-1);
-     if (decrease_count>0) decrease_stats=decrease_stats+"¡¢ÔËÆø";
-     else decrease_stats="ÔËÆø";
+     if (decrease_count>0) decrease_stats=decrease_stats+"ã€é‹æ°£";
+     else decrease_stats="é‹æ°£";
      decrease_count++;
    }
    if (decrease_count==0) 
      tell_object(dest,
-            "ÕâÕæÊÇÒ»´ÎÔÙ³É¹¦²»¹ıµÄÊÖÊõ, ²»½öË³Àû°ÑÄã¾È»î, Á¬Ò»µãËğÊ§¶¼\n"+
-            "Ã»ÓĞ¡£Äã¸Ã¿¼ÂÇ°ì¼¸×À¾ÆÏ¯ÇëÇëÕâÎ»ÀÍ¿à¹¦\¸ßµÄÒ½Éú¡£\n");
+            "é€™çœŸæ˜¯ä¸€æ¬¡å†æˆåŠŸä¸éçš„æ‰‹è¡“, ä¸åƒ…é †åˆ©æŠŠä½ æ•‘æ´», é€£ä¸€é»æå¤±éƒ½\n"+
+            "æ²’æœ‰ã€‚ä½ è©²è€ƒæ…®è¾¦å¹¾æ¡Œé…’å¸­è«‹è«‹é€™ä½å‹è‹¦åŠŸé«˜çš„é†«ç”Ÿã€‚\n");
    else 
      tell_object(dest,
-            "ËäÈ»ÕâËãÊÇÒ»´Î³É¹¦µÄÊÖÊõ, µ«ÓÉì¶Ä³Ğ©Ô­ÒòÊ¹ÄãÔÚ"+decrease_stats+
-            "\n¸÷ÊÜµ½Ò»µãµÄËğÊ§¡£\n"+
-            "»°ËäÈç´Ë, ÄÜ°ÑÄã´Ó¹íÃÅ¹ØÀ­»ØÀ´, Äã»¹ÊÇ¸ÃºÃºÃĞ»Ğ»ÄãµÄÖ÷ÖÎ´ó·ò¡£\n"
+            "é›–ç„¶é€™ç®—æ˜¯ä¸€æ¬¡æˆåŠŸçš„æ‰‹è¡“, ä½†ç”±æ–¼æŸäº›åŸå› ä½¿ä½ åœ¨"+decrease_stats+
+            "\nå„å—åˆ°ä¸€é»çš„æå¤±ã€‚\n"+
+            "è©±é›–å¦‚æ­¤, èƒ½æŠŠä½ å¾é¬¼é–€é—œæ‹‰å›ä¾†, ä½ é‚„æ˜¯è©²å¥½å¥½è¬è¬ä½ çš„ä¸»æ²»å¤§å¤«ã€‚\n"
             );
                       
 	return 1;
@@ -327,18 +327,18 @@ int help()
 {
     write(
     @C_HELP
-Ö¸Áî¸ñÊ½: operate <Ä³ÈË> operate <Ä³ÈË> at <²¿Î»>
+æŒ‡ä»¤æ ¼å¼: operate <æŸäºº> operate <æŸäºº> at <éƒ¨ä½>
 
-ÔÚÄ³¸öÈËÎï¸ÕÍ£Ö¹ºôÎüÊ±, ¾­Ñé·á¸»µÄĞĞÒ½ÕßÈÔÓĞ»ú»á¶¯ÊÖÊõ½«Ëû´Ó¹íÃÅ¹Ø
-À­»ØÀ´, ÓÉì¶ÊÖÊõÊÇÒ»ÃÅ¸ßÄÑ¶ÈµÄ¼¼ÇÉ, Ö»ÓĞÔÚ¼±¾ÈÊõ, ½âÆÊÑ§, Ö¹Ñª¼¼ÄÜ
-, ÒÔ¼°ÊÖÊõ¼¼ÄÜ¶¼µÇ·åÔì¼«µÄĞĞÒ½ÕßÓĞ½Ï¸ßµÄ³É¹¦ÂÊ¡£²»¹ı¼´Ê¹³É¹¦¾È»î, 
-¸ÃÈËÎïµÄÄ³Ğ©ÊôĞÔ»¹ÊÇ¿ÉÄÜ»áÊÜµ½Ò»µãµÄËğÊ§¡£
-ÊÖÊõĞëÒªÔÚ¼«×¨ĞÄµÄÇé¿öÏÂ½øĞĞ, Òò´ËĞèÒªºÄ·ÑºÜ¶àµÄ¾«ÉñÁ¦, ¶øÇÒ¹ı³ÌÖĞ
-²»ÄÜÊÜµ½¸ÉÈÅ, Èç¹ûÔÚÊÖÊõÖĞÔâµ½¹¥»÷, ÊÖÊõ±ã±ØÈ»Ê§°Ü¡£
-**¶¯ÊÖÊõµÄÊ±»úÔ½¿ìÔ½ºÃ, Ò»µ©ÈËÎïÊ¬Ìå¿ªÊ¼¸¯ÀÃ, »òÊÇ¸ÃÈËÎïÒÑ¾­»¹Ñô,
-  ÔÙ¶àµÄÅ¬Á¦Ò²ÊÇÍ÷È»¡£
-³ı´ËÖ®Íâ, Ò²¿ÉÒÔ¶Ô»¼ÕßµÄÌØ¶¨²¿Î»½øĞĞÊÖÊõ, Ä¿Ç°Íê³ÉµÄÓĞÒÔÏÂ²¿Î»:
-1.ÑÛ¾¦(eye) : °ïÖúÊ§Ã÷µÄÈËÖØ¼û¹âÃ÷¡£
+åœ¨æŸå€‹äººç‰©å‰›åœæ­¢å‘¼å¸æ™‚, ç¶“é©—è±å¯Œçš„è¡Œé†«è€…ä»æœ‰æ©Ÿæœƒå‹•æ‰‹è¡“å°‡ä»–å¾é¬¼é–€é—œ
+æ‹‰å›ä¾†, ç”±æ–¼æ‰‹è¡“æ˜¯ä¸€é–€é«˜é›£åº¦çš„æŠ€å·§, åªæœ‰åœ¨æ€¥æ•‘è¡“, è§£å‰–å­¸, æ­¢è¡€æŠ€èƒ½
+, ä»¥åŠæ‰‹è¡“æŠ€èƒ½éƒ½ç™»å³°é€ æ¥µçš„è¡Œé†«è€…æœ‰è¼ƒé«˜çš„æˆåŠŸç‡ã€‚ä¸éå³ä½¿æˆåŠŸæ•‘æ´», 
+è©²äººç‰©çš„æŸäº›å±¬æ€§é‚„æ˜¯å¯èƒ½æœƒå—åˆ°ä¸€é»çš„æå¤±ã€‚
+æ‰‹è¡“é ˆè¦åœ¨æ¥µå°ˆå¿ƒçš„æƒ…æ³ä¸‹é€²è¡Œ, å› æ­¤éœ€è¦è€—è²»å¾ˆå¤šçš„ç²¾ç¥åŠ›, è€Œä¸”éç¨‹ä¸­
+ä¸èƒ½å—åˆ°å¹²æ“¾, å¦‚æœåœ¨æ‰‹è¡“ä¸­é­åˆ°æ”»æ“Š, æ‰‹è¡“ä¾¿å¿…ç„¶å¤±æ•—ã€‚
+**å‹•æ‰‹è¡“çš„æ™‚æ©Ÿè¶Šå¿«è¶Šå¥½, ä¸€æ—¦äººç‰©å±é«”é–‹å§‹è…çˆ›, æˆ–æ˜¯è©²äººç‰©å·²ç¶“é‚„é™½,
+  å†å¤šçš„åŠªåŠ›ä¹Ÿæ˜¯æ‰ç„¶ã€‚
+é™¤æ­¤ä¹‹å¤–, ä¹Ÿå¯ä»¥å°æ‚£è€…çš„ç‰¹å®šéƒ¨ä½é€²è¡Œæ‰‹è¡“, ç›®å‰å®Œæˆçš„æœ‰ä»¥ä¸‹éƒ¨ä½:
+1.çœ¼ç›(eye) : å¹«åŠ©å¤±æ˜çš„äººé‡è¦‹å…‰æ˜ã€‚
 C_HELP
 	);
     return 1;

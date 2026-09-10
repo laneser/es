@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wedding scarf", "Ë¿ÖÊÁì½í");
+        set_name("wedding scarf", "çµ²è³ªé ˜å·¾");
         add( "id", ({ "scarf" }) );
-        set_short("a scarf for Gentlemen", "Ë¿ÖÊÁì½í");
+        set_short("a scarf for Gentlemen", "çµ²è³ªé ˜å·¾");
         set_long(
                 "A beautiful scarf for gentlemen on meeting.\n",
-                "Ò»ÌõÄĞÊ¿ÔÚÕıÊ½³¡ºÏ½áµÄÁì½í¡£\n"
+                "ä¸€æ¢ç”·å£«åœ¨æ­£å¼å ´åˆçµçš„é ˜å·¾ã€‚\n"
         );
-        set("unit","Ìõ");
+        set("unit","æ¢");
         set( "type", "cloak" );
         set( "material","cloth" ) ;
         set( "armor_class", 6 );

@@ -13,9 +13,9 @@ int cmd_bribe()
 	
 	me = this_player();
     if( me->query_level() < 5 )
-        return notify_fail("�㵽���������?\n");
+        return notify_fail("你到底想幹嘛啦?\n");
     if( me->query_temp("bribe_busy") )
-    	return notify_fail("ͬʱ��¸�������ǲ����ܵġ�\n");
+    	return notify_fail("同時賄賂兩個人是不可能的。\n");
 
 	victim = me->query_attacker();
 	
@@ -36,28 +36,28 @@ switch( me->query("race") ) {
 		}
 	
 
-	if( !victim ) return notify_fail("��û��ս���У��Ҳ�������������!\n");
+	if( !victim ) return notify_fail("你沒在戰鬥中，找不到對手在哪裡!\n");
 	if( !skill = (int)me->query_skill("polemic") )
-		return notify_fail( "��û��ѧ���������ڲ�Ҳ���ã�����ȥ��¸������ !!!\n");
+		return notify_fail( "你沒有學過辯術，口才也不好，怎麼去賄賂別人呢 !!!\n");
         if( victim->query("prevent_give_money") )
-                return notify_fail("��һ￴���ǲ��ܻ�¸��!\n");
+                return notify_fail("這傢伙看來是不能賄賂的!\n");
         num1 = (victim->query_level()+26)/me->query_level();
 	
 	time = victim->query_temp("bribe_time") ; 
 	num = 5*(1 + time*time)*num1;
 	tp_cost = 65 - (skill / 6) - (5 * charm);
 	if( !tp_cost || (int)me->query("talk_points") < (tp_cost + 1) )
-		return notify_fail("�㽲��̫�໰�ˣ�����һ�仰��˵��������\n");
+		return notify_fail("你講了太多話了，現在一句話都說不出來！\n");
 	if (me->query("wealth/gold")<num+1)
-	        return notify_fail("��¸����ý�ң�����Ľ�Ҳ�����\n");
+	        return notify_fail("賄賂最好用金幣，但你的金幣不夠！\n");
 	else
 		me->add("talk_points", -tp_cost );
 
-	tell_object(me, set_color("��������֮�࣬˫������һ�ѽ�ң���ʼ��¸��Ķ��� ! \n", "HIC",me) );
-	tell_object(victim, set_color("�㿴��"+me->query("c_name")+"����һ�����ĵ�Ц���ߵ�����ǰ��ͼ��¸��! \n", "HIC",victim) ); 
+	tell_object(me, set_color("你鼓起如簧之舌，雙手捧起一把金幣，開始賄賂你的對手 ! \n", "HIC",me) );
+	tell_object(victim, set_color("你看到"+me->query("c_name")+"帶著一臉諂媚的笑容走到你面前試圖賄賂你! \n", "HIC",victim) ); 
         tell_room( environment(me),
-                me->query("c_name")+"������Ц���ߵ�"+
-                victim->query("c_name")+"����ǰ��ͼ��¸����\n" ,({ me, victim }) );
+                me->query("c_name")+"滿臉陪笑的走到"+
+                victim->query("c_name")+"的面前試圖賄賂他。\n" ,({ me, victim }) );
         delay = 6 - skill/10 - (charm+1)/2;  
         if( delay < 0 ) delay = 1;
         else delay = 2;
@@ -84,16 +84,16 @@ int bribe_work(object me, object victim, int charm)
 	num1 = (victim->query_level()+26)/me->query_level();
 	num = 5*(1 + time*time)*num1;
 	if (me->query("wealth/gold")<num+1) 
-	                return notify_fail("����Ϊ��ܴ�����??��ɵ�ˣ�\n");
+	                return notify_fail("你以為你很聰明嗎??別傻了！\n");
 	if ( ! me->query_attackers() || !victim || victim->query("hit_points") < 1) {
-		tell_object(me,"���ս�������ˣ���Ҫ�˷�Ǯ��! \n");
+		tell_object(me,"你的戰鬥結束了，不要浪費錢了! \n");
 		return 1;
 	}
 	if( skill+chance+random(3*charm)+random(skill) < vic_int+vic_level ) {
-		tell_object(me,set_color("��ĵ��˺ܸ��˵Ľӹ������ϵĽ�ң�Ȼ���������!\n", "HIG",me) );
-		tell_object(victim,set_color("��ҡͷ̾��: �����ķ��ӣ�����Ǯ����Ǯ����! \n", "HIC",victim) );
+		tell_object(me,set_color("你的敵人很高興的接過你手上的金幣，然後繼續打你!\n", "HIG",me) );
+		tell_object(victim,set_color("你搖頭嘆道: 可憐的瘋子，臨死錢還送錢給我! \n", "HIC",victim) );
 	        tell_room( environment(me),"\n"+
-		victim->query("c_name")+"ҡͷ̾��: �����ķ��ӣ�����Ǯ����Ǯ����! \n\n" ,
+		victim->query("c_name")+"搖頭嘆道: 可憐的瘋子，臨死錢還送錢給我! \n\n" ,
 	        ({ me, victim }) );
 		me->add("wealth/gold",-num);
 		victim->add("wealth/gold",num);
@@ -107,14 +107,14 @@ int bribe_work(object me, object victim, int charm)
 	victim->add("wealth/gold",num);
 	victim->add_temp("bribe_time",1);
 	tell_object( me, set_color( 
-		"��ɹ���˵�����ˣ���һЩ��һ������ݵĺ�ƽ....\n", "HIY",me) );
+		"你成功的說服敵人，用一些金幣換來短暫的和平....\n", "HIY",me) );
 		
 	tell_object(victim, set_color( 
-		me->query("c_name")+"����һ��ѽ�ң��㿴���ۻ����ң�ɥʧ��50%��ս����־��\n", "HIM",victim));
+		me->query("c_name")+"給你一大把金幣，你看的眼花撩亂，喪失了50%的戰鬥意志。\n", "HIM",victim));
 
 	tell_room( environment(me), "\n"+
-		me->query("c_name")+"�ó�һ��ѽ������"+
-		victim->query("c_name")+"�����ϣ�ʹ����ֹͣ��"+me->query("c_name")+"�Ĺ�����\n\n" ,
+		me->query("c_name")+"拿出一大把金幣塞到"+
+		victim->query("c_name")+"的身上，使得他停止對"+me->query("c_name")+"的攻擊。\n\n" ,
 		({ me, victim }) );
                 return 1;
 }
@@ -122,14 +122,14 @@ int help()
 {
    write(
 @C_HELP
-ָ���ʽ: bribe 
+指令格式: bribe 
    
-���ָ��������������ս��ʱʹ�ý��ȥ��¸���ˣ���ʹ�������
-��ĵ��⡣�ɹ��Ļ����뻨�ѵĽ����Ŀ��ʹ���߱����ı����й�
-ͬʱҲ����˵������йأ���ʩ���ɹ������ȥһ������Ҫ��ս��
-����ʧ�����㽫��ʧһ��Ǯ��
-����õ�����ǰ��������Ļ�¸�����ٳɹ��Ļ�¸����Ҫ��������
-����Ľ�Ǯ��
+這個指令讓你有能力在戰鬥時使用金幣去賄賂敵人，並使其放棄對
+你的敵意。成功的機率與花費的金幣數目與使用者本身的辯術有關
+同時也與敵人的智力有關，若施術成功則可免去一場不必要的戰爭
+，若失敗則你將損失一筆錢。
+如果該敵人先前曾接受你的賄賂，想再成功的賄賂則需要付出比上
+更多的金錢。
 C_HELP
    );
    return 1;

@@ -95,11 +95,11 @@ void unwield(int silent)
 		secondwep = fellow->query("weapon2");
 		if( !silent ) {
 			tell_object( fellow, 
-				sprintf("Äã½«ÊÖÖÐµÄ%s·ÅÏÂ¡£\n",query("short"))
+				sprintf("ä½ å°‡æ‰‹ä¸­çš„%sæ”¾ä¸‹ã€‚\n",query("short"))
 			);
 			if( environment(fellow) )
 				tell_room( environment(fellow), 
-					sprintf("%s½«ÊÖÖÐµÄ%s·ÅÏÂ¡£\n" ,
+					sprintf("%så°‡æ‰‹ä¸­çš„%sæ”¾ä¸‹ã€‚\n" ,
 						fellow->query("c_name"),query("short") ),
 					fellow
 				);
@@ -223,9 +223,9 @@ int wand_hit( object victim, int damage )
 		if( !c_msg ) c_msg = msg;
 		if( !msg ) return 0;
 		tell_object( holder, 
-			sprintf("ÄãµÄ%s%s\n",query("c_name"),msg));
+			sprintf("ä½ çš„%s%s\n",query("c_name"),msg));
 		tell_room( environment(holder), 
-			sprintf("%sµÄ%s%s\n",
+			sprintf("%sçš„%s%s\n",
 				holder->query("c_name") ,query("c_name"),msg),
 			holder );
 		return dam;

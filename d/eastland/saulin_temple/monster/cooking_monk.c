@@ -4,12 +4,12 @@ void create ()
 {
         ::create();
         set_level(9);
-        set_name( "Cooking monk", "ÕÆ³øÊ¦¸¸" );
+        set_name( "Cooking monk", "æŒå»šå¸«çˆ¶" );
         add ("id", ({ "monk","cooking" }) );
-        set_short("ÕÆ³øÊ¦¸¸");
-        set("unit","Î»");
+        set_short("æŒå»šå¸«çˆ¶");
+        set("unit","ä½");
         set_long(
-           "ËûÊÇÒ»Î»Ç¿×³µÄºÍÉĞ£¬ËûµÄÖ°ÔğÊÇ¸ºÔğÈ«ËÂµÄ»ïÊ³¡£\n"
+           "ä»–æ˜¯ä¸€ä½å¼·å£¯çš„å’Œå°šï¼Œä»–çš„è·è²¬æ˜¯è² è²¬å…¨å¯ºçš„ä¼™é£Ÿã€‚\n"
         );
         set("alignment",200);
         set("wealth/silver",50);
@@ -27,6 +27,6 @@ void create ()
         set("aim_difficulty", ([ "critical" : 10, "vascular" : 4, ]) );
         set ("gender", "male");
         set ("race", "human");
-        set_c_limbs(({ "ÉíÌå", "Í·²¿", "½Å²¿", "ÊÖ±Û"}));
+        set_c_limbs(({ "èº«é«”", "é ­éƒ¨", "è…³éƒ¨", "æ‰‹è‡‚"}));
         wield_weapon(SAULIN_OBJ"scoop");
 }

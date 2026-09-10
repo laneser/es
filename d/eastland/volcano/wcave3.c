@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short( "�ص���ͷ" );
+        set_short( "地道盡頭" );
         set_long(
 @LONG
-��վ�ڵص��ľ�ͷ��һ��С��������ͨȥ�����ػ��ɣ�������ǳ����ˡ�
+你站在地道的盡頭，一個小土階往上通去，不必懷疑，上面就是出口了。
 LONG
         );
 	set( "exits", ([

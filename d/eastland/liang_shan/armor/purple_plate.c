@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("purple platemail","×ÏĞåÍÅĞØÕ½¼×");
+    set_name("purple platemail","ç´«ç¹¡åœ˜èƒ¸æˆ°ç”²");
     add("id",({"plate","platemail"}) );
-    set_short( "purple platemail","×ÏĞåÍÅĞØÕ½¼×");
+    set_short( "purple platemail","ç´«ç¹¡åœ˜èƒ¸æˆ°ç”²");
 	set_long(
 		"This is a platemail with beautiful marks....\n",
-		"ÕâÊÇÒ»¼şÃÀÀöµÄÕ½¼×£¬ĞØÇ°ĞåÂúÁËÃÀÀöµÄÍ¼°¸£¬ÁîÈËĞÄ¿õÉñâù£¬Äã¾õ\n"
-		"µÃÓµÓĞËüµÄÈË±Ø¶¨ÊÇ¸öºÜÓĞÆ·Î¶µÄÈË£®\n"
+		"é€™æ˜¯ä¸€ä»¶ç¾éº—çš„æˆ°ç”²ï¼Œèƒ¸å‰ç¹¡æ»¿äº†ç¾éº—çš„åœ–æ¡ˆï¼Œä»¤äººå¿ƒæ› ç¥æ€¡ï¼Œä½ è¦º\n"
+		"å¾—æ“æœ‰å®ƒçš„äººå¿…å®šæ˜¯å€‹å¾ˆæœ‰å“å‘³çš„äººï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 130 );
 	set( "type", "body" );
 	set( "armor_class", 25 );

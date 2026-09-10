@@ -17,15 +17,15 @@ void arrive();
 void create()
 {
 	seteuid(getuid());
-//	set_name( "gate","¶İ¼×Ö®ÃÅ" );
+//	set_name( "gate","éç”²ä¹‹é–€" );
 	set("name","gate");
 	add( "id", ({ "gate" }) );
-	set_short( "¶İ¼×Ö®ÃÅ" );
+	set_short( "éç”²ä¹‹é–€" );
 	set_long(@LONG
-ÕâÊÇ´«ËµÖĞÏÉÈËÓÃÆæÃÅ¶İ¼×Ö®Êõ£¬ËùÔì³öµÄÃÅ£¬ÔÚÎ÷·½¾ÍÊÇËùÎ½µÄ´«ËÍ
-Êõ£¬ËäÈ»ËµÊÇÃÅ£¬µ«ÕâÊÇÕÒ²»µ½ÌØ¶¨Ãû´Ê²ÅÕâ÷áËµµÄ£¬ÊÂÊµÉÏËü²»¹ıÊÇ
-¸öÉÁÖø¹âÃ¢µÄ³¤·½ĞÎ¿ò¿ò£¬ÌıËµËü»áÔÚ²»Í¬µÄÊ±¼ä³öÏÖÔÚ²»Í¬µØ·½£¬Ïë
-½øÈ¥µÄ»°ÓÃ½øÈë(enter)ÊÔÊÔ¿´¡£
+é€™æ˜¯å‚³èªªä¸­ä»™äººç”¨å¥‡é–€éç”²ä¹‹è¡“ï¼Œæ‰€é€ å‡ºçš„é–€ï¼Œåœ¨è¥¿æ–¹å°±æ˜¯æ‰€è¬‚çš„å‚³é€
+è¡“ï¼Œé›–ç„¶èªªæ˜¯é–€ï¼Œä½†é€™æ˜¯æ‰¾ä¸åˆ°ç‰¹å®šåè©æ‰é€™éº¼èªªçš„ï¼Œäº‹å¯¦ä¸Šå®ƒä¸éæ˜¯
+å€‹é–ƒè‘—å…‰èŠ’çš„é•·æ–¹å½¢æ¡†æ¡†ï¼Œè½èªªå®ƒæœƒåœ¨ä¸åŒçš„æ™‚é–“å‡ºç¾åœ¨ä¸åŒåœ°æ–¹ï¼Œæƒ³
+é€²å»çš„è©±ç”¨é€²å…¥(enter)è©¦è©¦çœ‹ã€‚
 LONG
  );
 	set( "prevent_get", 1 );
@@ -46,7 +46,7 @@ int do_enter(string arg)
 	{
 	write(@LONG
 	
-ÄãÒª½øÈëÉ¶¶«¶«Ñ½£¿
+ä½ è¦é€²å…¥å•¥æ±æ±å‘€ï¼Ÿ
 
 LONG
               );
@@ -56,14 +56,14 @@ LONG
 	{
 	write(@LONG
 	
-¿ç¹ı¶İ¼×Ö®ÃÅ£¬Äãµ½´ïÁíÒ»¸öĞÂµÄ¿Õ¼ä¡£
+è·¨ééç”²ä¹‹é–€ï¼Œä½ åˆ°é”å¦ä¸€å€‹æ–°çš„ç©ºé–“ã€‚
 
 LONG
 
             );
 	this_player()->move_player( ROOM_OBJ,
-		"\n"+this_player()->query("c_name")+"½øÁË¶İ¼×Ö®ÃÅ¡£\n",
-	        "\n"+this_player()->query("c_name")+"´Ó¶İ¼×Ö®ÃÅ½øÀ´ÁË¡£\n" );
+		"\n"+this_player()->query("c_name")+"é€²äº†éç”²ä¹‹é–€ã€‚\n",
+	        "\n"+this_player()->query("c_name")+"å¾éç”²ä¹‹é–€é€²ä¾†äº†ã€‚\n" );
 	return 1;
 	}
 }
@@ -78,7 +78,7 @@ void announce()
 	if( !gate_room ) ROOM_OBJ->frog(); // Load the room
 	gate_room = find_object(ROOM_OBJ);
 
-	tell_room( environment(this_object()),"\n¶İ¼×Ö®ÃÅµÄĞÎÌå½¥½¥Ä£ºı¡£\n\n" );
+	tell_room( environment(this_object()),"\néç”²ä¹‹é–€çš„å½¢é«”æ¼¸æ¼¸æ¨¡ç³Šã€‚\n\n" );
 	call_out( "lets_go", 20 );
 }
 
@@ -92,7 +92,7 @@ void lets_go()
 	if( !gate_room ) ROOM_OBJ->frog(); // Load the room
 	gate_room = find_object(ROOM_OBJ);
 
-	tell_room( environment(this_object()), "\nÖÜÎ§µÄ¿Õ¼ä»Ö¸´Ô­Ñù£¬¶İ¼×Ö®ÃÅ²»¼ûÁË¡£\n\n" );
+	tell_room( environment(this_object()), "\nå‘¨åœçš„ç©ºé–“æ¢å¾©åŸæ¨£ï¼Œéç”²ä¹‹é–€ä¸è¦‹äº†ã€‚\n\n" );
 	call_out( "arrive", schedule[loc][3] );
 	ROOM_OBJ->set_location( "virtual" );
 	loc = next_loc;
@@ -107,7 +107,7 @@ void arrive()
 	gate_room = find_object(ROOM_OBJ);
 
 	ROOM_OBJ->set_location( schedule[loc][0], schedule[loc][1] );
-	tell_room( environment(this_object()),"\nÖÜÎ§µÄ¿Õ¼ä¿ªÊ¼Å¤Çú£¬¶İ¼×Ö®ÃÅÖğ½¥ĞÎ³ÉÁË\n\n" );
+	tell_room( environment(this_object()),"\nå‘¨åœçš„ç©ºé–“é–‹å§‹æ‰­æ›²ï¼Œéç”²ä¹‹é–€é€æ¼¸å½¢æˆäº†\n\n" );
 	call_out( "announce", schedule[loc][2]-20 );
 }
 

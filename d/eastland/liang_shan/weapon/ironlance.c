@@ -5,14 +5,14 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("iron lance","»ëÌúµã¸ÖÇ¹");
+       set_name("iron lance","æ¸¾éµé»žé‹¼æ§");
        add("id",({"iron-lance","lance",}) );
-       set_short("»ëÌúµã¸ÖÇ¹");
+       set_short("æ¸¾éµé»žé‹¼æ§");
 	   set_long(
-           "Ò»°ÑÌúÖÆµÄ³¤Ç¹£¬¼â¶Ë×°ÊÎÄ«ÂÌÉ«µÄÇ¹Ó§£®\n"
+           "ä¸€æŠŠéµè£½çš„é•·æ§ï¼Œå°–ç«¯è£é£¾å¢¨ç¶ è‰²çš„æ§çº“ï¼Ž\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
         set("type","jousting");
 	set( "min_damage", 25 );
@@ -22,7 +22,7 @@ void create()
 	set( "value", ({ 610, "gold" }) );
     set("hit_func","lance_damage");
     set("special_damage",10);
-    set("special_c_msg","ÉÏµÄÇ¹Ó§£¬ÕÚ×¡µÐÈËµÄÊÓÏß£¬Ê¹ÆäÎÞ·¨¹¥»÷£®\n\n");
+    set("special_c_msg","ä¸Šçš„æ§çº“ï¼Œé®ä½æ•µäººçš„è¦–ç·šï¼Œä½¿å…¶ç„¡æ³•æ”»æ“Šï¼Ž\n\n");
 }
 
 int lance_damage(object victim,int damage)
@@ -55,9 +55,9 @@ int lance_damage(object victim,int damage)
 //		if( !msg ) return 0;
 // It has bug, It will let damage_count no set 0, so player can hit every round after 6 round
 		tell_object( holder, 
-			"\nÄãµÄ"+query("c_name")+c_msg+"\n");
+			"\nä½ çš„"+query("c_name")+c_msg+"\n");
 		tell_room( environment(holder), 
-			"\n" + holder->query("c_cap_name") + "µÄ"+query("c_name")+c_msg+"\n",
+			"\n" + holder->query("c_cap_name") + "çš„"+query("c_name")+c_msg+"\n",
 			holder );
 		damage_count=0;
 		return dam;

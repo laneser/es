@@ -9,12 +9,12 @@ int inwar;
 void create()
 {
 	::create();
-	set_short("ËþÂ¥¶¥Â¥");
+	set_short("å¡”æ¨“é ‚æ¨“");
 	set_long( @C_LONG_DESCRIPTION
-ÄãÏÖÔÚÀ´µ½Ò»×ùËþÂ¥µÄÂ¥¶¥£¬´ÓÕâÀï¿ÉÒÔÔ¶Ì÷Åµ´ïÄáÑÇËÄÖÜµÄ¾°Îï£¬±±·½
-ÊÇÒ»Æ¬ÝîÓôµÄÉ­ÁÖ£¬¶«±±·½»·ÈÆÖøºÚÉ«É½¹ÈµÄ´óÉ½¸øÈËÒ»ÖÖÄªÃûµÄÑ¹ÆÈ¸Ð£¬Õâ
-ÀïÒ²ÊÇÅµ´ïÄáÑÇ¾ü¶ÓµÄÁËÍûÌ¨£¬Ò»µ©ÓÐµÐÈËÀ´Ï®£¬ÕâÀïµÄÎÀ±ø¾Í»áÂíÉÏÈ¥±¨¸æ
-ÊØ¾ü½«Áì¡£
+ä½ ç¾åœ¨ä¾†åˆ°ä¸€åº§å¡”æ¨“çš„æ¨“é ‚ï¼Œå¾žé€™è£¡å¯ä»¥é çœºè«¾é”å°¼äºžå››å‘¨çš„æ™¯ç‰©ï¼ŒåŒ—æ–¹
+æ˜¯ä¸€ç‰‡è“Šé¬±çš„æ£®æž—ï¼Œæ±åŒ—æ–¹ç’°ç¹žè‘—é»‘è‰²å±±è°·çš„å¤§å±±çµ¦äººä¸€ç¨®èŽ«åçš„å£“è¿«æ„Ÿï¼Œé€™
+è£¡ä¹Ÿæ˜¯è«¾é”å°¼äºžè»éšŠçš„çž­æœ›è‡ºï¼Œä¸€æ—¦æœ‰æ•µäººä¾†è¥²ï¼Œé€™è£¡çš„è¡›å…µå°±æœƒé¦¬ä¸ŠåŽ»å ±å‘Š
+å®ˆè»å°‡é ˜ã€‚
 C_LONG_DESCRIPTION
 	);
 
@@ -43,17 +43,17 @@ int do_brandish(string arg)
    if( !arg || (arg!="sword of markara" && arg!="markara"
         && arg!="sword") ) return 0;
    if( !present("sword of markara",this_player()) )
-        return notify_fail("ÄãÓÃÁ¦µØ»ÓÎèÖøË«ÊÖ¡£\n" );
+        return notify_fail("ä½ ç”¨åŠ›åœ°æ®èˆžè‘—é›™æ‰‹ã€‚\n" );
    if( this_player()->query_level()<5 )
-     return notify_fail("Äã¾ÙÆðÂê¿¨À­Ö®½££¬ÏòÌì¿Õ»ÓÎèÖø, µ«ÊÇÃ»ÈË×¢ÒâÄã¡£\n" );
-   if( inwar ) return notify_fail("Ä¬¶ûË¹´ó¾üÒÑ¾­½ø¹¥ÁË, ²»ÐèÒªÔÙ»Ó½£ÁË!\n");
+     return notify_fail("ä½ èˆ‰èµ·ç‘ªå¡æ‹‰ä¹‹åŠï¼Œå‘å¤©ç©ºæ®èˆžè‘—, ä½†æ˜¯æ²’äººæ³¨æ„ä½ ã€‚\n" );
+   if( inwar ) return notify_fail("é»˜çˆ¾æ–¯å¤§è»å·²ç¶“é€²æ”»äº†, ä¸éœ€è¦å†æ®åŠäº†!\n");
 
    guard = present("tower guard",environment(this_player()));
    sword = present("sword of markara",this_player());
 
-   tell_object( this_player(),"Äã¾ÙÆðÂê¿¨À­Ö®½££¬ÏòÌì¿Õ»ÓÎèÖø¡£\n" );
+   tell_object( this_player(),"ä½ èˆ‰èµ·ç‘ªå¡æ‹‰ä¹‹åŠï¼Œå‘å¤©ç©ºæ®èˆžè‘—ã€‚\n" );
    tell_room( environment(this_player()), 
-sprintf( "%s¾ÙÆðÂê¿¨À­Ö®½£³¯ÖøÌì¿Õ»ÓÎè¡£\n",this_player()->query("c_name")), this_player() );
+sprintf( "%sèˆ‰èµ·ç‘ªå¡æ‹‰ä¹‹åŠæœè‘—å¤©ç©ºæ®èˆžã€‚\n",this_player()->query("c_name")), this_player() );
    sword->remove();
    this_player()->add( "alignment", -1000 );
    this_player()->set_temp( "war_spy", 1 );
@@ -62,7 +62,7 @@ sprintf( "%s¾ÙÆðÂê¿¨À­Ö®½£³¯ÖøÌì¿Õ»ÓÎè¡£\n",this_player()->query("c_name")), thi
 
    if( present("tower guard",environment(this_player())) ) {
      tell_room(environment(this_player()),
-        "\n¿´ÊØËþÂ¥µÄÎÀ±øÅ­µÀ: ¿É¶ñµÄ¼äµý! ÏÂµØÓü°É!!\n\n" );
+        "\nçœ‹å®ˆå¡”æ¨“çš„è¡›å…µæ€’é“: å¯æƒ¡çš„é–“è«œ! ä¸‹åœ°ç„å§!!\n\n" );
      guard->kill_ob(this_player());
      this_player()->kill_ob(guard);
      return 1;

@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-   set_name("silk gloves", "°×É«´¿Ë¿ĞÂÄïÊÖÌ×");
+   set_name("silk gloves", "ç™½è‰²ç´”çµ²æ–°å¨˜æ‰‹å¥—");
         add( "id", ({"gloves" }) );
-   set_short("°×É«´¿Ë¿ĞÂÄïÊÖÌ×");
+   set_short("ç™½è‰²ç´”çµ²æ–°å¨˜æ‰‹å¥—");
         set_long(
-                "Ò»Ë«ÌìÈ»´¿Ë¿Ö¯³ÉµÄ°×É«ĞÂÄïÊÖÌ×¡£\n"
+                "ä¸€é›™å¤©ç„¶ç´”çµ²ç¹”æˆçš„ç™½è‰²æ–°å¨˜æ‰‹å¥—ã€‚\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "hands" );
         set("material","cloth");
         set( "armor_class", 6 );
@@ -25,7 +25,7 @@ stop_equip(object owner)
 {
         if ( (string)this_player()->query("gender") != "female") {
         printf(
-                  "±ğ¿ªÍæĞ¦ÁË, ÄãÏëµ±ÈËÑıÂğ?\n" );
+                  "åˆ¥é–‹ç©ç¬‘äº†, ä½ æƒ³ç•¶äººå¦–å—?\n" );
         return 1;
         }
 }

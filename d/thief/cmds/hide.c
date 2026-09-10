@@ -8,7 +8,7 @@ inherit DAEMON;
 int hide_idle(object me,int succeed)
 {
 	me->set_temp("hidden",0);
-// ���� hidding = 0 ; ʹ hiden �ĳɹ������ۼӵ�Ч��
+// 不設 hidding = 0 ; 使 hiden 的成功率有累加的效果
 //	me->set_temp("hidding",0);  
 //	tell_object(me, (succeed ) ? "succeed\n": "fault\n" );
 	if ( succeed ) 
@@ -37,13 +37,13 @@ int check_hide(object me)
 	rate = level*level/8 + ( 2*kar+3*dex+3*iq )/2;
 	rate = rate * (int)me->query_skill("hide")/100 ;
 // level bonus
-// ÿ�弶�ӳɹ��� 3
+// 每五級加成功率 3
 	rate += 3*(level+2)/5 ;
 	rate = ( rate > 95 ? 95 : rate );
 //   level -> 60 % for level 19
 //	 attrs -> 45 % for full 
 */
-// ֻ�� skill �й� ....
+// 只跟 skill 有關 ....
    	if ( random( 90 ) < (int)me->query_skill("hide")  )
    		return 1;
    	else
@@ -52,10 +52,10 @@ int check_hide(object me)
 int cmd_hide()
 {
 	if ( this_player()->query_temp("hidden") )
-		return notify_fail("�����ڵ������ز� ...\n");
-	write(set_color("�㿪ʼ�������ز� ...\n","HIY"));
+		return notify_fail("你正在到處躲躲藏藏 ...\n");
+	write(set_color("你開始到處躲躲藏藏 ...\n","HIY"));
 	tell_room(environment(this_player()),
-			sprintf("%s��ʼ�������ز� ...\n",this_player()->query("c_name"))
+			sprintf("%s開始到處躲躲藏藏 ...\n",this_player()->query("c_name"))
 			,this_player() );
 	this_player()->set_temp("hidden",1);
 	call_out("hide_idle",3,this_player(),check_hide(this_player()));
@@ -67,9 +67,9 @@ int help()
 	write (@HELP
 Usage: hide
 
-���ָ����ʹ�����ø��ֵ��ε����������Լ���ʹ�����ܵ��˲��ٶ���
-�����н��ģ�����ɹ�\�Ļ����㽫��ʱ��������ǰ��ʧ��ֱ�����ٴ���
-�����ǵĺ����ġ�
+這個指令能使你利用各種地形地物來隱藏自己，使得四周的人不再對你
+對你有戒心，如果成功的話，你將暫時從他們面前消失，直到你再次引
+起他們的好奇心。
 
 HELP
 );

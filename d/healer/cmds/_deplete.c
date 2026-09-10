@@ -1,4 +1,4 @@
-//	_deplete.c	��Ѫ�ⶾ��
+//	_deplete.c	放血解毒術
 //
 //		Lilia
 	////#pragma save_binary
@@ -15,39 +15,39 @@ int cmd_deplete(string arg)
     mixed poisoned;
 
     if (!arg || arg == "" || !(dest = present(arg, environment(this_player()))))
-  	return notify_fail("������˭�ⶾ? \n");
+  	return notify_fail("你想替誰解毒? \n");
     
-    if (!living(dest)) return notify_fail("��������������ж���? \n");
+    if (!living(dest)) return notify_fail("這個「東西」會中毒嗎? \n");
 
-    if (dest->query("npc")) return notify_fail("�㲻���� NPC ��Ѫ��\n");
+    if (dest->query("npc")) return notify_fail("你不能替 NPC 放血。\n");
 
-    if (dest->query("ghost")) return notify_fail("Ҫ�ϴ�����ʵ�ҽѧԺȥ����Ҫ����������Ц��\n");
+    if (dest->query("ghost")) return notify_fail("要上大體解剖到醫學院去，不要拿死□開玩笑！\n");
     
     weapon = this_player()->query("weapon1");
     if ((!weapon) || (string)weapon->query("type") != "dagger")
-	return notify_fail("��û��װ���ʵ��Ĺ��ߣ�û�취��Ѫ��\n");
+	return notify_fail("你沒有裝備適當的工具，沒辦法放血。\n");
 
     if (this_player()->query("stop_attack") != 0)
-        return notify_fail("����ϸ�������û����ɣ�û�취���˷�Ѫ��\n");
+        return notify_fail("你的上個動作還沒有完成，沒辦法替人放血。\n");
 
     if (!(poisoned = dest->query("conditions/simple_poison")))
-        return notify_fail("�� PK ֱ�Ӵ� kill <ĳ��> �Ϳ����ˣ����ط�Ѫ��\n");
+        return notify_fail("想 PK 直接打 kill <某人> 就可以了，不必放血。\n");
 
     if (dest->query_temp("depleted"))
-	return notify_fail("���߸շŹ�Ѫ�������������з�Ѫ��\n");
+	return notify_fail("患者剛放過血，不能立刻再行放血。\n");
     
     if ((int)dest->query("hit_points") <= 20)
-	return notify_fail("�����Ѿ�����һϢ�ˣ����¾������Ѫ�����ơ�\n");
+	return notify_fail("患者已經奄奄一息了，恐怕經不起放血的治療。\n");
 
     skill = (int)this_player()->query_skill("clotting");
-    if (!skill) return notify_fail("ûѧ��ֹѪ�����Ѫ? ���ð� ....\n");
+    if (!skill) return notify_fail("沒學過止血就想放血? 不好吧 ....\n");
 
     skill2 = (int)this_player()->query_skill("anatomlogy");
-    if (!skill2) return notify_fail("ûѧ������ѧ�����Ѫ? ��ȥ����ʮ��������!\n");
+    if (!skill2) return notify_fail("沒學過解剖學就想放血? 回去練個十年再來吧!\n");
 
-    write("����" + dest->query("c_name") + "���з�Ѫ ....\n");
-    tell_object(dest, this_player()->query("c_name") + "������з�Ѫ ... ����úö���!\n");
-    tell_room(environment(this_player()), this_player()->query("c_name") + "��" + dest->query("c_name") + "���з�Ѫ��\n", ({this_player(), dest}));
+    write("你替" + dest->query("c_name") + "進行放血 ....\n");
+    tell_object(dest, this_player()->query("c_name") + "替你進行放血 ... 你覺得好多了!\n");
+    tell_room(environment(this_player()), this_player()->query("c_name") + "替" + dest->query("c_name") + "進行放血。\n", ({this_player(), dest}));
    
     if (dest != this_player()) this_player()->add("alignment", 25);
 
@@ -78,12 +78,12 @@ int help()
 {
     write(
     @C_HELP
-ָ���ʽ�� deplete <ĳ��>
+指令格式： deplete <某人>
 
-���ָ��������ĳ�������Ѫ�ⶾ����Ѫ�Ľ����������ȫ��ȥ���ԣ�
-���ǽ����Լ��롣�������Ƿ���ȫ�ɹ������ߵ��������п��ܻ��½���
-����ʩ���ߵ�ֹѪ�����йء��Ź�Ѫ���˴�Լ���������ڲ����ٶȷ�Ѫ
-�ⶾ������ѪҺ��ʧ���ࡣ
+這個指令讓你替某個人物放血解毒，放血的結果可能是完全解去毒性，
+或是將毒性減半。但不論是否完全成功，患者的體力都有可能會下降，
+這與施術者的止血技能有關。放過血的人大約在兩分鐘內不能再度放血
+解毒，以免血液流失過多。
 C_HELP
     );
     return 1;

@@ -6,17 +6,17 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "special ghost", "÷Í¹í" );
+	set_name( "special ghost", "é­é¬¼" );
 	add( "id", ({ "ghost" }) );
-	set_short( "÷Í¹í" );
+	set_short( "é­é¬¼" );
 	set_long(@LONG
-÷Ë¹í³¤µÄÏñ¸öÈýËêÍÞÍÞ£¬Í¨ÉíºÚ¡õÍ¸ºì£¬³¤¶ú¶ä£¬ºìÑÛ¾¦£¬ÎÚºÚ¹â¡õµÄ³¤Í··¢£¬Ï²
-»¶Ñ§ÈËËµ»°µÄÉùÒôÀ´ÃÔ»óÈË¡£÷Í¹íºÍ÷È¹íÒ»Ñù¶¼¾åÅÂÁúµÄÉùÒô£¬»°ËäÈç´Ë£¬ËüÒ»Ñù
-²»ºÃÈÇ¡£
+é­Žé¬¼é•·çš„åƒå€‹ä¸‰æ­²å¨ƒå¨ƒï¼Œé€šèº«é»‘â–¡é€ç´…ï¼Œé•·è€³æœµï¼Œç´…çœ¼ç›ï¼Œçƒé»‘å…‰â–¡çš„é•·é ­é«®ï¼Œå–œ
+æ­¡å­¸äººèªªè©±çš„è²éŸ³ä¾†è¿·æƒ‘äººã€‚é­é¬¼å’Œé­…é¬¼ä¸€æ¨£éƒ½æ‡¼æ€•é¾çš„è²éŸ³ï¼Œè©±é›–å¦‚æ­¤ï¼Œå®ƒä¸€æ¨£
+ä¸å¥½æƒ¹ã€‚
 LONG
 	);
-	set( "unit", "¸ö" );
-        set( "race","¹í");
+	set( "unit", "å€‹" );
+        set( "race","é¬¼");
 	set( "alignment", -300 );
 	set_natural_armor(50,25);
 	set_natural_weapon(20,7,11);
@@ -43,7 +43,7 @@ int my_tactic()
     object victim;
     if ( !victim=query_attacker() ) return 0;
     if ( random(10) > 1 ) return 0;
-    tell_room(environment(),"÷Í¹í¿Ú·¢ÃùÃùµÄÉùÒô£¡\n");
+    tell_room(environment(),"é­é¬¼å£ç™¼é³´é³´çš„è²éŸ³ï¼\n");
     (CONDITION_PREFIX + "confused")->apply_effect( victim, 10, 7 );          
     hurt_all("evil",30);
     return 1;    

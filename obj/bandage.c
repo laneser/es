@@ -9,13 +9,13 @@ inherit OBJECT;
 void create()
 {
 #include <compress_obj.h>
-	set_name( "bandage", "±Á´ø" );
-	set_short("±Á´ø" );
+	set_name( "bandage", "ç¹ƒå¸¶" );
+	set_short("ç¹ƒå¸¶" );
 	set_long(
-		"±Á´øÊÇÒ»ÖÖ³£¼ûµÄ¡¢ÓÃÀ´Ê¹ÊÜÉËµÄÈË¼Ó¿ì»Ö¸´ËÙ¶ÈµÄÒ½Ò©ÓÃÆ·£¬Èç¹û\n"
-		"ÄãÑ§¹ıÉË¿Ú°üÔúµÄ¼¼ÄÜ£¬¾Í¿ÉÒÔÓÃ bandage Ö¸ÁîÌæ×Ô¼º»ò±ğÈË°üÔú¡£\n"
+		"ç¹ƒå¸¶æ˜¯ä¸€ç¨®å¸¸è¦‹çš„ã€ç”¨ä¾†ä½¿å—å‚·çš„äººåŠ å¿«æ¢å¾©é€Ÿåº¦çš„é†«è—¥ç”¨å“ï¼Œå¦‚æœ\n"
+		"ä½ å­¸éå‚·å£åŒ…ç´®çš„æŠ€èƒ½ï¼Œå°±å¯ä»¥ç”¨ bandage æŒ‡ä»¤æ›¿è‡ªå·±æˆ–åˆ¥äººåŒ…ç´®ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "weight", 5 );
 	set( "value", ({ 15, "silver" }) );
 }
@@ -35,35 +35,35 @@ int do_bandage(string arg)
 	// The player must carry the bandage before he can bandage.
 	if( environment()!=this_player() ) return 0;
 
-	if( query("in_use") ) return notify_fail("Õâ¾í±Á´øÒÑ¾­ÔÚÊ¹ÓÃÖĞÁË¡£\n");
+	if( query("in_use") ) return notify_fail("é€™å·ç¹ƒå¸¶å·²ç¶“åœ¨ä½¿ç”¨ä¸­äº†ã€‚\n");
 				
 	if( !arg || arg=="me" || arg=="myself" ) dest = this_player();
 	else dest = present( arg, environment(this_player()) );
 	if( !dest )
-		return notify_fail("ÄãÒª°üÔúË­£¿\n");
+		return notify_fail("ä½ è¦åŒ…ç´®èª°ï¼Ÿ\n");
 
 	if( (int)dest->query_temp("bandaged") >= time()) {
-		write("Èç¹ûÄãÒªÖØĞÂ°üÔú£¬ÇëÏÈ³ıÈ¥(remove)Ô­À´µÄ±Á´ø¡£\n");
+		write("å¦‚æœä½ è¦é‡æ–°åŒ…ç´®ï¼Œè«‹å…ˆé™¤å»(remove)åŸä¾†çš„ç¹ƒå¸¶ã€‚\n");
 		return 1;
 	}
 
 	if( dest->query("hit_points")==dest->query("max_hp") ) {
-		write("±Á´øÖ»ÄÜÓÃÀ´°üÔúÊÜÉËµÄÈË¡£\n");
+		write("ç¹ƒå¸¶åªèƒ½ç”¨ä¾†åŒ…ç´®å—å‚·çš„äººã€‚\n");
 		return 1;
 	}
 	
 	// Ok, now do the bandage stuff.
 	if( dest==this_player()) {
-		write("ÄãÏ¸ĞÄµØÎª×Ô¼ºµÄÉË¿Ú°üÉÏ±Á´ø¡£\n");
+		write("ä½ ç´°å¿ƒåœ°ç‚ºè‡ªå·±çš„å‚·å£åŒ…ä¸Šç¹ƒå¸¶ã€‚\n");
 		tell_room( environment(this_player()), 
-			sprintf("%sÓÃ±Á´ø°üÔú×Ô¼ºµÄÉË¿Ú¡£\n",this_player()->query("c_name")),
+			sprintf("%sç”¨ç¹ƒå¸¶åŒ…ç´®è‡ªå·±çš„å‚·å£ã€‚\n",this_player()->query("c_name")),
 			this_player() );
 	} else {
-		write(sprintf("ÄãÏ¸ĞÄµØÓÃ±Á´øÌæ%s°üÔúÉË¿Ú¡£\n",dest->query("c_name")));
+		write(sprintf("ä½ ç´°å¿ƒåœ°ç”¨ç¹ƒå¸¶æ›¿%såŒ…ç´®å‚·å£ã€‚\n",dest->query("c_name")));
 		tell_object( dest,
-			sprintf("%sÓÃ±Á´øÌæÄã°üÔúÉË¿Ú¡£\n",this_player()->query("c_name")));
+			sprintf("%sç”¨ç¹ƒå¸¶æ›¿ä½ åŒ…ç´®å‚·å£ã€‚\n",this_player()->query("c_name")));
 		tell_room( environment(this_player()), 
-			sprintf("%sÓÃ±Á´øÌæ%s°üÔúÉË¿Ú¡£\n",this_player()->query("c_name"),dest->query("c_name")),
+			sprintf("%sç”¨ç¹ƒå¸¶æ›¿%såŒ…ç´®å‚·å£ã€‚\n",this_player()->query("c_name"),dest->query("c_name")),
 			({ dest, this_player() }) );
 		move(dest);
 	}
@@ -72,7 +72,7 @@ int do_bandage(string arg)
 	pie = dest->query_stat("pie");
 	cond = dest->query("conditions/herb_apply");
 	if( cond && sizeof(cond) ) {
-		// speed up ¼õ 0% µ½ 80%, when skill 0 µ½ 100, by Kyoko/Annihilator.
+		// speed up æ¸› 0% åˆ° 80%, when skill 0 åˆ° 100, by Kyoko/Annihilator.
 		cond[0] -= cond[0] * skill * 8 / 1000;
 		if( cond[0] < 1 ) cond[0] = 1;
 		dest->set("conditions/herb_apply", cond);
@@ -82,7 +82,7 @@ int do_bandage(string arg)
 	set( "in_use", 1 );
 	set( "prevent_drop", 1 );
 	set( "prevent_insert", 1 );
-	set_short( "±Á´ø (Ê¹ÓÃÖĞ)" );
+	set_short( "ç¹ƒå¸¶ (ä½¿ç”¨ä¸­)" );
 
         // add this part to exp gain for healers
         if((string)this_player()->query("class")=="healer")
@@ -101,7 +101,7 @@ int do_remove(string arg)
 	// for fix the bug of user quit or suicide.
 	if( ob && living(ob) ) {
 		if( !id(arg) || !query("in_use") ) return 0;
-		tell_object(ob,"Äã½«±Á´ø²ğÏÂÀ´¶ªµô¡£\n");
+		tell_object(ob,"ä½ å°‡ç¹ƒå¸¶æ‹†ä¸‹ä¾†ä¸Ÿæ‰ã€‚\n");
 		ob->delete_temp("bandaged");
 		BANDAGED->remove_effect(ob);
 		// remove the herb apply effect.
@@ -122,7 +122,7 @@ void expire()
 		remove();
 		return;
 	}
-	tell_object(ob,"ÄãµÄ±Á´ø±»ÏÊÑª½şÍ¸ÁË¡£\n");
+	tell_object(ob,"ä½ çš„ç¹ƒå¸¶è¢«é®®è¡€æµ¸é€äº†ã€‚\n");
 	do_remove("bandage");
 	return;
 }

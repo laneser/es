@@ -116,17 +116,17 @@ varargs string get_list(int flag)
 	int i,day, hour, *savedata,size_list;
 	string msg;
 
-	if( !sizeof(top_list) ) return 	"Ä§·¨µÈ¼¶ÅÅĞĞ°ñÄ¿Ç°ÊÇ¿ÕµÄ¡£\n";
+	if( !sizeof(top_list) ) return 	"é­”æ³•ç­‰ç´šæ’è¡Œæ¦œç›®å‰æ˜¯ç©ºçš„ã€‚\n";
 	if (flag==0){
 	size_list=sizeof(top_list0);
-	msg = sprintf("Ä§·¨µÈ¼¶ÅÅĞĞ°ñÇ° %dÃû:\n", size_list) ;
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû      µÈ¼¶     ÉÏÏßÊ±¼ä        ×ÛºÏ   ÔªËØ    ºÚ    ÔÓÏî\n");
+	msg = sprintf("é­”æ³•ç­‰ç´šæ’è¡Œæ¦œå‰ %då:\n", size_list) ;
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å      ç­‰ç´š     ä¸Šç·šæ™‚é–“        ç¶œåˆ   å…ƒç´     é»‘    é›œé …\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels0[top_list0[i]];
 		day = savedata[5]/86400;
 		hour = savedata[5]%86400/3600;
 		msg += 
-			sprintf("  %2d. %15-s %2d %6d Ìì %2d Ğ¡Ê± %6d %6d %6d %6d\n",i+1, 
+			sprintf("  %2d. %15-s %2d %6d å¤© %2d å°æ™‚ %6d %6d %6d %6d\n",i+1, 
 			top_list0[i], savedata[4], day, hour, savedata[0], savedata[1],savedata[2],savedata[3]);
 	}
 	return msg;
@@ -134,44 +134,44 @@ varargs string get_list(int flag)
 
 	size_list=sizeof(top_list);
 	if (size_list>SIZE) size_list=SIZE;
-	msg = "×ÛºÏÄ§·¨µÈ¼¶ÅÅĞĞ°ñÇ° " + size_list + " Ãû:\n";
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä                    Ä§·¨µÈ¼¶\n");
+	msg = "ç¶œåˆé­”æ³•ç­‰ç´šæ’è¡Œæ¦œå‰ " + size_list + " å:\n";
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“                    é­”æ³•ç­‰ç´š\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels[top_list[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list[i], savedata[1], day, hour, savedata[0] );
 	}
-	msg += "\nÔªËØÄ§·¨µÈ¼¶ÅÅĞĞ°ñÇ° " + size_list + " Ãû:\n";
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä                    Ä§·¨µÈ¼¶\n");
+	msg += "\nå…ƒç´ é­”æ³•ç­‰ç´šæ’è¡Œæ¦œå‰ " + size_list + " å:\n";
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“                    é­”æ³•ç­‰ç´š\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels1[top_list1[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list1[i], savedata[1], day, hour, savedata[0] );
 	}
-	msg += "\nºÚÄ§·¨µÈ¼¶ÅÅĞĞ°ñÇ° " + size_list + " Ãû:\n";
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä                    Ä§·¨µÈ¼¶\n");
+	msg += "\né»‘é­”æ³•ç­‰ç´šæ’è¡Œæ¦œå‰ " + size_list + " å:\n";
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“                    é­”æ³•ç­‰ç´š\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels2[top_list2[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list2[i], savedata[1], day, hour, savedata[0] );
 	}
-	msg += "\nÔÓÏîÄ§·¨µÈ¼¶ÅÅĞĞ°ñÇ° " + size_list + " Ãû:\n";
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä                    Ä§·¨µÈ¼¶\n");
+	msg += "\né›œé …é­”æ³•ç­‰ç´šæ’è¡Œæ¦œå‰ " + size_list + " å:\n";
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“                    é­”æ³•ç­‰ç´š\n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels3[top_list3[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list3[i], savedata[1], day, hour, savedata[0] );
 	}
 

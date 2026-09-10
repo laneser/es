@@ -1,20 +1,20 @@
-ÎäÆ÷:eastland
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨:eastland
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-ÇàÖñ°ô   green_stick.c   3     4     6    bo
-ÆßĞıÕ¶   seven.c        15     5    15    lbl
-¹íÍ·µ¶   skull_glaive.c 26    11    19    lbl bleed:5
-¸Öµ¶     steel_blade.c  15    10    17    lbl bleed:5
-Ê¯°å¸«   stone_axe.c    10     5    13    axe
-ÁøÒ¶µ¶   thin_blade.c   17     6    14    lbl bleed:5
-»¢²æ     tiger_fork.c   23     9    27    thr bleed:10
+é’ç«¹æ£’   green_stick.c   3     4     6    bo
+ä¸ƒæ—‹æ–¬   seven.c        15     5    15    lbl
+é¬¼é ­åˆ€   skull_glaive.c 26    11    19    lbl bleed:5
+é‹¼åˆ€     steel_blade.c  15    10    17    lbl bleed:5
+çŸ³æ¿æ–§   stone_axe.c    10     5    13    axe
+æŸ³è‘‰åˆ€   thin_blade.c   17     6    14    lbl bleed:5
+è™å‰     tiger_fork.c   23     9    27    thr bleed:10
  
-·À¾ß:
-Ãû³Æ              µµÃû               AC  DB ÖÖÀà ²ÄÖÊ     ÌØ·À        ±¸×¢
+é˜²å…·:
+åç¨±              æª”å               AC  DB ç¨®é¡ æè³ª     ç‰¹é˜²        å‚™è¨»
 ================= ================== === == ==== ======== ==========  =========
-ÊŞÆ¤¶ÌÑ¥          fur_buskin.c        2   1 feet leather  fire:-3
+ç¸çš®çŸ­é´          fur_buskin.c        2   1 feet leather  fire:-3
                                                           cold:1
-ÊŞÆ¤È¹×Ó          fur_skirt.c         3   1 legs leather  fire:-2
+ç¸çš®è£™å­          fur_skirt.c         3   1 legs leather  fire:-2
                                                           cold:1
-É®ÅÛ              pallium.c           1   3 body cloth
+åƒ§è¢              pallium.c           1   3 body cloth
  

@@ -6,11 +6,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-  set_short(" the small pool","Ğ¡Ë®³Ø");
+  set_short(" the small pool","å°æ°´æ± ");
   set_long(@Long
 Long
 ,@CLong
-Ò»¸öĞ¡Ğ¡µÄË®³Ø,È»¶øÈ´¶Ñ»ıÂúÁË¹Çº¡,ÕâÀïÓ¦¸Ã´æÔÚÖøÒ»¸öºÜÇ¿µÄ¹ÖÎï.
+ä¸€å€‹å°å°çš„æ°´æ± ,ç„¶è€Œå»å †ç©æ»¿äº†éª¨éª¸,é€™è£¡æ‡‰è©²å­˜åœ¨è‘—ä¸€å€‹å¾ˆå¼·çš„æ€ªç‰©.
 CLong
 );
 set("item_func",([
@@ -27,7 +27,7 @@ reset();
 
 int look_skeleton()
 {
-    write("Ò»¶Ñ¹Çº¡,ËÆºõÓĞ±»¿Ğ¹ıµÄºÛ¼£\n");
+    write("ä¸€å †éª¨éª¸,ä¼¼ä¹æœ‰è¢«å•ƒéçš„ç—•è·¡\n");
     this_player()->set_explore("deathland#6");
     return 1;
 }

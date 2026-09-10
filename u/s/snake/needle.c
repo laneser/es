@@ -12,18 +12,18 @@ void create()
 	guild_ob::create();
 	set( "extra_look", "@@query_extra_look");
 	set_class_name("healer");
-	set("short","ÒøÕë");	
+	set("short","éŠ€é‡");	
 #include <compress_obj.h>
-	set_name("needle", "ÒøÕë");
+	set_name("needle", "éŠ€é‡");
 	set_long( @LONG
-ÕâÊÇÒ»¸ùÏ¸Ğ¡µÄÒøÕë£¬ĞĞÒ½ÕßÓÃÀ´ÌæÈËÕë¾ÄÖÎ²¡£¬ËäÈ»Ëü¿´ÆğÀ´
-ºÜ´àÈõ£¬µ«ÊÇµ½ÁËÒ»¸ö¾­Ñé·á¸»µÄĞĞÒ½ÕßÊÖÖĞ£¬¾Í»á±ä³ÉÒ»¸ö¾È
-ÈË»òÉ±ÈËµÄÀûÆ÷¡£Èç¹ûÄãÒªÖªµÀÓĞ¹ØÒøÕëÓëĞĞÒ½ÕßµÄÏêÏ¸ÓÃÍ¾£¬
-¿ÉÒÔÓÃ help needle Ö¸Áî¡£
+é€™æ˜¯ä¸€æ ¹ç´°å°çš„éŠ€é‡ï¼Œè¡Œé†«è€…ç”¨ä¾†æ›¿äººé‡ç¸æ²»ç—…ï¼Œé›–ç„¶å®ƒçœ‹èµ·ä¾†
+å¾ˆè„†å¼±ï¼Œä½†æ˜¯åˆ°äº†ä¸€å€‹ç¶“é©—è±å¯Œçš„è¡Œé†«è€…æ‰‹ä¸­ï¼Œå°±æœƒè®Šæˆä¸€å€‹æ•‘
+äººæˆ–æ®ºäººçš„åˆ©å™¨ã€‚å¦‚æœä½ è¦çŸ¥é“æœ‰é—œéŠ€é‡èˆ‡è¡Œé†«è€…çš„è©³ç´°ç”¨é€”ï¼Œ
+å¯ä»¥ç”¨ help needle æŒ‡ä»¤ã€‚
 LONG
 	);
 
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	set( "weight", 1 );
 	set( "skills_effect", "lawful_only" );
 	set( "bandage_reward_func", "bandage_reward" );
@@ -40,14 +40,14 @@ string query_extra_look()
   
   if (!op_succ_count=environment()->query("op_succ_count")) op_succ_count=0;
   if (!op_fail_count=environment()->query("op_fail_count")) op_fail_count=0;
-  msg ="$NÉíÉÏ´øÖøĞĞÒ½ÕßÓÃÀ´ÌæÈËÕë¾ÄÖÎ²¡µÄÒøÕë¡£\n";
-  if ( op_succ_count==0 && op_fail_count==0 ) msg += "$N»¹²»ÔøÌæÈË¶¯¹ıÊÖÊõ¡£\n";
+  msg ="$Nèº«ä¸Šå¸¶è‘—è¡Œé†«è€…ç”¨ä¾†æ›¿äººé‡ç¸æ²»ç—…çš„éŠ€é‡ã€‚\n";
+  if ( op_succ_count==0 && op_fail_count==0 ) msg += "$Né‚„ä¸æ›¾æ›¿äººå‹•éæ‰‹è¡“ã€‚\n";
   else if ( op_fail_count == 0 ) 
-       msg += "$NÕâÒ»±²×ÓÔøÌæÈË¶¯¹ı"+chinese_number(op_succ_count)+"´ÎÊÖÊõ, ¶øÇÒÍêÈ«³É¹¦ÁË¡£\n";
+       msg += "$Né€™ä¸€è¼©å­æ›¾æ›¿äººå‹•é"+chinese_number(op_succ_count)+"æ¬¡æ‰‹è¡“, è€Œä¸”å®Œå…¨æˆåŠŸäº†ã€‚\n";
   else if ( op_succ_count == 0 )
-       msg += "$NÏÔÈ»ÊÇ¸ö´óÓ¹Ò½....Ìæ"+chinese_number(op_fail_count)+"¸öÈË¶¯¹ıÊÖÊõ, ½á¹ûÈ«²¿ËÀ¹âÁË¡£\n"; 
-  else msg += "$NÔøÌæÈË¶¯¹ı"+chinese_number(op_succ_count+op_fail_count)+"´ÎÊÖÊõ, ÆäÖĞÓĞ"+ 
-              chinese_number(op_succ_count)+"´ÎÊÇ³É¹¦µÄ¡£\n";
+       msg += "$Né¡¯ç„¶æ˜¯å€‹å¤§åº¸é†«....æ›¿"+chinese_number(op_fail_count)+"å€‹äººå‹•éæ‰‹è¡“, çµæœå…¨éƒ¨æ­»å…‰äº†ã€‚\n"; 
+  else msg += "$Næ›¾æ›¿äººå‹•é"+chinese_number(op_succ_count+op_fail_count)+"æ¬¡æ‰‹è¡“, å…¶ä¸­æœ‰"+ 
+              chinese_number(op_succ_count)+"æ¬¡æ˜¯æˆåŠŸçš„ã€‚\n";
   return msg;
 }  
 
@@ -73,7 +73,7 @@ int do_healers()
 int do_chat(string arg)
 {
 	if( !arg )
-		return notify_fail( "ÄãÏë¶ÔÆäËüĞĞÒ½ÕßËµÊ²÷á£¿\n");
+		return notify_fail( "ä½ æƒ³å°å…¶å®ƒè¡Œé†«è€…èªªä»€éº¼ï¼Ÿ\n");
 	return guild_ob::guild_line(arg);
 }
 
@@ -84,7 +84,7 @@ int do_bandage_power(string level)
 
     p = this_player();
     if (p->query_temp("acup_effect/potential") == 1)
-	return notify_fail("Ç±ÄÜ¼¤·¢µÄ×´Ì¬ÏÂ£¬ÎŞ·¨ÕıÈ·µ÷Õû°üÔú³öÁ¦¡£\n");
+	return notify_fail("æ½›èƒ½æ¿€ç™¼çš„ç‹€æ…‹ä¸‹ï¼Œç„¡æ³•æ­£ç¢ºèª¿æ•´åŒ…ç´®å‡ºåŠ›ã€‚\n");
 
     switch (level)
     {
@@ -187,15 +187,15 @@ int do_list_meridian()
   
       learned = this_player()->query("prac_meridians") ;
       if(!learned) 
-          return notify_fail("ÄãÏÖÔÚ¶ÔÃ¿¸öÑ¨µÀ¶¼²»ÊìÏ¤¡£\n") ;
+          return notify_fail("ä½ ç¾åœ¨å°æ¯å€‹ç©´é“éƒ½ä¸ç†Ÿæ‚‰ã€‚\n") ;
 
       temp = keys(learned) ;      
       lenth = sizeof(temp) ;
 
-      write(sprintf("ÄãÏÖÔÚÄÜÕÆÎÕµÄ¾­Âç¹²ÓĞ%d¸ö¡£·Ö±ğÎª£º\n",lenth) ) ;
+      write(sprintf("ä½ ç¾åœ¨èƒ½æŒæ¡çš„ç¶“çµ¡å…±æœ‰%då€‹ã€‚åˆ†åˆ¥ç‚ºï¼š\n",lenth) ) ;
       for( i=0 ; i<lenth ; i++)
          {
-           write(temp[i]+"¡£\n") ; 
+           write(temp[i]+"ã€‚\n") ; 
          }
       return 1 ;           
 }

@@ -23,6 +23,6 @@ void consistency_check()
 string query_short()
 {
         if( this_object()->query("player_invisible") )
-            return "(ÒþÐÎ)" + ::query_short();
+            return "(éš±å½¢)" + ::query_short();
         else return ::query_short();
 }

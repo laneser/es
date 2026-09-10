@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name( "vendor", "小贩" );
-	set_short( "小贩" );
+	set_name( "vendor", "灏忚博" );
+	set_short( "灏忚博" );
 	set_long(
-		"一个看起来很友善的小贩，如果你有需要的话，可以向他购买物品，只要\n"
-		"问他价钱(price)，他就会让你看他的货物。\n"
+		"涓�鍊嬬湅璧蜂締寰堝弸鍠勭殑灏忚博锛屽鏋滀綘鏈夐渶瑕佺殑瑭憋紝鍙互鍚戜粬璩艰卜鐗╁搧锛屽彧瑕乗n"
+		"鍟忎粬鍍归將(price)锛屼粬灏辨渻璁撲綘鐪嬩粬鐨勮波鐗┿�俓n"
 	);
 	set( "race", "halfling" );
 	set( "gender", "male" );

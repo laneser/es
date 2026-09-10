@@ -46,20 +46,20 @@ int change (string str)
 	oldval = coinvalue(oldtype);
 	if( !oldval )
 		return notify_fail( 
-			"ÕâÖÖÇ®±ÒÔÚÕâÀï²¢²»Í¨ĞĞ....¡£\n");
+			"é€™ç¨®éŒ¢å¹£åœ¨é€™è£¡ä¸¦ä¸é€šè¡Œ....ã€‚\n");
 
 	if( number < 0 )
 		return notify_fail( 
-			"ÄãÖ»ÄÜ¹»¶Ò»»ÕıÊıµÄÇ®±Ò¡£\n");
+			"ä½ åªèƒ½å¤ å…Œæ›æ­£æ•¸çš„éŒ¢å¹£ã€‚\n");
 
 	newval = coinvalue(newtype);
 	if( !newval )
 		return notify_fail( 
-			"ÄãÏë¶Ò»»Ê²÷áÇ®±Ò£¿\n");
+			"ä½ æƒ³å…Œæ›ä»€éº¼éŒ¢å¹£ï¼Ÿ\n");
 
 	if( this_player()->query("wealth/"+oldtype)<number )
 		return notify_fail (
-			"ÄãÃ»ÓĞÄÇ÷á¶à" + to_chinese( oldtype + " coin") + "£¡\n");
+			"ä½ æ²’æœ‰é‚£éº¼å¤š" + to_chinese( oldtype + " coin") + "ï¼\n");
 
 	i = number*oldval ;	/* Value of old coins, in cheapest coin */
 	j = i/newval ;		/* Value of old coins, in new coins */
@@ -67,7 +67,7 @@ int change (string str)
 // If we have 0 new coins, then he is just getting back what he started with.
 	if (j==0) {
 		write( 
-			"ÕâĞ©" + to_chinese( oldtype + " coin") + "»¹Öµ²»µ½Ò»Ã¶" + to_chinese( newtype + " coin" ) + "£¡\n");
+			"é€™äº›" + to_chinese( oldtype + " coin") + "é‚„å€¼ä¸åˆ°ä¸€æš" + to_chinese( newtype + " coin" ) + "ï¼\n");
 		return 1 ;
 	}
 
@@ -76,13 +76,13 @@ int change (string str)
 	&& this_player()->credit( newtype, j ) ) {
 		write( "Ok.\n") ;
 		tell_room( this_object(), 
-			this_player()->query("c_name")+"½«Ò»Ğ©"+ to_chinese(oldtype+" coin")
-			+"¶Ò»»³É"+ to_chinese(newtype+" coin")+"¡£\n",
+			this_player()->query("c_name")+"å°‡ä¸€äº›"+ to_chinese(oldtype+" coin")
+			+"å…Œæ›æˆ"+ to_chinese(newtype+" coin")+"ã€‚\n",
 			this_player() );
 		return 1 ;
 	}
 	return notify_fail( 
-		"ÕâÀï¿ÉÄÜÓĞÒ»Ğ© Bug £¬ÇëÍ¨ÖªÎ×Ê¦´¦Àï£¡\n");
+		"é€™è£¡å¯èƒ½æœ‰ä¸€äº› Bug ï¼Œè«‹é€šçŸ¥å·«å¸«è™•è£¡ï¼\n");
 }
 
 int help() {

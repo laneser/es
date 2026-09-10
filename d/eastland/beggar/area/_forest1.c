@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("ÖñÁÖ");
+	ob->set_short("ç«¹æž—");
 	ob->set_long( @LONG_DESCRIPTION
-ÄãÉí´¦ÔÚÒ»Æ¬ÂÌÓÍÓÍµÄÖñÁÖÀï,ÕâÀïºÜ°²¾²,ÓÃÀ´¶ÁÊéµÄºÃµØ·½¡£
+ä½ èº«è™•åœ¨ä¸€ç‰‡ç¶ æ²¹æ²¹çš„ç«¹æž—è£¡,é€™è£¡å¾ˆå®‰éœ,ç”¨ä¾†è®€æ›¸çš„å¥½åœ°æ–¹ã€‚
 LONG_DESCRIPTION
 	);
 

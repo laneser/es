@@ -8,12 +8,12 @@ void create()
 
 	::create();
 	set_level(16);
-	set_name( "tamumu monk", "ËşÄ·Ä·É®ÂÂ" );
+	set_name( "tamumu monk", "å¡”å§†å§†åƒ§ä¾¶" );
 	add( "id", ({ "monk", "tamumu" }) );
-	set_short( "ËşÄ·Ä·É®ÂÂ" );
-	set_long("Õâ¸öËşÄ·Ä·É®ÂÂ¶ÔÄãÊÓ¶ø²»¼û£¬ºÃÏñÄã¸ù±¾²»´æÔÚÒ»Ñù¡£\n"
+	set_short( "å¡”å§†å§†åƒ§ä¾¶" );
+	set_long("é€™å€‹å¡”å§†å§†åƒ§ä¾¶å°ä½ è¦–è€Œä¸è¦‹ï¼Œå¥½åƒä½ æ ¹æœ¬ä¸å­˜åœ¨ä¸€æ¨£ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
    set( "race", "hawkman" );
 	set( "gender", "male" );
 	set( "alignment", -700 );

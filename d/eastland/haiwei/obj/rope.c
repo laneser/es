@@ -6,9 +6,9 @@ void create()
 {
         
         seteuid(getuid());
-        set_name( "rope", "Éþ×Ó" );
-        set_short( "Éþ×Ó" );
-   set_long( "Ò»¸ù³¤Éþ×Ó¡£\n" );
+        set_name( "rope", "ç¹©å­" );
+        set_short( "ç¹©å­" );
+   set_long( "ä¸€æ ¹é•·ç¹©å­ã€‚\n" );
         set( "weight", 18 );
         set( "value", ({ 1, "silver" }) );
 }
@@ -29,13 +29,13 @@ int to_throw(string str)
        ob2=environment(ob1);
        test=ob2->query("layuter_hole");
        if (test==1){
-       tell_room(this_object(),this_player()->query("c_name")+"¶ª³öÒ»ÌõÉþ×Ó£¬¸úÖø½øÈëÁË¶´ÖÐ¡£\n",this_player());
-       write("Äã°ÑÉþ×Ó¶ª³ö¹´×¡¶´Íâ´óÊ¯£¬È»ááÑØÖøÉþ×ÓÅÀÈë¶´ÄÚ£¬ÄãË³ÊÖ½«Éþ×ÓÊÕÆðÀ´¡£\n");
+       tell_room(this_object(),this_player()->query("c_name")+"ä¸Ÿå‡ºä¸€æ¢ç¹©å­ï¼Œè·Ÿè‘—é€²å…¥äº†æ´žä¸­ã€‚\n",this_player());
+       write("ä½ æŠŠç¹©å­ä¸Ÿå‡ºå‹¾ä½æ´žå¤–å¤§çŸ³ï¼Œç„¶å¾Œæ²¿è‘—ç¹©å­çˆ¬å…¥æ´žå…§ï¼Œä½ é †æ‰‹å°‡ç¹©å­æ”¶èµ·ä¾†ã€‚\n");
        this_player()->move_player("/d/eastland/haiwei/hole1","SNEAK");
        return 1;
         } 
-      else write("Äã½«Éþ×ÓÅ×ÉÏÅ×ÏÂµÄÍæÖø¡£\n");            
+      else write("ä½ å°‡ç¹©å­æ‹‹ä¸Šæ‹‹ä¸‹çš„çŽ©è‘—ã€‚\n");            
       }
-    return notify_fail("ÄãÉíÉÏ²¢Ã»ÓÐÉþ×Ó£¡\n");
+    return notify_fail("ä½ èº«ä¸Šä¸¦æ²’æœ‰ç¹©å­ï¼\n");
   } 
  }

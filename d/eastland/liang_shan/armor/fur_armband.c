@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("fur armband", "÷·Å£Æ¤±Û»·");
+        set_name("fur armband", "éž£ç‰›çš®è‡‚ç’°");
         add( "id", ({ "armband" }) );
-        set_short( "fur armband", "÷·Å£Æ¤±Û»·");
+        set_short( "fur armband", "éž£ç‰›çš®è‡‚ç’°");
         set_long(
                 "A fur armband .\n",
-                "Ò»¸öÓÃÅ£Æ¤÷·ÖÆµÄ±Û»·£® \n"
+                "ä¸€å€‹ç”¨ç‰›çš®éž£è£½çš„è‡‚ç’°ï¼Ž \n"
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "arms" );
         set( "material", "adventurer");
         set( "armor_class", 5 );

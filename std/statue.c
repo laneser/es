@@ -9,9 +9,9 @@ inherit OBJECT;
 #define LONG_DESCRIPTION_D "/cmds/std/_look"
 void create()
 {
-	set_name( "statue", "µñÏñ" );
-	set_short( "Ò»×ù²»ÖªÃûµÄµñÏñ" );
-	set_long("Ò»×ù²»ÖªÃûµÄµñÏñ£¬²»ÖªÊÇË­¿ÌµÄ¡£\n");
+	set_name( "statue", "é›•åƒ" );
+	set_short( "ä¸€åº§ä¸çŸ¥åçš„é›•åƒ" );
+	set_long("ä¸€åº§ä¸çŸ¥åçš„é›•åƒï¼Œä¸çŸ¥æ˜¯èª°åˆ»çš„ã€‚\n");
 	set("weight", 20);
 	set("prevent_get", 1);
 	set("no_attack", 1);
@@ -48,7 +48,7 @@ string long_description(object ob)
 				   ((string)inv[i]->query("type") != "shield") )
 					if( first ) {
 						first = 0;
-						reg += genat + "ÉíÉÏ´©Öø : ";
+						reg += genat + "èº«ä¸Šç©¿è‘— : ";
 						reg += short;
 						} 
 				else
@@ -56,7 +56,7 @@ string long_description(object ob)
 			}
 		}
 		if( !first )
-		  reg += "¡£\n" ;
+		  reg += "ã€‚\n" ;
         for(i=0, first=1; i<sizeof(inv); i++) {
 			short = (string)inv[i]->query("short");
 			if (short) {
@@ -65,7 +65,7 @@ string long_description(object ob)
 				     ((string)inv[i]->query("type") == "shield" )) )
 				  if( first ) {
 				    first = 0;
-				    reg += genat + "ÊÖÉÏÄÃÖø : ";
+				    reg += genat + "æ‰‹ä¸Šæ‹¿è‘— : ";
 				    reg += short;
 				  }
 				else
@@ -73,11 +73,11 @@ string long_description(object ob)
 			}
 		}
 		if( !first )
-		reg += "¡£\n";
+		reg += "ã€‚\n";
 	}
 		
 	if (stringp (race) && race != "")
-		reg += genat + "µÄÖÖ×åÊÇ" + raceat + "¡£\n";
+		reg += genat + "çš„ç¨®æ—æ˜¯" + raceat + "ã€‚\n";
 
 	if( sizeof(inv) ) {
 		first = 1;
@@ -87,7 +87,7 @@ string long_description(object ob)
 				if( inv[i]->query("wielded") || inv[i]->query("equipped") )
 				  continue;
 				if( first ) {
-				  reg += genat + "ÉíÉÏÐ¯´øÖø:\n";
+				  reg += genat + "èº«ä¸Šæ”œå¸¶è‘—:\n";
 					first = 0;
 				}
 				reg += "    " + short + ".\n";
@@ -99,9 +99,9 @@ string long_description(object ob)
 
 void assign(object who)
 {
-	set_short((string)who->query("c_name")+"µÄµñÏñ");
-	set_long("ÕâÊÇÒ»×ù"+(string)who->query("c_name")+
-		"µÄµñÏñ£¬¿ÌµÄèòèòÈçÉú¡£\n"+long_description( who)
+	set_short((string)who->query("c_name")+"çš„é›•åƒ");
+	set_long("é€™æ˜¯ä¸€åº§"+(string)who->query("c_name")+
+		"çš„é›•åƒï¼Œåˆ»çš„æ ©æ ©å¦‚ç”Ÿã€‚\n"+long_description( who)
 	);
 //	add("id", who->query("id") );
 }

@@ -7,23 +7,23 @@ void create ()
         ::create();
         seteuid( getuid() );
         set_level(19);
-        set_name( "ted", "Ì©µÂ" );
+        set_name( "ted", "æ³°å¾·" );
         add ("id", ({ "barman" }) );
-        set_short( "Ted the barman", "µêÖ÷Ì©µÂ" );
+        set_short( "Ted the barman", "åº—ä¸»æ³°å¾·" );
         set_long(@LONG
 This is Ted, the owner of Ted\'s place. He looks a bit old.
 Just another typical barman.
  
 LONG
         , @CLONG
-Ì©µÂ -- Õâ¼äĞ¡µêµÄµêÖ÷. Ëû¿´ÆğÀ´ÓĞµãÀÏ, ³ı´ËÖ®ÍâÃ»É¶ÌØÉ«.
+æ³°å¾· -- é€™é–“å°åº—çš„åº—ä¸». ä»–çœ‹èµ·ä¾†æœ‰é»è€, é™¤æ­¤ä¹‹å¤–æ²’å•¥ç‰¹è‰².
  
 CLONG
         );
         set( "alignment", 2500 );
         set( "gender", "male" );
         set( "race", "human" );
-        set( "unit", "Î»" );
+        set( "unit", "ä½" );
         set("weight", 650);
         set("exp_reward", 1 );
         set("no_attack",1);

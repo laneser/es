@@ -30,7 +30,7 @@ nomask protected int cmd_hook(string cmd)
 	mapping before;
 
 	if( query_temp("block_command") ) {
-		receive( "你现在无法做其他动作！\n");
+		receive( "浣犵従鍦ㄧ劇娉曞仛鍏朵粬鍕曚綔锛乗n");
 		return 1;
 	}
 

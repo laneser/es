@@ -8,15 +8,15 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_level(15);
-	set_name( "summoned monster", "�ٻ���" );
+	set_name( "summoned monster", "召喚獸" );
 	add ("id", ({ "summon", "monster", }) );
-	set_short( "a summoned monster", "�ٻ���" );
+	set_short( "a summoned monster", "召喚獸" );
 	set_long(  @C_LONG
-���޵���ħ�����г��Ĺ����ȫΪ�������˶��
+拉修帝用魔法呼叫出的怪物，完全為保護主人而活。
 C_LONG
 	);
 	set( "alignment", 0 );
-    set( "unit", "ֻ" );
+    set( "unit", "只" );
 	set_perm_stat( "dex", 23 );
 	set_perm_stat( "str", 26 );
 	set_perm_stat( "int", 10 );
@@ -38,8 +38,8 @@ C_LONG
     set ("pursuing", 1);
     set_experience(60000);
     set_skill("dodge",70);
-    set_c_verbs( ({ "%s��ץ%s", "%s��ײ%s", "%s����%s", "%s��ҧ%s", }) );
-    set_c_limbs( ({ "ͷ", "����", "��" }) );
+    set_c_verbs( ({ "%s狂抓%s", "%s猛撞%s", "%s亂踢%s", "%s死咬%s", }) );
+    set_c_limbs( ({ "頭", "身體", "腳" }) );
 }
 
 int query_moving()
@@ -53,10 +53,10 @@ int catch_huntee( object who )
 {
     if( !present( "rashudi", environment(this_object()) ) ) return 0;
     tell_room( environment(this_object()),  
-    "�ٻ��޺ܲ�м����"+who->query("c_name")+
-      "˵: �㻹�ҽ������빥���ҵ�������? �������ˣ�����!\n"
+    "召喚獸很不屑的向"+who->query("c_name")+
+      "說: 你還敢進來，想攻擊我的主人嗎? 別夢想了，死吧!\n"
     ,  ({ this_object(), who }) );
-    tell_object( who,      "�ٻ��޺ܲ�м������˵: �㻹�ҽ������빥���ҵ�������? �������ˣ�����!\n"
+    tell_object( who,      "召喚獸很不屑的向你說: 你還敢進來，想攻擊我的主人嗎? 別夢想了，死吧!\n"
     );
     return 1;
 }

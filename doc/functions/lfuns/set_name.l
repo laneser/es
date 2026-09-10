@@ -16,7 +16,7 @@ DESCRIPTION
      Finally, it checks if id is set, if not, set it to ({ str }).
 
 EXAMPLE
-     set_name("orc", "∞Î ﬁ»À");
+     set_name("orc", "ÂçäÁç∏‰∫∫");
 
 SEE ALSO
      set_long(),    set_short().

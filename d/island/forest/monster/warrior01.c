@@ -6,14 +6,14 @@ void create()
 {
     ::create();
     set_level(11);
-    set_name("Daemon Warrior","Ä§×åÕ½Ê¿");
+    set_name("Daemon Warrior","é­”æ—æˆ°å£«");
     add("id",({"warrior","daemon"}) );
-    set_short("Ä§×åÕ½Ê¿");
+    set_short("é­”æ—æˆ°å£«");
     set_long(@LONG
-ÕâÊÇÄ§×åµÄÒ»°ãÕ½Ê¿¡£
+é€™æ˜¯é­”æ—çš„ä¸€èˆ¬æˆ°å£«ã€‚
 LONG
             );
-    set("unit","¸ö");
+    set("unit","å€‹");
     set("gender","male");
     set("race","daemon");
     set("alignment",-500);

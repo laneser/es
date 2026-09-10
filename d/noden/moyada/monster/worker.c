@@ -8,16 +8,16 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(8);
-	set_name( "worker", "¹¤ÈË" );
-	set_short( "ĞŞÂ·¹¤ÈË" );
+	set_name( "worker", "å·¥äºº" );
+	set_short( "ä¿®è·¯å·¥äºº" );
 	set_long( @C_LONG
-ĞŞÖşµÀÂ·µÄ¹¤ÈË, Äã¿´ËûÂúÍ·´óº¹µÄÑù×Ó, ²»½ûÏëÒª°ïÖú(help)Ëû¡£
+ä¿®ç¯‰é“è·¯çš„å·¥äºº, ä½ çœ‹ä»–æ»¿é ­å¤§æ±—çš„æ¨£å­, ä¸ç¦æƒ³è¦å¹«åŠ©(help)ä»–ã€‚
 C_LONG
 	);
 	set( "alignment", 200 );
     set( "gender", "male" );
     set( "race", "human" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 12 );
 	set_perm_stat( "str", 16 );
 	set_perm_stat( "int", 5 );
@@ -38,7 +38,7 @@ C_LONG
     equip_armor( MOYADA"obj/dirty_shirt" );
     set ("chat_chance", 5);
     set ("chat_output", ({
-      "ĞŞÂ·¹¤ÈËÒ»±ß°ÑËéÊ¯×ÓÆÌÔÚµØÉÏ, Ò»±ßÓÃÔàÃ«½í²Áº¹¡£\n",
+      "ä¿®è·¯å·¥äººä¸€é‚ŠæŠŠç¢çŸ³å­é‹ªåœ¨åœ°ä¸Š, ä¸€é‚Šç”¨é«’æ¯›å·¾æ“¦æ±—ã€‚\n",
     }) );
 }
 
@@ -51,9 +51,9 @@ int to_help(string str)
 {
    object player;
    if( !str || str != "worker" )
-     return notify_fail("°ïË­Ã¦ÄØ???\n");
+     return notify_fail("å¹«èª°å¿™å‘¢???\n");
    tell_object( this_player(), 
-     "¹¤ÈËËµ: Ğ»À², ÌıËµÉÌµêµÄÀÏ°åÕıÔÚÕÒ¹¤ÈË, Äã¿ÉÒÔÈ¥ÊÔÊÔ¿´¡£\n" 
+     "å·¥äººèªª: è¬å•¦, è½èªªå•†åº—çš„è€é—†æ­£åœ¨æ‰¾å·¥äºº, ä½ å¯ä»¥å»è©¦è©¦çœ‹ã€‚\n" 
      );
    return 1;
 }

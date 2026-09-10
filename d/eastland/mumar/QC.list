@@ -1,54 +1,54 @@
-ÄÁÂí¹Ø£º (-)±íÓëÒ»°ãÉè¼ÆÆ½,(+)±í¸ßì¶Ò»°ãÉè¼Æ,(*)±í´ïÉÏÏŞ
+ç‰§é¦¬é—œï¼š (-)è¡¨èˆ‡ä¸€èˆ¬è¨­è¨ˆå¹³,(+)è¡¨é«˜æ–¼ä¸€èˆ¬è¨­è¨ˆ,(*)è¡¨é”ä¸Šé™
  
-ÎäÆ÷ÁĞ±í£º
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨åˆ—è¡¨ï¼š
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-¾¯¹÷     club.c        5     3     6    blu
-¶ÛØ°Ê×   dagger1.c    10     4    13    dag
-ÓğÉÈ     fan.c        35(+) 18(+) 27(+) wan  electric60
-´ó¡õÍ·   hammer1.c    25    11    28    blu
-³¤¸ê     javelin.c    10     5    13    thr
-ÉĞ·½±¦½£ king_sword.c 35(-) 20(-) 36    lbl  divine max 28
-³¤Ç¹     lance.c      13     6    14    thr
-Æ½µ×¹ø   pan.c        10     6    12    blu
-É××Ó     scoop.c       7     2     8    blt
-Ó°½£     shadow_sword 23    15    30    lbl
-¹âµ¶     shining_blad 23    15    30    lbl
-Ä¾µ¶     wooden_blade  8     4     8    lbl
+è­¦æ£     club.c        5     3     6    blu
+éˆåŒ•é¦–   dagger1.c    10     4    13    dag
+ç¾½æ‰‡     fan.c        35(+) 18(+) 27(+) wan  electric60
+å¤§â–¡é ­   hammer1.c    25    11    28    blu
+é•·æˆˆ     javelin.c    10     5    13    thr
+å°šæ–¹å¯¶åŠ king_sword.c 35(-) 20(-) 36    lbl  divine max 28
+é•·æ§     lance.c      13     6    14    thr
+å¹³åº•é‹   pan.c        10     6    12    blu
+å‹ºå­     scoop.c       7     2     8    blt
+å½±åŠ     shadow_sword 23    15    30    lbl
+å…‰åˆ€     shining_blad 23    15    30    lbl
+æœ¨åˆ€     wooden_blade  8     4     8    lbl
  
-Ãû³Æ     µµÃû         AC    DB    ÖÖÀà ÌØ·À                  ±¸×¢
+åç¨±     æª”å         AC    DB    ç¨®é¡ ç‰¹é˜²                  å‚™è¨»
 ======== ============ ===== ===== ==== ===================== ================
-Í·¿ø£º
-ÂÚ½í     hat01.c       7     1    clo
+é ­ç›”ï¼š
+ç¶¸å·¾     hat01.c       7     1    clo
  
-îø¼×£º
-½ğÂÆÓñÒÂ cloth01.c    29     7(+) ltm  fire10 cold-5 evil5 none1
-±³ĞÄ     cloth02.c    10     1    clo
-ËÄÏóĞşÅÛ cloth03.c    20     5    clo
-Çà¸ÖÁÛ¼× mail01.c     20     0    hvm
+é§ç”²ï¼š
+é‡‘ç¸·ç‰è¡£ cloth01.c    29     7(+) ltm  fire10 cold-5 evil5 none1
+èƒŒå¿ƒ     cloth02.c    10     1    clo
+å››è±¡ç„è¢ cloth03.c    20     5    clo
+é’é‹¼é±—ç”² mail01.c     20     0    hvm
  
-»¤ÊÖ£º
-Ë¿ÖÊÊÖÌ× gloves01.c    1     4(+) clo
+è­·æ‰‹ï¼š
+çµ²è³ªæ‰‹å¥— gloves01.c    1     4(+) clo
  
-ëÖ¼×£º
-ºì¶Ì¿ã   pants.c       3     0    clo
+è„›ç”²ï¼š
+ç´…çŸ­è¤²   pants.c       3     0    clo
  
-Ğ¬×Ó£º
-°ËØÔĞşĞ¬ boots01.c     6     3(-) clo
+é‹å­ï¼š
+å…«å¦ç„é‹ boots01.c     6     3(-) clo
  
-¶ÜÅÆ£º
-¾Ø·½¶Ü   shield01.c    4     6(-) ltm
-¹æÔ²¶Ü   shield02.c    4     6(-) ele
+ç›¾ç‰Œï¼š
+çŸ©æ–¹ç›¾   shield01.c    4     6(-) ltm
+è¦åœ“ç›¾   shield02.c    4     6(-) ele
  
-Åû·ç£º
-Ê¯ÃŞÍø   cloak01.c     6     5    ele  fire15
-õõÆ¤     cloak02.c     6     5    lea  cold15
+æŠ«é¢¨ï¼š
+çŸ³æ£‰ç¶²   cloak01.c     6     5    ele  fire15
+è²‚çš®     cloak02.c     6     5    lea  cold15
  
-»¤·û£º
-½ğÁúÏî¡õ amulet01.c    0     5    ltm  fire10
+è­·ç¬¦ï¼š
+é‡‘é¾é …â–¡ amulet01.c    0     5    ltm  fire10
  
-½äÖ¸£º
-Á½ÒÇÖ¸»· ring.c        0     9(+) ele
+æˆ’æŒ‡ï¼š
+å…©å„€æŒ‡ç’° ring.c        0     9(+) ele
  
-Âí°°£º
-»Æ½ğÂí°° saddle.c      7     2    lea
+é¦¬éï¼š
+é»ƒé‡‘é¦¬é saddle.c      7     2    lea

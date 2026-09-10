@@ -8,11 +8,11 @@ void create()
      add( "id",({ "necklace" }) );
      set_short( "@@query_short" );
      set_long(@C_LONG
-Ò»¸ö´¿½ğ´òÔì£¬¿ÌÖøÁúµÄĞÎ×´µÄÏî¡õ£¬¼ÛÖµ²»¡õ¡£
+ä¸€å€‹ç´”é‡‘æ‰“é€ ï¼Œåˆ»è‘—é¾çš„å½¢ç‹€çš„é …â–¡ï¼Œåƒ¹å€¼ä¸â–¡ã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "¸ö");
+     set( "unit", "å€‹");
      set( "type", "misc" );
      set( "material","heavy_metal" );
      set( "defense_bonus",5 );
@@ -20,5 +20,5 @@ C_LONG
 }
 string query_short()
 {
-    return set_color("ÁúĞÎÏî¡õ","HIY");
+    return set_color("é¾å½¢é …â–¡","HIY");
 }

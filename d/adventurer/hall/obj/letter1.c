@@ -17,12 +17,12 @@ int read_me(string str);
 void create() {
   seteuid(getuid());
   set("id",({"letter"}));
-  set_name("small letter","·¢»ÆµÄĞÅ");
-  set_short("±íÆ¤·º»ÆµÄĞÅ");
-  set_long("Ò»·â¿´À´ºÜ¹ÅÀÏµÄĞÅ£¬ºÃÏñÒÑ¾­ºÜ¾ÃÃ»ÈËÈ¥¶ÁËüÁË...\n");
+  set_name("small letter","ç™¼é»ƒçš„ä¿¡");
+  set_short("è¡¨çš®æ³›é»ƒçš„ä¿¡");
+  set_long("ä¸€å°çœ‹ä¾†å¾ˆå¤è€çš„ä¿¡ï¼Œå¥½åƒå·²ç¶“å¾ˆä¹…æ²’äººå»è®€å®ƒäº†...\n");
   set("weight",10);
   set("bulk",1);
-  set("unit","·â");
+  set("unit","å°");
 }
  
 void init() {

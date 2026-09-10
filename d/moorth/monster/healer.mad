@@ -8,14 +8,14 @@ void create()
 
 	::create();
 	set_level(16);
-	set_name( "Moorth Military Healer", "Ä¬¶ûË¹¾üÒ½" );
+	set_name( "Moorth Military Healer", "é»˜çˆ¾æ–¯è»é†«" );
 	add( "id", ({ "healer", "military healer" }) );
-	set_short( "Ä¬¶ûË¹¾üÒ½" );
+	set_short( "é»˜çˆ¾æ–¯è»é†«" );
 	set_long(
-		"Äã¿´µ½Ò»¸öÁ³É«ºÍÉÆµÄÄª¶ûË¹ÈË£¬Ëû²»ÏñÒ»°ãÄª¶ûË¹ÈËÄÇ÷áºÃÕ½£¬ËûµÄ\n"
-		"ÈÎÎñÖ»ÊÇĞ­ÖúËûµÄÍ¬°ûÔÚÕ½ÕùÖĞ»îÏÂÈ¥¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹è‡‰è‰²å’Œå–„çš„è«çˆ¾æ–¯äººï¼Œä»–ä¸åƒä¸€èˆ¬è«çˆ¾æ–¯äººé‚£éº¼å¥½æˆ°ï¼Œä»–çš„\n"
+		"ä»»å‹™åªæ˜¯å”åŠ©ä»–çš„åŒèƒåœ¨æˆ°çˆ­ä¸­æ´»ä¸‹å»ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment", 200 );
@@ -40,9 +40,9 @@ void create()
    set( "aiming_loc", "ganglion" );
 	set( "chat_chance", 20 );
 	set( "att_chat_output", ({
-		"Ä¬¶ûË¹¾üÒ½ËµµÀ: ÄãÃÇ»¹ÊÇ·ÅÆú°É£¬ÎÒÃÇµÄ¾ü¶ÓÄãÃÇÊÇµ²²»×¡µÄ£¡\n",
-		"Ä¬¶ûË¹¾üÒ½ËµµÀ: ·ÅÏÂÎäÆ÷Í¶½µ°É¡£\n",
-		"Ä¬¶ûË¹¾üÒ½ËµµÀ: ÄãÃÇÄÑµÀ²»ÅÂËÀÂğ£¿\n"
+		"é»˜çˆ¾æ–¯è»é†«èªªé“: ä½ å€‘é‚„æ˜¯æ”¾æ£„å§ï¼Œæˆ‘å€‘çš„è»éšŠä½ å€‘æ˜¯æ“‹ä¸ä½çš„ï¼\n",
+		"é»˜çˆ¾æ–¯è»é†«èªªé“: æ”¾ä¸‹æ­¦å™¨æŠ•é™å§ã€‚\n",
+		"é»˜çˆ¾æ–¯è»é†«èªªé“: ä½ å€‘é›£é“ä¸æ€•æ­»å—ï¼Ÿ\n"
 	}) );
 
 	wield_weapon( "/d/moorth/obj/moraz_dagger" );
@@ -72,8 +72,8 @@ int my_tactic()
 
 	if( random(20)<4 ) {
 		tell_room( environment(this_object()), 
-			"Ä¬¶ûË¹¾üÒ½¿ÚÖĞÄîµÀ: Sh'ak - Bad-mi-guraj la-thu .....\n"
-			"Ò»ÍÅÈáºÍµÄ¹âÃ¢´ÓµØÃæÉıÆğ£¬´ÓÔÚ³¡µÄËùÓĞÄª¶ûË¹ÈËÉíÉÏÁ÷¹ı£¬È»ááÏûÊ§¡£\n",
+			"é»˜çˆ¾æ–¯è»é†«å£ä¸­å¿µé“: Sh'ak - Bad-mi-guraj la-thu .....\n"
+			"ä¸€åœ˜æŸ”å’Œçš„å…‰èŠ’å¾åœ°é¢å‡èµ·ï¼Œå¾åœ¨å ´çš„æ‰€æœ‰è«çˆ¾æ–¯äººèº«ä¸Šæµéï¼Œç„¶å¾Œæ¶ˆå¤±ã€‚\n",
 			this_object() );
 		people = all_inventory(environment());
 		people->heal_moorth(35);
@@ -86,6 +86,6 @@ void help_me_moorth(object who, object victim)
 	if( !attackers || member_array(victim, attackers)==-1 )
 		kill_ob(victim);
 	tell_room( environment(), 
-		"Ä¬¶ûË¹¾üÒ½Í¦Éí....Ğ­Öú" + who->query("c_name") + "×÷Õ½¡£\n",
+		"é»˜çˆ¾æ–¯è»é†«æŒºèº«....å”åŠ©" + who->query("c_name") + "ä½œæˆ°ã€‚\n",
 		this_object() );
 }

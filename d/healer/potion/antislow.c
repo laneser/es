@@ -6,15 +6,15 @@ inherit MEDICINE;
 void create()
 {
 	medicine::create();
-	set_name("speed pill", "åÐÒ£ÓÎ" );
+	set_name("speed pill", "é€é™éŠ" );
 	add( "id", ({"pill"}) );
-	set_short("åÐÒ£ÓÎ");
+	set_short("é€é™éŠ");
 	set_long(
-		"ÕâÊÇÓÉÐÌ´óÄïÑÐ·¢³öµÄ½âÒ©,×¨ÃÅ½â³ý¸÷ÖÖÂé±ÔµÄÖ¢×´¡£\n"
-		"Èç¹ûÄã¾õµÃ¼¡Èâ½©Ó²,³Ô(eat)ÏÂËüÓ¦ÓÐ²»´íµÄÐ§¹û!\n"
+		"é€™æ˜¯ç”±åˆ‘å¤§å¨˜ç ”ç™¼å‡ºçš„è§£è—¥,å°ˆé–€è§£é™¤å„ç¨®éº»ç—ºçš„ç—‡ç‹€ã€‚\n"
+		"å¦‚æžœä½ è¦ºå¾—è‚Œè‚‰åƒµç¡¬,åƒ(eat)ä¸‹å®ƒæ‡‰æœ‰ä¸éŒ¯çš„æ•ˆæžœ!\n"
 	);
 	set( "can_eat", 1 );
-	set( "unit", "Á£" );
+	set( "unit", "ç²’" );
 	set( "weight", 15 );
 	set( "value", ({ 50, "silver" }) );
 	set( "medication", 50 );
@@ -26,7 +26,7 @@ void eat(object player)
     
 	if( !player->query("conditions/slow") ) return;
 	tell_object( player, can_read_chinese(player)?
-		"Äã¾õµÃ¼¡Èâ²»ÔÙ½©Ó²ÁË£¡\n": "You recover from poison!\n" );
+		"ä½ è¦ºå¾—è‚Œè‚‰ä¸å†åƒµç¡¬äº†ï¼\n": "You recover from poison!\n" );
 	stat = (int) player->query("slow");
 	player->modify_stat("dex",stat);	
 	"/std/conditions/slow"->remove_effect(player);

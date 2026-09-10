@@ -1,9 +1,9 @@
 #u/e/echobomber/board/board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Any idea about deathland,please post it","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÈÎºÎÓĞ¹Øì¶ Deathland µÄÒâ¼û,Çë Post ÉÏÀ´",])
-messages ({(["id":31,"title":"suggestion","body":"1. ±Á´øÒ©¸àÔö¶à»òĞÂÔö
-2. ·Å¸ö guild ÔÚÕâ¶ù°É....ÈçÉ±ÊÖ¹«»á or Ğ¡Íµ¹«»á(ÍµÈË money, hp, eqs, weapon...etc...)
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Any idea about deathland,please post it","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ä»»ä½•æœ‰é—œæ–¼ Deathland çš„æ„è¦‹,è«‹ Post ä¸Šä¾†",])
+messages ({(["id":31,"title":"suggestion","body":"1. ç¹ƒå¸¶è—¥è†å¢å¤šæˆ–æ–°å¢
+2. æ”¾å€‹ guild åœ¨é€™å…’å§....å¦‚æ®ºæ‰‹å…¬æœƒ or å°å·å…¬æœƒ(å·äºº money, hp, eqs, weapon...etc...)
 ","time":778835689,"poster":"Jinna",]),(["id":32,"body":"i think this quest is very difficult for players
 because it need a lot of exploring,talking and thinking
 and some fighting,if there is bug about this quest,mail to me...
@@ -28,16 +28,16 @@ what skeleton is ..... when you die will see...*grin*
 > skeletons in the land of Death....... just wonder... so...
 > where are they.. how do they look like????
 > 
-    Don't u see this sentance \" ÒÔ¼°´ÓÀ´Ã»ÈË¼û¹ıµÄº¡¹ÇÈË \" .
-    If u saw it , ÄÇÔõ÷áÄÜ½Ğ×öÃ»ÈË¼û¹ıÄØ?
+    Don't u see this sentance \" ä»¥åŠå¾ä¾†æ²’äººè¦‹éçš„éª¸éª¨äºº \" .
+    If u saw it , é‚£æ€éº¼èƒ½å«åšæ²’äººè¦‹éå‘¢?
                                Indra ........
 ","title":"Re: sKelEtonS","time":781155996,"poster":"Indra",]),(["id":39,"body":"About valor:
-  Ã¿´ÎÎÒtype \"cut ear from corpse\"Ê±¶¼»á³öÏÖ\"¸î¶ú??²»´íµÄÖ÷Òâ,µ«ÊÇ¶ÔËÀÕß²»¾´à¸!!!
-¶¼ÎŞ·¨¸î¶ú.....²»ÖªÊÇbug»¹ÊÇÎÒÓĞ´íÎó.......
+  æ¯æ¬¡æˆ‘type \"cut ear from corpse\"æ™‚éƒ½æœƒå‡ºç¾\"å‰²è€³??ä¸éŒ¯çš„ä¸»æ„,ä½†æ˜¯å°æ­»è€…ä¸æ•¬å–”!!!
+éƒ½ç„¡æ³•å‰²è€³.....ä¸çŸ¥æ˜¯bugé‚„æ˜¯æˆ‘æœ‰éŒ¯èª¤.......
 
                           death
-","title":"< no title >","time":781620022,"poster":"Death",]),(["id":40,"body":"Á¶¸Ö³¡???
-ÔÚ¿ó¿ÓÈë¿ÚµÄdescribeÖĞËµ:Íù¶«ÊÇÒ»×ùÁ¶¸Ö³§,µ«ÊÇÎÒÔõ÷áÕÒ¶¼Ã»ÓĞÂ·½øÈ¥..........**sigh**
+","title":"< no title >","time":781620022,"poster":"Death",]),(["id":40,"body":"éŠé‹¼å ´???
+åœ¨ç¤¦å‘å…¥å£çš„describeä¸­èªª:å¾€æ±æ˜¯ä¸€åº§éŠé‹¼å» ,ä½†æ˜¯æˆ‘æ€éº¼æ‰¾éƒ½æ²’æœ‰è·¯é€²å»..........**sigh**
 
                               Death
 ","title":"< no title >","time":781620305,"poster":"Death",]),(["id":41,"body":"

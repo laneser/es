@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("gold plate","½ğîø¼×");
+        set_name("gold plate","é‡‘é§ç”²");
         add("id",({"plate","platemail"}) );
-         set_short( "a gold plate","½ğîø¼×");
+         set_short( "a gold plate","é‡‘é§ç”²");
 	set_long(
 "This is a suit of plate make of gold ,which can  \n"
 "protect your body against opponent's attacks.\n",
-"ÕâÊÇÒ»¸±ÓÉ»Æ½ğ´òÔìµÄîø¼×,¿ÉÒÔ±£»¤ÄãµÖ¿¹µĞÈËµÄ¹¥»÷\n"
+"é€™æ˜¯ä¸€å‰¯ç”±é»ƒé‡‘æ‰“é€ çš„é§ç”²,å¯ä»¥ä¿è­·ä½ æŠµæŠ—æ•µäººçš„æ”»æ“Š\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 400 );
 	set( "type", "body" );
 	set( "armor_class", 32 );

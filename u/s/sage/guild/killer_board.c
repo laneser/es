@@ -8,5 +8,5 @@ void create()
         set_save_file("killer_board");
      set_location("/u/s/sage/guild/killer_guild");
         set ("short.text", "Killer's bulletin board");
-        set ("c_short.text", "É±ÊÖÁôÑÔ°å");
+        set ("c_short.text", "æ®ºæ‰‹ç•™è¨€æ¿");
 }

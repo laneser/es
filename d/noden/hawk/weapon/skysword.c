@@ -2,18 +2,18 @@
 
 inherit WEAPON;
 
-string C_NAME=("Ìì¿ÕÖ®½£");
+string C_NAME=("å¤©ç©ºä¹‹åŠ");
 void create()
 {
         set_name( "Sky Sword",C_NAME );
         add( "id",({ "sword","sky","sky sword" }) );
         set_short( C_NAME );
         set_long(@LONG
-Ìì¿ÕÖ®½£ÊÇÄñÈË×åÀú´úÏà´«µÄÊ¥Îï£¬·æÀûÒì³££¬¸üÓĞÖøÕĞ»½ÌìÀ×µÄÉñÊ¥Á¦Á¿£¬
-ÒâÍ¼È¾Ö¸Ìì¿ÕÖ®³ÇµÄÂù×åÕ½Ê¿Ñª½¦ÆäÏÂÕß²»¿ÉÊ¤Êı¡£
+å¤©ç©ºä¹‹åŠæ˜¯é³¥äººæ—æ­·ä»£ç›¸å‚³çš„è–ç‰©ï¼Œé‹’åˆ©ç•°å¸¸ï¼Œæ›´æœ‰è‘—æ‹›å–šå¤©é›·çš„ç¥è–åŠ›é‡ï¼Œ
+æ„åœ–æŸ“æŒ‡å¤©ç©ºä¹‹åŸçš„è »æ—æˆ°å£«è¡€æ¿ºå…¶ä¸‹è€…ä¸å¯å‹æ•¸ã€‚
 LONG
                 );
-        set( "unit","°Ñ" );
+        set( "unit","æŠŠ" );
         set( "type","longblade" );
         set( "weapon_class",35 );
         set( "min_damage",18 );
@@ -29,7 +29,7 @@ void report(object holder, object victim )
 {
    seteuid(getuid());
    tell_object( victim,
-   sprintf("( Äã%s )\n","/adm/daemons/statsd"->status_string(victim)));
+   sprintf("( ä½ %s )\n","/adm/daemons/statsd"->status_string(victim)));
 }
 
 int hit_fun(object victim,int dis)
@@ -53,16 +53,16 @@ int hit_fun(object victim,int dis)
         if (rate > 6) rate = 6;
         if( random(100) < (160 - skill - rate) ) return 0;
         dam = 20 + random(holder->query_skill("ethics")/8);
-                // Òª¶®µÃ±æ±ğÈËĞÄµÄÉÆ¶ñ²ÅÄÜÓĞĞ§µÄ´ò»÷µĞÈË....:p
-                // ÆäÊµÊÇÒòÎªÄ³Ğ©scholar ×Ô×ö´ÏÃ÷Ëµ²»ÓÃÁ·ethics ...ÓĞµã²»Ë¬
+                // è¦æ‡‚å¾—è¾¨åˆ¥äººå¿ƒçš„å–„æƒ¡æ‰èƒ½æœ‰æ•ˆçš„æ‰“æ“Šæ•µäºº....:p
+                // å…¶å¯¦æ˜¯å› ç‚ºæŸäº›scholar è‡ªåšè°æ˜èªªä¸ç”¨ç·´ethics ...æœ‰é»ä¸çˆ½
         victim->receive_special_damage( "electric", dam );
-        tell_room(environment(victim),"\n"+name1+"ÊÖÖĞµÄÌì¿ÕÖ®½£ºöÈ»·¢³öÒ»µÀ"+
-                "ÉÁ¹âÖ±³åÌì¼Ê£¬\n¶ÙÊ±·çÔÆ±äÉ«£¬½ô½ÓÖøÒ»µÀÉÁµç´ÓÌì¶ø½µ£¬¾«×¼"+
-                "µÄ´òÔÚ"+name2+"µÄÍ·ÉÏ£¬Ôì³ÉÄÑÒÔÑÔÓ÷µÄÉËº¦¡£\n",this_player()
+        tell_room(environment(victim),"\n"+name1+"æ‰‹ä¸­çš„å¤©ç©ºä¹‹åŠå¿½ç„¶ç™¼å‡ºä¸€é“"+
+                "é–ƒå…‰ç›´è¡å¤©éš›ï¼Œ\né “æ™‚é¢¨é›²è®Šè‰²ï¼Œç·Šæ¥è‘—ä¸€é“é–ƒé›»å¾å¤©è€Œé™ï¼Œç²¾æº–"+
+                "çš„æ‰“åœ¨"+name2+"çš„é ­ä¸Šï¼Œé€ æˆé›£ä»¥è¨€å–»çš„å‚·å®³ã€‚\n",this_player()
         );
-        tell_object(holder,"\nÄãÊÖÖĞµÄ½£ºô»½³ö"+set_color("À×Éñ","HIB")
-                +"µÄÁ¦Á¿³¹µ×µÄ»÷À£ÁËÄãµÄµĞÈË£¬Ôì³ÉÁË"
-                +set_color("¡¸ÄÑÒÔÏëÏñ¡¹","HIR")+"µÄÆÆ»µ£¡\n\n" );
+        tell_object(holder,"\nä½ æ‰‹ä¸­çš„åŠå‘¼å–šå‡º"+set_color("é›·ç¥","HIB")
+                +"çš„åŠ›é‡å¾¹åº•çš„æ“Šæ½°äº†ä½ çš„æ•µäººï¼Œé€ æˆäº†"
+                +set_color("ã€Œé›£ä»¥æƒ³åƒã€","HIR")+"çš„ç ´å£ï¼\n\n" );
         victim->set("last_attacker",holder);
         holder->set("hit_points",hp - 5);
         holder->set("spell_points",sp - 8);

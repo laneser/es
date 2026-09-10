@@ -22,25 +22,25 @@ int cmd_open (string str)
 	if(!str || ( str!="door" && !(dir=environment(this_player())->query_door(str)) 
 	&& sscanf(str,"%s door", dir) != 1))
 		return notify_fail( 
-			"ÄãÒª´ò¿ªÉõ÷á¶«Î÷£¿\n");
+			"ä½ è¦æ‰“é–‹ç”šéº¼æ±è¥¿ï¼Ÿ\n");
 
 	env = environment(this_player());
 	if (!env)
 		return notify_fail( 
-			"ÕâÀïÉõ÷áÒ²Ã»ÓĞ£¬ÄãÒª´ò¿ªÉõ÷á¶«Î÷£¿\n");
+			"é€™è£¡ç”šéº¼ä¹Ÿæ²’æœ‰ï¼Œä½ è¦æ‰“é–‹ç”šéº¼æ±è¥¿ï¼Ÿ\n");
 
 	doors = env->query("doors") ;
  
 	if (!doors)
 		return notify_fail( 
-			"ÕâÀïÃ»ÓĞÃÅ....¡£\n");
+			"é€™è£¡æ²’æœ‰é–€....ã€‚\n");
  
 	tmp = keys( doors );
  
 	if(str == "door") {
 		if(sizeof(doors) > 1)
 			return notify_fail( 
-				"ÕâÀïµÄÃÅ²»Ö»Ò»¸ö£¬ÄãÒª¿ªÄÄÒ»¸ö£¿\n");
+				"é€™è£¡çš„é–€ä¸åªä¸€å€‹ï¼Œä½ è¦é–‹å“ªä¸€å€‹ï¼Ÿ\n");
 
 		dir = tmp[0];
 	}
@@ -48,28 +48,28 @@ int cmd_open (string str)
 	//  If the user can't see ... then pick a random door. <grin>
 	if(!this_player()->query("vision"))  {
 		write( 
-			"ÄãÔÚºÚ°µÖĞÃşË÷£¬ÕÒÃÅ....¡£\n");
+			"ä½ åœ¨é»‘æš—ä¸­æ‘¸ç´¢ï¼Œæ‰¾é–€....ã€‚\n");
 		dir = tmp[ random(sizeof(tmp)) ];
 	}
  
 	if (!doors[dir])
 		return notify_fail(
-			"Õâ¸ö·½ÏòÃ»ÓĞÃÅ....¡£\n");
+			"é€™å€‹æ–¹å‘æ²’æœ‰é–€....ã€‚\n");
 
 	if (doors[dir]["status"]=="open")
 		return notify_fail( 
-			"ËüÒÑ¾­±»´ò¿ªÁË¡£\n");
+			"å®ƒå·²ç¶“è¢«æ‰“é–‹äº†ã€‚\n");
 
 	if (doors[dir]["status"]=="locked")
 		return notify_fail( 
-			"ß×....´ò²»¿ª£¬´ó¸ÅÊÇËø×¡ÁË¡£\n");
+			"å’¦....æ‰“ä¸é–‹ï¼Œå¤§æ¦‚æ˜¯é–ä½äº†ã€‚\n");
 
 	env->set_status(dir, "open");
 	env->update_link(dir);
-	printf( "Äã°Ñ%s´ò¿ª¡£\n", doors[dir]["c_name"] );
+	printf( "ä½ æŠŠ%sæ‰“é–‹ã€‚\n", doors[dir]["c_name"] );
 
 	tell_room( env, 
-		this_player()->query("c_name")+"´ò¿ªÁË"+ doors[dir]["c_name"] + ".\n" ,
+		this_player()->query("c_name")+"æ‰“é–‹äº†"+ doors[dir]["c_name"] + ".\n" ,
 		this_player()
 	);
 	return 1 ;
@@ -77,11 +77,11 @@ int cmd_open (string str)
 
 int help() {
 	write (@HELP
-Ê¹ÓÃ¸ñÊ½: open <·½Ïò> door  -or-  open <ÈİÆ÷>
+ä½¿ç”¨æ ¼å¼: open <æ–¹å‘> door  -or-  open <å®¹å™¨>
 
-Õâ¸öÖ¸Áî¿ÉÒÔ´ò¿ª¹Ø±ÕµÄÃÅ»òÈİÆ÷£¬µ«Ëü±ØĞëÊÇÃ»ÓĞËøÉÏµÄ.
+é€™å€‹æŒ‡ä»¤å¯ä»¥æ‰“é–‹é—œé–‰çš„é–€æˆ–å®¹å™¨ï¼Œä½†å®ƒå¿…é ˆæ˜¯æ²’æœ‰é–ä¸Šçš„.
 
-Ïà¹ØÖ¸Áî: get, put, close, lock, unlock.
+ç›¸é—œæŒ‡ä»¤: get, put, close, lock, unlock.
 HELP
 	) ;
 	return 1 ;

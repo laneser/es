@@ -8,13 +8,13 @@ void create()
 
 	::create();
 	set_level(8);
-	set_name( "Moorth Soldier", "Ä¬¶ûË¹Ê¿±ø" );
+	set_name( "Moorth Soldier", "é»˜çˆ¾æ–¯å£«å…µ" );
 	add( "id", ({ "soldier" }) );
-	set_short( "Ä¬¶ûË¹Ê¿±ø" );
+	set_short( "é»˜çˆ¾æ–¯å£«å…µ" );
 	set_long(
-		"Äã¿´µ½Ò»¸öÄ¬¶ûË¹µÄÊ¿±ø£¬ËûÕýÔÚÑ°ÕÒµÐÈË¡ª¡ª²¢ÇÒÆóÍ¼½¨Á¢Õ½¹¦\¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹é»˜çˆ¾æ–¯çš„å£«å…µï¼Œä»–æ­£åœ¨å°‹æ‰¾æ•µäººâ€”â€”ä¸¦ä¸”ä¼åœ–å»ºç«‹æˆ°åŠŸ\ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment", -300 );
@@ -32,9 +32,9 @@ void create()
 	set_skill( "defend", 40 );
 	set( "chat_chance", 20 );
 	set( "att_chat_output", ({
-		"Ä¬¶ûË¹Ê¿±ø´ó½Ð: À­ÄÈÎ÷Ë¹Å®»Ê±ÝÏÂÍòËê£¡\n",
-		"Ä¬¶ûË¹Ê¿±øËµµÀ: ¶ªÏÂÄãµÄÎäÆ÷¹Ô¹ÔÊÜËÀ°É£¡\n",
-		"Ä¬¶ûË¹Ê¿±øËµµÀ: ÄãÃÇ²»¿ÉÄÜÓ®µÄ£¬Ê¤ÀûÊÇÊôì¶Ä¬¶ûË¹µÛ¹úµÄ£¡\n"
+		"é»˜çˆ¾æ–¯å£«å…µå¤§å«: æ‹‰å¨œè¥¿æ–¯å¥³çš‡é™›ä¸‹è¬æ­²ï¼\n",
+		"é»˜çˆ¾æ–¯å£«å…µèªªé“: ä¸Ÿä¸‹ä½ çš„æ­¦å™¨ä¹–ä¹–å—æ­»å§ï¼\n",
+		"é»˜çˆ¾æ–¯å£«å…µèªªé“: ä½ å€‘ä¸å¯èƒ½è´çš„ï¼Œå‹åˆ©æ˜¯å±¬æ–¼é»˜çˆ¾æ–¯å¸åœ‹çš„ï¼\n"
 	}) );
 
 	ob1 = new( "/d/moorth/obj/shortsword" );
@@ -55,6 +55,6 @@ void help_me_moorth(object who, object victim)
 	if( !attackers || member_array(victim, attackers)==-1 )
 		kill_ob(victim);
 	tell_room( environment(), 
-		"Ä¬¶ûË¹Ê¿±øÍ¦Éí±£»¤" +who->query("c_name") +"¡£\n",
+		"é»˜çˆ¾æ–¯å£«å…µæŒºèº«ä¿è­·" +who->query("c_name") +"ã€‚\n",
 		this_object() );
 }

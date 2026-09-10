@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "dragon chainmail","·ÉÁúÖ®îø");
+        set_name( "dragon chainmail","é£›é¾ä¹‹é§");
         add( "id", ({ "chainmail","dragon" }) );
-        set_short( "dragon chainmail","·ÉÁúÖ®îø" );
+        set_short( "dragon chainmail","é£›é¾ä¹‹é§" );
         set_long(@AAA
-Ò»¸ö¿ÌÓĞ·ÉÁúÍ¼°¸µÄîø¼×£¬¾ßÓĞ³¬¸ßµÄ·ÀÓùÁ¦£¬ÊÇÈÌÕß¸ğÀ­µÄ´«¼ÒÖ®±¦¾İËµ
-Æä¸ß·ÀÓùÁ¦ÊÇÀ´ÖÁ´ËîøÔø½ş¹ıÁúÑª£®
+ä¸€å€‹åˆ»æœ‰é£›é¾åœ–æ¡ˆçš„é§ç”²ï¼Œå…·æœ‰è¶…é«˜çš„é˜²ç¦¦åŠ›ï¼Œæ˜¯å¿è€…è‘›æ‹‰çš„å‚³å®¶ä¹‹å¯¶æ“šèªª
+å…¶é«˜é˜²ç¦¦åŠ›æ˜¯ä¾†è‡³æ­¤é§æ›¾æµ¸éé¾è¡€ï¼
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 35 );
         set( "defense_bonus", 4 );

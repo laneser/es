@@ -1,4 +1,4 @@
-新的魔法架构
+鏂扮殑榄旀硶鏋舵
 _cast.c:
 
 int	cmd_cast(string s)

@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai mark", "ÎäÊ¿ÎÆÕÂ ");
+        set_name( "samurai mark", "æ­¦å£«ç´‹ç«  ");
         add( "id", ({ "samurai","mark","amulet"}) );
-        set_short("samurai mark", "ÎäÊ¿ÎÆÕÂ");
+        set_short("samurai mark", "æ­¦å£«ç´‹ç« ");
         set_long(@AAA
-           Ò»¸ö´ú±íÎäÊ¿Éí·ÖµØÎ»µÄÎÆÕÂ£¬Ö»ÓĞ¶ÔÎäÊ¿ÓĞÖØ´ó¹¦ÀÍµÄÈË
-           ²ÅÄÜÓµÓĞ´ËÎï
+           ä¸€å€‹ä»£è¡¨æ­¦å£«èº«åˆ†åœ°ä½çš„ç´‹ç« ï¼Œåªæœ‰å°æ­¦å£«æœ‰é‡å¤§åŠŸå‹çš„äºº
+           æ‰èƒ½æ“æœ‰æ­¤ç‰©
 AAA
    );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "misc" );
         set( "armor_class", 1 );
         set( "defense_bonus", 6 );

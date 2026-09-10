@@ -8,13 +8,13 @@ void create()
 	
 	set("echo_quest_card",1);
 	set("someone_id","0");
-	set_name( "blackcard", "ºÚÉ«¿¨Æ¬" );
-	set_short("a blackcard","ºÚÉ«¿¨Æ¬");
+	set_name( "blackcard", "é»‘è‰²å¡ç‰‡" );
+	set_short("a blackcard","é»‘è‰²å¡ç‰‡");
 	set_long("a black card.\n", 
 	   "@@query_c_long"
 	    );
 	add("id", ({ "card", }));
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set("weight", 30);
 	set("no_sale",1);
 	set("value", ({ 0, "copper" }));
@@ -22,7 +22,7 @@ void create()
 
 string query_c_long()
 {
-      return "Ò»ÕÅºÚÉ«µÄ¿¨Æ¬,ÉÏÃæÐ´Öø:"+query("someone_id")+" \ÒÑ\¾­\³É\¹¦\µÄÖ¤Ã÷ËûÊÇÒ»¸öÓÂÕß\n";
+      return "ä¸€å¼µé»‘è‰²çš„å¡ç‰‡,ä¸Šé¢å¯«è‘—:"+query("someone_id")+" \å·²ç¶“æˆåŠŸçš„è­‰æ˜Žä»–æ˜¯ä¸€å€‹å‹‡è€…\n";
 
 }    
 
@@ -41,11 +41,11 @@ int to_show(string str)
     if (sscanf(str,"%s to %s",card_name,npc_name)!=2) return 0;  
     if ( !id(card_name) ) return 0;   
     if ( !(npc=present(npc_name,environment(you))) ) { 
-      write("ÕâÀïÃ»ÓÐÕâ¸öÈË.\n");
+      write("é€™è£¡æ²’æœ‰é€™å€‹äºº.\n");
       return 1;
       }
     if ( ! npc->query("echo_valor") ) { 
-       write( sprintf("%s ¿´ÁËÒ»ÏÂÄãµÄ¿¨Æ¬, µ«ÊÇÃ»ÓÐÈÎºÎ·´Ó¦.\n",npc->query("c_name")) );   
+       write( sprintf("%s çœ‹äº†ä¸€ä¸‹ä½ çš„å¡ç‰‡, ä½†æ˜¯æ²’æœ‰ä»»ä½•åæ‡‰.\n",npc->query("c_name")) );   
        return 1;
        }
     else return npc->echo_valor(you,this_object()); 

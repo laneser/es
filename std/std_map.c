@@ -76,29 +76,29 @@ int read_map(string arg)
 
 	if( arg=="legend" ) {
 	write( @C_LEGEND
-ÒÔÏÂÊÇµØÍ¼ÖĞÓÃÀ´±íÊ¾¸÷ÖÖµØĞÎµÄÍ¼Àı:
+ä»¥ä¸‹æ˜¯åœ°åœ–ä¸­ç”¨ä¾†è¡¨ç¤ºå„ç¨®åœ°å½¢çš„åœ–ä¾‹:
 ------------------------------------------------------
-	::		Æ½Ô­
-	oo		Ê÷´Ô¡¢²İ´Ô
-	OO		É­ÁÖ
-	/\\		É½Âö
-	^^		É½Çğ
-	&&		É³Ä®
-	++		µÀÂ·
-	[]		³ÇÕò
-	%%		ÕÓÔó
-	==		Ë®Óò¡¢ºÓÁ÷
-	~~		º£Ñó
-	 *		½¨ÖşÎï
+	::		å¹³åŸ
+	oo		æ¨¹å¢ã€è‰å¢
+	OO		æ£®æ—
+	/\\		å±±è„ˆ
+	^^		å±±ä¸˜
+	&&		æ²™æ¼ 
+	++		é“è·¯
+	[]		åŸé®
+	%%		æ²¼æ¾¤
+	==		æ°´åŸŸã€æ²³æµ
+	~~		æµ·æ´‹
+	 *		å»ºç¯‰ç‰©
 ------------------------------------------------------
-µØÍ¼ÖĞÑëµÄ <*> ±íÊ¾ÄãÄ¿Ç°µÄÎ»ÖÃ¡£
+åœ°åœ–ä¸­å¤®çš„ <*> è¡¨ç¤ºä½ ç›®å‰çš„ä½ç½®ã€‚
 C_LEGEND
 		);
 		return 1;
 	}
 
 	if( arg!="map" )
-		return notify_fail("¶ÁÊ²÷á£¿\n");
+		return notify_fail("è®€ä»€éº¼ï¼Ÿ\n");
 
 	if( flag ) {
 		v_server = query_virtual_server();
@@ -108,7 +108,7 @@ C_LEGEND
 		env = environment(this_object());
 		if( living(env) ) env = environment(env);
 		if( !env || !(v_server= env->query("virtual_server")) )
-			return notify_fail("µØÍ¼Ö»ÓĞÔÚÒ°Íâ²ÅÄÜÊ¹ÓÃ¡£\n");
+			return notify_fail("åœ°åœ–åªæœ‰åœ¨é‡å¤–æ‰èƒ½ä½¿ç”¨ã€‚\n");
 		x = (int)env->query("x_coordinate");
 		y = (int)env->query("y_coordinate");
 	}
@@ -154,7 +154,7 @@ C_LEGEND
 	}
 	str += bar;
 	if( !flag ) str += 
-		sprintf("ÄãÄ¿Ç°µÄÎ»ÖÃ: (X = %d, Y = %d)\n", x, y);
+		sprintf("ä½ ç›®å‰çš„ä½ç½®: (X = %d, Y = %d)\n", x, y);
 	write(str);
 	return 1;
 }

@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("spirit ball","ÙãÁéÖé");
+        set_name("spirit ball","å·½éˆç ");
         add( "id" , ({ "ball" }) );
-        set_short( "ÙãÁéÖé");
+        set_short( "å·½éˆç ");
         set_long(@C_LONG
-Ò»¿ÅÄ«ºÚÉ«µÄÔ²Çò£¬ÓÌÈçÒ»Á£ºÚÕäÖé¡£
+ä¸€é¡†å¢¨é»‘è‰²çš„åœ“çƒï¼ŒçŒ¶å¦‚ä¸€ç²’é»‘çç ã€‚
 C_LONG  );      
-        set("unit","¿Å");
+        set("unit","é¡†");
         set("weight",50);
         set("no_sale",1);
         set("spiritball",1);

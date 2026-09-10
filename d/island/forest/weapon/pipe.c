@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Pipe","ÑÌ¶·");
-    set_short("ÑÌ¶·");
+    set_name("Pipe","è¸æ–—");
+    set_short("è¸æ–—");
     set_long(@LONG
-ÕâÊÇÓÃÏ¸Öñ×ö³ÉµÄÑÌ¶·£¬Ç°Í·»¹°óÁË¸öĞ¡Ğ¡µÄÑÌ²İ´ü£®
+é€™æ˜¯ç”¨ç´°ç«¹åšæˆçš„è¸æ–—ï¼Œå‰é ­é‚„ç¶äº†å€‹å°å°çš„è¸è‰è¢‹ï¼
 LONG
             );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("type","dagger");
     set("weapon_class",4);
     set("min_damage",3);

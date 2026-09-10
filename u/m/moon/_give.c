@@ -33,18 +33,18 @@ int give_item(object ob,object me,object target)
 	    if(is_log) log_file("GIVE", extract(ctime(time()), 4, 15)+"  "+
                      me->query("name")+" give "+base_name(ob)+
                      " to "+target->query("name") );
-            if( !(short = (string)ob->query("short")) ) short = "Ä³Îï";
-                        if( !(unit = (string)ob->query("unit")) ) unit = "¸ö"; 
+            if( !(short = (string)ob->query("short")) ) short = "æŸç‰©";
+                        if( !(unit = (string)ob->query("unit")) ) unit = "å€‹"; 
                 write(
-                    sprintf("Äã¸ø%sÒ»%s%s¡£\n",
+                    sprintf("ä½ çµ¦%sä¸€%s%sã€‚\n",
                                 target->query("c_name"),unit,short )
                      );
                 tell_room( environment(me),
-                        sprintf("%s¸ø%sÒ»%s%s¡£\n",
+                        sprintf("%sçµ¦%sä¸€%s%sã€‚\n",
                     me->query("c_name"),target->query("c_name"),unit,short),
                                         ({me, target}) );
                 tell_object(target,
-                        sprintf("%s¸øÄãÒ»%s%s¡£\n",
+                        sprintf("%sçµ¦ä½ ä¸€%s%sã€‚\n",
                     me->query("c_name"),unit,short )
                     );
                         // if target is NPC, call special func if exists.
@@ -52,7 +52,7 @@ int give_item(object ob,object me,object target)
                                 target->accept_item( me, ob );
                         return 1;
                 }
-                write(target->query("c_name")+"ÄÃ²»¶¯ÁË¡£\n");
+                write(target->query("c_name")+"æ‹¿ä¸å‹•äº†ã€‚\n");
                 return 1;
 } 
 int cmd_give(string str)
@@ -64,29 +64,29 @@ int cmd_give(string str)
  
         if( !str ) return help();
         if( !this_player()->query_vision() )
-        return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ£¬Ê²÷áÒ²¿´²»¼û¡£\n");
+        return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ï¼Œä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n");
  
         this_player()->block_attack(2);
         if( sscanf(str, "%d %s to %s", amount, type, who) == 3 ) {
                 money = this_player()->query("wealth/"+type);
                 if( money < amount )
-            return notify_fail("ºÙ....ÄãÃ»ÓĞÄÇ÷á¶àÇ®¡£\n");
+            return notify_fail("å˜¿....ä½ æ²’æœ‰é‚£éº¼å¤šéŒ¢ã€‚\n");
 
         who = lower_case(who);
                 target = present(who, environment(this_player())) ;
                 if( !target || !living(target) || !visible(target,this_player()) )
-            return notify_fail("¸øË­ ?\n");
+            return notify_fail("çµ¦èª° ?\n");
                 if( target->query("prevent_give_money") )
-              return notify_fail("ËüÉíÉÏ²»ÄÜ´øÇ®!\n");
+              return notify_fail("å®ƒèº«ä¸Šä¸èƒ½å¸¶éŒ¢!\n");
            // Add by Yueh to prevent wizard giving money to others
              if ((wizardp(this_player()))&&(living(target)))
-                return notify_fail("Î×Ê¦²»ÄÜ¸øÆäËüÉúÎïÇ®£¡\n");
+                return notify_fail("å·«å¸«ä¸èƒ½çµ¦å…¶å®ƒç”Ÿç‰©éŒ¢ï¼\n");
               
                 this_player()->debit( type, amount );
                 if( !target->credit( type, amount ) ) {
                         this_player()->credit( type, amount );
             return notify_fail(
-                target->query("c_name")+"ÒÑ¾­°á²»¶¯ÆäËû¶«Î÷ÁË¡£\n");
+                target->query("c_name")+"å·²ç¶“æ¬ä¸å‹•å…¶ä»–æ±è¥¿äº†ã€‚\n");
                 }
                 
                 // if target is NPC, call special func if exists.
@@ -94,16 +94,16 @@ int cmd_give(string str)
                         target->accept_money(type, amount);
                 
         write(
-            sprintf("Äã´Ó¿Ú´üÌÍ³ö %d Ã¶%s¸ø%s¡£\n",amount,to_chinese(type+" coin"),
+            sprintf("ä½ å¾å£è¢‹æå‡º %d æš%sçµ¦%sã€‚\n",amount,to_chinese(type+" coin"),
             target->query("c_name") )
              );
         tell_room( environment(this_player()),
-                sprintf("%s´Ó¿Ú´üÌÍ³ö %d Ã¶%s¸ø%s¡£\n",
+                sprintf("%så¾å£è¢‹æå‡º %d æš%sçµ¦%sã€‚\n",
                         this_player()->query("c_name") ,amount,
                         to_chinese(type+" coin"),target->query("c_name")),
                         ({ this_player(), target }) );
         tell_object(target,
-                sprintf("%s´Ó¿Ú´üÌÍ³ö %d Ã¶%s¸øÄã¡£\n",
+                sprintf("%så¾å£è¢‹æå‡º %d æš%sçµ¦ä½ ã€‚\n",
                         this_player()->query("c_name"),amount,
                         to_chinese(type+" coin") ) );
                 return 1;
@@ -115,15 +115,15 @@ int cmd_give(string str)
             who=lower_case(who);
                 target = present(who, environment(this_player()));
                 if( !target || !living(target) || !visible(target, this_player()) )
-            return notify_fail( "ÕâÀïÃ»ÓĞÕâ¸öÈË....¡£\n" );
+            return notify_fail( "é€™è£¡æ²’æœ‰é€™å€‹äºº....ã€‚\n" );
                 if( target->query("prevent_give") )
-            return notify_fail( "ËûÉíÉÏ²»ÄÜ´øÈÎºÎ¶«Î÷!\n");
+            return notify_fail( "ä»–èº«ä¸Šä¸èƒ½å¸¶ä»»ä½•æ±è¥¿!\n");
  
                 items = filter_array(all_inventory(this_player()),
                         "is_this_type", this_object(), type );
                         
                 if( sizeof(items) == 0 )
-            return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÀàÎïÆ·¡£\n" );
+            return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™é¡ç‰©å“ã€‚\n" );
                         
                 for( i=0; i<sizeof(items); i++ ) {
                         if( items[i]->query("prevent_drop") ||
@@ -138,9 +138,9 @@ int cmd_give(string str)
             who=lower_case(who);
                 target = present(who, environment(this_player()));
                 if( !target || !living(target) || !visible(target, this_player()) )
-            return notify_fail( "ÕâÀïÃ»ÓĞÕâ¸öÈË....¡£\n" );
+            return notify_fail( "é€™è£¡æ²’æœ‰é€™å€‹äºº....ã€‚\n" );
                 if( target->query("prevent_give") )
-            return notify_fail( "ËüÉíÉÏ²»ÄÜ´øÈÎºÎ¶«Î÷!\n");
+            return notify_fail( "å®ƒèº«ä¸Šä¸èƒ½å¸¶ä»»ä½•æ±è¥¿!\n");
  
                 inv = all_inventory(this_player());
                 for(i = 0; i < sizeof(inv); i++) {
@@ -154,15 +154,15 @@ int cmd_give(string str)
         if( sscanf(str, "%s to %s", item, who) == 2 ) {
                 ob = present(item, this_player());
                 if( !ob )
-            return notify_fail("ÄãÉíÉÏ²¢Ã»ÓĞÕâÑù¶«Î÷¡£\n");
+            return notify_fail("ä½ èº«ä¸Šä¸¦æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
          
                 if( ob->query("prevent_drop") || ob->query("secure") )
-            return notify_fail("Äã²»ÄÜ°ÑÕâÑù¶«Î÷¸øÈË.\n");
+            return notify_fail("ä½ ä¸èƒ½æŠŠé€™æ¨£æ±è¥¿çµ¦äºº.\n");
  
         who =lower_case(who);
                 target = present(who, environment(this_player()));
                 if( !target || !living(target) )
-            return notify_fail("ÕâÀïÃ»ÓĞÕâ¸öÈË¡£\n");
+            return notify_fail("é€™è£¡æ²’æœ‰é€™å€‹äººã€‚\n");
                 give_item(ob,this_player(),target);
                 return 1;
         }
@@ -179,15 +179,15 @@ int is_this_type(object ob, string type)
 int help()
 {
         write( @LONG
-Ê¹ÓÃ¸ñÊ½: give <ÎïÆ·Ãû»òall> to <ÉúÎï>
-          give <ÊıÄ¿> <ÎïÆ·ÀàĞÍ> to <ÉúÎï>
+ä½¿ç”¨æ ¼å¼: give <ç‰©å“åæˆ–all> to <ç”Ÿç‰©>
+          give <æ•¸ç›®> <ç‰©å“é¡å‹> to <ç”Ÿç‰©>
                  
-Õâ¸öÖ¸Áî½«¸øÉúÎïÎïÆ·£¬µ«ÕâÉúÎï±ØĞëÔÚÍ¬Ò»³¡¾°.
+é€™å€‹æŒ‡ä»¤å°‡çµ¦ç”Ÿç‰©ç‰©å“ï¼Œä½†é€™ç”Ÿç‰©å¿…é ˆåœ¨åŒä¸€å ´æ™¯.
 
-Àı×Ó: give all to echobomber(½«ÉíÉÏÈ«²¿ÎïÆ·¸øechobomber) ,
-      give 100 silver to kyoko(½«ÉíÉÏ100silver¸økyoko) .
+ä¾‹å­: give all to echobomber(å°‡èº«ä¸Šå…¨éƒ¨ç‰©å“çµ¦echobomber) ,
+      give 100 silver to kyoko(å°‡èº«ä¸Š100silverçµ¦kyoko) .
 
-Ïà¹ØÖ¸Áî:get,put
+ç›¸é—œæŒ‡ä»¤:get,put
 LONG
         );
         return 1;

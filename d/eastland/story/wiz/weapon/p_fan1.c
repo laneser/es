@@ -2,14 +2,14 @@
 inherit WEAPON;
 void create()
 {
-	set_name("Princess's fan","°Å½¶ÉÈ");
+	set_name("Princess's fan","èŠ­è•‰æ‰‡");
 	add ("id",({ "fan"}) );
-        set_short("°Å½¶ÉÈ");
+        set_short("èŠ­è•‰æ‰‡");
 	set_long(@C_LONG
-Ò»±ú°Å½¶Ò¶ĞÎ×´µÄÉÈ×Ó¡£ÉÈ×ÓÉÏÏâÓĞÃ÷Óñôä´äÖ®ÀàµÄÎïÆ·£¬Öé¹â±¦ÆøÂÒÏÔÒ»Í¨¡£  
+ä¸€æŸ„èŠ­è•‰è‘‰å½¢ç‹€çš„æ‰‡å­ã€‚æ‰‡å­ä¸Šé‘²æœ‰æ˜ç‰ç¿¡ç¿ ä¹‹é¡çš„ç‰©å“ï¼Œç å…‰å¯¶æ°£äº‚é¡¯ä¸€é€šã€‚  
 C_LONG
 	);
-	set( "unit", "±ú" );
+	set( "unit", "æŸ„" );
         setup_weapon("blunt", 25,13,22);
         set( "special_things",1);
 	set( "weight", 80 );

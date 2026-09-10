@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "red_chocolate", "ºìÉ«ÇÉ¿ËÁ¦" );
+	set_name( "red_chocolate", "ç´…è‰²å·§å…‹åŠ›" );
 	add( "id", ({ "chocolate" }) );
-	set_short(  "ºìÉ«ÇÉ¿ËÁ¦" );
+	set_short(  "ç´…è‰²å·§å…‹åŠ›" );
 	set_long(
-		"ÕâÊÇÒ»¸ö°üÖøÅ£ÄÌµÄÇÉ¿ËÁ¦£¬Äã¿ÉÒÔ¡õ¡õ¿´(taste)¡£\n"
+		"é€™æ˜¯ä¸€å€‹åŒ…è‘—ç‰›å¥¶çš„å·§å…‹åŠ›ï¼Œä½ å¯ä»¥â–¡â–¡çœ‹(taste)ã€‚\n"
 	);
 	set( "type", "misc" );
 	set( "weight", 10 );
@@ -26,12 +26,12 @@ int do_eat(string arg)
    int tp,maxtp;
 
    if(!arg || arg!="chocolate")
-   { write("ÄãÒª³ÔÊ²÷á£¿\n");
+   { write("ä½ è¦åƒä»€éº¼ï¼Ÿ\n");
      return 1;
    };
 
-   write("Äã³ÔÁËÒ»¿é°üÖøÅ£ÄÌµÄÇÉ¿ËÁ¦£¬ËüÂýÂýµÄ»¯ÔÚ×ìÀï£¬Å£ÄÌÒ²¸úÖøÂýÂýµÄÁ÷³ö¡£\n");
-   write("Äã¸Ðµ½Ëµ²»³öµÄÊæ·þ£¬ÕæÏëÔÙ³ÔÒ»¿é¡£\n");
+   write("ä½ åƒäº†ä¸€å¡ŠåŒ…è‘—ç‰›å¥¶çš„å·§å…‹åŠ›ï¼Œå®ƒæ…¢æ…¢çš„åŒ–åœ¨å˜´è£¡ï¼Œç‰›å¥¶ä¹Ÿè·Ÿè‘—æ…¢æ…¢çš„æµå‡ºã€‚\n");
+   write("ä½ æ„Ÿåˆ°èªªä¸å‡ºçš„èˆ’æœï¼ŒçœŸæƒ³å†åƒä¸€å¡Šã€‚\n");
    maxtp=this_player()->query("max_tp");
    tp=this_player()->query("talk_points");
    if (maxtp<(tp+10))

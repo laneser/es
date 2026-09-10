@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set("light", 1);
-    set_short( "Chatroom","ÇåÌ¸·¿" );
+    set_short( "Chatroom","æ¸…è«‡æˆ¿" );
     set_long(
 @LONG
 You are in yet another squared room. This place is barely
 decorated. However, it looks very comfortable.
 LONG
 	, @C_LONG
-ÕâÊÇÒ»¼ä³ÂÉè¼òµ¥µÄ·½ĞÎ·¿¼ä, ËäÈ»Éè±¸¼òµ¥, ¿´ÆğÀ´È´Ò²Âú
-Êæ·şµÄ¡£
+é€™æ˜¯ä¸€é–“é™³è¨­ç°¡å–®çš„æ–¹å½¢æˆ¿é–“, é›–ç„¶è¨­å‚™ç°¡å–®, çœ‹èµ·ä¾†å»ä¹Ÿæ»¿
+èˆ’æœçš„ã€‚
 C_LONG
     );
     set("exits", ([ "north" : IRC"lobby", ]) );

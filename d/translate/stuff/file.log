@@ -1,13 +1,13 @@
  
 filename    changes                            original locations
 --------------------------------------------------------------------------
-_faq.c    : Ôö¼ÓÖĞÎÄ.                          /cmds/std/_faq.c
-faq       : Ó¢ÎÄ°æ faq                         /adm/news/faq
-c_faq     : ÖĞÎÄ°æ faq                         /adm/news/c_faq (new file)
-about     : Ó¢ÎÄ°æµÄ about (help about) file   /doc/help/about
-start     : Ó¢ÎÄ°æ start, ¼ÓÒ»Ğ©ËµÃ÷. in case  /doc/help/start
-            ÓĞÀÏÍâÍæ ES and got lost :)
+_faq.c    : å¢åŠ ä¸­æ–‡.                          /cmds/std/_faq.c
+faq       : è‹±æ–‡ç‰ˆ faq                         /adm/news/faq
+c_faq     : ä¸­æ–‡ç‰ˆ faq                         /adm/news/c_faq (new file)
+about     : è‹±æ–‡ç‰ˆçš„ about (help about) file   /doc/help/about
+start     : è‹±æ–‡ç‰ˆ start, åŠ ä¸€äº›èªªæ˜. in case  /doc/help/start
+            æœ‰è€å¤–ç© ES and got lost :)
 config.h: : Intermud Configuration files       /include/net/config.h
-            (Ğ¡ĞÄ²»Òª¸ú /include/config.h ¸ã»ì)
+            (å°å¿ƒä¸è¦è·Ÿ /include/config.h ææ··)
 switches.h: Enable Intermud                    /include/switches.h
  

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wedding boots", "��ͷƤЬ");
+        set_name("wedding boots", "尖頭皮鞋");
         add( "id", ({ "boots" }) );
-        set_short("a pair of wedding boots", "��ͷƤЬ");
+        set_short("a pair of wedding boots", "尖頭皮鞋");
         set_long(
                 "A pair of boots made for wedding.\n",
-                "һ˫�ڵķ����ļ�ͷƤЬ��\n"
+                "一雙黑的發亮的尖頭皮鞋。\n"
         );
-        set( "unit", "˫");
+        set( "unit", "雙");
         set( "type", "feet" );
         set( "material" , "leather" ) ; 
         set( "armor_class", 8 );

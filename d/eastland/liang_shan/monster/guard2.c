@@ -8,14 +8,14 @@ void create()
 
 	::create();
 	set_level(13);
-	set_name( "Crab warrior", "Ğ·½«" );
+	set_name( "Crab warrior", "èŸ¹å°‡" );
 	add( "id", ({ "warrior", "crab" }) );
-	set_short( "Crab warrior", "Ğ·½«" );
+	set_short( "Crab warrior", "èŸ¹å°‡" );
 	set_long(
 		"\n",
-		"ÕâÒ»ÃûÕ½Ê¿ÊÇÁú¹¬µÄÖ÷ÒªÊØ»¤Õß,Ëû»áÖ÷¶¯×·»÷À´·¸Ö®ÈëÇÖÕß¡£\n"
+		"é€™ä¸€åæˆ°å£«æ˜¯é¾å®®çš„ä¸»è¦å®ˆè­·è€…,ä»–æœƒä¸»å‹•è¿½æ“Šä¾†çŠ¯ä¹‹å…¥ä¾µè€…ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "monster" );
 	set( "gender", "male" );
 	set( "alignment", 500 );

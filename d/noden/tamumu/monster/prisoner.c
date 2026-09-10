@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(3);
-	set_name( "prisoner", "Çô·¸" );
-	set_short( "Çô·¸" );
-	set_long("Ò»¸ö¿´ÆğÀ´ºÜ¿ÉÁ¯µÄ¼Ò»ï£¬ËûÓÃÃ£È»µÄÑÛÉñ¿´ÖøÄã¡£\n"
+	set_name( "prisoner", "å›šçŠ¯" );
+	set_short( "å›šçŠ¯" );
+	set_long("ä¸€å€‹çœ‹èµ·ä¾†å¾ˆå¯æ†çš„å‚¢ä¼™ï¼Œä»–ç”¨èŒ«ç„¶çš„çœ¼ç¥çœ‹è‘—ä½ ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "gender", "male" );
 	set( "race", "human" );
 	set_skill( "dodge", 30 );

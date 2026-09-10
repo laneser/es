@@ -28,9 +28,9 @@ int cmd_faq(string unused) {
  
 int help() {
         write (can_read_chinese()?
-"指令格式: faq\n\n"+
-"这里列出一些玩家常问的问题. 如果你有问题要问, 最好先看看这里是\n"+
-"不是已经有答案了.\n":
+"鎸囦护鏍煎紡: faq\n\n"+
+"閫欒！鍒楀嚭涓�浜涚帺瀹跺父鍟忕殑鍟忛. 濡傛灉浣犳湁鍟忛瑕佸晱, 鏈�濂藉厛鐪嬬湅閫欒！鏄痋n"+
+"涓嶆槸宸茬稉鏈夌瓟妗堜簡.\n":
 "Usage: faq\n\n"+
 "This command will show you the FAQ file. FAQ stands for frequently\n"+
 "asked questions, and the file contains the answers. It is good to read\n"+

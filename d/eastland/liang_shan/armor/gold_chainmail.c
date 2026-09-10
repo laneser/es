@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("gold chainmail","Ëø×Ó»Æ½ğ¼×");
+    set_name("gold chainmail","é–å­é»ƒé‡‘ç”²");
     add("id",({"chainmail","mail"}) );
-    set_short( "gold chainmail","Ëø×Ó»Æ½ğ¼×");
+    set_short( "gold chainmail","é–å­é»ƒé‡‘ç”²");
 	set_long(
 		"This is a suit of chainmail made of gold meterial.\n",
-		"ÕâÊÇÒ»¼ş½ğ¹âÉÁÉÁµÄ¡õ¼×,Ïà´«ÊÇµ±ÄêÆëÌì´óÊ¥µÄ×°±¸Ö®Ò»£¬ËäÈ»Ëü\n"
-		"ÊÇ»Æ½ğÖÆ³É£¬µ«²»ÖªÎªºÎ·Ç³£µÄÇáÇÉ£®\n"
+		"é€™æ˜¯ä¸€ä»¶é‡‘å…‰é–ƒé–ƒçš„â–¡ç”²,ç›¸å‚³æ˜¯ç•¶å¹´é½Šå¤©å¤§è–çš„è£å‚™ä¹‹ä¸€ï¼Œé›–ç„¶å®ƒ\n"
+		"æ˜¯é»ƒé‡‘è£½æˆï¼Œä½†ä¸çŸ¥ç‚ºä½•éå¸¸çš„è¼•å·§ï¼\n"
 	);
     set( "no_sale",1);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 130 );
 	set( "type", "body" );
 	set( "armor_class", 40 );

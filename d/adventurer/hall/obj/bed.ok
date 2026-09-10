@@ -3,28 +3,28 @@
 inherit OBJECT;
 
 string *c_illusion =({
-"Ë¯ÃÎÖĞÄã¿´µ½Ò»Ö»Ñò¡¢¶şÖ»Ñò¡¢ÈıÖ»Ñò¡¢ËÄÖ»Ñò...Ô½À´Ô½¶àµÄÑòÅÜÀ´ÅÜÈ¥£¡\n",
-"Ë¯ÃÎÖĞÄã¿´µ½×Ô¼ºÕ¾ÔÚÒ»¶ÑÀïÌåĞ¡É½ÉÏÎ¢Ğ¦£¬Ô­À´ÌÉÏÂµÄ¶¼ÊÇ×Ô¼ºµÄ½Ü×÷£¡\n",
-"Ë¯ÃÎÖĞÄã¿´µ½×Ô¼º²»¶ÏµÄÄÅº°Öø£ºÉ±Ñ½£¡É±Ñ½£¡Ïñ¸ö·è×ÓÒ»Ñù.....\n",
-"Äã¿´µ½Ò»Î»È«Éí½ğ¹âÉÁÉÁµÄÆïÊ¿£¬ì¶Ç§¾üÍòÂíÖĞ³å´Ì£¬È¡µĞÈËÊ×¼¶ÈçÈëÎŞÈËÖ®µØ£¡\n",
-"Ë¯ÃÎÖĞÄã¿´µ½Ò»Î»Í·¶¥ÓĞ¹âÈ¦µÄ¸ßÉ®£¬ÕıÑİÁ·Ò»Ì×ÉñÆæÎä¹¦\£¬ÉúÁú»î»¢Èç´ïÄ¦ÔÙÊÀ£¡\n",
-"Ë¯ÃÎÖĞÄã¿´µ½Ò»Î»Éí²ÄÃÔÈË£¬ÇúÏßÒ¦Ù¬µÄÅ®Ä§·¨Ê¦£¬Ğ¦Öø¶ÔÄãËµ£º¡¸àË£¡´óË§¸ç£¡¡¹\n",
-"´øÖøÇéÈË³ÔÍê´ó²ÍÒª¸¶ÕËÊ±£¬ÄãºÃÏñ¿´µ½Ò»¸öÉíÓ°£¬È»áá·¢ÏÖÇ®²»¼ûÁË£¡ÕæÊÇºÃôÜ£¡\n",
-"Äã¿´µ½Ò»Î»¸ßÈËÔÚÔÂÏÂÎè½££¬ÉíÓ°ôæôæ£¬¿ÚÖĞÄîÖø¡¸ÎÒ¸èÔÂÅÇ»²£¬ÎÒÎèÓ°ÁèÂÒ£¡¡¹\n",
-"Ë¯ÃÎÖĞÄã¿´µ½Ò»Î»È«ÉíÔàÙâÙâµÄÁ÷ÀËºº£¬¿ÚÖĞ²»¶ÏÄîÖø¡¸ºÍÆ½£¡·Ü¶·£¡ÍæÄà°Í£¡¡¹\n",
-"Ë¯ÃÎÖĞÄã¿´µ½Ò»Ö»¿ÉÁ¯µÄĞ¡Ã¨£¬½ĞÖø¡¸ß÷ß÷£¡´óÒ¯±ğÉ±ÎÒ...Ğ¡µÄ¸øÄã¹òÏÂ¿ÄÍ·£¡¡¹\n",
-"Äã¿´µ½Ò»Ö»±äÌ¬µÄÇàÍÜ³ªÖø¡¸ÄãËµÄãÏëÒªÌÓ£¬Æ«Æ«×¢¶¨ÒªËÀµô£¬ÃüÃ»ÁË£¡Ç®Ã»ÁË..¡¹\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°ä¸€éš»ç¾Šã€äºŒéš»ç¾Šã€ä¸‰éš»ç¾Šã€å››éš»ç¾Š...è¶Šä¾†è¶Šå¤šçš„ç¾Šè·‘ä¾†è·‘å»ï¼\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°è‡ªå·±ç«™åœ¨ä¸€å †è£¡é«”å°å±±ä¸Šå¾®ç¬‘ï¼ŒåŸä¾†èººä¸‹çš„éƒ½æ˜¯è‡ªå·±çš„å‚‘ä½œï¼\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°è‡ªå·±ä¸æ–·çš„å¶å–Šè‘—ï¼šæ®ºå‘€ï¼æ®ºå‘€ï¼åƒå€‹ç˜‹å­ä¸€æ¨£.....\n",
+"ä½ çœ‹åˆ°ä¸€ä½å…¨èº«é‡‘å…‰é–ƒé–ƒçš„é¨å£«ï¼Œæ–¼åƒè»è¬é¦¬ä¸­è¡åˆºï¼Œå–æ•µäººé¦–ç´šå¦‚å…¥ç„¡äººä¹‹åœ°ï¼\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°ä¸€ä½é ­é ‚æœ‰å…‰åœˆçš„é«˜åƒ§ï¼Œæ­£æ¼”ç·´ä¸€å¥—ç¥å¥‡æ­¦åŠŸ\ï¼Œç”Ÿé¾æ´»è™å¦‚é”æ‘©å†ä¸–ï¼\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°ä¸€ä½èº«æè¿·äººï¼Œæ›²ç·šå§šä½»çš„å¥³é­”æ³•å¸«ï¼Œç¬‘è‘—å°ä½ èªªï¼šã€Œå—¨ï¼å¤§å¸¥å“¥ï¼ã€\n",
+"å¸¶è‘—æƒ…äººåƒå®Œå¤§é¤è¦ä»˜è³¬æ™‚ï¼Œä½ å¥½åƒçœ‹åˆ°ä¸€å€‹èº«å½±ï¼Œç„¶å¾Œç™¼ç¾éŒ¢ä¸è¦‹äº†ï¼çœŸæ˜¯å¥½ç³—ï¼\n",
+"ä½ çœ‹åˆ°ä¸€ä½é«˜äººåœ¨æœˆä¸‹èˆåŠï¼Œèº«å½±ç¿©ç¿©ï¼Œå£ä¸­å¿µè‘—ã€Œæˆ‘æ­Œæœˆå¾˜å¾Šï¼Œæˆ‘èˆå½±å‡Œäº‚ï¼ã€\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°ä¸€ä½å…¨èº«é«’å…®å…®çš„æµæµªæ¼¢ï¼Œå£ä¸­ä¸æ–·å¿µè‘—ã€Œå’Œå¹³ï¼å¥®é¬¥ï¼ç©æ³¥å·´ï¼ã€\n",
+"ç¡å¤¢ä¸­ä½ çœ‹åˆ°ä¸€éš»å¯æ†çš„å°è²“ï¼Œå«è‘—ã€Œå–µå–µï¼å¤§çˆºåˆ¥æ®ºæˆ‘...å°çš„çµ¦ä½ è·ªä¸‹ç£•é ­ï¼ã€\n",
+"ä½ çœ‹åˆ°ä¸€éš»è®Šæ…‹çš„é’è›™å”±è‘—ã€Œä½ èªªä½ æƒ³è¦é€ƒï¼Œååè¨»å®šè¦æ­»æ‰ï¼Œå‘½æ²’äº†ï¼éŒ¢æ²’äº†..ã€\n",
  }) ;
 
 //int maxhp,maxsp,maxtp,hp_full,sp_full,tp_full ;
 
 void create()
 {
-        set_name( "Bed", "ĞĞ¾ü´²" );
+        set_name( "Bed", "è¡Œè»åºŠ" );
 //        set( "id", ( { "bed" } ) );
-        set_short( "ĞĞ¾ü´²" );
-        set("unit", "¸ö" );
-        set_long( "ÕâÊÇÒ»¸öĞĞ¾ü´², Äã¿ÉÒÔÔÚÉÏÃæË¯¾õ\n" );
+        set_short( "è¡Œè»åºŠ" );
+        set("unit", "å€‹" );
+        set_long( "é€™æ˜¯ä¸€å€‹è¡Œè»åºŠ, ä½ å¯ä»¥åœ¨ä¸Šé¢ç¡è¦º\n" );
         set( "weight", 100000);
 }
 
@@ -50,7 +50,7 @@ void do_sleep(object player, int skill, int degree,int num )
               set_color(text, colors[random(3)], player),player) ;
            if (degree % 2) {
              tell_room( environment(player), 
-             sprintf("Äã¿´µ½ %s ÌÉÔÚ´²ÉÏ£¬Ò»±ßÁ÷Öø¿ÚË®£¬Ò»±ß´«³öÏÅÈËµÄ÷ıÉù¡£\n",
+             sprintf("ä½ çœ‹åˆ° %s èººåœ¨åºŠä¸Šï¼Œä¸€é‚Šæµè‘—å£æ°´ï¼Œä¸€é‚Šå‚³å‡ºåš‡äººçš„é¼¾è²ã€‚\n",
                player->query("c_name")), player );
            } 
            maxhp = (int)player->query("max_hp"); 
@@ -75,9 +75,9 @@ void do_sleep(object player, int skill, int degree,int num )
    } else {
        player->delete_temp("block_command");
        tell_object( player, 
-		"......Í»È»¼äÄãÌıµ½Ò»ÕóÄÖÁåÉù£¬²»¸ÊÔ¸µÄĞÑÁË¹ıÀ´¡£\n" );
+		"......çªç„¶é–“ä½ è½åˆ°ä¸€é™£é¬§éˆ´è²ï¼Œä¸ç”˜é¡˜çš„é†’äº†éä¾†ã€‚\n" );
        tell_room( environment(player), 
-       sprintf("Äã¿´µ½%sÈàÈàĞÊâìÑÛ¾¦£¬ÉìÉìÀÁÑü£¬¼ÌĞø»î¶¯¡£\n",
+       sprintf("ä½ çœ‹åˆ°%sæ‰æ‰æƒºå¿ªçœ¼ç›ï¼Œä¼¸ä¼¸æ‡¶è…°ï¼Œç¹¼çºŒæ´»å‹•ã€‚\n",
                player->query("c_name")), player );
        call_out("quit_camp", degree*20, player);
    }
@@ -87,7 +87,7 @@ void quit_camp( object player )
 {
         if( !player ) return;
         tell_object( player,
-                "Äã¸Ğ¾õÓĞÒ»µãÀÛÁË¡£\n");
+                "ä½ æ„Ÿè¦ºæœ‰ä¸€é»ç´¯äº†ã€‚\n");
         player->delete_temp("in_sleep");
 }
 
@@ -107,17 +107,17 @@ int cmd_sleep()
     if ( me->query("class") == "adventurer" )
     num = num +1;  
     if (me->query_temp("in_sleep")) {
-    write("ÄãÊÇÖí°¡£¬²ÅË¯ĞÑÓÖÏëË¯£¿\n");
+    write("ä½ æ˜¯è±¬å•Šï¼Œæ‰ç¡é†’åˆæƒ³ç¡ï¼Ÿ\n");
     return 1;
     }
     if( (int)me->query_attacker()) {
-      write("ÔÚÕ½¶·ÖĞË¯¾õ£¬ÏëÒªÕÒÀÏºÚÅİ²èÂğ£¿\n");
+      write("åœ¨æˆ°é¬¥ä¸­ç¡è¦ºï¼Œæƒ³è¦æ‰¾è€é»‘æ³¡èŒ¶å—ï¼Ÿ\n");
       return 1;
     }
     tell_object( me,
-                    "ÄãÊµÔÚÌ«ÀÛÁË£¬Ëæ±ãÕÒ¸ö¿ÕµØµ¹Í·¾ÍË¯¡£\n" );
+                    "ä½ å¯¦åœ¨å¤ªç´¯äº†ï¼Œéš¨ä¾¿æ‰¾å€‹ç©ºåœ°å€’é ­å°±ç¡ã€‚\n" );
     tell_room( env, 
-	me->query("c_name")+"ËÆºõÌ«ÀÛÁË£¬Ò»½øÀ´¾ÍÌÉÔÚ´²ÉÏ²¹³äË¯Ãß¡£\n",
+	me->query("c_name")+"ä¼¼ä¹å¤ªç´¯äº†ï¼Œä¸€é€²ä¾†å°±èººåœ¨åºŠä¸Šè£œå……ç¡çœ ã€‚\n",
 		me );
     if( !wizardp( me ) ) {
 	me->set_temp("in_sleep",1);
@@ -134,38 +134,38 @@ int cmd_wake(string arg)
      me = this_player();
      if ( !arg || arg == "") {
                       tell_object( me,
-                      "ÄãÒÑ¾­Æğ´²ÁË°¡?\n" );
+                      "ä½ å·²ç¶“èµ·åºŠäº†å•Š?\n" );
                       return 1;
                       }
     
      if ( !(target = present( arg,environment(this_player()))) ) {
                       tell_object( me,
-                      "ÕâÀïÃ»ÓĞ½Ğ"+arg+"µÄ¶«Î÷¡£\n");
+                      "é€™è£¡æ²’æœ‰å«"+arg+"çš„æ±è¥¿ã€‚\n");
                       return 1;
                       }
     
      if ( !visible(target,this_player()) || target->query("invisible_player")) {
                       tell_object( me,
-                      "ºÃÏñÃ»ÓĞÕâ¸öÈËà¸?\n");
+                      "å¥½åƒæ²’æœ‰é€™å€‹äººå–”?\n");
                       return 1;
                       }
      
      if ( !living(target) || !(int)target->query_temp("block_command")==1 ) {
                       tell_object( me,
-                      "ÄãÓÃÁ¦µÄÒ¡»Î"+target->query("c_name")+"µ«ÊÇÊ²÷áÊÂÒ²Ã»·¢Éú¡£\n");
+                      "ä½ ç”¨åŠ›çš„æ–æ™ƒ"+target->query("c_name")+"ä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
                       return 1;
                       }      
       tell_object( me, set_color(
-           "Äã´óÁ¦µÄÒ¡»Î" + target->query("c_name") + "µÄÉíÌå£¬ÆóÍ¼°ÑËû½ĞĞÑ...\n\n", "HIY"
+           "ä½ å¤§åŠ›çš„æ–æ™ƒ" + target->query("c_name") + "çš„èº«é«”ï¼Œä¼åœ–æŠŠä»–å«é†’...\n\n", "HIY"
            ,me) );
                       
       tell_object(target, set_color(
-           me->query("c_name")+"´óÁ¦µÄÒ¡»ÎÄãµÄÉíÌå.....\n\n", "HIM"
+           me->query("c_name")+"å¤§åŠ›çš„æ–æ™ƒä½ çš„èº«é«”.....\n\n", "HIM"
             ,target));
                                               
       tell_room( environment(me), "\n"+
-           me->query("c_name")+"´óÁ¦Ò¡»Î"+
-           target->query("c_name")+"µÄÉíÌå£¬ÆóÍ¼°ÑËû½ĞĞÑ\n\n" ,
+           me->query("c_name")+"å¤§åŠ›æ–æ™ƒ"+
+           target->query("c_name")+"çš„èº«é«”ï¼Œä¼åœ–æŠŠä»–å«é†’\n\n" ,
            ({ me, target }) );
       
       target->set_temp("shaked",1); 
@@ -180,18 +180,18 @@ int cmd_protect(string str)
 	int	i;
 
         if ((string)this_player()->query("class") != "adventurer" ) 
-              return notify_fail("Ö»ÓĞÃ°ÏÕÕßÓĞÄÜÁ¦ÔÚÕÊÅîÖĞÊØÎÀ...\n");
+              return notify_fail("åªæœ‰å†’éšªè€…æœ‰èƒ½åŠ›åœ¨å¸³è“¬ä¸­å®ˆè¡›...\n");
         prot = (object *)this_player()->query_temp("protect_whom");
 
 	if (!str) {
 		if ( sizeof(prot) < 1 )
-			return notify_fail("ÄãÏÖÔÚÃ»ÓĞ±£»¤ÈÎºÎÈË¡£\n");
+			return notify_fail("ä½ ç¾åœ¨æ²’æœ‰ä¿è­·ä»»ä½•äººã€‚\n");
 		prot2 = ({ }) ;
 		for ( i=0 ; i < sizeof(prot) ; i++) 
 			if ( !nullp(prot[i]) && prot[i]) prot2 += ({ prot[i] }) ;
 		prot = prot2 ;
 		this_player()->set_temp("protect_whom",prot);
-		write(set_color("ÄãÏÖÔÚ±£»¤Öø :\n","HIY",this_player()));
+		write(set_color("ä½ ç¾åœ¨ä¿è­·è‘— :\n","HIY",this_player()));
 		for ( i=0 ; i < sizeof(prot) ; i++)
 			write(sprintf("%s(%s)\n",prot[i]->query("c_name"),prot[i]->query("name")));
 		return 1;
@@ -199,20 +199,20 @@ int cmd_protect(string str)
 
 	damsel = present(str, environment(this_player())) ;
 //	if ( damsel = this_player() )
-//	        return notify_fail("±£»¤×Ô¼ºÂğ£¬Äã»¹Õæ´ÏÃ÷\n");
+//	        return notify_fail("ä¿è­·è‡ªå·±å—ï¼Œä½ é‚„çœŸè°æ˜\n");
 	if (!damsel || !living(damsel))
-		return notify_fail("ÄãÒª±£»¤Ë­£¿\n");
+		return notify_fail("ä½ è¦ä¿è­·èª°ï¼Ÿ\n");
 
         if( prot && pointerp(prot) ) {
                 if ( member_array( damsel,prot ) != -1 )
-                return notify_fail("ÄãÒÑ¾­±£»¤ÖøËûÁË !!\n");
+                return notify_fail("ä½ å·²ç¶“ä¿è­·è‘—ä»–äº† !!\n");
 		if (sizeof(prot) > 3 )
-		return notify_fail("Äã²»ÄÜ·ÖĞÄ±£»¤ÄÇ÷á¶àÈË !!\n");
+		return notify_fail("ä½ ä¸èƒ½åˆ†å¿ƒä¿è­·é‚£éº¼å¤šäºº !!\n");
 	}
 
-	write( sprintf("ÄãÌá¸ßÁË¾¯¾õ£¬×¢Òâ%sµÄ°²È«¡£\n",damsel->query("short"),to_chinese(subjective(damsel))));
+	write( sprintf("ä½ æé«˜äº†è­¦è¦ºï¼Œæ³¨æ„%sçš„å®‰å…¨ã€‚\n",damsel->query("short"),to_chinese(subjective(damsel))));
 	tell_object( damsel, 
-		sprintf("%sÄ¿²»×ª¾¦µÄ×¢ÒâÖøÄãµÄ°²È«£¡\n",this_player()->query("c_name")));
+		sprintf("%sç›®ä¸è½‰ç›çš„æ³¨æ„è‘—ä½ çš„å®‰å…¨ï¼\n",this_player()->query("c_name")));
 
 	damsel->add_temp("who_protect", ({ this_player() }) ) ;
 	this_player()->add_temp("protect_whom", ({ damsel }) ) ;
@@ -226,18 +226,18 @@ int cmd_unprotect(string str)
 	if( !str ) return 0;
 	me = this_player();
 	if ((string)this_player()->query("class") != "adventurer" )
-	            return notify_fail("Ö»ÓĞÃ°ÏÕÕßÓĞÄÜÁ¦ÔÚÕÊÅîÖĞÊØÎÀ...\n");
+	            return notify_fail("åªæœ‰å†’éšªè€…æœ‰èƒ½åŠ›åœ¨å¸³è“¬ä¸­å®ˆè¡›...\n");
 	foo = (object *)me->query_temp("protect_whom");
 	if( sizeof(foo) < 1 )
-		return notify_fail("ÄãÏÖÔÚ²¢Ã»ÓĞ±£»¤ÈÎºÎÈË¡£\n");
+		return notify_fail("ä½ ç¾åœ¨ä¸¦æ²’æœ‰ä¿è­·ä»»ä½•äººã€‚\n");
 	done = 0;
 	for( i=sizeof(foo)-1; i>=0; i-- ) {
 		if ( !foo[i] ) continue ;
 		if( !foo[i]->id(str) ) continue;
-		write(sprintf("ÄãÍ£Ö¹±£»¤%s(%s)¡£\n", foo[i]->query("c_name"),
+		write(sprintf("ä½ åœæ­¢ä¿è­·%s(%s)ã€‚\n", foo[i]->query("c_name"),
 				foo[i]->query("name")));
 		tell_object( foo[i], 
-			sprintf("%s(%s)Í£Ö¹±£»¤Äã¡£\n", me->query("c_name"),
+			sprintf("%s(%s)åœæ­¢ä¿è­·ä½ ã€‚\n", me->query("c_name"),
 				me->query("name")));
 		tmp = foo[i]->query_temp("who_protect");
 		tmp -= ({ me });
@@ -257,7 +257,7 @@ int cmd_unprotect(string str)
 			me->set_temp("proctect_whom", tmp);
 		} else me->delete_temp("protect_whom");
 	} else return notify_fail( 
-		"ÄãÏÖÔÚ²¢Ã»ÓĞ±£»¤ÈÎºÎ½Ğ×ö " + str + " µÄÈË¡£\n");
+		"ä½ ç¾åœ¨ä¸¦æ²’æœ‰ä¿è­·ä»»ä½•å«åš " + str + " çš„äººã€‚\n");
 	return 1;
 }
 int cmd_kill(string arg)

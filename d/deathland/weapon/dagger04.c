@@ -6,12 +6,12 @@ int damage_num = 20;
 
 void create()
 {
-       set_name("night shadow dagger","Ò¹Ó°Ð¡µ¶");
+       set_name("night shadow dagger","å¤œå½±å°åˆ€");
        add("id",({"dagger",}) );
-       set_short("a night shadow dagger","Ò¹Ó°Ð¡µ¶");
+       set_short("a night shadow dagger","å¤œå½±å°åˆ€");
 	set_long("@@desc");
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 24 );
     set("type","dagger");
 	set( "min_damage", 15 );
@@ -20,7 +20,7 @@ void create()
 	set( "value", ({ 2050 , "silver" }) );
     set("hit_func","evil_damage");
     set("special_damage",7);      
-    set("special_c_msg","Ëµ:ÈÃÎÒÃÇ°ÑµÐÈËµÄÉúÃü»ÙÃð°É,ÎÒµÄÖ÷ÈË.\n\n");
+    set("special_c_msg","èªª:è®“æˆ‘å€‘æŠŠæ•µäººçš„ç”Ÿå‘½æ¯€æ»…å§,æˆ‘çš„ä¸»äºº.\n\n");
 }
 
 int evil_damage(object victim,int damage)
@@ -35,7 +35,7 @@ int evil_damage(object victim,int damage)
     vic_ali= (int) victim->query("alignment");
     dam = (int) query("special_damage") ;
     if ( my_ali > vic_ali &&  my_ali > -400 ) {
-      tell_object(holder,"Õâ°ÑÐ°¶ñµÄÐ¡µ¶·¢³öÐ°¶ñµÄÐ¦Éù:ÎÒÖ»·þ´ÓÐ°¶ñµÄÈË.\n\n");
+      tell_object(holder,"é€™æŠŠé‚ªæƒ¡çš„å°åˆ€ç™¼å‡ºé‚ªæƒ¡çš„ç¬‘è²:æˆ‘åªæœå¾žé‚ªæƒ¡çš„äºº.\n\n");
       holder->receive_special_damage("evil",dam+random(15));
      // report(holder,holder);
       victim->set("last_attacker", holder );
@@ -50,16 +50,16 @@ int evil_damage(object victim,int damage)
 		victim->receive_special_damage( "evil",dam );
 		victim->set("last_attacker", holder );
 		tell_object( holder,
-                        sprintf("\nÄãµÄ%s%s\n",query("c_name"),c_msg));
+                        sprintf("\nä½ çš„%s%s\n",query("c_name"),c_msg));
 		tell_room( environment(holder), 
-                        sprintf("%sµÄ%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
+                        sprintf("%sçš„%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
 			holder );
         if ( vic_ali <= 0 ) 
             return dam;  
         else
             return dam+random(max/3);
 	if (damage_num == 0)
-		tell_object( holder,"\nÒ¹Ó°Ð¡µ¶ÉÏµÄºÚÉ«¹âÔó½¥½¥ÏûÊ§ÁË¡£\n");
+		tell_object( holder,"\nå¤œå½±å°åˆ€ä¸Šçš„é»‘è‰²å…‰æ¾¤æ¼¸æ¼¸æ¶ˆå¤±äº†ã€‚\n");
         }
       return 0;
       }    
@@ -67,7 +67,7 @@ int evil_damage(object victim,int damage)
 string desc()
 {
 if (damage_num == 0)
-return ("Ò»°ÑÉñÃØ¶øÇÒÆæ¹ÖµÄÐ¡µ¶,ÄÜ¹»ºÜÒþÃØµØ´ÌÈëµÐÈËµÄÐÄÔà¶ø²»±»·¢¾õ£¬µ«ÊÇÈ´ËÆºõÊ§È¥ÁËÔ­ÓÐµÄ¹âÔó¡£\n");
+return ("ä¸€æŠŠç¥žç§˜è€Œä¸”å¥‡æ€ªçš„å°åˆ€,èƒ½å¤ å¾ˆéš±ç§˜åœ°åˆºå…¥æ•µäººçš„å¿ƒè‡Ÿè€Œä¸è¢«ç™¼è¦ºï¼Œä½†æ˜¯å»ä¼¼ä¹Žå¤±åŽ»äº†åŽŸæœ‰çš„å…‰æ¾¤ã€‚\n");
 else 
-return ("Ò»°ÑÉñÃØ¶øÇÒÆæ¹ÖµÄÐ¡µ¶,ÄÜ¹»ºÜÒþÃØµØ´ÌÈëµÐÈËµÄÐÄÔà¶ø²»±»·¢¾õ£¬ÉÏÃæÓÐÖøÉñÃØµÄºÚÉ«¹âÔó¡£\n");
+return ("ä¸€æŠŠç¥žç§˜è€Œä¸”å¥‡æ€ªçš„å°åˆ€,èƒ½å¤ å¾ˆéš±ç§˜åœ°åˆºå…¥æ•µäººçš„å¿ƒè‡Ÿè€Œä¸è¢«ç™¼è¦ºï¼Œä¸Šé¢æœ‰è‘—ç¥žç§˜çš„é»‘è‰²å…‰æ¾¤ã€‚\n");
 }

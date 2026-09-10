@@ -12,7 +12,7 @@ void report( object attacker, object victim )
   //   "( " + victim->query("c_name") + c_message+" )\n"  
   //     );
    tell_object( victim,!can_read_chinese(victim) ? 
-     "( you "+message+" )\n" : "( Äã "+c_message+" )\n"
+     "( you "+message+" )\n" : "( ä½  "+c_message+" )\n"
      
      );
 }

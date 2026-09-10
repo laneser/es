@@ -12,10 +12,10 @@ int cmd_killer(string arg)
 int help()
 {
         write( @HELP
-ÓÃ·¨ : killer message
-Õâ¸öÖ¸ÁîÓÃÀ´Í¬Ä¿Ç°ÏßÉÏµÄÉ±ÊÖÍ¨ĞÅ¡£
+ç”¨æ³• : killer message
+é€™å€‹æŒ‡ä»¤ç”¨ä¾†åŒç›®å‰ç·šä¸Šçš„æ®ºæ‰‹é€šä¿¡ã€‚
 
-²Î¿¼: killer
+åƒè€ƒ: killer
 HELP
               );
         return 1;

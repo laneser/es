@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "fire element", "»ğÖ®¾«" );
+	set_name( "fire element", "ç«ä¹‹ç²¾" );
 	add( "id", ({ "element","fire" }) );
-	set_short( "a fire element", "»ğÖ®¾«" );
+	set_short( "a fire element", "ç«ä¹‹ç²¾" );
 	set_long(
 		"You see a element of fire . \n",
-		"ÕâÊÇÒ»¿Åº±¼ûµÄ»ğÑæ¾«»ª¡£\n"
+		"é€™æ˜¯ä¸€é¡†ç½•è¦‹çš„ç«ç„°ç²¾è¯ã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "weight", 5 );
 	set( "value", ({ 100, "silver" }) );
 	set( "no_sale", 1 );

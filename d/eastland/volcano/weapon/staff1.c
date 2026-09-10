@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "broken_ice staff", "ÆÆ±ùÕÈ" );
+	set_name( "broken_ice staff", "ç ´å†°æ–" );
 	add( "id", ({ "staff" }) );
-	set_short( "ÆÆ±ùÕÈ" );
+	set_short( "ç ´å†°æ–" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÎÞ¼á²»´Ý£¬¹¥ÎÞ²»ÆÆµÄÉñÕÈ£¬ÕÈÍ·³¤Âú¼â´Ì¡£\n"
-                "ÕÈÉí³ÊÏÖÈé°×É«£¬¾ÝËµÕâ°ÑÕÈ»¹ÓÐÁéÐÔ¡£\n" );
-	set( "unit", "°Ñ" );
+		"é€™æ˜¯ä¸€æŠŠç„¡å …ä¸æ‘§ï¼Œæ”»ç„¡ä¸ç ´çš„ç¥žæ–ï¼Œæ–é ­é•·æ»¿å°–åˆºã€‚\n"
+                "æ–èº«å‘ˆç¾ä¹³ç™½è‰²ï¼Œæ“šèªªé€™æŠŠæ–é‚„æœ‰éˆæ€§ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 //	set( "hit_func", "weapon_hit" );
 	set( "weight", 130 );
@@ -30,13 +30,13 @@ int weapon_hit( object victim, int damage )
 	sp = owner->query("spell_points");
 	if( random(pietyy)>17 && sp > 5 ) {
 		tell_object( owner, 
-                "\nÄãµÄÆÆ±ùÕÈÉÏµÄ¼â´ÌÍ»È»Éä³ö£¬Ö±½ÓÃüÖÐ£¬"+victim->query("c_name")+
-		"µÄÒªº¦¡£\n\n");
+                "\nä½ çš„ç ´å†°æ–ä¸Šçš„å°–åˆºçªç„¶å°„å‡ºï¼Œç›´æŽ¥å‘½ä¸­ï¼Œ"+victim->query("c_name")+
+		"çš„è¦å®³ã€‚\n\n");
 		tell_object( victim, 
-                owner->query("c_name") + "µÄÆÆ±ùÕÈÉÏµÄ¼â´ÌÍ»È»Éä³ö£¬Ö±½ÓÃüÖÐÄãµÄÒªº¦¡£\n\n");
+                owner->query("c_name") + "çš„ç ´å†°æ–ä¸Šçš„å°–åˆºçªç„¶å°„å‡ºï¼Œç›´æŽ¥å‘½ä¸­ä½ çš„è¦å®³ã€‚\n\n");
 		tell_room( environment(owner),
-                        owner->query("c_name") + "µÄÆÆ±ùÕÈÉÏµÄ¼â´ÌÍ»È»Éä³ö£¬Ö±½ÓÃüÖÐ"
-                        + victim->query("c_name") + "µÄÒªº¦£¡\n\n",
+                        owner->query("c_name") + "çš„ç ´å†°æ–ä¸Šçš„å°–åˆºçªç„¶å°„å‡ºï¼Œç›´æŽ¥å‘½ä¸­"
+                        + victim->query("c_name") + "çš„è¦å®³ï¼\n\n",
 			({ victim, owner }) );
 	victim->receive_damage( 15+random(10) );
 	owner->add( "spell_points", -5 );

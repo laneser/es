@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-   set_name( "old_jade flute", "¹ÅÓñóï" );
+   set_name( "old_jade flute", "å¤çŽ‰ç°«" );
    add("id", ({"flute"}) );
-   set_short( "¹ÅÓñóï" );
+   set_short( "å¤çŽ‰ç°«" );
    set_long(
-     "ÕâÊÇÒ»Ö»ÓÉºº´ú¹ÅÓñËùµñ³ÉµÄÓñóï£¬ÓñóïÉÏÃæ²¼ÂúÁúÐÎ»¨ÎÆ£¬ÁíÍâ»¹ÓÐÓÃ\n"
-     "×­ÎÄ¿ÌÖø¼¸¸öÐ¡×Ö£º¡º°²°î¶¨¹ú¡»£¬¾ÝËµÕâÊÇµ±½ñ»ÊµÛËùÓù´ÍµÄ¶«Î÷¡£\n" );
-   set( "unit", "Ö»" );
+     "é€™æ˜¯ä¸€éš»ç”±æ¼¢ä»£å¤çŽ‰æ‰€é›•æˆçš„çŽ‰ç°«ï¼ŒçŽ‰ç°«ä¸Šé¢ä½ˆæ»¿é¾å½¢èŠ±ç´‹ï¼Œå¦å¤–é‚„æœ‰ç”¨\n"
+     "ç¯†æ–‡åˆ»è‘—å¹¾å€‹å°å­—ï¼šã€Žå®‰é‚¦å®šåœ‹ã€ï¼Œæ“šèªªé€™æ˜¯ç•¶ä»Šçš‡å¸æ‰€å¾¡è³œçš„æ±è¥¿ã€‚\n" );
+   set( "unit", "åª" );
    set( "type", "longblade" );
    set( "hit_func", "weapon_hit" );
    set( "weight", 50 );
@@ -32,7 +32,7 @@ int weapon_hit( object victim, int damage )
    fp = owner->query("force_points");
    if (!((string)owner->query("class")=="scholar")){
      tell_object( owner,
-     "\nÄãÊÖÖÐµÄÓñóï·¢³öÒ»ÕóÒô²¨£º¹þ¹þ ! Äã²»Åä×öÎÒµÄÖ÷ÈË¡£\n\n");
+     "\nä½ æ‰‹ä¸­çš„çŽ‰ç°«ç™¼å‡ºä¸€é™£éŸ³æ³¢ï¼šå“ˆå“ˆ ! ä½ ä¸é…åšæˆ‘çš„ä¸»äººã€‚\n\n");
      owner->receive_special_damage("energy",inte/2);
      return 0;
    }
@@ -40,13 +40,13 @@ int weapon_hit( object victim, int damage )
    intv = victim->query_stat("int");
    if( random(inte*3)>(intv*2) && fp >2 ) {
        tell_object( owner,
-       "\nÄã½«Ò»ÕóÄÚÁ¦¹áÊäì¶Óñóï, ¹ÜÖÐÍ»È»·¢³öÒ»ÕóÒô²¨Ïò"+victim->query("c_name")+"ÉäÈ¥\n\n" );
+       "\nä½ å°‡ä¸€é™£å…§åŠ›è²«è¼¸æ–¼çŽ‰ç°«, ç®¡ä¸­çªç„¶ç™¼å‡ºä¸€é™£éŸ³æ³¢å‘"+victim->query("c_name")+"å°„åŽ»\n\n" );
        tell_object( victim,
      "\n" +
-          owner->query("c_name") + "µÄÓñóïÍ»È»·¢³öÒ»ÕóÒô²¨ÏòÄãÏ®À´!\n\n" );
+          owner->query("c_name") + "çš„çŽ‰ç°«çªç„¶ç™¼å‡ºä¸€é™£éŸ³æ³¢å‘ä½ è¥²ä¾†!\n\n" );
        tell_room( environment(owner),
      "\n" +
-         owner->query("c_name") + "µÄÓñóïÍ»È»Ïò" + victim->query("c_name") + "Éä³öÒ»ÕóÒô²¨!\n\n"
+         owner->query("c_name") + "çš„çŽ‰ç°«çªç„¶å‘" + victim->query("c_name") + "å°„å‡ºä¸€é™£éŸ³æ³¢!\n\n"
          , ({ victim, owner }) );
        victim->receive_special_damage( "energy", inte/2 );
           owner->add( "force_points", -3 );

@@ -57,15 +57,15 @@ int hit_weakest( object me, object victim )
 	int damage;
 
 	tell_object(me, set_color( 
-		sprintf("���ҵ���% s�����㣬����ץס���ṥ����\n",victim->query("c_name"))
+		sprintf("你找到了% s的弱點，並且抓住機會攻擊！\n",victim->query("c_name"))
 	    , "HIY")
 	);
 	tell_object(victim, set_color ( 
-		sprintf("��� %s�ƺ������������������Ĳ�λ��\n",me->query("c_name"))
+		sprintf("不妙！ %s似乎發現了你防禦力最薄弱的部位！\n",me->query("c_name"))
 	    , "HIY")
 	);
 	tell_room( environment(me), 
-		sprintf("%s�ҵ���%s�����㣬����ץס���ṥ����\n",me->query("c_name"),victim->query("c_name")),
+		sprintf("%s找到了%s的弱點，並且抓住機會攻擊！\n",me->query("c_name"),victim->query("c_name")),
 		({ me, victim }) );
 	damage = me->query("max_damage1");
 	victim->receive_damage(damage);
@@ -77,15 +77,15 @@ int hit_critical( object me, object victim )
 	int hp, max_hp, damage;
 
 	tell_object(me, set_color(
-		sprintf("\n�û��ᣡ�㷢����%s���������㣡\n\n",victim->query("c_name") )
+		sprintf("\n好機會！你發現了%s的致命弱點！\n\n",victim->query("c_name") )
 	    ,"HIW")
 	);
 	tell_object(victim, set_color( 
-		sprintf("\n��⣡%s�ƺ�����������������㣡\n\n", me->query("c_name"))
+		sprintf("\n糟糕！%s似乎發現了你的致命弱點！\n\n", me->query("c_name"))
 	    ,"HIW")
 	);
 	tell_room( environment(me), 
-		sprintf("\n  %s�ҵ���%s���������㣡\n\n",me->query("c_name"),victim->query("c_name")),
+		sprintf("\n  %s找到了%s的致命弱點！\n\n",me->query("c_name"),victim->query("c_name")),
 		({ me, victim }) );
 	hp = victim->query("hit_points");
 	max_hp = victim->query("max_hp");
@@ -100,15 +100,15 @@ int hit_vascular( object me, object victim )
 	int my_int;
 
 	tell_object(me, set_color( 
-		sprintf("\n���ҵ�%sѪ�ܾۼ��ĵط�������ץס���ṥ����\n\n", victim->query("c_name") )
+		sprintf("\n你找到%s血管聚集的地方，並且抓住機會攻擊！\n\n", victim->query("c_name") )
 	    ,"HIR")
 	);
 	tell_object(victim, set_color( 
-		sprintf("%s�����������������ƣ��ƺ��ڹ۲�������� ....��\n",me->query("c_name") )
+		sprintf("%s用銳利的眼神盯著你瞧，似乎在觀察你的弱點 ....　\n",me->query("c_name") )
 	    ,"HIR")
 	);
 	tell_room( environment(me), 
-		sprintf("%s��������������%s���ж����ƺ��ڹ۲���ֵ����� ....��\n" ,
+		sprintf("%s用銳利的眼神盯著%s的行動，似乎在觀察對手的弱點 ....　\n" ,
 		me->query("c_name") ,victim->query("c_name") ),
 		({ me, victim }) );
 	my_int = (int)(me->query_stat("int"));
@@ -124,21 +124,21 @@ int hit_ganglion( object me, object victim )
 	if( my_int > (vic_con + 1) ) {
 
 	tell_object(me, set_color ( 
-		sprintf("\n���ҵ�%s�񾭾ۼ��ĵط�������ץס���ṥ����\n\n",victim->query("c_name") )
+		sprintf("\n你找到%s神經聚集的地方，並且抓住機會攻擊！\n\n",victim->query("c_name") )
 	    ,"HIC")
 	);	
 	tell_object(victim, set_color( 
-		sprintf("%s�����������������ƣ��ƺ��ڹ۲�������� ....��\n",me->query("c_name") )
+		sprintf("%s用銳利的眼神盯著你瞧，似乎在觀察你的弱點 ....　\n",me->query("c_name") )
 	    ,"HIC")
 	);
 	tell_room( environment(me), 
-		sprintf("%s��������������%s���ж����ƺ��ڹ۲���ֵ����� ....��\n" ,
+		sprintf("%s用銳利的眼神盯著%s的行動，似乎在觀察對手的弱點 ....　\n" ,
 		me->query("c_name") ,victim->query("c_name")),
 		({ me, victim }) );
 
 		victim->block_attack( (my_int-vic_con)/2 );
 		victim->set_temp("msg_stop_attack", 
-			"( ����øղű����еĵط���ʹ�ѵ���ʧȥһ�ι������ᡡ )\n" );
+			"( 你覺得剛才被打中的地方疼痛難當，失去一次攻擊機會　 )\n" );
 	}
 	return 0;
 }

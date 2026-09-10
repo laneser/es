@@ -5,13 +5,13 @@ inherit OBJECT;
 void create()     
 {
 	seteuid(getuid());
-	set_name( "cutknife", "¸î¶úĞ¡µ¶" );
-	set_short("¸î¶úĞ¡µ¶");
+	set_name( "cutknife", "å‰²è€³å°åˆ€" );
+	set_short("å‰²è€³å°åˆ€");
 	set_long( 
-	   "Ò»°ÑºÜÈñÀûµÄĞ¡µ¶,ËÆºõËüÊÇ±»ÓÃÀ´´Ó¡õÌåÉÏ¸îÏÂ(cut)¶ú¶äµÄºÃ¹¤¾ß.\n"
+	   "ä¸€æŠŠå¾ˆéŠ³åˆ©çš„å°åˆ€,ä¼¼ä¹å®ƒæ˜¯è¢«ç”¨ä¾†å¾â–¡é«”ä¸Šå‰²ä¸‹(cut)è€³æœµçš„å¥½å·¥å…·.\n"
 	    );
 	add("id", ({ "knife", }));
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set("weight", 30);
 	set("no_sale",1);
 	set("value", ({ 0, "copper" }));
@@ -30,7 +30,7 @@ int cut_ear(string str)
 	
     if (!str) return 0;
     if (sscanf(str,"%s from %s",str1,str2)!=2) {
-      write("Óï·¨ÈçÏÂ: cut A from B.\n");
+      write("èªæ³•å¦‚ä¸‹: cut A from B.\n");
       return 1;
 	  }
 	if( str1!="ear") return 0;
@@ -40,20 +40,20 @@ int cut_ear(string str)
       if ((int)(ob1->query("troll_ear"))==1) {   
          if (!(ob1->query("be_cut")))
            {
-           write("Äã´Ó¾ŞÈËµÄ¡õÌåÉÏ¸îÏÂÁË¶ú¶ä.\n");
+           write("ä½ å¾å·¨äººçš„â–¡é«”ä¸Šå‰²ä¸‹äº†è€³æœµ.\n");
            ob2=new(Object"/trollear");
            ob2->move(this_player());
            ob1->set("be_cut",1);
            }
          else 
-         write("Õâ¡õÌåÒÑ¾­±»¸î¹ı¶ú¶äÁË.\n");
+         write("é€™â–¡é«”å·²ç¶“è¢«å‰²éè€³æœµäº†.\n");
          }
       else
          {
-         write("¸î¶ú¶ä??ÊÇÒ»¸öºÃÖ÷Òâµ«ÊÇËÆºõ¶Ôì¶ËÀÕß²»¾´.\n");
+         write("å‰²è€³æœµ??æ˜¯ä¸€å€‹å¥½ä¸»æ„ä½†æ˜¯ä¼¼ä¹å°æ–¼æ­»è€…ä¸æ•¬.\n");
          }
     else
-    write("ÕâÀïÃ»ÓĞÈÎºÎ¡õÌå.\n");
+    write("é€™è£¡æ²’æœ‰ä»»ä½•â–¡é«”.\n");
     
     return 1;
 

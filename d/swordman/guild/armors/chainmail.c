@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "regular chainmail", "¡õ¼×" );
+	set_name( "regular chainmail", "â–¡ç”²" );
 	add( "id", ({ "chain", "mail", "regular" }) );
-	set_short( "ÖÆÊ½¡õ¼×" );
+	set_short( "åˆ¶å¼â–¡ç”²" );
 	set_long(
-		"Õâ¼ş¡õ¼×¿´ÆğÀ´ºÜÖØ£¬µ«ÊÇÏà¶ÔµØÄÜÌá¹©Ïàµ±²»´íµÄ±£»¤¡£\n"
+		"é€™ä»¶â–¡ç”²çœ‹èµ·ä¾†å¾ˆé‡ï¼Œä½†æ˜¯ç›¸å°åœ°èƒ½æä¾›ç›¸ç•¶ä¸éŒ¯çš„ä¿è­·ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 180 );
 	set( "type", "body" );
 	set( "material" ,"heavy_metal" );

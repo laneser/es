@@ -5,14 +5,14 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("pepper bottle","ºú½·¹Þ");
-     set_short("ºú½·¹Þ");
+     set_name("pepper bottle","èƒ¡æ¤’ç½");
+     set_short("èƒ¡æ¤’ç½");
      set_long(
-      "ÕâÊÇÒ»¸ö×°Âúºú½··ÛµÄµÄÐ¡Æ¿×Ó£¬ÓÐÁËËü³Ô·¹¾Í²»»áÄÇ÷áÎÞÁÄÁË£¬²»¹ý\n"
-      "ÄãÒ²¿ÉÒÔÄÃÖøËüÈ¥¶ñ×÷¾ç£¬Ð¡ÐÄÈö(scatter)µ½×Ô¼ºÅçÌç´ò²»Íê¡£\n"
+      "é€™æ˜¯ä¸€å€‹è£æ»¿èƒ¡æ¤’ç²‰çš„çš„å°ç“¶å­ï¼Œæœ‰äº†å®ƒåƒé£¯å°±ä¸æœƒé‚£éº¼ç„¡èŠäº†ï¼Œä¸éŽ\n"
+      "ä½ ä¹Ÿå¯ä»¥æ‹¿è‘—å®ƒåŽ»æƒ¡ä½œåŠ‡ï¼Œå°å¿ƒæ’’(scatter)åˆ°è‡ªå·±å™´åšæ‰“ä¸å®Œã€‚\n"
       );
      add("id",({ "bottle","pepper" }) );
-     set( "unit", "Æ¿");
+     set( "unit", "ç“¶");
      set("weight",5);
      set("value", ({ 100, "silver" }));
 }
@@ -25,25 +25,25 @@ int do_scatter(string arg)
 	object target;
 	int skill,rate,level;
 	if ( !arg || arg == "" )
-		return notify_fail("²»Òª¶ÔÖø×Ô¼ºÂÒÈöºú½··Û !!\n");
+		return notify_fail("ä¸è¦å°è‘—è‡ªå·±äº‚æ’’èƒ¡æ¤’ç²‰ !!\n");
 	if ( !target = present(arg,environment(this_player())) )
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð×ö "+arg+" µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«åš "+arg+" çš„ç”Ÿç‰©ã€‚\n");
 	if (!living(target) )
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð×ö "+arg+" µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«åš "+arg+" çš„ç”Ÿç‰©ã€‚\n");
 	if ( target->query("no_attack") )
-		return notify_fail("Äã²»¿ÉÒÔÆÛ¸ºÕâÖÖÏ¡ÓÐ¶¯Îï£¬»áÔâÌì·£ ...\n");
+		return notify_fail("ä½ ä¸å¯ä»¥æ¬ºè² é€™ç¨®ç¨€æœ‰å‹•ç‰©ï¼Œæœƒé­å¤©ç½° ...\n");
 	if ( target->query("user") ) {
 		if ( (int)this_player()->query_level() < 5 || 
 			(int)target->query_level() < 5 ) 
-			return notify_fail("»¹Ã»µ½ PK µÄÊ±ºòÂï ... µÈÄã(»òËû)³¤´ó°É !!\n");
+			return notify_fail("é‚„æ²’åˆ° PK çš„æ™‚å€™å˜› ... ç­‰ä½ (æˆ–ä»–)é•·å¤§å§ !!\n");
 	}		
 	if ( !this_player()->query_vision() )
-        return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+        return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
 	tell_object(this_player(),
-		set_color("ÄãÌÍ³öºú½·¹Þ£¬°ÑÕû¹Þºú½··ÛÍù"+target->query("c_name")+"Èö¹ýÈ¥ ...\n","HIY") );
+		set_color("ä½ æŽå‡ºèƒ¡æ¤’ç½ï¼ŒæŠŠæ•´ç½èƒ¡æ¤’ç²‰å¾€"+target->query("c_name")+"æ’’éŽåŽ» ...\n","HIY") );
 	tell_object(target,
-		set_color(this_player()->query("c_name")+"ÌÍ³öÒ»¸öÐ¡¹Þ×Ó£¬¶ÔÄãÒ»ÕóÂÒÑï ..\n","HIY"));
-	tell_room(environment(this_player()),sprintf("%sÌÍ³öÒ»¸öÐ¡Æ¿×Ó£¬Ïò%sÒ»ÕóÂÒÈö ...",
+		set_color(this_player()->query("c_name")+"æŽå‡ºä¸€å€‹å°ç½å­ï¼Œå°ä½ ä¸€é™£äº‚æš ..\n","HIY"));
+	tell_room(environment(this_player()),sprintf("%sæŽå‡ºä¸€å€‹å°ç“¶å­ï¼Œå‘%sä¸€é™£äº‚æ’’ ...",
 		this_player()->query("c_name"),target->query("c_name") ),
 		({ this_player(),target }) );
 	level = (int)this_player()->query_skill("trick")/5 - (int)target->query_level()+5;
@@ -55,20 +55,20 @@ int do_scatter(string arg)
 		skill = ((int)this_player()->query_skill("trick")-20)/10;
 		target->kill_ob(this_player());
 		if ( skill > 0 ) {
-			tell_room(environment(this_player()),"Ëû¿ªÊ¼²»ÓÉ×ÔÖ÷µÄ´òÅçÌç ....\n",target);
+			tell_room(environment(this_player()),"ä»–é–‹å§‹ä¸ç”±è‡ªä¸»çš„æ‰“å™´åš ....\n",target);
 			target->block_attack(skill);
 			target->set_temp("msg_block_attack",
-			"(Äã¾õµÃ±Ç×ÓÓÖÀ±ÓÖÑ÷£¬²»ÓÉµÃ´òÁËÒ»¸öÅçÌç !! )\n");
+			"(ä½ è¦ºå¾—é¼»å­åˆè¾£åˆç™¢ï¼Œä¸ç”±å¾—æ‰“äº†ä¸€å€‹å™´åš !! )\n");
 		}
 		this_object()->remove();
 		return 1;
 	}
 	tell_room(environment(this_player()),
-		"µ«ÊÇÍ»È»´µÀ´Ò»Õó·ç£¬°Ñ·ÛÄ©¶¼´µµ½Ëû×Ô¼ºÉíÉÏ ...\n",this_player() );
-	tell_object(this_player(),"Í»È»Ò»Õó·ç´µÀ´£¬²»Ãî ... °¡ ¡«¡« ¹þÌç ...\n");
+		"ä½†æ˜¯çªç„¶å¹ä¾†ä¸€é™£é¢¨ï¼ŒæŠŠç²‰æœ«éƒ½å¹åˆ°ä»–è‡ªå·±èº«ä¸Š ...\n",this_player() );
+	tell_object(this_player(),"çªç„¶ä¸€é™£é¢¨å¹ä¾†ï¼Œä¸å¦™ ... å•Š ï½žï½ž å“ˆåš ...\n");
 	this_player()->block_attack(4);
 	this_player()->set_temp("msg_block_attack",
-		"(Äã¾õµÃ±Ç×ÓÓÖÀ±ÓÖÑ÷£¬²»ÓÉµÃ´òÁËÒ»¸öÅçÌç !! )\n");
+		"(ä½ è¦ºå¾—é¼»å­åˆè¾£åˆç™¢ï¼Œä¸ç”±å¾—æ‰“äº†ä¸€å€‹å™´åš !! )\n");
 	this_object()->remove();
 	return 1;	
 }

@@ -2,7 +2,7 @@
 #define GUILD_TOKEN	     "/d/adventurer/adv_map"
 #define GUILD_LOCATION   "/d/adventurer/hall/adv_guild"
 
-#define GUILD_MASTER     ({ "Yamor", "—«ƒ¨≥§¿œ" })
+#define GUILD_MASTER     ({ "Yamor", "‰∫ûÈªòÈï∑ËÄÅ" })
 #define ALLOWED_MATERIAL ({ "cloth", "leather", "wood", "light_metal",\
 							"wood", })
 #define SECOND_MATERIAL  ({ "heavy_metal", "stone", })

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-    set_name(" Prick","ÆÆÄ§×¶");
+    set_name(" Prick","ç ´é­”éŒ");
     add("id",({ "dagger" }) );
-    set_short("ÆÆÄ§×¶");
+    set_short("ç ´é­”éŒ");
     set_long( @C_LONG
-ÕâÊÇÄ§×åÄ§µ¼Ê¿×¨ÓÃµÄÎäÆ÷£¬ÇáÇÉµÄÉè¼ÆÊ¹Ëû³ÉÎªÕ½ÕùÖĞµÄÀûÆ÷¡£
+é€™æ˜¯é­”æ—é­”å°å£«å°ˆç”¨çš„æ­¦å™¨ï¼Œè¼•å·§çš„è¨­è¨ˆä½¿ä»–æˆç‚ºæˆ°çˆ­ä¸­çš„åˆ©å™¨ã€‚
 C_LONG
             );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("weapon_class",17);
     set("type","dagger");
     set("min_damage",10);

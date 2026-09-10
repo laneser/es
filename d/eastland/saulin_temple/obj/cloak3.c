@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "purple cloak", "воку║Уеш" );
+	set_name( "purple cloak", "Г╢╚Х≤┤Б√║Х╒█" );
 	add( "id", ({ "cloak" }) );
-	set_short( "воку║Уеш" );
+	set_short( "Г╢╚Х≤┤Б√║Х╒█" );
 	set_long(
-		"╨мип╣дмБешн╫ж╝║Уеш, воку║Уешйгиыаж╨мип╢╘╣дешвс,спжЬвои╚аВку║ё\n"
+		"Е▓▄Е╟ Г └Е╓√Х╒█Х╛┌Д╧▀Б√║Х╒█, Г╢╚Х≤┤Б√║Х╒█Ф≤╞Е╟▒Ф·≈Е▓▄Е╟ Г╘©Г └Х╒█Е╜░,Ф°┴Х▒≈Г╢╚Х┴╡Ф╣│Х≤┤Ц─┌\n"
 	);
-	set( "unit", "╪Ч" );
+	set( "unit", "Д╩╤" );
 	set( "type", "cloak" );
         set("material","cloth");
 	set( "armor_class", 6 );

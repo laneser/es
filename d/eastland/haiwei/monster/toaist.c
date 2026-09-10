@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "old toaist", "ÀÏµÀÊ¿" );
+	set_name( "old toaist", "è€é“å£«" );
 	add( "id", ({ "toaist" }) );
-	set_short( "ÀÏµÀÊ¿" );
+	set_short( "è€é“å£«" );
 	set_long(
-		"ÕâÎ»µÀÊ¿ÊÇÕâ¼äµÀ¹ÛµÄÖ÷³Ö£¬ÌıËµ·¨Á¦¸ßÇ¿ÒÑ¾­½µ·üÎŞÊıµÄÑı¹Ö¡£\n"
+		"é€™ä½é“å£«æ˜¯é€™é–“é“è§€çš„ä¸»æŒï¼Œè½èªªæ³•åŠ›é«˜å¼·å·²ç¶“é™ä¼ç„¡æ•¸çš„å¦–æ€ªã€‚\n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );
@@ -23,7 +23,7 @@ void create()
 	set( "wealth/gold", 20 );
 	set( "inquiry", ([
 		"paper" : 
-	"ÏëÒª·û°¡!Ö»ÒªÌíµã(put coins)ÏãÓÍ¾Í¿ÉÒÔµÃµ½Ò»ÕÅÊÕÑı·û¡£"
+	"æƒ³è¦ç¬¦å•Š!åªè¦æ·»é»(put coins)é¦™æ²¹å°±å¯ä»¥å¾—åˆ°ä¸€å¼µæ”¶å¦–ç¬¦ã€‚"
 	]) );
 #include <replace_mob.h>
 }

@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "carter", "³µ·ò" );
-	set_short( "³µ·ò" );
-	set_long("ÕâÃû³µ·ò¿´ÆğÀ´ÏñÊÇ¸ÏÁËºÜ³¤µÄÂ·£¬ËûÕı×øÔÚ¿ÍÕ»Ç°µÄÌ¨½×ÉÏĞİÏ¢¡£\n");
-	set( "unit", "Ãû" );
+	set_name( "carter", "è»Šä¼•" );
+	set_short( "è»Šä¼•" );
+	set_long("é€™åè»Šä¼•çœ‹èµ·ä¾†åƒæ˜¯è¶•äº†å¾ˆé•·çš„è·¯ï¼Œä»–æ­£ååœ¨å®¢æ£§å‰çš„è‡ºéšä¸Šä¼‘æ¯ã€‚\n");
+	set( "unit", "å" );
 	set( "gender", "male" );
 	set( "race", "human" );
 	set_perm_stat( "str", 3 );

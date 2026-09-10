@@ -7,17 +7,17 @@ void create ()
        ::create();
        set("lvlimit",10);
        set_level(5);
-       set_name( "beetle", "¼×³æ" );
+       set_name( "beetle", "ç”²èŸ²" );
        add( "id",({"beelte",""}) );
-       set_short( "¼×³æ" );
-       set("unit","Ö»");
+       set_short( "ç”²èŸ²" );
+       set("unit","åª");
        set_long(
-       "ÕâÊÇÒ»Ö»Ğ¡Ğ¡µÄÀ¥³æ,ËüÕıÆÜÏ¢ÔÚÊ÷ÉÏ¡£\n"
+       "é€™æ˜¯ä¸€éš»å°å°çš„æ˜†èŸ²,å®ƒæ­£æ£²æ¯åœ¨æ¨¹ä¸Šã€‚\n"
                         );
        set_perm_stat("dex", 4);
        set_perm_stat("str", 4);
        set_natural_weapon(7,4,8);
        set_natural_armor(25,1); 
-       set_c_verbs(({"%sÓÃËüµÄ¾Ş½ÇÍù%sÒ»¶¥"}));
-       set_c_limbs(({"¸¹²¿","Í·²¿","½Ç"}));
+       set_c_verbs(({"%sç”¨å®ƒçš„å·¨è§’å¾€%sä¸€é ‚"}));
+       set_c_limbs(({"è…¹éƒ¨","é ­éƒ¨","è§’"}));
 }

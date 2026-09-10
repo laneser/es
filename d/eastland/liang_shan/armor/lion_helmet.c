@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("lion helmet", "Êì¸ÖÊ¨×Ó¿ø");
+        set_name("lion helmet", "ç†Ÿé‹¼ç…å­ç›”");
         add( "id", ({ "helmet" }) );
-        set_short( "lion helmet", "Êì¸ÖÊ¨×Ó¿ø");
+        set_short( "lion helmet", "ç†Ÿé‹¼ç…å­ç›”");
         set_long(
                 "A lion face helmet .\n",
-                "ÕâÊÇÒ»¶¥²ÉÊ¨×ÓÖ®ĞÎÖÆ×÷µÄ¿ø¼×£¬ÄÔáá»¹ÓĞĞí¶à»ÆÉ«µÄ××Ã« \n"
-                "¿´À´Ê®·ÖĞÛ×³ÍşÎä£®\n"
+                "é€™æ˜¯ä¸€é ‚æ¡ç…å­ä¹‹å½¢åˆ¶ä½œçš„ç›”ç”²ï¼Œè…¦å¾Œé‚„æœ‰è¨±å¤šé»ƒè‰²çš„é¬ƒæ¯› \n"
+                "çœ‹ä¾†ååˆ†é›„å£¯å¨æ­¦ï¼\n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "heavy_metal");
         set( "armor_class", 9 );

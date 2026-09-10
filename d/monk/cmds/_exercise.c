@@ -29,12 +29,12 @@ varargs void disturbed(object player, object victim, int flag)
 
 	call_other( EXERCISING, "remove_effect", player, 1 );
 	tell_object( player, set_color( ( 
-		"\nÄã¸Ğµ½ĞØ¿ÚÒ»ÕóÆøÑª·­Ó¿£¬ÑÛÇ°½ğĞÇÂÒÃ°£¬¿´À´ÊÇ×ß»ğÈëÄ§µÄáçÕ× ....\n"+
-		( some_stat > 1 ? "\nÄãµÄ" + to_chinese(stat) + "½µµÍÁË£¡\n":"")+
-		"\nÄãÉîÉîÎü½øÒ»¿ÚÆø£¬ÃãÇ¿Ñ¹ÖÆ×¡ÌåÄÚËÄ´¦ÂÒ´ÜµÄÕæÆø£¬Õ¾ÁËÆğÀ´ ....\n\n")));
+		"\nä½ æ„Ÿåˆ°èƒ¸å£ä¸€é™£æ°£è¡€ç¿»æ¹§ï¼Œçœ¼å‰é‡‘æ˜Ÿäº‚å†’ï¼Œçœ‹ä¾†æ˜¯èµ°ç«å…¥é­”çš„å¾µå…† ....\n"+
+		( some_stat > 1 ? "\nä½ çš„" + to_chinese(stat) + "é™ä½äº†ï¼\n":"")+
+		"\nä½ æ·±æ·±å¸é€²ä¸€å£æ°£ï¼Œå‹‰å¼·å£“åˆ¶ä½é«”å…§å››è™•äº‚ç«„çš„çœŸæ°£ï¼Œç«™äº†èµ·ä¾† ....\n\n")));
 	tell_room( environment(player), 
-		player->query("c_name") + "ÊÜµ½ÁË¾ªÈÅ£¬Õû¸öÈËÒ»Õó²ü¶¶£¬Á³ÉÏÍ´¿àµØÅ¤ÇúÖø ....\n\n"
-		+ player->query("c_name") + "ÉîÉîµØÎüÁËÒ»¿ÚÆø£¬Ò¡Ò¡»Î»ÎµØÕ¾ÁËÆğÀ´ ....\n\n" ,
+		player->query("c_name") + "å—åˆ°äº†é©šæ“¾ï¼Œæ•´å€‹äººä¸€é™£é¡«æŠ–ï¼Œè‡‰ä¸Šç—›è‹¦åœ°æ‰­æ›²è‘— ....\n\n"
+		+ player->query("c_name") + "æ·±æ·±åœ°å¸äº†ä¸€å£æ°£ï¼Œæ–æ–æ™ƒæ™ƒåœ°ç«™äº†èµ·ä¾† ....\n\n" ,
 		player );
 
 	if( some_stat < 1 ) player->receive_damage(player->query("max_hp"), 0);
@@ -49,7 +49,7 @@ varargs void disturbed(object player, object victim, int flag)
 			victim->set("last_attacker", player);
 			victim->receive_damage(fp/ (1+random(2)) );
 			tell_object( victim, 
-				"\nÄã¸Ğµ½" + player->query("c_name") + "ÉíÉÏ´«À´Ò»¹É¾ŞÁ¦£¬ÕğµÃÄãĞØ¿ÚÒ»ÕóÆøÑª·­Ó¿£¡\n\n");
+				"\nä½ æ„Ÿåˆ°" + player->query("c_name") + "èº«ä¸Šå‚³ä¾†ä¸€è‚¡å·¨åŠ›ï¼Œéœ‡å¾—ä½ èƒ¸å£ä¸€é™£æ°£è¡€ç¿»æ¹§ï¼\n\n");
 		}
 	}
 }
@@ -61,27 +61,27 @@ int cmd_exercise( string arg )
 	
 	me = this_player();
 	exe_skill = (int)me->query_skill("inner-force");
-	if( !exe_skill ) return notify_fail("ÄãÃ»ÓĞÑ§¹ıĞŞÏ°ÄÚ¹¦\µÄ·½·¨ ....¡£\n");
+	if( !exe_skill ) return notify_fail("ä½ æ²’æœ‰å­¸éä¿®ç¿’å…§åŠŸçš„æ–¹æ³• ....ã€‚\n");
 
     if( me->query("conditions/exercising") )
-        return notify_fail("Äã¸ÕÔË¹¦\²»¾Ã£¬ÌåÄÚ³äÂúÕæÆø£¬²»ÊÊºÏ²ÙÖ®¹ı¼±ÂíÉÏÔÙÁ·¡£\n");
+        return notify_fail("ä½ å‰›é‹åŠŸä¸ä¹…ï¼Œé«”å…§å……æ»¿çœŸæ°£ï¼Œä¸é©åˆæ“ä¹‹éæ€¥é¦¬ä¸Šå†ç·´ã€‚\n");
 
     if( me->query_attackers() )
-         return notify_fail("Äã²»ÄÜÔÚÕ½¶·ÔË¹¦\£¬Ğ¡ĞÄ×ß»ğÈëÄ§ !!\n");
+         return notify_fail("ä½ ä¸èƒ½åœ¨æˆ°é¬¥é‹åŠŸ\ï¼Œå°å¿ƒèµ°ç«å…¥é­” !!\n");
     if(me->query("monk_songin") )
-         return notify_fail("ÄãÕıÔÚ¼¯ÖĞ¾«ÉñËĞ¾­£¬ÎŞ·¨ÔË¹¦!!\n");
+         return notify_fail("ä½ æ­£åœ¨é›†ä¸­ç²¾ç¥èª¦ç¶“ï¼Œç„¡æ³•é‹åŠŸ!!\n");
 
 	if( me->query("stop_heal") )
-         return notify_fail("ÄãÏÖÔÚ²»ÄÜÔË¹¦\¡£\n");
+         return notify_fail("ä½ ç¾åœ¨ä¸èƒ½é‹åŠŸ\ã€‚\n");
 
 	if( !arg || !sscanf(arg, "%d", max) ) max = exe_skill / 3;
         fe=(int)me->query("force_effect");
     max = max/2 + random(max/2) + random(fe);
 	if( max < 1 ) max = 1;
 	if( max > 35 ) max = 35;
-	write("Äã¿íÅÛ»º´ø£¬ÅÌÍÈ¶ø×ø£¬ÑÛ¹Û±Ç£¬±Ç¹ÛĞÄ£¬Ò»¹ÉÄÚÏ¢¿ªÊ¼ÔÚÄãµÄÌåÄÚÁ÷¶¯ ...¡£\n");
+	write("ä½ å¯¬è¢ç·©å¸¶ï¼Œç›¤è…¿è€Œåï¼Œçœ¼è§€é¼»ï¼Œé¼»è§€å¿ƒï¼Œä¸€è‚¡å…§æ¯é–‹å§‹åœ¨ä½ çš„é«”å…§æµå‹• ...ã€‚\n");
 	tell_room( environment(me), 
-		me->query("c_name")+ "ÅÌÍÈ×øÁËÏÂÀ´£¬±ÕÄ¿ÄıÉñ£¬¿ªÊ¼´ò×ø¡£\n", me );
+		me->query("c_name")+ "ç›¤è…¿åäº†ä¸‹ä¾†ï¼Œé–‰ç›®å‡ç¥ï¼Œé–‹å§‹æ‰“åã€‚\n", me );
 	me->set_temp("exercising", base_name(this_object()));
         EXERCISING->apply_effect(me, max, 60+max+random(max)+fe*3);
 	return 1;

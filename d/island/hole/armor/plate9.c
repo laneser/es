@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Blood Plate","ºÚÃæÑª¼×" );
+	set_name( "Blood Plate","é»‘éºµè¡€ç”²" );
 	add( "id", ({ "plate" }) );
-	set_short( "ºÚÃæÑª¼×" );
+	set_short( "é»‘éºµè¡€ç”²" );
 	set_long(@LONG
-	ÎªÁËµÃµ½ºÚ°µµÄ¼Ó»¤£¬ÓÃºÚÑªÈ¾³ÉµÄîø¼×£¬ÊÇ
-	Õ½³¡ÉÏµÄ²»ÏéÎïÖ®Ò»¡£
+	ç‚ºäº†å¾—åˆ°é»‘æš—çš„åŠ è­·ï¼Œç”¨é»‘è¡€æŸ“æˆçš„é§ç”²ï¼Œæ˜¯
+	æˆ°å ´ä¸Šçš„ä¸ç¥¥ç‰©ä¹‹ä¸€ã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",110 );
 	set( "type","body" );
 	set( "material","heavy_metal" );

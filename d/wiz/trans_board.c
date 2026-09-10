@@ -8,5 +8,5 @@ void create()
 	set_save_file("trans_board");
 	set_location("/d/wiz/translate");
 	set( "short.text", "Board of Translation");
-	set( "c_short.text", "ÖĞÓ¢ÎÄ·­ÒëÁôÑÔ°å");
+	set( "c_short.text", "ä¸­è‹±æ–‡ç¿»è­¯ç•™è¨€æ¿");
 }

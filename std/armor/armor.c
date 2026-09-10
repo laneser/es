@@ -50,19 +50,19 @@ string unequip_c_verb(string type)
 	switch( type ) {
 		case "head":
 		case "arms":
-		case "hands": verb = "ÍÑÏÂ"; break;
+		case "hands": verb = "è„«ä¸‹"; break;
 		case "misc":
-		case "finger": verb = "È¡ÏÂ"; break;
+		case "finger": verb = "å–ä¸‹"; break;
 		case "body":
 		case "legs":
 		case "tail":
 		case "cloak":
-		case "feet": verb = "ÍÑµô"; break;
-		case "shield": verb = "·ÅÏÂ"; break;
-		case "globe": verb = "¡õÉÏ"; break;
-		case "saddle": verb = "½âÏÂ"; break;
-		case "kernel": verb = "ÍÂ³ö"; break;
-		default: verb = "×°±¸"; break;
+		case "feet": verb = "è„«æŽ‰"; break;
+		case "shield": verb = "æ”¾ä¸‹"; break;
+		case "globe": verb = "â–¡ä¸Š"; break;
+		case "saddle": verb = "è§£ä¸‹"; break;
+		case "kernel": verb = "åå‡º"; break;
+		default: verb = "è£å‚™"; break;
 	}
 	return verb;
 }
@@ -151,10 +151,10 @@ void unequip(int silent)
 						unequip_msg[1] : unequip_msg[0] );
 			else
 				tell_object(fellow, 
-					sprintf("Äã%s×°±¸ÖÐµÄ%s¡£\n",verb,query("short")));
+					sprintf("ä½ %sè£å‚™ä¸­çš„%sã€‚\n",verb,query("short")));
 			if( environment(fellow) )
 				tell_room( environment(fellow), 
-					sprintf("%s%s×°±¸ÖÐµÄ%s¡£\n",fellow->query("c_name"),verb,query("short")),
+					sprintf("%s%sè£å‚™ä¸­çš„%sã€‚\n",fellow->query("c_name"),verb,query("short")),
 					fellow
 				);
 		}

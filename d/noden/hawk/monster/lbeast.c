@@ -8,17 +8,17 @@ void create ()
 {
         ::create();
         set_level(19);
-        set_name("Light Beast","¹âÊŞ");
+        set_name("Light Beast","å…‰ç¸");
         add("id",({"light","beast","light beast"}) );
-        set_short("¹âÊŞ");
+        set_short("å…‰ç¸");
         set_long(@C_LONG
-Ì«¹ÅµÄÄ§ÊŞ£¬ÊÇôÃÀ­¸ù´ÓµØÓüºô»½³öÀ´µÄÄ§ÎïÖ®Ò»¡£
+å¤ªå¤çš„é­”ç¸ï¼Œæ˜¯è£˜æ‹‰æ ¹å¾åœ°ç„å‘¼å–šå‡ºä¾†çš„é­”ç‰©ä¹‹ä¸€ã€‚
 C_LONG
         );
         set("alignment",-100000);
         set( "gender", "male" );
         set( "race", "beast");
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set_perm_stat( "dex",27);
         set_perm_stat( "int",30);
         set_perm_stat( "karma",27);
@@ -73,7 +73,7 @@ int my_tactic()
                         command("cast lightning on "+name);
                         break;
                 default :
-                        command("say ÓĞ³æ³æ:~~\n");
+                        command("say æœ‰èŸ²èŸ²:~~\n");
                         break;
         }
 

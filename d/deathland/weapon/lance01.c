@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
     seteuid(getuid());
-	set_name("Lance of Molader", "ÄªÀ­µÂ³¤Ç¹");
+	set_name("Lance of Molader", "è«æ‹‰å¾·é•·æ§");
 	add ("id",({ "lance" }) );
-	set_short("ÄªÀ­µÂ³¤Ç¹");
+	set_short("è«æ‹‰å¾·é•·æ§");
 	set_long(
-            "Ò»°ÑÄ©ÓÉÄªÀ­µÂ»ÊÊÒµÄÊØÎÀ×¨ÓÃµÄ³¤Ç¹\n"
+            "ä¸€æŠŠæœ«ç”±è«æ‹‰å¾·çš‡å®¤çš„å®ˆè¡›å°ˆç”¨çš„é•·æ§\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", 25 );
 	set( "type", "thrusting" );
 	set( "min_damage", 10 );

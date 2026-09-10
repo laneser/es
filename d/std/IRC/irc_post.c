@@ -11,7 +11,7 @@ void create()
 {
         ::create();
         seteuid(getuid()) ;
-        set_short( "The post office", "ÓÊ¾Ö");
+        set_short( "The post office", "éƒµå±€");
         set_long( @LONG
 This is the IRC post office. Here you can send mails to anyone on
 the mud or read your own mails.
@@ -19,9 +19,9 @@ The news bulletin is posted on the wall.
  
 LONG
 , @C_LONG
-ÕâÀïÊÇ ES IRC ÊÀ½çµÄÓÊ¾Ö, Äã¿ÉÒÔÔÚÕâÀïĞ´ĞÅ¸øÆäËûÍæ¼Ò, »ò\ÔÄ\¶ÁÄã×Ô¼º
-µÄĞÅ¼ş¡£
-Ç½±ÚÉÏÓĞÒ»¸ö¹«²¼À¸ (bulletin).
+é€™è£¡æ˜¯ ES IRC ä¸–ç•Œçš„éƒµå±€, ä½ å¯ä»¥åœ¨é€™è£¡å¯«ä¿¡çµ¦å…¶ä»–ç©å®¶, æˆ–é–±è®€ä½ è‡ªå·±
+çš„ä¿¡ä»¶ã€‚
+ç‰†å£ä¸Šæœ‰ä¸€å€‹å…¬ä½ˆæ¬„ (bulletin).
 
 C_LONG
         );

@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "Ğ¡Íµ¹«»áÃØÃÜ×°±¸ÊÒ");
+	set_short( "å°å·å…¬æœƒç§˜å¯†è£å‚™å®¤");
 	set_long(	@C_LONG_DESCRIPTION
-ÕâÀïÊÇĞ¡Íµ¹«»áµÄÃØÃÜ´¢²ØÊÒ¡£¼¸ÄêÇ°Ò»Ğ©ÓĞÇ®µÄĞ¡Íµ¾èÁËĞ©Ç®\¸Ç\ÁËÕâ×ù´¢²ØÊÒ,
-¸øÒ»Ğ©ĞèÒªÊÜÑµµÄĞ¡Íµ°Ñ×°±¸ÁôÔÚÕâÀï¡£
+é€™è£¡æ˜¯å°å·å…¬æœƒçš„ç§˜å¯†å„²è—å®¤ã€‚å¹¾å¹´å‰ä¸€äº›æœ‰éŒ¢çš„å°å·æäº†äº›éŒ¢è“‹äº†é€™åº§å„²è—å®¤,
+çµ¦ä¸€äº›éœ€è¦å—è¨“çš„å°å·æŠŠè£å‚™ç•™åœ¨é€™è£¡ã€‚
 C_LONG_DESCRIPTION
 	);
 
@@ -38,15 +38,15 @@ int do_get(string arg)
 			continue ;
 		invs[i]->delete("owner");			
 		}
-		tell_object(this_player(),"Äã°ÑÄãµÄ¶«Î÷È«²¿¼ğÁËÆğÀ´¡£\n");
+		tell_object(this_player(),"ä½ æŠŠä½ çš„æ±è¥¿å…¨éƒ¨æ€äº†èµ·ä¾†ã€‚\n");
 		return 1;
 	}
 	if ( !ob = present(arg,this_object()) )
 		return 0;
 	if ( (string)ob->query("owner") != (string)this_player()->query("name") ) {
 //		&& !wizardp(this_player()) )
-		tell_object(this_player(),"Õâ¼ş¶«Î÷Äã²»ÄÜÄÃ×ß¡£\n");
-//		return notify_fail("Õâ¼ş¶«Î÷Äã²»ÄÜÄÃ×ß¡£\n");
+		tell_object(this_player(),"é€™ä»¶æ±è¥¿ä½ ä¸èƒ½æ‹¿èµ°ã€‚\n");
+//		return notify_fail("é€™ä»¶æ±è¥¿ä½ ä¸èƒ½æ‹¿èµ°ã€‚\n");
 		return 1;
 	}
 	call_other("/cmds/std/_get","cmd_get",arg);

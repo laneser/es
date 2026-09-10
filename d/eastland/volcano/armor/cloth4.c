@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wraith elder's robe", "°«Áé³¤ÀÏÖ®ÅÛ");
+        set_name("wraith elder's robe", "çŸ®éˆé•·è€ä¹‹è¢");
         add( "id", ({ "robe" }) );
-        set_short( "°«Áé³¤ÀÏÖ®ÅÛ");
+        set_short( "çŸ®éˆé•·è€ä¹‹è¢");
         set_long(
-                "Õâ¼ş³¤ÅÛÊÇ°«Áé³¤ÀÏ´©ÖøµÄ¡£\n"
+                "é€™ä»¶é•·è¢æ˜¯çŸ®éˆé•·è€ç©¿è‘—çš„ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "cloth");
         set( "armor_class", 20 );

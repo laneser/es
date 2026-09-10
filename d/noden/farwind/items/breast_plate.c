@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "breast plate", "ĞØ¼×" );
+	set_name( "breast plate", "èƒ¸ç”²" );
 	add( "id", ({ "plate" }) );
-	set_short( "ĞØ¼×");
+	set_short( "èƒ¸ç”²");
 	set_long(
-		"ÕâÊÇÒ»¸±ÌúÖÆµÄĞØ¼×£¬ÓÃÀ´±£»¤ĞØ²¿¼°¸¹²¿µÄ·À¾ß¡£\n"
+		"é€™æ˜¯ä¸€å‰¯éµè£½çš„èƒ¸ç”²ï¼Œç”¨ä¾†ä¿è­·èƒ¸éƒ¨åŠè…¹éƒ¨çš„é˜²å…·ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 150 );
 	set( "type", "body" );
 	set( "material", "heavy_metal");

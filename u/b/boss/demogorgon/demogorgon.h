@@ -11,7 +11,7 @@
 #define MAX_GUILD_EXP   4000000
 #define MAX_GUILD_LVL   120
 
-#define MAGE_GUILD_MASTER ({ "Rashudi", "¿≠–ﬁµ€" })
+#define MAGE_GUILD_MASTER ({ "Rashudi", "Êãâ‰øÆÂ∏ù" })
 #define MAGIC_TYPES       ({ "black-magic", "misc", "elemental", })
 
 #define ALLOWED_MATERIAL  ({ "cloth", "element", "leather", "wood", })

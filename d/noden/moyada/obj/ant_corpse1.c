@@ -22,9 +22,9 @@ void create()
 	decay = 2;
 	set ("weight", 100);
 	set ("type", "ant");
-	set_name( "corpse of ant", "ÂìÒÏµÄÊ¬Ìå" );
+	set_name( "corpse of ant", "èèŸ»çš„å±é«”" );
 	set_short( "@@query_c_short" );
-	set ("unit", "¾ß" );
+	set ("unit", "å…·" );
 	set ("max_load", 400);
 	set ("prevent_insert", 1);
 	set ("id", ({ "corpse", "remains", "body", "dead body", }) );
@@ -55,7 +55,7 @@ int can_put_and_get() { return 1; }
 string query_c_short()
 {
    if(decay == 2)
-      return "ÂìÒÏµÄÊ¬Ìå";
+      return "èèŸ»çš„å±é«”";
    else
-      return "ÂìÒÏµÄ¹Çº¡";
+      return "èèŸ»çš„éª¨éª¸";
 }

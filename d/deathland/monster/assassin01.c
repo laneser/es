@@ -7,13 +7,13 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "shadow assassin", "Ò¹Ó°É±ÊÖ" );
+	set_name( "shadow assassin", "å¤œå½±æ®ºæ‰‹" );
 	add("id",({"assassin"}));
-	set_short( "an shadow assassin", "Ò¹Ó°É±ÊÖ" );
+	set_short( "an shadow assassin", "å¤œå½±æ®ºæ‰‹" );
 	set_long(
 		"a terrible shadow assassin.\n"
-		"Ò»¸öÁîÈË¾åÅÂµÄÒ¹Ó°É±ÊÖ ,ÎÞÉùÎÞÏ¢µÄ±³´ÌÊÇËûµÄ×¨³¤ ,¶øÇÒÖ»ÒªÔÚºÚ°µÖ®ÖÐ ,\n"
-		"¼¸ºõÃ»ÓÐÈËÄÜ¹»²é¾õ³öËûµÄÎ»ÖÃ .\n"
+		"ä¸€å€‹ä»¤äººæ‡¼æ€•çš„å¤œå½±æ®ºæ‰‹ ,ç„¡è²ç„¡æ¯çš„èƒŒåˆºæ˜¯ä»–çš„å°ˆé•· ,è€Œä¸”åªè¦åœ¨é»‘æš—ä¹‹ä¸­ ,\n"
+		"å¹¾ä¹Žæ²’æœ‰äººèƒ½å¤ æŸ¥è¦ºå‡ºä»–çš„ä½ç½® .\n"
 	);
 	set( "gender", "male" );
 	set( "alignment", -1200 );
@@ -39,9 +39,9 @@ int my_tactic()
 
 	if( random(20)>3 || !(victim= query_attacker()) ) return 0;
     else {
-      tell_object(victim, "Ò¹Ó°É±ÊÖÍ»È»±³´ÌÄã.\n" );
+      tell_object(victim, "å¤œå½±æ®ºæ‰‹çªç„¶èƒŒåˆºä½ .\n" );
       tell_room(environment(this_object()),
-          "Ò¹Ó°É±ÊÖÍ»È»±³´Ì"+victim->query("c_name")+".\n"
+          "å¤œå½±æ®ºæ‰‹çªç„¶èƒŒåˆº"+victim->query("c_name")+".\n"
           ,({victim,this_object(),}) );
       victim->receive_damage( 20 + random(30) );
       report(this_object(),victim);

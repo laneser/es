@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("magic arms", "ÔÂÉñ±Û");
-    set_short("ÔÂÉñ±Û");
+    set_name("magic arms", "æœˆç¥è‡‚");
+    set_short("æœˆç¥è‡‚");
     add("id", ({ "arms", "armband" }));
-    set_long("ÓÉÉñÁ¦»Ã»¯¶ø³ÉµÄ±Û»·¡£\n");
-    set("unit", "¶Ô");
+    set_long("ç”±ç¥åŠ›å¹»åŒ–è€Œæˆçš„è‡‚ç’°ã€‚\n");
+    set("unit", "å°");
     set("weight", 0);
     set("type", "arms");
         set( "armor_class", 150 );
@@ -20,7 +20,7 @@ void create()
 
 void unequip(int silent)
 {
-    tell_object(this_player(), "ÔÂÉñ±Û¾Ü¾øÀë¿ªÄãµÄÉíÌå!\n");
+    tell_object(this_player(), "æœˆç¥è‡‚æ‹’çµ•é›¢é–‹ä½ çš„èº«é«”!\n");
 }
 
 int remove()

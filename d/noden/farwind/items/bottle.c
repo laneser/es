@@ -6,12 +6,12 @@ int breaked;
 
 void create()
 {
-	set_name( "wine bottle", "¾ÆÆ¿" );
+	set_name( "wine bottle", "é…’ç“¶" );
 	add( "id", ({ "bottle" }) );
-	set_short( "¾ÆÆ¿" );
+	set_short( "é…’ç“¶" );
 	set_long(@CLONG
-ÕâÊÇÒ»¸ö....ßÀ....¾ÆÆ¿×Ó£¬ÀïÃæÔçÒÑºÈµÃÒ»µÎÒ²²»Ê££¬Æ¿Àï
-»¹ÓĞÒ»¶Ñ¶ñĞÄµÄÍÙÄ­£¬³ÃÔç°ÑÕâÀ¬»ø¸ø¶ªÁË°É¡£
+é€™æ˜¯ä¸€å€‹....å‘ƒ....é…’ç“¶å­ï¼Œè£¡é¢æ—©å·²å–å¾—ä¸€æ»´ä¹Ÿä¸å‰©ï¼Œç“¶è£¡
+é‚„æœ‰ä¸€å †å™å¿ƒçš„å”¾æ²«ï¼Œè¶æ—©æŠŠé€™åƒåœ¾çµ¦ä¸Ÿäº†å§ã€‚
 CLONG
 	);
 	set( "weight", 30 );
@@ -30,21 +30,21 @@ int break_bottle(string arg)
 	if( breaked ) return 0;
 
 	if( !arg || !id(arg) )
-		return notify_fail("´òÆÆÊ²÷á£¿\n");
+		return notify_fail("æ‰“ç ´ä»€éº¼ï¼Ÿ\n");
 	breaked = 1;
 	write( 
-		"Äã½«¾ÆÆ¿Ë¤ÔÚµØÉÏ£¬àÅ....¿´ÆğÀ´Õâ°ë½Ø¾ÆÆ¿ËÆºõ¿ÉÒÔµ±³ÉÎäÆ÷£¿\n"
+		"ä½ å°‡é…’ç“¶æ‘”åœ¨åœ°ä¸Šï¼Œå—¯....çœ‹èµ·ä¾†é€™åŠæˆªé…’ç“¶ä¼¼ä¹å¯ä»¥ç•¶æˆæ­¦å™¨ï¼Ÿ\n"
 	);
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name") + "°ÑÒ»¸ö¾ÆÆ¿Ë¤ÔÚµØÉÏ£¬ÆÆ³ÉÁ½½Ø¡£\n",
+		this_player()->query("c_name") + "æŠŠä¸€å€‹é…’ç“¶æ‘”åœ¨åœ°ä¸Šï¼Œç ´æˆå…©æˆªã€‚\n",
 		this_player() );
 	set( "type", "dagger" );
 	set( "weapon_class", 7 );
 	set( "min_damage", 3 );
 	set( "max_damage", 7 );
-	set_name( "broken wine bottle", "ÆÆ¾ÆÆ¿" );
+	set_name( "broken wine bottle", "ç ´é…’ç“¶" );
 	add( "id", ({ "broken bottle" }) );
-	set_short( "ÆÆ¾ÆÆ¿" );
+	set_short( "ç ´é…’ç“¶" );
 	return 1;
 }
 

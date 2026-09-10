@@ -7,17 +7,17 @@ void create ()
 {
         ::create();
         set_level(6);
-        set_name( "merchant","ÔÓ»õÉÌÈË" );
+        set_name( "merchant","é›œè²¨å•†äºº" );
         add ("id", ({ "merchant"}) );
-        set_short( "merchant","ÔÓ»õÉÌÈË");
-        set("unit","Î»");
+        set_short( "merchant","é›œè²¨å•†äºº");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇÒ»¸öÔÓ»õµÄÉÌÈË
+é€™æ˜¯ä¸€å€‹é›œè²¨çš„å•†äºº
 ANGEL
         );
         
         set ("gender", "male");
         set("wealth/gold",7);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 }

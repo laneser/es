@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "bastard blade", "¾«¸Ö½äµ¶" );
+	set_name( "bastard blade", "ç²¾é‹¼æˆ’åˆ€" );
 	add( "id", ({ "blade" }) );
-	set_short( "¾«¸Ö½äµ¶" );
+	set_short( "ç²¾é‹¼æˆ’åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÓÃ¾«¸ÖÖı³ÉµÄ³¬¼¶´ó½äµ¶£¬ÊÇÉÙÁÖËÂÂŞººÌÃµÜ×Ó¹ßÓÃµÄ±øÈĞ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠç”¨ç²¾é‹¼é‘„æˆçš„è¶…ç´šå¤§æˆ’åˆ€ï¼Œæ˜¯å°‘æ—å¯ºç¾…æ¼¢å ‚å¼Ÿå­æ…£ç”¨çš„å…µåˆƒã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weight", 178 );
 	set( "nosecond", 1 );

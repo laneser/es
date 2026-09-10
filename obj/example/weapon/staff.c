@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "staff", "木杖" );
-	set_short( "a wooden staff", "木杖" );
+	set_name( "staff", "鏈ㄦ潠" );
+	set_short( "a wooden staff", "鏈ㄦ潠" );
 	set_long(
 		"A long hard wooden staff.\n",
-		"一根长、硬、用来当作武器的木杖。\n"
+		"涓�鏍归暦銆佺‖銆佺敤渚嗙暥浣滄鍣ㄧ殑鏈ㄦ潠銆俓n"
 	);
 	set( "weapon_class", 7 );
 	set( "type", "blunt" );

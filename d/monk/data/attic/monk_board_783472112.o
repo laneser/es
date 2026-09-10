@@ -1,36 +1,36 @@
 #d/monk/guild/monk_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Monk's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÎäÉ®¹«»áÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Monk's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿",])
 messages ({(["id":209,"body":"On Sat Oct 22, Adad wrote:
->     ¿´ÁËÕâ¸öboard,ÕæµÄºÜÏÛÄ½µ±ºÍÉĞµÄÊ±´ú.....
-> ÏÖÔÚ»ìÊéÉú,ÄÑµÃ¿´µ½Ò»Î»Î×Ê¦ÔÚ¹«»á³öÏÖ,ËäËµÊéÉú¹«»áÒ²ÔÚĞŞ¸ÄÖĞ,µ«ËÆºõÃ»Ïñmonk¹«»áÕâÑù¿ìËÙ......
-> ÕæµÄºÜ¼É¶Ê,ÎªºÎÊéÉú¹«»áÃ»ÓĞÏñangelÕâÑù³£»á¹ØĞÄ¹«»áÏÖ¿öµÄÎ×Ê¦ÔÚ....
-> »òĞí\ÓĞÆäËûµÄÎ×Ê¦ÔÚÄ»ááÎªÊéÉú¹«»á¾¡ĞÄ¾¡Á¦Öø,µ«»¹ÊÇ°Ú\ÍÑ²»ÁËÀäÂäµÄ¸Ğ¾õ......
-> Ã»ÓĞÉËº¦±ğÈËµÄÒâË¼,´¿´âÓĞ¸Ğ¶ø·¢°ÕÁË......
+>     çœ‹äº†é€™å€‹board,çœŸçš„å¾ˆç¾¨æ…•ç•¶å’Œå°šçš„æ™‚ä»£.....
+> ç¾åœ¨æ··æ›¸ç”Ÿ,é›£å¾—çœ‹åˆ°ä¸€ä½å·«å¸«åœ¨å…¬æœƒå‡ºç¾,é›–èªªæ›¸ç”Ÿå…¬æœƒä¹Ÿåœ¨ä¿®æ”¹ä¸­,ä½†ä¼¼ä¹æ²’åƒmonkå…¬æœƒé€™æ¨£å¿«é€Ÿ......
+> çœŸçš„å¾ˆå¿Œå¦’,ç‚ºä½•æ›¸ç”Ÿå…¬æœƒæ²’æœ‰åƒangelé€™æ¨£å¸¸æœƒé—œå¿ƒå…¬æœƒç¾æ³çš„å·«å¸«åœ¨....
+> æˆ–è¨±æœ‰å…¶ä»–çš„å·«å¸«åœ¨å¹•å¾Œç‚ºæ›¸ç”Ÿå…¬æœƒç›¡å¿ƒç›¡åŠ›è‘—,ä½†é‚„æ˜¯æ“ºè„«ä¸äº†å†·è½çš„æ„Ÿè¦º......
+> æ²’æœ‰å‚·å®³åˆ¥äººçš„æ„æ€,ç´”ç²¹æœ‰æ„Ÿè€Œç™¼ç½·äº†......
 
-  ÊéÉúÆäÊµºÜºÃÁËÀ².....
-Äã¿ÉÒÔÈ¥¿´¿´Ò½Éú¹«»á.....¸ù±¾ºÃÏñÊÇ±»ÒÅÆúÁËµÄÑù×Ó...
+  æ›¸ç”Ÿå…¶å¯¦å¾ˆå¥½äº†å•¦.....
+ä½ å¯ä»¥å»çœ‹çœ‹é†«ç”Ÿå…¬æœƒ.....æ ¹æœ¬å¥½åƒæ˜¯è¢«éºæ£„äº†çš„æ¨£å­...
                                              Tutu
-","title":"Re: ÓĞµãÉË¸Ğ........","time":782806278,"poster":"Tu",]),(["id":210,"title":"Re: Re: ÓĞµãÉË¸Ğ........","body":"On Sat Oct 22, Tu wrote:
+","title":"Re: æœ‰é»å‚·æ„Ÿ........","time":782806278,"poster":"Tu",]),(["id":210,"title":"Re: Re: æœ‰é»å‚·æ„Ÿ........","body":"On Sat Oct 22, Tu wrote:
 > On Sat Oct 22, Adad wrote:
-> >     ¿´ÁËÕâ¸öboard,ÕæµÄºÜÏÛÄ½µ±ºÍÉĞµÄÊ±´ú.....
-> > ÏÖÔÚ»ìÊéÉú,ÄÑµÃ¿´µ½Ò»Î»Î×Ê¦ÔÚ¹«»á³öÏÖ,ËäËµÊéÉú¹«»áÒ²ÔÚĞŞ¸ÄÖĞ,µ«ËÆºõÃ»Ïñmonk¹«»áÕâÑù¿ìËÙ......
-> > ÕæµÄºÜ¼É¶Ê,ÎªºÎÊéÉú¹«»áÃ»ÓĞÏñangelÕâÑù³£»á¹ØĞÄ¹«»áÏÖ¿öµÄÎ×Ê¦ÔÚ....
-> > »òĞí\ÓĞÆäËûµÄÎ×Ê¦ÔÚÄ»ááÎªÊéÉú¹«»á¾¡ĞÄ¾¡Á¦Öø,µ«»¹ÊÇ°Ú\ÍÑ²»ÁËÀäÂäµÄ¸Ğ¾õ......
-> > Ã»ÓĞÉËº¦±ğÈËµÄÒâË¼,´¿´âÓĞ¸Ğ¶ø·¢°ÕÁË......
+> >     çœ‹äº†é€™å€‹board,çœŸçš„å¾ˆç¾¨æ…•ç•¶å’Œå°šçš„æ™‚ä»£.....
+> > ç¾åœ¨æ··æ›¸ç”Ÿ,é›£å¾—çœ‹åˆ°ä¸€ä½å·«å¸«åœ¨å…¬æœƒå‡ºç¾,é›–èªªæ›¸ç”Ÿå…¬æœƒä¹Ÿåœ¨ä¿®æ”¹ä¸­,ä½†ä¼¼ä¹æ²’åƒmonkå…¬æœƒé€™æ¨£å¿«é€Ÿ......
+> > çœŸçš„å¾ˆå¿Œå¦’,ç‚ºä½•æ›¸ç”Ÿå…¬æœƒæ²’æœ‰åƒangelé€™æ¨£å¸¸æœƒé—œå¿ƒå…¬æœƒç¾æ³çš„å·«å¸«åœ¨....
+> > æˆ–è¨±æœ‰å…¶ä»–çš„å·«å¸«åœ¨å¹•å¾Œç‚ºæ›¸ç”Ÿå…¬æœƒç›¡å¿ƒç›¡åŠ›è‘—,ä½†é‚„æ˜¯æ“ºè„«ä¸äº†å†·è½çš„æ„Ÿè¦º......
+> > æ²’æœ‰å‚·å®³åˆ¥äººçš„æ„æ€,ç´”ç²¹æœ‰æ„Ÿè€Œç™¼ç½·äº†......
 > 
->   ÊéÉúÆäÊµºÜºÃÁËÀ².....
-> Äã¿ÉÒÔÈ¥¿´¿´Ò½Éú¹«»á.....¸ù±¾ºÃÏñÊÇ±»ÒÅÆúÁËµÄÑù×Ó...
+>   æ›¸ç”Ÿå…¶å¯¦å¾ˆå¥½äº†å•¦.....
+> ä½ å¯ä»¥å»çœ‹çœ‹é†«ç”Ÿå…¬æœƒ.....æ ¹æœ¬å¥½åƒæ˜¯è¢«éºæ£„äº†çš„æ¨£å­...
 >                                              Tutu
 
-  Healer ÏÖÔÚÓÉ Annihilator Ö÷µ¼£¬Äã¿ÉÒÔÏòËûÌá³ö½¨Òé
+  Healer ç¾åœ¨ç”± Annihilator ä¸»å°ï¼Œä½ å¯ä»¥å‘ä»–æå‡ºå»ºè­°
 
-","time":782813465,"poster":"Ruby",]),(["id":211,"title":"< no title >","body":"ÎØÎØ....:~~~~~~~~~~~~
-ÓÖÃ»×¢Òâ....ËĞ¾­Ã»Íê¾Íexcise...:~~~~~~~~
-µÚ¶ş´ÎÁË...sigh...
+","time":782813465,"poster":"Ruby",]),(["id":211,"title":"< no title >","body":"å—šå—š....:~~~~~~~~~~~~
+åˆæ²’æ³¨æ„....èª¦ç¶“æ²’å®Œå°±excise...:~~~~~~~~
+ç¬¬äºŒæ¬¡äº†...sigh...
 
-                      °¦...²»ÍæÁË...
+                      å”‰...ä¸ç©äº†...
 ;
 ","time":782822560,"poster":"Tu",]),(["id":212,"body":"
   can somebody help me.....
@@ -46,82 +46,82 @@ MudOS driver tells you: You have no heart beat!
    i have tell oldcat and she tell me that i have IRC mark 
    when i am in IRC , i just tell and exercise one time ..
 
-                  ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡£ã£è£á£î
-","title":"help !!!!!","time":782849007,"poster":"Chan",]),(["id":213,"title":"< no title >","body":"·üÄ§¹÷·¨²»¾ÍÊÇÓÃ¹÷×ÓÂğ??
-ÎªºÎÎÒÊÖÄÃÊìÍ­¹÷È´ËµÎÒÃ»ÊÊµ±µÄÎäÆ÷, ²»ÄÜÓÃ·üÄ§??
-ÊÇbugs°É, plz check it, thx
+                  ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ï½ƒï½ˆï½ï½
+","title":"help !!!!!","time":782849007,"poster":"Chan",]),(["id":213,"title":"< no title >","body":"ä¼é­”æ£æ³•ä¸å°±æ˜¯ç”¨æ£å­å—??
+ç‚ºä½•æˆ‘æ‰‹æ‹¿ç†ŸéŠ…æ£å»èªªæˆ‘æ²’é©ç•¶çš„æ­¦å™¨, ä¸èƒ½ç”¨ä¼é­”??
+æ˜¯bugså§, plz check it, thx
 ","time":782901663,"poster":"Longfly",]),(["id":214,"title":"...","body":"
-ÔÚ¶ÁÊéÉú¹«»áµÄ°å×ÓÊ±, 
+åœ¨è®€æ›¸ç”Ÿå…¬æœƒçš„æ¿å­æ™‚, 
 ERROR: (s)printf(): More arguments specified than passed. in arg 0
 ....
-ÎªÊ²÷á¶¼ÊÇÎÒ¿´µ½°¡ ?
-ÄÇ±ß²»ÄÜ post , ¾Í·Åµ½Õâ .. Çë angel ´úÎª¸æÖªÆäËû wiz ÁË ..
+ç‚ºä»€éº¼éƒ½æ˜¯æˆ‘çœ‹åˆ°å•Š ?
+é‚£é‚Šä¸èƒ½ post , å°±æ”¾åˆ°é€™ .. è«‹ angel ä»£ç‚ºå‘ŠçŸ¥å…¶ä»– wiz äº† ..
 ","time":782905853,"poster":"Pro",]),(["id":215,"body":"On Sun Oct 23, Longfly wrote:
-> ·üÄ§¹÷·¨²»¾ÍÊÇÓÃ¹÷×ÓÂğ??
-> ÎªºÎÎÒÊÖÄÃÊìÍ­¹÷È´ËµÎÒÃ»ÊÊµ±µÄÎäÆ÷, ²»ÄÜÓÃ·üÄ§??
-> ÊÇbugs°É, plz check it, thx
+> ä¼é­”æ£æ³•ä¸å°±æ˜¯ç”¨æ£å­å—??
+> ç‚ºä½•æˆ‘æ‰‹æ‹¿ç†ŸéŠ…æ£å»èªªæˆ‘æ²’é©ç•¶çš„æ­¦å™¨, ä¸èƒ½ç”¨ä¼é­”??
+> æ˜¯bugså§, plz check it, thx
 ====================================
 ok lo!!!
-","title":"Re: < no title >","time":782921445,"poster":"Angel",]),(["id":216,"title":"< no title >","body":"72 ¾ø¼¼¿ÉÒÔÖØÁ·ÁË!!! 
-Ì×Ô­Á·´¦ sangon xxx(look paper) É¢¹¦\!!
-·ÅĞÄÀ²! ¾ÉµÄ ÊìÁ·ÖµÃ»É±µô! Èç¹û¾õµÄ²»Ïë»» 
-É±µôĞÂµÄÔÙÁ·»ØÀ´!!! ÔÙÈ¥ training room ±ãÄÜ
-ÂíÉÏÁ·»ØÔ­ÓĞµÈ¼¶!!!
+","title":"Re: < no title >","time":782921445,"poster":"Angel",]),(["id":216,"title":"< no title >","body":"72 çµ•æŠ€å¯ä»¥é‡ç·´äº†!!! 
+å¥—åŸç·´è™• sangon xxx(look paper) æ•£åŠŸ\!!
+æ”¾å¿ƒå•¦! èˆŠçš„ ç†Ÿç·´å€¼æ²’æ®ºæ‰! å¦‚æœè¦ºçš„ä¸æƒ³æ› 
+æ®ºæ‰æ–°çš„å†ç·´å›ä¾†!!! å†å» training room ä¾¿èƒ½
+é¦¬ä¸Šç·´å›åŸæœ‰ç­‰ç´š!!!
 so if u like,, u can train all 72!
-ÎÒÖ»ÏŞÖÆÄãÒ»´ÎÖ»×¼ÓÃÒ»ÖÖ!!!
-ÏÖÔÚÓĞsaulin war!!!
-¹¦\ÀÍ¹»¶à than u can learn 2 72¾ø¼¼
-( or maybe ÈçÀ´ÉñÕÆ heheh)
-and can ÓĞ×Ê¸ñpass 18 Í­ÈË!
-then ±ä³ÉË×¼ÒµÜ×Ó!
+æˆ‘åªé™åˆ¶ä½ ä¸€æ¬¡åªå‡†ç”¨ä¸€ç¨®!!!
+ç¾åœ¨æœ‰saulin war!!!
+åŠŸå‹å¤ å¤š than u can learn 2 72çµ•æŠ€
+( or maybe å¦‚ä¾†ç¥æŒ heheh)
+and can æœ‰è³‡æ ¼pass 18 éŠ…äºº!
+then è®Šæˆä¿—å®¶å¼Ÿå­!
 then can marry :P
 
 heheheh
-Çë½¨Òé10 Í­ÈËµÄ×ö·¨! now no idea la :P
-","time":782941333,"poster":"Angel",]),(["id":217,"title":"< no title >","body":"monk ²ÎÊıÏŞÖÆ now is:
+è«‹å»ºè­°10 éŠ…äººçš„åšæ³•! now no idea la :P
+","time":782941333,"poster":"Angel",]),(["id":217,"title":"< no title >","body":"monk åƒæ•¸é™åˆ¶ now is:
 str 24 con 27 dex 22
 int 14 pie 18 karma 15
-","time":782942873,"poster":"Angel",]),(["id":218,"title":"SOS","body":"       ½ñÌì×ß»ğÈëÄ§Á½´Î....
-       Ò»´ÎÊÇ±»¿³³öÉË¿ÚááÔË¹¦\µ¼ÖÂ....
-       ÕâÒ²¾ÍËãÁË ..BUT Mudos say i have no heart beat now...
-       then when Ã»Á÷ÑªÊ±ÎÒÓÖÔË¹¦\Ò»´Î
-       ÓÖÔÙ¶È×ß»ğÈëÄ§....
-       È»ááÓÖ±ä³ÉÁ÷Ñª×´Ì¬....
+","time":782942873,"poster":"Angel",]),(["id":218,"title":"SOS","body":"       ä»Šå¤©èµ°ç«å…¥é­”å…©æ¬¡....
+       ä¸€æ¬¡æ˜¯è¢«ç å‡ºå‚·å£å¾Œé‹åŠŸå°è‡´....
+       é€™ä¹Ÿå°±ç®—äº† ..BUT Mudos say i have no heart beat now...
+       then when æ²’æµè¡€æ™‚æˆ‘åˆé‹åŠŸä¸€æ¬¡
+       åˆå†åº¦èµ°ç«å…¥é­”....
+       ç„¶å¾Œåˆè®Šæˆæµè¡€ç‹€æ…‹....
        and say i have no heart beat again...
-       µÚÒ»´Î str 24 -> 12 ,µÚ¶ş´Î con con 27 -> 13...
-       ÎØÎØÎØÎØÎØÎØ....ÕæÔ©Í÷....
-       ºÃÏñÓĞ BUG ....
-       Angel and Ruby ÄÜ°ï°ïÎÒÂğ?....*cry*
-","time":782954736,"poster":"Apolo",]),(["id":219,"title":"< no title >","body":"      ÔË¹¦\ÁÆÉËááÔÚÁ¢¿ÌÔË¹¦\ÁÆÉË..»áÓĞÂÒÂí...
-      like this Äã×îºÃĞİÏ¢Ò»ÏÂÔÙÔËÄ¸¡õÜ·C..ËµÒ»ÏÂ..:)
+       ç¬¬ä¸€æ¬¡ str 24 -> 12 ,ç¬¬äºŒæ¬¡ con con 27 -> 13...
+       å—šå—šå—šå—šå—šå—š....çœŸå†¤æ‰....
+       å¥½åƒæœ‰ BUG ....
+       Angel and Ruby èƒ½å¹«å¹«æˆ‘å—?....*cry*
+","time":782954736,"poster":"Apolo",]),(["id":219,"title":"< no title >","body":"      é‹åŠŸç™‚å‚·å¾Œåœ¨ç«‹åˆ»é‹åŠŸç™‚å‚·..æœƒæœ‰äº‚é¦¬...
+      like this ä½ æœ€å¥½ä¼‘æ¯ä¸€ä¸‹å†é‹æ¯â–¡èŠŠC..èªªä¸€ä¸‹..:)
                    clapton
-","time":782955111,"poster":"Clapton",]),(["id":220,"title":"again","body":"ÏÖÔÚÎÒ²»¸ÒÔË¹¦\ÁË
-ÅÂ»áÔÙ×ß»ğÈëÄ§....
+","time":782955111,"poster":"Clapton",]),(["id":220,"title":"again","body":"ç¾åœ¨æˆ‘ä¸æ•¢é‹åŠŸäº†
+æ€•æœƒå†èµ°ç«å…¥é­”....
 SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS SOS .........
-","time":782955131,"poster":"Apolo",]),(["id":221,"title":"Angel ¹úĞ¡Ã»±ÏÒµ!!","body":"´óÁ¦½ğ¸ÕÖ¸ÓĞ´í×Ö!!
-·ÉºèÑïÒíÄÇÕĞ, ÒâÊØµ¤ÌïµÄµ¤Ğ´³Éµ¥!!
-¹ş¹ş¹ş!!´ó¼ÒÒ»Æğ³°Ğ¦Angel!!
+","time":782955131,"poster":"Apolo",]),(["id":221,"title":"Angel åœ‹å°æ²’ç•¢æ¥­!!","body":"å¤§åŠ›é‡‘å‰›æŒ‡æœ‰éŒ¯å­—!!
+é£›é´»æšç¿¼é‚£æ‹›, æ„å®ˆä¸¹ç”°çš„ä¸¹å¯«æˆå–®!!
+å“ˆå“ˆå“ˆ!!å¤§å®¶ä¸€èµ·å˜²ç¬‘Angel!!
                            Rabbit
 ","time":782972541,"poster":"Rabbit",]),(["id":222,"title":"Re: < no title >","body":"On Mon Oct 24, Angel wrote:
-> monk ²ÎÊıÏŞÖÆ now is:
+> monk åƒæ•¸é™åˆ¶ now is:
 > str 24 con 27 dex 22
 > int 14 pie 18 karma 15
-   hmm..........dex 22 and con 27, ºÃÏÛÄ½monkµÄÇ¿à¸!!!
-","time":782973584,"poster":"Adad",]),(["id":223,"body":"¹Øì¶exercise....
-1. ËğÊ§ 1/2 of str, con dex (24,27,22) seems too terrible to monk! ÄÇÊÇkyoko's code! i will discuss to him!
+   hmm..........dex 22 and con 27, å¥½ç¾¨æ…•monkçš„å¼·å–”!!!
+","time":782973584,"poster":"Adad",]),(["id":223,"body":"é—œæ–¼exercise....
+1. æå¤± 1/2 of str, con dex (24,27,22) seems too terrible to monk! é‚£æ˜¯kyoko's code! i will discuss to him!
 
-2. ÔË¹¦\ÊÇºÜÎ£ÏÕµÄÊÂ!!! so
-  1. µ±Äã Á÷Ñª »ìÂÒ Éú²¡... Á·¹¦\»áÍêµ°!!! (but u can ±Æ¶¾ Ö¹Ñª....)
+2. é‹åŠŸæ˜¯å¾ˆå±éšªçš„äº‹!!! so
+  1. ç•¶ä½  æµè¡€ æ··äº‚ ç”Ÿç—…... ç·´åŠŸæœƒå®Œè›‹!!! (but u can é€¼æ¯’ æ­¢è¡€....)
 
-   µ±ÄãÄî¾­Ã»Íê... Ê±Ò²²»¿É!!!
+   ç•¶ä½ å¿µç¶“æ²’å®Œ... æ™‚ä¹Ÿä¸å¯!!!
 
-***** ÓĞÊ±Äã»álose heart beat! ÄÇÕıÊÇÎÒÒª×¥µÄbug(ºÜÉÙ.. so hard to debug)
-Èç¹ûÄã·¢Éúno heart beat.. plz post here ..
+***** æœ‰æ™‚ä½ æœƒlose heart beat! é‚£æ­£æ˜¯æˆ‘è¦æŠ“çš„bug(å¾ˆå°‘.. so hard to debug)
+å¦‚æœä½ ç™¼ç”Ÿno heart beat.. plz post here ..
 1. use what gonfu?!
-2. ÔÚÄÇÖÖÇé¿öÏÂ?....
+2. åœ¨é‚£ç¨®æƒ…æ³ä¸‹?....
 
- Èç¹ûÄãno heart beat! Í£Ö¹Õ½¶·! ÕÒÒ»Ö»Ğ¡Ö»µÄmob È¥´ò, u can always got heart beat
-(no heart beat ÄãÎŞ·¨K mobs.. if u can hit mob then heart beat ok!)
+ å¦‚æœä½ no heart beat! åœæ­¢æˆ°é¬¥! æ‰¾ä¸€éš»å°éš»çš„mob å»æ‰“, u can always got heart beat
+(no heart beat ä½ ç„¡æ³•K mobs.. if u can hit mob then heart beat ok!)
 (use IRC bug enter ES will lose heart beats)
 ok! if u can report how do u lose heart beats, then exercise fail.. i will give
 i will give back ur exp!
@@ -131,34 +131,34 @@ that is all! thanks ur report! :)
 i will fix all message bug u had write above!
 ","title":"< no title >","time":782993112,"poster":"Angel",]),(["id":224,"body":"
 
-	×öÁËÒ»µãĞŞÕı£¬ÒÔááÓ¦¸ÃÖ»ÓĞÔÚÕ½¶·ÖĞ²Å»áÔì³É×ß»ğÈëÄ§£¬
+	åšäº†ä¸€é»ä¿®æ­£ï¼Œä»¥å¾Œæ‡‰è©²åªæœ‰åœ¨æˆ°é¬¥ä¸­æ‰æœƒé€ æˆèµ°ç«å…¥é­”ï¼Œ
 
-ÖĞ¶¾ºÍÁ÷ÑªÓ¦¸Ã¶¼²»»áÓ°ÏìÁË ...
+ä¸­æ¯’å’Œæµè¡€æ‡‰è©²éƒ½ä¸æœƒå½±éŸ¿äº† ...
 
-	ËùÒÔ ... ×ß»ğÈëÄ§ == ±»Íµ K ÁË
+	æ‰€ä»¥ ... èµ°ç«å…¥é­” == è¢«å· K äº†
 
-					Èã±È
+					èŒ¹æ¯”
 ","title":"< no title >","time":783006151,"poster":"Ruby",]),(["id":225,"body":"On Mon Oct 24, Angel wrote:
-> monk ²ÎÊıÏŞÖÆ now is:
+> monk åƒæ•¸é™åˆ¶ now is:
 > str 24 con 27 dex 22
 > int 14 pie 18 karma 15
-  hmm...ÕâÑùÒ»¸Ä...µÄÈ·ÓÖ¸üÇ¿ÁËÒ»Ğ©.....
-  ²»¹ı.....ÊµÔÚÊÇ...Ô½À´Ô½²»Ïñ monk ÁË....
-   pie ´Ó 23 -> 21 -> 18 ......
-   ò¯³ÏÒÑ¾­±ÈÃ°ÏÕÕß»¹µÍÁË.....ÕâÑù»¹½ĞºÍÉĞÂğ...
+  hmm...é€™æ¨£ä¸€æ”¹...çš„ç¢ºåˆæ›´å¼·äº†ä¸€äº›.....
+  ä¸é.....å¯¦åœ¨æ˜¯...è¶Šä¾†è¶Šä¸åƒ monk äº†....
+   pie å¾ 23 -> 21 -> 18 ......
+   è™”èª å·²ç¶“æ¯”å†’éšªè€…é‚„ä½äº†.....é€™æ¨£é‚„å«å’Œå°šå—...
                                           Tutu
-","title":"Re: < no title >","time":783006797,"poster":"Tu",]),(["id":227,"body":"ºÃ¾ÃÃ»À´ÁË, ¿´µ½ monk µÄ dex can reach 22, Waaaaa...
+","title":"Re: < no title >","time":783006797,"poster":"Tu",]),(["id":227,"body":"å¥½ä¹…æ²’ä¾†äº†, çœ‹åˆ° monk çš„ dex can reach 22, Waaaaa...
 Monk is so strong, con=27 str=24, dex=22, what guild can compare with monk?
-¸ÃÇ¿µÄÊôĞÔ¶¼Ç¿ÁË, ÕæÊÇºÃ.. ºÃÏÛÄ½
+è©²å¼·çš„å±¬æ€§éƒ½å¼·äº†, çœŸæ˜¯å¥½.. å¥½ç¾¨æ…•
 ","title":"< no title >","time":783146236,"poster":"Laputa",]),(["id":228,"body":"On Wed Oct 26, Laputa wrote:
-> ºÃ¾ÃÃ»À´ÁË, ¿´µ½ monk µÄ dex can reach 22, Waaaaa...
+> å¥½ä¹…æ²’ä¾†äº†, çœ‹åˆ° monk çš„ dex can reach 22, Waaaaa...
 > Monk is so strong, con=27 str=24, dex=22, what guild can compare with monk?
-> ¸ÃÇ¿µÄÊôĞÔ¶¼Ç¿ÁË, ÕæÊÇºÃ.. ºÃÏÛÄ½
-²»ÄÜÕâÑùËµ, ÕâÊÇmonk->ÎäÉ®µÄÌØÉ«!
-²»È»Í¬ÑùµÄÊôĞÔÓÃµ½mage¸ù±¾´ò²»³öÄ§·¨!
-ÓÃµ½Healer¸ù±¾aim²»µ½!
+> è©²å¼·çš„å±¬æ€§éƒ½å¼·äº†, çœŸæ˜¯å¥½.. å¥½ç¾¨æ…•
+ä¸èƒ½é€™æ¨£èªª, é€™æ˜¯monk->æ­¦åƒ§çš„ç‰¹è‰²!
+ä¸ç„¶åŒæ¨£çš„å±¬æ€§ç”¨åˆ°mageæ ¹æœ¬æ‰“ä¸å‡ºé­”æ³•!
+ç”¨åˆ°Healeræ ¹æœ¬aimä¸åˆ°!
                             Rabbit
-","title":"Re: < no title >","time":783147787,"poster":"Rabbit",]),(["id":229,"title":"< no title >","body":"ËùÓĞ²ÎÊı¶¼ÖØÒª!!!
+","title":"Re: < no title >","time":783147787,"poster":"Rabbit",]),(["id":229,"title":"< no title >","body":"æ‰€æœ‰åƒæ•¸éƒ½é‡è¦!!!
 now is for monk, so do so!
 
 Do u want to be dex 30 , con 30, dex 30, other all 10??? hehehe

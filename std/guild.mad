@@ -38,12 +38,12 @@ void announce_guild_members(string type, object me)
 	
 	urs = users();
 	master = this_guild->query_guild_master();
-	if( !master ) master = ({ "Master", "¹«»áÀÏ´ó" });
+	if( !master ) master = ({ "Master", "å…¬æœƒè€å¤§" });
 	class = (string)me->query("class");
 	c_msg = "["+to_chinese(class)+"] "+master[1]+" : ";
 	if( type == "join" ) {
-		c_msg += "»¶Ó­ "+me->query("c_name")+"("+me->query("name")+") "+
-		  "ÕıÊ½¼ÓÈëÎÒÃÇµÄĞĞÁĞ!\n";
+		c_msg += "æ­¡è¿ "+me->query("c_name")+"("+me->query("name")+") "+
+		  "æ­£å¼åŠ å…¥æˆ‘å€‘çš„è¡Œåˆ—!\n";
 	} else return;
 	for( i=0; i<sizeof(urs); i++ )
 		if( this_guild->is_guild_member(urs[i]) )
@@ -87,9 +87,9 @@ int do_list(string arg)
 	string msg, *skills;
 
 	skills = this_guild->query_skill_list();
-	msg = "ÔÚÕâÀïÄãËùÄÜÑµÁ·µÄ¼¼ÄÜÓĞ:\n";
+	msg = "åœ¨é€™è£¡ä½ æ‰€èƒ½è¨“ç·´çš„æŠ€èƒ½æœ‰:\n";
 	for( i=0; i<sizeof(skills); i++)
-			msg += sprintf("    %-30s ( ¾­ÑéÖµ±ÈÀı = %3d%%, ÉÏÏŞ = %3d )\n", 
+			msg += sprintf("    %-30s ( ç¶“é©—å€¼æ¯”ä¾‹ = %3d%%, ä¸Šé™ = %3d )\n", 
 				to_chinese(skills[i]) + "("+skills[i]+")",
 				this_guild->query_skill_cost(skills[i]),
 				this_guild->query_skill_max(skills[i]) );
@@ -105,24 +105,24 @@ int do_cost(string arg)
 
 	me = this_player();
 	if( !this_guild->is_guild_member(me) )
-		return notify_fail("ºÜ±§Ç¸£¬Äã²»ÊÇÕâ¸ö¹«»áµÄ³ÉÔ±¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œä½ ä¸æ˜¯é€™å€‹å…¬æœƒçš„æˆå“¡ã€‚\n");
 
 	lvl = me->query_level();
 	exp = (int)STATS_D->query_level_exp( lvl )
 		  - (int)me->query_experience();
 
-	if( lvl >= MAX_PLAYER_LEVEL ) msg ="ÄãÒÑ¾­Éıµ½×î¸ß¼¶ÁË¡£\n";
-	else if( exp > 0 ) msg ="Äã»¹ĞèÒª "+exp+" µã¾­Ñé²ÅÄÜÉı¼¶¡£\n";
-	else msg = "ÄãµÄ¾­ÑéÖµÒÑ¾­´ïµ½Éı¼¶±ê×¼ÁË¡£\n";
+	if( lvl >= MAX_PLAYER_LEVEL ) msg ="ä½ å·²ç¶“å‡åˆ°æœ€é«˜ç´šäº†ã€‚\n";
+	else if( exp > 0 ) msg ="ä½ é‚„éœ€è¦ "+exp+" é»ç¶“é©—æ‰èƒ½å‡ç´šã€‚\n";
+	else msg = "ä½ çš„ç¶“é©—å€¼å·²ç¶“é”åˆ°å‡ç´šæ¨™æº–äº†ã€‚\n";
 		
 	stock = (int)me->query_exp_stock();
 	if( stock < 1 ) 
-		msg +="ÄãÄ¿Ç°Ã»ÓĞÈÎºÎ¶îÍâµÄ¾­Ñé¿ÉÒÔÓÃÀ´ÌáÉıÊôĞÔÓë¼¼ÄÜ¡£\n";
+		msg +="ä½ ç›®å‰æ²’æœ‰ä»»ä½•é¡å¤–çš„ç¶“é©—å¯ä»¥ç”¨ä¾†æå‡å±¬æ€§èˆ‡æŠ€èƒ½ã€‚\n";
 	else {
 	    none = 1;
-		msg +="²¢ÇÒÄãÓĞ "+stock+" µã¾­Ñé¿ÉÒÔÓÃÀ´ÌáÉıÊôĞÔÓë¼¼ÄÜ¡£\n";
+		msg +="ä¸¦ä¸”ä½ æœ‰ "+stock+" é»ç¶“é©—å¯ä»¥ç”¨ä¾†æå‡å±¬æ€§èˆ‡æŠ€èƒ½ã€‚\n";
 
-		msg +="ÌáÉıÊôĞÔ :";
+		msg +="æå‡å±¬æ€§ :";
 		attrs = STATS_D->query_stat_names();
 		for( i=0; i<sizeof(attrs); i++) {
 			s = (int)me->query_perm_stat(attrs[i]);
@@ -130,27 +130,27 @@ int do_cost(string arg)
 			exp = (int)me->query_stat_exp_cost(attrs[i], s);
 			if( exp > 0 ) {
 			    none = 0;
-				msg += sprintf("\n    %30-s -> %2d    %d µã¾­Ñé¡£",
+				msg += sprintf("\n    %30-s -> %2d    %d é»ç¶“é©—ã€‚",
 					to_chinese(attrs[i]) +"("+ attrs[i] +")", s+1, exp );
 			}
 		}
         if( none )
-          msg += " ÄãµÄÊôĞÔ¾ùÒÑ´ï±¾¹«»á×î´óÖµÁË¡£\n";
+          msg += " ä½ çš„å±¬æ€§å‡å·²é”æœ¬å…¬æœƒæœ€å¤§å€¼äº†ã€‚\n";
         else msg += "\n";
         none = 1;
-		msg += "ÑµÁ·¼¼ÄÜ :";
+		msg += "è¨“ç·´æŠ€èƒ½ :";
 		skills = this_guild->query_skill_list();
 		for( i=0; i<sizeof(skills); i++) {
 			s = (int)me->query_perm_skill(skills[i]);
 			exp = this_guild->query_skill_exp_cost(skills[i], s);
 			if( exp > 0 ) {
 			    none = 0;
-				msg +=sprintf("\n    %30-s -> %2d    %d µã¾­Ñé¡£",
+				msg +=sprintf("\n    %30-s -> %2d    %d é»ç¶“é©—ã€‚",
 					      to_chinese(skills[i])+"("+skills[i]+")", s+1, exp) ;
 			}
 		}
 		if( none )
-          msg +=" ÄãµÄ¼¼ÄÜ¾ùÒÑ´ï±¾¹«»á×î´óÖµÁË¡£\n" ;
+          msg +=" ä½ çš„æŠ€èƒ½å‡å·²é”æœ¬å…¬æœƒæœ€å¤§å€¼äº†ã€‚\n" ;
         else msg += "\n";
 	}
 	write(msg);
@@ -183,15 +183,15 @@ int do_advance(string arg)
 	chinese_mode = can_read_chinese();
 
       if( me->id("guest") )
-              return notify_fail("ºÜ±§Ç¸, GUEST ²»ÄÜÌáÉıÈÎºÎµÈ¼¶¡£\n") ;
+              return notify_fail("å¾ˆæŠ±æ­‰, GUEST ä¸èƒ½æå‡ä»»ä½•ç­‰ç´šã€‚\n") ;
               
 	if( !this_guild->is_guild_member(me) )
-		return notify_fail("ºÜ±§Ç¸£¬Äã²»ÊÇÕâ¸ö¹«»áµÄ³ÉÔ±¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œä½ ä¸æ˜¯é€™å€‹å…¬æœƒçš„æˆå“¡ã€‚\n");
 
 	if( this_guild == "/d/adventurer/adventurer" && 
 		(string)me->query("class") != "adventurer" ) {
 		return notify_fail(
-			"ÄãÒÑ¾­¼ÓÈëÁËÆäËûµÄ¹«»á£¬²»ÄÜÔÚÕâÀïÌáÉıµÈ¼¶»òÊôĞÔ¡£\n");
+			"ä½ å·²ç¶“åŠ å…¥äº†å…¶ä»–çš„å…¬æœƒï¼Œä¸èƒ½åœ¨é€™è£¡æå‡ç­‰ç´šæˆ–å±¬æ€§ã€‚\n");
 	}
 	
 	// prevent wrong keyin, added by Kyoko.
@@ -204,16 +204,16 @@ int do_advance(string arg)
 		arg = STATS_D->check_stat_name(arg);
 		if( stat >= (int)this_guild->query_stat_max(arg) )
 			return notify_fail(
-				sprintf("ÄãµÄ%s(%s)ÒÑ¾­´ïµ½×î´óÖµÁË¡£\n",to_chinese(arg),arg));
+				sprintf("ä½ çš„%s(%s)å·²ç¶“é”åˆ°æœ€å¤§å€¼äº†ã€‚\n",to_chinese(arg),arg));
 
 		exp = (int)me->query_stat_exp_cost( arg, stat );
 		if( exp > (int)me->query_exp_stock() )
-			return notify_fail("ÄãµÄ¾­ÑéÖµ²»¹»¡£\n");
+			return notify_fail("ä½ çš„ç¶“é©—å€¼ä¸å¤ ã€‚\n");
 		if( check_total_stats_is_max(me) )
-			return notify_fail("¶Ô²»Æğ£¬ÒÀÄãµÄµÈ¼¶£¬ÊôĞÔÖ»ÄÜ¼Óµ½ÕâÑù¡£ÇëÏÈÌáÉıÄãµÄµÈ¼¶¡£\n");
+			return notify_fail("å°ä¸èµ·ï¼Œä¾ä½ çš„ç­‰ç´šï¼Œå±¬æ€§åªèƒ½åŠ åˆ°é€™æ¨£ã€‚è«‹å…ˆæå‡ä½ çš„ç­‰ç´šã€‚\n");
 		if( STATS_D->advance_stat(me, arg) ) {
 			me->gain_experience( -exp );
-				printf("ÄãµÄ%s(%s)ÏÖÔÚÌáÉıµ½ÁË %d¡£\n", to_chinese(arg),arg, me->query_stat(arg));
+				printf("ä½ çš„%s(%s)ç¾åœ¨æå‡åˆ°äº† %dã€‚\n", to_chinese(arg),arg, me->query_stat(arg));
 			return 1;
 		} else
 			return do_help("advance");
@@ -222,36 +222,36 @@ int do_advance(string arg)
 	if( arg == "level" || arg == "wizard" ) {
 		lvl = (int)me->query_level();
 		if( lvl >= MAX_PLAYER_LEVEL )
-			return notify_fail("ÄãÒÑ¾­Éıµ½×î¸ß¼¶ÁË¡£\n");
+			return notify_fail("ä½ å·²ç¶“å‡åˆ°æœ€é«˜ç´šäº†ã€‚\n");
 			
 		// if level = 19 and advance level again ....	
 		if( arg != "wizard" && (lvl+1) >= MAX_PLAYER_LEVEL )
-		return notify_fail("ÄãÒÑ¾­Éıµ½×î¸ß¼¶ÁË¡£\n");
+		return notify_fail("ä½ å·²ç¶“å‡åˆ°æœ€é«˜ç´šäº†ã€‚\n");
 		// check exp...
 		exp = (int)STATS_D->query_level_exp(lvl);
 		if( exp > (int)me->query_experience() )
-			return notify_fail("ÄãµÄ¾­ÑéÖµ»¹²»µ½Éı¼¶±ê×¼¡£\n");
+			return notify_fail("ä½ çš„ç¶“é©—å€¼é‚„ä¸åˆ°å‡ç´šæ¨™æº–ã€‚\n");
 
 		// check quest point, added by Kyoko.
 		if( !QUEST_D->check_quest(me) )
-			return notify_fail("±§Ç¸, ÄãµÄÈÎÎñµãÊı»¹²»µ½Éı¼¶±ê×¼¡£\n");
+			return notify_fail("æŠ±æ­‰, ä½ çš„ä»»å‹™é»æ•¸é‚„ä¸åˆ°å‡ç´šæ¨™æº–ã€‚\n");
 
 		// check explored, add by Kyoko.
 //		if( !EXPLORE_D->check_explore(me) )
-//			return notify_fail("±§Ç¸, ÄãµÄÌ½ÏÕ¶È»¹Î´´ïµ½Éı¼¶±ê×¼£¬ÔÙ¶àÈ¥¹ä¹ä°É¡£\n");
+//			return notify_fail("æŠ±æ­‰, ä½ çš„æ¢éšªåº¦é‚„æœªé”åˆ°å‡ç´šæ¨™æº–ï¼Œå†å¤šå»é€›é€›å§ã€‚\n");
 
 		// if advance wizard ...
 		if( arg == "wizard" ) {
 	    	if( lvl < 19 || !EXPLORE_D->check_explore(me) ||
 	        	!QUEST_D->check_quest(me) )
-	        	return notify_fail("ÄãÄ¿Ç°»¹²»¹»×Ê¸ñÉı³É¼ûÏ°Î×Ê¦¡£\n" );
+	        	return notify_fail("ä½ ç›®å‰é‚„ä¸å¤ è³‡æ ¼å‡æˆè¦‹ç¿’å·«å¸«ã€‚\n" );
 		}
 
 		STATS_D->advance_level(me);
-		write(sprintf("ÄãÏÖÔÚÊÇµÚ %d ¼¶ÁË¡£\n",me->query_level()));
+		write(sprintf("ä½ ç¾åœ¨æ˜¯ç¬¬ %d ç´šäº†ã€‚\n",me->query_level()));
 		me->set("title",me->query_title());
 		tell_room( environment(me), 
-			sprintf("%sÏÖÔÚÊÇµÚ %d ¼¶ÁË¡£\n",me->query("c_name"),me->query_level()) ,
+			sprintf("%sç¾åœ¨æ˜¯ç¬¬ %d ç´šäº†ã€‚\n",me->query("c_name"),me->query_level()) ,
 			me
 			  );
 		return 1;
@@ -265,26 +265,26 @@ int do_train(string arg)
 
 	me = this_player();
 	if( !this_guild->is_guild_member(me) )
-		return notify_fail("ºÜ±§Ç¸£¬Äã²»ÊÇÕâ¸ö¹«»áµÄ³ÉÔ±¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œä½ ä¸æ˜¯é€™å€‹å…¬æœƒçš„æˆå“¡ã€‚\n");
 
 	if( !arg || !this_guild->query_skill_exp_cost(arg,0) )
-		return notify_fail("ÇëÓÃ list Ö¸Áî²ì¿´ÕâÀïËùÄÜÌá¹©µÄÑµÁ·ÄÚÈİ¡£\n");
+		return notify_fail("è«‹ç”¨ list æŒ‡ä»¤å¯Ÿçœ‹é€™è£¡æ‰€èƒ½æä¾›çš„è¨“ç·´å…§å®¹ã€‚\n");
 
 	skill = (int)me->query_perm_skill(arg);
 	exp = this_guild->query_skill_exp_cost(arg, skill);
 
 	if( exp < 1 )
-		return notify_fail("ÄãµÄ"+to_chinese(arg)+"¼¼ÄÜÒÑ¾­´ïµ½×î´óÖµÁË¡£\n");
+		return notify_fail("ä½ çš„"+to_chinese(arg)+"æŠ€èƒ½å·²ç¶“é”åˆ°æœ€å¤§å€¼äº†ã€‚\n");
 
 	if( exp > (int)me->query_exp_stock() )
-		return notify_fail("ÄãµÄ¾­ÑéÖµ²»¹»¡£\n");
+		return notify_fail("ä½ çš„ç¶“é©—å€¼ä¸å¤ ã€‚\n");
 
 	if( skill >= ((int)me->query_level() * 5 + 5) )
-		return notify_fail("ºÜ±§Ç¸£¬ÄãÄ¿Ç°µÄµÈ¼¶Ö»ÄÜÑµÁ·µ½Ä¿Ç°ÕâÖÖµØ²½¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œä½ ç›®å‰çš„ç­‰ç´šåªèƒ½è¨“ç·´åˆ°ç›®å‰é€™ç¨®åœ°æ­¥ã€‚\n");
 
 	me->gain_experience( -exp );
 	STATS_D->train_skill( me, arg );
-		printf( "ÄãµÄ%s¼¼ÄÜÏÖÔÚÌáÉıµ½ %d ÁË¡£\n", to_chinese(arg), me->query_perm_skill(arg));
+		printf( "ä½ çš„%sæŠ€èƒ½ç¾åœ¨æå‡åˆ° %d äº†ã€‚\n", to_chinese(arg), me->query_perm_skill(arg));
 	return 1;
 }
 
@@ -297,10 +297,10 @@ int do_join(string arg)
 
 	ob = this_player();
 	if( this_guild->is_guild_member(ob) )
-		return notify_fail("ÄãÒÑ¾­ÊÇ±¾¹«»áµÄ³ÉÔ±ÁË£¡\n");
+		return notify_fail("ä½ å·²ç¶“æ˜¯æœ¬å…¬æœƒçš„æˆå“¡äº†ï¼\n");
 	
 	if( ob->id("guest") )
-	      return notify_fail("Guest ²»ÄÜ¼ÓÈëÈÎºÎ¹«»á¡£\n") ;
+	      return notify_fail("Guest ä¸èƒ½åŠ å…¥ä»»ä½•å…¬æœƒã€‚\n") ;
 
 	// Check if the player is a wizard or didn't join other guilds yet.
 	if( wizardp(ob) || ( (string)ob->query("class")=="adventurer" 
@@ -312,12 +312,12 @@ int do_join(string arg)
 		}
 		return join_ok;
 	} else 
-		return notify_fail( "ÄãÒÑ¾­¼ÓÈëÁËÆäËü¹«»áÁË£¬ÇëÄãÏÈÍË³öÔ­À´µÄ¹«»á£¡\n");
+		return notify_fail( "ä½ å·²ç¶“åŠ å…¥äº†å…¶å®ƒå…¬æœƒäº†ï¼Œè«‹ä½ å…ˆé€€å‡ºåŸä¾†çš„å…¬æœƒï¼\n");
 }
 
 int do_verify()
 {
-	notify_fail("¶Ô²»Æğ£¬Äã²»ÊÇÕâ¸ö¹«»áµÄ³ÉÔ±¡£\n");
+	notify_fail("å°ä¸èµ·ï¼Œä½ ä¸æ˜¯é€™å€‹å…¬æœƒçš„æˆå“¡ã€‚\n");
 	return (int)this_guild->check_token( this_player() );
 }
 
@@ -330,7 +330,7 @@ int do_explore(string arg)
 	need_exp = ((int)me->query_level()-3)*3 ;
 	if( need_exp < 0 ) need_exp = 0;
 	if( !this_guild->is_guild_member(me) )
-		return notify_fail("ºÜ±§Ç¸£¬ÕâÀï²¢Ã»ÓĞÄãµÄ×ÊÁÏ£¬Çë»Øµ½×Ô¼ºµÄ¹«»á²éÑ¯Ì½ÏÕ¶È¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œé€™è£¡ä¸¦æ²’æœ‰ä½ çš„è³‡æ–™ï¼Œè«‹å›åˆ°è‡ªå·±çš„å…¬æœƒæŸ¥è©¢æ¢éšªåº¦ã€‚\n");
 
 	for( i=0; i<sizeof(AREAS); i++ ) {
 		expl = (int)me->query_explore_points(AREAS[i]);
@@ -338,8 +338,8 @@ int do_explore(string arg)
 		if( max < 1 ) continue;
 		expl = expl * 1000 / max;
 		if( expl > 1000 ) expl = 1000;
-		printf("ÇøÓò : "+set_color("%13s", "HIG")+"    Ì½ÏÕ¶È : "+
-			set_color("%2d.%1-d%%", "HIY")+"  Éı¼¶±ê×¼ : %3d%%\n",
+		printf("å€åŸŸ : "+set_color("%13s", "HIG")+"    æ¢éšªåº¦ : "+
+			set_color("%2d.%1-d%%", "HIY")+"  å‡ç´šæ¨™æº– : %3d%%\n",
 			to_chinese(AREAS[i]), expl/10, expl%10,need_exp);
 	}
 	expl = (int)me->query_explore_points();
@@ -347,7 +347,7 @@ int do_explore(string arg)
 	if( max < 1 ) expl = 0;
 	else expl = expl * 1000 / max;
 	if( expl > 1000 ) expl = 1000;
-	printf(set_color("Æ½¾ùÌ½ÏÕ¶È : %2d.%1-d%%.\n","HIC"), expl/10, expl%10);
+	printf(set_color("å¹³å‡æ¢éšªåº¦ : %2d.%1-d%%.\n","HIC"), expl/10, expl%10);
     return 1;
 }
 
@@ -359,16 +359,16 @@ int do_quests(string arg)
 
 	me = this_player();
 	if( !this_guild->is_guild_member(me) )
-		return notify_fail("ºÜ±§Ç¸£¬ÕâÀï²¢Ã»ÓĞÄãµÄ×ÊÁÏ£¬Çë»Øµ½×Ô¼ºµÄ¹«»á²éÑ¯¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œé€™è£¡ä¸¦æ²’æœ‰ä½ çš„è³‡æ–™ï¼Œè«‹å›åˆ°è‡ªå·±çš„å…¬æœƒæŸ¥è©¢ã€‚\n");
 
 	sloved = me->query_finish_quests();
 	if( !sloved || !( size_quest=sizeof(sloved) ) )
-		write(set_color("ÄãÄ¿Ç°ÉĞÎ´Íê³ÉÈÎºÎµÄÈÎÎñ, ¼ÓµãÓÍ°É!\n", "HIR"));
+		write(set_color("ä½ ç›®å‰å°šæœªå®Œæˆä»»ä½•çš„ä»»å‹™, åŠ é»æ²¹å§!\n", "HIR"));
 	else {
 		for( i=0; i<size_quest; i++ )
-			printf("ÄãÍê³ÉÁË "+set_color("%s", "HIG")+
-				   " µÄÈÎÎñ¡£\n", to_chinese( sloved[i] ) );
-		printf( "¹²µÃµ½ %3d µãµÄÈÎÎñµãÊı¡£\n" ,(int)me->query_quest_points());
+			printf("ä½ å®Œæˆäº† "+set_color("%s", "HIG")+
+				   " çš„ä»»å‹™ã€‚\n", to_chinese( sloved[i] ) );
+		printf( "å…±å¾—åˆ° %3d é»çš„ä»»å‹™é»æ•¸ã€‚\n" ,(int)me->query_quest_points());
 	}
     return 1;
 }
@@ -378,16 +378,16 @@ int do_help(string arg)
 
 	switch(arg) {
 		case "guild": write( @C_USAGE_GUILD
-ÔÚÕâÀïÄã¿ÉÒÔÊ¹ÓÃÒÔÏÂµÄÖ¸Áî£¬Ã¿Ò»¸öÖ¸Áî¶¼ÓĞ¸üÏê¾¡µÄËµÃ÷( ÇëÓÃ "help <Ö¸Áî>" ):
+åœ¨é€™è£¡ä½ å¯ä»¥ä½¿ç”¨ä»¥ä¸‹çš„æŒ‡ä»¤ï¼Œæ¯ä¸€å€‹æŒ‡ä»¤éƒ½æœ‰æ›´è©³ç›¡çš„èªªæ˜( è«‹ç”¨ "help <æŒ‡ä»¤>" ):
 
-  list        - ÁĞ³öÔÚÕâÀïÄãËùÄÜ½ÓÊÜÑµÁ·µÄ¼¼ÄÜÏîÄ¿¡£
-  cost        - ÁĞ³öÉı¼¶¡¢ÌáÉıÊôĞÔ¡¢»òÑµÁ·¼¼ÄÜËùĞèµÄ¾­ÑéÖµ¡£
-  advance     - ÌáÉıµÈ¼¶, ¹«»áµÈ¼¶»òÊôĞÔ¡£
-  train       - ÑµÁ·¼¼ÄÜ¡£
-  join        - ¼ÓÈëÕâ¸ö¹«»á£¬ÄãµÄµÈ¼¶±ØĞëĞ¡ì¶ 5 ¼¶²ÅÄÜ¼ÓÈë¹«»á¡£
-  verify      - È·ÈÏÉí·Ö£¬»òÈ¡»ØÒÅÊ§µÄ¹«»áĞÅÎï¡£
-  explore     - ²éÑ°ÄãÄ¿Ç°µÄÃ°ÏÕ¶È¡£
-  quests      - ÁĞ³öÄãÍê³ÉµÄËùÓĞÈÎÎñ¡£
+  list        - åˆ—å‡ºåœ¨é€™è£¡ä½ æ‰€èƒ½æ¥å—è¨“ç·´çš„æŠ€èƒ½é …ç›®ã€‚
+  cost        - åˆ—å‡ºå‡ç´šã€æå‡å±¬æ€§ã€æˆ–è¨“ç·´æŠ€èƒ½æ‰€éœ€çš„ç¶“é©—å€¼ã€‚
+  advance     - æå‡ç­‰ç´š, å…¬æœƒç­‰ç´šæˆ–å±¬æ€§ã€‚
+  train       - è¨“ç·´æŠ€èƒ½ã€‚
+  join        - åŠ å…¥é€™å€‹å…¬æœƒï¼Œä½ çš„ç­‰ç´šå¿…é ˆå°æ–¼ 5 ç´šæ‰èƒ½åŠ å…¥å…¬æœƒã€‚
+  verify      - ç¢ºèªèº«åˆ†ï¼Œæˆ–å–å›éºå¤±çš„å…¬æœƒä¿¡ç‰©ã€‚
+  explore     - æŸ¥å°‹ä½ ç›®å‰çš„å†’éšªåº¦ã€‚
+  quests      - åˆ—å‡ºä½ å®Œæˆçš„æ‰€æœ‰ä»»å‹™ã€‚
 
 C_USAGE_GUILD
 			); break;

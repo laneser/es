@@ -4,18 +4,18 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(6);
-	ob->set_name( "swamp frog", "ÕÓÔóÍÜ" );
+	ob->set_name( "swamp frog", "æ²¼æ¾¤è›™" );
 	ob->add( "id", ({ "frog" }) );
-   ob->set_short( "ÕÓÔóÍÜ" );
+   ob->set_short( "æ²¼æ¾¤è›™" );
 	ob->set_long(
-		"Ò»Ö»ÓÖ´óÓÖğ¤µÄÂÌÉ«ÕÓÔóÍÜÕıÒ»¶¯Ò²²»¶¯µØÅ¿ÔÚÕÓÔóµÄÀÃÄàÀï¡£\n"
+		"ä¸€éš»åˆå¤§åˆé»çš„ç¶ è‰²æ²¼æ¾¤è›™æ­£ä¸€å‹•ä¹Ÿä¸å‹•åœ°è¶´åœ¨æ²¼æ¾¤çš„çˆ›æ³¥è£¡ã€‚\n"
 	);
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set( "alignment", 500 );
 	ob->set_skill( "anatomlogy", 30 );
 	ob->set_temp( "aiming_loc", "ganglion" );
-	ob->set_c_limbs( ({ "ááÍÈ", "Í·²¿", "ÉíÌå" }) );
-	ob->set_c_verbs( ({ "%sÕÅ×ìÍù%sÒ»Ò§", "%sÓÃËüµÄÉàÍ·Íù%sÒ»Ìò" }) );
+	ob->set_c_limbs( ({ "å¾Œè…¿", "é ­éƒ¨", "èº«é«”" }) );
+	ob->set_c_verbs( ({ "%så¼µå˜´å¾€%sä¸€å’¬", "%sç”¨å®ƒçš„èˆŒé ­å¾€%sä¸€èˆ”" }) );
 	ob->set_natural_armor( 10, 15 );
 	ob->set_natural_weapon( 10, 8, 11 );
 }

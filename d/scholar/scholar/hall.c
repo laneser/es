@@ -5,13 +5,13 @@ inherit ROOM;
 void create()
 {
 	::create();
-    set_short("Alley", "´©ÌÃ");
+    set_short("Alley", "ç©¿å ‚");
 	set_long( @LONG_DESCRIPTION
 This is the inner hall of scholar's guild. .
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-ÕâÀïÊÇÎèÄ«ÐùµÄ¶þÂ¥, ¶«ÄÏÎ÷±±¹²ÓÐËÄ¼äÊé·¿, ¸÷Ô»¡¸°ÁÃ·¡¹¡¢¡¸±ÌÀ¼¡¹¡¢
-¡¸Ä«Öñ¡¹ÒÔ¼°¡¸¶¬¾Õ¡¹¡£
+é€™è£¡æ˜¯èˆžå¢¨è»’çš„äºŒæ¨“, æ±å—è¥¿åŒ—å…±æœ‰å››é–“æ›¸æˆ¿, å„æ›°ã€Œå‚²æ¢…ã€ã€ã€Œç¢§è˜­ã€ã€
+ã€Œå¢¨ç«¹ã€ä»¥åŠã€Œå†¬èŠã€ã€‚
 C_LONG_DESCRIPTION
 	);
 	set( "light", 1 );

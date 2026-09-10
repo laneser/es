@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "dwarf knight", "°«ÈËÎäÊ¿" );
+	set_name( "dwarf knight", "çŸ®äººæ­¦å£«" );
 	add("id",({"knight","dwarf"}) );
-   set_short( "°«ÈËÎäÊ¿" );
+   set_short( "çŸ®äººæ­¦å£«" );
 	set_long(
-		"Ò»¸öÑÏËàµÄ°«ÈËÎäÊ¿,ÎªÁËÈÙÓşÓëĞÅÄî¶ø»î.\n"
+		"ä¸€å€‹åš´è‚…çš„çŸ®äººæ­¦å£«,ç‚ºäº†æ¦®è­½èˆ‡ä¿¡å¿µè€Œæ´».\n"
 	);
 	set( "gender", "male" );
 	set( "race", "dwarf" );
@@ -56,7 +56,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-      guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i]
+      guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i]
       );
       guard[i]->kill_ob(victim);
     }
@@ -65,7 +65,7 @@ int cast_help()
       for(i=0;i<sizeof(victims);i++) {
         (victims[i])->receive_damage(35+random(20));
         tell_room(environment(),
-                   "°«ÈËÎäÊ¿»Ó¶¯ËûµÄ¾Ş½£¹¥»÷ËùÓĞµÄµĞÈË.\n", this_object() );
+                   "çŸ®äººæ­¦å£«æ®å‹•ä»–çš„å·¨åŠæ”»æ“Šæ‰€æœ‰çš„æ•µäºº.\n", this_object() );
         report_damage(this_object(),victims[i]);
         }
       return 1;

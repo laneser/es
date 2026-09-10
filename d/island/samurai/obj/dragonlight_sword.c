@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "dragonlight sword","Ãûµ¶Áú¹â");
+        set_name( "dragonlight sword","ååˆ€é¾å…‰");
         add( "id",({ "dragonlight","sword" }) );
-        set_short( "dragonlight sword","Ãûµ¶Áú¹â" );
+        set_short( "dragonlight sword","ååˆ€é¾å…‰" );
         set_long(@AAA
-ÕâÊÇÒ»°ÑÓĞÃûµÄ±¦µ¶¡åÁú¹â¡å£¬ÊÇÎäÊ¿ÍÅÖĞµÄÙ®Ù®ÕßÔ¼¿ËµÄÎäÆ÷
+é€™æ˜¯ä¸€æŠŠæœ‰åçš„å¯¶åˆ€â€³é¾å…‰â€³ï¼Œæ˜¯æ­¦å£«åœ˜ä¸­çš„ä½¼ä½¼è€…ç´„å…‹çš„æ­¦å™¨
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 30 );
         set( "type", "longblade" );
         set( "min_damage", 15 );

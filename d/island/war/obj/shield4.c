@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Platinum Shield","°×½ğ¶Ü" );
+	set_name( "Platinum Shield","ç™½é‡‘ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "°×½ğ¶Ü" );
+	set_short( "ç™½é‡‘ç›¾" );
 	set_long(@LONG
-	ÕâÊÇÓÃ°×½ğ´òÔìµÄ¶Ü¡£
+	é€™æ˜¯ç”¨ç™½é‡‘æ‰“é€ çš„ç›¾ã€‚
 LONG
            );
-	set( "unit","Ãæ" );
+	set( "unit","é¢" );
 	set( "weight",100 );
 	set( "type","shield" );
 	set( "material","knight" );

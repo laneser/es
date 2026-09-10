@@ -6,16 +6,16 @@ void create()
 {
         ::create();
         set_level(18);
-        set_name( "elf elder", "¾«Áé³¤ÀÏ" );
+        set_name( "elf elder", "ç²¾éˆé•·è€" );
         add ("id", ({ "elf", "elder" }) );
-        set_short( "¾«Áé³¤ÀÏ" );
-        set("unit","Î»");
+        set_short( "ç²¾éˆé•·è€" );
+        set("unit","ä½");
         set("alignment",600);
         set("wealth/gold",100);
         set_long(
-           "¾«Áé³¤ÀÏÇÇÄÉË¹ÊÇÒ»Î»ºÍ°ª¿ÉÇ×µÄ³¤Õß£¬ÓÉì¶ËûÊÇµ±ÄêÄ§×åÈëÇÖÊ±\n"
-           "´òµ¹Ä§Íõ¾üÍÅ³¤(yamato)µÄÓ¢ÐÛ£¬¹Ê¶ø¾«Áé×åµÄÃ¿Ò»·Ý×Ó¶¼¶ÔÆäÐÄ»³\n"
-           "×ð¾´¡£\n"
+           "ç²¾éˆé•·è€å–¬ç´æ–¯æ˜¯ä¸€ä½å’Œè—¹å¯è¦ªçš„é•·è€…ï¼Œç”±æ–¼ä»–æ˜¯ç•¶å¹´é­”æ—å…¥ä¾µæ™‚\n"
+           "æ‰“å€’é­”çŽ‹è»åœ˜é•·(yamato)çš„è‹±é›„ï¼Œæ•…è€Œç²¾éˆæ—çš„æ¯ä¸€ä»½å­éƒ½å°å…¶å¿ƒæ‡·\n"
+           "å°Šæ•¬ã€‚\n"
         );
         set_perm_stat("int", 30);
         set_perm_stat("dex", 25);
@@ -27,8 +27,8 @@ void create()
         set ("race", "elf");
         set("tactic_func","fire_tactic");
    set("special_defense",(["all":50,"fire":35,"poison":30,"none":35]));
-        set_c_verbs(({"ÓÃ%Ê¹³ö¾«ÁéÕÈ·¨Ïò%s¹¥»÷","ÓÃ%sÏò%s´ÌÈ¥","ÓÃ%sÏò%sÇÃ»÷"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_verbs(({"ç”¨%ä½¿å‡ºç²¾éˆæ–æ³•å‘%sæ”»æ“Š","ç”¨%så‘%såˆºåŽ»","ç”¨%så‘%sæ•²æ“Š"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         wield_weapon(LWEAPON"staff");
         equip_armor(LARMOR"boots");
         equip_armor(LARMOR"legging");
@@ -43,7 +43,7 @@ int fire_tactic()
   
   if ( !(magics=query_attacker()) || (random(10)>2)) return 0;
    tell_room(environment(),
-      "\nÍ»È»¾«Áé³¤ÀÏÄî³öÒ»´®ÉñÃØµÄÖäÓï, Äã¿´¼ûÒ»Æ¬»ðº£ÏòÄãÏ®À´¡£\n\n",
+      "\nçªç„¶ç²¾éˆé•·è€å¿µå‡ºä¸€ä¸²ç¥žç§˜çš„å’’èªž, ä½ çœ‹è¦‹ä¸€ç‰‡ç«æµ·å‘ä½ è¥²ä¾†ã€‚\n\n",
        this_object() );
   dam = 65 + random(30);
   magics->receive_special_damage("fire",dam);

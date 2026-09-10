@@ -8,12 +8,12 @@ void create()
 
 	::create();
 	set_level(2);
-	set_name( "drunk", "醉汉" );
-   set_short( "醉汉" );
+	set_name( "drunk", "閱夋饥" );
+   set_short( "閱夋饥" );
 	set_long(
 		"You see a smelly drunk. He looks sad and down.\n",
-		"一个浑身酒臭味的醉汉，看他失意潦倒的样子，不知道是遭到什麽不幸\n"
-		"还是自甘堕落。\n"
+		"涓�鍊嬫妇韬厭鑷懗鐨勯唹婕紝鐪嬩粬澶辨剰娼﹀�掔殑妯ｅ瓙锛屼笉鐭ラ亾鏄伃鍒颁粈楹间笉骞竆n"
+		"閭勬槸鑷敇澧惤銆俓n"
 	);
 	set_perm_stat( "str", 3 );
 	set_skill( "dodge", 10 );

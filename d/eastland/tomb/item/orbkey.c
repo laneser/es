@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "golden dragon orb", "½ğÁúÖé" );
+	set_name( "golden dragon orb", "é‡‘é¾ç " );
 	add( "id", ({ "key","orb" }) );
-	set_short( "½ğÁúÖé" );
+	set_short( "é‡‘é¾ç " );
 	set_long(
-		"ÕâÊÇÒ»¿Å½ğÉ«µÄÖé×Ó£¬ÉÏÃæÁ÷¶¯ÖøÆæÒìµÄ¹âÃ¢¡£\n"
+		"é€™æ˜¯ä¸€é¡†é‡‘è‰²çš„ç å­ï¼Œä¸Šé¢æµå‹•è‘—å¥‡ç•°çš„å…‰èŠ’ã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "to_lock", "TOMBKEY_1" );
 	set( "weight", 5 );
 	set( "value", ({ 10, "copper" }) );

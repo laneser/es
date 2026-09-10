@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("green cloak", "ğĞ¸çÂÌ¡õË¿Õ½ÅÛ");
+        set_name("green cloak", "é¸šå“¥ç¶ â–¡çµ²æˆ°è¢");
         add( "id", ({ "cloak","cape" }) );
-        set_short("green cloak","ğĞ¸çÂÌ¡õË¿Õ½ÅÛ");
+        set_short("green cloak","é¸šå“¥ç¶ â–¡çµ²æˆ°è¢");
         set_long(
                 "This is a green cloak with some floral mark.\n",
-                "Ò»¼şË«²ãºşÂÌµÄÅû·ç£¬ĞåÁËĞí\¶àÃÀÀöµÄ»¨ÎÆ£®\n"
+                "ä¸€ä»¶é›™å±¤æ¹–ç¶ çš„æŠ«é¢¨ï¼Œç¹¡äº†è¨±å¤šç¾éº—çš„èŠ±ç´‹ï¼\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "cloth" );
         set( "armor_class", 6 );

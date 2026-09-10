@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("swallowtail","ÑàÎ²Àñ·ş");
+        set_name("swallowtail","ç‡•å°¾ç¦®æœ");
         add("id",({"suit"}) );
-   set_short( "ĞÂÀÉÑàÎ²·ş");
+   set_short( "æ–°éƒç‡•å°¾æœ");
         set_long(
-"ÕâÊÇÒ»¼ş°×É«µÄÑàÎ²·ş£¬´¿°×µÄÑÕÉ«´ú±í´¿½àÎŞÏ¾µÄ°®Çé¡£\n"
+"é€™æ˜¯ä¸€ä»¶ç™½è‰²çš„ç‡•å°¾æœï¼Œç´”ç™½çš„é¡è‰²ä»£è¡¨ç´”æ½”ç„¡æš‡çš„æ„›æƒ…ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight", 150 );
         set( "type", "body" );
         set("material","cloth" ) ;
@@ -26,7 +26,7 @@ stop_equip(object owner)
 {
         if ( (string)this_player()->query("gender") != "male") {
         printf(
-                  "±ğ¿ªÍæĞ¦ÁË, ÄãÏëµ±ÄĞÈËÆÅÂğ?\n" );
+                  "åˆ¥é–‹ç©ç¬‘äº†, ä½ æƒ³ç•¶ç”·äººå©†å—?\n" );
         return 1;
         }
 }

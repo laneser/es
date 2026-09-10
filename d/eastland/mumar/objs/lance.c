@@ -3,13 +3,13 @@ inherit WEAPON;
  
 void create()
 {
-        set_name("lance", "³¤Ç¹");
+        set_name("lance", "é•·æ§");
         add ("id",({ "lance" }) );
-        set_short("³¤Ç¹");
+        set_short("é•·æ§");
         set_long(
-            "Ò»°Ñ³¤Ç¹£¬Ç¹Í·³¤ÉÁÖøÒø¹â¡£\n"
+            "ä¸€æŠŠé•·æ§ï¼Œæ§é ­é•·é–ƒè‘—éŠ€å…‰ã€‚\n"
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 13 );
         set( "type", "thrusting" );
         set( "min_damage", 6 );

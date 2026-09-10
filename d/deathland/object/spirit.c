@@ -6,19 +6,19 @@ inherit OBJECT;
 void create()
 {
   seteuid(getuid());
-  set_name("Ancient Evil Spirit","¹Å´úĞ°¶ñµÄÁé»ê");
+  set_name("Ancient Evil Spirit","å¤ä»£é‚ªæƒ¡çš„éˆé­‚");
   
-  set_short("Ancient Evil Spirit","¹Å´úĞ°¶ñµÄÁé»ê");
+  set_short("Ancient Evil Spirit","å¤ä»£é‚ªæƒ¡çš„éˆé­‚");
   set("c_long",@ScryBall
-±»½ûïÀµÄ¹Å´úĞ°¶ñµÄÁé»ê, µ±ÄãÊÍ·ÅËüµÄÊ±ºò, Ëü½«¼àÊÓËü±»·Å³öÀ´
-µÄµØ·½, ¶øÄã½«ÄÜÖªµÀÄÇÀïµÄÒ»¾ÙÒ»¶¯, Ö±µ½Äã°ÑËü»ÙµôÎªÖ¹.
---Use <info spirit> »ñµÃ¸üÏêÏ¸µÄ×ÊÁÏ.
+è¢«ç¦éŒ®çš„å¤ä»£é‚ªæƒ¡çš„éˆé­‚, ç•¶ä½ é‡‹æ”¾å®ƒçš„æ™‚å€™, å®ƒå°‡ç›£è¦–å®ƒè¢«æ”¾å‡ºä¾†
+çš„åœ°æ–¹, è€Œä½ å°‡èƒ½çŸ¥é“é‚£è£¡çš„ä¸€èˆ‰ä¸€å‹•, ç›´åˆ°ä½ æŠŠå®ƒæ¯€æ‰ç‚ºæ­¢.
+--Use <info spirit> ç²å¾—æ›´è©³ç´°çš„è³‡æ–™.
 ScryBall
 );
   add("id",({"spirit",}));
-  set( "unit", "¸ö");
+  set( "unit", "å€‹");
   set("weight", 0);
-  set("c_extra_look","$NµÄÉíÅÔÓĞÖø¿ÉÅÂµÄÁé»êÎ§ÈÆÖøËû.\n");
+  set("c_extra_look","$Nçš„èº«æ—æœ‰è‘—å¯æ€•çš„éˆé­‚åœç¹è‘—ä»–.\n");
   set("prevent_drop",1);
   set("prevent_insert",1);
 }
@@ -37,14 +37,14 @@ int to_release(string str)
     if (!id(str)) 
       return 0;
     if (query("release")) 
-      return notify_fail("ÕâÁé»êÒÑ¾­±»ÊÍ·Å³öÀ´ÁË.\n");
+      return notify_fail("é€™éˆé­‚å·²ç¶“è¢«é‡‹æ”¾å‡ºä¾†äº†.\n");
     
     room = file_name( environment( this_player() ) );
     
     set("where",room);
     
     set("release",1);
-    write("ÄãÔÚÕâÀïÊÍ·Å³ö¹Å´úĞ°¶ñÁé»êÀ´.\n");
+    write("ä½ åœ¨é€™è£¡é‡‹æ”¾å‡ºå¤ä»£é‚ªæƒ¡éˆé­‚ä¾†.\n");
     return 1;     
 }
 
@@ -57,7 +57,7 @@ int to_scry(string str)
     if (!id(str)) 
       return 0;
     if (!query("release")) 
-      return notify_fail("ÕâÁé»êÉĞÎ´±»ÊÍ·Å³öÀ´.\n");
+      return notify_fail("é€™éˆé­‚å°šæœªè¢«é‡‹æ”¾å‡ºä¾†.\n");
     
     room_desc = query("where");
     chinese_mode=can_read_chinese();
@@ -70,7 +70,7 @@ int to_scry(string str)
 int to_toss(string str)
 {
     if (!id(str)) return 0;
-    write("Äã°Ñ¹Å´úĞ°¶ñÁé»ê¸ø»ÙµôÁË.\n");
+    write("ä½ æŠŠå¤ä»£é‚ªæƒ¡éˆé­‚çµ¦æ¯€æ‰äº†.\n");
     this_object()->remove();
     return 1;
 }
@@ -81,9 +81,9 @@ int to_info(string str)
     
     write(
     "------------------------\n"
-    "ÊÍ·ÅÁé»ê: release spirit\n"
-    "¼àÊÓ·¿¼ä  scry spirit   \n"
-    "»ÙµôÁé»ê  toss spirit   \n"
+    "é‡‹æ”¾éˆé­‚: release spirit\n"
+    "ç›£è¦–æˆ¿é–“  scry spirit   \n"
+    "æ¯€æ‰éˆé­‚  toss spirit   \n"
     );
     return 1;
 }

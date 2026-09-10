@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "blacksteel armor", "Õ½¼×" );
+	set_name( "blacksteel armor", "æˆ°ç”²" );
 	add( "id", ({ "armor" }) );
-	set_short( "a suit of blacksteel armor", "ïÙÌúÕ½¼×" );
+	set_short( "a suit of blacksteel armor", "é‘Œéµæˆ°ç”²" );
 	set_long(
 		"You see a suit of blacksteel armor.\n",
-		"Ò»Ì×ÓÃ¼áÓ²µÄïÙÌúÖı³ÉµÄÕ½¼×¡£\n"
+		"ä¸€å¥—ç”¨å …ç¡¬çš„é‘Œéµé‘„æˆçš„æˆ°ç”²ã€‚\n"
 	);
-	set( "unit", "Ì×" );
+	set( "unit", "å¥—" );
 	set( "type", "body" );
 	set( "armor_class", 25 );
 	set( "defense_bonus", 5 );

@@ -21,8 +21,8 @@ void create()
 {
 	seteuid(getuid());
 	::create();
-	set_short( "A shop", "ÉÌµê" );
-	set_long( "You are in a general shop.\n", "ÕâÀïÊÇÉÌµê¡£\n" );
+	set_short( "A shop", "å•†åº—" );
+	set_long( "You are in a general shop.\n", "é€™è£¡æ˜¯å•†åº—ã€‚\n" );
 
 	/* Force the warehouse to load, if it's not loaded  */
 	CENTSTORE->frog();
@@ -82,7 +82,7 @@ int list(string arg)
 	mixed *ob;
 	string type,list;
 
-	list = "ÔÚÕâÀïÄãÄÜÂòµ½µÄÓĞ:\n";
+	list = "åœ¨é€™è£¡ä½ èƒ½è²·åˆ°çš„æœ‰:\n";
 
 	/* Objects in local storage */
 	ob = all_inventory(storeroom);
@@ -133,48 +133,48 @@ int buy(string str)
 
 	/* Look for the object, first in central storage then in local storage. */
 	if (!str)
-		return notify_fail( "ÄúÒªÂòÊ²÷á£¿\n");
+		return notify_fail( "æ‚¨è¦è²·ä»€éº¼ï¼Ÿ\n");
 
 	ob = present(str, centstore);
 	if( !ob ) ob = present(str, storeroom);
 	if( !ob )
-		return notify_fail( "µêÀïÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		return notify_fail( "åº—è£¡æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 
 	value = ob->query("value");
 	if( !value ) {
 		ob->remove();
-		return notify_fail( "ÕâÑù¶«Î÷²»Ó¦¸Ã³öÏÖµêÀï....¡£\n");
+		return notify_fail( "é€™æ¨£æ±è¥¿ä¸æ‡‰è©²å‡ºç¾åº—è£¡....ã€‚\n");
 	}
 	type = value[1];
 	number = value[0];
 	if( number==0 ) {
 		ob->remove();
-		return notify_fail( "ÕâÑù¶«Î÷²»Ó¦¸Ã³öÏÖµêÀï....¡£\n");
+		return notify_fail( "é€™æ¨£æ±è¥¿ä¸æ‡‰è©²å‡ºç¾åº—è£¡....ã€‚\n");
 	}
 	skill = this_player()->query_skill("trading");
 	number -= number * random(skill) / 300;
 	if ( living(environment(ob) ) )
-		return notify_fail("±§Ç¸ ! ÕâÖÖ¶«Î÷¸Õ¸ÕÂôÍêÁË ...¡£\n");
+		return notify_fail("æŠ±æ­‰ ! é€™ç¨®æ±è¥¿å‰›å‰›è³£å®Œäº† ...ã€‚\n");
 	// Check to see if the player has exact change.
 	if( this_player()->debit( type, number ) ) {
 		// See if the player can carry the object.
 		res = ob->move(this_player());
 		if( res==MOVE_OK ) {
-			if( skill > 0 ) write( "¾­¹ıÒ»·¬ÌÖ¼Û»¹¼Û£¬");
-			if( !(unit = ob->query("unit")) ) unit = "¸ö";
-			write( sprintf("Äã»¨%dÃ¶%s ÂòÏÂÒ»%s%s¡£\n",number ,to_chinese(type + " coin"),unit,ob->query("short") ));
+			if( skill > 0 ) write( "ç¶“éä¸€ç•ªè¨åƒ¹é‚„åƒ¹ï¼Œ");
+			if( !(unit = ob->query("unit")) ) unit = "å€‹";
+			write( sprintf("ä½ èŠ±%dæš%s è²·ä¸‹ä¸€%s%sã€‚\n",number ,to_chinese(type + " coin"),unit,ob->query("short") ));
 			tell_room( this_object(), 
-				sprintf("%sÂòÏÂÒ»%s%s¡£\n",this_player()->query("c_name"),unit,ob->query("short")),
+				sprintf("%sè²·ä¸‹ä¸€%s%sã€‚\n",this_player()->query("c_name"),unit,ob->query("short")),
 				this_player());
 			return 1 ;
 		} else {
 			// Give him his money back.
 			this_player()->credit( type , number );
-			return notify_fail("ÄãÒÑ¾­¿¸²»¶¯ÆäËû¶«Î÷ÁË¡£\n");
+			return notify_fail("ä½ å·²ç¶“æ‰›ä¸å‹•å…¶ä»–æ±è¥¿äº†ã€‚\n");
 		}
 	}
 
-	return notify_fail("ÄãÉíÉÏÃ»ÓĞºÏÊÊµÄÇ®±ÒÄÜ¹ºÂòÕâÑù¶«Î÷¡£\n");
+	return notify_fail("ä½ èº«ä¸Šæ²’æœ‰åˆé©çš„éŒ¢å¹£èƒ½è³¼è²·é€™æ¨£æ±è¥¿ã€‚\n");
 }
 
 int value(string str)
@@ -187,45 +187,45 @@ int value(string str)
 	if( !str ) {
 		ob = all_inventory(this_player());
 		if( !ob )
-			return notify_fail("ÄãÉíÉÏÃ»ÓĞ´øÈÎºÎ¶«Î÷¡£\n");
+			return notify_fail("ä½ èº«ä¸Šæ²’æœ‰å¸¶ä»»ä½•æ±è¥¿ã€‚\n");
 
 		for( i=0; i<sizeof(ob); i++ ) {
 			convert_value( ob[i] );
 			value = ob[i]->query("value") ;
 			if (!value) {
-				write(sprintf("%s²»ÖµÇ®¡£\n",ob[i]->query("short")));
+				write(sprintf("%sä¸å€¼éŒ¢ã€‚\n",ob[i]->query("short")));
 				continue;
 			}
 			type = value[1];
 			number=value[0] * SHOP_SALES_FRAC;
 		 	if( number==0 ) {
-				write(sprintf("%s²»ÖµÇ®¡£\n",ob[i]->query("short")));
+				write(sprintf("%sä¸å€¼éŒ¢ã€‚\n",ob[i]->query("short")));
 				continue;
 			}
 
-			write(sprintf("%s¼ÛÖµ%d¿é%s  ¡£\n",ob[i]->query("short") ,number,to_chinese(type+" coin")));
+			write(sprintf("%såƒ¹å€¼%då¡Š%s  ã€‚\n",ob[i]->query("short") ,number,to_chinese(type+" coin")));
 			if( number>1000 )
-				write("µ«ÊÇÀÏ°å×î¶àÖ»Ô¸Òâ³ö 1000 ¿éÒø±ÒÊÕ¹º.....¡£\n");
+				write("ä½†æ˜¯è€é—†æœ€å¤šåªé¡˜æ„å‡º 1000 å¡ŠéŠ€å¹£æ”¶è³¼.....ã€‚\n");
 		}
 		return 1 ;
 	}
 	obj = present(str,this_player());
 	if( !obj )
-		return notify_fail(sprintf("ÄãÉíÉÏÃ»ÓĞ½Ğ×ö%sµÄ¶«Î÷¡£\n",str));
+		return notify_fail(sprintf("ä½ èº«ä¸Šæ²’æœ‰å«åš%sçš„æ±è¥¿ã€‚\n",str));
 
 	convert_value( obj );
 	value = obj->query("value");
 	if( !value )
-		return notify_fail("Õâ¸ö¶«Î÷²»ÖµÇ®¡£\n");
+		return notify_fail("é€™å€‹æ±è¥¿ä¸å€¼éŒ¢ã€‚\n");
 
 	type = value[1];
 	number = value[0] * SHOP_SALES_FRAC;
 	if( number==0 )
-		return notify_fail("Õâ¸ö¶«Î÷²»ÖµÇ®¡£\n");
+		return notify_fail("é€™å€‹æ±è¥¿ä¸å€¼éŒ¢ã€‚\n");
 
-			write(sprintf("%s¼ÛÖµ%d¿é%s  ¡£\n",obj->query("short") ,number,to_chinese(type+" coin")));
+			write(sprintf("%såƒ¹å€¼%då¡Š%s  ã€‚\n",obj->query("short") ,number,to_chinese(type+" coin")));
 	if( number>1000 )
-		write("µ«ÊÇÀÏ°å×î¶àÖ»Ô¸Òâ³ö 1000 ¿éÒø±ÒÊÕ¹º.....¡£\n");
+		write("ä½†æ˜¯è€é—†æœ€å¤šåªé¡˜æ„å‡º 1000 å¡ŠéŠ€å¹£æ”¶è³¼.....ã€‚\n");
 	return 1 ;
 }
 
@@ -262,7 +262,7 @@ int sell_ob(object ob)
 	value = ob->query("value");
 	if( !value ) {
 		tell_object(this_player(),
-			sprintf("ÀÏ°åÄÃÆğ%s¿´¿´£¬ËæÊÖ°ÑËü¶ª½øÀ¬»øÍ°¡£\n",ob->query("short")));
+			sprintf("è€é—†æ‹¿èµ·%sçœ‹çœ‹ï¼Œéš¨æ‰‹æŠŠå®ƒä¸Ÿé€²åƒåœ¾æ¡¶ã€‚\n",ob->query("short")));
 		ob->remove();
 		return 1;
 	}
@@ -281,41 +281,41 @@ int sell_ob(object ob)
 	will_remove = 0;
 	if( in_storeroom(ob) ) {
 	  tell_room( this_object(), 
-		sprintf("ÀÏ°åËµ: %sµêÀïÒÑ¾­ÓĞÁË£¬´òÆßÎåÕÛ¡£\n" ,ob->query("short")));
+		sprintf("è€é—†èªª: %såº—è£¡å·²ç¶“æœ‰äº†ï¼Œæ‰“ä¸ƒäº”æŠ˜ã€‚\n" ,ob->query("short")));
 	  number -= number / 4;
 	  will_remove = 1;
 	}
 	if( number < 1 ) number = 1;
 	res = ob->move(centstore) ;
 	if( res != MOVE_OK )
-		return notify_fail( "¶Ô²»Æğ£¬ÉÌµê²»ÊÕ¹ºÕâÖÖ¶«Î÷¡£\n");
+		return notify_fail( "å°ä¸èµ·ï¼Œå•†åº—ä¸æ”¶è³¼é€™ç¨®æ±è¥¿ã€‚\n");
 
 	if ( !this_player()->credit(type, number) ) {
-		write("Äã´ø²»¶¯ÂôµôÕâÑù¶«Î÷ËùµÃµ½µÄÇ®±Ò¡£\n");
+		write("ä½ å¸¶ä¸å‹•è³£æ‰é€™æ¨£æ±è¥¿æ‰€å¾—åˆ°çš„éŒ¢å¹£ã€‚\n");
 		ob->move(this_player());
 		return 1;
 	}
-	if( !(unit = ob->query("unit")) ) unit = "¸ö";
-	write(sprintf("ÄãÂôµô%s£¬»ñµÃ%d¿é%s ¡£\n",
+	if( !(unit = ob->query("unit")) ) unit = "å€‹";
+	write(sprintf("ä½ è³£æ‰%sï¼Œç²å¾—%då¡Š%s ã€‚\n",
 		ob->query("short"),number,to_chinese(type+" coin")));
 	tell_room( this_object(), 
-		sprintf("%sÂôµôÒ»%s%s¡£\n",
+		sprintf("%sè³£æ‰ä¸€%s%sã€‚\n",
 		this_player()->query("c_name"),unit,ob->query("short")),this_player() );
 
     if(ob->query("on_mounted")) ob->delete("on_mounted");
     
     if( will_remove ) {
       tell_room( this_object(), 
-                sprintf("ÀÏ°åºÜ²»ÇéÔ¸µÄ°Ñ%sÂòÏÂ²¢¶ÑÔÚÇ½½Ç¡£\n" ,ob->query("short")));
+                sprintf("è€é—†å¾ˆä¸æƒ…é¡˜çš„æŠŠ%sè²·ä¸‹ä¸¦å †åœ¨ç‰†è§’ã€‚\n" ,ob->query("short")));
 		ob->remove();
 	} else if( ob->query("useless") ) {
 		tell_room( this_object(),
-			sprintf("ÀÏ°å°Ñ%s¶ÑÔÚÇ½½Ç£¬µÈÊÕ¾É»õµÄÈËÀ´ÊÕ¹º¡£\n" ,ob->query("short")));
+			sprintf("è€é—†æŠŠ%så †åœ¨ç‰†è§’ï¼Œç­‰æ”¶èˆŠè²¨çš„äººä¾†æ”¶è³¼ã€‚\n" ,ob->query("short")));
 		ob->remove();
 	}
 	else if( ob->query("no_sale") ) {
 		tell_room( this_object(), 
-			sprintf("ÀÏ°å°Ñ%sÊÕ½øµêÀï£¬È»ááµÃÒâµØĞ¦ÁËĞ¦¡£\n" ,ob->query("short")));
+			sprintf("è€é—†æŠŠ%sæ”¶é€²åº—è£¡ï¼Œç„¶å¾Œå¾—æ„åœ°ç¬‘äº†ç¬‘ã€‚\n" ,ob->query("short")));
 		ob->remove();
 	}
 	
@@ -339,7 +339,7 @@ int sell(string str)
 	object ob, *obs ;
 
 	if (!str) 
-		return notify_fail("ÄãÒªÂôÊ²÷á¶«Î÷£¿\n");
+		return notify_fail("ä½ è¦è³£ä»€éº¼æ±è¥¿ï¼Ÿ\n");
 
 	if( str=="all" ) {
 		obs = all_inventory(this_player());
@@ -355,9 +355,9 @@ int sell(string str)
 	} else {
 	ob = present(str, this_player());
 	if( !ob )
-		return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 	if( ob->query("prevent_drop") || ob->query("secure") )
-		return notify_fail("Äã²»ÄÜÂôÕâÑù¶«Î÷¡£\n");
+		return notify_fail("ä½ ä¸èƒ½è³£é€™æ¨£æ±è¥¿ã€‚\n");
 	sell_ob(ob);
 	}
 	return 1;
@@ -367,8 +367,8 @@ int enter_storeroom()
 {
 	if (!wizardp(this_player())) return 0;
 	this_player()->move(centstore);
-	write( "³ÃÖøÀÏ°å²»×¢ÒâµÄÊ±ºò£¬ÄãÍµÍµµÄÁï½øµêÀïµÄ´¢²ØÊÒ¡£\n");
-	say( this_player()->query("c_name") + "Í»È»²»¼ûÁË¡£\n");
+	write( "è¶è‘—è€é—†ä¸æ³¨æ„çš„æ™‚å€™ï¼Œä½ å·å·çš„æºœé€²åº—è£¡çš„å„²è—å®¤ã€‚\n");
+	say( this_player()->query("c_name") + "çªç„¶ä¸è¦‹äº†ã€‚\n");
 	return 1 ;
 }
 
@@ -380,14 +380,14 @@ int try_items( string str )
 
 	/* Look for the object, first in central storage then in local storage. */
 	if( !str )
-		return notify_fail("ÄúÒªÊÔÊ²÷á£¿\n");
+		return notify_fail("æ‚¨è¦è©¦ä»€éº¼ï¼Ÿ\n");
 
 	me = this_player();
 	ob = present(str, centstore);
 	if( !ob ) ob = present(str, storeroom);
 	if( !ob )
-		return notify_fail("µêÀïÃ»ÓĞÕâÑù¶«Î÷¡£\n");
-	write(sprintf("ÄãÄÃÆğ%s£¬¿´ÁËÒ»¿´ .... \n%s",
+		return notify_fail("åº—è£¡æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
+	write(sprintf("ä½ æ‹¿èµ·%sï¼Œçœ‹äº†ä¸€çœ‹ .... \n%s",
 		ob->query("short"),ob->query("long") ));
 
 	if( !(need = (int)ob->query("weapon_class")) ) {
@@ -395,13 +395,13 @@ int try_items( string str )
 		if( ob->query("armor_class") || ob->query("defense_bonus") ) {
 			type = (string)ob->query("type");
 			if( !type || type == "" || member_array(type, ARMOR_TYPES) == -1 ) 
-				return notify_fail("ÕâÑù¶«Î÷²»Ó¦¸Ã³öÏÖµêÀï....¡£\n");
+				return notify_fail("é€™æ¨£æ±è¥¿ä¸æ‡‰è©²å‡ºç¾åº—è£¡....ã€‚\n");
 		// not a weapon nor a armor, it's sure he can use.
 		} else {
 			tell_room( this_object(), 
-			sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔÁËÊÔááÂ¶³öÂúÒâµÄĞ¦Èİ¡£\n" 
+			sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦äº†è©¦å¾Œéœ²å‡ºæ»¿æ„çš„ç¬‘å®¹ã€‚\n" 
 				,me->query("c_name"),ob->query("short")),me );
-       		write("Õâ¶«Î÷Ö»ÒªÄãÄÃµÄ¶¯¡¢ÂòµÃÆğ£¬¾Í¿ÉÒÔÓÃ¡£\n" );
+       		write("é€™æ±è¥¿åªè¦ä½ æ‹¿çš„å‹•ã€è²·å¾—èµ·ï¼Œå°±å¯ä»¥ç”¨ã€‚\n" );
          	return 1;
 		}
 		// check equip level, defined in guild object.
@@ -409,42 +409,42 @@ int try_items( string str )
 		if( member_array(aclass, CLASS_NAMES) == -1 ||
 		(int)GUILD_MASTER(aclass)->equip_level(ob) > 1 ) {
 		tell_room( this_object(), 
-			sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔ´©ÁËÒ»ÏÂáá½á¹ûºÃÏñºÜ²»ºÏÊÊ¡£\n", 
+			sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦ç©¿äº†ä¸€ä¸‹å¾Œçµæœå¥½åƒå¾ˆä¸åˆé©ã€‚\n", 
 				me->query("c_name"),ob->query("short")),me );
-			write("Õâ»¤¾ß¾ÍËãÄãÄÃµÄ¶¯¡¢ÂòµÃÆğ£¬Ó²ÊÇ°ÑËü´©ÆğÀ´ËÆºõ²»»áÓĞ¶à´óĞ§¹û¡£\n" );
+			write("é€™è­·å…·å°±ç®—ä½ æ‹¿çš„å‹•ã€è²·å¾—èµ·ï¼Œç¡¬æ˜¯æŠŠå®ƒç©¿èµ·ä¾†ä¼¼ä¹ä¸æœƒæœ‰å¤šå¤§æ•ˆæœã€‚\n" );
 		} else if( (int)GUILD_MASTER(aclass)->equip_level(ob) == 1 ) {
 			tell_room( this_object(), 
-				sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔ´©ÁËÒ»ÏÂááËÆºõÃãÇ¿ÄÜ¹»´©ÉÏ¡£\n", 
+				sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦ç©¿äº†ä¸€ä¸‹å¾Œä¼¼ä¹å‹‰å¼·èƒ½å¤ ç©¿ä¸Šã€‚\n", 
 				me->query("c_name"),ob->query("short")),me );
-			write("Õâ»¤¾ß¾ÍËãÄãÄÃµÄ¶¯¡¢ÂòµÃÆğ£¬´©ÆğÀ´ËÆºõÓĞĞ©ÃãÇ¿¡£\n" );
+			write("é€™è­·å…·å°±ç®—ä½ æ‹¿çš„å‹•ã€è²·å¾—èµ·ï¼Œç©¿èµ·ä¾†ä¼¼ä¹æœ‰äº›å‹‰å¼·ã€‚\n" );
  		} else {
 	     	tell_room( this_object(), 
-                sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔ´©ÁËÒ»ÏÂááËÆºõ·Ç³£ºÏÉí¡£\n",
+                sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦ç©¿äº†ä¸€ä¸‹å¾Œä¼¼ä¹éå¸¸åˆèº«ã€‚\n",
 			me->query("c_name"),ob->query("short")),me );
-           	write("Õâ»¤¾ßÖ»ÒªÄãÄÃµÄ¶¯¡¢ÂòµÃÆğ£¬¾ÍÄÜ¹»´©¡£\n" );
+           	write("é€™è­·å…·åªè¦ä½ æ‹¿çš„å‹•ã€è²·å¾—èµ·ï¼Œå°±èƒ½å¤ ç©¿ã€‚\n" );
 		}
 		return 1;
     }
     // It's a weapon.
     type = (string)ob->query("type");
     if( !type || type == "" || member_array(type, WEAPON_TYPES) == -1 ) 
-     	 return notify_fail("ÕâÑù¶«Î÷²»Ó¦¸Ã³öÏÖµêÀï....¡£\n");
+     	 return notify_fail("é€™æ¨£æ±è¥¿ä¸æ‡‰è©²å‡ºç¾åº—è£¡....ã€‚\n");
 	skill = me->query_skill(type);
     if( need <= 15 || skill >= need*2 ) {
        	tell_room( this_object(), 
-		sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔÁËÊÔááÂ¶³öÂúÒâµÄĞ¦Èİ¡£\n",
+		sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦äº†è©¦å¾Œéœ²å‡ºæ»¿æ„çš„ç¬‘å®¹ã€‚\n",
 			me->query("c_name"),ob->query("short")), me );
-       write("ÄãµÄÄÜÁ¦×ãÒÔ¼İÔ¦ÕâÖÖÎäÆ÷¡£Ö»ÒªÄãÄÃµÄ¶¯¡¢ÂòµÃÆğ£¬¾Í¿ÉÒÔÓÃ¡£\n" );
+       write("ä½ çš„èƒ½åŠ›è¶³ä»¥é§•é¦­é€™ç¨®æ­¦å™¨ã€‚åªè¦ä½ æ‹¿çš„å‹•ã€è²·å¾—èµ·ï¼Œå°±å¯ä»¥ç”¨ã€‚\n" );
     } else if( (need*2 - skill) < 10 ) {
       	tell_room( this_object(), 
- 		sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔÁËÊÔ½á¹ûËÆºõÓĞµãÀ§ÄÑ¡£\n",
+ 		sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦äº†è©¦çµæœä¼¼ä¹æœ‰é»å›°é›£ã€‚\n",
 			me->query("c_name"),ob->query("short")), me );
- 	write("ÔÙ¼Ó°Ñ¾¢£¬Õâ¶«Î÷Äã¾Í¿ì¿ÉÒÔÊ¹ÓÃÁË!\n" );
+ 	write("å†åŠ æŠŠå‹ï¼Œé€™æ±è¥¿ä½ å°±å¿«å¯ä»¥ä½¿ç”¨äº†!\n" );
     } else {
       	tell_room( this_object(), 
-		sprintf("%s°Ñ%sÄÃÆğÀ´ÊÔÁËÊÔ½á¹ûËÆºõÊ®·ÖÀ§ÄÑ¡£\n",
+		sprintf("%sæŠŠ%sæ‹¿èµ·ä¾†è©¦äº†è©¦çµæœä¼¼ä¹ååˆ†å›°é›£ã€‚\n",
 			me->query("c_name"),ob->query("short")), me );
-      	write("±ğÉµÁË£¬Á·¸öÊ®ÄêÔÙÀ´°É!\n" );
+      	write("åˆ¥å‚»äº†ï¼Œç·´å€‹åå¹´å†ä¾†å§!\n" );
     }
     return 1;
 }

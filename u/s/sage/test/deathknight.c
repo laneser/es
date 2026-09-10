@@ -16,11 +16,11 @@ void create()
 {
     ::create();
     set_level(15);
-    set_name("Death Knight", "µØÓüÆïÊ¿");
+    set_name("Death Knight", "åœ°ç„é¨å£«");
     add("id", ({ "knight", "death" }));
-    set_short("µØÓüÆïÊ¿");
-    set("unit", "Î»");
-    set_long("´«ËµÖĞ×îÀ÷º¦×î¿ÉÅÂµÄ²»ËÀÆïÊ¿¡£\n");
+    set_short("åœ°ç„é¨å£«");
+    set("unit", "ä½");
+    set_long("å‚³èªªä¸­æœ€å²å®³æœ€å¯æ€•çš„ä¸æ­»é¨å£«ã€‚\n");
     set("race", "undead");
     set("gender", "neutral");
     set("unbleeding", 1);
@@ -50,7 +50,7 @@ void die()
     for(i = 0; i < sizeof(items); i++)
         items[i]->remove();
 
-    tell_room(environment(this_object()), "µØÓüÆïÊ¿·¢³öÒ»Éù¿ñĞ¦£º¡¸ÄãÒÔÎªÕâÑù¾ÍÄÜ´òµ¹ÎÒÂğ£¿×öÃÎ£¡¡¹\n\nµØÓüÆïÊ¿µÄÊ¬ÌåÓÖÕ¾ÁËÆğÀ´£¡\n\n", this_object());
+    tell_room(environment(this_object()), "åœ°ç„é¨å£«ç™¼å‡ºä¸€è²ç‹‚ç¬‘ï¼šã€Œä½ ä»¥ç‚ºé€™æ¨£å°±èƒ½æ‰“å€’æˆ‘å—ï¼Ÿåšå¤¢ï¼ã€\n\nåœ°ç„é¨å£«çš„å±é«”åˆç«™äº†èµ·ä¾†ï¼\n\n", this_object());
     set("alt_corpse", MOB"deathknight");
     
     ::die(1);

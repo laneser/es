@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "emperor crown", "»Ê¹Ú" );
+        set_name( "emperor crown", "çš‡å† " );
         add( "id", ({ "crown", }) );
-        set_short( "»Ê¹Ú");
+        set_short( "çš‡å† ");
         set_long( 
 @C_LONG
-Ò»¶¥»Ê¹Ú£¬ÊÇ¶«·½»ÊµÛËù´÷ÓÃµÄ¡£
+ä¸€é ‚çš‡å† ï¼Œæ˜¯æ±æ–¹çš‡å¸æ‰€æˆ´ç”¨çš„ã€‚
 C_LONG
         );
-        set( "unit", "¶¥" );
+        set( "unit", "é ‚" );
         set( "weight", 50 );
         set( "type", "head" );
         set( "material", "light_metal" );

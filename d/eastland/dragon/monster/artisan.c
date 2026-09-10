@@ -9,16 +9,16 @@ void create ()
 
         ::create();
         set_level(15);
-        set_name( "draconian artisan", "ÁúÈË¹¤½³" );
+        set_name( "draconian artisan", "é¾äººå·¥åŒ " );
         add ("id", ({ "draconian", "artisan"}) );
-        set_short(" ÁúÈË¹¤½³");
-        set("unit","Î»");
+        set_short(" é¾äººå·¥åŒ ");
+        set("unit","ä½");
         set("alignment",400);
         set("weight",400);
         set("wealth/gold",100);
         set_long(@C_LONG
-ÁúÈË¹¤½³ËûÊìÏ°¸÷ÖÖÆ÷ÎïµÄÖÆÔì£¬ÔÚÕâ¸öÊÀ½çÉÏ»¹Ã»ÓĞÈÎºÎÒÀÑùÎïÆ·ÊÇ
-ËûÔì²»³öÀ´µÄ£¡
+é¾äººå·¥åŒ ä»–ç†Ÿç¿’å„ç¨®å™¨ç‰©çš„è£½é€ ï¼Œåœ¨é€™å€‹ä¸–ç•Œä¸Šé‚„æ²’æœ‰ä»»ä½•ä¾æ¨£ç‰©å“æ˜¯
+ä»–é€ ä¸å‡ºä¾†çš„ï¼
 C_LONG
         );
         set( "inquiry", ([
@@ -39,7 +39,7 @@ C_LONG
         set_skill("shortblade",80);
         set_skill("dodge",100);
         set("tactic_func","sleet_tactic");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
       
        
         wield_weapon(Lditem"dagger1");
@@ -51,9 +51,9 @@ C_LONG
 void ask_drum( object who )
 {
         tell_object( who, @ALONG
-Èç¹ûÄãÏëÒªÖÆÔìÁúÉñ¹Äé³£¬Äã±ØĞëÒªÕÒµ½Ò»¸ùÊÀÉÏ×î¼áÓ²µÄÄ¾Í·£¬¼ÓÉÏ
-ÎÒÔ­ÓĞµÄ÷è÷ëÆ¤¼´¿ÉÖÆÔì³öÁúÉñ¹Äé³£¬ËùÒÔ¿ìÈ¥ÕÒÊÀÉÏ×î¼áÓ²µÄÄ¾Í·À´
-°É£¬µ±ÄãÕÒµ½Ö®ááÔÙÀ´ÕÒÎÒ£¬ÎÒ×ÔÈ»»á°ïÄãµÄ¡£
+å¦‚æœä½ æƒ³è¦è£½é€ é¾ç¥é¼“æ§Œï¼Œä½ å¿…é ˆè¦æ‰¾åˆ°ä¸€æ ¹ä¸–ä¸Šæœ€å …ç¡¬çš„æœ¨é ­ï¼ŒåŠ ä¸Š
+æˆ‘åŸæœ‰çš„éº’éºŸçš®å³å¯è£½é€ å‡ºé¾ç¥é¼“æ§Œï¼Œæ‰€ä»¥å¿«å»æ‰¾ä¸–ä¸Šæœ€å …ç¡¬çš„æœ¨é ­ä¾†
+å§ï¼Œç•¶ä½ æ‰¾åˆ°ä¹‹å¾Œå†ä¾†æ‰¾æˆ‘ï¼Œæˆ‘è‡ªç„¶æœƒå¹«ä½ çš„ã€‚
 ALONG
                    );
       return ;        
@@ -64,14 +64,14 @@ int accept_item(object ob1,object ob2)
     if (!ob2|| (int)(ob2->query("layuter_club"))!=1) return 0;
     if ((int)(ob2->query("layuter_club"))==1){
     tell_object(ob1,
-         "ºÃ¼ÈÈ»ÄãÒÑ¾­µÃµ½ÊÀÉÏ×î¼áÓ²µÄÄ¾Í·£¬ÄÇÎÒ¾Í°ïÄãÔìÁúÉñ¹Äé³¡£\n");
-    tell_room(environment(this_object()),"ÁúÈË¹¤½³¿ªÊ¼ÇÃÇÃ´ò´òµØÅ¬Á¦ì¶¹¤×÷\n");  
+         "å¥½æ—¢ç„¶ä½ å·²ç¶“å¾—åˆ°ä¸–ä¸Šæœ€å …ç¡¬çš„æœ¨é ­ï¼Œé‚£æˆ‘å°±å¹«ä½ é€ é¾ç¥é¼“æ§Œã€‚\n");
+    tell_room(environment(this_object()),"é¾äººå·¥åŒ é–‹å§‹æ•²æ•²æ‰“æ‰“åœ°åŠªåŠ›æ–¼å·¥ä½œ\n");  
     call_out("aaa",15,this_object());
     ob3=new(Lditem"club");
     ob3->move(environment(this_object()));
        }
     else {
-       tell_room(environment(this_object()),"ÁúÈË¹¤½³Ëµ£ºĞ»Ğ»ÄãµÄÀñÎï¡£\n");  
+       tell_room(environment(this_object()),"é¾äººå·¥åŒ èªªï¼šè¬è¬ä½ çš„ç¦®ç‰©ã€‚\n");  
        }
           
     ob2->remove();   
@@ -79,7 +79,7 @@ int accept_item(object ob1,object ob2)
 
 void aaa(object who)
 {
-  tell_room(environment(who),"ÁúÈË¹¤½³ÖÕì¶Íê³ÉÕâ¼èîÒµÄ¹¤×÷£¬´ËÊ±ËûÒÑÀÛµÄÂúÍ·´óº¹¡£\n");
-   tell_room(environment(this_object()),"ÁúÈË¹¤½³Ëµ£ºÕâÊÇÄãÒªµÄ¹Äé³ £¬Ï£ÍûÄãÄÜºÃºÃµÄÀûÓÃËü\n");  
+  tell_room(environment(who),"é¾äººå·¥åŒ çµ‚æ–¼å®Œæˆé€™è‰±é‰…çš„å·¥ä½œï¼Œæ­¤æ™‚ä»–å·²ç´¯çš„æ»¿é ­å¤§æ±—ã€‚\n");
+   tell_room(environment(this_object()),"é¾äººå·¥åŒ èªªï¼šé€™æ˜¯ä½ è¦çš„é¼“æ§Œ ï¼Œå¸Œæœ›ä½ èƒ½å¥½å¥½çš„åˆ©ç”¨å®ƒ\n");  
  
 }

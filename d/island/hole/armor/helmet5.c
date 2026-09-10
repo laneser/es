@@ -4,15 +4,15 @@ inherit ARMOR;
 int no_pray;
 void create()
 {
-	set_name( "Daemon Visor","¶ñÄ§ÃæÕÖ" );
+	set_name( "Daemon Visor","æƒ¡é­”é¢ç½©" );
 	add( "id", ({ "visor" }) );
-	set_short( "¶ñÄ§ÃæÕÖ" );
+	set_short( "æƒ¡é­”é¢ç½©" );
 	set_long(@LONG
-	Ğ°½ÌÍ½ÎªÁËÒª°Ñ¶ñÄ§µÄÁ¦Á¿¸½ÔÚÉíÉÏËù´÷µÄÃæÕÖ¡£
-	´«ËµÖ»Òª³ÏĞÄÆíÇó£¬¾Í¿ÉÒÔ»ñµÃºÚ°µµÄÁ¦Á¿¡£
+	é‚ªæ•™å¾’ç‚ºäº†è¦æŠŠæƒ¡é­”çš„åŠ›é‡é™„åœ¨èº«ä¸Šæ‰€æˆ´çš„é¢ç½©ã€‚
+	å‚³èªªåªè¦èª å¿ƒç¥ˆæ±‚ï¼Œå°±å¯ä»¥ç²å¾—é»‘æš—çš„åŠ›é‡ã€‚
 LONG
 		);
-	set( "unit","¶¥" );
+	set( "unit","é ‚" );
 	set( "weight",50 );
 	set( "type","head" );
 	set( "material","heavy_metal" );
@@ -33,19 +33,19 @@ int do_beg(string str)
 	player=this_player();
 	
 	if( obj->query( "equipped" ) ){
-		if( no_pray==1 ) return notify_fail( "ÕâÃæÕÖÒÑ¾­Ê§È¥×÷ÓÃÁË¡£\n" );
-		if( !str || str!="ishige" ) return notify_fail( "ÏëÏë¿´£¬Ë­ÊÇĞ°¶ñµÄÏóáç£®£®\n" );
-		if( ((int)player->query( "alignment" )) < -1600 ) return notify_fail( "ÄãÒÑ¾­¹»Ğ°¶ñÁË¡£\n" );
+		if( no_pray==1 ) return notify_fail( "é€™é¢ç½©å·²ç¶“å¤±å»ä½œç”¨äº†ã€‚\n" );
+		if( !str || str!="ishige" ) return notify_fail( "æƒ³æƒ³çœ‹ï¼Œèª°æ˜¯é‚ªæƒ¡çš„è±¡å¾µï¼ï¼\n" );
+		if( ((int)player->query( "alignment" )) < -1600 ) return notify_fail( "ä½ å·²ç¶“å¤ é‚ªæƒ¡äº†ã€‚\n" );
 		tell_object(player,set_color(
-		"ÄãÒ§ÆÆÖ¸¼â½«ÏÊÑªÈ÷Ïò¿ÕÖĞ£¬ĞÄÖĞÄ¬ÄîÖøÕÙ»½ºÚ°µÁ¦Á¿µÄÖäÓï....\n"+
-		"½¥½¥µÄÄã·¢¾õÉíÉÏ³äÂúÁËĞ°¶ñµÄÁ¦Á¿¡£\n","HIY" ));
+		"ä½ å’¬ç ´æŒ‡å°–å°‡é®®è¡€ç‘å‘ç©ºä¸­ï¼Œå¿ƒä¸­é»˜å”¸è‘—å¬å–šé»‘æš—åŠ›é‡çš„å’’èª....\n"+
+		"æ¼¸æ¼¸çš„ä½ ç™¼è¦ºèº«ä¸Šå……æ»¿äº†é‚ªæƒ¡çš„åŠ›é‡ã€‚\n","HIY" ));
 		player->set( "alignment",-1600 );
 		player->add( "hit_points",-60 );
 		no_pray=1;
 		return 1;
 	}
 	else{
-		tell_object( player,"ÏëÓë¶ñÄ§´ò½»µÀ±ØĞë´©´÷ÏóáçĞ°¶ñµÄĞÅÎï¡£\n" );
+		tell_object( player,"æƒ³èˆ‡æƒ¡é­”æ‰“äº¤é“å¿…é ˆç©¿æˆ´è±¡å¾µé‚ªæƒ¡çš„ä¿¡ç‰©ã€‚\n" );
 		return 1;
 	}
 }

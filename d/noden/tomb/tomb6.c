@@ -8,16 +8,16 @@ inherit ROOM;
 void create()
 {
 	::create();
-   set_short("Ĺ������");
+   set_short("墓中密室");
 	set_long( @LONG_DESCRIPTION
-���ʯ�ұȱ��ߵķ�����С�����ǲ���������ʯ�ƵļҾ�(furniture)��Ҫ��
-�������Ǹ�ĹѨ�������Ĳ��ÿ�����Ӧ�о��У�ʮ�����ʵ�ס���ˡ���ע�⵽ʯ��
-����ĵ�̺(carpet)�м����°���������Щ�Ź�....��
+這間石室比北邊的房間略小，但是佈置著許多石制的傢俱(furniture)，要不
+是這裡是個墓穴，這樣的佈置可算是應有盡有，十分舒適的住所了。你注意到石室
+中央的地毯(carpet)中間向下凹，可能有些古怪....。
 LONG_DESCRIPTION
 	);
 
 	set( "c_item_desc", ([ 
-		"furniture" : "��Щ�Ҿ���Ȼ�����Զ���������涼������ϸ�Ļ��ƣ��������ʵ��൱����\n" ]) );
+		"furniture" : "這些傢俱雖然年代久遠，但是上面都刻滿精細的花紋，看起來質地相當昂貴。\n" ]) );
 	set( "item_func", ([
 		"carpet": "look_carpet" ]) );
 	set( "exits", ([ 
@@ -31,14 +31,14 @@ LONG_DESCRIPTION
 void look_carpet()
 {
    write(
-		"���ŵ�̺������������������е����ˣ���������....��һ�Ų��ϵ�̺��ȴ���˸�\n"
-            "�գ����ŵ�̺�Ǹ���Ӱ��\n" );
+		"這張地毯上面繡著兩個並肩而行的獵人，手上提著....你一腳踩上地毯，卻踩了個\n"
+            "空，這張地毯是個幻影！\n" );
     tell_room( this_object(),
-        "������"+this_player()->query("c_cap_name") + "һ�����У�ת��ͷȥ���Ѿ������ˡ�\n",
+        "你聽到"+this_player()->query("c_cap_name") + "一聲驚叫，轉過頭去人已經不見了。\n",
 		this_player() );
 	this_player()->move_player( "/d/noden/tomb/tomb2", "SNEAK" );
    this_player()->set_explore("noden#20");
     tell_room( "/d/noden/tomb/tomb2",
-             "���������˴������У�Ȼ��һ��Ӱ�ӵ���������һ��ѹ����....\n",
+             "你聽到有人大聲驚叫，然後一個影子掉下來，差一點壓到你....\n",
 		this_player() );
 }

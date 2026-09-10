@@ -7,14 +7,14 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "prayer", "Æíµ»Õß" );
-	set_short( "Æíµ»Õß" );
+	set_name( "prayer", "ç¥ˆç¦±è€…" );
+	set_short( "ç¥ˆç¦±è€…" );
 	set_long(
-        "Ò»¸öÕı¾Û¾«»áÉñÆíµ»±£ÓÓÈ«×åµÄÆíµ»Õß¡£\n");
+        "ä¸€å€‹æ­£èšç²¾æœƒç¥ç¥ˆç¦±ä¿ä½‘å…¨æ—çš„ç¥ˆç¦±è€…ã€‚\n");
         set("alignment", 100 );
         set( "gender", "male" );
         set( "race", "dwarf" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
 	set_perm_stat( "str", 15 );
 	set_perm_stat( "int", 15 );
 	set_perm_stat( "kar", 10 );

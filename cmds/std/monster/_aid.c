@@ -9,33 +9,33 @@ int cmd_aid(string arg)
 
 	chinese_mode = can_read_chinese();
 	if( !arg || arg=="" || !(dest = present(arg, environment(this_player()))) )
-		return notify_fail( "ÄãÒª¶ÔË­Ê©ĞĞ¼±¾È£¿\n");
+		return notify_fail( "ä½ è¦å°èª°æ–½è¡Œæ€¥æ•‘ï¼Ÿ\n");
 
-	if( !living(dest) ) return notify_fail("ÄÇ¸ö¡¸¶«Î÷¡¹²»ĞèÒª¼±¾È¡£\n");
+	if( !living(dest) ) return notify_fail("é‚£å€‹ã€Œæ±è¥¿ã€ä¸éœ€è¦æ€¥æ•‘ã€‚\n");
 
 //	if( dest==this_player() ) return notify_fail( chinese_mode?
-//		"Äã²»ÄÜ¶Ô×Ô¼ºÊ©ĞĞ¼±¾È¡£\n": "You can't aid yourself.\n" );
+//		"ä½ ä¸èƒ½å°è‡ªå·±æ–½è¡Œæ€¥æ•‘ã€‚\n": "You can't aid yourself.\n" );
 
 	if( dest->query("ghost") ) return notify_fail(
-		"Ì«³ÙÁË .... "+dest->query("c_name")+"ÒÑ¾­ËÀÁË¡£\n");
+		"å¤ªé²äº† .... "+dest->query("c_name")+"å·²ç¶“æ­»äº†ã€‚\n");
 
 	if( dest->query_temp("aided") ) return notify_fail(
-		dest->query("c_name") + "ÒÑ¾­±»¼±¾È¹ıÁË¡£\n");
+		dest->query("c_name") + "å·²ç¶“è¢«æ€¥æ•‘éäº†ã€‚\n");
 
 	hp = (int)dest->query( "hit_points" );
 	max_hp = (int)dest->query( "max_hp" );
 	if( hp==max_hp ) return notify_fail(
-		dest->query("c_name") + "²¢Ã»ÓĞÊÜÉË¡£\n" );
+		dest->query("c_name") + "ä¸¦æ²’æœ‰å—å‚·ã€‚\n" );
 
 	if( hp > max_hp/6 ) return notify_fail(
-		dest->query("c_name") + "µÄÉËÊÆ»¹Ã»ÓĞÑÏÖØµ½ĞèÒª¼±¾ÈµÄµØ²½¡£\n" );
+		dest->query("c_name") + "çš„å‚·å‹¢é‚„æ²’æœ‰åš´é‡åˆ°éœ€è¦æ€¥æ•‘çš„åœ°æ­¥ã€‚\n" );
 
 	skill = (int)this_player()->query_skill( "first-aid");
-	if( !skill ) return notify_fail("Äã²¢Ã»ÓĞÑ§¹ı¼±¾ÈµÄ¼¼ÄÜ¡£\n");
+	if( !skill ) return notify_fail("ä½ ä¸¦æ²’æœ‰å­¸éæ€¥æ•‘çš„æŠ€èƒ½ã€‚\n");
 
-	write("Äã¶Ô" + dest->query("c_name") + "½øĞĞ¼±¾È ....\n");
-	tell_object( dest, this_player()->query("c_name") + "¶ÔÄã½øĞĞ¼±¾È .... Äã¾õµÃºÃ¶àÁË£¡\n");
-	tell_room( environment(this_player()), this_player()->query("c_name") + "¶Ô" + dest->query("c_name") + "½øĞĞ¼±¾È ....\n",
+	write("ä½ å°" + dest->query("c_name") + "é€²è¡Œæ€¥æ•‘ ....\n");
+	tell_object( dest, this_player()->query("c_name") + "å°ä½ é€²è¡Œæ€¥æ•‘ .... ä½ è¦ºå¾—å¥½å¤šäº†ï¼\n");
+	tell_room( environment(this_player()), this_player()->query("c_name") + "å°" + dest->query("c_name") + "é€²è¡Œæ€¥æ•‘ ....\n",
 		({ this_player(), dest }) );
 	if( dest!=this_player() ) this_player()->add( "alignment", 25 );
 	dest->receive_healing( skill/2 + random(skill/2) );
@@ -54,10 +54,10 @@ int help()
 {
     write(can_read_chinese()?
     @C_HELP
-Ö¸Áî¸ñÊ½: aid <Ä³ÈË>
+æŒ‡ä»¤æ ¼å¼: aid <æŸäºº>
 
-Õâ¸öÖ¸ÁîÈÃÄã¶ÔÄ³¸öÈËÎï( »ò NPC )Ê©ĞĞ¼±¾È£¬ÓĞ¹Ø¼±¾ÈµÄÏ¸½ÚÓëÏŞÖÆÇë²Î
-¿¼ help first-aid¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ å°æŸå€‹äººç‰©( æˆ– NPC )æ–½è¡Œæ€¥æ•‘ï¼Œæœ‰é—œæ€¥æ•‘çš„ç´°ç¯€èˆ‡é™åˆ¶è«‹åƒ
+è€ƒ help first-aidã€‚
 C_HELP
     :@HELP
 Usage: aid <someone>

@@ -8,15 +8,15 @@ void init()
  
 void create()
 {
-        set_name( "cavalry permit", "Æï±øÁîÅÆ" );
+        set_name( "cavalry permit", "é¨å…µä»¤ç‰Œ" );
         add( "id", ({ "cavalry","permit" }) );
-        set_short( "Æï±øÁîÅÆ" );
+        set_short( "é¨å…µä»¤ç‰Œ" );
         set_long( @C_LONG
-ÕâÊÇÒ»Ãæ½ğÖÆµÄÁîÅÆ£¬ÉÏÃæ¿ÌÖø¡ºÄÁÂí¹ØÆï±øÁî¡»£¬¾İËµÕâ±ø·ûºÍÆï±øÍÅ³¤ÓĞÍ¬µÈ
-µÄµØÎ»£¬ÄÃÖø(hold)Ëü¿ÉÒÔ×ÔÓÉÊ¹ÓÃÄÁÂí¹ØµÄÂíÆ¥¡£
+é€™æ˜¯ä¸€é¢é‡‘åˆ¶çš„ä»¤ç‰Œï¼Œä¸Šé¢åˆ»è‘—ã€ç‰§é¦¬é—œé¨å…µä»¤ã€ï¼Œæ“šèªªé€™å…µç¬¦å’Œé¨å…µåœ˜é•·æœ‰åŒç­‰
+çš„åœ°ä½ï¼Œæ‹¿è‘—(hold)å®ƒå¯ä»¥è‡ªç”±ä½¿ç”¨ç‰§é¦¬é—œçš„é¦¬åŒ¹ã€‚
 C_LONG
                 );
-                set("unit","Ãæ");
+                set("unit","é¢");
                 set("weight", 10);
                 set("value",({10, "silver"}) );
                 set("no_sale", 1 );
@@ -25,20 +25,20 @@ C_LONG
 int hold_mark(string arg)
 {
     if( !arg || arg != "permit" ) return 0;
-    if ((string)environment(this_player())->query("short")=="Âí·¿" ) {
+    if ((string)environment(this_player())->query("short")=="é¦¬æˆ¿" ) {
         if (this_object()->query_temp("hold_permit") ) {
              tell_object(this_player(),
-                     "Âí·ò¶ÔÄãËµ£¬ÕâÃæÁîÅÆµÄÊ±Ğ§ÒÑ¹ıÁË¡£\n" );
+                     "é¦¬ä¼•å°ä½ èªªï¼Œé€™é¢ä»¤ç‰Œçš„æ™‚æ•ˆå·²éäº†ã€‚\n" );
              this_player()->set_temp("cavalry_mark",0);
               }
         else  {
              tell_object(this_player(),
-                "ÄãÄÃÖøÁîÅÆ£¬Âí·òÏÅµÃÍ·¶¼²»¸ÒÌ§Ò»ÏÂ¡£\n" );
+                "ä½ æ‹¿è‘—ä»¤ç‰Œï¼Œé¦¬ä¼•åš‡å¾—é ­éƒ½ä¸æ•¢æŠ¬ä¸€ä¸‹ã€‚\n" );
              this_player()->set_temp("cavalry_mark",1);
              this_object()->set_temp("hold_permit",1);
               }
         } else
         tell_object(this_player(),
-                "ÄãÄÃÖøÁîÅÆÏñ¸ö°×³ÕÒ»Ñù»ÎÑ½»ÎÑ½µØ£¬¿ÉÊÇÃ»ÈËÀíÄã¡£\n" );
+                "ä½ æ‹¿è‘—ä»¤ç‰Œåƒå€‹ç™½ç—´ä¸€æ¨£æ™ƒå‘€æ™ƒå‘€åœ°ï¼Œå¯æ˜¯æ²’äººç†ä½ ã€‚\n" );
         return 1;
 }

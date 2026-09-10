@@ -3,14 +3,14 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("Sky Cloth","ÌìÒÂ");
+        set_name("Sky Cloth","å¤©è¡£");
         add("id",({"cloth"}) );
         set_short( "@@title");
         set_long(
-"´«ËµÖĞÌìÒÂÊÇÎŞ·ìµÄ£¬Èç½ñÄã¿´µ½µÄÕâ¼şÒÂ·şÕæµÄÕÒ²»µ½½Ó·ì£¬²»ÖªµÀ
-ÊÇÈçºÎÖÆ³ÉµÄ¡£\n"
+"å‚³èªªä¸­å¤©è¡£æ˜¯ç„¡ç¸«çš„ï¼Œå¦‚ä»Šä½ çœ‹åˆ°çš„é€™ä»¶è¡£æœçœŸçš„æ‰¾ä¸åˆ°æ¥ç¸«ï¼Œä¸çŸ¥é“
+æ˜¯å¦‚ä½•è£½æˆçš„ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight", 120 );
         set( "type", "body" );
         set( "light", 1);
@@ -24,5 +24,5 @@ void create()
 
 string title()
 {
-	return set_color("ÌìÒÂ","HIW");
+	return set_color("å¤©è¡£","HIW");
 }

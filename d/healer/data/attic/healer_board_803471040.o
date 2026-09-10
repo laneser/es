@@ -1,52 +1,52 @@
 #d/healer/building/healer_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"���԰�","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"���԰�","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷��뿴 help board��
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"��ҽ�����԰�",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"行醫者留言板",])
 messages ({(["id":797,"title":"Re: < no title >","body":"On Mon Jun  5, Kinta wrote:
-> �ǹ��ɶ��Сξ��~~�Ҷ���һ��ȥ���ྐྵȻ��ż����
-> ����û�кúõ��õ�һ�����...���İ�����ʧ����~
-> �Ҷ���˵���Сξ�������~~�������׼��~�ٺ�~~
-> Сξ~~ע��ͻϮ�~!
-�����ĸ����°�???pkdҲ�ǰ���Ү!!
-","time":802603163,"poster":"Upu",]),(["id":799,"title":"< no title >","body":"�չ���Ҫ��һ��ˮ
-�ǹ��� upu ����Ҽ�ס..�����۸��Һ� pkd...
-[D��Ͳ�Ҫ���һ�������...������
+> 那鍋可惡的小尉啦~~我都第一次去交青竟然給偶溜了
+> 害我沒有好好的敲到一筆竹□...害的阿德損失慘重~
+> 我都嘛說這鍋小尉還真會跑~~不過我俗間多~嘿嘿~~
+> 小尉~~注意突襲喔~!
+阿德哪個阿德啊???pkd也是阿德耶!!
+","time":802603163,"poster":"Upu",]),(["id":799,"title":"< no title >","body":"照慣例要灌一下水
+那鍋死 upu 你給我記住..老是欺負我和 pkd...
+[D你就不要讓我花轟起來...打死你
 good luck for all healers...:)
 ","time":802611784,"poster":"Kinta",]),(["id":800,"body":"On Tue Jun  6, Dey wrote:
 > On Tue Jun  6, Kinta wrote:
-> > ûɶ��~~������һ��ˮ
-> > ��ΪҪ�þò�����
-> > ��ŵ�����˰�~~
-> > һֱ�� dey ���úܷ�~�ܲ�����˼
-> > ��Ϊû��̧���Ǩ�~ֻ��~~
-> > һЩ�˶�Ҫ����ȥ��~�ڴ�ף������
-> > �пջ�������������Щ����~�������������~
-> > ��Ҽ���~~����~~�ظ�һ��
-> > �ǹ���Сξ��Ҫ��~����һ��ȵ���~~������~
-> �Ǻ�...
-> ��Ҳ������...������ǵĻ�....
+> > 沒啥事~~照例灌一下水
+> > 因為要好久不玩了
+> > 大概到暑假了吧~~
+> > 一直讓 dey 覺得很煩~很不好意思
+> > 因為沒人抬□ㄇㄟ~只好~~
+> > 一些人都要當兵去了~在此祝福你們
+> > 有空回來看看我們這些新手~我真的是新手啦~
+> > 大家加油~~還有~~重複一次
+> > 那鍋死小尉不要跑~總有一天等到你~~ㄠ死你~
+> 呵呵...
+> 我也是新手...如果你是的化....
 > ,
-  ���������ǲ���~~~~
-  �ҿ϶�������....:PPPPPPPPPP
+  不管你們是不是~~~~
+  我肯定是新手....:PPPPPPPPPP
 ","title":"Re: Re: < no title >","time":802674162,"poster":"Jschen",]),(["id":801,"body":"On Wed Jun  7, Mu wrote:
-> 	��....û������scotch����̬������.....
-> 	��û��....��.....���Ұ�.....
-> 	���ĵͼ�������.....:P
+> 	唉....沒看過比scotch更變態的人了.....
+> 	真沒力....唉.....不幸阿.....
+> 	噁心低級加無聊.....:P
 > 					Mu....
 > 
-        ����~~~~
-         ����˵��~~~~
-        ��Ȼ���˱��ҵͼ����ļ�����~~~~
-       ʵ��#$@!%##@^%#$
-                            ��~~~~��
+        唉唉~~~~
+         就是說嘛~~~~
+        竟然有人比我低級噁心兼無聊~~~~
+       實在#$@!%##@^%#$
+                            八~~~~雲
 ","title":"Re: < no title >","time":802674380,"poster":"Jschen",]),(["id":802,"body":"On Thu Jun  8, Kinta wrote:
-> �չ���Ҫ��һ��ˮ
-> �ǹ��� upu ����Ҽ�ס..�����۸��Һ� pkd...
-> [D��Ͳ�Ҫ���һ�������...������
+> 照慣例要灌一下水
+> 那鍋死 upu 你給我記住..老是欺負我和 pkd...
+> [D你就不要讓我花轟起來...打死你
 > good luck for all healers...:)
-��ϧ��Ҫ����Ҳû������!!���϶�������!!
-Ҫ������!!�ÿ����!!
-��û������!!��Ҳ����ȥ��landy��!!
+可惜你要砍我也沒機會了!!資料都不見了!!
+要重練羅!!好可憐喔!!
+你沒機會羅!!我也可以去見landy羅!!
 ","title":"Re: < no title >","time":802686046,"poster":"Upu",]),(["id":804,"title":"cry .....","body":"hi :
 
 	Since i play ES ...
@@ -60,106 +60,106 @@ good luck for all healers...:)
 > 	include suicide ..file broken ....
 > 		if i train again ...i will train 6 times spy ... :) ...
 > 
-wa.....�����ϰ�!!��Ȼû��������������������
-����ֻ������indra and ruby��!!
-","time":802730935,"poster":"Upu",]),(["id":806,"title":"< no title >","body":"û��..ֻ�ǲ�֪����һ��������Ȼ���� file broken ��ʱ�����ҵ�����
-�����ҵ��� ruby :PP
-ok..û����..Ҫ��ȥ������.
-��ټ�§  ^_^
-","time":802774305,"poster":"Lisa",]),(["id":809,"body":"��Ȼ����~~~~
-��~~~~
-��һ��ˮ��~~~~
-�ٺٺ�....:P
-","title":"��~~~~","time":802834625,"poster":"Guest",]),(["id":810,"body":"ǰ���ˮ~~~~
-������ǩ��˵~~~~
-���ǹ����Ӻ�Ҫ�����ҵ�~~~~
-������~~~~
-�ܻ���ǩ~~~~��~~~~
-����`~~~
-                                   ����
-","title":"����ǩ��","time":802834740,"poster":"Guest",]),(["id":811,"body":"����Ҫ������Ҫ explore....
-�Ҿ�����Щ��̫����...
-��Ϊ̽�ն��������������������� quest ��ȥ���(Ӧ���ǰ�?!)
-�����е� quests ����Ҫ�������ȼ��ܶ඼�� 18 19 ��
-��û������֮ǰû������ȥ��̽����Ϊֻ�����Լ�������Σ��
-���������иĳ����������Լ����ö�����Ҷ��Բ���ƽ
-�úڰ���½˵��~�������������ߵİ�ȫ�ش��������Ӧ��û���� explore ����
- queen smile ��������Щʮ��.ʮ�ļ������ȥ����һ��������?
-�����Ҿ�������������Ƿ���һЩ��̫����?
-ֻ��һЩСС�ĸо�~~
-","title":"< no title >","time":802864553,"poster":"Kinta",]),(["id":812,"title":"Re: �ϨۨϨ�~~~~","body":"On Sun Jun 11, Guest wrote:
-> ��~~~~
-> ������˼~~~~
-> �ǹ�jschen��ID������~~~~
-> ����~~~~
-> ֻ����ǰ��ҵ��....:P
-> ����~~~~
-> �ǹ�����·~~~~
-> ��������mail����ɽBBS��jjjj��....
-> email ��e4483145@alpha1.dec.ncku.edu.tw( ��ĳ��Ӳ�굽�ɨ�....:P)
-> ����~~~~
-> ��������~~~~
-> ������~~~~
+wa.....你有上啊!!居然沒教我碰到這種情況怎麼辦
+現在只有死纏indra and ruby了!!
+","time":802730935,"poster":"Upu",]),(["id":806,"title":"< no title >","body":"沒事..只是不知道哪一個壞蛋居然稱我 file broken 的時候搶我的名子
+還好找到了 ruby :PP
+ok..沒事了..要回去唸書了.
+暑假見摟  ^_^
+","time":802774305,"poster":"Lisa",]),(["id":809,"body":"既然來了~~~~
+那~~~~
+灌一下水羅~~~~
+嘿嘿嘿....:P
+","title":"灌~~~~","time":802834625,"poster":"Guest",]),(["id":810,"body":"前封灌水~~~~
+我忘了簽名說~~~~
+ㄚ那鍋男子漢要敢做敢當~~~~
+所以我~~~~
+跑回來籤~~~~名~~~~
+嘻嘻`~~~
+                                   八雲
+","title":"忘了簽名","time":802834740,"poster":"Guest",]),(["id":811,"body":"現在要升級還要 explore....
+我覺得有些不太合理...
+因為探險度是照你所逛的區域及所解的 quest 下去算的(應該是吧?!)
+但是有的 quests 所需要的能力等級很多都是 18 19 級
+在沒有升級之前沒有能力去做探險因為只會讓自己有生命危險
+可是現在有改成這樣子我自己覺得對新玩家而言不公平
+拿黑暗大陸說吧~真正能讓新手走的安全地帶不多而且應該沒算在 explore 裡面
+ queen smile 可能讓那些十三.十四級的玩家去逛那一塊區域嗎?
+所以我覺得這樣的設計是否有一些不太合理?
+只是一些小小的感覺~~
+","title":"< no title >","time":802864553,"poster":"Kinta",]),(["id":812,"title":"Re: ㄏㄛㄏㄛ~~~~","body":"On Sun Jun 11, Guest wrote:
+> ㄚ~~~~
+> 不好意思~~~~
+> 那鍋jschen的ID被搶了~~~~
+> 所以~~~~
+> 只好提前畢業了....:P
+> 對了~~~~
+> 那鍋大馬路~~~~
+> 結婚的日子mail到中山BBS的jjjj或....
+> email 到e4483145@alpha1.dec.ncku.edu.tw( 向某人硬坳到ㄉㄟ....:P)
+> 好啦~~~~
+> 就這樣啦~~~~
+> 掰掰掰~~~~
 > kiss bye my dear wife....
 > wave bye my dear friends....^_*
 >                                                       
->                                           ��  ��
-����email....Ϊe4483145@alpha6.dec.ncku.edu.tw
-����ֻ��alpha6��������....:P
-","time":802868407,"poster":"Guest",]),(["id":813,"title":"< no title >","body":"��ҿ����Ҷ��� No backup?
-�Ե�~~I die one time so cant backup
-But �Ҳ��ѹ���~~��Ҫ���� silver ��ο��Ҳ�ǻ���ܵ�
+>                                           八  雲
+更正email....為e4483145@alpha6.dec.ncku.edu.tw
+好像只有alpha6可以收信....:P
+","time":802868407,"poster":"Guest",]),(["id":813,"title":"< no title >","body":"大家看到我都問 No backup?
+對的~~I die one time so cant backup
+But 我不難過啦~~但要給我 silver 安慰我也是會接受的
 ","time":802892926,"poster":"June",]),(["id":816,"body":"dear healers:
-������Ҫ�����Ŷ...
-��������� mela & d will get married...^_^
-�пյ�����һ�Ψ��...
+美拉我要結婚了哦...
+這個星期天 mela & d will get married...^_^
+有空的來參一ㄎㄚ喔...
                      Mela
-","title":"��Ҫ�����...","time":803063250,"poster":"Mela",]),(["id":817,"title":"Re: ��Ҫ�����...","body":"On Wed Jun 14, Mela wrote:
+","title":"我要結婚了...","time":803063250,"poster":"Mela",]),(["id":817,"title":"Re: 我要結婚了...","body":"On Wed Jun 14, Mela wrote:
 > dear healers:
-> ������Ҫ�����Ŷ...
-> ��������� mela & d will get married...^_^
-> �пյ�����һ�Ψ��...
+> 美拉我要結婚了哦...
+> 這個星期天 mela & d will get married...^_^
+> 有空的來參一ㄎㄚ喔...
 >                      Mela
 
-	��.. ����Ϣ..
-	mela ��֪���Ѿ��ͼ����˽ڹ���
+	唉.. 舊消息..
+	mela 不知道已經和幾個人節過婚
 
 ","time":803143168,"poster":"Spy",]),(["id":818,"title":"< no title >","body":"
-	�ǺǺ�... ^.^
+	呵呵呵... ^.^
 
-	I am NP ѽ... ^.^
+	I am NP 呀... ^.^
 
-	ϣ������..����..����չ�ѽ.. ^.^
+	希望大哥哥..大姐姐..多多照顧呀.. ^.^
 
-	���Ҹ�����һ��ѽ...
+	讓我跟大樹一樣呀...
 
-	�ǺǺ�... ^.^
+	呵呵呵... ^.^
 
 			P ^.^
-","time":803149861,"poster":"P",]),(["id":820,"title":"��ӥ��","body":"�찡~~~Ҫ quit ����֪��Ҫ remove ��ӥ��
-���˷Ѷ����
+","time":803149861,"poster":"P",]),(["id":820,"title":"光鷹盾","body":"天啊~~~要 quit 都不知道要 remove 光鷹盾
+很浪費東西喔
 ","time":803161418,"poster":"June",]),(["id":821,"body":"On Wed Jun 14, Mela wrote:
 > dear healers:
-> ������Ҫ�����Ŷ...
-> ��������� mela & d will get married...^_^
-> �пյ�����һ�Ψ��...
+> 美拉我要結婚了哦...
+> 這個星期天 mela & d will get married...^_^
+> 有空的來參一ㄎㄚ喔...
 >                      Mela
 
-	 ��˵��Ψ�һҪ�����Ҫƭ����Ү,mela С���...��һƭ��������....
-	������һ��,ɱ���.....
+	 聽說這次ㄉ一要結婚是要騙戒子耶,mela 小心喔...ㄉ一騙完戒子後會....
+	像昨天一樣,殺夫喔.....
 
 						beautiful jan
-							С��
-","title":"Re: ��Ҫ�����...","time":803178524,"poster":"Jan",]),(["id":822,"body":"
-	�Ǹ���honey ���������Ǯ,�����컹..���м����Ǹ�������
-	��Ż�Ƿ�Ҿ����ǧ������ʮ�˿�����
-	��㻹...
+							小咪
+","title":"Re: 我要結婚了...","time":803178524,"poster":"Jan",]),(["id":822,"body":"
+	那個死honey 借我那麼多錢,還不快還..還有加上那個保護費
+	大概還欠我九萬八千六百五十八塊淫幣
+	快點還...
 
 						beautiful jan
-						С��
-","title":"honey �콻������","time":803178639,"poster":"Jan",]),(["id":823,"body":"���Ҿ�����Ե�С�Թ� kinta..
-�����~~�һ���֪��(��ѷ( julius) ���Ǳ��������ĵ��ֵ� --̨����߰�  :p *grimace*
-������� ,��̨�й�һ��~~��Ȼ�����ۡ��˨� 
-haha...û�� ...post һ�� .
+						小咪
+","title":"honey 快交保護費","time":803178639,"poster":"Jan",]),(["id":823,"body":"啊我就是最乖的小乖乖 kinta..
+真好玩~~我還不知道(阿遜( julius) 真是北港六尺四的兄弟 --臺中五尺半  :p *grimace*
+還真好玩 ,到臺中逛一下~~竟然看到汙□ㄋㄟ 
+haha...沒事 ...post 一下 .
 ","title":"< no title >","time":803211115,"poster":"Kinta",]),})
 id_ref 833

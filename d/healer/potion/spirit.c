@@ -6,15 +6,15 @@ inherit MEDICINE;
 void create()
 {
 	medicine::create();
-	set_name("spirit pill","ÐÑÄÔÍè" );
+	set_name("spirit pill","é†’è…¦ä¸¸" );
 	add( "id", ({"pill"}) );
-	set_short("ÐÑÄÔÍè");
+	set_short("é†’è…¦ä¸¸");
 	set_long(
-		"ÕâÊÇÒ»·ÝÐÐÒ½ÕßËùµ÷ÅäµÄÐÑÄÔÍè£¬³Ô(eat)ÏÂËü¿ÉÒÔ½â³ý»ìÂÒµÄ\n"
-		"×´Ì¬¡£\n"
+		"é€™æ˜¯ä¸€ä»½è¡Œé†«è€…æ‰€èª¿é…çš„é†’è…¦ä¸¸ï¼Œåƒ(eat)ä¸‹å®ƒå¯ä»¥è§£é™¤æ··äº‚çš„\n"
+		"ç‹€æ…‹ã€‚\n"
 	);
 	set( "can_eat", 1 );
-	set( "unit", "Á£" );
+	set( "unit", "ç²’" );
 	set( "weight", 10 );
 	set( "value", ({ 30, "silver" }) );
         set( "medication", 50 );
@@ -24,6 +24,6 @@ void eat(object player)
 {
 	if( !player->query("conditions/confused") ) return;
 //      tell_object( player,
-//             "ÄãËù¾õµÄÄÔ×ÓÇåÐÑ¶àÁË !\n");
+//             "ä½ æ‰€è¦ºçš„è…¦å­æ¸…é†’å¤šäº† !\n");
 	CONFUSED->remove_effect(player);
 }

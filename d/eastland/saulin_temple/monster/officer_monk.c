@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "Bonze", "°ãÈôÌÃ ÎäÉ®" );
+	set_name( "Bonze", "èˆ¬è‹¥å ‚ æ­¦åƒ§" );
 	add( "id", ({ "bonze","monk" }) );
-	set_short( "°ãÈôÌÃ ÎäÉ®" );
+	set_short( "èˆ¬è‹¥å ‚ æ­¦åƒ§" );
 	set_long(
-		"Äã¿´µ½Ò»¸öÎäÉ®£¬ËûÕýÔÚÑ°ÕÒ¶ÔÊÖÏëÒªÔÚÊ¦Êå²®ÃæÇ°Ò»Õ¹×Ô¼ºËùÑ§¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹æ­¦åƒ§ï¼Œä»–æ­£åœ¨å°‹æ‰¾å°æ‰‹æƒ³è¦åœ¨å¸«å”ä¼¯é¢å‰ä¸€å±•è‡ªå·±æ‰€å­¸ã€‚\n"
 	);
-	set("unit", "Ãû" );
+	set("unit", "å" );
 	set("race", "human" );
 	set("gender", "male" );
 	set("alignment",  300 );
@@ -35,9 +35,9 @@ void create()
 	set_skill( "defend", 60 );
 	set( "chat_chance", 10 );
 	set( "att_chat_output", ({
-		"ÎäÉ®´ó½Ð: ¿ì¿ìÈÃ·ðÒ¯´È±¯ÁËÄãÃÇ°É!!\n",
-		"ÎäÉ®ËµµÀ: ÊøÊÖ¾Í¸¿ÎÒ¾ÍÈÃÄãÃÇÉÙÊÜÐ©×ï!\n",
-		"ÎäÉ®ËµµÀ: ÏëÔÚÎÒÊ¦Êå²®ÊÖÏÂÌÖµÄºÃÈ¥£¿Äã³ÃÔç±ð×÷ÇåÇï´óÃÎ°É!\n"
+		"æ­¦åƒ§å¤§å«: å¿«å¿«è®“ä½›çˆºæ…ˆæ‚²äº†ä½ å€‘å§!!\n",
+		"æ­¦åƒ§èªªé“: æŸæ‰‹å°±ç¸›æˆ‘å°±è®“ä½ å€‘å°‘å—äº›ç½ª!\n",
+		"æ­¦åƒ§èªªé“: æƒ³åœ¨æˆ‘å¸«å”ä¼¯æ‰‹ä¸‹è¨Žçš„å¥½åŽ»ï¼Ÿä½ è¶æ—©åˆ¥ä½œæ¸…ç§‹å¤§å¤¢å§!\n"
 	}) );
 
 	wield_weapon( SAULIN_OBJ"blade4" );
@@ -57,7 +57,7 @@ void help_me_saulin(object who, object victim)
 	if( !attackers || member_array(victim, attackers)==-1 )
 		kill_ob(victim);
 	tell_room( environment(), 
-		"ÎäÉ®Í¦Éí±£»¤" + who->query("c_name") + "¡£\n"
+		"æ­¦åƒ§æŒºèº«ä¿è­·" + who->query("c_name") + "ã€‚\n"
 		, this_object()
 	);
 }

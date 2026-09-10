@@ -5,9 +5,9 @@ inherit OBJECT;
 int filled = 0;
 void create()
 {
-	set_name("broken gourd", "ÆÆµôµÄºùÂ«Æ°¶ù");
+	set_name("broken gourd", "ç ´æ‰çš„è‘«è˜†ç“¢å…’");
 	add( "id", ({ "gourd" }) );
-	set_short("ÆÆµôµÄºùÂ«Æ°¶ù" );
+	set_short("ç ´æ‰çš„è‘«è˜†ç“¢å…’" );
 	set("long",
 		"@@query_c_long"
 	);
@@ -18,12 +18,12 @@ void create()
 string query_c_long()
 {
 	if( filled )
-		return "Õâ¸öºùÂ«Æ°¶ù×°ÂúÁËÇåË®¡£\n";
+		return "é€™å€‹è‘«è˜†ç“¢å…’è£æ»¿äº†æ¸…æ°´ã€‚\n";
 	else
 		return @C_LONG
-Õâ¸öºùÂ«Æ°¶ù¿ÉÒÔÓÃÀ´×°Ë®¡£µ±È»Äã¿ÉÒÔÓÃËüÀ´ºÈË®£¬µ«ÊÇÏÖÔÚËüºÃÏñÊÇÓÃÀ´
-¸øÖ²Îï½½Ë®(water) ÓÃµÄ£¬²»¹ÜÄãÒªÔõ÷áÓÃ£¬×ÜµÃÒªÏÈ°ÑËü×°Âú(fill)Ë®°É! 
-²»¹ıËüµ×²¿ÁÑÁË¸öĞ¡·ì£¬¿ÖÅÂ³Å²»ÁË¶à¾Ã¡£
+é€™å€‹è‘«è˜†ç“¢å…’å¯ä»¥ç”¨ä¾†è£æ°´ã€‚ç•¶ç„¶ä½ å¯ä»¥ç”¨å®ƒä¾†å–æ°´ï¼Œä½†æ˜¯ç¾åœ¨å®ƒå¥½åƒæ˜¯ç”¨ä¾†
+çµ¦æ¤ç‰©æ¾†æ°´(water) ç”¨çš„ï¼Œä¸ç®¡ä½ è¦æ€éº¼ç”¨ï¼Œç¸½å¾—è¦å…ˆæŠŠå®ƒè£æ»¿(fill)æ°´å§! 
+ä¸éå®ƒåº•éƒ¨è£‚äº†å€‹å°ç¸«ï¼Œææ€•æ’ä¸äº†å¤šä¹…ã€‚
 C_LONG
 		;
 }
@@ -41,16 +41,16 @@ int fill_water(string arg)
 	object env;
 
 	if( !arg || arg!="gourd" )
-		return notify_fail("ÓÃÊ²÷á×°Ë®£¿\n");
+		return notify_fail("ç”¨ä»€éº¼è£æ°´ï¼Ÿ\n");
 	if( filled )
-		return notify_fail("ºùÂ«Æ°¶ùÖĞÒÑ¾­×°ÂúÇåË®ÁË¡£\n" );
+		return notify_fail("è‘«è˜†ç“¢å…’ä¸­å·²ç¶“è£æ»¿æ¸…æ°´äº†ã€‚\n" );
 
 	env = environment(this_object());
 	if( living(env) ) env = environment(env);
 	if( !env->query("water_source") )
-		return notify_fail("ÕâÀïÃ»ÓĞË®....¡£\n" );
+		return notify_fail("é€™è£¡æ²’æœ‰æ°´....ã€‚\n" );
 	filled = 1;
-	write("Äã°ÑºùÂ«Æ°¶ù×°ÂúÇåË®¡£\n");
+	write("ä½ æŠŠè‘«è˜†ç“¢å…’è£æ»¿æ¸…æ°´ã€‚\n");
 
 	call_out("mess_up",180);
 	return 1;
@@ -60,32 +60,32 @@ int squirt_water(string arg)
 {
 
 	if( !arg || arg!="herb" )
-		return notify_fail("½½Ê²÷á£¿\n");
+		return notify_fail("æ¾†ä»€éº¼ï¼Ÿ\n");
 
-	if( !filled ) return notify_fail("ºùÂ«Æ°¶ùÊÇ¿ÕµÄ¡£\n" );
+	if( !filled ) return notify_fail("è‘«è˜†ç“¢å…’æ˜¯ç©ºçš„ã€‚\n" );
 
 	filled = 0;
 
-	if ((string)environment(this_player())->query("short") != "Ò©ÆÔ") 
-		return notify_fail("Äã°ÑºùÂ«Æ°ÖĞµÄË®½½ÔÚÉí±ßµÄµØÉÏ¡£\n");
+	if ((string)environment(this_player())->query("short") != "è—¥åœƒ") 
+		return notify_fail("ä½ æŠŠè‘«è˜†ç“¢ä¸­çš„æ°´æ¾†åœ¨èº«é‚Šçš„åœ°ä¸Šã€‚\n");
 
 
 	if( this_player()->query_temp("herb_quest/step") ) {
 	  write(
-		"Äã°ÑºùÂ«Æ°¶ùÖĞµÄË®½½ÔÚÄãÖÖµÄ»ØÑô²İÉÏ£¬ËüºÃÏñºÜÕñ·Ü£¬¿´À´ÄãµÄÒÆÖ²\n"
-		"³É¹¦\ÁË¡£Äã×îºÃÈ¥¸úÌìĞÄ´óÊ¦±¨¸æ(report)Ò»ÏÂ£¬ËûÒ»¶¨»áºÜ¸ßĞËµÄ!!\n\n");
+		"ä½ æŠŠè‘«è˜†ç“¢å…’ä¸­çš„æ°´æ¾†åœ¨ä½ ç¨®çš„å›é™½è‰ä¸Šï¼Œå®ƒå¥½åƒå¾ˆæŒ¯å¥®ï¼Œçœ‹ä¾†ä½ çš„ç§»æ¤\n"
+		"æˆåŠŸäº†ã€‚ä½ æœ€å¥½å»è·Ÿå¤©å¿ƒå¤§å¸«å ±å‘Š(report)ä¸€ä¸‹ï¼Œä»–ä¸€å®šæœƒå¾ˆé«˜èˆˆçš„!!\n\n");
 
 	if( (int)this_player()->query_quest_level("Tenshin's herb") < 1 ){
 		this_player()->finish_quest( "Tenshin's herb", 1 );
-		write( set_color("[ÄãÍê³ÉÁËÌìĞÄ´óÊ¦µÄÈÎÎñ£¬µÃµ½ 1500 µã¾­Ñé]\n","HIY"));
+		write( set_color("[ä½ å®Œæˆäº†å¤©å¿ƒå¤§å¸«çš„ä»»å‹™ï¼Œå¾—åˆ° 1500 é»ç¶“é©—]\n","HIY"));
 		this_player()->gain_experience(1500);
                 if((string)this_player()->query("class")=="scholar") {
-   write("ÄãËÆºõÌıµ½»ØÑô²İÎ¢ÈõµÄÉùÒô£¬Ğ»Ğ»Äã°ÑÎÒ¾È»î£¬ÎÒ»á°ÑÄãµÄÒåĞĞ×ª¸æ¸ø\nÕÆ¹ÜÎÒÃÇµÄ²İ¾«Áé£¬Ò²ĞíÄã»áÓĞĞèÒªËüµÄµØ·½¡£\n");
+   write("ä½ ä¼¼ä¹è½åˆ°å›é™½è‰å¾®å¼±çš„è²éŸ³ï¼Œè¬è¬ä½ æŠŠæˆ‘æ•‘æ´»ï¼Œæˆ‘æœƒæŠŠä½ çš„ç¾©è¡Œè½‰å‘Šçµ¦\næŒç®¡æˆ‘å€‘çš„è‰ç²¾éˆï¼Œä¹Ÿè¨±ä½ æœƒæœ‰éœ€è¦å®ƒçš„åœ°æ–¹ã€‚\n");
                    this_player()->set("demand/grass",1);
                 }
 	} else 
 	    tell_object(this_player(),
-	      "ÄãÓÖÖÖ»îÁËÒ»¿Ã»ØÑô²İ£¬ÌìĞÄ´óÊ¦Ò»¶¨»áºÜ¸ßĞËµÄ !!\n");
+	      "ä½ åˆç¨®æ´»äº†ä¸€æ£µå›é™½è‰ï¼Œå¤©å¿ƒå¤§å¸«ä¸€å®šæœƒå¾ˆé«˜èˆˆçš„ !!\n");
 
 	  this_player()->set_temp("herb_quest/step",0);
 	}
@@ -99,6 +99,6 @@ void mess_up()
 	if ( !filled ) return ; 
         owner = environment(this_object());
         if( living(owner) )
-          tell_object( owner, "°¡ ! ²»Öª²»¾õÖĞÆ°ÖĞµÄË®ÒÑ¾­Â©¹âÁË¡£\n" );
+          tell_object( owner, "å•Š ! ä¸çŸ¥ä¸è¦ºä¸­ç“¢ä¸­çš„æ°´å·²ç¶“æ¼å…‰äº†ã€‚\n" );
 	filled=0;
 }

@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "spud", "Ğ¡³úÍ·");
+        set_name( "spud", "å°é‹¤é ­");
         add ("id",({ "spud"}) );
-        set_short("Ğ¡³úÍ·");
-        set("unit", "°Ñ");
+        set_short("å°é‹¤é ­");
+        set("unit", "æŠŠ");
         set_long(
-            "ÕâÊÇÒ»°ÑÓÃÀ´ÕûµØµÄĞ¡³úÍ·¡£\n"
+            "é€™æ˜¯ä¸€æŠŠç”¨ä¾†æ•´åœ°çš„å°é‹¤é ­ã€‚\n"
         );
         set( "weapon_class", 6 );
         set( "type", "blunt" );                        

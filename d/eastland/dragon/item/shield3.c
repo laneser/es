@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("occult shield", "ÉñÃØ¶ÜÅÆ");
+        set_name("occult shield", "ç¥ç§˜ç›¾ç‰Œ");
         add( "id", ({ "shield" }) );
-        set_short("ÉñÃØ¶ÜÅÆ");
+        set_short("ç¥ç§˜ç›¾ç‰Œ");
         set_long(
-                "ÉñÃØ¶ÜÅÆ\n"
+                "ç¥ç§˜ç›¾ç‰Œ\n"
         );
-        set("unit","Ãæ");
+        set("unit","é¢");
         set( "type", "shield" );
         set( "material", "light_metal" );
         set( "armor_class", 6 );

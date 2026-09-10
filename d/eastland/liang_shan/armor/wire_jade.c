@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wire jade", "ÉşÎÄÓñÅå");
+        set_name("wire jade", "ç¹©æ–‡ç‰ä½©");
         add( "id", ({ "jade" }) );
-        set_short("ÉşÎÄÓñÅå");
+        set_short("ç¹©æ–‡ç‰ä½©");
         set_long(
-                "ÕâÊÇÒ»¿éÓĞÉşÎÄµÄ¹Å´úÓñÅå....\n"
+                "é€™æ˜¯ä¸€å¡Šæœ‰ç¹©æ–‡çš„å¤ä»£ç‰ä½©....\n"
         );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set( "type", "misc" );
         set( "material", "element");
         set( "armor_class", 0);

@@ -6,14 +6,14 @@ void create()
 {
     ::create();
     set_level(14);
-    set_name("peacock","¿×È¸");
+    set_name("peacock","å­”é›€");
     add("id",({"peacock"}) );
-    set_short("¿×È¸");
+    set_short("å­”é›€");
     set_long(@LONG
-Ò»Ö»·Ç³£Æ¯ÁÁµÄÄñ£¬ËüÊÇÔÂ¶ÁÑøµÄ³èÎï¡£
+ä¸€éš»éå¸¸æ¼‚äº®çš„é³¥ï¼Œå®ƒæ˜¯æœˆè®€é¤Šçš„å¯µç‰©ã€‚
 LONG
             );
-    set("unit","Ö»");
+    set("unit","åª");
     set_perm_stat( "str", 22 );
     set_perm_stat( "dex", 16 );
     set_perm_stat( "kar", 20 );
@@ -27,8 +27,8 @@ LONG
     set( "natural_max_damage2", 25 );
     set("chicken",1);
     set( "tactic_func", "my_attack" );
-    set_c_verbs( ({ "%sÓÃÇ°×¦×¥Ïò%s", "%sÓÃËüµÄ×ìÍù%s×ÄÈ¥" }) );
-    set_c_limbs( ({ "Í·²¿", "Î²°Í", "ÍÈ²¿" }) );
+    set_c_verbs( ({ "%sç”¨å‰çˆªæŠ“å‘%s", "%sç”¨å®ƒçš„å˜´å¾€%så•„å»" }) );
+    set_c_limbs( ({ "é ­éƒ¨", "å°¾å·´", "è…¿éƒ¨" }) );
 }
 int can_help( object ob )
 {
@@ -47,7 +47,7 @@ int my_attack()
             "can_help", this_object() );
    for( i=0; i<sizeof(couples); i++ ) {
        tell_room( environment(this_object()), couples[i]->query("c_name")+
-             "Å­µÀ:É±É±É±!!\n",couples[i]);
+             "æ€’é“:æ®ºæ®ºæ®º!!\n",couples[i]);
        couples[i]->kill_ob(victim);
    }
    return 0;

@@ -9,13 +9,13 @@ void create ()
 
         ::create();
         set_level(3);
-        set_name("Elven lady", "Å®¾«Áé" );
+        set_name("Elven lady", "å¥³ç²¾éˆ" );
         add ("id", ({"elf", "lady" }) );
-        set_short( "Å®¾«Áé" );
-        set("unit","Î»");
+        set_short( "å¥³ç²¾éˆ" );
+        set("unit","ä½");
         set_long(
-           " Å®¾«ÁéÊÇÐÁÇÚµÄ¹¤×÷Õß£¬ÓÉì¶ËýÃÇµÄÅ¬Á¦Ê¹µÄ¾«Áé´å\n"
-           " ¿´ÆðÀ´¾®¾®ÓÐÌõ¡£\n" 
+           " å¥³ç²¾éˆæ˜¯è¾›å‹¤çš„å·¥ä½œè€…ï¼Œç”±æ–¼å¥¹å€‘çš„åŠªåŠ›ä½¿çš„ç²¾éˆæ‘\n"
+           " çœ‹èµ·ä¾†äº•äº•æœ‰æ¢ã€‚\n" 
         );
         set_perm_stat("str", 2);
         set_perm_stat("int", 4);
@@ -27,8 +27,8 @@ void create ()
         set ("gender", "female");
         set("wealth/silver",30);
         set ("race", "elf");
-        set_c_verbs(({"%ÓÃ%sÏò%s¿³È¥","ÓÃ%sÏò%s´ÌÈ¥"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_verbs(({"%ç”¨%så‘%sç åŽ»","ç”¨%så‘%såˆºåŽ»"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         weapon= new(LWEAPON"carver");
         weapon->move(this_object());

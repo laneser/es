@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "long spear", "³¤Ã¬" );
+	set_name( "long spear", "é•·çŸ›" );
 	add( "id", ({ "spear" }) );
-	set_short( "³¤Ã¬" );
+	set_short( "é•·çŸ›" );
 	set_long(
-		"Õâ¸ù³¤Ã¬ÊÇÓÃÒ»Ö¦³¤Ä¾¹÷£¬ÔÚÄ©¶Ë°óÉÏÒ»¿é¼âÈñµÄÑÒÊ¯ËéÆ¬ÖÆ³É¡£\n"
+		"é€™æ ¹é•·çŸ›æ˜¯ç”¨ä¸€æé•·æœ¨æ£ï¼Œåœ¨æœ«ç«¯ç¶ä¸Šä¸€å¡Šå°–éŠ³çš„å²©çŸ³ç¢ç‰‡è£½æˆã€‚\n"
 	);
-	set( "unit", "Ö¦" );
+	set( "unit", "æ" );
 	set( "weight", 90 );
 	set( "type", "thrusting" );
 	set( "weapon_class", 13 );

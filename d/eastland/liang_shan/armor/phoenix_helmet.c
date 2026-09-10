@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("phoenix_wing helmet", "·ï³á×Ï½ğ¹Ú");
+        set_name("phoenix_wing helmet", "é³³ç¿…ç´«é‡‘å† ");
         add( "id", ({ "helmet" }) );
-        set_short( "phoenix_wing helmet", "·ï³á×Ï½ğ¹Ú");
+        set_short( "phoenix_wing helmet", "é³³ç¿…ç´«é‡‘å† ");
         set_long(
                 "A metal helmet which is like wing of phoenix.  \n",
-                "ÕâÊÇÓÃ×Ï½ğÖÆ³ÉµÄÍ·¹Ú£¬ÔìĞÍÈç´óÄñ³åÌì·ÉÆğ£® \n"
+                "é€™æ˜¯ç”¨ç´«é‡‘è£½æˆçš„é ­å† ï¼Œé€ å‹å¦‚å¤§é³¥æ²–å¤©é£›èµ·ï¼ \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "heavy_metal");
         set( "armor_class", 10 );

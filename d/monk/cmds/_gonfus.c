@@ -16,36 +16,36 @@ int cmd_gonfus()
 	known = (mapping)this_player()->query("monk_gonfu");
 	exp = (mapping)this_player()->query("gonfus_exp");
 	if( !known || sizeof(known) == 0 ) {
-		write("ÄãÄ¿Ç°²»»áÈÎºÎ¹¦\·ò¡£\n");
+		write("ä½ ç›®å‰ä¸æœƒä»»ä½•åŠŸå¤«ã€‚\n");
 		return 1;
 	}
 
 
-	msg = "ÄãÄ¿Ç°ËùÄÜÊ¹ÓÃµÄ¹¦\·òÓĞ:\n";
+	msg = "ä½ ç›®å‰æ‰€èƒ½ä½¿ç”¨çš„åŠŸå¤«æœ‰:\n";
 	gonfu = keys(known);
 	for( i=0; i<sizeof(gonfu); i++ ) {
 		if( gonfu[i] == "fist" || gonfu[i]=="heal" ) continue;
 		msg +=
-		sprintf("%14-s(%14-s)  µÚ%3dÖØ  (ÊìÁ·¾­ÑéÖµ%d) \n", to_chinese(gonfu[i]), 
+		sprintf("%14-s(%14-s)  ç¬¬%3dé‡  (ç†Ÿç·´ç¶“é©—å€¼%d) \n", to_chinese(gonfu[i]), 
          	capitalize(gonfu[i]),  known[gonfu[i]], ( exp ? exp[gonfu[i]] : 0 )) ;
        }
 
 	if( gonfu = known["fist"] ) {
-		tmp = "\n»ù±¾È­·¨: " ;
+		tmp = "\nåŸºæœ¬æ‹³æ³•: " ;
 		for( i=0; i<sizeof(gonfu); i++ )
 			tmp += 
 				sprintf("%s(%s), ", to_chinese(gonfu[i]), gonfu[i]) ;
 		msg += iwrap(tmp, 60);
 	}
 	if( gonfu = known["heal"] ) {
-		tmp = "\nÒ½ÁÆĞÄ·¨¼°Ö¸·¨: " ;
+		tmp = "\né†«ç™‚å¿ƒæ³•åŠæŒ‡æ³•: " ;
 		for( i=0; i<sizeof(gonfu); i++ )
 			tmp += 
 				sprintf("%s(%s), ", to_chinese(gonfu[i]), gonfu[i]) ;
 		msg += iwrap(tmp, 60);
 	}
         if ( this_player()->query("monk_score") ) {
-	msg += sprintf("\nÄã¶ÔÉÙÁÖµÄ¹±Ï×¹¦\ÀÍÓĞ %d µã\n\n",(int)this_player()->query("monk_score"));
+	msg += sprintf("\nä½ å°å°‘æ—çš„è²¢ç»åŠŸå‹æœ‰ %d é»\n\n",(int)this_player()->query("monk_score"));
                                                    }
 	write(set_color(msg,"GRN",this_player()));
 	return 1;
@@ -54,11 +54,11 @@ int cmd_gonfus()
 int help()
 {
 	write( @HELP
-ÓÃ·¨ : gonfus
-Õâ¸öÖ¸Áî»áÁĞ³öÄ¿Ç°ÄãËùÍ¨ÏşµÄ¹¦·òÒÔ¼°µÈ¼¶£¬ÁíÍâÒ²»áÁĞ³öÄãÄ¿Ç°¶ÔÉÙÁÖËÂµÄ
-¹±Ï×¶È¡£
+ç”¨æ³• : gonfus
+é€™å€‹æŒ‡ä»¤æœƒåˆ—å‡ºç›®å‰ä½ æ‰€é€šæ›‰çš„åŠŸå¤«ä»¥åŠç­‰ç´šï¼Œå¦å¤–ä¹Ÿæœƒåˆ—å‡ºä½ ç›®å‰å°å°‘æ—å¯ºçš„
+è²¢ç»åº¦ã€‚
 
-²Î¿¼ : fist
+åƒè€ƒ : fist
 HELP
 	      );
 	return 1;

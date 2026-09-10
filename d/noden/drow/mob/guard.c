@@ -6,13 +6,13 @@ void create ()
 {
         ::create();
         set_level(10);
-        set_name( "Drow guard","ºÚ°µ¾«ÁéÊØÎÀ" );
+        set_name( "Drow guard","é»‘æš—ç²¾éˆå®ˆè¡›" );
         add ("id", ({ "drow", "guard" }) );
-        set_short( "Drow guard","ºÚ°µ¾«ÁéÊØÎÀ" );
-        set("unit","Î»");
+        set_short( "Drow guard","é»‘æš—ç²¾éˆå®ˆè¡›" );
+        set("unit","ä½");
         set_long(
 @C_LONG
-ËûÊÇÕâ¸öºÚ°µ´åÂäÄÚµÄÊØÎÀ£¬ÕıÏñËÀÓã°ãµÄÕ¾Öø¡£
+ä»–æ˜¯é€™å€‹é»‘æš—æ‘è½å…§çš„å®ˆè¡›ï¼Œæ­£åƒæ­»é­šèˆ¬çš„ç«™è‘—ã€‚
 C_LONG
         );
         set_perm_stat("str", 15);
@@ -29,8 +29,8 @@ C_LONG
         set("wealth/silver",50);
    set( "weight", 700 );
         set ("race", "drow");
-        set_c_verbs(({"%ÓÃ%sÏò%s¿³È¥","ÓÃ%sÏò%s´ÌÈ¥"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","ÊÖ±Û"}));
+        set_c_verbs(({"%ç”¨%så‘%sç å»","ç”¨%så‘%såˆºå»"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","æ‰‹è‡‚"}));
         wield_weapon(OBJ"copper_hammer");
         equip_armor(ARM"copper_arm");
         // equip_armor(ARM"a23");

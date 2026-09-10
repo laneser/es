@@ -9,15 +9,15 @@ void create ()
 
         ::create();
         set_level(10);
-        set_name( "Rich man", "Ö£´ó»§" );
+        set_name( "Rich man", "é„­å¤§æˆ¶" );
         add ("id", ({ "draconian", "man","rich" }) );
-        set_short(" Ö£´ó»§");
-        set("unit","Î»");
+        set_short(" é„­å¤§æˆ¶");
+        set("unit","ä½");
         set("alignment",-100);
         set("weight",1000);
         set("wealth/gold",400);
         set_long(
-           "Ö£´ó»§ÊÇµØÏÂ³ÇÖĞ×îÓĞÇ®µÄÈË£¬ËûµÄ¿ÚÍ·ìøÊÇ:ÀÏ×ÓÊ²÷á¶¼Ã»ÓĞ¾ÍÊÇÇ®¶à¡£\n"
+           "é„­å¤§æˆ¶æ˜¯åœ°ä¸‹åŸä¸­æœ€æœ‰éŒ¢çš„äººï¼Œä»–çš„å£é ­ç¦ªæ˜¯:è€å­ä»€éº¼éƒ½æ²’æœ‰å°±æ˜¯éŒ¢å¤šã€‚\n"
         );
         set("natural_defense_bonus",30);
         set ("natural_weapon_class1", 60);
@@ -32,5 +32,5 @@ void create ()
         set_perm_stat("str", 30);
         set_perm_stat("dex", 5);
         set_perm_stat("kar",30);
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 }       

@@ -8,7 +8,7 @@ void create()
 	set_save_file("adventurer_board");
 	set_location("/d/adventurer/hall/adv_guild");
 	set ("short.text", "Adventurer's bulletin board");
-	set ("c_short.text", "Ã°ÏÕÕßÁôÑÔ°å");
-	set ("c_long.text", "ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£\n"
-						"ÓÉì¶Ã°ÏÕÕß¹«»áÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÈÎºÎÈË¶¼»¶Ó­ÔÚÕâÀïÁôÑÔ¡£\n");
+	set ("c_short.text", "å†’éšªè€…ç•™è¨€æ¿");
+	set ("c_long.text", "é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚\n"
+						"ç”±æ–¼å†’éšªè€…å…¬æœƒæ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤ä»»ä½•äººéƒ½æ­¡è¿åœ¨é€™è£¡ç•™è¨€ã€‚\n");
 }

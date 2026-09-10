@@ -8,13 +8,13 @@ void create()
 {
         wielded=0;
         seteuid(getuid());
-        set_name("ying-yang ring","Á½ÒÇÖ¸»·");
+        set_name("ying-yang ring","å…©å„€æŒ‡ç’°");
         add("id",({"ring"}) );
-        set_short("Á½ÒÇÖ¸»·");
+        set_short("å…©å„€æŒ‡ç’°");
         set_long(
-"ÕâÊÇÒ»¶ÔÖ¸»·£¬Ò»ÒõÒ»Ñô£¬ÔÚÄãÁ½ÊÖ¼äÏà»¥»ÔÓ³¡£ÊÇÖî¸ğ¼ÒµÄ¼Ò´«Ö®±¦¡£\n"
+"é€™æ˜¯ä¸€å°æŒ‡ç’°ï¼Œä¸€é™°ä¸€é™½ï¼Œåœ¨ä½ å…©æ‰‹é–“ç›¸äº’è¼æ˜ ã€‚æ˜¯è«¸è‘›å®¶çš„å®¶å‚³ä¹‹å¯¶ã€‚\n"
         );
-        set( "unit", "¶Ô" );
+        set( "unit", "å°" );
         set( "weight", 60 );
         set( "type", "finger" );
         set( "material", "element" );
@@ -31,11 +31,11 @@ void daemon_wear()
     set("light",1);
     set("extra_look","@@color");
     write( set_color(
-       "\nµ±Äã´÷ÉÏÁ½ÒÇÖ¸»·µÄÍ¬Ê±£¬ËÆºõ¸Ğµ½ÒşÔ¼µÄµç¹âÔÚÁ½Ã¶Ö¸»·ÖĞÁ÷¶¯...\n\n"
+       "\nç•¶ä½ æˆ´ä¸Šå…©å„€æŒ‡ç’°çš„åŒæ™‚ï¼Œä¼¼ä¹æ„Ÿåˆ°éš±ç´„çš„é›»å…‰åœ¨å…©æšæŒ‡ç’°ä¸­æµå‹•...\n\n"
        ,"HIB") );
     tell_room( environment(this_player()),set_color(
-       "\nÄã¿´µ½Î¢Èõ¶øÒşÔ¼µÄµç¹â´Ó"+this_player()->query("c_name")+
-       "Á½ÊÖµÄÖ¸»·¼ä·º³ö.........\n\n"
+       "\nä½ çœ‹åˆ°å¾®å¼±è€Œéš±ç´„çš„é›»å…‰å¾"+this_player()->query("c_name")+
+       "å…©æ‰‹çš„æŒ‡ç’°é–“æ³›å‡º.........\n\n"
        ,"HIB"),this_player() );
     wielded=1;
     player=this_player();
@@ -52,11 +52,11 @@ void daemon_unwear()
     delete("extra_look");
     set("prevent_drop",0);
     tell_object( holder,set_color(
-       "\nÄãÈ¡ÏÂµÄÖ¸»·£¬Ô­±¾¼¸ºõÉ¢ì¶È«ÉíµÄµçÁ÷»º»ºµØÉ¢È¥......\n\n"
+       "\nä½ å–ä¸‹çš„æŒ‡ç’°ï¼ŒåŸæœ¬å¹¾ä¹æ•£æ–¼å…¨èº«çš„é›»æµç·©ç·©åœ°æ•£å»......\n\n"
        ,"HIB") );
     tell_room( environment(holder),set_color(
        "\n"+holder->query("c_name")+
-       "Á½ÊÖ¼äµÄµç¹âËæÖøËûÈ¡ÏÂÖ¸»·¶ø»º»ºµÄÉ¢È¥......\n\n"
+       "å…©æ‰‹é–“çš„é›»å…‰éš¨è‘—ä»–å–ä¸‹æŒ‡ç’°è€Œç·©ç·©çš„æ•£å»......\n\n"
        ,"HIB"),holder );
     wielded=0;
     remove_call_out("effect");
@@ -65,7 +65,7 @@ void daemon_unwear()
  
 string color()
 { 
-  return set_color("$NµÄÁ½ÊÖÖ®¼äËÆºõÒşÔ¼·ºÖøÀ¶É«µÄÀ×¹â...\n","HIB");
+  return set_color("$Nçš„å…©æ‰‹ä¹‹é–“ä¼¼ä¹éš±ç´„æ³›è‘—è—è‰²çš„é›·å…‰...\n","HIB");
 }
 void effect()
 {
@@ -75,14 +75,14 @@ void effect()
   if ( ((int) player->query("npc")) == 1 ) return;
     
   tell_object( player, 
-     set_color("·ºÖøÀ¶É«µç¹âµÄÖ¸»·ËÆºõÈÃÄã¸ĞÊÜµ½Èç´¥µçµÄÎ¢²ü¡£\n","HIC"),
+     set_color("æ³›è‘—è—è‰²é›»å…‰çš„æŒ‡ç’°ä¼¼ä¹è®“ä½ æ„Ÿå—åˆ°å¦‚è§¸é›»çš„å¾®é¡«ã€‚\n","HIC"),
               );
   hp = player->query("hit_points");
   hp = hp - 5;
   player->set("hit_points",hp);
   if (hp<80) {
   tell_object( player,
-     set_color("Äã¾õµÃÉíÌå×´¿ö²»ÊÇºÜºÃ, ¾ö¶¨½«Á½ÒÇÖ¸»·È¡ÏÂ, ÒÔ²â°²È«¡£\n","HIY"),
+     set_color("ä½ è¦ºå¾—èº«é«”ç‹€æ³ä¸æ˜¯å¾ˆå¥½, æ±ºå®šå°‡å…©å„€æŒ‡ç’°å–ä¸‹, ä»¥æ¸¬å®‰å…¨ã€‚\n","HIY"),
                ) ;
   this_object()->unequip();
   return;

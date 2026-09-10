@@ -7,16 +7,16 @@ void create()
 
 	::create();
 	set_level(17);
-	set_name( "snaky warrior", "ÉßÈËÕ½Ê¿" );
+	set_name( "snaky warrior", "è›‡äººæˆ°å£«" );
 	add( "id", ({ "warrior" }) );
-	set_short( "ÉßÈËÕ½Ê¿" );
+	set_short( "è›‡äººæˆ°å£«" );
 	set_long(@C_LONG
-ÉßÈËÆäÊµ¿ÉÒÔËµÊÇÃ»ÓĞ½ÅµÄòáòæÈË£¬ËäÃ»ÓĞòáòæÈËÄÇ÷áÇ¿×³
-µ«ÊÇÈ´ÓĞÔ¶¸ßì¶ËûÃÇµÄÖÇ»Û¡£¾¡¹ÜÈç´Ë£¬¾­¹ıÑÏ¸ñÑµÁ·µÄÉß
-ÈË»¹ÊÇ¿ÉÒÔ³ÉÎªÓÂÃÍµÄÕ½Ê¿£¬²¢ÇÒÄÜ¹»×ÔÓÉÊ¹ÓÃĞí¶à²»Í¬µÄ
-Õ½Êõ¡£
+è›‡äººå…¶å¯¦å¯ä»¥èªªæ˜¯æ²’æœ‰è…³çš„èœ¥èœ´äººï¼Œé›–æ²’æœ‰èœ¥èœ´äººé‚£éº¼å¼·å£¯
+ä½†æ˜¯å»æœ‰é é«˜æ–¼ä»–å€‘çš„æ™ºæ…§ã€‚å„˜ç®¡å¦‚æ­¤ï¼Œç¶“éåš´æ ¼è¨“ç·´çš„è›‡
+äººé‚„æ˜¯å¯ä»¥æˆç‚ºå‹‡çŒ›çš„æˆ°å£«ï¼Œä¸¦ä¸”èƒ½å¤ è‡ªç”±ä½¿ç”¨è¨±å¤šä¸åŒçš„
+æˆ°è¡“ã€‚
 C_LONG	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment", -500 );
@@ -40,9 +40,9 @@ C_LONG	);
 	set( "tactic_func", "my_tactic" );
 	set( "chat_chance", 20 );
 	set( "att_chat_output", ({
-		"[1mÉßÈËÕ½Ê¿´ó½Ğ: ò¿ÓÈ´óÍõ¾Í¿ì¹ıÀ´ÁË£¬´ó¼Ò¿ì°ÑÀ¬»øÇåÇ¬¾»£¡[0m\n",
-		"[1mÉßÈËÕ½Ê¿ËµµÀ: ¶ªÏÂÎäÆ÷£¬²»Òª×öÎŞÎ½µÄµÖ¿¹£¡[0m\n",
-		"[1mÉßÈËÕ½Ê¿ºÈµÀ: »ÆÖÓ»ÙÆú£¬Íß¸ªÀ×Ãù£¬ÄãÃÇµÄÓ¢ĞÛ¶¼µ½ÄÇÈ¥ÁË£¡[0m\n"
+		"[1mè›‡äººæˆ°å£«å¤§å«: èš©å°¤å¤§ç‹å°±å¿«éä¾†äº†ï¼Œå¤§å®¶å¿«æŠŠåƒåœ¾æ¸…ä¹¾æ·¨ï¼[0m\n",
+		"[1mè›‡äººæˆ°å£«èªªé“: ä¸Ÿä¸‹æ­¦å™¨ï¼Œä¸è¦åšç„¡è¬‚çš„æŠµæŠ—ï¼[0m\n",
+		"[1mè›‡äººæˆ°å£«å–é“: é»ƒé˜è­­æ£„ï¼Œç“¦é‡œé›·é³´ï¼Œä½ å€‘çš„è‹±é›„éƒ½åˆ°é‚£å»äº†ï¼[0m\n"
 	}) );
 
         wield_weapon( "/d/deathland/weapon/sword03" );
@@ -58,12 +58,12 @@ int my_tactic()
         if ( !victim = query_attacker()) return 0;
 	
 	if( random(20)<3 ) {
-        tell_object(victim,set_color( "ËµÊ±³Ù£¬ÄÇÊ±¿ì£¬ÉßÈËÕ½Ê¿ÓÃËû³¤³¤µÄÎ²°ÍÏòÄãÏÂÅÌÉ¨È¥£¬ÄãÒ»¸ö\n"
-        "²»Ğ¡ĞÄ£¬±»Ëû´ò·­ÔÚµØÉÏ¡£\n","HIM",victim));
-        tell_room(environment(this_object()),set_color("ËµÊ±³Ù£¬ÄÇÊ±¿ì£¬ÉßÈËÕ½Ê¿ÓÃËû³¤³¤µÄÎ²°ÍÏò"
-        +victim->query("c_name")+"µÄÏÂÅÌÉ¨È¥£¬½«Ëû´òµ¹ÔÚµØ¡£\n","HIM",victim),victim);
+        tell_object(victim,set_color( "èªªæ™‚é²ï¼Œé‚£æ™‚å¿«ï¼Œè›‡äººæˆ°å£«ç”¨ä»–é•·é•·çš„å°¾å·´å‘ä½ ä¸‹ç›¤æƒå»ï¼Œä½ ä¸€å€‹\n"
+        "ä¸å°å¿ƒï¼Œè¢«ä»–æ‰“ç¿»åœ¨åœ°ä¸Šã€‚\n","HIM",victim));
+        tell_room(environment(this_object()),set_color("èªªæ™‚é²ï¼Œé‚£æ™‚å¿«ï¼Œè›‡äººæˆ°å£«ç”¨ä»–é•·é•·çš„å°¾å·´å‘"
+        +victim->query("c_name")+"çš„ä¸‹ç›¤æƒå»ï¼Œå°‡ä»–æ‰“å€’åœ¨åœ°ã€‚\n","HIM",victim),victim);
         victim->block_attack(3);
-        victim->set_temp("msg_stop_attack", "\n£¨ ÄãÏÖÔÚË¤µ¹ÔÚµØÎŞ·¨¶¯µ¯ £©\n\n");
+        victim->set_temp("msg_stop_attack", "\nï¼ˆ ä½ ç¾åœ¨æ‘”å€’åœ¨åœ°ç„¡æ³•å‹•å½ˆ ï¼‰\n\n");
         victim->receive_damage(5);
         return 1;
 	} else return 0;
@@ -79,7 +79,7 @@ void relay_message(string class, string str)
         
         
         if( !str || str == "" ) return;
-        if( sscanf(str,"%s(%s)×ßÁË¹ıÀ´¡£", tmp,name)==2 ) {
+        if( sscanf(str,"%s(%s)èµ°äº†éä¾†ã€‚", tmp,name)==2 ) {
         name = lower_case(name);
         victim = present(name, environment(this_object()));
         if( !victim || victim->query("npc") || victim->query("no_attack")) return ;
@@ -88,16 +88,16 @@ void relay_message(string class, string str)
         
         if( !pointerp(attackers) || member_array(victim, attackers)==-1 ) {
         
-        tell_object(victim,query("c_name")+"½ĞµÀ : Í¨Í¨È¥ËÀ°É£¬Í¬Ê±²»»³ºÃÒâµÄÍùÄãÕâÀï³å¹ıÀ´....\n");
+        tell_object(victim,query("c_name")+"å«é“ : é€šé€šå»æ­»å§ï¼ŒåŒæ™‚ä¸æ‡·å¥½æ„çš„å¾€ä½ é€™è£¡è¡éä¾†....\n");
          kill_ob(victim);
          } } }
-        if( sscanf(str,"%sÍù%sÀë¿ª¡£", tmp,direction)==2) {
+        if( sscanf(str,"%så¾€%sé›¢é–‹ã€‚", tmp,direction)==2) {
         if ( query_attacker() ) return ;
         hp1 = query("max_hp")/2;
         hitp = query("hit_points");
         if ( bleed = query("conditions/bleeding") || hitp < hp1  )        
         tell_room(environment(this_object()),
-        "ÉßÈËÕ½Ê¿(warrior)ËµµÀ: µĞÈËÒÑ¾­ÌÓ×ßÁË£¬¿ìÀ´°ïÎÒÖÎÁÆ°É.....\n",this_object());
+        "è›‡äººæˆ°å£«(warrior)èªªé“: æ•µäººå·²ç¶“é€ƒèµ°äº†ï¼Œå¿«ä¾†å¹«æˆ‘æ²»ç™‚å§.....\n",this_object());
         return ;
         }  
 }        

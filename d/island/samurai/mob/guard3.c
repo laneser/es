@@ -6,13 +6,13 @@ void create ()
 {
         ::create();
         set_level(14);
-        set_name( "samurai guard", "ÎäÊ¿ÊØÎÀ" );
+        set_name( "samurai guard", "æ­¦å£«å®ˆè¡›" );
         add ("id", ({ "samurai","guard"}) );
-        set_short( "samurai guard","ÎäÊ¿ÊØÎÀ");
-        set("unit","Î»");
+        set_short( "samurai guard","æ­¦å£«å®ˆè¡›");
+        set("unit","ä½");
         set_long(@AAA
-ÕâÊÇÒ»¸ö×¨ÃÅ¸ºÔğÎäÊ¿³Ç±¤³ÇÇ½ÊØÎÀÖ®Ö°µÄÎäÊ¿£¬Ëû¶Ôì¶ÄãµÄµ½À´
-ËÆºõ·Ç³£²»Âú£®
+é€™æ˜¯ä¸€å€‹å°ˆé–€è² è²¬æ­¦å£«åŸå ¡åŸç‰†å®ˆè¡›ä¹‹è·çš„æ­¦å£«ï¼Œä»–å°æ–¼ä½ çš„åˆ°ä¾†
+ä¼¼ä¹éå¸¸ä¸æ»¿ï¼
 AAA
         );
         set_perm_stat("str",25);
@@ -28,7 +28,7 @@ AAA
         set ("gender", "male");
         set("wealth/silver",300);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(MOBJ"samurai_short_blade.c");
         equip_armor(MOBJ"samurai_chainmail.c");
@@ -36,5 +36,5 @@ AAA
 
 void init()
 {
-tell_room(environment(this_object()),"Î¹£¡Î¹£¡ÄãÒÔÎªÕâÊÇ¹Û¹âÊ¤µØÂğ£¿ÔÙ²»¿ì×ßĞ¡ĞÄÎÒ±âÄãà¸£¡\n");
+tell_room(environment(this_object()),"å–‚ï¼å–‚ï¼ä½ ä»¥ç‚ºé€™æ˜¯è§€å…‰å‹åœ°å—ï¼Ÿå†ä¸å¿«èµ°å°å¿ƒæˆ‘æ‰ä½ å–”ï¼\n");
 }

@@ -6,11 +6,11 @@ void create ()
 {               
        ::create();
        set_level(2);
-       set_name( "butterfly", "·ïÏÉµû" );
-        set_short( "·ïÏÉµû" );
-       set("unit","Ö»");
+       set_name( "butterfly", "é³³ä»™è¶" );
+        set_short( "é³³ä»™è¶" );
+       set("unit","åª");
         set_long(
-       "ÕâÊÇÒ»Ö»ÃÀÀöµÄ·ïÏÉµû£¬´Ë¿ÌÕıÔÚËÄ´¦ÉÏÇá¿ìµÄ·ÉÎèÖø£¬ÓĞÈç·çÖ®ÎèÕß¡£\n"
+       "é€™æ˜¯ä¸€éš»ç¾éº—çš„é³³ä»™è¶ï¼Œæ­¤åˆ»æ­£åœ¨å››è™•ä¸Šè¼•å¿«çš„é£›èˆè‘—ï¼Œæœ‰å¦‚é¢¨ä¹‹èˆè€…ã€‚\n"
                         );
        set("moving",1);
        set("speed",25);                  
@@ -19,8 +19,8 @@ void create ()
        set ("natural_min_damage1",2);
        set ("natural_max_damage1", 4);
        set ("natural_armor_class", 5);
-		setenv( "C_MIN", "Ò»Ö»$NôæôæµÄ·ÉÁË¹ıÀ´¡£");
-        setenv( "C_MOUT", "$NôæôæµØÍù$D±ß·ÉÈ¥¡£");
-       set_c_verbs(({"%sÓÃËüµÄ³á°òÏò%sÆË»÷"}));
-       set_c_limbs(({"ÉíÌå","Í·²¿"}));
+		setenv( "C_MIN", "ä¸€éš»$Nç¿©ç¿©çš„é£›äº†éä¾†ã€‚");
+        setenv( "C_MOUT", "$Nç¿©ç¿©åœ°å¾€$Dé‚Šé£›å»ã€‚");
+       set_c_verbs(({"%sç”¨å®ƒçš„ç¿…è†€å‘%sæ’²æ“Š"}));
+       set_c_limbs(({"èº«é«”","é ­éƒ¨"}));
 }

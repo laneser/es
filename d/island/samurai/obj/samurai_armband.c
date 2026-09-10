@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_armband", "ÎäÊ¿»¤Íó ");
+        set_name( "samurai_armband", "æ­¦å£«è­·è…• ");
         add( "id", ({ "armband" }) );
-        set_short("samurai_armband", "ÎäÊ¿»¤Íó");
+        set_short("samurai_armband", "æ­¦å£«è­·è…•");
         set_long(@AAA
-Ò»¸öÎäÊ¿ÃÇÖÆÊ½´©µÄ»¤Íó
+ä¸€å€‹æ­¦å£«å€‘åˆ¶å¼ç©¿çš„è­·è…•
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "arms" );
         set( "armor_class", 3 );
         set( "defense_bonus", 2 );

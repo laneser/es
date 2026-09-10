@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("dark leggings", "ºÚ°µëÖ¼×");
+        set_name("dark leggings", "é»‘æš—è„›ç”²");
         add( "id", ({ "leggings" }) );
-        set_short( "ºÚ°µëÖ¼×");
+        set_short( "é»‘æš—è„›ç”²");
         set_long(
-                "Õâ¼şëÖ¼×ÄËÊÇ¾­¹ıµØÓüÖ®ºÚ°µÉîÔ¨ÖĞÁ¶ÖÆ¶ø³É¡£\n"
+                "é€™ä»¶è„›ç”²ä¹ƒæ˜¯ç¶“éåœ°ç„ä¹‹é»‘æš—æ·±æ·µä¸­ç…‰è£½è€Œæˆã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "legs" );
         set( "material", "light_metal");
         set( "armor_class", 7 );

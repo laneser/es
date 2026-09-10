@@ -8,15 +8,15 @@ void init()
  
 void create()
 {
-        set_name( "seven nail", "ÆßĞÇ×·»ê¶¤" );
+        set_name( "seven nail", "ä¸ƒæ˜Ÿè¿½é­‚é‡˜" );
         add( "id", ({ "nail" }) );
-        set_short( "ÆßĞÇ×·»ê¶¤" );
+        set_short( "ä¸ƒæ˜Ÿè¿½é­‚é‡˜" );
         set_long( @C_LONG
-ÕâÊÇÒ»Ö§Æß´ç³¤µÄºìÉ«Ä¾¶¤£¬ÕûÖ»¶¤×ÓÉ¢·¢ÖøÌ´ÏãºÍÄ³ÖÖÄãËµ²»ÉÏÀ´µÄÆæÒìÁ¦Á¿¡£
-ÕâÖ»Ä¾¶¤µÄ¶¤Í·¿´ÆğÀ´²¢²»Ê®·Ö·æÀû£¬ÈÃÄã»³ÒÉÊÇ²»ÊÇÕæµÄÄÜ¶¤(nail)×¡Ğ©Ê²÷á¡£
+é€™æ˜¯ä¸€æ”¯ä¸ƒå¯¸é•·çš„ç´…è‰²æœ¨é‡˜ï¼Œæ•´éš»é‡˜å­æ•£ç™¼è‘—æª€é¦™å’ŒæŸç¨®ä½ èªªä¸ä¸Šä¾†çš„å¥‡ç•°åŠ›é‡ã€‚
+é€™éš»æœ¨é‡˜çš„é‡˜é ­çœ‹èµ·ä¾†ä¸¦ä¸ååˆ†é‹’åˆ©ï¼Œè®“ä½ æ‡·ç–‘æ˜¯ä¸æ˜¯çœŸçš„èƒ½é‡˜(nail)ä½äº›ä»€éº¼ã€‚
 C_LONG
                 );
-        set("unit","Ö§");
+        set("unit","æ”¯");
         set("weight", 10);
         set("value",({1, "silver"}) );
         set("no_sale", 1 );
@@ -25,17 +25,17 @@ C_LONG
 int nail_spirit(string arg)
 {
     if( !arg || arg != "mark" ) return 0;
-    if ((string)environment(this_player())->query("short")=="¿â·¿´óÃÅ" ) {
+    if ((string)environment(this_player())->query("short")=="åº«æˆ¿å¤§é–€" ) {
         tell_object(this_player(),
-                "ÄãÄÃÖøÁîÅÆ£¬ÊØÎÀ¶ÔÄãÒ»·ù±Ø¹§±Ø¾´µÄÑù×Ó¡£\n" );
+                "ä½ æ‹¿è‘—ä»¤ç‰Œï¼Œå®ˆè¡›å°ä½ ä¸€å¹…å¿…æ­å¿…æ•¬çš„æ¨£å­ã€‚\n" );
         this_player()->set_temp("army_mark",1);
         } else
-    if ((string)environment(this_player())->query("short")=="ÃÜµÀ¸ÚÉÚ" ) {
+    if ((string)environment(this_player())->query("short")=="å¯†é“å´—å“¨" ) {
         tell_object(this_player(),
-                "ÄãÄÃÖøÁîÅÆ£¬ÊØÎÀ¶ÔÄãÒ»·ù±Ø¹§±Ø¾´µÄÑù×Ó¡£\n" );
+                "ä½ æ‹¿è‘—ä»¤ç‰Œï¼Œå®ˆè¡›å°ä½ ä¸€å¹…å¿…æ­å¿…æ•¬çš„æ¨£å­ã€‚\n" );
         this_player()->set_temp("army_mark",1);
         } else
         tell_object(this_player(),
-                "ÄãÄÃÖøÁîÅÆÏñ±¿µ°Ò»Ñù»ÎÑ½»ÎÑ½µØ£¬¿ÉÊÇÃ»ÈËÀíÄã¡£\n" );
+                "ä½ æ‹¿è‘—ä»¤ç‰Œåƒç¬¨è›‹ä¸€æ¨£æ™ƒå‘€æ™ƒå‘€åœ°ï¼Œå¯æ˜¯æ²’äººç†ä½ ã€‚\n" );
         return 1;
 }

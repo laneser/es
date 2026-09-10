@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Wind Dagger","·çÈĞØ°Ê×");
+    set_name("Wind Dagger","é¢¨åˆƒåŒ•é¦–");
     add("id",({ "dagger" }) );
-    set_short("·çÈĞØ°Ê×");
+    set_short("é¢¨åˆƒåŒ•é¦–");
     set_long( @C_LONG
-ÕâÊÇÒ»°Ñ¾«ĞÄÉè¼ÆµÄØ°Ê×£¬·æÀûµÄµ¶ÈĞ·ºÖøÉÁÁÁµÄÇà¹â£¬áİ·ğÔÚ¿ÊÍûÖøÒªÎüÊ³ÉúÑª¡£
+é€™æ˜¯ä¸€æŠŠç²¾å¿ƒè¨­è¨ˆçš„åŒ•é¦–ï¼Œé‹’åˆ©çš„åˆ€åˆƒæ³›è‘—é–ƒäº®çš„é’å…‰ï¼Œå½·ä½›åœ¨æ¸´æœ›è‘—è¦å¸é£Ÿç”Ÿè¡€ã€‚
 C_LONG
             );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("weapon_class",25);
     set("type","dagger");
     set("min_damage",15);

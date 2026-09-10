@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name("gate guard", "ÎÀ±ø");
+	set_name("gate guard", "è¡›å…µ");
 	add( "id", ({ "guard" }) );
-	set_short("¿´ÊØÍõ¹¬µÄÎÀ±ø");
+	set_short("çœ‹å®ˆç‹å®®çš„è¡›å…µ");
 	set_long(
-		"Õâ¸öÎÀ±øÕıÊØÎÀÖø³ÇÃÅ£¬Ëû¿´ÆğÀ´Ê®·ÖÒÔ´Ë¹¤×÷ÎªÈÙ¡£\n"
+		"é€™å€‹è¡›å…µæ­£å®ˆè¡›è‘—åŸé–€ï¼Œä»–çœ‹èµ·ä¾†ååˆ†ä»¥æ­¤å·¥ä½œç‚ºæ¦®ã€‚\n"
 	);
 	set_perm_stat("str", 13 );
 	set_skill("longblade", 70);

@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-   set_name( "wooden key", "Ä¾Ô¿³×" );
+   set_name( "wooden key", "æœ¨é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-   set_short( "Ä¾Ô¿³×" );
+   set_short( "æœ¨é‘°åŒ™" );
 	set_long(
-            "Ò»°ÑÀÏ¾ÉµÄÓÃÎÚ³ÁÄ¾µñ³ÉµÄÔ¿³×¡£\n" );
-	set( "unit", "°Ñ" );
+            "ä¸€æŠŠè€èˆŠçš„ç”¨çƒæ²‰æœ¨é›•æˆçš„é‘°åŒ™ã€‚\n" );
+	set( "unit", "æŠŠ" );
    set( "to_lock", "IANYEU_LIANG_HOME" );
 	set( "weight", 3 );
 	set( "value", ({ 10, "silver" }) );

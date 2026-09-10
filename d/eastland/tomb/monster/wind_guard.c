@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "wind guard", "·çÖ®»¤ÎÀ" );
+        set_name( "wind guard", "é¢¨ä¹‹è­·è¡›" );
         add ("id", ({ "wind", "guard" }) );
-        set_short( "·çÖ®»¤ÎÀ");
-        set("unit","Î»");
+        set_short( "é¢¨ä¹‹è­·è¡›");
+        set("unit","ä½");
         set("alignment",500);
         set("wealth/gold",100);
         set_long(
-"Ò»Î»·çÖ®»¤ÎÀ£¬ÊÇ´ó¹úÊ¦ÓÃµÀ¼ÒÕýÍ³ÐÄ·¨ËùÕÐ»½³öÀ´µÄ£¬Ëý¸ºÓÐÊØÎÀ´ËµØµÄÉñÊ¥
-Ê¹Ãü\¡£\n"
+"ä¸€ä½é¢¨ä¹‹è­·è¡›ï¼Œæ˜¯å¤§åœ‹å¸«ç”¨é“å®¶æ­£çµ±å¿ƒæ³•æ‰€æ‹›å–šå‡ºä¾†çš„ï¼Œå¥¹è² æœ‰å®ˆè¡›æ­¤åœ°çš„ç¥žè–
+ä½¿å‘½\ã€‚\n"
         );
         set_perm_stat("int", 20);
         set_perm_stat("dex", 25);
@@ -27,7 +27,7 @@ void create()
         set("race", "daemon");
         set("tactic_func","wind_tactic");
         set("special_defense",(["all":40,"none":40]));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         equip_armor(ARMORS"/wind_boots");
         equip_armor(ARMORS"/wind_amulet");
 }
@@ -42,7 +42,7 @@ int wind_tactic()
   if ( !(ob2=query_attacker()) || (random(10)>2)) return 0;
   
   tell_room(environment(),
-       "\n"+"·çÖ®»¤ÎÀ½«Ë«ÊÖ¾ÙÆð£¬Í»È»Ò»ÕóÇå·ç°üÎ§ÁËËý !!\n",
+       "\n"+"é¢¨ä¹‹è­·è¡›å°‡é›™æ‰‹èˆ‰èµ·ï¼Œçªç„¶ä¸€é™£æ¸…é¢¨åŒ…åœäº†å¥¹ !!\n",
        this_object() );
   heal = 45 + random(25);
   ob1->receive_healing(heal);

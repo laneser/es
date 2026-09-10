@@ -15,17 +15,17 @@ void create()
 	string long, c_long;
 	int i;
 
-	set_name("sign", "»ãÂÊ±í");
-	set_short( "Exchange rate sign", "Ç®±Ò»ãÂÊ±í" );
+	set_name("sign", "åŒ¯ç‡è¡¨");
+	set_short( "Exchange rate sign", "éŒ¢å¹£åŒ¯ç‡è¡¨" );
 	types = cointypes() ;
 	long = "The least valuable coin in the realm is the "+types[sizeof(types)-1]+" coin.\n" ;
-	c_long = "ËùÓĞÇ®±ÒÖ®ÖĞ£¬±ÒÖµ×îµÍµÄÊÇ: "+ to_chinese(types[sizeof(types)-1]+" coin")+"¡£\n";
+	c_long = "æ‰€æœ‰éŒ¢å¹£ä¹‹ä¸­ï¼Œå¹£å€¼æœ€ä½çš„æ˜¯: "+ to_chinese(types[sizeof(types)-1]+" coin")+"ã€‚\n";
 	for (i=sizeof(types)-2;i>-1;i--) {
 		long +=		"A "+types[i]+" coin is worth "+coinvalue(types[i])+" "
 					+types[sizeof(types)-1]+" coins.\n" ;
-		c_long +=	"Ò»¸ö¡¸"+to_chinese(types[i]+" coin")+"¡¹¼ÛÖµ "+
-					coinvalue(types[i])+" ¸ö¡¸"+to_chinese(types[sizeof(types)-1]
-					+" coin")+"¡¹\n" ;
+		c_long +=	"ä¸€å€‹ã€Œ"+to_chinese(types[i]+" coin")+"ã€åƒ¹å€¼ "+
+					coinvalue(types[i])+" å€‹ã€Œ"+to_chinese(types[sizeof(types)-1]
+					+" coin")+"ã€\n" ;
 	}
 	set_long( long, c_long );
 }

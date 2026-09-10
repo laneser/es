@@ -4,19 +4,19 @@ inherit "/std/poison.c";
 void create()
 {
 	seteuid(getuid());
-	set_name("opiate","ÃÔ»êÏã");
-	set_short("ÃÔ»êÏã");
+	set_name("opiate","è¿·é­‚é¦™");
+	set_short("è¿·é­‚é¦™");
         set_long(
-		"Ò»°ãĞ¡ÍµĞĞÇÔÇ°»áµã¸ùÃÔÏã, ±ãì¶ĞĞÇÔ¡£\n"
-        	"Äã¿ÉÒÔÓÃ poison someone ¶ÔÖøÄ³ÈËµãÃÔÏã\n"
+		"ä¸€èˆ¬å°å·è¡Œç«Šå‰æœƒé»æ ¹è¿·é¦™, ä¾¿æ–¼è¡Œç«Šã€‚\n"
+        	"ä½ å¯ä»¥ç”¨ poison someone å°è‘—æŸäººé»è¿·é¦™\n"
 	);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	set_duration(20);
 	set_effect(5);
 	set_type("slow");
 	set_times(2);
-	set("poison_msg","%s²»×¡µÄµãÍ·, ºÃÏñÒªË¯ÖøÁË...\n");
-	set("poison_method","%s¶ÔÖø%sµãÈ¼$P");
+	set("poison_msg","%sä¸ä½çš„é»é ­, å¥½åƒè¦ç¡è‘—äº†...\n");
+	set("poison_method","%så°è‘—%sé»ç‡ƒ$P");
 	set("value",({ 320,"silver"}));
 }
 

@@ -2,12 +2,12 @@
 inherit ARMOR;
 void create()
 {
-   set_name( "wedding globe", "½á»é»¤¶ÜÔ²Çò" );
+   set_name( "wedding globe", "çµå©šè­·ç›¾åœ“çƒ" );
 	add( "id", ({ "globe" }) );
-	set_short( "½á»é»¤¶ÜÔ²Çò" );
+	set_short( "çµå©šè­·ç›¾åœ“çƒ" );
 	set_long(
-	"ÕâÊÇÒ»¸ö¿´ÆğÀ´ÓÖÔ²ÓÖ¿É°®Ğ¡ÇòÇò,²»¹ıÖØÒªµÄÊÇËüËù´ú±íµÄÒâÒå: \n"
-	"ÓÀÔ¶²»ÄÜÔÙ½á»é.......:p  \n");
+	"é€™æ˜¯ä¸€å€‹çœ‹èµ·ä¾†åˆåœ“åˆå¯æ„›å°çƒçƒ,ä¸éé‡è¦çš„æ˜¯å®ƒæ‰€ä»£è¡¨çš„æ„ç¾©: \n"
+	"æ°¸é ä¸èƒ½å†çµå©š.......:p  \n");
 	set("prevent_drop",1);
 	set("material","element");
 	set( "type", "globe" );
@@ -29,7 +29,7 @@ int stop_equip()
 {
         if( !this_player()->query("spouse") ) {
         printf(
-               "µÈÄã½á»éááÔÙ´÷°É!\n" );
+               "ç­‰ä½ çµå©šå¾Œå†æˆ´å§!\n" );
         return 1;
         }
    return 0;

@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "snow lotus", "Ñ©Á«" );
+	set_name( "snow lotus", "é›ªè“®" );
         set("no_sale",1);
 	add( "id", ({"lotus"}) );
-	set_short( "Ñ©Á«" );
+	set_short( "é›ªè“®" );
 	set_long(
-		"ÍÛ!ÕâÊÇÓÉÑ©Á«»¨¶äÉ¹Ç¬ÖÆ³ÉµÄÒ©²Ä, ¿ÉËµ°ÙÄêÄÑµÃÒ»¼û!!Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"å“‡!é€™æ˜¯ç”±é›ªè“®èŠ±æœµæ›¬ä¹¾è£½æˆçš„è—¥æ, å¯èªªç™¾å¹´é›£å¾—ä¸€è¦‹!!ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
-	set( "unit","¶ä");
+	set( "unit","æœµ");
 	set( "ident", "SNOW_LOTUS" );
 	set( "savour","sweet");
 	set( "effect","weak");

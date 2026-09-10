@@ -39,7 +39,7 @@ mixed cmd_wimpy(string arg)
 	else return help();
 	
 	if( level > (int)this_player()->query("max_hp")*80/100 ) return notify_fail( 
-		"Äã²»ÄÜ½«ÌÓÅÜµÄÌåÁ¦Éè³¬¹ýÄãµÄ×î´óÌåÁ¦µÄ°Ù·ÖÖ®°ËÊ®¡£\n");
+		"ä½ ä¸èƒ½å°‡é€ƒè·‘çš„é«”åŠ›è¨­è¶…éŽä½ çš„æœ€å¤§é«”åŠ›çš„ç™¾åˆ†ä¹‹å…«åã€‚\n");
 	if( set_wimpy && level >= 0 ) {
 		this_player()->set("wimpy", level);
 		wimpy = level;
@@ -51,22 +51,22 @@ mixed cmd_wimpy(string arg)
 		this_player()->set("wimpydir", wimpydir);
 		
 	if( !wimpydir || wimpydir == "none" ) wimpydir = "random escape";
-	printf("ÄãÏÖÔÚÉè¶¨ÌåÁ¦µÍì¶ %d »áÌÓÏò %s \n",wimpy,wimpydir);
+	printf("ä½ ç¾åœ¨è¨­å®šé«”åŠ›ä½Žæ–¼ %d æœƒé€ƒå‘ %s \n",wimpy,wimpydir);
 	return 1;
 }
 
 int help()
 {
    write(@HELP
-Ê¹ÓÃ¸ñÊ½: wimpy <ÌÓÅÜÖµ> <ÌÓÅÜ·½Ïò>
-          wimpy <ÌÓÅÜ·½Ïò> <ÌÓÅÜÖµ>
+ä½¿ç”¨æ ¼å¼: wimpy <é€ƒè·‘å€¼> <é€ƒè·‘æ–¹å‘>
+          wimpy <é€ƒè·‘æ–¹å‘> <é€ƒè·‘å€¼>
 
-Éè¶¨µ±ÊÜ¹¥»÷Ê±Èç¹ûÌåÁ¦ÖµµÍÓÚ<ÌÓÅÜÖµ>Ê±×Ô¶¯ÌÓÅÜ£¬
-¿ÉÒÔÉè¶¨ÌÓÅÜÊ±µÄ·½Ïò<ÌÓÅÜ·½Ïò>.
+è¨­å®šç•¶å—æ”»æ“Šæ™‚å¦‚æžœé«”åŠ›å€¼ä½Žæ–¼<é€ƒè·‘å€¼>æ™‚è‡ªå‹•é€ƒè·‘ï¼Œ
+å¯ä»¥è¨­å®šé€ƒè·‘æ™‚çš„æ–¹å‘<é€ƒè·‘æ–¹å‘>.
 
-Àý×Ó: wimpy 40, wimpy north,
+ä¾‹å­: wimpy 40, wimpy north,
       wimpy 40 north, wimpy north 40.
-µ±ÄãÌåÁ¦ÖµµÍÓÚ40Ê±×Ô¶¯³¯±±ÌÓÅÜ.
+ç•¶ä½ é«”åŠ›å€¼ä½Žæ–¼40æ™‚è‡ªå‹•æœåŒ—é€ƒè·‘.
 HELP
 );
    return 1;

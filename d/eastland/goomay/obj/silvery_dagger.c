@@ -4,25 +4,25 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "silvery dagger", "Ð¡Òøµ¶" );
+	set_name( "silvery dagger", "å°éŠ€åˆ€" );
 	add( "id", ({ "dagger" }) );
-	set_short( "Ð¡Òøµ¶" );
+	set_short( "å°éŠ€åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÒøÉ«Ø°Ê×£¬¿´ÆðÀ´Ê®·Ö·æÈñ£¬¶øÇÒÓÐÒ»ÖÖÎÞ·¨ÐÎÈÝµÄÄ§Á¦¡£\n"
+		"é€™æ˜¯ä¸€æŠŠéŠ€è‰²åŒ•é¦–ï¼Œçœ‹èµ·ä¾†ååˆ†é‹’éŠ³ï¼Œè€Œä¸”æœ‰ä¸€ç¨®ç„¡æ³•å½¢å®¹çš„é­”åŠ›ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 40 );
 	setup_weapon( "dagger", 25, 18, 28 );
 	set( "value", ({ 220, "silver" }) );
         set( "second", 1 );
 //	set("hit_func","holy_damage");
 	set("special_damage",5);
-	set("special_c_msg","%sµÄÐ¡Òøµ¶·¢³öÒ»µÀÒø¹â£¬ÉäÈë%sµÄÐÄÔà¡£\n\n");
+	set("special_c_msg","%sçš„å°éŠ€åˆ€ç™¼å‡ºä¸€é“éŠ€å…‰ï¼Œå°„å…¥%sçš„å¿ƒè‡Ÿã€‚\n\n");
 }
 void report( object attacker, object victim )
 {
    seteuid(getuid());
-   tell_object( victim,sprintf("( Äã%s )\n","/adm/daemons/statsd"->status_string(victim)));
+   tell_object( victim,sprintf("( ä½ %s )\n","/adm/daemons/statsd"->status_string(victim)));
 }
 int holy_damage(object victim,int damage)
 {
@@ -36,7 +36,7 @@ int holy_damage(object victim,int damage)
     vic_ali= (int) victim->query("alignment");
     dam = (int) query("special_damage") ;
     if ( my_ali < vic_ali &&  my_ali < 400 ) {
-      tell_object(holder,"Ð¡Òøµ¶·¢³öÒ»µÀÒø¹â£¬È´ÉËµ½ÁËÄã×Ô¼º¡£\n\n");
+      tell_object(holder,"å°éŠ€åˆ€ç™¼å‡ºä¸€é“éŠ€å…‰ï¼Œå»å‚·åˆ°äº†ä½ è‡ªå·±ã€‚\n\n");
       holder->receive_special_damage("divine",dam+random(10));
       report(holder,holder);
       victim->set("last_attacker", holder );
@@ -49,7 +49,7 @@ int holy_damage(object victim,int damage)
                 victim->receive_special_damage( "divine",dam );
                 victim->set("last_attacker", holder );
                 tell_object( holder,
-                        sprintf(c_msg,"Äã",victim->query("c_name")));
+                        sprintf(c_msg,"ä½ ",victim->query("c_name")));
                 tell_room( environment(holder), 
                 		sprintf(c_msg,holder->query("c_name"),victim->query("c_name")),
                         holder );

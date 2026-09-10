@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name( "visitor", "¹Û¹â¿Í" );
-	set_short( "¹Û¹â¿Í" );
+	set_name( "visitor", "è§€å…‰å®¢" );
+	set_short( "è§€å…‰å®¢" );
 	set_long(
-		"ËûÊÇÒ»¸ö³õµ½±¾ÕòµÄ¹Û¹â¿Í£¬ÕıÔÚ¶ÔÖøĞÂÆæµÄÊÂÎïÖ¸Ö¸µãµã¡£\n"
+		"ä»–æ˜¯ä¸€å€‹åˆåˆ°æœ¬é®çš„è§€å…‰å®¢ï¼Œæ­£åœ¨å°è‘—æ–°å¥‡çš„äº‹ç‰©æŒ‡æŒ‡é»é»ã€‚\n"
 	);
         set ("gender", "male");
         set ("race", "human");
-        set("unit","¸ö");
+        set("unit","å€‹");
         set_natural_armor( 28, 10 );
         set_natural_weapon( 6, 5, 13 );
         set_perm_stat( "str", 12 );
@@ -21,7 +21,7 @@ void create()
 	set_skill( "dodge", 60 );
 	set( "chat_chance", 15 );
 	set( "att_chat_output", ({
-		"¹Û¹â¿Í¿ŞÖøµÀ£º¡¸Ç¿µÁÏÈÉú£¬ÎÒÊ²÷á¶¼¸øÄã !! ²»ÒªÉ±ÎÒ !!¡¹¡£\n",
+		"è§€å…‰å®¢å“­è‘—é“ï¼šã€Œå¼·ç›œå…ˆç”Ÿï¼Œæˆ‘ä»€éº¼éƒ½çµ¦ä½  !! ä¸è¦æ®ºæˆ‘ !!ã€ã€‚\n",
 	}) );
         set ("wealth", ([ "silver": 50 ]) );
         equip_armor( Obj"glasses" );

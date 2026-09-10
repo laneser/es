@@ -6,14 +6,14 @@ void create()
 {
     ::create();
     set_level(17);
-    set_name("jail guard","¼àÀÎÊØÎÀ");
+    set_name("jail guard","ç›£ç‰¢å®ˆè¡›");
     add("id",({"guard"}) );
-    set_short("¼àÀÎÊØÎÀ");
+    set_short("ç›£ç‰¢å®ˆè¡›");
     set_long(@LONG
-ÕâÊÇ¡ºĞ½µ¨´å¡»µÄ¼àÀÎÊØÎÀ¡£Ëû¿´ÆğÀ´ÓĞµã½ôÕÅ,Ïë±ØÀÎÀï¿´ÊØµÄÊÇºÜÀ÷º¦µÄÈËÎï¡£
+é€™æ˜¯ã€è–ªè†½æ‘ã€çš„ç›£ç‰¢å®ˆè¡›ã€‚ä»–çœ‹èµ·ä¾†æœ‰é»ç·Šå¼µ,æƒ³å¿…ç‰¢è£¡çœ‹å®ˆçš„æ˜¯å¾ˆå²å®³çš„äººç‰©ã€‚
 LONG
             );
-    set("unit","¸ö");
+    set("unit","å€‹");
     set("gender","male");
     set("race","human");
     set("alignment",-1000);
@@ -48,7 +48,7 @@ int my_attack()
             "can_help", this_object() );
    for( i=0; i<sizeof(couples); i++ ) {
        tell_room( environment(this_object()), couples[i]->query("c_name")+
-             "Å­µÀ:ĞÖµÜÃÇ,³­¼Ò»ïÉÏ!!\n",couples[i]);
+             "æ€’é“:å…„å¼Ÿå€‘,æŠ„å‚¢ä¼™ä¸Š!!\n",couples[i]);
        couples[i]->kill_ob(victim);
    }
    return 0;

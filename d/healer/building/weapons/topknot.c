@@ -2,13 +2,13 @@
 inherit WEAPON;
 void create()
 {
-        set_name("phoenix topknot", "·ïÍ·îÎ");
+        set_name("phoenix topknot", "é³³é ­é‡µ");
         add( "id", ({ "topknot" }) );
-        set_short("·ïÍ·îÎ");
+        set_short("é³³é ­é‡µ");
         set_long(
-                "ÕâÊÇĞÌÀÏµùËÍ¸øĞÌÀÏÂèµÄ¶¨ÇéÖ®Îï, ÉÏÃæÓĞÒ»Ö»ºÜ¾«ÖÂµÄ·ï»Ë¡£\n"
+                "é€™æ˜¯åˆ‘è€çˆ¹é€çµ¦åˆ‘è€åª½çš„å®šæƒ…ä¹‹ç‰©, ä¸Šé¢æœ‰ä¸€éš»å¾ˆç²¾ç·»çš„é³³å‡°ã€‚\n"
         );
-        set("unit","Ö§");
+        set("unit","æ”¯");
         set( "type", "dagger" );
         set( "weapon_class",35);
         set( "min_damage", 15);

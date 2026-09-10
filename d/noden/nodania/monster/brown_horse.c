@@ -9,12 +9,12 @@ void create()
 
 	::create();
 	set_level(6);
-	set_name( "brown horse", "×ØÉ«Âí" );
+	set_name( "brown horse", "æ£•è‰²é¦¬" );
 	add( "id", ({ "horse" }) );
-	set_short( "×ØÉ«Âí" );
+	set_short( "æ£•è‰²é¦¬" );
 	set_long(
-		"ÕâÊÇÒ»Æ¥¸ß´ó¡¢Ç¿×³µÄ×ØÉ«Âí¡£\n" );
-	set( "unit", "Æ¥" );
+		"é€™æ˜¯ä¸€åŒ¹é«˜å¤§ã€å¼·å£¯çš„æ£•è‰²é¦¬ã€‚\n" );
+	set( "unit", "åŒ¹" );
 	set_perm_stat( "str", 10 );
 	set_perm_stat( "int", 2 );
 	set( "natural_armor_class", 25 );
@@ -23,8 +23,8 @@ void create()
 	set( "natural_max_damage1", 10 );
 	set( "alignment", 100 );
 	set( "max_load", 1900 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ááÍÈ", "Î²°Í" }) );
-	set_c_verbs( ({ "%sÌ§ÆðááÍÈ£¬Íù%sÒ»Ìß", "%sÈËÁ¢ÆðÀ´£¬ÓÃÇ°Ö«ÔÚ%sÒ»ÕóÉÏÂÒµÅ" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å¾Œè…¿", "å°¾å·´" }) );
+	set_c_verbs( ({ "%sæŠ¬èµ·å¾Œè…¿ï¼Œå¾€%sä¸€è¸¢", "%säººç«‹èµ·ä¾†ï¼Œç”¨å‰è‚¢åœ¨%sä¸€é™£ä¸Šäº‚è¹¬" }) );
 
 	saddle = new( "/d/noden/nodania/obj/leather_saddle" );
 	saddle->move( this_object() );

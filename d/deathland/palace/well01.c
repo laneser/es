@@ -6,12 +6,12 @@ inherit ROOM;
 void create()
 {
 	::create();
-set_short("well","¾®µ×");
+set_short("well","äº•åº•");
   set_long(@Long
 Long
 ,@CLong
-Ò»¸öÇ³Ç³µÄ¾®,¶ø¾®ÀïµÄË®Ò²²»ÊÇºÜÉî.¾®µÄËÄÖÜ³¤ÂúÁËÇàÌ¦,ËÆºõÅÀÉÏÈ¥²¢²»
-ÊÇÒ»¼þÀ§ÄÑµÄÊÂ.
+ä¸€å€‹æ·ºæ·ºçš„äº•,è€Œäº•è£¡çš„æ°´ä¹Ÿä¸æ˜¯å¾ˆæ·±.äº•çš„å››å‘¨é•·æ»¿äº†é’è‹”,ä¼¼ä¹Žçˆ¬ä¸ŠåŽ»ä¸¦ä¸
+æ˜¯ä¸€ä»¶å›°é›£çš„äº‹.
 CLong
 );
 
@@ -29,8 +29,8 @@ void init()
 
 int to_climb()
 {
-    say(this_player()->query("c_name")+"ÅÀ³ö¾®µ×\n");
-    write("ÄãÇáÒ×µÄÅÀ³ö¾®µ×\n");
+    say(this_player()->query("c_name")+"çˆ¬å‡ºäº•åº•\n");
+    write("ä½ è¼•æ˜“çš„çˆ¬å‡ºäº•åº•\n");
     this_player()->set_explore( "deathland#8" );
     this_player()->move_player(Deathland"/palace/pa_07","SNEAK","");
     return 1;

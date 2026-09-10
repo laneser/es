@@ -1,94 +1,94 @@
-        ÄñÈË¹ÈÈÎÎñ¼ò½é :
+        é³¥äººè°·ä»»å‹™ç°¡ä»‹ :
 
-                1.ÕÒ³¤ÀÏ....ÖªµÀÄñÈË×åµÄÎÊÌâ
-                2.ÔÚ´åÀï¶«»Î»ÎÎ÷»Î»Î....¿ÉÒÔÖªµÀ¸ü¶àÓĞ¹ØÄñÈËµÄÎÊÌâ
+                1.æ‰¾é•·è€....çŸ¥é“é³¥äººæ—çš„å•é¡Œ
+                2.åœ¨æ‘è£¡æ±æ™ƒæ™ƒè¥¿æ™ƒæ™ƒ....å¯ä»¥çŸ¥é“æ›´å¤šæœ‰é—œé³¥äººçš„å•é¡Œ
 
-                3.ÔÚÅµ¶ÙÉ­ÁÖÀïÕÒµ½Î¬¶àµÄ½äÖ¸(~/hawk/tomb.c)
+                3.åœ¨è«¾é “æ£®æ—è£¡æ‰¾åˆ°ç¶­å¤šçš„æˆ’æŒ‡(~/hawk/tomb.c)
 
-                4.ÄñÈË¹ÈµÄÉ­ÁÖÀïÓĞÎ¬¶àÁôÏÂÀ´µÄĞÅ....
+                4.é³¥äººè°·çš„æ£®æ—è£¡æœ‰ç¶­å¤šç•™ä¸‹ä¾†çš„ä¿¡....
                   (~/hawk/room1-5.c & room1-6.c)
 
-                5.Ïë°ì·¨ºæÇ¬ĞÅ.... (E1)
-                  (ÔÚ ~/hawk/room2-4.c ÓĞÒ»¸ö²Ã·ìÊ¦ .... °ïËûÕÒ»ØìÙ¶·
-                   ~/hawk/liang.c .... ¾Í¿ÉÒÔìÙÇ¬ĞÅ)
+                5.æƒ³è¾¦æ³•çƒ˜ä¹¾ä¿¡.... (E1)
+                  (åœ¨ ~/hawk/room2-4.c æœ‰ä¸€å€‹è£ç¸«å¸« .... å¹«ä»–æ‰¾å›ç†¨æ–—
+                   ~/hawk/liang.c .... å°±å¯ä»¥ç†¨ä¹¾ä¿¡)
 
-                6.¸ù¾İĞÅµÄÖ¸Ê¾È¥ÕÒ Bernice(~/hawk/room1-20.c)
+                6.æ ¹æ“šä¿¡çš„æŒ‡ç¤ºå»æ‰¾ Bernice(~/hawk/room1-20.c)
 
-                7.Bernice »á¸æËßÄãÓĞ¹Ø¼¸¸öÄñÈË¼äµÄ¾À¸ğ ....
-                  È¥ÕÒ Adolph (~/hawk/room3-6.c)
-                  and ÕÒ Traito (~/hawk/traroom.c)
-                  ÔÚ Traito ÄÇ±ß¿ÉÒÔÕÒµ½Ò©Ë®(E2)
-                  ²»¹ıÒªÏÈÏë°ì·¨°Ñ Traito Åª×ß
-		  (~/hawk/tea_booth.c ÓĞËûÏëÒªÕÒµÄ¾Æ)
-               8.ÄÃÖøÒ©Ë®È¥ÕÒôÃÀ­¸ù ....
-                  »á±»Ö÷¶¯¹¥»÷ ( ask juraken about potion )
-                  °ÑôÃÀ­¸ù¸ÉµôÖ®ááËû»áËµ³öÓĞ¹Ø (plan) µÄÊÂ
+                7.Bernice æœƒå‘Šè¨´ä½ æœ‰é—œå¹¾å€‹é³¥äººé–“çš„ç³¾è‘› ....
+                  å»æ‰¾ Adolph (~/hawk/room3-6.c)
+                  and æ‰¾ Traito (~/hawk/traroom.c)
+                  åœ¨ Traito é‚£é‚Šå¯ä»¥æ‰¾åˆ°è—¥æ°´(E2)
+                  ä¸éè¦å…ˆæƒ³è¾¦æ³•æŠŠ Traito å¼„èµ°
+		  (~/hawk/tea_booth.c æœ‰ä»–æƒ³è¦æ‰¾çš„é…’)
+               8.æ‹¿è‘—è—¥æ°´å»æ‰¾è£˜æ‹‰æ ¹ ....
+                  æœƒè¢«ä¸»å‹•æ”»æ“Š ( ask juraken about potion )
+                  æŠŠè£˜æ‹‰æ ¹å¹¹æ‰ä¹‹å¾Œä»–æœƒèªªå‡ºæœ‰é—œ (plan) çš„äº‹
 
-                9.´øÖøÒ©Ë®È¥ÕÒ Traito .... ask traito about plan
-                  Ëû¾Í»á³¶³öÒ»¶Ñ¹ÊÊÂ .... È»áá¾Í¸ğÆ¨ÁË ....
+                9.å¸¶è‘—è—¥æ°´å»æ‰¾ Traito .... ask traito about plan
+                  ä»–å°±æœƒæ‰¯å‡ºä¸€å †æ•…äº‹ .... ç„¶å¾Œå°±è‘›å±äº† ....
 
-               10.È¥³¤ÀÏÄÇ±ß report ....
+               10.å»é•·è€é‚£é‚Š report ....
 
-               11.ÔÙ»ØVito µÄÄ¹ .... pray ....
+               11.å†å›Vito çš„å¢“ .... pray ....
 
-               12.ÔÙÕÒ Bernice .... ¾Í ok ÁË (E3)
+               12.å†æ‰¾ Bernice .... å°± ok äº† (E3)
 
-	×¢:(E1) (E2) (E3) ±íÊ¾ explore points .... i feel 3 points is ok
-	ÔÚroom1-18.c Ò²ÓĞÒ»µã explore points --> search everywhere 
-        ÄñÈË¹È¼ò½é :
+	æ³¨:(E1) (E2) (E3) è¡¨ç¤º explore points .... i feel 3 points is ok
+	åœ¨room1-18.c ä¹Ÿæœ‰ä¸€é» explore points --> search everywhere 
+        é³¥äººè°·ç°¡ä»‹ :
 
-                Room    --> 64 ¼ä
-		Armor	--> 20 ¼ş
-                Weapon  -->  8 ¼ş
+                Room    --> 64 é–“
+		Armor	--> 20 ä»¶
+                Weapon  -->  8 ä»¶
 
-ÎäÆ÷²¿·İ:
+æ­¦å™¨éƒ¨ä»½:
 
-   µµÃû :         ÎäÆ÷Ãû³Æ :     ÖÖÀà :      ¹¥»÷Á¦ :       ÎäÆ÷µÈ¼¶ :
-   dagger01.c     ¶Æ½ğ±â×ê       dagger      15/30           30
-   flute.c        ½ğÉ«³¤µÑ       blunt       12/33           40
-*o skysword.c     Ìì¿ÕÖ®½£       longblade   18/35           35
-*  stone_sword.c  ìİÊ¯³¤½£       longblade   11/22           24
-   stsword.c      ìİÊ¯¾Ş½£       longblade   20/28           30
-   sword.c        ¾£¼¬³¤½£       longblade   17/40           40
-   wand.c         ÓÄÚ¤È¨ÕÈ       wand        10/25           35
- o whip1.c        ¼ÅÈ»³¤±Ş       whip        20/35(25/40)    35
+   æª”å :         æ­¦å™¨åç¨± :     ç¨®é¡ :      æ”»æ“ŠåŠ› :       æ­¦å™¨ç­‰ç´š :
+   dagger01.c     éé‡‘æ‰é‘½       dagger      15/30           30
+   flute.c        é‡‘è‰²é•·ç¬›       blunt       12/33           40
+*o skysword.c     å¤©ç©ºä¹‹åŠ       longblade   18/35           35
+*  stone_sword.c  ç‡§çŸ³é•·åŠ       longblade   11/22           24
+   stsword.c      ç‡§çŸ³å·¨åŠ       longblade   20/28           30
+   sword.c        èŠæ£˜é•·åŠ       longblade   17/40           40
+   wand.c         å¹½å†¥æ¬Šæ–       wand        10/25           35
+ o whip1.c        å¯‚ç„¶é•·é­       whip        20/35(25/40)    35
 
-ps : "*" ±íÊ¾ÌØ¹©ÎäÆ÷ , "o" ±íÊ¾ÓĞÌØÊâÏŞÖÆ.
+ps : "*" è¡¨ç¤ºç‰¹ä¾›æ­¦å™¨ , "o" è¡¨ç¤ºæœ‰ç‰¹æ®Šé™åˆ¶.
 
-   ·À¾ß²¿·İ:
+   é˜²å…·éƒ¨ä»½:
 
-   µµÃû :         ·À¾ßÃû³Æ:        AC  DB    special_defense    MA
+   æª”å :         é˜²å…·åç¨±:        AC  DB    special_defense    MA
 
-   black_suit.c   ºÚÉ«¾¢×°         33   4    evil+10   ,fire-15 thief
-   boots1.c       ÁèÔÆ±ÎÈÕÑ¥        7   3                       wood
-   cloth03.c      ÓÄÚ¤Ö®ÅÛ         33   5                       cloth
-   glove1.c       äÖ×ÏÊÖÌ×          4   2                       scholar
+   black_suit.c   é»‘è‰²å‹è£         33   4    evil+10   ,fire-15 thief
+   boots1.c       å‡Œé›²è”½æ—¥é´        7   3                       wood
+   cloth03.c      å¹½å†¥ä¹‹è¢         33   5                       cloth
+   glove1.c       æ¸²ç´«æ‰‹å¥—          4   2                       scholar
 
-   god_1.c        Î¬ÄÉË¹°××ê        0   1
-   god_2.c        ÖæË¹µ­Óñ»¤Éí·û    0   1
-   god_3.c        Çğ±ÈÌØÎÚ½ğ±Û»·    1   1
-   god_4.c        ºÚµÛË¹ÃæÉ´        1   1
-   god_5.c        ÑÅµäÄÈÉÁÁÁëÖ¼×    1   1
-o  gift.c         ÖÚÉñµÄÀñÔŞ       35  40                       guild
+   god_1.c        ç¶­ç´æ–¯ç™½é‘½        0   1
+   god_2.c        å®™æ–¯æ·¡ç‰è­·èº«ç¬¦    0   1
+   god_3.c        ä¸˜æ¯”ç‰¹çƒé‡‘è‡‚ç’°    1   1
+   god_4.c        é»‘å¸æ–¯é¢ç´—        1   1
+   god_5.c        é›…å…¸å¨œé–ƒäº®è„›ç”²    1   1
+o  gift.c         çœ¾ç¥çš„ç¦®è®š       35  40                       guild
         (About gift.c ... please read file ....)
 
-   magerobe.c     ÁéÁ¦Ö®ÅÛ         26   4                       cloth
-   plate.c        ÖØĞÍ¿ø¼×         40   7    ËùÓĞÊôĞÔ½µÒ»µã     heavy_metal
-   samulet.c      Ìì¿ÕÊØ»¤»ÕÕÂ      0   6
-   shield.c       Ææ¹ÖµÄ¶ÜÅÆ        8   2    magic 5,           heavy_metal
+   magerobe.c     éˆåŠ›ä¹‹è¢         26   4                       cloth
+   plate.c        é‡å‹ç›”ç”²         40   7    æ‰€æœ‰å±¬æ€§é™ä¸€é»     heavy_metal
+   samulet.c      å¤©ç©ºå®ˆè­·å¾½ç«       0   6
+   shield.c       å¥‡æ€ªçš„ç›¾ç‰Œ        8   2    magic 5,           heavy_metal
 
-   shield1.c      ×Ï»Ô¶ÜÅÆ          8   2    devine-10,fire10,  light_metal
+   shield1.c      ç´«è¼ç›¾ç‰Œ          8   2    devine-10,fire10,  light_metal
                                              cold-15,electric15,
                                              evil-10
 
- o shield2.c        Ê¥¹â¶Ü          6\8 3\6                     mage
+ o shield2.c        è–å…‰ç›¾          6\8 3\6                     mage
 
-   splate.c         Ìì¿ÕÖ®îø       31   6    cold:10,fire:-20   light_metal
+   splate.c         å¤©ç©ºä¹‹é§       31   6    cold:10,fire:-20   light_metal
                                              electric:10
 
-   sshield.c        Ìì½çÖ®¶Ü        6   6                       light_metal
-   star_arm.c       Á÷ĞÇ±Û»·        4   2    trading:10,        element
+   sshield.c        å¤©ç•Œä¹‹ç›¾        6   6                       light_metal
+   star_arm.c       æµæ˜Ÿè‡‚ç’°        4   2    trading:10,        element
                                              climbing 5
-   white_suit.c     °×É«Ê«ÈË·ş     10   2
+   white_suit.c     ç™½è‰²è©©äººæœ     10   2
 
-ps : "o" ÓĞÌØÊâÏŞÖÆ..
+ps : "o" æœ‰ç‰¹æ®Šé™åˆ¶..

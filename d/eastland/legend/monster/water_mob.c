@@ -4,23 +4,23 @@ inherit MONSTER;
 void die();
 int calloutcheck = 0;
 string laugh,*action =
-     ({ "%sÖ¸Öø%sµÄ£Ø£ØĞ¦µÃÖ±²»ÆğÑüÀ´¡£\n",
-        "%sÔÚ%sµÄËÄÖÜÌøÀ´ÌøÈ¥£¬ÄÃ´ó¶¦¡¢·­¸ú¶·¡£\n",
-        "%s×°ÉÏÒ»¸öºìºìµÄĞ¡³ó±Ç×Ó£¬¶ÔÖø%sÒ¡Í·»ÎÄÔ¡£\n",
-        "%sÒ»Æ¨¹É×øÔÚµØÉÏ£¬Ö¸Öø%sÍÛÀ²ÍÛÀ²µÄ¿ŞÁËÆğÀ´¡£\n",
-        "%sÓÃÄà°ÍÂÒÍ¿%sµÄÁ³¡£\n" }) ;
+     ({ "%sæŒ‡è‘—%sçš„ï¼¸ï¼¸ç¬‘å¾—ç›´ä¸èµ·è…°ä¾†ã€‚\n",
+        "%såœ¨%sçš„å››å‘¨è·³ä¾†è·³å»ï¼Œæ‹¿å¤§é¼ã€ç¿»è·Ÿæ–—ã€‚\n",
+        "%sè£ä¸Šä¸€å€‹ç´…ç´…çš„å°ä¸‘é¼»å­ï¼Œå°è‘—%sæ–é ­æ™ƒè…¦ã€‚\n",
+        "%sä¸€å±è‚¡ååœ¨åœ°ä¸Šï¼ŒæŒ‡è‘—%så“‡å•¦å“‡å•¦çš„å“­äº†èµ·ä¾†ã€‚\n",
+        "%sç”¨æ³¥å·´äº‚å¡—%sçš„è‡‰ã€‚\n" }) ;
 
 void create()
 {       
 	::create();
 	set_level(19);
-	set_name( "Water Beast", "ÎŞÖ§Æí" );
+	set_name( "Water Beast", "ç„¡æ”¯ç¥ˆ" );
 	add( "id", ({ "beast","water beast"}) );
-	set_short( "Ë®¹Ö ÎŞÖ§Æí" );
+	set_short( "æ°´æ€ª ç„¡æ”¯ç¥ˆ" );
 	set_long(@C_LONG
-ÕâÊÇÒ»Ö§ÉÆì¶Ó¦¶ÔÑÔÓïµÄ¹ÖÎï, ĞÎ×´ÏñÔ³ºï, ¶îÍ·¸ß, ±ÇÁºµÍ, °×ÄÔ´ü, ÇàÉí×Ó,
-ÑÀ³İÑ©ÁÁ, ÑÛ¾¦ÉÁ¡õ³ö½ğ¹â, Á¦Á¿´ó¹ı¾ÅÖ»Ïó, ¾±²±×ÓÉì³öÀ´ÓĞ°Ù³ß³¤, µ«ËûµÄ
-ÉíÇûÈ´ÁæÀşÇá±ã¡£
+é€™æ˜¯ä¸€æ”¯å–„æ–¼æ‡‰å°è¨€èªçš„æ€ªç‰©, å½¢ç‹€åƒçŒ¿çŒ´, é¡é ­é«˜, é¼»æ¨‘ä½, ç™½è…¦è¢‹, é’èº«å­,
+ç‰™é½’é›ªäº®, çœ¼ç›é–ƒâ–¡å‡ºé‡‘å…‰, åŠ›é‡å¤§éä¹éš»è±¡, é ¸è„–å­ä¼¸å‡ºä¾†æœ‰ç™¾å°ºé•·, ä½†ä»–çš„
+èº«è»€å»ä¼¶ä¿è¼•ä¾¿ã€‚
 C_LONG
 );
         set("killer",1);
@@ -56,13 +56,13 @@ int do_joke(string arg)
    player=this_player();
    laugh = set_color(action[random(sizeof(action))],"HIY");
    tell_object(player,
-     "\n¡ºàÛÍÛ¹ş¹ş¹ş¡»,ÎŞÖ§Æí¶ÔÖøÄã´óĞ¦ÖøËµ:ÄãÄÑµÀ²»ÖªµÀ joke µÄÀÏ×æ×ÚÊÇË­Âğ?\n\n");
+     "\nã€å™—å“‡å“ˆå“ˆå“ˆã€,ç„¡æ”¯ç¥ˆå°è‘—ä½ å¤§ç¬‘è‘—èªª:ä½ é›£é“ä¸çŸ¥é“ joke çš„è€ç¥–å®—æ˜¯èª°å—?\n\n");
    tell_room(environment(this_object()),
-         sprintf(laugh,"ÎŞÖ§Æí",player->query("c_name")));
+         sprintf(laugh,"ç„¡æ”¯ç¥ˆ",player->query("c_name")));
    kill_ob(player);
    player->block_attack(6);
    player->set_temp("msg_stop_attack",
-       "( ÄãÏÖÔÚĞ¦µÃ»ëÉíÃ»Á¦£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+       "( ä½ ç¾åœ¨ç¬‘å¾—æ¸¾èº«æ²’åŠ›ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
    return 1;
 }
 int my_tactic()
@@ -75,11 +75,11 @@ int my_tactic()
 
     laugh = set_color(action[random(sizeof(action))],"HIY");
     tell_room(environment(this_object()),
-       sprintf(laugh,"ÎŞÖ§Æí","ËùÓĞ¹¥»÷ËüµÄµĞÈË"));
+       sprintf(laugh,"ç„¡æ”¯ç¥ˆ","æ‰€æœ‰æ”»æ“Šå®ƒçš„æ•µäºº"));
     for (i=0;i<sizeof(victim);i++) {
        victim[i]->block_attack(4);
        victim[i]->set_temp("msg_stop_attack",
-          "( ÄãÏÖÔÚĞ¦µÃ»ëÉíÃ»Á¦£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+          "( ä½ ç¾åœ¨ç¬‘å¾—æ¸¾èº«æ²’åŠ›ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
     }
     return 0;
 }
@@ -89,7 +89,7 @@ void recover_or_die(object ob)
    calloutcheck=0;
    env=environment(ob);
    if ( !ob->query("locked") ) {  
-      tell_room(env,"\nºöÈ»Ò»Éù´óºğ,ÎŞÖ§ÆíÓÖ»îÁË¹ıÀ´...\n\n");
+      tell_room(env,"\nå¿½ç„¶ä¸€è²å¤§å¼,ç„¡æ”¯ç¥ˆåˆæ´»äº†éä¾†...\n\n");
       ob->set("hit_points",2500);
       ob->set("no_attack",0);
       ob->set("killer",1);
@@ -109,7 +109,7 @@ void die()
        cease_all_attacks();
        clean_up_attackers();
        set("hit_points",1); 
-       tell_room(environment(this_object()),"ÎŞÖ§ÆíÒ»Éù°¦º¿,»èµ¹ÔÚµØÉÏ!!\n");
+       tell_room(environment(this_object()),"ç„¡æ”¯ç¥ˆä¸€è²å”‰åš,æ˜å€’åœ¨åœ°ä¸Š!!\n");
        set("faint",1);
        if (!calloutcheck) {
          call_out("recover_or_die",60,this_object());  	

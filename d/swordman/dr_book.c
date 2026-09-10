@@ -13,18 +13,18 @@ void create()
 	seteuid( getuid() );
 	set_class_name("swordman");
 #include <compress_obj.h>
-	set_name("The book of DragonSlayer", "ÍÀÁú½£Æ×");
+	set_name("The book of DragonSlayer", "å± é¾åŠè­œ");
 	add( "id", ({ "book" }) );
-	set("unit","±¾");
-	set_short("ÍÀÁú½£Æ×");
+	set("unit","æœ¬");
+	set_short("å± é¾åŠè­œ");
 	set_long( @LONG
-ÕâÊÇÍÀÁú½£ÅÉµÄ»ù±¾ÈëÃÅĞÄ·¨£¬ÆäÖĞ¼ÇÔØÁËÒ»Ğ©»ù±¾½£ÊõºÍÁ¶Æø·¨ÃÅ£¬
-Èç¹ûÄãÏëÖªµÀËüµÄÓÃ·¨£¬¿ÉÒÔÓÃ help book ¡£
+é€™æ˜¯å± é¾åŠæ´¾çš„åŸºæœ¬å…¥é–€å¿ƒæ³•ï¼Œå…¶ä¸­è¨˜è¼‰äº†ä¸€äº›åŸºæœ¬åŠè¡“å’Œç…‰æ°£æ³•é–€ï¼Œ
+å¦‚æœä½ æƒ³çŸ¥é“å®ƒçš„ç”¨æ³•ï¼Œå¯ä»¥ç”¨ help book ã€‚
 LONG
 	);
 
 	set( "weight", 10 );
-	set( "extra_look", "$N´øÖøÒ»±¾Á·½£ÑøÆøµÄ¡¸ÍÀÁú½£Æ×¡¹¡£\n");
+	set( "extra_look", "$Nå¸¶è‘—ä¸€æœ¬ç·´åŠé¤Šæ°£çš„ã€Œå± é¾åŠè­œã€ã€‚\n");
 }
 
 void init()
@@ -49,7 +49,7 @@ int do_comrades()
 	n = sizeof(usr);
 	if( n ) {
 		write( 
-			"Ä¿Ç°¹²ÓĞ " + n  + " Î»ÍÀÁú½£ÅÉµÄÍ¬ÃÅ :\n"
+			"ç›®å‰å…±æœ‰ " + n  + " ä½å± é¾åŠæ´¾çš„åŒé–€ :\n"
 			"==================================\n");
 		for( i=0; i<n; i++ )
 /*
@@ -60,7 +60,7 @@ int do_comrades()
 					usr[i]->query("short"), capitalize(usr[i]->query("name"))
 				);
 	} else
-		write( "ËÆºõÃ»ÓĞÈÎºÎÍÀÁú½£ÅÉµÄ³ÉÔ±ÔÚÏßÉÏ....¡£\n");
+		write( "ä¼¼ä¹æ²’æœ‰ä»»ä½•å± é¾åŠæ´¾çš„æˆå“¡åœ¨ç·šä¸Š....ã€‚\n");
 	return 1;
 }
 
@@ -81,7 +81,7 @@ int filter_swordmans( object plr )
 
 int do_chat(string arg)
 {
-	if( !arg ) return notify_fail("ÄãÏë¶ÔÆäËüÍ¬ÃÅËµÊ²÷á£¿\n");
+	if( !arg ) return notify_fail("ä½ æƒ³å°å…¶å®ƒåŒé–€èªªä»€éº¼ï¼Ÿ\n");
 
 	return guild_ob::guild_line(arg);
 }
@@ -94,14 +94,14 @@ int do_read(string arg)
 
 	if( !id(arg) ) return 0;
 	me = this_player();
-		printf("     Ä§·¨ÖÖÀà     ÊìÁ·µÈ¼¶            Ä§·¨¾­Ñé\n");
+		printf("     é­”æ³•ç¨®é¡     ç†Ÿç·´ç­‰ç´š            é­”æ³•ç¶“é©—\n");
 		for( i=0; i<sizeof(MAGIC_TYPES); i++ )
 			printf("     %8s        %2d        %15d\n",
 				to_chinese(MAGIC_TYPES[i]),
 				me->query("spell_levels/"+MAGIC_TYPES[i]),
 				me->query("spell_exps/"+MAGIC_TYPES[i])
 			);
-		printf("×ÛºÏ(Æ½¾ù)Ä§·¨µÈ¼¶ : %2d\n", me->query("spell_levels/guild"));
+		printf("ç¶œåˆ(å¹³å‡)é­”æ³•ç­‰ç´š : %2d\n", me->query("spell_levels/guild"));
 
 	return 1;
 }

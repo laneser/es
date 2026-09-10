@@ -8,11 +8,11 @@ void create()
     
 	::create();
 	set_level(10);
-	set_name( "Hand of Underswamp", "ÕÓÔóÏÂµÄÄ§ÊÖ" );
+	set_name( "Hand of Underswamp", "æ²¼æ¾¤ä¸‹çš„é­”æ‰‹" );
 	add("id",({"hand"}));
-	set_short( "ÕÓÔóÏÂµÄÄ§ÊÖ" );
+	set_short( "æ²¼æ¾¤ä¸‹çš„é­”æ‰‹" );
 	set_long(
-		"²ØÔÚÕÓÔóÏÂµÄÆæ¹ÖÉúÎï, ËæÊ±¶¼¿ÉÄÜÉì³öÊÖÀ´ÍÏÄãÏÂÕÓÔóÀïÈ¥.\n"
+		"è—åœ¨æ²¼æ¾¤ä¸‹çš„å¥‡æ€ªç”Ÿç‰©, éš¨æ™‚éƒ½å¯èƒ½ä¼¸å‡ºæ‰‹ä¾†æ‹–ä½ ä¸‹æ²¼æ¾¤è£¡å».\n"
 	);
 	set( "alignment",-500 );
 	set_perm_stat( "dex", 17 );
@@ -26,7 +26,7 @@ void create()
     set ("killer",1);
 	
 	set("speed",10);
-	set_c_limbs( ({  "ÊÖ" }) );
-	set_c_verbs( ({ "%sÓÃËüµÄÊÖÏò%s×½È¥" }) );
+	set_c_limbs( ({  "æ‰‹" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„æ‰‹å‘%sæ‰å»" }) );
     
 }

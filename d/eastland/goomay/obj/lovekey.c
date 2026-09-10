@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Necklace of love","Çé¹ØÒâËø");
+        set_name("Necklace of love","æƒ…é—œæ„é–");
         add("id",({"necklace"}) );
-         set_short( "Necklace of love","Çé¹ØÒâËø");
+         set_short( "Necklace of love","æƒ…é—œæ„é–");
 	set_long(
 "This is a magic necklace , it is growing and you feel you got a strong mind .\n",
-"ÕâÊÇÒ»ÌõÏµÖøÒ»°Ñ½ğÉ«Ô¿³×µÄÏî¡õ£¬Õâ°ÑÆæÒìµÄÔ¿³×É¢·¢³öÒ»ÖÖº¶ÈËĞÄÏÒ\n"+
-"µÄ¹âÃ¢£¬¿´µ½ÁËËü£¬Äã¾õµÃÔÚÒ²²»¡õáåÁË¡£\n"
+"é€™æ˜¯ä¸€æ¢ç³»è‘—ä¸€æŠŠé‡‘è‰²é‘°åŒ™çš„é …â–¡ï¼Œé€™æŠŠå¥‡ç•°çš„é‘°åŒ™æ•£ç™¼å‡ºä¸€ç¨®æ†¾äººå¿ƒçµƒ\n"+
+"çš„å…‰èŠ’ï¼Œçœ‹åˆ°äº†å®ƒï¼Œä½ è¦ºå¾—åœ¨ä¹Ÿä¸â–¡å¾¨äº†ã€‚\n"
 	);
 	set( "no_sale",1);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "weight", 20 );
         set("material","light_metal");
 	set( "type", "misc" );

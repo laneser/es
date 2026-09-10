@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("volcano-rocks plate", "»ğÉ½ÑÒîøëĞ");
+        set_name("volcano-rocks plate", "ç«å±±å²©é§å†‘");
         add( "id", ({ "plate" }) );
-        set_short( "»ğÉ½ÑÒîøëĞ");
+        set_short( "ç«å±±å²©é§å†‘");
         set_long(
-                "Õâ¼şîøëĞÄËÊÇÓÃ»ğÉ½ÑÒÖÆ³É¡£\n"
+                "é€™ä»¶é§å†‘ä¹ƒæ˜¯ç”¨ç«å±±å²©è£½æˆã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "stone");
         set( "armor_class", 28 );

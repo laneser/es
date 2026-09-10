@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
     seteuid(getuid());
-	set_name("Pick", "Ê®×Ö¸ä");
+	set_name("Pick", "åå­—é¬");
 	add ("id",({ "pick" }) );
-	set_short("a dwarven pick", "°«ÈËµÄÊ®×Ö¸ä");
+	set_short("a dwarven pick", "çŸ®äººçš„åå­—é¬");
 	set_long(
-            "Ò»°Ñ°«ÈËµÄÊ®×Ö¸ä£¬¿ÉÓÃÀ´¿ªÔä(excavate)\»ò\ÊÇÍÚ¾ò(dig)¡£\n"
+            "ä¸€æŠŠçŸ®äººçš„åå­—é¬ï¼Œå¯ç”¨ä¾†é–‹é‘¿(excavate)\æˆ–æ˜¯æŒ–æ˜(dig)ã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "weapon_class", 7 );
 	set( "type", "thrusting" );
 	set( "min_damage", 5 );
@@ -31,21 +31,21 @@ int to_excavate(string str)
         object obj1, obj2;
         
           if ( !str || str=="" )
-           return notify_fail("ÄãÏëÍÚÊ²÷á¶«Î÷?\n"); 
+           return notify_fail("ä½ æƒ³æŒ–ä»€éº¼æ±è¥¿?\n"); 
           obj1=environment(this_object());
           if (living(obj1)) {
             obj2 = environment(obj1);
             if (!( obj2->query("direction") )) 
-               return notify_fail("ÆÆ»µ»·¾³ÊÇ²»ºÃµÄĞĞÎª.\n");
+               return notify_fail("ç ´å£ç’°å¢ƒæ˜¯ä¸å¥½çš„è¡Œç‚º.\n");
             
             if ((string)obj2->query("direction")=="block" ) 
               obj2->to_find_excavate(str);
-             // write ("µ±ÄãÊÔÖøÍÚ¾òÊ±,Ò»Ö»¿ÉÅÂµÄ¹ÖÊŞÏòÄã³åÀ´,\n");
+             // write ("ç•¶ä½ è©¦è‘—æŒ–æ˜æ™‚,ä¸€éš»å¯æ€•çš„æ€ªç¸å‘ä½ è¡ä¾†,\n");
             else
               return notify_fail( 
-                "ÓÉì¶ÕâÀïÊÇ°«ÈËµÄµØÅÌ,Äã²»ÄÜÔÚÕâÀï¿ªÔä£¡\n");
+                "ç”±æ–¼é€™è£¡æ˜¯çŸ®äººçš„åœ°ç›¤,ä½ ä¸èƒ½åœ¨é€™è£¡é–‹é‘¿ï¼\n");
             }
           else return notify_fail( 
-            "ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");  
+            "ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");  
         return 1;
 }

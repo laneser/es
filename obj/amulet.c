@@ -11,14 +11,14 @@ int do_help();
 void create()
 {
 	seteuid( getuid() );
-	set_name( "workshop amulet","Äà°ÍÑÐÌÖ»á¼ÍÄîÐØÕÂ" );
+	set_name( "workshop amulet","æ³¥å·´ç ”è¨Žæœƒç´€å¿µèƒ¸ç« " );
 	add("id",({"amulet"}));
-	set_short( "Äà°ÍÑÐÌÖ»á¼ÍÄîÐØÕÂ" );
+	set_short( "æ³¥å·´ç ”è¨Žæœƒç´€å¿µèƒ¸ç« " );
 	set_long(@Long
-	ÕâÊÇ1996 M.U.D. workshop ÉÏËÍµÄÐéÄâ¼ÍÄîÆ·, ÉÏÃæÓÐ¸öÆ¯ÁÁµÄ
-ÓÂÕß¶·¶ñÁúMark¡£ÉÏÃæ¹²ÓÐÈý¸öÐ¡°´Å¥, ·Ö±ð±êÊ¾Öø(help), (login),
- ÒÔ¼° (check), Èç¹ûÄã²»Çå³þËüÃÇµÄ¹¦ÓÃ, ½¨ÒéÄãÏÈ°´(press) help 
- °´¼ü¿´¿´¡£
+	é€™æ˜¯1996 M.U.D. workshop ä¸Šé€çš„è™›æ“¬ç´€å¿µå“, ä¸Šé¢æœ‰å€‹æ¼‚äº®çš„
+å‹‡è€…é¬¥æƒ¡é¾Markã€‚ä¸Šé¢å…±æœ‰ä¸‰å€‹å°æŒ‰éˆ•, åˆ†åˆ¥æ¨™ç¤ºè‘—(help), (login),
+ ä»¥åŠ (check), å¦‚æžœä½ ä¸æ¸…æ¥šå®ƒå€‘çš„åŠŸç”¨, å»ºè­°ä½ å…ˆæŒ‰(press) help 
+ æŒ‰éµçœ‹çœ‹ã€‚
 Long
 	);
 	set( "type", "misc" );
@@ -43,11 +43,11 @@ void init()
 
 int do_press(string arg)
 {
-	if (!arg) return notify_fail("ÄãÒª°´Ê²÷á?\n");
+	if (!arg) return notify_fail("ä½ è¦æŒ‰ä»€éº¼?\n");
 	if (arg == "login") do_fast_in();
 	else if (arg == "check") do_check();
 	else if (arg == "help") do_help();
-	else return notify_fail("ÄãÒª°´Ê²÷á?\n");
+	else return notify_fail("ä½ è¦æŒ‰ä»€éº¼?\n");
 	return 1;
 }
 int do_fast_in()
@@ -59,18 +59,18 @@ int do_fast_in()
 	player = this_player();
 	
 	if ( ! player->query_temp("chat_user") ) { 
-		write("ÄãÓÖÃ»ÔÚ´óÌüÖÐ, Ë£±¦°¡??\n");
+		write("ä½ åˆæ²’åœ¨å¤§å»³ä¸­, è€å¯¶å•Š??\n");
 		return 1;
 	}
 	if (! ( fast_login=player->query("fast_login") ) ) fast_login=5;
 	
 	// move user to adv guild
 	tell_room ( environment(player), player->query("c_name")+
-			"ÉìÊÖ°´ÏÂÄà°Í¼ÍÄîÐØÕÂÉÏµÄÒ»¸öÐ¡°´Å¥, Äã·¢ÏÖËûµÄÉíÓ°½¥½¥Ä£ºý, ÖÕì¶ÏûÊ§ÁË¡£\n",
+			"ä¼¸æ‰‹æŒ‰ä¸‹æ³¥å·´ç´€å¿µèƒ¸ç« ä¸Šçš„ä¸€å€‹å°æŒ‰éˆ•, ä½ ç™¼ç¾ä»–çš„èº«å½±æ¼¸æ¼¸æ¨¡ç³Š, çµ‚æ–¼æ¶ˆå¤±äº†ã€‚\n",
 			player);
-	write ("ÄãÉìÊÖ°´ÏÂÄà°Í¼ÍÄîÐØÕÂÉÏµÄÒ»¸öÐ¡°´Å¥, ÄãµÄÉíÓ°½¥½¥Ä£ºý...¡£\n");
+	write ("ä½ ä¼¸æ‰‹æŒ‰ä¸‹æ³¥å·´ç´€å¿µèƒ¸ç« ä¸Šçš„ä¸€å€‹å°æŒ‰éˆ•, ä½ çš„èº«å½±æ¼¸æ¼¸æ¨¡ç³Š...ã€‚\n");
 	player->move_player("/d/adventurer/hall/adv_guild");
-	write ("ÄãµÄÉíÓ°ËæÖøÒ»ÕóÑÌÎí, ³öÏÖÔÚÃ°ÏÕÕß¹«»áÖÐ¡£\n");
+	write ("ä½ çš„èº«å½±éš¨è‘—ä¸€é™£ç…™éœ§, å‡ºç¾åœ¨å†’éšªè€…å…¬æœƒä¸­ã€‚\n");
 	
 	// delete temp attributes in lobby
      player->delete_temp("chat_user");
@@ -86,7 +86,7 @@ int do_fast_in()
      }
      // can not use fast login anymore....
      else {
-     	write ("ÄãµÄÄà°Í¼ÍÄîÐØÕÂÄÜÔ´ÒÑ¾­ºÄ¾¡, ÔÙÒ²²»ÄÜ°ïÄã¿ìËÙ½øÈëESÁË:~\n");
+     	write ("ä½ çš„æ³¥å·´ç´€å¿µèƒ¸ç« èƒ½æºå·²ç¶“è€—ç›¡, å†ä¹Ÿä¸èƒ½å¹«ä½ å¿«é€Ÿé€²å…¥ESäº†:~\n");
      	player->delete("fast_login");
      	new_amulet = new(NEW_AMULET);
      	new_amulet->move(player);
@@ -105,19 +105,19 @@ int do_check()
 		fast_login = 5;
 		this_player()->set("fast_login",5);
 	}	
-	write ("ÄãµÄÄà°Í¼ÍÄîÐØÕÂ»¹ÄÜ°ïÖúÄã¿ìËÙ½øÈëES " + fast_login +" ´Î¡£\n");
+	write ("ä½ çš„æ³¥å·´ç´€å¿µèƒ¸ç« é‚„èƒ½å¹«åŠ©ä½ å¿«é€Ÿé€²å…¥ES " + fast_login +" æ¬¡ã€‚\n");
 	return 1;
 }
 
 int do_help()
 {
 	write(@Help
-Õâ¸öÄà°ÍÑÐÌÖ»á¼ÍÄîÐØÕÂ³ýÁË¿ÉÒÔµ±×öÒ»°ãµÄ·À¾ßÊ¹ÓÃÍâ, »¹¿ÉÒÔ°ïÖúÄã
-¿ìËÙ½øÈë¿ª·ÅÇøÓò, Ê¹ÓÃ·½·¨ÈçÏÂ:
-press check: ¼ì²é¼ÍÄîÐØÕÂÖÐµÄÄÜÁ¿»¹ÄÜ°ïÖúÄãlogin¼¸´Î¡£
-press login: Á¢¼´½øÈë ES ¿ª·ÅÇøÓò¡£
-µ±¼ÍÄîÐØÕÂÖÐµÄÄÜÁ¿ÓÃÍêáá, ÐØÕÂÈÔ¿Éµ±×÷Ò»°ãµÄ·À¾ßÊ¹ÓÃ, ¶øÇÒÔÚquit
-áá²»»áÏûÊ§¡£
+é€™å€‹æ³¥å·´ç ”è¨Žæœƒç´€å¿µèƒ¸ç« é™¤äº†å¯ä»¥ç•¶åšä¸€èˆ¬çš„é˜²å…·ä½¿ç”¨å¤–, é‚„å¯ä»¥å¹«åŠ©ä½ 
+å¿«é€Ÿé€²å…¥é–‹æ”¾å€åŸŸ, ä½¿ç”¨æ–¹æ³•å¦‚ä¸‹:
+press check: æª¢æŸ¥ç´€å¿µèƒ¸ç« ä¸­çš„èƒ½é‡é‚„èƒ½å¹«åŠ©ä½ loginå¹¾æ¬¡ã€‚
+press login: ç«‹å³é€²å…¥ ES é–‹æ”¾å€åŸŸã€‚
+ç•¶ç´€å¿µèƒ¸ç« ä¸­çš„èƒ½é‡ç”¨å®Œå¾Œ, èƒ¸ç« ä»å¯ç•¶ä½œä¸€èˆ¬çš„é˜²å…·ä½¿ç”¨, è€Œä¸”åœ¨quit
+å¾Œä¸æœƒæ¶ˆå¤±ã€‚
 Help
 	);
 }	

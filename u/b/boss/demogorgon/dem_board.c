@@ -9,5 +9,5 @@ void create()
         set_save_file("dem_board");
         set_location("/u/boss/demogorgon/dema");
         set ("short.text", "dem's bulletin board");
-        set ("c_short.text", "Ä§ÍõÁôÑÔ°å");
+        set ("c_short.text", "é­”ç‹ç•™è¨€æ¿");
 }

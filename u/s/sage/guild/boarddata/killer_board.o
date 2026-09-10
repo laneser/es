@@ -1,4 +1,4 @@
 #u/s/sage/guild/killer_board.c
-ob_data (["silent_look":1,"c_short.text":"É±ÊÖÁôÑÔ°å","c_name":"ÁôÑÔ°å","id":({"board","bulletin board",}),"long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£","name":"board","short":"@@query_short","short.text":"Killer's bulletin board","long":"@@query_long",])
-messages ({(["poster":"Sage","time":891902582,"body":"ÎÒµÚÒ»£¬ÎÒÊÇÀÏ´ó","title":"< no title >","id":1,]),})
+ob_data (["silent_look":1,"c_short.text":"æ®ºæ‰‹ç•™è¨€æ¿","c_name":"ç•™è¨€æ¿","id":({"board","bulletin board",}),"long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚","name":"board","short":"@@query_short","short.text":"Killer's bulletin board","long":"@@query_long",])
+messages ({(["poster":"Sage","time":891902582,"body":"æˆ‘ç¬¬ä¸€ï¼Œæˆ‘æ˜¯è€å¤§","title":"< no title >","id":1,]),})
 id_ref 1

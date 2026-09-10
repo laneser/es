@@ -8,11 +8,11 @@ void create()
 {
     ::create();
     seteuid(getuid());
-    set_name("water","Ë®");
-    set_short("water","°×¿ªË®");
+    set_name("water","æ°´");
+    set_short("water","ç™½é–‹æ°´");
     set_long("A cup of clear liquid -- water.\n",
-    "Ò»±­°×¿ªË®.\n");
-    set("unit","±­");  // Æ¿, ±­, ¹Ş, ´ü(?)
+    "ä¸€æ¯ç™½é–‹æ°´.\n");
+    set("unit","æ¯");  // ç“¶, æ¯, ç½, è¢‹(?)
     set("e_unit","cup"); // can, bottle, cup, bag(?)
  
     set("recycle",1);

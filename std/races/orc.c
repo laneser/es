@@ -38,10 +38,10 @@ void setup_race_body()
 
 	// These variables are used for /adm/daemons/combat_d.c
 /*
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ",
-		"%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ÐØ", "×óÍÈ", "ÓÒÍÈ",
-		"²±×Ó", "×ó¼ç", "ÓÒ¼ç", "ááÐÄ", "Ð¡¸¹", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"è„–å­", "å·¦è‚©", "å³è‚©", "å¾Œå¿ƒ", "å°è…¹", }) );
 */
 	// Orc has natural damage.
 	body->set("natural_max_damage1", "@@query_orc_damage_bonus");
@@ -61,9 +61,9 @@ int do_feast()
         for ( i = 0 ; i < sizeof(inv) ; i++) {
                 if ( !living(inv[i]) && (string)inv[i]->query("name")=="corpse"&&
 		!inv[i]->query("user_corpse")) {
-                        write(sprintf("Äã°Ñ%s×¥ÆðÀ´£¬Ï£Á¨ºôàà³Ô¸öÇ¬¾» !!\n",
+                        write(sprintf("ä½ æŠŠ%sæŠ“èµ·ä¾†ï¼Œå¸Œå“©å‘¼åš•åƒå€‹ä¹¾æ·¨ !!\n",
                                       inv[i]->query("short")));
-                        tell_room(environment(),sprintf("%s»¶ºôÒ»Éù£¬°Ñ%s×¥ÁËÆðÀ´£¬Á½ÈýÏÂ¿ÐÁË¸öÇ¬¾» ... ¶ñ ...\n",
+                        tell_room(environment(),sprintf("%sæ­¡å‘¼ä¸€è²ï¼ŒæŠŠ%sæŠ“äº†èµ·ä¾†ï¼Œå…©ä¸‰ä¸‹å•ƒäº†å€‹ä¹¾æ·¨ ... æƒ¡ ...\n",
 							this_object()->query("c_name"),inv[i]->query("short")),this_object());
 
 			this_object()->add("hit_points",1+(int)this_object()->query_level()*(int)inv[i]->query("weight")/2000);
@@ -74,11 +74,11 @@ int do_feast()
 		}
 	}
         if ( !j ) {
-                write("ÄãÏë³ÔÊ²÷á£¿ÎÒ¿´ÄãÊÇ¶ö»èÁË !! \n");
+                write("ä½ æƒ³åƒä»€éº¼ï¼Ÿæˆ‘çœ‹ä½ æ˜¯é¤“æ˜äº† !! \n");
                 return 1;
 	}
-        write("Äã²Á²Á×ì£¬ÅÄÅÄ¶Ç×Ó£¬Âú×ãµØ´òÁË¸ö±¥àÃ¡£\n");
-        tell_room(environment(),sprintf("%s²Á²Á×ì£¬ÅÄÅÄ¶Ç×Ó£¬Âú×ãµØ´òÁË¸ö±¥àÃ¡£\n",this_object()->query("c_name")),this_object());
+        write("ä½ æ“¦æ“¦å˜´ï¼Œæ‹æ‹è‚šå­ï¼Œæ»¿è¶³åœ°æ‰“äº†å€‹é£½å—ã€‚\n");
+        tell_room(environment(),sprintf("%sæ“¦æ“¦å˜´ï¼Œæ‹æ‹è‚šå­ï¼Œæ»¿è¶³åœ°æ‰“äº†å€‹é£½å—ã€‚\n",this_object()->query("c_name")),this_object());
         return 1;
 }
 

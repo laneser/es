@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
 #include <compress_obj.h>
-        set_name("longsword", "³¤½£");
+        set_name("longsword", "é•·åŠ");
         add ("id",({ "sword" }) );
-        set_short( "³¤½£" );
+        set_short( "é•·åŠ" );
         set_long(
-            "ÕâÊÇÒ»°ãµÄ¾«ÁéËùÊ¹ÓÃµÄ³¤½£¡£\n"
+            "é€™æ˜¯ä¸€èˆ¬çš„ç²¾éˆæ‰€ä½¿ç”¨çš„é•·åŠã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 9 );
         set( "type", "longblade" );
         set( "min_damage", 5);

@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "grand axe", "¾Ş¸«" );
+	set_name( "grand axe", "å·¨æ–§" );
 	add( "id", ({ "tamumu grand axe", "axe" }) );
-	set_short( "ËşÄ·Ä·¾Ş¸«" );
-	set_long("Õâ°Ñ¾Ş¸«µÄ¸«ÈĞºÜ¿í£¬¶øÇÒÏàµ±·æÀû£¬ÄÜ¶ÔµĞÈËÔì³ÉÆÄ´óµÄÉ±ÉËÁ¦¡£\n"
+	set_short( "å¡”å§†å§†å·¨æ–§" );
+	set_long("é€™æŠŠå·¨æ–§çš„æ–§åˆƒå¾ˆå¯¬ï¼Œè€Œä¸”ç›¸ç•¶é‹’åˆ©ï¼Œèƒ½å°æ•µäººé€ æˆé —å¤§çš„æ®ºå‚·åŠ›ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "axe" );
 	set( "weapon_class", 25 );
 	set( "min_damage", 20 );

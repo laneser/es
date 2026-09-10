@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cloak of king", "ÍõÕßÅû·ç");
+        set_name("cloak of king", "ç‹è€…æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short( "ÍõÕßÅû·ç");
+        set_short( "ç‹è€…æŠ«é¢¨");
         set_long(@C_LONG
-ÕâÊÇÒ»¼şÏóáçÍõÕßµØÎ»µÄÅû·ç£¬ááÃæÓ¡ÓĞÒ»¸ö»Ê¹ÚÍ¼ĞÎ¡£  
+é€™æ˜¯ä¸€ä»¶è±¡å¾µç‹è€…åœ°ä½çš„æŠ«é¢¨ï¼Œå¾Œé¢å°æœ‰ä¸€å€‹çš‡å† åœ–å½¢ã€‚  
 C_LONG
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set("type", "cloak" );
         set("material","heavy_metal") ;
         set("armor_class",7);

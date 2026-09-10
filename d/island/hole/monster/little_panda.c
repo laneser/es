@@ -5,15 +5,15 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "Little Panda","Ğ¡ºÚĞÜ" );
+	set_name( "Little Panda","å°é»‘ç†Š" );
 	add( "id",({ "panda" }) );
-	set_short( "Ğ¡ºÚĞÜ" );
+	set_short( "å°é»‘ç†Š" );
 	set_long(@LONG
-Ò»Í·ÍçÆ¤µÄĞ¡ºÚĞÜÕıºÍËüµÄĞÖµÜ¿ìÀÖµÄÍæË£¡£
+ä¸€é ­é ‘çš®çš„å°é»‘ç†Šæ­£å’Œå®ƒçš„å…„å¼Ÿå¿«æ¨‚çš„ç©è€ã€‚
 LONG
                 );
 	set( "gender","male" );
-	set( "unit","Í·" );
+	set( "unit","é ­" );
 	set_perm_stat( "dex",15 );
 	set_perm_stat( "str",18 );
 	set_perm_stat( "int",10 );
@@ -28,8 +28,8 @@ LONG
 	set( "natural_max_damage2",27 );
 	set( "weight",200 );
 	set( "unbleeding",1 );
-	set_c_verbs( ({ "%sÓÃËüĞ¡Ğ¡µÄÊÖÕÆÏò%s»ÓÈ¥","%sÕÅ¿ªËü³¤ÂúÀûÑÀÏò%sÒ§È¥" }) );
-	set_c_limbs( ({ "¶îÍ·","ĞØÌÅ" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒå°å°çš„æ‰‹æŒå‘%sæ®å»","%så¼µé–‹å®ƒé•·æ»¿åˆ©ç‰™å‘%så’¬å»" }) );
+	set_c_limbs( ({ "é¡é ­","èƒ¸è†›" }) );
 }
 
 void init()
@@ -50,8 +50,8 @@ int kill_me( string str )
 	 if( lv >14 && !present( "black panda" ) )
 	 {
 	 
-	  tell_room( environment( this_object() ),"\n"+him+"¾¹È»ÎŞ³Üµ½È¥ÆÛ¸ºÈõĞ¡¶¯Îï\n\n",this_player() );
-	  tell_object( this_player(),"Ğ¡ĞÜ·¢³öÒ»Õó°§ºÅÉù£¬ºÃÏñÔÚÇó¾ÈËÆµÄËÄ´¦ÌÓ´ÜÁË¡£\n" );
+	  tell_room( environment( this_object() ),"\n"+him+"ç«Ÿç„¶ç„¡æ¥åˆ°å»æ¬ºè² å¼±å°å‹•ç‰©\n\n",this_player() );
+	  tell_object( this_player(),"å°ç†Šç™¼å‡ºä¸€é™£å“€è™Ÿè²ï¼Œå¥½åƒåœ¨æ±‚æ•‘ä¼¼çš„å››è™•é€ƒç«„äº†ã€‚\n" );
 	  call_out( "warning",5 );
 	  return 1;
 	 }
@@ -62,7 +62,7 @@ int kill_me( string str )
 void warning()
 {
 	tell_room( environment(this_object()),set_color(
-	"\nºöÈ»²İ´ÔÖĞÒ»Æ¬É§¶¯£¬ºÃÏñÓĞÊ²÷á¶«Î÷ÔÚÀïÃæ......\n\n","HIY") );
+	"\nå¿½ç„¶è‰å¢ä¸­ä¸€ç‰‡é¨·å‹•ï¼Œå¥½åƒæœ‰ä»€éº¼æ±è¥¿åœ¨è£¡é¢......\n\n","HIY") );
 	call_out( "mother_help",2 );
 	return ;
 }

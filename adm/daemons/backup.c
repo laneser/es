@@ -53,12 +53,12 @@ int user_backup(object user)
 	link = (object)user->query_link();
 
 	body = link->query("body_ob");
-	if( !body ) notify_fail("*¾¯¸æ* ÈËÎï×ÊÁÏ²»ÕýÈ·¡¡ÇëÍ¨ÖªÉñ»òÎ×Ê¦¡¡\n");
+	if( !body ) notify_fail("*è­¦å‘Š* äººç‰©è³‡æ–™ä¸æ­£ç¢ºã€€è«‹é€šçŸ¥ç¥žæˆ–å·«å¸«ã€€\n");
 
 	link_data = read_file(user_data_file(link)+".o");
 	body_data = read_file(user_data_file(body)+".o");
 	if( !link_data || !body_data )
-		return notify_fail("*¾¯¸æ* ÈËÎï×ÊÁÏ²»ÕýÈ·¡¡ÇëÍ¨ÖªÉñ»òÎ×Ê¦¡¡\n");
+		return notify_fail("*è­¦å‘Š* äººç‰©è³‡æ–™ä¸æ­£ç¢ºã€€è«‹é€šçŸ¥ç¥žæˆ–å·«å¸«ã€€\n");
 
 	link_file = user_backup_file(link);
 	body_file = user_backup_file(body);
@@ -75,7 +75,7 @@ int user_backup(object user)
 	else rm(body_file);
 		write_file(body_file, body_data);
 
-		write("×ÊÁÏ±¸·Ý ... Íê±Ï¡¡\n");
+		write("è³‡æ–™å‚™ä»½ ... å®Œç•¢ã€€\n");
 	return 1;
 }
 

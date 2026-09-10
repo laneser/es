@@ -8,7 +8,7 @@
 int cmd_score()
 {
 	write( can_read_chinese()?
-		"һ�����ˣ���Ҳ���üƽ�ʲ�����ԡ�״̬�ˡ�\n":
+		"一死百了，你也不用計較什麼屬性、狀態了。\n":
 		"Dead. Dead, dead, dead, dead, dead. Dead!\n"
 		"You are in a immaterial state and have no other scores.\n");
 	return 1 ;

@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-        set_name( "occult club", "ÉñÃØ¹÷" );
+        set_name( "occult club", "ç¥ç§˜æ£" );
         add( "id",({ "club" }) );
-        set_short( "ÉñÃØ¹÷" );
+        set_short( "ç¥ç§˜æ£" );
         set_long(
-            "ÕâÊÇÉñÃØÊ÷µÄÖĞĞÄ¾«»ª£¬ÓµÓĞ¾ÙÊÀÎŞÆ¥Ó²¶È¡£\n"
+            "é€™æ˜¯ç¥ç§˜æ¨¹çš„ä¸­å¿ƒç²¾è¯ï¼Œæ“æœ‰èˆ‰ä¸–ç„¡åŒ¹ç¡¬åº¦ã€‚\n"
         );
         set("layuter_club",1);
-        set( "unit", "¿Ã");
+        set( "unit", "æ£µ");
         set( "weight", 400 );
         set( "value", ({ 0, "gold" }) );
 }

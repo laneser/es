@@ -5,13 +5,13 @@ inherit OBJECT;
 object place;
 void create()
 {
-	set_name( "manlike fruit", "ÈË²Î¹û" );
-	set_short( "ÈË²Î¹û" );
+	set_name( "manlike fruit", "äººåƒæœ" );
+	set_short( "äººåƒæœ" );
 	set_long(
-	  "ÕâÊÇ¸ö¿ÉÒÔÑÓÄêÒæÊÙ¡¢Ç§ÄêÒ»½áµÄÈË²Î¹û¡£\n"
+	  "é€™æ˜¯å€‹å¯ä»¥å»¶å¹´ç›Šå£½ã€åƒå¹´ä¸€çµçš„äººåƒæœã€‚\n"
 	);
         add("id",({"fruit"}) );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
 	set( "weight", 10 );
 	set( "value", ({ 1, "silver" }) );
 	set( "no_sale", 1 );
@@ -27,11 +27,11 @@ int do_eat(string arg)
    int align;
 
    if(!arg || arg!="fruit")
-   { write("ÄãÒª³ÔÊ²÷á£¿\n");
+   { write("ä½ è¦åƒä»€éº¼ï¼Ÿ\n");
      return 1;
    };
    this_object()->set("prevent_drop",1); 
-   write("Äã³ÔÁËÕâ¿ÅÈË²Î¹ûÖ®áá£¬Í»È»Äã¾õµÃÉíÌåºÃÏñÓĞÊ²÷á±ä»¯£®£®£®£®£®\n");
+   write("ä½ åƒäº†é€™é¡†äººåƒæœä¹‹å¾Œï¼Œçªç„¶ä½ è¦ºå¾—èº«é«”å¥½åƒæœ‰ä»€éº¼è®ŠåŒ–ï¼ï¼ï¼ï¼ï¼\n");
    this_player()->set_temp("block_command",1);
    write("\n\n\n\n\n\n\n");
    call_out("idle_time1",2,this_player());
@@ -43,16 +43,16 @@ int do_eat(string arg)
 
 int idle_time1(object who)
 {
-    tell_object(who, "Äã¾õµÃÄãµÄÉí×ÓÒ»Çá£¬ÂıÂıµÄÆ®ÁËÆğÀ´£¬Äã²»½û°µ°µÍµĞ¦£¬ºÃ²»ÈİÒ×ÔÚ£Å£ÓÖĞ»ìÄÇ÷á¾Ã£¬ÖÕì¶³ÉÏÉÁË¡£\n");
-    tell_room(environment(this_player()),"\nÄã¼ûµ½ "+this_player()->query("c_name")+" ÂıÂıµÄÆ®ÁËÆğÀ´£¬ÍùÌì¿ÕÖĞ·ÉÉÏÈ¥¡£\n\n",this_player());
+    tell_object(who, "ä½ è¦ºå¾—ä½ çš„èº«å­ä¸€è¼•ï¼Œæ…¢æ…¢çš„é£„äº†èµ·ä¾†ï¼Œä½ ä¸ç¦æš—æš—å·ç¬‘ï¼Œå¥½ä¸å®¹æ˜“åœ¨ï¼¥ï¼³ä¸­æ··é‚£éº¼ä¹…ï¼Œçµ‚æ–¼æˆä»™äº†ã€‚\n");
+    tell_room(environment(this_player()),"\nä½ è¦‹åˆ° "+this_player()->query("c_name")+" æ…¢æ…¢çš„é£„äº†èµ·ä¾†ï¼Œå¾€å¤©ç©ºä¸­é£›ä¸Šå»ã€‚\n\n",this_player());
     tell_object(who,"\n\n\n\n\n\n\n");
     return 1;
 }
 
 int idle_time2(object who)
 {
-    tell_object(who, "Äã·¢¾õ×Ô¼ºÈÔ²»¶ÏµÄÉı¸ß£¬ÀëµØÃæÔ½À´Ô½Ô¶£¬ÖÕì¶¿´²»¼ûÁË£¬ÄãÕû¸öÉíÌåĞüÔÚ°ë¿ÕÖĞ£¬²»Öªµ½»áÆ®µ½ºÎ´¦¡£\n");
-    tell_room(place=environment(who),"\n"+who->query("c_name")+"Ô½·ÉÔ½¸ß¡¢Ô½·ÉÔ½¿ì£¬ÖÕì¶Ëõ³ÉÒ»µã£¬ÏûÊ§ÔÚ¿ÕÖĞÁË¡£\n\n",who);
+    tell_object(who, "ä½ ç™¼è¦ºè‡ªå·±ä»ä¸æ–·çš„å‡é«˜ï¼Œé›¢åœ°é¢è¶Šä¾†è¶Šé ï¼Œçµ‚æ–¼çœ‹ä¸è¦‹äº†ï¼Œä½ æ•´å€‹èº«é«”æ‡¸åœ¨åŠç©ºä¸­ï¼Œä¸çŸ¥åˆ°æœƒé£„åˆ°ä½•è™•ã€‚\n");
+    tell_room(place=environment(who),"\n"+who->query("c_name")+"è¶Šé£›è¶Šé«˜ã€è¶Šé£›è¶Šå¿«ï¼Œçµ‚æ–¼ç¸®æˆä¸€é»ï¼Œæ¶ˆå¤±åœ¨ç©ºä¸­äº†ã€‚\n\n",who);
     who->set_temp("block_command",0);
     who->move_player(OTEMP"void","SNEAK");
     return 1;
@@ -60,8 +60,8 @@ int idle_time2(object who)
 
 void end(object ob1,object who)
 {
-  tell_object(who,"\n¿ÕÖĞ´«À´Î×Ê¦ÀÏÃ¨µÄÉùÒô£º¶Ô²»Æğ¡¢ÄãĞŞ¡õ»¹²»¹»£¬µÈÄã¹¦\µÂÔ²ÂúÊ±£¬\n×ÔÈ»ÓĞÈË»áÀ´´øÄã³ÉÏÉ¡£\n\n");
-  tell_room(place,"\nÄã¼ûµ½"+who->query("c_name")+"´Ó¿ÕÖĞÂıÂıµÄÆ®ÁËÏÂÀ´¡£\n\n",who);
+  tell_object(who,"\nç©ºä¸­å‚³ä¾†å·«å¸«è€è²“çš„è²éŸ³ï¼šå°ä¸èµ·ã€ä½ ä¿®â–¡é‚„ä¸å¤ ï¼Œç­‰ä½ åŠŸå¾·åœ“æ»¿æ™‚ï¼Œ\nè‡ªç„¶æœ‰äººæœƒä¾†å¸¶ä½ æˆä»™ã€‚\n\n");
+  tell_room(place,"\nä½ è¦‹åˆ°"+who->query("c_name")+"å¾ç©ºä¸­æ…¢æ…¢çš„é£„äº†ä¸‹ä¾†ã€‚\n\n",who);
   who->move_player(place,"SNEAK");
   ob1->remove();
   return;

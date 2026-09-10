@@ -3,14 +3,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("golden pen","½ğ±Ê");
+	set_name("golden pen","é‡‘ç­†");
 	add ("id",({ "pen"}) );
-        set_short("½ğ±Ê");
+        set_short("é‡‘ç­†");
 	set_long(@C_LONG
-Ò»Ö¦´¿½ğ´òÔìµÄ±Ê¹Ü£¬Ã«Õ´½ğÄ«£¬°º¹ó¼«ÁË¡£
+ä¸€æç´”é‡‘æ‰“é€ çš„ç­†ç®¡ï¼Œæ¯›æ²¾é‡‘å¢¨ï¼Œæ˜‚è²´æ¥µäº†ã€‚
 C_LONG
 	);
-	set( "unit", "Ö¦" );
+	set( "unit", "æ" );
         setup_weapon("thrusting", 30,15,20);
 	set( "weight", 100 );
         set("second",1);

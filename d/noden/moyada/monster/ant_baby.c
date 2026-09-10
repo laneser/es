@@ -6,21 +6,21 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name("ant baby", "Ğ¡ÂìÒÏ");
+	set_name("ant baby", "å°èèŸ»");
 	add( "id", ({ "ant", "baby", }) );
-	set_short("Ğ¡ÂìÒÏ");
-	set_long( "¹ÖÒÏµÄÓ¤º¢¡£\n"
+	set_short("å°èèŸ»");
+	set_long( "æ€ªèŸ»çš„å¬°å­©ã€‚\n"
 	);
    set( "race", "insect" );
 	set( "max_hp",20);
 	set( "hit_points",20);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", 100 );
 	set( "weight", 100);
 	set_natural_weapon(2, 3, 5);
-	set( "c_death_msg", "%s¼â½ĞÒ»Éù£¬¶¶ÁË¼¸ÏÂ²»¶¯ÁË ....\n" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å" }) );
-	set_c_verbs( ({ "%sºİºİµÄÍù%sÒ§ÏÂÈ¥" }) );
+	set( "c_death_msg", "%så°–å«ä¸€è²ï¼ŒæŠ–äº†å¹¾ä¸‹ä¸å‹•äº† ....\n" );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³" }) );
+	set_c_verbs( ({ "%sç‹ ç‹ çš„å¾€%så’¬ä¸‹å»" }) );
 	set( "tactic_func", "call_help");
     set( "exp_reward", 40 );
    set( "alt_corpse", MOYADA"obj/ant_corpse2" );
@@ -50,7 +50,7 @@ int call_help()
     left = env->query("ant_left");
     if( random(20)>5 || number > 4 || left < 1 ) return 0;
     tell_room( env,
-      "Ğ¡ÂìÒÏ½Ğ³öÕ½Ê¿ÒÏÀ´°ïÃ¦µÖ¿¹¡£\n", this_object()
+      "å°èèŸ»å«å‡ºæˆ°å£«èŸ»ä¾†å¹«å¿™æŠµæŠ—ã€‚\n", this_object()
     );
     left--;
     env->set("ant_left", left);

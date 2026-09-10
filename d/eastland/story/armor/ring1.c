@@ -2,14 +2,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("buddha ring","¡õ½ä");
+        set_name("buddha ring","â–¡æˆ’");
         add( "id", ({ "ring" }) );
-        set_short( "¡õ½ä");
+        set_short( "â–¡æˆ’");
         set_long(@C_LONG
-Ò»Ö»ÏâÖø¡õ×Ö·ûºÅµÄ½äÖ¸£¬½äÖ¸ÉÏ²»Ê±ÉÁË¸ÖøÆß²Êºç¹â¡£
+ä¸€éš»é‘²è‘—â–¡å­—ç¬¦è™Ÿçš„æˆ’æŒ‡ï¼Œæˆ’æŒ‡ä¸Šä¸æ™‚é–ƒçˆè‘—ä¸ƒå½©è™¹å…‰ã€‚
 C_LONG
         );
-        set( "unit","Ö»");
+        set( "unit","åª");
         set( "type", "finger" );
         set( "material","element");
         set( "defense_bonus", 7 );

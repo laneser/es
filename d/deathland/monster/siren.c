@@ -8,10 +8,10 @@ void create()
     object ob1;
 	::create();
 	set_level(18);
-	set_name( "siren", "ÈüÂ×" );
-	set_short( "ÈüÂ×" );
+	set_name( "siren", "è³½å€«" );
+	set_short( "è³½å€«" );
 	set_long(
-		"Äã¼ûµ½Ò»¸öÃÀÀöµÄÅ®ÈË,¶øÇÒËıµÄ¸èÉùÊÇÈç´ËµÄÓÅÃÀÒÔÖÁì¶ÈÃÄãÌÕ×íÆäÖĞ,ÎŞ·¨×Ô°Î¡£\n"
+		"ä½ è¦‹åˆ°ä¸€å€‹ç¾éº—çš„å¥³äºº,è€Œä¸”å¥¹çš„æ­Œè²æ˜¯å¦‚æ­¤çš„å„ªç¾ä»¥è‡³æ–¼è®“ä½ é™¶é†‰å…¶ä¸­,ç„¡æ³•è‡ªæ‹”ã€‚\n"
 	);
 	set( "gender", "female" );
 	set( "alignment", -1600 );
@@ -46,22 +46,22 @@ int my_tactic()
 	if ( random(10)>5 ) {
 	  if( victim->query("stop_attack") ) {
 	     tell_object( victim, 
-		 "ÈüÂ×ÓÃËıµÄÑÛÉñ×¢ÊÓÖøÄã.\n");
+		 "è³½å€«ç”¨å¥¹çš„çœ¼ç¥æ³¨è¦–è‘—ä½ .\n");
 	     tell_room( environment(this_object()), 
-                 "ÈüÂ×ÓÖÓÃËıµÄÑÛÉñ×¢ÊÓÖø"+ victim->query("c_name") +".\n"
+                 "è³½å€«åˆç”¨å¥¹çš„çœ¼ç¥æ³¨è¦–è‘—"+ victim->query("c_name") +".\n"
 		 ,({ victim, this_object() }) );
 	     victim->receive_special_damage( "mental" , 35+random(15) );
 	     report( this_object() , victim );
 	     }
 	  else {  
 	     tell_object( victim, 
-		   "ÈüÂ×ÓÃËıµÄÑÛÉñ×¢ÊÓÖøÄã£¬°ÑÄã¸øÃÔ»ó×¡ÁË.\n");
+		   "è³½å€«ç”¨å¥¹çš„çœ¼ç¥æ³¨è¦–è‘—ä½ ï¼ŒæŠŠä½ çµ¦è¿·æƒ‘ä½äº†.\n");
 	     tell_room( environment(this_object()), 
-                   "ÈüÂ×ÓÃËıµÄÑÛÉñ×¢ÊÓÖø"+ victim->query("c_name") +"£¬°Ñ"+ victim->query("c_name") +"¸øÃÔ»ó×¡ÁË.\n"
+                   "è³½å€«ç”¨å¥¹çš„çœ¼ç¥æ³¨è¦–è‘—"+ victim->query("c_name") +"ï¼ŒæŠŠ"+ victim->query("c_name") +"çµ¦è¿·æƒ‘ä½äº†.\n"
 		   ,({ victim, this_object() }) );
 	     victim->block_attack(6);
 	     victim->set_temp("msg_stop_attack", 
-		 "( ÄãÏÖÔÚÒâÂÒÇéÃÔ£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+		 "( ä½ ç¾åœ¨æ„äº‚æƒ…è¿·ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
 	     }
 	    return 1;
       }
@@ -69,7 +69,7 @@ int my_tactic()
       all_vic=query_attackers();
       all_vic->receive_special_damage("mental",50 );
       tell_room(environment(),
-                "ÈüÂ×Õı³ªÖø¸èÀ´ÍµÈ¡ÄãµÄÉúÃüÁ¦.\n"
+                "è³½å€«æ­£å”±è‘—æ­Œä¾†å·å–ä½ çš„ç”Ÿå‘½åŠ›.\n"
                 ,this_object() );
       for(i=0;i<sizeof(all_vic);i++) 
         report(this_object(),all_vic[i]);

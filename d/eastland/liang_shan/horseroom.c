@@ -11,12 +11,12 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "ÂíÊĞ" );
+	set_short( "é¦¬å¸‚" );
 	set_long(
-	"ÕâÀïÊÇÒ»¿éĞ¡Ğ¡µÄ¿ÕµØ£¬ÈËÃÇµÄßººÈÉù´ËÆğ±ËÂä£¬¼ä»ò¼ĞÔÓÖøÂíÆ¥\n"
-	"µÄ³¤Ğ¥Éù£¬ÕâÀï¾ÍÊÇÁºÉ½²´ÄÚ×î´óµÄÂíÊĞ£¬ÓÉ»Ê¸¦¶ËËù³ö×Ê¿ªÉè¡£\n"
-	"ÂíÆ¥µÄĞÈ¡õÆøºÍÈËÃÇº¹Ë®µÄÆøÎ¶»ìÔÓÔÚÒ»Æğ£¬È´³ÉÁËÁíÒ»ÖÖ³äÂúÉú¡£\n"
-	"ÃüÁ¦µÄÆøÏ¢¡£ÔÚ¿ÕµØÖĞÑë£¬ÌùÁËÒ»ÕÅ¸æÊ¾(note)¡£\n"
+	"é€™è£¡æ˜¯ä¸€å¡Šå°å°çš„ç©ºåœ°ï¼Œäººå€‘çš„å†å–è²æ­¤èµ·å½¼è½ï¼Œé–“æˆ–å¤¾é›œè‘—é¦¬åŒ¹\n"
+	"çš„é•·å˜¯è²ï¼Œé€™è£¡å°±æ˜¯æ¢å±±æ³Šå…§æœ€å¤§çš„é¦¬å¸‚ï¼Œç”±çš‡ç”«ç«¯æ‰€å‡ºè³‡é–‹è¨­ã€‚\n"
+	"é¦¬åŒ¹çš„è…¥â–¡æ°£å’Œäººå€‘æ±—æ°´çš„æ°£å‘³æ··é›œåœ¨ä¸€èµ·ï¼Œå»æˆäº†å¦ä¸€ç¨®å……æ»¿ç”Ÿã€‚\n"
+	"å‘½åŠ›çš„æ°£æ¯ã€‚åœ¨ç©ºåœ°ä¸­å¤®ï¼Œè²¼äº†ä¸€å¼µå‘Šç¤º(note)ã€‚\n"
 	);
 	set( "light",1 );
         set_outside("eastland");
@@ -43,13 +43,13 @@ int note_msg()
 	amount = this_object()->query("amount");
 
 write(
-"ÕâÕÅ¸æÊ¾ÉÏĞ´Öø£º\n\n"
-"    ±¾µêÌá¹©¸÷ÀàÂíÆ¥£¬¼ÛÇ®¹«µÀ£¬Í¯ÛÅÎŞÆÛ£¬ÒÔÏÂÎªÏÖÓĞµÄÂíÖÖ\n\n"
-"     ÂíÖÖ:                    ¼Û¸ñ:\n\n"
-"   Ğ¡»¨Âí  (spot_horse)     "+PRICE[1]+" Òø±Ò    Ö»Ê£ "+amount[1]+" Ö»  \n"
-"  ºì××ÁÒÂí  (red_horse)     "+PRICE[2]+" Òø±Ò    Ö»Ê£ "+amount[2]+" Ö»  \n"
-"  Ì¤Ñ©ÎÚæí(whitefoot_horse) "+PRICE[3]+" Òø±Ò    Ö»Ê£ "+amount[3]+" Ö»  \n\n"
-"         ¡¡¡¡¡¡¡¡¡¡ps ·²±¾µêÂô³öµÄÂíÆ¥£¬Èô²»ÂúÒâ£¬±¾µê¿ÉÒÔ°ë¼Û¹º»Ø\n"                                      
+"é€™å¼µå‘Šç¤ºä¸Šå¯«è‘—ï¼š\n\n"
+"    æœ¬åº—æä¾›å„é¡é¦¬åŒ¹ï¼Œåƒ¹éŒ¢å…¬é“ï¼Œç«¥åŸç„¡æ¬ºï¼Œä»¥ä¸‹ç‚ºç¾æœ‰çš„é¦¬ç¨®\n\n"
+"     é¦¬ç¨®:                    åƒ¹æ ¼:\n\n"
+"   å°èŠ±é¦¬  (spot_horse)     "+PRICE[1]+" éŠ€å¹£    åªå‰© "+amount[1]+" åª  \n"
+"  ç´…é¬ƒçƒˆé¦¬  (red_horse)     "+PRICE[2]+" éŠ€å¹£    åªå‰© "+amount[2]+" åª  \n"
+"  è¸é›ªçƒé¨…(whitefoot_horse) "+PRICE[3]+" éŠ€å¹£    åªå‰© "+amount[3]+" åª  \n\n"
+"         ã€€ã€€ã€€ã€€ã€€ps å‡¡æœ¬åº—è³£å‡ºçš„é¦¬åŒ¹ï¼Œè‹¥ä¸æ»¿æ„ï¼Œæœ¬åº—å¯ä»¥åŠåƒ¹è³¼å›\n"                                      
 	);
 	return 1;
 }
@@ -60,14 +60,14 @@ int sell_horse(string arg)
  	object horse;
  	int i=0, *amount;
  	if( !arg || arg != "horse" ) {
- 		return notify_fail("Ö¸Áî¸ñÊ½ : sell horse (Èç¹ûÄãÓĞ).\n");
+ 		return notify_fail("æŒ‡ä»¤æ ¼å¼ : sell horse (å¦‚æœä½ æœ‰).\n");
  		                     }
  	horse = this_player()->query_temp("now_mount");
 	if( !horse )                 
-		return notify_fail("ÀÏ°åËµµÀ:ÄãÓĞÔÚÕâÂòÂíÂğ?\n");
+		return notify_fail("è€é—†èªªé“:ä½ æœ‰åœ¨é€™è²·é¦¬å—?\n");
 	if( !present(horse, this_object())	) {
 		tell_object( this_player(),
-            "ÀÏ°åËµµÀ: Ã»´í£¬ÏÈÈÃÎÒ¿´¿´Âí°É!\n" );
+            "è€é—†èªªé“: æ²’éŒ¯ï¼Œå…ˆè®“æˆ‘çœ‹çœ‹é¦¬å§!\n" );
         return 1;
 	}
 
@@ -77,7 +77,7 @@ int sell_horse(string arg)
         case "whitefoot_horse" : i=3;  break;
         default :
           tell_object( this_player(), 
-            "ÀÏ°åËµµÀ: ¶Ô²»Æğ£¬±¾µê²»ÊÕÕâÖÖ¶«Î÷¡£\n" );
+            "è€é—†èªªé“: å°ä¸èµ·ï¼Œæœ¬åº—ä¸æ”¶é€™ç¨®æ±è¥¿ã€‚\n" );
           return 1;
     }
 
@@ -90,7 +90,7 @@ int sell_horse(string arg)
     amount[i]++;
     this_object()->set("amount", amount);
     tell_object(this_player(), 
-        "ÄãÂôµôÄãµÄÂí£¬µÃµ½ "+(PRICE[i]/2)+" ¿éÒø±Ò¡£\n"
+        "ä½ è³£æ‰ä½ çš„é¦¬ï¼Œå¾—åˆ° "+(PRICE[i]/2)+" å¡ŠéŠ€å¹£ã€‚\n"
 		);
     return 1;
 }
@@ -101,14 +101,14 @@ int buy_horse(string arg)
 	int i=0, *amount;
 
 	if( !arg || arg == "" )
-		return notify_fail("Ö¸Áî¸ñÊ½ : buy + <ÂíµÄÃû³Æ>.\n");
+		return notify_fail("æŒ‡ä»¤æ ¼å¼ : buy + <é¦¬çš„åç¨±>.\n");
 	
 	if( this_player()->query_temp("now_mount") )
-    	return notify_fail("ÀÏ°åÒ¡Í·ËµµÀ: ¶Ô²»Æğ, Ò»¸öÈËÖ»ÄÜÂòÒ»Æ¥Âí¡£\n");
+    	return notify_fail("è€é—†æ–é ­èªªé“: å°ä¸èµ·, ä¸€å€‹äººåªèƒ½è²·ä¸€åŒ¹é¦¬ã€‚\n");
           
 	amount = this_object()->query("amount");
 	if( !amount )
-		return notify_fail("ÀÏ°åĞ¦µÀ: ¶Ô²»Æğ, ±¾µêËùÓĞµÄÂí¶¼ÒÑÂôÍêÁË¡£\n");
+		return notify_fail("è€é—†ç¬‘é“: å°ä¸èµ·, æœ¬åº—æ‰€æœ‰çš„é¦¬éƒ½å·²è³£å®Œäº†ã€‚\n");
           
 	switch (arg) {
         case "spot_horse"  : i=1;  break;
@@ -116,19 +116,19 @@ int buy_horse(string arg)
         case "whitefoot_horse" : i=3;  break;
         default :
           tell_object( this_player(), 
-            "ÀÏ°åËµµÀ: ¶Ô²»Æğ£¬±¾µêÃ»ÓĞÂô "+arg+" ÕâÖÖÂí¡£\n" );
+            "è€é—†èªªé“: å°ä¸èµ·ï¼Œæœ¬åº—æ²’æœ‰è³£ "+arg+" é€™ç¨®é¦¬ã€‚\n" );
           return 1;
           break;
     }
     if( i<1 || 1>3 ) return 0;
     if( amount[i] < 1 ) {
     	tell_object( this_player(), 
-          "ÀÏ°åËµµÀ: ¶Ô²»Æğ£¬±¾µê "+arg+" ÕâÖÖÂíÒÑ¾­ÂôÍêÁË¡£\n" );
+          "è€é—†èªªé“: å°ä¸èµ·ï¼Œæœ¬åº— "+arg+" é€™ç¨®é¦¬å·²ç¶“è³£å®Œäº†ã€‚\n" );
         return 1;
     }
     
     if( !this_player()->debit("silver",PRICE[i] ) )
-        return notify_fail("ÄãÃ»ÓĞÄÇ÷á¶àÒø±Ò¡£\n");
+        return notify_fail("ä½ æ²’æœ‰é‚£éº¼å¤šéŠ€å¹£ã€‚\n");
 
 	amount[i]--;
 	this_object()->set("amount", amount);
@@ -139,7 +139,7 @@ int buy_horse(string arg)
       horse->set_master( this_player() );
 
     tell_object(this_player(), 
-        "ÀÏ°åÇ£À´Ò»Æ¥Âí£¬Ğ°¶ñµØĞ¦µÀ£º¡¸ÏÂ´Î¼ÇµÃÔÙÀ´à¸ !!¡¹±ßËµ±ß°Ñ¡õÉş½»¸øÄã\n");
+        "è€é—†ç‰½ä¾†ä¸€åŒ¹é¦¬ï¼Œé‚ªæƒ¡åœ°ç¬‘é“ï¼šã€Œä¸‹æ¬¡è¨˜å¾—å†ä¾†å–” !!ã€é‚Šèªªé‚ŠæŠŠâ–¡ç¹©äº¤çµ¦ä½ \n");
     return 1;
 }
 

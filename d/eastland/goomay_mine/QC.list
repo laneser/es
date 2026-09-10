@@ -1,40 +1,40 @@
-¹ÅÃ·¿ó¿Ó£º (-)±íÓëÒ»°ãÉè¼ÆÆ½,(+)±í¸ßì¶Ò»°ãÉè¼Æ,(*)±í´ïÉÏÏŞ
+å¤æ¢…ç¤¦å‘ï¼š (-)è¡¨èˆ‡ä¸€èˆ¬è¨­è¨ˆå¹³,(+)è¡¨é«˜æ–¼ä¸€èˆ¬è¨­è¨ˆ,(*)è¡¨é”ä¸Šé™
  
-ÎäÆ÷ÁĞ±í£º
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨åˆ—è¡¨ï¼š
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-ºÚÉ½ÉñÕÈ black_staff  30    15(-) 26    blt
-Ä§·¨Ø°Ê× dagger.c     30(-) 15(-) 30(-) dag               42(+),25(*),39(*)
-ÁúĞÎ½£   dragon_sword 38(+) 24(+) 44(+) lbl
-¹ÕÕÈ     stick.c      14     8    16    blt
-ĞıÌì¸«   tang_axe.c   37(+) 21(+) 41(+) axe  bleeding10
-À×öªµ¶   thunder_blad 33    23(+) 38    lbl
+é»‘å±±ç¥æ– black_staff  30    15(-) 26    blt
+é­”æ³•åŒ•é¦– dagger.c     30(-) 15(-) 30(-) dag               42(+),25(*),39(*)
+é¾å½¢åŠ   dragon_sword 38(+) 24(+) 44(+) lbl
+æŸºæ–     stick.c      14     8    16    blt
+æ—‹å¤©æ–§   tang_axe.c   37(+) 21(+) 41(+) axe  bleeding10
+é›·éœ†åˆ€   thunder_blad 33    23(+) 38    lbl
  
-Ãû³Æ     µµÃû         AC    DB    ÖÖÀà ÌØ·À                  ±¸×¢
+åç¨±     æª”å         AC    DB    ç¨®é¡ ç‰¹é˜²                  å‚™è¨»
 ======== ============ ===== ===== ==== ===================== ================
-îø¼×£º
-ºÚÉ«¿ø¼× black_plate  33     0    hvm                        35(-),6(-)
-¿×È¸ÍõÅÛ king_robe.c  35(-)  5    clo
-ºìÔÆÉ¼   red_coat.c   20     5    clo
-ÔÆÅÛ     white_robe.c 24     9(+) clo  evil5
+é§ç”²ï¼š
+é»‘è‰²ç›”ç”² black_plate  33     0    hvm                        35(-),6(-)
+å­”é›€ç‹è¢ king_robe.c  35(-)  5    clo
+ç´…é›²æ‰   red_coat.c   20     5    clo
+é›²è¢     white_robe.c 24     9(+) clo  evil5
  
-±Û»·£º
-ºÚÄ¾±Û»· black_armban  3     4(-) wood all5                  4(*),5(*)
+è‡‚ç’°ï¼š
+é»‘æœ¨è‡‚ç’° black_armban  3     4(-) wood all5                  4(*),5(*)
  
-»¤ÊÖ£º
-ÁúÎÆÊÖÌ× dragon_glove  4(-)  5(*) clo  acid10 poison5
+è­·æ‰‹ï¼š
+é¾ç´‹æ‰‹å¥— dragon_glove  4(-)  5(*) clo  acid10 poison5
  
-ëÖ¼×£º
-ºÚÉ«»¤Ï¥ black_leggin  8(-)  0    ltm
+è„›ç”²ï¼š
+é»‘è‰²è­·è† black_leggin  8(-)  0    ltm
  
-Ğ¬×Ó£º
-ºÚÉ«¹ÖĞ¬ black_boots   6     0    hvm  acid2
-¿ìÒâ±¡Ñ¥ boots.c       8(-)  3(-) lea
-ÁùºÏÑ¥   six_shoe.c    5     5(*) ele  all5 none2
+é‹å­ï¼š
+é»‘è‰²æ€ªé‹ black_boots   6     0    hvm  acid2
+å¿«æ„è–„é´ boots.c       8(-)  3(-) lea
+å…­åˆé´   six_shoe.c    5     5(*) ele  all5 none2
  
-Åû·ç£º
-»ğÅû·ç   fire_cloak.c  6     7(+) clo  cold10
+æŠ«é¢¨ï¼š
+ç«æŠ«é¢¨   fire_cloak.c  6     7(+) clo  cold10
  
-½äÖ¸£º
-×êÊ¯½äÖ¸ diamond_ring  0     5    ele  magic5
-À¶º£Çé½ä love_ring.c   0     6(-) ele  fire2
+æˆ’æŒ‡ï¼š
+é‘½çŸ³æˆ’æŒ‡ diamond_ring  0     5    ele  magic5
+è—æµ·æƒ…æˆ’ love_ring.c   0     6(-) ele  fire2

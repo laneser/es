@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("milky cape", "Èé°×¡õË¿Õ½ÅÛ");
+        set_name("milky cape", "ä¹³ç™½â–¡çµ²æˆ°è¢");
         add( "id", ({ "cloak","cape" }) );
-        set_short("milky cape","Èé°×¡õË¿»¤ÅÛ");
+        set_short("milky cape","ä¹³ç™½â–¡çµ²è­·è¢");
         set_long(
                 "This is a milky cape for fighters\n",
-                "ÕâÊÇÒ»¼şÈé°×É«µÄÕ½ÅÛ£¬¿´ÆğÀ´Æ½Æ½·²·²£®\n"
+                "é€™æ˜¯ä¸€ä»¶ä¹³ç™½è‰²çš„æˆ°è¢ï¼Œçœ‹èµ·ä¾†å¹³å¹³å‡¡å‡¡ï¼\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "cloth" );
         set( "armor_class", 4 );

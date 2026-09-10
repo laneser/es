@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(10);
-	set( "unit","Ö»");
+	set( "unit","åª");
 	set("killer",1);
-	set_name("salamander", "»ğòáòæ");
+	set_name("salamander", "ç«èœ¥èœ´");
 	add( "id", ({ "lizard" }) );
-	set_short("»ğòáòæ");
+	set_short("ç«èœ¥èœ´");
 	set_long(
-		"ÕâÊÇÒ»ÖÖ×¡ÔÚ»ğÅÔÒÔ»ğÎªÊ³µÄÉúÎï£¬ÉúĞÔ²Ğ±©µÄËüÊ²÷á¶¼³Ô¡£\n"
+		"é€™æ˜¯ä¸€ç¨®ä½åœ¨ç«æ—ä»¥ç«ç‚ºé£Ÿçš„ç”Ÿç‰©ï¼Œç”Ÿæ€§æ®˜æš´çš„å®ƒä»€éº¼éƒ½åƒã€‚\n"
 	);
 	set_skill( "dodge", 50 );
 	set_perm_stat("dex",15);
@@ -23,11 +23,11 @@ void create()
         set( "natural_max_damage1", 20 );
 	set( "alignment", -450 );
 	set( "wealth/copper", 400 );
-        set_c_verbs( ({ "%sÕÅ×ìÍù%sÒ»Ò§", "%sÓÃËüµÄ×¦×Ó×¥%s" }) );
+        set_c_verbs( ({ "%så¼µå˜´å¾€%sä¸€å’¬", "%sç”¨å®ƒçš„çˆªå­æŠ“%s" }) );
         set("special_attack",(["damage_type" : "fire","main_damage" : 15,
                                 "random_dam" : 10 , "hit_rate" : 20]));
         set( "tactic_func", "my_tactic" );
-set("c_enemy_msg","\n»ğòáòæÅç³öÒ»ÅîÖËÈÈµÄ»ğ»¨£¬¡¸ºä¡¹µÄÒ»ÉùÕ¨ÔÚÄãÉíÉÏ..\n\n");
-set("c_room_msg","»ğòáòæÅç³öÒ»Åî»ğ»¨£¬ÔÚ");
-set("c_room_msg2", "µÄÉíÉÏÃÍÁÒÈ¼ÉÕ ...\n");
+set("c_enemy_msg","\nç«èœ¥èœ´å™´å‡ºä¸€è“¬ç‚™ç†±çš„ç«èŠ±ï¼Œã€Œè½Ÿã€çš„ä¸€è²ç‚¸åœ¨ä½ èº«ä¸Š..\n\n");
+set("c_room_msg","ç«èœ¥èœ´å™´å‡ºä¸€è“¬ç«èŠ±ï¼Œåœ¨");
+set("c_room_msg2", "çš„èº«ä¸ŠçŒ›çƒˆç‡ƒç‡’ ...\n");
 }

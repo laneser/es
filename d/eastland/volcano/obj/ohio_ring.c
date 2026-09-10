@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "ohio ring", "¶íº¥¶íµÄ½äÖ¸" );
+	set_name( "ohio ring", "ä¿„äº¥ä¿„çš„æˆ’æŒ‡" );
 	add( "id", ({ "ohio ring","ring" }) );
-	set_short("¶íº¥¶íµÄ½äÖ¸" );
+	set_short("ä¿„äº¥ä¿„çš„æˆ’æŒ‡" );
 	set_long(
-		"ÕâÊÇ¶íº¥¶íµÄ½äÖ¸¡£\n"
+		"é€™æ˜¯ä¿„äº¥ä¿„çš„æˆ’æŒ‡ã€‚\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "weight", 3 );
 	set( "value", ({ 0, "silver" }) );
 }

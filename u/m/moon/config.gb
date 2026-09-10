@@ -7,7 +7,7 @@
 ###############################################################################
  
 # name of this mud
-name : ¶«·½¹ÊÊÂ
+name : æ±æ–¹æ•…äº‹
  
 # port number to accept users on
 port number : 8000
@@ -112,10 +112,10 @@ object table size : 1501
  
 # default no-matching-action message
 # default fail message : What?
-default fail message : ÄãÏë¸ÉÊ²Ã´? 
+default fail message : ä½ æƒ³å¹¹ä»€éº¼? 
 
 # default message when error() occurs (optional)
-default error message : °¡¹ş£¡ÄãËÆºõ¾õµÃÓĞµã²»¶Ô¾¢£¡
+default error message : å•Šå“ˆï¼ä½ ä¼¼ä¹è¦ºå¾—æœ‰é»ä¸å°å‹ï¼
 
 # file to include in all LPC objects (optional)
 global include file : <mudlib.h>

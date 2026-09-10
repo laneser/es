@@ -8,6 +8,6 @@ void create()
 	set_save_file("scholar_board");
 	set_location("/d/scholar/scholar/scholar_guild");
 	set ("short.text", "Scholar's bulletin board");
-	set ("c_short.text", "ÊéÉúÁôÑÔ°å");
+	set ("c_short.text", "æ›¸ç”Ÿç•™è¨€æ¿");
 	replace_program("/std/board/bboard");
 }

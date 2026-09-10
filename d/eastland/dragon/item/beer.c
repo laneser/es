@@ -7,14 +7,14 @@ inherit OBJECT;
 void create()
 {
         seteuid(getuid());
-        set_name( "chinese beer", "³ÂÄêÅ®¶ùºì" );
+        set_name( "chinese beer", "é™³å¹´å¥³å…’ç´…" );
         add( "id",({ "beer" }) );
-        set_short( "³ÂÄêÅ®¶ùºì" );
+        set_short( "é™³å¹´å¥³å…’ç´…" );
         set_long(
-            "ÕâÊÇÓÉÒ»¸ö¹ÅÀÏµÄ¹ú¼ÒËù´«ÏÂµÄÃû¾Æ¡£\n"
+            "é€™æ˜¯ç”±ä¸€å€‹å¤è€çš„åœ‹å®¶æ‰€å‚³ä¸‹çš„åé…’ã€‚\n"
         );
         set("layuter_beer",1);
-        set( "unit", "Æ¿");
+        set( "unit", "ç“¶");
         set( "weight", 10 );
         set( "value", ({ 20, "gold" }) );
 }
@@ -32,10 +32,10 @@ int drink_beer(string arg)
 
 	if( !arg || (arg!="beer") ) return 0;
 	if( environment() != this_player() )
-		return notify_fail("ÄãÉíÉÏÃ»ÓÐÕâÑù¶«Î÷¡£\n");
-	write("ÄãºÈÏÂÒ»ºÈÏÂÒ»Æ¿³ÂÄêÅ®¶ùºì¡£\n");
+		return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
+	write("ä½ å–ä¸‹ä¸€å–ä¸‹ä¸€ç“¶é™³å¹´å¥³å…’ç´…ã€‚\n");
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"ºÈÏÂÒ»Æ¿³ÂÄêÅ®¶ùºì¡£\n",
+		this_player()->query("c_name")+"å–ä¸‹ä¸€ç“¶é™³å¹´å¥³å…’ç´…ã€‚\n",
 		this_player() );
 	heal = 20;
 	this_player()->receive_healing( heal );

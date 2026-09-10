@@ -9,9 +9,9 @@ object roomcart;
 void create()
 {
 	seteuid(getuid());
-	set_name( "Cisklyph cart", "Ï£Ë¹¿ËÀû·òÔË¿ó³µ" );
+	set_name( "Cisklyph cart", "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Š" );
 	add( "id", ({ "cart" }) );
-	set_short( "Cisklyph cart", "Ï£Ë¹¿ËÀû·òÔË¿ó³µ" );
+	set_short( "Cisklyph cart", "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Š" );
 	set_long( "@@query_long", "@@query_c_long" );
 	set( "prevent_get", 1 );
 	set( "prevent_drop", 1 );
@@ -30,8 +30,8 @@ string query_long()
 string query_c_long()
 {
 	return
-		"ÕâÊÇÒ»Ì¨Ï£Ë¹¿ËÀû·òÔË¿ó³µ,ÄãÈç¹ûÏëÒª´î³ËËü,¿ÉÒÔ\n"
-		"ÓÃ board Ö¸Áî´î³µ.\n";
+		"é€™æ˜¯ä¸€è‡ºå¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Š,ä½ å¦‚æœæƒ³è¦æ­ä¹˜å®ƒ,å¯ä»¥\n"
+		"ç”¨ board æŒ‡ä»¤æ­è»Š.\n";
 }
 
 void init()
@@ -43,9 +43,9 @@ int do_board(string arg)
 {
 	if( !arg || !id(arg) ) return 0;
 	if ( roomcart->query("cart_moving") ) 
-	   return notify_fail("ÕâÔË¿ó³µÕı¿ìËÙÒÆ¶¯Öø.ÄãÎŞ·¨×øÉÏËü.\n");
+	   return notify_fail("é€™é‹ç¤¦è»Šæ­£å¿«é€Ÿç§»å‹•è‘—.ä½ ç„¡æ³•åä¸Šå®ƒ.\n");
 	this_player()->move_player( roomcart , ({
-	  "%s board the cart.\n","%s ×øÉÏÔË¿ó³µ.\n","%s board the cart.\n","%s ×ø½øÁËÔË¿ó³µ.\n",
+	  "%s board the cart.\n","%s åä¸Šé‹ç¤¦è»Š.\n","%s board the cart.\n","%s åé€²äº†é‹ç¤¦è»Š.\n",
 	  }));
 	return 1;
 }
@@ -69,12 +69,12 @@ void traveling()
      switch ( dir ) {
         case "block":  
                         tell_room(outside,
-                          "ÄãÖ»¼û³µ×Ó×²»ÙÔÚÕâÀï. ¶øÒ»Ğ©ÈË´Ó³µ×ÓÀï±»Å×³öÀ´.\n"
+                          "ä½ åªè¦‹è»Šå­æ’æ¯€åœ¨é€™è£¡. è€Œä¸€äº›äººå¾è»Šå­è£¡è¢«æ‹‹å‡ºä¾†.\n"
                           );
                         tell_room(roomcart,
-                          "ºöÈ»  ±ÅÒ»Éù, ³µ×ÓºÃÏñÖØÖØµØ×²ÉÏÁËÑÒ±Ú\n"
-                          "ÕûÌ¨³µ×Ó½âÌåÁË, ¶øÄã±»Å×³öÁË³µÍâ......\n"
-                          "Äã¾õµÃÌìĞıµØ×ª, Ò»ÕóÍ·»èÄ¿Ñ£.\n"
+                          "å¿½ç„¶  è¿¸ä¸€è², è»Šå­å¥½åƒé‡é‡åœ°æ’ä¸Šäº†å·–å£\n"
+                          "æ•´è‡ºè»Šå­è§£é«”äº†, è€Œä½ è¢«æ‹‹å‡ºäº†è»Šå¤–......\n"
+                          "ä½ è¦ºå¾—å¤©æ—‹åœ°è½‰, ä¸€é™£é ­æ˜ç›®çœ©.\n"
                           );
                         items=all_inventory(roomcart);
                         for(i=0;i<sizeof(items);i++) { 
@@ -87,14 +87,14 @@ void traveling()
                         break;
         case "machine":       
                         tell_room(outside,
-                        "³µ×Ó·ÉÊ»½øÀ´ááÒ»Ö±´¦ÔÚ½ô¼±É·³µµÄ×´Ì¬, Ò»Ğ©ÈËÂ½Â½ĞøĞø.\n"
-                        "µØ±»Å×³öÀ´.\n"
+                        "è»Šå­é£›é§›é€²ä¾†å¾Œä¸€ç›´è™•åœ¨ç·Šæ€¥ç…è»Šçš„ç‹€æ…‹, ä¸€äº›äººé™¸é™¸çºŒçºŒ.\n"
+                        "åœ°è¢«æ‹‹å‡ºä¾†.\n"
                         );
                         tell_room(roomcart,
-                        "³µ×ÓÒ»Õó½ô¼±É·³µáá, ÖÕì¶Í£ÁËÏÂÀ´.\n"
-                        "È»¶øÄãÈ´²»Ğ¡ĞÄµØ±»Å×ÁË³öÀ´.\n"
-                         "Äã¾õµÃÌìĞıµØ×ª, Ò»ÕóÍ·»èÄ¿Ñ£.\n"
-                         "ĞÒÔËµÄÊÇÄãºÁ·¢ÎŞÉË\n"
+                        "è»Šå­ä¸€é™£ç·Šæ€¥ç…è»Šå¾Œ, çµ‚æ–¼åœäº†ä¸‹ä¾†.\n"
+                        "ç„¶è€Œä½ å»ä¸å°å¿ƒåœ°è¢«æ‹‹äº†å‡ºä¾†.\n"
+                         "ä½ è¦ºå¾—å¤©æ—‹åœ°è½‰, ä¸€é™£é ­æ˜ç›®çœ©.\n"
+                         "å¹¸é‹çš„æ˜¯ä½ æ¯«é«®ç„¡å‚·\n"
                           );
                         items=all_inventory(roomcart);
                         for(i=0;i<sizeof(items);i++) 
@@ -102,23 +102,23 @@ void traveling()
                         roomcart->remove();
                         cart->remove();
                         tell_room(outside,
-                        "Ö»¼ûÒ»Ğ©°«ÈË¿ó¹¤°Ñ¿ó³µ½âÌå, Ñ¸ËÙ¶øÓĞĞ§ÂÊµØ½øĞĞÖøËûÃÇµÄ¹¤×÷.\n"
+                        "åªè¦‹ä¸€äº›çŸ®äººç¤¦å·¥æŠŠç¤¦è»Šè§£é«”, è¿…é€Ÿè€Œæœ‰æ•ˆç‡åœ°é€²è¡Œè‘—ä»–å€‘çš„å·¥ä½œ.\n"
                         );  
                         break;
         case "abyss" : tell_room(outside,
-                       "Ö»¼û³µ×Ó·ÉÔ½ÁËÉîÔ¨, µ½´ïÁË¶ÔÃæ.\n"
+                       "åªè¦‹è»Šå­é£›è¶Šäº†æ·±æ·µ, åˆ°é”äº†å°é¢.\n"
                        );
                        tell_room(roomcart,
-                       "Äã¸Ğ¾õµ½³µ×ÓºÃÏñ·ÉÁËÆğÀ´.\n"
+                       "ä½ æ„Ÿè¦ºåˆ°è»Šå­å¥½åƒé£›äº†èµ·ä¾†.\n"
                        );
                        cart->move(outside->query("another"));
                        call_out("traveling",1);
                        break;
         case "special":tell_room(outside, 
-                       "Äã¼ûµ½³µ×Ó³åÈëÂÒÊ¯¶ÑÄÚ, µ½´ïÁËÊ¯¶ÑµÄááÃæ.\n"
+                       "ä½ è¦‹åˆ°è»Šå­è¡å…¥äº‚çŸ³å †å…§, åˆ°é”äº†çŸ³å †çš„å¾Œé¢.\n"
                        );
                        tell_room(roomcart,
-                       "Äã¾õµÃ³µ×ÓºÃÏñ×²µ½ÁËÒ»¶ÑÊ¯Í·.\n"
+                       "ä½ è¦ºå¾—è»Šå­å¥½åƒæ’åˆ°äº†ä¸€å †çŸ³é ­.\n"
                        );
                        cart->move(outside->query("another"));
                        call_out("traveling",1);
@@ -126,17 +126,17 @@ void traveling()
         default: 
                tell_room(outside,({
                  "You find the cart move out here and go "+dir+".\n",
-                 "Äã¿´µ½ÔË¿ó³µÀë¿ªÕâÀïÍù"+to_chinese(dir)+"·½·ÉÊ»¶øÈ¥.\n",
+                 "ä½ çœ‹åˆ°é‹ç¤¦è»Šé›¢é–‹é€™è£¡å¾€"+to_chinese(dir)+"æ–¹é£›é§›è€Œå».\n",
                  }),cart);           
                tell_room( roomcart,({ 
                  "The Cisklyph cart is moving very fast.\n",
-                 "Ï£Ë¹¿ËÀû·òÔË¿ó³µ·ÉËÙµØÒÆ¶¯Öø.\n"
+                 "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Šé£›é€Ÿåœ°ç§»å‹•è‘—.\n"
                }) );
      
                cart->move(outside->query("exits/"+dir));
                tell_room(environment(cart),({
                  "You find the cart moves in very fast.\n",
-                 "Äã¿´µ½Ò»Ì¨ÔË¿ó³µ¿ìËÙµØ³å½øÀ´...\n",
+                 "ä½ çœ‹åˆ°ä¸€è‡ºé‹ç¤¦è»Šå¿«é€Ÿåœ°è¡é€²ä¾†...\n",
                  }),cart);
                
                call_out("traveling",1);

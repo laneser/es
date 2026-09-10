@@ -1,4 +1,4 @@
- // chi_yu_group.c ÕâÊÇò¿ÓÈµÄÊÖÏÂÃÇ¹²Í¬inherit µÄµµ
+ // chi_yu_group.c é€™æ˜¯èš©å°¤çš„æ‰‹ä¸‹å€‘å…±åŒinherit çš„æª”
 
 #include <mudlib.h>
 #include <conditions.h>
@@ -25,7 +25,7 @@ void relay_message(string class, string str)
         
         
         if( !str || str == "" ) return;
-        if( sscanf(str,"%s(%s)×ßÁË¹ıÀ´¡£", tmp,name)==2 ) {
+        if( sscanf(str,"%s(%s)èµ°äº†éä¾†ã€‚", tmp,name)==2 ) {
         name = lower_case(name);
         victim = present(name, environment(this_object()));
         if( !victim || victim->query("npc") || victim->query("no_attack")) return ;
@@ -34,24 +34,24 @@ void relay_message(string class, string str)
         
         if( !pointerp(attackers) || member_array(victim, attackers)==-1 ) {
         
-        tell_object(victim,query("c_name")+"½ĞµÀ : Í¨Í¨È¥ËÀ°É£¬Í¬Ê±²»»³ºÃÒâµÄÍùÄãÕâÀï³å¹ıÀ´....\n");
+        tell_object(victim,query("c_name")+"å«é“ : é€šé€šå»æ­»å§ï¼ŒåŒæ™‚ä¸æ‡·å¥½æ„çš„å¾€ä½ é€™è£¡è¡éä¾†....\n");
          kill_ob(victim);
          } } }
         
         
-        if( sscanf(str,"%s(%s)Íù%s±ßÀë¿ª¡£", tmp,name,direction)==3) {
+        if( sscanf(str,"%s(%s)å¾€%sé‚Šé›¢é–‹ã€‚", tmp,name,direction)==3) {
         name = lower_case(name); 
         victim = find_living(name);
         guild = victim->query("class");
            
            
-           if  ( query("c_name") == "ò¿ÓÈ" ) {
+           if  ( query("c_name") == "èš©å°¤" ) {
            if  (wizardp(victim)) return ;
            tell_object( victim, set_color(
-           "\n ò¿ÓÈÔ¶Ô¶µÄ¶ÔÄã»Ó»ÓÊÖ£¬²¢ÇÒÄîÁËĞ©Ææ¹ÖµÄÖäÎÄ£¬Í»È»Ò»ÕóĞı·ç°üÎ§ÖøÄã£¬Äã¸Ğ¾õµ½Ò»\n"
-           "²¿·İµÄÁé»êáİ·ğÀë¿ªÁËÄãµÄÉíÌå£¬Í¬Ê±Äã¾õµÃÓĞµã²»Êæ·ş.......\n\n" , "HIY",this_object()) ); 
+           "\n èš©å°¤é é çš„å°ä½ æ®æ®æ‰‹ï¼Œä¸¦ä¸”å”¸äº†äº›å¥‡æ€ªçš„å’’æ–‡ï¼Œçªç„¶ä¸€é™£æ—‹é¢¨åŒ…åœè‘—ä½ ï¼Œä½ æ„Ÿè¦ºåˆ°ä¸€\n"
+           "éƒ¨ä»½çš„éˆé­‚å½·ä½›é›¢é–‹äº†ä½ çš„èº«é«”ï¼ŒåŒæ™‚ä½ è¦ºå¾—æœ‰é»ä¸èˆ’æœ.......\n\n" , "HIY",this_object()) ); 
            
-//¼ì²éÊÇ·ñ±»³é¹ı£¬ÈôÊÇÔò²»»áÔÙ½Ğ³öÍ¬ÃûµÄ¹ÖÎï           
+//æª¢æŸ¥æ˜¯å¦è¢«æŠ½éï¼Œè‹¥æ˜¯å‰‡ä¸æœƒå†å«å‡ºåŒåçš„æ€ªç‰©           
            
            if ( !victim->query_temp("be_caught") ) {
            mob = new("/d/eastland/liang_shan/monster/evil_"+guild);          
@@ -67,14 +67,14 @@ void relay_message(string class, string str)
            victim->add("alignment",1000);
            }
 
-//±»³é¹ıµÄÒÔáá¾Í³éĞ°¶ñ»ÃÓ°
+//è¢«æŠ½éçš„ä»¥å¾Œå°±æŠ½é‚ªæƒ¡å¹»å½±
            
            if ( random(5) < 1 ) {
            mob = new("/d/deathland/monster/evilshadow"); 
            mob->move(environment(this_object()));
            }
          }
-          if  ( query("c_name") == "ÉßÈËÎ×Ò½" ) {
+          if  ( query("c_name") == "è›‡äººå·«é†«" ) {
           if ( query_attacker() ) return ; 
           env = environment(this_object());
           who = all_inventory(env);
@@ -91,8 +91,8 @@ void relay_message(string class, string str)
          who[i]->set( "conditions/bleeding", bleed );
           }
          tell_room(environment(this_object()),set_color(
-         "\nÉßÈËÎ×Ò½³ÃÖøÕ½¶·¸æÒ»¶ÎÂä£¬ºÜ¿ìµÄ¶Ô"+who[i]->query("c_name")+
-         "½øĞĞÖ¹Ñª¡£\n\n","HIY",who[i]),who[i]);
+         "\nè›‡äººå·«é†«è¶è‘—æˆ°é¬¥å‘Šä¸€æ®µè½ï¼Œå¾ˆå¿«çš„å°"+who[i]->query("c_name")+
+         "é€²è¡Œæ­¢è¡€ã€‚\n\n","HIY",who[i]),who[i]);
          who[i]->set_temp("clotted", 1 );
          call_out( "remove_clotted", 45, who[i] );
         } }
@@ -108,8 +108,8 @@ void relay_message(string class, string str)
              who[i]->set_temp("aided",1);
              call_out("can_aid_again",180,who[i]);
              tell_room(environment(this_object()),set_color(
-             "\nÉßÈËÎ×Ò½³ÃÖøÕ½¶·¸æÒ»¶ÎÂä£¬ºÜ¿ìµÄ¶Ô"+who[i]->query("c_name")+
-             "½øĞĞ¼±¾È¡£\n\n","HIY",who[i]),who[i]);
+             "\nè›‡äººå·«é†«è¶è‘—æˆ°é¬¥å‘Šä¸€æ®µè½ï¼Œå¾ˆå¿«çš„å°"+who[i]->query("c_name")+
+             "é€²è¡Œæ€¥æ•‘ã€‚\n\n","HIY",who[i]),who[i]);
               }}
          
          if (hitp < hp1)  {
@@ -117,8 +117,8 @@ void relay_message(string class, string str)
           if (!bandaged = query("conditions/bandaged")) {
          
           tell_room(environment(this_object()),set_color(
-          "\nÉßÈËÎ×Ò½´Ó»³ÖĞÌÍ³öÒ»Ğ©Ò©¸à£¬ºÜ¿ìµÄÄ¨ÔÚ"+who[i]->query("c_name")+
-          "ÉË¿ÚÉÏ¡£\n\n","HIY",who[i]),who[i]);
+          "\nè›‡äººå·«é†«å¾æ‡·ä¸­æå‡ºä¸€äº›è—¥è†ï¼Œå¾ˆå¿«çš„æŠ¹åœ¨"+who[i]->query("c_name")+
+          "å‚·å£ä¸Šã€‚\n\n","HIY",who[i]),who[i]);
           HERB_APPLY->apply_effect(this_player(), 8, 5, 30);
           bandage = new("/obj/bandage");
           bandage->move(this_object());
@@ -143,11 +143,11 @@ void pseudo_hunt(object me, object player)
 	if( environment() && present(player, environment()) ) 
 		if( this_object()==me )
 			tell_room( environment(), 
-				query("c_name") + "·¢ÏÖÄãµÄÒâÍ¼£¬´ó½Ğ: ĞÖµÜÃÇ£¡¿´Çå³şÕâ¼Ò»ï£¬±ğÈÃËûÅÜÁË£¡\n",
+				query("c_name") + "ç™¼ç¾ä½ çš„æ„åœ–ï¼Œå¤§å«: å…„å¼Ÿå€‘ï¼çœ‹æ¸…æ¥šé€™å‚¢ä¼™ï¼Œåˆ¥è®“ä»–è·‘äº†ï¼\n",
 				this_object() );
 		else {
 			tell_room( environment(), 
-				query("c_name") + "Í»È»µ²ÔÚÄãÃæÇ°£¬¿ªÊ¼·¢¶¯¹¥»÷£¡\n",
+				query("c_name") + "çªç„¶æ“‹åœ¨ä½ é¢å‰ï¼Œé–‹å§‹ç™¼å‹•æ”»æ“Šï¼\n",
 				this_object() );
 			if( !pointerp(attackers) || member_array(player, attackers)==-1 )
 				kill_ob(player);

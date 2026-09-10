@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Combat Cap","Õ½¶·¹Ú");
+    set_name("Combat Cap","æˆ°é¬¥å† ");
     add("id",({"hat","cap"}) );
-    set_short("Õ½¶·¹Ú");
+    set_short("æˆ°é¬¥å† ");
     set_long(@LONG
-ÕâÊÇÒ»¼şÇáÇÉ¾«ÖÂµÄÃ±×Ó¡£
+é€™æ˜¯ä¸€ä»¶è¼•å·§ç²¾ç·»çš„å¸½å­ã€‚
 LONG
             );
-    set("unit","¼ş");
+    set("unit","ä»¶");
     set("type","head");
     set("material","wood");
     set("armor_class",5);

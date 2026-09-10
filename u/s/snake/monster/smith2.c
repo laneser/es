@@ -6,8 +6,8 @@ void create()
 {
         ::create();
         set_level( 3 );
-        set_name( "smith", "Ìú½³" );
-        set_short( "ÀÏÌú½³" );
+        set_name( "smith", "éµåŒ " );
+        set_short( "è€éµåŒ " );
         set( "gender", "male" );
         set( "race", "dwarf" );
         set_natural_weapon( 4, 2, 2 );
@@ -18,12 +18,12 @@ void create()
 int accept_item(object who,object item)
 {
      tell_room( environment(), 
-            sprintf("ÀÏÌú½³Ïò%s(%s)µãÍ·Î¢Ð¦£¬ËµµÀ: Ð»Ð»£¡\n",
+            sprintf("è€éµåŒ å‘%s(%s)é»žé ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼\n",
                 who->query("c_name"),who->query("name") )
                 ,who );
-        tell_object( who,"ÀÏÌú½³ÏòÄãµãÍ·Î¢Ð¦£¬ËµµÀ: Ð»Ð»£¡\n");
+        tell_object( who,"è€éµåŒ å‘ä½ é»žé ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼\n");
                 tell_object( who, 
-                        "[ÄãÍê³ÉÁË Smith ÈÎÎñ£¬µÃµ½ 1000 µã¾­Ñé]\n"
+                        "[ä½ å®Œæˆäº† Smith ä»»å‹™ï¼Œå¾—åˆ° 1000 é»žç¶“é©—]\n"
                         );
                 who->gain_experience(10000);
                 }

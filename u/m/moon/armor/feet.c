@@ -6,11 +6,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("magic feet", "ÔÂÉñĞ¬");
-    set_short("ÔÂÉñĞ¬");
+    set_name("magic feet", "æœˆç¥é‹");
+    set_short("æœˆç¥é‹");
     add("id", ({ "feet" }));
-    set_long("ÓÉÉñÁ¦»Ã»¯¶ø³ÉµÄĞ¬×Ó¡£\n");
-    set("unit", "Ë«");
+    set_long("ç”±ç¥åŠ›å¹»åŒ–è€Œæˆçš„é‹å­ã€‚\n");
+    set("unit", "é›™");
     set("weight", 0);
     set("type", "feet");
         set( "armor_class", 150 );
@@ -22,7 +22,7 @@ void create()
 
 void unequip(int silent)
 {
-    tell_object(this_player(), "ÔÂÉñĞ¬¾Ü¾øÀë¿ªÄãµÄÉíÌå!\n");
+    tell_object(this_player(), "æœˆç¥é‹æ‹’çµ•é›¢é–‹ä½ çš„èº«é«”!\n");
 }
 
 int remove()

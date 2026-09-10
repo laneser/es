@@ -12,15 +12,15 @@ int enhant(object me, int level)
 	weapon = (object)me->query("weapon1");
 
 	tell_object(me, can_read_chinese(me)?
-		"\nÄã¿ªÊ¼½«ÄÚÁ¦¾Ûì¶½£Éí, ×¼±¸Ê¹³ö¡¸"+
-		to_chinese(GONFU_NAME)+"¡¹!!\n":
+		"\nä½ é–‹å§‹å°‡å…§åŠ›èšæ–¼åŠèº«, æº–å‚™ä½¿å‡ºã€Œ"+
+		to_chinese(GONFU_NAME)+"ã€!!\n":
 		"You prepare to use "+GONFU_NAME+" sword!!\n");
 
 	tell_room( environment(me), ({
 		"\n"+me->query("cap_name")+" is preparing to use "+GONFU_NAME+
 		" gonfu!\n", "\n"+me->query("c_cap_name")+
-		"´óºÈÒ»Éù£¬½«ÊÖÉÏµÄ"+weapon->query("short")+
-		"¾ÙÆğ£¬×¼±¸Ê¹³ö¿ÉÅÂµÄ"+to_chinese(GONFU_NAME)+"¡£\n" }), me);
+		"å¤§å–ä¸€è²ï¼Œå°‡æ‰‹ä¸Šçš„"+weapon->query("short")+
+		"èˆ‰èµ·ï¼Œæº–å‚™ä½¿å‡ºå¯æ€•çš„"+to_chinese(GONFU_NAME)+"ã€‚\n" }), me);
 
 	me->set("attack_skill", GONFU_DIR+GONFU_NAME); 
 	me->delete("defense_skill");
@@ -33,13 +33,13 @@ void release_gonfu(object me)
 {
 	if( !me ) return;
 	tell_object(me, can_read_chinese(me)?
-		"ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n":
+		"ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n":
 		"You make a deep breath, stop using "+GONFU_NAME+" sword!\n");
  
  	tell_room( environment(me),({
  		me->query("cap_name")+" makes a deep breath, stops using "+
  		GONFU_NAME+" sword!\n", me->query("c_cap_name")+
- 		"ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n" }), me);
+ 		"è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n" }), me);
  
 	me->delete("attack_skill");
 	me->delete("defense_skill");

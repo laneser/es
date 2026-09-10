@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("����ͬ");
+	ob->set_short("死胡同");
 	ob->set_long( @LONG_DESCRIPTION
-������վ��Ħ�Ǵ�ǵ���Ҫ��·�ľ�ͷ��������������שʯ������
-���ɡ������ǳ����ĵ�Բ�ι㳡�롸��ɫ֮������
+你現在站在摩亞達城的主要道路的盡頭，地面多以破碎的磚石所鋪制
+而成。往西是城中心的圓形廣場與「銀色之塔」。
 LONG_DESCRIPTION
 	);
 

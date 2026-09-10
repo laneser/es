@@ -6,13 +6,13 @@ void create ()
 {
         ::create();
         set_level(14);
-        set_name( "red samurai", "ºìÒÂÎäÊ¿" );
+        set_name( "red samurai", "ç´…è¡£æ­¦å£«" );
         add ("id", ({ "samurai","red"}) );
-        set_short( "red samurai","ºìÒÂÎäÊ¿");
-        set("unit","Î»");
+        set_short( "red samurai","ç´…è¡£æ­¦å£«");
+        set("unit","ä½");
         set_long(@AAA
-ºìÒÂÎäÊ¿ÊÇÎäÊ¿ÍÅÖĞµÈ¼¶½Ï¸ßµÄÎäÊ¿£¬Í¬Ê±Ò²±íÊ¾Æä½£ÊõÒ²½Ï¸ß,Îª
-ÎäÊ¿ÍÅÕ½Á¦µÄºËĞÄ
+ç´…è¡£æ­¦å£«æ˜¯æ­¦å£«åœ˜ä¸­ç­‰ç´šè¼ƒé«˜çš„æ­¦å£«ï¼ŒåŒæ™‚ä¹Ÿè¡¨ç¤ºå…¶åŠè¡“ä¹Ÿè¼ƒé«˜,ç‚º
+æ­¦å£«åœ˜æˆ°åŠ›çš„æ ¸å¿ƒ
 AAA
         );
         set_skill("longblade",70);
@@ -27,7 +27,7 @@ AAA
         set ("gender", "male");
         set("wealth/silver",300);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(MOBJ"wind_blade_sword.c");
         equip_armor(MOBJ"samurai_chainmail.c");

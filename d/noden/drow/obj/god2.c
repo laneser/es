@@ -3,16 +3,16 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "@@name","¡ºÖîÉñµÄ»Æ»è¡»" );
+	set_name( "@@name","ã€è«¸ç¥çš„é»ƒæ˜ã€" );
          add("id",({"sword","ragnarok"}));
 	set_short( "@@short" );
 	set_long(@LONG
-Õâ°Ñ÷îºÚµÄ³¤½£µÄ½£±úÉÏ²øÈÆÁË°ËÌõÊ¯ÉßÏñ£¬ÓĞÈçÌÙÂû½ô½ôÎ§ÈÆ
-Öø£¬½£ÉàÉÏµÄÀ¶É«ÉßÑÛ°ëÕÚ°ëÑÚ£¬ÒşÒşÍ¸Â¶ÖøÇà¹â£¬ËÆºõÒş²ØÖø
-²»¿ÉÖªµÄÁ¦Á¿¡£
+é€™æŠŠé»é»‘çš„é•·åŠçš„åŠæŸ„ä¸Šçºç¹äº†å…«æ¢çŸ³è›‡åƒï¼Œæœ‰å¦‚è—¤è”“ç·Šç·Šåœç¹
+è‘—ï¼ŒåŠèˆŒä¸Šçš„è—è‰²è›‡çœ¼åŠé®åŠæ©ï¼Œéš±éš±é€éœ²è‘—é’å…‰ï¼Œä¼¼ä¹éš±è—è‘—
+ä¸å¯çŸ¥çš„åŠ›é‡ã€‚
 LONG
 		);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
    set( "type", "longblade" );
    set( "weapon_class",40 );
    set( "min_damage", 16 );
@@ -25,7 +25,7 @@ LONG
 }
 
 string name(){ return set_color ("Ragnarok","HIY");}
-string short(){ return set_color ("¡ºÖîÉñµÄ»Æ»è¡»","HIY"); }
+string short(){ return set_color ("ã€è«¸ç¥çš„é»ƒæ˜ã€","HIY"); }
 
 int thunder_damage(object victim,int damage)
 {
@@ -41,7 +41,7 @@ int thunder_damage(object victim,int damage)
    if( mysp < 21 || mytp < 42 ) return 0;
    if ( (int)holder->query_skill( "longblade" )<100 )
 	{
-	tell_object( holder,"\n¡ºÖîÉñµÄ»Æ»è¡»µÄ·âÓ¡Ö®ÑÛ·¢³öÒ»ÕóÇà¹â´ÌÍ´ÄãµÄË«ÑÛ¡£\n" );
+	tell_object( holder,"\nã€è«¸ç¥çš„é»ƒæ˜ã€çš„å°å°ä¹‹çœ¼ç™¼å‡ºä¸€é™£é’å…‰åˆºç—›ä½ çš„é›™çœ¼ã€‚\n" );
    holder->receive_damage( dam );
 	victim->set( "last_attacker",holder );
         return 0;
@@ -55,10 +55,10 @@ int thunder_damage(object victim,int damage)
         if( random(mykar) < 9 ) return 0;
 	him=victim->query( "c_name" );
 	me=holder->query( "c_name" );
-	tell_object( holder,set_color("\n¡ºÖîÉñµÄ»Æ»è¡»µÄ·âÓ¡Ö®ÑÛºöÈ»ÕÅ¿ª£¬ÕÙ»½Ò»µÀÌìÀ×ÅüÏò"+him+"£¡£¡\n\n","HIB") );
+	tell_object( holder,set_color("\nã€è«¸ç¥çš„é»ƒæ˜ã€çš„å°å°ä¹‹çœ¼å¿½ç„¶å¼µé–‹ï¼Œå¬å–šä¸€é“å¤©é›·åŠˆå‘"+him+"ï¼ï¼\n\n","HIB") );
 	tell_object( victim,
-"\n"+me+"ÕÙ»½Ò»µÀÌìÀ×´òÖĞÄãµÄÍ·¶¥£¬Äã±»´òµÄÑÛÃ°½ğĞÇ£¬È«ÉíÌÛÍ´¡£\n\n" );
-	tell_room( environment(holder),"\nºöÈ»Ò»Õó¾ŞÏì£¡£¡¡ºÖîÉñµÄ»Æ»è¡»ÕÙ»½ÌìÀ×½«"+him+"Åü³É½¹Ì¿£¡£¡\n\n",({ holder,victim }) );
+"\n"+me+"å¬å–šä¸€é“å¤©é›·æ‰“ä¸­ä½ çš„é ­é ‚ï¼Œä½ è¢«æ‰“çš„çœ¼å†’é‡‘æ˜Ÿï¼Œå…¨èº«ç–¼ç—›ã€‚\n\n" );
+	tell_room( environment(holder),"\nå¿½ç„¶ä¸€é™£å·¨éŸ¿ï¼ï¼ã€è«¸ç¥çš„é»ƒæ˜ã€å¬å–šå¤©é›·å°‡"+him+"åŠˆæˆç„¦ç‚­ï¼ï¼\n\n",({ holder,victim }) );
    holder->add( "spell_points", -max-2 );
    holder->add( "talk_points", -max*2-4 );
    victim->receive_special_damage( "divine", dam+max );
@@ -73,10 +73,10 @@ void body_look()
 
  holder = environment(this_object());
  tell_object( holder,set_color(
-    "\nÊ¯ÏñÑÛÖĞ·¢³ö¹âÃ¢£¬°ËÌõÉßÑ¸ËÙ»î¶¯£¬¾íÇúµØ²øÈÆ×¡ÄãµÄÊÖÍó£¡\n\n","HIB"));
+    "\nçŸ³åƒçœ¼ä¸­ç™¼å‡ºå…‰èŠ’ï¼Œå…«æ¢è›‡è¿…é€Ÿæ´»å‹•ï¼Œæ²æ›²åœ°çºç¹ä½ä½ çš„æ‰‹è…•ï¼\n\n","HIB"));
    set("extra_look",set_color(
-   "Ò»Ö»Ö»Ê¯ÉßÍäÇúµÄ²øÈÆÔÚ$NµÄÊÖÍóÉÏ£¬²»Í£µØÅ¤¶¯Öø£¡£¡\n","HIG"));
+   "ä¸€éš»åªçŸ³è›‡å½æ›²çš„çºç¹åœ¨$Nçš„æ‰‹è…•ä¸Šï¼Œä¸åœåœ°æ‰­å‹•è‘—ï¼ï¼\n","HIG"));
 }	
 
-// ÌØÊâ¹¥»÷ÈçÏÂ:
-// ÃüÖĞÂÊÔ¼ 1/3, ×î´óÉËº¦ 31(str) + 14 = 45
+// ç‰¹æ®Šæ”»æ“Šå¦‚ä¸‹:
+// å‘½ä¸­ç‡ç´„ 1/3, æœ€å¤§å‚·å®³ 31(str) + 14 = 45

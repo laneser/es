@@ -3,12 +3,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "knout", "Æ¤±Ş");
+        set_name( "knout", "çš®é­");
         add ("id",({ "knout"}) );
-        set_short("Æ¤±Ş");
-        set("unit", "Ìõ");
+        set_short("çš®é­");
+        set("unit", "æ¢");
         set_long(
-            "ÕâÊÇÒ»ÌõÆ¤±Ş£¬ÉÏÃæÑª¼£°ß°ß£¬Ïë±Ø´ò¹ıºÜ¶àÈË¡£\n"
+            "é€™æ˜¯ä¸€æ¢çš®é­ï¼Œä¸Šé¢è¡€è·¡æ–‘æ–‘ï¼Œæƒ³å¿…æ‰“éå¾ˆå¤šäººã€‚\n"
         );
         set( "weapon_class", 10 );
         set( "type", "whip" );                        
@@ -16,5 +16,5 @@ void create()
         set( "max_damage", 16);
         set( "weight", 45 );
         set( "value", ({ 350, "silver" }) );
-        set_c_verbs(({"%s³éÏò%s","%s¾íÏò%s","%s»ÓÏò%s"}));
+        set_c_verbs(({"%sæŠ½å‘%s","%så·å‘%s","%sæ®å‘%s"}));
 }

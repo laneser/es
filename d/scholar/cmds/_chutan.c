@@ -30,12 +30,12 @@ varargs void disturbed(object player, object victim, int flag)
 
 	call_other(EXERCISING, "remove_effect", player, 0);
 	tell_object( player, set_color( 
-		"\nÄã¸Ðµ½ÐØ¿ÚÒ»ÕóÆøÑª·­Ó¿£¬ÑÛÇ°½ðÐÇÂÒÃ°£¬¿´À´ÊÇ×ß»ðÈëÄ§µÄáçÕ× ....\n"+
-		( some_stat > 1 ? "\nÄãµÄ" + to_chinese(stat) + "½µµÍÁË£¡\n":"")+
-		"\nÄãÉîÉîÎü½øÒ»¿ÚÆø£¬ÃãÇ¿Ñ¹ÖÆ×¡ÌåÄÚËÄ´¦ÂÒ´ÜµÄÕæÆø£¬Õ¾ÁËÆðÀ´ ....\n\n", "HIY", player) );
+		"\nä½ æ„Ÿåˆ°èƒ¸å£ä¸€é™£æ°£è¡€ç¿»æ¹§ï¼Œçœ¼å‰é‡‘æ˜Ÿäº‚å†’ï¼Œçœ‹ä¾†æ˜¯èµ°ç«å…¥é­”çš„å¾µå…† ....\n"+
+		( some_stat > 1 ? "\nä½ çš„" + to_chinese(stat) + "é™ä½Žäº†ï¼\n":"")+
+		"\nä½ æ·±æ·±å¸é€²ä¸€å£æ°£ï¼Œå‹‰å¼·å£“åˆ¶ä½é«”å…§å››è™•äº‚ç«„çš„çœŸæ°£ï¼Œç«™äº†èµ·ä¾† ....\n\n", "HIY", player) );
 	tell_room( environment(player), 
-		player->query("c_name") + "ÊÜµ½ÁË¾ªÈÅ£¬Õû¸öÈËÒ»Õó²ü¶¶£¬Á³ÉÏÍ´¿àµØÅ¤ÇúÖø ....\n\n"
-		+ player->query("c_name") + "ÉîÉîµØÎüÁËÒ»¿ÚÆø£¬Ò¡Ò¡»Î»ÎµØÕ¾ÁËÆðÀ´ ....\n\n" ,
+		player->query("c_name") + "å—åˆ°äº†é©šæ“¾ï¼Œæ•´å€‹äººä¸€é™£é¡«æŠ–ï¼Œè‡‰ä¸Šç—›è‹¦åœ°æ‰­æ›²è‘— ....\n\n"
+		+ player->query("c_name") + "æ·±æ·±åœ°å¸äº†ä¸€å£æ°£ï¼Œæ–æ–æ™ƒæ™ƒåœ°ç«™äº†èµ·ä¾† ....\n\n" ,
 		player );
 
 	// skip all NPCs, for stop system hole, added by Kyoko.
@@ -46,7 +46,7 @@ varargs void disturbed(object player, object victim, int flag)
 			victim->set("last_attacker", player);
 			victim->receive_damage(fp/3);
 			tell_object( victim, 
-				"\nÄã¸Ðµ½" + player->query("c_name") + "ÉíÉÏ´«À´Ò»¹É¾ÞÁ¦£¬ÕðµÃÄãÐØ¿ÚÒ»ÕóÆøÑª·­Ó¿£¡\n\n");
+				"\nä½ æ„Ÿåˆ°" + player->query("c_name") + "èº«ä¸Šå‚³ä¾†ä¸€è‚¡å·¨åŠ›ï¼Œéœ‡å¾—ä½ èƒ¸å£ä¸€é™£æ°£è¡€ç¿»æ¹§ï¼\n\n");
 		}
 	}
 
@@ -65,25 +65,25 @@ int cmd_chutan(string arg)
 	if( arg ) return help();
 	me = this_player();
 	skill = (int)me->query_skill("chutan");
-	if( !skill ) return notify_fail("ÄãÃ»ÓÐÑ§¹ýÐÞÏ°¹ý¾Ûµ¤¹¦\µÄÐÄ·¨ ....¡£\n");
+	if( !skill ) return notify_fail("ä½ æ²’æœ‰å­¸éŽä¿®ç¿’éŽèšä¸¹åŠŸçš„å¿ƒæ³• ....ã€‚\n");
 
     if( me->query("conditions/exercising") )
-        return notify_fail("Äã¸ÕÔË¹¦\²»¾Ã£¬ÌåÄÚ³äÂúÕæÆø£¬²»ÊÊºÏ²ÙÖ®¹ý¼±ÂíÉÏÔÙÁ·¡£\n");
+        return notify_fail("ä½ å‰›é‹åŠŸä¸ä¹…ï¼Œé«”å…§å……æ»¿çœŸæ°£ï¼Œä¸é©åˆæ“ä¹‹éŽæ€¥é¦¬ä¸Šå†ç·´ã€‚\n");
 
     if( me->query_attackers() )
-         return notify_fail("Äã²»ÄÜÔÚÕ½¶·¾Ûµ¤£¬Ð¡ÐÄ×ß»ðÈëÄ§ !!\n");
+         return notify_fail("ä½ ä¸èƒ½åœ¨æˆ°é¬¥èšä¸¹ï¼Œå°å¿ƒèµ°ç«å…¥é­” !!\n");
 
-   if( me->query_temp("meditating")) return notify_fail("ÄãÕýÔÚ´ò×ø£¬ÎÞ·¨¾Ûµ¤...¡£\n");
+   if( me->query_temp("meditating")) return notify_fail("ä½ æ­£åœ¨æ‰“åï¼Œç„¡æ³•èšä¸¹...ã€‚\n");
 	if( me->query("stop_heal") )
-         return notify_fail("ÄãÏÖÔÚ²»ÄÜÔË¹¦\¡£\n");
+         return notify_fail("ä½ ç¾åœ¨ä¸èƒ½é‹åŠŸ\ã€‚\n");
 
 	max = skill / 3;
     max = max/2 + random(max/2) + (int)me->query("force_effect");
 	if( max < 1 ) max = 1;
 	if( max > 35 ) max = 35;
-	write("Äã¿íÅÛ»º´ø£¬ÅÌÍÈ¶ø×ø£¬ÑÛ¹Û±Ç£¬±Ç¹ÛÐÄ£¬Ò»¹ÉÄÚÏ¢¿ªÊ¼ÔÚÄãµÄÌåÄÚÁ÷¶¯ ...¡£\n");
+	write("ä½ å¯¬è¢ç·©å¸¶ï¼Œç›¤è…¿è€Œåï¼Œçœ¼è§€é¼»ï¼Œé¼»è§€å¿ƒï¼Œä¸€è‚¡å…§æ¯é–‹å§‹åœ¨ä½ çš„é«”å…§æµå‹• ...ã€‚\n");
 	tell_room( environment(me), 
-		me->query("c_name")+ "ÅÌÍÈ×øÁËÏÂÀ´£¬±ÕÄ¿ÄýÉñ£¬¿ªÊ¼¾ÛÆø¡£\n", me );
+		me->query("c_name")+ "ç›¤è…¿åäº†ä¸‹ä¾†ï¼Œé–‰ç›®å‡ç¥žï¼Œé–‹å§‹èšæ°£ã€‚\n", me );
 	me->set_temp("exercising", base_name(this_object()));
 	EXERCISING->apply_effect(me, max, 5*max-random(skill/5));
 	return 1;
@@ -92,11 +92,11 @@ int cmd_chutan(string arg)
 int help()
 {
     write(@HELP
-Ö¸Áî¸ñÊ½£º chutan
+æŒ‡ä»¤æ ¼å¼ï¼š chutan
 
-Õâ¸öÃüÁîÈÃÄã·ÅËÉÄãµÄÉíÌå£¬¼¯ÖÐ¾«Éñ²úÉúÄÚÁ¦£¬ÒòÎªÄÚÁ¦ºÜÄÑÔÚÉú¹ÊÔÚ¹«ÖÚ³¡Ëù
-¾Ûµ¤ÊÇÏàµ±Î£ÏÕµÄ¡£¼ÙÈçÄãÔÚ¾Ûµ¤Ê±±»´òÈÅÔòÄãµÄ»ù±¾ÊôÐÔ½«»á´ÓÔ­À´µÄÖµÏÂ½µ£¬
-Ò²¿ÉÄÜ²úÉúÆäËûÒ»Ð©²»Á¼µÄÓ°Ïì¡£
+é€™å€‹å‘½ä»¤è®“ä½ æ”¾é¬†ä½ çš„èº«é«”ï¼Œé›†ä¸­ç²¾ç¥žç”¢ç”Ÿå…§åŠ›ï¼Œå› ç‚ºå…§åŠ›å¾ˆé›£åœ¨ç”Ÿæ•…åœ¨å…¬çœ¾å ´æ‰€
+èšä¸¹æ˜¯ç›¸ç•¶å±éšªçš„ã€‚å‡å¦‚ä½ åœ¨èšä¸¹æ™‚è¢«æ‰“æ“¾å‰‡ä½ çš„åŸºæœ¬å±¬æ€§å°‡æœƒå¾žåŽŸä¾†çš„å€¼ä¸‹é™ï¼Œ
+ä¹Ÿå¯èƒ½ç”¢ç”Ÿå…¶ä»–ä¸€äº›ä¸è‰¯çš„å½±éŸ¿ã€‚
 HELP
 	);
     return 1;

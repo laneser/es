@@ -8,14 +8,14 @@ inherit DAEMON;
 int enhant(object me, int level)
 {
 	tell_object(me, can_read_chinese(me)?
-		"\nÄã¿ªÊ¼½«ÄÚÁ¦¾Ûì¶½Å¼â, ×¼±¸Ê¹³ö¡¸"+
-		to_chinese(GONFU_NAME)+"¡¹!!\n":
+		"\nä½ é–‹å§‹å°‡å…§åŠ›èšæ–¼è…³å°–, æº–å‚™ä½¿å‡ºã€Œ"+
+		to_chinese(GONFU_NAME)+"ã€!!\n":
 		"You prepare to use "+GONFU_NAME+" step!!\n");
 
 	tell_room( environment(me), ({
 		"\n"+me->query("cap_name")+" is preparing to use "+GONFU_NAME+
 		" gonfu!\n", "\n"+me->query("c_cap_name")+
-		"Í»È»ÉíĞÎÒ»±ä£¬½Å²½²»ÖªÒÀÕÕÉõ÷áË³Ğò¶ø×ßÁËÆğÀ´¡£\n" }), me);
+		"çªç„¶èº«å½¢ä¸€è®Šï¼Œè…³æ­¥ä¸çŸ¥ä¾ç…§ç”šéº¼é †åºè€Œèµ°äº†èµ·ä¾†ã€‚\n" }), me);
 
 	me->set("defense_skill", GONFU_DIR+GONFU_NAME); 
 	me->delete("attack_skill");
@@ -28,13 +28,13 @@ void release_gonfu(object me)
 {
 	if( !me ) return;
 	tell_object(me, can_read_chinese(me)?
-		"ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n":
+		"ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n":
 		"You make a deep breath, stop using "+GONFU_NAME+" step!\n");
  
  	tell_room( environment(me),({
  		me->query("cap_name")+" makes a deep breath, stops using "+
  		GONFU_NAME+" step!\n", me->query("c_cap_name")+
- 		"½Å²½Öğ½¥»ºÂı, ÖÕì¶Í£ÁËÏÂÀ´¡£\n" }), me);
+ 		"è…³æ­¥é€æ¼¸ç·©æ…¢, çµ‚æ–¼åœäº†ä¸‹ä¾†ã€‚\n" }), me);
  
 	me->delete("attack_skill");
 	me->delete("defense_skill");

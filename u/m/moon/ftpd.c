@@ -163,7 +163,7 @@ mapping *query_connections()
 
 void create()
 {
-        set("channel_id", "档案传输精灵");
+        set("channel_id", "妾旀鍌宠几绮鹃潏");
         if ( !socket_info ) {
                 socket_info = ([  ]);
                 temp_map = ([ ]);

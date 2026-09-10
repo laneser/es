@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name( "cave worm", "¶´Ñ¨³æ" );
+	set_name( "cave worm", "æ´ç©´èŸ²" );
 	add( "id", ({ "worm" }) );
-	set_short( "¶´Ñ¨³æ" );
+	set_short( "æ´ç©´èŸ²" );
 	set_long(@CLONG
-ÕâÊÇÒ»ÖÖ½Ğ×ö¶´Ñ¨¶êµÄÓ×³æ£¬ËüµÄÉíÉÏ³¤ÖøĞí¶à¼áÓ²µÄ¸ÕÃ«£¬Æ¤·ôÉÏ¸²¸ÇÖø
-Ò»²ãÑÒÊ¯°ãµÄ½ÇÖÊ£¬¾İËµËüµÄ½ĞÉù»áÊ¹ÈËÉ¥Ê§·¨Á¦¡£
+é€™æ˜¯ä¸€ç¨®å«åšæ´ç©´è›¾çš„å¹¼èŸ²ï¼Œå®ƒçš„èº«ä¸Šé•·è‘—è¨±å¤šå …ç¡¬çš„å‰›æ¯›ï¼Œçš®è†šä¸Šè¦†è“‹è‘—
+ä¸€å±¤å²©çŸ³èˆ¬çš„è§’è³ªï¼Œæ“šèªªå®ƒçš„å«è²æœƒä½¿äººå–ªå¤±æ³•åŠ›ã€‚
 CLONG
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", 100 );
 	set( "natural_weapon_class1", 8 );
 	set( "natural_min_damage1", 5 );
@@ -25,8 +25,8 @@ CLONG
 	set( "max_hp", 300 );
 	set( "natural_armor_class", 80 );
 	set( "tactic_func", "my_tactic" );
-	set_c_limbs( ({ "ÉíÌå" }) );
-	set_c_verbs( ({ "%sÕÅ¿ª³¤ÂúÀû³İÖø¿ÚÆ÷´ÌÏò%s", "ÓÃÉíÌåµÄ¸ÕÃ«Íù%s´ÌÈ¥" }) );
+	set_c_limbs( ({ "èº«é«”" }) );
+	set_c_verbs( ({ "%så¼µé–‹é•·æ»¿åˆ©é½’è‘—å£å™¨åˆºå‘%s", "ç”¨èº«é«”çš„å‰›æ¯›å¾€%såˆºå»" }) );
 }
 
 int my_tactic()
@@ -35,7 +35,7 @@ int my_tactic()
 
 	if( random(20)<3 ) {
 		tell_room( environment(this_object()), 
-			"¶´Ñ¨³æ·¢³öÒ»Õó¡¸ßÙ¹¾£¬ßÙ¹¾¡¹µÄ½ĞÉù£¬Äã¾õµÃÒ»ÕóÍ·ÔÎ....¡£\n",
+			"æ´ç©´èŸ²ç™¼å‡ºä¸€é™£ã€Œå—¶å’•ï¼Œå—¶å’•ã€çš„å«è²ï¼Œä½ è¦ºå¾—ä¸€é™£é ­æšˆ....ã€‚\n",
 			this_object() );
 		victim = query_attackers();
 		if ( victim->query("spell_points"))

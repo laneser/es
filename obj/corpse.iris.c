@@ -15,7 +15,7 @@ int decay;
 
 void prevent_insert()
 {
-   write("Ê¬ÌåÌ«´óÁË!!\n");
+   write("å±é«”å¤ªå¤§äº†!!\n");
    return;
 }
 
@@ -23,12 +23,12 @@ void create()
 {
 	::create();
 	name = "someone";
-	c_name = "Ä³ÈË";
+	c_name = "æŸäºº";
 	decay = MAX_DECAY;
 
 	set("weight", 600);
 	set_short( "@@query_short" );
-	set("unit", "¾ß" );
+	set("unit", "å…·" );
 	set("max_load", 400);
 	set("prevent_insert", 1);
 	set("id", ({ "corpse", "remains", "body", "dead body","bone" }));
@@ -36,11 +36,11 @@ void create()
 string query_short()
 {
         switch( decay ) {
-                case 1: return "¿İ¹Ç";
-                case 2: return "º¡¹Ç";
-                case 3: return "¸¯ÀÃµÄÊ¬Ìå";
-                case 4: return sprintf("%sµÄÊ¬Ìå", c_name);
-                default: return "Ê¬Ìå";
+                case 1: return "æ¯éª¨";
+                case 2: return "éª¸éª¨";
+                case 3: return "è…çˆ›çš„å±é«”";
+                case 4: return sprintf("%sçš„å±é«”", c_name);
+                default: return "å±é«”";
 	}
 }
 void set_name(string str, string str2)
@@ -48,9 +48,9 @@ void set_name(string str, string str2)
 	name = str;
 	c_name = str2;
 
-	::set_name( "corpse", "Ê¬Ìå" );
+	::set_name( "corpse", "å±é«”" );
 	if( name )  name = capitalize(name);
-        set_c_open_long(sprintf("ÕâÊÇ%sµÄÒÅÌå¡£\n", c_name));
+        set_c_open_long(sprintf("é€™æ˜¯%sçš„éºé«”ã€‚\n", c_name));
 	set("id", ({ "corpse", "remains", "body", "dead body", "bone",
 		sprintf("corpse of %s", name) }) );
 	call_out("decay", DECAY_TIME,this_object() );
@@ -72,7 +72,7 @@ void decay(object me)
 		           return;
 		        } 
 		case 1: call_out("decay", 80,me); return;
-		case 2: ::set_name("bone", "º¡¹Ç");
+		case 2: ::set_name("bone", "éª¸éª¨");
 				call_out("decay", 80,me);
 				return;
 		case 3: call_out("decay", 80,me); return;

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-  set_name("Bone Helmet","Áú¹Ç¿ø");
+  set_name("Bone Helmet","é¾éª¨ç›”");
   add("id",({"bone","helmet"}) );
-  set_short("Áú¹Ç¿ø");
+  set_short("é¾éª¨ç›”");
   set_long(@LONG
-Õâ¾ÍÊÇ´«ËµÖĞÓÃÄ§ÁúÍ·¹ÇËù×÷³ÉµÄÍ·¿ø£¬Ö»¼ûËü²»¶ÏµÄÉÁË¸ÖøºÚÉ«µÄ¹âÃ¢¡£
+é€™å°±æ˜¯å‚³èªªä¸­ç”¨é­”é¾é ­éª¨æ‰€ä½œæˆçš„é ­ç›”ï¼Œåªè¦‹å®ƒä¸æ–·çš„é–ƒçˆè‘—é»‘è‰²çš„å…‰èŠ’ã€‚
 LONG
           );
-  set("unit","¸ö");
+  set("unit","å€‹");
   set("type","head");
   set("material","stone");
   set("armor_class",7);

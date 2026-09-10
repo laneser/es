@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "Yang Chun", "Ñî´º" );
+	set_name( "Yang Chun", "æ¥Šæ˜¥" );
 	add("id",({"yang","chun"}));
-	set_short( "Ñî´º" );
+	set_short( "æ¥Šæ˜¥" );
 	set_long(
-		"ËûµÄÍâºÅÊÇ°×»¨Éß£¬ÆÑÖİ½âÑôÏØÈË£¬Ê¹Ò»°ÑÌú¹Ï¡õ£¬ÎªÁºÉ½²´Âí¾üĞ¡±ë½«\n"
-		"¼æÔ¶Ì½³öÉÚÍ·Áì£®Èç¹ûÄã²»ÏëËÀµÄ»°£¬×îºÃ±ğÈ¥ÕĞÈÇËû¡£\n"
+		"ä»–çš„å¤–è™Ÿæ˜¯ç™½èŠ±è›‡ï¼Œè’²å·è§£é™½ç¸£äººï¼Œä½¿ä¸€æŠŠéµç“œâ–¡ï¼Œç‚ºæ¢å±±æ³Šé¦¬è»å°å½ªå°‡\n"
+		"å…¼é æ¢å‡ºå“¨é ­é ˜ï¼å¦‚æœä½ ä¸æƒ³æ­»çš„è©±ï¼Œæœ€å¥½åˆ¥å»æ‹›æƒ¹ä»–ã€‚\n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );
@@ -30,7 +30,7 @@ void create()
 	set_natural_armor( 22, 8 );
         set( "chat_chance",20);
 	set("att_chat_output",
-	"\n Ñî´º´óº°: ÓŞ´ÀµÄ¼Ò»ï£¬¸øÎÒ¹ö³öÁºÉ½²´.....\n\n");
+	"\n æ¥Šæ˜¥å¤§å–Š: æ„šè ¢çš„å‚¢ä¼™ï¼Œçµ¦æˆ‘æ»¾å‡ºæ¢å±±æ³Š.....\n\n");
 	wield_weapon( TWEAPON"ironhammer" );
         equip_armor( TARMOR"white_warcape");
         equip_armor( TARMOR"wool_hat");

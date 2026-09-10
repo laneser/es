@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("holy amulet", "ÉñÊ¥»¤Éí·û");
+        set_name("holy amulet", "ç¥è–è­·èº«ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short( "ÉñÊ¥»¤Éí·û");
+        set_short( "ç¥è–è­·èº«ç¬¦");
         set_long(
-                "Õâ¸ö»¤Éí·ûÄÜ¿¹¾ÜËùÓĞµÄĞ°¶ñ¡£\n"
+                "é€™å€‹è­·èº«ç¬¦èƒ½æŠ—æ‹’æ‰€æœ‰çš„é‚ªæƒ¡ã€‚\n"
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "misc" );
         set( "material", "leather");
         set( "armor_class", 0 );

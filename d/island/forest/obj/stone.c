@@ -7,11 +7,11 @@ int left_hole,mid_hole,right_hole;
 void create()
 {
     ::create();
-    set_name("Stone","ÆÆĞ°Õò");
-    set_short("ÆÆĞ°Õò");
+    set_name("Stone","ç ´é‚ªé®");
+    set_short("ç ´é‚ªé®");
     set_long(@C_LONG
-Ò»¿Ã¾Ş´óµÄÌìÈ»ÑÒ¿é£¬ÑÒ¿éÉÏÓĞÈı¸ö´óĞ¡²»Í¬µÄĞ¡¶´¶´(hole)£¬
-ºÃÏñ¿ÉÒÔ²å(insert)¶«Î÷Ò®!!
+ä¸€æ£µå·¨å¤§çš„å¤©ç„¶å·–å¡Šï¼Œå·–å¡Šä¸Šæœ‰ä¸‰å€‹å¤§å°ä¸åŒçš„å°æ´æ´(hole)ï¼Œ
+å¥½åƒå¯ä»¥æ’(insert)æ±è¥¿è€¶!!
 C_LONG
             );
     set("prevent_get",1);

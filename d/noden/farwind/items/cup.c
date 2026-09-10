@@ -6,9 +6,9 @@ int filled;
 
 void create()
 {
-	set_name("cup", "±­×Ó");
+	set_name("cup", "æ¯å­");
 	add( "id", ({ "paper cup" }) );
-	set_short( "Ö½±­" );
+	set_short( "ç´™æ¯" );
 	set("long","@@query_c_long");
 	set( "quest_smith", 1 );
 	set( "weight", 3 );
@@ -18,11 +18,11 @@ void create()
 string query_c_long()
 {
 	if( filled )
-		return "Õâ¸ö±­×Ó×°ÂúÁËÇåË®£¬µ«ÊÇÈô²»°ÑË®ºÈ(drink)µô»òµ¹(pour)µô£¬\n"
-			"Õâ¸ö±­×Ó¿ÉÄÜºÜ¿ì»áºıµô¡£\n";
+		return "é€™å€‹æ¯å­è£æ»¿äº†æ¸…æ°´ï¼Œä½†æ˜¯è‹¥ä¸æŠŠæ°´å–(drink)æ‰æˆ–å€’(pour)æ‰ï¼Œ\n"
+			"é€™å€‹æ¯å­å¯èƒ½å¾ˆå¿«æœƒç³Šæ‰ã€‚\n";
 	else
-		return  "Õâ¸öÖ½±­ËÆºõ¿ÉÒÔÓÃÀ´×°Ë®£¬ÄãËùÒª×öµÄÖ»ÊÇÕÒÒ»´¦ÓĞË®µÄµØ·½\n"
-			"ÓÃ fill cup °Ñ±­×Ó×°ÂúË®¡£\n";
+		return  "é€™å€‹ç´™æ¯ä¼¼ä¹å¯ä»¥ç”¨ä¾†è£æ°´ï¼Œä½ æ‰€è¦åšçš„åªæ˜¯æ‰¾ä¸€è™•æœ‰æ°´çš„åœ°æ–¹\n"
+			"ç”¨ fill cup æŠŠæ¯å­è£æ»¿æ°´ã€‚\n";
 }
 
 int query_filled() { return filled; }
@@ -39,18 +39,18 @@ int fill_water(string arg)
 	object env;
 
 	if( !arg || arg!="cup" )
-		return notify_fail("ÓÃÊ²÷á×°Ë®£¿\n");
+		return notify_fail("ç”¨ä»€éº¼è£æ°´ï¼Ÿ\n");
 	if( filled )
-		return notify_fail("±­×ÓÖĞÒÑ¾­×°ÂúÇåË®ÁË¡£\n");
+		return notify_fail("æ¯å­ä¸­å·²ç¶“è£æ»¿æ¸…æ°´äº†ã€‚\n");
 
 	env = environment(this_object());
 	if( living(env) ) env = environment(env);
 
 	if( !env->query("water_source") )
-		return notify_fail("ÕâÀïÃ»ÓĞË®....¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰æ°´....ã€‚\n");
 
 	filled = 1;
-	write("Äã°Ñ±­×Ó×°ÂúÇåË®¡£\n");
+	write("ä½ æŠŠæ¯å­è£æ»¿æ¸…æ°´ã€‚\n");
 	call_out("mess_up", 200);
 	return 1;
 }
@@ -59,22 +59,22 @@ int drink_water(string arg)
 {
 
 	if( !arg || arg!="cup" )
-		return notify_fail("ºÈÊ²÷á£¿\n");
+		return notify_fail("å–ä»€éº¼ï¼Ÿ\n");
 	if( !filled )
-		return notify_fail("±­×ÓÊÇ¿ÕµÄ¡£\n");
+		return notify_fail("æ¯å­æ˜¯ç©ºçš„ã€‚\n");
 	filled = 0;
-	write("Äã°ÑÖ½±­ÖĞµÄË®ºÈ¹âÁË¡£\n");
+	write("ä½ æŠŠç´™æ¯ä¸­çš„æ°´å–å…‰äº†ã€‚\n");
 	return 1;
 }
 
 int pour_water(string arg)
 {
 	if( !arg || arg!="cup" )
-		return notify_fail("µ¹µôÊ²÷á£¿\n");
+		return notify_fail("å€’æ‰ä»€éº¼ï¼Ÿ\n");
 	if( !filled )
-		return notify_fail("±­×ÓÊÇ¿ÕµÄ¡£\n");
+		return notify_fail("æ¯å­æ˜¯ç©ºçš„ã€‚\n");
 	filled = 0;
-	write("Äã°ÑÖ½±­ÖĞµÄË®µ¹¹âÁË¡£\n");
+	write("ä½ æŠŠç´™æ¯ä¸­çš„æ°´å€’å…‰äº†ã€‚\n");
 	return 1;
 }
 
@@ -84,7 +84,7 @@ void mess_up()
 
 	owner = environment(this_object());
 	if( living(owner) ) {
-	tell_object(owner, "ÄãµÄÖ½±­ºıµôÁË£¬±ä³ÉÒ»ÍÅÊªÖ½ÍÅ£¬ÄãËæÊÖ½«ËüÈÓÁË¡£\n");
+	tell_object(owner, "ä½ çš„ç´™æ¯ç³Šæ‰äº†ï¼Œè®Šæˆä¸€åœ˜æº¼ç´™åœ˜ï¼Œä½ éš¨æ‰‹å°‡å®ƒæ‰”äº†ã€‚\n");
 	}
 	remove();
 	return;

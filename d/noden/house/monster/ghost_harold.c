@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(7);
-	set_name( "ghost of Harold", "¹şÂåµÂµÄ¹í»ê" );
+	set_name( "ghost of Harold", "å“ˆæ´›å¾·çš„é¬¼é­‚" );
 	add( "id", ({ "ghost", "harold" }) );
-	set_short( "¹şÂåµÂµÄ¹í»ê" );
+	set_short( "å“ˆæ´›å¾·çš„é¬¼é­‚" );
 	set_long(
-		"Äã¿´µ½Ò»¸ö±íÇéÓÇ³îµÄÖĞÄêÉğÊ¿£¬Ëû¿´ÆğÀ´ÕıÔÚÉòË¼¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹è¡¨æƒ…æ†‚æ„çš„ä¸­å¹´ç´³å£«ï¼Œä»–çœ‹èµ·ä¾†æ­£åœ¨æ²ˆæ€ã€‚\n"
 	);
    set( "race", "undead" );
 	set( "gender", "male" );
@@ -26,9 +26,9 @@ void create()
 	set( "tactic_func", "my_tactic" );
 	set( "block_aim", ({ "vascular", "ganglion" }) );
 	set( "alt_corpse", "/d/noden/house/obj/cellar_key" );
-	set_c_verbs( ({"%sÉìÊÖ×¥Ïò%s"}) );
+	set_c_verbs( ({"%sä¼¸æ‰‹æŠ“å‘%s"}) );
 	set( "inquiry", ([
-		"key" : "Ô¿³×£¿Ê²÷áÔ¿³× .... ÎÒÃ»ÓĞÔ¿³× .... " 
+		"key" : "é‘°åŒ™ï¼Ÿä»€éº¼é‘°åŒ™ .... æˆ‘æ²’æœ‰é‘°åŒ™ .... " 
 	]) );
 }
 
@@ -39,7 +39,7 @@ int my_tactic()
 
 	if( !(victim = query_attackers() ) || random(20)>5 ) return 0;
 	tell_room( environment(this_object()), 
-		"¹í»êµÄÓ°×Ó±äµÃÄ£ºı£¬È»ááÄã¾õµÃÓĞÈËÔÚÄãµÄ¶ú±ß´µÆø....\n" ,
+		"é¬¼é­‚çš„å½±å­è®Šå¾—æ¨¡ç³Šï¼Œç„¶å¾Œä½ è¦ºå¾—æœ‰äººåœ¨ä½ çš„è€³é‚Šå¹æ°£....\n" ,
 		this_object() );
 	for( i=0; i<sizeof(victim); i++ )
 		victim[i]->receive_special_damage( "mental", 20 );
@@ -49,7 +49,7 @@ int my_tactic()
 void die()
 {
 	tell_room( environment(this_object()), 
-		query("c_cap_name") + "µÄÓ°×Ó»¯³ÉÒ»¹É°×ÑÌ£¬ÏûÊ§ÁË .... ÄãÌıµ½Ä³¸ö¶«Î÷µôÔÚµØ°åÉÏ¡£\n",
+		query("c_cap_name") + "çš„å½±å­åŒ–æˆä¸€è‚¡ç™½ç…™ï¼Œæ¶ˆå¤±äº† .... ä½ è½åˆ°æŸå€‹æ±è¥¿æ‰åœ¨åœ°æ¿ä¸Šã€‚\n",
 		this_object() );
 	::die(1);
 }

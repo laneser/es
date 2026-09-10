@@ -9,12 +9,12 @@ void create()
     
 	::create();
 	set_level(14);
-	set_name( "strange jungle plant", "Ææ¹ÖµÄ´ÔÁÖÖ²Îï" );
+	set_name( "strange jungle plant", "å¥‡æ€ªçš„å¢æž—æ¤ç‰©" );
 	add("id",({"plant"}));
-	set_short( "a strange green jungle plant", "Ææ¹ÖµÄ´ÔÁÖÖ²Îï" );
+	set_short( "a strange green jungle plant", "å¥‡æ€ªçš„å¢æž—æ¤ç‰©" );
 	set_long(
 		"a strange green jungle plant.\n",
-		"Ò»ÖÖÆæ¹ÖµÄÂÌÉ«´ÔÁÖÖ²Îï,¼ûµ½»á¶¯µÄ¾Í»áÖ÷¶¯¹¥»÷.\n"
+		"ä¸€ç¨®å¥‡æ€ªçš„ç¶ è‰²å¢æž—æ¤ç‰©,è¦‹åˆ°æœƒå‹•çš„å°±æœƒä¸»å‹•æ”»æ“Š.\n"
 	);
 	set( "alignment", 0 );
 	set_perm_stat( "dex", 20 );
@@ -28,8 +28,8 @@ void create()
     set ("aim_difficulty",([ "critical":40 ]) );
     set ("unbleeding",1);
     set ("killer",1);
-    set_c_verbs( ({ "%sÉì³öÖ¦Ìõ¿ìËÙ»÷Ïò%s"}) );
-    set_c_limbs( ({ "Ö¦Ìõ", "Ö¦¸É" }) );
+    set_c_verbs( ({ "%sä¼¸å‡ºæžæ¢å¿«é€Ÿæ“Šå‘%s"}) );
+    set_c_limbs( ({ "æžæ¢", "æžå¹¹" }) );
     set( "tactic_func", "my_tactic");
     
 }
@@ -40,9 +40,9 @@ int my_tactic()
 
 	if( random(20)>3 || !(victim= query_attacker()) ) return 0;
     else {
-      tell_object(victim, "ÕâÖ²Îï°ÑÄã²ø×¡²¢ÎüÊÕÄãµÄ¾«Á¦.\n" );
+      tell_object(victim, "é€™æ¤ç‰©æŠŠä½ çºä½ä¸¦å¸æ”¶ä½ çš„ç²¾åŠ›.\n" );
       tell_room(environment(this_object()),
-          "ÕâÖ²Îï°Ñ"+victim->query("c_name")+"²ø×¡²¢ÎüÊÕËûµÄ¾«Á¦.\n"
+          "é€™æ¤ç‰©æŠŠ"+victim->query("c_name")+"çºä½ä¸¦å¸æ”¶ä»–çš„ç²¾åŠ›.\n"
           ,({victim,this_object(),}) );
       victim->receive_damage( 15 + random(20) );
       report(this_object(),victim);

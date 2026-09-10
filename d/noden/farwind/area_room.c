@@ -9,12 +9,12 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "Ã°ÏÕÕßÖ®¼Ò" );
+	set_short( "å†’éšªè€…ä¹‹å®¶" );
 	set_long(@C_LONG
-ÄãÏÖÔÚÕıÕ¾ÔÚÒ»¼ä³äÂúÖøÏéºÍÆø·ÕµÄ´óÌüÖ®ÖĞ£¬Õâ¸ö´óÌüÊÇÓÃÄ³ÖÖ°×
-ÖĞ´øÖøµ­À¶É«ÎÆÂ·µÄÊ¯²Ä½¨³ÉµÄ£¬Ò»Ğ©ÂÌÉ«µÄÖ²ÎïºÍÆ¯ÁÁµÄ»¨»Ü×°ÊÎÖø´ó
-ÌüËÄÖÜµÄÔ²Öù¡£ËÄÃæµÄÇ½±ÚÉÏµñ¿ÌÖø¼«ÎªÓÅÃÀµÄÍ¼»­¡£¶ø´óÌüµÄÖĞÑëÓĞÖø
-Ò»±¾ºÜ´óµÄÊé±¾( book )ÖÃì¶ÆäÖĞ¡£±±·½ÓĞ¸öÍ¨µÀ, ¿ÉÒÔÍ¨ÏòÈÎÎñµîÌÃ¡£
+ä½ ç¾åœ¨æ­£ç«™åœ¨ä¸€é–“å……æ»¿è‘—ç¥¥å’Œæ°£æ°›çš„å¤§å»³ä¹‹ä¸­ï¼Œé€™å€‹å¤§å»³æ˜¯ç”¨æŸç¨®ç™½
+ä¸­å¸¶è‘—æ·¡è—è‰²ç´‹è·¯çš„çŸ³æå»ºæˆçš„ï¼Œä¸€äº›ç¶ è‰²çš„æ¤ç‰©å’Œæ¼‚äº®çš„èŠ±å‰è£é£¾è‘—å¤§
+å»³å››å‘¨çš„åœ“æŸ±ã€‚å››é¢çš„ç‰†å£ä¸Šé›•åˆ»è‘—æ¥µç‚ºå„ªç¾çš„åœ–ç•«ã€‚è€Œå¤§å»³çš„ä¸­å¤®æœ‰è‘—
+ä¸€æœ¬å¾ˆå¤§çš„æ›¸æœ¬( book )ç½®æ–¼å…¶ä¸­ã€‚åŒ—æ–¹æœ‰å€‹é€šé“, å¯ä»¥é€šå‘ä»»å‹™æ®¿å ‚ã€‚
 C_LONG
 	);
 	
@@ -43,8 +43,8 @@ void init()
 int area_book()
 {
     write( 
-    "Ì½ÏÕ\n"
-     "Ò»±¾¼ÇÔØÖøÓÉĞíĞí¶à¶àÃ°ÏÕÕßËù¼ÇÂ¼ÏÂµÄ¸÷¸öÇøÓòµÄÊé.\n"
+    "æ¢éšª\n"
+     "ä¸€æœ¬è¨˜è¼‰è‘—ç”±è¨±è¨±å¤šå¤šå†’éšªè€…æ‰€è¨˜éŒ„ä¸‹çš„å„å€‹å€åŸŸçš„æ›¸.\n"
     );
     return 1;
 }
@@ -56,10 +56,10 @@ int to_open(string str)
     if (!str||str!="book") return 0;
     can_look=query("book_status");
     if ( can_look=="open" ) 
-      write("ÕâÊéÒÑ¾­±»´ò¿ªÁË.\n");
+      write("é€™æ›¸å·²ç¶“è¢«æ‰“é–‹äº†.\n");
     else {
       set("book_status","open");
-      write("Äã´ò¿ªÌ½ÏÕÕßÖ®Êé.\n");
+      write("ä½ æ‰“é–‹æ¢éšªè€…ä¹‹æ›¸.\n");
       }
     return 1;    
 }
@@ -71,11 +71,11 @@ int to_close(string str)
     if (!str||str!="book") return 0;
     can_look=query("book_status");
     if ( can_look=="close" ) 
-      write("ÕâÊéÒÑ¾­±»ºÏÉÏÁË.\n");
+      write("é€™æ›¸å·²ç¶“è¢«åˆä¸Šäº†.\n");
     else {
       set("book_status","close");
       set("book_page",0);
-      write("ÄãºÏÉÏÌ½ÏÕÕßÖ®Êé.\n");
+      write("ä½ åˆä¸Šæ¢éšªè€…ä¹‹æ›¸.\n");
       }
     return 1;    
 }
@@ -88,21 +88,21 @@ int to_turn(string str)
     else if ( str=="page" )
       {
           if ( (string)query("book_status")=="close" )
-            return notify_fail("ÇëÏÈ´ò¿ªÊé.\n"); 
+            return notify_fail("è«‹å…ˆæ‰“é–‹æ›¸.\n"); 
           page=(int)query("book_page")+1;
           page=(page==LAST_PAGE)?0:page;
-          write("Äã°ÑÊé·­µ½ÁËµÚ"+ page +"Ò³.\n");
+          write("ä½ æŠŠæ›¸ç¿»åˆ°äº†ç¬¬"+ page +"é .\n");
           set("book_page",page);
       }
     else if ( sscanf(str,"page to %d",page)==1 )
       {
          if ( (string)query("book_status")=="close" )
-            return notify_fail("ÇëÏÈ´ò¿ªÊé.\n"); 
-         write("Äã°ÑÊé·­µ½ÁËµÚ"+ page +"Ò³.\n");
+            return notify_fail("è«‹å…ˆæ‰“é–‹æ›¸.\n"); 
+         write("ä½ æŠŠæ›¸ç¿»åˆ°äº†ç¬¬"+ page +"é .\n");
          set("book_page",page);
       }
     else 
-      write("·­ÊéµÄ·½·¨ÈçÏÂ:turn page or turn page to <num>.\n");
+      write("ç¿»æ›¸çš„æ–¹æ³•å¦‚ä¸‹:turn page or turn page to <num>.\n");
     return 1;  
 }
 
@@ -110,7 +110,7 @@ int to_read(string str)
 {
     if (!str||str!="book") return 0;
     if ( (string)query("book_status")=="close" )
-            return notify_fail("ÇëÏÈ´ò¿ªÊé.\n"); 
+            return notify_fail("è«‹å…ˆæ‰“é–‹æ›¸.\n"); 
     cat(AREA+query("book_page"));
     return 1;
 }

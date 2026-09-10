@@ -8,5 +8,5 @@ void create()
 	set_save_file("swordman_board");
 	set_location("/d/swordman/guild/guild");
 	set ("short.text", "Swordman's bulletin board");
-	set ("c_short.text", "ÍÀÁú½£ÅÉÁôÑÔ°å");
+	set ("c_short.text", "å± é¾åŠæ´¾ç•™è¨€æ¿");
 }

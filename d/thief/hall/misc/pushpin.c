@@ -1,23 +1,23 @@
 // Created by Aquarius@EasternStory
 #include "mudlib.h"
-#define TIME 120 	// 120 ÃëááÏûÊ§
+#define TIME 120 	// 120 ç§’å¾Œæ¶ˆå¤±
 inherit OBJECT;
-int droped = 0;		// ÊÇ·ñÒÑ±»È÷ÔÚµØÉÏ
-int xx = 0;		// ÕâÕâ.. ×ÜÖ®, ±ØÒªµÄ flag
-int life=0;		// ÕâÃ¶Í¼¶¤µÄÓÐÐ§ÆÚÏÞ
-int dam=0;		// ËùÔì³ÉµÄÉËº¦ , dam = skill/5;
-object tricker;		// ·ÅÍ¼¶¤µÄÈË
+int droped = 0;		// æ˜¯å¦å·²è¢«ç‘åœ¨åœ°ä¸Š
+int xx = 0;		// é€™é€™.. ç¸½ä¹‹, å¿…è¦çš„ flag
+int life=0;		// é€™æžšåœ–é‡˜çš„æœ‰æ•ˆæœŸé™
+int dam=0;		// æ‰€é€ æˆçš„å‚·å®³ , dam = skill/5;
+object tricker;		// æ”¾åœ–é‡˜çš„äºº
 
 void create()
 {
-     set_name("pushpin","Í¼¶¤");
-     set_short("Í¼¶¤");
+     set_name("pushpin","åœ–é‡˜");
+     set_short("åœ–é‡˜");
      set_long(@LONG
-Ò»°ÑÍ¼¶¤, ¿´ÆðÀ´²»Ì«ÆðÑÛ, ÈôÊÇÈ÷(spread)ÔÚµØÉÏ, ²»Ð¡ÐÄ²Èµ½µÄÈË
-Ò»¶¨»áÍ´µÄÍÛÍÛ½Ð¡£
+ä¸€æŠŠåœ–é‡˜, çœ‹èµ·ä¾†ä¸å¤ªèµ·çœ¼, è‹¥æ˜¯ç‘(spread)åœ¨åœ°ä¸Š, ä¸å°å¿ƒè¸©åˆ°çš„äºº
+ä¸€å®šæœƒç—›çš„å“‡å“‡å«ã€‚
 LONG
       );
-     set( "unit", "°Ñ");
+     set( "unit", "æŠŠ");
      set("weight",5);
      set("value", ({ 50, "silver" }));
 }
@@ -29,7 +29,7 @@ void init()
     mapping exits;
     string dir,*dirs;
 
-	// ÕýÔÚ¶ÔÄ³ÈË(ÆïÂí)×÷ÓÃÖÐ, ÁíÒ»¸öÍ¬Ê±½øÕâ¸ö·¿¼äµÄÈË²»»á±»´Ìµ½ .
+	// æ­£åœ¨å°æŸäºº(é¨Žé¦¬)ä½œç”¨ä¸­, å¦ä¸€å€‹åŒæ™‚é€²é€™å€‹æˆ¿é–“çš„äººä¸æœƒè¢«åˆºåˆ° .
     if ( xx ) return ;
 
     if ( ! droped ) {
@@ -50,7 +50,7 @@ void init()
 	return ;
 
     if ( who == tricker && dam > random(23) ) {
-	tell_object(who,"ÄãÐ¡ÐÄµÄ±Ü¿ª×Ô¼ºÈ÷µÄÍ¼¶¤¡£\n");
+	tell_object(who,"ä½ å°å¿ƒçš„é¿é–‹è‡ªå·±ç‘çš„åœ–é‡˜ã€‚\n");
 	return ;
     }
 
@@ -61,22 +61,22 @@ void init()
     if ( (mount_ob = who->query_temp("mounting")) ){
 	xx=1;
     	tell_object(who,
-		set_color("ÄãµÄ×ùÆïÍ»È»Ò»ÕóÃùË»,ÈËÁ¢ÆðÀ´,°ÑÄãË¤µ½µØÉÏ!!\n","HIR",who));
+		set_color("ä½ çš„åº§é¨Žçªç„¶ä¸€é™£é³´å˜¶,äººç«‹èµ·ä¾†,æŠŠä½ æ‘”åˆ°åœ°ä¸Š!!\n","HIR",who));
 	tell_room( environment(who),
-		who->query("c_name") + "µÄ×ùÆïÍ»È»²Ò½ÐÒ»Éù, °Ñ"+who->query("c_name")+"Ë¤ÔÚµØÉÏ.\n",who);
+		who->query("c_name") + "çš„åº§é¨Žçªç„¶æ…˜å«ä¸€è², æŠŠ"+who->query("c_name")+"æ‘”åœ¨åœ°ä¸Š.\n",who);
 	who->block_attack(6);
-	who->set_temp("msg_stop_attack","( Äã±»Ë¤µÄÍ´ËÀÁË, ÅÀ²»ÆðÀ´, ÎÞ·¨¹¥»÷ )" );
+	who->set_temp("msg_stop_attack","( ä½ è¢«æ‘”çš„ç—›æ­»äº†, çˆ¬ä¸èµ·ä¾†, ç„¡æ³•æ”»æ“Š )" );
 //	call_other("/adm/daemons/mount","dismount",mount_ob,who);
 	"/adm/daemons/mount"->dismount(mount_ob,who);
-	// ±¿±È .. º¦ÎÒÐ´²»³öÀ´ ...
+	// ç¬¨æ¯” .. å®³æˆ‘å¯«ä¸å‡ºä¾† ...
 //	mount_ob->set("moving",1);
 //	mount_ob->set("speed",40);
 	this_object()->remove();
     } else {
 	xx = 1;
     	tell_object(who,
-		set_color("Äã½ÅÏÂÒ»Í´, ºÃÏñ±»Ê²÷á´Ìµ½ÁË!!\n","HIR",who));
-    	who->set_temp("msg_stop_attack","( ÄãµÄ½Å±»¶¤×¡ÁË, ¶¯µ¯²»µÃ )\n");
+		set_color("ä½ è…³ä¸‹ä¸€ç—›, å¥½åƒè¢«ä»€éº¼åˆºåˆ°äº†!!\n","HIR",who));
+    	who->set_temp("msg_stop_attack","( ä½ çš„è…³è¢«é‡˜ä½äº†, å‹•å½ˆä¸å¾— )\n");
     	who->block_attack(4);
     	who->add("hit_points",-dam);
     	this_object()->remove();
@@ -91,7 +91,7 @@ int do_spread(string arg)
 	if ( ! arg || arg == "" || ! id(arg) )
 		return 0;
 	if ( (int)this_player()->query_skill("trick") < 5) {
-		tell_object(this_player(),"Äã±¿ÊÖ±¿½ÅµÄ, ²»Ð¡ÐÄ´Ìµ½×Ô¼º, Í´ËÀÁË!!\n");
+		tell_object(this_player(),"ä½ ç¬¨æ‰‹ç¬¨è…³çš„, ä¸å°å¿ƒåˆºåˆ°è‡ªå·±, ç—›æ­»äº†!!\n");
 		this_player()->add("hit_points",-10);
 		return 1;
 	}
@@ -102,16 +102,16 @@ int do_spread(string arg)
 			num++;
 
 	if ( num > 2 ) {
-		tell_object(this_player(),"ÕâÀïÂúµØ¶¼ÊÇÍ¼¶¤, ¾Í±ðÔÙÈ÷À²¡£\n");
+		tell_object(this_player(),"é€™è£¡æ»¿åœ°éƒ½æ˜¯åœ–é‡˜, å°±åˆ¥å†ç‘å•¦ã€‚\n");
 		return 1;
 	}
 
 	tell_object(this_player(),
-		"Äã×¥ÆðÒ»°ÑÍ¼¶¤, ÍµÍµµÄÈ÷ÔÚµØÉÏ¡£\n");
+		"ä½ æŠ“èµ·ä¸€æŠŠåœ–é‡˜, å·å·çš„ç‘åœ¨åœ°ä¸Šã€‚\n");
 	if( (int) this_player()->query_temp("hide_score") < 100  &&
 	    this_player()->query("player_invisible") != 1 )
 		tell_room(environment(this_player()),
-	          sprintf("%sÓÐµã¹í¹íËîËîµÄ,²»ÖªµÀÔÚ×öÊ²÷á¡£\n",this_player()->query("c_name")), this_player() );
+	          sprintf("%sæœ‰é»žé¬¼é¬¼ç¥Ÿç¥Ÿçš„,ä¸çŸ¥é“åœ¨åšä»€éº¼ã€‚\n",this_player()->query("c_name")), this_player() );
 	life = time()+TIME;
 	this_object()->set("prevent_get",1);
 	this_object()->set("player_invisible",1);

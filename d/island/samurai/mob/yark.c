@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(17);
-	set_name( "samurai yark","ÎäÊ¿ Ô¼¿Ë" );
+	set_name( "samurai yark","æ­¦å£« ç´„å…‹" );
 	add( "id", ({ "yark" }) );
-	set_short( "ÎäÊ¿ Ô¼¿Ë" );
+	set_short( "æ­¦å£« ç´„å…‹" );
 	set_long(@AAA
-Ô¼¿ËÊÇÎäÊ¿¶Ó³¤Ô¼ĞŞµÄµÜµÜ,Í¬ÎªĞÖµÜÔ¼¿ËµÄ½£ÊõÒ²²»ÔÚÔ¼ĞŞÖ®ÏÂ,¶øÔ¼¿Ë
-×îÏë×öµÄÊÂ¾ÍÊÇÓĞÒ»ÌìÒ»¶¨ÒªÊ¤¹ı¸ç¸çÔ¼ĞŞ!!!
+ç´„å…‹æ˜¯æ­¦å£«éšŠé•·ç´„ä¿®çš„å¼Ÿå¼Ÿ,åŒç‚ºå…„å¼Ÿç´„å…‹çš„åŠè¡“ä¹Ÿä¸åœ¨ç´„ä¿®ä¹‹ä¸‹,è€Œç´„å…‹
+æœ€æƒ³åšçš„äº‹å°±æ˜¯æœ‰ä¸€å¤©ä¸€å®šè¦å‹éå“¥å“¥ç´„ä¿®!!!
 AAA
         );
-	set( "unit", "Î»" );
+	set( "unit", "ä½" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set_perm_stat( "str", 25 );
@@ -31,7 +31,7 @@ AAA
                                  "vascular":10 ]));
         set( "stun_difficulty/ma",10);  
 	set( "alignment", 500 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÊÖÍó", "ÑÊºí" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "æ‰‹è…•", "å’½å–‰" }) );
         set_skill( "parry",85 );
         set_skill( "longblade",100 );
         set_skill( "tactic",100);

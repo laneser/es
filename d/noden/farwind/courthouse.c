@@ -26,11 +26,11 @@ void create()
 	set("objects", ([ "justice" : FARWIND"monster/justice" ]) );
 	reset() ;
 	set ("light", 1) ;
-	set ("short", "·¨Ôº");
+	set ("short", "æ³•é™¢");
 	set ("long", 
-			"ÄãÏÖÔÚÀ´µ½Ô¶·çÕòµÄ·¨Ôº¡£·¨ÔºÀïµÄ·¨¹Ù¿ÉÒÔÎªÄãºÍÄãµÄ°®ÈËÖ¤»é£¬²»\n"
-		"¹ı±ğÏëÔÚÕâÀïÀë»é£¬Ô¶·çÕòµÄÈË½«»éÒöÊÓÎªÒ»ÖÖÉñÊ¥²»¿ÉÇÖ·¸µÄÖÕÉíÊÄÔ¼£¬\n"
-		"ÏëÒª½á»éµÄÈË£¬Çë help marriage ÒÔµÃµ½½øÒ»²½µÄËµÃ÷¡£\n");
+			"ä½ ç¾åœ¨ä¾†åˆ°é é¢¨é®çš„æ³•é™¢ã€‚æ³•é™¢è£¡çš„æ³•å®˜å¯ä»¥ç‚ºä½ å’Œä½ çš„æ„›äººè­‰å©šï¼Œä¸\n"
+		"éåˆ¥æƒ³åœ¨é€™è£¡é›¢å©šï¼Œé é¢¨é®çš„äººå°‡å©šå§»è¦–ç‚ºä¸€ç¨®ç¥è–ä¸å¯ä¾µçŠ¯çš„çµ‚èº«èª“ç´„ï¼Œ\n"
+		"æƒ³è¦çµå©šçš„äººï¼Œè«‹ help marriage ä»¥å¾—åˆ°é€²ä¸€æ­¥çš„èªªæ˜ã€‚\n");
 	set ("exits", ([ "south" : FARWIND"ebazz" ]) ) ;
 	numpending = 0 ;
 	pending = allocate(10) ;
@@ -79,7 +79,7 @@ int list_couples()
 	string s1, s2, date ;
 
 	if (numcouples==0) {
-		write("ÏÖÔÚ²¢Ã»ÓĞÈÎºÎÕıÊ½µÇ¼ÇµÄ·òÆŞ ....¡£\n");
+		write("ç¾åœ¨ä¸¦æ²’æœ‰ä»»ä½•æ­£å¼ç™»è¨˜çš„å¤«å¦» ....ã€‚\n");
 		return 1 ;
 	}
 	for (i=0;i<numcouples;i++) {
@@ -110,10 +110,10 @@ int married_to_whom (string str)
 	if (!str) str = this_player()->query("name") ;
 	spouse = find_spouse(str) ;
 	if (spouse=="none") {
-		write( capitalize(str)+" ÏÖÔÚ»¹ÊÇµ¥Éí£¬Ã»ÓĞ½á¹ı»é¡£\n");
+		write( capitalize(str)+" ç¾åœ¨é‚„æ˜¯å–®èº«ï¼Œæ²’æœ‰çµéå©šã€‚\n");
 		return 1 ;
 	}
-	write( capitalize(str)+" µÄÅäÅ¼ÊÇ "+spouse+"¡£\n");
+	write( capitalize(str)+" çš„é…å¶æ˜¯ "+spouse+"ã€‚\n");
 	return 1 ;
 }
 
@@ -123,27 +123,27 @@ int get_married (string str)
 	string s1,s2;
 
 	if (!str) {
-		notify_fail("ÄãÒªºÍË­½á»é£¿\n") ;
+		notify_fail("ä½ è¦å’Œèª°çµå©šï¼Ÿ\n") ;
 		return 0 ;
 	}
 	if(capitalize(str)==(string)this_player()->query("name")) 
-	return notify_fail( "ºÍ×Ô¼º½á»é£¿ºÃÖ÷Òâ£¬²»¹ıÔÚÕâÀïĞĞ²»Í¨¡£\n");
+	return notify_fail( "å’Œè‡ªå·±çµå©šï¼Ÿå¥½ä¸»æ„ï¼Œä¸éåœ¨é€™è£¡è¡Œä¸é€šã€‚\n");
 
         if ( (string)this_player()->query("class") == "monk" )
 	return notify_fail(
-	"·¨¹Ù¿ª¿ÚÂîµÀ£º¡¸ÄãÕâ²»ÊØÇå¹æµÄ³ôºÍÉĞ !! ÏëÓÕ¹ÕÁ¼¼Ò¸¾Å®Âğ£¿¡¹\n" );
+	"æ³•å®˜é–‹å£ç½µé“ï¼šã€Œä½ é€™ä¸å®ˆæ¸…è¦çš„è‡­å’Œå°š !! æƒ³èª˜æ‹è‰¯å®¶å©¦å¥³å—ï¼Ÿã€\n" );
 
 	person = present( "justice", this_object() );
 	if (!person) {
-		write("½ñÌì·¨¹Ù²»ÔÚ£¬Çë¸ÄÌìÔÙÀ´¡£");
+		write("ä»Šå¤©æ³•å®˜ä¸åœ¨ï¼Œè«‹æ”¹å¤©å†ä¾†ã€‚");
 		return 1 ;
 	}
 	if( this_player()->query("spouse") )
-		return notify_fail("ÄãÒÑ¾­½á¹ı»éÁË£¡\n") ;
+		return notify_fail("ä½ å·²ç¶“çµéå©šäº†ï¼\n") ;
 	if( find_spouse(capitalize(str))!="none" )
-		return notify_fail( capitalize(str) + " ÒÑ¾­½á¹ı»éÁË ....¡£\n");
+		return notify_fail( capitalize(str) + " å·²ç¶“çµéå©šäº† ....ã€‚\n");
 	if( !find_player(str) || !present(str, environment(this_player())) )
-		return notify_fail("ÄãµÄ½á»é¶ÔÏó²»ÔÚÕâÀï ....¡£\n");
+		return notify_fail("ä½ çš„çµå©šå°è±¡ä¸åœ¨é€™è£¡ ....ã€‚\n");
 	if (numpending==0) {
 		add_pending(str) ;
 		return 1 ;
@@ -174,14 +174,14 @@ int add_pending(string str)
 
 	if (numpending==10)
 		return notify_fail(
-			"ÏÖÔÚµÈ´ı½á»éµÄĞÂÈËÌ«¶àÁË£¬·¨¹ÙÃ¦²»¹ıÀ´£¬Çë´ı»á¶ùÔÙÀ´¡£\n");
+			"ç¾åœ¨ç­‰å¾…çµå©šçš„æ–°äººå¤ªå¤šäº†ï¼Œæ³•å®˜å¿™ä¸éä¾†ï¼Œè«‹å¾…æœƒå…’å†ä¾†ã€‚\n");
 	str2 = this_player()->query("name") ;
 	pending[numpending] = capitalize(str)+"-"+str2 ;
 	numpending = numpending + 1 ;
-	write( "·¨¹Ù½«ÄãµÄÇó»é×ª¸æ¸ø " + capitalize(str) + "¡£\n");
+	write( "æ³•å®˜å°‡ä½ çš„æ±‚å©šè½‰å‘Šçµ¦ " + capitalize(str) + "ã€‚\n");
 	fiancee = find_player(str) ;
 	tell_object( fiancee, 
-		str2 + " Í¸¹ı·¨¹Ù¶ÔÄãÌá³öÕıÊ½µÄÇó»é£¡");
+		str2 + " é€éæ³•å®˜å°ä½ æå‡ºæ­£å¼çš„æ±‚å©šï¼");
 }
 
 int perform_marriage(string s1, string s2)
@@ -191,17 +191,17 @@ int perform_marriage(string s1, string s2)
 	spouse = find_player(lower_case(s2)) ;
 	if (!spouse)
 		return notify_fail( 
-			"ÄãµÄ½á»é¶ÔÏóÒÑ¾­Àë¿ªÁË¡¸¶«·½¹ÊÊÂ¡¹£¬ÎŞ·¨½øĞĞ»éÀñ¡£\n");
+			"ä½ çš„çµå©šå°è±¡å·²ç¶“é›¢é–‹äº†ã€Œæ±æ–¹æ•…äº‹ã€ï¼Œç„¡æ³•é€²è¡Œå©šç¦®ã€‚\n");
 	spouse->set( "spouse", s1);
 	this_player()->set( "spouse", s2);
 
 	tell_object(spouse, 
-		"¹§Ï²£¡Ë«·½ÇéÍ¶ÒâºÏ£¬·¨¹ÙÏÖÔÚÕıÊ½Ğû²¼ÄãºÍ "+s1+" ³ÉÎªºÏ·¨·òÆŞ£¡\n");
+		"æ­å–œï¼é›™æ–¹æƒ…æŠ•æ„åˆï¼Œæ³•å®˜ç¾åœ¨æ­£å¼å®£ä½ˆä½ å’Œ "+s1+" æˆç‚ºåˆæ³•å¤«å¦»ï¼\n");
 	write( 
-		"¹§Ï²£¡Ë«·½ÇéÍ¶ÒâºÏ£¬·¨¹ÙÏÖÔÚÕıÊ½Ğû²¼ÄãºÍ "+s2+" ³ÉÎªºÏ·¨·òÆŞ£¡\n");
-	shout("ÄãÌıµ½Ô¶·çÕòµÄ½ÌÌÃÖÓÉù»¶ĞÀµØµ±µ±ÆëÏì .... \n"+
-	      "Â·ÈËÃÇ¶¼»¶ĞÀ³ªµÀ£º¡¸¹§Ï²Õâ¶ÔĞÂÈË !! ×£¸£ "+capitalize(s1)+" ºÍ "+capitalize(s2)+
-	      " ÓÀÔ¶ĞÒ¸£¿ìÀÖ !!¡¹\n"); 
+		"æ­å–œï¼é›™æ–¹æƒ…æŠ•æ„åˆï¼Œæ³•å®˜ç¾åœ¨æ­£å¼å®£ä½ˆä½ å’Œ "+s2+" æˆç‚ºåˆæ³•å¤«å¦»ï¼\n");
+	shout("ä½ è½åˆ°é é¢¨é®çš„æ•™å ‚é˜è²æ­¡æ¬£åœ°ç•¶ç•¶é½ŠéŸ¿ .... \n"+
+	      "è·¯äººå€‘éƒ½æ­¡æ¬£å”±é“ï¼šã€Œæ­å–œé€™å°æ–°äºº !! ç¥ç¦ "+capitalize(s1)+" å’Œ "+capitalize(s2)+
+	      " æ°¸é å¹¸ç¦å¿«æ¨‚ !!ã€\n"); 
 	couples[numcouples] = s1+"-"+s2+" "+ctime(time());
 	numcouples++;
 

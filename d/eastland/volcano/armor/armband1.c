@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("prayer armband", "Æíµ»ÕßÊÖ»·");
+        set_name("prayer armband", "ç¥ˆç¦±è€…æ‰‹ç’°");
         add( "id", ({ "armband" }) );
-        set_short("Æíµ»ÕßÊÖ»·");
+        set_short("ç¥ˆç¦±è€…æ‰‹ç’°");
         set_long(
-                "ÕâÊÇÒ»°ãÆíµ»ÕßÓÃµÄÊÖ»·¡£\n"
+                "é€™æ˜¯ä¸€èˆ¬ç¥ˆç¦±è€…ç”¨çš„æ‰‹ç’°ã€‚\n"
         );
-        set("unit","Ö»");
+        set("unit","åª");
         set( "type", "arms" );
         set( "material", "light_metal");
         set( "armor_class", 2 );

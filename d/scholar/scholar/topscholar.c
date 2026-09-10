@@ -71,15 +71,15 @@ varargs string get_list()
 	int i,day, hour, *savedata;
 	string msg="\n";
 
-	if( !sizeof(top_list1) ) return 	"½£·¨µÈ¼¶ÅÅĞĞ°ñÄ¿Ç°ÊÇ¿ÕµÄ¡£\n";
-	msg += "\nºº¸³½£·¨µÈ¼¶ÅÅĞĞ°ñÇ° " + sizeof(top_list1) + " Ãû:\n";
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä                    ½£·¨µÈ¼¶\n");
+	if( !sizeof(top_list1) ) return 	"åŠæ³•ç­‰ç´šæ’è¡Œæ¦œç›®å‰æ˜¯ç©ºçš„ã€‚\n";
+	msg += "\næ¼¢è³¦åŠæ³•ç­‰ç´šæ’è¡Œæ¦œå‰ " + sizeof(top_list1) + " å:\n";
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“                    åŠæ³•ç­‰ç´š\n");
 	for(i=0; i<sizeof(top_list1); i++) {
 		savedata = levels1[top_list1[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list1[i], savedata[1], day, hour, savedata[0] );
 	}
 	return msg;

@@ -5,15 +5,15 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("»¨Ô°");
+	set_short("èŠ±åœ’");
 	set_long( @C_LONG_DESCRIPTION
-ÕâÀïÊÇÒ»¸ö»¨ÍÅ½õ´ØµÄ»¨Ô°£¬ÕâÀïÓÐ·Ç³£¶àµÄÆæ»¨Òì²Ý£¬ÊÇÖ£´ó»§´ÓÊÀ½ç¸÷µØÒÆÖ²¹ý
-À´µÄ£¬ÆäÖÐÓÐÒ»ÖêÊýÈË¸ßµÄÊ³ÈËÊ÷£¬Ã¿ÌìÒª¡õÆäÒ»Ö»´óÏó£¬Ò²ÓÐÊýÖê´¿ºÚÃµ¹åÌýËµÊÇÔ°ÒÕ
-´óÊ¦ÕÂÓãÕýÐÄµÄ½Ü×÷£¬ÕâÀïÒ²ÓÐÒ»¸öÅçÈª(fountain)¡£
+é€™è£¡æ˜¯ä¸€å€‹èŠ±åœ˜éŒ¦ç°‡çš„èŠ±åœ’ï¼Œé€™è£¡æœ‰éžå¸¸å¤šçš„å¥‡èŠ±ç•°è‰ï¼Œæ˜¯é„­å¤§æˆ¶å¾žä¸–ç•Œå„åœ°ç§»æ¤éŽ
+ä¾†çš„ï¼Œå…¶ä¸­æœ‰ä¸€æ ªæ•¸äººé«˜çš„é£Ÿäººæ¨¹ï¼Œæ¯å¤©è¦â–¡å…¶ä¸€éš»å¤§è±¡ï¼Œä¹Ÿæœ‰æ•¸æ ªç´”é»‘çŽ«ç‘°è½èªªæ˜¯åœ’è—
+å¤§å¸«ç« é­šæ­£å¿ƒçš„å‚‘ä½œï¼Œé€™è£¡ä¹Ÿæœ‰ä¸€å€‹å™´æ³‰(fountain)ã€‚
 C_LONG_DESCRIPTION
 	);
 set("item_desc",([
-    "fountain":"ÕâÊÇÒ»¸öÇ¬¿Ý\µÄÅçÈª¡£\n"]));
+    "fountain":"é€™æ˜¯ä¸€å€‹ä¹¾æž¯çš„å™´æ³‰ã€‚\n"]));
 	
 	set("objects",([
 	    "woman1":"/d/noden/nodania/monster/gardener"
@@ -34,7 +34,7 @@ int do_enter(string arg)
 { 
  if (!arg || arg!="fountain") return 0;
  tell_room(environment(this_player()),
-         this_player()->query("c_name")+"½øÈëÅçÈªÖÐ\n",this_player() );
+         this_player()->query("c_name")+"é€²å…¥å™´æ³‰ä¸­\n",this_player() );
  this_player()->move_player(Lcave"cave31","SNEAK");
  return 1;
  }

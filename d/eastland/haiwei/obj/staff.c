@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "bronze staff", "ÇàÍ­ìøÕÈ" );
+	set_name( "bronze staff", "é’éŠ…ç¦ªæ–" );
 	add( "id", ({ "staff" }) );
-	set_short( "ÇàÍ­ìøÕÈ" );
-	set_long( "ÕâÊÇÒ»°ÑÓÃÇàÍ­Öı³ÉµÄìøÕÈ£¬¿´ÆğÀ´Ïàµ±ÉòÖØ¡£\n");
-	set( "unit", "°Ñ" );
+	set_short( "é’éŠ…ç¦ªæ–" );
+	set_long( "é€™æ˜¯ä¸€æŠŠç”¨é’éŠ…é‘„æˆçš„ç¦ªæ–ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶æ²ˆé‡ã€‚\n");
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 	set( "weapon_class", 14 );
 	set( "min_damage", 8 );

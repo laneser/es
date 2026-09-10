@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("�Ǳ�·��ŵ������");
+	ob->set_short("城堡路，諾達尼亞");
 	ob->set_long( @LONG_DESCRIPTION
-�Ǳ�·����ŵ�����ǳǵĳ�ǽ�����������죬·�����˲�����ľ��
-�����ԡ�����Ķ������Կ����Ǳ������š�
+城堡路沿著諾達尼亞城的城牆往東西向延伸，路旁種了不少樹木及
+矮樹叢。在你的東方可以看到城堡的南門。
 LONG_DESCRIPTION
 	);
 

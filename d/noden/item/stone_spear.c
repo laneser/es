@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "stone spear", "Ê¯ïßÃ¬" );
+	set_name( "stone spear", "çŸ³éƒçŸ›" );
 	add( "id", ({ "spear" }) );
-   set_short( "Ê¯ïßÃ¬" );
+   set_short( "çŸ³éƒçŸ›" );
 	set_long(
-		"Ò»°ÑÄ¾ÖÊ³¤±úµÄÃ¬£¬ËüµÄ¼â¶ËÊÇÓÃÊ¯Í·Ä¥¼â¶ø³ÉµÄ¡£\n"
+		"ä¸€æŠŠæœ¨è³ªé•·æŸ„çš„çŸ›ï¼Œå®ƒçš„å°–ç«¯æ˜¯ç”¨çŸ³é ­ç£¨å°–è€Œæˆçš„ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "polearm" );
 	set( "weapon_class", 13 );
 	set( "min_damage", 6 );

@@ -5,15 +5,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "Fire Scale Sword","»ð÷ë½£" );
+	set_name( "Fire Scale Sword","ç«éºŸåŠ" );
 	add( "id",({ "sword" }) );
-	set_short( "»ð÷ë½£" );
+	set_short( "ç«éºŸåŠ" );
 	set_long(@LONG
-	Õâ°Ñ½£ÉÏÏâÁËÒ»Æ¬»ð÷è÷ëµÄÁÛÆ¬£¬ÊÇ°Ñº±¼û
-	µÄºÃ±øÆ÷¡£
+	é€™æŠŠåŠä¸Šé‘²äº†ä¸€ç‰‡ç«éº’éºŸçš„é±—ç‰‡ï¼Œæ˜¯æŠŠç½•è¦‹
+	çš„å¥½å…µå™¨ã€‚
 LONG
 		);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","shortblade" );
 	set( "weapon_class",40 );
 	set( "min_damage",20 );
@@ -22,10 +22,10 @@ LONG
 	set( "weight",150 );
 	set( "second",1 );
 	set( "value",({ 3600,"silver" }) );
-	set_c_verbs( ({ "%sÔÚÉíÅÔ»®ÁË¸öÈ¦£¬Ê¹³ö¡¸ÈÕ×ø³î³Ç¡¹´ÌÏò%s",
-			"%s±Å³öÑ£Ä¿¹â»ª£¬³àÑÛÈçÕë£¬Ê¹³ö¡¸°×ÑôÆÆÏþ¡¹¹¥Ïò%s",
-			"%sÈ¸Ô¾Èç¿ñ£¬Áè¿ÕÒ»»®£¬¡õÈçÁÒÈÕ£¬Ê¹³ö¡¸ÈÕÀöÖÐÌì¡¹³åÏò%s",
-			"%sÕÀ³öÑÏÃÜ½£Íø£¬±ÎÌì¶øÖÁ£¬Ê¹³ö¡¸»ð÷ëÊ´ÈÕ¡¹ÕÖ×¡%s" }) );
+	set_c_verbs( ({ "%såœ¨èº«æ—åŠƒäº†å€‹åœˆï¼Œä½¿å‡ºã€Œæ—¥åæ„åŸŽã€åˆºå‘%s",
+			"%sè¿¸å‡ºçœ©ç›®å…‰è¯ï¼Œèµ¤çœ¼å¦‚é‡ï¼Œä½¿å‡ºã€Œç™½é™½ç ´æ›‰ã€æ”»å‘%s",
+			"%sé›€èºå¦‚ç‹‚ï¼Œå‡Œç©ºä¸€åŠƒï¼Œâ–¡å¦‚çƒˆæ—¥ï¼Œä½¿å‡ºã€Œæ—¥éº—ä¸­å¤©ã€è¡å‘%s",
+			"%sç¶»å‡ºåš´å¯†åŠç¶²ï¼Œè”½å¤©è€Œè‡³ï¼Œä½¿å‡ºã€Œç«éºŸè•æ—¥ã€ç½©ä½%s" }) );
 //	set( "hit_func","fire_damage" );
 }
 
@@ -39,7 +39,7 @@ int fire_damage(object victim,int dam)
 	if ( !victim ) return 0;
 	if( !(holder = environment(this_object())) || !living(holder) ) return 0;
 	if ( (int)holder->query_skill( "shortblade" )<88 ){
-		tell_object( holder,"\nÄãµÄ»ð÷ë½£ºöÈ»Ó¿³öÒ»¹ÉºÚÉ«»ðÑæ½«ÄãÈ«ÉíÉÕµÃÌÛÍ´²»¿°£¡\n" );
+		tell_object( holder,"\nä½ çš„ç«éºŸåŠå¿½ç„¶æ¹§å‡ºä¸€è‚¡é»‘è‰²ç«ç„°å°‡ä½ å…¨èº«ç‡’å¾—ç–¼ç—›ä¸å ªï¼\n" );
 		holder->receive_damage( dam+random(15) );
 //		report( holder );
 		victim->set( "last_attacker",holder );
@@ -49,9 +49,9 @@ int fire_damage(object victim,int dam)
 		if ( max = random(75)< 20 ){
 			him=victim->query( "c_name" );
 			me=holder->query( "c_name" );
-			tell_object( holder,set_color("ÄãµÄ»ð÷ë½£ºöÈ»Ó¿³öÒ»¹ÉºÚÉ«»ðÑæ½«"+him+"ÉÕ¸ö½¹ºÚ£¡\n","HIR") );
-			tell_object( victim,set_color( me+"µÄ»ð÷ë½£ºöÈ»Ó¿³öÒ»¹ÉºÚÉ«»ðÑæ½«ÄãÈ«ÉíÉÕµÃÌÛÍ´²»¿°£¡\n","HIR") );
-			tell_room( environment(holder),set_color(me+"µÄ»ð÷ë½£ºöÈ»Ó¿³öÒ»¹ÉºÚÉ«»ðÑæ½«"+him+"ÉÕ¸ö½¹ºÚ£¡\n","HIR"),({ holder,victim }) );
+			tell_object( holder,set_color("ä½ çš„ç«éºŸåŠå¿½ç„¶æ¹§å‡ºä¸€è‚¡é»‘è‰²ç«ç„°å°‡"+him+"ç‡’å€‹ç„¦é»‘ï¼\n","HIR") );
+			tell_object( victim,set_color( me+"çš„ç«éºŸåŠå¿½ç„¶æ¹§å‡ºä¸€è‚¡é»‘è‰²ç«ç„°å°‡ä½ å…¨èº«ç‡’å¾—ç–¼ç—›ä¸å ªï¼\n","HIR") );
+			tell_room( environment(holder),set_color(me+"çš„ç«éºŸåŠå¿½ç„¶æ¹§å‡ºä¸€è‚¡é»‘è‰²ç«ç„°å°‡"+him+"ç‡’å€‹ç„¦é»‘ï¼\n","HIR"),({ holder,victim }) );
 			victim->receive_damage( dam+max );
 //			report( victim );
 			victim->set( "last_attacker",holder );

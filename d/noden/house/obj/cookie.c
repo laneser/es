@@ -6,11 +6,11 @@ inherit OBJECT;
 
 void create()
 {
-   set_name( "cookie", "Ğ¡±ıÇ¬" );
-   set_short("Ğ¡±ıÇ¬");
+   set_name( "cookie", "å°é¤…ä¹¾" );
+   set_short("å°é¤…ä¹¾");
 	set_long(
-             "ÕâÊÇÒ»Æ¬Ğ¡Ğ¡µÄĞÇĞÎ±ıÇ¬¡£\n"
+             "é€™æ˜¯ä¸€ç‰‡å°å°çš„æ˜Ÿå½¢é¤…ä¹¾ã€‚\n"
 	);
-   set("unit", "Æ¬");
+   set("unit", "ç‰‡");
    set( "weight", 1 );
 }

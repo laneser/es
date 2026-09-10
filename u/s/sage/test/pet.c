@@ -12,7 +12,7 @@ void disappear(object pet)
         if( !pet ) return;
         tell_room( environment(pet),
                 pet->query("c_name")+
-                "ÒòÎªÖ÷ÈËÀëËü¶øÈ¥, ËùÒÔÒ²ÉËĞÄµØÀë¿ªÁËÕâ¸öÊÀ½ç¡£\n"
+                "å› ç‚ºä¸»äººé›¢å®ƒè€Œå», æ‰€ä»¥ä¹Ÿå‚·å¿ƒåœ°é›¢é–‹äº†é€™å€‹ä¸–ç•Œã€‚\n"
                 , pet
         );
         pet_type = (string)pet->query("pet_type");
@@ -52,15 +52,15 @@ int order_me(string arg)
     if( this_player() != master_player ) return 0;
 // make the order cmd work.
       if( !arg || arg == "quit" || sscanf(arg,"get %s",dir) || sscanf(arg,"kill %s",dir))
-                return notify_fail("ÄãµÄ³èÎïÕ£ÖøÎŞ¹¼µÄÑÛ¾¦¿´ÖøÄã !\n");
+                return notify_fail("ä½ çš„å¯µç‰©çœ¨è‘—ç„¡è¾œçš„çœ¼ç›çœ‹è‘—ä½  !\n");
         if( arg == "stay" ) {
                 tell_object( master_player,
-                        "ÄãµÄ³èÎïºÜÌı»°µØ¹Ô¹Ô×øÖø, Ò»¶¯Ò²²»¶¯¡£\n"
+                        "ä½ çš„å¯µç‰©å¾ˆè½è©±åœ°ä¹–ä¹–åè‘—, ä¸€å‹•ä¹Ÿä¸å‹•ã€‚\n"
                 );
                 this_object()->set("stop", 1);
         } else if( arg == "follow" ) {
                 tell_object( master_player,
-                        "ÄãµÄ³èÎï¸ßĞËµØÅÜÁË¹ıÀ´, ÈÆÖøÄã´ò×ª¡£\n"
+                        "ä½ çš„å¯µç‰©é«˜èˆˆåœ°è·‘äº†éä¾†, ç¹è‘—ä½ æ‰“è½‰ã€‚\n"
                 );
                 this_object()->set("stop", 0);
         } else command(arg);
@@ -99,11 +99,11 @@ void die()
         master = (object)this_object()->query("pet_master");
         if( killer && master ) {
           tell_object( killer, 
-                sprintf("\n%sËµ: ÄãÆÛ¸ºÎÒ, ÎÒµÄÖ÷ÈË»á°ïÎÒ±¨³ğµÄ!!\n\n",
+                sprintf("\n%sèªª: ä½ æ¬ºè² æˆ‘, æˆ‘çš„ä¸»äººæœƒå¹«æˆ‘å ±ä»‡çš„!!\n\n",
                         this_object()->query("c_name"))
           );
           tell_object( master, 
-                sprintf("\nÄãµÄ³èÎï¶ÔÄãËµ: Ö÷ÈË, %sÆÛ¸ºÎÒ, Çë°ïÎÒ±¨³ğ! Ò»¶¨Å¶!\n\n",
+                sprintf("\nä½ çš„å¯µç‰©å°ä½ èªª: ä¸»äºº, %sæ¬ºè² æˆ‘, è«‹å¹«æˆ‘å ±ä»‡! ä¸€å®šå“¦!\n\n",
                         killer->query("c_name"))
           );
         }
@@ -120,12 +120,12 @@ int call_help()
 
                 !present(master, environment(this_object())) ) return 0;
         tell_room( environment(this_object()), 
-                sprintf("%sÅÜ¹ıÈ¥±£»¤ËûµÄ³èÎï!!\n",
+                sprintf("%sè·‘éå»ä¿è­·ä»–çš„å¯µç‰©!!\n",
                         master->query("c_name"))
                   , ({ master, this_object() })
         );
         tell_object( master, 
-                "ÄãÅÜ¹ıÈ¥Îª±£»¤ÄãµÄ³èÎï¶øÕ½!!\n"
+                "ä½ è·‘éå»ç‚ºä¿è­·ä½ çš„å¯µç‰©è€Œæˆ°!!\n"
         );
         master->kill_ob(killer);
         return 0;
@@ -146,8 +146,8 @@ int help_order(string arg)
         if( !arg || sscanf(arg, "order_%s", tmp)!=1 ) return 0;
         write( @HELP
 Format: order_<pet_name> <command>
-command ¿ÉÎªÒ»°ã user Ê¹ÓÃµÄÖ¸Áî, µ«³èÎï²»ÄÜ get ÈÎºÎÎï¼ş¡£
-´ËÍâÄã¿ÉÓÃ stay & follow  À´ÃüÁîÄãµÄ³èÎïÒª²»Òª¸úËæÄã¡£
+command å¯ç‚ºä¸€èˆ¬ user ä½¿ç”¨çš„æŒ‡ä»¤, ä½†å¯µç‰©ä¸èƒ½ get ä»»ä½•ç‰©ä»¶ã€‚
+æ­¤å¤–ä½ å¯ç”¨ stay & follow  ä¾†å‘½ä»¤ä½ çš„å¯µç‰©è¦ä¸è¦è·Ÿéš¨ä½ ã€‚
 HELP
         );
         return 1;

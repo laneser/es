@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Dragon bone","Áú¹Ç" );
+	set_name( "Dragon bone","é¾éª¨" );
 	add( "id", ({ "bone" }) );
-	set_short( "Áú¹Ç" );
+	set_short( "é¾éª¨" );
 	set_long(@LONG
-	¾İËµÊÇÁúÉíÉÏ×îÖØÒªµÄÒ»¿é¹ÇÍ·£¬ÓĞÉñÊ¥Á¦Á¿
-	±£»¤¡£
+	æ“šèªªæ˜¯é¾èº«ä¸Šæœ€é‡è¦çš„ä¸€å¡Šéª¨é ­ï¼Œæœ‰ç¥è–åŠ›é‡
+	ä¿è­·ã€‚
 LONG
            );
-	set( "unit","¿é" );
+	set( "unit","å¡Š" );
 	set( "weight",5 );
 	set( "type","misc" );
 	set( "material","element" );

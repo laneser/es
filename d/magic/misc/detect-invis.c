@@ -47,31 +47,31 @@ int cast(int level,string target)
 	me = this_player();
 
 	if( (int)me->query_skill("misc") < query_need_skill(level) ) {
-	  tell_object( me, "ÄãµÄÔÓÏîÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n" );
+	  tell_object( me, "ä½ çš„é›œé …é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n" );
 	  return 0;
 	}
    if (target =="NONE") dest=me;
     else if ( !(dest = present (target, environment (me) ))) {
-           tell_object( me, "Òª¶ÔË­Ê¹ÓÃÕì²âÒþÐÎÊõ?\n" );
+           tell_object( me, "è¦å°èª°ä½¿ç”¨åµæ¸¬éš±å½¢è¡“?\n" );
          return 0;
     }
 
     if( dest->query_temp("effect/detect-invis") ) {
 	if (dest == me)
-      	tell_object( me, "ÄãÉÏÒ»¸öÕì²âÒþÐÎÊõ»¹Ã»ÏûÊ§ÄØ! ±ðÀË·Ñ·¨Á¦ÁË¡£\n" );
+      	tell_object( me, "ä½ ä¸Šä¸€å€‹åµæ¸¬éš±å½¢è¡“é‚„æ²’æ¶ˆå¤±å‘¢! åˆ¥æµªè²»æ³•åŠ›äº†ã€‚\n" );
 	else
-      	tell_object( me, "ËûÉÏÒ»¸öÕì²âÒþÐÎÊõ»¹Ã»ÏûÊ§ÄØ! ±ðÀË·Ñ·¨Á¦ÁË¡£\n" );
+      	tell_object( me, "ä»–ä¸Šä¸€å€‹åµæ¸¬éš±å½¢è¡“é‚„æ²’æ¶ˆå¤±å‘¢! åˆ¥æµªè²»æ³•åŠ›äº†ã€‚\n" );
       return 0;
     }
 	if (dest == me) 
-	write( set_color("ÄãÊ©Õ¹Õì²âÒþÐÎÊõ£¬¸Ðµ½ÄãµÄÑÛ¾¦ÎªÖ®Ò»ÁÁ¡£\n","HIY"));
+	write( set_color("ä½ æ–½å±•åµæ¸¬éš±å½¢è¡“ï¼Œæ„Ÿåˆ°ä½ çš„çœ¼ç›ç‚ºä¹‹ä¸€äº®ã€‚\n","HIY"));
 	else{
-	tell_object(me,"ÄãÊ©Õ¹Õì²âÒþÐÎÊõ£¬"+dest->query("c_name")+"µÄÑÛ¾¦·¢³öÒìÑùµÄ¹âÃ¢¡£\n");
-	tell_object(dest,set_color("Äã¸Ðµ½ÄãµÄÑÛ¾¦ÎªÖ®Ò»ÁÁ¡£\n","HIY"));
+	tell_object(me,"ä½ æ–½å±•åµæ¸¬éš±å½¢è¡“ï¼Œ"+dest->query("c_name")+"çš„çœ¼ç›ç™¼å‡ºç•°æ¨£çš„å…‰èŠ’ã€‚\n");
+	tell_object(dest,set_color("ä½ æ„Ÿåˆ°ä½ çš„çœ¼ç›ç‚ºä¹‹ä¸€äº®ã€‚\n","HIY"));
 	}
 	tell_room( environment(me), 
-		me->query("c_name") + "à«à«µØÄîÁËÒ»¶ÎÖäÎÄ£¬" 
-		+ dest->query("c_name") + "µÄÑÛ¾¦·¢³öÒìÑùµÄ¹âÃ¢¡£\n" ,
+		me->query("c_name") + "å–ƒå–ƒåœ°å¿µäº†ä¸€æ®µå’’æ–‡ï¼Œ" 
+		+ dest->query("c_name") + "çš„çœ¼ç›ç™¼å‡ºç•°æ¨£çš„å…‰èŠ’ã€‚\n" ,
 		({me,dest})
 	);
     dest->set_temp("detect_invi", 1);
@@ -85,7 +85,7 @@ int cast(int level,string target)
 void release(object caster)
 {
     if( !caster ) return;
-    tell_object( caster , set_color("Äã¸Ð¾õµ½ÄãµÄÑÛÁ¦ÓÖ»Ö¸´Õý³£ÁË¡£\n" ,"HIW"));
+    tell_object( caster , set_color("ä½ æ„Ÿè¦ºåˆ°ä½ çš„çœ¼åŠ›åˆæ¢å¾©æ­£å¸¸äº†ã€‚\n" ,"HIW"));
     caster->set_temp("detect_invi", 0);
     caster->set_temp("effect/detect-invis", 0);
 }

@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "bloody stiletto", "ÑªĞÈĞ¡µ¶" );
+	set_name( "bloody stiletto", "è¡€è…¥å°åˆ€" );
 	add( "id", ({ "stiletto" }) );
-   set_short( "ÑªĞÈĞ¡µ¶" );
+   set_short( "è¡€è…¥å°åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÕ´ÂúÑª¼£µÄ·æÀûĞ¡µ¶ .... Ğ¡ĞÄ£¡±ğ¸îµ½ÄãµÄÊÖÖ¸¡£\n"
+		"é€™æ˜¯ä¸€æŠŠæ²¾æ»¿è¡€è·¡çš„é‹’åˆ©å°åˆ€ .... å°å¿ƒï¼åˆ¥å‰²åˆ°ä½ çš„æ‰‹æŒ‡ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	setup_weapon( "dagger", 16, 6, 14 );
 	set( "weight", 30 );
 	set( "bleeding", 25 );

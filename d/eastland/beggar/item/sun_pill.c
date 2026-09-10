@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("sun pill","ÁùÑôÕıÆøµ¤");
+        set_name("sun pill","å…­é™½æ­£æ°£ä¸¹");
         add( "id" , ({ "sun pill"}) );
-        set_short( "ÁùÑôÕıÆøµ¤");
+        set_short( "å…­é™½æ­£æ°£ä¸¹");
         set_long(@C_LONG
-ÕâÊÇÒ»¿Å³àºìÉ«µÄÒ©Íè,ÃşÆğÀ´ÎÂÎÂ¡£
+é€™æ˜¯ä¸€é¡†èµ¤ç´…è‰²çš„è—¥ä¸¸,æ‘¸èµ·ä¾†æº«æº«ã€‚
 C_LONG  );      
-        set("unit","¿Å");
+        set("unit","é¡†");
         set("weight",1);
         set("no_sale",1);
 }

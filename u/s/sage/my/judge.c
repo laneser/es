@@ -8,11 +8,11 @@ void create()
 {
 	::create();
      set_level(22);
-     set_name("pufan", "ÓÄÖú");
-     set_short("the assistant judge", "ÆÖ·¹ÓÄÖú");
+     set_name("pufan", "å¹½åŠ©");
+     set_short("the assistant judge", "æµ¦é£¯å¹½åŠ©");
 	set_long(
 		"This is a simple monster created by npc maker.\n",
-     "Ò»¸ö°×³Õ£¬¼ÙÈçÄã´ò²»Ó®£¬¾Í²»ÒªÍæesÁË\n"
+     "ä¸€å€‹ç™½ç—´ï¼Œå‡å¦‚ä½ æ‰“ä¸è´ï¼Œå°±ä¸è¦ç©esäº†\n"
 	);
 	set( "gender", "male" );
      set( "no_attack", 0 );

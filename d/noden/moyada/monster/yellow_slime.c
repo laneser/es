@@ -6,16 +6,16 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(4);
-	set_name( "yellow slime", "»ÆÉ«Ê·À³Ä·" );
+	set_name( "yellow slime", "é»ƒè‰²å²èŠå§†" );
 	add ("id", ({ "slime", }) );
-	set_short( "»ÆÉ«Ê·À³Ä·" );
+	set_short( "é»ƒè‰²å²èŠå§†" );
 	set_long( @LONG
-»ÆÉ«µÄÈíÌå¹Ö£¬ÉíÌåğ¤ğ¤´ğ´ğµÄ£¬¹Ö¶ñĞÄµÄ¡£
+é»ƒè‰²çš„è»Ÿé«”æ€ªï¼Œèº«é«”é»é»ç­”ç­”çš„ï¼Œæ€ªå™å¿ƒçš„ã€‚
 LONG
 	);
    set( "race", "undead" );
 	set( "alignment", -100 );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
 	set_perm_stat( "dex", 3 );
 	set_perm_stat( "str", 2 );
 	set_perm_stat( "int", 10 );
@@ -35,9 +35,9 @@ LONG
     set ("exp_reward",300 );
     set ("chat_chance",5);
     set ("chat_output", ({
-      "»ÆÉ«Ê·À³Ä·Èä¶¯Ò»ÏÂ£¬ÅÀ¹ıÊ³Îï²ĞÔü²¢ÏòÄãÒÆ¶¯¹ıÀ´¡£\n"
+      "é»ƒè‰²å²èŠå§†è •å‹•ä¸€ä¸‹ï¼Œçˆ¬éé£Ÿç‰©æ®˜æ¸£ä¸¦å‘ä½ ç§»å‹•éä¾†ã€‚\n"
     }) );
-    set_c_verbs( ({ "%sÈä¶¯µ½%sÉíÉÏ", "%sÆËµ½%sÁ³ÉÏ" }) );
-    set_c_limbs( ({ "ÉíÌå"  }) );
-    set( "c_death_msg", "%sÍ£Ö¹Èä¶¯£¬ËÀÁË.....\n" );
+    set_c_verbs( ({ "%sè •å‹•åˆ°%sèº«ä¸Š", "%sæ’²åˆ°%sè‡‰ä¸Š" }) );
+    set_c_limbs( ({ "èº«é«”"  }) );
+    set( "c_death_msg", "%såœæ­¢è •å‹•ï¼Œæ­»äº†.....\n" );
 }

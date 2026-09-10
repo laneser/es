@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Sapphire Ring","À¶±¦Ê¯½äÖ¸" );
+	set_name( "Sapphire Ring","è—å¯¶çŸ³æˆ’æŒ‡" );
 	add( "id", ({ "ring" }) );
-	set_short( "À¶±¦Ê¯½äÖ¸" );
+	set_short( "è—å¯¶çŸ³æˆ’æŒ‡" );
 	set_long(@LONG
-	Ê¥ÆïÊ¿×¨ÓÃµÄ½äÖ¸¡£ÉÏÃæ»¹ÏâÖøÒ»¸öÀ¶±¦Ê¯£¬¸üÏÔ³ö
-	ËüµÄ¸ß¹ó¡£
+	è–é¨å£«å°ˆç”¨çš„æˆ’æŒ‡ã€‚ä¸Šé¢é‚„é‘²è‘—ä¸€å€‹è—å¯¶çŸ³ï¼Œæ›´é¡¯å‡º
+	å®ƒçš„é«˜è²´ã€‚
 LONG
            );
-	set( "unit","Ö»" );
+	set( "unit","åª" );
 	set( "weight",5 );
 	set( "type","finger" );
 	set( "material","element" );

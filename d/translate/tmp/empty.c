@@ -12,14 +12,14 @@ void create()
     set_short("@@short","@@c_short");
     set_long("@@long","@@c_long");
     set("weight",1);
-    set("unit","¸ö");
+    set("unit","å€‹");
     set("recycle",10); // recycle value, coin type is copper.
     set("prevent_drop",1);
 }
  
 string c_short()
 {
-    return "¿Õ"+query("c_name");
+    return "ç©º"+query("c_name");
 }
  
 string short()
@@ -35,7 +35,7 @@ string long()
  
 string c_long()
 {
-    return "Ò»¸ö¿Õ"+query("c_name")+"\n"+
-    "»ùì¶»·±£µÄÀíÓÉ, Äã¾õµÃÄãÓ¦¸Ã°ÑËüËÍµ½×ÊÔ´»ØÊÕÖĞĞÄÈ¥.\n";
+    return "ä¸€å€‹ç©º"+query("c_name")+"\n"+
+    "åŸºæ–¼ç’°ä¿çš„ç†ç”±, ä½ è¦ºå¾—ä½ æ‡‰è©²æŠŠå®ƒé€åˆ°è³‡æºå›æ”¶ä¸­å¿ƒå».\n";
 }
  

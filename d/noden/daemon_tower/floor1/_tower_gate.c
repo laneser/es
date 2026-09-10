@@ -2,9 +2,9 @@
 void create(object ob)
 {
 	if (!ob) return;
-	ob->set_short("恶魔塔大门");
+	ob->set_short("鎯￠瓟濉斿ぇ闁�");
 	ob->set_long( @C_LONG_DESCRIPTION
-这里是恶魔塔的大门.
+閫欒！鏄儭榄斿鐨勫ぇ闁�.
 C_LONG_DESCRIPTION
 	);
 

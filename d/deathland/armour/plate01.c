@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Dwarvern mithril plate","°«ÈËÃ×ËÕÀíîø¼×");
+        set_name("Dwarvern mithril plate","çŸ®äººç±³è˜‡ç†é§ç”²");
         add("id",({"plate","platemail"}) );
-         set_short( "a dwarvern mithril plate","°«ÈËÃ×ËÕÀíîø¼×");
+         set_short( "a dwarvern mithril plate","çŸ®äººç±³è˜‡ç†é§ç”²");
 	set_long(
 "This is a suit of plate made of mithril meterial,which can  \n"
 "protect your body against opponent's attacks.\n",
-"ÕâÊÇÒ»¸±ÓÉÃ×ËÕÀí½ğÊôÔìµÄîø¼×,¿ÉÒÔ±£»¤ÄãµÖ¿¹µĞÈËµÄ¹¥»÷\n"
+"é€™æ˜¯ä¸€å‰¯ç”±ç±³è˜‡ç†é‡‘å±¬é€ çš„é§ç”²,å¯ä»¥ä¿è­·ä½ æŠµæŠ—æ•µäººçš„æ”»æ“Š\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 300 );
 	set( "type", "body" );
 	set( "material", "light_metal" );

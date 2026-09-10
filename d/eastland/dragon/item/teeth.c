@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "Chilin teeth", "÷è÷ëÑÀ" );
+        set_name( "Chilin teeth", "éº’éºŸç‰™" );
         add( "id",({ "teeth", "shortsword" }) );
-        set_short( "÷è÷ëÑÀ" );
-        set_long("ÕâÊÇ÷è÷ë¾­¹ıÊıÇ§ÄêÊ±¹âÑİ»¯³öµÄ³¬¼¶ÎäÆ÷\n");
-        set( "unit", "°Ñ");
+        set_short( "éº’éºŸç‰™" );
+        set_long("é€™æ˜¯éº’éºŸç¶“éæ•¸åƒå¹´æ™‚å…‰æ¼”åŒ–å‡ºçš„è¶…ç´šæ­¦å™¨\n");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 44 );
         set( "type", "longblade" );
         set( "min_damage", 20 );

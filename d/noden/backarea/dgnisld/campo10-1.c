@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set( "outside" , "dgnisld" ) ;
-	set_short( "campo",  "草原" );
+	set_short( "campo",  "鑽夊師" );
 	set_long(
 	    "A campo. \n", 
-	    "一片广大的草原。\n"
+	    "涓�鐗囧唬澶х殑鑽夊師銆俓n"
         ) ;
 	
 	set( "exits", ([

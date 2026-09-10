@@ -5,23 +5,23 @@ void create ()
 {
 	::create();
 	set_level(8);
-	set_name( "Dragon Fish","ºìÁú" );
+	set_name( "Dragon Fish","ç´…é¾" );
 	set ( "id",({ "fish" }) );
-	set_short( "ºìÁú" );
+	set_short( "ç´…é¾" );
 	set_long(@LONG
-ÕâÊÇÒ»Ìõ¾Ş´óµÄºìÁúÓã¡£
+é€™æ˜¯ä¸€æ¢å·¨å¤§çš„ç´…é¾é­šã€‚
 LONG
 		);
 	set( "likefish",1 ) ;
-	set( "unit","Ìõ" );
+	set( "unit","æ¢" );
 	set( "alignment",1000 );
 	set( "moving",1 );
 	set( "speed",30 );
 	set_natural_weapon( 35,5,16 );
 	set_skill( "unarmed",80 );
 	set_natural_armor( 25,8 );
-	set_c_verbs( ({ "%sÓÃ¾Ş´óµÄÎ²÷¢É¨Ïò%s","%sÕÅ¿ª³¤ÂúÀûÑÀµÄ´ó×ìÒ§Ïò%s" }) );
-	set_c_limbs( ({ "Óã÷¢","Î²°Í","Í·²¿" }) );
-	setenv( "C_MIN","Ò»ÌõºÜ´óÎ²µÄ$Nã¼ÀÁµØÓÎÁË¹ıÀ´" );
-	setenv( "C_MOUT","Ò»ÌõºÜ´óÎ²µÄ$Nã¼ÀÁµØÏò$DÓÎÁË¹ıÈ¥" );
+	set_c_verbs( ({ "%sç”¨å·¨å¤§çš„å°¾é°­æƒå‘%s","%så¼µé–‹é•·æ»¿åˆ©ç‰™çš„å¤§å˜´å’¬å‘%s" }) );
+	set_c_limbs( ({ "é­šé°­","å°¾å·´","é ­éƒ¨" }) );
+	setenv( "C_MIN","ä¸€æ¢å¾ˆå¤§å°¾çš„$Næ…µæ‡¶åœ°éŠäº†éä¾†" );
+	setenv( "C_MOUT","ä¸€æ¢å¾ˆå¤§å°¾çš„$Næ…µæ‡¶åœ°å‘$DéŠäº†éå»" );
 }

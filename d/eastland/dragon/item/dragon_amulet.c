@@ -4,18 +4,18 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Amulet of Dragon", "ÁúÖ®ÎÆÕÂ" );
+	set_name( "Amulet of Dragon", "é¾ä¹‹ç´‹ç« " );
 	add( "id", ({ "amulet", }) );
-	set_short( "ÄõÁúÎÆÕÂ" );
+	set_short( "å­½é¾ç´‹ç« " );
 	set_long(
-		"ÕâÊÇÒ»ÃæÏóáçÍÀÁúµÄÎÆÕÂ¡£\n"
+		"é€™æ˜¯ä¸€é¢è±¡å¾µå± é¾çš„ç´‹ç« ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "misc" );
 	set( "material" ,"cloth" );
         set( "defense_bonus", 2 );
         set( "special_defense", ([ "fire":3 ]) );
-	set( "extra_look", "$N´øÖøÏóáçÍÀÁúµÄÎÆÕÂ¡£\n" );
+	set( "extra_look", "$Nå¸¶è‘—è±¡å¾µå± é¾çš„ç´‹ç« ã€‚\n" );
 	set( "no_sale", 1 );
 	set( "weight", 15 );
 	set( "value", ({ 100, "silver" }) );

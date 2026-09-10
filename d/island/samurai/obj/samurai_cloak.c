@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_cloak", "ÎäÊ¿Åû·ç");
+        set_name( "samurai_cloak", "æ­¦å£«æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short("samurai_cloak", "ÎäÊ¿Åû·ç");
+        set_short("samurai_cloak", "æ­¦å£«æŠ«é¢¨");
         set_long(@AAA
-Ò»¸öÎäÊ¿ÃÇÖÆÊ½´©µÄÅû·ç
+ä¸€å€‹æ­¦å£«å€‘åˆ¶å¼ç©¿çš„æŠ«é¢¨
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "cloak" );
         set( "armor_class", 6 );
         set( "defense_bonus", 3 );

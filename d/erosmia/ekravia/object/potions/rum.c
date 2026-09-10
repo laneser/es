@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "rum", "À³Ä·¾Æ" );
+	set_name( "rum", "èŠå§†é…’" );
 	add( "id", ({ "rum" }) );
-	set_short( "À³Ä·¾Æ" );
+	set_short( "èŠå§†é…’" );
 	set_long( @LONG
-ÕâÊÇÒ»ÖÖ³£¼ûµÄÌğ¾Æ, ËäÈ»Ìğ, ¿ÉÊÇºÜÈİÒ××íà¸¡£
+é€™æ˜¯ä¸€ç¨®å¸¸è¦‹çš„ç”œé…’, é›–ç„¶ç”œ, å¯æ˜¯å¾ˆå®¹æ˜“é†‰å–”ã€‚
 LONG
 	);
 	set( "no_sale", 1 );
-	set( "unit", "Æ¿" );
+	set( "unit", "ç“¶" );
 	set( "weight", 15 );
 	set( "value", ({ 100, "silver" }) );
 }

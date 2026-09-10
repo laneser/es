@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "shining ruby", "ºì±¦Ê¯" );
+	set_name( "shining ruby", "ç´…å¯¶çŸ³" );
 	add( "id", ({ "ruby","stone","gem" }) );
-	set_short( "ÉÁÉÁ·¢¹âµÄºì±¦Ê¯" );
+	set_short( "é–ƒé–ƒç™¼å…‰çš„ç´…å¯¶çŸ³" );
 	set_long(
-		"ÕâÊÇÒ»¿ÅÉÁÉÁ·¢¹âµÄºì±¦Ê¯¡£\n"
+		"é€™æ˜¯ä¸€é¡†é–ƒé–ƒç™¼å…‰çš„ç´…å¯¶çŸ³ã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "weight", 5 );
 	set( "value", ({ 10, "silver" }) );
 	set( "no_sale", 1 );
@@ -35,7 +35,7 @@ int put_ruby(string str)
 	if ( str == "ruby in hole" && present( "guilt", player ) )
 	   {	   
 		write( 
-		"µ±Äã°Ñºì±¦Ê¯·ÅÈëÐ¡¶´Ê±£¬Ð°ÏñÑÛÖÐµÄ¹âÃ¢ºöÈ»Ò»°µ£¬½ÓÖø´óÊ¢ !! \n"
+		"ç•¶ä½ æŠŠç´…å¯¶çŸ³æ”¾å…¥å°æ´žæ™‚ï¼Œé‚ªåƒçœ¼ä¸­çš„å…‰èŠ’å¿½ç„¶ä¸€æš—ï¼ŒæŽ¥è‘—å¤§ç›› !! \n"
 		);
 		player->set_temp("NO_DRAIN", 1);
 		remove();

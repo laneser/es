@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Doctor cloth","Ò½Ê¦ÕïÅÛ");
+        set_name("Doctor cloth","é†«å¸«è¨ºè¢");
         add("id",({"cloth"}) );
-        set_short("Ò½Ê¦ÕïÅÛ");
-	set_long("ÕâÊÇĞĞÒ½Õß×îÏ²»¶´©µÄÒÂ·ş, ³ıÁËÄÜ¹»±£Å¯Ö®Íâ, Ëü\n"
-	         "Ò²ÊÇĞĞÒ½ÕßÉí·İµÄÏóáç¡£\n");
-	set( "unit", "¼ş" );
+        set_short("é†«å¸«è¨ºè¢");
+	set_long("é€™æ˜¯è¡Œé†«è€…æœ€å–œæ­¡ç©¿çš„è¡£æœ, é™¤äº†èƒ½å¤ ä¿æš–ä¹‹å¤–, å®ƒ\n"
+	         "ä¹Ÿæ˜¯è¡Œé†«è€…èº«ä»½çš„è±¡å¾µã€‚\n");
+	set( "unit", "ä»¶" );
 	set( "weight", 80 );
 	set( "type", "body" );
         set("material","healer");

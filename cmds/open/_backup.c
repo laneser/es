@@ -26,9 +26,9 @@ int cmd_backup(string user)
 		"/data/user_backup/connection/"+name+".o");
 	this_player()->set_temp("block_message", block_msg);
 	if( !user || name != user )
-		write(chinese_mode? "±¸·İ×ÊÁÏ... Ok.\n":"Backup save data... Ok.\n");
+		write(chinese_mode? "å‚™ä»½è³‡æ–™... Ok.\n":"Backup save data... Ok.\n");
 	else
-		write(chinese_mode? "±¸·İ "+name+" µÄ×ÊÁÏ... Ok.\n":"Backup "+name+"'s save data... Ok.\n");
+		write(chinese_mode? "å‚™ä»½ "+name+" çš„è³‡æ–™... Ok.\n":"Backup "+name+"'s save data... Ok.\n");
 	return 1;
 }
 
@@ -36,10 +36,10 @@ int help()
 {
 	if( can_read_chinese() )
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: backup
+æŒ‡ä»¤æ ¼å¼: backup
 
-½«ÄãµÄ×ÊÁÏ±¸·İÆğÀ´£¬¼ÙÊ¹²»ĞÒÓöµ½ crash »òÊÇ×ÊÁÏ´íÎó»¹ÄÜ¾ÈµÃ»ØÀ´¡£
-¼ÙÈçÄãÏë±¸·İµÄÊÇÏÖÔÚµÄ×´Ì¬, ÇëÏÈÏÂ save Ö¸Áî¡£
+å°‡ä½ çš„è³‡æ–™å‚™ä»½èµ·ä¾†ï¼Œå‡ä½¿ä¸å¹¸é‡åˆ° crash æˆ–æ˜¯è³‡æ–™éŒ¯èª¤é‚„èƒ½æ•‘å¾—å›ä¾†ã€‚
+å‡å¦‚ä½ æƒ³å‚™ä»½çš„æ˜¯ç¾åœ¨çš„ç‹€æ…‹, è«‹å…ˆä¸‹ save æŒ‡ä»¤ã€‚
 
 C_HELP
 		);

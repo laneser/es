@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("����ë���Ȼ�ĵط�");
+	ob->set_short("令人毛骨悚然的地方");
 	ob->set_long( @LONG_DESCRIPTION
-�����ν��ⶴѨ��ʱ,��������Ȼ������ë���Ȼ�ĸо�.
-һЩ�к���ˮ��Ʈ����,ʹ���뾡���뿪ˮ��
+當你遊進這洞穴中時,你的心靈忽然充滿了毛骨悚然的感覺.
+一些殘骸在水中飄浮著,使你想盡快離開水中
 LONG_DESCRIPTION
 	);
 

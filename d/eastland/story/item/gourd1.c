@@ -4,22 +4,22 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("red gourd","´óºìºùÂ«");
+        set_name("red gourd","å¤§ç´…è‘«è˜†");
         add("id",({"gourd"}));
         set_short( "@@query_short");
         set_long("@@query_long");
-        set("unit","¸ö");
+        set("unit","å€‹");
         set("weight",10);
         set("no_sale",1);
         set("value", ({100, "silver"}) );
 }
 string query_short()
 {
-   return sprintf("´óºìºùÂ«%s", (query("heaven_water") ? " (×°ÖøÌìÌÃÖ®Ë®)" : "") );
+   return sprintf("å¤§ç´…è‘«è˜†%s", (query("heaven_water") ? " (è£è‘—å¤©å ‚ä¹‹æ°´)" : "") );
 }
 string query_long()
 {
-   return sprintf("Ò»¸öºìÉ«µÄ´óºùÂ«£¬%s", (query("heaven_water") ? "¿ÉÒÔ°ÑÀïÃæµÄÈÜÒºµ¹³öÀ´(full)¡£\n":"¿ÉÒÔÓÃÀ´µ±ÈİÆ÷(fill)ÓÃ¡£\n"));
+   return sprintf("ä¸€å€‹ç´…è‰²çš„å¤§è‘«è˜†ï¼Œ%s", (query("heaven_water") ? "å¯ä»¥æŠŠè£¡é¢çš„æº¶æ¶²å€’å‡ºä¾†(full)ã€‚\n":"å¯ä»¥ç”¨ä¾†ç•¶å®¹å™¨(fill)ç”¨ã€‚\n"));
 }
 void init()
 {
@@ -30,16 +30,16 @@ int do_full(string arg)
 {
    object player,flute;
    if ( !query("heaven_water") ) 
-      return notify_fail("ºùÂ«ÀïÃ»ÓĞÈÎºÎÈÜÒº¡£\n");
-   if ( !arg ) return notify_fail("Syntax:<full items>¡£\n");
+      return notify_fail("è‘«è˜†è£¡æ²’æœ‰ä»»ä½•æº¶æ¶²ã€‚\n");
+   if ( !arg ) return notify_fail("Syntax:<full items>ã€‚\n");
    player=this_player();
    if ( !(flute=present(arg,player)) )
-      return notify_fail("ÄãÃ»ÓĞÄÇÑù¶«Î÷¡£\n");
+      return notify_fail("ä½ æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n");
    if ( flute->query("name") != "fly flute" )
-      return notify_fail("Äã²»ÄÜ°ÑºùÂ«ÀïµÄ¡¸ÌìÌÃÖ®Ë®¡¹µ¹½øÄÇÀïÃæÈ¥£¡\n");
+      return notify_fail("ä½ ä¸èƒ½æŠŠè‘«è˜†è£¡çš„ã€Œå¤©å ‚ä¹‹æ°´ã€å€’é€²é‚£è£¡é¢å»ï¼\n");
    if ( flute->query("left_times") )
-      return notify_fail("ÄÇ¶«Î÷ÀïÃæÒÑ¾­³äÂúÖø¡¸ÌìÌÃÖ®Ë®¡¹ÁË¡£\n");
-   write("Äã»º»ºµØ°ÑºùÂ«ÀïµÄ¡¸ÌìÌÃÖ®Ë®¡¹µ¹½ø¡¸·ÉÏèÖ®µÑ¡¹ÄÚ¡£\n");
+      return notify_fail("é‚£æ±è¥¿è£¡é¢å·²ç¶“å……æ»¿è‘—ã€Œå¤©å ‚ä¹‹æ°´ã€äº†ã€‚\n");
+   write("ä½ ç·©ç·©åœ°æŠŠè‘«è˜†è£¡çš„ã€Œå¤©å ‚ä¹‹æ°´ã€å€’é€²ã€Œé£›ç¿”ä¹‹ç¬›ã€å…§ã€‚\n");
    flute->set("flute_left",1);
    remove();        
    return 1;
@@ -48,14 +48,14 @@ int do_fill(string arg)
 {
    object env;
    if( !arg || arg!="gourd" )
-      return notify_fail("Syntax:<fill gourd>¡£\n");
+      return notify_fail("Syntax:<fill gourd>ã€‚\n");
    if( query("heaven_water") )
-      return notify_fail("ºùÂ«ÄÚÒÑ¾­×°ÂúÈÜÒºÁË¡£\n");
+      return notify_fail("è‘«è˜†å…§å·²ç¶“è£æ»¿æº¶æ¶²äº†ã€‚\n");
    env=environment(this_object());
    if( living(env) ) env = environment(env);
    if( !env->query("heaven_water") )
-      return notify_fail("Õâ¸öºùÂ«²»ÊÇÓÃÀ´×°ÕâÀïµÄÈÎºÎÈÜÒº£¡\n");
+      return notify_fail("é€™å€‹è‘«è˜†ä¸æ˜¯ç”¨ä¾†è£é€™è£¡çš„ä»»ä½•æº¶æ¶²ï¼\n");
    set("heaven_water",1);
-   write("\n\nºöÈ»´ÓºùÂ«¿Ú²úÉúÒ»¹ÉÁ¦Á¿°ÑÕâÀïµÄÆøÌåÎü½øÈ¥£¬Ë²¼ä£¬ÆøÌå±ä³ÉÁËÊ¥Ë®£­¡¸ÌìÌÃÖ®Ë®¡¹¡£\n\n\n");
+   write("\n\nå¿½ç„¶å¾è‘«è˜†å£ç”¢ç”Ÿä¸€è‚¡åŠ›é‡æŠŠé€™è£¡çš„æ°£é«”å¸é€²å»ï¼Œç¬é–“ï¼Œæ°£é«”è®Šæˆäº†è–æ°´ï¼ã€Œå¤©å ‚ä¹‹æ°´ã€ã€‚\n\n\n");
    return 1;    
 }

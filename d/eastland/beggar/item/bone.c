@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("white bone","Ò»¸ù°×°×µÄ¹ÇÍ·");
-        set_short( "Ò»¸ù°×°×µÄ¹ÇÍ·");
+        set_name("white bone","ä¸€æ ¹ç™½ç™½çš„éª¨é ­");
+        set_short( "ä¸€æ ¹ç™½ç™½çš„éª¨é ­");
         set_long(@C_LONG
-Ò»¸ù°×°×µÄ¹ÇÍ·,ÊÇĞ¡¹·×îÏ²°®¿ĞµÄ¶«Î÷¡£
+ä¸€æ ¹ç™½ç™½çš„éª¨é ­,æ˜¯å°ç‹—æœ€å–œæ„›å•ƒçš„æ±è¥¿ã€‚
 C_LONG  );      
-        set("unit","¸ù");
+        set("unit","æ ¹");
         set("weight",1);
         set("no_sale",1);
 }

@@ -2,14 +2,14 @@
 inherit OBJECT;
 void create()     
 {
-        set_name( "crystal glass", "Ë®¾§²£Á§Çò" );
+        set_name( "crystal glass", "æ°´æ™¶ç»ç’ƒçƒ" );
 	add("id",({"glass"}));
 	set_long(@LONG
-Ò»¿Å¾§Ó¨ÌŞÍ¸µÄË®¾§Çò£¬ËüÉÏÃæµÄÓ©¹âÎïÖÊÊ¹µÃËü²»Ê±ÔÚºÚ°µÖĞ·¢³öĞ©Î¢Á×¹â¡£	
+ä¸€é¡†æ™¶ç‘©å‰”é€çš„æ°´æ™¶çƒï¼Œå®ƒä¸Šé¢çš„è¢å…‰ç‰©è³ªä½¿å¾—å®ƒä¸æ™‚åœ¨é»‘æš—ä¸­ç™¼å‡ºäº›å¾®ç£·å…‰ã€‚	
 LONG
         );	
-	set_short("Ë®¾§²£Á§Çò");
-	set( "unit", "¿Å" );
+	set_short("æ°´æ™¶ç»ç’ƒçƒ");
+	set( "unit", "é¡†" );
 	set("weight", 40);
 	set("value", ({ 100, "silver" }));
         set("light",1);
@@ -20,6 +20,6 @@ void disappear(object ob)
     object owner;
     owner=environment(this_object());
     if (!owner)
-       printf("Õâ¿ÅË®¾§ÇòÉÏµÄÓ©¹âÎïÖÊÒµÒÑÏûºÄ´ù¾¡Ê§È¥¹âÔóÁË...£¡\n");
+       printf("é€™é¡†æ°´æ™¶çƒä¸Šçš„è¢å…‰ç‰©è³ªæ¥­å·²æ¶ˆè€—æ®†ç›¡å¤±å»å…‰æ¾¤äº†...ï¼\n");
     remove();
 }

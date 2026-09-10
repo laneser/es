@@ -38,7 +38,7 @@ string *do_ls(mixed *files, string path)
 		files = filter_array(files, "remove_dots", this_object());
 	num = sizeof(files);
 	if(!num) {
-		return ({ chinese_mode?"    Ã»ÓÐÈÎºÎµµ°¸¡£\n":"    Directory is empty.\n" });
+		return ({ chinese_mode?"    æ²’æœ‰ä»»ä½•æª”æ¡ˆã€‚\n":"    Directory is empty.\n" });
 	}
 	if(show_long) return long_ls(files, path);
 	for (index = 0; index < num; index++) {
@@ -97,10 +97,10 @@ string *long_ls(mixed *files, string path)
   num = sizeof(files);
   output = allocate(num+2);
   output[0]= chinese_mode?
-  "   ÉÏ´ÎÐÞ¸ÄÈÕÆÚ              ÔØÈëÊ±¼ä           ´óÐ¡       µµÃû":
+  "   ä¸Šæ¬¡ä¿®æ”¹æ—¥æœŸ              è¼‰å…¥æ™‚é–“           å¤§å°       æª”å":
   "   Last change                Loaded            Size       Name";
   output[1]= chinese_mode?
-  "¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª   ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª   ¡ª¡ª¡ª¡ª   ¡ª¡ª¡ª¡ª¡ª ":
+  "â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”   â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”   â€”â€”â€”â€”   â€”â€”â€”â€”â€” ":
   "--------------------   --------------------   --------   -----------";
   for(i=0; i<num; i++) {
 	 tmp = path + "/" + files[i][0];
@@ -112,7 +112,7 @@ string *long_ls(mixed *files, string path)
 		stats[0]=spaces[0..(8-strlen(stats[0]+" "))]+stats[0];
 		stats[1]=ctime(stats[1]);
 		if(stats[2]) stats[2]=ctime(stats[2]);
-		else stats[2]= chinese_mode?"          <Î´ÔØÈë>      ":"       < not loaded >   ";
+		else stats[2]= chinese_mode?"          <æœªè¼‰å…¥>      ":"       < not loaded >   ";
 		output[i+2] = sprintf("%s   %s   %s   %s", stats[1][4..strlen(stats[1])],
 		  stats[2][4..strlen(stats[2])], stats[0], files[i][0]);
 	 }
@@ -180,7 +180,7 @@ int cmd_ls(string path)
 	full_path = resolv_path(this_player()->query("cwd"), path);
 	full_path = full_path[1..sizeof(full_path)];
 	if (file_size(full_path)==-2) {
-		write( chinese_mode? "Ä¿Â¼: "+full_path+"\n": "Dorectory: "+full_path+"\n" );
+		write( chinese_mode? "ç›®éŒ„: "+full_path+"\n": "Dorectory: "+full_path+"\n" );
 		output = do_ls(get_dir(full_path+"/*", -1), full_path);
 		do_more(output);
 		return 1;

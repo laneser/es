@@ -15,26 +15,26 @@
 # Lines beginning with #, and blank lines, are ignored.
 
 # Twilight
-180 The sky is dark blue and a yellow glow comes from the east. @@ ĞÇ¹âÖğ½¥±»¶«·½Ìì¿ÕµÄÎ¢êØÑÚÓ³ÏûÊ§
-1 The sun appears at the edge of the eastern sky. @@ Ì«ÑôµÄ¹âÃ¢¿ªÊ¼³öÏÖÔÚ¶«·½µÄµØÆ½ÏßÉÏ¡¡
+180 The sky is dark blue and a yellow glow comes from the east. @@ æ˜Ÿå…‰é€æ¼¸è¢«æ±æ–¹å¤©ç©ºçš„å¾®æ›¦æ©æ˜ æ¶ˆå¤±
+1 The sun appears at the edge of the eastern sky. @@ å¤ªé™½çš„å…‰èŠ’é–‹å§‹å‡ºç¾åœ¨æ±æ–¹çš„åœ°å¹³ç·šä¸Šã€€
 # Sunrise
-180 The sun is rising on the eastern horizon. @@ Ì«Ñô¸Õ¸Õ³öÏÖÔÚ¶«·½µÄµØÆ½ÏßÉÏ£¬ÏÖÔÚÊÇÇå³¿
-1 The sun has risen and the day begins. @@ Ì«Ñô´Ó¶«·½µÄµØÆ½ÏßÉÏÉıÆğÁË¡¡
+180 The sun is rising on the eastern horizon. @@ å¤ªé™½å‰›å‰›å‡ºç¾åœ¨æ±æ–¹çš„åœ°å¹³ç·šä¸Šï¼Œç¾åœ¨æ˜¯æ¸…æ™¨
+1 The sun has risen and the day begins. @@ å¤ªé™½å¾æ±æ–¹çš„åœ°å¹³ç·šä¸Šå‡èµ·äº†ã€€
 # Morning
-720 The sun shines brightly in the eastern sky. @@ Ì«Ñô¸ß¸ß¹ÒÔÚ¶«·½µÄÌì¿ÕÖĞ
-1 The sun climbs into the highest part of the sky. @@ Ì«ÑôÒÑ¾­Éıµ½Ìì¿ÕµÄÕıÖĞÑë¡¡
+720 The sun shines brightly in the eastern sky. @@ å¤ªé™½é«˜é«˜æ›åœ¨æ±æ–¹çš„å¤©ç©ºä¸­
+1 The sun climbs into the highest part of the sky. @@ å¤ªé™½å·²ç¶“å‡åˆ°å¤©ç©ºçš„æ­£ä¸­å¤®ã€€
 # Noon
-360 The sun shines down from directly overhead. @@ Ì«Ñô´ÓÄãµÄÕıÉÏ·½ÕÕÒ«Öø´óµØ
-1 The sun begins to pass towards the western sky. @@ Ì«Ñô¿ªÊ¼ÏòÎ÷ÒÆ¶¯¡¡
+360 The sun shines down from directly overhead. @@ å¤ªé™½å¾ä½ çš„æ­£ä¸Šæ–¹ç…§è€€è‘—å¤§åœ°
+1 The sun begins to pass towards the western sky. @@ å¤ªé™½é–‹å§‹å‘è¥¿ç§»å‹•ã€€
 # Afternoon
-720 The sun shines brightly in the western sky. @@ Ì«Ñô¸ß¸ß¹ÒÔÚÎ÷±ßµÄÌì¿ÕÖĞ
-1 The sun sinks towards the western horizon. @@ Ì«Ñô¿ªÊ¼Ã»ÈëÎ÷·½µÄµØÆ½Ïß¡¡
+720 The sun shines brightly in the western sky. @@ å¤ªé™½é«˜é«˜æ›åœ¨è¥¿é‚Šçš„å¤©ç©ºä¸­
+1 The sun sinks towards the western horizon. @@ å¤ªé™½é–‹å§‹æ²’å…¥è¥¿æ–¹çš„åœ°å¹³ç·šã€€
 # Sunset
-180 The sun is setting in the west. @@ Ï¦ÑôµÄÓà»ÔÕÕÒ«ÖøÎ÷·½µÄÌì±ß
-1 The sun sets beyond the western horizon. @@ ×îááÒ»ÏßÏ¦ÑôµÄ¹âÃ¢Ò²ÏûÊ§ÔÚµØÆ½ÏßÉÏ¡¡
+180 The sun is setting in the west. @@ å¤•é™½çš„é¤˜è¼ç…§è€€è‘—è¥¿æ–¹çš„å¤©é‚Š
+1 The sun sets beyond the western horizon. @@ æœ€å¾Œä¸€ç·šå¤•é™½çš„å…‰èŠ’ä¹Ÿæ¶ˆå¤±åœ¨åœ°å¹³ç·šä¸Šã€€
 # Twilight
-180 The sky is dark blue and a yellow glow comes from the west. @@ Î÷±ßµÄÌì¿ÕÈÔ²ĞÁôÖø»è°µµÄÏ¦ÑôÓà»Ô
-1 Twilight fades and the night begins. @@ Ìì¿ÕÍêÈ«°µÏÂÀ´£¬Ò¹Íí½µÁÙÁË¡¡
+180 The sky is dark blue and a yellow glow comes from the west. @@ è¥¿é‚Šçš„å¤©ç©ºä»æ®˜ç•™è‘—æ˜æš—çš„å¤•é™½é¤˜è¼
+1 Twilight fades and the night begins. @@ å¤©ç©ºå®Œå…¨æš—ä¸‹ä¾†ï¼Œå¤œæ™šé™è‡¨äº†ã€€
 # Night
-1800 The sky is black and the stars shine down brightly. @@ ÉîÀ¶É«µÄÌì¿ÕÖĞµã×ºÖøÎŞÊıÉÁÁÁµÄĞÇĞÇ
-0 A faint glow appears in the east. @@ ¶«·½Ìì¿Õ¿ªÊ¼·º°×¡¡
+1800 The sky is black and the stars shine down brightly. @@ æ·±è—è‰²çš„å¤©ç©ºä¸­é»ç¶´è‘—ç„¡æ•¸é–ƒäº®çš„æ˜Ÿæ˜Ÿ
+0 A faint glow appears in the east. @@ æ±æ–¹å¤©ç©ºé–‹å§‹æ³›ç™½ã€€

@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(3);
-	set_name( "wisp", "¹í»ğ" );
-   set_short( "¹í»ğ" );
+	set_name( "wisp", "é¬¼ç«" );
+   set_short( "é¬¼ç«" );
 	set_long(
-		"Äã¿´µ½Ò»ÍÅ·¢¹âµÄ¹í»ğ£¬ËäÈ»ºÜ¶àÈË²»ÏàĞÅ¹í»ğµÄ´æÔÚ£¬µ«ÊÇÄãÃæÇ°µÄ\n"
-		"Õâ¸ö¶«Î÷ºÁÎŞÒÉÎÊµØÊÇ»îµÄ£¡\n"
+		"ä½ çœ‹åˆ°ä¸€åœ˜ç™¼å…‰çš„é¬¼ç«ï¼Œé›–ç„¶å¾ˆå¤šäººä¸ç›¸ä¿¡é¬¼ç«çš„å­˜åœ¨ï¼Œä½†æ˜¯ä½ é¢å‰çš„\n"
+		"é€™å€‹æ±è¥¿æ¯«ç„¡ç–‘å•åœ°æ˜¯æ´»çš„ï¼\n"
 	);
    set( "race", "undead" );
-	set( "unit", "ÍÅ" );
+	set( "unit", "åœ˜" );
 	set( "alignment", -200 );
 	set( "natural_defense_bonus", 10 );
 	set( "natural_weapon_class1", 4 );
@@ -21,6 +21,6 @@ void create()
 	set( "unbleeding",1);
    set( "block_aim", ({ "vascular", "ganglion" }) );
 	set_skill( "dodge", 35 );
-	set_c_verbs( ({"%s·¢³öÒ»µÀĞ¡Ğ¡µÄ»ğ»¨ÉäÏò%s", "%sµÄÓ°×Ó»ÎÁËÒ»»Î£¬Ïò%s³åÈ¥" }) );
-	set_c_limbs( ({ "ºËĞÄ" }) );
+	set_c_verbs( ({"%sç™¼å‡ºä¸€é“å°å°çš„ç«èŠ±å°„å‘%s", "%sçš„å½±å­æ™ƒäº†ä¸€æ™ƒï¼Œå‘%sè¡å»" }) );
+	set_c_limbs( ({ "æ ¸å¿ƒ" }) );
 }

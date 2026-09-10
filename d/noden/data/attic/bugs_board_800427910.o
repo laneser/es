@@ -1,39 +1,39 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":706,"title":"Re: about petals...","body":"On Sat Apr 29, And wrote:
 > when i type\"sprinkle and\" then appear :
-> Äã°Ñ»¨°êÈöÏòÌì¿Õ£¬ö®Ê±Ìì¿ÕÂäÏÂÒ»Õó»¨Óê¡£
+> ä½ æŠŠèŠ±ç“£æ’’å‘å¤©ç©ºï¼Œéœæ™‚å¤©ç©ºè½ä¸‹ä¸€é™£èŠ±é›¨ã€‚
 > Oops, there's something wrong with that!
 >     so ,this is bug?     
-ĞŞºÃÁË, Thanks.
+ä¿®å¥½äº†, Thanks.
                               Iris.
 ","time":799118191,"poster":"Iris",]),(["id":707,"title":"Re: about petals...","body":"On Sat Apr 29, And wrote:
 > when i type\"sprinkle and\" then appear :
-> Äã°Ñ»¨°êÈöÏòÌì¿Õ£¬ö®Ê±Ìì¿ÕÂäÏÂÒ»Õó»¨Óê¡£
+> ä½ æŠŠèŠ±ç“£æ’’å‘å¤©ç©ºï¼Œéœæ™‚å¤©ç©ºè½ä¸‹ä¸€é™£èŠ±é›¨ã€‚
 > Oops, there's something wrong with that!
 >     so ,this is bug?     
-      à¸,ÎÒÏëËûÊÇËµÂäÏÂÀ´µÄ²»ÊÇ»¨Óê,¶øÊÇÅÚÓê...
+      å–”,æˆ‘æƒ³ä»–æ˜¯èªªè½ä¸‹ä¾†çš„ä¸æ˜¯èŠ±é›¨,è€Œæ˜¯ç‚®é›¨...
                                  Indra.
-","time":799134273,"poster":"Indra",]),(["id":708,"body":"ºÇºÇ£¬²»¹Ü»¨ÓêÒ²ºÃ¡¢ÅÚÓêÒ²ºÃ
-¿É²»¿ÉÒÔ¼ÓÉÏÑÕÉ«°¡£¬
-ÄÇÎÒ¾Í¿ÉÒÔÄÃÈ¥ÏÅÈËÁË *smirk*  And
-","title":"still about petals...","time":799222674,"poster":"And",]),(["id":709,"title":"´ò¶¾¸òó¡!","body":"½ñÌìÎÒÍ¬Ñ§´ò¶¾ó¸òÜÊ±£¬²»É÷ÖĞ¶¾¶øÍö£¬²»¹ıËûÔÚËÀÇ°ºÈÁËÒ»Æ¿¼ªÀ­ potion£¬¿ÉÊÇÂíÉÏ
-¾Í¸øËû¶¾ËÀÀ²£¡²»ÖªµÀÎªÊ²÷á£¿ÊÇ²»ÊÇÖĞ¶¾Ê± Hp too low Ê±ºÈÒ©Ã»ÓÃÂğ£¿
+","time":799134273,"poster":"Indra",]),(["id":708,"body":"å‘µå‘µï¼Œä¸ç®¡èŠ±é›¨ä¹Ÿå¥½ã€ç‚®é›¨ä¹Ÿå¥½
+å¯ä¸å¯ä»¥åŠ ä¸Šé¡è‰²å•Šï¼Œ
+é‚£æˆ‘å°±å¯ä»¥æ‹¿å»åš‡äººäº† *smirk*  And
+","title":"still about petals...","time":799222674,"poster":"And",]),(["id":709,"title":"æ‰“æ¯’è›¤èŸ†!","body":"ä»Šå¤©æˆ‘åŒå­¸æ‰“æ¯’èŸ¾èœæ™‚ï¼Œä¸æ…ä¸­æ¯’è€Œäº¡ï¼Œä¸éä»–åœ¨æ­»å‰å–äº†ä¸€ç“¶å‰æ‹‰ potionï¼Œå¯æ˜¯é¦¬ä¸Š
+å°±çµ¦ä»–æ¯’æ­»å•¦ï¼ä¸çŸ¥é“ç‚ºä»€éº¼ï¼Ÿæ˜¯ä¸æ˜¯ä¸­æ¯’æ™‚ Hp too low æ™‚å–è—¥æ²’ç”¨å—ï¼Ÿ
                                By salufai ............
 ","time":799268213,"poster":"Salufai",]),(["id":711,"body":". persephone's information bad loh ...have backup ..who can help he..
  thx u... .
-","title":"µµ°¸»µÁË","time":800078876,"poster":"Linar",]),(["id":712,"body":"On Wed May 10, Linar wrote:
+","title":"æª”æ¡ˆå£äº†","time":800078876,"poster":"Linar",]),(["id":712,"body":"On Wed May 10, Linar wrote:
 > . persephone's information bad loh ...have backup ..who can help he..
 >  thx u... .
-restore ÁË
+restore äº†
                                Iris
-","title":"Re: µµ°¸»µÁË","time":800091771,"poster":"Iris",]),(["id":713,"title":"¹«¸æ..:P","body":"Hmm....seem have a small change..
+","title":"Re: æª”æ¡ˆå£äº†","time":800091771,"poster":"Iris",]),(["id":713,"title":"å…¬å‘Š..:P","body":"Hmm....seem have a small change..
 Now only thieves with \"peek\" skills can l what mob take 
 other player can't see what mob take loh..:P
-²»ÊÇbug ..»òĞí\°É..cc:P
+ä¸æ˜¯bug ..æˆ–è¨±å§..cc:P
                                         Hch smile here...
 ","time":800246378,"poster":"Hch",]),(["id":714,"body":"
 ","title":"< no title >","time":800427905,"poster":"Twingo",]),(["id":715,"body":"

@@ -18,11 +18,11 @@ inherit DAEMON;
 int help() {
  
    write( @HELP
-Ê¹ÓÃ¸ñÊ½: put [ÎïÆ·] into [Ä¿±ê]
+ä½¿ç”¨æ ¼å¼: put [ç‰©å“] into [ç›®æ¨™]
 
-Õâ¸öÖ¸Áî½«ÎïÆ··ÅÈëÈİÆ÷ÄÚ.
+é€™å€‹æŒ‡ä»¤å°‡ç‰©å“æ”¾å…¥å®¹å™¨å…§.
 
-Ïà¹ØÖ¸Áî: get, open, close, lock, unlock.
+ç›¸é—œæŒ‡ä»¤: get, open, close, lock, unlock.
 HELP
 );
  
@@ -30,7 +30,7 @@ return 1; }
 
 int cmd_put() {
  
-   notify_fail("°ÑÊ²÷á·Åµ½Ê²÷áÀïÃæ°¡£¿\n");
+   notify_fail("æŠŠä»€éº¼æ”¾åˆ°ä»€éº¼è£¡é¢å•Šï¼Ÿ\n");
  
 return 0; }
  

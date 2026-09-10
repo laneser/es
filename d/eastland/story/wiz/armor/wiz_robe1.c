@@ -1,16 +1,16 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "The Archmaster's robe","»¤¹úÊ¦¡õÅÛ" );
+     set_name( "The Archmaster's robe","è­·åœ‹å¸«â–¡è¢" );
      add( "id",({ "robe" }) );
-     set_short( "»¤¹úÊ¦¡õÅÛ" );
+     set_short( "è­·åœ‹å¸«â–¡è¢" );
      set_long(@C_LONG
-Ò»¼şĞåÖø°×ÔÆÍ¼°¸µÄË¿ÖÆÅÛ×Ó¡£ÔÚÕâ¼şÅÛ×ÓÉÏ»¹ÓĞÖøÌìÉñµÄ×£¸££¬ÔÚ°×ÔÆÀï²»Ê±ÓĞ
-ÎåÉ«Ïé¹â³öÏÖ¡£
+ä¸€ä»¶ç¹¡è‘—ç™½é›²åœ–æ¡ˆçš„çµ²åˆ¶è¢å­ã€‚åœ¨é€™ä»¶è¢å­ä¸Šé‚„æœ‰è‘—å¤©ç¥çš„ç¥ç¦ï¼Œåœ¨ç™½é›²è£¡ä¸æ™‚æœ‰
+äº”è‰²ç¥¥å…‰å‡ºç¾ã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","cloth" );
      set( "armor_class",30);

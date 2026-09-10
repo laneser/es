@@ -1,16 +1,16 @@
-// model.c ÓĞÁ½¸ö¹¦ÓÃ, Ò»ÊÇÓÃÀ´Á·Ï°Õë¾Ä, ÁíÒ»¸öÒş²ØµÄ¹¦ÓÃÊÇÓÃ
-// À´ÔÚÒ°ÍâÈ÷Ê÷ÖÖ, Ã¿µ±model update Ê±, È÷Ê÷ÖÖµÄfunction ¾Í»á
-// ×Ô¶¯±»ºô½Ğµ½////#pragma save_binary
+// model.c æœ‰å…©å€‹åŠŸç”¨, ä¸€æ˜¯ç”¨ä¾†ç·´ç¿’é‡ç¸, å¦ä¸€å€‹éš±è—çš„åŠŸç”¨æ˜¯ç”¨
+// ä¾†åœ¨é‡å¤–ç‘æ¨¹ç¨®, æ¯ç•¶model update æ™‚, ç‘æ¨¹ç¨®çš„function å°±æœƒ
+// è‡ªå‹•è¢«å‘¼å«åˆ°////#pragma save_binary
 #include <mudlib.h>
 #include "/d/healer/healer.h"
 inherit OBJECT ;
 
-// plant.dat ÓÃÀ´¼ÍÂ¼ÔÚ¸÷ÖÖµØĞÍ¸Ã³öÏÖÄÄÖÖÖ²Îï, ÒÔ¼°³öÏÖµÄ»úÂÊ±È
+// plant.dat ç”¨ä¾†ç´€éŒ„åœ¨å„ç¨®åœ°å‹è©²å‡ºç¾å“ªç¨®æ¤ç‰©, ä»¥åŠå‡ºç¾çš„æ©Ÿç‡æ¯”
 #define PLANTDATA "/d/healer/plant/plant.dat"
 mapping P0,P1,F0,B0,S0,H0,R0,R1;
 
-//  ÔÚÈ÷Ê÷ÖÖÖ®Ç°, ÏÈ½«ÉÏ´ÎÈ÷¹ıµÄÊ÷Çåµô, ÒÔÃâupdate ¼¸´Îáá, µ½´¦
-//  ¶¼ÊÇÊ÷, ·ºÀÄ³ÉÔÖ
+//  åœ¨ç‘æ¨¹ç¨®ä¹‹å‰, å…ˆå°‡ä¸Šæ¬¡ç‘éçš„æ¨¹æ¸…æ‰, ä»¥å…update å¹¾æ¬¡å¾Œ, åˆ°è™•
+//  éƒ½æ˜¯æ¨¹, æ°¾æ¿«æˆç½
 //  kill_plant accept a argument, which is the tree's file
 //  eg: kill_plant("/d/healer/plant/dang_guei_tree.c");
 int kill_plant(string str) {
@@ -29,8 +29,8 @@ int kill_plant(string str) {
    clones = children( file_name(target) );
    //	Its either the Master object or has no other copies around
    if(sizeof(clones) == 1) {
-        tell_room(environment(target),"Äã·¢ÏÖ"+target->query("c_name")+
-                                      "ÔÚÄãÃæÇ°¿İÎ®¶øËÀÁË¡£\n");
+        tell_room(environment(target),"ä½ ç™¼ç¾"+target->query("c_name")+
+                                      "åœ¨ä½ é¢å‰æ¯èè€Œæ­»äº†ã€‚\n");
 	target->remove();
 	if(target)  destruct(target);
         return 1; 
@@ -40,8 +40,8 @@ int kill_plant(string str) {
    //	Try to remove all clone copies
    for ( loop= 0; loop<sizeof(clones); loop++){
      tell_room(environment(clones[loop]),
-               "Äã·¢ÏÖ"+clones[loop]->query("c_name")+
-               "ÔÚÄãÃæÇ°¿İÎ®¶øËÀÁË¡£\n");
+               "ä½ ç™¼ç¾"+clones[loop]->query("c_name")+
+               "åœ¨ä½ é¢å‰æ¯èè€Œæ­»äº†ã€‚\n");
      clones[loop]->remove();
    } 
    clones = children( file_name(target) );
@@ -65,9 +65,9 @@ void make_plant (string room, string the_plant)
 
 // choose_plant accept 2 arguments, the first is the 
 // file name of a room, the second is the type of the room
-// for example, P0 means Æ½Ô­
-// choose_plant ¸ù¾İroom_type, ¼ÆËã³öÊÇ·ñ¸Ã³¤Ê÷, ÒÔ¼°¸Ã³¤
-// Ê²÷áÊ÷áá, ºô½Ğ make_plantÔÚ¸Ã·¿¼äÖÖÊ÷
+// for example, P0 means å¹³åŸ
+// choose_plant æ ¹æ“šroom_type, è¨ˆç®—å‡ºæ˜¯å¦è©²é•·æ¨¹, ä»¥åŠè©²é•·
+// ä»€éº¼æ¨¹å¾Œ, å‘¼å« make_plantåœ¨è©²æˆ¿é–“ç¨®æ¨¹
 void choose_plant(string room, string room_type)
 {
   int i;
@@ -75,7 +75,7 @@ void choose_plant(string room, string room_type)
   int decision;
   
   switch (room_type) {
-    // P0 is Æ½Ô­ , have 1/8 chance to have a plant
+    // P0 is å¹³åŸ , have 1/8 chance to have a plant
     case "P0" : max=P0[sizeof(P0)-1][0]*8;
                 decision=random(max);
                 for ( i = 0 ; i < sizeof(P0) ; i++ ) 
@@ -83,7 +83,7 @@ void choose_plant(string room, string room_type)
                                            return;
                                          }
                 break;                           
-     // P1 is ºÓ±ß, have 1/8 chance to have a plant           
+     // P1 is æ²³é‚Š, have 1/8 chance to have a plant           
     case "P1" : max=P1[sizeof(P1)-1][0]*8;
                 decision=random(max);
                 for ( i = 0 ; i < sizeof(P1) ; i++ ) 
@@ -91,7 +91,7 @@ void choose_plant(string room, string room_type)
                                            return;
                                          }
                 break;  
-     // F0 is É­ÁÖ, have 1/10 chance to have a plant           
+     // F0 is æ£®æ—, have 1/10 chance to have a plant           
     case "F0" : max=F0[sizeof(F0)-1][0]*10;
                 decision=random(max);
                 for ( i = 0 ; i < sizeof(F0) ; i++ ) 
@@ -99,7 +99,7 @@ void choose_plant(string room, string room_type)
                                            return;
                                          }
                 break;                           
-     // B0 is ²İµØ, have 1/7 chance to have a plant           
+     // B0 is è‰åœ°, have 1/7 chance to have a plant           
     case "B0" : max=B0[sizeof(B0)-1][0]*7;
                 decision=random(max);
                 for ( i = 0 ; i < sizeof(B0) ; i++ ) 
@@ -170,7 +170,7 @@ void plant(string map)
   string area,file,name,area_file;
   int rate, i , j , k,temp,weight,height;
 
-// initial all mapping for all 8 kinds of µØĞÎ 
+// initial all mapping for all 8 kinds of åœ°å½¢ 
   P0=([]);  P1=([]);  F0=([]);  B0=([]);
   S0=([]);  H0=([]);  R0=([]);  R1=([]);
 
@@ -241,17 +241,17 @@ void create()
         seteuid(getuid()) ;
         set("id", ({"model","brass model"}) ) ;
 
-	set_name("brass model", "Í­ÈË");
-	set_short("Í­ÈË");
+	set_name("brass model", "éŠ…äºº");
+	set_short("éŠ…äºº");
 	set("long", "@@model_desc" );
 
-	set( "unit", "¾ß" );
+	set( "unit", "å…·" );
 	set( "weight", 1000000 );
         set("prevent_get",1);
         set("temp1",({ }) );
         set("temp2",({ }) );
         set("temp3",({ }) );        
-        // call kill_plants before start to ÖÖÊ÷
+        // call kill_plants before start to ç¨®æ¨¹
         kill_plants();
         plant("/d/noden/noden.map");
         plant("/d/eastland/eastland.map");
@@ -269,18 +269,18 @@ string model_desc()
      string msg;
 
      if((string)this_player()->query("class")!="healer")
-       {   msg = "  Ò»¸ö²»ÉõÆğÑÛµÄÄ¾ÖÆ½ğÆá¼ÙÈË, Ï¸¿´áá·¢ÏÖÉíÉÏÓĞÒ»¸ö¸öµÄĞ¡µã¡£\n"
-                "ÁíÍâ»¹ÓĞºìÏßºÚÏßÁ¬½ÓÕâĞ©µã¡£Ïë±ØÕâ¸ö¾ÍÊÇÁ·Ï°Õë¾ÄÓÃµÄÍ­ÈËÁË¡£\n"
-                "ÓÃ exam <¾­Âç> ¿ÉÒÔ²éÒÑ·¢ÏÖµÄËùÓĞÑ¨µÀ¡£\n"  ;
+       {   msg = "  ä¸€å€‹ä¸ç”šèµ·çœ¼çš„æœ¨è£½é‡‘æ¼†å‡äºº, ç´°çœ‹å¾Œç™¼ç¾èº«ä¸Šæœ‰ä¸€å€‹å€‹çš„å°é»ã€‚\n"
+                "å¦å¤–é‚„æœ‰ç´…ç·šé»‘ç·šé€£æ¥é€™äº›é»ã€‚æƒ³å¿…é€™å€‹å°±æ˜¯ç·´ç¿’é‡ç¸ç”¨çš„éŠ…äººäº†ã€‚\n"
+                "ç”¨ exam <ç¶“çµ¡> å¯ä»¥æŸ¥å·²ç™¼ç¾çš„æ‰€æœ‰ç©´é“ã€‚\n"  ;
         }        
      else     
         {      
-          msg = "  Ò»¸ö²»ÉõÆğÑÛµÄÄ¾ÖÆ½ğÆá¼ÙÈË, Ï¸¿´áá·¢ÏÖÉíÉÏÓĞÒ»¸ö¸öµÄĞ¡µã¡£\n"
-                "ÁíÍâ»¹ÓĞºìÏßºÚÏßÁ¬½ÓÕâĞ©µã¡£Ïë±ØÕâ¸ö¾ÍÊÇÁ·Ï°Õë¾ÄÓÃµÄÍ­ÈËÁË¡£\n"
-                "ÓÃ exam <¾­Âç> ¿ÉÒÔ²éÒÑ·¢ÏÖµÄËùÓĞÑ¨µÀ¡£\n"  
-                "¶øÒ»¸öĞĞÒ½ÕßÔÚÌ¤³öÊ¦ÃÅÊ©ÕëĞĞÒ½¾ÈÈËÇ°£¬±Ø¶¨Òª¶ÔÍ­ÈËÁ·µ½ÏÂÕë×¼\n"
-                "È·ÎŞÎóµÄµØ²½²ÅÄÜ±»ÔÊĞíÊ¹ÓÃÕëÁÆ¡£³ıÊì¶ÁÒ½ÊéÍâ£¬Á·Ï°(practice)\n"
-                "ÔÚÍ­ÈËÉÏÊ©Õë²ÅÊÇÑ§»áÕë¾ÄµÄ²»¶ş·¨ÃÅ¡£\n\n" ;
+          msg = "  ä¸€å€‹ä¸ç”šèµ·çœ¼çš„æœ¨è£½é‡‘æ¼†å‡äºº, ç´°çœ‹å¾Œç™¼ç¾èº«ä¸Šæœ‰ä¸€å€‹å€‹çš„å°é»ã€‚\n"
+                "å¦å¤–é‚„æœ‰ç´…ç·šé»‘ç·šé€£æ¥é€™äº›é»ã€‚æƒ³å¿…é€™å€‹å°±æ˜¯ç·´ç¿’é‡ç¸ç”¨çš„éŠ…äººäº†ã€‚\n"
+                "ç”¨ exam <ç¶“çµ¡> å¯ä»¥æŸ¥å·²ç™¼ç¾çš„æ‰€æœ‰ç©´é“ã€‚\n"  
+                "è€Œä¸€å€‹è¡Œé†«è€…åœ¨è¸å‡ºå¸«é–€æ–½é‡è¡Œé†«æ•‘äººå‰ï¼Œå¿…å®šè¦å°éŠ…äººç·´åˆ°ä¸‹é‡æº–\n"
+                "ç¢ºç„¡èª¤çš„åœ°æ­¥æ‰èƒ½è¢«å…è¨±ä½¿ç”¨é‡ç™‚ã€‚é™¤ç†Ÿè®€é†«æ›¸å¤–ï¼Œç·´ç¿’(practice)\n"
+                "åœ¨éŠ…äººä¸Šæ–½é‡æ‰æ˜¯å­¸æœƒé‡ç¸çš„ä¸äºŒæ³•é–€ã€‚\n\n" ;
         }        
      return msg ;    
 }
@@ -292,16 +292,16 @@ int do_exam(string arg)
    int    i,j ;
    string *temp,first_str ;
 
-   if(!arg||arg=="¾­Âç") arg="title" ;
+   if(!arg||arg=="ç¶“çµ¡") arg="title" ;
    
    temp = ALL_POINTS->query_meridians(arg) ;
    first_str = temp[0]  ; 
    if(first_str=="NULL") return 0 ;
 
    if(arg=="title") 
-       write("ÈËÌåÈ«Éí¾­Âç¹²ÓĞÊ®ËÄÌõ£¬·Ö±ğÎª:\n") ;
+       write("äººé«”å…¨èº«ç¶“çµ¡å…±æœ‰åå››æ¢ï¼Œåˆ†åˆ¥ç‚º:\n") ;
    else
-       write(first_str+"Ëùº¬Ñ¨µÀÈçÏÂ:\n") ;   
+       write(first_str+"æ‰€å«ç©´é“å¦‚ä¸‹:\n") ;   
 
    j = sizeof(temp);
    for(i=1;i<j;i++)
@@ -314,7 +314,7 @@ int do_exam(string arg)
            if((arg!="title")&&(i%8==0)) write("\n") ;
          }
       }
-    write(" ¡£\n") ;
+    write(" ã€‚\n") ;
     return 1 ;
 }
 
@@ -326,12 +326,12 @@ int do_practice(string arg)
      practiced = ({ }) ; 
      
      if((string)this_player()->query("class")!="healer")
-          return notify_fail("Ğ¡ÅóÓÑ , ÄãÏë¸ÉÊ²÷á ???\n") ;
+          return notify_fail("å°æœ‹å‹ , ä½ æƒ³å¹¹ä»€éº¼ ???\n") ;
 
      if(!arg)
           return notify_fail
-          ("ÒªÁ·Ï°Õë¾Ä¼¼ÇÉ, Ö»Òª¼üÈëÁ·Ï°(practice)<¾­Âç>, ¾Í¿ÉÒÔ´ïµ½\n"
-           "Á·Ï°µÄĞ§¹û¡£\n") ; 
+          ("è¦ç·´ç¿’é‡ç¸æŠ€å·§, åªè¦éµå…¥ç·´ç¿’(practice)<ç¶“çµ¡>, å°±å¯ä»¥é”åˆ°\n"
+           "ç·´ç¿’çš„æ•ˆæœã€‚\n") ; 
 
      temp      = ({ arg }) ;
      acu_skill = this_player()->query_perm_skill("acupuncture") ;
@@ -339,7 +339,7 @@ int do_practice(string arg)
      temp  = ALL_POINTS->query_meridians(arg) ;
      if(temp[0]=="NULL") 
         {
-          write("Ã»ÓĞÕâÌõ¾­Âç..\n") ;
+          write("æ²’æœ‰é€™æ¢ç¶“çµ¡..\n") ;
           return 1 ;
           }
 
@@ -349,10 +349,10 @@ int do_practice(string arg)
      difficulty = difficulty * 6 + 15 ;
      j = sizeof(temp);
      for ( i = 1 ; i < j ; i ++ ) {
-       write ("ÄãÄÃÆğÒøÕë, ÍùÍ­ÈËµÄ"+temp[i]+"Ñ¨´ÌÁË½øÈ¥¡£\n");
+       write ("ä½ æ‹¿èµ·éŠ€é‡, å¾€éŠ…äººçš„"+temp[i]+"ç©´åˆºäº†é€²å»ã€‚\n");
        tell_room(environment( this_player() ),
                  this_player()->query("c_name")+
-                 "ÄÃÆğÒøÕë, ÍùÍ­ÈËµÄ"+temp[i]+"Ñ¨´ÌÁË½øÈ¥¡£\n",
+                 "æ‹¿èµ·éŠ€é‡, å¾€éŠ…äººçš„"+temp[i]+"ç©´åˆºäº†é€²å»ã€‚\n",
                  this_player() );
      }  
        
@@ -362,11 +362,11 @@ int do_practice(string arg)
          this_player()->delete_temp("practice_pts") ;
          this_player()->delete("practice_pts") ;
          
-         write("¿´ÖøÍ­ÈËÉÏ"+arg+"µÄÍ¼ĞÎ,Ò»·ùÏÊÃ÷µÄÓ°ÏñÉî¿ÌµÄ\n"
-               "¿ÌÈëÄãµÄÄÔº£¡£\n") ;
+         write("çœ‹è‘—éŠ…äººä¸Š"+arg+"çš„åœ–å½¢,ä¸€å¹…é®®æ˜çš„å½±åƒæ·±åˆ»çš„\n"
+               "åˆ»å…¥ä½ çš„è…¦æµ·ã€‚\n") ;
          tell_room( environment( this_player() ),
-           this_player()->query("c_name")+"ÄÃ³öÒøÕë,ÑÓÖøÍ­ÈËÉíÉÏµÄÄ³Ò»Ìõ¾­Âç"+
-           "Ò»¸öÑ¨µÀÒ»¸öÑ¨µÀÍùÏÂÔú¡£\n¹ıÁËÒ»»á¶ù,Ö»¼ûËû´øÖøÎ¢Ğ¦´Ó³ÁË¼ÖĞÕÅ¿ªÑÛ¡£\n"
+           this_player()->query("c_name")+"æ‹¿å‡ºéŠ€é‡,å»¶è‘—éŠ…äººèº«ä¸Šçš„æŸä¸€æ¢ç¶“çµ¡"+
+           "ä¸€å€‹ç©´é“ä¸€å€‹ç©´é“å¾€ä¸‹æ‰ã€‚\néäº†ä¸€æœƒå…’,åªè¦‹ä»–å¸¶è‘—å¾®ç¬‘å¾æ²‰æ€ä¸­å¼µé–‹çœ¼ã€‚\n"
            ,this_player()  ) ;
        }
      else
@@ -374,8 +374,8 @@ int do_practice(string arg)
          this_player()->delete_temp("practice_pts") ;
          this_player()->delete("practice_pts") ;
 
-         write("\nàÅ...à¸....°¡.......ÄãÍ»È»·¢¾õÄã±»Í­ÈËÉÏµÄÍ¼ĞÎÅªÃÔºıÁË¡£\n"
-               "ÄãÒâÊ¶µ½ÕâÊÇÓÉì¶×Ô¼º¼¼ÄÜ²»×ã, ì¶ÊÇ¾ö¶¨ÒªÅ¬Á¦×¬ EXP¡£\n ");
+         write("\nå—¯...å–”....å•Š.......ä½ çªç„¶ç™¼è¦ºä½ è¢«éŠ…äººä¸Šçš„åœ–å½¢å¼„è¿·ç³Šäº†ã€‚\n"
+               "ä½ æ„è­˜åˆ°é€™æ˜¯ç”±æ–¼è‡ªå·±æŠ€èƒ½ä¸è¶³, æ–¼æ˜¯æ±ºå®šè¦åŠªåŠ›è³º EXPã€‚\n ");
 
        }
      return 1 ;

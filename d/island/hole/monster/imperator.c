@@ -5,14 +5,14 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "Lizardman Imperial Akaba","������" );
+	set_name( "Lizardman Imperial Akaba","阿卡巴" );
 	add( "id",({ "lizardman","imperator","akaba" }) );
-	set_short( "�����˴󽫾� ������" );
+	set_short( "蜥蜴人大將軍 阿卡巴" );
 	set_long(@LONG
-������������һλ������ս�Ĵ󽫾�����˵���������ھ����е�ʱ��
-�������Բб���ÿ�γ�����ʱ������ɱ��Ϊ�֣�������ɱ���˷ܣ���
-�����и����--ħ���������Ѿ���֪������Ӣ�ۺú�ɥ��������˫��
-֮���ˡ�
+你所看到的是一位身經百戰的大將軍。據說，當它還在軍隊中的時候
+，因生性殘暴，每次出任務時總是以殺人為樂，而且愈殺愈興奮，所
+以又有個外號--魔鬼將軍。已經不知道有少英雄好漢喪生在它的雙斧
+之下了。
 LONG
 		);
 	set( "gender","male" );
@@ -63,8 +63,8 @@ int to_embattle()
 	him=player->query( "name" );
 	c_him=player->query( "c_name" );
 	tell_room( env,
-	"�����ͺݺݵĵ���"+c_him+"һ��˵��������ս���붼���룬�����ɡ�\n",player );
-	tell_object( player,"�����ͺݺݵĵ�����һ��˵��������ս���붼���룬�����ɡ�\n" );
+	"阿卡巴狠狠的瞪了"+c_him+"一眼說道：車輪戰？想都別想，單挑吧。\n",player );
+	tell_object( player,"阿卡巴狠狠的瞪了你一眼說道：車輪戰？想都別想，單挑吧。\n" );
 	command( "kill "+him );
 	return 1;
 }
@@ -79,8 +79,8 @@ int to_demand()
 	him=player->query( "name" );
 	c_him=player->query( "c_name" );
 	tell_room( env,
-	"�����ͺݺݵĵ���"+c_him+"һ��˵�����Ұ��֣��붼���룬�ԹԵ����ɡ�\n",player );
-	tell_object( player,"�����ͺݺݵĵ�����һ��˵�����Ұ��֣��붼���룬�ԹԵ����ɡ�\n" );
+	"阿卡巴狠狠的瞪了"+c_him+"一眼說道：找幫手？想都別想，乖乖單挑吧。\n",player );
+	tell_object( player,"阿卡巴狠狠的瞪了你一眼說道：找幫手？想都別想，乖乖單挑吧。\n" );
 	command( "kill "+him );
 	return 1;
 }

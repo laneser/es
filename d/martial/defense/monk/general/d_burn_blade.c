@@ -11,13 +11,13 @@ varargs int can_use(object me, object victim, object weapon)
 }
 
 string *defense_msg = ({
-        "%sááÍËÒ»²½",
-        "%sÏòááÒ»ÉÁ", 
-        "%s¾Ùµ¶»¤Éí",
-        "%sÉíÌåË³ÊÆÒ»Æ«",
-        "%s¾Ùµ¶»¤Í·£¬Éí×ÓÒ»µÍ",
-        "%sºáµ¶»¤Éí",
-        "%sË«ÊÖÇ°¾Ù£¬Î¢Ò»Ðý×ªÉíÐÎ",
+        "%så¾Œé€€ä¸€æ­¥",
+        "%så‘å¾Œä¸€é–ƒ", 
+        "%sèˆ‰åˆ€è­·èº«",
+        "%sèº«é«”é †å‹¢ä¸€å",
+        "%sèˆ‰åˆ€è­·é ­ï¼Œèº«å­ä¸€ä½Ž",
+        "%sæ©«åˆ€è­·èº«",
+        "%sé›™æ‰‹å‰èˆ‰ï¼Œå¾®ä¸€æ—‹è½‰èº«å½¢",
 });
 
 varargs int hit_modify(object me, object victim, object weapon)
@@ -45,6 +45,6 @@ varargs string query_defense_msg(object me, object victim, object weapon)
 {
 	if( !can_use(me, victim, weapon) ) return 0;
 	if( (int)me->query("force_points") < query_need_fp() )
-        return defense_msg[random(7)]+"µ«ÔË¹¦\Ê±ÏÔµÃÄÚÁ¦²»×ã";        
+        return defense_msg[random(7)]+"ä½†é‹åŠŸæ™‚é¡¯å¾—å…§åŠ›ä¸è¶³";        
         return defense_msg[random(7)];
 }

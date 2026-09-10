@@ -9,16 +9,16 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(8);
-	set_name( "Anteater", "Ê³ÒÏÊŞ" );
+	set_name( "Anteater", "é£ŸèŸ»ç¸" );
 	add ("id", ({ "anteater" }) );
-	set_short( "Ê³ÒÏÊŞ" );
+	set_short( "é£ŸèŸ»ç¸" );
 	set_long( @LONG
-Ò»Ö»¼¢¶öµÄÊ³ÒÏÊŞ£¬²»Öª¶à¾ÃÃ»½øÊ³ÁË£¬¿´ÆğÀ´ÊİÊİ°Í°ÍµÄ£¬ºÃ¿ÉÁ¯¡£
+ä¸€éš»é£¢é¤“çš„é£ŸèŸ»ç¸ï¼Œä¸çŸ¥å¤šä¹…æ²’é€²é£Ÿäº†ï¼Œçœ‹èµ·ä¾†ç˜¦ç˜¦å·´å·´çš„ï¼Œå¥½å¯æ†ã€‚
 LONG
 	);
 
     set( "alignment", 400);
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
 	set_perm_stat( "dex", 12 );
 	set_perm_stat( "str", 10 );
 	set_perm_stat( "int", 7 );
@@ -30,23 +30,23 @@ LONG
 	set_natural_weapon( 20, 10, 20 );
 	set_natural_armor( 45, 10 );
 	set( "persuing", 1);
-	set( "death_msg", "Ê³ÒÏÊŞ¿ŞÖøËµ: ÎÒºÃÃü¿à .... È»áá¾ÍËÀÁË!\n" );
+	set( "death_msg", "é£ŸèŸ»ç¸å“­è‘—èªª: æˆ‘å¥½å‘½è‹¦ .... ç„¶å¾Œå°±æ­»äº†!\n" );
 	set( "weight", 400);
 	set( "exp_reward", 700 );
     
 	set ("chat_chance", 15);
 	set ("chat_output", ({
-	    "Ê³ÒÏÊŞËµ: ºÃ¶öà¸!\n",
-	    "Ê³ÒÏÊŞËµ: ºÃ¾ÃÃ»¼û¹ıÂìÒÏÁË£¬ÊÇ²»ÊÇ¶¼ËÀ¹âÁË?\n",
-	    "Ê³ÒÏÊŞËµ: ºÃĞÄµÄ´óÒ¯£¬ÉÍÖ»ÂìÒÏ¸øÎÒºÃÂğ!\n",
-            "Ê³ÒÏÊŞËµ: Ã»ÓĞ»îµÄÂìÒÏ£¬Î¹(feed)¸öÂìÒÏµÄÊ¬ÌåÒ²ĞĞ£¡\n",
+	    "é£ŸèŸ»ç¸èªª: å¥½é¤“å–”!\n",
+	    "é£ŸèŸ»ç¸èªª: å¥½ä¹…æ²’è¦‹éèèŸ»äº†ï¼Œæ˜¯ä¸æ˜¯éƒ½æ­»å…‰äº†?\n",
+	    "é£ŸèŸ»ç¸èªª: å¥½å¿ƒçš„å¤§çˆºï¼Œè³åªèèŸ»çµ¦æˆ‘å¥½å—!\n",
+            "é£ŸèŸ»ç¸èªª: æ²’æœ‰æ´»çš„èèŸ»ï¼Œå–‚(feed)å€‹èèŸ»çš„å±é«”ä¹Ÿè¡Œï¼\n",
 	    }) ); 
 	set ("att_chat_output", ({
-	    "Ê³ÒÏÊŞËµ: ²»Òª¾ÍËãÁË£¬¸ÉÂï»¹´òÎÒ£¡\n",
-	    "Ê³ÒÏÊŞËµ: ¾ÈÃü°¡! ÆÛ¸ºÈõĞ¡°¡ ¡«¡«\n",
+	    "é£ŸèŸ»ç¸èªª: ä¸è¦å°±ç®—äº†ï¼Œå¹¹å˜›é‚„æ‰“æˆ‘ï¼\n",
+	    "é£ŸèŸ»ç¸èªª: æ•‘å‘½å•Š! æ¬ºè² å¼±å°å•Š ï½ï½\n",
 	    }) );
-	set_c_verbs( ({ "%sÒ§%s", "%sÌß%s", "%sÓÃÁ¦×²%s" }) );
-	set_c_limbs( ({ "ÉíÌå", "×¦×Ó", "½Å", "Í·", "Î²°Í", "ÉàÍ·", }) );
+	set_c_verbs( ({ "%så’¬%s", "%sè¸¢%s", "%sç”¨åŠ›æ’%s" }) );
+	set_c_limbs( ({ "èº«é«”", "çˆªå­", "è…³", "é ­", "å°¾å·´", "èˆŒé ­", }) );
 }
 /*
 
@@ -55,13 +55,13 @@ void relay_message(string class, string msg)
       string who,tmp;
       object obj;
 
-      if ( sscanf( msg, "%s(%s)×ßÁË¹ıÀ´¡£", tmp,who )==2 ) {
+      if ( sscanf( msg, "%s(%s)èµ°äº†éä¾†ã€‚", tmp,who )==2 ) {
         obj = present(lower_case(who), environment(this_object()) );
         if( !obj ) return;
         if( (string)obj->query("race") == "ant" ) {
           tell_room( environment(this_object()) , 
-            "Ê³ÒÏÊŞËµ: ÂìÒÏ!!! ÓĞ¾ÈÁË£¬¹Ô¹ÔµÄ±ğÅÜ£¬ºÃºÃÈÃÎÒ³Ô°É!\n"+
-            "Ê³ÒÏÊŞÒ»¿Ú¾Í°Ñ"+obj->query("c_name")+"ÍÌÏÂ¶ÇÁË¡£\n"
+            "é£ŸèŸ»ç¸èªª: èèŸ»!!! æœ‰æ•‘äº†ï¼Œä¹–ä¹–çš„åˆ¥è·‘ï¼Œå¥½å¥½è®“æˆ‘åƒå§!\n"+
+            "é£ŸèŸ»ç¸ä¸€å£å°±æŠŠ"+obj->query("c_name")+"åä¸‹è‚šäº†ã€‚\n"
             , this_object()
           );
           obj->remove();
@@ -88,9 +88,9 @@ int to_feed( string str )
     int left, i;
     
     if( !str || str == "" )
-      return notify_fail("Î¹Ë­ ?\n");
+      return notify_fail("å–‚èª° ?\n");
     if( str != "anteater" )
-      return notify_fail("Ã»¿´µ½ÓĞÕâ¸ö¶«¶«°¡ £¿\n");
+      return notify_fail("æ²’çœ‹åˆ°æœ‰é€™å€‹æ±æ±å•Š ï¼Ÿ\n");
     player = this_player();
     left = MAX - (int)player->query_temp("anteater");
     corpse = filter_array( all_inventory(player),
@@ -98,35 +98,35 @@ int to_feed( string str )
     i = sizeof( corpse );
     if( !i )
       tell_object( player,
-        "Ê³ÒÏÊŞºÜ²»¸ßĞËµÄµÉÖøÄãËµ: ÄãÄÃÊ²÷áÎ¹ÎÒ?\n" );
+        "é£ŸèŸ»ç¸å¾ˆä¸é«˜èˆˆçš„çªè‘—ä½ èªª: ä½ æ‹¿ä»€éº¼é¤µæˆ‘?\n" );
     else {
       while( i-- ) {
         if( (string)corpse[i]->query("type")=="ant" ) {
           tell_object( player,
-            "Ê³ÒÏÊŞ¸ßĞËµÄ°Ñ"+corpse[i]->query("c_name")+
-            "ÍÌÏÂ¶Ç²¢Â¶³öÂú×ãµÄ±íÇé¡£\n" );
+            "é£ŸèŸ»ç¸é«˜èˆˆçš„æŠŠ"+corpse[i]->query("c_name")+
+            "åä¸‹è‚šä¸¦éœ²å‡ºæ»¿è¶³çš„è¡¨æƒ…ã€‚\n" );
           left--;
           corpse[i]->remove();
         } else {
           tell_object( player, 
-          "Ê³ÒÏÊŞ¸ßĞËµÄ°Ñ"+corpse[i]->query("c_name")+
-            "ÍÌÏÂ¶Çµ«È´Â¶³öÄÑ¿´µÄ±íÇé¡£\n" );
+          "é£ŸèŸ»ç¸é«˜èˆˆçš„æŠŠ"+corpse[i]->query("c_name")+
+            "åä¸‹è‚šä½†å»éœ²å‡ºé›£çœ‹çš„è¡¨æƒ…ã€‚\n" );
           corpse[i]->remove();
         }
       }
       if( left <= 0 && (int)player->query_quest_level("anteater") < 1 ) {
         tell_object( player,
-          "Ê³ÒÏÊŞÂúÒâµÄËµ: Ğ»Ğ»Äã! ÎÒ³Ô±¥ÁË!\n"
-          "   [ Äã¾ÈÁËÊ³ÒÏÊŞ£¬»ñµÃ 4000 µã¾­ÑéÖµ¡£]\n" );
+          "é£ŸèŸ»ç¸æ»¿æ„çš„èªª: è¬è¬ä½ ! æˆ‘åƒé£½äº†!\n"
+          "   [ ä½ æ•‘äº†é£ŸèŸ»ç¸ï¼Œç²å¾— 4000 é»ç¶“é©—å€¼ã€‚]\n" );
         player->finish_quest("anteater",1);
         player->gain_experience(4000);
       } else if( (MAX - left) > (int)player->query_temp("anteater") ) {
         tell_object( player, 
-          "Ê³ÒÏÊŞ¸ßĞËµÄËµ: Ğ»Ğ»Äã! ºÃºÃ³Ô£¬ÎÒ»¹Òª¡£\n" );
+          "é£ŸèŸ»ç¸é«˜èˆˆçš„èªª: è¬è¬ä½ ! å¥½å¥½åƒï¼Œæˆ‘é‚„è¦ã€‚\n" );
         player->set_temp("anteater", MAX-left);
       } else
         tell_object( player,
-          "Ê³ÒÏÊŞÊ§ÍûµÄËµ: ¶¼²»ºÃ³Ô£¬ÓĞÃ»ÓĞ±ğÖÖµÄ?\n" );
+          "é£ŸèŸ»ç¸å¤±æœ›çš„èªª: éƒ½ä¸å¥½åƒï¼Œæœ‰æ²’æœ‰åˆ¥ç¨®çš„?\n" );
     }
     return 1;
 }
@@ -134,7 +134,7 @@ int to_feed( string str )
 void to_emote( object obj )
 {
       tell_room( environment(obj), 
-            "Ê³ÒÏÊŞËµ: ºÃ³Ô!!»¹ÓĞÃ»ÓĞ?\n" , obj
+            "é£ŸèŸ»ç¸èªª: å¥½åƒ!!é‚„æœ‰æ²’æœ‰?\n" , obj
       );
 }
 

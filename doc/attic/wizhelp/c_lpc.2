@@ -1,14 +1,14 @@
 
-                    ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-                    ¡õ                          ¡õ
-                    ¡õ       £Ì£Ğ£Ã½²×ù¡õ       ¡õ
-                    ¡õ                          ¡õ
-                    ¡õ        Elon Ö÷½²         ¡õ
-                    ¡õ        1994.3.12         ¡õ
-                    ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+                    â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+                    â–¡                          â–¡
+                    â–¡       ï¼¬ï¼°ï¼£è¬›åº§â–¡       â–¡
+                    â–¡                          â–¡
+                    â–¡        Elon ä¸»è¬›         â–¡
+                    â–¡        1994.3.12         â–¡
+                    â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 
 
-¡ÑÊ×ÏÈ£¬ÊÇ½éÉÜMUDµÄÀúÊ·¡Ñ
+âŠ™é¦–å…ˆï¼Œæ˜¯ä»‹ç´¹MUDçš„æ­·å²âŠ™
 In the beginning someone created Tinymud. So Tinymud is the first MUD (formally)
 it uses database. the whole world is saved in a single file.
 diku was created that way too, but with some modification.
@@ -33,11 +33,11 @@ CD driver were used mostly in European muds and MudOS in US muds.
 
 
 
-¡Ñ Well, ´ÓÕâÀï¿ªÊ¼£¬ÎÒÃÇÕıÊ½½øÈëLPµÄÄÚÈİ ¡Ñ
+âŠ™ Well, å¾é€™è£¡é–‹å§‹ï¼Œæˆ‘å€‘æ­£å¼é€²å…¥LPçš„å…§å®¹ âŠ™
 how lp works:
 
 
-¡îÏÂÃæ¼òµ¥µÄ½éÉÜFunctions and ¼Ì³ĞµÄ¸ÅÄî¡î
+â˜†ä¸‹é¢ç°¡å–®çš„ä»‹ç´¹Functions and ç¹¼æ‰¿çš„æ¦‚å¿µâ˜†
 LP consists of two parts: driver and mudlib
 driver is the binary code, and the interpreter,
 which will be used to "run" the mudlib.
@@ -56,7 +56,7 @@ but *some* will slways be the same as long as the driver is the same.
 why? because there is so few name to use for function names :)
 for example: set_name() will probably be used everywhere.
 
-Q : set_name?...ESÖĞÓĞÂğ?
+Q : set_name?...ESä¸­æœ‰å—?
 A : yes. set_name() in all objects.
     and you should set that (both chinese and English)
     btw- it's also as known as set("name",xxx)
@@ -93,14 +93,14 @@ which saves a lot of memory.
 ok. questions before we start specific codes.. (room, mob, .. etc)
 the rest will be pretty much lib dependent, means mostly for ES coding
 
-¡î´ÓÕâÀï¿ªÊ¼½Ìµ¼ÈçºÎĞ´Ò»¸ö·¿¼ä¡î
+â˜†å¾é€™è£¡é–‹å§‹æ•™å°å¦‚ä½•å¯«ä¸€å€‹æˆ¿é–“â˜†
 to create a room, first you inherit the generic room.
 (now you got a brand new room to modify)
 major part (must have) in room file : create()
 in create() you'll need to include the defination
 (ie, name, desc) for your room file.
 
-(<Wind> To Ñ§¹ı C++ µÄÈË...create()¾ÍµÈì¶ÊÇC++ ÖĞµÄ main())
+(<Wind> To å­¸é C++ çš„äºº...create()å°±ç­‰æ–¼æ˜¯C++ ä¸­çš„ main())
 
 but first, since you only told the driver to "inherit" a copy of room,
 you also need to tell it to call the original create() the ones at
@@ -119,37 +119,37 @@ into a room.
 in ES, since it supports both chinese and english mode,
 the function to set long and short desc would be like:
 set_short(english,chinese);
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ (Wind ¾ÙÀı:     set_short( "Adventurer Guild", "Ã°ÏÕÕß¹«»á" );)  ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡ (Wind èˆ‰ä¾‹:     set_short( "Adventurer Guild", "å†’éšªè€…å…¬æœƒ" );)  â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 set_short CAN NOT have \n tho..
 it only means to be one line anyway..
 set_long has the same syntax..
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ¾ÙÀı£º                                                                  ¡õ
-¡õ"You are in the Adventurer Guild of Farwind. You are welcome to here\n" ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡èˆ‰ä¾‹ï¼š                                                                  â–¡
+â–¡"You are in the Adventurer Guild of Farwind. You are welcome to here\n" â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 but with long description, you need \n to wrap lines..
 now we have long and short desc, we need exit,
 unless you are building a prison..
 
-Q : Scorpion_ ÎÊ:Òª²»Òª¹Üascii ¿ØÖÆÂë?
+Q : Scorpion_ å•:è¦ä¸è¦ç®¡ascii æ§åˆ¶ç¢¼?
 A : scor: yes.. u need to put escape char before control char..
           (and some weird Chinese char too)
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ ¾ÙÀı£º                                       ¡õ
-¡õ <Wind>     set("exits", ([                   ¡õ
-¡õ <Wind>         "east" : FARWIND"smain",      ¡õ
-¡õ <Wind>         "west" : "/d/wiz/wiz_hall",   ¡õ
-¡õ <Wind>         "up" : FARWIND"adv_storage",  ¡õ
-¡õ <Wind>         "down":FARWIND"quest_room",   ¡õ
-¡õ <Wind>     ]) ) ;                            ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡ èˆ‰ä¾‹ï¼š                                       â–¡
+â–¡ <Wind>     set("exits", ([                   â–¡
+â–¡ <Wind>         "east" : FARWIND"smain",      â–¡
+â–¡ <Wind>         "west" : "/d/wiz/wiz_hall",   â–¡
+â–¡ <Wind>         "up" : FARWIND"adv_storage",  â–¡
+â–¡ <Wind>         "down":FARWIND"quest_room",   â–¡
+â–¡ <Wind>     ]) ) ;                            â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 and one last thing: lights. since I found ES's generic room default
 lights to be 0.. (unusual)
 or set_light(1); I believe this works as well..
 
-<Wind> Ya...³õÑ§ÕßÒªĞ¡ĞÄ£¬²»È»»áĞ´³öÒ»¶ÑµÄºÚ°µµØÇø...
+<Wind> Ya...åˆå­¸è€…è¦å°å¿ƒï¼Œä¸ç„¶æœƒå¯«å‡ºä¸€å †çš„é»‘æš—åœ°å€...
 
 (pay special notice to this function, you can use it to create some
 funny stuff, like light switch :)
@@ -159,25 +159,25 @@ IF you are working with libs support infrasion, light can be more than 0 and 1.
 Thus we have a basic room. But it's boring to create 100 roms like this.
 sometimes we need to add furnitures into a room (sign, plaque)
 
-Q : Scorpion_ ÎÊ:ÄÇÔÚÊÒÍâÓĞ°×ÌìºÍÍíÉÏÄØ?
-A : <Wind> ÔÚESÖĞÊ±¼ä²»Ó°Ïìlight...
+Q : Scorpion_ å•:é‚£åœ¨å®¤å¤–æœ‰ç™½å¤©å’Œæ™šä¸Šå‘¢?
+A : <Wind> åœ¨ESä¸­æ™‚é–“ä¸å½±éŸ¿light...
     <elon> scor: there is a special mark for room that's outside.
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ ¾ÙÀıÂŞ...                                                            ¡õ
-¡õ     set("c_item_desc", ([                                            ¡õ
-¡õ         "sign" : @C_SIGN                                             ¡õ
-¡õ ÕâÕÅ¸æÊ¾Ğ´Öø:                                                        ¡õ
-¡õ ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª ¡õ
-¡õ »¶Ó­À´µ½Ã°ÏÕÕß¹«»á:                                                  ¡õ
-¡õ     Ã°ÏÕÕß¹«»áÊÇÊôì¶ËùÓĞÔÚÕâ¸öÊÀ½çÉÏÃ°ÏÕµÄÈË£¬²»¹ÜÄãÊÇ·ñ¼ÓÈëÁËÆäËüµÄ ¡õ
-¡õ ¹«»á£¬ÕâÀïµÄ´óÃÅÓÀÔ¶ÎªÄã¶ø³¨¿ª¡£Äã¿ÉÒÔÔÚÕâÀïÑµÁ·(train) ¼¼ÄÜ»òÌáÉı ( ¡õ
-¡õ advance)µÈ¼¶ÓëÊôĞÔ£¬ÊäÈë help guild ¿ÉÒÔµÃµ½¸üÏêÏ¸µÄËµÃ÷¡£           ¡õ
-¡õ     ÓĞ¹Ø±¾¹«»áµÄÏêÏ¸ÇéĞÎ£¬ÇëÓÃ help adventurers¡£                    ¡õ
-¡õ ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª ¡õ
-¡õ C_SIGN                                                               ¡õ
-¡õ         ]) );                                                        ¡õ
-¡õ                                                                      ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡ èˆ‰ä¾‹ç¾…...                                                            â–¡
+â–¡     set("c_item_desc", ([                                            â–¡
+â–¡         "sign" : @C_SIGN                                             â–¡
+â–¡ é€™å¼µå‘Šç¤ºå¯«è‘—:                                                        â–¡
+â–¡ â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” â–¡
+â–¡ æ­¡è¿ä¾†åˆ°å†’éšªè€…å…¬æœƒ:                                                  â–¡
+â–¡     å†’éšªè€…å…¬æœƒæ˜¯å±¬æ–¼æ‰€æœ‰åœ¨é€™å€‹ä¸–ç•Œä¸Šå†’éšªçš„äººï¼Œä¸ç®¡ä½ æ˜¯å¦åŠ å…¥äº†å…¶å®ƒçš„ â–¡
+â–¡ å…¬æœƒï¼Œé€™è£¡çš„å¤§é–€æ°¸é ç‚ºä½ è€Œæ•é–‹ã€‚ä½ å¯ä»¥åœ¨é€™è£¡è¨“ç·´(train) æŠ€èƒ½æˆ–æå‡ ( â–¡
+â–¡ advance)ç­‰ç´šèˆ‡å±¬æ€§ï¼Œè¼¸å…¥ help guild å¯ä»¥å¾—åˆ°æ›´è©³ç´°çš„èªªæ˜ã€‚           â–¡
+â–¡     æœ‰é—œæœ¬å…¬æœƒçš„è©³ç´°æƒ…å½¢ï¼Œè«‹ç”¨ help adventurersã€‚                    â–¡
+â–¡ â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” â–¡
+â–¡ C_SIGN                                                               â–¡
+â–¡         ]) );                                                        â–¡
+â–¡                                                                      â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 from the example, we see that an iten "sign" has been define.
 now since ES operates in both language,
 we need to define item_desc and c_item_desc
@@ -185,94 +185,94 @@ so when a player typed look sign in that room,
 he/she will get the desc u define for sign.
 this saves the disk space and meory to load an actual sign object.
 
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ<Wind> @AA .... AA µÄÓÃ·¨¿ÉÒÔ°ïÖúÄãĞ´½Ï´óµÄĞğÊö£¬²»È»¾ÍÒªÏñÕâÑùĞ´:        ¡õ
-¡õ                                                                          ¡õ
-¡õ"ÄãÏÖÔÚÎ»ì¶Ô¶·çÕòµÄÃ°ÏÕÕß¹«»á£¬Õâ¡õËæÊ±»¶Ó­Æ£¾ë»òĞèÒªĞİÏ¢µÄÃ°ÏÕÕß\n"      ¡õ
-¡õ+"¹âÁÙ¡£ÔÚÎİ×ÓµÄÒ»½ÇÓĞ×ùÂ¥ÌİÍ¨Íù¶şÂ¥µÄ²Ö¿â£¬ÔÚ³ö¿Ú¸½½üÄã¿ÉÒÔ¿´µ½Ò»ÕÅ¸æ\n" ¡õ
-¡õ+"Ê¾(sign)£¬Î÷±ßµÄÇ½ÉÏÓĞÒ»¸öÉÁÖøÆæ»Ã¹âÃ¢µÄÁ¦³¡¡£ÒÔ¼°ÓĞÒ»¸öºÜ´óµÄ½×ÌİÍ¨\n" ¡õ
-¡õ"ÍùÏÂÃæµÄÒ»¸ö´óÌü.\n"                                                     ¡õ
-¡õ                                                                          ¡õ
-¡õ<Wind> ÕâÑù¾ÍºÜÀÛÁË...                                                    ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡<Wind> @AA .... AA çš„ç”¨æ³•å¯ä»¥å¹«åŠ©ä½ å¯«è¼ƒå¤§çš„æ•˜è¿°ï¼Œä¸ç„¶å°±è¦åƒé€™æ¨£å¯«:        â–¡
+â–¡                                                                          â–¡
+â–¡"ä½ ç¾åœ¨ä½æ–¼é é¢¨é®çš„å†’éšªè€…å…¬æœƒï¼Œé€™â–¡éš¨æ™‚æ­¡è¿ç–²å€¦æˆ–éœ€è¦ä¼‘æ¯çš„å†’éšªè€…\n"      â–¡
+â–¡+"å…‰è‡¨ã€‚åœ¨å±‹å­çš„ä¸€è§’æœ‰åº§æ¨“æ¢¯é€šå¾€äºŒæ¨“çš„å€‰åº«ï¼Œåœ¨å‡ºå£é™„è¿‘ä½ å¯ä»¥çœ‹åˆ°ä¸€å¼µå‘Š\n" â–¡
+â–¡+"ç¤º(sign)ï¼Œè¥¿é‚Šçš„ç‰†ä¸Šæœ‰ä¸€å€‹é–ƒè‘—å¥‡å¹»å…‰èŠ’çš„åŠ›å ´ã€‚ä»¥åŠæœ‰ä¸€å€‹å¾ˆå¤§çš„éšæ¢¯é€š\n" â–¡
+â–¡"å¾€ä¸‹é¢çš„ä¸€å€‹å¤§å»³.\n"                                                     â–¡
+â–¡                                                                          â–¡
+â–¡<Wind> é€™æ¨£å°±å¾ˆç´¯äº†...                                                    â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 actually.. depends on the taste.. I like \n better :P
 but there's nothing wrong with both method.
 and remember, always check lib doc.. some doesn't support @start start..
 
-Q : Scorpion_ Ò²¾ÍÊÇËµ,@aa xx aa »ò"xx\n"ÈÎÑ¡ÆäÒ»?
+Q : Scorpion_ ä¹Ÿå°±æ˜¯èªª,@aa xx aa æˆ–"xx\n"ä»»é¸å…¶ä¸€?
 A : Yes
 
 
-¡îÔÙÏÂÀ´ÊÇÔÚ·Ö±ğ ([...]) Óë ({...}) µÄ²»Í¬¡î (p.s Õâ¶ÎºÜÀÛ...)
-<Wind>  ([ ....]) ´ú±íÒ»ÖÖmapping
-<Wind> ÀıÈç£º
+â˜†å†ä¸‹ä¾†æ˜¯åœ¨åˆ†åˆ¥ ([...]) èˆ‡ ({...}) çš„ä¸åŒâ˜† (p.s é€™æ®µå¾ˆç´¯...)
+<Wind>  ([ ....]) ä»£è¡¨ä¸€ç¨®mapping
+<Wind> ä¾‹å¦‚ï¼š
 <Wind>     set("exits", ([
 <Wind>         "east" : FARWIND"smain",
 <Wind>         "west" : "/d/wiz/wiz_hall",
 <Wind>         "up" : FARWIND"adv_storage",
 <Wind>         "down":FARWIND"quest_room",
 <Wind>     ]) ) ;
-<Wind> ÖĞ£¬exitsÓĞºÜ¶à¸ö...¾ÍÓÃ ([]) ½«ËûÃÇÀ¨ÆğÀ´...
-<Wind> ÆäÖĞÃ¿Ò»¸ö³ö¿Ú¶ÔÓ¦Ò»¸öµµ°¸... ÖĞ¼äÓÃÃ°ºÅ¸ô¿ª
-<Wind> ×¢Òâ£¬ÔÚ ([]) ÖĞ£¬Ò»¶¨ÊÇ¡¸Ò»¸ö¶«Î÷¡¹ £º ¡¸Ò»¸ö¶«Î÷¡¹...
+<Wind> ä¸­ï¼Œexitsæœ‰å¾ˆå¤šå€‹...å°±ç”¨ ([]) å°‡ä»–å€‘æ‹¬èµ·ä¾†...
+<Wind> å…¶ä¸­æ¯ä¸€å€‹å‡ºå£å°æ‡‰ä¸€å€‹æª”æ¡ˆ... ä¸­é–“ç”¨å†’è™Ÿéš”é–‹
+<Wind> æ³¨æ„ï¼Œåœ¨ ([]) ä¸­ï¼Œä¸€å®šæ˜¯ã€Œä¸€å€‹æ±è¥¿ã€ ï¼š ã€Œä¸€å€‹æ±è¥¿ã€...
 
-<Wind> ¶ø ({....}) ÄØ...ÎÒÃÇÀ´¿´ÏÂÒ»¸öÀı×Ó
+<Wind> è€Œ ({....}) å‘¢...æˆ‘å€‘ä¾†çœ‹ä¸‹ä¸€å€‹ä¾‹å­
 <Wind>     add( "id" , ({ "wine","xo" }) );
-<Wind> ÕâÊÇxoµÄµµ°¸ÖĞµÄÒ»ĞĞ...
-<Wind> ÎÒÃÇ¶¼ÖªµÀ£¬Ò»¸ö¶«Î÷²»Ö»Ò»¸öÃû×Ö...Äã¿ÉÒÔget xo, Ò²¿ÉÒÔget wine...
-<Wind> Õâ¸ö½ĞÕóÁĞ...
-<Wind> °ÚÔÚÕóÁĞÖĞµÄ¶«Î÷ÊÇÒ»¶Ñ×ÊÁÏ£¬²¢Ã»ÓĞmapµÄ¶¯×÷...
-<Wind> ¶ø mapping ¾ÍÊÇ°ÑÒ»¸ö¶«¶«¶ÔÓ¦µ½ÁíÒ»¸ö¶«¶«...
-<Wind> ÀıÈç "east" ¶ÔÓ¦µ½Ò»¸ö file...
-<Wind> ÆäÖĞÃ°ºÅÀ´´ú±ímapµÄ¶¯×÷..
-<Wind> ÕâÑù´ó¸Å¿ÉÒÔ·Ö±ğÁË..
+<Wind> é€™æ˜¯xoçš„æª”æ¡ˆä¸­çš„ä¸€è¡Œ...
+<Wind> æˆ‘å€‘éƒ½çŸ¥é“ï¼Œä¸€å€‹æ±è¥¿ä¸åªä¸€å€‹åå­—...ä½ å¯ä»¥get xo, ä¹Ÿå¯ä»¥get wine...
+<Wind> é€™å€‹å«é™£åˆ—...
+<Wind> æ“ºåœ¨é™£åˆ—ä¸­çš„æ±è¥¿æ˜¯ä¸€å †è³‡æ–™ï¼Œä¸¦æ²’æœ‰mapçš„å‹•ä½œ...
+<Wind> è€Œ mapping å°±æ˜¯æŠŠä¸€å€‹æ±æ±å°æ‡‰åˆ°å¦ä¸€å€‹æ±æ±...
+<Wind> ä¾‹å¦‚ "east" å°æ‡‰åˆ°ä¸€å€‹ file...
+<Wind> å…¶ä¸­å†’è™Ÿä¾†ä»£è¡¨mapçš„å‹•ä½œ..
+<Wind> é€™æ¨£å¤§æ¦‚å¯ä»¥åˆ†åˆ¥äº†..
 
-¡îÏÂÃæÔÚ½Ìµ¼Ò»Ğ©½ÏÊ¡ÊÂµÄ²ÎÊıÉè¶¨...Ğ´Ò»¸ö×Ô¼ºµÄ XXXX.h ¡î
+â˜†ä¸‹é¢åœ¨æ•™å°ä¸€äº›è¼ƒçœäº‹çš„åƒæ•¸è¨­å®š...å¯«ä¸€å€‹è‡ªå·±çš„ XXXX.h â˜†
 sometimes it's wasting time to type out the whole path.
 so we #define a keyword, in this case, FARWIND,
 to "/d/noden/farwind/"
 which is the exact location of the file.
 so FARWIND"smain" means /d/noden/farwind/smain
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ  <Wind> #define FARWIND "/d/noden/farwind/"  ¡õ
-¡õ  <Wind> #include <mudlib.h>                  ¡õ
-¡õ  <Wind> ÕâÊÇfarwind.hµÄÄÚÈİ...               ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡  <Wind> #define FARWIND "/d/noden/farwind/"  â–¡
+â–¡  <Wind> #include <mudlib.h>                  â–¡
+â–¡  <Wind> é€™æ˜¯farwind.hçš„å…§å®¹...               â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 this is to make life easier if someone decide to move farwind
 directory to somewhere else..
 so wizards won't ended up editing 100+ files to change pathname.
 best way to do is to have a defination file called farwind.h
 and all farwind files includes it.
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ  <Wind> ÕâÊÇ wind.h ...ÒÔÏÂ£º                              ¡õ
-¡õ  <Wind> #define WROOM "/u/w/wind/rooms/"                   ¡õ
-¡õ  <Wind> #define WWEAPON "/u/w/wind/weapon/"                ¡õ
-¡õ  <Wind> #define WARMOR "/u/w/wind/armor/"                  ¡õ
-¡õ  <Wind> #define WMONSTER "/u/w/k/wind/monster/"            ¡õ
-¡õ  <Wind> #define NAME this_player()->query("cap_name")      ¡õ
-¡õ  <Wind> #define C_NAME this_player()->query("c_cap_name")  ¡õ
-¡õ  <Wind> #define F_NAME C_NAME+"( "+NAME+" )"               ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡  <Wind> é€™æ˜¯ wind.h ...ä»¥ä¸‹ï¼š                              â–¡
+â–¡  <Wind> #define WROOM "/u/w/wind/rooms/"                   â–¡
+â–¡  <Wind> #define WWEAPON "/u/w/wind/weapon/"                â–¡
+â–¡  <Wind> #define WARMOR "/u/w/wind/armor/"                  â–¡
+â–¡  <Wind> #define WMONSTER "/u/w/k/wind/monster/"            â–¡
+â–¡  <Wind> #define NAME this_player()->query("cap_name")      â–¡
+â–¡  <Wind> #define C_NAME this_player()->query("c_cap_name")  â–¡
+â–¡  <Wind> #define F_NAME C_NAME+"( "+NAME+" )"               â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 ok.. a room is basicly complete now..
 
-¡î Wind ¾ÙÀı²»µ±£¬¿ªÊ¼Ç£³¶µ½Ò»Ğ©Îï¼şµ¼ÏòµÄÎÊÌâ... ¡î
-Q : Scorpion_ ÎÊ:this_player()->query("c_cap_name")ÊÇÊ²÷áÒâË¼?
+â˜† Wind èˆ‰ä¾‹ä¸ç•¶ï¼Œé–‹å§‹ç‰½æ‰¯åˆ°ä¸€äº›ç‰©ä»¶å°å‘çš„å•é¡Œ... â˜†
+Q : Scorpion_ å•:this_player()->query("c_cap_name")æ˜¯ä»€éº¼æ„æ€?
 A : this_player() : the player calling the function
     -> calling , query("c_cap_name) name of the calling obj
                     
 sometimes we want to add some "fun" thing in a room..
 like if you look at something, something will smile at you (ie, painting ..)
-Scorpion : Ò²¾ÍÊÇplayer×öÁËÄ³Ğ©¶¯×ö¾Ícall this_player Õâ¸öfunction ?
+Scorpion : ä¹Ÿå°±æ˜¯playeråšäº†æŸäº›å‹•åšå°±call this_player é€™å€‹function ?
 
 for example, in a room with painting, if you look at it, it will smiles at u.
 then we need to use the item_func property.
 (btw- all the set(xxx) where xxx are properties.
-ÕâÓ¦¸ÃËãÊÇÒ»¸öÎï¼ş£¨object£©¶ø²»ÊÇfunction
+é€™æ‡‰è©²ç®—æ˜¯ä¸€å€‹ç‰©ä»¶ï¼ˆobjectï¼‰è€Œä¸æ˜¯function
 with item_func you don't need to create an actual object painting
 to do this effect.
 
-<Wind> this_player()->query("c_cap_name") ±íÊ¾È¥call
-       this_player()ÖĞµÄqueryÕâ¸öfunction...
+<Wind> this_player()->query("c_cap_name") è¡¨ç¤ºå»call
+       this_player()ä¸­çš„queryé€™å€‹function...
 
 btw- those of you who reads the propertiy files under
 /doc/properties/room.properties..
@@ -282,37 +282,37 @@ there's an error in syntax of item_func
 <Wind> by the way
 
 this_player() is the calling object.
-this_player() ÊÇÈ¥ call µÄ. query() ÊÇ±» call µÄ.
-<Wind> ĞèÒªÒ»µãÎï¼şµ¼Ïò£¨OOP£©µÄ¹ÛÄî£¬ÓĞÈËÅª²»¶®Âğ£¿
-Ã¿¸öplayerÊÇÒ»¶Î³ÌÊ½£¨Ò»¸öÎï¼ş£©
-Ã¿¸öÎïÆ·£¨EX.ÁúÑª¡õ£©Ò²ÊÇ
-<Wind> this_player() Õâ¸öfunction»áÈ¥callÕâ¸öÍæ¼ÒµÄÕâ¶Î³ÌÊ½...
+this_player() æ˜¯å» call çš„. query() æ˜¯è¢« call çš„.
+<Wind> éœ€è¦ä¸€é»ç‰©ä»¶å°å‘ï¼ˆOOPï¼‰çš„è§€å¿µï¼Œæœ‰äººå¼„ä¸æ‡‚å—ï¼Ÿ
+æ¯å€‹playeræ˜¯ä¸€æ®µç¨‹å¼ï¼ˆä¸€å€‹ç‰©ä»¶ï¼‰
+æ¯å€‹ç‰©å“ï¼ˆEX.é¾è¡€â–¡ï¼‰ä¹Ÿæ˜¯
+<Wind> this_player() é€™å€‹functionæœƒå»callé€™å€‹ç©å®¶çš„é€™æ®µç¨‹å¼...
 <Wind> this_player()->query()
-<Wind> ¾ÍÊÇÈ¥callÕâ¸öÍæ¼Ò£¨µÄ³ÌÊ½£©ÖĞµÄqueryÕâ¸öº¯Êı...
+<Wind> å°±æ˜¯å»callé€™å€‹ç©å®¶ï¼ˆçš„ç¨‹å¼ï¼‰ä¸­çš„queryé€™å€‹å‡½æ•¸...
 
-¡î ÏÂÃæElon¿ªÊ¼½Ìitem_funcµÄÓÃ·¨ ¡î
+â˜† ä¸‹é¢Eloné–‹å§‹æ•™item_funcçš„ç”¨æ³• â˜†
 
-»ù±¾ĞÎÊ½
+åŸºæœ¬å½¢å¼
 set("item_func",(["obj":"function_to_call"]));
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ<Wind> ¾Ù¸öÀı×Ó£¨±§Ç¸£¬ÕÒ²»µ½Ê²÷áºÃÀı×Ó£¬ËùÒÔÓÃÎÒ×Ô¼ºµÄ£© ¡õ
-¡õ<Wind>     set( "item_func", ([                           ¡õ
-¡õ<Wind>         "pipe" : "touch_pipe" ]) );                ¡õ
-¡õ<Wind> ×¢Òâµ½à¸£¬Õâ¸öÒ²ÊÇÓÃmapping                        ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡<Wind> èˆ‰å€‹ä¾‹å­ï¼ˆæŠ±æ­‰ï¼Œæ‰¾ä¸åˆ°ä»€éº¼å¥½ä¾‹å­ï¼Œæ‰€ä»¥ç”¨æˆ‘è‡ªå·±çš„ï¼‰ â–¡
+â–¡<Wind>     set( "item_func", ([                           â–¡
+â–¡<Wind>         "pipe" : "touch_pipe" ]) );                â–¡
+â–¡<Wind> æ³¨æ„åˆ°å–”ï¼Œé€™å€‹ä¹Ÿæ˜¯ç”¨mapping                        â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 so when you "look" at pipe. the function touch_pipe is called.
 then you can write a function touch_pipe() in your code to do
 whatever you want to do.
 
 let's not go into the detail on how to write that function.
 we just want to know it's possible to create "fake" object that does something.
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õint touch_pipe()                                                        ¡õ
-¡õ{                                                                       ¡õ
-¡õ  .....[QUOTE DELETE].... (p.s. ±§Ç¸£¬ÒòÎªÕâËã»úÃÜ£¬ËùÒÔÎÒ°ÑËûÉ¾µôÁË...)¡õ
-¡õ  return 1;                                                             ¡õ
-¡õ}                                                                       ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡int touch_pipe()                                                        â–¡
+â–¡{                                                                       â–¡
+â–¡  .....[QUOTE DELETE].... (p.s. æŠ±æ­‰ï¼Œå› ç‚ºé€™ç®—æ©Ÿå¯†ï¼Œæ‰€ä»¥æˆ‘æŠŠä»–åˆªæ‰äº†...)â–¡
+â–¡  return 1;                                                             â–¡
+â–¡}                                                                       â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 "item_func" and "item_desc" are both useful and save a lot of memory.
 they are the new addition of LPC3, LPC2 doesn't have this.
 since not all of them you will use in every room you create.
@@ -325,42 +325,42 @@ as some of you might see Yamor or Rashudi running around.. <grin>
 so monster shares a lot of properties with player.
 names, levels, hp,sp, stats.. etc just to name a few.
 
-¡î ÏÂÃæ¿ªÊ¼½ÌÄÇ¸öMOBµÄĞ´·¨ ... ¡î
+â˜† ä¸‹é¢é–‹å§‹æ•™é‚£å€‹MOBçš„å¯«æ³• ... â˜†
 
-     <Wind> : ´«ËµÖĞµÄ×íººÀ´ÁË
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
-¡õ   #include <mudlib.h>                                                    ¡õ
-¡õ   inherit MONSTER;                                                       ¡õ
-¡õ   void create()                                                          ¡õ
-¡õ   {                                                                      ¡õ
-¡õ           object ob1, ob2;                                               ¡õ
-¡õ           ::create();                                                    ¡õ
-¡õ           set_level(2);                                                  ¡õ
-¡õ           set_name( "drunk", "×íºº" );                                   ¡õ
-¡õ           set_short( "a drunk", "×íºº" );                                ¡õ
-¡õ           set_long(                                                      ¡õ
-¡õ                   "You see a smelly drunk. He looks sad and down.\n",    ¡õ
-¡õ   "Ò»¸ö»ëÉí¾Æ³ôÎ¶µÄ×íºº£¬¿´ËûÊ§ÒâÁÊµ¹µÄÑù×Ó£¬²»ÖªµÀÊÇÔâµ½Ê²÷á²»ĞÒ"       ¡õ
-¡õ                   "»¹ÊÇ×Ô¸Ê¶éÂä¡£\n"                                     ¡õ
-¡õ           );                                                             ¡õ
-¡õ           set_perm_stat( "str", 3 );                                     ¡õ
-¡õ           set_skill( "dodge", 10 );                                      ¡õ
-¡õ           set( "gender", "male" );                                       ¡õ
-¡õ           set( "race", "human" );                                        ¡õ
-¡õ           set( "alignment", -100 );                                      ¡õ
-¡õ           ob1 = new( "/d/noden/farwind/items/coat" );                    ¡õ
-¡õ           ob1->move( this_object() );                                    ¡õ
-¡õ           equip_armor( ob1 );                                            ¡õ
-¡õ           ob2 = new( "/d/noden/farwind/items/bottle" );                  ¡õ
-¡õ           ob2->move( this_object() );                                    ¡õ
-¡õ   }                                                                      ¡õ
-¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ
+     <Wind> : å‚³èªªä¸­çš„é†‰æ¼¢ä¾†äº†
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
+â–¡   #include <mudlib.h>                                                    â–¡
+â–¡   inherit MONSTER;                                                       â–¡
+â–¡   void create()                                                          â–¡
+â–¡   {                                                                      â–¡
+â–¡           object ob1, ob2;                                               â–¡
+â–¡           ::create();                                                    â–¡
+â–¡           set_level(2);                                                  â–¡
+â–¡           set_name( "drunk", "é†‰æ¼¢" );                                   â–¡
+â–¡           set_short( "a drunk", "é†‰æ¼¢" );                                â–¡
+â–¡           set_long(                                                      â–¡
+â–¡                   "You see a smelly drunk. He looks sad and down.\n",    â–¡
+â–¡   "ä¸€å€‹æ¸¾èº«é…’è‡­å‘³çš„é†‰æ¼¢ï¼Œçœ‹ä»–å¤±æ„æ½¦å€’çš„æ¨£å­ï¼Œä¸çŸ¥é“æ˜¯é­åˆ°ä»€éº¼ä¸å¹¸"       â–¡
+â–¡                   "é‚„æ˜¯è‡ªç”˜å¢®è½ã€‚\n"                                     â–¡
+â–¡           );                                                             â–¡
+â–¡           set_perm_stat( "str", 3 );                                     â–¡
+â–¡           set_skill( "dodge", 10 );                                      â–¡
+â–¡           set( "gender", "male" );                                       â–¡
+â–¡           set( "race", "human" );                                        â–¡
+â–¡           set( "alignment", -100 );                                      â–¡
+â–¡           ob1 = new( "/d/noden/farwind/items/coat" );                    â–¡
+â–¡           ob1->move( this_object() );                                    â–¡
+â–¡           equip_armor( ob1 );                                            â–¡
+â–¡           ob2 = new( "/d/noden/farwind/items/bottle" );                  â–¡
+â–¡           ob2->move( this_object() );                                    â–¡
+â–¡   }                                                                      â–¡
+â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡
 inherit MONSTER; -> to tell the driver info about inherit
 :: create(); is important. 
-set_level() ÊÇÒ»¸ö function..  ºÜÈİÒâ¿´³öÀ´ÓÃÍ¾..
+set_level() æ˜¯ä¸€å€‹ function..  å¾ˆå®¹æ„çœ‹å‡ºä¾†ç”¨é€”..
 <drag> sorry ask a problem, How can you know how much function can call?
-<Wind> ÓĞDOCµµ...¿ÉÊÇ¿´ÆğÀ´»áÍÂÑª...
-<Wind> ×îºÃµÄ·½·¨»¹ÊÇ¡¸¿´files£¬Ğ´files...¡¹
+<Wind> æœ‰DOCæª”...å¯æ˜¯çœ‹èµ·ä¾†æœƒåè¡€...
+<Wind> æœ€å¥½çš„æ–¹æ³•é‚„æ˜¯ã€Œçœ‹filesï¼Œå¯«files...ã€
 <elon> yeah... so we guess, and study other files..
 <elon> Oh.. and there's a command called: apropos
 this is a handy command once you know it's usefulness.
@@ -371,8 +371,8 @@ cat() and more()
 <elon> apropos file will return all function related to file handling..
 <elon> so that's another way to find about functions.
 back to set_level() --
-<Wind> »¹ÓĞÄÇ¸ödoc/properties/ ÏÂµÄ¶«¶«Ò²Òª¿´..ÂùÖØÒªµÄ
-<elon> properties ÏÂµÄ¶«Î÷ºÜ¶à.. µ«ĞÂÔöµÄ function ¶¼Ã»ÈËÒªĞ´½øÈ¥.
+<Wind> é‚„æœ‰é‚£å€‹doc/properties/ ä¸‹çš„æ±æ±ä¹Ÿè¦çœ‹..è »é‡è¦çš„
+<elon> properties ä¸‹çš„æ±è¥¿å¾ˆå¤š.. ä½†æ–°å¢çš„ function éƒ½æ²’äººè¦å¯«é€²å».
 so.. read bulletin board is important too.
 
 <elon> set_level(2) means we set this mob to level 2.
@@ -419,21 +419,21 @@ not in the mob's inventory. it needed to be moved to the mob's inv.
 as you can see, most of the mobs are classified as simple mob.
 which doesn't do particular anything besides taking role
 at a room and let player kill them.
-<Wind> ¶ÔÁË£¬²¹³äÒ»ÏÂ£¬ÏÖÔÚµÄES³ÌÊ½ÒÑ¾­¸Ä¹ıÁË...Äã¿ÉÒÔÖ±½Ó
+<Wind> å°äº†ï¼Œè£œå……ä¸€ä¸‹ï¼Œç¾åœ¨çš„ESç¨‹å¼å·²ç¶“æ”¹éäº†...ä½ å¯ä»¥ç›´æ¥
 <Wind>                 wield_weapon("/u/w/wind/weapon/seven.c");
-<Wind> ²»ĞèÒªÔÙnew,move
-<Wind> ÒªÔÚroomÀï¼Ó¶«Î÷Ò²Ö»Òª
+<Wind> ä¸éœ€è¦å†new,move
+<Wind> è¦åœ¨roomé‡ŒåŠ æ±è¥¿ä¹Ÿåªè¦
 <Wind>         set( "objects", ([
 <Wind>                 "shop owner" : "/u/w/wind/shops/wine.owner",
 <Wind>         ]) );
-<Wind> ²»ĞèÒªnew...
+<Wind> ä¸éœ€è¦new...
 
-.....[QUOTE DELETED]....ááÃæ¾Í¿ªÊ¼ÏĞÁÄÁË...
+.....[QUOTE DELETED]....å¾Œé¢å°±é–‹å§‹é–’èŠäº†...
 
-¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î
-¡î ½ñÌìµÄ¿Î³Ì¾Íµ½ÕâÀïÁË£¬ÓĞÊ²÷áÎÊÌâµÄ»°£¬ÇëÕÒElonÀÏÊ¦£¬ ¡î
-¡î »òÊÇÖú½ÌWind...                                      ¡î
-¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î
+â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†
+â˜† ä»Šå¤©çš„èª²ç¨‹å°±åˆ°é€™è£¡äº†ï¼Œæœ‰ä»€éº¼å•é¡Œçš„è©±ï¼Œè«‹æ‰¾Elonè€å¸«ï¼Œ â˜†
+â˜† æˆ–æ˜¯åŠ©æ•™Wind...                                      â˜†
+â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†
 
 
 

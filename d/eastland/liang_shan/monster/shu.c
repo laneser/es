@@ -7,18 +7,18 @@ void create ()
 
 	::create();
     set_level(16);
-    set_name("Shu Ning","ĞìÄş");
+    set_name("Shu Ning","å¾å¯§");
     add("id",({"shu","ning"}) );
-    set_short("ĞìÄş");
+    set_short("å¾å¯§");
 	set_long(@C_LONG
-ÍâºÅ½ğ¡õÊÖ£¬ÑÓ°²¸®ÈË£¬ÖØÒåÇáÀû£¬ÉÆÊ¹Ò»°Ñ¹³Á­¡õ£¬ÎäÒÕ²»·²£¬½øÍËÓĞ½Ú£¬
-Ä¿Ç°ÎªÁºÉ½Âí¾ü´óæôÆï¼æÏÈ·æÊ¹¡£
+å¤–è™Ÿé‡‘â–¡æ‰‹ï¼Œå»¶å®‰åºœäººï¼Œé‡ç¾©è¼•åˆ©ï¼Œå–„ä½¿ä¸€æŠŠé‰¤é®â–¡ï¼Œæ­¦è—ä¸å‡¡ï¼Œé€²é€€æœ‰ç¯€ï¼Œ
+ç›®å‰ç‚ºæ¢å±±é¦¬è»å¤§é©ƒé¨å…¼å…ˆé‹’ä½¿ã€‚
 C_LONG
 	);
     set("alignment",300);
     set( "gender", "male" );
     set( "race", "human");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",20);
     set_perm_stat( "str",25);
     set_perm_stat( "int",20);

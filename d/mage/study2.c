@@ -87,8 +87,8 @@ void view_catalog()
 
 	chinese_mode = can_read_chinese();
 	printf( "%-30s  %-15s  %-8s  %-8s\n",
-		chinese_mode? "·¨ÊõÃû³Æ": "Spell", chinese_mode? "·¨ÊõÖÖÀà": "Type",
-		chinese_mode? "ËùĞèµÈ¼¶": "Level need", chinese_mode? "×î´ó¼¶Êı": "Max Lvl" );
+		chinese_mode? "æ³•è¡“åç¨±": "Spell", chinese_mode? "æ³•è¡“ç¨®é¡": "Type",
+		chinese_mode? "æ‰€éœ€ç­‰ç´š": "Level need", chinese_mode? "æœ€å¤§ç´šæ•¸": "Max Lvl" );
 	write( "=====================================================================\n");
 	spells = query_spells();
 	s = keys(spells);
@@ -108,17 +108,17 @@ int do_study(string arg)
 	chinese_mode = can_read_chinese();
 	if( !arg || arg=="" )
 		return notify_fail( chinese_mode?
-			"Ö¸Áî¸ñÊ½: study <·¨ÊõÃû³Æ>\n": "Syntax: study <spell>\n" );
+			"æŒ‡ä»¤æ ¼å¼: study <æ³•è¡“åç¨±>\n": "Syntax: study <spell>\n" );
 	if( !undefinedp( this_player()->query("spells/"+arg) ) )
 		return notify_fail( chinese_mode?
-			"Õâ¸ö·¨ÊõÄãÒÑ¾­Ñ§»áÁË£¬Äã¿ÉÒÔ¡õÊÔÓÃ(raise)ÌáÉı·¨ÊõµÈ¼¶¡£\n":
+			"é€™å€‹æ³•è¡“ä½ å·²ç¶“å­¸æœƒäº†ï¼Œä½ å¯ä»¥â–¡è©¦ç”¨(raise)æå‡æ³•è¡“ç­‰ç´šã€‚\n":
 			"You already learned this spell, you can try \"raise\" the spell level.\n" );
 	if( !can_learn_spell( this_player(), arg ) )
 		return notify_fail( chinese_mode?
-			"¶Ô²»Æğ£¬ÄãÏÖÔÚµÄµÈ¼¶»¹Ã»ÓĞ°ì·¨Ñ§Ï°ÕâÖÖ·¨Êõ....¡£\n":
+			"å°ä¸èµ·ï¼Œä½ ç¾åœ¨çš„ç­‰ç´šé‚„æ²’æœ‰è¾¦æ³•å­¸ç¿’é€™ç¨®æ³•è¡“....ã€‚\n":
 			"Sorry, you cannot learn such spell by now.\n" );
 	write( chinese_mode?
-		"¾­¹ıÒ»·¬ÄÍĞÄµÄÑĞ¶Á£¬ÄãÑ§»áÁË³õ¼¶µÄ" + to_chinese(arg) + "·¨Êõ£¡\n":
+		"ç¶“éä¸€ç•ªè€å¿ƒçš„ç ”è®€ï¼Œä½ å­¸æœƒäº†åˆç´šçš„" + to_chinese(arg) + "æ³•è¡“ï¼\n":
 		"After studying hard with the books, you learned the basic of "+arg+" spell!\n");
 	this_player()->set("spells/"+arg, 0);
 	return 1;
@@ -135,18 +135,18 @@ int do_raise(string arg)
 		my_spells = this_player()->query("spells");
 		if( !my_spells || !mapp(my_spells) || sizeof(my_spells) < 1 ) {
 			write( chinese_mode?
-				"ÄãÄ¿Ç°²¢Ã»ÓĞÑ§¹ıÈÎºÎ·¨Êõ¡£\n": "You don't know any spell by now.\n" );
+				"ä½ ç›®å‰ä¸¦æ²’æœ‰å­¸éä»»ä½•æ³•è¡“ã€‚\n": "You don't know any spell by now.\n" );
 			return 1;
 		}
 		s = keys(my_spells);
-		printf( "%-30s  %-8s  %s\n", chinese_mode? "·¨ÊõÃû³Æ": "Spell",
-			chinese_mode? "Ä¿Ç°µÈ¼¶": "Level", chinese_mode? "ÌáÉıµÈ¼¶ËùĞè¾­Ñé": "Exp. Required" );
+		printf( "%-30s  %-8s  %s\n", chinese_mode? "æ³•è¡“åç¨±": "Spell",
+			chinese_mode? "ç›®å‰ç­‰ç´š": "Level", chinese_mode? "æå‡ç­‰ç´šæ‰€éœ€ç¶“é©—": "Exp. Required" );
 		write( "============================================================\n");
 		for( i=0; i<sizeof(s); i++ ) {
 			if( undefinedp( spells[s[i]] ) ) continue;
 			exp = raise_cost( this_player(), s[i] );
 			if( exp < 1 )
-				printf( "%-30s  %6d    Ä¿Ç°ÒÑ´ï×î´óµÈ¼¶\n",
+				printf( "%-30s  %6d    ç›®å‰å·²é”æœ€å¤§ç­‰ç´š\n",
 					chinese_mode? to_chinese(s[i]) + " (" + s[i] + ")": capitalize(s[i]),
 					my_spells[s[i]] );
 			else
@@ -160,30 +160,30 @@ int do_raise(string arg)
 	
 	if( undefinedp( this_player()->query("spells/"+arg) ) ) {
 		write( chinese_mode?
-			"ÕâÖÖ·¨ÊõÄãÃ»ÓĞÑ§¹ı£¬ÇëÓÃ(study)ÑĞ¶Á¹ıÔÙÀ´¡£\n":
+			"é€™ç¨®æ³•è¡“ä½ æ²’æœ‰å­¸éï¼Œè«‹ç”¨(study)ç ”è®€éå†ä¾†ã€‚\n":
 			"You havn't learned such spell yet. Please study it first.\n" );
 		return 1;
 	}
 	if( raise_cost(this_player(), arg) == -2 ) {
 	    write( chinese_mode?
-			"¶Ô²»Æğ£¬Õâ·¨ÊõÔÚÕâÀïÄãÖ»ÄÜÑ§µ½Õâ¸ö¼¶Êı¡£\n":
+			"å°ä¸èµ·ï¼Œé€™æ³•è¡“åœ¨é€™è£¡ä½ åªèƒ½å­¸åˆ°é€™å€‹ç´šæ•¸ã€‚\n":
 			"Sorry, you have learned this spell as maximum level here.\n" );
 		return 1;
 	}
 	if( (exp = raise_cost(this_player(), arg)) < 1 ) {
 		write( chinese_mode?
-			"¶Ô²»Æğ£¬ÄãÏÖÔÚµÄÄÜÁ¦»¹Ã»ÓĞ°ì·¨ÌáÉıÕâ¸ö·¨ÊõµÄÍşÁ¦¡£\n":
+			"å°ä¸èµ·ï¼Œä½ ç¾åœ¨çš„èƒ½åŠ›é‚„æ²’æœ‰è¾¦æ³•æå‡é€™å€‹æ³•è¡“çš„å¨åŠ›ã€‚\n":
 			"Sorry, but your level is not high enough to riase the spell level.\n" );
 		return 1;
 	}
 	if( (int)this_player()->query_exp_stock() < exp ) {
 		write( chinese_mode?
-			"ÄãÏÖÔÚÒªÌá¸ßÕâ¸ö·¨ÊõµÄµÈ¼¶£¬ĞèÒª "+exp+" µã¾­Ñé¡£\n":
+			"ä½ ç¾åœ¨è¦æé«˜é€™å€‹æ³•è¡“çš„ç­‰ç´šï¼Œéœ€è¦ "+exp+" é»ç¶“é©—ã€‚\n":
 			"You need "+exp+" experience to raise the spell level.\n" );
 		return 1;
 	}
 	write( chinese_mode?
-		"¾­¹ıÒ»·¬ÄÍĞÄµÄÑĞ¶ÁÖ®áá£¬Äã¶Ô"+to_chinese(arg)+"·¨ÊõµÄÁìÎòÓÖ¸ü½øÒ»²ãÁË£¡\n":
+		"ç¶“éä¸€ç•ªè€å¿ƒçš„ç ”è®€ä¹‹å¾Œï¼Œä½ å°"+to_chinese(arg)+"æ³•è¡“çš„é ˜æ‚Ÿåˆæ›´é€²ä¸€å±¤äº†ï¼\n":
 		"After studying hard with the books, you feel more advanced with the spell!\n" );
 	this_player()->gain_experience( -exp );
 	this_player()->add("spells/"+arg, 1 );

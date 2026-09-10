@@ -7,20 +7,20 @@ void create ()
 	::create();
 	//seteuid( getuid() );
  set_level(7);
- set_name("dwarf new_trained soldier","°«ÈËĞÂ±ø");
+ set_name("dwarf new_trained soldier","çŸ®äººæ–°å…µ");
 add ("id", ({ "soldier","dwarf"}) );
 set_short( "a dwarf soldier",
-           "°«ÈËĞÂ±ø");
+           "çŸ®äººæ–°å…µ");
 	set_long(@LONG
 a new trained soldier,looks very young.
 LONG
     ,@C_LONG
-¿´ÆğÀ´·Ç³£ÄêÇáµÄĞÂ±øÕ½Ê¿.
+çœ‹èµ·ä¾†éå¸¸å¹´è¼•çš„æ–°å…µæˆ°å£«.
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",8);
     set_perm_stat( "str",9);
     set_perm_stat( "int",5);

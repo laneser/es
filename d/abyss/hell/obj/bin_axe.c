@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "blacksteel grand axe", "À«¸«" );
+	set_name( "blacksteel grand axe", "é—Šæ–§" );
 	add( "id", ({ "axe", "grand axe", "blacksteel axe" }) );
-	set_short( "a blacksteel grand axe", "ïÙÌúÀ«¸«" );
+	set_short( "a blacksteel grand axe", "é‘Œéµé—Šæ–§" );
 	set_long(
 		"You see a blacksteel grand axe.\n",
-		"Ò»°ÑÓÃ¼áÓ²µÄïÙÌúÖı³ÉµÄÀ«¸«¡£\n"
+		"ä¸€æŠŠç”¨å …ç¡¬çš„é‘Œéµé‘„æˆçš„é—Šæ–§ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "axe" );
 	set( "weapon_class", 30 );
 	set( "min_damage", 22 );

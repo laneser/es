@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
 	seteuid(getuid());
-        set_name( "staff", "´ÌÕÈ" );
+        set_name( "staff", "åˆºæ–" );
 	add( "id", ({ "staff" }) );
-   set_short( "´ÌÕÈ" );
+   set_short( "åˆºæ–" );
 	set_long(
-		"Õâ¸ùÄ¾ÕÈÉÏÃæ¶¤ÂúÁË¼â¼âµÄÌú´Ì£¬ÓĞĞ©´ÌÉÏ»¹´øÓĞµ¹¹³¡£\n"
+		"é€™æ ¹æœ¨æ–ä¸Šé¢é‡˜æ»¿äº†å°–å°–çš„éµåˆºï¼Œæœ‰äº›åˆºä¸Šé‚„å¸¶æœ‰å€’é‰¤ã€‚\n"
 	);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	set( "type", "blunt" );
 	set( "weapon_class", 9 );
 	set( "min_damage", 3 );

@@ -7,22 +7,22 @@ void create ()
 
 	::create();
     set_level(10);
-    set_name("guardian","ÊØ»¤Õß");
+    set_name("guardian","å®ˆè­·è€…");
     add ("id", ({ "guardian"}) );
     set_short( "a guardian",
-           "ÊØ»¤Õß");
+           "å®ˆè­·è€…");
 	set_long(@LONG
 A strange and mystic guard 
 LONG
     ,@C_LONG
-Ò»¸öÆæ¹ÖÇÒÉñÃØµÄÊØ»¤Õß,ËÆºõÊÇÒ»¸ö»ÃÓ°.
+ä¸€å€‹å¥‡æ€ªä¸”ç¥ç§˜çš„å®ˆè­·è€…,ä¼¼ä¹æ˜¯ä¸€å€‹å¹»å½±.
 C_LONG
 	);
 	set("alignment" , -700 );
     set("weapon_master",1);
     set( "gender", "male" );
     set( "race", "unknown");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",  12);
     set_perm_stat( "str",  15);
     set_perm_stat( "int",  18);

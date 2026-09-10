@@ -5,11 +5,11 @@ void create()
 {
         ::create();
         set_level(6);
-        set_name( "soldier", "士兵" );
-        set_short( "士兵" );
+        set_name( "soldier", "澹叺" );
+        set_short( "澹叺" );
         add( "id", ({ "soldier" }) );
         set_long(
-                "一个牧马关的正规士兵。\n"
+                "涓�鍊嬬墽棣棞鐨勬瑕忓＋鍏点�俓n"
         );
         set( "gender", "male" );
         set( "alignment", 150 );

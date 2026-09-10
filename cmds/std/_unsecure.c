@@ -26,13 +26,13 @@ int cmd_unsecure(string str)
 	if( str == "all" ) {
 		inv = all_inventory(player);
 		if( !pointerp(inv) || sizeof(inv) < 1 )
-			return notify_fail("ÄãÉíÉÏÃ»ÓĞÈÎºÎ¶«Î÷¿É³ıÈ¥±ê¼Ç¡£\n");
+			return notify_fail("ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•æ±è¥¿å¯é™¤å»æ¨™è¨˜ã€‚\n");
 		for( i=0; i<sizeof(inv); i++) {
 			if( !inv[i] || inv[i]->query("prevent_drop") ) continue;
 			if( inv[i]->query("secure") ) {
 				tell_object( player, 
 					inv[i]->query("short")+"("+inv[i]->query("name")+
-					")"+" --> ÒÆ×ß±ê¼Ç¡£\n" );
+					")"+" --> ç§»èµ°æ¨™è¨˜ã€‚\n" );
 				inv[i]->delete("secure");
 			}
 		}
@@ -44,13 +44,13 @@ int cmd_unsecure(string str)
 		inv = filter_array(all_inventory(player), "is_this_type",
 			this_object(), type );
 		if( !pointerp(inv) || sizeof(inv) < 1 )
-			return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÀà¶«Î÷¿É³ıÈ¥±ê¼Ç¡£\n");
+			return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™é¡æ±è¥¿å¯é™¤å»æ¨™è¨˜ã€‚\n");
 		for( i=0; i<sizeof(inv); i++) {
 			if( !inv[i] || inv[i]->query("prevent_drop") ) continue;
 			if( inv[i]->query("secure") ) {
 				tell_object( player, 
 					inv[i]->query("short")+"("+inv[i]->query("name")+
-					")"+" --> ÒÆ×ß±ê¼Ç¡£\n" );
+					")"+" --> ç§»èµ°æ¨™è¨˜ã€‚\n" );
 				inv[i]->delete("secure");
 			}
 		}
@@ -60,12 +60,12 @@ int cmd_unsecure(string str)
 
 	ob = present(str, player);
 	if( !ob )
-		return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 	if( !ob->query("secure") )
-		return notify_fail("ÕâÑù¶«Î÷²¢Î´±»Éè¶¨±ê¼Ç¡£\n");
+		return notify_fail("é€™æ¨£æ±è¥¿ä¸¦æœªè¢«è¨­å®šæ¨™è¨˜ã€‚\n");
 	tell_object( player,
 		ob->query("short")+"("+ob->query("name")+
-		")"+" --> ÒÆ×ß±ê¼Ç¡£\n" );
+		")"+" --> ç§»èµ°æ¨™è¨˜ã€‚\n" );
 	ob->delete("secure");
 	write( "Ok.\n" );
 	return 1;
@@ -79,8 +79,8 @@ int is_this_type(object item, string type)
 
 int help()
 {
-	  write("Ê¹ÓÃ¸ñÊ½: unsecure <item | all [type of items] | all>.\n\n"+
-	     "½åÓÉÕâ¸öÖ¸Áî, Äã¿ÉÒÔ½«³ıÈ¥ÎïÆ·µÄ±ê¼Ç¡£\n"+
+	  write("ä½¿ç”¨æ ¼å¼: unsecure <item | all [type of items] | all>.\n\n"+
+	     "è—‰ç”±é€™å€‹æŒ‡ä»¤, ä½ å¯ä»¥å°‡é™¤å»ç‰©å“çš„æ¨™è¨˜ã€‚\n"+
 	     "See also: secure.\n\n"
 	  );
 	return 1;

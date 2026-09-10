@@ -4,11 +4,11 @@
 
 #define SCHOLAR_SUMMON_DIR "/d/scholar/demand/"
 #define SCHOLAR_SUMMON_SKILL "demand/"
-// ÕâĞ©²ÎÊıÊÇËæ±ã¶¨µÄ£¬ÊıÄ¿Ò»Ñù¾Í¿ÉÒÔÁË
+// é€™äº›åƒæ•¸æ˜¯éš¨ä¾¿å®šçš„ï¼Œæ•¸ç›®ä¸€æ¨£å°±å¯ä»¥äº†
 #define spirits ({ "fire","water","dark","moon","wood","solid","sword",\
 				"grass","solid2",})
-#define names ({ "»ğ¾«Áé","Ë®¾«Áé","ºÚ°µ¾«Áé","ÔÂ¹â¾«Áé","Ä¾¾«Áé","´óµØ¾«Áé",\
-				"½£»ê","²İ¾«Áé","´óµØ¾«Áé2", })
+#define names ({ "ç«ç²¾éˆ","æ°´ç²¾éˆ","é»‘æš—ç²¾éˆ","æœˆå…‰ç²¾éˆ","æœ¨ç²¾éˆ","å¤§åœ°ç²¾éˆ",\
+				"åŠé­‚","è‰ç²¾éˆ","å¤§åœ°ç²¾éˆ2", })
 #define files ({ "fire","water","dark","moon","wood","solid","sword","grass","solid2",})
 #define levels ({ 13,10,17,15,8,19,16,4,19, })
 #define combat ({ 1,0,1,0,1,1,1,0,1, })
@@ -24,10 +24,10 @@ int can_summon(object me)
 	int i,j;
 
 	if (!summon = me->query("demand")) {
-		write("Ä¿Ç°ÄãÎŞ·¨ÕÙ»½ÈÎºÎ¶«¶«¡£\n");
+		write("ç›®å‰ä½ ç„¡æ³•å¬å–šä»»ä½•æ±æ±ã€‚\n");
 		return 1;
 	}
-	str = "ÄãÄ¿Ç°ÄÜÕÙ»½µÄ¶«¶«ÓĞ £º \n";
+	str = "ä½ ç›®å‰èƒ½å¬å–šçš„æ±æ±æœ‰ ï¼š \n";
         type = keys(summon);
         for(i=0; i<sizeof(type); i++) {
         	j = member_array(type[i],spirits) ;
@@ -36,7 +36,7 @@ int can_summon(object me)
          
           str += sprintf("  %-10s( %-10s)\t  %-10d\t  [%|6s] \n", names[j], 
           capitalize(type[i]),levels[j],
-		( !combat[j]  ? "·ÇÕ½Ê±" : "Õ½Ê±" ));
+		( !combat[j]  ? "éæˆ°æ™‚" : "æˆ°æ™‚" ));
         }
         write(str);
         return 1;
@@ -54,49 +54,49 @@ int cmd_demand(string str)
 	if ( str=="who" ) return can_summon(me);
 
 	if (!me->query(SCHOLAR_SUMMON_SKILL+str)) 
-             return notify_fail("ºÇ ! ±ğÉµÁË !! ÄãÄÜÕÙ»½ÕâÖÖ¶«¶«Âğ£¿\n");
+             return notify_fail("å‘µ ! åˆ¥å‚»äº† !! ä½ èƒ½å¬å–šé€™ç¨®æ±æ±å—ï¼Ÿ\n");
  
 	i = member_array(str,spirits) ;
 	if ( i < 0 )
-                return notify_fail("ºÇ ! ±ğÉµÁË !! ÄãÄÜÕÙ»½ÕâÖÖ¶«¶«Âğ£¿\n");
+                return notify_fail("å‘µ ! åˆ¥å‚»äº† !! ä½ èƒ½å¬å–šé€™ç¨®æ±æ±å—ï¼Ÿ\n");
 
 	if( (int)me->query("stop_attack")>0 )
 		return notify_fail (
-			"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨¶¯×÷¡£ )\n");
+			"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•å‹•ä½œã€‚ )\n");
 
 	if( me->query_temp("summon_busy") )
-    	  return notify_fail("ÄãÄ¿Ç°ÕıÃ¦Öø¸ú¸Õ¸ÕÕÙ»½À´µÄ¶«¶«¹µÍ¨£¬Ã»¿ÕÏë±ğµÄÊÂÇé¡£\n"); 
+    	  return notify_fail("ä½ ç›®å‰æ­£å¿™è‘—è·Ÿå‰›å‰›å¬å–šä¾†çš„æ±æ±æºé€šï¼Œæ²’ç©ºæƒ³åˆ¥çš„äº‹æƒ…ã€‚\n"); 
 
         if (me->query_temp("summon_rest"))
-          return notify_fail("ÄãµÄ¾«ÉñÁ¦»¹²»×ãÒÔÓÃÀ´×÷ÏÂÒ»´ÎÕÙ»½£¬ÔÙĞİÏ¢Ò»ÏÂ°É¡£\n");
+          return notify_fail("ä½ çš„ç²¾ç¥åŠ›é‚„ä¸è¶³ä»¥ç”¨ä¾†ä½œä¸‹ä¸€æ¬¡å¬å–šï¼Œå†ä¼‘æ¯ä¸€ä¸‹å§ã€‚\n");
 
 	if( environment(me)->query("no_summon"))
 		return notify_fail( 
-			"ÄãÔõÑùÒ²²»ÄÜÄı¾Û¾«ÉñÁ¦£¬ÎŞ·¨°ÑÄãµÄĞèÒª´«´ï³öÈ¥¡£\n");
+			"ä½ æ€æ¨£ä¹Ÿä¸èƒ½å‡èšç²¾ç¥åŠ›ï¼Œç„¡æ³•æŠŠä½ çš„éœ€è¦å‚³é”å‡ºå»ã€‚\n");
 
 	if ( !combat[i] && me->query_attacker())
-		return notify_fail("Äã²»ÄÜÔÚÕ½¶·ÖĞÕÙ»½Õâ¸ö¶«¶« ...\n");
+		return notify_fail("ä½ ä¸èƒ½åœ¨æˆ°é¬¥ä¸­å¬å–šé€™å€‹æ±æ± ...\n");
 
         if ( combat[i] && !me->query_attacker())
-                return notify_fail("ÄãÖ»ÄÜÔÚÕ½¶·ÖĞÕÙ»½Õâ¸ö¶«¶« ...\n");
+                return notify_fail("ä½ åªèƒ½åœ¨æˆ°é¬¥ä¸­å¬å–šé€™å€‹æ±æ± ...\n");
 //
 	
         if ( (int)me->query_skill("polemic")< levels[i]*5 ) {
-          write("ÄãµÄ±çÊõ¼¼ÄÜ²»¹»ÇıÊ¹"+names[i]+"À´°ïÖúÄã¡£\n");
+          write("ä½ çš„è¾¯è¡“æŠ€èƒ½ä¸å¤ é©…ä½¿"+names[i]+"ä¾†å¹«åŠ©ä½ ã€‚\n");
           return 1;
         }
 
         if ( (int)me->query_skill("yinyanglogy")< levels[i]*3 ) {
-          write("ÄãµÄÒõÑôÑ§¼¼ÄÜ²»¹»ÇıÊ¹"+names[i]+"À´°ïÖúÄã¡£\n");
+          write("ä½ çš„é™°é™½å­¸æŠ€èƒ½ä¸å¤ é©…ä½¿"+names[i]+"ä¾†å¹«åŠ©ä½ ã€‚\n");
           return 1;
         }
 
 	if ( (int)me->query("spell_points") < cost_sp[i] ) {
-	  write("ÄãµÄ¾«Éñ²»¼ÃÁË£¬Ó¦¸ÃºÃºÃĞİÏ¢Ò»ÏÂ¡£\n");
+	  write("ä½ çš„ç²¾ç¥ä¸æ¿Ÿäº†ï¼Œæ‡‰è©²å¥½å¥½ä¼‘æ¯ä¸€ä¸‹ã€‚\n");
 	  return 1;
 	}
         me->add("spell_points",-cost_sp[i]);
-        tell_object(me,set_color("Äã¼¯ÖĞ¾«Éñ¿ªÊ¼ÀûÓÃĞÄÁéÁ¦Á¿ÕÙ»½"+names[i]+"À´°ïÖúÄã¡£\n","HIR"));
+        tell_object(me,set_color("ä½ é›†ä¸­ç²¾ç¥é–‹å§‹åˆ©ç”¨å¿ƒéˆåŠ›é‡å¬å–š"+names[i]+"ä¾†å¹«åŠ©ä½ ã€‚\n","HIR"));
         me->set_temp("summon_busy",1);
         call_out("check_demand",1,me,i);
         return 1;
@@ -108,13 +108,13 @@ void check_demand(object me,int i)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic"))<=levels[i]) {
-    write("ÄãºÍ"+names[i]+"Ö®¼äµÄĞÄÁé´«µİÃ»ÓĞ³É¹¦\£¬ÕÙ»½Ê§°Ü¡£\n");
+    write("ä½ å’Œ"+names[i]+"ä¹‹é–“çš„å¿ƒéˆå‚³éæ²’æœ‰æˆåŠŸ\ï¼Œå¬å–šå¤±æ•—ã€‚\n");
     return ;
   }
   else {
     seteuid(getuid());
     mob=new("/d/scholar/demand/spirit/"+files[i]);
-// È¥³ıÓëÕ½¶·ÎŞ¹ØµÄÉè¶¨
+// å»é™¤èˆ‡æˆ°é¬¥ç„¡é—œçš„è¨­å®š
     mob->set_perm_stat("str",random((int)me->query_perm_stat("str")*2/3)+levels[i]);
 //    mob->set_perm_stat("int",random((int)me->query_perm_stat("int")*2/3)+levels[i]);
     mob->set_perm_stat("kar",random((int)me->query_perm_stat("kar")*2/3)+levels[i]);
@@ -136,13 +136,13 @@ void check_demand(object me,int i)
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: demand <¶ÔÏóÃû³Æ>
+æŒ‡ä»¤æ ¼å¼: demand <å°è±¡åç¨±>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´ÕÙ»½ÈÎºÎÔ¸Òâ°ïÖúÄãµÄ¾«ÁéÇ°À´°ïÄã¡£
-ÒªÇóËûÃÇÀ´°ïÖúÄãÖ®Ç°£¬ÄãÒªÏë°ì·¨ºÍËûÃÇ½¨Á¢¹ØÏµ£¬ÓĞÁËÁ¼ºÃµÄ¹ØÏµáá
-£¬ËûÃÇ¶¼ºÜÀÖÒâÎªÄã·şÎñ£¬²»¹ıÅ¼¶øÓĞĞ©¶ÔÏó»¹ÊÇ»á¸úÄãÊÕÈ¡Ò»Ğ©´ú¼Û¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†å¬å–šä»»ä½•é¡˜æ„å¹«åŠ©ä½ çš„ç²¾éˆå‰ä¾†å¹«ä½ ã€‚
+è¦æ±‚ä»–å€‘ä¾†å¹«åŠ©ä½ ä¹‹å‰ï¼Œä½ è¦æƒ³è¾¦æ³•å’Œä»–å€‘å»ºç«‹é—œä¿‚ï¼Œæœ‰äº†è‰¯å¥½çš„é—œä¿‚å¾Œ
+ï¼Œä»–å€‘éƒ½å¾ˆæ¨‚æ„ç‚ºä½ æœå‹™ï¼Œä¸éå¶è€Œæœ‰äº›å°è±¡é‚„æ˜¯æœƒè·Ÿä½ æ”¶å–ä¸€äº›ä»£åƒ¹ã€‚
 
-Äã¿ÉÒÔÓÃ demand who Ö¸ÁîÀ´²éÑ¯Äã¿ÉÒÔÇóÖúµÄ¶ÔÏó¡£
+ä½ å¯ä»¥ç”¨ demand who æŒ‡ä»¤ä¾†æŸ¥è©¢ä½ å¯ä»¥æ±‚åŠ©çš„å°è±¡ã€‚
 C_HELP
 		);
     return 1;

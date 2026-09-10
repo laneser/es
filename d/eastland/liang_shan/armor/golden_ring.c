@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("golden ring","Ì«Ô­¸®Å¦Ë¿½ğ»·");
+        set_name("golden ring","å¤ªåŸåºœç´çµ²é‡‘ç’°");
         add("id",({"ring"}) );
-         set_short( "golden ring","Ì«Ô­¸®Å¦Ë¿½ğ»·");
+         set_short( "golden ring","å¤ªåŸåºœç´çµ²é‡‘ç’°");
 	set_long(
 "This is a golden ring . \n"
-"ÕâÊÇÌ«Ô­¸®µÄÌØ²ú£¬¶«·½´óÂ½µÄÓÎ¿Íµ½Ì«Ô­¸®Ò»¶¨»áÂòÒ»¸öÀ´´÷´÷\n"
+"é€™æ˜¯å¤ªåŸåºœçš„ç‰¹ç”¢ï¼Œæ±æ–¹å¤§é™¸çš„éŠå®¢åˆ°å¤ªåŸåºœä¸€å®šæœƒè²·ä¸€å€‹ä¾†æˆ´æˆ´\n"
 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "finger" );
 	set( "material","adventurer");

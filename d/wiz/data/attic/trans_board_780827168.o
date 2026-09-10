@@ -1,7 +1,7 @@
 #d/wiz/trans_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Board of Translation","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÖĞÓ¢ÎÄ·­ÒëÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Board of Translation","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ä¸­è‹±æ–‡ç¿»è­¯ç•™è¨€æ¿",])
 messages ({(["id":1,"body":"Hello,
 Can someone translate the stuffs in /d/noden/camp into English
 these days? 
@@ -31,19 +31,19 @@ in a lot of areas :)
 
 -Elon was here.
 ","time":761199993,"poster":"Elon",]),(["id":9,"body":"
-ÕÒµ½Ò»±¾ GURPS China reference..
-ÎÒÕâ»¹ÓĞ GURPS Space.. AD&D Dwarven reference, AD&D Castle, 
+æ‰¾åˆ°ä¸€æœ¬ GURPS China reference..
+æˆ‘é€™é‚„æœ‰ GURPS Space.. AD&D Dwarven reference, AD&D Castle, 
 AD&D Fighter..
 
 :)
 -Elon was here
-","title":"reference book..","time":763717788,"poster":"Elon",]),(["id":10,"title":"ÎäÊõÕĞÊ½µÄ reference..","body":"½ñÌìÈ¥ Hobby store ¹äÁËÒ»ÏÂ..
-Steven Jackson Games ³öÁËÒ»±¾ GURPS Martial Arts:
-ÄÚÈİ³ıÁË Rules ÒÔÍâ»¹ÓĞÒ»Ğ©ÕĞÊ½... ÎÊÌâÊÇ¶¼ÊÇÓ¢ÎÄµÄ.. (Ã»ÓĞÖĞ
-Ó¢¶ÔÕÕ) »¹ÓĞ... ´ó¶àÊı¶¼ÊÇ¶«ÑóÈÌÕßµÄ¶«Î÷... :P ËùÒÔÂŞ... Ã»ÓĞ
-Âò... (»¹ÓĞÒ»¸öÔ­ÒòÊÇÌ«¹óÁË... $16 µÄÑù×Ó..)
-×î½üºÃÏñÓĞºÜ¶àÖĞ¹ú¹¦\·òµÄÔÓÖ¾.. ÎÒÃéÁËÒ»ÏÂ.. Ã»Âò.. Platino ÒÔ
-ááÒª°ïË­²éÕĞÊ½¿ÉÒÔÈ¥ bookstore ¹ä¹ä... ´ø±Ê¼Ç±¾È¥ :P
+","title":"reference book..","time":763717788,"poster":"Elon",]),(["id":10,"title":"æ­¦è¡“æ‹›å¼çš„ reference..","body":"ä»Šå¤©å» Hobby store é€›äº†ä¸€ä¸‹..
+Steven Jackson Games å‡ºäº†ä¸€æœ¬ GURPS Martial Arts:
+å…§å®¹é™¤äº† Rules ä»¥å¤–é‚„æœ‰ä¸€äº›æ‹›å¼... å•é¡Œæ˜¯éƒ½æ˜¯è‹±æ–‡çš„.. (æ²’æœ‰ä¸­
+è‹±å°ç…§) é‚„æœ‰... å¤§å¤šæ•¸éƒ½æ˜¯æ±æ´‹å¿è€…çš„æ±è¥¿... :P æ‰€ä»¥ç¾…... æ²’æœ‰
+è²·... (é‚„æœ‰ä¸€å€‹åŸå› æ˜¯å¤ªè²´äº†... $16 çš„æ¨£å­..)
+æœ€è¿‘å¥½åƒæœ‰å¾ˆå¤šä¸­åœ‹åŠŸå¤«çš„é›œèªŒ.. æˆ‘ç„äº†ä¸€ä¸‹.. æ²’è²·.. Platino ä»¥
+å¾Œè¦å¹«èª°æŸ¥æ‹›å¼å¯ä»¥å» bookstore é€›é€›... å¸¶ç­†è¨˜æœ¬å» :P
  
 -Elon was here.
 ","time":763868337,"poster":"Elon",]),(["id":11,"body":"Dear Administrater Elon,
@@ -52,29 +52,29 @@ Steven Jackson Games ³öÁËÒ»±¾ GURPS Martial Arts:
 lending me the account for the time. 
 				Sincerely, Translater Junior Grad Platino
 ,.
-","title":"Hi Elon","time":765350220,"poster":"Platino",]),(["id":12,"title":"< no title >","body":"Çë½ÌÈÌÕßµÄ\"ÕıÊ½\"ÒëÃû,Ğ»Ğ»
+","title":"Hi Elon","time":765350220,"poster":"Platino",]),(["id":12,"title":"< no title >","body":"è«‹æ•™å¿è€…çš„\"æ­£å¼\"è­¯å,è¬è¬
 ","time":770541235,"poster":"Bluebard",]),(["id":13,"body":"On Thu Jun  2, Bluebard wrote:
-> Çë½ÌÈÌÕßµÄ\"ÕıÊ½\"ÒëÃû,Ğ»Ğ»
+> è«‹æ•™å¿è€…çš„\"æ­£å¼\"è­¯å,è¬è¬
 
-²»ÊÇ ninja Âğ? »¹ÓĞ±ğµÄ? hmmm....
+ä¸æ˜¯ ninja å—? é‚„æœ‰åˆ¥çš„? hmmm....
 
 -Elon was here.
 ","title":"Re: < no title >","time":770627073,"poster":"Elon",]),(["id":14,"title":"< no title >","body":"Yup, just Ninja
-","time":772115332,"poster":"Platino",]),(["id":16,"body":"Ë«½Ú¹÷µÄÉĞ·½±¦½£µÄÓ¢ÎÄ¸Ã½ĞÊ²÷áÄØ? :P
-","title":"Ë«½Ú¹÷.....","time":778664765,"poster":"Stasia",]),(["id":17,"title":"Re: Ë«½Ú¹÷.....","body":"On Sun Sep  4, Stasia wrote:
-> Ë«½Ú¹÷µÄÉĞ·½±¦½£µÄÓ¢ÎÄ¸Ã½ĞÊ²÷áÄØ? :P
+","time":772115332,"poster":"Platino",]),(["id":16,"body":"é›™ç¯€æ£çš„å°šæ–¹å¯¶åŠçš„è‹±æ–‡è©²å«ä»€éº¼å‘¢? :P
+","title":"é›™ç¯€æ£.....","time":778664765,"poster":"Stasia",]),(["id":17,"title":"Re: é›™ç¯€æ£.....","body":"On Sun Sep  4, Stasia wrote:
+> é›™ç¯€æ£çš„å°šæ–¹å¯¶åŠçš„è‹±æ–‡è©²å«ä»€éº¼å‘¢? :P
 
-Ë«½Ø¹÷ÊÇ°É.. È¥¿´¿´ÀîĞ¡ÁúµÄµçÓ°.. 
-*sigh* ÎÒ»ØÈ¥²é²é.. ÎÒÓĞÒ»±¾ weapon book..
+é›™æˆªæ£æ˜¯å§.. å»çœ‹çœ‹æå°é¾çš„é›»å½±.. 
+*sigh* æˆ‘å›å»æŸ¥æŸ¥.. æˆ‘æœ‰ä¸€æœ¬ weapon book..
 
-ÖÁì¶ÉĞ·½±¦½£.. ÄãÊÇÖ¸ÏÈÕ¶áá×àÄÇ°Ñ? Òª²»¾ÍÕÕÒô·­. Òª²»¾Í°ÑÒâË¼
-Ğ´³öÀ´... ±È·½Ëµ the sword of emperor power (àÅ.. ²»Ì«ºÃ.. Ò»Ê±Ïë
-²»ÆğÀ´ÁË...)
+è‡³æ–¼å°šæ–¹å¯¶åŠ.. ä½ æ˜¯æŒ‡å…ˆæ–¬å¾Œå¥é‚£æŠŠ? è¦ä¸å°±ç…§éŸ³ç¿». è¦ä¸å°±æŠŠæ„æ€
+å¯«å‡ºä¾†... æ¯”æ–¹èªª the sword of emperor power (å—¯.. ä¸å¤ªå¥½.. ä¸€æ™‚æƒ³
+ä¸èµ·ä¾†äº†...)
 
 
 -Elon was here.
 ","time":778817141,"poster":"Elon",]),(["id":18,"body":"
-Nunchaku -- Ë«½Ø¹÷... ¿´À´ÏñÈÕÎÄ.. hmmm...
+Nunchaku -- é›™æˆªæ£... çœ‹ä¾†åƒæ—¥æ–‡.. hmmm...
 
 -Elon was here.
 ","title":"< no title >","time":778859143,"poster":"Elon",]),(["id":19,"title":"16","body":"About Nunchaku,
@@ -97,22 +97,22 @@ You silly.. desc is your job.
 He only need a name to create an object.. :)
 
 -Elon was here.
-","title":"Re: 16","time":779122533,"poster":"Elon",]),(["id":21,"title":"question","body":"ÈçºÎÇø·Ö kohold , goblin , hobgoblin
-ÒÔ¼°ËüÃÇµÄÖĞÎÄ.
+","title":"Re: 16","time":779122533,"poster":"Elon",]),(["id":21,"title":"question","body":"å¦‚ä½•å€åˆ† kohold , goblin , hobgoblin
+ä»¥åŠå®ƒå€‘çš„ä¸­æ–‡.
 _Echo_
 ","time":779376918,"poster":"Echobomber",]),(["id":22,"body":"Dear Echo:
-  Kobold ÊÇÒ»ÖÖÓĞµãÏñ wererat µÄ±ÉËöÀàÈËÉúÎï
+  Kobold æ˜¯ä¸€ç¨®æœ‰é»åƒ wererat çš„é„™ç‘£é¡äººç”Ÿç‰©
 
-goblin  Ğ¡¶ñ¹í
+goblin  å°æƒ¡é¬¼
 
-hoblin  ´ó¶ñ¹í
-ÖÁì¶ÆäÏêÊö£¬ÈİÎÒÍíÉÏĞ´Ğ´ÔÙ·Åµ½×Ê¹¤ Mud board °É
+hoblin  å¤§æƒ¡é¬¼
+è‡³æ–¼å…¶è©³è¿°ï¼Œå®¹æˆ‘æ™šä¸Šå¯«å¯«å†æ”¾åˆ°è³‡å·¥ Mud board å§
 
-¶Ô²»Æğ£¬¼±ÖøÈ¥¼İÑµ°à£¬please forgive me :(
-","title":"< no title >","time":779522095,"poster":"Bluebard",]),(["id":23,"title":"< no title >","body":"²¹³ä..
-size ÉÏÀ´Ëµ..  hobgoblin > goblin > kobold (3' tall)
-hobgoblin ×îÍ´ºŞ elf.. kobold ×îÍ´ºŞ gnome.. 
-alignment ¶¼ÊÇ lawful evil.. 
+å°ä¸èµ·ï¼Œæ€¥è‘—å»é§•è¨“ç­ï¼Œplease forgive me :(
+","title":"< no title >","time":779522095,"poster":"Bluebard",]),(["id":23,"title":"< no title >","body":"è£œå……..
+size ä¸Šä¾†èªª..  hobgoblin > goblin > kobold (3' tall)
+hobgoblin æœ€ç—›æ¨ elf.. kobold æœ€ç—›æ¨ gnome.. 
+alignment éƒ½æ˜¯ lawful evil.. 
 
 -Elon was here.
 ","time":779553263,"poster":"Elon",]),})

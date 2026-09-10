@@ -6,16 +6,16 @@ void create()
 {
 	::create();
 	set_level(18);
-	set_name( "Killer Genan", "É±ÊÖ »ÃâÖ" );
+	set_name( "Killer Genan", "æ®ºæ‰‹ å¹»åºµ" );
 	add( "id", ({ "killer","genan" }) );
-	set_short( "Killer Genan", "É±ÊÖ »ÃâÖ" );
+	set_short( "Killer Genan", "æ®ºæ‰‹ å¹»åºµ" );
 	set_long(@AAA
-»ÃâÖÊÇÒ»¸öÍâ±í¿ÉÆðÀ´Ïàµ±Ð°¶ñµÄÄÐ×Ó£¬»ëÉíÉ¢·¢³öÒ»¹ÉÇ¿ÁÒµÄÉ±Æø£¬Ëû
-ÊÇÎäÊ¿ÍÅËùÊôµÄÌØÊâÉ±ÊÖ£¬¾ÝËµËûÔø¾­´ÌÉ±¹ýÒ£ÕÕÌì»Ê£¬ËäÈ»Ã»ÓÐ³É¹¦µ«
-ÈÔÄÜÈ«Éí¶øÍË£¬¿É¼ûËûµÄÀ÷º¦ÁË£¡£¡
+å¹»åºµæ˜¯ä¸€å€‹å¤–è¡¨å¯èµ·ä¾†ç›¸ç•¶é‚ªæƒ¡çš„ç”·å­ï¼Œæ¸¾èº«æ•£ç™¼å‡ºä¸€è‚¡å¼·çƒˆçš„æ®ºæ°£ï¼Œä»–
+æ˜¯æ­¦å£«åœ˜æ‰€å±¬çš„ç‰¹æ®Šæ®ºæ‰‹ï¼Œæ“šèªªä»–æ›¾ç¶“åˆºæ®ºéŽé™ç…§å¤©çš‡ï¼Œé›–ç„¶æ²’æœ‰æˆåŠŸä½†
+ä»èƒ½å…¨èº«è€Œé€€ï¼Œå¯è¦‹ä»–çš„åŽ²å®³äº†ï¼ï¼
 AAA
  );
-	set( "unit", "Î»" );
+	set( "unit", "ä½" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set_perm_stat( "str", 30 );
@@ -34,7 +34,7 @@ AAA
                                  "vascular":30 ]));
         set( "stun_difficulty/ma",10);  
 	set( "alignment", -2500 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÊÖÍó", "ÑÊºí" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "æ‰‹è…•", "å’½å–‰" }) );
         set_skill( "parry",100 );
         set_skill( "longblade",100 );
         set_skill( "dodge",100);
@@ -56,7 +56,7 @@ int att_gonfus()
 { case 0:
     {
      tell_room(environment(this_object()), 
-     "\n»ÃâÖÍ»È»ÕÅ¿Ú¶Ô"+victim->query("c_name")+"ÅçÁËÒ»¿Ú¶¾Æø\n\n"
+     "\nå¹»åºµçªç„¶å¼µå£å°"+victim->query("c_name")+"å™´äº†ä¸€å£æ¯’æ°£\n\n"
      );
       dam1 = 15 + random(25);
       victim->receive_special_damage("poison", dam1 );
@@ -66,7 +66,7 @@ int att_gonfus()
   case 1:
      { 
        tell_room(environment(this_object()),
-       "\n»ÃâÖÉìÊÖ×¥×¡"+victim->query("c_name")+"²¢ÕÅ¿Ú¿ªÊ¼ÂÒÒ§\n\n"
+       "\nå¹»åºµä¼¸æ‰‹æŠ“ä½"+victim->query("c_name")+"ä¸¦å¼µå£é–‹å§‹äº‚å’¬\n\n"
        );
        dam2 = 15 + random(15);
        victim->receive_special_damage("poison",dam2);

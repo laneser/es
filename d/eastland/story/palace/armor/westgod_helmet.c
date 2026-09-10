@@ -8,11 +8,11 @@ void create()
      add( "id",({ "helmet", }) );
      set_short( "@@query_short" );
      set_long(@C_LONG
-Ò»¶¥½ğ³Î³ÎµÄÍ·¹Ú£¬ÉÏÃæÏâÓĞ¸÷É«Öé±¦£¬Ò«ÑÛÉú»Ô¡£
+ä¸€é ‚é‡‘æ¾„æ¾„çš„é ­å† ï¼Œä¸Šé¢é‘²æœ‰å„è‰²ç å¯¶ï¼Œè€€çœ¼ç”Ÿè¼ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¶¥");
+     set( "unit", "é ‚");
      set( "type", "head" );
      set( "material","heavy_metal" );
      set( "armor_class",8 );
@@ -22,5 +22,5 @@ C_LONG
 }
 string query_short()
 {
-       return set_color("ĞÇÌì¹Ú","HIY") ;
+       return set_color("æ˜Ÿå¤©å† ","HIY") ;
 }

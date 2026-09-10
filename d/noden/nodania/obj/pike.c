@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("pike", "³¤Ç¹");
-	set_short("³¤Ç¹");
+	set_name("pike", "é•·æ§");
+	set_short("é•·æ§");
 	set_long(
-		"ÕâÊÇÒ»ÖÖÔÚ³¤±úÄ¾ÕÈÄ©¶Ë×°ÉÏÇ¹Í·µÄÇá±ãÎäÆ÷¡£\n"
+		"é€™æ˜¯ä¸€ç¨®åœ¨é•·æŸ„æœ¨æ–æœ«ç«¯è£ä¸Šæ§é ­çš„è¼•ä¾¿æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 60 );
 	set( "type", "polearm" );
 	set( "weapon_class", 14 );

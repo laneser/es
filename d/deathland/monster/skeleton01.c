@@ -7,13 +7,13 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "skeleton black knight", "º§¹Ç×åºÚÎäÊ¿" );
+	set_name( "skeleton black knight", "é§­éª¨æ—é»‘æ­¦å£«" );
 	add("id",({"skeleton","knight",}));
-	set_short( " a skeleton black knight", "º§¹Ç×åºÚÎäÊ¿" );
+	set_short( " a skeleton black knight", "é§­éª¨æ—é»‘æ­¦å£«" );
 	set_long(
 		"a terrible skeleton knight.\n"
-		"Ò»¸öÁîÈË¾åÅÂµÄº§¹Ç×åºÚÎäÊ¿,²ÐÈÌÊÈÉ±,Àä¿áÎÞÇé,\n"
-		"×î¿ÉÅÂµÄÊÇÒ»»÷±ØÉ±µÄ¿ÉÅÂ±ØÉ±¼¼.\n"
+		"ä¸€å€‹ä»¤äººæ‡¼æ€•çš„é§­éª¨æ—é»‘æ­¦å£«,æ®˜å¿å—œæ®º,å†·é…·ç„¡æƒ…,\n"
+		"æœ€å¯æ€•çš„æ˜¯ä¸€æ“Šå¿…æ®ºçš„å¯æ€•å¿…æ®ºæŠ€.\n"
 	);
 	set( "gender", "male" );
 	set( "alignment", -2000 );
@@ -39,9 +39,9 @@ int my_tactic()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
     else {
-      tell_object(victim, "º§¹Ç×åºÚÎäÊ¿¿´×¼ÄãµÄÈõµã¿ì.×¼.ºÝ.µØÃÍ»÷Äã.\n" );
+      tell_object(victim, "é§­éª¨æ—é»‘æ­¦å£«çœ‹æº–ä½ çš„å¼±é»žå¿«.æº–.ç‹ .åœ°çŒ›æ“Šä½ .\n" );
       tell_room(environment(this_object()),
-          "º§¹Ç×åºÚÎäÊ¿¿ì.×¼.ºÝ.µØÃÍ»÷"+victim->query("c_name")+".\n"
+          "é§­éª¨æ—é»‘æ­¦å£«å¿«.æº–.ç‹ .åœ°çŒ›æ“Š"+victim->query("c_name")+".\n"
           ,({victim,this_object(),}) );
       victim->receive_damage( 75 + random(55) );
       report(this_object(),victim);

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Longsword of Nightmare","¶ñÃÎ³¤½£");
+        set_name("Longsword of Nightmare","æƒ¡å¤¢é•·åŠ");
         add("id",({"sword","longsword","nightmare"}) );
-        set_short("¶ñÃÎ³¤½£");
+        set_short("æƒ¡å¤¢é•·åŠ");
       	set_long(
-           "Ò»°Ñ»áÈÃÄãµÄµĞÈË²úÉú¶ñÃÎµÄ·æÀû³¤½£\n"
+           "ä¸€æŠŠæœƒè®“ä½ çš„æ•µäººç”¢ç”Ÿæƒ¡å¤¢çš„é‹’åˆ©é•·åŠ\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
     set("type","longblade");
 	set( "min_damage", 18 );

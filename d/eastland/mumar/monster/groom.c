@@ -6,10 +6,10 @@ void create()
         ::create();
         seteuid( getuid() );
         set_level(5);
-        set_name( "groom", "马夫" );
-        set_short( "马夫" );
+        set_name( "groom", "棣紩" );
+        set_short( "棣紩" );
         add( "id", ({ "groom" }) );
-        set_long( "一个马夫，负责看管照顾马房里的马儿们。\n" );
+        set_long( "涓�鍊嬮Μ浼曪紝璨犺铂鐪嬬鐓ч¨棣埧瑁＄殑棣厭鍊戙�俓n" );
         set( "gender", "male" );
         set( "alignment", 150 );
         set( "wealth/silver", 30 );

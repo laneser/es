@@ -10,19 +10,19 @@ void create()
 {
         ::create();
         set_level(2);
-        set_name("bee", "Ò°·ä");
-        set_short("Ò°·ä");
+        set_name("bee", "é‡èœ‚");
+        set_short("é‡èœ‚");
         set_long(
-                "Äã¿´µ½Ò»Ö»ÎËÎË½ĞµÄÒ°·ä£¬ËüÕıÈÆÖø»¨¶ù´ò×ª£¬Äã×îºÃ²»ÒªÈÇËü¡£\n"
+                "ä½ çœ‹åˆ°ä¸€éš»å—¡å—¡å«çš„é‡èœ‚ï¼Œå®ƒæ­£ç¹è‘—èŠ±å…’æ‰“è½‰ï¼Œä½ æœ€å¥½ä¸è¦æƒ¹å®ƒã€‚\n"
         );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set( "alignment", -100 );
 	set( "tactic_func", "sting" );
         set_natural_weapon( 5, 2, 5 );
         set_natural_armor( 10, 4 );
-        set( "c_death_msg", "%sÎŞÁ¦µØÂäµ½µØÉÏ£¬ËÀÇÌÇÌÁË ....\n" );
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
-        set_c_verbs( ({ "%s·¢³öÎËÎËµÄ½ĞÉù£¬Íù%s¶£È¥" }) );
+        set( "c_death_msg", "%sç„¡åŠ›åœ°è½åˆ°åœ°ä¸Šï¼Œæ­»ç¿¹ç¿¹äº† ....\n" );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
+        set_c_verbs( ({ "%sç™¼å‡ºå—¡å—¡çš„å«è²ï¼Œå¾€%så®å»" }) );
 }
 
 int sting()
@@ -31,9 +31,9 @@ int sting()
 
         if( random(20)>4 || !(victim= query_attacker()) ) return 0;
         tell_object( victim, 
-                "Ò°·ä·Éµ½ÄãµÄÁ³ÉÏ£¬Äã¸Ğµ½Á³ÉÏÒ»Õó´ÌÍ´£¡\n");
+                "é‡èœ‚é£›åˆ°ä½ çš„è‡‰ä¸Šï¼Œä½ æ„Ÿåˆ°è‡‰ä¸Šä¸€é™£åˆºç—›ï¼\n");
         tell_room( environment(this_object()), 
-                "Ò°·ä·Éµ½" + victim->query("c_name") + "µÄÁ³ÉÏ£¬ÓÃÎ²ÕëÍùÏÂÒ»ó§£¡\n",
+                "é‡èœ‚é£›åˆ°" + victim->query("c_name") + "çš„è‡‰ä¸Šï¼Œç”¨å°¾é‡å¾€ä¸‹ä¸€è«ï¼\n",
                 this_object() );
         (CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 5, 3 );
         return 1;

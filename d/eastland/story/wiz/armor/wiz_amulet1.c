@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("The Archmaster's amulet","»¤¹úÊ¦¡õ·û¡õ");
+        set_name("The Archmaster's amulet","è­·åœ‹å¸«â–¡ç¬¦â–¡");
         add( "id", ({ "amulet" }) );
-        set_short( set_color("»¤¹úÊ¦¡õ·û¡õ","HIY"));
+        set_short( set_color("è­·åœ‹å¸«â–¡ç¬¦â–¡","HIY"));
         set_long(@C_LONG
-Ò»ÕÅ²»Ê±ÉÁÒ«ÖøÎåÉ«ÏéÔÆµÄ»¤·û£¬ÉÏÃæÓĞĞ©ÍäÍäÇúÇúµÄòòò½ĞÍÎÄ×Ö¡£
+ä¸€å¼µä¸æ™‚é–ƒè€€è‘—äº”è‰²ç¥¥é›²çš„è­·ç¬¦ï¼Œä¸Šé¢æœ‰äº›å½å½æ›²æ›²çš„èŒèšªå‹æ–‡å­—ã€‚
 C_LONG
         );
-        set("unit","ÕÅ");
+        set("unit","å¼µ");
         set( "type", "misc" );
         set("material","cloth");
         set( "defense_bonus", 8 );

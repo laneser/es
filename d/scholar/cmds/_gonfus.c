@@ -16,15 +16,15 @@ int cmd_gonfus(string str)
 	known = (mapping)this_player()->query("scholar_gonfu");
         exp = (mapping)this_player()->query("gonfus_exp");
 	if( !known || sizeof(known) == 0 ) {
-		write("��Ŀǰ�����κι�\��\n");
+		write("你目前不會任何功夫。\n");
 		return 1;
 	}
 
-	msg = "��Ŀǰ����ʹ�õĹ�\����:\n" ;
+	msg = "你目前所能使用的功夫有:\n" ;
 
 	gonfu = keys(known);
 	for( i=0; i<sizeof(gonfu); i++ )
-		msg += sprintf(" %s(%s) [%d] (��������ֵ%d)\n", to_chinese(gonfu[i]),
+		msg += sprintf(" %s(%s) [%d] (熟練經驗值%d)\n", to_chinese(gonfu[i]),
 		gonfu[i], known[gonfu[i]], (exp ? exp[gonfu[i]]:0) );
 	write(msg);
 	return 1;

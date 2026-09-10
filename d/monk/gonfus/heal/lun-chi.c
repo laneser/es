@@ -15,47 +15,47 @@ int eungon(object me, int level)
 	chinese_mode=can_read_chinese(me);
 	if( me->query_temp("monk_bleeding") ) {
 		tell_object( me, 
-			"ÄãµÄÉË¿Ú¸Õ¸Õ´¦Àí¹ıÁË¡£\n");
+			"ä½ çš„å‚·å£å‰›å‰›è™•ç†éäº†ã€‚\n");
 		return 0;
 	}
 	
 	if( me->query("weapon1") ) {
 		tell_object(me, 
-			"Î¹...ÄÃÎäÆ÷ÊÇÎŞ·¨Ê©Õ¹ÂÖÖ¸·âÑ¨µÄ¡£\n");
+			"å–‚...æ‹¿æ­¦å™¨æ˜¯ç„¡æ³•æ–½å±•è¼ªæŒ‡å°ç©´çš„ã€‚\n");
 		return 0;
 	}
 
 	if( !bleed = me->query("conditions/"+COND_NAME) ) {
 		tell_object( me, 
-			"Äã²¢Ã»ÓĞÊ§ÑªµÄÇéĞÎ¡£\n");
+			"ä½ ä¸¦æ²’æœ‰å¤±è¡€çš„æƒ…å½¢ã€‚\n");
 		return 0;
 	}
 
 	if( !skill = (int)me->query_skill("force-stun") ) {
 		tell_object( me,
-			"Äã²¢Ã»ÓĞÑ§¹ıµãÑ¨µÄ¼¼ÄÜ¡£\n");
+			"ä½ ä¸¦æ²’æœ‰å­¸éé»ç©´çš„æŠ€èƒ½ã€‚\n");
 		return 0;
 	}
 
     fp = (int)me->query("force_points");
     if ( !fp || fp < query_fp_cost() ) {
         tell_object( me,
-            "ÄãµÄÄÚÁ¦²»¹»£¬²»ÄÜ¹»Ê©Õ¹ÂÖÖ¸·âÑ¨¡£\n");
+            "ä½ çš„å…§åŠ›ä¸å¤ ï¼Œä¸èƒ½å¤ æ–½å±•è¼ªæŒ‡å°ç©´ã€‚\n");
         return 0;
     }
 
 	me->set_temp("monk_bleeding", 1);
 	me->add("force_points", -query_fp_cost());
 	tell_object( me,
-		"ÄãÓÒÊÖ¼²µã×Ô¼ºµÄÉÌÑô£¬´ó¾Ş£¬Ì«°×µÈÑ¨ÏëÌæ×Ô¼ºµÄÉË¿ÚÖ¹Ñª....\n");
+		"ä½ å³æ‰‹ç–¾é»è‡ªå·±çš„å•†é™½ï¼Œå¤§å·¨ï¼Œå¤ªç™½ç­‰ç©´æƒ³æ›¿è‡ªå·±çš„å‚·å£æ­¢è¡€....\n");
 	tell_room( environment(me), 
-		me->query("c_name")+"ÓÒÊÖ¼²µã£¬ÌæËûµÄÉË¿ÚÖ¹Ñª¡£\n", me );
+		me->query("c_name")+"å³æ‰‹ç–¾é»ï¼Œæ›¿ä»–çš„å‚·å£æ­¢è¡€ã€‚\n", me );
 		
 	if( skill/2 + random(skill/2) > 10 * bleed[1] * bleed[2] / bleed[0] )
 		BLEEDING->remove_effect(me);
 	else {
 		tell_object( me, 
-			"µ«ÊÇ½á¹ûÖ»ÊÇ¼õ»ºÁËÉËÊÆ£¬²¢Î´ÍêÈ«³É¹¦\¡£\n");
+			"ä½†æ˜¯çµæœåªæ˜¯æ¸›ç·©äº†å‚·å‹¢ï¼Œä¸¦æœªå®Œå…¨æˆåŠŸ\ã€‚\n");
 		// make the result random case.
 		switch( random(3) ) {
 			case 1 : bleed[0] *= 2; break;

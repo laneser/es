@@ -6,10 +6,10 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("casablanca", "ÏãË®°ÙºÏ");
+    set_name("casablanca", "é¦™æ°´ç™¾åˆ");
     add("id", ({"casablanca", "lily", "flower"}));
-    set_short("ÏãË®°ÙºÏ");
-    set_long("ÏãË®°ÙºÏ£¬»¨ÖĞµÄÅ®Íõ£¬»¨ÓïÊÇÎ°´óµÄ°®¡£\n");
-    set("unit", "¶ä");
+    set_short("é¦™æ°´ç™¾åˆ");
+    set_long("é¦™æ°´ç™¾åˆï¼ŒèŠ±ä¸­çš„å¥³ç‹ï¼ŒèŠ±èªæ˜¯å‰å¤§çš„æ„›ã€‚\n");
+    set("unit", "æœµ");
     set("no_sale", 1);
 }

@@ -7,15 +7,15 @@ void create ()
 
         ::create();
         set_level(9);
-        set_name( "Drow village leader","�ϴ峤");
+        set_name( "Drow village leader","老村長");
         add ("id", ({ "drow", "leader" }) );
-        set_short( "Drow village leader","�ϴ峤");
-        set("unit","λ");
+        set_short( "Drow village leader","老村長");
+        set("unit","位");
         set_long(
 @C_LONG
-�������һ���ȴ��Ȼ���������ڵ�Э�������������Ǻڰ�������
-�ϴ峤��������ִ�⽫һλŮ��˾������̳���룬�ƺ�������ϴ塡
-���ķ���(trouble)������԰������
+他的年紀一大把卻仍然擔任著村內的協調工作，他就是黑暗精靈村的
+老村長，最近神官執意將一位女祭司送往神壇祭祀，似乎造成了老村　
+長的煩惱(trouble)，你可以幫幫他嗎？
 C_LONG
         );
         set_perm_stat("str", 12);
@@ -30,11 +30,11 @@ C_LONG
         set("weight" , 700);
         set ("race", "drow");
         set( "inquiry", ([
-                "trouble" : "Ů��˾�𣿰����������ĵٵ£�˭��ȥ��(help)���أ� \n",
-                "help" : "�ٵ±�����͵�˾�ȿ����(temple)�ˣ����Ѿ��׸����ˣ�Ҫ��ξ����أ�\n",
-                "temple" : "ร������ƽ�����ǲ��ܽ�ȥ����������������(valor)�Ĵ��˲��ܽ�������\n",
+                "trouble" : "女祭司嗎？唉．．可憐的蒂德，誰能去幫(help)她呢？ \n",
+                "help" : "蒂德被神官送到司娜可神殿(temple)了，就已經獻給神了，要如何救她呢？\n",
+                "temple" : "喔．．神殿平常人是不能進去的啦，除非是勇者(valor)的傳人才能進入啦！\n",
                 "valor" : "@@ask_valor",
-      "mark" : "���ʣ��㵽��Ҫ��Ҫȥ������\n",
+      "mark" : "還問？你到底要不要去拿啦？\n",
                ]) );
         wield_weapon(OBJ"copper_blunt");
         equip_armor(ARM"bracers");
@@ -44,10 +44,10 @@ C_LONG
 int ask_valor()
 {
         tell_object(this_player(),@LONG
-�峤˵��ࡣ���Ҳ�����Լ�����������ǰ��������Ķ�˵�����ߣ�
-�����ƭ�ҡ��������ԣ��Ҿ������������ܵõ��޿�˼���Ͽɣ���ͨ����
-�Ŀ��鲢�������Ļ���(mark)���ң�֤�� (certification)�������ߣ���
-�ٽ�����ο�����
+村長說：唷，你也覺得自己是是勇者嗎？前幾天來玩的都說是勇者，
+結果都騙我～～～所以，我決定，除非你能得到修凱思的認可，能通過他
+的考驗並且拿他的徽章(mark)給我，證明 (certification)你是勇者，我
+再教你如何靠近神殿！
 LONG
         );
         this_player()->set_temp("drow_certi",1);
@@ -64,16 +64,16 @@ int accept_item(object me, object item)
         if (!name || (name!="captain's seal"))
                 return 1;
 
-        write("�ϴ峤˵���ţ��ǻ���û������ȵȣ�������\n");
+        write("老村長說：嗯，是徽章沒錯，你等等．．．．\n");
         if (!this_object()->query("scale"))
         {
-                write("�ϴ峤˵����ȥ�ɣ���Ƭ���۵������ף����Ŷ�����а����ġ�\n");
+                write("老村長說：拿去吧，這片蛇鱗得來不易，相信對你會有幫助的。\n");
                 ob=new(OBJ"scale");
                 ob->move(this_player());
                 set("scale",1);
         }
         else
-                write("�ϴ峤������˵�������ϧ������Ҳ���һ����ˣ�����Ƿ�ðƷ�ɣ�\n");
+                write("老村長慢慢的說道：真可惜，有人也給我徽章了，你的是仿冒品吧！\n");
                 return 1;
 }
 // QCing.

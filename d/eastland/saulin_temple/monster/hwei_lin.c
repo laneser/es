@@ -4,12 +4,12 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "Hwei lin", "晦林" );
+	set_name( "Hwei lin", "鏅︽灄" );
 	add( "id", ({ "lin","monk","hwei" }) );
-	set_short( "Hwei lin", "晦林" );
+	set_short( "Hwei lin", "鏅︽灄" );
 	set_long(
 		"Hwei lin is a lower level monk.\n",
-		"晦林是一个年轻的和尚,他正在专心的学武...\n"
+		"鏅︽灄鏄竴鍊嬪勾杓曠殑鍜屽皻,浠栨鍦ㄥ皥蹇冪殑瀛告...\n"
 	);
 	set( "gender", "male" );
 	set( "race", "human" );

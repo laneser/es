@@ -5,14 +5,14 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("elemental staff","Ë®»ğ·çÀ×¹÷");
+       set_name("elemental staff","æ°´ç«é¢¨é›·æ£");
        add("id",({"staff"}) );
-       set_short("Ë®»ğ·çÀ×¹÷");
+       set_short("æ°´ç«é¢¨é›·æ£");
 	   set_long(
-           "Ò»°Ñ°ß°şµÄ¹Å´úÄ¾¹÷£¬¿´À´ÆÆÆÆÀÃÀÃ£¬Äã»³ÒÉËü»¹ÄÜµ±ÎäÆ÷Ê¹ÓÃ£®\n"
+           "ä¸€æŠŠæ–‘å‰çš„å¤ä»£æœ¨æ£ï¼Œçœ‹ä¾†ç ´ç ´çˆ›çˆ›ï¼Œä½ æ‡·ç–‘å®ƒé‚„èƒ½ç•¶æ­¦å™¨ä½¿ç”¨ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
         set("type","blunt");
 	set( "min_damage", 15 );

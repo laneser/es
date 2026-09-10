@@ -7,20 +7,20 @@ void create ()
 
 	::create();
     set_level(16);
-    set_name("dwarf royal guard","°«ÈË»ÊÊÒÊØÎÀ");
+    set_name("dwarf royal guard","çŸ®äººçš‡å®¤å®ˆè¡›");
     add ("id", ({ "guard","dwarf"}) );
     set_short( "a drawf royal guard",
-           "°«ÈË»ÊÊÒÊØÎÀ");
+           "çŸ®äººçš‡å®¤å®ˆè¡›");
 	set_long(@LONG
 A drawf guard protects the dwarven palace.
 LONG
     ,@C_LONG
-Ò»¸ö°«ÈË»ÊÊÒÊØÎÀÕı±£ÎÀÖø°«ÈË»Ê¹¬µÄ´¢²ØÊÒ
+ä¸€å€‹çŸ®äººçš‡å®¤å®ˆè¡›æ­£ä¿è¡›è‘—çŸ®äººçš‡å®®çš„å„²è—å®¤
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",  21);
     set_perm_stat( "str",  23);
     set_perm_stat( "int",  11);

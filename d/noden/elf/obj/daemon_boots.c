@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("daemonic boots", "��ħЬ");
+        set_name("daemonic boots", "惡魔鞋");
         add( "id", ({ "boots" }) );
-        set_short( "��ħЬ" );
+        set_short( "惡魔鞋" );
         set_long(
-                "���ǹŶ�ħսʿר�õ�սѥ\n"
+                "這是古惡魔戰士專用的戰靴\n"
         );
-        set( "unit", "˫");
+        set( "unit", "雙");
         set( "type", "feet" );
         set( "material", "heavy_metal");
         set( "armor_class", 6 );

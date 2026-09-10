@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("Ӣ��Ĺ��");
+	ob->set_short("英雄墓場");
 	ob->set_long( @LONG_DESCRIPTION
-�����ǰ���Ӣ�۵�Ĺ��,Ĺ���������һλ����ΰ��̽�վ������.��һ��Ĺ���ı���
-��д��: ��·���ȷ�.
+這裡是矮人英雄的墓場,墓場裡埋藏著一位有著偉大探險精神的人.這一座墓碑的碑銘
+上寫著: 開路的先鋒.
 LONG_DESCRIPTION
 	);
 

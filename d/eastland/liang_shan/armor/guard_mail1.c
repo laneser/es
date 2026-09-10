@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Soft mail","ÈíÏº±³ĞÄ");
+    set_name("Soft mail","è»Ÿè¦èƒŒå¿ƒ");
     add("id",({"plate","mail"}) );
-    set_short( "soft mail","ÈíÏº±³ĞÄ");
+    set_short( "soft mail","è»Ÿè¦èƒŒå¿ƒ");
 	set_long(
 		"\n",
-		"Õâ¼şÕ½¼×ÓÉÈáÈíµÄÏº¿ÇÖÆ³É£¬ÈáÈÍµÄ±íÆ¤Ó¦ÄÜ·¢»ÓÒÔÈá¿Ë¸ÕµÄĞ§¹û£®\n"
+		"é€™ä»¶æˆ°ç”²ç”±æŸ”è»Ÿçš„è¦æ®¼è£½æˆï¼ŒæŸ”éŸŒçš„è¡¨çš®æ‡‰èƒ½ç™¼æ®ä»¥æŸ”å…‹å‰›çš„æ•ˆæœï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 140 );
 	set( "type", "body" );
 	set( "armor_class", 31 );

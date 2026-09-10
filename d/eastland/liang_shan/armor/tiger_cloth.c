@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("tiger fur cloth","»¢Æ¤Ì×Ìå");
+    set_name("tiger fur cloth","è™çš®å¥—é«”");
     add("id",({"fur","cloth"}) );
-    set_short( "tiger fur cloth","»¢Æ¤Ì×Ìå");
+    set_short( "tiger fur cloth","è™çš®å¥—é«”");
 	set_long(
 		"This is a cloth made of fur of tiger\n",
-		"ÕâÊÇÓÃ»¢Æ¤ÖÆ³ÉµÄÒÂÎï£¬¼ô²Ã·Ç³£µÄÆÓÊµÎŞ»ª£¬ÂÔÄÜ±ÖÌå£®\n"
+		"é€™æ˜¯ç”¨è™çš®è£½æˆçš„è¡£ç‰©ï¼Œå‰ªè£éå¸¸çš„æ¨¸å¯¦ç„¡è¯ï¼Œç•¥èƒ½æ•é«”ï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 160 );
 	set( "type", "body" );
 	set( "armor_class", 24 );

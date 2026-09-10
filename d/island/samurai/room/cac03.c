@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
    ::create();
-   set_short( "դ��" );
+   set_short( "柵門" );
    set_long(@ANGEL
-�������ǰ��һ�������դ�ţ���Ҫ������ʿ�Ǳ��ؾ�֮�ؿ�������
-ʿ�Ǳ���ͨ����Ŧ��
+在你的面前是一個大的鐵柵門，是要進入武士城堡必經之關卡，是武
+士城堡交通的樞紐．
 ANGEL
 
    
@@ -27,8 +27,8 @@ ANGEL
                   "keyword" : ({"door","iron door"}),
                   "status"  : "closed",
                   "name"    : "Iron Door",
-                  "c_name"  : "��դ��",
-                  "c_desc"  : "һ��������դ��\n"
+                  "c_name"  : "鐵柵門",
+                  "c_desc"  : "一個鐵做的柵門\n"
                   ]) );
                             
          reset();                     

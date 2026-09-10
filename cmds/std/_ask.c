@@ -11,24 +11,24 @@ int cmd_ask(string str)
 
 	if (!str)
 		return notify_fail(
-			"ÒªÎÊ·ÇÍæÕßÈËÎïÎÊÌâ£¬ÇëÓÃ \"ask <Ë­> about <¹Ø¼ü×Ö>\"¡£\n");
+			"è¦å•éç©è€…äººç‰©å•é¡Œï¼Œè«‹ç”¨ \"ask <èª°> about <é—œéµå­—>\"ã€‚\n");
 
 	if (sscanf(str, "%s about %s", mon_name, subject) != 2)
 		return notify_fail( 
-			"ÒªÎÊ·ÇÍæÕßÈËÎïÎÊÌâ£¬ÇëÓÃ \"ask <Ë­> about <¹Ø¼ü×Ö>\"¡£\n");
+			"è¦å•éç©è€…äººç‰©å•é¡Œï¼Œè«‹ç”¨ \"ask <èª°> about <é—œéµå­—>\"ã€‚\n");
 
 	mon_name = lower_case(mon_name);
 
 	if( !(mon_obj= present(mon_name, environment(this_player()))) )
 		return notify_fail( 
-			"ÄãÒªÎÊµÄ¶ÔÏó²¢²»ÔÚÕâÀï¡£\n");
+			"ä½ è¦å•çš„å°è±¡ä¸¦ä¸åœ¨é€™è£¡ã€‚\n");
 
 	if (mon_obj->query("user")) {
 		write( 
-			"ÄãÏò"+ mon_obj->query("c_name") + "Ñ¯ÎÊÓĞ¹Ø "+subject+" µÄÊÂ¡£\n");
+			"ä½ å‘"+ mon_obj->query("c_name") + "è©¢å•æœ‰é—œ "+subject+" çš„äº‹ã€‚\n");
 
 		tell_object( mon_obj,
-			this_player()->query("c_name")+"ÎÊÄã: Öª²»ÖªµÀÓĞ¹Ø "+subject+" µÄÏûÏ¢£¿\n");
+			this_player()->query("c_name")+"å•ä½ : çŸ¥ä¸çŸ¥é“æœ‰é—œ "+subject+" çš„æ¶ˆæ¯ï¼Ÿ\n");
 		return 1 ;
 	}
 
@@ -37,31 +37,31 @@ int cmd_ask(string str)
 
 	if (sizeof(cmd_map)==0) {
 		write( 
-			mon_obj->query("c_name")+"¶ÔÄãµÄÎÊÌâÃ»ÓĞÈÎºÎ·´Ó¦....¡£\n");
+			mon_obj->query("c_name")+"å°ä½ çš„å•é¡Œæ²’æœ‰ä»»ä½•åæ‡‰....ã€‚\n");
 		return 1 ;
 	}
 	if( undefinedp(cmd_map[subject]) ) {
 		tell_room(environment(this_player()), 
-			this_player()-> query("c_name") + "Ïò" + mon_obj->query("c_name")
-			+ "´òÌıÓĞ¹Ø " + subject + " µÄÏûÏ¢¡£\n",
+			this_player()-> query("c_name") + "å‘" + mon_obj->query("c_name")
+			+ "æ‰“è½æœ‰é—œ " + subject + " çš„æ¶ˆæ¯ã€‚\n",
 			this_player() );
 		tell_room( environment(this_player()), 
-			mon_obj->query("c_name") + "Ò¡Ò¡Í·£¬ËµµÀ: " + "ÎÒ²»ÖªµÀ....¡£\n" );
+			mon_obj->query("c_name") + "æ–æ–é ­ï¼Œèªªé“: " + "æˆ‘ä¸çŸ¥é“....ã€‚\n" );
 	} else {
 		tell_room(environment(this_player()), 
-			this_player()-> query("c_name") + "Ïò" + mon_obj->query("c_name")
-			+ "´òÌıÓĞ¹Ø " + subject + " µÄÏûÏ¢¡£\n",
+			this_player()-> query("c_name") + "å‘" + mon_obj->query("c_name")
+			+ "æ‰“è½æœ‰é—œ " + subject + " çš„æ¶ˆæ¯ã€‚\n",
 			this_player() );
 		if( stringp(cmd_map[subject]) && sscanf( cmd_map[subject], "@@%s", func )==1 )
 			call_other( mon_obj, func, this_player() );
 		else {
 			if( pointerp(cmd_map[subject]) )
 				tell_room(environment(this_player()), 
-					mon_obj->query("c_name") + "ËµµÀ: " + cmd_map[subject][0] + "\n",
+					mon_obj->query("c_name") + "èªªé“: " + cmd_map[subject][0] + "\n",
 					mon_obj );
 			else
 				tell_room(environment(this_player()), 
-					mon_obj->query("c_name") + "ËµµÀ: " + cmd_map[subject] + "\n",
+					mon_obj->query("c_name") + "èªªé“: " + cmd_map[subject] + "\n",
 					mon_obj );
 		}
 	}
@@ -70,10 +70,10 @@ int cmd_ask(string str)
 int help()
 {
 	write(@HELP
-Ê¹ÓÃ¸ñÊ½: ask <ÉúÎïÃû> about <ÊÂÎï>
+ä½¿ç”¨æ ¼å¼: ask <ç”Ÿç‰©å> about <äº‹ç‰©>
 
-ÓÃÓÚÒÔnpc½»Ì¸¡¢½âÃÕµÄ±ê×¼Ö¸Áî.
-²»¹ıÓĞĞ©³¡ºÏÈÔÒªÏÈÓÃsay»òtellÖ¸Áî¶ÔnpcËµ¹Ø¼ü×Ö²ÅÄÜ´¥·¢Çé½Ú.
+ç”¨æ–¼ä»¥npcäº¤è«‡ã€è§£è¬çš„æ¨™æº–æŒ‡ä»¤.
+ä¸éæœ‰äº›å ´åˆä»è¦å…ˆç”¨sayæˆ–tellæŒ‡ä»¤å°npcèªªé—œéµå­—æ‰èƒ½è§¸ç™¼æƒ…ç¯€.
 
 HELP
 );

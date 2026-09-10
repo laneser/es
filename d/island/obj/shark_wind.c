@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("Shark's fin","Óã³á");
+     set_name("Shark's fin","é­šç¿…");
      add("id",({"fin","shark's fin"}) );
-     set_short("Óã³á");
+     set_short("é­šç¿…");
      set_long(@ALONG
-ÕâÊÇ´ó°×öèµÄ÷¢£¬ÌıËµ°¾³ÉÌÀáá¶ÔÖÎÁÆºí¼²ºÜÓĞĞ§Å¶£¡
+é€™æ˜¯å¤§ç™½é¯Šçš„é°­ï¼Œè½èªªç†¬æˆæ¹¯å¾Œå°æ²»ç™‚å–‰ç–¾å¾ˆæœ‰æ•ˆå“¦ï¼
 ALONG
      );
-     set("unit","Æ¬");
+     set("unit","ç‰‡");
      set("no_sale",1);
      set("weight",10);
 }     

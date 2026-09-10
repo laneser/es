@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("large whitegolden ring", "°×½ğ½äÖ¸");
+        set_name("large whitegolden ring", "ç™½é‡‘æˆ’æŒ‡");
         add( "id", ({ "ring" }) );
-        set_short( "°×½ğ½äÖ¸");
+        set_short( "ç™½é‡‘æˆ’æŒ‡");
         set_long(
-                " Ò»¸öÉÁÉÁ·¢¹âµÄ´óĞÍ°×½ğ½äÖ¸\n"
+                " ä¸€å€‹é–ƒé–ƒç™¼å…‰çš„å¤§å‹ç™½é‡‘æˆ’æŒ‡\n"
         );
-        set("unit","Ö»");
+        set("unit","åª");
         set( "type", "finger" );
         set("material","light_metal");
         set( "armor_class", 0 );

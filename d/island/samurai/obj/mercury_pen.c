@@ -27,10 +27,10 @@ int cure(string arg)
 		return notify_fail("That is not here!\n");
 	if( !living(dest) )
 		return notify_fail("Only living things can be healed!\n");
-	tell_room(environment(this_player()),"\n\n " +owner->query("c_cap_name")+"ÄÃÆğ±ÊÔÚÄãµÄÁ³ÉÏÍ¿À´Í¿È¥£®\n\n");
-	tell_room(environment(this_player()),"\n ´ËÊ±Äã×¢Òâµ½ËÄÖÜµÄ¿Õ¼ä¿ªÊ¼¾Û¼¯ÁË´óÁ¿µÄË®Îí£¬Õâ²»ÊÇ´«ËµÖĞË®ĞÇµÄÉñÃØÁ¦Á¿Âğ£¿£¿ \n");
-	tell_room(environment(this_player()),"\n Í»È»¼ä£¬Ë®ĞÇÖ®±ÊÉ¢·¢³öÁËË®Îí°üÎ§ÁË"+dest->query("c_cap_name")+".....\n");
-        tell_room(environment(this_player()),"\n µ±ËùÓĞµÄË®ÎíÂıÂıµÄÏûÊ§Ö®áá£¬"+dest->query("c_cap_name")+"·¢ÏÖËûÒÑ¾­»Ö¸´µ½×î¼Ñ×´¿ö£®\n");
+	tell_room(environment(this_player()),"\n\n " +owner->query("c_cap_name")+"æ‹¿èµ·ç­†åœ¨ä½ çš„è‡‰ä¸Šå¡—ä¾†å¡—å»ï¼\n\n");
+	tell_room(environment(this_player()),"\n æ­¤æ™‚ä½ æ³¨æ„åˆ°å››å‘¨çš„ç©ºé–“é–‹å§‹èšé›†äº†å¤§é‡çš„æ°´éœ§ï¼Œé€™ä¸æ˜¯å‚³èªªä¸­æ°´æ˜Ÿçš„ç¥ç§˜åŠ›é‡å—ï¼Ÿï¼Ÿ \n");
+	tell_room(environment(this_player()),"\n çªç„¶é–“ï¼Œæ°´æ˜Ÿä¹‹ç­†æ•£ç™¼å‡ºäº†æ°´éœ§åŒ…åœäº†"+dest->query("c_cap_name")+".....\n");
+        tell_room(environment(this_player()),"\n ç•¶æ‰€æœ‰çš„æ°´éœ§æ…¢æ…¢çš„æ¶ˆå¤±ä¹‹å¾Œï¼Œ"+dest->query("c_cap_name")+"ç™¼ç¾ä»–å·²ç¶“æ¢å¾©åˆ°æœ€ä½³ç‹€æ³ï¼\n");
 	dest->set("hit_points", (int)dest->query("max_hp"));
 	dest->set("spell_points", (int)dest->query("max_sp"));
 	dest->set("talk_points", (int)dest->query("max_tp"));
@@ -43,12 +43,12 @@ int cure(string arg)
 
 void create()
 {
-        set_name( "mercury pen", "Ë®ĞÇÖ®±Ê" );
+        set_name( "mercury pen", "æ°´æ˜Ÿä¹‹ç­†" );
         add( "id", ({ "pen" }) );
-        set_short( "mercury pen", "Ë®ĞÇÖ®±Ê" );
+        set_short( "mercury pen", "æ°´æ˜Ÿä¹‹ç­†" );
         set_long(
         "This a pen of mercury!\n",
-	"ÕâÊÇÒ»Ö»Ë®ĞÇÖ®±ÊÓµÓĞÖÎÓúÉË¿ÚµÄÁ¦Á¿£®\n"
+	"é€™æ˜¯ä¸€éš»æ°´æ˜Ÿä¹‹ç­†æ“æœ‰æ²»ç™’å‚·å£çš„åŠ›é‡ï¼\n"
 	);
         set("no_sell",1);
         set( "type", "shield" );

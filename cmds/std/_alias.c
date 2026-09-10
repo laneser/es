@@ -22,7 +22,7 @@ void print_aliases(mapping n, mapping x)
 
 	tmp = keys(n);
 	if(sizeof(tmp)) {
-		write( "ÄúÉè¶¨ÁË "+sizeof(tmp)+" ¸öÌæ´úÖ¸Áî:\n");
+		write( "æ‚¨è¨­å®šäº† "+sizeof(tmp)+" å€‹æ›¿ä»£æŒ‡ä»¤:\n");
 		tmp = sort_array(tmp, "sort_keys", this_object());
 
 		for(i = 0; i < sizeof(tmp); i++)
@@ -30,14 +30,14 @@ void print_aliases(mapping n, mapping x)
 	}
 	tmp = keys(x);
 	if(sizeof(tmp)) {
-		write( "ºÍ "+sizeof(tmp)+" Ìæ´ú¶¯´Ê:\n");
+		write( "å’Œ "+sizeof(tmp)+" æ›¿ä»£å‹•è©:\n");
 		tmp = sort_array(tmp, "sort_keys", this_object());
 
 		for(i = 0; i < sizeof(tmp); i++)
 			printf("	%-15s %s\n",tmp[i],x[tmp[i]]);
 	}
 	else if( !sizeof(keys(n)) )
-		write("ÄúÄ¿Ç°Ã»ÓĞÉè¶¨ÈÎºÎÌæ´úÖ¸Áî¡£\n");
+		write("æ‚¨ç›®å‰æ²’æœ‰è¨­å®šä»»ä½•æ›¿ä»£æŒ‡ä»¤ã€‚\n");
 }
 
 int cmd_alias(string str)
@@ -67,8 +67,8 @@ int cmd_alias(string str)
  	elements = keys(alias);
 	if( sizeof(elements) > MAX_ALIAS_NUMBER ) {
 		write( @SORRY
-¶Ô²»Æğ, ÎªÁËÔö¿ì ES µÄËÙ¶È, alias ×î¶àÖ»ÄÜÉè¶¨ 40 ¸ö....
-Äã alias µÄÊıÄ¿Ì«¶àÒÑ¾­±» reset ÁË, ÇëÖØĞÂÉè¶¨¡£
+å°ä¸èµ·, ç‚ºäº†å¢å¿« ES çš„é€Ÿåº¦, alias æœ€å¤šåªèƒ½è¨­å®š 40 å€‹....
+ä½  alias çš„æ•¸ç›®å¤ªå¤šå·²ç¶“è¢« reset äº†, è«‹é‡æ–°è¨­å®šã€‚
 SORRY
 );
 		act_ob->clear_aliases();
@@ -77,7 +77,7 @@ SORRY
 
 	if(!str) {
 		if(!elements || !sizeof(elements) )
-			write("ÄãÄ¿Ç°Ã»ÓĞ¶¨ÒåÈÎºÎÌæ´úÖ¸Áî¡£\n");
+			write("ä½ ç›®å‰æ²’æœ‰å®šç¾©ä»»ä½•æ›¿ä»£æŒ‡ä»¤ã€‚\n");
 		else
 			print_aliases((mapping)act_ob->query_nalias(),
 						  (mapping)act_ob->query_xalias()
@@ -89,15 +89,15 @@ SORRY
 	while(str[0] == ' ') str = str[1..strlen(str)-1];
 	if(sscanf(str,"%s %s", verb, cmd) == 2) {
 		if (!verb || verb == "" || verb == " ")
-			return notify_fail("Äã±ØĞëÖ¸¶¨Ò»¸ö¶¯´Ê¸øÌæ´úÖ¸Áî¡£\n");
+			return notify_fail("ä½ å¿…é ˆæŒ‡å®šä¸€å€‹å‹•è©çµ¦æ›¿ä»£æŒ‡ä»¤ã€‚\n");
 
 		if((verb=="alias") || (verb=="unalias") || (verb=="go") )
-			return notify_fail (sprintf("Äã²»ÄÜÓÃ %s Õâ¸ö×Öµ±¶¯´Ê¡£\n",verb));
+			return notify_fail (sprintf("ä½ ä¸èƒ½ç”¨ %s é€™å€‹å­—ç•¶å‹•è©ã€‚\n",verb));
 
 		if((sscanf(cmd,"%s,"+verb+",%s",tmp1,tmp2)==2) ||
 		   (sscanf(cmd,"do "+verb+",%s",tmp1)==1) ||
 		   ((sscanf(cmd,"%s,"+verb+"%s",tmp1,tmp2)==2) && tmp2=="") )
-			return notify_fail("Äã²»ÄÜ°ÑÏàÍ¬µÄÃüÁî·Åµ½Ìæ´úÖ¸ÁîÖĞ !!\n");
+			return notify_fail("ä½ ä¸èƒ½æŠŠç›¸åŒçš„å‘½ä»¤æ”¾åˆ°æ›¿ä»£æŒ‡ä»¤ä¸­ !!\n");
 
 		if(environment(this_player())) { // it's probably not a new player
 			// Players demand this .... by Annihilator@Eastern.Stories (12-26-93)
@@ -106,19 +106,19 @@ SORRY
 				// set Max alias number, added by Kyoko.
 				if( sizeof(elements) < MAX_ALIAS_NUMBER )
 				  write(
-					"¼ÓÈëĞÂµÄÌæ´úÖ¸Áî "+verb+" ( Ìæ´ú "+cmd+" ) .... OK.\n");
+					"åŠ å…¥æ–°çš„æ›¿ä»£æŒ‡ä»¤ "+verb+" ( æ›¿ä»£ "+cmd+" ) .... OK.\n");
 				else {
 				  write(
-					"ÄãÒÑ¾­Éè¶¨Ì«¶àµÄÌæ´úÖ¸ÁîÁË, ÇëÏÈÉ±µôÒ»Ğ©¡£\n");
+					"ä½ å·²ç¶“è¨­å®šå¤ªå¤šçš„æ›¿ä»£æŒ‡ä»¤äº†, è«‹å…ˆæ®ºæ‰ä¸€äº›ã€‚\n");
 				  return 1;
 				}
 			else
 			     if(strlen(cmd)>MAX_ALIAS_SIZE)
-			       {  write("ÄãµÄÌæ´úÖ¸Áî³¤¶È´óì¶ÈİĞíÖµ,ÇëÊÔÖø¸Ä¶ÌÒ»µã¡£\n") ;
+			       {  write("ä½ çš„æ›¿ä»£æŒ‡ä»¤é•·åº¦å¤§æ–¼å®¹è¨±å€¼,è«‹è©¦è‘—æ”¹çŸ­ä¸€é»ã€‚\n") ;
 			          return 1;
 			       }
 			     else
-				  write("ĞŞ¸Ä¾ÉÓĞÌæ´úÖ¸Áî "+verb+" ( ¸ÄÎª "+cmd+" ) .... OK.\n");
+				  write("ä¿®æ”¹èˆŠæœ‰æ›¿ä»£æŒ‡ä»¤ "+verb+" ( æ”¹ç‚º "+cmd+" ) .... OK.\n");
 		}
 		act_ob->add_alias(verb,cmd);
 		return 1;
@@ -126,7 +126,7 @@ SORRY
 
 	if(!alias[str]) {
 		write(
-			"Äã²¢Ã»ÓĞÉè¶¨ \""+str+"\" Õâ¸öÌæ´úÖ¸Áî¡£\n");
+			"ä½ ä¸¦æ²’æœ‰è¨­å®š \""+str+"\" é€™å€‹æ›¿ä»£æŒ‡ä»¤ã€‚\n");
 		return 1;
 	}
 
@@ -139,16 +139,16 @@ protected int sort_keys(string a, string b) {  return strcmp(a, b);  }
 void help()
 {
 write(@HELP
-Ò»°ã²ÎÊı: -clear  É¾³ıÈ«²¿¶¨Òå.
+ä¸€èˆ¬åƒæ•¸: -clear  åˆªé™¤å…¨éƒ¨å®šç¾©.
 
-alias			²é¿´È«²¿¶¨Òå.
-alias <alias> <command>	¶¨Òå<alias>ÊÇ<command>.
-alias <alias>		¼ì²é¶¨Òå<alias>.
-unalias <alias>		É¾³ı¶¨Òå<alias>.
+alias			æŸ¥çœ‹å…¨éƒ¨å®šç¾©.
+alias <alias> <command>	å®šç¾©<alias>æ˜¯<command>.
+alias <alias>		æª¢æŸ¥å®šç¾©<alias>.
+unalias <alias>		åˆªé™¤å®šç¾©<alias>.
 
-¿ÉÌæ»»µÄ±äÁ¿:
-	$# - Ìæ´úÊı×Ö»òÎÄ×Ö.
-	$* - Ìæ´úÈÎºÎÊÂ¼ş.
+å¯æ›¿æ›çš„è®Šé‡:
+	$# - æ›¿ä»£æ•¸å­—æˆ–æ–‡å­—.
+	$* - æ›¿ä»£ä»»ä½•äº‹ä»¶.
 
 HELP
 );

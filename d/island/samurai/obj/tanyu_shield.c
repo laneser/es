@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "tanyu shield", "ÌìÓğ¶Ü");
+        set_name( "tanyu shield", "å¤©ç¾½ç›¾");
         add( "id", ({ "shield" }) );
-        set_short("tanyu shield", "ÌìÓğ¶Ü");
+        set_short("tanyu shield", "å¤©ç¾½ç›¾");
         set_long(@AAA
-ÕâÊÇÌìÓğ½£ÅÉµÄÌØÓĞÖ®»¤¶Ü
+é€™æ˜¯å¤©ç¾½åŠæ´¾çš„ç‰¹æœ‰ä¹‹è­·ç›¾
 AAA
         );
-        set( "unit", "Ãæ"); 
+        set( "unit", "é¢"); 
         set( "type", "shield" );
         set( "armor_class", 6 );
         set( "defense_bonus", 4 );

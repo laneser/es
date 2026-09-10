@@ -11,7 +11,7 @@ int stop_attack()
    object player;
    player=this_player();
    if ( player->query_level() > query("lvlimit") ) {
-     write("喂，你留口饭给低等级的玩家吃吧！\n");
+     write("鍠傦紝浣犵暀鍙ｉ／绲︿綆绛夌礆鐨勭帺瀹跺悆鍚э紒\n");
      return 1;
    }
    return 0;

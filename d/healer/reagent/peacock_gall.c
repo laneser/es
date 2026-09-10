@@ -4,15 +4,15 @@ inherit "/std/reagent.c";
 
 void create()
 {
-	set_name( "peacock's gall", "¿×È¸µ¨" );
+	set_name( "peacock's gall", "å­”é›€è†½" );
 	add( "id", ({"gall"}) );
-	set_short( "¿×È¸µ¨" );
+	set_short( "å­”é›€è†½" );
 	set_long(
-		"ÕâÊÇÒ»¿ÅÂÌÉ«µÄ¿×È¸µ¨,¾ßÓĞÇ¿ÁÒµÄ¶¾ĞÔ¡£\n"
-		"Èç¹ûÄã²»ÅÂËÀµÄ»°,¿ÉÒÔ³¢³¢(taste)Ëü¡£\n"
+		"é€™æ˜¯ä¸€é¡†ç¶ è‰²çš„å­”é›€è†½,å…·æœ‰å¼·çƒˆçš„æ¯’æ€§ã€‚\n"
+		"å¦‚æœä½ ä¸æ€•æ­»çš„è©±,å¯ä»¥åšåš(taste)å®ƒã€‚\n"
 	);
            set("no_sale",1);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "ident", "PEACOCK_GALL" );
         set( "weight", 2 );
 	set( "value", ({ 20, "silver" }) );

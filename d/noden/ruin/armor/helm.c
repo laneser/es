@@ -6,11 +6,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("magic helmet", "îøÄ§¿ø");
-    set_short("îøÄ§¿ø");
+    set_name("magic helmet", "é§é­”ç›”");
+    set_short("é§é­”ç›”");
     add("id", ({ "helmet", "helm" }));
-    set_long("ÓÉÄ§Á¦»Ã»¯¶ø³ÉµÄÍ·¿ø¡£\n");
-    set("unit", "¶¥");
+    set_long("ç”±é­”åŠ›å¹»åŒ–è€Œæˆçš„é ­ç›”ã€‚\n");
+    set("unit", "é ‚");
     set("weight", 0);
     set("type", "head");
     set("material", "knight");
@@ -22,7 +22,7 @@ void create()
 
 void unequip(int silent)
 {
-    tell_object(this_player(), "îøÄ§¿ø¾Ü¾øÀë¿ªÄãµÄÉíÌå!\n");
+    tell_object(this_player(), "é§é­”ç›”æ‹’çµ•é›¢é–‹ä½ çš„èº«é«”!\n");
 }
 
 int remove()

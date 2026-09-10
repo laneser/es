@@ -8,11 +8,11 @@ void create()
 
         ::create();
         set_level(3);
-        set_name( "little elf", "Ğ¡¾«Áé" );
+        set_name( "little elf", "å°ç²¾éˆ" );
         add ("id", ({"little elf", "elf" }) );
-        set_short( "Ğ¡¾«Áé" );
+        set_short( "å°ç²¾éˆ" );
         set_long(
-           "  Ğ¡¾«ÁéÊÇ¾«Áé´å¿ìÀÖµÄÖÆÔìÕß¡£\n"
+           "  å°ç²¾éˆæ˜¯ç²¾éˆæ‘å¿«æ¨‚çš„è£½é€ è€…ã€‚\n"
         );
         set_perm_stat("str", 5);
         set_perm_stat("dex", 1);
@@ -26,6 +26,6 @@ void create()
         knife->move(this_object());
         wield_weapon(knife);
         set("wealth/silver", 23);
-        set_c_limbs(({"ÉíÌå","Í·²¿","ÊÖ±Û","½Å²¿"}));
-        set_c_verbs(({"ÓÃ%sÏò%s´ÌÈ¥","ÓÃ%sÏò%sÅüÈ¥"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","æ‰‹è‡‚","è…³éƒ¨"}));
+        set_c_verbs(({"ç”¨%så‘%såˆºå»","ç”¨%så‘%såŠˆå»"}));
 }

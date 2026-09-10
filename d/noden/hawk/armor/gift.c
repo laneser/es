@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-            set_name( "Gods gift","ÖÚÉñµÄÀñÔŞ" );
+            set_name( "Gods gift","çœ¾ç¥çš„ç¦®è®š" );
             add( "id", ({ "gift","gods gift" }) );
-            set_short( "ÖÚÉñµÄÀñÔŞ" );
+            set_short( "çœ¾ç¥çš„ç¦®è®š" );
             set_long(@LONG
-    ÕâÊÇ°ÂÁÖÅÁË¹É½ÉÏÖÚÉñ´ÍÓëÈË¼ä×îÇ¿µÄ·À¾ß£¬Î¨ÓĞ¾ßÓĞ¸ß¶ÈÖÇ»ÛÓëÇ¿´óÁ¦
-Á¿µÄÈË²ÅÓĞÄÜÁ¦Ê¹ÓÃËü¡£Äã×ĞÏ¸¶ËÏêÕâ¼ş×ãÒÔ¸²¸Ç×¡ÄãÈ«ÉíµÄ±¦Îï£¬ÉÏÃæËù¿Ì
-¾«ÃÀ¾øÂ×µÄÁú·ïÎÆÕıÊÇÖîÉñµÄÖ¤Ã÷¡£
+    é€™æ˜¯å¥§æ—å¸•æ–¯å±±ä¸Šçœ¾ç¥è³œèˆ‡äººé–“æœ€å¼·çš„é˜²å…·ï¼Œå”¯æœ‰å…·æœ‰é«˜åº¦æ™ºæ…§èˆ‡å¼·å¤§åŠ›
+é‡çš„äººæ‰æœ‰èƒ½åŠ›ä½¿ç”¨å®ƒã€‚ä½ ä»”ç´°ç«¯è©³é€™ä»¶è¶³ä»¥è¦†è“‹ä½ä½ å…¨èº«çš„å¯¶ç‰©ï¼Œä¸Šé¢æ‰€åˆ»
+ç²¾ç¾çµ•å€«çš„é¾é³³ç´‹æ­£æ˜¯è«¸ç¥çš„è­‰æ˜ã€‚
 LONG );
 	set( "armor_class",20 );
 	set( "defense_bonus",40);
@@ -41,13 +41,13 @@ int stop_wear(object player)
           || (player->query("armor/misc")) || (player->query("armor/legs"))
           || (player->query("armor/finger")) )
         {
-                write( "Äã´©ÁËÄ³ÖÖºÍÖîÉñµÄÀñÔŞÏà³åÍ»µÄ·À¾ß!\n");
+                write( "ä½ ç©¿äº†æŸç¨®å’Œè«¸ç¥çš„ç¦®è®šç›¸æ²–çªçš„é˜²å…·!\n");
                 return 1;
         }
 
         else if ( (int)player->query_perm_stat("int") < 14 )
         {
-                write( "ÖîÉñÈÏÎªÄãÊÇ¸ö±¿µ°£¬²»Ô¸ÄãÔãÌ£Õâ¸öÀñÎï!\n");
+                write( "è«¸ç¥èªç‚ºä½ æ˜¯å€‹ç¬¨è›‹ï¼Œä¸é¡˜ä½ ç³Ÿè¹‹é€™å€‹ç¦®ç‰©!\n");
                 return 1;
         }
         else return 0;
@@ -87,10 +87,10 @@ int do_wear(string str)
                                  {
                                         armor->equip();
                                         armor->set( "equipped", 1 );
-                                        write( "ÄãË³ÀûµØ´©ÉÏÖÚÉñµÄÀñÔŞ¡£\n" );
+                                        write( "ä½ é †åˆ©åœ°ç©¿ä¸Šçœ¾ç¥çš„ç¦®è®šã€‚\n" );
                                         tell_room( environment(player),
                                                 player->query("c_name")
-                                                + "ÀûµØ´©ÉÏÖÚÉñµÄÀñÔŞ¡£\n",
+                                                + "åˆ©åœ°ç©¿ä¸Šçœ¾ç¥çš„ç¦®è®šã€‚\n",
                                                 player );
                                  }
                          }
@@ -129,9 +129,9 @@ int do_wear(string str)
 
                         switch ( ob[i]->query( "equip_level" ) )
                          {
-                                case 0 : verb = "Ë³ÀûµØ";   break;
-                                case 1 : verb = "ÃãÇ¿µØ";   break;
-                                case 2 : verb = "Ó²ÉúÉúµØ"; break;
+                                case 0 : verb = "é †åˆ©åœ°";   break;
+                                case 1 : verb = "å‹‰å¼·åœ°";   break;
+                                case 2 : verb = "ç¡¬ç”Ÿç”Ÿåœ°"; break;
                                 default : verb = "";        break;
                          }
 
@@ -140,28 +140,28 @@ int do_wear(string str)
                                 case "body":
                                 case "legs":
                                 case "feet":
-                                case "cloak": verb += "´©ÉÏ"; break;
+                                case "cloak": verb += "ç©¿ä¸Š"; break;
                                 case "head":
                                 case "finger":
                                 case "hands":
-                                case "misc": verb += "´÷ÉÏ"; break;
-                                case "globe": verb += "ÕÅ¿ª"; break;
-                                case "shield": verb += "ÓÃÊÖÄÃÆğ"; break;
-                                case "saddle": verb += "×°ÅäÉÏ"; break;
-                                case "kernel": verb += "ÍÌÏÂ"; break;
+                                case "misc": verb += "æˆ´ä¸Š"; break;
+                                case "globe": verb += "å¼µé–‹"; break;
+                                case "shield": verb += "ç”¨æ‰‹æ‹¿èµ·"; break;
+                                case "saddle": verb += "è£é…ä¸Š"; break;
+                                case "kernel": verb += "åä¸‹"; break;
                                 case "arms":
-                                case "tail": verb += "Ì×ÉÏ"; break;
-                                default: verb += "´©ÉÏ"; break;
+                                case "tail": verb += "å¥—ä¸Š"; break;
+                                default: verb += "ç©¿ä¸Š"; break;
                          }
 
                         ob[i]->equip();
-                        write( "Äã" + verb
-                               + (string)ob[i]->query("c_name") + "¡£\n" );
+                        write( "ä½ " + verb
+                               + (string)ob[i]->query("c_name") + "ã€‚\n" );
                         tell_room( environment( player ),
                                         (string)player->query( "c_name" )
                                         + verb
                                         + (string)ob[i]->query("c_name")
-                                        + "¡£\n", player );
+                                        + "ã€‚\n", player );
                  }
                 write( "Ok.\n" );
                 return 1;
@@ -176,7 +176,7 @@ int do_wear(string str)
          {
                 if ( armor->query( "equipped" ) )
                  {
-                        write( "ÄãÒÑ¾­´©ÁËÍ¬ÀàĞÍµÄ»¤¼×ÁË¡£\n" );
+                        write( "ä½ å·²ç¶“ç©¿äº†åŒé¡å‹çš„è­·ç”²äº†ã€‚\n" );
                         return 1;
                  }
                 else return 0;

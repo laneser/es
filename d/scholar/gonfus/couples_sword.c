@@ -17,13 +17,13 @@ int check_weapon(object me)
 
   weapon=(object)me->query("weapon1");
   if( !weapon || (string)weapon->query("type") != ("longblade") ) {
-           tell_object(me,"Äã²¢Î´×°±¸ÊÊºÏµÄÎäÆ÷¡£\n");
+           tell_object(me,"ä½ ä¸¦æœªè£å‚™é©åˆçš„æ­¦å™¨ã€‚\n");
            tell_object(me,
-                "ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n");
+                "ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n");
 
         tell_room( environment(me),
                 me->query("c_name")+
-                "ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n" , me);
+                "è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n" , me);
 
         me->delete("attack_skill");
         me->delete("defense_skill");
@@ -38,14 +38,14 @@ int check_weapon(object me)
 int check_spouse(object me)
 {
 
-  /* obj_id ÊÇÎªÁË¿¼Á¿ĞÔ±ğ¿ÉÄÜ²»»á¸ÕºÃÊÇÒ»ÄĞÒ»Å®¶øÉèµÄ */
+  /* obj_id æ˜¯ç‚ºäº†è€ƒé‡æ€§åˆ¥å¯èƒ½ä¸æœƒå‰›å¥½æ˜¯ä¸€ç”·ä¸€å¥³è€Œè¨­çš„ */
   int obj_id1, obj_id2, i;
   string spouse_name, trash, temp;
   object spouse, env;
 
   spouse_name = me->query("spouse");
   if (!spouse_name) {
-    tell_object(me,"ÄãÏë»¹ÊÇÏÈ½á»éÔÙËµ°É¡£\n");
+    tell_object(me,"ä½ æƒ³é‚„æ˜¯å…ˆçµå©šå†èªªå§ã€‚\n");
     return 0;
   }
                                             
@@ -54,7 +54,7 @@ int check_spouse(object me)
   spouse_name = lower_case(spouse_name);
   spouse = find_living(spouse_name);
   if ( !spouse || !present(spouse,env) ) {
-    tell_object(me,"ÒòÎªÈ±ÉÙÄãÁíÒ»°ëµÄ¸¨Öú¶øÎŞ·¨Ê©Õ¹ÕâÌ×½£·¨¡£\n");
+    tell_object(me,"å› ç‚ºç¼ºå°‘ä½ å¦ä¸€åŠçš„è¼”åŠ©è€Œç„¡æ³•æ–½å±•é€™å¥—åŠæ³•ã€‚\n");
     return 0;
   }
  
@@ -82,7 +82,7 @@ int enhant(object me, int level)
 	weapon = (object)me->query("weapon1");
 
         if( !weapon || (string)weapon->query("type") != ("longblade") ) {
-           tell_object(me,"Äã²¢Î´×°±¸ÊÊºÏµÄÎäÆ÷¡£\n");
+           tell_object(me,"ä½ ä¸¦æœªè£å‚™é©åˆçš„æ­¦å™¨ã€‚\n");
            return 0;
         }
         
@@ -90,14 +90,14 @@ int enhant(object me, int level)
           return 0;                                  
         
 	tell_object(me, 
-		"\nÄã¿ªÊ¼½«ÄÚÁ¦¾Ûì¶½£Éí, ×¼±¸Ê¹³ö¡¸"+
-		to_chinese(GONFU_NAME)+"¡¹!!\n");
+		"\nä½ é–‹å§‹å°‡å…§åŠ›èšæ–¼åŠèº«, æº–å‚™ä½¿å‡ºã€Œ"+
+		to_chinese(GONFU_NAME)+"ã€!!\n");
 
 	tell_room( environment(me),
 		"\n"+me->query("c_name")+
-		"´óºÈÒ»Éù£¬½«ÊÖÉÏµÄ"+weapon->query("short")+
-		"Ò»¶¶£¬×¼±¸Ê©Õ¹ÄÇÄÑµÃÒ»¼ûµÄ"+
-                to_chinese(GONFU_NAME)+"¡£\n" , me);
+		"å¤§å–ä¸€è²ï¼Œå°‡æ‰‹ä¸Šçš„"+weapon->query("short")+
+		"ä¸€æŠ–ï¼Œæº–å‚™æ–½å±•é‚£é›£å¾—ä¸€è¦‹çš„"+
+                to_chinese(GONFU_NAME)+"ã€‚\n" , me);
 
 	me->set("attack_skill", GONFU_DIR+GONFU_NAME); 
 	me->delete("defense_skill");
@@ -113,11 +113,11 @@ void release_gonfu(object me)
         if (!me->query_temp("gonfu_busy"))
           return;
 	tell_object(me, 
-		"ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n");
+		"ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n");
  
  	tell_room( environment(me),
  		me->query("c_name")+
- 		"ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n" , me);
+ 		"è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n" , me);
  
 	me->delete("attack_skill");
 	me->delete("defense_skill");

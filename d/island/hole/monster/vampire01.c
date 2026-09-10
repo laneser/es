@@ -7,13 +7,13 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "Vampire","��Ѫ����" );
+	set_name( "Vampire","吸血蝙蝠" );
 	add("id",({ "vampire","bat" }) );
-	set_short( "��Ѫ����" );
+	set_short( "吸血蝙蝠" );
 	set_long(@LONG
-    һֻ�޴����Ѫ�������������ұ��ϣ�һ˫������۾���������
-���ţ��ƺ���������Ҫ���㵱�����͡����������������֮ǰ�Ͽ���
-�����
+    一隻巨大的吸血蝙蝠正倒掛在巖壁上，一雙泛紅的眼睛緊盯著你
+不放，似乎正盤算著要將你當作晚餐。你最好在它攻擊你之前趕快離
+開這裡。
 LONG
 		);
 	set( "alignment",-3000 );
@@ -34,8 +34,8 @@ LONG
 	set( "stun_diffculty",100 );
 	set( "tactic","assault" );
 	set( "unbleeding",1 );
-	set_c_limbs( ({ "ͷ��","����","���","צ��" }) );
-	set_c_verbs( ({ "%s����������������ҧ��%s","%s��������צץ��%s","%s�����ĳ������%s" }) );
+	set_c_limbs( ({ "頭部","身體","翅膀","爪子" }) );
+	set_c_verbs( ({ "%s用它長滿利牙的嘴咬向%s","%s用它的利爪抓向%s","%s用它的翅膀拍向%s" }) );
 	set( "tactic_func","my_tactic" );
 }
 
@@ -48,9 +48,9 @@ int my_tactic()
 	else
 	{
 	him = victim->query( "c_name" );
-	tell_object(victim,"\n��Ѫ����ɵ���Ĳ����Ϻݺݵ�����һ�����Ѫ\n\n");
+	tell_object(victim,"\n吸血蝙蝠飛到你的脖子上狠狠的吸了一大口鮮血\n\n");
 	tell_room(environment(this_object()),
-	"��Ѫ����ͻȻ�ɵ�"+him+"�Ĳ����Ϻݺݵ�����һ�����Ѫ\n\n",victim);
+	"吸血蝙蝠突然飛到"+him+"的脖子上狠狠地吸了一大口鮮血\n\n",victim);
 	victim->receive_damage( 20 + random(30) );
 	report( victim );
 	return 1;
@@ -64,8 +64,8 @@ void change( object what, object player )
 	ob->move( environment( what ) );
 	tell_object( player,@ALONG
      
-��Ѫ���𷢳�һ���������ᣬͻȻ���һ������Ѫɫ����Ѫ��!
-��Ѫ�����������˵�����������㾹�һ����Ҷ�������У�ȥ����!
+吸血蝙蝠發出一陣尖銳叫聲後，突然變成一個面無血色的吸血鬼!
+吸血鬼滿懷恨意地說道：該死，你竟敢壞了我多年的修行，去死吧!
 
 ALONG
 		);       

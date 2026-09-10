@@ -10,12 +10,12 @@ void create()
 
 	::create();
 	set_level(15);
-	set_name("horseface", "马面将军");
-	set_short("General Horseface", "马面将军");
+	set_name("horseface", "棣潰灏囪粛");
+	set_short("General Horseface", "棣潰灏囪粛");
 	set_long(
 		"You se a huge giant with horse face.\n",
-		"马面将军的脸虽然长得像马，但是他的剑术足以使胆敢取笑他长相的人\n"
-		"一辈子笑不出来。\n"
+		"棣潰灏囪粛鐨勮噳闆栫劧闀峰緱鍍忛Μ锛屼絾鏄粬鐨勫妽琛撹冻浠ヤ娇鑶芥暍鍙栫瑧浠栭暦鐩哥殑浜篭n"
+		"涓�杓╁瓙绗戜笉鍑轰締銆俓n"
 	);
 	set_skill( "longblade", 100 );
 	set_skill( "parry", 100 );

@@ -6,11 +6,11 @@ void	create()
 	::create();
 	set_light(1);
 	set_outside();
-	set_short("Maple Street","·ãÊ÷´ó½Ö");
+	set_short("Maple Street","æ¥“æ¨¹å¤§è¡—");
 	set_long(@Long
 Long
 ,@CLong
-ÕâÀïÊÇ·ãÊ÷´ó½Ö, ÖÜÎ§Ïàµ±µØÇå¾²¡£
+é€™è£¡æ˜¯æ¥“æ¨¹å¤§è¡—, å‘¨åœç›¸ç•¶åœ°æ¸…éœã€‚
 CLong
 );
 	set("exits", ([

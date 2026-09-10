@@ -87,11 +87,11 @@ int do_read(string arg)
 	int i;
 
 	if ( ! arg) 
-		return notify_fail("ÄãÒª¶ÁÊ²÷á£¿\n");
+		return notify_fail("ä½ è¦è®€ä»€éº¼ï¼Ÿ\n");
 	trick = keys(tricks);
 	if ( (i = member_array( arg,trick)) < 0 )
-		return notify_fail("Äã·­±éÁËÊéÒ²ÕÒ²»µ½ÄãÒªµÄ×ÊÁÏ¡£\n");
-	write("Äã°Ñ¾ŞÊé·­¿ª£¬·­µ½ÓĞ¹Ø"+to_chinese(trick[i])+"µÄÄÇÒ»Ò³£¬ÉÏÃæĞ´Öø :\n\n");
+		return notify_fail("ä½ ç¿»éäº†æ›¸ä¹Ÿæ‰¾ä¸åˆ°ä½ è¦çš„è³‡æ–™ã€‚\n");
+	write("ä½ æŠŠå·¨æ›¸ç¿»é–‹ï¼Œç¿»åˆ°æœ‰é—œ"+to_chinese(trick[i])+"çš„é‚£ä¸€é ï¼Œä¸Šé¢å¯«è‘— :\n\n");
 	cat("/d/thief/doc/tricks/"+trick[i]);
 	return 1;
 }
@@ -102,9 +102,9 @@ void view_catalog()
 	string *s;
 	int i;
 	
-	write("ÊéµÄÄ¿Â¼ÉÏĞ´Öø : \n\n");
+	write("æ›¸çš„ç›®éŒ„ä¸Šå¯«è‘— : \n\n");
 	printf( "%-30s  %-15s  %-8s  %-8s\n",
-		"¼Æ²ßÃû³Æ","¼Æ²ßÖÖÀà","ËùĞè¼¼ÄÜ","×î´ó¼¶Êı");
+		"è¨ˆç­–åç¨±","è¨ˆç­–ç¨®é¡","æ‰€éœ€æŠ€èƒ½","æœ€å¤§ç´šæ•¸");
 	write( "=====================================================================\n");
 	tricks = query_tricks();
 	s = keys(tricks);
@@ -115,7 +115,7 @@ void view_catalog()
 			tricks[s[i]][1], tricks[s[i]][2] );
 	}
 	write( "=====================================================================\n");
-	write("\nÄã¿ÉÒÔ·­·­Êé£¬¶Á¶Á(read)ÄãËùÏëÖªµÀµÄ×ÊÁÏ¡£\n");
+	write("\nä½ å¯ä»¥ç¿»ç¿»æ›¸ï¼Œè®€è®€(read)ä½ æ‰€æƒ³çŸ¥é“çš„è³‡æ–™ã€‚\n");
 }
 
 int do_study(string arg)
@@ -123,17 +123,17 @@ int do_study(string arg)
 
 //	if ( !wizardp(this_player()) )
 //		return notify_fail(
-//			"Ä¿Ç°Ôİ²»¿ª·ÅÑ§Ï°¡£\n");
+//			"ç›®å‰æš«ä¸é–‹æ”¾å­¸ç¿’ã€‚\n");
 	if( !arg || arg=="" )
 		return notify_fail(
-			"Ö¸Áî¸ñÊ½: study <¼Æ²ßÃû³Æ>\n");
+			"æŒ‡ä»¤æ ¼å¼: study <è¨ˆç­–åç¨±>\n");
 	if( !undefinedp( this_player()->query("tricks/"+arg) ) )
 		return notify_fail(
-			"Õâ¸ö¼Æ²ßÄãÒÑ¾­Ñ§»áÁË£¬Äã¿ÉÒÔ¡õÊÔË¼¿¼(thinking)¸ü¸ß¼¶µÄÔËÓÃ·½Ê½¡£\n");
+			"é€™å€‹è¨ˆç­–ä½ å·²ç¶“å­¸æœƒäº†ï¼Œä½ å¯ä»¥â–¡è©¦æ€è€ƒ(thinking)æ›´é«˜ç´šçš„é‹ç”¨æ–¹å¼ã€‚\n");
 	if( !can_learn_trick( this_player(), arg ) )
 		return notify_fail(
-			"¶Ô²»Æğ£¬ÄãÏÖÔÚ¶Ô¹î¼ÆÑ§µÄÈÏÊ¶»¹Ã»ÓĞ°ì·¨ÁË½âÕâÖÖ¼Æ²ß....¡£\n");
-	write("¾­¹ıÒ»·¬×êÑĞ£¬ÄãÖÕì¶ÁË½âÁË" + to_chinese(arg) + "µÄ»ù±¾¹Ø¼ü£¡\n");
+			"å°ä¸èµ·ï¼Œä½ ç¾åœ¨å°è©­è¨ˆå­¸çš„èªè­˜é‚„æ²’æœ‰è¾¦æ³•ç­è§£é€™ç¨®è¨ˆç­–....ã€‚\n");
+	write("ç¶“éä¸€ç•ªé‘½ç ”ï¼Œä½ çµ‚æ–¼ç­è§£äº†" + to_chinese(arg) + "çš„åŸºæœ¬é—œéµï¼\n");
 	this_player()->set("tricks/"+arg, 0);
 	return 1;
 }
@@ -147,17 +147,17 @@ int do_raise(string arg)
 	if( !arg || arg=="" ) {
 		my_tricks = this_player()->query("tricks");
 		if( !my_tricks || !mapp(my_tricks) || sizeof(my_tricks) < 1 ) {
-			write( "ÄãÄ¿Ç°²¢Ã»ÓĞÑ§µ½ÈÎºÎ¼Æ²ß¡£\n");
+			write( "ä½ ç›®å‰ä¸¦æ²’æœ‰å­¸åˆ°ä»»ä½•è¨ˆç­–ã€‚\n");
 			return 1;
 		}
 		s = keys(my_tricks);
-		printf( "%-30s  %-8s  %s\n","¼Æ²ßÃû³Æ","Ä¿Ç°µÈ¼¶","ÌáÉıµÈ¼¶ËùĞè¾­Ñé");
+		printf( "%-30s  %-8s  %s\n","è¨ˆç­–åç¨±","ç›®å‰ç­‰ç´š","æå‡ç­‰ç´šæ‰€éœ€ç¶“é©—");
 		write( "============================================================\n");
 		for( i=0; i<sizeof(s); i++ ) {
 			if( undefinedp( tricks[s[i]] ) ) continue;
 			exp = raise_cost( this_player(), s[i] );
 			if( exp < 1 )
-				printf( "%-30s  %6d    ÄãÒÑ¾­ÍêÈ«Ìå»áÁË\n",
+				printf( "%-30s  %6d    ä½ å·²ç¶“å®Œå…¨é«”æœƒäº†\n",
 					to_chinese(s[i]) + " (" + s[i] + ")",
 					my_tricks[s[i]] );
 			else
@@ -170,22 +170,22 @@ int do_raise(string arg)
 	}
 	
 	if( undefinedp( this_player()->query("tricks/"+arg) ) ) {
-		write("ÕâÖÖ¼Æ²ßÄãÌı¶¼Ã»Ìı¹ı£¬Äã¿ÉÒÔÓÃ(study)ÑĞ¾¿ÑĞ¾¿¹ıÔÙÀ´¡£\n");
+		write("é€™ç¨®è¨ˆç­–ä½ è½éƒ½æ²’è½éï¼Œä½ å¯ä»¥ç”¨(study)ç ”ç©¶ç ”ç©¶éå†ä¾†ã€‚\n");
 		return 1;
 	}
 	if( raise_cost(this_player(), arg) == -2 ) {
-	    write("¶Ô²»Æğ£¬Õâ¼Æ²ßÔÚÕâÀïÖ»¼ÇÂ¼µ½Õâ¸ö¼¶Êı¡£\n");
+	    write("å°ä¸èµ·ï¼Œé€™è¨ˆç­–åœ¨é€™è£¡åªè¨˜éŒ„åˆ°é€™å€‹ç´šæ•¸ã€‚\n");
 		return 1;
 	}
 	if( (exp = raise_cost(this_player(), arg)) < 1 ) {
-		write("¶Ô²»Æğ£¬Äã¶ÔÕâ¸ö¼Æ²ßµÄÌå»á»¹Ã»ÓĞ°ì·¨¶ÔËüµÄÔËÓÃ·½Ê½ÓĞËù¸ÄÉÆ¡£\n");
+		write("å°ä¸èµ·ï¼Œä½ å°é€™å€‹è¨ˆç­–çš„é«”æœƒé‚„æ²’æœ‰è¾¦æ³•å°å®ƒçš„é‹ç”¨æ–¹å¼æœ‰æ‰€æ”¹å–„ã€‚\n");
 		return 1;
 	}
 	if( (int)this_player()->query_exp_stock() < exp ) {
-		write("ÄãÏÖÔÚÒªÌá¸ßÔËÓÃÕâ¸ö¼Æ²ßµÄÄÜÁ¦£¬ĞèÒª "+exp+" µã¾­Ñé¡£\n");
+		write("ä½ ç¾åœ¨è¦æé«˜é‹ç”¨é€™å€‹è¨ˆç­–çš„èƒ½åŠ›ï¼Œéœ€è¦ "+exp+" é»ç¶“é©—ã€‚\n");
 		return 1;
 	}
-	write("¾­¹ıÒ»·¬¿àË¼Ö®áá£¬Äã¶Ô"+to_chinese(arg)+"µÄÔËÓÃ¸ü¼ÓµÃĞÄÓ¦ÊÖÁË£¡\n");
+	write("ç¶“éä¸€ç•ªè‹¦æ€ä¹‹å¾Œï¼Œä½ å°"+to_chinese(arg)+"çš„é‹ç”¨æ›´åŠ å¾—å¿ƒæ‡‰æ‰‹äº†ï¼\n");
 	this_player()->gain_experience( -exp );
 	this_player()->add("tricks/"+arg, 1 );
 	return 1;

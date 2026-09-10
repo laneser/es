@@ -1,119 +1,119 @@
 
-1.ÂëÍ·µÄË®µ× (/d/deathland/main/d4)     
-    int to_move_stone();       °áÊ¯Í·Ê¹¶´Ñ¨ÏÔÏÖ
+1.ç¢¼é ­çš„æ°´åº• (/d/deathland/main/d4)     
+    int to_move_stone();       æ¬çŸ³é ­ä½¿æ´ç©´é¡¯ç¾
             
-2.¾ŞÈË¼ÀÌ³ (/d/deathland/troll/cave_07)
-                               ÕÒµ½¾ŞÈËµÄ¼ÀÌ³
+2.å·¨äººç¥­å£‡ (/d/deathland/troll/cave_07)
+                               æ‰¾åˆ°å·¨äººçš„ç¥­å£‡
 
-12.»ÊºóÀòÀòË¿µÄÆğ¾ÓÊÒ (/d/deathland/palace/pa_08)
-                               ½øÈë°«ÈË»ÊºóÀòÀòË¿µÄ·¿¼ä
+12.çš‡åè‰è‰çµ²çš„èµ·å±…å®¤ (/d/deathland/palace/pa_08)
+                               é€²å…¥çŸ®äººçš‡åè‰è‰çµ²çš„æˆ¿é–“
 
-3.ÉîÔ¨µÄÄÏ±ß (/d/deathland/main/d12)    
-    int walk_fog();            ³¢ÊÔ½øÈëÎíÖĞ
+3.æ·±æ·µçš„å—é‚Š (/d/deathland/main/d12)    
+    int walk_fog();            å˜—è©¦é€²å…¥éœ§ä¸­
 
-0.ËÀÍö´óµØµÄÂëÍ· (/d/deathland/main/d1)
-                               µÚÒ»´Îµ½´ïºÚ°µ´óÂ½
+0.æ­»äº¡å¤§åœ°çš„ç¢¼é ­ (/d/deathland/main/d1)
+                               ç¬¬ä¸€æ¬¡åˆ°é”é»‘æš—å¤§é™¸
 
-13.°«ÈË»ÊÁê (/d/deathland/city/gb)
-                               ÕÒµ½Íõ×ÓµÄÁé»ê
+13.çŸ®äººçš‡é™µ (/d/deathland/city/gb)
+                               æ‰¾åˆ°ç‹å­çš„éˆé­‚
 
-14.òùòğ¶´ (/d/deathland/dwarf/batcave04)  
-    string to_search_here();   Òı³öÖ÷¶¯¹¥»÷¹ÖÎï
+14.è™è æ´ (/d/deathland/dwarf/batcave04)  
+    string to_search_here();   å¼•å‡ºä¸»å‹•æ”»æ“Šæ€ªç‰©
 
-15.ÃıË¼Èª (/d/deathland/dwarf/muse33)     
-    int look_fountain();       ¹Û¿´ÃıË¼ÈªÈªË®   
+15.è¬¬æ€æ³‰ (/d/deathland/dwarf/muse33)     
+    int look_fountain();       è§€çœ‹è¬¬æ€æ³‰æ³‰æ°´   
 
-4.·ÏÆúµÄ¼àÓü (/d/deathland/dwarf/prison02) 
-    string search_skeleton();  ÕÒ¾ŞÈËÄ§·¨Ê¦ÁÖ¶Ù(Lindn)µÄÊÖ¼Ç
+4.å»¢æ£„çš„ç›£ç„ (/d/deathland/dwarf/prison02) 
+    string search_skeleton();  æ‰¾å·¨äººé­”æ³•å¸«æ—é “(Lindn)çš„æ‰‹è¨˜
 
-16.Ò»¸öÆæ¹ÖµÄµØ·½ (/d/deathland/dwarf/village_09)  
-    int to_enter();            ½øÈë¶´Ñ¨¼ûµ½É±ÊÖ
+16.ä¸€å€‹å¥‡æ€ªçš„åœ°æ–¹ (/d/deathland/dwarf/village_09)  
+    int to_enter();            é€²å…¥æ´ç©´è¦‹åˆ°æ®ºæ‰‹
 
-17.ÉñÃØ¼ÀÌ³ (/d/deathland/dwarf/village_0b)      
-    int to_extinguish();       Ï¨ÃğÁÒ»ğ
+17.ç¥ç§˜ç¥­å£‡ (/d/deathland/dwarf/village_0b)      
+    int to_extinguish();       ç†„æ»…çƒˆç«
 
-11.°«ÈË´åÂäµÄ±ÜÄÑËù (/d/deathland/village/vr4)
+11.çŸ®äººæ‘è½çš„é¿é›£æ‰€ (/d/deathland/village/vr4)
 
-10.Í¨µÀ (/d/deathland/palace/pa_02)
-    string to_search_icons();  ÕÒÑ°Í¼»­ááµÄÃÜµÀ
+10.é€šé“ (/d/deathland/palace/pa_02)
+    string to_search_icons();  æ‰¾å°‹åœ–ç•«å¾Œçš„å¯†é“
 
-5.¾®µ× (/d/deathland/dwarf/well01) 
-    int to_squeeze();          ×ê½ø±ä´óááµÃÁÑ·ì
+5.äº•åº• (/d/deathland/dwarf/well01) 
+    int to_squeeze();          é‘½é€²è®Šå¤§å¾Œå¾—è£‚ç¸«
 
-6.Ğ¡Ë®³Ø (/d/deathland/mine/d06) 
-    int look_skeleton();       ÈüÂ×µÄ¶´Ñ¨
+6.å°æ°´æ±  (/d/deathland/mine/d06) 
+    int look_skeleton();       è³½å€«çš„æ´ç©´
 
-7.°«ÈË¿ó¿Ó (/d/deathland/mine/m53) 
-    int to_find_excavate();    ÍÚ¾òµ²ÔÚÂ·ÖĞµÄÂÒÊ¯¶Ñ
+7.çŸ®äººç¤¦å‘ (/d/deathland/mine/m53) 
+    int to_find_excavate();    æŒ–æ˜æ“‹åœ¨è·¯ä¸­çš„äº‚çŸ³å †
 
-18.ÒÅ¼£µØÏÂ´¢²ØÊÒ (/d/deathland/ruin1/down03)
-                               ¼ûµ½Ô¹ÁéÀ³ÌØ(Wight Leit)
+18.éºè¹Ÿåœ°ä¸‹å„²è—å®¤ (/d/deathland/ruin1/down03)
+                               è¦‹åˆ°æ€¨éˆèŠç‰¹(Wight Leit)
      
-19.Òé»á (/d/deathland/ruin1/house01) 
-    string search_here();      ÕÒÑ°×ÏË®¾§
+19.è­°æœƒ (/d/deathland/ruin1/house01) 
+    string search_here();      æ‰¾å°‹ç´«æ°´æ™¶
 
-20.ÒÅ¼£ (/d/deathland/ruin1/ruin13) 
-    int look_description();    °ºµÂÎÖ³Ç¹úÃñ»áÒéµÄ¸æÊ¾
+20.éºè¹Ÿ (/d/deathland/ruin1/ruin13) 
+    int look_description();    æ˜‚å¾·æ²ƒåŸåœ‹æ°‘æœƒè­°çš„å‘Šç¤º
 
-21.ÒÅ¼£ (/d/deathland/ruin1/ruin51) 
-    int to_hand();             ºÍµñÏñÎÕÊÖ
+21.éºè¹Ÿ (/d/deathland/ruin1/ruin51) 
+    int to_hand();             å’Œé›•åƒæ¡æ‰‹
 
-22.»Ò°µÖ®µºµÄÉ­ÁÖ (/d/deathland/island/forest03)
-    string search_herer();     ÕÒÑ°ÃØÃÜÍ¨µÀ
+22.ç°æš—ä¹‹å³¶çš„æ£®æ— (/d/deathland/island/forest03)
+    string search_herer();     æ‰¾å°‹ç§˜å¯†é€šé“
 
-23.»Ò°µÖ®µºµÄÉ³ÖŞ (/d/deathland/island/i01) 
-    int to_blow();             ´µÏìºÅ½Ç
+23.ç°æš—ä¹‹å³¶çš„æ²™æ´² (/d/deathland/island/i01) 
+    int to_blow();             å¹éŸ¿è™Ÿè§’
 
-24.»Ò°µÖ®µºµÄÕÓÔó (/d/deathland/island/swamp14)
-    int look_mushroom();       ÕÒÑ°¿ÉÒÔÖĞºÍÃıË¼ÈªË®¶¾ËØµÄÄ¢¹½
+24.ç°æš—ä¹‹å³¶çš„æ²¼æ¾¤ (/d/deathland/island/swamp14)
+    int look_mushroom();       æ‰¾å°‹å¯ä»¥ä¸­å’Œè¬¬æ€æ³‰æ°´æ¯’ç´ çš„è˜‘è‡
 
-8.¾®µ× (/d/deathland/palace/well01) 
-    int to_climb();            ÅÀ³ö¾®µ×
+8.äº•åº• (/d/deathland/palace/well01) 
+    int to_climb();            çˆ¬å‡ºäº•åº•
 
-25.ÒşÃÜµÄĞ¡·¿¼ä (/d/deathland/village/d01) 
-    int recover();             °´ÏÂÇ¿ÉÏµÄ°´Å¥
+25.éš±å¯†çš„å°æˆ¿é–“ (/d/deathland/village/d01) 
+    int recover();             æŒ‰ä¸‹å¼·ä¸Šçš„æŒ‰éˆ•
 
-26.°«ÈË´åÂäµÄ¹ã³¡ (/d/deathland/village/v32)
-    int to_answer();           »Ø´ğ³¤ÀÏ°²ÂåµÄÃÜÓï
+26.çŸ®äººæ‘è½çš„å»£å ´ (/d/deathland/village/v32)
+    int to_answer();           å›ç­”é•·è€å®‰æ´›çš„å¯†èª
 
-9.°«ÈË´åÂäµÄ»áÒéÊÒ (/d/deathland/village/vr3) 
-    string to_search_here();   ÕÒÑ°ºÚ»ÒÉ«µÄÔ¿³×
+9.çŸ®äººæ‘è½çš„æœƒè­°å®¤ (/d/deathland/village/vr3) 
+    string to_search_here();   æ‰¾å°‹é»‘ç°è‰²çš„é‘°åŒ™
 
-27.ÓÅÃÀµÄ½¨Öş (/d/deathland/village/vr7) 
-    string to_look_bottle();   Ä¦¶ùµÄ·¿¼äµÄÄ§·¨Æ¿
+27.å„ªç¾çš„å»ºç¯‰ (/d/deathland/village/vr7) 
+    string to_look_bottle();   æ‘©å…’çš„æˆ¿é–“çš„é­”æ³•ç“¶
 
 29./d/deathland/monster/annow.c
-    void ask_bell();           Ñ¯ÎÊ°²ÂåÓĞ¹ØÁåîõµÄÊÂ
+    void ask_bell();           è©¢å•å®‰æ´›æœ‰é—œéˆ´éºçš„äº‹
 
 33./d/deathland/monster/calford.c
-    void ask_valor();          Ñ¯ÎÊ¿¨¶û·şµÂÓĞ¹ØÓÁÕßµÄÊÂ
+    void ask_valor();          è©¢å•å¡çˆ¾æœå¾·æœ‰é—œæ¿è€…çš„äº‹
 
 30./d/deathland/monster/doctor.c
-   int accept_item();          °ï°²ç÷À­ÕÒ»ØÊ§ÂäµÄ¼Ò´«±¦Îï
+   int accept_item();          å¹«å®‰çªæ‹‰æ‰¾å›å¤±è½çš„å®¶å‚³å¯¶ç‰©
 
 34./d/deathland/monster/explorer01.c
-   int die();                  É±ËÀÀ¼¶ú´ï
+   int die();                  æ®ºæ­»è˜­è€³é”
 
 35./d/deathland/monster/explorer02.c
-   int accept_item();          ËÍÑÛÄ§»¤¶ÜÔ²Çò¸øÎüÑª¹íÃ°ÏÕÕß 
+   int accept_item();          é€çœ¼é­”è­·ç›¾åœ“çƒçµ¦å¸è¡€é¬¼å†’éšªè€… 
 
 36./d/deathland/monster/guard02.c
-   int accept_item();          ÇëÊØÎÀºÈÆ»¹ûÖ­
+   int accept_item();          è«‹å®ˆè¡›å–è˜‹æœæ±
 
 37./d/deathland/monster/king.c
-   int die();                  É±ËÀ°«ÈË¹úÍõ
+   int die();                  æ®ºæ­»çŸ®äººåœ‹ç‹
   
 28./d/deathland/monster/ranger.c
-   void ask_muse();            Ö¤ÊµÃıË¼ÈªµÄ´æÔÚ
+   void ask_muse();            è­‰å¯¦è¬¬æ€æ³‰çš„å­˜åœ¨
 
 31./d/deathland/monster/wight02.c
-   void ask_brother();         °ïÖúÀ³ÌØÕÒËûµÄĞÖµÜ  
+   void ask_brother();         å¹«åŠ©èŠç‰¹æ‰¾ä»–çš„å…„å¼Ÿ  
  
 32./d/deathland/monster/wight03.c
-   void quest_info_2();        ÖÆ×÷Ë®¾§´Å¿¨
+   void quest_info_2();        è£½ä½œæ°´æ™¶ç£å¡
  
 38./d/deathland/monster/writer.c
-   void ask_afflatus();        °«ÈË×÷¼ÒµÄ¿àÄÕ  
+   void ask_afflatus();        çŸ®äººä½œå®¶çš„è‹¦æƒ±  
 
 39./d/deathland/monster/bard01.c
-                               À­¿ËÎ÷Ë¿µÄĞÄÔ¸
+                               æ‹‰å…‹è¥¿çµ²çš„å¿ƒé¡˜

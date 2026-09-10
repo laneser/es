@@ -8,5 +8,5 @@ void create()
 	set_save_file("qc_board");
 	set_location("/d/wiz/qc-request");
 	set( "short.text", "Board of QC-Request");
-	set( "c_short.text", "Æ·ÖÊ¹ÜÖÆÁôÑÔ°å");
+	set( "c_short.text", "å“è³ªç®¡åˆ¶ç•™è¨€æ¿");
 }

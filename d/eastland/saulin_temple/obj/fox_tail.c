@@ -9,15 +9,15 @@ void init()
 
 void create()
 {
-        set_name( "fox's tail", "ºüÀêÎ²°Í" );
+        set_name( "fox's tail", "ç‹ç‹¸å°¾å·´" );
         add( "id", ({ "tail" }) );
-        set_short( "ºüÀêÎ²°Í" );
+        set_short( "ç‹ç‹¸å°¾å·´" );
         set_long(@C_LONG
-ÕâÊÇÒ»ÌõÅîÅîËÉËÉµÄºüÀêÎ²°Í£¬¾İËµÎÕÖø(hold)Ç§ÄêºüÀê¾«µÄÎ²°Í¿ÉÒÔÊ¹ÈË
-ÔİÊ±ÒşÉí£¬²»ÖªµÀÊÇÕæÊÇ¼Ù£¿
+é€™æ˜¯ä¸€æ¢è“¬è“¬é¬†é¬†çš„ç‹ç‹¸å°¾å·´ï¼Œæ“šèªªæ¡è‘—(hold)åƒå¹´ç‹ç‹¸ç²¾çš„å°¾å·´å¯ä»¥ä½¿äºº
+æš«æ™‚éš±èº«ï¼Œä¸çŸ¥é“æ˜¯çœŸæ˜¯å‡ï¼Ÿ
 C_LONG
 		);
-   		set("unit","Ìõ");
+   		set("unit","æ¢");
    		set("weight", 10);
    		set("value",({10, "silver"}) );
         set("no_sale", 1 );
@@ -26,14 +26,14 @@ C_LONG
 int hold_tail(string arg)
 {
 	if( !arg || arg != "tail" ) return 0;
-    if ((string)environment(this_player())->query("short")=="²Ø¾­¸óÇ°" ) {
+    if ((string)environment(this_player())->query("short")=="è—ç¶“é–£å‰" ) {
     	tell_object(this_player(), 
-    		"ÄãÄÃ³öºüÀêÎ²°Í¾ÙÔÚĞØÇ°£¬ÄÇĞ©É®ÈËÃÇºÃÏñÊ²÷á¶¼Ã»¿´¼û¡£\n" 
+    		"ä½ æ‹¿å‡ºç‹ç‹¸å°¾å·´èˆ‰åœ¨èƒ¸å‰ï¼Œé‚£äº›åƒ§äººå€‘å¥½åƒä»€éº¼éƒ½æ²’çœ‹è¦‹ã€‚\n" 
         );
         this_player()->set_temp("book_quest/step",1);
 	} else
         tell_object(this_player(), 
-         	"Äã°ÑºüÀêÎ²°Í¾ÙÔÚĞØÇ°£¬ÅÔ±ßÂ·¹ıµÄÈË¶¼ÑÚÖø×ìÍµĞ¦¡£\n"
+         	"ä½ æŠŠç‹ç‹¸å°¾å·´èˆ‰åœ¨èƒ¸å‰ï¼Œæ—é‚Šè·¯éçš„äººéƒ½æ©è‘—å˜´å·ç¬‘ã€‚\n"
         );
 	return 1;
 

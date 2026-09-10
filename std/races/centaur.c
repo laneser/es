@@ -33,10 +33,10 @@ void setup_race_body()
 	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 7);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%sÍ»È»Ô¾Æð, Ë«½ÅÍù%sõßÏÂ", "%sÓÃááÍÈÍù%sÒ»Ìß",
-		"%s»ÓÈ­Íù%sÃÍ¡õ", "%sË«½ÅÍù%sÃÍõß", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ÐØ", "×óÍÈ", "ÓÒÍÈ",
-		"±³²¿", "¸¹²¿" }) );
+	body->set_c_verbs( ({ "%sçªç„¶èºèµ·, é›™è…³å¾€%sè¸¹ä¸‹", "%sç”¨å¾Œè…¿å¾€%sä¸€è¸¢",
+		"%sæ®æ‹³å¾€%sçŒ›â–¡", "%sé›™è…³å¾€%sçŒ›è¸¹", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"èƒŒéƒ¨", "è…¹éƒ¨" }) );
 
 	// Extra command for Centaur.
 	add_action("do_hoof", "hoof");
@@ -101,19 +101,19 @@ int do_hoof(string arg)
 	if( !arg || arg == "" || me->query("stop_attack") ) return 0;
 	dest = present( arg, environment(me) );
 	if( !dest || !living(dest) ) 
-		return notify_fail("ÄãÒªÌßË­£¿\n");
+		return notify_fail("ä½ è¦è¸¢èª°ï¼Ÿ\n");
 
 	if( dest->query("no_attack") )
-		return notify_fail("Äã²»ÄÜÌßÕâ¼Ò»ï¡£\n");
+		return notify_fail("ä½ ä¸èƒ½è¸¢é€™å‚¢ä¼™ã€‚\n");
 
         if ( userp(dest) && ((int)dest->query_level()<5) )
-                return notify_fail("Äã²»ÄÜÆÛ¸ºµÍµÈ¼¶Íæ¼Ò !!\n");
+                return notify_fail("ä½ ä¸èƒ½æ¬ºè² ä½Žç­‰ç´šçŽ©å®¶ !!\n");
 	
 	if ( userp(dest) && ((int) me->query_level()<5) )
-		return notify_fail("ÄãµÈ¼¶Ì«µÍ,²»×¼PK¡£\n");
+		return notify_fail("ä½ ç­‰ç´šå¤ªä½Ž,ä¸æº–PKã€‚\n");
 
 	if ( dest->query_temp("be_hoofed") )
-		return notify_fail("Õâ¸ö¼Ò»ï¾¯¾õÐÔºÜ¸ß£¬ÄãÃ»ÓÐ»ú»áÌßËû¡£\n");
+		return notify_fail("é€™å€‹å‚¢ä¼™è­¦è¦ºæ€§å¾ˆé«˜ï¼Œä½ æ²’æœ‰æ©Ÿæœƒè¸¢ä»–ã€‚\n");
 
 	chance = 50 + (int)me->query_level() * 7 - (int)dest->query_level() * 7;
 	if( chance > 95 ) chance = 95;
@@ -124,33 +124,33 @@ int do_hoof(string arg)
 	dest->set_temp("be_hoofed",1);
 	if( random(100) < chance ) {
 		tell_object( me, 
-			sprintf("\nÄãÌ§ÆðááÍÈ£¬½«%sÌß·­ÁË¸ö¸ú¶·£¡\n\n", dest->query("c_name")));
+			sprintf("\nä½ æŠ¬èµ·å¾Œè…¿ï¼Œå°‡%sè¸¢ç¿»äº†å€‹è·Ÿæ–—ï¼\n\n", dest->query("c_name")));
 
 		tell_room( environment(me), 
-			sprintf("\n%sÍ»È»Ì§ÆðááÍÈ£¬½«%sÌß·­ÁË¸ö¸ú¶·£¡\n\n",
+			sprintf("\n%sçªç„¶æŠ¬èµ·å¾Œè…¿ï¼Œå°‡%sè¸¢ç¿»äº†å€‹è·Ÿæ–—ï¼\n\n",
 				me->query("c_name"), dest->query("c_name")) ,
 			({ me, dest }) );
 		tell_object( dest,
-			sprintf("\n%sÍ»È»Ì§ÆðááÍÈ£¬½«ÄãÌßµÃÑÛÇ°Ö±Ã°½ðÐÇ£¡\n\n",
+			sprintf("\n%sçªç„¶æŠ¬èµ·å¾Œè…¿ï¼Œå°‡ä½ è¸¢å¾—çœ¼å‰ç›´å†’é‡‘æ˜Ÿï¼\n\n",
 				me->query("c_name"))
 			    );
 
                 dest->block_attack( 1 + random(4) );
 		dest->receive_damage( (int)me->query_level() );
 		dest->set_temp("msg_stop_attack", 
-			"( Äã±»Ìß·­ÁË¸ö¸ú¶·£¬Í´µÃÅÀ²»ÆðÀ´£¡ )\n" );
+			"( ä½ è¢«è¸¢ç¿»äº†å€‹è·Ÿæ–—ï¼Œç—›å¾—çˆ¬ä¸èµ·ä¾†ï¼ )\n" );
 	} else {
 		tell_object( me, 
-			sprintf("\nÄãÌ§ÆðááÍÈÍù%sÌßÈ¥£¬µ«ÊÇÂä¿ÕÁË£¡\n\n",
+			sprintf("\nä½ æŠ¬èµ·å¾Œè…¿å¾€%sè¸¢åŽ»ï¼Œä½†æ˜¯è½ç©ºäº†ï¼\n\n",
 				dest->query("c_name"))
 			    );
 
 		tell_room( environment(me), 
-			sprintf("\n%sÍ»È»Ì§ÆðááÍÈÍù%sÌßÈ¥£¬µ«ÊÇÃ»ÓÐÌßÖÐ£¡\n\n",
+			sprintf("\n%sçªç„¶æŠ¬èµ·å¾Œè…¿å¾€%sè¸¢åŽ»ï¼Œä½†æ˜¯æ²’æœ‰è¸¢ä¸­ï¼\n\n",
 				me->query("c_name"), dest->query("c_name")) ,
 			({ me, dest }) );
 		tell_object( dest, 
-			sprintf("\n%sÍ»È»Ì§ÆðááÍÈÍùÄãÌßÁË¹ýÀ´£¬µ«ÊÇ±»Äã¶ã¹ý£¡\n\n",
+			sprintf("\n%sçªç„¶æŠ¬èµ·å¾Œè…¿å¾€ä½ è¸¢äº†éŽä¾†ï¼Œä½†æ˜¯è¢«ä½ èº²éŽï¼\n\n",
 				me->query("c_name"))
 			    );
 	}

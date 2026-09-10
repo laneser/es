@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "yellow lotus", "»ÆÁ«" );
+	set_name( "yellow lotus", "é»ƒè“®" );
          set("no_sale",1);
 	add( "id", ({"lotus"}) );
-	set_short( "»ÆÁ«" );
+	set_short( "é»ƒè“®" );
 	set_long(
-		"ÕâÊÇÒ»Ğ©ÓÉÁ«×ÓĞÄÉ¹Ç¬ÖÆ³ÉµÄÒ©²Ä¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ˜¯ä¸€äº›ç”±è“®å­å¿ƒæ›¬ä¹¾è£½æˆçš„è—¥æã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
-	set( "unit","°ü");
+	set( "unit","åŒ…");
 	set( "ident", "YELLOW_LOTUS" );
 	set( "savour","bitter");
 	set( "effect","slow");

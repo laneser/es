@@ -1,16 +1,16 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
-messages ({(["id":578,"body":"ÓÖÊÇÉ«²ÊµÄÎÊÌâ
-¹Øì¶×Ô¼ºµÄÈÎºÎÑ¶Ï¢
-¿É·ñ¶¼¼ÓÉÏÉ«²ÊÄØ
-ÀıÈç±»¿³µ½ÓĞÑÕÉ«, ¿³µ½¹ÖÎï¾ÍÃ»ÓĞÑÕÉ«
-Äã¸æËß±ğÈËÃ»ÓĞÑÕÉ«, ±ğÈË¸æËßÄã¾ÍÓĞÑÕÉ«
-ÖîÈç´ËÀà, Ğ»Ğ»!!
-","title":"< no title >","time":788865461,"poster":"Zoro",]),(["id":579,"body":"list ááÃæ¿É·ñ¼ÓĞ©²ÎÊı
-ÀıÈç:
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
+messages ({(["id":578,"body":"åˆæ˜¯è‰²å½©çš„å•é¡Œ
+é—œæ–¼è‡ªå·±çš„ä»»ä½•è¨Šæ¯
+å¯å¦éƒ½åŠ ä¸Šè‰²å½©å‘¢
+ä¾‹å¦‚è¢«ç åˆ°æœ‰é¡è‰², ç åˆ°æ€ªç‰©å°±æ²’æœ‰é¡è‰²
+ä½ å‘Šè¨´åˆ¥äººæ²’æœ‰é¡è‰², åˆ¥äººå‘Šè¨´ä½ å°±æœ‰é¡è‰²
+è«¸å¦‚æ­¤é¡, è¬è¬!!
+","title":"< no title >","time":788865461,"poster":"Zoro",]),(["id":579,"body":"list å¾Œé¢å¯å¦åŠ äº›åƒæ•¸
+ä¾‹å¦‚:
 list sword
 list weapon
 list armor
@@ -22,15 +22,15 @@ etc.
 
 ok.
 ","time":788908623,"poster":"Elon",]),(["id":582,"title":"Re: about list in shop","body":"On Sat Dec 31, Zoro wrote:
-> list ááÃæ¿É·ñ¼ÓĞ©²ÎÊı
-> ÀıÈç:
+> list å¾Œé¢å¯å¦åŠ äº›åƒæ•¸
+> ä¾‹å¦‚:
 > list sword
 > list weapon
 > list armor
 > list shield
 > etc.
 
-±¾À´¾Í¿ÉÒÔÁËÑ½..
+æœ¬ä¾†å°±å¯ä»¥äº†å‘€..
 
 -Elon.
 ","time":788908687,"poster":"Elon",]),(["id":583,"body":"   dear god or maz
@@ -57,7 +57,7 @@ ok.
 >       hope u can solve it  thank u
 >   
 
-ÎÒÊÔ¹ıÁË, Ã»ÓĞÎÊÌâ. ÏÂ´Î»¹ÓĞÍ¬ÑùµÄÇéĞÎÇëÖ±½ÓÕÒÎÒ..
+æˆ‘è©¦éäº†, æ²’æœ‰å•é¡Œ. ä¸‹æ¬¡é‚„æœ‰åŒæ¨£çš„æƒ…å½¢è«‹ç›´æ¥æ‰¾æˆ‘..
 
 -Elon
 ","title":"Re: < no title >","time":788988114,"poster":"Elon",]),(["id":585,"body":"Please shorten the reborn time, too long to wait lah...
@@ -75,7 +75,7 @@ ok.
 > 	every death cut less?
 > 				ES is good mud.
 ................................................................
-ËÀµôÖ»»áËğÊ§ÊôĞÔ¼°¼¼ÇÉ°É? ¸Ä¹ıÁËÂğ?
+æ­»æ‰åªæœƒæå¤±å±¬æ€§åŠæŠ€å·§å§? æ”¹éäº†å—?
 
          Sincerely your mad...
 ","title":"Re: New user","time":789269610,"poster":"Mad",]),(["id":588,"body":"  dear god:
@@ -109,38 +109,38 @@ ok.
 
 ","time":789350325,"poster":"Annie",]),(["id":591,"title":"14 vendor","body":"
 
-    ß×,why need k vendor ah ?ÄÑµÀÉ±µ½Ã»ÓĞ mob ?
+    å’¦,why need k vendor ah ?é›£é“æ®ºåˆ°æ²’æœ‰ mob ?
 
-    ha,ÒÔááÈÃÎÒ¿´µ½Ë­ k vendor,¾ÍĞ¡ĞÄÒ»µã,ÎÒ»áÕÒËûÁ·Ä§·¨µÈ¼¶,,,,,
+    ha,ä»¥å¾Œè®“æˆ‘çœ‹åˆ°èª° k vendor,å°±å°å¿ƒä¸€é»,æˆ‘æœƒæ‰¾ä»–ç·´é­”æ³•ç­‰ç´š,,,,,
 
 ","time":789379515,"poster":"Dandan",]),(["id":592,"body":"i k iriah and get no money ?
 ah 400 golfdya sigh poor laws
-","title":"iriah no money?","time":789424579,"poster":"Laws",]),(["id":593,"title":"<about party>","body":"party µÄ bug ºÜ¾ÃÁË£¬ ´ÓÒ»¿ªÊ¼µ½ÏÖÔÚÎ´¼û¸ÄÉÆ£¬ ÃèÊöÈçÏÂ£º
+","title":"iriah no money?","time":789424579,"poster":"Laws",]),(["id":593,"title":"<about party>","body":"party çš„ bug å¾ˆä¹…äº†ï¼Œ å¾ä¸€é–‹å§‹åˆ°ç¾åœ¨æœªè¦‹æ”¹å–„ï¼Œ æè¿°å¦‚ä¸‹ï¼š
 
-Ò»£º ËÄÈËparty Ê±£¬ µÚËÄÈË³£»á¸ú¶ª£¡
-¶ş£º µ±¸ú¶ª»òÊÇleader ½øÈËËûÈË²»ÄÜ½øÖ®µØÊ±£¬ ¶ÓÓÑ²¢Ã»ÓĞ¸úÉÏÀ´£¬ ¿ÉÊÇleaderµÄ
-message È´ÈÔËµ¶ÓÓÑ¸úÄã×ß¹ıÀ´£¬ µÚ¶ş²½ÒÔááµÄmessage²Å»áÕıÈ·¡£ Í¬ÑùµÄ¶ÓÔ±µÄ
-messageÒ²ÊÇ´íµÄ
-Èı£º ×ßÊ§Ö®ááÓÖ»áºÏµÄÄÇÒ»´Î£¬ (Ò²¾ÍÊÇÒÑÔÙºÍ¶ÓÓÑ»áºÏµÄÄÇÒ»²½) £¬ message È´ÈÔËµ¶ÓÓÑ×ß¶ªÁË¡£ Í¬ÑùµÄ£¬ ¶ÓÓÑµÄmessage Ò²ÊÇ´íµÄ¡£
+ä¸€ï¼š å››äººparty æ™‚ï¼Œ ç¬¬å››äººå¸¸æœƒè·Ÿä¸Ÿï¼
+äºŒï¼š ç•¶è·Ÿä¸Ÿæˆ–æ˜¯leader é€²äººä»–äººä¸èƒ½é€²ä¹‹åœ°æ™‚ï¼Œ éšŠå‹ä¸¦æ²’æœ‰è·Ÿä¸Šä¾†ï¼Œ å¯æ˜¯leaderçš„
+message å»ä»èªªéšŠå‹è·Ÿä½ èµ°éä¾†ï¼Œ ç¬¬äºŒæ­¥ä»¥å¾Œçš„messageæ‰æœƒæ­£ç¢ºã€‚ åŒæ¨£çš„éšŠå“¡çš„
+messageä¹Ÿæ˜¯éŒ¯çš„
+ä¸‰ï¼š èµ°å¤±ä¹‹å¾Œåˆæœƒåˆçš„é‚£ä¸€æ¬¡ï¼Œ (ä¹Ÿå°±æ˜¯å·²å†å’ŒéšŠå‹æœƒåˆçš„é‚£ä¸€æ­¥) ï¼Œ message å»ä»èªªéšŠå‹èµ°ä¸Ÿäº†ã€‚ åŒæ¨£çš„ï¼Œ éšŠå‹çš„message ä¹Ÿæ˜¯éŒ¯çš„ã€‚
 
-ÒÔÉÏµÄbug ÔÚÆ½³£Ö»ÊÇ²»·½±ã£¬ ÔÚÕ½¶·ÖĞÈ´ÂùÎ£ÏÕµÄ£¬ ÒòÎªleader ³£²»ÖªµÀÓĞ¶ÓÓÑ
-±»blockµ½¶øÃ»ÓĞflee£¡
+ä»¥ä¸Šçš„bug åœ¨å¹³å¸¸åªæ˜¯ä¸æ–¹ä¾¿ï¼Œ åœ¨æˆ°é¬¥ä¸­å»è »å±éšªçš„ï¼Œ å› ç‚ºleader å¸¸ä¸çŸ¥é“æœ‰éšŠå‹
+è¢«blockåˆ°è€Œæ²’æœ‰fleeï¼
 
-ÍâĞÇ»¤Ê¿
+å¤–æ˜Ÿè­·å£«
 
-","time":789650185,"poster":"Amt",]),(["id":594,"title":"< no title >","body":"to make ºÚÓñ¶ÏĞø¸àÊ±
+","time":789650185,"poster":"Amt",]),(["id":594,"title":"< no title >","body":"to make é»‘ç‰æ–·çºŒè†æ™‚
 i can't put the four things into it....it tell my bowl too heavy////is it a bug???
 ","time":789661412,"poster":"Mu",]),(["id":595,"body":"every time i \"enter hole\", it will appear \"Oops,there's something wrong with that...
-","title":"smith in farwind","time":789762583,"poster":"Evileye",]),(["id":597,"body":"É± mob Ê±, ÎªºÎµÚÒ»¸ö character Ò»¶¨ÒªĞ¡Ğ´ ?
-xterm + mouse µÄ±ãÀû¶¼ÓÃ²»µ½... *grin evily*
+","title":"smith in farwind","time":789762583,"poster":"Evileye",]),(["id":597,"body":"æ®º mob æ™‚, ç‚ºä½•ç¬¬ä¸€å€‹ character ä¸€å®šè¦å°å¯« ?
+xterm + mouse çš„ä¾¿åˆ©éƒ½ç”¨ä¸åˆ°... *grin evily*
 
--- æå¶ÛË¾ÂíÒ»Ğş½£
+-- é§‘éˆå¸é¦¬ä¸€ç„åŠ
 ","title":"< no title >","time":789766637,"poster":"Miring",]),(["id":598,"body":"On Wed Jan 11, Miring wrote:
-> É± mob Ê±, ÎªºÎµÚÒ»¸ö character Ò»¶¨ÒªĞ¡Ğ´ ?
-> xterm + mouse µÄ±ãÀû¶¼ÓÃ²»µ½... *grin evily*
+> æ®º mob æ™‚, ç‚ºä½•ç¬¬ä¸€å€‹ character ä¸€å®šè¦å°å¯« ?
+> xterm + mouse çš„ä¾¿åˆ©éƒ½ç”¨ä¸åˆ°... *grin evily*
 > 
-> -- æå¶ÛË¾ÂíÒ»Ğş½£
-    Äã¾Íµ±³ÉÊÇÔÚÁ·´ò×Ö¾ÍºÃÁË°¡ ....
+> -- é§‘éˆå¸é¦¬ä¸€ç„åŠ
+    ä½ å°±ç•¶æˆæ˜¯åœ¨ç·´æ‰“å­—å°±å¥½äº†å•Š ....
                          Indra......
 ","title":"Re: < no title >","time":789782391,"poster":"Indra",]),})
 id_ref 608

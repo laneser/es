@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Emerald ring", "绿玉戒指" );
+	set_name( "Emerald ring", "缍犵帀鎴掓寚" );
 	add( "id", ({ "ring" }) );
-	set_short( "a emerald ring", "绿玉戒指" );
+	set_short( "a emerald ring", "缍犵帀鎴掓寚" );
 	set_long(
 		"You see a beautiful emerald ring.\n",
-		"这是一个很漂亮的绿玉戒指，好像有一种奇特的魔力。\n"
+		"閫欐槸涓�鍊嬪緢婕備寒鐨勭稜鐜夋垝鎸囷紝濂藉儚鏈変竴绋鐗圭殑榄斿姏銆俓n"
 	);
 	set( "type", "finger" );
 	set("material","element");

@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "water guard", "Ë®Ö®»¤ÎÀ" );
+        set_name( "water guard", "æ°´ä¹‹è­·è¡›" );
         add ("id", ({ "water", "guard" }) );
-        set_short( "Ë®Ö®»¤ÎÀ");
-        set("unit","Î»");
+        set_short( "æ°´ä¹‹è­·è¡›");
+        set("unit","ä½");
         set("alignment",500);
         set("wealth/gold",100);
         set_long(
-"Ò»Î»Ë®Ö®»¤ÎÀ£¬ÊÇ´ó¹úÊ¦ÓÃµÀ¼ÒÕýÍ³ÐÄ·¨ËùÕÐ»½³öÀ´µÄ£¬Ëû¸ºÓÐÊØÎÀ´ËµØµÄÉñÊ¥
-Ê¹Ãü\¡£\n"
+"ä¸€ä½æ°´ä¹‹è­·è¡›ï¼Œæ˜¯å¤§åœ‹å¸«ç”¨é“å®¶æ­£çµ±å¿ƒæ³•æ‰€æ‹›å–šå‡ºä¾†çš„ï¼Œä»–è² æœ‰å®ˆè¡›æ­¤åœ°çš„ç¥žè–
+ä½¿å‘½\ã€‚\n"
         );
         set_perm_stat("int", 25);
         set_perm_stat("str", 23);
@@ -27,7 +27,7 @@ void create()
         set ("race", "daemon");
         set("tactic_func","water_tactic");
         set("special_defense",(["cold":30,"none":30,"fire":-20]));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         equip_armor(ARMORS"/water_ring");
         equip_armor(ARMORS"/water_amulet");
 }
@@ -39,7 +39,7 @@ int water_tactic()
   
  if ( !(victim=query_attacker()) || (random(10)>2)) return 0;
   tell_room(environment(),
-       "\n"+"Ë®Ö®»¤ÎÀÄÃÆðËûµÄ»¤·ûÏòÄã»ÓÁË»Ó£¬ÄãÍ»È»¾õµÃÒ»Õóº®Òâ!!\n",
+       "\n"+"æ°´ä¹‹è­·è¡›æ‹¿èµ·ä»–çš„è­·ç¬¦å‘ä½ æ®äº†æ®ï¼Œä½ çªç„¶è¦ºå¾—ä¸€é™£å¯’æ„!!\n",
        this_object() );
   dam = 50 + random(25);
   victim->receive_special_damage("cold",dam);

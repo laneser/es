@@ -25,20 +25,20 @@ int do_gaze()
 {
         object victim ;
         if ( !victim = query_attacker())
-                return notify_fail("¸ÉÂï£¿ÄãÓÖ²»ÔÚÕ½¶·ÖĞ£¬ÓÃ look ¾ÍºÃÁË¡£\n");
+                return notify_fail("å¹¹å˜›ï¼Ÿä½ åˆä¸åœ¨æˆ°é¬¥ä¸­ï¼Œç”¨ look å°±å¥½äº†ã€‚\n");
 
         if ( query_temp("gazing") )
-                return notify_fail("ÄãÕı×¨ĞÄÄıÊÓÄãµÄµĞÈË ... \n");
+                return notify_fail("ä½ æ­£å°ˆå¿ƒå‡è¦–ä½ çš„æ•µäºº ... \n");
 
         if ( victim->query("stop_attack") ) 
-                return notify_fail("¹ş ! ±ğ°×·ÑÁ¦ÆøÁË£¬ËûÒÑ¾­Ë¯ÖøÁË¡£\n");
+                return notify_fail("å“ˆ ! åˆ¥ç™½è²»åŠ›æ°£äº†ï¼Œä»–å·²ç¶“ç¡è‘—äº†ã€‚\n");
 
-	tell_object(this_object(),"ÄãÓÃÄãµÄÄ§ÑÛ×¨ĞÄÄıÊÓÖøµĞÈË ...\n");
+	tell_object(this_object(),"ä½ ç”¨ä½ çš„é­”çœ¼å°ˆå¿ƒå‡è¦–è‘—æ•µäºº ...\n");
 
-	tell_object(victim,sprintf("%sÓÃËûÄÇÑıÒìµÄÄ§ÑÛÄıÊÓÖøÄã£¬ÄãÍ»È»¸Ğµ½Ç¿ÁÒµÄË¯Òâ¡£\n",query("c_name")));
+	tell_object(victim,sprintf("%sç”¨ä»–é‚£å¦–ç•°çš„é­”çœ¼å‡è¦–è‘—ä½ ï¼Œä½ çªç„¶æ„Ÿåˆ°å¼·çƒˆçš„ç¡æ„ã€‚\n",query("c_name")));
 
         tell_room(environment(this_object()),
-                  sprintf("%sÓÃËûÑıÒìµÄÑÛ¾¦ÄıÊÓÖø%s¡£\n",query("c_name"),
+                  sprintf("%sç”¨ä»–å¦–ç•°çš„çœ¼ç›å‡è¦–è‘—%sã€‚\n",query("c_name"),
                           victim->query("c_name")),({ this_object(),victim }));
 
         set_temp("gazing",1);
@@ -53,13 +53,13 @@ void sleeping(object me,object victim)
 	if ( !me || !victim ) return;
         if ( !me->query_attacker() ) return ;
         if ( random((int)victim->query_level()*4) > (int)me->query_level() ) {
-                tell_object(me,set_color("µ«ÊÇµĞÈË²»ÉÏµ± ...\n","HIC",me));
-                tell_object(victim,"ÄãÆ´ÃüµÄ´òÆğ¾«Éñ£¬Ëµ²»Ë¯¾ÍÊÇ²»Ë¯¡£\n");
+                tell_object(me,set_color("ä½†æ˜¯æ•µäººä¸ä¸Šç•¶ ...\n","HIC",me));
+                tell_object(victim,"ä½ æ‹¼å‘½çš„æ‰“èµ·ç²¾ç¥ï¼Œèªªä¸ç¡å°±æ˜¯ä¸ç¡ã€‚\n");
                 return;
 	}
         victim->block_attack(4);
 	victim->set_temp("msg_stop_attack",
-                "( ÄãÏÖÔÚË¯µÃÕıÊæ·ş£¡ )\n" );
-        tell_object(me,set_color("µĞÈË¿ªÊ¼´ò÷ıÁË ...\n","HIY",me));
+                "( ä½ ç¾åœ¨ç¡å¾—æ­£èˆ’æœï¼ )\n" );
+        tell_object(me,set_color("æ•µäººé–‹å§‹æ‰“é¼¾äº† ...\n","HIY",me));
         return ;
 }

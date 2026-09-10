@@ -34,9 +34,9 @@ void setup_race_body()
 //	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 7);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%sÍÂÉà¾íÏò%s", "%sÃÍõß%sÒ»ÍÈ",
-		"%sÕÅ¿ÚÍù%sÅçÆø", }) );
-	body->set_c_limbs( ({ "Í·²¿", "Ç°½Å", "áá½Å", "±³²¿", "¸¹²¿", }) );
+	body->set_c_verbs( ({ "%såèˆŒå·å‘%s", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%så¼µå£å¾€%så™´æ°£", }) );
+	body->set_c_limbs( ({ "é ­éƒ¨", "å‰è…³", "å¾Œè…³", "èƒŒéƒ¨", "è…¹éƒ¨", }) );
 }
 
 // These functions are used for race Amphibia.

@@ -15,7 +15,7 @@ int decay;
 
 void prevent_insert()
 {
-   write("Ê¬ÌåÌ«´óÁË!!\n");
+   write("å±é«”å¤ªå¤§äº†!!\n");
    return;
 }
 
@@ -23,12 +23,12 @@ void create()
 {
 	::create();
 	name = "someone";
-	c_name = "Ä³ÈË";
+	c_name = "æŸäºº";
 	decay = MAX_DECAY;
 
 	set("weight", 600);
 	set_short( "@@query_short" );
-	set("unit", "¾ß" );
+	set("unit", "å…·" );
 	set("max_load", 400);
 	set("prevent_insert", 1);
 	set("id", ({ "corpse", "remains", "body", "dead body" }));
@@ -39,9 +39,9 @@ void set_name(string str, string str2)
 	name = str;
 	c_name = str2;
 
-	::set_name( "corpse", "Ê¬Ìå" );
+	::set_name( "corpse", "å±é«”" );
 	if( name )  name = capitalize(name);
-	set_open_long(sprintf("ÕâÊÇ%s(%s)µÄÒÅÌå¡£\n", c_name, name));
+	set_open_long(sprintf("é€™æ˜¯%s(%s)çš„éºé«”ã€‚\n", c_name, name));
 	set("id", ({ "corpse", "remains", "body", "dead body",
 		sprintf("corpse of %s", name) }) );
 	call_out("decay", DECAY_TIME);
@@ -53,8 +53,8 @@ void decay()
 	switch( decay ) {
 		case 0: ::remove(); return;
 		case 1: call_out("decay", 20); return;
-		case 2: ::set_name("bone", "º¡¹Ç");
-				set_open_long("Ò»¾ßº¡¹Ç, ÒÑ·Ö²»ÇåÊÇÄÄÒ»¸ö¿ÉÁ¯ÈËµÄÒÅº¡¡£\n");
+		case 2: ::set_name("bone", "éª¸éª¨");
+				set_open_long("ä¸€å…·éª¸éª¨, å·²åˆ†ä¸æ¸…æ˜¯å“ªä¸€å€‹å¯æ†äººçš„éºéª¸ã€‚\n");
 				set("id", ({ "bone", "corpse", "remains", }));
 				call_out("decay", 30);
 				return;
@@ -71,10 +71,10 @@ int can_put_and_get()
 string query_short()
 {
 	switch( decay ) {
-		case 1: return "Ò»¶Ñ¿İ¹Ç(bones)";
-		case 2: return "Ò»¾ß¹Çº¡(skelton)";
-		case 3: return "Ò»¾ß¸¯ÀÃµÄÊ¬Ìå(dead body)";
-		case 4: return sprintf("Ò»¾ß%s(%s)µÄÊ¬Ìå(corpse)", c_name, name);
-		default: return "Ò»¾ßÊ¬Ìå";
+		case 1: return "ä¸€å †æ¯éª¨(bones)";
+		case 2: return "ä¸€å…·éª¨éª¸(skelton)";
+		case 3: return "ä¸€å…·è…çˆ›çš„å±é«”(dead body)";
+		case 4: return sprintf("ä¸€å…·%s(%s)çš„å±é«”(corpse)", c_name, name);
+		default: return "ä¸€å…·å±é«”";
 	}
 }

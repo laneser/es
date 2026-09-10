@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "guardroom key", "¿´ÊØÊÒÔ¿³×" );
+	set_name( "guardroom key", "çœ‹å®ˆå®¤é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "¿´ÊØÊÒÔ¿³×" );
+	set_short( "çœ‹å®ˆå®¤é‘°åŒ™" );
 	set_long(
-		"ÕâÊÇ°«Áé×å¿´ÊØÊÒµÄÔ¿³×¡£\n"
+		"é€™æ˜¯çŸ®éˆæ—çœ‹å®ˆå®¤çš„é‘°åŒ™ã€‚\n"
 	);
 	set( "to_lock", "WGUARD" );
 	set( "weight", 3 );

@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "vagabond","ÊĞ¾®Á÷Ã¥" );
-	set_short( "ÊĞ¾®Á÷Ã¥" );
+	set_name( "vagabond","å¸‚äº•æµæ°“" );
+	set_short( "å¸‚äº•æµæ°“" );
 	set_long(@C_LONG
-Ò»¸öÕûÌìÎŞËùÊÂÊÂµÄÎŞÀµºº£¬Ö»»áÆÛ¸ºÒ»Ğ©Á¼¼Ò¸¾Å®£¬ËùÒÔÄã×îºÃĞ¡ĞÄÒ»µã£¬²»Òª
-ÕĞÈÇËû¡£
+ä¸€å€‹æ•´å¤©ç„¡æ‰€äº‹äº‹çš„ç„¡è³´æ¼¢ï¼Œåªæœƒæ¬ºè² ä¸€äº›è‰¯å®¶å©¦å¥³ï¼Œæ‰€ä»¥ä½ æœ€å¥½å°å¿ƒä¸€é»ï¼Œä¸è¦
+æ‹›æƒ¹ä»–ã€‚
 C_LONG
 	);
 	set( "gender", "male" );
@@ -19,7 +19,7 @@ C_LONG
         set("alignment",-50);
         set_perm_stat( "str", 10 );
         set_perm_stat( "dex", 10 );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set_natural_armor(50,1);
         set_natural_weapon( 15,10,18 );
 }

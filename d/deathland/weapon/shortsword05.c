@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("holy shortsword","ÉñÊ¥¶Ì½£");
+        set_name("holy shortsword","ç¥è–çŸ­åŠ");
         add("id",({"sword","shortsword"}) );
-       set_short("ÉñÊ¥¶Ì½£");
+       set_short("ç¥è–çŸ­åŠ");
        set_long(
-         "Ò»°ÑÉñÊ¥µÄ¶Ì½£,¾İËµÊÇÓÉÉñÊ¥ÊØÎÀÊ¹ÓÃµÄÉñ±øÀûÆ÷ .\n"
+         "ä¸€æŠŠç¥è–çš„çŸ­åŠ,æ“šèªªæ˜¯ç”±ç¥è–å®ˆè¡›ä½¿ç”¨çš„ç¥å…µåˆ©å™¨ .\n"
                );
 	
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
  	set("second",1);
     set("type","shortblade");

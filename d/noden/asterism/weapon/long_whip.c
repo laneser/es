@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("long whip","³¤±Ş");
+        set_name("long whip","é•·é­");
         add ("id",({ "whip" }) );
-        set_short("³¤±Ş");
+        set_short("é•·é­");
         set_long(
-            "ÕâÊÇÒ»ÌõºÜ³¤µÄ±Ş×Ó¡£×ĞÏ¸Ò»¿´, ÉÏÃæÊ²÷á»¨ÎÆ¶¼Ã»ÓĞ¡£\n"
+            "é€™æ˜¯ä¸€æ¢å¾ˆé•·çš„é­å­ã€‚ä»”ç´°ä¸€çœ‹, ä¸Šé¢ä»€éº¼èŠ±ç´‹éƒ½æ²’æœ‰ã€‚\n"
         );
-        set( "unit", "Ìõ");
+        set( "unit", "æ¢");
         set( "weapon_class", 20 );
         set( "type", "whip" );
         set( "min_damage", 17);

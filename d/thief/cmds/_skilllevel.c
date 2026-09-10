@@ -5,19 +5,19 @@ int cmd_skilllevel()
 	object owner;
 	owner = this_player();
 tell_object(owner,
-"ĞÕÃû : "+owner->query("c_name")+"\n"
-"\t¼¼ÄÜ\t\tµÈ¼¶\t\t¾­Ñé\n"
-"\t±³´Ì\t\t"+owner->query("thief_level/backstab")+"\t\t"+owner->query("thief_exp/backstab")+"\n"
-"\tÉä·Éµ¶\t\t"+owner->query("thief_level/throw-dagger")+"\t\t"+owner->query("thief_exp/throw-dagger")+"\n" );
-// "\tÍµÇÔ\t\t"+owner->query("thief_level/steal")+"\t\t"+owner->query("thief_exp/steal")+"\n" );
+"å§“å : "+owner->query("c_name")+"\n"
+"\tæŠ€èƒ½\t\tç­‰ç´š\t\tç¶“é©—\n"
+"\tèƒŒåˆº\t\t"+owner->query("thief_level/backstab")+"\t\t"+owner->query("thief_exp/backstab")+"\n"
+"\tå°„é£›åˆ€\t\t"+owner->query("thief_level/throw-dagger")+"\t\t"+owner->query("thief_exp/throw-dagger")+"\n" );
+// "\tå·ç«Š\t\t"+owner->query("thief_level/steal")+"\t\t"+owner->query("thief_exp/steal")+"\n" );
 	return 1;
 }
 
 int help()
 {
 	write(@HELP
-Ö¸Áî¸ñÊ½ : skilllevel
-    Õâ¸öÖ¸ÁîÈÃÄãÖªµÀÄ¿Ç°Äã¸÷ÖÖ¼¼ÄÜµÄµÈ¼¶¡£
+æŒ‡ä»¤æ ¼å¼ : skilllevel
+    é€™å€‹æŒ‡ä»¤è®“ä½ çŸ¥é“ç›®å‰ä½ å„ç¨®æŠ€èƒ½çš„ç­‰ç´šã€‚
 HELP
 	);
 }

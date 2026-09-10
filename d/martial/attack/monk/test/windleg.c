@@ -1,5 +1,5 @@
-// ÉÙÁÖËÂÎä¹¦¡¸Áú×¦ÊÖ¡¹ part2
-// Text Data from book ¡¸ÒÐÌìÍÀÁú¼Ç¡¹
+// å°‘æž—å¯ºæ­¦åŠŸã€Œé¾çˆªæ‰‹ã€ part2
+// Text Data from book ã€Œå€šå¤©å± é¾è¨˜ã€
 // modify by Wind
 // May 28 1994
 // second modify by Wind
@@ -12,36 +12,36 @@ int query_need_fp()
 }
 int gonfu_level(object me)
 {
-        // ´«»ØÊìÁ·Öµ
+        // å‚³å›žç†Ÿç·´å€¼
         return (int)me->query("gonfus/windleg");
-        //                     ^^^^^^^^^^^^^^^^^^ÊìÁ·¶È
+        //                     ^^^^^^^^^^^^^^^^^^ç†Ÿç·´åº¦
 }
 
 varargs int can_use(object me, object victim, object weapon)
 {
-        // È·¶¨ËùÊ¹ÓÃÎäÆ÷ÊÇ·ñÕýÈ·
-        if( weapon ) return 0; // Í½ÊÖÎä¹¦
+        // ç¢ºå®šæ‰€ä½¿ç”¨æ­¦å™¨æ˜¯å¦æ­£ç¢º
+        if( weapon ) return 0; // å¾’æ‰‹æ­¦åŠŸ
         return 1;
 }
 
-// ¸÷Ê½Õ½¶·Ñ¶Ï¢
+// å„å¼æˆ°é¬¥è¨Šæ¯
 string *attack_msg = ({
-        "%sÍÈÈçÐý·çµÄÌßÏò%s",
-        "%sÉíÐÎÒ»¶¯£¬ÍÈÒÑÌßµ½ÁË%s",
-        "%sÊ¹³ö¡¸·ç¾í²ÐÂ¥¡¹Ò»ÕÐ£¬Á¬ÐøÌß³ö£¬Ìßµ½%s",
-        "%sÉíÐÎÒ»Âä£¬ÌßÏò¶ÔÊÖÏÂÅÌ",
-        "%sÍ»È»ÉÁµ½ÁË¶ÔÊÖÃæÇ°£¬ÌßÏò%s",
-        "%s°ÎÉí¶øÆð£¬´Ó¸ß´¦ÌßÏò%s",
+        "%sè…¿å¦‚æ—‹é¢¨çš„è¸¢å‘%s",
+        "%sèº«å½¢ä¸€å‹•ï¼Œè…¿å·²è¸¢åˆ°äº†%s",
+        "%sä½¿å‡ºã€Œé¢¨æ²æ®˜æ¨“ã€ä¸€æ‹›ï¼Œé€£çºŒè¸¢å‡ºï¼Œè¸¢åˆ°%s",
+        "%sèº«å½¢ä¸€è½ï¼Œè¸¢å‘å°æ‰‹ä¸‹ç›¤",
+        "%sçªç„¶é–ƒåˆ°äº†å°æ‰‹é¢å‰ï¼Œè¸¢å‘%s",
+        "%sæ‹”èº«è€Œèµ·ï¼Œå¾žé«˜è™•è¸¢å‘%s",
 });
 
 varargs int hit_modify(int hit_chance, object me, object victim, object weapon,int type)
 {
 	int i,delta_dex;
-        // ÃüÖÐÂÊµ÷Õû
+        // å‘½ä¸­çŽ‡èª¿æ•´
         if( !(type) ) return 0;
         delta_dex = (int)me->query_stat("dex")-(int)victim->quert_stat("dex");
         if ( delta_dex<0) { delta_dex=0; } 
-        // ÃüÖÐÂÊµ÷ÕûÖµÎª °Ù·ÖÖ®£¨ 30 + ÊìÁ·¶È/3 + Ë«·½Ãô½Ý¶È²î/2 £©
+        // å‘½ä¸­çŽ‡èª¿æ•´å€¼ç‚º ç™¾åˆ†ä¹‹ï¼ˆ 30 + ç†Ÿç·´åº¦/3 + é›™æ–¹æ•æ·åº¦å·®/2 ï¼‰
         i = 30 + gonfu_level(me)/20 + delta_dex*5 ;
    	if( (int)me->query("force_points") < query_need_fp() ){	i = -5; }
         return i;
@@ -49,17 +49,17 @@ varargs int hit_modify(int hit_chance, object me, object victim, object weapon,i
 
 varargs int penetrate_modify(int pene_chance, object me, object victim, object weapon,int type)
 {
-        // ´©Í¸ÂÊµ÷Õû¼õ°Ù·ÖÖ®Ê®£¨ËÙ¶È¿ì£¬´©Í¸ÂÊ¾ÍÐ¡ÁË£©
+        // ç©¿é€çŽ‡èª¿æ•´æ¸›ç™¾åˆ†ä¹‹åï¼ˆé€Ÿåº¦å¿«ï¼Œç©¿é€çŽ‡å°±å°äº†ï¼‰
         return -10;
 }
 
 varargs int damage_modify(int damage, object me, object victim, object weapon,int type)
 {
         int i;
-        // ¹¥»÷Á¦µ÷Õû
+        // æ”»æ“ŠåŠ›èª¿æ•´
         if( !type ) return 0;
         i = gonfu_level(me)/5+10;
-        // ¹¥»÷Á¦µ÷ÕûÎª°Ù·ÖÖ®£¨  ÊìÁ·¶È/5+20£©
+        // æ”»æ“ŠåŠ›èª¿æ•´ç‚ºç™¾åˆ†ä¹‹ï¼ˆ  ç†Ÿç·´åº¦/5+20ï¼‰
         if( (int)me->query("force_points") < query_need_fp() ){	i = -5; }
             else {me->add("force_points",-query_need_fp()); } 
         return i;
@@ -71,6 +71,6 @@ varargs string query_attack_msg(object me, object victim, int type)
         if( !(type) ) return 0;
         a_msg = attack_msg[random(sizeof(attack_msg))];
         if( (int)me->query("force_points") < query_need_fp() )
-        { a_msg = a_msg+"£¬µ«ÊÇ³öÍÈÊ±ÏÔµÃÄÚÁ¦²»×ãµÄ¸Ð¾õ";}
+        { a_msg = a_msg+"ï¼Œä½†æ˜¯å‡ºè…¿æ™‚é¡¯å¾—å…§åŠ›ä¸è¶³çš„æ„Ÿè¦º";}
 return a_msg;
 }

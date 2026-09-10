@@ -6,10 +6,10 @@ int cutted;
 
 void create()
 {
-    set_name( "wolf heart", "ÀÇĞÄ" );
+    set_name( "wolf heart", "ç‹¼å¿ƒ" );
     add( "id", ({ "heart" }) );
-    set_short( "ÀÇĞÄ" );
-    set( "unit", "¿Å" );
+    set_short( "ç‹¼å¿ƒ" );
+    set( "unit", "é¡†" );
 	set("long","@@query_c_long");
     set( "weight", 10 );
     cutted = 0;
@@ -18,9 +18,9 @@ void create()
 string query_c_long()
 {
     if( cutted )
-        return "ÕâÊÇÒ»¿Å±»ÇĞ³ÉÒ»ÍÅÏ¡ÀÃµÄÀÇĞÄ, ÄãÔ½¿´Ô½¸Ğ¶ñĞÄ¡£\n";
+        return "é€™æ˜¯ä¸€é¡†è¢«åˆ‡æˆä¸€åœ˜ç¨€çˆ›çš„ç‹¼å¿ƒ, ä½ è¶Šçœ‹è¶Šæ„Ÿå™å¿ƒã€‚\n";
 	else
-        return "ÕâÊÇÒ»¿ÅÑªÁÜÁÜµÄÀÇĞÄ, ËÆºõÃ»Ê²÷áÀûÓÃ¼ÛÖµ¡£\n";
+        return "é€™æ˜¯ä¸€é¡†è¡€æ·‹æ·‹çš„ç‹¼å¿ƒ, ä¼¼ä¹æ²’ä»€éº¼åˆ©ç”¨åƒ¹å€¼ã€‚\n";
 }
 
 int query_cutted() { return cutted; }
@@ -35,17 +35,17 @@ int cut_heart(string arg)
     object cleaver;
 
     if( !arg || ( arg!="heart" && arg!="wolf heart") )
-        return notify_fail("ÄãÒªÇĞÊ²÷á¶«Î÷£¿\n");
+        return notify_fail("ä½ è¦åˆ‡ä»€éº¼æ±è¥¿ï¼Ÿ\n");
     if( cutted )
-        return notify_fail("Õâ¿ÅĞÄÒÑ¾­±»ÇĞ¹ıÁË¡£\n");
+        return notify_fail("é€™é¡†å¿ƒå·²ç¶“è¢«åˆ‡éäº†ã€‚\n");
 
     cleaver = present("cleaver",this_player());
 
     if( !present("cleaver",this_player()) )
-        return notify_fail("Äã×îºÃÕÒ°ÑÊÊµ±µÄµ¶À´ÇĞËü¡£\n");
+        return notify_fail("ä½ æœ€å¥½æ‰¾æŠŠé©ç•¶çš„åˆ€ä¾†åˆ‡å®ƒã€‚\n");
 
     cutted = 1;
-    write("ÄãÄÃÆğÍÀµ¶°ÑÀÇĞÄ´ó½â°Ë¿é¡£\n");
+    write("ä½ æ‹¿èµ·å± åˆ€æŠŠç‹¼å¿ƒå¤§è§£å…«å¡Šã€‚\n");
 	return 1;
 }
 

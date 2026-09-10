@@ -6,15 +6,15 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("¡ºÉÍÉÆ·£¶ñÌü¡»");
+	ob->set_short("ã€è³å–„ç½°æƒ¡å»³ã€");
 	ob->set_long( @LONG_DESCRIPTION
-ÕâÀïÊÇ¡ºÉÍÉÆ·£¶ñÌü¡»µÄÓÒ±ßÆ«·¿,±ÚÉÏ¹ÒÖøÒ»·ù»­»æĞÎÒ»¸öÈËĞÎ¡£
+é€™è£¡æ˜¯ã€è³å–„ç½°æƒ¡å»³ã€çš„å³é‚Šåæˆ¿,å£ä¸Šæ›è‘—ä¸€å¹…ç•«ç¹ªå½¢ä¸€å€‹äººå½¢ã€‚
 LONG_DESCRIPTION
 	);
 
 	ob->set( "light", 1 );
 	ob->set( "c_item_desc", ([ 
-		"icons" : "Ò»·ùÆÄ¾ÉµÄ»­¡£\n" ]) );
+		"icons" : "ä¸€å¹…é —èˆŠçš„ç•«ã€‚\n" ]) );
 	ob->set( "exits", ([ 
 		"west" : "/d/eastland/beggar/area/master_room.c" ]) );
 	ob->reset();

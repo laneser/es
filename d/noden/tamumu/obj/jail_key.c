@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "jail key", "¼àÓüÔ¿³×" );
+	set_name( "jail key", "ç›£ç„é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "¼àÓüÔ¿³×" );
+	set_short( "ç›£ç„é‘°åŒ™" );
 	set_long(
-		"ÕâÊÇËşÄ·Ä·¼àÓüµÄÔ¿³×£¬ÉÏÃæÕ´ÂúÁËÑª¼£¡£\n"
+		"é€™æ˜¯å¡”å§†å§†ç›£ç„çš„é‘°åŒ™ï¼Œä¸Šé¢æ²¾æ»¿äº†è¡€è·¡ã€‚\n"
 	);
 	set( "to_lock", "TAMUMU_JAIL1" );
 	set( "weight", 3 );

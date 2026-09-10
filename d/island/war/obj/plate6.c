@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Platinum Acton","°×½ğËø×Ó¼×" );
+	set_name( "Platinum Acton","ç™½é‡‘é–å­ç”²" );
 	add( "id", ({ "acton" }) );
-	set_short( "°×½ğËø×Ó¼×" );
+	set_short( "ç™½é‡‘é–å­ç”²" );
 	set_long(@LONG
-	Ò»¼şÓÃ°×½ğ´òÔìµÄËø×Ó¼×¡£
+	ä¸€ä»¶ç”¨ç™½é‡‘æ‰“é€ çš„é–å­ç”²ã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",100 );
 	set( "type","body" );
 	set( "material","heavy_metal" );

@@ -31,10 +31,10 @@ varargs int cmd_invis(string str)
 	if(!str || str == "") {
 		invis = (int)act_ob->query("invisible");
 		if(invis == 2)
-			write( "你目前对巫师及玩家隐形。\n" );
+			write( "浣犵洰鍓嶅皪宸斧鍙婄帺瀹堕毐褰€�俓n" );
 		else if(invis == 1) 
-			write( "你目前对玩家隐形。\n" );
-		else write("你目前并没有隐形。\n");
+			write( "浣犵洰鍓嶅皪鐜╁闅卞舰銆俓n" );
+		else write("浣犵洰鍓嶄甫娌掓湁闅卞舰銆俓n");
  
 		return 0;
 	}

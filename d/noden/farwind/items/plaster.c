@@ -6,12 +6,12 @@ void create()
 {
 	herb::create();
 #include <compress_obj.h>
-	set_name( "plaster", "½ğ´´Ò©" );
-	set_short( "½ğ´´Ò©" );
+	set_name( "plaster", "é‡‘å‰µè—¥" );
+	set_short( "é‡‘å‰µè—¥" );
 	set_long(
-		"ÕâºĞ½ğ´´Ò©ÉÏ±êÊ¾Öø: ÍâÓÃÒ©(apply)£¬ÑÏ½û·şÓÃ¡£\n"
+		"é€™ç›’é‡‘å‰µè—¥ä¸Šæ¨™ç¤ºè‘—: å¤–ç”¨è—¥(apply)ï¼Œåš´ç¦æœç”¨ã€‚\n"
 	);
-	set( "unit", "ºĞ" );
+	set( "unit", "ç›’" );
 	set( "heal_apply", 3 );
 	set( "duration", 20 );
 	set( "weight", 15 );

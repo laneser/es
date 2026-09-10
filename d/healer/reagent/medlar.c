@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "medlar", "èÛè½×Ó" );
+	set_name( "medlar", "æ¸æå­" );
          set("no_sale",1);
-	set_short( "a medlar fruit", "èÛè½×Ó" );
+	set_short( "a medlar fruit", "æ¸æå­" );
 	set_long(
 		"You see a medlar fruit which are used as reagents the most.\n",
-		"ÕâÊÇÒ»ÖÖÓÃÀ´×öÒ©²ÄµÄèÛè½×Ó¡£Äã¿ÉÒÔ³¢³¢(taste)¿´¡£\n"
+		"é€™æ˜¯ä¸€ç¨®ç”¨ä¾†åšè—¥æçš„æ¸æå­ã€‚ä½ å¯ä»¥åšåš(taste)çœ‹ã€‚\n"
 	);
 	set( "ident", "MEDLAR" );
-	set( "unit", "°ü" );
+	set( "unit", "åŒ…" );
         set( "weight", 2 );
 	set( "savour","sweet");
         set("value", ({40,"silver" }) );

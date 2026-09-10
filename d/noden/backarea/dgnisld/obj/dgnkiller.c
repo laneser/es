@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Dragon Killer", "É±Áú½£");
+	set_name("Dragon Killer", "æ®ºé¾åŠ");
 	add ("id",({ "sword","dragon killer","longblade", }) );
-	set_short("a Dragon killer", "É±Áú½£");
+	set_short("a Dragon killer", "æ®ºé¾åŠ");
 	set_long(
 	    "A long sword named \"Dragon Killer\". It can cause much damage\n" 
 	"to dragons, dinosaurs as same as its name. But it is a normal long\n"
 	"blade to other animals.\n",
-	    "Ò»°ÑÃûÎªÁúÖ®ÖÕ½áÕßÖ®½££¬ÕıÈçÆäÃû£¬Ëü¶ÔÁú¡¢¿ÖÁú¶¼ÓĞºÜ´óµÄÉ±ÉËÁ¦\n"
-	"¡£µ«¶Ôì¶ÆäËûÖÖÀà£¬ËüÖ»ÊÇÒ»°ÑÆÕÍ¨µÄ³¤½£¡£\n"
+	    "ä¸€æŠŠåç‚ºé¾ä¹‹çµ‚çµè€…ä¹‹åŠï¼Œæ­£å¦‚å…¶åï¼Œå®ƒå°é¾ã€æé¾éƒ½æœ‰å¾ˆå¤§çš„æ®ºå‚·åŠ›\n"
+	"ã€‚ä½†å°æ–¼å…¶ä»–ç¨®é¡ï¼Œå®ƒåªæ˜¯ä¸€æŠŠæ™®é€šçš„é•·åŠã€‚\n"
 	);
 	
 	set( "weapon_class", 10 );
@@ -21,5 +21,5 @@ void create()
 	set( "max_damage", 35 );
 	set( "weight", 50 );
 	set( "value", ({ 10, "gold" }) );
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 }

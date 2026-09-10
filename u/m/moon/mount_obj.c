@@ -10,10 +10,10 @@ void create()
                 set_default_ob("/std/mount_obj");
                 return ;
         }
-        set_name( "wooden horse", "Ğ¡Ä¾Âí" );
-        set("short", "Ğ¡Ä¾Âí");
-        set("long", "ÕâÊÇÒ»Æ¥Ä¾Âí");
-        set( "unit", "Æ¥" );
+        set_name( "wooden horse", "å°æœ¨é¦¬" );
+        set("short", "å°æœ¨é¦¬");
+        set("long", "é€™æ˜¯ä¸€åŒ¹æœ¨é¦¬");
+        set( "unit", "åŒ¹" );
         set("weight", 0);
         set("prevent_drop",1);
         set("prevent_insert",1);
@@ -50,42 +50,42 @@ int hit1(string arg)
    me=this_object();
 
    if( !living(owner) ) 
-        return notify_fail("Ëü²»ÌıÄãµÄÖ¸»Ó¡£\n");
-   if( !arg ) return notify_fail("ÄãÏë×²Ë­£¿\n");
+        return notify_fail("å®ƒä¸è½ä½ çš„æŒ‡æ®ã€‚\n");
+   if( !arg ) return notify_fail("ä½ æƒ³æ’èª°ï¼Ÿ\n");
    if( !target = present(arg,environment(owner)) )
-        return notify_fail("ÕâÀïÃ»ÓĞÄÇÖÖ¶«Î÷¡£\n");
+        return notify_fail("é€™è£¡æ²’æœ‰é‚£ç¨®æ±è¥¿ã€‚\n");
    if( arg == (string)owner->query("name") )
-        return notify_fail("×²×Ô¼º£¿Äã·èÀ²£¿\n");
+        return notify_fail("æ’è‡ªå·±ï¼Ÿä½ ç˜‹å•¦ï¼Ÿ\n");
    if( !living(target) )
-        return notify_fail("ÄãµÄ×øÆïÓÃÁ¦µÄ×²ÁË"
-                        +target->query("c_name")+"µ«ÊÇÊ²÷áÊÂÒ²Ã»·¢Éú¡£\n");
+        return notify_fail("ä½ çš„åé¨ç”¨åŠ›çš„æ’äº†"
+                        +target->query("c_name")+"ä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
    if( !visible(target,owner) )
-        return notify_fail("ÄãÏë×²Ë­£¿\n");
+        return notify_fail("ä½ æƒ³æ’èª°ï¼Ÿ\n");
    if( !owner->query_vision() )
-        return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+        return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
    if ( target->query("no_attack") )
-        return notify_fail("Õâ¼Ò»ï£­²»ÄÜÉ±¡£\n");
+        return notify_fail("é€™å‚¢ä¼™ï¼ä¸èƒ½æ®ºã€‚\n");
    if( userp(target) && (int)target->query_level()< 5 )
-        return notify_fail("Äã²»ÄÜ PK Ëû !!\n");
+        return notify_fail("ä½ ä¸èƒ½ PK ä»– !!\n");
    if( "berserk" == (string)owner->query("tactic") )
-        return notify_fail("Äã±ØĞë»»ÁíÒ»ÖÖÕ½Êõ¡£\n");
+        return notify_fail("ä½ å¿…é ˆæ›å¦ä¸€ç¨®æˆ°è¡“ã€‚\n");
    if( "melee" == (string)owner->query("tactic") )
-        return notify_fail("Äã±ØĞë»»ÁíÒ»ÖÖÕ½Êõ¡£\n");
+        return notify_fail("ä½ å¿…é ˆæ›å¦ä¸€ç¨®æˆ°è¡“ã€‚\n");
    if( "assault" == (string)owner->query("tactic") )
-        return notify_fail("Äã±ØĞë»»ÁíÒ»ÖÖÕ½Êõ¡£\n");
+        return notify_fail("ä½ å¿…é ˆæ›å¦ä¸€ç¨®æˆ°è¡“ã€‚\n");
    if( (int)owner->query("talk_points")<100 )
-        return notify_fail("ÄãµÄ½»Ì¸ÄÜÁ¦Ì«µÍÁË!\n" );
+        return notify_fail("ä½ çš„äº¤è«‡èƒ½åŠ›å¤ªä½äº†!\n" );
    if( owner->query_skill("riding")/2 +
         random( owner->query_skill("riding")/2)
       < ( int )target->query_skill("dodge")  ) {
 
         tell_object( owner,
-            "\nÄãÃüÁî"+me->query("c_name")+"Ïò¶Ô·½×²È¥, µ«ÊÇµĞÈËÉÁ¹ıÁË!\n\n" );
+            "\nä½ å‘½ä»¤"+me->query("c_name")+"å‘å°æ–¹æ’å», ä½†æ˜¯æ•µäººé–ƒéäº†!\n\n" );
         tell_object( target,
-             "\n"+me->query("c_name")+"ÏòÄã×²À´, µ«ÊÇÄãÉÁ¹ıÁË!\n\n" );
+             "\n"+me->query("c_name")+"å‘ä½ æ’ä¾†, ä½†æ˜¯ä½ é–ƒéäº†!\n\n" );
         tell_room( owner,
-            owner->query("c_name")+"Æï×Å"+me->query("c_name")
-             +"×²Ïò"+target->query("c_name")+"\n\n",
+            owner->query("c_name")+"é¨è‘—"+me->query("c_name")
+             +"æ’å‘"+target->query("c_name")+"\n\n",
         ({ owner,target }) );
         owner->add("talk_points", -50);
         target->kill_ob(owner);
@@ -100,9 +100,9 @@ int hit1(string arg)
          dod = (int)target->query_skill("dodge");
          dam = rid/2 - deb/5 -random(dod)/5;
          tell_object( owner,
-         "\nÄãÃüÁîºÚÉ«Â½ĞĞÄñÏò¶Ô·½×²È¥, µĞÈËË¤µ¹ÔÚµØ, ËÆºõÊÜµ½¾Ş´óµÄÉËº¦!\n\n" );
+         "\nä½ å‘½ä»¤é»‘è‰²é™¸è¡Œé³¥å‘å°æ–¹æ’å», æ•µäººæ‘”å€’åœ¨åœ°, ä¼¼ä¹å—åˆ°å·¨å¤§çš„å‚·å®³!\n\n" );
          tell_object( target,
-          "\nºÚÉ«Â½ĞĞÄñÏòÄã×²À´, ÄãË¤µ¹ÔÚµØ, ËÆºõÊÜµ½¾Ş´óµÄÉËº¦!\n\n" );
+          "\né»‘è‰²é™¸è¡Œé³¥å‘ä½ æ’ä¾†, ä½ æ‘”å€’åœ¨åœ°, ä¼¼ä¹å—åˆ°å·¨å¤§çš„å‚·å®³!\n\n" );
 
          target->add("hit_points",-dam);
          owner->add("talk_points",-20);
@@ -110,12 +110,12 @@ int hit1(string arg)
       else
        {
          tell_object( owner,
-            "\nÄãÃüÁî"+me->query("c_name")+"Ïò¶Ô·½×²È¥, µĞÈËË¤µ¹ÔÚµØÉÏÁË!\n\n" );
+            "\nä½ å‘½ä»¤"+me->query("c_name")+"å‘å°æ–¹æ’å», æ•µäººæ‘”å€’åœ¨åœ°ä¸Šäº†!\n\n" );
          tell_object( target,
-            "\n"+me->query("c_name")+"ÏòÄã×²À´, ÄãË¤µ¹ÔÚµØÉÏÁË!\n\n" );
+            "\n"+me->query("c_name")+"å‘ä½ æ’ä¾†, ä½ æ‘”å€’åœ¨åœ°ä¸Šäº†!\n\n" );
          tell_room( owner,
-            owner->query("c_name")+"ÆïÖø"+me->query("c_name")+
-            "×²Ïò"+target->query("c_name")+"\n\n",
+            owner->query("c_name")+"é¨è‘—"+me->query("c_name")+
+            "æ’å‘"+target->query("c_name")+"\n\n",
          ({ owner,target }) );
         }
         owner->add("talk_points",-100);
@@ -123,7 +123,7 @@ int hit1(string arg)
         owner->kill_ob(target);
         target->block_attack(3);
         target->set_temp("msg_stop_attack",
-            "( ÄãÏÖÔÚË¤µ¹ÔÚµØ£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+            "( ä½ ç¾åœ¨æ‘”å€’åœ¨åœ°ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
         return 1;
    }
    return 1;

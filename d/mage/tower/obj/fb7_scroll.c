@@ -4,11 +4,11 @@
 inherit OBJECT;
 void create()
 {
-	set_name( "red magic scroll", "ºìÉ«Ä§·¨¾íÖá" );
+	set_name( "red magic scroll", "ç´…è‰²é­”æ³•å·è»¸" );
 	add( "id", ({ "scroll" }) );
-	set_short( "ºìÉ«Ä§·¨¾íÖá" );
+	set_short( "ç´…è‰²é­”æ³•å·è»¸" );
 	set("long","@@desc");
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set( "weight", 5 );
 	set( "no_sale", 1 );
 
@@ -25,23 +25,23 @@ int recite_runes(string arg)
         object env,me;
 	me=this_player();
         if( !arg || arg!="runes" )
-                return notify_fail("ÏëÒ÷ËĞÊ²÷á£¿\n");
+                return notify_fail("æƒ³åŸèª¦ä»€éº¼ï¼Ÿ\n");
         if ((this_player()->query_skill("runes")< 90))
-                return notify_fail("Äã¸ù±¾¿´²»¶®£¬ÏëÒ÷ËĞÊ²÷á£¿\n");
+                return notify_fail("ä½ æ ¹æœ¬çœ‹ä¸æ‡‚ï¼Œæƒ³åŸèª¦ä»€éº¼ï¼Ÿ\n");
         if ((this_player()->query("spell_levels/elemental")< 50))
-                return notify_fail("ÄãÒ÷ËĞÁË°ëÌì£¬»¹ÊÇ²»ÖªµÀÕıÈ·µÄÊ¹ÓÃ·½Ê½£¬´ó¸ÅÊÇÄã¶ÔÔªËØÄ§·¨»¹²»¹»ÊìÁ·°É£¡\n");
+                return notify_fail("ä½ åŸèª¦äº†åŠå¤©ï¼Œé‚„æ˜¯ä¸çŸ¥é“æ­£ç¢ºçš„ä½¿ç”¨æ–¹å¼ï¼Œå¤§æ¦‚æ˜¯ä½ å°å…ƒç´ é­”æ³•é‚„ä¸å¤ ç†Ÿç·´å§ï¼\n");
 if ((undefinedp (this_player()->query("spells/fireball"))) || (this_player()->query("spells/fireball")< 6))
-return  notify_fail("ÄãÒ÷ËĞÖøÖäÎÄ£¬µ«ÊÇÒÔÄ¿Ç°ÄãµÄ»ğÇòÊõµÈ¼¶²»ÖªµÀ¸ÃÈçºÎÊ¹ÓÃ£¡\n");
+return  notify_fail("ä½ åŸèª¦è‘—å’’æ–‡ï¼Œä½†æ˜¯ä»¥ç›®å‰ä½ çš„ç«çƒè¡“ç­‰ç´šä¸çŸ¥é“è©²å¦‚ä½•ä½¿ç”¨ï¼\n");
 
 if ((this_player()->query("spells/lightning")== 4)||(this_player()->query("spells/ether-bolt")== 8))
-return notify_fail("ÄãÒÑ¾­Ñ§ÁËÆäËü¸ßµÈ¹¥»÷Ä§·¨£¬ÎŞ·¨ÔÚÑ§ÁË£¡\n");
+return notify_fail("ä½ å·²ç¶“å­¸äº†å…¶å®ƒé«˜ç­‰æ”»æ“Šé­”æ³•ï¼Œç„¡æ³•åœ¨å­¸äº†ï¼\n");
 
 if (this_player()->query("spells/fireball")== 7)
-return notify_fail("ÄãÒ÷ËĞÁËÖäÎÄ£¬¶ÔÕâ¸öÖäÎÄ¼ÇµÃ¸üÇå³şÁË¡£\n");
-	write("Äã¿ªÊ¼Ò÷ËĞ¾íÖáÉÏµÄÖäÎÄÃÀÀ­ Î÷ º±Äª .... \n\n");
-	tell_room( environment(me), sprintf("%s¶ÔÖø¾íÖá¿ªÊ¼à«à«×ÔÓï¡£\n", me->query("c_name")), me);
-	printf(set_color("¾íÖá·¢³öÁËºìÉ«µÄ¹âÃ¢£¬»¯×÷ÁË¼¸°Ù¸öµÄĞ¡»ğÇò£¬Î§ÈÆÖøÄã¿ìËÙµÄ·ÉĞĞ.... \n ...\n ...\n", "HIR") );
-	tell_room( environment(me), set_color(sprintf("\n%sÊÖÉÏµÄ¾íÖá·¢³öÁËºìÉ«µÄ¹âÃ¢£¬»¯×÷ÁË¼¸°Ù¸öµÄĞ¡»ğÇò£¬Î§ÈÆÖø%s¿ìËÙµÄ·ÉĞĞ.... \n",me->query("c_name"),me->query("c_name")),"HIR" ), me);
+return notify_fail("ä½ åŸèª¦äº†å’’æ–‡ï¼Œå°é€™å€‹å’’æ–‡è¨˜å¾—æ›´æ¸…æ¥šäº†ã€‚\n");
+	write("ä½ é–‹å§‹åŸèª¦å·è»¸ä¸Šçš„å’’æ–‡ç¾æ‹‰ è¥¿ ç½•è« .... \n\n");
+	tell_room( environment(me), sprintf("%så°è‘—å·è»¸é–‹å§‹å–ƒå–ƒè‡ªèªã€‚\n", me->query("c_name")), me);
+	printf(set_color("å·è»¸ç™¼å‡ºäº†ç´…è‰²çš„å…‰èŠ’ï¼ŒåŒ–ä½œäº†å¹¾ç™¾å€‹çš„å°ç«çƒï¼Œåœç¹è‘—ä½ å¿«é€Ÿçš„é£›è¡Œ.... \n ...\n ...\n", "HIR") );
+	tell_room( environment(me), set_color(sprintf("\n%sæ‰‹ä¸Šçš„å·è»¸ç™¼å‡ºäº†ç´…è‰²çš„å…‰èŠ’ï¼ŒåŒ–ä½œäº†å¹¾ç™¾å€‹çš„å°ç«çƒï¼Œåœç¹è‘—%så¿«é€Ÿçš„é£›è¡Œ.... \n",me->query("c_name"),me->query("c_name")),"HIR" ), me);
 
 	call_out("effect",1,me);
         return 1;
@@ -51,11 +51,11 @@ void effect(object reciter)
 string fame;
 seteuid(getuid());
 fame = "     "+(string)reciter->query("c_name")+"("+
-                (string)reciter->query("name")+")"+" ì¶ "+
-                "/adm/daemons/weather_d"->query_c_game_time()+" Ï°µÃ»ğÇòÊõ[7] !!\n";
+                (string)reciter->query("name")+")"+" æ–¼ "+
+                "/adm/daemons/weather_d"->query_c_game_time()+" ç¿’å¾—ç«çƒè¡“[7] !!\n";
                 write_file(SLAB_FILE, fame+"\n");
-	write("´Ó¹Û²ì»ğÇòµÄ·ÉĞĞÂ·¾¶£¬ÄãÁìÂÔ³öÈçºÎÊ¹ÓÃ»ğÇòÊõ[7]£¡£¡\n> ");
-	tell_room( environment(reciter), sprintf(set_color("\n»ğÇòÓúÀ´ÓúĞ¡£¬½¥½¥µÄÏûÊ§²»¼ûÁË.... \n\n> ", "HIR") ));
+	write("å¾è§€å¯Ÿç«çƒçš„é£›è¡Œè·¯å¾‘ï¼Œä½ é ˜ç•¥å‡ºå¦‚ä½•ä½¿ç”¨ç«çƒè¡“[7]ï¼ï¼\n> ");
+	tell_room( environment(reciter), sprintf(set_color("\nç«çƒæ„ˆä¾†æ„ˆå°ï¼Œæ¼¸æ¼¸çš„æ¶ˆå¤±ä¸è¦‹äº†.... \n\n> ", "HIR") ));
 	this_player()->set("spells/fireball",7);
 	remove();
 }
@@ -63,17 +63,17 @@ fame = "     "+(string)reciter->query("c_name")+"("+
 string desc()
 {
 if ((this_player()->query_skill("runes")< 50))
-return ("ÕâÕÅºìÉ«¾íÖáÉÏĞ´ÁËÒ»Ğ©Äã¿´²»¶®µÄÆæ¹ÖÎÄ×Ö¡£\n");
+return ("é€™å¼µç´…è‰²å·è»¸ä¸Šå¯«äº†ä¸€äº›ä½ çœ‹ä¸æ‡‚çš„å¥‡æ€ªæ–‡å­—ã€‚\n");
 else
 if ((this_player()->query_skill("runes")< 90))
-return ("ÕâÕÅºìÉ«¾íÖáÉÏĞ´ÁËÒ»Ğ©Ä§·¨ÎÄ×Ö£¬µ«ÊÇÄãÖ»¿´¶®ÁËÒ»°ë£¬´ó¸ÅÊÇÄã¶ÔÄ§·¨ÎÄ×ÖµÄÈÏÊ¶»¹²»¹»°É¡£\n");
+return ("é€™å¼µç´…è‰²å·è»¸ä¸Šå¯«äº†ä¸€äº›é­”æ³•æ–‡å­—ï¼Œä½†æ˜¯ä½ åªçœ‹æ‡‚äº†ä¸€åŠï¼Œå¤§æ¦‚æ˜¯ä½ å°é­”æ³•æ–‡å­—çš„èªè­˜é‚„ä¸å¤ å§ã€‚\n");
 else
 if ((undefinedp (this_player()->query("spells/fireball"))) || (this_player()->query("spells/fireball")< 6))
-return ("ÕâÕÅºìÉ«¾íÖáÉÏÃæËÆºõ¼ÇÔØÖø»ğÇòÊõµÄÖäÎÄ£¬µ«ÊÇÒÔÄ¿Ç°ÄãµÄ»ğÇòÊõµÈ¼¶²»ÖªµÀ¸ÃÈçºÎÊ¹ÓÃ¡£\n");
+return ("é€™å¼µç´…è‰²å·è»¸ä¸Šé¢ä¼¼ä¹è¨˜è¼‰è‘—ç«çƒè¡“çš„å’’æ–‡ï¼Œä½†æ˜¯ä»¥ç›®å‰ä½ çš„ç«çƒè¡“ç­‰ç´šä¸çŸ¥é“è©²å¦‚ä½•ä½¿ç”¨ã€‚\n");
 else
 if (this_player()->query("spells/fireball")== 7)
-return("ÕâÕÅºìÉ«¾íÖáÉÏÃæ¼ÇÔØÖø»ğÇòÊõµÚÆß¼¶µÄÖäÎÄ¡£\n");
+return("é€™å¼µç´…è‰²å·è»¸ä¸Šé¢è¨˜è¼‰è‘—ç«çƒè¡“ç¬¬ä¸ƒç´šçš„å’’æ–‡ã€‚\n");
 else
-return("ÒÀÄã¶Ô»ğÇòÊõµÄÁË½â£¬ÉÏÃæ¼ÇÔØÖøËÆºõÊÇ»ğÇòÊõµÄÒ»ÖÖÖäÎÄ£¬¿ÉÊÇÄãÒÔÇ°´ÓÃ»¿´¹ıÕâĞ©ÖäÎÄ£¬\nÏëÊÔÖøÒ÷ËĞ(recite)ÕâĞ©ÖäÎÄ(runes)¿´¿´Âğ£¿\n");
+return("ä¾ä½ å°ç«çƒè¡“çš„ç­è§£ï¼Œä¸Šé¢è¨˜è¼‰è‘—ä¼¼ä¹æ˜¯ç«çƒè¡“çš„ä¸€ç¨®å’’æ–‡ï¼Œå¯æ˜¯ä½ ä»¥å‰å¾æ²’çœ‹éé€™äº›å’’æ–‡ï¼Œ\næƒ³è©¦è‘—åŸèª¦(recite)é€™äº›å’’æ–‡(runes)çœ‹çœ‹å—ï¼Ÿ\n");
 }
 

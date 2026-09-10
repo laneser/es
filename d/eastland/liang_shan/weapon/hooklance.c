@@ -5,14 +5,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("scythe-lance","¹³Á­Ç¹");
+       set_name("scythe-lance","é‰¤é®æ§");
        add("id",({"lance"}) );
-       set_short("¹³Á­Ç¹");
+       set_short("é‰¤é®æ§");
 	   set_long(
-           "ÕâÊÇÒ»°ÑÔìĞÍÆæÌØµÄÇ¹£¬Ä©¶ËÁ¬ÖøÒ»°ÑĞ¡Á­µ¶£®\n"
+           "é€™æ˜¯ä¸€æŠŠé€ å‹å¥‡ç‰¹çš„æ§ï¼Œæœ«ç«¯é€£è‘—ä¸€æŠŠå°é®åˆ€ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 26 );
         set("type","thrusting");
 	set( "min_damage", 21 );

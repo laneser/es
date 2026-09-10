@@ -8,5 +8,5 @@ void create()
 	set_save_file("arch_board");
 	set_location("/d/wiz/arch_office");
 	set( "short.text", "Archwizards' bulletin board");
-	set( "c_short.text", "´óÎ×Ê¦ÁôÑÔ°å");
+	set( "c_short.text", "å¤§å·«å¸«ç•™è¨€æ¿");
 }

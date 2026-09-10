@@ -7,18 +7,18 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("µÀ¹Û");
+        set_short("é“è§€");
         set_long( @C_LONG_DESCRIPTION
-ÕâÊÇÒ»¼äµÀ¹Û£¬ÆäÉÏ¹©·îµÄÊÇÕæÎä´óµÛ£¬ËäÈ»²»Ì«´ó£¬µ«ÊÇÊ®·ÖÇ¬¾»£¬×ó²à
-ÓÐÒ»¸öÏãÂ¯£¬ÏÖ½ñÓÐ¼¸Ðí\ÇáÑÌôÁôÁ£¬¿´À´´Ë¼äµÀ¹ÛµÄÐÅÍ½²»ÉÙ£¬ÓÒ²àÓÐÒ»¸ö´óÏä
-×Ó(box)¡£
+é€™æ˜¯ä¸€é–“é“è§€ï¼Œå…¶ä¸Šä¾›å¥‰çš„æ˜¯çœŸæ­¦å¤§å¸ï¼Œé›–ç„¶ä¸å¤ªå¤§ï¼Œä½†æ˜¯ååˆ†ä¹¾æ·¨ï¼Œå·¦å´
+æœ‰ä¸€å€‹é¦™çˆï¼Œç¾ä»Šæœ‰å¹¾è¨±è¼•ç…™å«‹å«‹ï¼Œçœ‹ä¾†æ­¤é–“é“è§€çš„ä¿¡å¾’ä¸å°‘ï¼Œå³å´æœ‰ä¸€å€‹å¤§ç®±
+å­(box)ã€‚
 C_LONG_DESCRIPTION
         );
     set("objects",([
         "toaist":"/d/eastland/haiwei/monster/toaist"]));
         set( "light", 1 );
         set( "item_desc", ([ 
-                "box" : "ÕâÊÇÒ»¸ö¹©ÙºÏä\n"]) );
+                "box" : "é€™æ˜¯ä¸€å€‹ä¾›ä¿¸ç®±\n"]) );
         set( "exits", ([ 
                 "west" : "/d/eastland/haiwei/temple_square" ]) );
         reset();
@@ -38,13 +38,13 @@ int do_put(string arg)
 
         if( !arg || arg=="" || sscanf( arg, "%d %s",num, type)!=2 )
                 return notify_fail( can_read_chinese()?
-                        "·ÅÊ²÷á£¿\n": "Put whom what?\n" );
+                        "æ”¾ä»€éº¼ï¼Ÿ\n": "Put whom what?\n" );
         if( !this_player()->debit(type, num) ) return notify_fail( can_read_chinese()?
-                "ÄãÃ»ÓÐÄÇ÷á¶àÇ®¡£\n": "You don't have that many coins.\n" );
+                "ä½ æ²’æœ‰é‚£éº¼å¤šéŒ¢ã€‚\n": "You don't have that many coins.\n" );
     if (present("toaist",this_object())){
        this_player()->credit(type,-num);
        write(can_read_chinese()?
-          "ÀÏµÀËµ£º¼ÈÈ»ÄãÒÑ±í´ïÄãµÄ³ÏÒâ£¬¾Í¸øÄãÒ»ÕÅÊÕÑý·û°É¡£\n":
+          "è€é“èªªï¼šæ—¢ç„¶ä½ å·²è¡¨é”ä½ çš„èª æ„ï¼Œå°±çµ¦ä½ ä¸€å¼µæ”¶å¦–ç¬¦å§ã€‚\n":
           "\n");
        ob1=new("/d/eastland/haiwei/obj/paper");
        ob1->move(this_object());

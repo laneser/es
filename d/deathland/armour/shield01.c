@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "warlord shield", "Õ½Éñ¶ÜÅÆ");
+        set_name( "warlord shield", "æˆ°ç¥ç›¾ç‰Œ");
         add( "id", ({ "shield" }) );
-        set_short("a warlord shield", "Õ½Éñ¶ÜÅÆ");
+        set_short("a warlord shield", "æˆ°ç¥ç›¾ç‰Œ");
         set_long(
                 "mithril shield of protection .\n",
-           "ÕâÊÇÓÃÃ×ËÕÀï½ğÊôÓëÒø»ìºÏËùÖÆ³ÉµÄ¶Ü£¬ÓÉÀú´úµÄ°«ÈË½«¾üÒ»Ö±´«ÏÂÀ´ \n"
+           "é€™æ˜¯ç”¨ç±³è˜‡é‡Œé‡‘å±¬èˆ‡éŠ€æ··åˆæ‰€è£½æˆçš„ç›¾ï¼Œç”±æ­·ä»£çš„çŸ®äººå°‡è»ä¸€ç›´å‚³ä¸‹ä¾† \n"
         );
-        set( "unit", "Ãæ"); 
+        set( "unit", "é¢"); 
         set( "type", "shield" );
         set( "material", "heavy_metal" );
         set( "armor_class", 6 );

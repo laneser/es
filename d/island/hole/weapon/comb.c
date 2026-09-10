@@ -3,14 +3,14 @@
 inherit WEAPON;
 void create() 
 {
-	set_name( "Comb","Êá×Ó" );
+	set_name( "Comb","æ¢³å­" );
 	add( "id",({ "comb" }) );
-	set_short( "Comb","Êá×Ó" );
+	set_short( "Comb","æ¢³å­" );
 	set_long(@LONG
-	¸¾ÈËÓÃÀ´ÕûÀíÍ··¢µÄ¹¤¾ß
+	å©¦äººç”¨ä¾†æ•´ç†é ­é«®çš„å·¥å…·
 LONG
             );
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "weight",9 );
 	set( "value",({ 100,"silver" }) );
 	setup_weapon( "blunt",8,5,15 );

@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "dang guei", "µ±¹é" );
+	set_name( "dang guei", "ç•¶æ­¸" );
            set("no_sale",1);
 	add("id", ({"dang","guei"}) );
-	set_short( "µ±¹é" );
+	set_short( "ç•¶æ­¸" );
 	set_long(
-		"ÕâÊÇÒ»¿éÓÃÀ´×öÒ©²ÄµÄµ±¹é¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ˜¯ä¸€å¡Šç”¨ä¾†åšè—¥æçš„ç•¶æ­¸ã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "DANG_GUEI" );
-	set( "unit", "¿é" );
+	set( "unit", "å¡Š" );
         set( "weight", 2);
 	set( "savour","bitter");
 	set( "value", ({ 100, "silver" }) );

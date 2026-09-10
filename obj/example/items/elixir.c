@@ -16,12 +16,12 @@ inherit OBJECT ;
 
 void create()
 {
-	set_name( "elixir", "Ò©Ë®" );
+	set_name( "elixir", "è—¥æ°´" );
 	add ("id", ({ "potion" }) );
-	set_short( "an elixir of healing", "»Ö¸´Ò©Ë®" );
+	set_short( "an elixir of healing", "æ¢å¾©è—¥æ°´" );
 	set_long(
 		"An elixir of healing, which can heal some wounds if you drink it.\n",
-		"»Ö¸´Ò©Ë®£¬ÓÃºÈ(drink)µÄ¡£\n"
+		"æ¢å¾©è—¥æ°´ï¼Œç”¨å–(drink)çš„ã€‚\n"
 	);
 	set ("weight", 50);
 	set ("value", ({ 30, "gold" }) );
@@ -38,17 +38,17 @@ int drink (string str)
 
 	chinese_mode = can_read_chinese();
 	if (!str || !id(str))
-		return notify_fail(chinese_mode?"ºÈÊ²÷á£¿\n":"What would you like to drink?\n") ;
+		return notify_fail(chinese_mode?"å–ä»€éº¼ï¼Ÿ\n":"What would you like to drink?\n") ;
 
 	if( chinese_mode)
-		write( "ÄãºÈÏÂ»Ö¸´Ò©Ë®Ö®áá£¬Æ¿×ÓÍ»È»»¯³ÉÒ»ÕóÑÌÎíÏûÊ§ÁË¡£\n");
+		write( "ä½ å–ä¸‹æ¢å¾©è—¥æ°´ä¹‹å¾Œï¼Œç“¶å­çªç„¶åŒ–æˆä¸€é™£ç…™éœ§æ¶ˆå¤±äº†ã€‚\n");
 	else
 		write( "You drink the elixir of healing.\n"
 		"As you drink the last drop, the bottle vanishes in a puff of smoke!\n");
 	old_hp = this_player()->query("hit_points");
 	this_player()->receive_healing( HEALING );
 	if( old_hp < this_player()->query("hit_points") )
-		write(chinese_mode?"Äã¾õµÃºÃ¶àÁË¡£\n":"You feel better!\n");
+		write(chinese_mode?"ä½ è¦ºå¾—å¥½å¤šäº†ã€‚\n":"You feel better!\n");
 	remove();
 	return 1;
 }

@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "spider ankh", "蜘蛛圣标" );
+	set_name( "spider ankh", "铚樿洓鑱栨" );
 	add( "id", ({ "ankh" }) );
-   set_short( "蜘蛛圣标" );
+   set_short( "铚樿洓鑱栨" );
 	set_long(
-		"这是一个小型的圣标，上面扎著一条破布，圣标中间一个圆形的\n"
-		"突起上刻著一个蜘蛛的记号。\n"
+		"閫欐槸涓�鍊嬪皬鍨嬬殑鑱栨锛屼笂闈㈡墡钁椾竴姊濈牬甯冿紝鑱栨涓枔涓�鍊嬪湏褰㈢殑\n"
+		"绐佽捣涓婂埢钁椾竴鍊嬭湗铔涚殑瑷樿櫉銆俓n"
 	);
 	set( "type", "misc" );
    set( "material", "wood" );

@@ -5,17 +5,17 @@ void create(object ob)
 	if (!ob ) return ;
 	ob->set_level(1);
 	ob->add( "id", ({ "crow" }) );
-	ob->set_name( "black crow", "ÎÚÑ»" );
-    ob->set_short( "ÎÚÑ»" );
+	ob->set_name( "black crow", "çƒé´‰" );
+    ob->set_short( "çƒé´‰" );
 	ob->set_long(
-		"ÕâÖ»ÎÚÑ»·Ç³£³³£¬ÈÃÄãÓÐÒ»¹É°ÑËüÒ»½ÅõßËÀµÄ³å¶¯¡£¡£\n"
+		"é€™éš»çƒé´‰éžå¸¸åµï¼Œè®“ä½ æœ‰ä¸€è‚¡æŠŠå®ƒä¸€è…³è¸¹æ­»çš„è¡å‹•ã€‚ã€‚\n"
 	);
 	ob->set_perm_stat( "dex", 3 );
 
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set( "natural_weapon_class1", 3 );
 	ob->set( "natural_min_damage1", 3 );
 	ob->set( "natural_max_damage1", 5 );
-	ob->set_c_verbs( ({ "%sÍùÏÂ¸©³å£¬ÓÃ×ì°Í×Ä%s", "%sÓÃ×¦×ÓÍù%s×¥ÏÂ" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
+	ob->set_c_verbs( ({ "%så¾€ä¸‹ä¿¯è¡ï¼Œç”¨å˜´å·´å•„%s", "%sç”¨çˆªå­å¾€%sæŠ“ä¸‹" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
 }

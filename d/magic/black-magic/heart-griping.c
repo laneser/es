@@ -142,50 +142,50 @@ int cast(int level, string target)
 
 	me = this_player();	
 	if( (int)me->query_skill("black-magic") < query_need_skill(level) ) {
-	  tell_object( me, "ÄãµÄºÚÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n");
+	  tell_object( me, "ä½ çš„é»‘é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n");
       return 0;
     }	
 	if( target=="NONE" && !(targ = me->query_attacker()) ) { 
-		write( "Òª¶ÔË­Ê©Õ¹½ÊĞÄÊõ£¿\n");
+		write( "è¦å°èª°æ–½å±•çµå¿ƒè¡“ï¼Ÿ\n");
 	    return 0;
 	} else {
 		if( !targ ) 
 			targ = present( target, environment(me) );
 		if( !targ ) {
-		   write( "ÄãµÄÄ¿±ê²¢²»ÔÚÕâÀï£¡\n");
+		   write( "ä½ çš„ç›®æ¨™ä¸¦ä¸åœ¨é€™è£¡ï¼\n");
 	       return 0;
 	    }
 	}
 	if( !living(targ) ) {
-	    write( "½ÊĞÄÊõµÄÄ¿±ê±ØĞëÊÇÉúÎï£¡\n");
+	    write( "çµå¿ƒè¡“çš„ç›®æ¨™å¿…é ˆæ˜¯ç”Ÿç‰©ï¼\n");
 	        return 0;
 	}
 	if( targ->query("no_attack") ) {
-	    write( "²»¡ª¿É¡ªÒÔ¡£\n");
+	    write( "ä¸â€”å¯â€”ä»¥ã€‚\n");
 	    return 0;
 	}
 	if( targ==me ) {
-	    write( "Õâ .... ²»Ì«ºÃ°É¡£\n");
+	    write( "é€™ .... ä¸å¤ªå¥½å§ã€‚\n");
 	     return 0;
 	}
 	if( !check_level( me, targ, 1 ) ) return 0;
 	me->set_temp("cast_busy",1);
 	me->block_attack(query_delay_time(level)*2);
-	me->set_temp("msg_stop_attack","( ÄãÕıÔÚÊ©·¨£¬ÎŞ·¨¹¥»÷¡£ )\n"  );
-	write( set_color(sprintf("Äã¿ªÊ¼ÄîÆğ½ÊĞÄÊõÖäÎÄ...\n"),"HIG",me));
+	me->set_temp("msg_stop_attack","( ä½ æ­£åœ¨æ–½æ³•ï¼Œç„¡æ³•æ”»æ“Šã€‚ )\n"  );
+	write( set_color(sprintf("ä½ é–‹å§‹å¿µèµ·çµå¿ƒè¡“å’’æ–‡...\n"),"HIG",me));
 	tell_room( environment(me), 
-		sprintf("%s(%s)¿ªÊ¼à«à«×ÔÓï¡£\n", me->query("c_name"), me->query("name"))
+		sprintf("%s(%s)é–‹å§‹å–ƒå–ƒè‡ªèªã€‚\n", me->query("c_name"), me->query("name"))
 		, me);
 	ali1 = (int) me->query("alignment") ;
 	ali2 = (int) targ->query("alignment") ;
 	    if( !targ->query_attackers() &&
 	       (random(find_rate)<query_find_rate(me,targ)) ) {
 		tell_object( me, set_color(
-			sprintf("\n%s(%s)·¢ÏÖÄã¶ÔËû²»»³ºÃÒâ¶ø¿ªÊ¼¹¥»÷Äã¡£\n",
+			sprintf("\n%s(%s)ç™¼ç¾ä½ å°ä»–ä¸æ‡·å¥½æ„è€Œé–‹å§‹æ”»æ“Šä½ ã€‚\n",
 				targ->query("c_name"), targ->query("name")) ,"HIY",me));
 
 		tell_room( environment(targ), 
-			sprintf("%s·¢ÏÖ%s¶ÔËû²»»³ºÃÒâ¶øÖ÷¶¯¹¥»÷¡£\n",
+			sprintf("%sç™¼ç¾%så°ä»–ä¸æ‡·å¥½æ„è€Œä¸»å‹•æ”»æ“Šã€‚\n",
 				targ->query("c_name"), me->query("c_name")) , me);
 	      targ->kill_ob(me);
 	      me->block_attack(2);
@@ -207,16 +207,16 @@ int cast(int level, string target)
 void pre_effect( object caster, object target, int level )
 {
    if( level < 3 ) {
-     tell_object( caster,set_color(sprintf( "ÄãÄîÖøÖäÓï£¬ÕÙ»½ÖøĞ°¶ñµÄÁ¦Á¿¡£\n" ),"HIG"));
+     tell_object( caster,set_color(sprintf( "ä½ å¿µè‘—å’’èªï¼Œå¬å–šè‘—é‚ªæƒ¡çš„åŠ›é‡ã€‚\n" ),"HIG"));
 	 tell_room( environment(caster), 
-sprintf("%s¿ÚÀïÄîÄîÓĞ´Ê£¬ËÆºõÕıÔÚÊ©Õ¹Ä³Ñù·¨Êõ¡£\n",caster->query("c_name")) , caster);
+sprintf("%så£è£¡å”¸å”¸æœ‰è©ï¼Œä¼¼ä¹æ­£åœ¨æ–½å±•æŸæ¨£æ³•è¡“ã€‚\n",caster->query("c_name")) , caster);
    } else
      if (level < 6 ) {
-     tell_object( caster,set_color(sprintf( "ÄãÄîÖøÖäÓï£¬ÕÙ»½Ç¿´óµÄĞ°¶ñÁ¦Á¿Ç°À´¡£\n" ),"HIG"));
+     tell_object( caster,set_color(sprintf( "ä½ å¿µè‘—å’’èªï¼Œå¬å–šå¼·å¤§çš„é‚ªæƒ¡åŠ›é‡å‰ä¾†ã€‚\n" ),"HIG"));
 	 tell_room( environment(caster),set_color( 
-sprintf( "%s¿ÚÀïÄîÄîÓĞ´Ê£¬ËÆºõÕıÔÚÊ©Õ¹Ä³Ñù·¨Êõ£¬ÄãºöÈ»¸Ğµ½Ò»ÕóÄªÃûµÄ¿Ö¾å¡£\n",caster->query("c_name")) ,"HIG"), caster );
+sprintf( "%så£è£¡å”¸å”¸æœ‰è©ï¼Œä¼¼ä¹æ­£åœ¨æ–½å±•æŸæ¨£æ³•è¡“ï¼Œä½ å¿½ç„¶æ„Ÿåˆ°ä¸€é™£è«åçš„ææ‡¼ã€‚\n",caster->query("c_name")) ,"HIG"), caster );
 	} else
-     tell_room( environment(caster),set_color(sprintf( "Í»È»¼äÒ»¹É¼«Ç¿´óµÄÉñÃØÁ¦Á¿¿ªÊ¼ÁıÕÖÖøÕâÀï£¬ºÃÏñÓĞÊ²÷áÊÂÒª·¢ÉúÁË£¬ÈÃÄã¸Ğµ½²»º®¶øÀõ¡£\n" ),"HIG"));
+     tell_room( environment(caster),set_color(sprintf( "çªç„¶é–“ä¸€è‚¡æ¥µå¼·å¤§çš„ç¥ç§˜åŠ›é‡é–‹å§‹ç± ç½©è‘—é€™è£¡ï¼Œå¥½åƒæœ‰ä»€éº¼äº‹è¦ç™¼ç”Ÿäº†ï¼Œè®“ä½ æ„Ÿåˆ°ä¸å¯’è€Œæ…„ã€‚\n" ),"HIG"));
 	if( !target || !present(target, environment(caster)) ) 
 		caster->set_temp("cast_flee",1);
 }
@@ -237,7 +237,7 @@ void effect_one(int level, object caster, object victim)
 	damage = query_damage(caster, level);
 	ali = (int) caster->query("alignment") ;
 	if (ali > -200) {
-		tell_room( environment(caster), "ÄãÄîÍê×îááµÄÖäÓï£¬µ«ÊÇÊ²÷áÊÂÒ²Ã»ÓĞ·¢Éú....¡£\n");
+		tell_room( environment(caster), "ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’æœ‰ç™¼ç”Ÿ....ã€‚\n");
 		return;
 	}
 	if (ali < query_bonus_ali(level)) 
@@ -247,15 +247,15 @@ void effect_one(int level, object caster, object victim)
     recharging( caster, damage, "evil" );
     
 	if( !victim || !present(victim, environment(caster)) ) {
-	    tell_object( caster, "ÄãÄîÍê×îááµÄÖäÓï£¬¿ÉÊÇµĞÈËÒÑ¾­²»ÔÚÁË£¬Ê²÷áÊÂÒ²Ã»·¢Éú¡£\n");
-	    tell_room( environment(caster), sprintf("%s¿ÚÀïÄîÖøÆæ¹ÖµÄÖäÓï£¬µ«ÊÇÊ²÷áÊÂÒ²Ã»ÓĞ·¢Éú¡£\n",
+	    tell_object( caster, "ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œå¯æ˜¯æ•µäººå·²ç¶“ä¸åœ¨äº†ï¼Œä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
+	    tell_room( environment(caster), sprintf("%så£è£¡å¿µè‘—å¥‡æ€ªçš„å’’èªï¼Œä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’æœ‰ç™¼ç”Ÿã€‚\n",
 	      caster->query("c_name")) , caster);
 	  gain_spell_experience(caster, TYPE, query_gain_spell_exp(level)/2);
       return ;
     }
     if( !success_hit( 10+level*15, caster, TYPE, query_need_spell_level(level) ) ) {
-      tell_object( caster, 	sprintf("ÄãÄîÍê×îááµÄÖäÓï£¬µ«ÊÇ%sÈ´Ã»ÓĞÊÂµÄÑù×Ó£¬¿É¶ñ£¡ÓÖÃ»»÷ÖĞ¡£\n", victim->query("c_name") ) );
-	  tell_room( environment(caster), sprintf("%s¿ÚÀïÄîÖøÆæ¹ÖµÄÖäÓï£¬µ«ÊÇÊ²÷áÊÂÒ²Ã»ÓĞ·¢Éú¡£\n",
+      tell_object( caster, 	sprintf("ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œä½†æ˜¯%så»æ²’æœ‰äº‹çš„æ¨£å­ï¼Œå¯æƒ¡ï¼åˆæ²’æ“Šä¸­ã€‚\n", victim->query("c_name") ) );
+	  tell_room( environment(caster), sprintf("%så£è£¡å¿µè‘—å¥‡æ€ªçš„å’’èªï¼Œä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’æœ‰ç™¼ç”Ÿã€‚\n",
 	    caster->query("c_name")), caster);
 	  gain_spell_experience(caster, TYPE, query_gain_spell_exp(level)/2);
 	  return;
@@ -263,17 +263,17 @@ void effect_one(int level, object caster, object victim)
 // hit effect ....
     if( level < 3 ) {
 
-	  tell_object( caster,set_color( sprintf("ÄãÄîÍê×îááµÄÖäÓï£¬¿´µ½%sÂ¶³öÍ´¿àµÄ±íÇé¡£\n",
+	  tell_object( caster,set_color( sprintf("ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œçœ‹åˆ°%séœ²å‡ºç—›è‹¦çš„è¡¨æƒ…ã€‚\n",
 		 victim->query("c_name") ),"HIG",) );
-	    tell_object( victim, sprintf("%sà«à«µØÄîÖø¹îÒìµÄÖäÎÄ£¬Ê¹Äã¾õµÃĞÄÔà½ÊÍ´£¡\n ",
+	    tell_object( victim, sprintf("%så–ƒå–ƒåœ°å¿µè‘—è©­ç•°çš„å’’æ–‡ï¼Œä½¿ä½ è¦ºå¾—å¿ƒè‡Ÿçµç—›ï¼\n ",
 		 caster->query("c_name") ) );
-	  tell_room( environment(caster),sprintf("%sà«à«µØÄîÖø¹îÒìµÄÖäÎÄ£¬Äã¿´µ½%sÂ¶³öÍ´¿àµÄ±íÇé¡£\n",
+	  tell_room( environment(caster),sprintf("%så–ƒå–ƒåœ°å¿µè‘—è©­ç•°çš„å’’æ–‡ï¼Œä½ çœ‹åˆ°%séœ²å‡ºç—›è‹¦çš„è¡¨æƒ…ã€‚\n",
 	     caster->query("c_name"), victim->query("c_name")) ,  ({caster,victim}));
     } else {
-	  tell_room( environment(caster),set_color( sprintf( "%sÉí×ÓÎªÖ®Ò»Õğ£¬Ò¡»ÎÁË¼¸ÏÂ£¬Á³ÉÏÂ¶³öÁËÍ´¿àµÄ±íÇé¡£\n",
+	  tell_room( environment(caster),set_color( sprintf( "%sèº«å­ç‚ºä¹‹ä¸€éœ‡ï¼Œæ–æ™ƒäº†å¹¾ä¸‹ï¼Œè‡‰ä¸Šéœ²å‡ºäº†ç—›è‹¦çš„è¡¨æƒ…ã€‚\n",
 			victim->query("c_name")),"HIG") ,victim);
 	  tell_object( victim,sprintf( 
-"\nÄã¾õµÃÑÛÇ°Ò»ºÚ, Ä³ÖÖÉñÃØµÄÁ¦Á¿»÷ÖĞÄãµÄĞÄÔà, Ê¹ÄãÍ´¿à²»¿°!\n"));
+"\nä½ è¦ºå¾—çœ¼å‰ä¸€é»‘, æŸç¨®ç¥ç§˜çš„åŠ›é‡æ“Šä¸­ä½ çš„å¿ƒè‡Ÿ, ä½¿ä½ ç—›è‹¦ä¸å ª!\n"));
 	}
 
 	damage -= random((int)victim->query_stat("int"));
@@ -294,7 +294,7 @@ void report1( object caster)
 
    if( living( caster ) )
      tell_object( caster,
-       "( Äã"+message+" )\n" );
+       "( ä½ "+message+" )\n" );
 }
 
 void effect_self(int level, object caster, object victim)
@@ -305,7 +305,7 @@ void effect_self(int level, object caster, object victim)
 	damage = query_damage(caster, level);
 	ali = (int) caster->query("alignment") ;
 	if (ali > -200) {
-		tell_room( environment(caster), "ÄãÄîÍê×îááµÄÖäÓï£¬µ«ÊÇÊ²÷áÊÂÒ²Ã»ÓĞ·¢Éú....¡£\n");
+		tell_room( environment(caster), "ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’æœ‰ç™¼ç”Ÿ....ã€‚\n");
 		return;
 	}
 	damage = modify_damage(caster, damage, TYPE, query_need_spell_level(level));
@@ -313,27 +313,27 @@ void effect_self(int level, object caster, object victim)
     recharging( caster, damage, "evil" );
     
 	if( !victim || !present(victim, environment(caster)) ) {
-	    tell_object( caster, "ÄãÄîÍê×îááµÄÖäÓï£¬¿ÉÊÇµĞÈËÒÑ¾­²»ÔÚÁË£¬Ê²÷áÊÂÒ²Ã»·¢Éú¡£\n");
-	    tell_room( environment(caster), sprintf("%s¿ÚÀïÄîÖøÆæ¹ÖµÄÖäÓï£¬µ«ÊÇÊ²÷áÊÂÒ²Ã»ÓĞ·¢Éú¡£\n",
+	    tell_object( caster, "ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œå¯æ˜¯æ•µäººå·²ç¶“ä¸åœ¨äº†ï¼Œä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
+	    tell_room( environment(caster), sprintf("%så£è£¡å¿µè‘—å¥‡æ€ªçš„å’’èªï¼Œä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’æœ‰ç™¼ç”Ÿã€‚\n",
 	      caster->query("c_name")) , caster);
 	  gain_spell_experience(caster, TYPE, query_gain_spell_exp(level)/2);
       return ;
     }
 // hit effect ....
     if( level < 3 ) {
-/*	  tell_object( caster, sprintf(bold("ÄãÄîÍê×îááµÄÖäÓï£¬µ«È´ºöÈ»¾õµÃĞÄÔà½ÊÍ´£¡\n") ) );
+/*	  tell_object( caster, sprintf(bold("ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œä½†å»å¿½ç„¶è¦ºå¾—å¿ƒè‡Ÿçµç—›ï¼\n") ) );
 */
-	  tell_object( caster,set_color( sprintf("ÄãÄîÍê×îááµÄÖäÓï£¬µ«È´ºöÈ»¾õµÃĞÄÔà½ÊÍ´£¡\n"),"HIR" )) ;
-	  tell_room( environment(caster),sprintf("%sà«à«µØÄîÖø¹îÒìµÄÖäÎÄ£¬È´ºöÈ»Â¶³öÍ´¿àµÄ±íÇé¡£\n",
+	  tell_object( caster,set_color( sprintf("ä½ å¿µå®Œæœ€å¾Œçš„å’’èªï¼Œä½†å»å¿½ç„¶è¦ºå¾—å¿ƒè‡Ÿçµç—›ï¼\n"),"HIR" )) ;
+	  tell_room( environment(caster),sprintf("%så–ƒå–ƒåœ°å¿µè‘—è©­ç•°çš„å’’æ–‡ï¼Œå»å¿½ç„¶éœ²å‡ºç—›è‹¦çš„è¡¨æƒ…ã€‚\n",
 	     caster->query("c_name")) , caster);
     } else {
-	  tell_room( environment(caster),set_color( sprintf( "%sÉí×ÓÎªÖ®Ò»Õğ£¬Ò¡»ÎÁË¼¸ÏÂ£¬Á³ÉÏÂ¶³öÁËÍ´¿àµÄ±íÇé¡£\n",
+	  tell_room( environment(caster),set_color( sprintf( "%sèº«å­ç‚ºä¹‹ä¸€éœ‡ï¼Œæ–æ™ƒäº†å¹¾ä¸‹ï¼Œè‡‰ä¸Šéœ²å‡ºäº†ç—›è‹¦çš„è¡¨æƒ…ã€‚\n",
 			caster->query("c_name") ),"HIR" ,caster));
 /*	  tell_object(caster,sprintf( bold(
-"\nÄã¾õµÃÑÛÇ°Ò»ºÚ, Ä³ÖÖÉñÃØµÄÁ¦Á¿»÷ÖĞÄãµÄĞÄÔà, Ê¹ÄãÍ´¿à²»¿°!\n")));
+"\nä½ è¦ºå¾—çœ¼å‰ä¸€é»‘, æŸç¨®ç¥ç§˜çš„åŠ›é‡æ“Šä¸­ä½ çš„å¿ƒè‡Ÿ, ä½¿ä½ ç—›è‹¦ä¸å ª!\n")));
 */
 	  tell_object(caster,set_color(sprintf(
-"\nÄã¾õµÃÑÛÇ°Ò»ºÚ, Ä³ÖÖÉñÃØµÄÁ¦Á¿»÷ÖĞÄãµÄĞÄÔà, Ê¹ÄãÍ´¿à²»¿°!\n"),"HIR"));
+"\nä½ è¦ºå¾—çœ¼å‰ä¸€é»‘, æŸç¨®ç¥ç§˜çš„åŠ›é‡æ“Šä¸­ä½ çš„å¿ƒè‡Ÿ, ä½¿ä½ ç—›è‹¦ä¸å ª!\n"),"HIR"));
 
 	}
 	damage -= random((int)caster->query_stat("int"));
@@ -365,8 +365,8 @@ void effect_all(int level, object caster, object targ)
     damage += random( (int)caster->query("int") );
     recharging( caster, damage, "evil" );
     
-    tell_room( environment(caster),set_color(sprintf( " Í»È»£¬Äã¿´¼ûÒ»ÍÅºÚ°µµÄÎïÌå¿ìËÙµÄÅòÕÍ±¬¿ª£¬ÏòÄãÏ®À´¡£\n" ),"HIG",));
-    tell_room( environment(caster),set_color(sprintf(  "\nÄãÖ»¼ûÑÛÇ°Ò»°µ£¬ÄÔÖĞ¶ÌÔİµÄ¿Õ°×Ö®áá£¬Ëæ¼´¸Ğµ½È«ÉíµÄÑª¹ÜºÃÏñ¶¼±¬¿ªÁË¡£\n\n" ),"HIG"));
+    tell_room( environment(caster),set_color(sprintf( " çªç„¶ï¼Œä½ çœ‹è¦‹ä¸€åœ˜é»‘æš—çš„ç‰©é«”å¿«é€Ÿçš„è†¨è„¹çˆ†é–‹ï¼Œå‘ä½ è¥²ä¾†ã€‚\n" ),"HIG",));
+    tell_room( environment(caster),set_color(sprintf(  "\nä½ åªè¦‹çœ¼å‰ä¸€æš—ï¼Œè…¦ä¸­çŸ­æš«çš„ç©ºç™½ä¹‹å¾Œï¼Œéš¨å³æ„Ÿåˆ°å…¨èº«çš„è¡€ç®¡å¥½åƒéƒ½çˆ†é–‹äº†ã€‚\n\n" ),"HIG"));
 	victim = filter_array( all_inventory( environment(caster) ),
 	         "is_a_victim", this_object() );
 	if( sizeof(victim) ) {

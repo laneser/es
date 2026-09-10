@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "club", "ÀÇÑÀ°ô" );
+	set_name( "club", "ç‹¼ç‰™æ£’" );
 	add( "id", ({ "spiked club" }) );
-	set_short( "ÀÇÑÀ°ô" );
+	set_short( "ç‹¼ç‰™æ£’" );
 	set_long(
-   "Õâ¸ùÀÇÑÀ°ôÉÏÃæÓĞĞí¶à¼â¼âµÄÌú´Ì£¬¿´ÆğÀ´ÊÇ¼şÉòÖØµÄÕ½Ê¿¼¶ÎäÆ÷¡£\n"
+   "é€™æ ¹ç‹¼ç‰™æ£’ä¸Šé¢æœ‰è¨±å¤šå°–å°–çš„éµåˆºï¼Œçœ‹èµ·ä¾†æ˜¯ä»¶æ²ˆé‡çš„æˆ°å£«ç´šæ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 	set( "weapon_class", 18 );
 	set( "min_damage", 7 );

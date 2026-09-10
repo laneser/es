@@ -10,14 +10,14 @@ void init()
 
 void create()
 {
-	set_name("beef","�б�ţ��");
+	set_name("beef","蔥爆牛肉");
 	add( "id" , ({ "beef" }) );
-	set_short("beef" , "�б�ţ��");
+	set_short("beef" , "蔥爆牛肉");
 	set_long(".." , 
-		"��Ҳ�����������ֺòˣ��ð�����Сţ������������ϱ���\n"
-		"������㻬�ۣ����˻�ζ���\n"
+		"這也是孫二孃的拿手好菜，用半年大的小牛肉加入特殊佐料爆香\n"
+		"入口鮮香滑嫩，令人回味無窮。\n"
 	);
-   	set("unit","��");
+   	set("unit","盤");
    	set("weight", 20);
    	set("value",({ 260, "silver" }) );
 //	call_out("not_fresh", FRESH_TIME, this_object() );
@@ -34,10 +34,10 @@ int move(mixed ob)
 int eat_food(string arg)
 {
 		if( !arg || arg != "beef" ) return 0;
-		write( "�����سԵ����̴б�ţ�⣬������������Ķ���...:)\n" );
+		write( "你愉快地吃掉這盤蔥爆牛肉，而後滿足的拍拍肚子...:)\n" );
                 tell_room( environment(this_player()),
-                "�㿴��"+this_player()->query("c_name")+"�Ե�һ�̴б�ţ��"
-                "Ȼ���൱��������Ķ���...\n" , this_player()
+                "你看到"+this_player()->query("c_name")+"吃掉一盤蔥爆牛肉"
+                "然後相當滿足地拍拍肚子...\n" , this_player()
         );		
 		this_player()->receive_healing( 10+random(10) );
 	remove();
@@ -50,12 +50,12 @@ void not_fresh(object what)
 	owner = environment(what);
 	if ( !owner ) { 
 //	what->set ("value", ({ 1, "silver" }));
-//	what->set_short("���˵ĳ����");
-//	what->set_long("������˱�ɻ�ɫ�����ܳ��ˡ�\n");
+//	what->set_short("壞了的炒青菜");
+//	what->set_long("這盤青菜變成黃色，不能吃了。\n");
 //	what->set("is_fresh",0);
 	if( living(owner) )
 	tell_object(owner,
-		"��Ĵб�ţ��̫�ò��ԣ������Ѿ�����!!��˳�ְ���������\n"
+		"你的蔥爆牛肉太久不吃，現在已經壞了!!你順手把它丟掉。\n"
 		);
 	}
 	remove();

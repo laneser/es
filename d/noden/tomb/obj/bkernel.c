@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "black kernel", "黑核" );
+	set_name( "black kernel", "榛戞牳" );
 	add( "id", ({ "kernel" }) ); 
-   set_short( "黑核" );
+   set_short( "榛戞牳" );
 	set_long(
-		"这是一个颜色黝黑，形状像苹果核的奇怪物品，拿在手上感觉温温的。\n"
+		"閫欐槸涓�鍊嬮鑹查粷榛戯紝褰㈢媭鍍忚構鏋滄牳鐨勫鎬墿鍝侊紝鎷垮湪鎵嬩笂鎰熻婧韩鐨勩�俓n"
 	);
 	set( "type", "kernel" );
 	set( "material", "stone");

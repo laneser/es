@@ -48,9 +48,9 @@ void form_party(object le)
 	le->set_temp( "party_invited", ({ }) );
 	le->set_temp( "leader", NAME(le) );
 	tell_object(le,
-		"Äã¿ªÊ¼×éÖ¯Ò»¸öÃ°ÏÕ¶ÓÎé.¡¡\n");
+		"ä½ é–‹å§‹çµ„ç¹”ä¸€å€‹å†’éšªéšŠä¼.ã€€\n");
 	tell_room( environment(le), 
-		C_CAPNAME(le)+"¿ªÊ¼×éÖ¯Ò»¸öÃ°ÏÕ¶ÓÎé.¡¡\n" ,le );
+		C_CAPNAME(le)+"é–‹å§‹çµ„ç¹”ä¸€å€‹å†’éšªéšŠä¼.ã€€\n" ,le );
 	give_party_token( NAME(le), le );
 }
 
@@ -63,28 +63,28 @@ void invite_member(object le, object me)
 		return;
 
 	if( sizeof(invited)>=MAX ) {
-		write("ÄãµÄ¶ÓÎé×î¶àÖ»ÄÜÓĞ " + MAX + " ¸öÈË.¡¡\n");
+		write("ä½ çš„éšŠä¼æœ€å¤šåªèƒ½æœ‰ " + MAX + " å€‹äºº.ã€€\n");
 		return;
 	}
 
 	if( member_array(me, members)!=-1 ) {
-		write(C_CAPNAME(me)+"ÒÑ¾­ÊÇÄã¶ÓÎéµÄ³ÉÔ±ÁË.¡¡\n");
+		write(C_CAPNAME(me)+"å·²ç¶“æ˜¯ä½ éšŠä¼çš„æˆå“¡äº†.ã€€\n");
 		return;
 	}
 
 	if( member_array(me, invited)!=-1 ) {
-		write("ÄãÒÑ¾­ÑûÇë¹ı"+ C_CAPNAME(me)+"ÁË.¡¡\n");
+		write("ä½ å·²ç¶“é‚€è«‹é"+ C_CAPNAME(me)+"äº†.ã€€\n");
 		return;
 	}
 
 	invited += ({ me });
 	le->set_temp( "party_invited", invited );
-	write("ÄãÑûÇë"+C_CAPNAME(me)+"¼ÓÈëÄãµÄÃ°ÏÕ¶ÓÎé.¡¡\n");
+	write("ä½ é‚€è«‹"+C_CAPNAME(me)+"åŠ å…¥ä½ çš„å†’éšªéšŠä¼.ã€€\n");
 	tell_object(me, 
-		C_CAPNAME(le)+"ÑûÇëÄã²Î¼Ó"+ to_chinese(POSS(le)) +"¶ÓÎé.¡¡\n"
+		C_CAPNAME(le)+"é‚€è«‹ä½ åƒåŠ "+ to_chinese(POSS(le)) +"éšŠä¼.ã€€\n"
 	);
 	tell_room( environment(le), 
-		C_CAPNAME(le)+"ÑûÇë"+C_CAPNAME(me)+"¼ÓÈë"+ to_chinese(POSS(le))+"¶ÓÎé¡¡\n",
+		C_CAPNAME(le)+"é‚€è«‹"+C_CAPNAME(me)+"åŠ å…¥"+ to_chinese(POSS(le))+"éšŠä¼ã€€\n",
 		({ le, me }) );
 	call_out("remove_invitation", TIMEOUT, ({ le, me, 1 ,C_CAPNAME(me) }) );
 }
@@ -99,14 +99,14 @@ void remove_invitation(mixed arg)
 	if( arg[2] ) {
 	  if ( ! nullp(arg[1]) ) {
 		tell_object(arg[1],
-			C_CAPNAME(arg[0])+ "ÑûÇëÄã²Î¼ÓÃ°ÏÕ¶ÓÎéµÄÊ±ÏŞÒÑ¾­µ½ÁË.¡¡\n"
+			C_CAPNAME(arg[0])+ "é‚€è«‹ä½ åƒåŠ å†’éšªéšŠä¼çš„æ™‚é™å·²ç¶“åˆ°äº†.ã€€\n"
 		);
 		tell_object(arg[0],
-			"ÄãÑûÇë" + arg[3]+ "²Î¼ÓÃ°ÏÕ¶ÓÎéµÄÊ±ÏŞÒÑ¾­µ½ÁË.¡¡\n"
+			"ä½ é‚€è«‹" + arg[3]+ "åƒåŠ å†’éšªéšŠä¼çš„æ™‚é™å·²ç¶“åˆ°äº†.ã€€\n"
 		);
 		} else
 		tell_object(arg[0],
-			"ÄãÑûÇë"+arg[3]+"²Î¼ÓÃ°ÏÕ¶ÓÎéµÄÊ±ÏŞÒÑ¾­µ½ÁË.¡¡\n"
+			"ä½ é‚€è«‹"+arg[3]+"åƒåŠ å†’éšªéšŠä¼çš„æ™‚é™å·²ç¶“åˆ°äº†.ã€€\n"
 		);
 		}	
 	invited -= ({ arg[1] });
@@ -122,19 +122,19 @@ void add_member(object le, object me)
 		return;
 	if( member_array(me, members)!= -1 ) {
 		write( 
-			"ÄãÒÑ¾­ÊÇ" + C_CAPNAME(le) + "µÄÃ°ÏÕ¶ÓÎé³ÉÔ±Ö®Ò»ÁË.¡¡\n"
+			"ä½ å·²ç¶“æ˜¯" + C_CAPNAME(le) + "çš„å†’éšªéšŠä¼æˆå“¡ä¹‹ä¸€äº†.ã€€\n"
 		);
 		return;
 	}
 	if( sizeof(members)>=MAX ) {
 		write( 
-			C_CAPNAME(le)+"µÄÃ°ÏÕ¶ÓÎéÈËÊıÒÑ¾­ÂúÁË.¡¡\n"
+			C_CAPNAME(le)+"çš„å†’éšªéšŠä¼äººæ•¸å·²ç¶“æ»¿äº†.ã€€\n"
 		);
 		return;
 	}
 	if( member_array(me, invited) == -1 ) {
 		write(
-			"Äã²¢Ã»ÓĞ±»ÑûÇë²Î¼Ó"+C_CAPNAME(le)+"µÄÃ°ÏÕ¶ÓÎé.¡¡\n"
+			"ä½ ä¸¦æ²’æœ‰è¢«é‚€è«‹åƒåŠ "+C_CAPNAME(le)+"çš„å†’éšªéšŠä¼.ã€€\n"
 	);
 		return;
 	}
@@ -142,10 +142,10 @@ void add_member(object le, object me)
 	members += ({ me });
 	me->set_temp("leader", NAME(le));
 	le->set_temp("party_members", members );
-	tell_object(me,"Äã¼ÓÈëÁË"+C_CAPNAME(le)+"µÄÃ°ÏÕ¶ÓÎé.¡¡\n");
-	tell_object(le, C_CAPNAME(me)+"¾ö¶¨¼ÓÈëÄãµÄÃ°ÏÕ¶ÓÎé.¡¡\n");
+	tell_object(me,"ä½ åŠ å…¥äº†"+C_CAPNAME(le)+"çš„å†’éšªéšŠä¼.ã€€\n");
+	tell_object(le, C_CAPNAME(me)+"æ±ºå®šåŠ å…¥ä½ çš„å†’éšªéšŠä¼.ã€€\n");
 	tell_room( environment(le), 
-		C_CAPNAME(me)+"¼ÓÈë"+CAPNAME(le)+"µÄÃ°ÏÕ¶ÓÎé.¡¡\n",
+		C_CAPNAME(me)+"åŠ å…¥"+CAPNAME(le)+"çš„å†’éšªéšŠä¼.ã€€\n",
 		({ me, le }) );
 	give_party_token( NAME(le), me );
 	return;
@@ -162,14 +162,14 @@ void disband_party(object le)
 	for(i = 0; i < sz; i++) {
 		if( !members[i]) continue;
 		members[i]->set_temp("leader", 0);
-		tell_object(members[i],"ÄãµÄÃ°ÏÕ¶ÓÎé½âÉ¢ÁË.¡¡\n");
+		tell_object(members[i],"ä½ çš„å†’éšªéšŠä¼è§£æ•£äº†.ã€€\n");
 		remove_party_token( members[i] );
 	}
 	le->set_temp("party_members", 0 );
 	le->set_temp("party_invited", 0 );
 	le->set_temp("leader", 0);
 //	tell_object(le, can_read_chinese(le)?
-//		"ÄãµÄÃ°ÏÕ¶ÓÎé½âÉ¢ÁË¡¡\n": "Your party has been disbanded.\n");
+//		"ä½ çš„å†’éšªéšŠä¼è§£æ•£äº†ã€€\n": "Your party has been disbanded.\n");
 }
 
 void disband_member(object le, object me, int flag)
@@ -184,12 +184,12 @@ void disband_member(object le, object me, int flag)
 	me->set_temp("leader", 0);
 	if(flag) {
 		tell_object(me, 
-			C_CAPNAME(le)+"½«Äã´Ó"+ to_chinese(POSS(le)) +"Ã°ÏÕ¶ÓÎéÖĞ³ıÃû.¡¡\n"
+			C_CAPNAME(le)+"å°‡ä½ å¾"+ to_chinese(POSS(le)) +"å†’éšªéšŠä¼ä¸­é™¤å.ã€€\n"
 		);
-		tell_object(le,"Äã½«"+C_CAPNAME(me)+"´Ó¶ÓÎéÖĞ³ıÃû.¡¡\n");
+		tell_object(le,"ä½ å°‡"+C_CAPNAME(me)+"å¾éšŠä¼ä¸­é™¤å.ã€€\n");
 	} else {
-		tell_object(me,"ÄãÍÑÀë"+CAPNAME(le)+"µÄÃ°ÏÕ¶ÓÎé.¡¡\n");
-		tell_object(le, C_CAPNAME(me)+"ÍÑÀëÁËÄãµÄÃ°ÏÕ¶ÓÎé.¡¡\n");
+		tell_object(me,"ä½ è„«é›¢"+CAPNAME(le)+"çš„å†’éšªéšŠä¼.ã€€\n");
+		tell_object(le, C_CAPNAME(me)+"è„«é›¢äº†ä½ çš„å†’éšªéšŠä¼.ã€€\n");
 	}
 	remove_party_token( me );
 	return;
@@ -226,14 +226,14 @@ void change_leader(object le, object me)
 	for(i = 0; i < sz; i++) {
 		if(!members[i] || members[i]==me ) continue;
 		members[i]->set_temp("leader", NAME(me));
-		tell_object(members[i], C_CAPNAME(me)+"³ÉÎªÄãÃ°ÏÕ¶ÓÎéµÄĞÂÁìĞä.¡¡\n");
+		tell_object(members[i], C_CAPNAME(me)+"æˆç‚ºä½ å†’éšªéšŠä¼çš„æ–°é ˜è¢–.ã€€\n");
 	}
 	me->set_temp( "prty_members", MEMBERS(le) );
 	me->set_temp( "party_invited", INVITED(le) );
 	le->set_temp( "party_members", 0 );
 	le->set_temp( "party_invited", 0 );
 	me->set_temp("leader", NAME(me));
-	tell_object(me, "ÄãÏÖÔÚÊÇÃ°ÏÕ¶ÓÎéµÄĞÂÁìĞäÁË.¡¡\n");
+	tell_object(me, "ä½ ç¾åœ¨æ˜¯å†’éšªéšŠä¼çš„æ–°é ˜è¢–äº†.ã€€\n");
 }
 
 void party_list(object le) 
@@ -243,8 +243,8 @@ void party_list(object le)
 
 	if( !le || !pointerp(members= MEMBERS(le)) ) return;
 	sz = sizeof(members);
-	write( "ÄãµÄÃ°ÏÕ¶ÓÎé¹²ÓĞ " + sz + " ¸ö³ÉÔ±:\n");
-	write("  "+C_CAPNAME(le)+" [ÁìĞä]\n");
+	write( "ä½ çš„å†’éšªéšŠä¼å…±æœ‰ " + sz + " å€‹æˆå“¡:\n");
+	write("  "+C_CAPNAME(le)+" [é ˜è¢–]\n");
 	for(i = 0; i < sz; i++) {
 		if(!members[i] || members[i]==le) continue;
 		write("  "+C_CAPNAME(members[i])+"\n");
@@ -280,12 +280,12 @@ void share_experience(object me, int exp)
 				if ( level+8  <= high_level ) j =0;
 				members[i]->gain_experience(j);
 				tell_object( members[i], 
-					"ÄãµÄÃ°ÏÕ¶ÓÎé´òµ¹µĞÈË£¬Äã·Öµ½ " + j + " µã¾­Ñé¡¡\n"
+					"ä½ çš„å†’éšªéšŠä¼æ‰“å€’æ•µäººï¼Œä½ åˆ†åˆ° " + j + " é»ç¶“é©—ã€€\n"
 				);
 			}
 			return;
 		}
 	}
 	me->gain_experience(exp);
-	tell_object( me, "ÄãµÃµ½ " + exp + " µã¾­Ñé.¡¡\n");
+	tell_object( me, "ä½ å¾—åˆ° " + exp + " é»ç¶“é©—.ã€€\n");
 }

@@ -9,19 +9,19 @@ void create()
         ::create();
         seteuid(getuid());
         set_level(19);
-        set_name( "Gnome Archelder Orion","�ؾ�����" );
+        set_name( "Gnome Archelder Orion","地精大長老" );
         add ("id", ({ "gnome", "elder","archelder","orion" }) );
-        set_short( "�ؾ�����ŷ��");
-        set("unit","λ");
+        set_short( "地精大長老歐瑞安");
+        set("unit","位");
         set("exp_reward",65535) ;           // bcz this mob is more terrible
                                             // then Rashudi to Players .
         set("alignment",1000);
         set("wealth/gold",300);
         set_long(
-            "�ؾ����Ͽ�˵������������µ�ʩ���ߡ��ؾ����ܲص�ħ���飬\n"
-            "�ټ���������ľ���������ħ�����飬ʹ����Ϊ��ӽ���ʦ�ĳ��ˡ�\n"
-            "�ؾ�����Ӧ�����ֹ۵����壬����ŷ�𰲵�����ȴ��������������\n"
-            "�ƺ���������Щ�鷳��\n"
+            "地精大長老可說是這世上最可怕的施法者。地精族密藏的魔法書，\n"
+            "再加上數百年的驚人閱歷及魔法經驗，使他成為最接近巫師的超人。\n"
+            "地精本來應該是樂觀的民族，但是歐瑞安的臉上卻帶著幾分憂鬱，\n"
+            "似乎是遇上了些麻煩。\n"
         );
         set_perm_stat("str", 30);
         set_perm_stat("int", 30);
@@ -55,9 +55,9 @@ void create()
         set("stun_difficulty",42) ;
         set("unbleeding",1);
         set("inquiry",([ 
-                         "�鷳"    : "@@quest1" ,
+                         "麻煩"    : "@@quest1" ,
                          "trouble" : "@@quest1" ,
-                         "�Ų��޻�": "@@quest1a",
+                         "優波羅花": "@@quest1a",
                       ]) ) ;
         
         set("special_defense",(["all":80,"monk":80,"scholar":80,"none":80]));
@@ -83,10 +83,10 @@ void reset()
 int catch_huntee( object who )
 {
     tell_room( environment(this_object()), 
-      "������"+who->query("c_name")+"��Ц˵: �㻹�ҽ������Ҿͳ�ȫ�㣬����!\n"
+      "長老向"+who->query("c_name")+"冷笑說: 你還敢進來，我就成全你，死吧!\n"
     ,  ({ this_object(), who }) );
     tell_object( who,
-      "����������Ц˵: �㻹�ҽ������Ҿͳ�ȫ�㣬����!\n"
+      "長老向你冷笑說: 你還敢進來，我就成全你，死吧!\n"
     );
     set("warn",1) ;
     return 1;
@@ -118,7 +118,7 @@ int hunt_check( object archelder, object victim )
     if( victim &&
         member_killer( (string)victim->query("name"), hunt_list ) ) {
       tell_room( environment(archelder), 
-        "ŷ��Ц��˵: "+victim->query("c_name")+"��QUITֻ���ӱ���ʵ���ѣ�����!\n"
+        "歐瑞安笑著說: "+victim->query("c_name")+"，QUIT只是逃避現實而已，死吧!\n"
         , archelder 
       );
       kill_ob( victim );
@@ -136,7 +136,7 @@ void relay_message(string class1, string msg)
      int ali;
      
      ::relay_message(class1, msg);
-     if( sscanf( msg, "%s(%s)���˹�����\n",str,who )==2 ) 
+     if( sscanf( msg, "%s(%s)走了過來。\n",str,who )==2 ) 
        {
          who = lower_case(who);
          obj = present(find_player(who),environment(this_object()));
@@ -152,10 +152,10 @@ void relay_message(string class1, string msg)
          if( done ) return ;
          if( !obj->query("quest/astr1")&&obj->query_temp("astr/quest1fin") )
            { tell_object( obj ,
-                   "ŷ������������һ��������ص�Ц��Ц˵:\n"
-                   "��֪���������ˡ��ǳ�лл��İ�æ,ϣ�����������Щ������\n"
-                   "ŷ�𰲶����ſ�����,һ�������������ʱ������������ܡ�\n"
-                   "                ��õ���ǧ�㾭��ֵ��\n"
+                   "歐瑞安凝視你眼中一會兒後神秘的笑了笑說:\n"
+                   "我知道怎麼做了。非常謝謝你的幫忙,希望這對你能有些幫助。\n"
+                   "歐瑞安對你張開手掌,一陣舒服的藍光霎時籠罩在你的四周。\n"
+                   "                你得到五千點經驗值。\n"
                        ) ;
              obj->gain_experiance(5000) ;
              obj->set("quest/asterism1",1) ;
@@ -172,8 +172,8 @@ int accept_item(object me,object item)
 {
 //   Avoid players fill the mob to decrease DEX .
          tell_room( environment(),
-                  "ŷ�����ְ����õ���"+item->query("c_cap_name")+
-                  "����ɷۡ�\n"
+                  "歐瑞安隨手把他拿到的"+item->query("c_cap_name")+
+                  "給搓成粉。\n"
                   , this_object() ) ;
                             
          item->remove() ;           
@@ -239,7 +239,7 @@ void quest1(object who)
    string cmsg,msg ;
    if(done)
      { write(
-              "ŷ��Ц��Ц˵:лл��Ĺ���,�����Ѿ��б��˰�æ����ˡ�\n"
+              "歐瑞安笑了笑說:謝謝你的關心,問題已經有別人幫忙解決了。\n"
              );
        this_player()->delete("astr") ;
        this_player()->delete_temp("astr") ;
@@ -248,7 +248,7 @@ void quest1(object who)
    
    if( ( (int)this_player()->query_level() ) < 15 )
       { write(
-               "ŷ�𰲳��Ͽ��˿���֮��,ҡ��ҡͷ��û���κα�ʾ��\n") ;  
+               "歐瑞安長老看了看你之後,搖了搖頭。沒有任何表示。\n") ;  
         return ;
        }
    
@@ -261,10 +261,10 @@ void quest1(object who)
    this_player()->set("astr/questa",a);
    
      cmsg =
-            "����ŷ�𰲸�����˵:\n"
-            "�ҵ��ٻ�ħ����Ҫ�õ������ﲻ����,�����˸�ȥ����.\n"
-            "ֻ�ǵ���ĳ��ҽ�����ҵġ�������ҵ������ʿ���\n"
-            "����·ǳ���Ҫ,������æ��\n";
+            "大長老歐瑞安告訴你說:\n"
+            "我的召喚魔法需要用到的引物不見了,我忘了該去那找.\n"
+            "只記得是某個醫生送我的。請你幫我到處問問看。\n"
+            "這件事非常重要,請你幫幫忙。\n";
      write(
            cmsg  );
      return ;
@@ -280,23 +280,23 @@ int quest1a(object who)
       
    if(!a || !b || b <2)
       return notify_fail(
-             "����˵ɶ??��һ�䶼��������\n"  ) ;
+             "你在說啥??我一句都聽不懂。\n"  ) ;
    
    if(random(2)==1)
       {
         who->set_temp("astr/quest1",3);
         cmsg =
-            "����ŷ�𰲸�����˵:\n"
-               "�Ҳ�����˵�����ֶ�����Ҳ������¶���С���ܰ��㡣\n"
-            "����̸̸������õ�һ���������Ǿ��鷳���ˡ�\n";
+            "大長老歐瑞安告訴你說:\n"
+               "我不曾聽說過這種東西，也許安杜露美妲小姐能幫你。\n"
+            "跟她談談或許會得到一點線索，那就麻煩你了。\n";
        }
    else
       {
         who->set_temp("astr/quest1",31);  
         cmsg =
-            "ŷ�𰲳��ϸ�����˵ :\n"
-            "      ��˵��ңԶ�Ķ���ס��һλ��ֲ������ĵõĸ���,\n"
-            "      Ҳ������֪��һЩ�¡�\n" ;
+            "歐瑞安長老告訴你說 :\n"
+            "      聽說在遙遠的東方住了一位對植物很有心得的高人,\n"
+            "      也許他會知道一些事。\n" ;
        }
             
    write(  cmsg  );
@@ -318,8 +318,8 @@ void die()
      if (killer)
      for(i=0;i<sizeof(player);i++)
        {
-          tell_object(player[i],"��մ���ŷ�𰲵�̾Ϣ�� : ��!!! ��Ȼ���"+
-                killer->query("c_name")+"֮�֣����Ǹ�������ʱ���ˡ�\n") ;
+          tell_object(player[i],"天空傳來歐瑞安的嘆息道 : 唉!!! 竟然敗於"+
+                killer->query("c_name")+"之手，真是該退隱的時候到了。\n") ;
         } 
 
      ::die(1) ;

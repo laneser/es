@@ -5,15 +5,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Crystal cape","Ë®¾§ÔÆ¼ç" );
+     set_name( "Crystal cape","æ°´æ™¶é›²è‚©" );
      add( "id",({ "cape" }) );
-     set_short( "Ë®¾§ÔÆ¼ç" );
+     set_short( "æ°´æ™¶é›²è‚©" );
      set_long(@C_LONG
-Ò»¼şË®¾§ÖÆ³ÉµÄÅû·ç£¬²»Ê±É¢·¢ÖøĞ©Î¢º®Æø¡£
+ä¸€ä»¶æ°´æ™¶è£½æˆçš„æŠ«é¢¨ï¼Œä¸æ™‚æ•£ç™¼è‘—äº›å¾®å¯’æ°£ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "cloak" );
      set( "material","element" );
      set( "the_one",1);

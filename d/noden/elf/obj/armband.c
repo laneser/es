@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("elven armband", "¾«Áé±Û»·");
+        set_name("elven armband", "ç²¾éˆè‡‚ç’°");
         add( "id", ({ "armband" }) );
-        set_short( "¾«Áé±Û»·" );
+        set_short( "ç²¾éˆè‡‚ç’°" );
         set_long(
-                "ÕâÊÇ¾«Áé³¤ÀÏÓÃ¶À½ÇÊŞµÄ¶À½ÇËùÄ¥ÖÆ³ÉµÄ±Û»·£¬ÆäÉÏÓĞÖÖÆæÌØµÄ±£»¤¹âÃ¢¡£ \n"
+                "é€™æ˜¯ç²¾éˆé•·è€ç”¨ç¨è§’ç¸çš„ç¨è§’æ‰€ç£¨è£½æˆçš„è‡‚ç’°ï¼Œå…¶ä¸Šæœ‰ç¨®å¥‡ç‰¹çš„ä¿è­·å…‰èŠ’ã€‚ \n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "arms" );
         set( "material", "wood");
         set( "armor_class", 2 );

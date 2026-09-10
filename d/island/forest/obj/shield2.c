@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-  set_name("Scale shield","ÁÛ¶Ü");
+  set_name("Scale shield","é±—ç›¾");
   add("id",({"scale","shield"}) );
-  set_short("ÁÛ¶Ü");
+  set_short("é±—ç›¾");
   set_long(@LONG
-Õâ¾ÍÊÇ´óòáòæËù»Ã»¯¶ø³ÉµÄÇ¿Á¦¶ÜÅÆ¡£
+é€™å°±æ˜¯å¤§èœ¥èœ´æ‰€å¹»åŒ–è€Œæˆçš„å¼·åŠ›ç›¾ç‰Œã€‚
 LONG
           );
-  set("unit","Ãæ");
+  set("unit","é¢");
   set("type","shield");
   set("material","stone");
   set("armor_class",6);

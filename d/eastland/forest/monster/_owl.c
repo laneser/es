@@ -4,16 +4,16 @@ void create(object ob)
 {
 	if ( ! ob ) return ;
         ob->set_level(3);
-        ob->set_name( "owl", "Ã¨Í·Ó¥" );
-        ob->set_short( "Ã¨Í·Ó¥" );
+        ob->set_name( "owl", "è²“é ­é·¹" );
+        ob->set_short( "è²“é ­é·¹" );
         ob->set_long(
-                "ÕâÊÇÒ»ÖÖÖç·üÒ¹³öµÄÄñ£¬½ÐÉù·Ç³£ÄÑÌý£¬³£±»ÊÓÎª²»¼ªÏéµÄÏóáç¡£\n"
+                "é€™æ˜¯ä¸€ç¨®æ™ä¼å¤œå‡ºçš„é³¥ï¼Œå«è²éžå¸¸é›£è½ï¼Œå¸¸è¢«è¦–ç‚ºä¸å‰ç¥¥çš„è±¡å¾µã€‚\n"
         );
-        ob->set("unit","Ö»");
+        ob->set("unit","åª");
         ob->set( "alignment", -100 );
         ob->set_perm_stat( "dex", 5 );
         ob->set_natural_weapon(4,3,6);
         ob->set_natural_armor(9,0);
-        ob->set_c_verbs( ({ "%sÍùÏÂ¸©³å£¬ÓÃ×ì°Í×Ä%s", "%sÓÃ×¦×ÓÍù%s×¥ÏÂ" }) );
-        ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
+        ob->set_c_verbs( ({ "%så¾€ä¸‹ä¿¯è¡ï¼Œç”¨å˜´å·´å•„%s", "%sç”¨çˆªå­å¾€%sæŠ“ä¸‹" }) );
+        ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
 }

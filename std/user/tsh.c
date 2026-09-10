@@ -181,7 +181,7 @@ int push_cmd(string arg)
 	if ( strsrch(arg, "do ") != -1 )
 		return command(arg);
 	if ( (cmd_top+1) == cmd_bottom ) {
-		write("ÄãÍ¬Ê±ÏÂÌ«¶àÃüÁî, Í£Ö¹Ö´ĞĞ !!\n");
+		write("ä½ åŒæ™‚ä¸‹å¤ªå¤šå‘½ä»¤, åœæ­¢åŸ·è¡Œ !!\n");
 		cmd_top = 0;
 		cmd_bottom = 0;
 		return 0;
@@ -210,7 +210,7 @@ nomask string process_input(string arg)
 
 	if( this_object()->query_temp("block_command") ) {
 		write(
-			"( ÄãÏÖÔÚÎŞ·¨×öÆäËû¶¯×÷¡£ )\n" );
+			"( ä½ ç¾åœ¨ç„¡æ³•åšå…¶ä»–å‹•ä½œã€‚ )\n" );
 		return "";
 	}
 
@@ -233,7 +233,7 @@ nomask string process_input(string arg)
 
 	if(macro && num && arg && arg != "" && !previous_object()) {
 		if(num > 10) {
-			write("ÖØ¸´Ö¸Áî´ÎÊı²»¿ÉÒÔ³¬¹ı 10 ´Î¡£\n");
+			write("é‡è¤‡æŒ‡ä»¤æ¬¡æ•¸ä¸å¯ä»¥è¶…é 10 æ¬¡ã€‚\n");
 			return "";
 		}
 

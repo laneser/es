@@ -8,13 +8,13 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "yaramon", "Ò®À­Âü" );
+	set_name( "yaramon", "è€¶æ‹‰æ›¼" );
 	add ("id", ({ "king", "yaramon xi" }) );
-	set_short( "¹úÍõÒ®À­ÂüÊ®Ò»ÊÀ" );
+	set_short( "åœ‹çŽ‹è€¶æ‹‰æ›¼åä¸€ä¸–" );
 	set_long(@LONG
-Äã¼ûµ½ÁË¹úÍõÒ®À­ÂüÊ®Ò»ÊÀ±¾ÈË£¬Ëû´óÔ¼ËÄ¡¢ÎåÊ®Ëê£¬¿´ÆðÀ´ÍþÑÏÖÐ´øµã
-ºÍ°ª£¬µ±ÄãÄ¿¹âºÍËû½»½ÓÊ±Ò®À­Âü¶ÔÄãÎ¢Î¢Ò»Ð¦¡£Èç¹ûÄãÀÛ»ýÁË×ã¹»µÄÕ½
-¹¦¿ÉÒÔÏò¹úÍõÒªÇó(request)ë··â¾ôÎ»¡£
+ä½ è¦‹åˆ°äº†åœ‹çŽ‹è€¶æ‹‰æ›¼åä¸€ä¸–æœ¬äººï¼Œä»–å¤§ç´„å››ã€äº”åæ­²ï¼Œçœ‹èµ·ä¾†å¨åš´ä¸­å¸¶é»ž
+å’Œè—¹ï¼Œç•¶ä½ ç›®å…‰å’Œä»–äº¤æŽ¥æ™‚è€¶æ‹‰æ›¼å°ä½ å¾®å¾®ä¸€ç¬‘ã€‚å¦‚æžœä½ ç´¯ç©äº†è¶³å¤ çš„æˆ°
+åŠŸå¯ä»¥å‘åœ‹çŽ‹è¦æ±‚(request)æ••å°çˆµä½ã€‚
 LONG
 	);
 	set( "race", "human" );
@@ -83,7 +83,7 @@ void defend_king(object obj)
 		if( (string)inv[i]->query("class")=="knight" && inv[i]!=atk){
 	//	&& (!atk || member_array( inv[i], atk )==-1) ) {
 			tell_room( env,
-				inv[i]->query("c_name") + "³åµ½¹úÍõÃæÇ°£¬×¼±¸Îª±£ÎÀ¹úÍõ¶øÕ½£¡\n",
+				inv[i]->query("c_name") + "è¡åˆ°åœ‹çŽ‹é¢å‰ï¼Œæº–å‚™ç‚ºä¿è¡›åœ‹çŽ‹è€Œæˆ°ï¼\n",
 				inv[i] );
 			inv[i]->force_me( "protect king" );
 			inv[i]->kill_ob(atk);
@@ -99,7 +99,7 @@ int my_tactic()
 	hp = (int)query("hit_points");
 	if( hp<300 && random(20)<3 ) {
 		tell_room( environment(this_object()),
-			"¹úÍõ¾ÙÆðÊÖÖÐµÄ½££¬¿ÚÖÐà«à«µØÄîÆð°×Ä§·¨µÄ»Ö¸´ÖäÎÄ ....¡£\n",
+			"åœ‹çŽ‹èˆ‰èµ·æ‰‹ä¸­çš„åŠï¼Œå£ä¸­å–ƒå–ƒåœ°å¿µèµ·ç™½é­”æ³•çš„æ¢å¾©å’’æ–‡ ....ã€‚\n",
 			this_object() );
 		receive_healing( 60 );
 		return 1;
@@ -124,16 +124,16 @@ int request()
 	// Cannot advance knighthood
 	if( nws <= order ) {
 		tell_room( environment(),
-			"\n¹úÍõËµµÀ: ÄãµÄÕ½¹¦Ö»ÄÜÏíÓÐÄãÄ¿Ç°µÄÉí·ÝµØÎ»£¬¼ÌÐøÅ¬Á¦°É¡£\n");
+			"\nåœ‹çŽ‹èªªé“: ä½ çš„æˆ°åŠŸåªèƒ½äº«æœ‰ä½ ç›®å‰çš„èº«ä»½åœ°ä½ï¼Œç¹¼çºŒåŠªåŠ›å§ã€‚\n");
 		return 1;
 	}
 	
 	tell_room( environment(),
-		"\n¹úÍõ¸ß¾ÙËûµÄÅå½££¬ÔÚ" + this_player()->query("c_name") +
-		"µÄÍ·ÉÏ¼°¼ç°ò¸÷»®ÁËÒ»¸öÔ²È¦¡£\n"
-		"\n½ÓÖø£¬ËûÓÃºêÁÁµÄÉùÒôÐû²¼:\n"
-		"\n    ÏÖÔÚ£¬ÎÒ·âÄãÎª" + this_player()->query("c_name") + 
-		to_chinese(KNIGHTS[order+1]) + "¡£\n\n"  );
+		"\nåœ‹çŽ‹é«˜èˆ‰ä»–çš„ä½©åŠï¼Œåœ¨" + this_player()->query("c_name") +
+		"çš„é ­ä¸ŠåŠè‚©è†€å„åŠƒäº†ä¸€å€‹åœ“åœˆã€‚\n"
+		"\næŽ¥è‘—ï¼Œä»–ç”¨å®äº®çš„è²éŸ³å®£ä½ˆ:\n"
+		"\n    ç¾åœ¨ï¼Œæˆ‘å°ä½ ç‚º" + this_player()->query("c_name") + 
+		to_chinese(KNIGHTS[order+1]) + "ã€‚\n\n"  );
 	this_player()->set("knighthood", KNIGHTS[order+1] );
 	this_player()->set("title", this_player()->query_title());
 	return 1;

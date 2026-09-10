@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "blue rose", "À¶Ãµ¹å" );
-	set_short( "À¶Ãµ¹å" );
+	set_name( "blue rose", "è—ç«ç‘°" );
+	set_short( "è—ç«ç‘°" );
         add ( "id" , ({"rose"}) );
 	set_long(
-	  "ÕâÊÇÒ»¶äÊÀÉÏº±ÓĞµÄÀ¶É«Ãµ¹å»¨¡£\n"
+	  "é€™æ˜¯ä¸€æœµä¸–ä¸Šç½•æœ‰çš„è—è‰²ç«ç‘°èŠ±ã€‚\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "¶ä" );
+	set( "unit", "æœµ" );
 	set( "weight", 2 );
 	set( "value", ({ 1, "gold" }) );
 }

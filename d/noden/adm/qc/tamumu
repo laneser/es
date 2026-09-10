@@ -1,16 +1,16 @@
 
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1. »¤Éí·û( /d/noden/tamumu/obj/amulet )
+1. è­·èº«ç¬¦( /d/noden/tamumu/obj/amulet )
    0    *8       15      ok      element      mad
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1. Òø×¦( /d/noden/tamumu/obj/claw )
+1. éŠ€çˆª( /d/noden/tamumu/obj/claw )
  *36     14     28      70        *15         mad
-2. »ğÀÇÖ®½£( /d/noden/tamumu/obj/sword )
+2. ç«ç‹¼ä¹‹åŠ( /d/noden/tamumu/obj/sword )
  *38    *21    *43      230         0         mad

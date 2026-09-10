@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "mimic", "Ïä¹Ö" );
+	set_name( "mimic", "ç®±æ€ª" );
 	add("id",({"mimic"}) );
-   set_short( "Ïä¹Ö" );
+   set_short( "ç®±æ€ª" );
 	set_long(
-		"ÕâÊÇ¶ñÃûÕÑÕÅµÄÏä¹Ö,²»ÖªÇé¶øËÀÔÚÆäÊÖµÄÄêÇáÌ½ÏÕ¼Ò²»¿É¼ÆÊı¡£.\n"
+		"é€™æ˜¯æƒ¡åæ˜­å¼µçš„ç®±æ€ª,ä¸çŸ¥æƒ…è€Œæ­»åœ¨å…¶æ‰‹çš„å¹´è¼•æ¢éšªå®¶ä¸å¯è¨ˆæ•¸ã€‚.\n"
 	);
 	set("exp_reward",35000) ;
 	set( "gender", "neuter" );
@@ -32,8 +32,8 @@ void create()
         set("aim_difficulty",(["critical":100,"weakest":50,
                                "vascular":50,"ganglion":100 ])) ;
 
-        set_c_verbs(({"%sÓÃËüµÄÉíÌåÏò%s×²È¥","%sÓÃËüµÄÑÀ³İÏò%sÒ§È¥"}));
-        set_c_limbs(({"ÉíÌå","×ì°Í"}));
+        set_c_verbs(({"%sç”¨å®ƒçš„èº«é«”å‘%sæ’å»","%sç”¨å®ƒçš„ç‰™é½’å‘%så’¬å»"}));
+        set_c_limbs(({"èº«é«”","å˜´å·´"}));
         set_skill("dodge",65)    ;
         set_skill("unarmed",100) ;
 	set( "wealth/gold", 600 );

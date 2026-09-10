@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "feathered hat", "ÓğÊÎÃ±" );
+	set_name( "feathered hat", "ç¾½é£¾å¸½" );
 	add( "id", ({ "hat" }) );
-	set_short( "ÓğÊÎÃ±" );
+	set_short( "ç¾½é£¾å¸½" );
 	set_long(
-		"Õâ¶¥Ã±×ÓµÄ±ß±ß²åÁËÒ»¸ù°×ÓğÃ«×ö×°ÊÎ¡£\n"
+		"é€™é ‚å¸½å­çš„é‚Šé‚Šæ’äº†ä¸€æ ¹ç™½ç¾½æ¯›åšè£é£¾ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
 	set( "type", "head" );
 	set( "material", "leather");
 	set( "armor_class", 3 );

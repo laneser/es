@@ -2,15 +2,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Shadow dagger","Ò¹Ó°´óµ¶");
+    set_name("Shadow dagger","å¤œå½±å¤§åˆ€");
     add("id",({"dagger"}) );
-    set_short("Ò¹Ó°´óµ¶");
+    set_short("å¤œå½±å¤§åˆ€");
     set_long(@AAA
-ÕâÊÇÒ»°ÑÉ¢·¢ÕâÐ°¶ñÆøÏ¢µÄØ°Ê×£¬µ«ºÜÆæ¹ÖµÄÊÇËûµÄÃû³ÆÈ´ÊÇ
-½Ð×ö´óµ¶£®
+é€™æ˜¯ä¸€æŠŠæ•£ç™¼é€™é‚ªæƒ¡æ°£æ¯çš„åŒ•é¦–ï¼Œä½†å¾ˆå¥‡æ€ªçš„æ˜¯ä»–çš„åç¨±å»æ˜¯
+å«åšå¤§åˆ€ï¼Ž
 AAA
        );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("weapon_class",30);
     set("type","dagger");
     set("min_damage",15);
@@ -19,8 +19,8 @@ AAA
     set("value",({110,"gold"}));
 //    set("hit_func","dagger_damage");
     set("special_msg","  .\n\n");
-    set("special_c_msg"," ÎüÊÕ³ÖÓÐÕßµÄÐ°¶ñµÄÁ¦Á¿ £¡£¡£¡\n\n"
-        "Õâ¹ÉÐ°¶ñµÄÁ¦Á¿»¯ÎªÒ»°Ñ¾ÞÈÐ´ÌÈëµÐÈËµÄÒªº¦£¡£¡£¡\n");
+    set("special_c_msg"," å¸æ”¶æŒæœ‰è€…çš„é‚ªæƒ¡çš„åŠ›é‡ ï¼ï¼ï¼\n\n"
+        "é€™è‚¡é‚ªæƒ¡çš„åŠ›é‡åŒ–ç‚ºä¸€æŠŠå·¨åˆƒåˆºå…¥æ•µäººçš„è¦å®³ï¼ï¼ï¼\n");
 }
 
 int dagger_damage(object victim,int damage)
@@ -44,11 +44,11 @@ int dagger_damage(object victim,int damage)
                 if( !c_msg ) c_msg = msg;
                 if( !msg ) return 0;
                 tell_object( holder, can_read_chinese(holder)?
-                        "\nÄãµÄ"+query("c_name")+c_msg+"\n":
+                        "\nä½ çš„"+query("c_name")+c_msg+"\n":
                         "\nYour "+query("name")+msg+"\n" );
                 tell_room( environment(holder), ({
                         holder->query("cap_name") + "'s "+query("name")+msg+"\n",
-                        holder->query("c_cap_name") + "µÄ"+query("c_name")+c_msg+"\n"}),
+                        holder->query("c_cap_name") + "çš„"+query("c_name")+c_msg+"\n"}),
                         holder );
                 return dam;
      }

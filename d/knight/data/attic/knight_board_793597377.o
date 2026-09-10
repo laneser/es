@@ -1,50 +1,50 @@
 #d/knight/fortress/knight_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÆïÊ¿ÁôÑÔ°å",])
-messages ({(["id":227,"title":"±ò±òÓÖËÀÁË","body":"
-±ò±òÕâ´Î¾ö¶¨µ±Ò»¸ö¹í»ê
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"é¨å£«ç•™è¨€æ¿",])
+messages ({(["id":227,"title":"å½¬å½¬åˆæ­»äº†","body":"
+å½¬å½¬é€™æ¬¡æ±ºå®šç•¶ä¸€å€‹é¬¼é­‚
 
-¹§Ï²¹§Ï²
+æ­å–œæ­å–œ
 
-¹§Ï²¹§Ï²
+æ­å–œæ­å–œ
 
-","time":782767072,"poster":"Bangdoll",]),(["id":228,"body":"ÎÒ¸´»îÁË......^_^
+","time":782767072,"poster":"Bangdoll",]),(["id":228,"body":"æˆ‘å¾©æ´»äº†......^_^
 
                      Limay....
 ","title":"< no title >","time":783136167,"poster":"Limay",]),(["id":229,"title":"< no title >","body":"hmm......
-    Ô­À´À×Ë¼Ö»ÄÜÄÃµÃ¶¯Æß°ÑÂê¿¨À­.........
+    åŸä¾†é›·æ€åªèƒ½æ‹¿å¾—å‹•ä¸ƒæŠŠç‘ªå¡æ‹‰.........
 
                   Uranus 
 ","time":783212866,"poster":"Uranus",]),(["id":230,"body":"hmm........
-  ¹Ö¹Ö¹Ö¹Ö¹Ö¹Ö¹Ö.......... 
-      Why laice and king no dead .....but i see ÒøëÖ¼×and ÒøÊÖÌ×ÔÚHoke ÉíÉÏ????
-   ÏÖÔÚÓĞĞÂµÄmobs have ÕâĞ©eq Âğ??
-   »¹ÊÇÄ³Ò»Î»wiz ÔÚÏ·ÅªÎÒÄØ???
+  æ€ªæ€ªæ€ªæ€ªæ€ªæ€ªæ€ª.......... 
+      Why laice and king no dead .....but i see éŠ€è„›ç”²and éŠ€æ‰‹å¥—åœ¨Hoke èº«ä¸Š????
+   ç¾åœ¨æœ‰æ–°çš„mobs have é€™äº›eq å—??
+   é‚„æ˜¯æŸä¸€ä½wiz åœ¨æˆ²å¼„æˆ‘å‘¢???
 why ?? why ???
-","title":"< no title >","time":783242391,"poster":"Loveme",]),(["id":231,"body":"oh....¸½×¢Ò»µã.....eq i see before on king all gone ...  have love sword and elf sword and elf shield ...why gone ?? king reborn ??
-","title":"< no title >","time":783242460,"poster":"Loveme",]),(["id":232,"title":"< no title >","body":"ÎÒ¸ÄÁË knight train skill's Öµ...
+","title":"< no title >","time":783242391,"poster":"Loveme",]),(["id":231,"body":"oh....é™„è¨»ä¸€é».....eq i see before on king all gone ...  have love sword and elf sword and elf shield ...why gone ?? king reborn ??
+","title":"< no title >","time":783242460,"poster":"Loveme",]),(["id":232,"title":"< no title >","body":"æˆ‘æ”¹äº† knight train skill's å€¼...
 
-ÕâÊÇÎªÆ½ºâÆäËü¹«»á×öµÄ±ä»¯
+é€™æ˜¯ç‚ºå¹³è¡¡å…¶å®ƒå…¬æœƒåšçš„è®ŠåŒ–
 plz see mage healer monk and scholar
-¶øÆäËümage need train spells, monk need gonfu, healer also has spells
+è€Œå…¶å®ƒmage need train spells, monk need gonfu, healer also has spells
 
-ËùÒÔÎÒ¾õµÄÊÇ¹«Æ½µÄ!
-¼ÓÓÍ°É! ÆïÊ¿ÃÇ!
+æ‰€ä»¥æˆ‘è¦ºçš„æ˜¯å…¬å¹³çš„!
+åŠ æ²¹å§! é¨å£«å€‘!
 
 ","time":784131572,"poster":"Angel",]),(["id":233,"body":"   I come back ES again...:P
                       ---Xx---
-","title":"7 Hi ...:P","time":786790057,"poster":"Xx",]),(["id":234,"title":"defend ĞŞÕû","body":"¸÷Î»ÆïÊ¿ºÃ :
+","title":"7 Hi ...:P","time":786790057,"poster":"Xx",]),(["id":234,"title":"defend ä¿®æ•´","body":"å„ä½é¨å£«å¥½ :
 
-    ÓÉì¶ÒÔÍùµÄ defend Ö¸ÁîÓĞ bug £¬ËùÒÔ¼ÓÒÔĞŞÕû£¬ÓĞÏÂÁĞ¸Ä±ä :
+    ç”±æ–¼ä»¥å¾€çš„ defend æŒ‡ä»¤æœ‰ bug ï¼Œæ‰€ä»¥åŠ ä»¥ä¿®æ•´ï¼Œæœ‰ä¸‹åˆ—æ”¹è®Š :
 
-    1. defend ÈËÊı½«ÓĞÉÏÏŞ .
-    2. ²»ÄÜÔÙ¶ÔÍ¬Ò»ÈËÏÂ¶à´Î defend Ö¸Áî
-    3. Ö»´ò defend ½«¿ÉÒÔ¿´µ½Ä¿Ç°Ëù defend µÄÈËÎïÁĞ±í
+    1. defend äººæ•¸å°‡æœ‰ä¸Šé™ .
+    2. ä¸èƒ½å†å°åŒä¸€äººä¸‹å¤šæ¬¡ defend æŒ‡ä»¤
+    3. åªæ‰“ defend å°‡å¯ä»¥çœ‹åˆ°ç›®å‰æ‰€ defend çš„äººç‰©åˆ—è¡¨
 
-						Èã±È
-","time":787003616,"poster":"Ruby",]),(["id":237,"body":"Çë´ó¼ÒÔÚ·¢ÏÖbugÊ±ÓÃ\"bug\"Ö¸Áî°ÑËü¼ÇÂ¼ÏÂÀ´,
-ÒÔ·½±ã×÷Òµ,Ğ»Ğ»!
+						èŒ¹æ¯”
+","time":787003616,"poster":"Ruby",]),(["id":237,"body":"è«‹å¤§å®¶åœ¨ç™¼ç¾bugæ™‚ç”¨\"bug\"æŒ‡ä»¤æŠŠå®ƒè¨˜éŒ„ä¸‹ä¾†,
+ä»¥æ–¹ä¾¿ä½œæ¥­,è¬è¬!
 
 ","title":"< no title >","time":787400220,"poster":"Tsunami",]),(["id":238,"title":"< no title >","body":"
      byebye all knights ......
@@ -52,30 +52,30 @@ plz see mage healer monk and scholar
 
                         death
 
-","time":788711914,"poster":"Death",]),(["id":239,"body":"Ğ»Ğ»´ó¼ÒµÄ°ïÃ¦,ÎÒÉıµÃºÜ¿ì.....
+","time":788711914,"poster":"Death",]),(["id":239,"body":"è¬è¬å¤§å®¶çš„å¹«å¿™,æˆ‘å‡å¾—å¾ˆå¿«.....
 thax all
 dear knights.....thax all friends
-","title":"< no title >","time":789399120,"poster":"Liman",]),(["id":240,"title":"ÓĞ×¯×°±¸......","body":"      ²»ÖªµÀÊÇË­µÄ
-È«°áÈ¥²Ö¿âÁË
+","title":"< no title >","time":789399120,"poster":"Liman",]),(["id":240,"title":"æœ‰èŠè£å‚™......","body":"      ä¸çŸ¥é“æ˜¯èª°çš„
+å…¨æ¬å»å€‰åº«äº†
 ","time":789945223,"poster":"Neo",]),(["id":241,"body":"limay:
-    Äã»¹ÔÚ°¡??
-    i am ur Ö÷ÈË...:))
+    ä½ é‚„åœ¨å•Š??
+    i am ur ä¸»äºº...:))
 
     lcy.
-","title":"board","time":790058070,"poster":"Lcy",]),(["id":242,"title":"ES¾ÍÒªre-open loh","body":"ES½«ì¶Ãñ¹ú84Äê1ÔÂ19ÈÕ¾ÙĞĞre-openÒÇÊ½
-ËùÓĞÍæ¼Òµµ°¸½«±»delete......
-Ï£Íû´ó¼ÒÄÜ¼ÌĞø´ıÔÚÆïÊ¿¹¤»á......^_^
+","title":"board","time":790058070,"poster":"Lcy",]),(["id":242,"title":"ESå°±è¦re-open loh","body":"ESå°‡æ–¼æ°‘åœ‹84å¹´1æœˆ19æ—¥èˆ‰è¡Œre-openå„€å¼
+æ‰€æœ‰ç©å®¶æª”æ¡ˆå°‡è¢«delete......
+å¸Œæœ›å¤§å®¶èƒ½ç¹¼çºŒå¾…åœ¨é¨å£«å·¥æœƒ......^_^
 
                                  Ishige ....
 
 ,
-","time":790264636,"poster":"Ishige",]),(["id":243,"body":"ÎÒÊÇĞÂÊÖ ... ³¬ĞÂµÄ ..
-Çë¸÷Î»¶à¶àÖ¸½Ì .. ^_^
+","time":790264636,"poster":"Ishige",]),(["id":243,"body":"æˆ‘æ˜¯æ–°æ‰‹ ... è¶…æ–°çš„ ..
+è«‹å„ä½å¤šå¤šæŒ‡æ•™ .. ^_^
 ","title":"< no title >","time":790946093,"poster":"Ken",]),(["id":245,"title":"< no title >","body":"
-	¸ĞĞ»pert and ds..¸øÎÒÔÚ»Ø¼ÒµÄ×îááÒ»Ìì.Íæµ½ºÜ¶àµÄsword..ºÃ¾ÃÃ»ÕâÑùÍæ¹ıÁË......
-	»¹ÓĞopen ááµÄµÚÒ»¸öwar....ccc..ËäÈ»ÎÒ²»ÊÇµÚÒ»¸öÉı
-	µ½level 19 µÄÈË..µ«ÊÇ×ÜÊÇµÚÒ»¸öÄÃµ½elf sword..love sword µÄÈË
-	»¹ÓĞµÚÒ»¸öÍæwar µÄ...ccc...»¹ÊÇºÜ¸ßĞË.....party ÕæµÄºÜºÃÍæ¨Û...
+	æ„Ÿè¬pert and ds..çµ¦æˆ‘åœ¨å›å®¶çš„æœ€å¾Œä¸€å¤©.ç©åˆ°å¾ˆå¤šçš„sword..å¥½ä¹…æ²’é€™æ¨£ç©éäº†......
+	é‚„æœ‰open å¾Œçš„ç¬¬ä¸€å€‹war....ccc..é›–ç„¶æˆ‘ä¸æ˜¯ç¬¬ä¸€å€‹å‡
+	åˆ°level 19 çš„äºº..ä½†æ˜¯ç¸½æ˜¯ç¬¬ä¸€å€‹æ‹¿åˆ°elf sword..love sword çš„äºº
+	é‚„æœ‰ç¬¬ä¸€å€‹ç©war çš„...ccc...é‚„æ˜¯å¾ˆé«˜èˆˆ.....party çœŸçš„å¾ˆå¥½ç©ã„›...
 	
 						cute ho..very cute orc..:P
 ","time":791333381,"poster":"Ho",]),(["id":246,"title":"HI I am back !","body":"HI EVERYONE:
@@ -85,12 +85,12 @@ I am so happy to join this guild with scorpion !!
 Nice to Meet all,especially scorpion !! :)
 
                        Light :)
-","time":791580407,"poster":"Light",]),(["id":248,"body":"»¶Ó­¼ÓÈëÖí °ï...
-¼ÓÈë°ì·¨:
-	Ö»ÒªÔÚÃû×ÓÖĞÓĞ¸öÖí×Ö¼´¿É¼ÓÈë...
-			Mermaid Áô
+","time":791580407,"poster":"Light",]),(["id":248,"body":"æ­¡è¿åŠ å…¥è±¬ å¹«...
+åŠ å…¥è¾¦æ³•:
+	åªè¦åœ¨åå­ä¸­æœ‰å€‹è±¬å­—å³å¯åŠ å…¥...
+			Mermaid ç•™
 ","title":"< no title >","time":792046471,"poster":"Mermaid",]),(["id":249,"title":"< no title >","body":"
-»¶Ó­¼ÓÈëäìÈ÷°ï.....ÎÒÊÇ°ïÖ÷\"äìÈ÷½£\"......
-±¨Ãû´ÓËÙà¸........
+æ­¡è¿åŠ å…¥ç€Ÿç‘å¹«.....æˆ‘æ˜¯å¹«ä¸»\"ç€Ÿç‘åŠ\"......
+å ±åå¾é€Ÿå–”........
 ","time":792135683,"poster":"Liman",]),})
 id_ref 264

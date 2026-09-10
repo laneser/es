@@ -1,18 +1,18 @@
-ÒÔÏÂÊÇÒ»Ğ©³£ÓÃµÄÖ¸Áî£¬ËùÓĞµÄÖ¸Áî¾ù¿ÉÓÃ help <Ö¸ÁîÃû³Æ> »ñµÃ½ÏÏêÏ¸µÄËµÃ÷¡£
+ä»¥ä¸‹æ˜¯ä¸€äº›å¸¸ç”¨çš„æŒ‡ä»¤ï¼Œæ‰€æœ‰çš„æŒ‡ä»¤å‡å¯ç”¨ help <æŒ‡ä»¤åç¨±> ç²å¾—è¼ƒè©³ç´°çš„èªªæ˜ã€‚
  
-[Ò»°ãÖ¸Áî]
+[ä¸€èˆ¬æŒ‡ä»¤]
 go, inventory, skills, drop, emote, give, ask, close, get
 look, open, brief, score, party, search, put, lock, secure
  
-[¹µÍ¨ÓÃÖ¸Áî]                  [²éÑ¯×´Ì¬ÓÃÖ¸Áî]
+[æºé€šç”¨æŒ‡ä»¤]                  [æŸ¥è©¢ç‹€æ…‹ç”¨æŒ‡ä»¤]
 describe, emote, converse     faq, finger, levels, bug
 say, tell, reply, shout       time,query,who,version
 ignore, wizcall, temote       uptime
  
-[Õ½¶·ÓÃÖ¸Áî]          [Ê¹ÓÃÕß½éÃæÖ¸Áî]       [ÓĞ¹ØÏµÍ³µÄÖ¸Áî]
+[æˆ°é¬¥ç”¨æŒ‡ä»¤]          [ä½¿ç”¨è€…ä»‹é¢æŒ‡ä»¤]       [æœ‰é—œç³»çµ±çš„æŒ‡ä»¤]
 wimpy, wear, kill     do, alias, history     okip, set, passwd
 hp, wield, remove     nickname, inactive     chfn, suicide
 consider, tactic                             hibernate, save
  
-[ÆäËüÖ¸Áî]
-ÒÀÖ°Òµ»áÓĞÒ»Ğ©¸½¼ÓÖ¸Áî£¬Çë²éÑ°¸÷¹«»á¡£
+[å…¶å®ƒæŒ‡ä»¤]
+ä¾è·æ¥­æœƒæœ‰ä¸€äº›é™„åŠ æŒ‡ä»¤ï¼Œè«‹æŸ¥å°‹å„å…¬æœƒã€‚

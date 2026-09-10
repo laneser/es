@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("stone armbands", "ÓÂÕß»¤±Û");
+        set_name("stone armbands", "å‹‡è€…è­·è‡‚");
         add( "id", ({"armband","armbands" }) );
-        set_short("a stone armbands", "ÓÂÕß»¤±Û");
+        set_short("a stone armbands", "å‹‡è€…è­·è‡‚");
         set_long(
         "An armband used by wrestler.\n",
-	"ÕâÊÇÓÃÈûÍâÎ÷ÏÄµÄºÚ¸ÕÊ¯×÷³ÉµÄ»¤±Û£¬Í¨³£ÊÇÎ÷ÏÄ¸ß¼¶µÄË¤½ÇÓÂÊ¿²ÅÓĞ\n"
-        "×Ê¸ñÅä´øµÄ¡£Ë¤½Ç¸ßÊÖ×îÅÂÊÖ±ÛÊÜÉË£¬ËùÒÔÅä´ËÒÔ·ÀµĞÈËµÄµ¶½£¹¥»÷¡£\n"
+	"é€™æ˜¯ç”¨å¡å¤–è¥¿å¤çš„é»‘å‰›çŸ³ä½œæˆçš„è­·è‡‚ï¼Œé€šå¸¸æ˜¯è¥¿å¤é«˜ç´šçš„æ‘”è§’å‹‡å£«æ‰æœ‰\n"
+        "è³‡æ ¼é…å¸¶çš„ã€‚æ‘”è§’é«˜æ‰‹æœ€æ€•æ‰‹è‡‚å—å‚·ï¼Œæ‰€ä»¥é…æ­¤ä»¥é˜²æ•µäººçš„åˆ€åŠæ”»æ“Šã€‚\n"
                 );
-        set( "unit", "¶Ô");
+        set( "unit", "å°");
         set( "type", "arms" );
         set( "armor_class", 4 );
         set( "defense_bonus", 0 );

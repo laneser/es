@@ -9,14 +9,14 @@ void create()
 {
 	::create();
    set_level(8);
-   set_name("centipede", "òÚò¼");
-   set_short("òÚò¼");
+   set_name("centipede", "èœˆèš£");
+   set_short("èœˆèš£");
 	set_long(
-     "Äã¿´µ½Ò»Ö»ºÚÉ«µÄòÚò¼, Ò»Ë«ÉîºìµÄÑÛ¾¦Õý¶¢ÖøÄã,\n"
-     "ÁîÄã²»½ûµ¹³éÒ»¿ÚÁ¹Æø!\n"
+     "ä½ çœ‹åˆ°ä¸€éš»é»‘è‰²çš„èœˆèš£, ä¸€é›™æ·±ç´…çš„çœ¼ç›æ­£ç›¯è‘—ä½ ,\n"
+     "ä»¤ä½ ä¸ç¦å€’æŠ½ä¸€å£æ¶¼æ°£!\n"
 	);
    set("race","insect");
-   set( "unit", "Ìõ" );
+   set( "unit", "æ¢" );
    set( "alignment", -500 );
    set( "exp_reward", 1350 );
    set_natural_armor( 30, 15 );
@@ -26,8 +26,8 @@ void create()
    set_perm_stat( "int", 5 );
    set( "killer", 1 );
 	set( "tactic_func", "emit_poison" );
-   set_c_limbs( ({ "Í·²¿", "ÉíÌå", "×ã²¿" }) );
-   set_c_verbs( ({ "%sµÄÎ²°ÍÉ¨Ïò%s", "%sµÄÍ·²¿×²Ïò%s" }) );
+   set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è¶³éƒ¨" }) );
+   set_c_verbs( ({ "%sçš„å°¾å·´æŽƒå‘%s", "%sçš„é ­éƒ¨æ’žå‘%s" }) );
 }
 
 int emit_poison(object victim)
@@ -36,7 +36,7 @@ int emit_poison(object victim)
    if( random(20)>3 || !(victim= query_attacker()) ) return 0;
    if( random(20)<4 ) {
     tell_room( environment(this_object()),
-     "\nòÚò¼Í»È»¸½ÔÚÄãµÄÉíÉÏ, ºÝºÝµØÒ§ÁËÄãÒ»¿Ú...\n",
+     "\nèœˆèš£çªç„¶é™„åœ¨ä½ çš„èº«ä¸Š, ç‹ ç‹ åœ°å’¬äº†ä½ ä¸€å£...\n",
 		this_object() );
    (CONDITION_PREFIX + "weak")->apply_effect( victim, 10, 3 );
    }

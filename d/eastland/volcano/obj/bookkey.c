@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("stone key", "À¶±¦Ê¯Ô¿³×");
-        set_short("À¶±¦Ê¯Ô¿³×");
+        set_name("stone key", "è—å¯¶çŸ³é‘°åŒ™");
+        set_short("è—å¯¶çŸ³é‘°åŒ™");
         set_long( @LONG
-    Ò»Ö§ÓÉÆ¯ÁÁÀ¶±¦Ê¯´òÖÆ³ÉµÄÔ¿³×¡£Äã¿ÉÒÔÓÃËüÖ±½Ó  < insert Ä³µØ·½ > À´¿ª
-ÆôÌØ¶¨µÄ¶«Î÷¡£
+    ä¸€æ”¯ç”±æ¼‚äº®è—å¯¶çŸ³æ‰“è£½æˆçš„é‘°åŒ™ã€‚ä½ å¯ä»¥ç”¨å®ƒç›´æ¥  < insert æŸåœ°æ–¹ > ä¾†é–‹
+å•Ÿç‰¹å®šçš„æ±è¥¿ã€‚
 LONG    );
-        set( "unit", "Ö§" );
+        set( "unit", "æ”¯" );
         set( "weight", 20 );
         set( "value", ({ 50,"silver"}) );
         set("no_sale",1);
@@ -26,19 +26,19 @@ int do_unlock(string arg)
   object here,book;
   
   if (arg!="wall_hole")
-    return notify_fail("ÄãÊÔÁË°ëÌì£¬Ò»µã½á¹ûÒ²Ã»ÓĞ¡£\n");
+    return notify_fail("ä½ è©¦äº†åŠå¤©ï¼Œä¸€é»çµæœä¹Ÿæ²’æœ‰ã€‚\n");
   if (!this_player()->query_temp("can_insert_key"))
          return 0;
   here=environment(this_player());
   if (here->query("wall_box_for_mar_short"))
     if (present("wraith elder",here))
       return 
-        notify_fail("Äã·¢ÏÖ°«Áé×å³¤ÀÏÕı¶ñºİºİµØ¶¢ÖøÄã£¬Ö»ºÃ¸Ï½ôÂä»Ä¶øÌÓ¡£\n");
+        notify_fail("ä½ ç™¼ç¾çŸ®éˆæ—é•·è€æ­£æƒ¡ç‹ ç‹ åœ°ç›¯è‘—ä½ ï¼Œåªå¥½è¶•ç·Šè½è’è€Œé€ƒã€‚\n");
     else   
       if (here->query("have_book")) {
         tell_object(this_player(),@LONG
-Äã°ÑÀ¶±¦Ê¯Ô¿³×²å½øÇ½ÉÏµÄ°µ¶´£¬ì¬µÄÒ»Éù£¬Ô¿³×±»ÎüÁË½øÈ¥£¬²¢µ¯³öÒ»±¾Ğ¡²á
-×Ó¡£ÄãË³ÊÖ¾Í°ÑĞ¡²á×Ó½ÓÁËÆğÀ´¡£
+ä½ æŠŠè—å¯¶çŸ³é‘°åŒ™æ’é€²ç‰†ä¸Šçš„æš—æ´ï¼Œé¢¼çš„ä¸€è²ï¼Œé‘°åŒ™è¢«å¸äº†é€²å»ï¼Œä¸¦å½ˆå‡ºä¸€æœ¬å°å†Š
+å­ã€‚ä½ é †æ‰‹å°±æŠŠå°å†Šå­æ¥äº†èµ·ä¾†ã€‚
 LONG  );
         here->set("have_book",0);
         seteuid(getuid());
@@ -49,7 +49,7 @@ LONG  );
       }
       else {
         tell_object(this_player(),
-          "Äã°ÑÀ¶±¦Ê¯Ô¿³×²å½øÇ½ÉÏµÄ°µ¶´£¬¿ÉÊÇÔ¿³×ÓÖµ¯ÁË³öÀ´¡£\n"
+          "ä½ æŠŠè—å¯¶çŸ³é‘°åŒ™æ’é€²ç‰†ä¸Šçš„æš—æ´ï¼Œå¯æ˜¯é‘°åŒ™åˆå½ˆäº†å‡ºä¾†ã€‚\n"
           );
         return 1;     
       }

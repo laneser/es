@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("tan ring","³åÏöÔÆÖ¸");
+        set_name("tan ring","æ²–éœ„é›²æŒ‡");
         add( "id", ({ "ring" }) );
-        set_short( "³åÏöÔÆÖ¸");
+        set_short( "æ²–éœ„é›²æŒ‡");
         set_long(@C_LONG
-³åÏöÔÆÖ¸ÊÇÑô¹«¹«ºÍÒõÆÅÆÅÓÃÇ§Äêº®±ùÖÆ³É,¿´ÉÏÈ¥»¹ÓĞÒ»ÉÁÉÁµÄÁÁ¹â¡£
+æ²–éœ„é›²æŒ‡æ˜¯é™½å…¬å…¬å’Œé™°å©†å©†ç”¨åƒå¹´å¯’å†°è£½æˆ,çœ‹ä¸Šå»é‚„æœ‰ä¸€é–ƒé–ƒçš„äº®å…‰ã€‚
 C_LONG
         );
-        set("unit","Ö»");
+        set("unit","åª");
         set( "type", "finger" );
         set("material","element");
         set( "armor_class", 0 );

@@ -10,11 +10,11 @@ void init()
 
 void create(){
 
-        set_name("ching","ÖñÒ¶Çà");
+        set_name("ching","ç«¹è‘‰é’");
         add( "id" , ({ "wine","chinese wine","ching" }) );
-	set_short( "ÖñÒ¶Çà" );
-      set_long("ÕâÊÇÔ¶·çÕò²úµÄÖñÒ¶Çà¡£\n");
-        set("unit","±­");
+	set_short( "ç«¹è‘‰é’" );
+      set_long("é€™æ˜¯é é¢¨é®ç”¢çš„ç«¹è‘‰é’ã€‚\n");
+        set("unit","æ¯");
 	set("ident", "CHING");
         set("weight", 10);
         set("value",({20, "silver"}) );
@@ -25,11 +25,11 @@ int quaff_potion(string arg)
 
         if( ! id(arg) ) return 0;
         write(
-                "ÄãºÈÏÂÒ»±­ÖñÒ¶Çà¡£¸Ğµ½Í·ÓĞµãÔÎÔÎµÄ£¬µ«ÊÇÓĞÒ»ÖÖĞË·ÜµÄ¸Ğ¾õ¡£\n"
+                "ä½ å–ä¸‹ä¸€æ¯ç«¹è‘‰é’ã€‚æ„Ÿåˆ°é ­æœ‰é»æšˆæšˆçš„ï¼Œä½†æ˜¯æœ‰ä¸€ç¨®èˆˆå¥®çš„æ„Ÿè¦ºã€‚\n"
         );
         tell_room( environment(this_player()) ,
-                this_player()->query("c_name")+"ºÈÏÂÒ»±­ÖñÒ¶Çà£¬ÏÔµÃºÜ¿ªĞÄµÄÑù×Ó
-¡£\n",
+                this_player()->query("c_name")+"å–ä¸‹ä¸€æ¯ç«¹è‘‰é’ï¼Œé¡¯å¾—å¾ˆé–‹å¿ƒçš„æ¨£å­
+ã€‚\n",
                 this_player() );
 
         remove();

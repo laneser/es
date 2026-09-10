@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("golden cloak", "ÍìÈŞ½ğĞåË¿ÂŞÅÛ");
+        set_name("golden cloak", "æŒ½çµ¨é‡‘ç¹¡çµ²ç¾…è¢");
         add( "id", ({ "cloak","cape" }) );
-        set_short("golden cloak","ÍìÈŞ½ğĞåË¿ÂŞÅÛ");
+        set_short("golden cloak","æŒ½çµ¨é‡‘ç¹¡çµ²ç¾…è¢");
         set_long(
                 "This is a golden beautiful cloak.\n",
-                "Ò»¼şÓÃ½ğË¿ºÍÈŞ²¼×ö³ÉµÄÅû·ç£¬·Ç³£²ÓÀÃ¶áÄ¿£®\n"
+                "ä¸€ä»¶ç”¨é‡‘çµ²å’Œçµ¨å¸ƒåšæˆçš„æŠ«é¢¨ï¼Œéå¸¸ç‡¦çˆ›å¥ªç›®ï¼\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "heavy_metal" );
         set( "armor_class", 6 );

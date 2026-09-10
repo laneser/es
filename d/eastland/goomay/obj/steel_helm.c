@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "steel helm", "¸Ö¿ø" );
+	set_name( "steel helm", "é‹¼ç›”" );
 	add( "id", ({ "helm" }) );
-	set_short( "a steel helm", "¸Ö¿ø" );
+	set_short( "a steel helm", "é‹¼ç›”" );
 	set_long(
 		"You see a steel helm with protective hood.\n",
-		"ÕâÊÇÒ»¸öÔ²¶¥µÄ¸ÖÖÆÍ·¿ø¡£\n"
+		"é€™æ˜¯ä¸€å€‹åœ“é ‚çš„é‹¼è£½é ­ç›”ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
 	set( "type", "head" );
 	set("material","heavy_metal");
 	set( "weight", 60 );

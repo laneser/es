@@ -4,17 +4,17 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "glasses", "Ä«¾µ" );
-	set_short( "Ä«¾µ" );
+	set_name( "glasses", "å¢¨é¡" );
+	set_short( "å¢¨é¡" );
 	set_long(
-		"ÕâÊÇÒ»¸¶ºÜÀ­·çµÄÄ«¾µ£¬¿ÉÒÔµ²×¡Ç¿¹âµÄÕÕÉä¡£\n"
+		"é€™æ˜¯ä¸€ä»˜å¾ˆæ‹‰é¢¨çš„å¢¨é¡ï¼Œå¯ä»¥æ“‹ä½å¼·å…‰çš„ç…§å°„ã€‚\n"
 	);
-	set( "unit", "¸¶" );
+	set( "unit", "ä»˜" );
         set("material","element");
 	set( "type", "head" );
 	set( "weight", 20 );
 	set( "armor_class", 2 );
 	set( "value", ({ 40, "silver" }) );
-        set( "extra_look", "$N´÷ÖøÒ»¸¶ºÜÀ­·çµÄÄ«¾µ£¬ÏÔµÃÊ®·ÖË§Æø¡£\n" );
+        set( "extra_look", "$Næˆ´è‘—ä¸€ä»˜å¾ˆæ‹‰é¢¨çš„å¢¨é¡ï¼Œé¡¯å¾—ååˆ†å¸¥æ°£ã€‚\n" );
 
 }

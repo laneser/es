@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "mercenary", "ïÚÊ¦" );
-	set_short("ïÚÊ¦" );
+	set_name( "mercenary", "é¢å¸«" );
+	set_short("é¢å¸«" );
 	set_long(
-		"ÕâĞ©ïÚÊ¦ÏĞÀ´ÎŞÊÂ£¬Î§ÖøÒ»¶ÑÕıÔÚÏĞ¿ÄÑÀ£¬Ò»ÃæµÈÖøÉúÒâÉÏÃÅ¡£\n"
+		"é€™äº›é¢å¸«é–’ä¾†ç„¡äº‹ï¼Œåœè‘—ä¸€å †æ­£åœ¨é–’ç£•ç‰™ï¼Œä¸€é¢ç­‰è‘—ç”Ÿæ„ä¸Šé–€ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set_perm_stat( "str", 13 );
 	set_perm_stat( "dex", 12 );
 	set_skill( "dodge", 70 );

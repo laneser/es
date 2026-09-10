@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wedding cape", "°×É«ĞÂÄïÅû¼ç");
+        set_name("wedding cape", "ç™½è‰²æ–°å¨˜æŠ«è‚©");
         add( "id", ({ "cape" }) );
-   set_short("°×É«ĞÂÄïÅû¼ç");
+   set_short("ç™½è‰²æ–°å¨˜æŠ«è‚©");
         set_long(
-                "Ò»¼şĞåÖøÀÙË¿»¨±ßµÄ°×É«ĞÂÄïÅû¼ç.\n" 
+                "ä¸€ä»¶ç¹¡è‘—è•¾çµ²èŠ±é‚Šçš„ç™½è‰²æ–°å¨˜æŠ«è‚©.\n" 
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "armor_class", 6 );
         set( "defense_bonus", 2 );
@@ -25,7 +25,7 @@ stop_equip(object owner)
 {
         if ( (string)this_player()->query("gender") != "female") {
         printf(
-                  "±ğ¿ªÍæĞ¦ÁË, ÄãÏëµ±ÈËÑıÂğ?\n" );
+                  "åˆ¥é–‹ç©ç¬‘äº†, ä½ æƒ³ç•¶äººå¦–å—?\n" );
         return 1;
         }
 }

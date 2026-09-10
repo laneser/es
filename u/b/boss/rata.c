@@ -6,11 +6,11 @@ void create()
 {
         ::create();
         set_level(1);
-        set_name("richman",""+HIB"¸»ÈË"+NOR"");
+        set_name("richman",""+HIB"å¯Œäºº"+NOR"");
         add( "id", ({ "rat" }) );
-        set_short(""+HIB"¸»ÈË"+NOR"");
-        set_long(""+HIR"²¨Ê¿µÄÀÏ´ó£¬ºÜ¿Ì±¡¡£"+NOR"\n");
-        set("unit", "Ö»");
+        set_short(""+HIB"å¯Œäºº"+NOR"");
+        set_long(""+HIR"æ³¢å£«çš„è€å¤§ï¼Œå¾ˆåˆ»è–„ã€‚"+NOR"\n");
+        set("unit", "åª");
         set_perm_stat("int", 1);
         set ("wealth", ([ "gold": 30000 ]) );
     equip_armor( "/d/mage/tower/armors/wizard_amulet" );

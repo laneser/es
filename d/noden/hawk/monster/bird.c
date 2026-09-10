@@ -4,11 +4,11 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name( "Bird", "野鸟" );
+	set_name( "Bird", "閲庨偿" );
 	add("id",({"Bird"}) );
-   	set_short( "野鸟" );
+   	set_short( "閲庨偿" );
 	set_long(
-		"一只颜色完全不漂亮的野鸟，似乎正忙著觅食呢.\n"
+		"涓�闅婚鑹插畬鍏ㄤ笉婕備寒鐨勯噹槌ワ紝浼间箮姝ｅ繖钁楄椋熷憿.\n"
 	);
 	set( "alignment", 0 );
 	set( "time_to_heal", 10 );

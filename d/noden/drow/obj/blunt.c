@@ -3,16 +3,16 @@
 inherit WEAPON;
 void create()
 {
-       set_name("blunt","±âµ£");
+       set_name("blunt","æ‰æ“”");
        add("id",({"blunt",}) );
-   set_short("±âµ£");
+   set_short("æ‰æ“”");
        set_long(
 @C_LONG
-    ÕâÊÇÅ«ÒÛÓÃÀ´Ìô»õÎïµÄ³¤±âµ£¡£
+    é€™æ˜¯å¥´å½¹ç”¨ä¾†æŒ‘è²¨ç‰©çš„é•·æ‰æ“”ã€‚
 C_LONG
         );
 
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 9 );
     set("type","blunt");
         set( "min_damage", 6 );

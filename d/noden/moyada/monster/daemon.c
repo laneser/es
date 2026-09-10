@@ -7,16 +7,16 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(15);
-	set_name( "daemon shadow", "¶ñÄ§" );
+	set_name( "daemon shadow", "æƒ¡é­”" );
 	add ("id", ({ "daemon", "demon", }) );
-	set_short( "¶ñÄ§" );
+	set_short( "æƒ¡é­”" );
 	set_long( @C_LONG
-Éú»îì¶Ú¤ºÚµÄÊÀ½çµÄ¶ñÄ§£¬ÔÚÄ§½çµÄµØÎ»ÆÄ¸ß£¬µ«Òà»áËÀĞÄËúµØµÄ
-ÎªÖ÷ÈËÂôÃü£¬Ìı´ÓÖ÷ÈËµÄÃüÁî£¬ÖÁËÀ·½Ğİ¡£
+ç”Ÿæ´»æ–¼å†¥é»‘çš„ä¸–ç•Œçš„æƒ¡é­”ï¼Œåœ¨é­”ç•Œçš„åœ°ä½é —é«˜ï¼Œä½†äº¦æœƒæ­»å¿ƒå¡Œåœ°çš„
+ç‚ºä¸»äººè³£å‘½ï¼Œè½å¾ä¸»äººçš„å‘½ä»¤ï¼Œè‡³æ­»æ–¹ä¼‘ã€‚
 C_LONG
 	);
 	set ("alignment", -2000 );
-    set ("unit", "Ö»" );
+    set ("unit", "åª" );
     set ("race", "daemon");
 	set_perm_stat( "dex", 30 );
 	set_perm_stat( "str", 25 );
@@ -24,7 +24,7 @@ C_LONG
 	set_perm_stat( "con", 24 );
 	set_perm_stat( "piety", 1 );
 	set_perm_stat( "karma", 25 );
-	set ("c_death_msg", "%s¼â½ĞÒ»Éù:%#$@&*@*!%&&(ÄãÌı²»¶®£¬¿ÉÄÜÊÇÍâÓï).... È»áá¾ÍËÀÁË!\n" );
+	set ("c_death_msg", "%så°–å«ä¸€è²:%#$@&*@*!%&&(ä½ è½ä¸æ‡‚ï¼Œå¯èƒ½æ˜¯å¤–èª).... ç„¶å¾Œå°±æ­»äº†!\n" );
 	set ("max_hp", 1000);
 	set ("hit_points", 1000);
 	set ("persuing", 1);
@@ -41,9 +41,9 @@ C_LONG
     set_skill("shortblade", 80);
     set_experience(20000);
     set_skill("dodge",70);
-    set_c_verbs( ({ "%sÓÃ×¦×Ó×¥%s", "%sÓÃ½Ç´Ì%s", "%sÌß%s",
-                    "%sÒ§%s", "%sÓÃËÀÉñÁ­µ¶ºáÅü%s", }) );
-    set_c_limbs( ({ "Í·", "ÉíÌå", "½Å", "½Ç", "³á°ò", }) );
+    set_c_verbs( ({ "%sç”¨çˆªå­æŠ“%s", "%sç”¨è§’åˆº%s", "%sè¸¢%s",
+                    "%så’¬%s", "%sç”¨æ­»ç¥é®åˆ€æ©«åŠˆ%s", }) );
+    set_c_limbs( ({ "é ­", "èº«é«”", "è…³", "è§’", "ç¿…è†€", }) );
     wield_weapon(MOYADA"obj/d_death_scythe");
 }
 

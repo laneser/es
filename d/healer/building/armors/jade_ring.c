@@ -10,12 +10,12 @@ void create()
 {
         wielded=0;
         seteuid(getuid());
-	set_name( "jade ring", "º®Óñ½äÖ¸" );
+	set_name( "jade ring", "å¯’ç‰æˆ’æŒ‡" );
 	add( "id", ({ "ring", "xyz", }) );
-	set_short( "jade ring", "º®Óñ½äÖ¸");
-	set_long( "ÕâÊÇÓÉÍòÄêº®ÓñÖÆ³ÉµÄ½äÖ¸, ±íÃæÉ¢·¢³öÕóÕóµÄº®Æø¡£\n"
+	set_short( "jade ring", "å¯’ç‰æˆ’æŒ‡");
+	set_long( "é€™æ˜¯ç”±è¬å¹´å¯’ç‰è£½æˆçš„æˆ’æŒ‡, è¡¨é¢æ•£ç™¼å‡ºé™£é™£çš„å¯’æ°£ã€‚\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "finger" );
         set( "material", "element" );
@@ -36,7 +36,7 @@ void effect()
   if ( ((int) player->query("npc")) == 1 ) return;
     
   tell_object( player, 
-               set_color("´Ó½äÖ¸ÉÏ´«À´Ò»Õóº®ÆøÊ¹ÄãÍ·ÄÔÂÔÎªÇåĞÑ, µ«Í¬Ê±Ò²Ê¹ÄãÊÜÁËµãº®¶¾¡£\n","HIC"),
+               set_color("å¾æˆ’æŒ‡ä¸Šå‚³ä¾†ä¸€é™£å¯’æ°£ä½¿ä½ é ­è…¦ç•¥ç‚ºæ¸…é†’, ä½†åŒæ™‚ä¹Ÿä½¿ä½ å—äº†é»å¯’æ¯’ã€‚\n","HIC"),
               );
   sp = player->query("spell_points");
   hp = player->query("hit_points");
@@ -47,7 +47,7 @@ void effect()
   ("/std/conditions/simple_poison")->apply_effect(player,12,1);
   if (hp<80) {
     tell_object( player,
-                 set_color("Äã¾õµÃÉíÌå×´¿ö²»ÊÇºÜºÃ, ¾ö¶¨½«º®Óñ½äÖ¸È¡ÏÂ, ÒÔ²â°²È«¡£\n","HIY"),
+                 set_color("ä½ è¦ºå¾—èº«é«”ç‹€æ³ä¸æ˜¯å¾ˆå¥½, æ±ºå®šå°‡å¯’ç‰æˆ’æŒ‡å–ä¸‹, ä»¥æ¸¬å®‰å…¨ã€‚\n","HIY"),
                ) ;
     this_object()->unequip();
     return;                 

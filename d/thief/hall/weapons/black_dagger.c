@@ -5,11 +5,11 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("black dagger","ºÚÉ«Ø°Ê×");
+       set_name("black dagger","é»‘è‰²åŒ•é¦–");
        add("id",({"dagger"}) );
-       set_short("ºÚÉ«Ø°Ê×");
-       set_long("ÕâÊÇÒ»°ÑºÚÉ«µÄØ°Ê×, ºÜÊÊºÏÔÚÒ¹¼äÊ¹ÓÃ¡£\n");
-	set( "unit", "°Ñ" );
+       set_short("é»‘è‰²åŒ•é¦–");
+       set_long("é€™æ˜¯ä¸€æŠŠé»‘è‰²çš„åŒ•é¦–, å¾ˆé©åˆåœ¨å¤œé–“ä½¿ç”¨ã€‚\n");
+	set( "unit", "æŠŠ" );
 	set( "weight", 10 );
 	set( "type","dagger");
 	set( "min_damage",13);

@@ -7,9 +7,9 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("A empty room", "¿Õ·¿¼ä");
+	set_short("A empty room", "ç©ºæˆ¿é–“");
 	set_long(
 		"This is a simple room created by roommaker.\n",
-		"ÕâÊÇÒ»¸öÓÃ·¿¼ä±à¼­Æ÷Ôì³öÀ´µÄ¿Õ·¿¼ä¡£\n"
+		"é€™æ˜¯ä¸€å€‹ç”¨æˆ¿é–“ç·¨è¼¯å™¨é€ å‡ºä¾†çš„ç©ºæˆ¿é–“ã€‚\n"
 	);
 }

@@ -9,16 +9,16 @@ inherit "gamble.c" ;
 void create()
 {
 	::create();
-	set_short("A Casino", "ÆË¿Ë¾ãÀÖ²¿");
+	set_short("A Casino", "æ’²å…‹ä¿±æ¨‚éƒ¨");
 	set_long( @LONG_DESCRIPTION
 LONG_DESCRIPTION
 		,@C_LONG_DESCRIPTION
-ÕâÀïÊÇ°¬Ë¹ÌØÂÉ¶÷(asterism)³Ç×îÖøÃûµÄ¶Ä³¡¡£°¬Ë¹ÌØÂÉ¶÷ÔÚÕ½Õùáá,ÓÉì¶
-Èı×åµÄÍ¨Á¦ºÏ×÷,Ê¹µÃÕâ¸ö³ÇÄÜ¼«Ñ¸ËÙµÄÓÉ·ÏĞæÖĞÖØ½¨¡£ÔÚÏĞÏ¾Ö®âÅ,ÈËÃÇ×ÜÏ²»¶
-µ½¾Æ¹İĞ¡×Ã¼°Ğ¡¶ÄÒ»·¬¡£¾ÃÖ®,¾ÆµêÀÏ°åÇ¬´àÀ©´ó¹æÄ£,¿ªÆğ¶Ä³¡À´ÁË¡£
-ÔÚÕâ¸ö´óÌıÖĞÑë,ÊÇÍæËó¹ş(Poker)µÄÌ¨×Ó,¿¿×ó±ßÊÇ±È21µã(Black Jack)µÄ³¡µØ,
-¿¿ÓÒ±ßÊÇÖÀ÷»×Ó(Dice)µÄµØ·½¡£¶øÔÚÄãÕıÇ°·½ÄÇ¶ÂÇ½ÉÏËÆºõÓĞÕÅ¹æÔò(rule)¡£
-¼°Ò»ÕÅÍæ·¨ËµÃ÷(explain)¡£
+é€™è£¡æ˜¯è‰¾æ–¯ç‰¹å¾‹æ©(asterism)åŸæœ€è‘—åçš„è³­å ´ã€‚è‰¾æ–¯ç‰¹å¾‹æ©åœ¨æˆ°çˆ­å¾Œ,ç”±æ–¼
+ä¸‰æ—çš„é€šåŠ›åˆä½œ,ä½¿å¾—é€™å€‹åŸèƒ½æ¥µè¿…é€Ÿçš„ç”±å»¢å¢Ÿä¸­é‡å»ºã€‚åœ¨é–’æš‡ä¹‹é¤˜,äººå€‘ç¸½å–œæ­¡
+åˆ°é…’é¤¨å°é…ŒåŠå°è³­ä¸€ç•ªã€‚ä¹…ä¹‹,é…’åº—è€é—†ä¹¾è„†æ“´å¤§è¦æ¨¡,é–‹èµ·è³­å ´ä¾†äº†ã€‚
+åœ¨é€™å€‹å¤§è½ä¸­å¤®,æ˜¯ç©æ¢­å“ˆ(Poker)çš„è‡ºå­,é å·¦é‚Šæ˜¯æ¯”21é»(Black Jack)çš„å ´åœ°,
+é å³é‚Šæ˜¯æ“²éª°å­(Dice)çš„åœ°æ–¹ã€‚è€Œåœ¨ä½ æ­£å‰æ–¹é‚£å µç‰†ä¸Šä¼¼ä¹æœ‰å¼µè¦å‰‡(rule)ã€‚
+åŠä¸€å¼µç©æ³•èªªæ˜(explain)ã€‚
 C_LONG_DESCRIPTION
 	);
 
@@ -27,9 +27,9 @@ C_LONG_DESCRIPTION
 		"north" : ASTR"city21",
 		]) );
  	set("pre_exit_func",([ "north" : "check_gamble" ]) ) ;
-        set("c_item_desc",(["rule":"1.½ûÖ¹×÷±×¡£\n"
-                                   "2.½ûÖ¹ÍµÇÔ¡£\n"
-                                   "3.½ûÖ¹Ç¿¶á¡£\nÎ¥ÕßÒ»ÂÉÒÔË½ĞÌËÅºò¡£\n",
+        set("c_item_desc",(["rule":"1.ç¦æ­¢ä½œå¼Šã€‚\n"
+                                   "2.ç¦æ­¢å·ç«Šã€‚\n"
+                                   "3.ç¦æ­¢å¼·å¥ªã€‚\né•è€…ä¸€å¾‹ä»¥ç§åˆ‘ä¼ºå€™ã€‚\n",
                             "explain":
                                    "" ,
                             ]) ) ;        
@@ -73,36 +73,36 @@ int do_gamble(string arg)
     string game,cgame,msg,cmsg,mas1,cmsg1 ;
     
     if(!arg) return notify_fail(can_read_chinese()?
-                   "ÍæÉ¶Íë¸â°¡ ??\n":"What do u wanna play?\n");
+                   "ç©å•¥ç¢—ç³•å•Š ??\n":"What do u wanna play?\n");
                          
 //    if(lower_case(arg)=="poker")    ;
 //    if(lower_case(arg)=="black jack")   ;
 //    if(lower_case(arg)=="dice")   ;            
 //    else return notify_fail(can_read_chinese()?
-//                   "ÍæÉ¶Íë¸â°¡ ??\n":"What do u wanna play?\n");
+//                   "ç©å•¥ç¢—ç³•å•Š ??\n":"What do u wanna play?\n");
                    
     switch(lower_case(arg))                   
      {  
        case "poker" :
                  game = "Poker" ;
-                 cgame= "Ëó¹ş" ;
+                 cgame= "æ¢­å“ˆ" ;
                  play_game(game,cgame) ;
                  poker() ;
                  break ;
        case "black jack":
                  game = "Black Jack" ;
-                 cgame= "¶şÊ®Ò»µã" ;
+                 cgame= "äºŒåä¸€é»" ;
                  play_game(game,cgame) ;
                  jack() ; 
                  break ;
        case "dice" :
                  game = "Taiwan Dice" ;
-                 cgame= "Î÷°ËÀ²" ;
+                 cgame= "è¥¿å…«å•¦" ;
                  play_game(game,cgame) ;
                  dice() ;
                  break ;
        default: return notify_fail(can_read_chinese()?
-                  "±§Ç¸,±¾¶Ä³¡²»Ìá¹©ÕâÖÖÍæ·¨¡£\n":"Which kind do u wanna play?\n");
+                  "æŠ±æ­‰,æœ¬è³­å ´ä¸æä¾›é€™ç¨®ç©æ³•ã€‚\n":"Which kind do u wanna play?\n");
                 break ;
       }
     

@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(18);
-	set_name( "Sword Soul", "½£»ê" );
+	set_name( "Sword Soul", "åŠé­‚" );
 	add( "id", ({ "soul", "guard" }) );
-	set_short( "½£»ê" );
+	set_short( "åŠé­‚" );
 	set_long(
-		"Äã¿´µ½Ò»Î»Àä¿áµÄÄêÇáÈË×øÔÚÕâ¶ù¡£ËûµÄË«Ä¿Î¢±Õ£¬¶Ôì¶ÄãµÄµ½À´Ë¿\n"
-		"ºÁÃ»ÓÐ·´Ó¦¡£\n"
+		"ä½ çœ‹åˆ°ä¸€ä½å†·é…·çš„å¹´è¼•äººååœ¨é€™å…’ã€‚ä»–çš„é›™ç›®å¾®é–‰ï¼Œå°æ–¼ä½ çš„åˆ°ä¾†çµ²\n"
+		"æ¯«æ²’æœ‰åæ‡‰ã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "race", "human" );
@@ -49,9 +49,9 @@ int my_tactic()
   
   if ( !(victim=query_attacker()) || (random(10)>3)) return 0;
   tell_object(victim,
-       "\n½£»êÊÖÉÏÖ®½£»¯³ÉÒ»µÀÆßÉ«²Êºç·Ö´ÌÄãÖÜÉí´óÑ¨ !!\n");
+       "\nåŠé­‚æ‰‹ä¸Šä¹‹åŠåŒ–æˆä¸€é“ä¸ƒè‰²å½©è™¹åˆ†åˆºä½ å‘¨èº«å¤§ç©´ !!\n");
 	tell_room(environment(this_object()),
-		sprintf("½£»êÊÖÉÏÖ®½£»¯³ÉÒ»µÀÆßÉ«²ÊºçÏò%sÖÜÉí´óÑ¨´ÌÈ¥ !\n\n",
+		sprintf("åŠé­‚æ‰‹ä¸Šä¹‹åŠåŒ–æˆä¸€é“ä¸ƒè‰²å½©è™¹å‘%så‘¨èº«å¤§ç©´åˆºåŽ» !\n\n",
 			victim->query("c_cap_name")),({ this_object(),victim }) );
   dam = 25 + random(15);
   victim->receive_damage(dam);
@@ -68,14 +68,14 @@ void relay_message(string class1,string msg)
      string who,str,tmp;
      object *weapons,obj;
      
-     if( sscanf( msg, "%s(%s)×ßÁË¹ýÀ´¡£\n", tmp,who )==2 ) 
+     if( sscanf( msg, "%s(%s)èµ°äº†éŽä¾†ã€‚\n", tmp,who )==2 ) 
         {
          obj = find_player(lower_case(who));
          if(!obj) return ;
 	weapons = filter_array( all_inventory( obj ), "is_a_weapon", this_object() );
 	if( !sizeof(weapons) || !weapons ) return;
 	tell_object( obj,
-		"½£»êÊÖÉÏÖ®½£Í»È»ÏìÆðÒ»ÉùÇáÒ÷£¬ËÆºõÒªºÍÄãµÄÎäÆ÷Ò»½Ï³¤¶Ì¡£\n");
+		"åŠé­‚æ‰‹ä¸Šä¹‹åŠçªç„¶éŸ¿èµ·ä¸€è²è¼•åŸï¼Œä¼¼ä¹Žè¦å’Œä½ çš„æ­¦å™¨ä¸€è¼ƒé•·çŸ­ã€‚\n");
 	this_object()->kill_ob(obj);
 	return;
 	}
@@ -84,7 +84,7 @@ void relay_message(string class1,string msg)
 void die()
 {
 	tell_room( environment(this_object()), 
-		"\n"+"½£»êµÄ¡õÊ×Ñ¸ËÙµØ»¯³ÉÁË»Ò½ý¡£\n"+"\n" ,
+		"\n"+"åŠé­‚çš„â–¡é¦–è¿…é€Ÿåœ°åŒ–æˆäº†ç°ç‡¼ã€‚\n"+"\n" ,
 		this_object() );
 	::die(1);	
 }

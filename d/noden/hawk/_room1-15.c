@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("С��԰");
+	ob->set_short("小公園");
 	ob->set_long( @LONG_DESCRIPTION
-һ��СС����Ĺ�԰������Щ������������ʱ�����лεĵط�������Կ���
-����������˥��������������졣
+一個小小髒髒的公園，是這些老人閒來無事時聊天閒晃的地方，你可以看到
+不少年老力衰的鳥人在這邊聊天。
 LONG_DESCRIPTION
 	);
 

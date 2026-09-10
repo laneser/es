@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("daemonic platemail", "¶ñÄ§ÁÛ¼×");
+        set_name("daemonic platemail", "æƒ¡é­”é±—ç”²");
         add( "id", ({ "mail","platemail" }) );
-        set_short( "¶ñÄ§ÁÛ¼×" );
+        set_short( "æƒ¡é­”é±—ç”²" );
         set_long(
-                "ÕâÊÇ¶ñÄ§Õ½Ê¿Ëù×¨ÓÃµÄÁÛ¼×¡£\n"
+                "é€™æ˜¯æƒ¡é­”æˆ°å£«æ‰€å°ˆç”¨çš„é±—ç”²ã€‚\n"
         );
-        set("unit","¼þ");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "heavy_metal");
         set( "armor_class", 28 );

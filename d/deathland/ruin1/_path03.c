@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("�ںڵ�С��");
+	ob->set_short("黑黑的小徑");
 	ob->set_long( @LONG_DESCRIPTION
-һ���ںڵ�С· ,��С·��ͨ������ ,�����ܷ����ز���ͨ������ .
+一條黑黑的小路 ,這小路的通道狹隘 ,你必須很費力地才能通過這裡 .
 LONG_DESCRIPTION
 	);
 

@@ -16,17 +16,17 @@ void create()
 	rdm = 9;
 	set( "light" , 1 ) ;
 	set( "dig", 1 );
-	set_short( "cellar",  "µØ¶´" );
+	set_short( "cellar",  "åœ°æ´" );
 	set_long(
 	    "A cellar under the swamp. You feel watery here. You can see\n"
 	"a stair made of mire, it looks weak to load anyone. To the west\n"
 	"you can see something under the wall. There has a fetor here, so\n"
 	"you feel very ailing now. But it's queer in around. There is a \n"
 	"torch on the wall near the stair.\n",
-	    "ÕÓÔóÏÂµÄµØ¶´£¬ÕâÀïÊ®·ÖµØ³±Êª¡£ÕâÀïÓĞÒ»×ùÓÃÄàÍÁ(mire)ËùÔìµÄ\n"
-        "Â¥Ìİ(stair) £¬Î÷±ßµÄÇ½(wall)ºÃÏñÓĞ¶«Î÷¡£Õû¸ö·¿¼äÃÖÂşÖøÒ»¹É´Ì±Ç\n"
-        "µÄ¶ñ³ô£¬ÁîÄã¸Ğµ½²»Êæ·şÏëÍÂ£¡ÖÜÎ§(around)³äÂúÁË¿ÉÒÉµÄÆø·Õ¡£¿¿½ü\n"
-        "Â¥ÌİµÄÇ½ÉÏÓĞÒ»°Ñ»ğ¾æ(torch)¡£\n" );
+	    "æ²¼æ¾¤ä¸‹çš„åœ°æ´ï¼Œé€™è£¡ååˆ†åœ°æ½®æº¼ã€‚é€™è£¡æœ‰ä¸€åº§ç”¨æ³¥åœŸ(mire)æ‰€é€ çš„\n"
+        "æ¨“æ¢¯(stair) ï¼Œè¥¿é‚Šçš„ç‰†(wall)å¥½åƒæœ‰æ±è¥¿ã€‚æ•´å€‹æˆ¿é–“ç€°æ¼«è‘—ä¸€è‚¡åˆºé¼»\n"
+        "çš„æƒ¡è‡­ï¼Œä»¤ä½ æ„Ÿåˆ°ä¸èˆ’æœæƒ³åï¼å‘¨åœ(around)å……æ»¿äº†å¯ç–‘çš„æ°£æ°›ã€‚é è¿‘\n"
+        "æ¨“æ¢¯çš„ç‰†ä¸Šæœ‰ä¸€æŠŠç«ç‚¬(torch)ã€‚\n" );
         
         set( "item_func", ([ "around" : "msg_around" ,
                              "wall"   : "msg_wall",
@@ -53,7 +53,7 @@ int to_up()
        if (( obj!=0) && ( (int)obj->query("dgnball")==1 )) {
          write( !can_read_chinese() ?
            "A magic power stop you to climb up!!\n":
-           "Í»È»ÓĞÒ»¹ÉÁ¦Á¿×èÖ¹ÄãÅÀÉÏÈ¥£¡\n");
+           "çªç„¶æœ‰ä¸€è‚¡åŠ›é‡é˜»æ­¢ä½ çˆ¬ä¸Šå»ï¼\n");
          return 1;
        }
        else {
@@ -73,22 +73,22 @@ int to_find_dig(string str)
        else if ( (steps>3) && (steps<rdm) ) {
          write( !chinese_mode ?
            "You dig a lot of time, and you feel tired.\n":
-           "ÄãÍÚÁËÒ»»á¶ù¶ø¸Ğµ½Æ£¾ë¡£\n");
+           "ä½ æŒ–äº†ä¸€æœƒå…’è€Œæ„Ÿåˆ°ç–²å€¦ã€‚\n");
           steps++;
        }
        else if ( (steps>(rdm-1)) && (balls==1) ) {
          write ( !chinese_mode ?
            "You dig and dig, finnally you find a light ball!\n"
            "But there appear someone and take it away.\n":
-           "ÄãÒ»ÍÚÔÙÍÚ£¬×îááÖÕì¶·¢ÏÖÁËÒ»¿Å»á·¢¹âµÄÇò¡£\n"
-           "µ«ÊÇÍ»È»³öÏÖÒ»¸öÈË°ÑËüÄÃ×ßÁË¡£\n");
+           "ä½ ä¸€æŒ–å†æŒ–ï¼Œæœ€å¾Œçµ‚æ–¼ç™¼ç¾äº†ä¸€é¡†æœƒç™¼å…‰çš„çƒã€‚\n"
+           "ä½†æ˜¯çªç„¶å‡ºç¾ä¸€å€‹äººæŠŠå®ƒæ‹¿èµ°äº†ã€‚\n");
          obj = new(DGNISLD"monster/dgnbgrd.c");
          obj->move(this_object());
          balls = 0 ;
        }
        else write( !chinese_mode ?
             "You find nothing in there! :( \n" :
-            "Äã·¢ÏÖÀïÃæ¾¹ÊÇ¿ÕµÄ£¡°×·ÏÁ¦ÆøÁË¡£:( \n");
+            "ä½ ç™¼ç¾è£¡é¢ç«Ÿæ˜¯ç©ºçš„ï¼ç™½å»¢åŠ›æ°£äº†ã€‚:( \n");
        return 1;     
 }
 
@@ -100,25 +100,25 @@ int light_on_off(string str)
        if (str=="off torch") {
          if (lights==1) {
            write( !chinese_mode ?
-             "The torch is dead again.\n":"»ğ¾æµÄ»ğÏ¨ÃğÁË¡£\n");
+             "The torch is dead again.\n":"ç«ç‚¬çš„ç«ç†„æ»…äº†ã€‚\n");
            lights = 0;
            set ("light" ,0);
          }
          else write( !chinese_mode ?
-           "The torch is not burning!\n":"»ğ¾æÊÇÏ¨ÃğµÄ¡£\n");  
+           "The torch is not burning!\n":"ç«ç‚¬æ˜¯ç†„æ»…çš„ã€‚\n");  
          return 1;
        }     
        else if (str=="on torch") {
          if (lights==0) {
            write( !can_read_chinese() ?
                 "The torch becomes burning.\n" :
-                "»ğ¾æ¿ªÊ¼È¼ÉÕ£¬ÄãÌıµ½ÅüßÖÅ¾À®µÄÉùÒô¡£\n");
+                "ç«ç‚¬é–‹å§‹ç‡ƒç‡’ï¼Œä½ è½åˆ°åŠˆå’§å•ªå–‡çš„è²éŸ³ã€‚\n");
            lights = 1;
            set("light" ,1);
          }
          else 
            write( !chinese_mode ?
-             "The torch is burning!\n":"»ğ¾æÒÑ¾­ÊÇÈ¼ÉÕµÄ¡£\n");
+             "The torch is burning!\n":"ç«ç‚¬å·²ç¶“æ˜¯ç‡ƒç‡’çš„ã€‚\n");
          return 1;
        }  
        else 
@@ -135,21 +135,21 @@ int msg_around()
             "There are a little light in around, it is so potty\n"
             "that you almost can't tell it form the one of your\n"
             "torch. Because ligtht of torch is too strong!\n":
-            "ÄãËÆºõ¿´µ½Ò»¹ÉºÜÎ¢ÈõµÄ¹âÉÁÁËÒ»ÉÁ£¬µ«ÊÇÓÉì¶»ğ¾æÌ«ÁÁÁË£¬\n"                                   
-            "ÄãÎŞ·¨·Ö±æÉÁ¹â´ÓÄÄ¶ùÀ´¡£\n");
+            "ä½ ä¼¼ä¹çœ‹åˆ°ä¸€è‚¡å¾ˆå¾®å¼±çš„å…‰é–ƒäº†ä¸€é–ƒï¼Œä½†æ˜¯ç”±æ–¼ç«ç‚¬å¤ªäº®äº†ï¼Œ\n"                                   
+            "ä½ ç„¡æ³•åˆ†è¾¨é–ƒå…‰å¾å“ªå…’ä¾†ã€‚\n");
           else write( !chinese_mode ?
             "This place is very dusty, you find nothing special here.\n":
-            "ÕâµØ·½ºÜÔàÂÒ£¬Äã²¢Ã»ÓĞÕÒµ½ÈÎºÎÌØ±ğµÄ¶«Î÷¡£\n");
+            "é€™åœ°æ–¹å¾ˆé«’äº‚ï¼Œä½ ä¸¦æ²’æœ‰æ‰¾åˆ°ä»»ä½•ç‰¹åˆ¥çš„æ±è¥¿ã€‚\n");
         }
         else {
           if (balls==1) {
             steps = 2 ;
             write( !chinese_mode ?
               "In the dark, you see a potty light from the stair.\n":
-              "ÔÚºÚ°µÖĞÄã·¢ÏÖÒ»¹ÉÉÁ¹âÓÉÂ¥Ìİ·½Ïò¶øÀ´¡£\n" );
+              "åœ¨é»‘æš—ä¸­ä½ ç™¼ç¾ä¸€è‚¡é–ƒå…‰ç”±æ¨“æ¢¯æ–¹å‘è€Œä¾†ã€‚\n" );
           } else write( !chinese_mode ?
             "You feel more dark now, but still nothing special.\n":
-            "Äã¾õµÃÏÖÔÚ±È½Ï°µÁË£¬µ«ÈÔÈ»Ã»ÓĞÕÒµ½ÈÎºÎÌØ±ğµÄ¶«Î÷¡£\n");
+            "ä½ è¦ºå¾—ç¾åœ¨æ¯”è¼ƒæš—äº†ï¼Œä½†ä»ç„¶æ²’æœ‰æ‰¾åˆ°ä»»ä½•ç‰¹åˆ¥çš„æ±è¥¿ã€‚\n");
         }  
         return 1;  
 }
@@ -163,13 +163,13 @@ int msg_stair()
           write( !chinese_mode ?
             "You canvass it and find the light is comimg from the\n"
             "mire near middle of the stair.\n":
-            "Äã×ĞÏ¸¿´ÄÇÂ¥Ìİ£¬·¢ÏÖ¹â´ÓÂ¥Ìİ¼äµÄÄàÍÁÖĞÉø³öÀ´¡£\n");
+            "ä½ ä»”ç´°çœ‹é‚£æ¨“æ¢¯ï¼Œç™¼ç¾å…‰å¾æ¨“æ¢¯é–“çš„æ³¥åœŸä¸­æ»²å‡ºä¾†ã€‚\n");
           steps = 3;
         }
         else write( !chinese_mode ?
             "It is a normal stair and made by mire.\n"
             "You find nothing special on it.\n":
-            "ÕâÊÇÄàÍÁ¶Ñ³ÉµÄÂ¥Ìİ£¬Ã»Éõ÷áÌØ±ğµÄ¡£\n");
+            "é€™æ˜¯æ³¥åœŸå †æˆçš„æ¨“æ¢¯ï¼Œæ²’ç”šéº¼ç‰¹åˆ¥çš„ã€‚\n");
         return 1;
 }
 
@@ -180,20 +180,20 @@ int msg_mire()
         
         if (steps>(rdm-1))
           write( !chinese_mode ?
-            "The mire has been digged deeply!\n":"Ëü±»ÍÚµÃÂÒÆß°ËÔã¡£\n");
+            "The mire has been digged deeply!\n":"å®ƒè¢«æŒ–å¾—äº‚ä¸ƒå…«ç³Ÿã€‚\n");
         else if ( (steps>4) && (steps<rdm) )
           write( !chinese_mode ?
-            "The mire has been a little digged!\n":"Ëü±»ÍÚµôÒ»Ğ©¡£\n");
+            "The mire has been a little digged!\n":"å®ƒè¢«æŒ–æ‰ä¸€äº›ã€‚\n");
         else if ( (steps<5) && (steps>2) && (lights==0) ) {
           write( !chinese_mode ?
             "There is some potty light transude in it.\n":
-            "ÓĞÎ¢Á¿µÄ¹âÏß´ÓÕâÀïÉø³öÀ´¡£\n");
+            "æœ‰å¾®é‡çš„å…‰ç·šå¾é€™è£¡æ»²å‡ºä¾†ã€‚\n");
           steps = 4;
           rdm = 6 + random(4) ;
         }
         else write( !chinese_mode ?
             "It's dusty, the ingredient of this stair.\n":
-            "ºÜÔàµÄÄàÍÁ£¬ÕâÂ¥ÌİµÄÖ÷Òª²ÄÁÏ¡£\n");
+            "å¾ˆé«’çš„æ³¥åœŸï¼Œé€™æ¨“æ¢¯çš„ä¸»è¦ææ–™ã€‚\n");
         return 1;  
 }
 
@@ -206,16 +206,16 @@ int msg_wall()
 
        if (x==0)
          write( !chinese_mode ?
-           "It is a mired wall.\n":"ÕâÊÇÆÕÍ¨µÄÍÁÇ½¡£\n");  
+           "It is a mired wall.\n":"é€™æ˜¯æ™®é€šçš„åœŸç‰†ã€‚\n");  
        else if (x==1)
          write( !chinese_mode ?
            "You see a small hole which can let only one person enter\n"
            "and looks like very weak. You can type hole to enter.\n":
-           "Äã¿´µ½Ò»¸öĞ¡¶´¡£ËüĞ¡µ½Ò»´ÎÖ»ÄÜÈÃÒ»ÈËÍ¨¹ı(enter)¡£\n"
-           "Ëü¿´ÆğÀ´Î£Î£Óû×¹£¬ºÃÏñËæÊ±¶¼»á±À»µ¡£\n");         
+           "ä½ çœ‹åˆ°ä¸€å€‹å°æ´ã€‚å®ƒå°åˆ°ä¸€æ¬¡åªèƒ½è®“ä¸€äººé€šé(enter)ã€‚\n"
+           "å®ƒçœ‹èµ·ä¾†å±å±æ¬²å¢œï¼Œå¥½åƒéš¨æ™‚éƒ½æœƒå´©å£ã€‚\n");         
        else write( !chinese_mode ?
            "You find a small hole, but it's broken.\n":
-           "ÄãÕÒµ½Ò»¸öĞ¡¶´£¬¿ÉÏ§Õâ¶´ÒÑ¾­»ÙÁË£¡\n");  
+           "ä½ æ‰¾åˆ°ä¸€å€‹å°æ´ï¼Œå¯æƒœé€™æ´å·²ç¶“æ¯€äº†ï¼\n");  
        return 1;                            
 }
 
@@ -227,11 +227,11 @@ int msg_torch()
        if ( lights == 1 )
          write( !chinese_mode ?
            "The torch is burning, you can light off it.\n":
-           "»ğ¾æµÄ»ğÕıÔÚĞÜĞÜµØÈ¼ÉÕÖø¡£Äã¿ÉÒÔÏ¨Ãğ(light off) Ëü¡£\n");
+           "ç«ç‚¬çš„ç«æ­£åœ¨ç†Šç†Šåœ°ç‡ƒç‡’è‘—ã€‚ä½ å¯ä»¥ç†„æ»…(light off) å®ƒã€‚\n");
        else
          write( !chinese_mode ?
            "The torch is not light, you can light on it.\n":
-           "»ğ¾æ°²°²¾²¾²µØ²åÔÚÇ½ÉÏ¡£Äã¿ÉÒÔµãÈ¼(light on) Ëü¡£\n"); 
+           "ç«ç‚¬å®‰å®‰éœéœåœ°æ’åœ¨ç‰†ä¸Šã€‚ä½ å¯ä»¥é»ç‡ƒ(light on) å®ƒã€‚\n"); 
        return 1;
 }
 
@@ -244,13 +244,13 @@ int enter_hole(string str)
         return notify_fail("Enter what ?\n");
       if( (str!="hole") || (x==0) )
         return notify_fail( !can_read_chinese()?
-          "There is no "+str+" here !\n":"ÕâÀïÃ»ÓĞ"+str+"£¡\n");  
+          "There is no "+str+" here !\n":"é€™è£¡æ²’æœ‰"+str+"ï¼\n");  
       else if (x==1)
         this_player()->move_player(DGNISLD"entrance", "", "enter hole") ;
       else if (x==2) 
         write( !can_read_chinese() ?
           "The hole is broken, you can't enter it!\n":
-          "Õâ¶´ÒÑ¾­»ÙÁË£¬ÄãÎŞ·¨½øÈë£¡\n");
+          "é€™æ´å·²ç¶“æ¯€äº†ï¼Œä½ ç„¡æ³•é€²å…¥ï¼\n");
       else 
         write("What?\n");
       return 1;    

@@ -6,9 +6,9 @@ void create()
 {
 	::create();
 	set_level( 3 );
-	set_name( "smith", "Ìú½³" );
+	set_name( "smith", "éµåŒ " );
 	add( "id", ({ "old smith" }) );
-	set_short( "ÀÏÌú½³" );
+	set_short( "è€éµåŒ " );
 	set_long("@@query_long");
 	set( "gender", "male" );
 	set( "race", "dwarf" );
@@ -16,9 +16,9 @@ void create()
 
 	set( "chat_chance", 20 );
 	set( "chat_output", ({
-		"ÀÏÌú½³½«ÉÕºìµÄÌú¿é½þÈëË®ÖÐ£¬·¢³öÒ»Õó×Ì×ÌµÄÉùÒô¡£\n",
-		"ÀÏÌú½³ËµµÀ: °ÝÍÐ£¬µ¹±­Ë®¸øÎÒºÈºÃÂð£¿\n",
-		"ÀÏÌú½³ÓÃ¹ÒÔÚ²±×ÓÉÏµÄÃ«½í²Áº¹¡£\n"
+		"è€éµåŒ å°‡ç‡’ç´…çš„éµå¡Šæµ¸å…¥æ°´ä¸­ï¼Œç™¼å‡ºä¸€é™£æ»‹æ»‹çš„è²éŸ³ã€‚\n",
+		"è€éµåŒ èªªé“: æ‹œè¨—ï¼Œå€’æ¯æ°´çµ¦æˆ‘å–å¥½å—Žï¼Ÿ\n",
+		"è€éµåŒ ç”¨æŽ›åœ¨è„–å­ä¸Šçš„æ¯›å·¾æ“¦æ±—ã€‚\n"
 	}) );
 	set("max_hp", 200);
 	set("hit_points", 200);
@@ -32,9 +32,9 @@ void create()
 string query_long()
 {
 	if( query("chat_chance") )
-		return "Õâ¸öÀÏÌú½³ÕýÔÚÅ¬Á¦¹¤×÷£¬ÇÆËûÂúÉí´óº¹µÄÑù×Ó£¬Èç¹ûÄãÄÜÌæËûµ¹Ò»±­Ë®\n"
-		"ºÈ£¬ËûÒ»¶¨»á¸ÐÐ»Äã¡£\n";
-	else return "ÀÏÌú½³ÕýÔÚÐÁÇÚµØ¹¤×÷Öø£¬²»¹ý¿´ÆðÀ´ËûËÆºõÀÖÔÚÆäÖÐ¡£\n";
+		return "é€™å€‹è€éµåŒ æ­£åœ¨åŠªåŠ›å·¥ä½œï¼Œçž§ä»–æ»¿èº«å¤§æ±—çš„æ¨£å­ï¼Œå¦‚æžœä½ èƒ½æ›¿ä»–å€’ä¸€æ¯æ°´\n"
+		"å–ï¼Œä»–ä¸€å®šæœƒæ„Ÿè¬ä½ ã€‚\n";
+	else return "è€éµåŒ æ­£åœ¨è¾›å‹¤åœ°å·¥ä½œè‘—ï¼Œä¸éŽçœ‹èµ·ä¾†ä»–ä¼¼ä¹Žæ¨‚åœ¨å…¶ä¸­ã€‚\n";
 }
 
 int accept_item(object who,object item)
@@ -42,7 +42,7 @@ int accept_item(object who,object item)
     if ( !item->query("quest_smith") ) return 1;
     if ( !item->query_filled() ) {
          tell_room( environment(), 
-			"ÀÏÌú½³Ì¾ÁË¿ÚÆø: ÎÒºÜÃ¦£¬±ðÄÃ¿Õ±­×ÓºÍÎÒ¿ªÍæÐ¦¡£\n");
+			"è€éµåŒ å˜†äº†å£æ°£: æˆ‘å¾ˆå¿™ï¼Œåˆ¥æ‹¿ç©ºæ¯å­å’Œæˆ‘é–‹çŽ©ç¬‘ã€‚\n");
 			command("give cup to "+who->query("name"));
 			return 1; 
 	     }
@@ -50,14 +50,14 @@ int accept_item(object who,object item)
 	 set( "chat_chance", 0 );
 
      tell_room( environment(), 
-	    sprintf("ÀÏÌú½³Ïò%s(%s)µãÍ·Î¢Ð¦£¬ËµµÀ: Ð»Ð»£¡\n",
+	    sprintf("è€éµåŒ å‘%s(%s)é»žé ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼\n",
 		who->query("c_name"),who->query("name") )
 		,who );
-	tell_object( who,"ÀÏÌú½³ÏòÄãµãÍ·Î¢Ð¦£¬ËµµÀ: Ð»Ð»£¡\n");
+	tell_object( who,"è€éµåŒ å‘ä½ é»žé ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼\n");
 	if( (int)who->query_quest_level("smith") < 1 ) {
 		who->finish_quest("smith", 1);
 		tell_object( who, 
-			"[ÄãÍê³ÉÁË Smith ÈÎÎñ£¬µÃµ½ 1000 µã¾­Ñé]\n"
+			"[ä½ å®Œæˆäº† Smith ä»»å‹™ï¼Œå¾—åˆ° 1000 é»žç¶“é©—]\n"
 			);
 		who->gain_experience(1000);
 		}
@@ -80,16 +80,16 @@ int my_tactic()
 		weapon = victim->query("weapon2");
 	if( !weapon ) return 0;
 	tell_room( environment(), 
-		"ÀÏÌú½³¸ß¾ÙÌú´¸£¬Íù" + victim->query("c_cap_name") + "µÄ" + 
-		weapon->query("c_name") + "¡¸¿ïà¥¡¹Ò»ÉùÇÃÁËÏÂÈ¥¡£\n",
+		"è€éµåŒ é«˜èˆ‰éµéŒ˜ï¼Œå¾€" + victim->query("c_cap_name") + "çš„" + 
+		weapon->query("c_name") + "ã€ŒåŒ¡å•·ã€ä¸€è²æ•²äº†ä¸‹åŽ»ã€‚\n",
 		({ this_object(), victim }) );
 	tell_object( victim,
-		"ÀÏÌú½³¸ß¾ÙÌú´¸£¬ÍùÄãµÄ" + 
-		weapon->query("c_name") + "¡¸¿ïà¥¡¹Ò»ÉùÇÃÁËÏÂÈ¥¡£\n");
+		"è€éµåŒ é«˜èˆ‰éµéŒ˜ï¼Œå¾€ä½ çš„" + 
+		weapon->query("c_name") + "ã€ŒåŒ¡å•·ã€ä¸€è²æ•²äº†ä¸‹åŽ»ã€‚\n");
 	wc = weapon->query("weapon_class");
 	wc -= weapon->query("wc_damaged");
 	if( !weapon->query("wc_damaged") ) {
-		weapon->add( "short", " (ÊÜËð)" );
+		weapon->add( "short", " (å—æ)" );
 	}
 	weapon->add( "wc_damaged", wc/2 );
 	victim->calc_weapon_class();

@@ -2,11 +2,11 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Strange shield", "Ææ¹ÖµÄ¶ÜÅÆ");
+        set_name("Strange shield", "å¥‡æ€ªçš„ç›¾ç‰Œ");
         add( "id", ({ "shield" }) );
-        set_short( "Ææ¹ÖµÄ¶ÜÅÆ") ;
-	set_long("ÕâÊÇÒ»Ö»ÆæĞÎ¹Ö×´µÄ¶ÜÅÆ¡£\n");
-        set("unit","Ö»");
+        set_short( "å¥‡æ€ªçš„ç›¾ç‰Œ") ;
+	set_long("é€™æ˜¯ä¸€éš»å¥‡å½¢æ€ªç‹€çš„ç›¾ç‰Œã€‚\n");
+        set("unit","åª");
         set( "type", "shield" );
         set( "material", "heavy_metal");
         set( "armor_class", 4 );

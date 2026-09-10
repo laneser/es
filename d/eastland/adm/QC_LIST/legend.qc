@@ -1,114 +1,114 @@
     
 
-                      "´«Ëµ" ÇøÓò¼ò½é
+                      "å‚³èªª" å€åŸŸç°¡ä»‹
 
-                      ×÷Õß£ºPlayer&Dony
+                      ä½œè€…ï¼šPlayer&Dony
 
-II.ÉÌµê£º
+II.å•†åº—ï¼š
        
-       II).ÂÃĞĞÉÌÈË    vendor1
+       II).æ—…è¡Œå•†äºº    vendor1
       
-III.ÈÎÎñ¸ÅÒª£º
+III.ä»»å‹™æ¦‚è¦ï¼š
 
-       Íê³ÉÄĞÖ÷ÈËµÄÈı¼ş¹¤¼ş £º
-     I ). Íê³É¡¸Ğ½µ¨´å¡¹µÄ quest
-    II ). Íê³ÉÅ®Ö÷ÈË°®ÃÀµÄĞÄÔ¸
-   III ). Íê³ÉÓæ´å´å³¤µÄĞÄÔ¸
+       å®Œæˆç”·ä¸»äººçš„ä¸‰ä»¶å·¥ä»¶ ï¼š
+     I ). å®Œæˆã€Œè–ªè†½æ‘ã€çš„ quest
+    II ). å®Œæˆå¥³ä¸»äººæ„›ç¾çš„å¿ƒé¡˜
+   III ). å®Œæˆæ¼æ‘æ‘é•·çš„å¿ƒé¡˜
 
 
-IV.¹ÖÎï : /u/d/dony/legend/monster
+IV.æ€ªç‰© : /u/d/dony/legend/monster
 
-µÈ¼¶   ¹ÖÎïÃû³Æ      µµÃû         AC/DB  WC  ÉËº¦·¶Î§  ÎäÆ÷×°±¸       
+ç­‰ç´š   æ€ªç‰©åç¨±      æª”å         AC/DB  WC  å‚·å®³ç¯„åœ  æ­¦å™¨è£å‚™       
 
-[ 15 ] ÇàÁéÖ®ÑÛ      beholder1.c  60/16  61  24/32     ÇàÁé»¤¶ÜÔ²Çò
-[  6 ] Ğ¡ÄĞº¢        boy.c        30/2    13  6/11
-[ 18 ] Óæ´å ´å³¤     captain1.c   80/40  81  30/62     ÓæÒÂ
-[  1 ] ÀÏ´¬¶«        captain2.c   ²»ÄÜ´ò
-[ 17 ] É½Ã¨          cat.c        80/1    58  23/36
-[ 16 ] Îå²Ê°ßìµµÄ¾ŞĞÍ»¨òÚò¼
+[ 15 ] é’éˆä¹‹çœ¼      beholder1.c  60/16  61  24/32     é’éˆè­·ç›¾åœ“çƒ
+[  6 ] å°ç”·å­©        boy.c        30/2    13  6/11
+[ 18 ] æ¼æ‘ æ‘é•·     captain1.c   80/40  81  30/62     æ¼è¡£
+[  1 ] è€èˆ¹æ±        captain2.c   ä¸èƒ½æ‰“
+[ 17 ] å±±è²“          cat.c        80/1    58  23/36
+[ 16 ] äº”å½©æ–‘æ–•çš„å·¨å‹èŠ±èœˆèš£
                      centipede.c  40/10  58  26/31
-[  6 ] ´óó¦Ğ·        crab.c       1/0    14  6/14
-[ 19 ] Ã©É½µÀÊ¿ »ÆÌì»¯ 
-   	             daoist.c     65/55  87  30/61     Ã©É½°ËØÔÅÛ
-						       ÅÌ¹ÅÖ®¸«
-[  7 ] Ğ¡Å®º¢        girl.c       35/2    14  7/12
-[ 17 ] ÒşÕß          hermit.c     55/50  81  25/38     ±ùÆÇÒøÕë
-[ 14 ] ±ùó¸òÜ        icetoad.c    60/15  41  16/25
-[ 18 ] ÌìË®Âì»È      leech.c      10/20  67  31/56
-[ 13 ] Ê³ÈËòáòæ      lizard.c     45/10  49  21/27
-[ 18 ] ÄĞÖ÷ÈË        man1.c       70/46  71  33/48     ÈÕ·û
-						       ÈÕ½ä
-						       ·ï»Ë³¤ÈĞ
-[  8 ] Óã··          merchant.c   40/2    15  6/12
-[ 13 ] ÒøÏßòÒòõ      mollusk.c    10/40  51  6/15
-[ 10 ] »¨°ß¶¾ÎÃ      mosquito.c   45/10  35  11/19
-[ 17 ] ¹íÃæ¶ê        moth.c       10/10  58  21/31
-[ 19 ] ÀÏÓæÎÌ        older.c      75/46  79  35/61     ÓæÒÂ
-						       Òµ»ğÖ®ÕÈ
-[ 19 ] Öî±£À¥        pao_kun.c    116/38 100 52/63     ĞşÌúÍ¨±Û  
-           ( only one )                  75  38/57     ÒøÁúÕ½¼×  
-						       ¼²·çÆÆÔÂ×¶
-						       µØÄ¸À×¹«ºä
-[ 10 ] Ö½ÈË          paperman.c   15/5   48  16/31   
-[ 19 ] Ã§êôÖì¸ò      redtoad.c    80/30  87  56/71
+[  6 ] å¤§èƒèŸ¹        crab.c       1/0    14  6/14
+[ 19 ] èŒ…å±±é“å£« é»ƒå¤©åŒ– 
+   	             daoist.c     65/55  87  30/61     èŒ…å±±å…«å¦è¢
+						       ç›¤å¤ä¹‹æ–§
+[  7 ] å°å¥³å­©        girl.c       35/2    14  7/12
+[ 17 ] éš±è€…          hermit.c     55/50  81  25/38     å†°é­„éŠ€é‡
+[ 14 ] å†°èŸ¾èœ        icetoad.c    60/15  41  16/25
+[ 18 ] å¤©æ°´èè—      leech.c      10/20  67  31/56
+[ 13 ] é£Ÿäººèœ¥èœ´      lizard.c     45/10  49  21/27
+[ 18 ] ç”·ä¸»äºº        man1.c       70/46  71  33/48     æ—¥ç¬¦
+						       æ—¥æˆ’
+						       é³³å‡°é•·åˆƒ
+[  8 ] é­šè²©          merchant.c   40/2    15  6/12
+[ 13 ] éŠ€ç·šè›è“      mollusk.c    10/40  51  6/15
+[ 10 ] èŠ±æ–‘æ¯’èšŠ      mosquito.c   45/10  35  11/19
+[ 17 ] é¬¼é¢è›¾        moth.c       10/10  58  21/31
+[ 19 ] è€æ¼ç¿        older.c      75/46  79  35/61     æ¼è¡£
+						       æ¥­ç«ä¹‹æ–
+[ 19 ] è«¸ä¿æ˜†        pao_kun.c    116/38 100 52/63     ç„éµé€šè‡‚  
+           ( only one )                  75  38/57     éŠ€é¾æˆ°ç”²  
+						       ç–¾é¢¨ç ´æœˆéŒ
+						       åœ°æ¯é›·å…¬è½Ÿ
+[ 10 ] ç´™äºº          paperman.c   15/5   48  16/31   
+[ 19 ] è½ç‰¯æœ±è›¤      redtoad.c    80/30  87  56/71
            ( only one )
-[ 16 ] Ë®¾§±äĞÎ³æ    shapeshifter1.c  
+[ 16 ] æ°´æ™¶è®Šå½¢èŸ²    shapeshifter1.c  
                                   10/207 87  26/35
-[ 19 ] ÉñÄ¾ÉÏÈË      spirit1.c    ²»ÄÜ´ò
-[ 14 ] ÀÏ»¢          tiger.c      70/1    47  18/33 
-[ 10 ] ÊĞ¾®Á÷Ã¥      vagabond.c   50/4   20  11/22
-[  6 ] ÂÃĞĞÉÌÈË      vendor1.c    ²»ÄÜ´ò
-[ 15 ] Á÷ÀËÕß        wanderer.c   70/18  38  19/39
-[ 19 ] Ë®¹Ö ÎŞÖ§Æí   water_mob.c  30/1   105 41/48
-[ 16 ] ÂèÂèÉ£        woman.c      70/18  38  19/39
-[ 18 ] Å®Ö÷ÈË        woman1.c     70/41  71  33/46
+[ 19 ] ç¥æœ¨ä¸Šäºº      spirit1.c    ä¸èƒ½æ‰“
+[ 14 ] è€è™          tiger.c      70/1    47  18/33 
+[ 10 ] å¸‚äº•æµæ°“      vagabond.c   50/4   20  11/22
+[  6 ] æ—…è¡Œå•†äºº      vendor1.c    ä¸èƒ½æ‰“
+[ 15 ] æµæµªè€…        wanderer.c   70/18  38  19/39
+[ 19 ] æ°´æ€ª ç„¡æ”¯ç¥ˆ   water_mob.c  30/1   105 41/48
+[ 16 ] åª½åª½æ¡‘        woman.c      70/18  38  19/39
+[ 18 ] å¥³ä¸»äºº        woman1.c     70/41  71  33/46
 
 
-V.ÎäÆ÷£º /u/d/dony/weapon
+V.æ­¦å™¨ï¼š /u/d/dony/weapon
 
-ÎäÆ÷Ãû³Æ    µµ°¸Ãû³Æ      ÎäÆ÷Àà±ğ     WC   ÉËº¦·¶Î§          ÌØÊâ¹¥»÷    
+æ­¦å™¨åç¨±    æª”æ¡ˆåç¨±      æ­¦å™¨é¡åˆ¥     WC   å‚·å®³ç¯„åœ          ç‰¹æ®Šæ”»æ“Š    
 
-Òµ»ğÖ®ÕÈ   hell_wand.c    wand         38    20/37            fire 
-±ùÆÇÒøÕë   ice_needle.c   dagger       42    23/30         
-ÅÌ¹ÅÖ®¸«   mahogany_axe.c axe          36    25/43 
-·ï»Ë³¤ÈĞ   phenix1.c      longblade    47    27/47         
-ºìĞäµ¶     red_sle.c      longblade    35    25/40
-µØÄ¸µç¹«ºä t_star.c       chain     chain/2  8+lv / 26+lv     energy 
+æ¥­ç«ä¹‹æ–   hell_wand.c    wand         38    20/37            fire 
+å†°é­„éŠ€é‡   ice_needle.c   dagger       42    23/30         
+ç›¤å¤ä¹‹æ–§   mahogany_axe.c axe          36    25/43 
+é³³å‡°é•·åˆƒ   phenix1.c      longblade    47    27/47         
+ç´…è¢–åˆ€     red_sle.c      longblade    35    25/40
+åœ°æ¯é›»å…¬è½Ÿ t_star.c       chain     chain/2  8+lv / 26+lv     energy 
     ( only one )
-¼²·çÆÆÔÂ×¶ wind_awl.c     thrusting    45    28 / 42  bleeding 10~20
-    ( only one )                                    ( ÒÀ explore Ëã )	
+ç–¾é¢¨ç ´æœˆéŒ wind_awl.c     thrusting    45    28 / 42  bleeding 10~20
+    ( only one )                                    ( ä¾ explore ç®— )	
 
 
-VI.·À¾ß£º /u/d/dony/armor
+VI.é˜²å…·ï¼š /u/d/dony/armor
 
-·À¾ßÃû³Æ     µµ°¸Ãû³Æ      ĞÍÌ¬     ÖÊÁÏ        AC/DB     
+é˜²å…·åç¨±     æª”æ¡ˆåç¨±      å‹æ…‹     è³ªæ–™        AC/DB     
 
-Ã©É½°ËØÔÅÛ daoist_cloth.c  body     cloth       5/10    "fire":30
+èŒ…å±±å…«å¦è¢ daoist_cloth.c  body     cloth       5/10    "fire":30
                                                         "devil":30
   							"magic":30
 							"cold":-30
 							"mental":-70
-ÓæÒÂ       fish_cloth.c    body     cloth       10/7    "poison":20
+æ¼è¡£       fish_cloth.c    body     cloth       10/7    "poison":20
 							"acid":20
-ÇàÁé»¤¶ÜÔ²Çò globe1.c      globe    element     0/15    
-ĞşÌúÍ¨±Û  iron_armband.c   arms     heavy_metal 5/0     
+é’éˆè­·ç›¾åœ“çƒ globe1.c      globe    element     0/15    
+ç„éµé€šè‡‚  iron_armband.c   arms     heavy_metal 5/0     
       ( only one )   
-ÒøÁúÕ½¼×   iron_plate.c    body     heavy_metal 40/1    
+éŠ€é¾æˆ°ç”²   iron_plate.c    body     heavy_metal 40/1    
       ( only one )
-×Ï¾§ºË     kernel1.c       kernel   element     0/7     
-ÔÂ·û       moon_amulet.c   misc     cloth       0/3     "evil":40
-ÔÂ½ä       moon_ring.c     finger   element     0/7
-ÈÕ·û       sun_amulet.c    misc     cloth       0/9     
-ÈÕ½ä       sun_ring.c      finger   element     0/2     "magic":30
+ç´«æ™¶æ ¸     kernel1.c       kernel   element     0/7     
+æœˆç¬¦       moon_amulet.c   misc     cloth       0/3     "evil":40
+æœˆæˆ’       moon_ring.c     finger   element     0/7
+æ—¥ç¬¦       sun_amulet.c    misc     cloth       0/9     
+æ—¥æˆ’       sun_ring.c      finger   element     0/2     "magic":30
 						        "evil":30
        
-VII.ÆäËûÎïÆ·£º/u/d/dony/item
+VII.å…¶ä»–ç‰©å“ï¼š/u/d/dony/item
   
-       ÎïÆ·Ãû³Æ       µµÃû            ÓÃÍ¾
+       ç‰©å“åç¨±       æª”å            ç”¨é€”
  
-       Öì¹û         fruit.c           1.quest 
+       æœ±æœ         fruit.c           1.quest 
                                       2.50hp+50fp (every reborn one)
-       ÌúËø         iron_lock.c       1.quest
-       ¶µÂÊÃÖÍÓÖé   lifeball.c        1.¼ÓÈ«Âú only one
-       ÏğÄ¾½°       oar.c             plz look file
-       ¶¨º£Öé       sea_ball.c        plz look file
+       éµé–         iron_lock.c       1.quest
+       å…œç‡å½Œé™€ç    lifeball.c        1.åŠ å…¨æ»¿ only one
+       æ©¡æœ¨æ§³       oar.c             plz look file
+       å®šæµ·ç        sea_ball.c        plz look file

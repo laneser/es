@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Police Mace","¾¯¹÷");
+    set_name("Police Mace","è­¦æ£");
     add("id",({"mace"}) );
-    set_short("¾¯¹÷");
+    set_short("è­¦æ£");
     set_long(@LONG
-ÕâÊÇ¸ùÓÃÃ×ËÕÀï¿óºÍ½ğ¸ÕÊ¯ºÏ³ÉµÄ¾¯ÓÃÕñ±©¹÷.
+é€™æ˜¯æ ¹ç”¨ç±³è˜‡é‡Œç¤¦å’Œé‡‘å‰›çŸ³åˆæˆçš„è­¦ç”¨æŒ¯æš´æ£.
 LONG
              ); 
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("weapon_class",25);
     set("type","blunt");
     set("min_damage",15);
@@ -33,14 +33,14 @@ LONG
      
      if( random(20) > 5 ) return 0;
      tell_object(victim,
-     "\nÍ»È»¾¯¹÷·¢³öÒ»Õóµç»÷£¬Äã¾õµÃÈ«ÉíÉÏÏÂÎŞ·¨Ê¹¾¢\n\n" );
+     "\nçªç„¶è­¦æ£ç™¼å‡ºä¸€é™£é›»æ“Šï¼Œä½ è¦ºå¾—å…¨èº«ä¸Šä¸‹ç„¡æ³•ä½¿å‹\n\n" );
      tell_room(environment(victim),
-     "\nÍ»È»¾¯¹÷·¢³öÒ»Õóµç»÷£¬Ö»¼û"+victim->query("c_name")+"Á¢¿ÌÌ±ÁËÏÂÈ¥£¡\n\n"
+     "\nçªç„¶è­¦æ£ç™¼å‡ºä¸€é™£é›»æ“Šï¼Œåªè¦‹"+victim->query("c_name")+"ç«‹åˆ»ç™±äº†ä¸‹å»ï¼\n\n"
      ,victim );
      victim->block_attack(6);
      victim->set("last_attacker",holder);
      victim->receive_damage( dam );
      victim->set_temp("msg_stop_attack",
-     "(ÄãÈ«ÉíÉÏÏÂ¸Ğµ½ÌÛÍ´ÎŞÁ¦£¬ÎŞ·¨³öÊÖ¹¥»÷£¡)\n" );
+     "(ä½ å…¨èº«ä¸Šä¸‹æ„Ÿåˆ°ç–¼ç—›ç„¡åŠ›ï¼Œç„¡æ³•å‡ºæ‰‹æ”»æ“Šï¼)\n" );
      return dam;
 }

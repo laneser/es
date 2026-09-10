@@ -4,9 +4,9 @@
 inherit DAEMON;
 
 string *c_illusion =({
-"Ò»¹ÉÕæÆøÓÉÄãµÄÆøº£Ñ¨Á÷³ö, »º»ºµÄÁ÷Ïò±³²¿µÄÑôÌÃÑ¨...\n",
-"Ò»ÂÆ\Ï¸Î¢µÄÕæÆø¾­ÓÉ¶½ÂöÁ÷Ïò×ãÈýÂÄÑ¨, È´ËÆºöÓöµ½ÁË×è°­¶øÎÞ·¨ÏòÇ°´ß¶¯...\n",
-"ËüÇ¿ÈÎËüÇ¿, Çå·ç¹ýÉ½¸Ú... ÎÒ×ÔÒ»¿ÚÕæÆø×ã Ç§¿àÍò¿àÒ²²»¿à... \n",
+"ä¸€è‚¡çœŸæ°£ç”±ä½ çš„æ°£æµ·ç©´æµå‡º, ç·©ç·©çš„æµå‘èƒŒéƒ¨çš„é™½å ‚ç©´...\n",
+"ä¸€ç¸·ç´°å¾®çš„çœŸæ°£ç¶“ç”±ç£è„ˆæµå‘è¶³ä¸‰å±¥ç©´, å»ä¼¼å¿½é‡åˆ°äº†é˜»ç¤™è€Œç„¡æ³•å‘å‰å‚¬å‹•...\n",
+"å®ƒå¼·ä»»å®ƒå¼·, æ¸…é¢¨éŽå±±å´—... æˆ‘è‡ªä¸€å£çœŸæ°£è¶³ åƒè‹¦è¬è‹¦ä¹Ÿä¸è‹¦... \n",
 "........\n" 
 });
 void do_chutan( object player, int skill, int degree )
@@ -14,7 +14,7 @@ void do_chutan( object player, int skill, int degree )
 	int mana, max, dex, parry, block, dodge,level;
 
     tell_object( player, can_read_chinese(player)?
-		"Äã¸Ðµ½...": "You see" );
+		"ä½ æ„Ÿåˆ°...": "You see" );
 	level =(int)player->query_level();
         if( degree < 10 && skill > random(degree * degree * 2+level) 
 	&& (int)player->query("hit_points") > 20 ) {
@@ -45,11 +45,11 @@ void do_chutan( object player, int skill, int degree )
 	      player->modify_skill("block", block);
 	      player->modify_skill("dodge", dodge);
 	    }
-		  tell_object( player, "... ÖÜÔâµÄ¿ÕÆøÔÚÁ÷¶¯Öø... ÄãÌåÄÚµÄÕæÆøÒ²²»ÔÙ¾Û¼¯ÁË...... \n");
+		  tell_object( player, "... å‘¨é­çš„ç©ºæ°£åœ¨æµå‹•è‘—... ä½ é«”å…§çš„çœŸæ°£ä¹Ÿä¸å†èšé›†äº†...... \n");
 		tell_object( player, 
-	"Äã´ÓÇåÃ÷Ö®¾³·µ»ØÕâ¸ö·×ÈÅµÄÊÀ½ç£¬ÄãµÄÔË¹¦\½áÊøÁË¡£\n");
+	"ä½ å¾žæ¸…æ˜Žä¹‹å¢ƒè¿”å›žé€™å€‹ç´›æ“¾çš„ä¸–ç•Œï¼Œä½ çš„é‹åŠŸçµæŸäº†ã€‚\n");
 		tell_room( environment(player), 
-			player->query("c_name")+ "ÉñÇåÆøË¬µØÕ¾ÁËÆðÀ´¡£\n",
+			player->query("c_name")+ "ç¥žæ¸…æ°£çˆ½åœ°ç«™äº†èµ·ä¾†ã€‚\n",
 			player );
 	    call_out( "quit_chutan", degree*20, player );
 	}
@@ -59,7 +59,7 @@ void quit_chutan( object player )
 {
     player->set_temp( "layuter_chutan", 0 );
     tell_object( player, 
-"Äã¾õµÃµ¤ÌïÈÈºæºæµÄ£¬Ò»¹ÉÄÚÁ¦´ÓÖÐÓ¿³ö... ÄãÓÖÄÜÔË¹¦\¾ÛÆøÁË¡£\n" );
+"ä½ è¦ºå¾—ä¸¹ç”°ç†±çƒ˜çƒ˜çš„ï¼Œä¸€è‚¡å…§åŠ›å¾žä¸­æ¹§å‡º... ä½ åˆèƒ½é‹åŠŸèšæ°£äº†ã€‚\n" );
 }
 
 int cmd_chutan()
@@ -67,15 +67,15 @@ int cmd_chutan()
 	int chu_skill, hp, dex, parry, block, dodge;
 
 	chu_skill = (int)this_player()->query_skill("chutan");
-	if( !chu_skill ) return notify_fail( "ÄãÃ»ÓÐÑ§¹ý¾Ûµ¤¹¦\£¬Äã²»ÄÜÊ¹ÓÃËüÀ´¾Û¼¯ÄÚÁ¦....¡£\n");
+	if( !chu_skill ) return notify_fail( "ä½ æ²’æœ‰å­¸éŽèšä¸¹åŠŸ\ï¼Œä½ ä¸èƒ½ä½¿ç”¨å®ƒä¾†èšé›†å…§åŠ›....ã€‚\n");
 	hp = (int)this_player()->query("hit_points");
-	if( hp <35 ) return notify_fail( "ÄãÏÖÔÚÊÜÉË¹ýì¶ÑÏÖØ£¬ÎÞ·¨ÔË¹¦\.¡£\n" );
+	if( hp <35 ) return notify_fail( "ä½ ç¾åœ¨å—å‚·éŽæ–¼åš´é‡ï¼Œç„¡æ³•é‹åŠŸ\.ã€‚\n" );
     if( this_player()->query_temp( "layuter_chutan" ) )
-      return notify_fail( "ÄãÐèÒªÒ»¶ÎÊ±¼äÐÝÏ¢£¬²ÅÄÜÓÐ×ã¹»ÕæÆøÔË¹¦\..¡£\n");
+      return notify_fail( "ä½ éœ€è¦ä¸€æ®µæ™‚é–“ä¼‘æ¯ï¼Œæ‰èƒ½æœ‰è¶³å¤ çœŸæ°£é‹åŠŸ\..ã€‚\n");
 	write( 
-"Äã×øÁËÏÂÀ´, Ä¬ËÌÄÚ¹¦\ÐÄ·¨, ½«¾«ÉñÔËÖÁ¿ÕÁéÖ®¾³... Äã¿ªÊ¼ÔË¹¦\¾ÛÆøÊ¹ÕæÆøÔËÐÐÈ«Éí¡£\n");
+"ä½ åäº†ä¸‹ä¾†, é»˜é Œå…§åŠŸå¿ƒæ³•, å°‡ç²¾ç¥žé‹è‡³ç©ºéˆä¹‹å¢ƒ... ä½ é–‹å§‹é‹åŠŸèšæ°£ä½¿çœŸæ°£é‹è¡Œå…¨èº«ã€‚\n");
 	tell_room( environment(this_player()), 
-	this_player()->query("c_name")+ "ÅÌÍÈ¶ø×ø£¬¿ªÊ¼ÔË¹¦\¾ÛÆø...¡£\n",
+	this_player()->query("c_name")+ "ç›¤è…¿è€Œåï¼Œé–‹å§‹é‹åŠŸèšæ°£...ã€‚\n",
 		this_player() );
 	this_player()->set_temp("chutan", 1 );
 	this_player()->set_temp("layuter_chutan", 1 );

@@ -34,10 +34,10 @@ void setup_race_body()
 //	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 7);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ",
-		"%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s", }) );
-	body->set_c_limbs( ({ "Í·¹Ç", "×ó±Û¹Ç", "ÓÒ±Û¹Ç", "Àß¹Ç", "×óÍÈ¹Ç",
-		"ÓÒÍÈ¹Ç", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s", }) );
+	body->set_c_limbs( ({ "é ­éª¨", "å·¦è‡‚éª¨", "å³è‡‚éª¨", "è‚‹éª¨", "å·¦è…¿éª¨",
+		"å³è…¿éª¨", }) );
 
 	// The default tactic function for undead.
 	if( !userp(body) ) body->set("tactic_func", "life_drain");
@@ -52,10 +52,10 @@ int life_drain()
 	if( !victim=(object)me->query_attacker() ) return 0;
 	if( !present(victim, environment(me)) ) return 0;
 	tell_object(victim, 
-		sprintf(set_color("\n%sÎüÈ¡ÄãµÄÉúÃüÁ¦!!\n\n", "HIR", victim),
+		sprintf(set_color("\n%så¸å–ä½ çš„ç”Ÿå‘½åŠ›!!\n\n", "HIR", victim),
 			me->query("c_name")));
 	tell_room(environment(me), 
-		sprintf("\n%sÎüÈ¡%sµÄÉúÃüÁ¦!!\n\n", me->query("c_name"),
+		sprintf("\n%så¸å–%sçš„ç”Ÿå‘½åŠ›!!\n\n", me->query("c_name"),
 			victim->query("c_name")) , ({ me, victim }) );
 	victim->receive_special_damage("evil", (int)me->query_level()*2);
 	me->receive_healing((int)me->query_level()*2);

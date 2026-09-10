@@ -14,14 +14,14 @@ int cast(int level, string target)
 	
 	if( (int)me->query_skill("white-magic") < query_need_skill(level) ) {
 		tell_object( me,
-			"ÄãµÄ°×Ä§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n"
+			"ä½ çš„ç™½é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n"
 		);
 		return 0;
 	}
 	
 	if( target == "NONE" ) dest = me;
 	else if( !(dest= present( target, environment(me) )) ) {
-		tell_object( me, "Òª¶ÔË­Ê©Õ¹Ò½ÁÆÊõ£¿\n"	);
+		tell_object( me, "è¦å°èª°æ–½å±•é†«ç™‚è¡“ï¼Ÿ\n"	);
 		return 0;
     }
     if( me->query("npc") && me->query("magic_delay") )
@@ -30,9 +30,9 @@ int cast(int level, string target)
 	    delay_time = 3;
 	me->block_attack(delay_time);
 	me->set_temp("cast_busy", 1);
-	write("Äã¿ªÊ¼Ò÷ËĞ°×Ä§·¨ÖĞÒ½ÁÆÊõµÄÖäÎÄ....¡£\n");
+	write("ä½ é–‹å§‹åŸèª¦ç™½é­”æ³•ä¸­é†«ç™‚è¡“çš„å’’æ–‡....ã€‚\n");
 	tell_room( environment(me), 
-		me->query("c_name") + "¿ªÊ¼ÒÔÒ»ÖÖÈáºÍµÄÉùÒôÒ÷ËĞÖäÎÄ....¡£\n",
+		me->query("c_name") + "é–‹å§‹ä»¥ä¸€ç¨®æŸ”å’Œçš„è²éŸ³åŸèª¦å’’æ–‡....ã€‚\n",
 		me );
 	call_out( "effect", delay_time, level, me, dest );
 	return 1;
@@ -44,7 +44,7 @@ void effect(int level, object caster, object dest)
     
     caster->set_temp("cast_busy", 0);
     if( !dest || !present(dest, environment(caster)) ) {
-      tell_object( caster, "ÄãÊ©·¨µÄÄ¿±ê×ßµôÁË¡£\n" );
+      tell_object( caster, "ä½ æ–½æ³•çš„ç›®æ¨™èµ°æ‰äº†ã€‚\n" );
       return;
     }
     
@@ -55,10 +55,10 @@ void effect(int level, object caster, object dest)
 	heal += random( (int)caster->query_stat("pie") / 2 );
 	dest->receive_healing(heal);
 	tell_object( dest, 
-		"Ò»ÍÅÈáºÍµÄÀ¶É«¹âÃ¢ÁıÕÖÖøÄã£¬ÄãÉíÉÏµÄÉË¿Ú¿ªÊ¼ÓúºÏÁË£¡\n"
+		"ä¸€åœ˜æŸ”å’Œçš„è—è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ èº«ä¸Šçš„å‚·å£é–‹å§‹ç™’åˆäº†ï¼\n"
 	);
 	tell_room( environment(dest), 
-		"Ò»ÍÅÈáºÍµÄÀ¶É«¹âÃ¢ÁıÕÖÖø"+dest->query("c_name")+"£¬È»ááÖğ½¥É¢È¥¡£\n",
+		"ä¸€åœ˜æŸ”å’Œçš„è—è‰²å…‰èŠ’ç± ç½©è‘—"+dest->query("c_name")+"ï¼Œç„¶å¾Œé€æ¼¸æ•£å»ã€‚\n",
 		dest
 	);
 	if( caster == dest ) return;

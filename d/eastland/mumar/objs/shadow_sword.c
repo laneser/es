@@ -3,12 +3,12 @@ inherit WEAPON;
  
 void create()
 {
-        set_name( "shadow sword", "Ó°½£" );
+        set_name( "shadow sword", "å½±åŠ" );
         add( "id", ({ "sword" }) );
-        set_short( "Ó°½£" );
+        set_short( "å½±åŠ" );
         set_long(
-                "ÕâÊÇÒ»°Ñ°µ³àÉ«µÄ³¤½££¬°¼Í¹²»Æ½µÄ½£ÉíËÆÓĞµãµã°ßÓ°£¬¹ÊÃû¡£\n" );
-        set( "unit", "°Ñ" );
+                "é€™æ˜¯ä¸€æŠŠæš—èµ¤è‰²çš„é•·åŠï¼Œå‡¹å‡¸ä¸å¹³çš„åŠèº«ä¼¼æœ‰é»é»æ–‘å½±ï¼Œæ•…åã€‚\n" );
+        set( "unit", "æŠŠ" );
         set( "type", "longblade" );
         set( "weight", 120 );
         set( "weapon_class", 23 );

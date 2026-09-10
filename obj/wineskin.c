@@ -4,13 +4,13 @@ inherit OBJECT;
 int num;
 void create()
 {
-        set_name("wineskin","Å£Æ¤¾Æ´ü");
+        set_name("wineskin","ç‰›çš®é…’è¢‹");
         add( "id", ({ "skin" }) );
-        set_short("¾Æ´ü");
+        set_short("é…’è¢‹");
         set( "weight", 10);
         set( "value", ({ 0, "coin" }));
         set("long", "@@query_desc");
-        set("unit", "¸ö");
+        set("unit", "å€‹");
         set("no_sale",1);
         num=100;
 }
@@ -22,11 +22,11 @@ void init()
 
 string query_desc()
 {
-        if(num>=100) return "Ò»¸ö×°Âú¾ÆµÄÅ£Æ¤¾Æ´ü\n";
-        if(num<100 && num >=70) return "Ò»¸öÆß¡¢°Ë³ÉÂúµÄÅ£Æ¤¾Æ´ü\n";
-        if(num<70 && num >=40) return "Ò»¸ö°ëÂúµÄÅ£Æ¤¾Æ´ü\n";
-        if(num<40 && num >0)   return "Ò»¸ö×°×ÅÒ»Ğ©¾ÆµÄÅ£Æ¤¾Æ´ü\n";
-        if(num<=0) return "Ò»¸ö¿ÕÁËµÄÅ£Æ¤¾Æ´ü\n";
+        if(num>=100) return "ä¸€å€‹è£æ»¿é…’çš„ç‰›çš®é…’è¢‹\n";
+        if(num<100 && num >=70) return "ä¸€å€‹ä¸ƒã€å…«æˆæ»¿çš„ç‰›çš®é…’è¢‹\n";
+        if(num<70 && num >=40) return "ä¸€å€‹åŠæ»¿çš„ç‰›çš®é…’è¢‹\n";
+        if(num<40 && num >0)   return "ä¸€å€‹è£è‘—ä¸€äº›é…’çš„ç‰›çš®é…’è¢‹\n";
+        if(num<=0) return "ä¸€å€‹ç©ºäº†çš„ç‰›çš®é…’è¢‹\n";
 }
 int to_drink(string arg)
 {
@@ -38,7 +38,7 @@ int to_drink(string arg)
         if( !arg || arg=="" || arg !="wine")
         {
                 tell_object(me,
-                "ÄãÏë¸ÉÊ²Ã´?\n"
+                "ä½ æƒ³å¹¹ä»€éº¼?\n"
                 );
         }
         else 
@@ -46,18 +46,18 @@ int to_drink(string arg)
                 if(num<=0) 
                 {
                    tell_object(me,
-                   "ÄãÒ»ÑöÍ·¸ÕÏëºÈ¾Æ, È´·¢ÏÖ¾Æ´üÒÑ¿ÕÁË...\n");
+                   "ä½ ä¸€ä»°é ­å‰›æƒ³å–é…’, å»ç™¼ç¾é…’è¢‹å·²ç©ºäº†...\n");
                    tell_object(me,
-                   "ÄãÆøµÃ°Ñ¾Æ´üËº¸ö·ÛËé ! \n");
+                   "ä½ æ°£å¾—æŠŠé…’è¢‹æ’•å€‹ç²‰ç¢ ! \n");
                    this_object()->remove();
                    return 1;
                 }
                 num--;
                 tell_object(this_player(),
-                "ÄãÒ»ÑöÍ·,¹¾àà¹¾ààµØºÈÁË¼¸¿Ú¾Æ.\n");
+                "ä½ ä¸€ä»°é ­,å’•åš•å’•åš•åœ°å–äº†å¹¾å£é…’.\n");
         
         tell_room( environment( me ),
-                me->query("c_name")+"Ò»ÑöÍ·,¹¾àà¹¾ààµØºÈÁË¼¸¿Ú¾Æ£®\n"
+                me->query("c_name")+"ä¸€ä»°é ­,å’•åš•å’•åš•åœ°å–äº†å¹¾å£é…’ï¼\n"
                 , me);
 
         maxhp = (int)me->query("max_hp");

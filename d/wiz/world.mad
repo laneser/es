@@ -8,7 +8,7 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("Square of World", "����㳡");
+	set_short("Square of World", "世界廣場");
 	set_long( @LONG_DESCRIPTION
 This is the Square of World. You can see a large globe in the
 center of square. From here, you can goto all the towns on the world
@@ -16,10 +16,10 @@ by entering the globe. There is a board of area connections, for the
 announcing opening of new areas.
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-��������ʦ����ͨ��ȫ����Ĺ㳡����������������￪��ǰ���κ�
-�ط��ĳ��ڡ��㳡������һ���޴��Բ�򣬽���Բ��Ϳ��԰��㴫�͵���
-������ȥ�ĵط���Բ���Ա���һ�����������԰壬������κ��������Ѿ�
-������( ����������ͼ )����ѽ��뷽��д�����
+這裡是巫師領域通往全世界的廣場，你可以任意在這裡開啟前往任何
+地方的出口。廣場中央有一個巨大的圓球，進入圓球就可以把你傳送到任
+何你想去的地方。圓球旁邊有一個新區域留言板，如果有任何新區域已經
+開放了( 連接上主地圖 )，請把進入方法寫在這裡。
 C_LONG_DESCRIPTION
 	);
 

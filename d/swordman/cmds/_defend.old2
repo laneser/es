@@ -25,19 +25,19 @@ int cmd_defend(string str)
 
 	damsel = present(str, environment(this_player())) ;
 	if (!damsel || !living(damsel))
-		return notify_fail("ÄãÒª±£»¤Ë­£¿\n");
+		return notify_fail("ä½ è¦ä¿è­·èª°ï¼Ÿ\n");
 
         prot = (object *)this_player()->query_temp("protectees");
         if( prot && pointerp(prot) ) {
                 if ( member_array( damsel,prot ) != -1 )
-                return notify_fail("ÄãÒÑ¾­±£»¤ÖøËûÁË !!\n");
+                return notify_fail("ä½ å·²ç¶“ä¿è­·è‘—ä»–äº† !!\n");
 		if (sizeof(prot) > 6 )
-		return notify_fail("Äã²»ÄÜ·ÖÐÄ±£»¤ÄÇ÷á¶àÈË !!\n");
+		return notify_fail("ä½ ä¸èƒ½åˆ†å¿ƒä¿è­·é‚£éº¼å¤šäºº !!\n");
 	}
 
-	write( sprintf("ÄãÒÆ¶¯µ½%sÇ°Ãæ£¬Ìæ%s³ÐÊÜ¹¥»÷¡£\n",damsel->query("short"),to_chinese(subjective(damsel))));
+	write( sprintf("ä½ ç§»å‹•åˆ°%så‰é¢ï¼Œæ›¿%sæ‰¿å—æ”»æ“Šã€‚\n",damsel->query("short"),to_chinese(subjective(damsel))));
 	tell_object( damsel, 
-		sprintf("%sÒÆ¶¯µ½ÄãÇ°Ãæ£¬ÌæÄã³ÐÊÜµÐÈËµÄ¹¥»÷£¡\n",this_player()->query("c_cap_name")));
+		sprintf("%sç§»å‹•åˆ°ä½ å‰é¢ï¼Œæ›¿ä½ æ‰¿å—æ•µäººçš„æ”»æ“Šï¼\n",this_player()->query("c_cap_name")));
 
 	damsel->add_temp("protectors", ({ this_player() }) ) ;
 	this_player()->add_temp("protectees", ({ damsel }) ) ;

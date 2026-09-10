@@ -9,22 +9,22 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name("ant worker", "¹¤ÒÏ");
+	set_name("ant worker", "å·¥èŸ»");
 	add( "id", ({ "ant" }) );
-	set_short("¹¤ÒÏ");
+	set_short("å·¥èŸ»");
 	set_long(
-		"Ò»Ö»ĞÁÇÚ¹¤×÷µÄ¹¤ÒÏ¡£\n"
+		"ä¸€éš»è¾›å‹¤å·¥ä½œçš„å·¥èŸ»ã€‚\n"
 	);
 	set( "max_hp",40);
 	set( "hit_points",40);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
    set( "race", "insect" );
 	set( "alignment", 50 );
 	set( "weight", 100);
 	set( "natural_weapon_class1", 7 );
-	set( "c_death_msg", "%s¼â½ĞÒ»Éù£¬¶¶ÁË¼¸ÏÂ²»¶¯ÁË ....\n" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å" }) );
-	set_c_verbs( ({ "%sºİºİµÄÍù%sÒ§ÏÂÈ¥" }) );
+	set( "c_death_msg", "%så°–å«ä¸€è²ï¼ŒæŠ–äº†å¹¾ä¸‹ä¸å‹•äº† ....\n" );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³" }) );
+	set_c_verbs( ({ "%sç‹ ç‹ çš„å¾€%så’¬ä¸‹å»" }) );
 	set( "tactic_func", "call_help");
     set( "exp_reward", 40 );
     set( "alt_corpse", "/d/noden/moyada/obj/ant_corpse2" );
@@ -54,7 +54,7 @@ int call_help()
     if( random(20)>4 || number > 6 || left < 1 ) return 0;
     if( random(10) > 7 ) {
       tell_room( env, 
-        "¹¤ÒÏ½Ğ³ö¹¤ÒÏÀ´°ïÃ¦µÖ¿¹ÈëÇÖÕß¡£\n" , this_object()
+        "å·¥èŸ»å«å‡ºå·¥èŸ»ä¾†å¹«å¿™æŠµæŠ—å…¥ä¾µè€…ã€‚\n" , this_object()
       );
       left--;
       env->set("ant_left", left);
@@ -63,7 +63,7 @@ int call_help()
       obj->kill_ob(victim);
     } else if( random(10)>5 ) {
       tell_room( env, 
-        "¹¤ÒÏ½Ğ³ö±øÒÏ³öÀ´°ïÃ¦µÖ¿¹ÈëÇÖÕß¡£\n" , this_object()
+        "å·¥èŸ»å«å‡ºå…µèŸ»å‡ºä¾†å¹«å¿™æŠµæŠ—å…¥ä¾µè€…ã€‚\n" , this_object()
       );
       left--;
       env->set("ant_left", left);
@@ -72,7 +72,7 @@ int call_help()
       obj->kill_ob(victim);
     } else {
       tell_room( env, 
-        "¹¤ÒÏ½Ğ³öÉ±ÈËÒÏ³öÀ´°ïÃ¦µÖ¿¹ÈëÇÖÕß¡£\n" , this_object()
+        "å·¥èŸ»å«å‡ºæ®ºäººèŸ»å‡ºä¾†å¹«å¿™æŠµæŠ—å…¥ä¾µè€…ã€‚\n" , this_object()
       );
       left--;
       env->set("ant_left", left);

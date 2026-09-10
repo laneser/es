@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "leather gloves", "Æ¤ÊÖÌ×" );
+	set_name( "leather gloves", "çš®æ‰‹å¥—" );
 	add( "id", ({ "gloves" }) );
-	set_short( "Æ¤ÊÖÌ×" );
+	set_short( "çš®æ‰‹å¥—" );
 	set_long(@CLONG
-ÕâË«Æ¤ÊÖÌ×ÊÇÓÃÒ»ÖÖÉîºÖÉ«µÄÆ¤¸ïÖÆ³ÉµÄ£¬²»µ«±£Å¯£¬¼æ¿ÉÒÔ
-±£»¤ÊÖ²¿¡£
+é€™é›™çš®æ‰‹å¥—æ˜¯ç”¨ä¸€ç¨®æ·±è¤è‰²çš„çš®é©è£½æˆçš„ï¼Œä¸ä½†ä¿æš–ï¼Œå…¼å¯ä»¥
+ä¿è­·æ‰‹éƒ¨ã€‚
 CLONG
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "hands" );
 	set( "material", "leather" );
 	set( "armor_class", 1 );

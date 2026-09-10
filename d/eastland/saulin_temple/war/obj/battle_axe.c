@@ -5,14 +5,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("bonze battle axe","Í­Õ½¸«");
+       set_name("bonze battle axe","éŠ…æˆ°æ–§");
        add("id",({"axe",}) );
-       set_short("Í­Õ½¸«");
+       set_short("éŠ…æˆ°æ–§");
        set_long(
-           "ÕâÊÇÒ»°ÑÓÃÀ´¿³Ê÷»¹²î²»¶àµÄ¶Ì¸«¡£\n"
+           "é€™æ˜¯ä¸€æŠŠç”¨ä¾†ç æ¨¹é‚„å·®ä¸å¤šçš„çŸ­æ–§ã€‚\n"
         );
 
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 14 );
 	set("type","axe");
         set( "min_damage", 7 );

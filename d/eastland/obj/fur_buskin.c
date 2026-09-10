@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "fur buskin", "ÊŞÆ¤¶ÌÑ¥" );
+	set_name( "fur buskin", "ç¸çš®çŸ­é´" );
 	add( "id", ({ "buskin", "buskins" }) );
-   set_short( "ÊŞÆ¤¶ÌÑ¥" );
+   set_short( "ç¸çš®çŸ­é´" );
 	set_long(
-		"ÕâÊÇÒ»Ë«°¹ÔàµÄÊŞÆ¤¶ÌÑ¥£¬ÉÏÃæÓÃÆ¤Éş²øÁËºÃ¼¸È¦¡£\n"
+		"é€™æ˜¯ä¸€é›™éª¯é«’çš„ç¸çš®çŸ­é´ï¼Œä¸Šé¢ç”¨çš®ç¹©çºäº†å¥½å¹¾åœˆã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "feet" );
 	set( "material", "leather" );
 	set( "weight", 40 );

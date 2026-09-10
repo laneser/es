@@ -6,15 +6,15 @@ inherit MEDICINE;
 void create()
 {
 	medicine::create();
-	set_name("strong pill", "ÑøÉúÖ÷" );
+	set_name("strong pill", "é¤Šç”Ÿä¸»" );
 	add( "id", ({"pill"}) );
-	set_short("ÑøÉúÖ÷");
+	set_short("é¤Šç”Ÿä¸»");
 	set_long(
-		"ÕâÊÇÓÉÐÌÀÏµùÑÐ·¢³öÀ´µÄ²¹Ò©,¶ÔÉíÌåÐéÈõµÄÈËÓÐºÜºÃµÄÁÆÐ§¡£\n"
-		"Èç¹ûÄã¾õµÃÁ¦²»´ÓÐÄ,³Ô(eat)ÏÂËü±£Ö¤ÈÃÄãËÄÊ®Ëê»¹ÏñÒ»Î²»îÁú!\n"
+		"é€™æ˜¯ç”±åˆ‘è€çˆ¹ç ”ç™¼å‡ºä¾†çš„è£œè—¥,å°èº«é«”è™›å¼±çš„äººæœ‰å¾ˆå¥½çš„ç™‚æ•ˆã€‚\n"
+		"å¦‚æžœä½ è¦ºå¾—åŠ›ä¸å¾žå¿ƒ,åƒ(eat)ä¸‹å®ƒä¿è­‰è®“ä½ å››åæ­²é‚„åƒä¸€å°¾æ´»é¾!\n"
 	);
 	set( "can_eat", 1 );
-	set( "unit", "Á£" );
+	set( "unit", "ç²’" );
 	set( "weight", 15 );
 	set( "value", ({ 50, "silver" }) );
         set( "medication", 50 );
@@ -26,7 +26,7 @@ void eat(object player)
     
 	if( !player->query("conditions/weak") ) return;
 	tell_object( player, can_read_chinese(player)?
-		"Äã¾õµÃÈ«ÉíÓÖ³äÂú¾«Á¦£¡\n": "You recover from poison!\n" );
+		"ä½ è¦ºå¾—å…¨èº«åˆå……æ»¿ç²¾åŠ›ï¼\n": "You recover from poison!\n" );
 	stat = (int) player->query("weak");
 	player->modify_stat("str",stat);	
 	"/std/conditions/weak"->remove_effect(player);

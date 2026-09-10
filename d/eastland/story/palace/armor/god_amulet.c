@@ -4,15 +4,15 @@ inherit ARMOR;
 inherit SARM"OR";
 void create()
 {
-     set_name( "God-Dragon amulet","Ç±Áú·û" );
+     set_name( "God-Dragon amulet","æ½›é¾ç¬¦" );
      add( "id",({ "amulet" }) );
-     set_short( "Ç±Áú·û" );
+     set_short( "æ½›é¾ç¬¦" );
      set_long(@C_LONG
-Ò»¸ö°×Óñ×öµÄÓñÅå£¬ÉÏ¿ÌÒ»Ö»ÅÌĞıì¶Ìì¼ÊµÄ·ÉÁú£¬ĞÎ×´ÉõÊÇĞ×ÃÍ¡£
+ä¸€å€‹ç™½ç‰åšçš„ç‰ä½©ï¼Œä¸Šåˆ»ä¸€éš»ç›¤æ—‹æ–¼å¤©éš›çš„é£›é¾ï¼Œå½¢ç‹€ç”šæ˜¯å…‡çŒ›ã€‚
 C_LONG
      );
      set( "weight",5 );
-     set( "unit", "¸ö");
+     set( "unit", "å€‹");
      set( "type", "misc" );
      set( "material","element" );
      set( "the_one",1);

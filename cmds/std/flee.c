@@ -7,14 +7,14 @@ inherit DAEMON;
 
 int cmd_flee()
 {
-	write("Ö±½ÓÅÜ¾ÍºÃÁË!!!!!!!\n");
+	write("ç›´æ¥è·‘å°±å¥½äº†!!!!!!!\n");
 	return 1;
 }
 
 int help()
 {
 	write(@TEXT
-flee - Ã»ÓÃµÄÖ¸Áî.
+flee - æ²’ç”¨çš„æŒ‡ä»¤.
 TEXT
 	);
 }

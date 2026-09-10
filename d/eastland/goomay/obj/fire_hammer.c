@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "fire hammer", "»ðÑæÖ®´¸" );
+	set_name( "fire hammer", "ç«ç„°ä¹‹éŒ˜" );
 	add( "id", ({ "hammer" }) );
-	set_short("»ðÑæÖ®´¸" );
+	set_short("ç«ç„°ä¹‹éŒ˜" );
 	set_long(
-		"ÕâÊÇÒ»°Ñ»ðºìµÄ¾Þ´¸£¬¾ÝËµ¿ÉÒÔ·¢³öÏñ»ðÉñÒ»ÑùµÄÍþÁ¦¡£\n"
+		"é€™æ˜¯ä¸€æŠŠç«ç´…çš„å·¨éŒ˜ï¼Œæ“šèªªå¯ä»¥ç™¼å‡ºåƒç«ç¥žä¸€æ¨£çš„å¨åŠ›ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 250 );
 	setup_weapon( "blunt", 45, 25, 45 );
 	set( "value", ({ 220, "gold" }) );
@@ -19,13 +19,13 @@ void create()
 
 //	set("hit_func","fire_damage");
 	set("special_damage",25);
-	set("special_c_msg","¡¸»©À²¡¹µÄÒ»Éù£¬·¢³öÒ»µÀ»ðÑæ£¬ºä»÷µÐÈËµÄÉíÌå¡£\n\n");
+	set("special_c_msg","ã€Œå˜©å•¦ã€çš„ä¸€è²ï¼Œç™¼å‡ºä¸€é“ç«ç„°ï¼Œè½Ÿæ“Šæ•µäººçš„èº«é«”ã€‚\n\n");
 }
 void report( object attacker, object victim )
 {
    seteuid(getuid());
    tell_object( victim,
-     sprintf("( Äã%s )\n","/adm/daemons/statsd"->status_string(victim))
+     sprintf("( ä½ %s )\n","/adm/daemons/statsd"->status_string(victim))
    );
    return 1;
 }
@@ -39,7 +39,7 @@ int fire_damage(object victim,int damage)
     if ( !victim ) return 0;
     if( !(holder = environment(this_object())) || !living(holder) ) return 0;
     if ( (int)holder->query_skill("blunt")<90 ) {
-      tell_object(holder,"»ðÑæÖ®´¸¡¸»©À²¡¹Ò»Éù¾ÞÏì·¢³öÒ»µÀ»ðÑæ£¬È´ºäµ½ÁËÄã×Ô¼º¡£\n\n");
+      tell_object(holder,"ç«ç„°ä¹‹éŒ˜ã€Œå˜©å•¦ã€ä¸€è²å·¨éŸ¿ç™¼å‡ºä¸€é“ç«ç„°ï¼Œå»è½Ÿåˆ°äº†ä½ è‡ªå·±ã€‚\n\n");
       holder->receive_special_damage("fire",dam+random(20));
       report(holder,holder);
       victim->set("last_attacker", holder );
@@ -53,9 +53,9 @@ int fire_damage(object victim,int damage)
                 victim->receive_special_damage( "fire",dam+max );
                 victim->set("last_attacker", holder );
                 tell_object( holder, 
-                        "\nÄãµÄ"+query("c_name")+c_msg+"\n");
+                        "\nä½ çš„"+query("c_name")+c_msg+"\n");
                 tell_room( environment(holder), 
-                        holder->query("c_name") + "µÄ"+query("c_name")+c_msg+"\n",
+                        holder->query("c_name") + "çš„"+query("c_name")+c_msg+"\n",
                         holder );
             return dam;
 }

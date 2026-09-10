@@ -33,9 +33,9 @@ EXAMPLE
      create_door("north",  "south", ([
      	"keyword"	: ({ "big door", "door" }),
      	"name"		: "big door",
-     	"c_name"	: "����",
+     	"c_name"	: "大門",
      	"desc"		: "A huge and massive door blocks your way to north",
-     	"c_desc"	: "һ�Ⱦ޴��ص��ŵ�ס����������ȥ·",
+     	"c_desc"	: "一扇巨大笨重的門擋住了你往北的去路",
      	"status"	: "closed"
      ]) );
 

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Thunder Cloak", "À×µçÅû·ç");
+        set_name( "Thunder Cloak", "é›·é›»æŠ«é¢¨");
         add( "id", ({ "thunder","cloak" }) );
-        set_short("Thunder Cloak", "À×µçÅû·ç");
+        set_short("Thunder Cloak", "é›·é›»æŠ«é¢¨");
         set_long(@AAA
-ÕâÊÇÒ»¼ş¸½ÓĞÀ×µç¾«ÁéÁ¦Á¿µÄÅû·ç
+é€™æ˜¯ä¸€ä»¶é™„æœ‰é›·é›»ç²¾éˆåŠ›é‡çš„æŠ«é¢¨
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "cloak" );
         set( "armor_class", 7 );
         set( "defense_bonus", 5 );

@@ -6,10 +6,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "��·" );
+	set_short( "道路" );
 	set_long( @LONG_DESCRIPTION
-������������һ����ʯ�̳ɵĵ�·�ϣ���·�򶫡����������졣·�ԵĲ�
-���ϳ���һЩ��֪����Ұ����Ұ�ݡ�
+你現在正走在一條碎石鋪成的道路上，道路向東、西方向延伸。路旁的草
+地上長著一些不知名的野花及野草。
 LONG_DESCRIPTION
 	);
 	set_outside( "noden" );

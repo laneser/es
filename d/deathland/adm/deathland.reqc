@@ -1,9 +1,9 @@
 
-ºÚ°µ´óÂ½ÎäÆ÷£¬×°±¸ÈÏÖ¤
+é»‘æš—å¤§é™¸æ­¦å™¨ï¼Œè£å‚™èªè­‰
 
-+±íÒ»°ãÖµÉÏÏŞ£¬++±íÊ¾´ïµ½¸½¼ÓÖµ£¬+++±í¸½¼ÓÖµÉÏÏŞ
++è¡¨ä¸€èˆ¬å€¼ä¸Šé™ï¼Œ++è¡¨ç¤ºé”åˆ°é™„åŠ å€¼ï¼Œ+++è¡¨é™„åŠ å€¼ä¸Šé™
 
-Ãû³Æ           type  wc     min     max     weight  ÊıÁ¿      ÌØ¹¥          ÈÏÖ¤Õß
+åç¨±           type  wc     min     max     weight  æ•¸é‡      ç‰¹æ”»          èªè­‰è€…
 axe03.c        axe   40(++) 17      45(++)  210    reborn 1   bleeding 10   yueh
 blacksword.c   lb    35(+)  25(++)  35      100    reborn 1   mental 15     yueh
 sword04.c       lb   35(+)  22(++)  33      150    reborn 1                 yueh
@@ -13,7 +13,7 @@ shortsword04.c  sb   30(+)  22(++)  32       87    reborn 1                 yueh
 shortsword05.c  sb   35(++) 22(++)  33       95    reborn 1                 yueh
 
 
-Ãû³Æ		type	material	ac	db	weight	ÊıÁ¿		ÈÏÖ¤Õß
+åç¨±		type	material	ac	db	weight	æ•¸é‡		èªè­‰è€…
 amulet02.c	misc	element		0	8(++)	10	reborn 1	yueh
 amulet04.c	misc	element		0	8(++)	12	reborn 1	yueh
 necklace01.c	misc	element		0	7(++)	12	reborn 1	yueh

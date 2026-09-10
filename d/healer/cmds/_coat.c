@@ -1,10 +1,10 @@
-//	_coat.c		´ã¶¾Êõ
+//	_coat.c		æ·¬æ¯’è¡“
 //
 //		Lilia@Eastern.Stories
 
-// ËùĞè¼¼ÄÜ£º¶¾ÎïÑ§ 50
-// ÉËº¦Á¦Îª¶¾Ò©±¾ÉíÉËº¦Á¦ * skill%
-// ÃüÖĞÂÊÎª¶¾Ò©±¾ÉíÀ§ÄÑ¶È + ÕóÓªÖµ/10000
+// æ‰€éœ€æŠ€èƒ½ï¼šæ¯’ç‰©å­¸ 50
+// å‚·å®³åŠ›ç‚ºæ¯’è—¥æœ¬èº«å‚·å®³åŠ› * skill%
+// å‘½ä¸­ç‡ç‚ºæ¯’è—¥æœ¬èº«å›°é›£åº¦ + é™£ç‡Ÿå€¼/10000
 	////#pragma save_binary
 #include <mudlib.h>
 
@@ -19,41 +19,41 @@ int cmd_coat(string arg)
     p = this_player();
 
     if (!arg || arg == "")
-	return notify_fail("ÄãÏë×öÊ²÷á?\n");
+	return notify_fail("ä½ æƒ³åšä»€éº¼?\n");
 
     sscanf (arg, "%s with %s", wname, pname);
     if (!wname || wname == "" || !pname || pname == "")
-	return notify_fail("ÄãÏë×öÊ²÷á?\n");
+	return notify_fail("ä½ æƒ³åšä»€éº¼?\n");
 
     if (weapon = present(wname, p))
 	if (weapon->query("weapon_class"))
 	    ;
 	else
-	    return notify_fail("Õâ²»ÊÇÎäÆ÷¡£\n");
+	    return notify_fail("é€™ä¸æ˜¯æ­¦å™¨ã€‚\n");
 
     if (poison = present(pname, p))
         if (poison->query("poison_type"))
             ;
         else
-            return notify_fail("Õâ²»ÊÇ¶¾Ò©¡£\n");
+            return notify_fail("é€™ä¸æ˜¯æ¯’è—¥ã€‚\n");
 
     if (weapon && poison)
     { 
     	skill = p->query_skill("venomlogy");
     	if (skill < 50)
-	    return notify_fail("Ô¶´¦´«À´Å®ÍõµÄĞ¦Éù: ÄêÇàÈË£¬±ğÉµÁË£¬Á·¸öÊ®ÄêÔÙÀ´°É!\n");
+	    return notify_fail("é è™•å‚³ä¾†å¥³ç‹çš„ç¬‘è²: å¹´é’äººï¼Œåˆ¥å‚»äº†ï¼Œç·´å€‹åå¹´å†ä¾†å§!\n");
 
 	ali = this_player()->query("alignment");
         if (ali >= 0)
-            return notify_fail("ÄãĞÄÖĞÒ»ÕóÌìÈË½»Õ½£¬ÏÂ²»ÁËÕâ¸öÊÖ ...\n");
+            return notify_fail("ä½ å¿ƒä¸­ä¸€é™£å¤©äººäº¤æˆ°ï¼Œä¸‹ä¸äº†é€™å€‹æ‰‹ ...\n");
 
     	if (p->query("stop_attack") != 0)
-	    return notify_fail("ÄãÉÏ¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬²»ÄÜÌæÎäÆ÷´ã¶¾¡£\n");
+	    return notify_fail("ä½ ä¸Šå€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œä¸èƒ½æ›¿æ­¦å™¨æ·¬æ¯’ã€‚\n");
 
     	if (weapon->query("poisoned/type"))
-	    return notify_fail("Õâ¸öÎäÆ÷ÒÑ¾­ÉÏ¹ı¶¾ÁË£¬Ã»ÓĞ°ì·¨ÖØ¸´´ã¶¾¡£\n");
+	    return notify_fail("é€™å€‹æ­¦å™¨å·²ç¶“ä¸Šéæ¯’äº†ï¼Œæ²’æœ‰è¾¦æ³•é‡è¤‡æ·¬æ¯’ã€‚\n");
 
-        write("ÄãÌæ"+weapon->query("c_name")+"Í¿ÉÏ"+poison->query("c_name")+"¡£\n");
+        write("ä½ æ›¿"+weapon->query("c_name")+"å¡—ä¸Š"+poison->query("c_name")+"ã€‚\n");
 
     	weapon->set("poisoned/type", poison->query("poison_type"));
     	weapon->set("poisoned/time", poison->query("poison_time"));
@@ -66,17 +66,17 @@ int cmd_coat(string arg)
     	return 1;
     }
     else
-	return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+	return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 }
 
 int help()
 {
     write(
     @C_HELP
-Ö¸Áî¸ñÊ½£º coat <ÎäÆ÷> with <¶¾Ò©>
+æŒ‡ä»¤æ ¼å¼ï¼š coat <æ­¦å™¨> with <æ¯’è—¥>
 
-Õâ¸öÖ¸Áî¿ÉÒÔÈÃÄãÌæÄ³ÑùÎäÆ÷Í¿ÉÏ¶¾Ò©£¬Ê¹ÎäÆ÷µÄÍşÁ¦ÔöÇ¿¡£Õâ¸öÖ¸Áî
-±ØĞëÊÇÊÜ¹ıÁ¼ºÃ¶¾ÎïÑ§ÑµÁ·µÄĞ°¶ñÒ½Ê¦·½¿ÉÊ¹ÓÃ¡£
+é€™å€‹æŒ‡ä»¤å¯ä»¥è®“ä½ æ›¿æŸæ¨£æ­¦å™¨å¡—ä¸Šæ¯’è—¥ï¼Œä½¿æ­¦å™¨çš„å¨åŠ›å¢å¼·ã€‚é€™å€‹æŒ‡ä»¤
+å¿…é ˆæ˜¯å—éè‰¯å¥½æ¯’ç‰©å­¸è¨“ç·´çš„é‚ªæƒ¡é†«å¸«æ–¹å¯ä½¿ç”¨ã€‚
 C_HELP
     );
     return 1;

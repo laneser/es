@@ -1,20 +1,20 @@
 #d/healer/building/healer_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ĞĞÒ½ÕßÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"è¡Œé†«è€…ç•™è¨€æ¿",])
 messages ({(["id":116,"body":"On Wed Sep 28, Noria wrote:
 > 	Js :
 > 
-> 		ÄãÕæµÄĞçòÕ¡õF? °¦! ....
+> 		ä½ çœŸçš„æˆŒè›˜â–¡F? å”‰! ....
 [B
         Noria :
-                ÄãÔÚËµÉ¶.....¿´²»¶®¨Ë¨ß.......:)
+                ä½ åœ¨èªªå•¥.....çœ‹ä¸æ‡‚ã„‹ã„Ÿ.......:)
 
-                                    °ËÔÆ
+                                    å…«é›²
 ","title":"Re: < no title >","time":780754363,"poster":"Jschen",]),(["id":117,"body":"On Tue Sep 27, Annihilator wrote:
 > Hi healers:
 >     Just added a new skill *grin* to make medicines, it is called
-> medical(Ò©Îïµ÷Åä). You can buy herb bowl from Medic Wang and make
+> medical(è—¥ç‰©èª¿é…). You can buy herb bowl from Medic Wang and make
 > medicines. The chance to succeed depend on your medical skill and
 > how difficulty the medicine can be made.
 > 
@@ -24,40 +24,40 @@ messages ({(["id":116,"body":"On Wed Sep 28, Noria wrote:
 >     no sick and may have varies advantages.
 > 
 >                                                   - Annihilator
-  ºÇºÇ...¹ûÈ»ºÜºÃÍæ....:)
-  Ï£Íû Annihilator ÄÜÔÙ¶àÔìÒ»Ğ©Ò©²Ä.....
-  ÖÁì¶ÅäÒ©µÄ·½·¨....³ıÁËÎÊ Wang Íâ..
-  ×îºÃÌØÊâµÄÒ©Ò²ÄÜÓÃÌØÊâµÄ·½·¨µÃÖª...:)
-  ÀıÈç..Èç¹ûÒªÖªµÀÌìÏã¶ÏĞò¸àµÄ»°...Òª flog wang Ê®´Î...:P
+  å‘µå‘µ...æœç„¶å¾ˆå¥½ç©....:)
+  å¸Œæœ› Annihilator èƒ½å†å¤šé€ ä¸€äº›è—¥æ.....
+  è‡³æ–¼é…è—¥çš„æ–¹æ³•....é™¤äº†å• Wang å¤–..
+  æœ€å¥½ç‰¹æ®Šçš„è—¥ä¹Ÿèƒ½ç”¨ç‰¹æ®Šçš„æ–¹æ³•å¾—çŸ¥...:)
+  ä¾‹å¦‚..å¦‚æœè¦çŸ¥é“å¤©é¦™æ–·åºè†çš„è©±...è¦ flog wang åæ¬¡...:P
   
-  ºÙ....ÎÒÍ»È»Ïëµ½Á·Ñıºø......*grin*
-  ²»¹ÜÔõÑù...Ï£Íû Annihilator ¶à¼ÓÓÍ...ÈÃ healer ÄÜ¸üºÃÍæ...:P
+  å˜¿....æˆ‘çªç„¶æƒ³åˆ°ç·´å¦–å£º......*grin*
+  ä¸ç®¡æ€æ¨£...å¸Œæœ› Annihilator å¤šåŠ æ²¹...è®“ healer èƒ½æ›´å¥½ç©...:P
  
-                                                 ¶Å¶ÅÄñ
+                                                 æœæœé³¥
 ","title":"Re: About herbs","time":780768532,"poster":"Tutu",]),(["id":118,"body":"On Wed Sep 28, Callman wrote:
-> ÎÒĞëÒª½â¶¾µ¤ÄÅ...........
-> ÉñÒ½¶¼×ÔÉ±ÁËÂğ??
-> Ò½ÉúÏÖÔÚ¿É×÷×÷Ğ¡±¾ÉúÒâ, ÂôÂô½â¶¾µ¤, ³É±¾ÎÒÊÇ²»Öª¶àÉÙ, ÎÒÂô¸øÉÌµêÀÏ°åÊÇ20 silver
-> ËùÒÔ½ñÌìHch ËµÒ»Á£½â¶¾µ¤30 silver ÎÒÊÇ¾õµÃ²î²»¶à,....
-> ²»¹ıÏÖÔÚÏßÉÏÃ»ÉñÒ½À²  :(~~
-> ¿É²»¿ÉÒÔÇëÄãÃÇÂôÒ»Ğ©µ½ÉÌµêÀï, ..........
+> æˆ‘é ˆè¦è§£æ¯’ä¸¹å¶...........
+> ç¥é†«éƒ½è‡ªæ®ºäº†å—??
+> é†«ç”Ÿç¾åœ¨å¯ä½œä½œå°æœ¬ç”Ÿæ„, è³£è³£è§£æ¯’ä¸¹, æˆæœ¬æˆ‘æ˜¯ä¸çŸ¥å¤šå°‘, æˆ‘è³£çµ¦å•†åº—è€é—†æ˜¯20 silver
+> æ‰€ä»¥ä»Šå¤©Hch èªªä¸€ç²’è§£æ¯’ä¸¹30 silver æˆ‘æ˜¯è¦ºå¾—å·®ä¸å¤š,....
+> ä¸éç¾åœ¨ç·šä¸Šæ²’ç¥é†«å•¦  :(~~
+> å¯ä¸å¯ä»¥è«‹ä½ å€‘è³£ä¸€äº›åˆ°å•†åº—è£¡, ..........
 > 
 > 
->                            Ïë´³¶¾³æÑ¨µÄCallman
+>                            æƒ³é—–æ¯’èŸ²ç©´çš„Callman
 > 
 > 
   
- Ìì°¡...30 silver ½Ğ²î²»¶à....
- ÄãÖªµÀÒª×öÒ»¸ö½â¶¾µ¤ÒªÄÄĞ©¶«Î÷Âğ??
- ¹âÊÇÄÇÈı¸öÒ©²ÄÃ¿¸ö 10 silver ¾ÍÒª 30 silver ÁË..
+ å¤©å•Š...30 silver å«å·®ä¸å¤š....
+ ä½ çŸ¥é“è¦åšä¸€å€‹è§£æ¯’ä¸¹è¦å“ªäº›æ±è¥¿å—??
+ å…‰æ˜¯é‚£ä¸‰å€‹è—¥ææ¯å€‹ 10 silver å°±è¦ 30 silver äº†..
 
- ÔÙ¼ÓÉÏÒ©²§ 100 silver ....
- »¹ÓĞ¼¼ÄÜ²»¹»»¹»áÊ§°Ü.....
- ¼ÓÒ»¼Ó....30 ÊÇÅâÇ®ÂôÒ®.....
- ÒªÊÇÕæµÄÒªÂô...ÎÒ¾õµÃÖÁÉÙÒª 50 silver à¸...:P
+ å†åŠ ä¸Šè—¥ç¼½ 100 silver ....
+ é‚„æœ‰æŠ€èƒ½ä¸å¤ é‚„æœƒå¤±æ•—.....
+ åŠ ä¸€åŠ ....30 æ˜¯è³ éŒ¢è³£è€¶.....
+ è¦æ˜¯çœŸçš„è¦è³£...æˆ‘è¦ºå¾—è‡³å°‘è¦ 50 silver å–”...:P
 
-                                         ¶Å¶ÅÄñ
-","title":"Re: about ½â¶¾µ¤!!","time":780768761,"poster":"Tutu",]),(["id":119,"body":"
+                                         æœæœé³¥
+","title":"Re: about è§£æ¯’ä¸¹!!","time":780768761,"poster":"Tutu",]),(["id":119,"body":"
 ","title":"< no title >","time":780796780,"poster":"Bamboo",]),(["id":120,"body":"
 ","title":"< no title >","time":780796786,"poster":"Bamboo",]),(["id":121,"body":"
 ","title":"< no title >","time":780796788,"poster":"Bamboo",]),(["id":122,"body":"

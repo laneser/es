@@ -6,18 +6,18 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "zombie", "½©Ê¬" );
-   set_short( "½©Ê¬" );
+	set_name( "zombie", "æ®­å±" );
+   set_short( "æ®­å±" );
 	set_long(
-		"Ò»¾ßÓÖ³óÓÖÐ×¶ñµÄ½©Ê¬¡£\n"
+		"ä¸€å…·åˆé†œåˆå…‡æƒ¡çš„æ®­å±ã€‚\n"
 	);
    set( "race", "undead" );
 	set( "gender", "male" );
 	set( "alignment", -400 );
 	set( "aggressive", 1 );
 	set( "tactic_func", "my_tactic" );
-	set_c_verbs( ({"%sÓÃËûµÄ½©Ö±µÄ×¦×Ó×¥Ïò%s", "%sÕÅ¿ª×ìÍù%sÒ§È¥",
-		"%sÎåÖ¸ÕÅ¿ª£¬ÃÍÈ»Íù%s²åÏÂ" }) );
+	set_c_verbs( ({"%sç”¨ä»–çš„åƒµç›´çš„çˆªå­æŠ“å‘%s", "%så¼µé–‹å˜´å¾€%så’¬åŽ»",
+		"%säº”æŒ‡å¼µé–‹ï¼ŒçŒ›ç„¶å¾€%sæ’ä¸‹" }) );
 }
 
 int my_tactic()
@@ -27,7 +27,7 @@ int my_tactic()
 
 	if( !(victim= query_attacker()) || (random(20)>2) ) return 0;
     tell_room( environment(),
-            "½©Ê¬¿ÚÖÐ·¢³öÒ»Ð©¹ÖÉù£¬Ê¹Äã¾õµÃÒ»ÕóÔÎÑ£....ºÃÏñÁ¦Á¿±»Îü×ßÁË¡£\n",
+            "æ®­å±å£ä¸­ç™¼å‡ºä¸€äº›æ€ªè²ï¼Œä½¿ä½ è¦ºå¾—ä¸€é™£æšˆçœ©....å¥½åƒåŠ›é‡è¢«å¸èµ°äº†ã€‚\n",
 		this_object() );
 	dam = 15 + random(10);
 	victim->receive_special_damage( "evil", dam );

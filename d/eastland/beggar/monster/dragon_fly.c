@@ -7,19 +7,19 @@ void create()
         ::create();
 	set("lvlimit",15);
 	set_level(10);
-	set_name( "dragon fly", "òßòÑ" );
+	set_name( "dragon fly", "èœ»èœ“" );
         add ("id", ({ "dragon","fly" }) );
-        set_short( "òßòÑ" );
+        set_short( "èœ»èœ“" );
 	set_long(@C_LONG
-Ò»Ö»ÕıÔÚÃÙÊ³µÄÀ¥³æ¡£
+ä¸€éš»æ­£åœ¨è¦“é£Ÿçš„æ˜†èŸ²ã€‚
 C_LONG
 	);
         set("alignment",-50);
 	set_perm_stat( "str", 10 );
 	set_perm_stat( "dex", 10 );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
         set_natural_armor(10,4);
 	set_natural_weapon( 15,10,18 );
-	set_c_verbs( ({ "%sÓÃ³á°òÅÄÏò%s","%sÓÃ×ìÒ§Ïò%s" }) );
-	set_c_limbs( ({ "Í·²¿", "ĞØ²¿", "Î²²¿" }) );
+	set_c_verbs( ({ "%sç”¨ç¿…è†€æ‹å‘%s","%sç”¨å˜´å’¬å‘%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èƒ¸éƒ¨", "å°¾éƒ¨" }) );
 }

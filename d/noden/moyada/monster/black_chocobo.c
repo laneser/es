@@ -9,17 +9,17 @@ void create ()
 	::create();
 	seteuid( getuid() );
    set_level(18);
-	set_name( "black chocobo", "ºÚÉ«Â½ÐÐÄñ" );
+	set_name( "black chocobo", "é»‘è‰²é™¸è¡Œé³¥" );
 	add ("id", ({ "bird", "chocobo", }) );
-	set_short( "ºÚÉ«Â½ÐÐÄñ" );
+	set_short( "é»‘è‰²é™¸è¡Œé³¥" );
 	set_long( @C_LONG
-±äÖÖµÄÂ½ÐÐÄñ£¬²»µ«¿ÉÒÔÔÚµØÉÏÅÜ£¬»¹ÄÜÔÚ¿ÕÖÐ·É¡£¿ÉÏ§·ÉÐÐËÙ¶È²¢²»ÊÇ
-ºÜ¿ì£¬Ê±ËÙ´óÔ¼Ö»ÓÐÈýÊ®¹«Àï¡£¿´ËüÆ´ÃüÕñ³áµÄÑù×Ó£¬»¬»ü¼«ÁË¡£
-´«ËµËü¿áÊ³ÈÎºÎ¶«Î÷¡£ÓÖÈç¹ûÄãÊÇËüµÄÖ÷ÈË, Ëü»á°ïÄã×²»÷(hit)µÐÈË¡£
+è®Šç¨®çš„é™¸è¡Œé³¥ï¼Œä¸ä½†å¯ä»¥åœ¨åœ°ä¸Šè·‘ï¼Œé‚„èƒ½åœ¨ç©ºä¸­é£›ã€‚å¯æƒœé£›è¡Œé€Ÿåº¦ä¸¦ä¸æ˜¯
+å¾ˆå¿«ï¼Œæ™‚é€Ÿå¤§ç´„åªæœ‰ä¸‰åå…¬é‡Œã€‚çœ‹å®ƒæ‹¼å‘½æŒ¯ç¿…çš„æ¨£å­ï¼Œæ»‘ç¨½æ¥µäº†ã€‚
+å‚³èªªå®ƒé…·é£Ÿä»»ä½•æ±è¥¿ã€‚åˆå¦‚æžœä½ æ˜¯å®ƒçš„ä¸»äºº, å®ƒæœƒå¹«ä½ æ’žæ“Š(hit)æ•µäººã€‚
 C_LONG
 	);
    set( "alignment", 1500 );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
 	set_perm_stat( "dex", 30 );
    set_perm_stat( "str", 25 );
    set_perm_stat( "int", 13 );
@@ -28,8 +28,8 @@ C_LONG
 	set_perm_stat( "karma", 30 );
    set_natural_weapon( 40, 20, 40 );
    set_natural_armor( 100, 50 );
-	setenv( "C_MIN", "Í»È»Ò»Ö»$N¿ìËÙµØ·ÉÁË½øÀ´¡£");
-	setenv( "C_MOUT", "$NÕñ³áÍù$D±ß·É×ßÁË¡£");
+	setenv( "C_MIN", "çªç„¶ä¸€éš»$Nå¿«é€Ÿåœ°é£›äº†é€²ä¾†ã€‚");
+	setenv( "C_MOUT", "$NæŒ¯ç¿…å¾€$Dé‚Šé£›èµ°äº†ã€‚");
 	set ("special_defense",
 	    ([ "all" : 25 ]) );
 	set ("wimpy", 100);
@@ -38,14 +38,14 @@ C_LONG
 	set ("speed", 5);
    set( "mountable", 0 );
    set( "max_load", 2400 );
-   set( "c_extra_look", "$NÕýÆïÖøÒ»Ö»ºÚÉ«Â½ÐÐÄñ¡£\n");
+   set( "c_extra_look", "$Næ­£é¨Žè‘—ä¸€éš»é»‘è‰²é™¸è¡Œé³¥ã€‚\n");
     set ("weight", 900);
    set( "exp_reward", 5555 );
     set ("time_to_heal", 5);
-    set_c_verbs( ({ "%s×²µ½%sÉíÉÏ", "%sÒ»½ÅÌßÔÚ%sÁ³ÉÏ", "%sÒ»×¦×¥µ½%s",
-                    "%sÓÃ´ó×ì×Ä%s", }) );
-    set_c_limbs( ({ "ÉíÌå", "³á°ò", "×ì", "½Å", "Æ¨¹É", "×¦×Ó", }) );
-    set( "c_death_msg", "%sËµ: ÎÒßÖ#@!&$*? :( .... È»áá¾ÍËÀÁË¡£\n" );
+    set_c_verbs( ({ "%sæ’žåˆ°%sèº«ä¸Š", "%sä¸€è…³è¸¢åœ¨%sè‡‰ä¸Š", "%sä¸€çˆªæŠ“åˆ°%s",
+                    "%sç”¨å¤§å˜´å•„%s", }) );
+    set_c_limbs( ({ "èº«é«”", "ç¿…è†€", "å˜´", "è…³", "å±è‚¡", "çˆªå­", }) );
+    set( "c_death_msg", "%sèªª: æˆ‘å’§#@!&$*? :( .... ç„¶å¾Œå°±æ­»äº†ã€‚\n" );
 }
 
 void init()
@@ -61,18 +61,18 @@ int accept_item(object who,object item)
    obj = new( "/d/noden/moyada/obj/saliva" );
 
         tell_room( environment(),
-            "ºÚÉ«Â½ÐÐÄñ¼â½ÐÒ»Éù: GEEE....\n"
-            "ºÚÉ«Â½ÐÐÄñ°Ñ"+item->query("c_name")+"³ÔÏÂ¶Ç!?\n" );
+            "é»‘è‰²é™¸è¡Œé³¥å°–å«ä¸€è²: GEEE....\n"
+            "é»‘è‰²é™¸è¡Œé³¥æŠŠ"+item->query("c_name")+"åƒä¸‹è‚š!?\n" );
         item->remove();
         if( this_object()->query("mountable") ) {
             if( random(60)>1 ) return 0;
             tell_room( environment(),
-            "ºÚÉ«Â½ÐÐÄñµÎÏÂÁËÒ»Ì²¿ÚË®, ÕæÔà°¡!\n" );
+            "é»‘è‰²é™¸è¡Œé³¥æ»´ä¸‹äº†ä¸€ç˜å£æ°´, çœŸé«’å•Š!\n" );
             obj->move(environment(this_object()));
             return 1;
         }
         else {
-            tell_object( who, "ÄãÏÖÔÚ¿ÉÒÔÆïºÚÉ«Â½ÐÐÄñÁË!\n" );
+            tell_object( who, "ä½ ç¾åœ¨å¯ä»¥é¨Žé»‘è‰²é™¸è¡Œé³¥äº†!\n" );
             set( "mountable", 1 );
             return 1;
         }
@@ -82,9 +82,9 @@ int accept_item(object who,object item)
 int catch_huntee( object who )
 {
     tell_room( environment(this_object()),
-      "ºÚÉ«Â½ÐÐÄñ¼â½ÐÒ»Éù: ÓÖÊÇ "+who->query("c_name")+" ÕâÉ±ÈËÄ§£¬¿ìÌÓ!\n"
+      "é»‘è‰²é™¸è¡Œé³¥å°–å«ä¸€è²: åˆæ˜¯ "+who->query("c_name")+" é€™æ®ºäººé­”ï¼Œå¿«é€ƒ!\n"
       ,  ({ this_object(), who }) );
-    tell_object( who, "ºÚÉ«Â½ÐÐÄñ¼â½ÐÒ»Éù: ÓÖÊÇÄãÕâÉ±ÈËÄ§£¬¿ìÌÓ!\n" );
+    tell_object( who, "é»‘è‰²é™¸è¡Œé³¥å°–å«ä¸€è²: åˆæ˜¯ä½ é€™æ®ºäººé­”ï¼Œå¿«é€ƒ!\n" );
     return 1;
 }
 
@@ -96,41 +96,41 @@ int hit_enemy(string arg)
    owner = environment(this_object());
 
    if( !living(owner) ) 
-        return notify_fail("ºÚÉ«Â½ÐÐÄñ²»ÌýÄãµÄÖ¸»Ó¡£\n");
-   if( !arg ) return notify_fail("ÄãÏë×²Ë­£¿\n");
+        return notify_fail("é»‘è‰²é™¸è¡Œé³¥ä¸è½ä½ çš„æŒ‡æ®ã€‚\n");
+   if( !arg ) return notify_fail("ä½ æƒ³æ’žèª°ï¼Ÿ\n");
    if( !target = present(arg,environment(owner)) )
-        return notify_fail("ÕâÀïÃ»ÓÐÄÇÖÖ¶«Î÷¡£\n");
+        return notify_fail("é€™è£¡æ²’æœ‰é‚£ç¨®æ±è¥¿ã€‚\n");
    if( arg == (string)owner->query("name") )
-        return notify_fail("×²×Ô¼º£¿Äã·èÀ²£¿\n");
+        return notify_fail("æ’žè‡ªå·±ï¼Ÿä½ ç˜‹å•¦ï¼Ÿ\n");
    if( !living(target) )
-        return notify_fail("ºÚÉ«Â½ÐÐÄñÓÃÁ¦µÄ×²ÁË"
-                        +target->query("c_name")+"µ«ÊÇÊ²÷áÊÂÒ²Ã»·¢Éú¡£\n");
+        return notify_fail("é»‘è‰²é™¸è¡Œé³¥ç”¨åŠ›çš„æ’žäº†"
+                        +target->query("c_name")+"ä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
    if( !visible(target,owner) )
-        return notify_fail("ÄãÏë×²Ë­£¿\n");
+        return notify_fail("ä½ æƒ³æ’žèª°ï¼Ÿ\n");
    if( !owner->query_vision() )
-        return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+        return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
    if ( target->query("no_attack") )
-        return notify_fail("Õâ¼Ò»ï£­²»ÄÜÉ±¡£\n");
+        return notify_fail("é€™å‚¢ä¼™ï¼ä¸èƒ½æ®ºã€‚\n");
    if( userp(target) && (int)target->query_level()< 5 )
-        return notify_fail("Äã²»ÄÜ PK Ëû !!\n");
+        return notify_fail("ä½ ä¸èƒ½ PK ä»– !!\n");
    if( "berserk" == (string)owner->query("tactic") )
-        return notify_fail("Äã±ØÐë»»ÁíÒ»ÖÖÕ½Êõ¡£\n");
+        return notify_fail("ä½ å¿…é ˆæ›å¦ä¸€ç¨®æˆ°è¡“ã€‚\n");
    if( "melee" == (string)owner->query("tactic") )
-        return notify_fail("Äã±ØÐë»»ÁíÒ»ÖÖÕ½Êõ¡£\n");
+        return notify_fail("ä½ å¿…é ˆæ›å¦ä¸€ç¨®æˆ°è¡“ã€‚\n");
    if( "flank" == (string)owner->query("tactic") )
-        return notify_fail("Äã±ØÐë»»ÁíÒ»ÖÖÕ½Êõ¡£\n");
+        return notify_fail("ä½ å¿…é ˆæ›å¦ä¸€ç¨®æˆ°è¡“ã€‚\n");
    if( (int)owner->query("talk_points")<100 )
-        return notify_fail("ÄãµÄ½»Ì¸ÄÜÁ¦Ì«µÍÁË!\n" );
+        return notify_fail("ä½ çš„äº¤è«‡èƒ½åŠ›å¤ªä½Žäº†!\n" );
    if( (int)target->query("hit_points")<50 )
-        return notify_fail("ºÚÉ«Â½ÐÐÄñ²»Ð¼ÆÛ¸ºÈç´Ë²»¿°Ò»»÷µÄ¼Ò»ï¡£\n");
+        return notify_fail("é»‘è‰²é™¸è¡Œé³¥ä¸å±‘æ¬ºè² å¦‚æ­¤ä¸å ªä¸€æ“Šçš„å‚¢ä¼™ã€‚\n");
 
    if( target->query_temp("dodge_hit") ) {
         tell_object( owner,
-            "\nÄãÃüÁîºÚÉ«Â½ÐÐÄñÏò¶Ô·½×²È¥, µ«ÊÇµÐÈËÉÁ¹ýÁË!\n\n" );
+            "\nä½ å‘½ä»¤é»‘è‰²é™¸è¡Œé³¥å‘å°æ–¹æ’žåŽ», ä½†æ˜¯æ•µäººé–ƒéŽäº†!\n\n" );
         tell_object( target,
-            "\nºÚÉ«Â½ÐÐÄñÏòÄã×²À´, µ«ÊÇÄãÉÁ¹ýÁË!\n\n" );
+            "\né»‘è‰²é™¸è¡Œé³¥å‘ä½ æ’žä¾†, ä½†æ˜¯ä½ é–ƒéŽäº†!\n\n" );
         tell_room( owner,
-            owner->query("c_name")+"ÆïÖøºÚÉ«Â½ÐÐÄñ×²Ïò"+target->query("c_name")+"\n\n",
+            owner->query("c_name")+"é¨Žè‘—é»‘è‰²é™¸è¡Œé³¥æ’žå‘"+target->query("c_name")+"\n\n",
         ({ owner,target }) );
         owner->add("talk_points", -50);
         target->kill_ob(owner);
@@ -143,11 +143,11 @@ int hit_enemy(string arg)
    dod = (int)target->query_skill("dodge");
    dam = rid/2 - deb/5 -random(dod)/10;
         tell_object( owner,
-            "\nÄãÃüÁîºÚÉ«Â½ÐÐÄñÏò¶Ô·½×²È¥, µÐÈËËÆºõÊÜµ½¾Þ´óµÄÉËº¦!\n\n" );
+            "\nä½ å‘½ä»¤é»‘è‰²é™¸è¡Œé³¥å‘å°æ–¹æ’žåŽ», æ•µäººä¼¼ä¹Žå—åˆ°å·¨å¤§çš„å‚·å®³!\n\n" );
         tell_object( target,
-            "\nºÚÉ«Â½ÐÐÄñÏòÄã×²À´, ÄãËÆºõÊÜµ½¾Þ´óµÄÉËº¦!\n\n" );
+            "\né»‘è‰²é™¸è¡Œé³¥å‘ä½ æ’žä¾†, ä½ ä¼¼ä¹Žå—åˆ°å·¨å¤§çš„å‚·å®³!\n\n" );
         tell_room( owner,
-            owner->query("c_name")+"ÆïÖøºÚÉ«Â½ÐÐÄñ×²Ïò"+target->query("c_name")+"\n\n",
+            owner->query("c_name")+"é¨Žè‘—é»‘è‰²é™¸è¡Œé³¥æ’žå‘"+target->query("c_name")+"\n\n",
         ({ owner,target }) );
         owner->add("talk_points",-100);
         target->add("hit_points",-dam);

@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "Song Jiang", "�ν�" );
-	set_short( "�ν�" );
+	set_name( "Song Jiang", "宋江" );
+	set_short( "宋江" );
 	set_long(
 @C_LONG
-    ���ֹ�������ź����壬�˳Ƽ�ʱ���ι�����۩�����μҴ��ˡ��׹���ʷ��
-����Ȩı��������Т��������ƣ�Ϊ��ɽ���ܱ���ͷ�죬�������ǣ��𶯾�ʦ��
+    表字公明，外號呼保義，人稱及時雨宋公明，鄆城縣宋家村人。幼攻經史，
+長有權謀，馳名大孝，仗義疏財，為梁山泊總兵部頭領，名聞遐邇，震動京師。
 C_LONG
 	);
-	set( "unit", "��" );
+	set( "unit", "名" );
 	add ("id", ({"song","jiang" }) );
 	set_perm_stat( "str", 25 );
 	set_perm_stat( "dex", 25 );
@@ -39,9 +39,9 @@ C_LONG
 	set_natural_weapon( 45, 25, 38 );
 	set( "defense_type","berserk");
 	set( "wealth/gold", 160 );
-	set_c_verbs( ({ "%s��̬������Ȼ, �����Ŀ���%s",
-		"%s���ֶ���, ����%s��������΢Ц", "%s����ҡͷ, ��������%s",
-		"%sһ����Х, %s�о�һ������"
+	set_c_verbs( ({ "%s神態悠閒自然, 靜靜的看著%s",
+		"%s負手而立, 對著%s發出會心微笑", "%s輕輕搖頭, 伸手拍拍%s",
+		"%s一聲清嘯, %s感覺一陣痠麻"
 		 }) );
 
 	set( "tactic_func", "my_tactic" );
@@ -63,34 +63,34 @@ int my_tactic()
 	if( victim->query_temp("caught") < 3 ) {
 	victim->add_temp("caught",1) ;
 	tell_object( victim, 
-"\n�ν�̾��: ����˵�����, ��������, ����������, ��������һ��! \n"
-"����һ����·����.......\n\n"
-"�ν��ӻ���, һȺ��ް��������կ��, Ȼ��һ�ѽ����Ƶ��ڵ�\n");
+"\n宋江嘆道: 看汝此等武藝, 亦屬不凡, 吾上體天心, 今乃網開一面! \n"
+"放汝一條生路便是.......\n\n"
+"宋江揮揮手, 一群嘍羅把你帶到大寨門, 然後一把將你推倒在地\n");
 	tell_room( environment(), 
-"\n�ν��ɳ�һ����ް�" + victim->query("c_name") + "��̧���𴦷���\n",
+"\n宋江派出一堆嘍羅把" + victim->query("c_name") + "，抬到別處放生\n",
 		 this_object()  );
 
  victim->receive_damage(5);
- victim->move_player( TROOM"gate1","*** �㿴��"+victim->query("c_name")+"��һֻ���㱻�˶����� ***","");
+ victim->move_player( TROOM"gate1","*** 你看到"+victim->query("c_name")+"像一隻狗般被人丟出來 ***","");
 
  tell_object( victim, 
- "\n�㱻ˤ�˸�����ʺ��һЩ��Ѫ�������������˳��������ܵ����ƺ�����Ц�� \n\n");
+ "\n你被摔了個狗吃屎，一些鮮血從你的嘴角中流了出來，四周的人似乎都在笑你 \n\n");
 	return 1;
 }
         tell_object( victim,
-        "\n�ν����: �����������ֻ���, ������޷���������? \n\n"
-        "�ν��ӻ���, һȺ��ް���ץȥ����, Ȼ��һ�ѽ����Ƶ��ڵ�\n");
+        "\n宋江罵道: 泥人亦有三分火氣, 你道我無法整治你嗎? \n\n"
+        "宋江揮揮手, 一群嘍羅把你抓去地牢, 然後一把將你推倒在地\n");
         tell_room( environment(),
-        "\n�ν��ӻ��֣�һ����ް�" + victim->query("c_name") + "���ൽ���ζ���˽��...\n",
+        "\n宋江揮揮手，一堆嘍羅把" + victim->query("c_name") + "，拎到地牢動用私刑...\n",
                  this_object()  );
         victim->receive_damage(30);
         bandit = new(TMONSTER"small_bandit");
         
- victim->move_player( TROOM"jail1","*** �㿴��"+victim->query("c_name")+"��һֻ���㱻�˶����� ***","");
+ victim->move_player( TROOM"jail1","*** 你看到"+victim->query("c_name")+"像一隻狗般被人丟出來 ***","");
  bandit->move(environment(victim));
  bandit->kill_ob(victim);
  tell_object( victim,
-  "\n�㱻ˤ�˸�����ʺ��һЩ��Ѫ�������������˳��������ܵ����ƺ�����Ц�� \n\n");
+  "\n你被摔了個狗吃屎，一些鮮血從你的嘴角中流了出來，四周的人似乎都在笑你 \n\n");
  return 1;  
 
 }

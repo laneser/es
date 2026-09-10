@@ -5,14 +5,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("ice demon's amulet","ÒõÄ§·û");
+        set_name("ice demon's amulet","é™°é­”ç¬¦");
         add("id",({"amulet"}) );
-         set_short("ÒõÄ§·û");
+         set_short("é™°é­”ç¬¦");
         set_long(
-"ÕâÊÇÒ»¸ö°×É«µÄ»¤Éí·û£¬µ«ÊÇÉÏÃæÈ´½¦ÂúÁË°ß°ßÑª¼££¬ÏÔµÃºÜ¹îÒì¡£\n"
+"é€™æ˜¯ä¸€å€‹ç™½è‰²çš„è­·èº«ç¬¦ï¼Œä½†æ˜¯ä¸Šé¢å»æ¿ºæ»¿äº†æ–‘æ–‘è¡€è·¡ï¼Œé¡¯å¾—å¾ˆè©­ç•°ã€‚\n"
         );
         set( "no_sale",1);
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set( "weight", 10 );
         set( "type", "misc" );
         set( "material", "element" );

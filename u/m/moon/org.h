@@ -3,13 +3,13 @@
 
 #define GUILD_PREFIX           "/d/"
 
-#define LOW_ORG_EXP             1000000  //¼ÓÈë×éÖ¯µÄ×îĞ¡¾­Ñé
-#define LOW_ORG_QUEST		260	//¼ÓÈë×éÖ¯µÄ×îÉÙÈÎÎñµãÊı
-#define LEVEL_UP_QUEST		30	//Ã¿ÉıÒ»¼¶ËùĞèµÄÈÎÎñµãÊı
-#define LOW_ORG_EXPLORE		600	//¼ÓÈë×éÖ¯µÄ×îÉÙÆ½¾ùÃ°ÏÕ¶È=60%
-#define LEVEL_UP_EXPLORE	50	//Ã¿ÉıÒ»¼¶ËùĞèµÄÃ°ÏÕ¶È=5%
-#define LEVEL_UP_SKILL		10	//Ã¿ÉıÒ»¼¶ÄÜÑµÁ·µÄskillsµÈ¼¶
-#define MAX_ORG_LEVEL		10	//×éÖ¯µÄ×î´óµÈ¼¶
+#define LOW_ORG_EXP             1000000  //åŠ å…¥çµ„ç¹”çš„æœ€å°ç¶“é©—
+#define LOW_ORG_QUEST		260	//åŠ å…¥çµ„ç¹”çš„æœ€å°‘ä»»å‹™é»æ•¸
+#define LEVEL_UP_QUEST		30	//æ¯å‡ä¸€ç´šæ‰€éœ€çš„ä»»å‹™é»æ•¸
+#define LOW_ORG_EXPLORE		600	//åŠ å…¥çµ„ç¹”çš„æœ€å°‘å¹³å‡å†’éšªåº¦=60%
+#define LEVEL_UP_EXPLORE	50	//æ¯å‡ä¸€ç´šæ‰€éœ€çš„å†’éšªåº¦=5%
+#define LEVEL_UP_SKILL		10	//æ¯å‡ä¸€ç´šèƒ½è¨“ç·´çš„skillsç­‰ç´š
+#define MAX_ORG_LEVEL		10	//çµ„ç¹”çš„æœ€å¤§ç­‰ç´š
 
 #define CLASS_NAMES ({ "adventurer","knight","mage","healer",\
         "monk", "scholar", "thief",})

@@ -3,7 +3,7 @@
 // cost   180
 // time    60
 // skill   80
-// G_LVL    0	×¢: Ä§·¨ÊìÁ·¶È¶Ô±¾·¨ÊõÎŞÈÎºÎÓ°Ïì
+// G_LVL    0	æ³¨: é­”æ³•ç†Ÿç·´åº¦å°æœ¬æ³•è¡“ç„¡ä»»ä½•å½±éŸ¿
 // G_EXP   50
 #include <mudlib.h>
 #define TYPE "misc"
@@ -30,37 +30,37 @@ int cast(int level, string dest)
      
 	if( (int)me->query_skill("misc") < query_need_skill(level) ) {
 	  tell_object( me, 
-		      "ÄãµÄÔÓÏîÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâ¸öÄ§·¨! \n" 
+		      "ä½ çš„é›œé …é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™å€‹é­”æ³•! \n" 
 		      );
       return 0;
     }
 
 if ( !environment(me)->query("outside") )
         {
-                tell_object( me, "ÕâÀï¿´²»µ½ĞÇĞÇ, Ã»°ì·¨¿ªÆôĞÇ¿ÕÖ®ÃÅ¡£\n");
+                tell_object( me, "é€™è£¡çœ‹ä¸åˆ°æ˜Ÿæ˜Ÿ, æ²’è¾¦æ³•é–‹å•Ÿæ˜Ÿç©ºä¹‹é–€ã€‚\n");
                 return 0;
         }
         if ( environment(me)->query("no_teleport") )
         {
-                tell_object( me, "ÔÚÕâÀïÎŞ·¨¸ĞÊÜµ½ÌìÉÏµÄÖîĞÇ, ÎŞ·¨¿ªÆôĞÇ¿ÕÖ®ÃÅ¡£\n");
+                tell_object( me, "åœ¨é€™è£¡ç„¡æ³•æ„Ÿå—åˆ°å¤©ä¸Šçš„è«¸æ˜Ÿ, ç„¡æ³•é–‹å•Ÿæ˜Ÿç©ºä¹‹é–€ã€‚\n");
                 return 0;
         }
 
 	if (!dest) return 0;
 	if (!dest = me->query( "teleport_points/" + dest ) )	{
-		tell_object( me, "ÄãÃ»ÓĞÈÎºÎ¹Øì¶Õâ¿ÅĞÇµÄ¼ÇÒä, ÎŞ·¨¿ªÆôĞÇ½çÖ®ÃÅ\n" );
+		tell_object( me, "ä½ æ²’æœ‰ä»»ä½•é—œæ–¼é€™é¡†æ˜Ÿçš„è¨˜æ†¶, ç„¡æ³•é–‹å•Ÿæ˜Ÿç•Œä¹‹é–€\n" );
 		return 0;
 	}
 
          area=explode(dest,"/")[2];
           if((area== "island")||(area== "beggar")||(area== "story")||(area== "legend"))
-	{     tell_object( me, "Õâ¸öÇøÓòÔİÊ±¹Ø±Õ! \n");
+	{     tell_object( me, "é€™å€‹å€åŸŸæš«æ™‚é—œé–‰! \n");
 	     return 0;
 	}
 
 	emote( @TEXT
-$NS¸ßÉùÒ÷³ªÖäÎÄ¡¸À­Ë¹. µÏ¿ËÀ­. À­·¨´ï.... ´ÓÎáÖ®Ô¸Òı´óµØÖ®Á¦,
-×·»ØÖîĞÇÖ®Òä... ¿ªÆô¡¸ĞÇ½çÖ®ÃÅ¡¹
+$NSé«˜è²åŸå”±å’’æ–‡ã€Œæ‹‰æ–¯. è¿ªå…‹æ‹‰. æ‹‰æ³•é”.... å¾å¾ä¹‹é¡˜å¼•å¤§åœ°ä¹‹åŠ›,
+è¿½å›è«¸æ˜Ÿä¹‹æ†¶... é–‹å•Ÿã€Œæ˜Ÿç•Œä¹‹é–€ã€
 TEXT
 		, this_player() );
 
@@ -80,7 +80,7 @@ void	open_gate(string dest, object caster)
 		(dest_room->query("no_teleport")) )
 	{
 		tell_room( environment(caster), 
-			"Ò»µÀÉîÀ¶É«µÄ¹âÃÅ¸¡ÏÖÔÚÄãÃæÇ°, µ«ÊÇ×ªÑÛ¼ä¾ÍÅ¤Çú¡¢ÏûÊ§ÁË¡£\n"
+			"ä¸€é“æ·±è—è‰²çš„å…‰é–€æµ®ç¾åœ¨ä½ é¢å‰, ä½†æ˜¯è½‰çœ¼é–“å°±æ‰­æ›²ã€æ¶ˆå¤±äº†ã€‚\n"
 		);
 		return;
 	}
@@ -92,10 +92,10 @@ void	open_gate(string dest, object caster)
 	gate->move( environment(caster) );
 	back_gate->move( dest_room );
 	tell_room(  environment(caster), 
-		"Ò»µÀÒ«ÑÛµÄÉîÀ¶É«¹âÃÅÔÚÄãÇ°Ãæ»º»ºµØÉıÆğ¡£\n"
+		"ä¸€é“è€€çœ¼çš„æ·±è—è‰²å…‰é–€åœ¨ä½ å‰é¢ç·©ç·©åœ°å‡èµ·ã€‚\n"
 	);
 	tell_room(  dest_room, 
-		"Ò»µÀÒ«ÑÛµÄÉîÀ¶É«¹âÃÅÔÚÄãÇ°Ãæ»º»ºµØÉıÆğ¡£\n"
+		"ä¸€é“è€€çœ¼çš„æ·±è—è‰²å…‰é–€åœ¨ä½ å‰é¢ç·©ç·©åœ°å‡èµ·ã€‚\n"
 	);
 	call_out( "remove_gates", 60, gate, back_gate);
 }

@@ -9,14 +9,14 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name("octpus", "ÕÂÓã");
+	set_name("octpus", "ç« é­š");
 	add("id",({"octpus"}));
-	set_short("ÕÂÓã");
+	set_short("ç« é­š");
 	set_long(@LONG
-Ò»Ö»´óÐÍµÄÕÂÓã£¬ÕýÓÃÖøËüµÄ´¥ÊÖÑ°ÕÒÊ³Îï£¬Çë²»ÒªÈÇËü¡£
+ä¸€éš»å¤§åž‹çš„ç« é­šï¼Œæ­£ç”¨è‘—å®ƒçš„è§¸æ‰‹å°‹æ‰¾é£Ÿç‰©ï¼Œè«‹ä¸è¦æƒ¹å®ƒã€‚
 LONG
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", -250 );
 	set("max_hp",400);
 	set("likefish",1);
@@ -25,8 +25,8 @@ LONG
 	set_natural_armor(40,10);
 	set( "unarmed" , 40 );
 	set( "tactic_func", "emit_lick" );
-	set_c_limbs( ({ "Í·²¿", "´¥ÊÖ" }) );
-	set_c_verbs( ({ "%s»Ó¶¯ËüµÄ´¥ÊÖÏò%s±Þ´ò¶øÈ¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "è§¸æ‰‹" }) );
+	set_c_verbs( ({ "%sæ®å‹•å®ƒçš„è§¸æ‰‹å‘%séž­æ‰“è€ŒåŽ»" }) );
 }
 
 int emit_lick()
@@ -36,7 +36,7 @@ int emit_lick()
 	if( random(25)>3 || !(victim= query_attacker()) ) return 0;
 	else {
 	  tell_room( environment(this_object()), 
-		  "\nÕâÕÂÓãÓÃËüµÄ´¥ÊÖ°Ñ"+victim->query("c_name")+"½ô½ôµØÀ¦×¡\n\n"
+		  "\né€™ç« é­šç”¨å®ƒçš„è§¸æ‰‹æŠŠ"+victim->query("c_name")+"ç·Šç·Šåœ°æ†ä½\n\n"
 		  );
 	  victim->receive_damage(1+random(3));
 	  report( victim );	

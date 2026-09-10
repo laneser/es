@@ -5,11 +5,11 @@ int number=0;
 void create()
 {
 	::create();
-        set_short("ÂÃ¹Ý");
+        set_short("æ—…é¤¨");
 	set("long",@LONG
-´Ë´¦ÊÇ¡¸Î×ÏÌ³Ç¡¹ÀïÎ¨Ò»µÄÒ»¼ÒÂÃ¹Ý£¬Äã¿ÉÒÔÔÚÕâÀïÐÝÏ¢¹ýÒ¹¡£ÓÈÆäÊÇÃ¿µ±ÊÜÉË·ç
-º®£¬³ýÁËÐèÒªÍ×ÉÆ°üÔúÒÔÍâ£¬Ë¯ÉÏÒ»¾õ²»µ«ÉË¿ÚÒ×ì¶È¬Óú£¬Ò»¾õÆðÀ´¸üÊÇ¾«Éñ±¥Âú£¡Õâ
-ÀïµÄ¼ÛÇ®Ïàµ±¹«µÀ£¬²»¶þ¼Û£¬È«Ð´ÔÚÇ½±ÚÉÏÒ»ÕÅ»ÆÉ«Ö½(paper)ÉÏ¡£	
+æ­¤è™•æ˜¯ã€Œå·«å’¸åŸŽã€è£¡å”¯ä¸€çš„ä¸€å®¶æ—…é¤¨ï¼Œä½ å¯ä»¥åœ¨é€™è£¡ä¼‘æ¯éŽå¤œã€‚å°¤å…¶æ˜¯æ¯ç•¶å—å‚·é¢¨
+å¯’ï¼Œé™¤äº†éœ€è¦å¦¥å–„åŒ…ç´®ä»¥å¤–ï¼Œç¡ä¸Šä¸€è¦ºä¸ä½†å‚·å£æ˜“æ–¼ç—Šç™’ï¼Œä¸€è¦ºèµ·ä¾†æ›´æ˜¯ç²¾ç¥žé£½æ»¿ï¼é€™
+è£¡çš„åƒ¹éŒ¢ç›¸ç•¶å…¬é“ï¼Œä¸äºŒåƒ¹ï¼Œå…¨å¯«åœ¨ç‰†å£ä¸Šä¸€å¼µé»ƒè‰²ç´™(paper)ä¸Šã€‚	
 LONG
 	);
 	set("light", 1);
@@ -17,7 +17,7 @@ LONG
             "west" : SCITY"ww"
         ]) );
         set("c_item_desc", ([
-           "paper" :" ¶·´óµÄ×ÖÉÏÃæÐ´Öø£º¹ýÒ¹(sleep)Ò»´Î 500 ½ð±Ò¡£\n"
+           "paper" :" æ–—å¤§çš„å­—ä¸Šé¢å¯«è‘—ï¼šéŽå¤œ(sleep)ä¸€æ¬¡ 500 é‡‘å¹£ã€‚\n"
         ]) );
         set("objects", ([
            "boss" : SWMOB"boss1"
@@ -35,27 +35,27 @@ int do_sleep(string arg)
      object player;
      string name;
      if ( number > 5 ) {
-        write("ÕâÎ»¿ÍÙÄÕæ¶Ô²»Æð£¬±¾µêÒÑ¾­¿ÍÂúÁË£¬ÏÂ´ÎÇëÔç¡£Ð»Ð»¡£\n"); 
+        write("é€™ä½å®¢å€ŒçœŸå°ä¸èµ·ï¼Œæœ¬åº—å·²ç¶“å®¢æ»¿äº†ï¼Œä¸‹æ¬¡è«‹æ—©ã€‚è¬è¬ã€‚\n"); 
         return 1;
      }
      player = this_player();
      name=player->query("c_name");
      if ( !player->debit("gold", 500) ) {
-         write("ÕâÎ»¿ÍÙÄÕæ¶Ô²»Æð£¬ÄúÉíÉÏËù´øµÄÇ®²»¹»¡£\n");
+         write("é€™ä½å®¢å€ŒçœŸå°ä¸èµ·ï¼Œæ‚¨èº«ä¸Šæ‰€å¸¶çš„éŒ¢ä¸å¤ ã€‚\n");
          return 1;
      }
      number++;
      write(@LONG
 
-ÂÃ¹ÝÀÏ°å´óº°µÀ£ºÐ¡¶þ£¬¿ì´øÕâÎ»¿ÍÙÄÐÝÏ¢È¥¡£
+æ—…é¤¨è€é—†å¤§å–Šé“ï¼šå°äºŒï¼Œå¿«å¸¶é€™ä½å®¢å€Œä¼‘æ¯åŽ»ã€‚
 
 
-ì¶ÊÇ£¬µêÐ¡¶þ¼±¼±Ã¦Ã¦µØÒýÄãµ½¶þÂ¥£¬×¼±¸ÐÝÏ¢È¥...
+æ–¼æ˜¯ï¼Œåº—å°äºŒæ€¥æ€¥å¿™å¿™åœ°å¼•ä½ åˆ°äºŒæ¨“ï¼Œæº–å‚™ä¼‘æ¯åŽ»...
 
 LONG 
      );
      tell_room(this_object(),sprintf(
-         "%s¿´ÆðÀ´ºÜÆ£¾ëµØËæÖøµêÐ¡¶þÉÏ¶þÂ¥ÐÝÏ¢È¥¡£\n",player->query("c_name")),player);
+         "%sçœ‹èµ·ä¾†å¾ˆç–²å€¦åœ°éš¨è‘—åº—å°äºŒä¸ŠäºŒæ¨“ä¼‘æ¯åŽ»ã€‚\n",player->query("c_name")),player);
      player->move_player(SCITY"hotel2","SNEAK");
      player->set_temp("block_command", 1);
      call_out("result", 6,player, 0 ,this_object());
@@ -67,7 +67,7 @@ void result(object me, int count, object place)
      int sp,fp,med,max_fp,max_sp;
      if( !me ) return 0;
      if( count < 10 ) {
-     tell_object(me, "Z z £Ú £ú Z z\n");
+     tell_object(me, "Z z ï¼º ï½š Z z\n");
          if ( me->query("max_fp") ) me->add("force_points",5);
          if ( me->query("max_sp") ) me->add("spell_points",7);
          me->set_temp("block_command",1);
@@ -87,9 +87,9 @@ void result(object me, int count, object place)
      me->move_player(SCITY"hotel1","SNEAK");
      me->delete_temp("block_command");
      tell_object(me,
-	"ÄãÉì¸öÀÁÑü,¿´¿´Ê±¼ä,àÅ,ÐÝÏ¢¹»ÁËÒ²¸ÃÉÏÂ·ÁË¡£\n");
+	"ä½ ä¼¸å€‹æ‡¶è…°,çœ‹çœ‹æ™‚é–“,å—¯,ä¼‘æ¯å¤ äº†ä¹Ÿè©²ä¸Šè·¯äº†ã€‚\n");
      tell_room(place,sprintf(
-	"%s´ÓÂ¥ÉÏ×ßÁËÏÂÀ´,¾«ÉñºÃ¼«ÁË¡£\n",me->query("c_name")),me);
+	"%så¾žæ¨“ä¸Šèµ°äº†ä¸‹ä¾†,ç²¾ç¥žå¥½æ¥µäº†ã€‚\n",me->query("c_name")),me);
      return ;
 }
 void reset()

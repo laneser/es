@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("enforcer's robe", "Ö´ÊÂÖ®ÅÛ");
+        set_name("enforcer's robe", "åŸ·äº‹ä¹‹è¢");
         add( "id", ({ "robe" }) );
-        set_short("Ö´ÊÂÖ®ÅÛ");
+        set_short("åŸ·äº‹ä¹‹è¢");
         set_long(
-                "Õâ¼ş³¤ÅÛÊÇÖ´ÊÂ³£´©ÖøµÄ¡£\n"
+                "é€™ä»¶é•·è¢æ˜¯åŸ·äº‹å¸¸ç©¿è‘—çš„ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "cloth");
         set( "armor_class", 13 );

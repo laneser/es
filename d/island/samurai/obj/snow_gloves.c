@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Snow Gloves", "±ùÑ©ÊÖÌ×");
+        set_name( "Snow Gloves", "å†°é›ªæ‰‹å¥—");
         add( "id", ({ "snow","gloves" }) );
-        set_short("Snow Gloves", "±ùÑ©ÊÖÌ×");
+        set_short("Snow Gloves", "å†°é›ªæ‰‹å¥—");
         set_long(@AAA
-ÕâÊÇÒ»¼şÑ©°×É«µÄÊÖÌ×£¬ÊÇÓÃ¸ß¼¶Ë¿³ñ¼ÓÉÏÌØÊâ²ÄÁÏ»ìºÏÖ¯³ÉµÄ£¬ÄÜÌá¹©Ïà
-µ±¸ßµÄ·À»¤Á¦£¡£¡
+é€™æ˜¯ä¸€ä»¶é›ªç™½è‰²çš„æ‰‹å¥—ï¼Œæ˜¯ç”¨é«˜ç´šçµ²ç¶¢åŠ ä¸Šç‰¹æ®Šææ–™æ··åˆç¹”æˆçš„ï¼Œèƒ½æä¾›ç›¸
+ç•¶é«˜çš„é˜²è­·åŠ›ï¼ï¼
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "hands" );
         set( "armor_class", 4 );
         set( "defense_bonus", 3 );

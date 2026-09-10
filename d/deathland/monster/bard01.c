@@ -8,14 +8,14 @@ void create()
 	::create();
 	seteuid(getuid());
 	set_level(5);
-	set_name( "bard lucksis", "Á÷ÀËÊ«ÈËÀ­¿ËÎ÷Ë¿" );
+	set_name( "bard lucksis", "æµæµªè©©äººæ‹‰å…‹è¥¿çµ²" );
 	add("id",({"bard","lucksis"}));
-	set_short( "a bard lucksis", "Á÷ÀËÊ«ÈËÀ­¿ËÎ÷Ë¿" );
+	set_short( "a bard lucksis", "æµæµªè©©äººæ‹‰å…‹è¥¿çµ²" );
 	set_long(
 		"A bard named lucksis. she has already searched many \n"
 		"years to find her lover.\n",@DESC
-Ò»¸öÁ÷ÀËÊ«ÈËÀ­¿ËÎ÷Ë¿,ÔÚÏò¶ñÉñ Yang ÎÊ¹ý×Ô¼ºµÄÃüÔËáá,¾Í¿ªÊ¼ËýÇ§Àï
-Æ¯²´µÄÂÃ³ÌÑ°ÕÒËýÃüÔËÖÐµÄ°®ÈË(lover)
+ä¸€å€‹æµæµªè©©äººæ‹‰å…‹è¥¿çµ²,åœ¨å‘æƒ¡ç¥ž Yang å•éŽè‡ªå·±çš„å‘½é‹å¾Œ,å°±é–‹å§‹å¥¹åƒé‡Œ
+æ¼‚æ³Šçš„æ—…ç¨‹å°‹æ‰¾å¥¹å‘½é‹ä¸­çš„æ„›äºº(lover)
 DESC
 	);
 	set("alignment",500);
@@ -52,28 +52,28 @@ void init()
 void ask_man(object who)
 {
      if (!(who->query_temp("lucksis_quest"))||(int)(who->query_temp("lucksis_quest/ask"))<2)
-        tell_object(who,"À­¿ËÏ£Ë¿¶ÔÄã²»Àí²»²Ç.\n"); 
+        tell_object(who,"æ‹‰å…‹å¸Œçµ²å°ä½ ä¸ç†ä¸ç¬.\n"); 
      else if( (int)(who->query_temp("lucksis_quest/ask") )==2 ) 
-        tell_object(who,"»òÐíËûÊÇÎÒÃüÔËÖÐµÄ°éÂÂ\n");
+        tell_object(who,"æˆ–è¨±ä»–æ˜¯æˆ‘å‘½é‹ä¸­çš„ä¼´ä¾¶\n");
      else   
-        tell_object(who,"ÎÒÒÑ¾­¾ö¶¨Ï×Éí¸ø Yang ÁË,ÇëÄã°ïÖúÎÒ\n");
+        tell_object(who,"æˆ‘å·²ç¶“æ±ºå®šç»èº«çµ¦ Yang äº†,è«‹ä½ å¹«åŠ©æˆ‘\n");
      return;     
 }
 
 void ask_romance(object who)
 {
      if ( !(who->query_temp("lucksis_quest")) ||(int)(who->query_temp("lucksis_quest/ask"))==0 )
-        tell_object(who,"À­¿ËÏ£Ë¿ËµµÀ:Äã¾õµÃÎÊÈËÒþË½ÊÇÒ»¼þÓÐÈ¤µÄÊÂÂð?\n");
+        tell_object(who,"æ‹‰å…‹å¸Œçµ²èªªé“:ä½ è¦ºå¾—å•äººéš±ç§æ˜¯ä¸€ä»¶æœ‰è¶£çš„äº‹å—Ž?\n");
      else 
        {
          tell_object(who,@MSG1
-À­¿ËÏ£Ë¿ÏòÄãÐ¡ÉùµØËµµÀ:ÔÚÎÒÂÃÐÐµÄÊýÄê¼ä,ÎÒµÄ°®Çé¹ÊÊÂ¼¸ºõÊÇÒ»Æ¬¿Õ
-°×,µ«ÊÇÓÐ¼¸¸ö¸ßÉÐµÄÉðÊ¿Ôø¾­ÎÂÎÄÓÐÀñµØÓëÎÒ¹²Í¬¾­Àú¹ýÒ»¶ÎÃ°ÏÕ,ËûÃÇ
-µÄÃû×Ö·Ö±ðÊÇÀ¼¶ú´ï(Lawierda),µ×Ë¹ÒË¶û(Desyer),°¬°ØÂ³Ë¹(Ebbruce)¼°
-´÷Àû·ð(Dalifore),µ±Ê±ÎÒ»ùì¶ÀñÃ²,²¢Ã»ÓÐ»ØÓ¦ËûÃÇµÄ°®Òâ,µ«ÊÇÁ÷ÀËÁËÕâ
-÷á¶àÄê,ÎÒÒÑ¾­Æ£¾ëÁË,Ï£ÍûÄãÄÜ°ïÖúÎÒ,Ò»¸öÅ®º¢×Ó¼Ò×ÜÊÇ²»ºÃÒâË¼¿ª¿Ú ,
-Âé·³Äã°ïÎÒÎÊÒ»ÎÊËûÃÇµÄÒâË¼,È»áá¸øÎÒÒ»¸ö½¨Òé(suggest),Ë­½«ÊÇÎÒ×îºÃ
-µÄ°éÂÂ,Ð»Ð»Äã.
+æ‹‰å…‹å¸Œçµ²å‘ä½ å°è²åœ°èªªé“:åœ¨æˆ‘æ—…è¡Œçš„æ•¸å¹´é–“,æˆ‘çš„æ„›æƒ…æ•…äº‹å¹¾ä¹Žæ˜¯ä¸€ç‰‡ç©º
+ç™½,ä½†æ˜¯æœ‰å¹¾å€‹é«˜å°šçš„ç´³å£«æ›¾ç¶“æº«æ–‡æœ‰ç¦®åœ°èˆ‡æˆ‘å…±åŒç¶“æ­·éŽä¸€æ®µå†’éšª,ä»–å€‘
+çš„åå­—åˆ†åˆ¥æ˜¯è˜­è€³é”(Lawierda),åº•æ–¯å®œçˆ¾(Desyer),è‰¾æŸé­¯æ–¯(Ebbruce)åŠ
+æˆ´åˆ©ä½›(Dalifore),ç•¶æ™‚æˆ‘åŸºæ–¼ç¦®è²Œ,ä¸¦æ²’æœ‰å›žæ‡‰ä»–å€‘çš„æ„›æ„,ä½†æ˜¯æµæµªäº†é€™
+éº¼å¤šå¹´,æˆ‘å·²ç¶“ç–²å€¦äº†,å¸Œæœ›ä½ èƒ½å¹«åŠ©æˆ‘,ä¸€å€‹å¥³å­©å­å®¶ç¸½æ˜¯ä¸å¥½æ„æ€é–‹å£ ,
+éº»ç…©ä½ å¹«æˆ‘å•ä¸€å•ä»–å€‘çš„æ„æ€,ç„¶å¾Œçµ¦æˆ‘ä¸€å€‹å»ºè­°(suggest),èª°å°‡æ˜¯æˆ‘æœ€å¥½
+çš„ä¼´ä¾¶,è¬è¬ä½ .
 MSG1
          );
          who->set_temp("lucksis_quest/ask",2);
@@ -85,10 +85,10 @@ void ask_lover(object who)
      if ( !(who->query_temp("lucksis_quest")) )
         {
         tell_object(who,@MSG2
-À­¿ËÏ£Ë¿ËµµÀ:ÔÚÎÒÂÃÐÐµÄÊýÄê¼ä,ÎÒ¼û¹ý¸÷Ê½¸÷ÑùµÄÈË.
-¶øÎÒÃüÔËÖÐµÄ°®ÈË........
+æ‹‰å…‹å¸Œçµ²èªªé“:åœ¨æˆ‘æ—…è¡Œçš„æ•¸å¹´é–“,æˆ‘è¦‹éŽå„å¼å„æ¨£çš„äºº.
+è€Œæˆ‘å‘½é‹ä¸­çš„æ„›äºº........
 
-À­¿ËÏ£Ë¿³¤Ì¾Ò»Éù,µÍÍ·²»Óï,ËÆºõÓÐÊ²÷á»°ÒªËµµÄÑù×Ó.
+æ‹‰å…‹å¸Œçµ²é•·å˜†ä¸€è²,ä½Žé ­ä¸èªž,ä¼¼ä¹Žæœ‰ä»€éº¼è©±è¦èªªçš„æ¨£å­.
 MSG2
           );
         who->set_temp("lucksis_quest",(["ask":0,
@@ -103,10 +103,10 @@ MSG2
      else  /* if ( (int)( who->query_temp("lucksis_quest/ask") ) !=2 ) */
         {
           tell_object(who,@MSG3
-À­¿ËÏ£Ë¿ËµµÀ:ÔÚÎÒÂÃÐÐµÄÊýÄê¼ä,ÎÒ¼û¹ý¸÷Ê½¸÷ÑùµÄÈË.
-¶øÎÒÃüÔËÖÐµÄ°®ÈË........
+æ‹‰å…‹å¸Œçµ²èªªé“:åœ¨æˆ‘æ—…è¡Œçš„æ•¸å¹´é–“,æˆ‘è¦‹éŽå„å¼å„æ¨£çš„äºº.
+è€Œæˆ‘å‘½é‹ä¸­çš„æ„›äºº........
 
-À­¿ËÏ£Ë¿³¤Ì¾Ò»Éù,µÍÍ·²»Óï,ËÆºõÓÐÊ²÷á»°ÒªËµµÄÑù×Ó.
+æ‹‰å…‹å¸Œçµ²é•·å˜†ä¸€è²,ä½Žé ­ä¸èªž,ä¼¼ä¹Žæœ‰ä»€éº¼è©±è¦èªªçš„æ¨£å­.
 MSG3
           );
         }
@@ -119,8 +119,8 @@ int tellyou(object who)
 {
     if ((int)(who->query_temp("lucksis_quest/ask"))==0) {
       tell_object(who,@MSG4
-À­¿ËÏ£Ë¿(Lucksis)¸æËßÄã:»òÐíÄãÄÜ°ïÖúÎÒ½â¾öÕâ¸öÄÑÌâ
-À­¿ËÏ£Ë¿(Lucksis)¸æËßÄã:»ØÀ´ÎÒÕâÀï,ÎÒ½«¸æËßÄã¹Øì¶ÎÒµÄÂÞÂüÊ·(romance)
+æ‹‰å…‹å¸Œçµ²(Lucksis)å‘Šè¨´ä½ :æˆ–è¨±ä½ èƒ½å¹«åŠ©æˆ‘è§£æ±ºé€™å€‹é›£é¡Œ
+æ‹‰å…‹å¸Œçµ²(Lucksis)å‘Šè¨´ä½ :å›žä¾†æˆ‘é€™è£¡,æˆ‘å°‡å‘Šè¨´ä½ é—œæ–¼æˆ‘çš„ç¾…æ›¼å²(romance)
 MSG4
                );
       who->set_temp("lucksis_quest/ask",1);
@@ -132,12 +132,12 @@ int suggest_who(string str)
 {
     object who;
     int *aaa,i,j;
-    mapping x=(["desyer" :"µ×Ë¹ÒË¶û ","lawierda":"À¼¶ú´ï ",
-                "ebbruce":"°¬°ØÂ³Ë¹ ","dalifore":"´÷Àû·ð "]);
+    mapping x=(["desyer" :"åº•æ–¯å®œçˆ¾ ","lawierda":"è˜­è€³é” ",
+                "ebbruce":"è‰¾æŸé­¯æ–¯ ","dalifore":"æˆ´åˆ©ä½› "]);
     who=this_player();
     if (!(who->query_temp("lucksis_quest"))|| (int)(who->query_temp("lucksis_quest/ask"))!=2 )
       {
-       tell_object(who,"À­¿ËÏ£Ë¿µÉÄãÒ»ÑÛËµ:±ð³³ÎÒ\n"); 
+       tell_object(who,"æ‹‰å…‹å¸Œçµ²çžªä½ ä¸€çœ¼èªª:åˆ¥åµæˆ‘\n"); 
       }  
     else if ( (int)( who->query_temp("lucksis_quest/ask") )==2)  
         {
@@ -146,22 +146,22 @@ int suggest_who(string str)
           if ( j==sizeof(aaa)+1 )  
              {
              tell_object(who,@MSG5
-µ±Äã°ïÎÒÈ¥ÎÊËûÃÇµÄÒâ¼ûÊ±,ÎÒ×Ô¼ºÏëÁËÐí¶à,ÆäÊµÒ»¸öÈËµÄÉú
-»îÒ²²»ËãÌ«»µ,¶øÇÒ¾­¹ýÁËÕâ÷á¶àÄêµÄ·ç·çÓêÓê,ÎÒÒÑ¾­¿´¿ªÁË.
-ÎÒ´òËã·þÊÌ Yang,µ½Ú¤½çÈ¥µ±ÐÞÅ® 
-ÇëÄã°ïÖúÎÒ×îááÒ»´Î,ËÍÎÒµ½Ú¤½çÈ¥,Ð»Ð»Äã.
+ç•¶ä½ å¹«æˆ‘åŽ»å•ä»–å€‘çš„æ„è¦‹æ™‚,æˆ‘è‡ªå·±æƒ³äº†è¨±å¤š,å…¶å¯¦ä¸€å€‹äººçš„ç”Ÿ
+æ´»ä¹Ÿä¸ç®—å¤ªå£ž,è€Œä¸”ç¶“éŽäº†é€™éº¼å¤šå¹´çš„é¢¨é¢¨é›¨é›¨,æˆ‘å·²ç¶“çœ‹é–‹äº†.
+æˆ‘æ‰“ç®—æœä¾ Yang,åˆ°å†¥ç•ŒåŽ»ç•¶ä¿®å¥³ 
+è«‹ä½ å¹«åŠ©æˆ‘æœ€å¾Œä¸€æ¬¡,é€æˆ‘åˆ°å†¥ç•ŒåŽ»,è¬è¬ä½ .
 MSG5
               );
              who->set_temp("lucksis_quest/ask",3);
              }  
           else 
             
-            tell_object(who,"À­¿ËÎ÷Ë¿Ëµ:Âé·³ÄãÔÙÈ¥ÎÊÎÊ"+
+            tell_object(who,"æ‹‰å…‹è¥¿çµ²èªª:éº»ç…©ä½ å†åŽ»å•å•"+
             ( (int)(who->query_temp("lucksis_quest/desyer"))==0 ? x["desyer"] : ""  )   +
             ( (int)(who->query_temp("lucksis_quest/lawierda"))==0 ? x["lawierda"] :""  )+           
             ( (int)(who->query_temp("lucksis_quest/ebbruce"))==0 ? x["ebbruce"] : ""   )+
             ( (int)(who->query_temp("lucksis_quest/dalifore"))==0 ? x["dalifore"] : "" )+
-            "\nÈ»ááÔÙ¸øÎÒ½¨Òé,Ð»Ð»Äã\n"
+            "\nç„¶å¾Œå†çµ¦æˆ‘å»ºè­°,è¬è¬ä½ \n"
             );
          }
          
@@ -175,24 +175,24 @@ void die()
    killer = query("last_attacker");
    if ( !(killer->query_temp("lucksis_quest")) || (int)(killer->query_temp("lucksis_quest/ask"))!=3)
      tell_room(environment(),
-        sprintf("À­¿ËÏ£Ë¿Ëµ: Yang ½«×çÖä%s.\nÀ­¿ËÏ£Ë¿µ¹µØ¶ø²»¸ÊÐÄµÄËÀÈ¥\n",killer->query("name") )
+        sprintf("æ‹‰å…‹å¸Œçµ²èªª: Yang å°‡è©›å’’%s.\næ‹‰å…‹å¸Œçµ²å€’åœ°è€Œä¸ç”˜å¿ƒçš„æ­»åŽ»\n",killer->query("name") )
               );
    else
      {
         if ( (int)killer -> query_quest_level("lucksis_lover") < 1 )
           {
-          tell_object(killer,sprintf("À­¿ËÏ£Ë¿Ëµ:Ð»Ð»Äã³¬¶ÉÎÒ,%s\n",killer->query("name")));
+          tell_object(killer,sprintf("æ‹‰å…‹å¸Œçµ²èªª:è¬è¬ä½ è¶…æ¸¡æˆ‘,%s\n",killer->query("name")));
           killer->finish_quest("lucksis_lover",1);
           killer->delete_temp("lucksis_quest");
           killer->gain_experience(3000);
           this_player()->set_explore( "deathland#39" );
-          tell_object(killer,"\nÄãÍê³ÉÁËÀ­¿ËÏ£Ë¿µÄÃüÔË,»ñµÃÁË3000µã¾­ÑéÖµ.\n");
+          tell_object(killer,"\nä½ å®Œæˆäº†æ‹‰å…‹å¸Œçµ²çš„å‘½é‹,ç²å¾—äº†3000é»žç¶“é©—å€¼.\n");
           //write_file("/log/lucksis_quest.log",
           //  sprintf("**%s finished the quests in %s.\n",
           //           killer->query("name"),ctime( time() ) ) );
           }
         else {
-          tell_object(killer,sprintf("À­¿ËÏ£Ë¿Ëµ:Ð»Ð»ÄãÔÙ¶È³¬¶ÉÎÒ,%s\n",killer->query("name")));
+          tell_object(killer,sprintf("æ‹‰å…‹å¸Œçµ²èªª:è¬è¬ä½ å†åº¦è¶…æ¸¡æˆ‘,%s\n",killer->query("name")));
           this_player()->set_explore( "deathland#39" );
         }
      }  

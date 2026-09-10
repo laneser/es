@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("fur boots", "ÊŞÆ¤Ñ¥×Ó");
+        set_name("fur boots", "ç¸çš®é´å­");
         add( "id", ({ "boots" }) );
-        set_short( "ÊŞÆ¤Ñ¥×Ó" );
+        set_short( "ç¸çš®é´å­" );
         set_long(
-                "ÕâÊÇ¾«ÁéÓÃÊŞÆ¤ËùºæÖÆ³ÉµÄÑ¥×Ó \n"
+                "é€™æ˜¯ç²¾éˆç”¨ç¸çš®æ‰€çƒ˜è£½æˆçš„é´å­ \n"
         );
-        set( "unit","Ë«");
+        set( "unit","é›™");
         set( "type", "feet" );
         set( "material", "leather");
         set( "armor_class", 5 );

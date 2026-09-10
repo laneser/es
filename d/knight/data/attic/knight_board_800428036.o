@@ -1,34 +1,34 @@
 #d/knight/fortress/knight_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÆïÊ¿ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"é¨å£«ç•™è¨€æ¿",])
 messages ({(["id":362,"body":"On Fri Apr 28, Julius wrote:
-> Ã»Ç®µÄ¿ÛÉ¶ÄØ...??
-> Ã»Ç®µÄ²Å±È½Ï»á°Ñ¶«¶«ÄÃÈ¥Âô.....
+> æ²’éŒ¢çš„æ‰£å•¥å‘¢...??
+> æ²’éŒ¢çš„æ‰æ¯”è¼ƒæœƒæŠŠæ±æ±æ‹¿å»è³£.....
 > so feel a little strange ...
 
-    àÅ......ºÃÎÊÌâ.......ÄÃÃüÀ´µÖÑº......ÈçºÎ??
+    å—¯......å¥½å•é¡Œ.......æ‹¿å‘½ä¾†æŠµæŠ¼......å¦‚ä½•??
 
                                                     Tsunami
-","title":"Re: Ã»Ç®µÄÄØ...??","time":799067984,"poster":"Tsunami",]),(["id":363,"body":"get glaiveÎª·ÀÖ¹Äã½«Ëü±äÂô£¬ÏÈ¿ÛÏÂÄãÓëÕâ¶«Î÷µÄ¼ÛÖµÏàµÈµÄÇ®£¬µ±Äã¹é»¹Ê±ÔÙÍËÇ®¸øÄã¡£....Ì«ÖØÁË£¬Äã°á²»¶¯¡£>
-ÕâÊÇÎÒÄÃÈ¡×°±¸µÄÑ¶Ï¢...
-Ã»ÓĞÄÃµ½×°±¸È´±»¿ÛÁË1000 gold ... can give me back?
-winter ¿ÛÊ×:~~~
+","title":"Re: æ²’éŒ¢çš„å‘¢...??","time":799067984,"poster":"Tsunami",]),(["id":363,"body":"get glaiveç‚ºé˜²æ­¢ä½ å°‡å®ƒè®Šè³£ï¼Œå…ˆæ‰£ä¸‹ä½ èˆ‡é€™æ±è¥¿çš„åƒ¹å€¼ç›¸ç­‰çš„éŒ¢ï¼Œç•¶ä½ æ­¸é‚„æ™‚å†é€€éŒ¢çµ¦ä½ ã€‚....å¤ªé‡äº†ï¼Œä½ æ¬ä¸å‹•ã€‚>
+é€™æ˜¯æˆ‘æ‹¿å–è£å‚™çš„è¨Šæ¯...
+æ²’æœ‰æ‹¿åˆ°è£å‚™å»è¢«æ‰£äº†1000 gold ... can give me back?
+winter æ‰£é¦–:~~~
 ","title":"< no title >","time":799079569,"poster":"Winter",]),(["id":364,"title":"Re: < no title >","body":"On Fri Apr 28, Winter wrote:
-> get glaiveÎª·ÀÖ¹Äã½«Ëü±äÂô£¬ÏÈ¿ÛÏÂÄãÓëÕâ¶«Î÷µÄ¼ÛÖµÏàµÈµÄÇ®£¬µ±Äã¹é»¹Ê±ÔÙÍËÇ®¸øÄã¡£....Ì«ÖØÁË£¬Äã°á²»¶¯¡£>
-> ÕâÊÇÎÒÄÃÈ¡×°±¸µÄÑ¶Ï¢...
-> Ã»ÓĞÄÃµ½×°±¸È´±»¿ÛÁË1000 gold ... can give me back?
-> winter ¿ÛÊ×:~~~
+> get glaiveç‚ºé˜²æ­¢ä½ å°‡å®ƒè®Šè³£ï¼Œå…ˆæ‰£ä¸‹ä½ èˆ‡é€™æ±è¥¿çš„åƒ¹å€¼ç›¸ç­‰çš„éŒ¢ï¼Œç•¶ä½ æ­¸é‚„æ™‚å†é€€éŒ¢çµ¦ä½ ã€‚....å¤ªé‡äº†ï¼Œä½ æ¬ä¸å‹•ã€‚>
+> é€™æ˜¯æˆ‘æ‹¿å–è£å‚™çš„è¨Šæ¯...
+> æ²’æœ‰æ‹¿åˆ°è£å‚™å»è¢«æ‰£äº†1000 gold ... can give me back?
+> winter æ‰£é¦–:~~~
 
-	Õâ¸öÎÊÌâ½â¾öÁË...ÏÂ´ÎÄã¿´µ½ÎÒµÄÊ±ºòÕÒÎÒÒªÇ®°É ...:P
-	Èç¹û·¢ÏÖ»¹ÓĞÆäËûÎÊÌâ,ÔÙ post ÉÏÀ´....
+	é€™å€‹å•é¡Œè§£æ±ºäº†...ä¸‹æ¬¡ä½ çœ‹åˆ°æˆ‘çš„æ™‚å€™æ‰¾æˆ‘è¦éŒ¢å§ ...:P
+	å¦‚æœç™¼ç¾é‚„æœ‰å…¶ä»–å•é¡Œ,å† post ä¸Šä¾†....
 
 				Ishige ..
 
-","time":799235298,"poster":"Ishige",]),(["id":366,"body":"ÍÛ...¸ÄºÃ¶àÀ²,Ò»½øÀ´¾Í±»À­ÀÏ´óº£~±â,...hmm..»¹ÊÇ¹àË®°É
-ps:´¿¹àË®
-","title":"hi...just ¹ä¹ä","time":799913962,"poster":"Sbos",]),(["id":367,"title":"< no title >","body":"Ğ´ÁËĞÂµÄ¹ÖÎï: ÑîÖ¾, for knights....
-¶ÔÇ¿¶ÈÓĞÒâ¼ûÇëmail ¸øÎÒ...
+","time":799235298,"poster":"Ishige",]),(["id":366,"body":"å“‡...æ”¹å¥½å¤šå•¦,ä¸€é€²ä¾†å°±è¢«æ‹‰è€å¤§æµ·~æ‰,...hmm..é‚„æ˜¯çŒæ°´å§
+ps:ç´”çŒæ°´
+","title":"hi...just é€›é€›","time":799913962,"poster":"Sbos",]),(["id":367,"title":"< no title >","body":"å¯«äº†æ–°çš„æ€ªç‰©: æ¥Šå¿—, for knights....
+å°å¼·åº¦æœ‰æ„è¦‹è«‹mail çµ¦æˆ‘...
               Sincerely Takeda
 ","time":799939830,"poster":"Takeda",]),(["id":369,"title":"< no title >","body":"Help...wiz or gods...
 
@@ -39,15 +39,15 @@ When I look book..see myself :~~ Help..:p
 ","time":800007182,"poster":"Book",]),(["id":370,"body":"this is just because ur name BOOK.....
 
                                Sincerely Takeda
-","title":"< no title >","time":800025413,"poster":"Takeda",]),(["id":371,"body":"    ÕæÊÇ·¸¼ú.......Ê²÷áÃû×Ö²»ºÃÈ¡,È¡ÁË¸öbook.....
-    hehehehe, »î¸Ãµ¹é¹, hohoho
+","title":"< no title >","time":800025413,"poster":"Takeda",]),(["id":371,"body":"    çœŸæ˜¯çŠ¯è³¤.......ä»€éº¼åå­—ä¸å¥½å–,å–äº†å€‹book.....
+    hehehehe, æ´»è©²å€’æ¥£, hohoho
                                 Tsunami
-","title":"< no title >","time":800078031,"poster":"Tsunami",]),(["id":372,"title":"< no title >","body":"ÎŞÁÄÖĞ....
-","time":800168399,"poster":"Wuwu",]),(["id":373,"body":"×î½ü³£³£ÓĞ²»Ã÷µÄÕ½Õù·¢Éú .. ÊÇÒòÎªÉ¶°¡ ??
-ÊÇÎÒÃÇÆïÊ¿Ì«ÈÇÈËÌÖÑáÂğ ?? »¹ÊÇ .. ºÃÍæ°¡ ??
-àÅ .. LoginÒ»Ö»mageÖ®áá²Å·¢ÏÖ .. Ô­À´ÕæµÄÊÇÎÒÃÇÆïÊ¿ÓĞ²»¶ÔµÄµØ·½ ..
-°¦ .. ¸÷Î»ÆïÊ¿´ó¸ç¸ç .. ºÃºÃÎªÁËÆïÊ¿¹«»áµÄÃûÉù¼ÓÓÍ°É .. :)))))
-Ğ¡Ğ¡±ø ÍêÖÎÉÏ .
+","title":"< no title >","time":800078031,"poster":"Tsunami",]),(["id":372,"title":"< no title >","body":"ç„¡èŠä¸­....
+","time":800168399,"poster":"Wuwu",]),(["id":373,"body":"æœ€è¿‘å¸¸å¸¸æœ‰ä¸æ˜çš„æˆ°çˆ­ç™¼ç”Ÿ .. æ˜¯å› ç‚ºå•¥å•Š ??
+æ˜¯æˆ‘å€‘é¨å£«å¤ªæƒ¹äººè¨å­å— ?? é‚„æ˜¯ .. å¥½ç©å•Š ??
+å—¯ .. Loginä¸€éš»mageä¹‹å¾Œæ‰ç™¼ç¾ .. åŸä¾†çœŸçš„æ˜¯æˆ‘å€‘é¨å£«æœ‰ä¸å°çš„åœ°æ–¹ ..
+å”‰ .. å„ä½é¨å£«å¤§å“¥å“¥ .. å¥½å¥½ç‚ºäº†é¨å£«å…¬æœƒçš„åè²åŠ æ²¹å§ .. :)))))
+å°å°å…µ å®Œæ²»ä¸Š .
 ","title":"< no title >","time":800399693,"poster":"Kanchi",]),(["id":374,"body":"
 ","title":"< no title >","time":800428032,"poster":"Twingo",]),(["id":375,"body":"
 ","title":"< no title >","time":800428032,"poster":"Twingo",]),(["id":376,"body":"

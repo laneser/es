@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("halfling magician cape", "°ëÉíÈËÄ§·¨Ê¦Åû·ç");
+        set_name("halfling magician cape", "åŠèº«äººé­”æ³•å¸«æŠ«é¢¨");
         add( "id", ({ "cape" }) );
-        set_short( "°ëÉíÈËÄ§·¨Ê¦Åû·ç");
+        set_short( "åŠèº«äººé­”æ³•å¸«æŠ«é¢¨");
         set_long(
-                "ÕâÊÇ°ëÉíÈËÄ§·¨Ê¦×¨ÓÃµÄÅû·ç \n"
+                "é€™æ˜¯åŠèº«äººé­”æ³•å¸«å°ˆç”¨çš„æŠ«é¢¨ \n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set("material","cloth") ;
         set( "armor_class", 5 );

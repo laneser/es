@@ -1,138 +1,138 @@
 #d/thief/hall/thief_board.c
-ob_data (["last_location":0,"silent_look":1,"c_short.text":"С͵���԰�","cap_name":"Board","id":({"board","bulletin board",}),"c_name":"���԰�","long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷��뿴 help board��
-","c_cap_name":"���԰�","name":"board","short":"@@query_short","short.text":"Thief's bulletin board","c_long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷���ο� help board��
+ob_data (["last_location":0,"silent_look":1,"c_short.text":"小偷留言板","cap_name":"Board","id":({"board","bulletin board",}),"c_name":"留言板","long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
+","c_cap_name":"留言板","name":"board","short":"@@query_short","short.text":"Thief's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請參看 help board。
 ","long":"@@query_long",])
 messages ({(["poster":"Natasha","time":827128849,"body":"On Mon Mar 18, Foxes wrote:
-> ��������Ү�������϶���.�ش� post ����
+> 今天死在耶拉曼手上二次.特此 post 留念
 
-	������foxes
-","title":"Re: < no title >","id":506,]),(["poster":"Lcy","time":827269524,"title":"< no title >","body":"Sigh����
-ͻȻ��һ����������������������ͷ���������ǰһ�������ð��Ȼ����ȫ����ʹ��һ�ɽ�ζ ....�����һ������˵��: ���в��壬������Ǵ�����ճʹ������ӯ֮ͽ: �Ƿ�����         һ�����������˾��� ....��What?> �����ˡ�
+	可憐的foxes
+","title":"Re: < no title >","id":506,]),(["poster":"Lcy","time":827269524,"title":"< no title >","body":"Sigh～～
+突然，一道閃電由天而降，正中你的頭頂，你的眼前一陣金星亂冒，然後是全身劇痛和一股焦味 ....天空中一個聲音說道: 多行不義，必遭天譴，今日懲處惡貫滿盈之徒: 非凡公子         一名，以作世人警惕 ....。What?> 你死了。
 ","id":507,]),(["poster":"Uranus","time":827329423,"body":"On Wed Mar 20, Lcy wrote:
-> Sigh����
-> ͻȻ��һ����������������������ͷ���������ǰһ�������ð��Ȼ����ȫ����ʹ��һ�ɽ�ζ ....�����һ������˵��: ���в��壬������Ǵ�����ճʹ������ӯ֮ͽ: �Ƿ�����         һ�����������˾��� ....��What?> �����ˡ�
-�۹���....���� Lcy ....
-û��̫а���...:p
-���ˮ....:p
+> Sigh～～
+> 突然，一道閃電由天而降，正中你的頭頂，你的眼前一陣金星亂冒，然後是全身劇痛和一股焦味 ....天空中一個聲音說道: 多行不義，必遭天譴，今日懲處惡貫滿盈之徒: 非凡公子         一名，以作世人警惕 ....。What?> 你死了。
+哇哈哈....笨笨 Lcy ....
+沒事太邪惡吧...:p
+灌灌水....:p
 ","title":"Re: < no title >","id":508,]),(["poster":"Ananda","time":827415330,"title":"Re: Re: < no title >","body":"On Wed Mar 13, Natasha wrote:
 > On Wed Mar 13, Titania wrote:
-> > ��.....ԭ��post ֻҪ��post�ͺ���
-> > ��reply��?
-> > ����.....*Ŭ��˼��ò*
+> > 嗯.....原來post 只要打post就好羅
+> > 那reply呢?
+> > 嗯嗯.....*努力思考貌*
 > 
-> 	��...�� help board ��֪�в���˵..
+> 	嗯...打 help board 不知行不行說..
 > 	grin
 > ,
-��followup <num> ������!.
+打followup <num> 就行啦!.
 ","id":509,]),(["poster":"Foxes","time":827446173,"body":"On Thu Mar 21, Ananda wrote:
 > On Wed Mar 13, Natasha wrote:
 > > On Wed Mar 13, Titania wrote:
-> > > ��.....ԭ��post ֻҪ��post�ͺ���
-> > > ��reply��?
-> > > ����.....*Ŭ��˼��ò*
+> > > 嗯.....原來post 只要打post就好羅
+> > > 那reply呢?
+> > > 嗯嗯.....*努力思考貌*
 > > 
-> > 	��...�� help board ��֪�в���˵..
+> > 	嗯...打 help board 不知行不行說..
 > > 	grin
 > > ,
-> ��followup <num> ������!.
+> 打followup <num> 就行啦!.
 test test.
 ","title":"Re: Re: Re: < no title >","id":510,]),(["poster":"Lcy","time":827448946,"body":"WA.....
-����������...:~~
+三天死兩次...:~~
 ","title":"< no title >","id":511,]),(["poster":"Hasayaki","time":827491609,"title":"Re: Re: Re: Re: < no title >","body":"On Fri Mar 22, Foxes wrote:
 > On Thu Mar 21, Ananda wrote:
 > > On Wed Mar 13, Natasha wrote:
 > > > On Wed Mar 13, Titania wrote:
-> > > > ��.....ԭ��post ֻҪ��post�ͺ���
-> > > > ��reply��?
-> > > > ����.....*Ŭ��˼��ò*
+> > > > 嗯.....原來post 只要打post就好羅
+> > > > 那reply呢?
+> > > > 嗯嗯.....*努力思考貌*
 > > > 
-> > > 	��...�� help board ��֪�в���˵..
+> > > 	嗯...打 help board 不知行不行說..
 > > > 	grin
 > > > ,
-> > ��followup <num> ������!.
+> > 打followup <num> 就行啦!.
 > test test.
-test hmm ���Ү
+test hmm 真的耶
 ","id":512,]),(["poster":"River","time":827506484,"title":"Re: Re: Re: Re: Re: < no title >","body":"On Fri Mar 22, Hasayaki wrote:
 > On Fri Mar 22, Foxes wrote:
 > > On Thu Mar 21, Ananda wrote:
 > > > On Wed Mar 13, Natasha wrote:
 > > > > On Wed Mar 13, Titania wrote:
-> > > > > ��.....ԭ��post ֻҪ��post�ͺ���
-> > > > > ��reply��?
-> > > > > ����.....*Ŭ��˼��ò*
+> > > > > 嗯.....原來post 只要打post就好羅
+> > > > > 那reply呢?
+> > > > > 嗯嗯.....*努力思考貌*
 > > > > 
-> > > > 	��...�� help board ��֪�в���˵..
+> > > > 	嗯...打 help board 不知行不行說..
 > > > > 	grin
 > > > > ,
-> > > ��followup <num> ������!.
+> > > 打followup <num> 就行啦!.
 > > test test.
-> test hmm ���Ү
-һȺ������lv19 Ӧ��Ҫ�д����������ȫ��Ϊlv0....grin
-û����Ҳ���ˮ ....
-����������С͵���Ҷ���չ�...:P
-","id":513,]),(["poster":"Eten","time":827590453,"body":"��ҲҪ��ˮ///
+> test hmm 真的耶
+一群笨笨的lv19 應該要叫大神大大把你們全降為lv0....grin
+沒事我也灌灌水 ....
+對了我是新小偷請大家多多照顧...:P
+","id":513,]),(["poster":"Eten","time":827590453,"body":"我也要灌水///
 test test
-","title":"< no title >","id":514,]),(["poster":"Eten","time":827590532,"body":"���������
-.....���в�
-","title":"< no title >","id":515,]),(["poster":"Foxes","time":827625757,"body":"��֪�ǲ����ҵĴ���,�о���С���� bs ��ʧ���ʺ����ֱ�����.���� bs gnome elder ����ʧ��ʮһ��,����ֻ���� mage ���Ҵ�
-��ʵÿ�����ᶼ��ÿ��������淨
-�е��ʺϾ�ŷ,�е��ʺϵ�����ս
-��Ҫ��ΪС͵���Դ��mob
-����ΪС����ǿ,
-��ʵС����������Ҳ�Ǻܸ�,
-�����е� mob ���ܴ�
-ϣ����ұ��ٱ�Թ�Ǹ���������,
-Ҫ��,�Լ�����һֻ,��Ҫ�ô�������������ﲻ����,ϣ�����᲻Ҫ������˵�Ǹ�������������,
+","title":"< no title >","id":514,]),(["poster":"Eten","time":827590532,"body":"灌灌灌□力搭
+.....麥仔茶
+","title":"< no title >","id":515,]),(["poster":"Foxes","time":827625757,"body":"不知是不是我的錯覺,感覺上小劍的 bs 牧失敗率好像又被改了.昨天 bs gnome elder 連續失敗十一次,最後只好請 mage 幫我打
+其實每個公會都有每個公會的玩法
+有的適合君歐,有的適合單獨做戰
+不要因為小偷可以打大mob
+就認為小劍很強,
+其實小劍的死亡率也是很高,
+而且有的 mob 不能打
+希望大家別再報怨那個公會怎樣,
+要不,自己來練一隻,不要讓大家玩起來都心裡不高興,希望以後不要再聽到說那個公會怎樣的事,
 ","title":"< no title >","id":516,]),(["poster":"Natasha","time":827659101,"body":"On Fri Mar 22, Lcy wrote:
 > WA.....
-> ����������...:~~
+> 三天死兩次...:~~
 
-	lcy���ͼ���:p
-	�ò�����ȥ��yaramon...��?
+	lcy加油加油:p
+	該不會是去ㄠyaramon...吧?
 ","title":"Re: < no title >","id":517,]),(["poster":"Aquarius","time":827663890,"title":"Re: < no title >","body":"On Sun Mar 24, Foxes wrote:
-> ��֪�ǲ����ҵĴ���,�о���С���� bs ��ʧ���ʺ����ֱ�����.���� bs gnome elder ����ʧ��ʮһ��,����ֻ���� mage ���Ҵ�
-> ��ʵÿ�����ᶼ��ÿ��������淨
-> �е��ʺϾ�ŷ,�е��ʺϵ�����ս
-> ��Ҫ��ΪС͵���Դ��mob
-> ����ΪС����ǿ,
-> ��ʵС����������Ҳ�Ǻܸ�,
-> �����е� mob ���ܴ�
-> ϣ����ұ��ٱ�Թ�Ǹ���������,
-> Ҫ��,�Լ�����һֻ,��Ҫ�ô�������������ﲻ����,ϣ�����᲻Ҫ������˵�Ǹ�������������,
+> 不知是不是我的錯覺,感覺上小劍的 bs 牧失敗率好像又被改了.昨天 bs gnome elder 連續失敗十一次,最後只好請 mage 幫我打
+> 其實每個公會都有每個公會的玩法
+> 有的適合君歐,有的適合單獨做戰
+> 不要因為小偷可以打大mob
+> 就認為小劍很強,
+> 其實小劍的死亡率也是很高,
+> 而且有的 mob 不能打
+> 希望大家別再報怨那個公會怎樣,
+> 要不,自己來練一隻,不要讓大家玩起來都心裡不高興,希望以後不要再聽到說那個公會怎樣的事,
 
-	û��Ү !
-","id":518,]),(["poster":"Sonic","time":827738843,"body":"�����һ�δ�����....post��
-��һ��..
+	沒改耶 !
+","id":518,]),(["poster":"Sonic","time":827738843,"body":"昨天第一次打孽龍....post記
+念一下..
 haha...**
 
 ","title":"< no title >","id":519,]),(["poster":"Upu","time":827777709,"body":"On Fri Mar 22, Lcy wrote:
 > WA.....
-> ����������...:~~
-hmm....����.....����������!!
+> 三天死兩次...:~~
+hmm....笨笨.....還被雷劈死!!
 ","title":"Re: < no title >","id":520,]),(["poster":"Lcy","time":827802528,"body":"On Tue Mar 26, Upu wrote:
 > On Fri Mar 22, Lcy wrote:
 > > WA.....
-> > ����������...:~~
-> hmm....����.....����������!!
-��..
-��������...�մ����ڵ�������...
+> > 三天死兩次...:~~
+> hmm....笨笨.....還被雷劈死!!
+嗯..
+運氣不好...剛從室內倒是室外...
 sigh..
-","title":"Re: Re: < no title >","id":521,]),(["poster":"Lcy","time":827802623,"body":"�������˯�����뵽 hide and bs
-���컹�뵽�ھ��е��೤������!@#$%
+","title":"Re: Re: < no title >","id":521,]),(["poster":"Lcy","time":827802623,"body":"最近幾天睡覺都想到 hide and bs
+今天還想到在軍中當班長喊口令!@#$%
 ","title":"< no title >","id":522,]),(["poster":"Foxes","time":827812069,"body":"laugh Lcy
-�������ϴ�ʮ������������..��
-","title":"< no title >","id":523,]),(["poster":"Lcy","time":827841801,"title":"about lucky plate","body":"Ϊʲ���е� lucky plate �������������
-�е�ȷ�ǲ�̫��???
-�ҵ� identify skill ��  100 �
-�ѵ����� N ���й�?
-N ԽСԽ��??
+不過我上次十分鐘內死二次..唉
+","title":"< no title >","id":523,]),(["poster":"Lcy","time":827841801,"title":"about lucky plate","body":"為什麼有的 lucky plate 鑑定起來是最佳
+有的確是不太差???
+我的 identify skill 是  100 喔
+難道跟第 N 件有關?
+N 越小越好??
 ","id":524,]),(["poster":"Natasha","time":828036053,"body":"On Tue Mar 26, Lcy wrote:
-> Ϊʲ���е� lucky plate �������������
-> �е�ȷ�ǲ�̫��???
-> �ҵ� identify skill ��  100 �
-> �ѵ����� N ���й�?
-> N ԽСԽ��??
+> 為什麼有的 lucky plate 鑑定起來是最佳
+> 有的確是不太差???
+> 我的 identify skill 是  100 喔
+> 難道跟第 N 件有關?
+> N 越小越好??
 
-	������...��...��û�д���id��...
+	你你你...你...有沒有穿再id啊...
 ","title":"Re: about lucky plate","id":525,]),})
 id_ref 535

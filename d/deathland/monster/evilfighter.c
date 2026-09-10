@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "evil fighter", "Ð°¶ñÕ½Ê¿" );
+	set_name( "evil fighter", "é‚ªæƒ¡æˆ°å£«" );
 	add("id",({"fighter","evilfighter"}));
-	set_short( "Ð°¶ñÕ½Ê¿" );
+	set_short( "é‚ªæƒ¡æˆ°å£«" );
 	set_long(
-		"Ò»¸öÁîÈË¾åÅÂµÄÐ°¶ñÕ½Ê¿,ÓÐÖøÁîÈËÎÞ·¨ÏëÏñµÄÄ§Á¦\n"
+		"ä¸€å€‹ä»¤äººæ‡¼æ€•çš„é‚ªæƒ¡æˆ°å£«,æœ‰è‘—ä»¤äººç„¡æ³•æƒ³åƒçš„é­”åŠ›\n"
 	);
 	set( "alignment", -1200 );
 	set_perm_stat( "dex", 23 );
@@ -39,10 +39,10 @@ int my_tactic()
 	if( random(20)>3 || !(victim= query_attacker()) ) return 0;
     else {
       tell_object(victim,
-          "Ð°¶ñ»ÃÓ°·¢³ö¿ÉÅÂµÄ¿ÞÉù,²¢ÇÒÊÖÖÐÐÎ³ÉÒ»ÍÅÂÌÉ«µÄ¹âÇò,ÏòÄã·ÉÈ¥.\n"
+          "é‚ªæƒ¡å¹»å½±ç™¼å‡ºå¯æ€•çš„å“­è²,ä¸¦ä¸”æ‰‹ä¸­å½¢æˆä¸€åœ˜ç¶ è‰²çš„å…‰çƒ,å‘ä½ é£›åŽ».\n"
           );
       tell_room(environment(this_object()),
-          "Ð°¶ñ»ÃÓ°·¢³ö¿ÉÅÂµÄÐ¦Éù,²¢ÇÒÊÖÖÐÐÎ³ÉÒ»ÍÅÂÌÉ«µÄ¹âÇò,Ïò"+victim->query("c_name")+"·ÉÈ¥.\n"
+          "é‚ªæƒ¡å¹»å½±ç™¼å‡ºå¯æ€•çš„ç¬‘è²,ä¸¦ä¸”æ‰‹ä¸­å½¢æˆä¸€åœ˜ç¶ è‰²çš„å…‰çƒ,å‘"+victim->query("c_name")+"é£›åŽ».\n"
           ,({victim,this_object(),}) );
       victim->receive_special_damage("evil",30+random(10));
       report(this_object(),victim);

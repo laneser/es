@@ -7,13 +7,13 @@ void create()
 {
 	::create();
 	set_level(12);
-	set_name("Mami mushroom", "ÁéÖ¥ÂèÂè");
+	set_name("Mami mushroom", "éˆèŠåª½åª½");
 	add("id",({"mami","mushroom"}));
-	set_short("ÁéÖ¥ÂèÂè");
+	set_short("éˆèŠåª½åª½");
 	set_long(
-	    "Ò»Ö»ÕıÒòÎªĞ¡º¢±»ÆÛ¸º¶øÉúÆøµÄÁéÖ¥ÂèÂè£¬ËüÕıÓÃ·ßÅ­µÄÑÛ¹âµÉÖøÄã¡£\n"
+	    "ä¸€éš»æ­£å› ç‚ºå°å­©è¢«æ¬ºè² è€Œç”Ÿæ°£çš„éˆèŠåª½åª½ï¼Œå®ƒæ­£ç”¨æ†¤æ€’çš„çœ¼å…‰çªè‘—ä½ ã€‚\n"
 	);
-	set("unit", "Ö»");
+	set("unit", "åª");
 	set("alignment", 350 );
 	set("killer",1);
 	set("max_hp", 500);
@@ -28,9 +28,9 @@ void create()
 	set( "unbleeding", 1);
 	set( "tactic_func", "sleepy" );
 	set( "alt_corpse", SAULIN_OBJ"big_pill" );
-	set_c_verbs(({ "%sÓÃÍ·×²%s", "%sÓÃÉíÌå×²%s" }));
-	set_c_limbs(({ "ÉíÌå", "Í·²¿" }));
-	set("c_death_msg","%sÍ»È»ºÁÎŞÉúÆøµØÌÉÔÚµØÉÏ... ²»¶¯ÁË¡£\n");
+	set_c_verbs(({ "%sç”¨é ­æ’%s", "%sç”¨èº«é«”æ’%s" }));
+	set_c_limbs(({ "èº«é«”", "é ­éƒ¨" }));
+	set("c_death_msg","%sçªç„¶æ¯«ç„¡ç”Ÿæ°£åœ°èººåœ¨åœ°ä¸Š... ä¸å‹•äº†ã€‚\n");
 }
 
 int sleepy()
@@ -40,15 +40,15 @@ int sleepy()
 	if( random(20)>6 || !(victim = query_attacker()) ) return 0;
     if( victim->query("stop_attack") ) return 0;
     tell_object( victim, 
-      "ÁéÖ¥ÂèÂèÉ¢·¢³öÒ»ÖÖÏãÆø£¬Äã¸Ğµ½»è»èÓûË¯!!\n");
+      "éˆèŠåª½åª½æ•£ç™¼å‡ºä¸€ç¨®é¦™æ°£ï¼Œä½ æ„Ÿåˆ°æ˜æ˜æ¬²ç¡!!\n");
 
     tell_room( environment(this_object()), 
-      "ÁéÖ¥ÂèÂè£¬É¢·¢³öÒ»ÖÖÆæÌØµÄÆøÏ¢°Ñ"+victim->query("c_name")+"ÃÔµÄ²»ĞÑÈËÊÂ!!\n",
+      "éˆèŠåª½åª½ï¼Œæ•£ç™¼å‡ºä¸€ç¨®å¥‡ç‰¹çš„æ°£æ¯æŠŠ"+victim->query("c_name")+"è¿·çš„ä¸é†’äººäº‹!!\n",
       ({ victim, this_object() })
     );
     victim->block_attack(6);
     victim->set_temp("msg_stop_attack", 
-       "( ÄãÏÖÔÚÈ«ÉíÎŞÁ¦£¬Ö»ÏëºÃºÃµÄË¯Ò»¾õ! )\n"
+       "( ä½ ç¾åœ¨å…¨èº«ç„¡åŠ›ï¼Œåªæƒ³å¥½å¥½çš„ç¡ä¸€è¦º! )\n"
     );
     return 1;
 }

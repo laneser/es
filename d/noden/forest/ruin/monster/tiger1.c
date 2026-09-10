@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "earless tiger", "ÎŞ¶ú»¢" );
+	set_name( "earless tiger", "ç„¡è€³è™" );
 	add( "id", ({ "tiger" }) );
-	set_short( "ÎŞ¶ú»¢" );
+	set_short( "ç„¡è€³è™" );
 	set_long(@C_LONG
-Ò»Ö»Ğ×ÃÍµÄÀÏ»¢, ²»ÖªÎªºÎ, ËüÊ§È¥ÁËÓ¦ÓĞµÄÒ»¶Ô¶ú¶ä¡£
+ä¸€éš»å…‡çŒ›çš„è€è™, ä¸çŸ¥ç‚ºä½•, å®ƒå¤±å»äº†æ‡‰æœ‰çš„ä¸€å°è€³æœµã€‚
 C_LONG
 	);
-	set("unit","Ö»");
+	set("unit","åª");
 	set_perm_stat( "str", 20 );
 	set_perm_stat( "dex", 17 );
 	set_perm_stat( "int", 10 );
@@ -30,6 +30,6 @@ C_LONG
     set_natural_weapon( 60, 10, 25 );
 	set("alignment", -500 );
 
-	set_c_verbs( ({ "%sĞ×ÃÍµØÏò%sÒ»¿ÚÒ§È¥", "%sÑ¸ËÙµØÆËÏò%s" }) );
-	set_c_limbs( ({ "µÄÍ·", "µÄÉíÌå", "µÄ½Å" }) );
+	set_c_verbs( ({ "%så…‡çŒ›åœ°å‘%sä¸€å£å’¬å»", "%sè¿…é€Ÿåœ°æ’²å‘%s" }) );
+	set_c_limbs( ({ "çš„é ­", "çš„èº«é«”", "çš„è…³" }) );
 }

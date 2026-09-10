@@ -8,11 +8,11 @@ void create()
      add( "id",({ "cloth" }) );
      set_short( "@@query_short");
      set_long(@C_LONG
-ÕâÊÇÒ»¼ş¾­¹ıÌìÉñµÄÑªÏ´ÀñµÄÒÂ·ş£¬ÊÇ¼şÌìÉñ×£¸£µÄ·À¾ß¡£
+é€™æ˜¯ä¸€ä»¶ç¶“éå¤©ç¥çš„è¡€æ´—ç¦®çš„è¡£æœï¼Œæ˜¯ä»¶å¤©ç¥ç¥ç¦çš„é˜²å…·ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","heavy_metal" );
      set( "armor_class",33 );
@@ -34,5 +34,5 @@ int unequip_cloth()
 }
 string query_short()
 {
-     return set_color("ĞÇÌìÒÂ","HIY");
+     return set_color("æ˜Ÿå¤©è¡£","HIY");
 }

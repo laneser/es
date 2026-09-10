@@ -6,14 +6,14 @@ int announce(object ppl);
 void create()
 {
 	seteuid( getuid() );
-	set_name( "peace stone", "ºÍÆ½¼ÍÄî±®" );
+	set_name( "peace stone", "å’Œå¹³ç´€å¿µç¢‘" );
 	add( "id", ({ "stone" }) );
-	set_short( "ºÍÆ½¼ÍÄî±®" );
+	set_short( "å’Œå¹³ç´€å¿µç¢‘" );
 	set_long(@LONG
-ÏóáçºÍÆ½µÄ¼ÍÄî±®£¬²»¹ıµ¹ÖÃµÄÎäÆ÷ÔìĞÍ£¬ÈÃÄã¾õµÄÏàµ±ÓĞÈ¤£¡
+è±¡å¾µå’Œå¹³çš„ç´€å¿µç¢‘ï¼Œä¸éå€’ç½®çš„æ­¦å™¨é€ å‹ï¼Œè®“ä½ è¦ºçš„ç›¸ç•¶æœ‰è¶£ï¼
 LONG
 	);
-	set( "unit", "×ù" );
+	set( "unit", "åº§" );
 	set( "prevent_get",1 );
 }
 
@@ -32,29 +32,29 @@ int do_beg(string arg)
 	pname=player->query( "c_name" );
 
 	if( !arg )
-		return notify_fail( "ÄãÏë×öÊ²÷á£¡£¿\n" );
+		return notify_fail( "ä½ æƒ³åšä»€éº¼ï¼ï¼Ÿ\n" );
 
 	if( arg != "Lizardman Holy Knight" )
-		return notify_fail( "ÇóË­°¡£¿\n" );
+		return notify_fail( "æ±‚èª°å•Šï¼Ÿ\n" );
 
 	if( (int)player->query_level()<=5 )
-		return notify_fail( "Ğ¡Ğ¡Äê¼Í£¬²»ÒªÑ§×ö»µÊÂ£¡\n" );
+		return notify_fail( "å°å°å¹´ç´€ï¼Œä¸è¦å­¸åšå£äº‹ï¼\n" );
 
 	if( !(obj=present("lizardman holy knight",env)) )
-		return notify_fail("ÄãÏëÇóµÄÈË²»ÔÚÕâ¶ù°¡£¡\n");
+		return notify_fail("ä½ æƒ³æ±‚çš„äººä¸åœ¨é€™å…’å•Šï¼\n");
 
 	if( (int)player->query_temp("jousting")==1 ) {
 		if( (int)(obj->query("no_jousting"))==0 ) {
 			obj1=new( IWEP"jousting" );
 			obj1->move( player );
 			obj->set("no_jousting",1);
-			write("\nÊ¥ÆïÊ¿½«Ê¯±®°ÎÆğ½»¸øÁËÄã£¬ß×£¿¾¹±ä³É¡º´´ÊÀÉñêª¡»ÁË£¡\n\n");
-			tell_room(env,set_color("\nÄã¿´µ½Ê¥ÆïÊ¿Éì³öË«ÊÖÓÃÁ¦µØÎÕ×¡Ê¯±®£¬Ê¯±®µÄÍâ¿ÇÁ¢¿Ì»¯ÎªËéÆ¬£»\n¾ÍÔÚÊ¯±®ËéµôµÄÍ¬Ê±£¬Ò»µÀÒ«ÑÛµÄ¹âÃ¢ÓÉÊ¥ÆïÊ¿ÊÖÉÏ·¢³ö£¬ÁîÄã¼¸ºõÕÅ²»¿ªÑÛ¾¦¡£\nÄãºÃÆæµÄÍùÊ¥ÆïÊ¿Ë«ÊÖ¿´È¥¡£ß×£¬ÄÇ²»¾ÍÊÇ´«ËµÖĞµÄ¡º´´ÊÀÉñêª¡»Âğ£¿\n½ÓÖøÊ¥ÆïÊ¿±ã°Ñêª½»¸øÁË"+pname+"\n","HIY"),player );
+			write("\nè–é¨å£«å°‡çŸ³ç¢‘æ‹”èµ·äº¤çµ¦äº†ä½ ï¼Œå’¦ï¼Ÿç«Ÿè®Šæˆã€å‰µä¸–ç¥æˆŸã€äº†ï¼\n\n");
+			tell_room(env,set_color("\nä½ çœ‹åˆ°è–é¨å£«ä¼¸å‡ºé›™æ‰‹ç”¨åŠ›åœ°æ¡ä½çŸ³ç¢‘ï¼ŒçŸ³ç¢‘çš„å¤–æ®¼ç«‹åˆ»åŒ–ç‚ºç¢ç‰‡ï¼›\nå°±åœ¨çŸ³ç¢‘ç¢æ‰çš„åŒæ™‚ï¼Œä¸€é“è€€çœ¼çš„å…‰èŠ’ç”±è–é¨å£«æ‰‹ä¸Šç™¼å‡ºï¼Œä»¤ä½ å¹¾ä¹å¼µä¸é–‹çœ¼ç›ã€‚\nä½ å¥½å¥‡çš„å¾€è–é¨å£«é›™æ‰‹çœ‹å»ã€‚å’¦ï¼Œé‚£ä¸å°±æ˜¯å‚³èªªä¸­çš„ã€å‰µä¸–ç¥æˆŸã€å—ï¼Ÿ\næ¥è‘—è–é¨å£«ä¾¿æŠŠæˆŸäº¤çµ¦äº†"+pname+"\n","HIY"),player );
 		}
 		else {
 			player->set_temp("jousting",0);
 			player->set_temp("holy_knight",0);
-			write("\nÊ¥ÆïÊ¿¶ÔÄãËµ£º¡º±§Ç¸£¬ÉñêªÔç±»È¡×ßÁË¡£¡»\n\n" );
+			write("\nè–é¨å£«å°ä½ èªªï¼šã€æŠ±æ­‰ï¼Œç¥æˆŸæ—©è¢«å–èµ°äº†ã€‚ã€\n\n" );
 		}
 	}
 	player->set_temp("jousting",0);
@@ -62,7 +62,7 @@ int do_beg(string arg)
 	player->set( "talk_points",50 );
 	announce(player);
 	tell_room( environment(player),set_color(
-	"\nÊ¥ÆïÊ¿¾ÙÆğÊÖÕÆ£¬ÇáÇáÔÚÊ¯±®ÉÏÒ»ÅÄ£¬Ê¯±®¾Í»Ò·ÉäÎÃğÁË¡£\n","HIR" ) );
+	"\nè–é¨å£«èˆ‰èµ·æ‰‹æŒï¼Œè¼•è¼•åœ¨çŸ³ç¢‘ä¸Šä¸€æ‹ï¼ŒçŸ³ç¢‘å°±ç°é£›æ¹®æ»…äº†ã€‚\n","HIR" ) );
 	obj->leave();
 	call_out("s_war",2);
 	return 1;
@@ -84,16 +84,16 @@ int announce(object ppl)
 	cname=ppl->query("c_name");
 	name=ppl->query("name");
 	class1=ppl->query("class");
-	if (class1=="knight") { cclass="¡¸ÆïÊ¿¡¹";}
-	else if (class1=="healer") { cclass="¡¸ĞĞÒ½Õß¡¹";}
-	else if (class1=="scholar") { cclass="¡¸ÊéÉú¡¹";}
-	else if (class1=="monk") { cclass="¡¸ÎäÉ®¡¹";}
-	else if (class1=="mage") { cclass="¡¸Ä§·¨Ê¦¡¹";}
-	else if (class1=="thief") { cclass="¡¸Ğ¡Íµ¡¹";}
-	else { cclass="Ä³¸ö";}
+	if (class1=="knight") { cclass="ã€Œé¨å£«ã€";}
+	else if (class1=="healer") { cclass="ã€Œè¡Œé†«è€…ã€";}
+	else if (class1=="scholar") { cclass="ã€Œæ›¸ç”Ÿã€";}
+	else if (class1=="monk") { cclass="ã€Œæ­¦åƒ§ã€";}
+	else if (class1=="mage") { cclass="ã€Œé­”æ³•å¸«ã€";}
+	else if (class1=="thief") { cclass="ã€Œå°å·ã€";}
+	else { cclass="æŸå€‹";}
 
 	for(i=sizeof(usr)-1;i>=0;i--) {
-	tell_object(usr[i],set_color("Ô¶·½´«À´"+cname+"("+name+")µÄÄÅº° :","HIR")+"ÎÒÒª·¢¶¯ÕªÏÉµºÕ½ÕùÁË£¬ÎªÁË "+set_color(cclass,"HIW")+" µÄÃûÓş\nÎÒ×ÜÓĞÒ»Ìì»áÇåÍêµÄ£¬ºÇºÇ.....\n*"+cname+"¶ÔÄãÂ¶³öÉñÃØµÄĞ¦Èİ*\n");
+	tell_object(usr[i],set_color("é æ–¹å‚³ä¾†"+cname+"("+name+")çš„å¶å–Š :","HIR")+"æˆ‘è¦ç™¼å‹•æ‘˜ä»™å³¶æˆ°çˆ­äº†ï¼Œç‚ºäº† "+set_color(cclass,"HIW")+" çš„åè­½\næˆ‘ç¸½æœ‰ä¸€å¤©æœƒæ¸…å®Œçš„ï¼Œå‘µå‘µ.....\n*"+cname+"å°ä½ éœ²å‡ºç¥ç§˜çš„ç¬‘å®¹*\n");
 	}
 	return 1;
 }

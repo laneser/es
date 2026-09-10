@@ -1,146 +1,146 @@
-ÎäÆ÷ÁĞ±í£º
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨åˆ—è¡¨ï¼š
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-Äà½ğÈµ»­ bow.c        35(-) 18(+) 35    blt               +dodge10
-É¥ÃÅ½£   deathsword.c 26    18    29    lbl
-ÇàÁúÑÚÔÂ dragonblade  40(+) 30(*) 53(+) lbl  bleed:10     nosecond
-Ë®»ğ·ç¹÷ elemental_st 35(-) 15(-) 38    blt
-ÓæÊ¦¶Ìµ¶ fishman_dagg 17     8    16    sbl               second
-ò¿ÓÈÆßÉ± flower_axe.c 40(+) 25(+) 53(+) axe  bleed:8      nosecond
-Ò©²æ     fork.c       17     7    17    thr
-¹³Á­Ç¹   hooklance.c  26    21(+) 28    thr               nosecond
-Ë®Ä¥ìøÕÈ huge_staff.c 42(+) 25(+) 47(+) blt               nosecond
-ÌúİğŞ¼¹Ç ironclub.c   40(+) 20(+) 40(-) blt  bleed:5      nosecond  Kar-4
+æ³¥é‡‘éµ²ç•« bow.c        35(-) 18(+) 35    blt               +dodge10
+å–ªé–€åŠ   deathsword.c 26    18    29    lbl
+é’é¾æ©æœˆ dragonblade  40(+) 30(*) 53(+) lbl  bleed:10     nosecond
+æ°´ç«é¢¨æ£ elemental_st 35(-) 15(-) 38    blt
+æ¼å¸«çŸ­åˆ€ fishman_dagg 17     8    16    sbl               second
+èš©å°¤ä¸ƒæ®º flower_axe.c 40(+) 25(+) 53(+) axe  bleed:8      nosecond
+è—¥å‰     fork.c       17     7    17    thr
+é‰¤é®æ§   hooklance.c  26    21(+) 28    thr               nosecond
+æ°´ç£¨ç¦ªæ– huge_staff.c 42(+) 25(+) 47(+) blt               nosecond
+éµè’ºè—œéª¨ ironclub.c   40(+) 20(+) 40(-) blt  bleed:5      nosecond  Kar-4
                                              weaponhit
                                              none, 16+random(9)
                                              bleed(6,8,8) ,holderhp-5
-Ìú¹Ï¡õ   ironhammer.c 18    10    20    blt
-»ëÌúµã¸Ö ironlance.c  35(-) 25(*) 30    jou  block,dam:10  nosecond
-ËÉ¶¨¹ÅÎÄ pinesword.c  35(-) 20(-) 35    lbl
-ÆÓµ¶     poblade.c    17     9    18    lbl  bleed:5
-·½Ìì»­êª polearm.c    26    16    30    pol                nosecond
-Ğ«×ÓÎ²°Í scor_whip.c  25    10    30(-) whi                nosale
-ĞåË¿ÀÃÒø silver_spear 50(*) 16    22    thu  ali/6000 18+min
-ÕÉ°ËÉßÃ¬ snake_polear 45(+) 30(*) 44(+) pol                nosecond
-Ñ©»¨ïÙÌú snowblade.c  37(+) 25(+) 37    lbl  bleed:10      nosecond
-Ë®Ä¥°Ë±Ş steel_whip.c 40(+) 25(*) 35(+) whi                anatomlogy+10
-µÁÔôØ°Ê× thief_dagger 18     8    16    dag                second
-Èı¼âÁ½ÈĞ threeblade.c 25    13    26    lbl                parry+10
-ÊÖÖ¸»¢   tiger_finger 17    10    19    una  bleed:2
-·ÖË®¶êÃ¼ waterdagger  18     9    18    dag                second
-ÔæÄ¾éÃ   woodoar.c    20    12    23    blt
-Ñãôáµ¶   yanlin.c     30    15    33    lbl  bleed:5
+éµç“œâ–¡   ironhammer.c 18    10    20    blt
+æ¸¾éµé»é‹¼ ironlance.c  35(-) 25(*) 30    jou  block,dam:10  nosecond
+æ¾å®šå¤æ–‡ pinesword.c  35(-) 20(-) 35    lbl
+æœ´åˆ€     poblade.c    17     9    18    lbl  bleed:5
+æ–¹å¤©ç•«æˆŸ polearm.c    26    16    30    pol                nosecond
+è å­å°¾å·´ scor_whip.c  25    10    30(-) whi                nosale
+ç¹¡çµ²çˆ›éŠ€ silver_spear 50(*) 16    22    thu  ali/6000 18+min
+ä¸ˆå…«è›‡çŸ› snake_polear 45(+) 30(*) 44(+) pol                nosecond
+é›ªèŠ±é‘Œéµ snowblade.c  37(+) 25(+) 37    lbl  bleed:10      nosecond
+æ°´ç£¨å…«é­ steel_whip.c 40(+) 25(*) 35(+) whi                anatomlogy+10
+ç›œè³ŠåŒ•é¦– thief_dagger 18     8    16    dag                second
+ä¸‰å°–å…©åˆƒ threeblade.c 25    13    26    lbl                parry+10
+æ‰‹æŒ‡è™   tiger_finger 17    10    19    una  bleed:2
+åˆ†æ°´è›¾çœ‰ waterdagger  18     9    18    dag                second
+æ£—æœ¨æ§Š   woodoar.c    20    12    23    blt
+é›ç¿åˆ€   yanlin.c     30    15    33    lbl  bleed:5
  
-·À¾ßQC±í:
+é˜²å…·QCè¡¨:
  
-Ãû³Æ     µµÃû         AC    DB    ÖÖÀà ÌØ·À                  ±¸×¢
+åç¨±     æª”å         AC    DB    ç¨®é¡ ç‰¹é˜²                  å‚™è¨»
 ======== ============ ===== ===== ==== ===================== ================
-Í·¿ø£º
-É½ÔôÍ·¿ø bandit_armor  7     1    hvm
-Ôí½í     black_hood.c  3     1    clo
-»ÆÍ­µÀ¹Ú brass_hat.c   4     1    ltm  evil5 divine-4 mental5
-ÂéÂŞ¡õ×Ö buddha_hood   6     3(-) clo  evil7 mental5
-³øÊ¦Ã±   cook_hat.c    4     2    clo  fire4 mental1
-ÉîéÜÅ¯Ã± fur_hat.c     6     1    lea  cold:4 fire:-3
-×Ï½ğµÀ¹Ú gold_hat.c    6     5(*) hvm  evil:7 divine:-5 mental:8
-ºì×º½ğÊø gold_helmet   6     2    ltm  none:1 magic:2
-»ëÇà×¥½Ç green_hood.c  7     5(*) clo  fire:4 cold:-5 mental:2     only
-ÕÚÈÕºÚóè hat.c         5     2    wood energy:6 fire:6
-³åÌì½ÇÌú iron_cap.c    6     2    adv  whip:10
-»ëÌú´ò¾Í iron_hat.c    5     2    ltm  none:5
-¹¿Í·Ìú½ç iron_headban  7     2    monk mental:2              con:-1 dodge+15
-ÆÌËªÒ«ÈÕ iron_helmet   9(+)  4    hvm  fire:5 cold:-2              only
-Êì¸ÖÊ¨×Ó lion_helmet   9(+)  3(-) hvm
-Ò»×Ö½í   one_hood.c    4     1    clo
-·ï³á×Ï½ğ phoenix_helm 10(*)  4    hvm  poison:3 none:3 mental:2   only
-ÂÚ½í     scholar_hood  7     5(*) scho magic:5 mental:2
-ÔíÉ´×ª½Ç silk_hood.c   6     2    clo  fire:3 acid:5 mental:2
-°×·¶ÑôÕ± wool_hat.c    6     2    lea  cold:3 fire:-3
+é ­ç›”ï¼š
+å±±è³Šé ­ç›” bandit_armor  7     1    hvm
+çš‚å·¾     black_hood.c  3     1    clo
+é»ƒéŠ…é“å†  brass_hat.c   4     1    ltm  evil5 divine-4 mental5
+éº»ç¾…â–¡å­— buddha_hood   6     3(-) clo  evil7 mental5
+å»šå¸«å¸½   cook_hat.c    4     2    clo  fire4 mental1
+æ·±ç°·æš–å¸½ fur_hat.c     6     1    lea  cold:4 fire:-3
+ç´«é‡‘é“å†  gold_hat.c    6     5(*) hvm  evil:7 divine:-5 mental:8
+ç´…ç¶´é‡‘æŸ gold_helmet   6     2    ltm  none:1 magic:2
+æ¸¾é’æŠ“è§’ green_hood.c  7     5(*) clo  fire:4 cold:-5 mental:2     only
+é®æ—¥é»‘ç®¬ hat.c         5     2    wood energy:6 fire:6
+æ²–å¤©è§’éµ iron_cap.c    6     2    adv  whip:10
+æ¸¾éµæ‰“å°± iron_hat.c    5     2    ltm  none:5
+ç®é ­éµç•Œ iron_headban  7     2    monk mental:2              con:-1 dodge+15
+é‹ªéœœè€€æ—¥ iron_helmet   9(+)  4    hvm  fire:5 cold:-2              only
+ç†Ÿé‹¼ç…å­ lion_helmet   9(+)  3(-) hvm
+ä¸€å­—å·¾   one_hood.c    4     1    clo
+é³³ç¿…ç´«é‡‘ phoenix_helm 10(*)  4    hvm  poison:3 none:3 mental:2   only
+ç¶¸å·¾     scholar_hood  7     5(*) scho magic:5 mental:2
+çš‚ç´—è½‰è§’ silk_hood.c   6     2    clo  fire:3 acid:5 mental:2
+ç™½èŒƒé™½æ°ˆ wool_hat.c    6     2    lea  cold:3 fire:-3
  
-îø¼×£º
-ĞÜÆ¤ÎÚÓÍ bear_cloth.c 26     4    lea
-Á¬»·ÊŞÃæ beast_plate  38(+)  6(-) lea
-ÔíÖ±×º   black_cloth  15     3    clo
-ÓÍÄå³øÊ¦ cook_cloth.c 25     3    clo
-ºÚË¿³ñ·¨ dark_cape.c  22     5    clo  mag:10 ene:10 ele:10 fire:15 cold:15
+é§ç”²ï¼š
+ç†Šçš®çƒæ²¹ bear_cloth.c 26     4    lea
+é€£ç’°ç¸é¢ beast_plate  38(+)  6(-) lea
+çš‚ç›´ç¶´   black_cloth  15     3    clo
+æ²¹è†©å»šå¸« cook_cloth.c 25     3    clo
+é»‘çµ²ç¶¢æ³• dark_cape.c  22     5    clo  mag:10 ene:10 ele:10 fire:15 cold:15
                                        con:-1 str:-2 kar:-1
-»ğÔÆÕ½¼× fire_plate.c 31     5    ele  none:10 cold:30
-ÓãÆ¤Ë®¿¿ fish_skin.c  19     2    lea  none:4 acid:-5        swim+20
-Ã·»¨ÓÜÒ¶ floral_plate 36(+)  7(+) ltm
-Ëø×Ó»Æ½ğ gold_chainma 40(*)  5    hvm                        no_sale
-µã´äÍÅ»¨ green_chainm 34     4    hvm
-ÈíÏº±³ĞÄ guard_mail1  31     3    ele
-ºìĞ·¼×   guard_mail2  33     6(-) ele
-¹ü½ğÉúÌú iron_plate.c 25     4    hvm
-½ğÂÆÓñÒÂ jade_cloth.c 31    10(*) ele  none:7 evil:10 poison:8 devine:-10 acid:6
+ç«é›²æˆ°ç”² fire_plate.c 31     5    ele  none:10 cold:30
+é­šçš®æ°´é  fish_skin.c  19     2    lea  none:4 acid:-5        swim+20
+æ¢…èŠ±æ¦†è‘‰ floral_plate 36(+)  7(+) ltm
+é–å­é»ƒé‡‘ gold_chainma 40(*)  5    hvm                        no_sale
+é»ç¿ åœ˜èŠ± green_chainm 34     4    hvm
+è»Ÿè¦èƒŒå¿ƒ guard_mail1  31     3    ele
+ç´…èŸ¹ç”²   guard_mail2  33     6(-) ele
+è£¹é‡‘ç”Ÿéµ iron_plate.c 25     4    hvm
+é‡‘ç¸·ç‰è¡£ jade_cloth.c 31    10(*) ele  none:7 evil:10 poison:8 devine:-10 acid:6
                                        dex:-3 kar:1 str:-1
-ÌúÒ¶îø¼× leave_plate  35(-)  6(-) hvm
-×ÏĞåÍÅĞØ purple_plate 25     7(+) hvm
-Öìºì¼×   red_armor.c  18     3    ltm  none:4 poison:1
-»ğÉñÁúÒø silver_plate 35(-) 10(*) hvm  fire:15 evil:10
-ÂéÉÀ     small_cloth  12     3    clo
-»¢Æ¤Ì×Ìå tiger_cloth  24     3    lea  none:8
-¸ñ×Ó²¼±³ vest.c       20     3    clo
-°×¼×     white_armor  18     4    ltm  none:3 poison:1
-°×¶Ğ×ÓÕ÷ white_warcap 18     5    clo  none:5 poison:1
+éµè‘‰é§ç”² leave_plate  35(-)  6(-) hvm
+ç´«ç¹¡åœ˜èƒ¸ purple_plate 25     7(+) hvm
+ç¡ƒç´…ç”²   red_armor.c  18     3    ltm  none:4 poison:1
+ç«ç¥é¾éŠ€ silver_plate 35(-) 10(*) hvm  fire:15 evil:10
+éº»è¡«     small_cloth  12     3    clo
+è™çš®å¥—é«” tiger_cloth  24     3    lea  none:8
+æ ¼å­å¸ƒèƒŒ vest.c       20     3    clo
+ç™½ç”²     white_armor  18     4    ltm  none:3 poison:1
+ç™½ç·å­å¾µ white_warcap 18     5    clo  none:5 poison:1
                                                           
-±Û»·£º
-É½Ôô»¤Öâ bandit_armor  4(-)  1    hvm
-÷·Å£Æ¤±Û fur_armband   5(*)  3    adv  cold:-10 str:-1 con:-1 ban+15 whip+20
+è‡‚ç’°ï¼š
+å±±è³Šè­·è‚˜ bandit_armor  4(-)  1    hvm
+é£ç‰›çš®è‡‚ fur_armband   5(*)  3    adv  cold:-10 str:-1 con:-1 ban+15 whip+20
  
-»¤ÊÖ£º
-É½Ôô»¤ÊÖ bandit_armor  4(-)  0    hvm
+è­·æ‰‹ï¼š
+å±±è³Šè­·æ‰‹ bandit_armor  4(-)  0    hvm
  
-ëÖ¼×£º
-É½ÔôëÖ¼× bandit_armor  7     0    hvm
-±ªÆ¤¿ã   panther_pant  8(-)  3(-) lea  cold:4 fire:-5
-ÏÊºìÉú¾î red_skirt.c   5     4(+) clo  cold:-2 fire:3
+è„›ç”²ï¼š
+å±±è³Šè„›ç”² bandit_armor  7     0    hvm
+è±¹çš®è¤²   panther_pant  8(-)  3(-) lea  cold:4 fire:-5
+é®®ç´…ç”Ÿçµ¹ red_skirt.c   5     4(+) clo  cold:-2 fire:3
  
-Ğ¬×Ó£º
-É½ÔôÑ¥   bandit_armor  7     2    hvm
-»ÆÆ¤³Äµ× cowskin_boot  6     2    lea
-â¯Æ¤Õ­¹³ deer_boots.c  7     1    lea
-Ó¥×¦Æ¤ËÄ eagleclaw_bo  4     5(*) lea  energy:2
-½ğÏßÄ¨ÂÌ golden_boots  6     2    lea
-ÂéĞ¬     simple_boots  3     0    clo  none:1 acid:1
-ÅºË¿²½ÔÆ waterlily_bo  7     5(*) ele  evil:8 divine:-8 poison:2
+é‹å­ï¼š
+å±±è³Šé´   bandit_armor  7     2    hvm
+é»ƒçš®è¥¯åº• cowskin_boot  6     2    lea
+ççš®çª„é‰¤ deer_boots.c  7     1    lea
+é·¹çˆªçš®å›› eagleclaw_bo  4     5(*) lea  energy:2
+é‡‘ç·šæŠ¹ç¶  golden_boots  6     2    lea
+éº»é‹     simple_boots  3     0    clo  none:1 acid:1
+è—•çµ²æ­¥é›² waterlily_bo  7     5(*) ele  evil:8 divine:-8 poison:2
  
-¶ÜÅÆ£º
-º®Ë®±ù¶Ü guard_shield  6     5    ele  fire:12
-²»Õ´¹ø   pot.c         5     0    ltm  mental:5
+ç›¾ç‰Œï¼š
+å¯’æ°´å†°ç›¾ guard_shield  6     5    ele  fire:12
+ä¸æ²¾é‹   pot.c         5     0    ltm  mental:5
  
-Åû·ç£º
-É½Ôô±³¼× bandit_armor  7     1    hvm
-Ï¼·É¹ÖÊŞ beast_cloak   7     4    lea  none:3 magic:4 fire:-2
-Çà½õ°À   blue_cloak.c  4     3    clo
-ºÚÂÌÂŞ°À darkgreen_cl  5     4    clo  none:1 divine:1 evil:2
-°Ù»¨µã´ä floral_cape   6     4    clo
-ç³ºìÍÅ»¨ floral_cloak  5     1    clo
-ÍìÈŞ½ğĞå golden_cloak  6     2    hvm
-ğĞ¸çÂÌ¡õ green_cloak   6     3    clo
-ÆßĞÇ´ò¶¤ nail_cape.c   5     4    clo  none:3 dodge+10 divine:2
-õõÊóÆ¤°À sable_cloak   6     1    lea  evil:2 fire:-4 cold:2
-¾üÊ¦»¤ÅÛ scholar_cape  6    10(*) sch  evil:-3  cold:-10 fire:2 divine:4
+æŠ«é¢¨ï¼š
+å±±è³ŠèƒŒç”² bandit_armor  7     1    hvm
+éœé£›æ€ªç¸ beast_cloak   7     4    lea  none:3 magic:4 fire:-2
+é’éŒ¦è¥–   blue_cloak.c  4     3    clo
+é»‘ç¶ ç¾…è¥– darkgreen_cl  5     4    clo  none:1 divine:1 evil:2
+ç™¾èŠ±é»ç¿  floral_cape   6     4    clo
+ç·‹ç´…åœ˜èŠ± floral_cloak  5     1    clo
+æŒ½çµ¨é‡‘ç¹¡ golden_cloak  6     2    hvm
+é¸šå“¥ç¶ â–¡ green_cloak   6     3    clo
+ä¸ƒæ˜Ÿæ‰“é‡˜ nail_cape.c   5     4    clo  none:3 dodge+10 divine:2
+è²‚é¼ çš®è¥– sable_cloak   6     1    lea  evil:2 fire:-4 cold:2
+è»å¸«è­·è¢ scholar_cape  6    10(*) sch  evil:-3  cold:-10 fire:2 divine:4
                                        inn_force+10
-ÎåÀ×ÌìĞÄ thunder_cape  7    10(*) mage electric:20
-Èé°×¡õË¿ white_robe.c  4     2    clo  none:3 divine:2 dodge+10
+äº”é›·å¤©å¿ƒ thunder_cape  7    10(*) mage electric:20
+ä¹³ç™½â–¡çµ² white_robe.c  4     2    clo  none:3 divine:2 dodge+10
                                                           
  
-»¤·û£º
-ÊŞÃæÑÚĞÄ beastface.c   0     8(+) lea  poison:-5 none:4
-À¶Ğ«ÎÆ»Õ blue_amulet   0     6(-) ele  evil:-4 divine:-8 poison:10
-¶Èëº     dudey.c       0     6(-) monk evil:30 inn_force+8 divine:5    no_sale
-ºÍÊÏèµ   hoshi_jade.c  0     8(+) ele  evil:8 none:-7 poison:5 no_sale
-»¤ĞÄ¾µ   mirror.c      0     3    ltm  poison:5
-ÈË¶¥¹ÇÊı skeleton_bea  0     7(+) sto  evil:-5 divine:7 pie -2
-Ëï×Ó±ø·¨ sun_book.c    0     6(-) sch  mental:6 tactic+10 none:-6
-ÀèÃ÷»¤Éí thief_amulet  0     5    clo  evil:10 poison:10
-ÉşÎÄÓñÅå wire_jade.c   0     7(+) ele  evil:6 none:-6
+è­·ç¬¦ï¼š
+ç¸é¢æ©å¿ƒ beastface.c   0     8(+) lea  poison:-5 none:4
+è—è ç´‹å¾½ blue_amulet   0     6(-) ele  evil:-4 divine:-8 poison:10
+åº¦ç‰’     dudey.c       0     6(-) monk evil:30 inn_force+8 divine:5    no_sale
+å’Œæ°ç’§   hoshi_jade.c  0     8(+) ele  evil:8 none:-7 poison:5 no_sale
+è­·å¿ƒé¡   mirror.c      0     3    ltm  poison:5
+äººé ‚éª¨æ•¸ skeleton_bea  0     7(+) sto  evil:-5 divine:7 pie -2
+å­«å­å…µæ³• sun_book.c    0     6(-) sch  mental:6 tactic+10 none:-6
+é»æ˜è­·èº« thief_amulet  0     5    clo  evil:10 poison:10
+ç¹©æ–‡ç‰ä½© wire_jade.c   0     7(+) ele  evil:6 none:-6
  
-½äÖ¸£º
-Ì«Ô­¸®Å¦ golden_ring   0     6(-) adv  whip+10
-ºì±¦Ê¯½ä ruby_ring.c   0     5    ele  dodge:-5 unarmed:-10
-ÑòÖ¬ÖéÓñ whitejade_ri  0     7(+) sch
+æˆ’æŒ‡ï¼š
+å¤ªåŸåºœç´ golden_ring   0     6(-) adv  whip+10
+ç´…å¯¶çŸ³æˆ’ ruby_ring.c   0     5    ele  dodge:-5 unarmed:-10
+ç¾Šè„‚ç ç‰ whitejade_ri  0     7(+) sch
  
-Î²°Í£º
-ò¿ÓÈÎ²¼× tail_armor.c 10(*)  4(+) lea  ali<-1200
+å°¾å·´ï¼š
+èš©å°¤å°¾ç”² tail_armor.c 10(*)  4(+) lea  ali<-1200

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("crown","»Ê¹Ú");
+        set_name("crown","çš‡å† ");
         add( "id", ({ "helmet" }) );
-        set_short( set_color("»Ê¹Ú","HIY"));
+        set_short( set_color("çš‡å† ","HIY"));
         set_long(@C_LONG
-Ò»¶¥´¿½ğ´òÔìµÄ½ğ»ÆÉ«»Ê¹Ú£¬ÉÏÃæÏâÓĞÕäÖéÂêè§£¬ÉÁË¸ÖøÖé¹â±¦Æø¡£
+ä¸€é ‚ç´”é‡‘æ‰“é€ çš„é‡‘é»ƒè‰²çš‡å† ï¼Œä¸Šé¢é‘²æœ‰çç ç‘ªç‘™ï¼Œé–ƒçˆè‘—ç å…‰å¯¶æ°£ã€‚
 C_LONG
         );
-        set( "unit","¶¥");
+        set( "unit","é ‚");
         set( "type", "head" );
         set( "material","heavy_metal");
         set( "armor_class",7 );

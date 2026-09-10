@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level(18);
-        set_name( "dwarf elder", "°«ÈË³¤ÀÏ" );
+        set_name( "dwarf elder", "çŸ®äººé•·è€" );
         add ("id", ({ "dwarf", "elder" }) );
-        set_short( "dwarf elder","°«ÈË³¤ÀÏ");
-        set("unit","Î»");
+        set_short( "dwarf elder","çŸ®äººé•·è€");
+        set("unit","ä½");
         set("alignment",600);
         set("wealth/gold",100);
         set_long("",
-            "°«ÈË³¤ÀÏ²»µ«ÊÇ¸öÇ¿×³µÄÕ½Ê¿Ò²ÊÇ¸ö¿ÉÅÂµÄÊ©·¨Õß¡£°«ÈË±¾À´²¢²»ÉÃì¶\n"
-            "Ê©·¨,µ«ÊÇÓëµØ¾«±ÈÁÚ¶ø¾ÓµÄ½á¹ûÊ¹°«ÈËÒ²¶ÔÄ§·¨ÓÐÂùÉîµÄÈÏÊ¶¡£\n"
+            "çŸ®äººé•·è€ä¸ä½†æ˜¯å€‹å¼·å£¯çš„æˆ°å£«ä¹Ÿæ˜¯å€‹å¯æ€•çš„æ–½æ³•è€…ã€‚çŸ®äººæœ¬ä¾†ä¸¦ä¸æ“…æ–¼\n"
+            "æ–½æ³•,ä½†æ˜¯èˆ‡åœ°ç²¾æ¯”é„°è€Œå±…çš„çµæžœä½¿çŸ®äººä¹Ÿå°é­”æ³•æœ‰è »æ·±çš„èªè­˜ã€‚\n"
         );
         set_perm_stat("str", 28);
         set_perm_stat("dex", 25);
@@ -30,8 +30,8 @@ void create()
         set_skill( "blunt",100 );
         set_skill( "parry",20 );
         set_skill( "dodge",20 );
-//      set_c_verbs(({"ÓÃ%sÊ¹³ö±Þ·¨Ïò%s¹¥»÷","ÓÃ%sÏò%sÇÃ»÷"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+//      set_c_verbs(({"ç”¨%sä½¿å‡ºéž­æ³•å‘%sæ”»æ“Š","ç”¨%så‘%sæ•²æ“Š"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         wield_weapon(WEAPONS"blunt01");
         equip_armor(ARMORS"boots01");
         equip_armor(ARMORS"leggings02");
@@ -46,8 +46,8 @@ int fire_tactic()
   
   if ( !(magics=query_attacker()) || (random(10)>2)) return 0;
    tell_room(environment(),
-       "°«ÈË³¤ÀÏµÄÊÖÔÚ¿ÕÖÐ»­ÁË»­¡£ÄãÉíÉÏ¾¹¿ªÊ¼½á±ù½«Äã°ü×¡¡£....\n"
-       "......ÄãºÃ²»ÈÝÒ×²Å´òÆÆ±ù¿éÅÜÁË³öÀ´¡£\n",
+       "çŸ®äººé•·è€çš„æ‰‹åœ¨ç©ºä¸­ç•«äº†ç•«ã€‚ä½ èº«ä¸Šç«Ÿé–‹å§‹çµå†°å°‡ä½ åŒ…ä½ã€‚....\n"
+       "......ä½ å¥½ä¸å®¹æ˜“æ‰æ‰“ç ´å†°å¡Šè·‘äº†å‡ºä¾†ã€‚\n",
        this_object() );
   dam = 40 + random(20);
   magics->receive_special_damage("cold",dam);

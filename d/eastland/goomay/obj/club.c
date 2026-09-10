@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("wooden club","èíÄ¾°ô");
+       set_name("wooden club","æªœæœ¨æ£’");
        add("id",({"club",}) );
-       set_short("wooden club","èíÄ¾°ô");
+       set_short("wooden club","æªœæœ¨æ£’");
        set_long(
            "A club made by oak.\n",
-           "Ò»ÌõÁ¬Ê÷Æ¤¶¼»¹Ã»²¦Ç¬¾»µÄèíÄ¾°ô\n"
+           "ä¸€æ¢é€£æ¨¹çš®éƒ½é‚„æ²’æ’¥ä¹¾æ·¨çš„æªœæœ¨æ£’\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 25 );
 	set("type","blunt");
 	set( "min_damage", 5 );

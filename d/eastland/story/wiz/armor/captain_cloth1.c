@@ -1,15 +1,15 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "captain's cloth","³¤Ğä¶Ô½óÃŞÅÛ" );
+     set_name( "captain's cloth","é•·è¢–å°è¥Ÿæ£‰è¢" );
      add( "id",({ "cloth" }) );
-     set_short( "³¤Ğä¶Ô½óÃŞÅÛ" );
+     set_short( "é•·è¢–å°è¥Ÿæ£‰è¢" );
      set_long(@C_LONG
-ÒÔÃŞ²¼ÖÆ³ÉµÄÒ»¼şÎÚºÚÉ«ÃŞÅÛ£¬ËüµÄÖØÁ¿·Ç³£µÄÇá£¬ÊÊºÏÄÇĞ©ĞĞ¶¯Ãô½İµÄÈËËù´©¡£
+ä»¥æ£‰å¸ƒè£½æˆçš„ä¸€ä»¶çƒé»‘è‰²æ£‰è¢ï¼Œå®ƒçš„é‡é‡éå¸¸çš„è¼•ï¼Œé©åˆé‚£äº›è¡Œå‹•æ•æ·çš„äººæ‰€ç©¿ã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","cloth" );
      set( "defense_bonus",5 );

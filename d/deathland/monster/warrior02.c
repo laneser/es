@@ -7,17 +7,17 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "dwarf old warrior", "°«ÈËÀÏÕ½Ê¿" );
+	set_name( "dwarf old warrior", "çŸ®äººè€æˆ°å£«" );
 	add ("id", ({ "warrior", "dwarf", }) );
-	set_short( "an old dwarf warrior", "°«ÈËÀÏÕ½Ê¿" );
+	set_short( "an old dwarf warrior", "çŸ®äººè€æˆ°å£«" );
 	set_long(
 	"   \n",
-    "Ò»¸öºÜÀÏµÄ°«ÈËÕ½Ê¿,ÔÚÊıÊ®ÄêµÄÕ½¶·Ö®ÖĞ,ËûÊÇÉÙÊıÄÜ»îÏÂÀ´¶øÍËĞİµÄ°«ÈË\n");
+    "ä¸€å€‹å¾ˆè€çš„çŸ®äººæˆ°å£«,åœ¨æ•¸åå¹´çš„æˆ°é¬¥ä¹‹ä¸­,ä»–æ˜¯å°‘æ•¸èƒ½æ´»ä¸‹ä¾†è€Œé€€ä¼‘çš„çŸ®äºº\n");
 
     set("alignment",-200);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "kar", 20 );
 	set ("wealth", ([ "silver": 400 ]) );
 	set_natural_weapon(3,7,12);

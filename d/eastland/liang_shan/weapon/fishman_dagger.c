@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("fishman's shortblade", "ÓæÊ¦¶Ìµ¶");
+	set_name("fishman's shortblade", "æ¼å¸«çŸ­åˆ€");
 	add("id",({"shortblade"}));
-	set_short("ÓæÊ¦¶Ìµ¶");
+	set_short("æ¼å¸«çŸ­åˆ€");
 	set_long(
-		"ÕâÊÇÒ»°Ñ·æÀûµÄ¶Ìµ¶£¬Óæ·ò¶àÓÃËüÀ´·ÀÉí»ò´¦ÀíÓã»ñ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠé‹’åˆ©çš„çŸ­åˆ€ï¼Œæ¼å¤«å¤šç”¨å®ƒä¾†é˜²èº«æˆ–è™•ç†é­šç²ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 95 );
 	set( "type", "shortblade" );
 	set( "second",1);

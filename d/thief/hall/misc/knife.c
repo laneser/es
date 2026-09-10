@@ -11,15 +11,15 @@ init()
 void create()
 {
 	seteuid(getuid());
-	set_name( "knife","¸îÆ¤Ğ¡µ¶" );
-	set_short( "¸îÆ¤Ğ¡µ¶" );
+	set_name( "knife","å‰²çš®å°åˆ€" );
+	set_short( "å‰²çš®å°åˆ€" );
 	set_long( @LONG
-    ÕâÊÇÒ»°ÑÇá±¡ÈñÀûµÄĞ¡µ¶, ÊÇÉÃ³¤ÖÆÔìÃæ¾ßµÄÈË³£ÓÃµÄ¹¤¾ßÖ®Ò»¡£
-Äã¿ÉÒÔÓÃ cut skin from corpse È¡Ò»¿éÆ¤À´×öÃæ¾ß¡£
+    é€™æ˜¯ä¸€æŠŠè¼•è–„éŠ³åˆ©çš„å°åˆ€, æ˜¯æ“…é•·è£½é€ é¢å…·çš„äººå¸¸ç”¨çš„å·¥å…·ä¹‹ä¸€ã€‚
+ä½ å¯ä»¥ç”¨ cut skin from corpse å–ä¸€å¡Šçš®ä¾†åšé¢å…·ã€‚
 LONG
 	);
 	set( "weight",10 );
-	set( "unit","°Ñ");
+	set( "unit","æŠŠ");
 	set( "value",({ 230,"silver" }));
 }
 int check_skill(object me)
@@ -47,35 +47,35 @@ do_cut(string arg)
 	object *inv,env,mask,corpse,mob;
 
 	if ( ! arg ) 
-		return notify_fail("ÄãÏëÒª¸îÊ²÷á?\n");
+		return notify_fail("ä½ æƒ³è¦å‰²ä»€éº¼?\n");
 	if ( sscanf(arg,"skin from %s",tmp) != 1)
 		return 0;
 	if ( !this_player()->query_vision() )
-		return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+		return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
 	env = environment(this_player());
 	if ( ! (corpse = present(tmp,env)) ) 
-		return notify_fail("ÕâÀïÃ»ÓĞÕâÖÖ¡õÌå ¡£\n");
-	if (sscanf((string)corpse->query("short"),"%sµÄÊ¬Ìå",tmp) < 1 || tmp == "¸¯ÀÃ") {
-		return notify_fail("Õâ¡õÌåÒÑ¾­·¢³ôÁË, ×ö³ÉÃæ¾ß¿ÉÄÜ»áµÃÆ¤·ô²¡, Äã¸ÒÂğ?? \n");
+		return notify_fail("é€™è£¡æ²’æœ‰é€™ç¨®â–¡é«” ã€‚\n");
+	if (sscanf((string)corpse->query("short"),"%sçš„å±é«”",tmp) < 1 || tmp == "è…çˆ›") {
+		return notify_fail("é€™â–¡é«”å·²ç¶“ç™¼è‡­äº†, åšæˆé¢å…·å¯èƒ½æœƒå¾—çš®è†šç—…, ä½ æ•¢å—?? \n");
 	}
 	if ( (i = query_sp_cost(this_player())) > (int)this_player()->query("spell_points") ) {
-		return notify_fail("Äã¾«ÉñÁ¦Ì«µÍÁË, ÎŞ·¨×öÕâÖÖ¾«Ï¸µÄ¹¤×÷¡£\n");
+		return notify_fail("ä½ ç²¾ç¥åŠ›å¤ªä½äº†, ç„¡æ³•åšé€™ç¨®ç²¾ç´°çš„å·¥ä½œã€‚\n");
 	}
 
 	this_player()->add("spell_points",-i);
 	if ( ! (tmp = (string) corpse->query("npc")) ) 
-		return notify_fail("¸îÏÂÆ¤áá,Äã¾õµÃÕâÖÖ²ÄÁÏ²¢²»ÊÊºÏ×öÃæ¾ß¡£\n");
+		return notify_fail("å‰²ä¸‹çš®å¾Œ,ä½ è¦ºå¾—é€™ç¨®ææ–™ä¸¦ä¸é©åˆåšé¢å…·ã€‚\n");
 	mob = new(tmp);
 	if ( nullp(mob) ) {
-		write("Õâ±ßÓĞ bug, ÇëÍ¨ÖªÎ×Ê¦!\n");
+		write("é€™é‚Šæœ‰ bug, è«‹é€šçŸ¥å·«å¸«!\n");
 		return 1;
 	}
 
 	if ( check_skill(this_player()) ) {
-		tell_room(env,sprintf("%sÔÚ¡õÌåÉÏ»®¼¸µ¶, È¡ÏÂÄ³Ñù¶«Î÷¡£\n",this_player()->query("c_name") ), this_player() );
-		write(sprintf("ÄãĞ¡ĞÄÒíÒíµÄ´Ó¡õÌåÉÏÈ¡ÏÂÁ³Æ¤, Ë³ÀûµÄÍê³ÉÁË%sµÄÃæ¾ß¡£\n",(string)mob->query("c_name") ));
+		tell_room(env,sprintf("%såœ¨â–¡é«”ä¸ŠåŠƒå¹¾åˆ€, å–ä¸‹æŸæ¨£æ±è¥¿ã€‚\n",this_player()->query("c_name") ), this_player() );
+		write(sprintf("ä½ å°å¿ƒç¿¼ç¿¼çš„å¾â–¡é«”ä¸Šå–ä¸‹è‡‰çš®, é †åˆ©çš„å®Œæˆäº†%sçš„é¢å…·ã€‚\n",(string)mob->query("c_name") ));
 		mask = new(MASK_OBJ);	
-		mask->set_short(mob->query("short")+"µÄÃæ¾ß");
+		mask->set_short(mob->query("short")+"çš„é¢å…·");
 		mask->set("mask_name", mob->query("name") );
 		mask->set("c_mask_name",mob->query("short") );
 		mask->add("extra_ids",mob->query("id"));
@@ -84,10 +84,10 @@ do_cut(string arg)
 		mob->remove();
 		return 1;
 	} else {
-	tell_room(env,sprintf("%sÊÔÖø´Ó¡õÌåÉÏÈ¡ÏÂÁ³Æ¤, ½á¹ûÊ§°ÜÁË!\n",this_player()->query("c_name") ), this_player() );
+	tell_room(env,sprintf("%sè©¦è‘—å¾â–¡é«”ä¸Šå–ä¸‹è‡‰çš®, çµæœå¤±æ•—äº†!\n",this_player()->query("c_name") ), this_player() );
 		corpse->remove();
 		mob->remove();
-		return notify_fail("ÄãÒ»¸ö²»Ğ¡ĞÄ, ¸î»µÁËÆ¤, ²»ÄÜÓÃÁË!!\n");
+		return notify_fail("ä½ ä¸€å€‹ä¸å°å¿ƒ, å‰²å£äº†çš®, ä¸èƒ½ç”¨äº†!!\n");
 	}
 }
 

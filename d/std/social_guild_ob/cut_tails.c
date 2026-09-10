@@ -11,24 +11,24 @@ void create()
 {
 	seteuid( getuid() );
 	social_guild_ob::create();
-	set_name("cut-tail knife", "����β��С��");
-	set_short("cut-tail knife", "����β��С��");
+	set_name("cut-tail knife", "割狼尾巴小刀");
+	set_short("cut-tail knife", "割狼尾巴小刀");
 	add( "id", ({ "knife", }) );
 	set_long(
 "This is a very sharp knife,made for cutting color-wolves tail.\n" ,
-"����һ��ʮ�ַ�����С��,ר��������(cut)ɫ��β�͵�.ͬʱ��Ҳ������\n"
-"���ֲ���������鿴��θ���β������(help_cut)ָ�\n"
+"這是一把十分鋒利的小刀,專門用來割(cut)色狼尾巴的.同時這也是屠狼\n"
+"俱樂部的信物。欲查看如何割狼尾巴請用(help_cut)指令。\n"
 	);
 	
 	set_social_class_name("WKA");
-	set( "unit", "��" );
+	set( "unit", "把" );
 	set( "weapon_class", 1 );
 	set( "type", "dagger" );
 	set( "min_damage", 1 );
 	set( "max_damage", 2 );
 	set( "weight", 10 );
 	set( "extra_look", "$N is a member of the WKA.\n");
-	set( "c_extra_look", "$N����һ�Ѹ���β��С����\n");
+	set( "c_extra_look", "$N帶著一把割狼尾巴小刀。\n");
 }
 
 void init()
@@ -53,7 +53,7 @@ int do_WKAS()
 	if( sizeof(usr) ) {
 	    i=sizeof(usr);
 	    write( chinese_mode ?
-             "Ŀǰ���� " + i + " λ��ʿ������:\n"
+             "目前共有 " + i + " 位騎士連線中:\n"
 			 "==================================\n":
 			 "There are " + i + " knight(s) connected currently:\n"
 			 "==================================================\n" );
@@ -63,7 +63,7 @@ int do_WKAS()
 		}
 	} else { 
 		write( chinese_mode?
-			"�ƺ�û���κ���ʿ����ĳ�Ա������....��\n":
+			"似乎沒有任何騎士公會的成員在線上....。\n":
 			"There seems no any knights on now.\n"
 		);
 	}
@@ -95,7 +95,7 @@ int do_chat(string arg)
 	chinese_mode = can_read_chinese();
 	if( !arg )
 		return notify_fail( chinese_mode?
-			"�����������ʿ˵ʲ�᣿\n":
+			"你想對其它騎士說什麼？\n":
 			"What do you like to say to other knights?\n"
 		);
 	usr = filter_array( users(), "filter_knight", this_object() );
@@ -103,7 +103,7 @@ int do_chat(string arg)
 		i = sizeof(usr);
 		while(i--) {
 			message( "guild_line", sprintf( can_read_chinese( usr[i] )?
-			"[��ʿ] %s: %s\n": "[Knight] %s: %s\n",
+			"[騎士] %s: %s\n": "[Knight] %s: %s\n",
 			this_player()->query( can_read_chinese( usr[i] )? "c_cap_name": "cap_name" ),
 			arg ), usr[i] );
 		}
@@ -115,12 +115,12 @@ int help(string arg)
 {
 	if( !arg || arg!="sabre" ) return 0;
 	write( can_read_chinese()? @C_HELP
-����䵶����ʿ���������磬ֻҪ���������䵶����������¼��������ָ��:
+這把配刀是騎士榮譽的象徵，只要你帶著這把配刀，你就有以下幾個額外的指令:
 
-    info <����>    : ��ѯ����ʿ�����йص�һЩ��ʶ��������� info topics �г�
-                     ���е����⡣
-    knights        : �г�Ŀǰ�����ϵ�������ʿ��
-    chat           : ʹ����ʿ�����ר��Ƶ����������ʿ��̸��
+    info <主題>    : 查詢和騎士公會有關的一些常識，你可以用 info topics 列出
+                     所有的主題。
+    knights        : 列出目前在線上的所有騎士。
+    chat           : 使用騎士公會的專用頻道和其他騎士交談。
 
 C_HELP
 	:@HELP

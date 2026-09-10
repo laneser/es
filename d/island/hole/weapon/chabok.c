@@ -3,21 +3,21 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "Magic Chabok","Ä§·¨³¤±Ş" );
+	set_name( "Magic Chabok","é­”æ³•é•·é­" );
 	add( "id",({ "chabok","whip" }) );
-	set_short( "Ä§·¨³¤±Ş" );
+	set_short( "é­”æ³•é•·é­" );
 	set_long(@LONG
-	Ò»°ÑÓÃÌÙÂû±à³ÉµÄ³¤±Ş£¬¾­¹ıòáòæÈË¼ÀË¾--À­
-	Ë÷´ï--³¤ÄêÓÃÄ§·¨½ş×ÕµÄ½á¹û£¬Ê¹µÃËüÓµÓĞÌØ
-	ÊâµÄÄ§Á¦¡£
+	ä¸€æŠŠç”¨è—¤è”“ç·¨æˆçš„é•·é­ï¼Œç¶“éèœ¥èœ´äººç¥­å¸--æ‹‰
+	ç´¢é”--é•·å¹´ç”¨é­”æ³•æµ¸æ¼¬çš„çµæœï¼Œä½¿å¾—å®ƒæ“æœ‰ç‰¹
+	æ®Šçš„é­”åŠ›ã€‚
 LONG
 	);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","whip" );
 	set( "weapon_class",33 );
 	set( "min_damage",15 );
 	set( "max_damage",30 );
 	set( "weight",120 );
 	set( "value",({ 1280,"silver" }) );
-	set_c_verbs( ({ "%sÏò%sÃÍ³éÒ»±Ş" }) );
+	set_c_verbs( ({ "%så‘%sçŒ›æŠ½ä¸€é­" }) );
 }

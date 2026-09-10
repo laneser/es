@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
    // seteuid(getuid());
-	set_name("standard spear", "±ê×¼³¤Ã¬");
+	set_name("standard spear", "æ¨™æº–é•·çŸ›");
 	add ("id",({ "spear" }) );
-	set_short("±ê×¼³¤Ã¬");
+	set_short("æ¨™æº–é•·çŸ›");
 	set_long(
-            "Ò»°Ñ±ê×¼µÄ³¤Ã¬\n"
+            "ä¸€æŠŠæ¨™æº–çš„é•·çŸ›\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", 15 );
 	set( "type", "thrusting" );
 	set( "min_damage", 7 );

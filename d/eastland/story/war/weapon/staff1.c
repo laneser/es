@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {    
-    set_name( "wind wand", "Ä§·çÕÈ" );
+    set_name( "wind wand", "é­”é¢¨æ–" );
     add( "id", ({ "wand" }) );
-    set_short( "Ä§·çÕÈ" );
+    set_short( "é­”é¢¨æ–" );
     set_long(@LONG
-Ò»°Ñ°×ÒøÖÆ³ÉµÄÎäÆ÷£¬ÉÏ¿Ì½õĞåÔÆ¶ä£¬Ç°¶Ë·Ö¿ªÁ½²æ¡£
+ä¸€æŠŠç™½éŠ€è£½æˆçš„æ­¦å™¨ï¼Œä¸Šåˆ»éŒ¦ç¹¡é›²æœµï¼Œå‰ç«¯åˆ†é–‹å…©å‰ã€‚
 LONG
     );
-    set( "unit", "°Ñ" );
+    set( "unit", "æŠŠ" );
     setup_weapon("wand",30,10,20 );
     set( "power_on", 1);
     set( "weight", 50 );
@@ -21,5 +21,5 @@ LONG
     set( "max_charge", 10 );
     set( "special_damage_type", "evil" );
     set( "special_damage", 30 );
-    set( "special_c_msg", " ·¢³öºÚÉ«±©·ç! ");
+    set( "special_c_msg", " ç™¼å‡ºé»‘è‰²æš´é¢¨! ");
 }

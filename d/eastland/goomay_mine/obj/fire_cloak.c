@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "fire cloak", "»ğÅû·ç" );
+	set_name( "fire cloak", "ç«æŠ«é¢¨" );
 	add( "id", ({ "fire","cloak" }) );
-	set_short( "fire cloak", "»ğÅû·ç" );
+	set_short( "fire cloak", "ç«æŠ«é¢¨" );
 	set_long(@C_LONG
-	Ò»¼ş·Ç³£ÆæÌØµÄÅû·ç£¬ÈôÓĞËÆÎŞ£¬»¹É¢·¢³öÕóÕóµÄÈÈÆø£¬¶Ôì¶º®ÀäÏµ
-	µÄ¹¥»÷ÓĞÌØÊâµÄ·ÀÓùÄÜÁ¦£®
+	ä¸€ä»¶éå¸¸å¥‡ç‰¹çš„æŠ«é¢¨ï¼Œè‹¥æœ‰ä¼¼ç„¡ï¼Œé‚„æ•£ç™¼å‡ºé™£é™£çš„ç†±æ°£ï¼Œå°æ–¼å¯’å†·ç³»
+	çš„æ”»æ“Šæœ‰ç‰¹æ®Šçš„é˜²ç¦¦èƒ½åŠ›ï¼
 C_LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "cloak" );
 	set( "material", "cloth");
 	set( "armor_class", 6 );

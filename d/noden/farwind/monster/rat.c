@@ -6,14 +6,14 @@ void create()
 {
         ::create();
         set_level(1);
-        set_name("rat","ÀÏÊó");
+        set_name("rat","è€é¼ ");
         add( "id", ({ "rat" }) );
-        set_short("ÀÏÊó");
-        set_long("ÕâÊÇÒ»Ö»ÓÖÔàÓÖĞ¡µÄÀÏÊó¡£\n");
-        set("unit", "Ö»");
+        set_short("è€é¼ ");
+        set_long("é€™æ˜¯ä¸€éš»åˆé«’åˆå°çš„è€é¼ ã€‚\n");
+        set("unit", "åª");
         set_perm_stat("dex", 3);
         set_perm_stat("int", 2);
         set_perm_stat("kar", 2);
-        set_c_verbs( ({ "%sÕÅ×ìÍù%sÒ»Ò§", "%sÓÃËüµÄ×¦×Ó×¥%s" }) );
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ááÍÈ", "Î²°Í" }) );
+        set_c_verbs( ({ "%så¼µå˜´å¾€%sä¸€å’¬", "%sç”¨å®ƒçš„çˆªå­æŠ“%s" }) );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰çˆª", "å¾Œè…¿", "å°¾å·´" }) );
 }

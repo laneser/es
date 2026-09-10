@@ -17,13 +17,13 @@ void create()
 	::create();
 	decay = 2;
         name = "blood";
-        c_name = "Ѫˮ";
+        c_name = "血水";
 	::set_name( name, c_name );
 //        set_open_long("This is a pool of blood.\n");
-        set_c_open_long("����һ̲��Ѫˮ��\n" );
+        set_c_open_long("這是一灘的血水。\n" );
 	set ("weight", 100);
 	set_short( "@@query_short", "@@query_c_short" );
-	set ("unit", "̲" );
+	set ("unit", "灘" );
 	set ("max_load", 400);
 	set ("prevent_insert", 1);
 	set ("id", ({ "blood",  "dead body",
@@ -57,8 +57,8 @@ string query_short()
 string query_c_short()
 {
    if(decay == 2)
-      return "һ̲Ѫˮ";
+      return "一灘血水";
    else
-      return "һĨѪ��";
+      return "一抹血跡";
 }
 

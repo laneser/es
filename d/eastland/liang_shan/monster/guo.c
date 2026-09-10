@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "Guo Sheng", "郭盛" );
+	set_name( "Guo Sheng", "閮洓" );
 	add("id",({"guo","sheng"}));
-	set_short( "郭盛" );
+	set_short( "閮洓" );
 	set_long(
-		"郭盛外号赛仁贵，四川嘉陵人，白衣白甲，善使方天画戟，为\n"
-		"梁山泊马军小彪将兼远探出哨头领，武艺出众。\n"
+		"閮洓澶栬櫉璩戒粊璨达紝鍥涘窛鍢夐櫟浜猴紝鐧借。鐧界敳锛屽杽浣挎柟澶╃暙鎴燂紝鐐篭n"
+		"姊佸北娉婇Μ杌嶅皬褰皣鍏奸仩鎺㈠嚭鍝ㄩ牠闋橈紝姝﹁棟鍑虹溇銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

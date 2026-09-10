@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "gnome magic teacher", "地精魔法老师" );
+	set_name( "gnome magic teacher", "鍦扮簿榄旀硶鑰佸斧" );
 	add("id",({"mage","gnome","teacher"}) );
-   set_short( "地精魔法老师" );
+   set_short( "鍦扮簿榄旀硶鑰佸斧" );
 	set_long(
-	        "一个传授魔法的老师.\n"
+	        "涓�鍊嬪偝鎺堥瓟娉曠殑鑰佸斧.\n"
            	);
 	set( "gender", "female" );
 	set( "race", "gnome" );

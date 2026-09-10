@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "black crystal", "ºÚÉ«Ä§Ë®¾§" );
+	set_name( "black crystal", "é»‘è‰²é­”æ°´æ™¶" );
 	add( "id", ({ "crystal" }) );
-	set_short( "black mystic crystal", "ºÚÉ«Ä§Ë®¾§" );
+	set_short( "black mystic crystal", "é»‘è‰²é­”æ°´æ™¶" );
 	set_long(
 	    "The black mystic crystal shinning terrible lights.\n",
-	    "ÉÁÒ«Öøµ­µ­µÄºÚÉ«¹âÃ¢µÄÉñÃØµÄË®¾§Ê¯.\n"
+	    "é–ƒè€€è‘—æ·¡æ·¡çš„é»‘è‰²å…‰èŠ’çš„ç¥žç§˜çš„æ°´æ™¶çŸ³.\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "echo_crystal",2);
 	set( "weight", 10 );
 	set( "value", ({ 1, "silver" }) );

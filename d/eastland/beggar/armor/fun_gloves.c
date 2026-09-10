@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "three moon gloves", "ÈıÒõĞşÌ×" );
+	set_name( "three moon gloves", "ä¸‰é™°ç„å¥—" );
 	add( "id", ({ "gloves" }) );
-	set_short( "ÈıÒõĞşÌ×" );
+	set_short( "ä¸‰é™°ç„å¥—" );
 	set_long(@C_LONG
-Ò»Ë«ÈÃÄã¸Ğ¾õµÃµ½ÕóÕóº®ÒâµÄÊÖÌ×¡£
+ä¸€é›™è®“ä½ æ„Ÿè¦ºå¾—åˆ°é™£é™£å¯’æ„çš„æ‰‹å¥—ã€‚
 C_LONG
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
         set("material","cloth");
 	set( "type", "hands" );
 	set( "weight", 70 );

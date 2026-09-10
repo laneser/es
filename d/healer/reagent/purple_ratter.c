@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "purple ratter", "×ÏĞÄÌÙ" );
+	set_name( "purple ratter", "ç´«å¿ƒè—¤" );
 	add("id",({"ratter"}) );
-	set_short("×ÏĞÄÌÙ" );
+	set_short("ç´«å¿ƒè—¤" );
 	set_long(
-		"Õâ¸ù×ÏĞÄÌÙ±íÃæÊÇÂÌÉ«µÄ, ¿ÉÊÇÇĞÃæÖĞĞÄÈ´ÓĞÒìÑùµÄ×ÏÉ«¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ ¹ç´«å¿ƒè—¤è¡¨é¢æ˜¯ç¶ è‰²çš„, å¯æ˜¯åˆ‡é¢ä¸­å¿ƒå»æœ‰ç•°æ¨£çš„ç´«è‰²ã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "PURPLE_RATTER" );
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
         set( "weight", 2 );
 	set( "savour","bitter");
 	set( "effect","slow");

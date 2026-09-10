@@ -6,10 +6,10 @@ inherit SELLER;
 void create()
 {       
         ::create();
-        set_short("shop", "ҩ��");
+        set_short("shop", "藥店");
         set_long( " no describe\n",
-        "����һ��ҩ�꣡�����ڵƺڻ�Ŀ�����һ���ˣ�ֻ��Լ����ǽ����һ����Ӱ��\n"
-        "������һ����ҽ�߱ر�������, ����Բο�����ǽ�ϵ�Ŀ¼(menu)��\n"
+        "這是一間藥店！裡面烏燈黑火的看不見一個人！只隱約看見牆邊有一個人影。\n"
+        "這裡有一樣行醫者必備的器具, 你可以參考掛在牆上的目錄(menu)。\n"
         );
         
         set("objects", ([
@@ -33,6 +33,6 @@ void reset()
 int do_buy(string arg)
 {
     if (this_player()->query("class") != "healer")
-        return notify_fail("�Բ�������ֻ��ҽ�������⣬����ذ�!\n");
+        return notify_fail("對不起，這裡只做醫生的生意，您請回吧!\n");
     return ::do_buy(arg);
 }

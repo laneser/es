@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "black vest","ºÚÉ«Õ½¼×");
+        set_name( "black vest","é»‘è‰²æˆ°ç”²");
         add( "id", ({ "vest" }) );
-        set_short( "black vest","ºÚÉ«Õ½¼×" );
+        set_short( "black vest","é»‘è‰²æˆ°ç”²" );
         set_long(@AAA
-Ò»¸öºÚÉ«µÄÕ½¼×,ÊÇÓÃÖØ½ğÊôËùÖÆ³ÉµÄ,ËùÒÔ·Ç³£µÄÖØ,²»ÊÇÆÕÍ¨ÈË¿ÉÒÔÓÃµÄ·À¾ß
+ä¸€å€‹é»‘è‰²çš„æˆ°ç”²,æ˜¯ç”¨é‡é‡‘å±¬æ‰€è£½æˆçš„,æ‰€ä»¥éå¸¸çš„é‡,ä¸æ˜¯æ™®é€šäººå¯ä»¥ç”¨çš„é˜²å…·
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 24 );
         set( "defense_bonus", 5 );

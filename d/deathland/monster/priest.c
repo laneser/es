@@ -9,16 +9,16 @@ void create()
 	
 	::create();
 	set_level(17);
-	set_name( "Dwarf priest", "°«ÈËÄÁÊ¦" );
+	set_name( "Dwarf priest", "çŸ®äººç‰§å¸«" );
 	add ("id", ({ "priest", "dwarf", }) );
-	set_short( "°«ÈËÄÁÊ¦" );
+	set_short( "çŸ®äººç‰§å¸«" );
 	set_long(
-    "Ò»¸ö°²¾²µÄÄÁÊ¦,ËÆºõËûÕıÔÚÓë¶ñÉñYang¹µÍ¨\n");
+    "ä¸€å€‹å®‰éœçš„ç‰§å¸«,ä¼¼ä¹ä»–æ­£åœ¨èˆ‡æƒ¡ç¥Yangæºé€š\n");
 
     set("alignment",1000);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "str", 20 );
 	set_perm_stat( "int", 25 );
 	set_perm_stat( "kar", 25 );
@@ -47,7 +47,7 @@ int cast_spell()
     
     if( random(10) < 4 ) {
       tell_room( environment(this_object()), 
-        "°«ÈËÄÁÊ¦ÕÙ»½³öÒ»ÍÅ»ğÇò¹¥»÷"+c_name+"\n\n" );
+        "çŸ®äººç‰§å¸«å¬å–šå‡ºä¸€åœ˜ç«çƒæ”»æ“Š"+c_name+"\n\n" );
       victim->receive_special_damage("fire", 43+random(12));
       report(this_object(),victim);
       return 1;

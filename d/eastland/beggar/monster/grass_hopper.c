@@ -6,12 +6,12 @@ void create ()
 {               
        ::create();
        set_level(4);
-       set_name( "grass hopper", "òÆòì" );
+       set_name( "grass hopper", "èš±èœ¢" );
        add( "id",({"grass","hopper"}) );
-       set_short( "òÆòì" );
-       set("unit","Ö»");
+       set_short( "èš±èœ¢" );
+       set("unit","åª");
        set_long(
-       "ÕâÊÇÒ»Ö»Ğ¡Ğ¡µÄÀ¥³æ,ËüÕıÌøÀ´ÌøÈ¥µÄ¡£\n"
+       "é€™æ˜¯ä¸€éš»å°å°çš„æ˜†èŸ²,å®ƒæ­£è·³ä¾†è·³å»çš„ã€‚\n"
                         );
        set_perm_stat("dex", 3);
        set_natural_weapon(5,2,4);
@@ -19,8 +19,8 @@ void create ()
 //       set( "moving", 1 );
 //       set( "speed", 30 );
 //       set ("pursuing", 1) ;
-//       setenv( "C_MIN", "Ò»Ö»$NÌøÁË¹ıÀ´¡£");
-//       setenv( "C_MOUT", "$NÍù$D±ßÌøÁË¹ıÈ¥¡£");
-       set_c_verbs(({"%sÓÃËüµÄÍÈÏò%sÌßÈ¥"}));
-       set_c_limbs(({"¸¹²¿","Í·²¿","ÍÈ"}));
+//       setenv( "C_MIN", "ä¸€éš»$Nè·³äº†éä¾†ã€‚");
+//       setenv( "C_MOUT", "$Nå¾€$Dé‚Šè·³äº†éå»ã€‚");
+       set_c_verbs(({"%sç”¨å®ƒçš„è…¿å‘%sè¸¢å»"}));
+       set_c_limbs(({"è…¹éƒ¨","é ­éƒ¨","è…¿"}));
 }

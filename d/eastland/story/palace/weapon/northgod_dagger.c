@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Crystal dagger","Ë®¾§Ø°Ê×");
+        set_name("Crystal dagger","æ°´æ™¶åŒ•é¦–");
         add ("id", ({"dagger" }) );
-        set_short("Ë®¾§Ø°Ê×");
+        set_short("æ°´æ™¶åŒ•é¦–");
         set_long(@LONG
-Ò»°ÑË®¾§ÖÆ³ÉµÄØ°Ê×£¬Í¨Ìå¾§Ó¨Í¸Ã÷£¬Î¢Î¢ÉÁÖø°×¹â¡£
+ä¸€æŠŠæ°´æ™¶è£½æˆçš„åŒ•é¦–ï¼Œé€šé«”æ™¶ç‘©é€æ˜ï¼Œå¾®å¾®é–ƒè‘—ç™½å…‰ã€‚
 LONG);
         set("type", "dagger");
-        set("unit","°Ñ");
+        set("unit","æŠŠ");
         set("weapon_class",25);
         set("min_damage", 14 );
         set("max_damage", 28);

@@ -8,17 +8,17 @@ void create ()
 {
         ::create();
     set_level(19);
-    set_name("wraith flamen corasho","°«ÁéÉñµî¼ÀË¾¿ÆÂÞË÷");
+    set_name("wraith flamen corasho","çŸ®éˆç¥žæ®¿ç¥­å¸ç§‘ç¾…ç´¢");
     add("id",({"flamen","corasho"}) );
-    set_short("°«ÁéÉñµî¼ÀË¾¿ÆÂÞË÷");
+    set_short("çŸ®éˆç¥žæ®¿ç¥­å¸ç§‘ç¾…ç´¢");
     set_long(@C_LONG
-°«ÁéÎ×Ê¦¿ÆÀ­¿ËµÄµÜµÜ£¬ÊÇ°«ÁéÉñµîÄÚ×¨Ë¾¼ÀìëµÄÎ×Ê¦¡£
+çŸ®éˆå·«å¸«ç§‘æ‹‰å…‹çš„å¼Ÿå¼Ÿï¼Œæ˜¯çŸ®éˆç¥žæ®¿å…§å°ˆå¸ç¥­ç¥€çš„å·«å¸«ã€‚
 C_LONG
         );
     set("alignment",1000);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "Î»" );
+    set( "unit", "ä½" );
     times=0;
     jump=0;
     set_perm_stat( "dex",27);
@@ -41,7 +41,7 @@ C_LONG
     set("spells/sleet",2);
     set("spells/fireball",4);
 ~    set("att_chat_output",({
-          "¡ººß£¬²»ÖªËÀ»îµÄ¶«Î÷£¬ÈÃÄãÖªµÀÆäÊµÎÒ²ÅÊÇ°«Áé×å×îÀ÷º¦µÄÄ§·¨Ê¦¡£¡»\n",
+          "ã€Žå“¼ï¼Œä¸çŸ¥æ­»æ´»çš„æ±è¥¿ï¼Œè®“ä½ çŸ¥é“å…¶å¯¦æˆ‘æ‰æ˜¯çŸ®éˆæ—æœ€åŽ²å®³çš„é­”æ³•å¸«ã€‚ã€\n",
           }) );
     set("chat_chance",15);
     set("time_to_heal",10);
@@ -56,8 +56,8 @@ C_LONG
     set("guild_levels/elemental",80);
     set("guild_levels/guild",80);
     set( "inquiry", ([
-         "½£·¨ÃØóÅ" : "@@ask_treasure",
-         "ÃØóÅ":"@@ask_treasure",
+         "åŠæ³•ç§˜ç¬ˆ" : "@@ask_treasure",
+         "ç§˜ç¬ˆ":"@@ask_treasure",
         ]) );
     set( "tactic_func", "cast_spell");
     wield_weapon("/d/eastland/volcano/weapon/ghostsword.c");
@@ -67,7 +67,7 @@ C_LONG
 void ask_treasure(object who)
 {
      tell_object( who ,
-"¿ÆÂÞË÷ËµµÀ£º¡ººß£¬ÄãÕâ¸öÍâÈËÒ²Ïëêéêì°«Áé×åµÄ±¦Îï£¬Ö»ÒªÓÐÎÒÔÚÄã¾ÍÐÝÏë¡£¡»\n"
+"ç§‘ç¾…ç´¢èªªé“ï¼šã€Žå“¼ï¼Œä½ é€™å€‹å¤–äººä¹Ÿæƒ³è¦¬è¦¦çŸ®éˆæ—çš„å¯¶ç‰©ï¼Œåªè¦æœ‰æˆ‘åœ¨ä½ å°±ä¼‘æƒ³ã€‚ã€\n"
        );    
 }
 
@@ -99,7 +99,7 @@ int cast_spell()
      case 4:command("cast fireball on "+name);
             break;               
      default :
-            command("say ÓÐ³æ³æ:~~\n");
+            command("say æœ‰èŸ²èŸ²:~~\n");
             break;  
     }
     if (times>1) {

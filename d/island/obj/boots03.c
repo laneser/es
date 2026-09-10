@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("black tiger boots","ºÚ»¢Ñ¥");
+        set_name("black tiger boots","é»‘è™é´");
         add( "id", ({ "boots" }) );
-        set_short("ºÚ»¢Ñ¥");
+        set_short("é»‘è™é´");
         set_long(@C_LONG
-ÕâË«Æ¤Ñ¥ÉÏĞåÓĞÒ»Í·ºÚÉ«µÄÀÏ»¢£¬¿´À´ìÅ¼«ÁË¡£        
+é€™é›™çš®é´ä¸Šç¹¡æœ‰ä¸€é ­é»‘è‰²çš„è€è™ï¼Œçœ‹ä¾†ç‚«æ¥µäº†ã€‚        
 C_LONG
         );
-        set("unit", "Ë«");
+        set("unit", "é›™");
         set("type", "feet" );
         set("armor_class", 9 );
         set("material","leather");

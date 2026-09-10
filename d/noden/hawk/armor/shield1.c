@@ -2,15 +2,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Purple shield", "×Ï»Ô¶ÜÅÆ");
+        set_name("Purple shield", "ç´«è¼ç›¾ç‰Œ");
         add( "id", ({ "shield" }) );
-        set_short( "×Ï»Ô¶ÜÅÆ") ;
+        set_short( "ç´«è¼ç›¾ç‰Œ") ;
         set_long(@LONG 
-ÕâÊÇÒ»Ö»×ÏÉ«µÄ¶ÜÅÆ£¬ÉÏÃæ»æÓĞ»ğÑæµÄÍ¼Ñù£¬¿´ÆğÀ´ËÆºõ´øÓĞ
-Ò»Ğ©ÉñÃØµÄÁ¦Á¿¡£
+é€™æ˜¯ä¸€éš»ç´«è‰²çš„ç›¾ç‰Œï¼Œä¸Šé¢ç¹ªæœ‰ç«ç„°çš„åœ–æ¨£ï¼Œçœ‹èµ·ä¾†ä¼¼ä¹å¸¶æœ‰
+ä¸€äº›ç¥ç§˜çš„åŠ›é‡ã€‚
 LONG
 	);
-	set("unit","Ãæ");
+	set("unit","é¢");
         set( "type", "shield" );
 	
         set( "material", "light_metal");

@@ -8,14 +8,14 @@ void create()
 
 	::create();
 	set_level(20);
-	set_name( "steely troll", "��������" );
+	set_name( "steely troll", "鋼鐵巨人" );
 	add( "id", ({ "troll" }) );
-	set_short( "a steely troll", "��������" );
+	set_short( "a steely troll", "鋼鐵巨人" );
 	set_long(@LONG
-���ݷ𿴼�һ��ɽ����������ǰ������ȫ�������˸ּף����Ƕμ��ص�
-Ƹ�����ش����ҵģ�����������������ѧ�䣬�ó������ƣ�Ŀǰû����
-֪������ȱ�㣮��������������������˶���һ�ֵ��ӵ��۹⣬���μ�
-����Ҳ�����⣬�����ƺ���̫Ѱ�����������ʿ��ɣ�
+你彷佛看見一座山矗立在你面前，他的全身佈滿了鋼甲．他是段家特地
+聘來看守儲藏室的．他曾經到過少林寺學武，擅長般若掌，目前沒有人
+知道他的缺點．可是他對所有來這裡的人都用一種敵視的眼光，連段家
+的人也不例外，事情似乎不太尋常，找人問問看吧！
 LONG
 );
 	set_perm_stat( "str", 30 );
@@ -43,8 +43,8 @@ int accept_item(object me,object item)
 {       int wine; 
         if ((string)item->query("name")!="da chu"){
 	tell_object(me,
-	"���˵�����������𣿣������������Ҳ�ϲ���ⶫ���������»����ɣ�\n\n"
-	"˵�����˾ͰѶ��������ˣ�\n",
+	"巨人道：想賄酪我嗎？．．．．可是我不喜歡這東西，換點新花樣吧！\n\n"
+	"說著巨人就把東西丟下了．\n",
 	);
         command("drop all");
         return 1;
@@ -52,20 +52,20 @@ int accept_item(object me,object item)
         if(query("wine"))
         {
         tell_room(environment(this_object()),
-        "��������������ˮ�㽫�Ƶ��������һ�����þƣ���\n"
-        "Ȼ��Ų���\��\���ߵ��ӱߣ��ۣ�һ����������ȥ��\n\n"
-        "�㿴��һ��ҩ��Ӿ��˵Ŀڴ��е�������������������ȥ�ˣ�\n\n"
+        "巨人拿起酒來如灌水般將酒倒進嘴裡，道一聲：好酒！！\n"
+        "然後腳步蹣跚地走到河邊，噗！一聲！倒了下去．\n\n"
+        "你看見一把藥丸從巨人的口袋中掉出來，滾啊滾到河裡去了．\n\n"
                   );
         item->remove();
-        set_short("�����ľ���");
-        set_name("troll","�����ľ���");
+        set_short("醉倒的巨人");
+        set_name("troll","酒醉的巨人");
         set_natural_armor(100,40);
         set("monk_gonfu/bolo-fist",20);
         return 1;
         }else{ 
         tell_room(environment(this_object()),
-	"�������������޾���ˮ�㽫���еľ���Ǭ��Ȼ������������δ��\n\n"
-	"��������û���أ�������Т�����ɣ�\n\n"
+	"巨人拿起酒來如巨鯨吸水般將所有的酒吸乾，然後擦擦嘴巴意猶未盡\n\n"
+	"道：還有沒有呢？快拿來孝敬大哥吧！\n\n"
 	);
 	item->remove();
         set("wine",1);
@@ -79,15 +79,15 @@ void die()
  	killer=query("last_attacker");
  	killer->set_temp("get_magnetite",1);
  	tell_room(environment(this_object()),
- 	"��������ڵ����������Ĵ����Ұɣ����Ѿ�����Ҫ�Ķ������������ˣ�\n",
+ 	"巨人以懺悔的聲音道：四處找找吧，我已經把你要的東西．藏起來了！\n",
  	this_object());
  	set("exp_reward",36000);
  	::die(1);
  	}else{
  	tell_room(environment(this_object()),
- 		"���˴�е������������𣿱�ɵ�˺��ӣ�\n"
- 		"ͻȻ���˴ӿڴ���ץ��һ��ҩ��������һ����\n\n"
- 		"��һ��������ĸ������ˣ�\n",
+ 		"巨人大叫道：你想打敗我嗎？別傻了孩子！\n"
+ 		"突然巨人從口袋裡抓出一把藥丸往嘴裡一塞．\n\n"
+ 		"又一個生龍活虎的鋼鐵巨人．\n",
  		this_object());
  	set ("exp_reward",10); 
  	set ("alt_corpse",ZMOB"/iron_troll.c");

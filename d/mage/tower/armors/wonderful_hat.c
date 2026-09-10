@@ -4,19 +4,19 @@ inherit ARMOR;
 mapping origin_sp;
 void create()
 {
-	set_name( "wonderful hat", "²»¿ÉË¼ÒéµÄÃ±×Ó" );
+	set_name( "wonderful hat", "ä¸å¯æ€è­°çš„å¸½å­" );
 	add( "id", ({ "hat", }) );
-	set_short( "a wonderful hat", "²»¿ÉË¼ÒéµÄÃ±×Ó");
+	set_short( "a wonderful hat", "ä¸å¯æ€è­°çš„å¸½å­");
 	set_long( @LONG
 	This hat is used by wizard Rashudi. It is made by magical cloth,
 so spreads a strong power of magic.
 LONG
     , @C_LONG
-	ÕâÊÇÄ§µ¼Ê¿À­ÐÞµÛ´÷µÄ²»¿ÉË¼ÒéÖ®Ã±×Ó£¬²»Òª¿´ËüÖ»ÊÇÓÃÆÕÍ¨µÄ²¼Ö¯³É£¬Ëü¿ÉÊÇÓµÓÐ
-³öºõÄãÒâÁÏÖ®ÍâµÄ·ÀÓùÁ¦£¬¾ÝËµ»¹ÄÜµÖ¿¹¸÷ÖÖÄ§·¨¡£
+	é€™æ˜¯é­”å°Žå£«æ‹‰ä¿®å¸æˆ´çš„ä¸å¯æ€è­°ä¹‹å¸½å­ï¼Œä¸è¦çœ‹å®ƒåªæ˜¯ç”¨æ™®é€šçš„å¸ƒç¹”æˆï¼Œå®ƒå¯æ˜¯æ“æœ‰
+å‡ºä¹Žä½ æ„æ–™ä¹‹å¤–çš„é˜²ç¦¦åŠ›ï¼Œæ“šèªªé‚„èƒ½æŠµæŠ—å„ç¨®é­”æ³•ã€‚
 C_LONG
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
 	set( "weight", 15 );
 	set( "type", "head" );
 	set( "material", "cloth" );
@@ -29,7 +29,7 @@ C_LONG
 	set( "equip_func", "heal_sp" );
 	set( "unequip_func", "stop_heal_sp" );
 	set( "extra_look", 
-	     "$N´÷ÖøµÄÃ±×ÓÖÐÉ¢·¢³öÒ»¹É²»¿ÉË¼ÒéµÄ¹âÃ¢¡£\n" );
+	     "$Næˆ´è‘—çš„å¸½å­ä¸­æ•£ç™¼å‡ºä¸€è‚¡ä¸å¯æ€è­°çš„å…‰èŠ’ã€‚\n" );
 }
 
 void heal_sp()
@@ -37,7 +37,7 @@ void heal_sp()
     object player;
     player = environment(this_object());
     tell_object( player, 
-      "Ò»¹É²»¿ÉË¼ÒéµÄ¹âÃ¢´ÓÃ±×ÓÉ¢³ö²¢°üÎ§ÖøÄã¡£\n" );
+      "ä¸€è‚¡ä¸å¯æ€è­°çš„å…‰èŠ’å¾žå¸½å­æ•£å‡ºå¹·åŒ…åœè‘—ä½ ã€‚\n" );
     origin_sp=player->query("conditions/_heal_sp");
     player->set("conditions/_heal_sp" , ({ 10, 5 }));
 }
@@ -47,6 +47,6 @@ void stop_heal_sp()
     object player;
     player = environment(this_object());
     tell_object( player, 
-      "ÄãÉíÉÏ²»¿ÉË¼ÒéµÄ¹âÃ¢ÏûÊ§ÁË¡£\n" );
+      "ä½ èº«ä¸Šä¸å¯æ€è­°çš„å…‰èŠ’æ¶ˆå¤±äº†ã€‚\n" );
     player->set("conditions/_heal_sp", origin_sp);
 }

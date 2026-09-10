@@ -143,7 +143,7 @@ int unlock_object(string str) {
         if (ob) {
             set("current_key", ob);
             if (query("lock") == -1) {
-                write ("这个锁已经被打开了.\n") ;
+                write ("閫欏�嬮帠宸茬稉琚墦闁嬩簡.\n") ;
                 return 1;
             }
             write ("You unlock "+str2+" with "+str3+".\n");
@@ -156,7 +156,7 @@ int unlock_object(string str) {
             return 1;
         }
         write (chinese_mode?
-               "这里没有 "+str3+" 这种东西.\n" : 
+               "閫欒！娌掓湁 "+str3+" 閫欑ó鏉辫タ.\n" : 
                "I can't seem to find "+str3+" here...\n");
         return 1;
     }

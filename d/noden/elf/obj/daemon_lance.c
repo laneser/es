@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "demonic lance", "¶ñÄ§³¤Ç¹" );
+        set_name( "demonic lance", "æƒ¡é­”é•·æ§" );
         add( "id",({ "lance"}) );
-        set_short( "¶ñÄ§³¤Ç¹" );
+        set_short( "æƒ¡é­”é•·æ§" );
         set_long(
-            "ÕâÊÇ¶ñÄ§Õ½Ê¿µÄ×¨ÓÃÎäÆ÷¡£\n"
+            "é€™æ˜¯æƒ¡é­”æˆ°å£«çš„å°ˆç”¨æ­¦å™¨ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 29 );
         set( "type", "thrusting" );
         set( "min_damage", 14 );
@@ -25,12 +25,12 @@ int stop_wield( object player )
 {
 	if( (int)player->query("alignment") > -1000 ) {
         notify_fail(
-                "¶ñÄ§³¤Ç¹ËÆºõ·¢³öÒ»¹ÄÁ¦Á¿, Ê¹ÄãÎÞ·¨¼ÝÔ¦Ëü¡£\n" );
+                "æƒ¡é­”é•·æ§ä¼¼ä¹Žç™¼å‡ºä¸€é¼“åŠ›é‡, ä½¿ä½ ç„¡æ³•é§•é¦­å®ƒã€‚\n" );
 		return 1;
 	}
 	if( (int)player->query_skill("thrusting") < 80 ) {
         notify_fail(
-                "¶ñÄ§³¤Ç¹ËÆºõ·¢³öÒ»¹ÄÁ¦Á¿, Ê¹ÄãÎÞ·¨¼ÝÔ¦Ëü¡£\n" );
+                "æƒ¡é­”é•·æ§ä¼¼ä¹Žç™¼å‡ºä¸€é¼“åŠ›é‡, ä½¿ä½ ç„¡æ³•é§•é¦­å®ƒã€‚\n" );
 		return 1;
 	}
 	return 0;
@@ -47,11 +47,11 @@ int weapon_hit( object victim, int damage )
 	alignment = owner->query("alignment");
 	if( random(intelligence)>=15 && sp > 40 && alignment < -1000 ) {
         tell_object( owner,
-			"\nÄãµÄ¶ñÄ§³¤Ç¹Í»È»·¢³öÒ»¹ÉÇ¿¾¢µÄÁ¦Á¿£¬À­ÖøÄãµÄÊÖ³åÏò" + victim->query("c_name")
+			"\nä½ çš„æƒ¡é­”é•·æ§çªç„¶ç™¼å‡ºä¸€è‚¡å¼·å‹çš„åŠ›é‡ï¼Œæ‹‰è‘—ä½ çš„æ‰‹è¡å‘" + victim->query("c_name")
                 + "!\n\n" );
         tell_room( environment(owner),
-			"\n" + owner->query("c_name") + "µÄ¶ñÄ§³¤Ç¹Í»È»ÏòÇ°Ö±³å£¬´Ì½ø" + victim->query("c_name")
-                + "µÄÉíÌå!\n\n",
+			"\n" + owner->query("c_name") + "çš„æƒ¡é­”é•·æ§çªç„¶å‘å‰ç›´è¡ï¼Œåˆºé€²" + victim->query("c_name")
+                + "çš„èº«é«”!\n\n",
 			owner );
 		dam = - alignment / 400;
 		if( dam > 25 ) damage = 25;

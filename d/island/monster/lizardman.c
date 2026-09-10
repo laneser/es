@@ -8,14 +8,14 @@ void create()
 
 	::create();
 	set_level(9);
-	set_name("lizardman hunter", "òáòæÈËÁÔÈË");
+	set_name("lizardman hunter", "èœ¥èœ´äººçµäºº");
 	add( "id", ({ "hunter" }) );
-	set_short( "òáòæÈËÁÔÈË");
+	set_short( "èœ¥èœ´äººçµäºº");
 	set_long(@LONG
-Õâ¸öòáòæÈËÈ«ÉíÅûÖøÓÍÁÁµÄÉîÂÌÉ«ÁÛÆ¬£¬¿´ÆğÀ´ºÃÏñÉíÊÖ²»´íµÄÑù×ÓµÄÑù×Ó¡£
+é€™å€‹èœ¥èœ´äººå…¨èº«æŠ«è‘—æ²¹äº®çš„æ·±ç¶ è‰²é±—ç‰‡ï¼Œçœ‹èµ·ä¾†å¥½åƒèº«æ‰‹ä¸éŒ¯çš„æ¨£å­çš„æ¨£å­ã€‚
 LONG
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set_perm_stat("str", 11);
 	set_perm_stat("dex", 11);
 	set( "time_to_heal", 3 );

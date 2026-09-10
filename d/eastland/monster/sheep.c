@@ -6,17 +6,17 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "white sheep", "°×ÃàÑò" );
+	set_name( "white sheep", "ç™½ç¶¿ç¾Š" );
 	add( "id", ({ "sheep" }) );
-	set_short( "°×ÃàÑò" );
+	set_short( "ç™½ç¶¿ç¾Š" );
 	set_long(
-		"Äã¿´µ½Ò»Ö»ÎÂÑ±µÄ°×ÃàÑò£¬¾²¾²µØÔÚ²İµØÉÏ³Ô²İ¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»æº«é¦´çš„ç™½ç¶¿ç¾Šï¼Œéœéœåœ°åœ¨è‰åœ°ä¸Šåƒè‰ã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", 500 );
 	set_perm_stat("kar", 5 );
-	set_c_verbs( ({ "%sÓÃááÍÈÍù%sÒ»Ìß" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿" }) );
+	set_c_verbs( ({ "%sç”¨å¾Œè…¿å¾€%sä¸€è¸¢" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨" }) );
 }
 
 int stop_attack()

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "silver tail", "ÁÁÒøÎ²¼×" );
+        set_name( "silver tail", "äº®éŠ€å°¾ç”²" );
         add( "id", ({ "tail" }) );
-        set_short( "ÁÁÒøÎ²¼×" );
+        set_short( "äº®éŠ€å°¾ç”²" );
         set_long(@C_LONG
-Ò»¸öÉÁÉÁ·¢¹âµÄÒøÖÆÎ²¼×¡£µñ¹¤¾«Ï¸£¬¿´ÆğÀ´Ïàµ±Ãû¹ó¡£
+ä¸€å€‹é–ƒé–ƒç™¼å…‰çš„éŠ€è£½å°¾ç”²ã€‚é›•å·¥ç²¾ç´°ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶åè²´ã€‚
 C_LONG
         );
-        set( "unit", "¼ş");
+        set( "unit", "ä»¶");
         set( "type", "tail" );
         set( "material", "heavy_metal");
         set( "armor_class",3 );

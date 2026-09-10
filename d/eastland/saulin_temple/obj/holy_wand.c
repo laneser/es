@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "holyword wand", "Ê¥ÑÔÕÈ" );
+	set_name( "holyword wand", "è–è¨€æ–" );
 	add( "id", ({ "wand" }) );
-	set_short( "Ê¥ÑÔÕÈ" );
+	set_short( "è–è¨€æ–" );
 	set_long(
-		"ÕâÊÇÒ»°Ñ÷îºÚµÄ·¨ÕÈ£¬ÉÏÃæ»¹¿Ì»æÓĞĞí\¶àÆæÌØµÄ·ûºÅ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠé»é»‘çš„æ³•æ–ï¼Œä¸Šé¢é‚„åˆ»ç¹ªæœ‰è¨±å¤šå¥‡ç‰¹çš„ç¬¦è™Ÿã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "wand" );
 	set( "weapon_class", 35 );
 	set( "min_damage", 8 );
@@ -22,7 +22,7 @@ void create()
 	set( "max_charge", 10 );
 	set( "special_damage_type", "divine" );
 	set( "special_damage", 40 );
-	set( "special_c_msg", "´ÓÕÈÍ··¢³öÒ»µÀ½ğÉ«µÄ¹âÃ¢ !!\n"+
-	    "Äã¿´µ½¸÷ÖÖÕæÑÔ¡¢·ğºÅÔÚ¿ÕÖĞ·ÉÎè !!\n" );
+	set( "special_c_msg", "å¾æ–é ­ç™¼å‡ºä¸€é“é‡‘è‰²çš„å…‰èŠ’ !!\n"+
+	    "ä½ çœ‹åˆ°å„ç¨®çœŸè¨€ã€ä½›è™Ÿåœ¨ç©ºä¸­é£›èˆ !!\n" );
 }
 

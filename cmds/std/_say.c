@@ -5,12 +5,12 @@ inherit DAEMON;
 int cmd_say(string str)
 {
 	if (!str) {
-	write("дЦвтятвтсО.\n");
-	say( this_player()->query("c_name")+"втятвтсО╣д╡╩ж╙╣ютзк╣й╡ВА.\n");
+	write("Д╫═Х┤╙Х╗─Х┤╙Х╙·.\n");
+	say( this_player()->query("c_name")+"Х┤╙Х╗─Х┤╙Х╙·Г └Д╦█Г÷╔И│⌠Е°╗Х╙╙Д╩─И╨╪.\n");
 	return 1;
 	}
-	printf( "дЦк╣╣юё╨%s\n",str);
-	say( this_player()->query("c_name") + "к╣╣юё╨" + str + "\n");
+	printf( "Д╫═Х╙╙И│⌠О╪ %s\n",str);
+	say( this_player()->query("c_name") + "Х╙╙И│⌠О╪ " + str + "\n");
 
 	return 1;
 }
@@ -18,9 +18,9 @@ int cmd_say(string str)
 int help()
 {
 	write ( @HELP
-й╧сц╦Яй╫: say <пео╒>
+Д╫©Г■╗Ф═╪Е╪▐: say <Д©║Ф│╞>
 
-к╣╩╟ё╛кЫспртдЦм╛р╩Ё║╬╟╣дхк╤╪©илЩ╪Шё╛спй╠йг╫Бцу╣дйж╤нж╝р╩.
+Х╙╙Х╘╠О╪▄Ф┴─Ф°┴Д╩╔Д╫═Е░▄Д╦─Е═╢Ф≥╞Г └Д╨╨И┐╫Е▐╞Х│╫Х╕▀О╪▄Ф°┴Ф≥┌Ф≤╞Х╖ёХ╛▌Г └Ф┴▀Ф╝╣Д╧▀Д╦─.
 HELP
 	);
 	return 1 ;

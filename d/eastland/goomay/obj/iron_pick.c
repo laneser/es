@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("iron pick", "ÌúÊ®×Ö¸ä");
+        set_name("iron pick", "éµåå­—é¬");
         add ("id",({ "pick" }) );
-        set_short("ÌúÊ®×Ö¸ä");
+        set_short("éµåå­—é¬");
         set_long(
-            "Ò»°ÑÊ®×Ö¸ä£¬¿ÉÓÃÀ´¿ªÔä(excavate)¿óÎï¡£\n"
+            "ä¸€æŠŠåå­—é¬ï¼Œå¯ç”¨ä¾†é–‹é‘¿(excavate)ç¤¦ç‰©ã€‚\n"
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 15 );
         set( "type", "thrusting" );
         set( "min_damage", 5 );
@@ -39,10 +39,10 @@ int to_excavate(string str)
               obj2->to_find_excavate(str);
             else
               write(
-              "ÕâÀï²»ÄÜ¿ªÔä£¡\n");
+              "é€™è£¡ä¸èƒ½é–‹é‘¿ï¼\n");
 	  }
           else return notify_fail(
-            "ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");
+            "ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");
 	}
         return 1;
 }

@@ -48,9 +48,9 @@ varargs string get_list(int chinese_mode)
 	string msg;
 
 	if( !sizeof(top_list) ) return chinese_mode?
-		"¹ÖÎïÉ±ÈËÅÅĞĞ°ñÄ¿Ç°ÊÇ¿ÕµÄ.¡¡\n": "The NPC Kills Score is empty.\n";
+		"æ€ªç‰©æ®ºäººæ’è¡Œæ¦œç›®å‰æ˜¯ç©ºçš„.ã€€\n": "The NPC Kills Score is empty.\n";
 	msg = chinese_mode?
-		"¹ÖÎïÉ±ÈËÅÅĞĞ°ñÇ° " + sizeof(top_list) + " Ãû:\n":
+		"æ€ªç‰©æ®ºäººæ’è¡Œæ¦œå‰ " + sizeof(top_list) + " å:\n":
 		"The Top " + sizeof(top_list) + " NPC Killers:\n\n";
 	for(i=0; i<sizeof(top_list); i++) {
 		if( file_size(top_list[i]+".c")<0 ) msg += "Error loading NPC code, Notice a wizard!\n";

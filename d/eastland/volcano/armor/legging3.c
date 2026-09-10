@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cloud leggings", "Á÷ÔÆëÖ¼×");
+        set_name("cloud leggings", "æµé›²è„›ç”²");
         add( "id", ({ "leggings" }) );
-        set_short("Á÷ÔÆëÖ¼×");
+        set_short("æµé›²è„›ç”²");
         set_long(
-                "Õâ¼şëÖ¼×ÄËÊÇ¾­¹ı³¤ÀÏÓÃÇ¿Á¦·¨Êõ½«Ìì¿Õ¸¡ÔÆ»¯³ÉµÄ¡£\n"
+                "é€™ä»¶è„›ç”²ä¹ƒæ˜¯ç¶“éé•·è€ç”¨å¼·åŠ›æ³•è¡“å°‡å¤©ç©ºæµ®é›²åŒ–æˆçš„ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "legs" );
         set( "material", "element");
         set( "armor_class", 6 );

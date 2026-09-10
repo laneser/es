@@ -8,15 +8,15 @@ void create()
 	
 	::create();
 	set_level(4);
-	set_name( "mama", "ÂèÂèÉ£" );
-	set_short( "ÂèÂèÉ£" );
+	set_name( "mama", "åª½åª½æ¡‘" );
+	set_short( "åª½åª½æ¡‘" );
 	set_long(
-	"Ò»¸öÈ«ÉíÇ¬±ñÈ´´©µÃºÜ*±©Â¶*µÄÀÏÆÅÆÅ£¬ËıÕıÔÚÕÕ¿´ÖøÔèÌÃµÄÉúÒâ¡£\n"
+	"ä¸€å€‹å…¨èº«ä¹¾ç™Ÿå»ç©¿å¾—å¾ˆ*æš´éœ²*çš„è€å©†å©†ï¼Œå¥¹æ­£åœ¨ç…§çœ‹è‘—æ¾¡å ‚çš„ç”Ÿæ„ã€‚\n"
 		 );
 	set("alignment",100);
 	set( "gender", "female" );
 	set( "race", "halfling" );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set_perm_stat( "str", 7 );
 	set ("wealth", ([ "silver": 50 ]) );
 	set_natural_weapon(4,4,9);
@@ -24,11 +24,11 @@ void create()
         set("special_attack",(["damage_type" : "energy","main_damage" : 6,
                                 "random_dam" : 3 , "hit_rate" : 15]));
         set( "tactic_func", "my_tactic" );
-set("c_enemy_msg","ÂèÂèÉ£¾ÙÆğĞ¡°åµÊ³¯ÄãÍ·ÉÏÒ»ÕóÂÒÔÒ ....Í´ËÀÁË...\n\n");
-set("c_room_msg","ÂèÂèÉ£¾ÙÆğËıµÄĞ¡°åµÊ³¯");
-set("c_room_msg2", "Ò»ÕóÂÒ´ò£¬°ÑËû´òµÃÔÎÍ·×ªÏò ...\n");
+set("c_enemy_msg","åª½åª½æ¡‘èˆ‰èµ·å°æ¿å‡³æœä½ é ­ä¸Šä¸€é™£äº‚ç ¸ ....ç—›æ­»äº†...\n\n");
+set("c_room_msg","åª½åª½æ¡‘èˆ‰èµ·å¥¹çš„å°æ¿å‡³æœ");
+set("c_room_msg2", "ä¸€é™£äº‚æ‰“ï¼ŒæŠŠä»–æ‰“å¾—æšˆé ­è½‰å‘ ...\n");
         set( "chat_chance", 15 );
         set( "att_chat_output", ({
-                "ÂèÂèÉ£´ó½ĞµÀ£º¡¸³ôĞ¡×Ó !! Á¬Äã×æÂèÎÒ¶¼ÒªÆÛ¸º !! ¡¹¡£\n",
+                "åª½åª½æ¡‘å¤§å«é“ï¼šã€Œè‡­å°å­ !! é€£ä½ ç¥–åª½æˆ‘éƒ½è¦æ¬ºè²  !! ã€ã€‚\n",
 	}) );
 }

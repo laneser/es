@@ -4,11 +4,11 @@ void create()
 {
         ::create();
         set_level(6);
-        set_name( "worker", "³¤¹¤" );
+        set_name( "worker", "é•·å·¥" );
         add ("id", ({ "worker" }) );
-        set_short("³¤¹¤");
-        set("unit","Î»");
-        set_long("ÕâÊÇÒ»¸öÔÚ²ËÔ°¹¤×÷µÄ³¤¹¤£¬È«ÉíÔàÙâÙâµÄÕıÔÚÅ¬Á¦¹¤×÷¡£\n");
+        set_short("é•·å·¥");
+        set("unit","ä½");
+        set_long("é€™æ˜¯ä¸€å€‹åœ¨èœåœ’å·¥ä½œçš„é•·å·¥ï¼Œå…¨èº«é«’å…®å…®çš„æ­£åœ¨åŠªåŠ›å·¥ä½œã€‚\n");
         set("alignment",100);
         set("wealth/silver",20);
         set_perm_stat("str", 10);
@@ -19,7 +19,7 @@ void create()
         set ("race", "human");
         set ("chat_chance",20);
         set ("chat_output",({
-        "³¤¹¤ËµµÀ£º×î½üÓĞÒ»Ğ©²»ÖªÃûµÄ¶¯ÎïÅÜÀ´²ËÔ°µ·ÂÒ£¬ÕæÌÖÑá¡£\n",
+        "é•·å·¥èªªé“ï¼šæœ€è¿‘æœ‰ä¸€äº›ä¸çŸ¥åçš„å‹•ç‰©è·‘ä¾†èœåœ’æ—äº‚ï¼ŒçœŸè¨å­ã€‚\n",
         }));
         wield_weapon(SAULIN_OBJ"spud");
 }

@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "great mushroom", "ÁéÖ¥" );
+	set_name( "great mushroom", "éˆèŠ" );
 	add("id",({"mushroom"}) );
-	set_short("ÁéÖ¥" );
+	set_short("éˆèŠ" );
 	set_long(
-		"Õâ¿éÁéÖ¥ÊÇÓÃÀ´×öÒ©ÒıµÄ, ²»ÄÜÖ±½ÓÉú³Ô, ²»¹ıÄã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™å¡ŠéˆèŠæ˜¯ç”¨ä¾†åšè—¥å¼•çš„, ä¸èƒ½ç›´æ¥ç”Ÿåƒ, ä¸éä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "GREAT_MUSHROOM" );
-	set( "unit", "¿é" );
+	set( "unit", "å¡Š" );
         set( "weight", 2 );
 	set( "savour","bitter");
 	set( "value", ({ 120, "silver" }) );

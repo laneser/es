@@ -121,7 +121,7 @@ void save_user(object *usr)
 //	if ( ob = find_player("ruby") )
 //		tell_object(ob,(string)usr[0]->link_data("name")+sizeof(usr)+"  \n");
 		usr[0]->save_me();
-		usr[0]->quick_message("×Ô¶¯´¢´æ ... Íê±Ï¡¡\n");
+		usr[0]->quick_message("è‡ªå‹•å„²å­˜ ... å®Œç•¢ã€€\n");
 	}
 	usr -= ({ usr[0] }) ;
 	call_out("save_user",10,usr);

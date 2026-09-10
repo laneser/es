@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "blue battle armor", "ÇàÒÂÕ½¼×" );
+	set_name( "blue battle armor", "é’è¡£æˆ°ç”²" );
 	add( "id", ({ "battle armor", "armor" }) );
-	set_short( "ÇàÒÂÕ½¼×" );
+	set_short( "é’è¡£æˆ°ç”²" );
 	set_long(@C_LONG
-ÕâÊÇÒ»¼şÇÉ½³Éè¼ÆµÄÕ½¼×£¬Èôá°¹¬½ûÎÀ¾üµÄÖÆÊ½»¤¼×·ÖÎªÇà¡¢ºì¡¢°×
-¡¢ºÚËÄÖÖ£¬·Ö±ğ·¢¸øËÄÖÖÆ·¼¶µÄÎä¹Ù¡£
+é€™æ˜¯ä¸€ä»¶å·§åŒ è¨­è¨ˆçš„æˆ°ç”²ï¼Œè‹¥åµå®®ç¦è¡›è»çš„åˆ¶å¼è­·ç”²åˆ†ç‚ºé’ã€ç´…ã€ç™½
+ã€é»‘å››ç¨®ï¼Œåˆ†åˆ¥ç™¼çµ¦å››ç¨®å“ç´šçš„æ­¦å®˜ã€‚
 C_LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );
 	set( "weight", 240 );

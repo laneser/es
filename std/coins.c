@@ -21,67 +21,67 @@ void set_descs()
 	set_name( type+" coin", to_chinese(type+" coin") );
 	set ("id", ({ "coin", "coins", type+" coins", type }) );
 	if (number==1) {
-		set_short( "Ò»Ã¶" + to_chinese(type+" coin"));
-		set( "unit", "Ã¶" );
+		set_short( "ä¸€æš" + to_chinese(type+" coin"));
+		set( "unit", "æš" );
 	} else {
-		set_short("Ò»¶Ñ" + to_chinese(type+" coin"));
-		set( "unit", "¶Ñ" );
+		set_short("ä¸€å †" + to_chinese(type+" coin"));
+		set( "unit", "å †" );
 	}
 //	set( "weight", number/10 + 1);
 	switch( number ) {
 		case 1 : {
-			set_long( "¹Â¹Âµ¥µ¥µÄÒ»Ã¶"
-				+to_chinese(type+" coin")+"¡£\n" );
+			set_long( "å­¤å­¤å–®å–®çš„ä¸€æš"
+				+to_chinese(type+" coin")+"ã€‚\n" );
 			break;
 		}
 		case 2..5 : {
-			set_long( "ÊıÃ¶"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "æ•¸æš"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break;
 		}
 		case 6..15 : {
-			set_long(  "´óÔ¼Ê®Ã¶×óÓÒµÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long(  "å¤§ç´„åæšå·¦å³çš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break;
 		}
 		case 16..25 : {
-			set_long( "´óÔ¼¶şÊ®Ã¶×óÓÒµÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "å¤§ç´„äºŒåæšå·¦å³çš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		case 26..35 : {
-			set_long( "ÈıÊ®Ã¶×óÓÒµÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "ä¸‰åæšå·¦å³çš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		case 36..65 : {
-			set_long( "Ò»Ğ¡¶ÑÔ¼ÎåÊ®Ã¶"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "ä¸€å°å †ç´„äº”åæš"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		case 66..85 : {
-			set_long( "½«½üÆßÊ®¼¸Ã¶µÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "å°‡è¿‘ä¸ƒåå¹¾æšçš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		case 86..150: {
-			set_long("Ò»¶ÑÒ»°ÙÃ¶×óÓÒµÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long("ä¸€å †ä¸€ç™¾æšå·¦å³çš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		case 151..350 : {
-			set_long( "Ò»´ó¶Ñ³¬¹ıÒ»°ÙÎåÊ®Ã¶µÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "ä¸€å¤§å †è¶…éä¸€ç™¾äº”åæšçš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		case 351..750 : {
-			set_long( "½«½üÎå°ÙÃ¶ÉÁÁÁµÄ"
-				+to_chinese(type+" coin")+"¡£\n");
+			set_long( "å°‡è¿‘äº”ç™¾æšé–ƒäº®çš„"
+				+to_chinese(type+" coin")+"ã€‚\n");
 			break ;
 		}
 		default : {
-			set_long( "Ò»×ùÓÉ"
-				+to_chinese(type+" coin")+"¶Ñ³ÉµÄĞ¡É½¡£\n");
+			set_long( "ä¸€åº§ç”±"
+				+to_chinese(type+" coin")+"å †æˆçš„å°å±±ã€‚\n");
 		}
 	}
 	return;

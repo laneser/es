@@ -34,10 +34,10 @@ void setup_race_body()
 
 	// These variables are used for /adm/daemons/combat_d.c
 /*
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ",
-		"%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ĞØ", "×óÍÈ", "ÓÒÍÈ",
-		"²±×Ó", "×ó¼ç", "ÓÒ¼ç", "ááĞÄ", "Ğ¡¸¹", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"è„–å­", "å·¦è‚©", "å³è‚©", "å¾Œå¿ƒ", "å°è…¹", }) );
 */
 	// Elf has weapon class bonus.
 	body->set("natural_weapon_class1", "@@query_elf_WC_bonus");
@@ -54,32 +54,32 @@ int do_invisible(string arg)
         object ob;
         if( this_player()->query_attacker())
           {  this_player()->block_attack(2) ;
-             return notify_fail(" ( ÄãÕıÔÚÕ½¶·ÖĞ, ÎŞ·¨¼¯ÖĞ¾«ÉñÒşĞÎ¡£ )\n") ;
+             return notify_fail(" ( ä½ æ­£åœ¨æˆ°é¬¥ä¸­, ç„¡æ³•é›†ä¸­ç²¾ç¥éš±å½¢ã€‚ )\n") ;
           }
          if( ob= this_player()->query_temp("mounting") )
                 return notify_fail(
-                    "ÄãÕıÆïÔÚÒ»" + ob->query("unit") + ob->query("c_name")+"ÉÏ£¬ÎŞ·¨ÒşĞÎ¡£\n");
+                    "ä½ æ­£é¨åœ¨ä¸€" + ob->query("unit") + ob->query("c_name")+"ä¸Šï¼Œç„¡æ³•éš±å½¢ã€‚\n");
 
         if( this_object()->query("player_invisible") )
-                return notify_fail("ÄãÒÑ¾­ÒşĞÎÁË¡£\n");
+                return notify_fail("ä½ å·²ç¶“éš±å½¢äº†ã€‚\n");
         this_player()->set("player_invisible",1);
         tell_room( environment(this_object()),
-                sprintf("%sµÄÉíÓ°½¥½¥µÄµ­È¥£¬´ÓÄãµÄÃæÇ°ÏûÊ§¡£\n",
+                sprintf("%sçš„èº«å½±æ¼¸æ¼¸çš„æ·¡å»ï¼Œå¾ä½ çš„é¢å‰æ¶ˆå¤±ã€‚\n",
                 this_object()->query("c_name")),
                 this_object() );
-        write( "ÄãÆÁÆøÄıÉñ£¬¿ªÊ¼ÒşĞÎ.\n" );
+        write( "ä½ å±æ°£å‡ç¥ï¼Œé–‹å§‹éš±å½¢.\n" );
         return 1;
 }
 int do_visible(string arg)
 {
         if( !this_object()->query("player_invisible") )
-                return notify_fail("ÄãÏÖÔÚ²¢Ã»ÓĞÒşĞÎ¡£\n");
+                return notify_fail("ä½ ç¾åœ¨ä¸¦æ²’æœ‰éš±å½¢ã€‚\n");
         this_object()->set("player_invisible", 0);
         tell_room( environment(this_object()),
-                sprintf("ÄãµÄÇ°·½Ò»Õó²¨¶¯£¬%sµÄÉíÓ°Í»È»¸¡ÏÖ³öÀ´¡£\n"
+                sprintf("ä½ çš„å‰æ–¹ä¸€é™£æ³¢å‹•ï¼Œ%sçš„èº«å½±çªç„¶æµ®ç¾å‡ºä¾†ã€‚\n"
                         ,this_object()->query("c_name")),
                 this_object() );
-        write( "Äã·ÅËÉĞÄÉñ£¬Í£Ö¹ÒşĞÎ.\n" );
+        write( "ä½ æ”¾é¬†å¿ƒç¥ï¼Œåœæ­¢éš±å½¢.\n" );
         return 1;
 }
 

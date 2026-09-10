@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Wand of Ultimate","ÓÀºãÖ®ÕÈ");
+    set_name("Wand of Ultimate","æ°¸æ†ä¹‹æ–");
     add("id",({"wand","ultimate wand"}) );
-   set_short("ÓÀºãÖ®ÕÈ(ÊÜËğ)");
+   set_short("æ°¸æ†ä¹‹æ–(å—æ)");
     set_long(
-           "Õâ°ÑÄ§ÕÈµÄÕÈÉíÊÇÓÉÉñÃÜµÄÃ×ËÕÀí½ğÊô´òÔì¶ø³É,ËüµÄÇ°¶Ë²¿·İÏâÖøÒ»\n"
-           "¿ÅË®¾§Çò,×Ô¹ÅÏà´«Õâ¿ÅË®¾§ÇòÖĞ²ØÖøÓÀºãÉúÃüµÄÃØÃÜ.°«ÈËµÄ°ÁÈË¿óÎï,\n"
-           "°ëÉíÈËµÄ¹¤ÒÕ¼¼Êõ,ÔÙ¼ÓÉÏµØ¾«µÄÉñÊ¥Ä§Á¦,Ê¹Õâ°Ñ·¨ÕÈ³ÉÎªÄ§·¨Ê¦ĞÄÖĞ\n"
-           "ÃÎÃÂÒÔÇóµÄÎäÆ÷.\n");
-    set("unit","°Ñ");
+           "é€™æŠŠé­”æ–çš„æ–èº«æ˜¯ç”±ç¥å¯†çš„ç±³è˜‡ç†é‡‘å±¬æ‰“é€ è€Œæˆ,å®ƒçš„å‰ç«¯éƒ¨ä»½é‘²è‘—ä¸€\n"
+           "é¡†æ°´æ™¶çƒ,è‡ªå¤ç›¸å‚³é€™é¡†æ°´æ™¶çƒä¸­è—è‘—æ°¸æ†ç”Ÿå‘½çš„ç§˜å¯†.çŸ®äººçš„å‚²äººç¤¦ç‰©,\n"
+           "åŠèº«äººçš„å·¥è—æŠ€è¡“,å†åŠ ä¸Šåœ°ç²¾çš„ç¥è–é­”åŠ›,ä½¿é€™æŠŠæ³•æ–æˆç‚ºé­”æ³•å¸«å¿ƒä¸­\n"
+           "å¤¢å¯ä»¥æ±‚çš„æ­¦å™¨.\n");
+    set("unit","æŠŠ");
     set("weapon_class",40);
     set("type","wand");
     set("damaged",1);    
@@ -24,7 +24,7 @@ void create()
     set("hit_func","wand_damage");
     set("special_damage",55);
     set("special_msg"," grow a bright,coverd");
-    set("special_c_msg","Ç°¶ËµÄË®¾§Çò·¢³öÒ»ÕóÇ¿¹â,°üÎ§×¡");
+    set("special_c_msg","å‰ç«¯çš„æ°´æ™¶çƒç™¼å‡ºä¸€é™£å¼·å…‰,åŒ…åœä½");
     set("no_sale",1);
 
 }
@@ -61,14 +61,14 @@ int wand_damage(object victim,int damage)
     if(!damaged && random(my_wand*2)<ran && times>8 && (int)holder->query("npc")!=1)
         { 
            write( holder,
-                "ÄãµÄË®¾§Çò±»µĞÈËÇÃµ½,ÆÆµôÁË.\n\n" );
+                "ä½ çš„æ°´æ™¶çƒè¢«æ•µäººæ•²åˆ°,ç ´æ‰äº†.\n\n" );
            tell_room( environment(holder), 
-                "\n"+holder->query("c_cap_name")+"ÊÖÉÏ"+query("c_name")
-                      +"Ç°¶ËµÄË®¾§ÇòÅÒµÄÒ»Éù,ÆÆÁË.\n\n",
+                "\n"+holder->query("c_cap_name")+"æ‰‹ä¸Š"+query("c_name")
+                      +"å‰ç«¯çš„æ°´æ™¶çƒä¹“çš„ä¸€è²,ç ´äº†.\n\n",
                 holder ) ;     
                         
            this_object()->add("short"," (damaged)") ;
-           this_object()->add("c_short"," (ÊÜËğ)") ;             
+           this_object()->add("c_short"," (å—æ)") ;             
            this_object()->set("weapon_class",3*wc/5) ;
            this_object()->set("min_damage",20) ;
            this_object()->set("max_damage",30) ; 
@@ -88,16 +88,16 @@ int wand_damage(object victim,int damage)
     if(my_sp<30)
         { 
           tell_object(holder ,
-                  "ÄãµÄ·¨Á¦²»×ãÒÔ¾Û¼¯µØ¾«µÄÉñÃØÁ¦Á¿.\n" );
+                  "ä½ çš„æ³•åŠ›ä¸è¶³ä»¥èšé›†åœ°ç²¾çš„ç¥ç§˜åŠ›é‡.\n" );
           return 0 ;
          }  
 		       
     if(!(!damaged))
         {  tell_object(holder ,
-                "Äã¼ûµ½ÆÆÁÑµÄË®¾§ÇòÉÁ¹ıÒ»ÕóÒìÑùµÄ¹âÃ¢,È»ááÁ¢¿ÌÏûÊ§.\n" );
+                "ä½ è¦‹åˆ°ç ´è£‚çš„æ°´æ™¶çƒé–ƒéä¸€é™£ç•°æ¨£çš„å…‰èŠ’,ç„¶å¾Œç«‹åˆ»æ¶ˆå¤±.\n" );
            tell_room( environment(holder),
-                "\n"+holder->query("c_cap_name")+"ÊÖÉÏ"+query("c_name")
-                     +"Ç°¶ËÆÆµôµÄË®¾§Çò·¢³öÒ»ÕóÒìÑùµÄ¹âÃ¢,È»ááÁ¢¿ÌÏûÊ§\n",
+                "\n"+holder->query("c_cap_name")+"æ‰‹ä¸Š"+query("c_name")
+                     +"å‰ç«¯ç ´æ‰çš„æ°´æ™¶çƒç™¼å‡ºä¸€é™£ç•°æ¨£çš„å…‰èŠ’,ç„¶å¾Œç«‹åˆ»æ¶ˆå¤±\n",
                 holder ) ;     
                      
            holder->set("spell_points",my_sp-10) ;                       
@@ -110,17 +110,17 @@ int wand_damage(object victim,int damage)
     this_object()->set("used_times",times+1);
                 
    tell_object( holder, 
-           "ÄãµÄ"+query("c_name")+c_msg+victim->query("c_cap_name")
+           "ä½ çš„"+query("c_name")+c_msg+victim->query("c_cap_name")
            +"\n" );
 
    tell_room( environment(holder), 
-	   "\n"+holder->query("c_cap_name") + "µÄ"+query("c_name")
+	   "\n"+holder->query("c_cap_name") + "çš„"+query("c_name")
             +c_msg+victim->query("c_cap_name")+"\n",
  	    holder );
 
    tell_object( victim,
-           "\n"+holder->query("c_cap_name") + "µÄ"+query("c_name")
-                +c_msg+"Äã.\n" );
+           "\n"+holder->query("c_cap_name") + "çš„"+query("c_name")
+                +c_msg+"ä½ .\n" );
 	 
     return dam; 
      

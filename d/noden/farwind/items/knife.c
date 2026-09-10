@@ -7,12 +7,12 @@ void create()
 	if ( clonep(this_object()) )
 	set_default_ob(base_name(this_object()));
 else {
-	set_name( "knife", "Ğ¡µ¶" );
-	set_short( "Ğ¡µ¶" );
+	set_name( "knife", "å°åˆ€" );
+	set_short( "å°åˆ€" );
 	set_long(
-		"Ò»°ÑºÁ²»ÆğÑÛµÄĞ¡µ¶¡£\n"
+		"ä¸€æŠŠæ¯«ä¸èµ·çœ¼çš„å°åˆ€ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
         set( "weight", 20 );
 	set( "weapon_class", 5 );
 	set( "type", "dagger" );

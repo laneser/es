@@ -11,14 +11,14 @@ void init()
 void create()
 {
         
-	set_name("sausage","¡ºÒ»¿ÚÏã³¦¡»");
+	set_name("sausage","ã€Žä¸€å£é¦™è…¸ã€");
 	add( "id" , ({ "sausage" }) );
-   set_short("¡ºÒ»¿ÚÏã³¦¡»");
+   set_short("ã€Žä¸€å£é¦™è…¸ã€");
    set_long(@C_LONG
-Ò»´®´®¿¾µÃÏãÏãµÄÏã³¦,ÒýÆðÄãÊ³Ö¸´ó¶¯¡£
+ä¸€ä¸²ä¸²çƒ¤å¾—é¦™é¦™çš„é¦™è…¸,å¼•èµ·ä½ é£ŸæŒ‡å¤§å‹•ã€‚
 C_LONG
 	);
-   	set("unit","¸ö");
+   	set("unit","å€‹");
         set("weight", 15);
    	set("value",({ 300, "silver" }) );
 }
@@ -27,12 +27,12 @@ int eat_food(string arg)
 {
         
     if( !arg ||( arg != "sausage") ) 
-        return notify_fail("ÄãÒª³ÔÉ¶¶«¶«?\n");
+        return notify_fail("ä½ è¦åƒå•¥æ±æ±?\n");
     tell_room( environment(this_player()),this_player()->query("c_name")+
-        "ÀÇÍÌ»¢¡õµØ³ÔÏÂÁËÒ»¸ö¡ºÒ»¿ÚÏã³¦¡»,ºÃÏñÈýÌìÃ»³Ô¶«Î÷µÄÑù×Ó...\n", 
+        "ç‹¼åžè™Žâ–¡åœ°åƒä¸‹äº†ä¸€å€‹ã€Žä¸€å£é¦™è…¸ã€,å¥½åƒä¸‰å¤©æ²’åƒæ±è¥¿çš„æ¨£å­...\n", 
          this_player());
     tell_object( this_player(),
-        "ÄãÀÇÍÌ»¢¡õµØ³ÔÏÂÁËÒ»¸ö¡ºÒ»¿ÚÏã³¦¡»,¿´À´ÄãÊÇ¶öÁË¡«¡«\n");
+        "ä½ ç‹¼åžè™Žâ–¡åœ°åƒä¸‹äº†ä¸€å€‹ã€Žä¸€å£é¦™è…¸ã€,çœ‹ä¾†ä½ æ˜¯é¤“äº†ï½žï½ž\n");
     this_player()->receive_healing( 15+random(5) );
     remove();
     return 1;

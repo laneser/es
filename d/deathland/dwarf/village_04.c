@@ -6,27 +6,27 @@ inherit ROOM;
 void create()
 {
 	::create();
-set_short("The barrack","¾üÓª");
+set_short("The barrack","è»ç‡Ÿ");
   set_long(@Long
 Long
 ,@CLong
-ÕâÀïÊÇ¾üÓªµÄÄÚ²¿,ÓĞºÃ¼¸¶°½¨ÖşÎï(buildings)ÔÚÂ·µÄÁ½ÅÔ,ËäÈ»ÕâĞ©½¨Öş
-ÎïµÄÍâĞÎ¿´ÆğÀ´¶¼Ò»Ä£Ò»Ñù,µ«ÊÇÃ¿Ò»¶°½¨ÖşÎï¶¼ÓĞÆäÌØ±ğµÄ¹¦\ÄÜ.
-ÓĞÌõĞ¡Â·´©Ô½¾üÓª,Á¬½ÓÖø°«ÈËµÄ´åÂä.
+é€™è£¡æ˜¯è»ç‡Ÿçš„å…§éƒ¨,æœ‰å¥½å¹¾æ£Ÿå»ºç¯‰ç‰©(buildings)åœ¨è·¯çš„å…©æ—,é›–ç„¶é€™äº›å»ºç¯‰
+ç‰©çš„å¤–å½¢çœ‹èµ·ä¾†éƒ½ä¸€æ¨¡ä¸€æ¨£,ä½†æ˜¯æ¯ä¸€æ£Ÿå»ºç¯‰ç‰©éƒ½æœ‰å…¶ç‰¹åˆ¥çš„åŠŸèƒ½.
+æœ‰æ¢å°è·¯ç©¿è¶Šè»ç‡Ÿ,é€£æ¥è‘—çŸ®äººçš„æ‘è½.
 CLong
 );
 
 set("c_item_desc",([
-    "buildings":"Ò»Ğ©·½·½ÕıÕıµÄ½¨Öş,Ã¿¶°½¨ÖşµÄÃÅÉÏ¶¼ÓĞÒ»¿é°å×Ó±êÊ¾¸Ã½¨Öş\n"
-                "µÄ¹¦\ÄÜ,ÆäÖĞÓĞÈı¶°½¨ÖşµÄ¹¦\ÄÜËÆºõ±È½ÏÓĞÈ¤,·Ö±ğÊÇ:\n"
-                "ĞÂ±ø½ÌÓıÖĞĞÄ(new_trained_soldier center)\n"
-                "¾ŞÈË¹¥»÷Ä£Ê½ÑĞ¾¿ÊÒ(the college of studing trolls' attack mode)\n" 
-                "±øÆ÷¿â(weapons storage room)\n",
-    "center":"ĞÂ±ø½ÌÓıÖĞĞÄ(new_trained_soldier center)\Ò»´¦ÑµÁ·ĞÂ±øµÄµØ·½\n",
-    "college":"¾ŞÈË¹¥»÷Ä£Ê½ÑĞ¾¿ÊÒ(the college of studing trolls' attack mode)\n"
-              "Ò»´¦ÑĞ¾¿¾ŞÈËµÄ¹¥»÷Ä£Ê½,ÆÚÍûÄÜ¹»»÷À£¾ŞÈËµÄÑĞ¾¿µ¥Î»\n",
-    "room":"±øÆ÷¿â(weapons storage room)"    
-           "´¢´æ¸÷Ê½¸÷ÑùÎäÆ÷µÄµØ·½ \n",    
+    "buildings":"ä¸€äº›æ–¹æ–¹æ­£æ­£çš„å»ºç¯‰,æ¯æ£Ÿå»ºç¯‰çš„é–€ä¸Šéƒ½æœ‰ä¸€å¡Šæ¿å­æ¨™ç¤ºè©²å»ºç¯‰\n"
+                "çš„åŠŸèƒ½,å…¶ä¸­æœ‰ä¸‰æ£Ÿå»ºç¯‰çš„åŠŸèƒ½ä¼¼ä¹æ¯”è¼ƒæœ‰è¶£,åˆ†åˆ¥æ˜¯:\n"
+                "æ–°å…µæ•™è‚²ä¸­å¿ƒ(new_trained_soldier center)\n"
+                "å·¨äººæ”»æ“Šæ¨¡å¼ç ”ç©¶å®¤(the college of studing trolls' attack mode)\n" 
+                "å…µå™¨åº«(weapons storage room)\n",
+    "center":"æ–°å…µæ•™è‚²ä¸­å¿ƒ(new_trained_soldier center)\ä¸€è™•è¨“ç·´æ–°å…µçš„åœ°æ–¹\n",
+    "college":"å·¨äººæ”»æ“Šæ¨¡å¼ç ”ç©¶å®¤(the college of studing trolls' attack mode)\n"
+              "ä¸€è™•ç ”ç©¶å·¨äººçš„æ”»æ“Šæ¨¡å¼,æœŸæœ›èƒ½å¤ æ“Šæ½°å·¨äººçš„ç ”ç©¶å–®ä½\n",
+    "room":"å…µå™¨åº«(weapons storage room)"    
+           "å„²å­˜å„å¼å„æ¨£æ­¦å™¨çš„åœ°æ–¹ \n",    
                 ]) ); 
 set("exits",([
                "south":Deathland"/dwarf/village_03",
@@ -46,25 +46,25 @@ int to_enter(string str)
    if (str=="center") {
     this_player()->move_player(Deathland"/dwarf/center",
         ({ 
-        "%s½øÈëÁËĞÂ±øÑµÁ·ÖĞĞÄ.\n",
-         "%s´ÓÍâÃæ×ßÁË½øÀ´.\n"}),"");
+        "%sé€²å…¥äº†æ–°å…µè¨“ç·´ä¸­å¿ƒ.\n",
+         "%så¾å¤–é¢èµ°äº†é€²ä¾†.\n"}),"");
      return 1;
      }
    else if (str=="college") {
      this_player()->move_player(Deathland"/dwarf/college",
       ({
-      "%s½øÈëÁË¾ŞÈË¹¥»÷Ä£Ê½ÑĞ¾¿ÊÒ.\n",
-      "%s´ÓÍâÃæ×ßÁË½øÀ´.\n"
+      "%sé€²å…¥äº†å·¨äººæ”»æ“Šæ¨¡å¼ç ”ç©¶å®¤.\n",
+      "%så¾å¤–é¢èµ°äº†é€²ä¾†.\n"
        }),"");
      return 1;
      }
    else if (str=="room") {
-     write("µ±ÄãÊÔÖø½øÈë±øÆ÷¿âµÄÊ±áá,·¢ÏÖËü±»ËøÖø.\n");
+     write("ç•¶ä½ è©¦è‘—é€²å…¥å…µå™¨åº«çš„æ™‚å¾Œ,ç™¼ç¾å®ƒè¢«é–è‘—.\n");
      return 1;
      
      }
    else if (str=="buildings" ||str=="building") {
-     write("ÄãÏë½øÈëÄÇÒ»¶°½¨ÖşÎï?\n");
+     write("ä½ æƒ³é€²å…¥é‚£ä¸€æ£Ÿå»ºç¯‰ç‰©?\n");
      return 1;
      }
    else return 0;  

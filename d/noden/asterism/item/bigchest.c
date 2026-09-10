@@ -5,14 +5,14 @@ inherit OBJECT ;
 void create()
 {     
 
-        set_name( "bigchest" , "´óÏä×Ó" ) ;
+        set_name( "bigchest" , "å¤§ç®±å­" ) ;
         add( "id" , ({ "bigchest","chest" })) ;
-        set( "unit","¸ö" ) ;
-        set_short("Ò»¸ö´óÏä×Ó") ;
+        set( "unit","å€‹" ) ;
+        set_short("ä¸€å€‹å¤§ç®±å­") ;
         set_long(
          @C_TEXT
-Ò»¸öÁ½Á¢·½¹«³ß×óÓÒµÄ´óÏä×Ó,¿´À´ÓÐµã¹îÒì¡£¸Ã´ò¿ªËüÂð ? 
-»¹ÊÇ¸ÃÏÈ×ö°²È«¼ì²é¶¯×÷ ??
+ä¸€å€‹å…©ç«‹æ–¹å…¬å°ºå·¦å³çš„å¤§ç®±å­,çœ‹ä¾†æœ‰é»žè©­ç•°ã€‚è©²æ‰“é–‹å®ƒå—Ž ? 
+é‚„æ˜¯è©²å…ˆåšå®‰å…¨æª¢æŸ¥å‹•ä½œ ??
 C_TEXT
          );
          
@@ -35,12 +35,12 @@ int exam_chest(string str)
           
      if (!str || str !="chest") 
          {         
-               return notify_fail( "¼ì²éÊ²÷á ?\n" );
+               return notify_fail( "æª¢æŸ¥ä»€éº¼ ?\n" );
          }
      else
       {   
           tell_room(environment(),
-           "Õâ¸öÏä×ÓÔÚÄã¿¿½üÊ±,Í»È»ÕÅ¿ªÑªÅè´ó¿Ú,ÏÅÁËÄãÒ»´óÌø¡£\n"
+           "é€™å€‹ç®±å­åœ¨ä½ é è¿‘æ™‚,çªç„¶å¼µé–‹è¡€ç›†å¤§å£,åš‡äº†ä½ ä¸€å¤§è·³ã€‚\n"
             ,this_player() )  ;
           mob = new(MOB"mimic") ;         
           mob->move(environment(this_object())) ;         
@@ -57,7 +57,7 @@ int do_hurt(string str)
        if (!str || str !="chest") 
           {         
            return notify_fail(
-                           "ÄãÏë×öÊ²÷á ?\n" );
+                           "ä½ æƒ³åšä»€éº¼ ?\n" );
           }
   
        hp = this_player()->query("hit_points") ;
@@ -71,9 +71,9 @@ int do_hurt(string str)
             this_player()->set("hit_points",hp-99) ;
            } 
        write(
-             "Õâ¸öÏä×ÓÍ»È»ÕÅ¿ªÑªÅè´ó¿ÚÍùÄãÉíÉÏÒ»¿ÚÒ§ÏÂ¡£ÍÛ¡«¡«ºÃÍ´¡£\n"  );
-       tell_room(environment(),"Õâ¿ÚÏä×ÓÍ»È»ÕÅ¿ÚÏò"+this_player()->query("c_cap_name")+
-                 "Ò»¿ÚÒ§ÏÂ¡£\n",this_player() ) ;
+             "é€™å€‹ç®±å­çªç„¶å¼µé–‹è¡€ç›†å¤§å£å¾€ä½ èº«ä¸Šä¸€å£å’¬ä¸‹ã€‚å“‡ï½žï½žå¥½ç—›ã€‚\n"  );
+       tell_room(environment(),"é€™å£ç®±å­çªç„¶å¼µå£å‘"+this_player()->query("c_cap_name")+
+                 "ä¸€å£å’¬ä¸‹ã€‚\n",this_player() ) ;
           
           mob = new (MOB"mimic") ;
           mob->move(environment(this_object())) ;         

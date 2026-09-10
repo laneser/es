@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Police Uniform","���ý���װ");
+    set_name("Police Uniform","警用緊身裝");
     add("id",({"cloth","uniform"}) );
-    set_short("���ý���װ");
+    set_short("警用緊身裝");
     set_long(@LONG
-����ħ�屣�������е�����ר���Ʒ�����һλ�����еı����ٴ�����ʱ������
-���������Ĵ��ڣ�ͬʱҲ�ܸ���ʹ�����൱�̶ȵķ������������참����Ч�ʣ�
+這是魔族保安衙門中的勤務專用制服．當一位服勤中的保安官穿上它時，將會
+忘了束縛的存在，同時也能給予使用者相當程度的防護，以提高偵辦案件的效率．
 LONG
             );
-     set("unit","��");
+     set("unit","件");
      set("type","body");
      set("material","cloth");
      set("armor_class",30);

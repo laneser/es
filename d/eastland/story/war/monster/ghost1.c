@@ -6,16 +6,16 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "special ghost", "÷Î¹í" );
+	set_name( "special ghost", "é­‘é¬¼" );
 	add( "id", ({ "ghost" }) );
-	set_short( "÷Î¹í" );
+	set_short( "é­‘é¬¼" );
 	set_long(@LONG
-Ò»¸öÀàËÆÈËµÄÁ³ºÍÒ°ÊŞÉíÇûµÄÓ°×Ó£¬ºÚëüëüµÄÁîÈË¿´²»ÇåËü¾¿¾¹ÊÇÊ²÷á¡£ËüËÆºõ¶Ô
-ÖøÄãÕÅÑÀÎè×¦£¬²»×¡·¢³öÎËÎËµÄÉùÒô¡£
+ä¸€å€‹é¡ä¼¼äººçš„è‡‰å’Œé‡ç¸èº«è»€çš„å½±å­ï¼Œé»‘æœ¦æœ¦çš„ä»¤äººçœ‹ä¸æ¸…å®ƒç©¶ç«Ÿæ˜¯ä»€éº¼ã€‚å®ƒä¼¼ä¹å°
+è‘—ä½ å¼µç‰™èˆçˆªï¼Œä¸ä½ç™¼å‡ºå—¡å—¡çš„è²éŸ³ã€‚
 LONG
 	);
-        set( "race", "¹í");
-	set( "unit", "¸ö" );
+        set( "race", "é¬¼");
+	set( "unit", "å€‹" );
 	set( "alignment", -300 );
 	set_natural_armor(70,15);
         set( "special_defense", ([ "all":10 ]) );
@@ -31,7 +31,7 @@ LONG
 	set_skill( "parry", 70 );
 	set( "chat_chance", 5 );
 	set( "att_chat_output", ({
-		"÷Î¹íËµµÀ£º±ğÔÙ×öÍçÇ¿µÄµÖ¿¹ÁË£¬Ã»ÈËµ²µÃ×¡ò¿ÓÈ´ó¾üµÄ£¡\n"
+		"é­‘é¬¼èªªé“ï¼šåˆ¥å†åšé ‘å¼·çš„æŠµæŠ—äº†ï¼Œæ²’äººæ“‹å¾—ä½èš©å°¤å¤§è»çš„ï¼\n"
 	}) );
         set("tactic_func","my_tactic");
         wield_weapon(WWEA"scythe1");
@@ -41,7 +41,7 @@ int my_tactic()
     object victim;
     if ( !victim=query_attacker() ) return 0;
     if ( random(10) > 1 ) return 0;
-    tell_room(environment(),"÷Î¹í¿ÚÍÂÕóÕóºÚÉ«µÄÆøÌå£¡!\n");
+    tell_room(environment(),"é­‘é¬¼å£åé™£é™£é»‘è‰²çš„æ°£é«”ï¼!\n");
     hurt_all("evil",30);
     return 1;    
 }

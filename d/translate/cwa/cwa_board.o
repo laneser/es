@@ -1,29 +1,29 @@
 #u/s/supertramp/cwa/cwa_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"CWA's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©É«ÀÇÃÇÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"É«ÀÇÐ­»áÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"CWA's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›è‰²ç‹¼å€‘ç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"è‰²ç‹¼å”æœƒç•™è¨€æ¿",])
 messages ({(["id":1,"body":"Hi ColorWolves!
 	test...
 Sincerely Yours
 Supertramp
-","title":"hi all! Colorwolves!","time":765015757,"poster":"Supertramp",]),(["id":2,"title":"»á³¤..","body":"
-À´Ñ¡»á³¤, ¸±»á³¤°É..
+","title":"hi all! Colorwolves!","time":765015757,"poster":"Supertramp",]),(["id":2,"title":"æœƒé•·..","body":"
+ä¾†é¸æœƒé•·, å‰¯æœƒé•·å§..
 
-ÌáÃû?
+æå?
 
-wiz ²»Ëã...
+wiz ä¸ç®—...
 
 -Elon was here.
 ","time":765062673,"poster":"Elon",]),(["id":3,"body":"On Thu Mar 31, Elon wrote:
-> À´Ñ¡»á³¤, ¸±»á³¤°É..
+> ä¾†é¸æœƒé•·, å‰¯æœƒé•·å§..
 > 
-> ÌáÃû?
+> æå?
 > 
-> wiz ²»Ëã...
+> wiz ä¸ç®—...
 > 
 > -Elon was here.
 
 Sham and Pioneer
 
-","title":"Re: »á³¤..","time":765072432,"poster":"Supertramp",]),})
+","title":"Re: æœƒé•·..","time":765072432,"poster":"Supertramp",]),})
 id_ref 3

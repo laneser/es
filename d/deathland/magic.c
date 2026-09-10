@@ -7,5 +7,5 @@ void report( object attacker, object victim )
    seteuid(getuid());
    c_message= "/adm/daemons/statsd"->c_status_string(victim);
 
-   tell_object( victim, sprintf("( Äã %s )\n",c_message));
+   tell_object( victim, sprintf("( ä½  %s )\n",c_message));
 }

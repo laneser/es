@@ -4,10 +4,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-        set_short( "forest1", "ÖñÁÖ" );
+        set_short( "forest1", "ç«¹æ—" );
 	set_long(@C_LONG
-ÄãÉí´¦ÔÚÒ»Æ¬ÂÌÓÍÓÍµÄÖñÁÖÀï,ÕâÀïºÜ°²¾²,ÓÃÀ´¶ÁÊéµÄºÃµØ·½¡£ÖñÉ­µÄÒ»½ÇÓĞÖø
-Ò»¶ÑËÆºõ±»ÍÚ¾òÖøµÄºÛ¼£¡£
+ä½ èº«è™•åœ¨ä¸€ç‰‡ç¶ æ²¹æ²¹çš„ç«¹æ—è£¡,é€™è£¡å¾ˆå®‰éœ,ç”¨ä¾†è®€æ›¸çš„å¥½åœ°æ–¹ã€‚ç«¹æ£®çš„ä¸€è§’æœ‰è‘—
+ä¸€å †ä¼¼ä¹è¢«æŒ–æ˜è‘—çš„ç—•è·¡ã€‚
 C_LONG
 	);
         set_outside("noden");
@@ -24,20 +24,20 @@ int do_search(string arg)
 {
     object obj;
     if ( !arg || arg != "hole" ){
-        tell_object(this_player(),"ÄãÔÚÕÒÊ²÷á¶«Î÷£¿\n");
+        tell_object(this_player(),"ä½ åœ¨æ‰¾ä»€éº¼æ±è¥¿ï¼Ÿ\n");
         return 1;      
     }
     if ( !present("a white dog",this_object()) ){
-        tell_object(this_player(),"ÄãÔÚÕÒÊ²÷á¶«Î÷£¿\n");
+        tell_object(this_player(),"ä½ åœ¨æ‰¾ä»€éº¼æ±è¥¿ï¼Ÿ\n");
         return 1;
     }      
     if ( this_object()->query_temp("be_searched") ){
-        tell_object(this_player(),"ÕâÀïËÆºõ±»±ğÈËÕÒ¹ıÁË¡£\n");
+        tell_object(this_player(),"é€™è£¡ä¼¼ä¹è¢«åˆ¥äººæ‰¾éäº†ã€‚\n");
         return 1;
     }
     this_object()->set_temp("be_searched",1);
     obj=new(DITEM"toad");
     obj->move(this_player());
-    tell_object(this_player(),"ÏÅ!ÄãÕÒµ½Ò»Ö»Óñ»ğó¸òÜ!!\n");    
+    tell_object(this_player(),"åš‡!ä½ æ‰¾åˆ°ä¸€éš»ç‰ç«èŸ¾èœ!!\n");    
     return 1;
 }

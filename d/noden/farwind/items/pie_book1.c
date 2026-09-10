@@ -11,14 +11,14 @@ int read_me(string str);
 void create() {
   seteuid(getuid());
   set("id",({"pie_book1"}));
-  set_name("pie_book1","�顸�����ƻ���ɡ�");
-  set_short("pie_book1","�顸�����ƻ���ɡ�");
+  set_name("pie_book1","書「如何做蘋果派」");
+  set_short("pie_book1","書「如何做蘋果派」");
   set_long("This is a message reader, you were given this reader when\n"+
            "Elon wants you to read a document or something like that\n"+
-           "Just type read note to read the content.\n","����һ���ÿ�����...\n");
+           "Just type read note to read the content.\n","這是一本好看的書...\n");
   set("mass",1);
   set("bulk",1);
-  set("unit","��");
+  set("unit","本");
   set("value",({20,"silver"}) );
 }
  
@@ -36,7 +36,7 @@ int read_me (string str)
         return 0;
     }
 this_player()->more("/u/w/wind/shops/pie_book1.txt");
-say(this_player()->query("c_cap_name")+"���ڶ�һ���飬�����ǡ������ƻ���ɡ���\n");
+say(this_player()->query("c_cap_name")+"正在讀一本書，書名是「如何做蘋果派」。\n");
     return 1;
 }
  

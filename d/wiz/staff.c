@@ -13,16 +13,16 @@ void create()
 {
 	seteuid( getuid(this_player()) );
 	guild_ob::create();
-	set_name("staff", "Ä§ÕÈ");
+	set_name("staff", "é­”æ–");
 	add( "id", ({ "magical staff" }) );
-	set_short("A wizard staff", "Î×Ê¦Ä§ÕÈ");
+	set_short("A wizard staff", "å·«å¸«é­”æ–");
 	set_long(
 		"This is a magical staff created by Annihilator. Type 'help staff'\n"
 		"for more information.\n",
-		"ÕâÊÇÒ»°Ñ¡¸Î×Ê¦×¨ÓÃ¡¹µÄÉñÆæÄ§ÕÈ£¬ÓÃ help staff ¿´Ê¹ÓÃËµÃ÷¡£\n"
+		"é€™æ˜¯ä¸€æŠŠã€Œå·«å¸«å°ˆç”¨ã€çš„ç¥å¥‡é­”æ–ï¼Œç”¨ help staff çœ‹ä½¿ç”¨èªªæ˜ã€‚\n"
 	);
 	set_class_name("adventurer");
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 	set( "weapon_class", 20 );
 	set( "min_damage", 10 );
@@ -62,7 +62,7 @@ int change_guild(string arg)
 {
 	if( file_size(GUILD_MASTER(arg)+".c")<0 )
 		return notify_fail( can_read_chinese()?
-			"Ã»ÓĞÕâ¸ö¹«»á¡£\n": "No such guild.\n" );
+			"æ²’æœ‰é€™å€‹å…¬æœƒã€‚\n": "No such guild.\n" );
 	set_class_name(arg);
 	// Cause init() to be called and everything set ok.
 	move(this_player());
@@ -78,25 +78,25 @@ int connect_room(string arg)
 
 	if( !arg || arg=="" || sscanf(arg, "%s to %s", dir, filename)!= 2 )
 		return notify_fail( can_read_chinese()?
-			"Ö¸Áî¸ñÊ½: connect <·½Ïò> to <·¿¼äµµÃû>\n":
+			"æŒ‡ä»¤æ ¼å¼: connect <æ–¹å‘> to <æˆ¿é–“æª”å>\n":
 			"Usage: connect <direction> to <filename>\n");
 
 	filename = resolv_path("cwd", filename);
 
 	here = environment( this_player() );
 	if( !here ) return notify_fail( can_read_chinese()?
-		"Äã²»ÄÜÔÚÒ»Æ¬ĞéÎŞÖĞÁ¬½Ó³ö¿Ú¡£\n":
+		"ä½ ä¸èƒ½åœ¨ä¸€ç‰‡è™›ç„¡ä¸­é€£æ¥å‡ºå£ã€‚\n":
 		"You can't do that in the void.\n");
 
 	if( !((int)master()->check_access( base_name(here), this_player() ) & 2) )
 		return notify_fail( can_read_chinese()?
-			"ÄãÃ»ÓĞĞŞ¸ÄÕâ¸ö·¿¼äµÄÈ¨Á¦¡£\n":
+			"ä½ æ²’æœ‰ä¿®æ”¹é€™å€‹æˆ¿é–“çš„æ¬ŠåŠ›ã€‚\n":
 			"You have no WRITE access to this room.\n" );
 
 	here->add( "exits", ([ dir:filename ]) );
 	tell_room( here, ({
 		this_player()->query("cap_name") + " opens a gateway with the magical staff.\n",
-		this_player()->query("c_cap_name") + "ÓÃÎ×Ê¦Ä§ÕÈ´ò¿ªÒ»ÌõÍ¨ÍùÒì´ÎÔªµÄÍ¨µÀ£¡\n"}),
+		this_player()->query("c_cap_name") + "ç”¨å·«å¸«é­”æ–æ‰“é–‹ä¸€æ¢é€šå¾€ç•°æ¬¡å…ƒçš„é€šé“ï¼\n"}),
 		this_player() );
 	write("Ok.\n");
 	return 1;
@@ -110,12 +110,12 @@ int make_room(string arg)
 
 	if( !arg || arg=="" ) return
 		notify_fail( can_read_chinese()?
-			"Ö¸Áî¸ñÊ½: mkroom <·¿¼äµµÃû>\n": "Usage: mkroom <filename>\n" );
+			"æŒ‡ä»¤æ ¼å¼: mkroom <æˆ¿é–“æª”å>\n": "Usage: mkroom <filename>\n" );
 
 	filename = resolv_path("cwd", arg) + ".c";
 	if( file_size(filename)!=-1 )
 		return notify_fail( can_read_chinese()?
-			"µµ°¸ "+filename+" ÒÑ¾­´æÔÚÁË£¡\n": filename+" already exists!\n");
+			"æª”æ¡ˆ "+filename+" å·²ç¶“å­˜åœ¨äº†ï¼\n": filename+" already exists!\n");
 
 	write("Creating room ("+filename+") ...... ");
 	header_file = user_path( this_player()->link_data("name") ) + ".room.h";
@@ -128,10 +128,10 @@ int make_room(string arg)
 	}
 	room += "\nvoid create()\n{\n";
 	room += "\t::create();\n";
-	room += "\tset_short(\"A empty room\", \"¿Õ·¿¼ä\");\n";
+	room += "\tset_short(\"A empty room\", \"ç©ºæˆ¿é–“\");\n";
 	room += "\tset_long(\n";
 	room += "\t\t\"This is a simple room created by roommaker.\\n\",\n";
-	room += "\t\t\"ÕâÊÇÒ»¸öÓÃ·¿¼ä±à¼­Æ÷Ôì³öÀ´µÄ¿Õ·¿¼ä¡£\\n\"\n";
+	room += "\t\t\"é€™æ˜¯ä¸€å€‹ç”¨æˆ¿é–“ç·¨è¼¯å™¨é€ å‡ºä¾†çš„ç©ºæˆ¿é–“ã€‚\\n\"\n";
 	room += "\t);\n";
 	room += "}\n";
 
@@ -140,7 +140,7 @@ int make_room(string arg)
 		return 1;
 	} else
 		return notify_fail( can_read_chinese()?
-			"µµ°¸Ğ´ÈëÊ§°Ü¡£\n": "Access denied.\n");
+			"æª”æ¡ˆå¯«å…¥å¤±æ•—ã€‚\n": "Access denied.\n");
 }
 
 // "mknpc" command creates a simple monster.
@@ -150,12 +150,12 @@ int make_npc(string arg)
 
 	if( !arg || arg=="" ) return
 		notify_fail( can_read_chinese()?
-			"Ö¸Áî¸ñÊ½: mknpc <¹ÖÎïµµÃû>\n": "Usage: mknpc <filename>\n" );
+			"æŒ‡ä»¤æ ¼å¼: mknpc <æ€ªç‰©æª”å>\n": "Usage: mknpc <filename>\n" );
 
 	filename = resolv_path("cwd", arg) + ".c";
 	if( file_size(filename)!=-1 )
 		return notify_fail( can_read_chinese()?
-			"µµ°¸ "+filename+" ÒÑ¾­´æÔÚÁË£¡\n": filename+" already exists!\n");
+			"æª”æ¡ˆ "+filename+" å·²ç¶“å­˜åœ¨äº†ï¼\n": filename+" already exists!\n");
 
 	write("Creating NPC ("+filename+") ...... ");
 	header_file = user_path( this_player()->link_data("name") ) + ".npc.h";
@@ -169,11 +169,11 @@ int make_npc(string arg)
 	room += "\nvoid create()\n{\n";
 	room += "\t::create();\n";
 	room += "\tset_level(1);\n";
-	room += "\tset_name(\"monster\", \"¹ÖÎï\");\n";
-	room += "\tset_short(\"A monster\", \"¹ÖÎï\");\n";
+	room += "\tset_name(\"monster\", \"æ€ªç‰©\");\n";
+	room += "\tset_short(\"A monster\", \"æ€ªç‰©\");\n";
 	room += "\tset_long(\n";
 	room += "\t\t\"This is a simple monster created by npc maker.\\n\",\n";
-	room += "\t\t\"ÕâÊÇÒ»¸öÓÃ¹ÖÎï±à¼­Æ÷Ôì³öÀ´µÄ¹ÖÎï¡£\\n\"\n";
+	room += "\t\t\"é€™æ˜¯ä¸€å€‹ç”¨æ€ªç‰©ç·¨è¼¯å™¨é€ å‡ºä¾†çš„æ€ªç‰©ã€‚\\n\"\n";
 	room += "\t);\n";
 	room += "}\n";
 
@@ -182,7 +182,7 @@ int make_npc(string arg)
 		return 1;
 	} else
 		return notify_fail( can_read_chinese()?
-			"µµ°¸Ğ´ÈëÊ§°Ü¡£\n": "Access denied.\n");
+			"æª”æ¡ˆå¯«å…¥å¤±æ•—ã€‚\n": "Access denied.\n");
 }
 
 
@@ -193,12 +193,12 @@ int make_obj(string arg)
 
 	if( !arg || arg=="" ) return
 		notify_fail( can_read_chinese()?
-			"Ö¸Áî¸ñÊ½: mkobj <¹ÖÎïµµÃû>\n": "Usage: mkobj <filename>\n" );
+			"æŒ‡ä»¤æ ¼å¼: mkobj <æ€ªç‰©æª”å>\n": "Usage: mkobj <filename>\n" );
 
 	filename = resolv_path("cwd", arg) + ".c";
 	if( file_size(filename)!=-1 )
 		return notify_fail( can_read_chinese()?
-			"µµ°¸ "+filename+" ÒÑ¾­´æÔÚÁË£¡\n": filename+" already exists!\n");
+			"æª”æ¡ˆ "+filename+" å·²ç¶“å­˜åœ¨äº†ï¼\n": filename+" already exists!\n");
 
 	write("Creating NPC ("+filename+") ...... ");
 	header_file = user_path( this_player()->link_data("name") ) + ".obj.h";
@@ -211,11 +211,11 @@ int make_obj(string arg)
 	}
 	room += "\nvoid create()\n{\n";
 	room += "\t::create();\n";
-	room += "\tset_name(\"object\", \"Îï¼ş\");\n";
-	room += "\tset_short(\"An object\", \"Îï¼ş\");\n";
+	room += "\tset_name(\"object\", \"ç‰©ä»¶\");\n";
+	room += "\tset_short(\"An object\", \"ç‰©ä»¶\");\n";
 	room += "\tset_long(\n";
 	room += "\t\t\"This is a simple object created by object maker.\\n\",\n";
-	room += "\t\t\"ÕâÊÇÒ»¸öÓÃÎï¼ş±à¼­Æ÷Ôì³öÀ´µÄÎï¼ş¡£\\n\"\n";
+	room += "\t\t\"é€™æ˜¯ä¸€å€‹ç”¨ç‰©ä»¶ç·¨è¼¯å™¨é€ å‡ºä¾†çš„ç‰©ä»¶ã€‚\\n\"\n";
 	room += "\t);\n";
 	room += "}\n";
 
@@ -224,7 +224,7 @@ int make_obj(string arg)
 		return 1;
 	} else
 		return notify_fail( can_read_chinese()?
-			"µµ°¸Ğ´ÈëÊ§°Ü¡£\n": "Access denied.\n");
+			"æª”æ¡ˆå¯«å…¥å¤±æ•—ã€‚\n": "Access denied.\n");
 }
 
 
@@ -239,7 +239,7 @@ int save_room(string arg)
 
 	env = environment( this_player() );
 	if( !env ) return notify_fail( can_read_chinese()?
-		"ÄãÏÖÔÚ²¢Ã»ÓĞÔÚÈÎºÎ·¿¼äÄÚ¡£\n": "Can't save void.\n");
+		"ä½ ç¾åœ¨ä¸¦æ²’æœ‰åœ¨ä»»ä½•æˆ¿é–“å…§ã€‚\n": "Can't save void.\n");
 
 	if( !arg || arg=="" ) {
 		filename = base_name(env) + ".c";
@@ -247,7 +247,7 @@ int save_room(string arg)
 	else filename = resolv_path("cwd", arg) + ".c";
 
 	write( can_read_chinese()?
-		"·¿¼ä×ÊÁÏ·ÖÎöÖĞ ...... ": "Saving room ("+filename+") ...... ");
+		"æˆ¿é–“è³‡æ–™åˆ†æä¸­ ...... ": "Saving room ("+filename+") ...... ");
 	header_file = user_path( this_player()->link_data("name") ) + ".roommaker.h";
 	if( file_size(header_file) > -1 )
 		room = read_file(header_file);
@@ -275,7 +275,7 @@ int save_room(string arg)
 	props = env->query_ob_data();
 	if( !props || !mapp(props) || sizeof(props)<1 )
 		return notify_fail( can_read_chinese()?
-			"·¿¼ä×ÊÁÏ¶ÁÈ¡Ê§°Ü¡£\n": "Failed to access the room data.");
+			"æˆ¿é–“è³‡æ–™è®€å–å¤±æ•—ã€‚\n": "Failed to access the room data.");
 
 	if( !undefinedp(props["light"]) && intp(props["light"]) )
 		room += "\tset( \"light\", "+props["light"]+" );\n";
@@ -294,7 +294,7 @@ int save_room(string arg)
 
 	if( file_size(filename)>-1 ) {
 		write( can_read_chinese()?
-			"µµ°¸ÒÑ´æÔÚ£¡\nÄãÒªÈ¡´ú¾Éµµ°¸Âğ£¿[y/n] ":
+			"æª”æ¡ˆå·²å­˜åœ¨ï¼\nä½ è¦å–ä»£èˆŠæª”æ¡ˆå—ï¼Ÿ[y/n] ":
 			"File already exists!\nReplace it? [y/n] " );
 		input_to( "save_room_file", 0, filename, room, can_read_chinese() );
 		return 1;
@@ -304,7 +304,7 @@ int save_room(string arg)
 		write("Ok.\n");
 	else
 		write( can_read_chinese()?
-			"µµ°¸Ğ´ÈëÊ§°Ü¡£\n": "Access denied ("+filename+").\n");
+			"æª”æ¡ˆå¯«å…¥å¤±æ•—ã€‚\n": "Access denied ("+filename+").\n");
 	return 1;
 }
 
@@ -317,7 +317,7 @@ void save_room_file(string yn, string filename, string room, int chinese_mode )
 {
 	if( !yn || yn=="" ) {
 		write( chinese_mode?
-			"Òª²»ÒªÈ¡´ú " + filename + " ? (ÊäÈë \"y\" ±íÊ¾Òª£¬\"n\" ±íÊ¾²»Òª) ":
+			"è¦ä¸è¦å–ä»£ " + filename + " ? (è¼¸å…¥ \"y\" è¡¨ç¤ºè¦ï¼Œ\"n\" è¡¨ç¤ºä¸è¦) ":
 			"Replace "+filename+"? (type \"yes\" or \"no\") " );
 		input_to( "save_room_file", 0, filename, room, chinese_mode );
 		return;
@@ -325,11 +325,11 @@ void save_room_file(string yn, string filename, string room, int chinese_mode )
 
 	if( yn[0]=='n' || yn[0]=='N' ) {
 		write( chinese_mode?
-			"·¿¼ä´¢´æÖĞÖ¹¡£\n": "Saveroom aborted.\n");
+			"æˆ¿é–“å„²å­˜ä¸­æ­¢ã€‚\n": "Saveroom aborted.\n");
 		return;
 	} else if( yn[0]!='y' && yn[0]!='Y' ) {
 		write( chinese_mode?
-			"Òª²»ÒªÈ¡´ú " + filename + " ? (ÊäÈë \"y\" ±íÊ¾Òª£¬\"n\" ±íÊ¾²»Òª) ":
+			"è¦ä¸è¦å–ä»£ " + filename + " ? (è¼¸å…¥ \"y\" è¡¨ç¤ºè¦ï¼Œ\"n\" è¡¨ç¤ºä¸è¦) ":
 			"Replace "+filename+"? (type \"yes\" or \"no\") " );
 		input_to( "save_room_file", 0, filename, room );
 		return;
@@ -339,7 +339,7 @@ void save_room_file(string yn, string filename, string room, int chinese_mode )
 		write("Ok.\n");
 	else
 		write( chinese_mode?
-			"µµ°¸Ğ´ÈëÊ§°Ü¡£\n": "Access denied("+filename+").\n");
+			"æª”æ¡ˆå¯«å…¥å¤±æ•—ã€‚\n": "Access denied("+filename+").\n");
 }
 
 int call_set_room(string arg)
@@ -349,11 +349,11 @@ int call_set_room(string arg)
 
 	env = environment(this_player());
 	if( !env ) return notify_fail( can_read_chinese()?
-		"ÄãÏÖÔÚ²¢Ã»ÓĞÔÚÈÎºÎ·¿¼äÖĞ¡£\n": "Can't set in void.\n");
+		"ä½ ç¾åœ¨ä¸¦æ²’æœ‰åœ¨ä»»ä½•æˆ¿é–“ä¸­ã€‚\n": "Can't set in void.\n");
 
 	if( !((int)master()->check_access( base_name(env), this_player() ) & 2) )
 		return notify_fail( can_read_chinese()?
-			"ÄãÃ»ÓĞĞŞ¸ÄÕâ¸ö·¿¼äµÄÈ¨Á¦¡£\n":
+			"ä½ æ²’æœ‰ä¿®æ”¹é€™å€‹æˆ¿é–“çš„æ¬ŠåŠ›ã€‚\n":
 			"You have no WRITE access to this room.\n" );
 
 	if( !arg || sscanf(arg, "%s %s", prop, str)!=2 )
@@ -371,11 +371,11 @@ int call_add_room(string arg)
 
 	env = environment(this_player());
 	if( !env ) return notify_fail( can_read_chinese()?
-		"ÄãÏÖÔÚ²¢Ã»ÓĞÔÚÈÎºÎ·¿¼äÖĞ¡£\n": "Can't set in void.\n");
+		"ä½ ç¾åœ¨ä¸¦æ²’æœ‰åœ¨ä»»ä½•æˆ¿é–“ä¸­ã€‚\n": "Can't set in void.\n");
 
 	if( !((int)master()->check_access( base_name(env), this_player() ) & 2) )
 		return notify_fail( can_read_chinese()?
-			"ÄãÃ»ÓĞĞŞ¸ÄÕâ¸ö·¿¼äµÄÈ¨Á¦¡£\n":
+			"ä½ æ²’æœ‰ä¿®æ”¹é€™å€‹æˆ¿é–“çš„æ¬ŠåŠ›ã€‚\n":
 			"You have no WRITE access to this room.\n" );
 
 	if( !arg || sscanf(arg, "%s %s", prop, str)!=2 )
@@ -392,17 +392,17 @@ int help_staff(string arg)
 	if( !arg || arg!="staff" ) return 0;
 	if( can_read_chinese() )
 		write( @C_HELP_STAFF
-Õâ°ÑÄ§ÕÈÌá¹©ÒÔÏÂ¼¸¸öÖ¸Áî:
+é€™æŠŠé­”æ–æä¾›ä»¥ä¸‹å¹¾å€‹æŒ‡ä»¤:
 
-    chat     - ÀûÓÃ¹«»áÆµµÀºÍÆäËûÈËËµ»°¡£
-    fellows  - ÁĞ³öÄ¿Ç°ºÍÄãÍ¬Ò»¹«»áµÄÍæ¼Ò¡£
-    join     - ¸Ä±äÄãµÄ¹«»á¡£
+    chat     - åˆ©ç”¨å…¬æœƒé »é“å’Œå…¶ä»–äººèªªè©±ã€‚
+    fellows  - åˆ—å‡ºç›®å‰å’Œä½ åŒä¸€å…¬æœƒçš„ç©å®¶ã€‚
+    join     - æ”¹è®Šä½ çš„å…¬æœƒã€‚
 
-    mkroom   - ÖÆÔì³öÒ»¸ö¼òµ¥·¿¼äµÄÄ£ĞÍ¡£
-    saveroom - ½«ÄãÏÖÔÚËùÔÚµÄ·¿¼ä³¢ÊÔÒÔ LPC µÄ³ÌÊ½Ğ´³ÉÒ»¸öµµ°¸¡£
-    rset     - Éè¶¨Õâ¸ö·¿¼äµÄ properties¡£
-    radd     - Ôö¼ÓÕâ¸ö·¿¼äµÄ properties¡£
-    connect  - ½ÓÍ¨Ò»¸öÍ¨ÍùÆäËû·¿¼äµÄ³ö¿Ú¡£
+    mkroom   - è£½é€ å‡ºä¸€å€‹ç°¡å–®æˆ¿é–“çš„æ¨¡å‹ã€‚
+    saveroom - å°‡ä½ ç¾åœ¨æ‰€åœ¨çš„æˆ¿é–“å˜—è©¦ä»¥ LPC çš„ç¨‹å¼å¯«æˆä¸€å€‹æª”æ¡ˆã€‚
+    rset     - è¨­å®šé€™å€‹æˆ¿é–“çš„ propertiesã€‚
+    radd     - å¢åŠ é€™å€‹æˆ¿é–“çš„ propertiesã€‚
+    connect  - æ¥é€šä¸€å€‹é€šå¾€å…¶ä»–æˆ¿é–“çš„å‡ºå£ã€‚
 C_HELP_STAFF
 	);
 	else write( @HELP_STAFF

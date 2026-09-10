@@ -12,22 +12,22 @@ void create()
 {
         ::create();
         set_level(10);
-        set_name("body guard","ÌùÉíÊÌÎÀ");
+        set_name("body guard","è²¼èº«ä¾è¡›");
         add( "id", ({ "guard" }) );
-        set_short( "ÕÒ²»µ½Ö÷ÈËµÄÌùÉíÊÌÎÀ");
+        set_short( "æ‰¾ä¸åˆ°ä¸»äººçš„è²¼èº«ä¾è¡›");
         set_long(
 @C_LONG
-ÕâÎ»ÌùÉíÊÌÎÀÉĞÔÚ²âÊÔÖĞ, ¿´ÆğÀ´»¹²»³ÉÊì, ÉíÉÏÓĞÒ»¶ÑbugÅÀÀ´ÅÀÈ¥
-¶ñĞÄËÀÁË *puke*
-Èç¹ûÄãÊÇËûµÄÖ÷ÈË£¬Äã¿ÉÒÔÓÃ order_guard <commands> ÃüÁîËû×öÊÂ¡£
-ÁíÍâ»¹ÓĞÒ»Ğ©Ö¸Áî, Äã¿ÉÒÔ´òhelp_guard¿´¿´¡£
+é€™ä½è²¼èº«ä¾è¡›å°šåœ¨æ¸¬è©¦ä¸­, çœ‹èµ·ä¾†é‚„ä¸æˆç†Ÿ, èº«ä¸Šæœ‰ä¸€å †bugçˆ¬ä¾†çˆ¬å»
+å™å¿ƒæ­»äº† *puke*
+å¦‚æœä½ æ˜¯ä»–çš„ä¸»äººï¼Œä½ å¯ä»¥ç”¨ order_guard <commands> å‘½ä»¤ä»–åšäº‹ã€‚
+å¦å¤–é‚„æœ‰ä¸€äº›æŒ‡ä»¤, ä½ å¯ä»¥æ‰“help_guardçœ‹çœ‹ã€‚
 C_LONG
         );
         set("post_name","'s body guard");
-        set("c_post_name","µÄÌùÉíÊÌÎÀ");
+        set("c_post_name","çš„è²¼èº«ä¾è¡›");
         set("prevent_give_money", 1);
-        setenv("C_MMIN","$N¸úÖøËûµÄÖ÷ÈË×ßÁË¹ıÀ´");
-        setenv("C_MMOUT","$N¸úÖøËûµÄÖ÷ÈË×ß¿ª");
+        setenv("C_MMIN","$Nè·Ÿè‘—ä»–çš„ä¸»äººèµ°äº†éä¾†");
+        setenv("C_MMOUT","$Nè·Ÿè‘—ä»–çš„ä¸»äººèµ°é–‹");
 	set_perm_stat("str", 13 );
 	set_skill("longblade", 55);
 	set_skill("parry", 55);

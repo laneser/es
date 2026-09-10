@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("Ô¶·çÕò´ó½Ö");
+	ob->set_short("é é¢¨é®å¤§è¡—");
 	ob->set_long( @LONG_DESCRIPTION
-ÄãÏÖÔÚ×ßÔÚÔ¶·çÕòµÄ´ó½ÖÉÏ¡£±±±ßÊÇÔ¶·çÕòµÄÖĞĞÄ¹ã³¡£¬ÔÚÄãµÄ¶«²àÓĞ
-Ò»¼äÉÌµê£¬Î÷±ßµÄ½¨ÖşÔòÊÇ¶¦¶¦´óÃûµÄÃ°ÏÕÕß¹«»á¡£
+ä½ ç¾åœ¨èµ°åœ¨é é¢¨é®çš„å¤§è¡—ä¸Šã€‚åŒ—é‚Šæ˜¯é é¢¨é®çš„ä¸­å¿ƒå»£å ´ï¼Œåœ¨ä½ çš„æ±å´æœ‰
+ä¸€é–“å•†åº—ï¼Œè¥¿é‚Šçš„å»ºç¯‰å‰‡æ˜¯é¼é¼å¤§åçš„å†’éšªè€…å…¬æœƒã€‚
 LONG_DESCRIPTION
 	);
 
@@ -22,15 +22,15 @@ LONG_DESCRIPTION
 			"keyword" : ({ 
 				"oak door", 
 				"door" }), 
-			"c_desc" : "Ò»ÉÈ½áÊµºñÖØµÄÏğÄ¾ÃÅ", 
+			"c_desc" : "ä¸€æ‰‡çµå¯¦åšé‡çš„æ©¡æœ¨é–€", 
 			"status" : "open", 
-			"c_name" : "ÏğÄ¾ÃÅ" ]) ]) );
+			"c_name" : "æ©¡æœ¨é–€" ]) ]) );
 	ob->set( "exits", ([ 
 		"east" : "/d/noden/farwind/shop", 
 		"north" : "/d/noden/farwind/square", 
 		"west" : "/d/adventurer/hall/adv_guild", 
 		"south" : "/d/noden/farwind/smain2" ]) );
 	ob->set( "item_desc", ([ 
-		"west door" : "Ò»ÉÈ½áÊµºñÖØµÄÏğÄ¾ÃÅ£¬ËüÏÖÔÚÊÇ¿ªÖøµÄ¡£\n" ]) );
+		"west door" : "ä¸€æ‰‡çµå¯¦åšé‡çš„æ©¡æœ¨é–€ï¼Œå®ƒç¾åœ¨æ˜¯é–‹è‘—çš„ã€‚\n" ]) );
 	ob->reset();
 }

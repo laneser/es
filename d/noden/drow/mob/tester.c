@@ -7,17 +7,17 @@ void create ()
 
         ::create();
 	set_level(15);
-        set_name( "Drow Valor Batur","ºÚ°µ¾«ÁéÓÂÕß¡¡°ÍÍ¼" );
+        set_name( "Drow Valor Batur","é»‘æš—ç²¾éˆå‹‡è€…ã€€å·´åœ–" );
         add ("id", ({ "drow", "valor","batur" }) );
-        set_short( "Drow Valor Batur","ºÚ°µ¾«ÁéÓÂÕß¡¡°ÍÍ¼" );
-        set("unit","Î»");
+        set_short( "Drow Valor Batur","é»‘æš—ç²¾éˆå‹‡è€…ã€€å·´åœ–" );
+        set("unit","ä½");
         set("alignment",900);
         set("weight",600);
         set("wealth/silver",1000);
         set_long(@C_LONG
-ÕâÎ»Ó¢¿¡Í¦°ÎµÄÎäÊ¿ÊÇºÚ°µ¾«Áé×åÈËÖÐ×îÓ¢ÓÂµÄÕ½Ê¿£¬ËûµÄÎäÒÕÁ¬¶Ó³¤
-ÐÞ¿­Ë¹¶¼ÒªÎ·¾åÈý·Ö£¬¾ÝËµÄÜÔÚËûÊÖÏÂ×ß¹ý°ÙÕÐµÄÈË²»¹ýÊ®âÅÈË¡£Èç¹ûÄãÄÜ
-´ò°ÜËû£¬ÄÇ¾ÍÊÇÉíÎªÓÂÕßµÄ×î¼ÑÖ¤Ã÷¡£
+é€™ä½è‹±ä¿ŠæŒºæ‹”çš„æ­¦å£«æ˜¯é»‘æš—ç²¾éˆæ—äººä¸­æœ€è‹±å‹‡çš„æˆ°å£«ï¼Œä»–çš„æ­¦è—é€£éšŠé•·
+ä¿®å‡±æ–¯éƒ½è¦ç•æ‡¼ä¸‰åˆ†ï¼Œæ“šèªªèƒ½åœ¨ä»–æ‰‹ä¸‹èµ°éŽç™¾æ‹›çš„äººä¸éŽåé¤˜äººã€‚å¦‚æžœä½ èƒ½
+æ‰“æ•—ä»–ï¼Œé‚£å°±æ˜¯èº«ç‚ºå‹‡è€…çš„æœ€ä½³è­‰æ˜Žã€‚
 C_LONG
         );
         set_perm_stat("int", 20);
@@ -35,7 +35,7 @@ C_LONG
 	set_skill("dodge",60);
 	set_skill("parry",70);
 	set_skill("block",60);
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 	set ("tactic_func","my_tactic" );
         wield_weapon(OBJ"scale_lb");
         equip_armor(ARM"plate");
@@ -50,7 +50,7 @@ void die()
 	killer = query("last_attacker");
 
 	tell_object( killer,
-		"°ÍÍ¼ËµµÀ£ºàÅ£¬Ð¡ÅóÓÑÎä¹¦²»´íÂï¡£ÎÒÈ¥±¨¸æ¶Ó³¤ÂÞ¡£\n");
+		"å·´åœ–èªªé“ï¼šå—¯ï¼Œå°æœ‹å‹æ­¦åŠŸä¸éŒ¯å˜›ã€‚æˆ‘åŽ»å ±å‘ŠéšŠé•·ç¾…ã€‚\n");
 	killer->move_player("/d/noden/drow/r02","SNEAK");
 	killer->set_temp("drow_certi",2);
 
@@ -71,7 +71,7 @@ int my_tactic()
 	for( i=0; i<sizeof(victim); i++ ) {
 		if( (int)victim[i]->query("hit_points") < 50 ) {
 		tell_object( victim[i], @LONG
-ºöÈ»ÐÞ¿­Ë¹¶Ó³¤×èÖ¹ÁËÕâ³¡±ÈÎä£¬²¢×ª¹ýÍ·À´¶ÔÄãËµ£ºÐ¡ÅóÓÑ£¬»Ø¼ÒÁ·µã¹¦ÔÙÀ´°É¡£
+å¿½ç„¶ä¿®å‡±æ–¯éšŠé•·é˜»æ­¢äº†é€™å ´æ¯”æ­¦ï¼Œä¸¦è½‰éŽé ­ä¾†å°ä½ èªªï¼šå°æœ‹å‹ï¼Œå›žå®¶ç·´é»žåŠŸå†ä¾†å§ã€‚
 LONG
                 );
 		victim[i]->cease_all_attacks();

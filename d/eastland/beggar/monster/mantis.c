@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "mantis", "ó«òë" );
+	set_name( "mantis", "è³è‚" );
 	add( "id",({"mantis"}) );
-	set_short( "ó«òë" );
+	set_short( "è³è‚" );
 	set_long(@C_LONG
-Ò»Ö»¿´ÆğÀ´ºÜĞ×ºİµÄÀ¥³æ,»ÎÖøÁ½Ö§³¤³¤µÄÁ­µ¶»¢ÊÓíñíñµØ¿´ÖøÄã,ËÆºõÒª°ÑÄãÍÌÏÂ
-¸¹¡£
+ä¸€éš»çœ‹èµ·ä¾†å¾ˆå…‡ç‹ çš„æ˜†èŸ²,æ™ƒè‘—å…©æ”¯é•·é•·çš„é®åˆ€è™è¦–çœˆçœˆåœ°çœ‹è‘—ä½ ,ä¼¼ä¹è¦æŠŠä½ åä¸‹
+è…¹ã€‚
 C_LONG
         );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
 	set_perm_stat( "str", 22 );
 	set_perm_stat( "dex", 16 );
 	set_perm_stat( "kar", 20 );
@@ -27,7 +27,7 @@ C_LONG
         set( "natural_weapon_class2", 40 );
         set( "natural_min_damage2", 15 );
         set( "natural_max_damage2", 25 );
-	set_c_verbs( ({ "%sÓÃÁ½Ö§³¤³¤µÄÁ­µ¶¹¥Ïò%s",
-                        "%sÓÃ×ìºİºİµØÒ§Ïò%s"      
+	set_c_verbs( ({ "%sç”¨å…©æ”¯é•·é•·çš„é®åˆ€æ”»å‘%s",
+                        "%sç”¨å˜´ç‹ ç‹ åœ°å’¬å‘%s"      
                     }) );
 }

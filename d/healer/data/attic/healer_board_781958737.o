@@ -1,9 +1,9 @@
 #d/healer/building/healer_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ĞĞÒ½ÕßÁôÑÔ°å",])
-messages ({(["id":233,"title":"no.1","body":"            [1;33m ¹ş¹ş¹ş¹ş¹ş
-                     Å¬Á¦¹àË®µÄÊ±¼äµ½ÁË
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"è¡Œé†«è€…ç•™è¨€æ¿",])
+messages ({(["id":233,"title":"no.1","body":"            [1;33m å“ˆå“ˆå“ˆå“ˆå“ˆ
+                     åŠªåŠ›çŒæ°´çš„æ™‚é–“åˆ°äº†
 [0;37;40m
 ","time":781540172,"poster":"Did",]),(["id":234,"body":"*cry* 
 ","title":"i got killed! =(","time":781564147,"poster":"Scotch",]),(["id":235,"body":"
@@ -27,30 +27,30 @@ remark: get killed == data lost.. =)
 > 
 > 			Floody Scotch
 
-àÅ....
-ÎÒµÄ×ÊÁÏÒ²ÒÅÊ§ÁË....
-²»¹ı....
-ÎÒÖ»ÒªÎÒµÄ½äÖ¸»ØÀ´....
-½á»é½äÖ¸....
-Ëü´ú±íÊ²÷áÒâÒå....
-Ò»¸öÓÀºã²»±äµÄ°®ÇéÂğ????
-²»¶®....
-ÓÀÔ¶²»¶®....
+å—¯....
+æˆ‘çš„è³‡æ–™ä¹Ÿéºå¤±äº†....
+ä¸é....
+æˆ‘åªè¦æˆ‘çš„æˆ’æŒ‡å›ä¾†....
+çµå©šæˆ’æŒ‡....
+å®ƒä»£è¡¨ä»€éº¼æ„ç¾©....
+ä¸€å€‹æ°¸æ†ä¸è®Šçš„æ„›æƒ…å—????
+ä¸æ‡‚....
+æ°¸é ä¸æ‡‚....
 
-                     °ËÔÆ
-","title":"Re: fogetable experience..","time":781571704,"poster":"Jschen",]),(["id":237,"title":"< no title >","body":" ÎØ~~  my data is lost,too.
- Although I had mail to kitten,this afternoon I am level cat ÎØ~~~
+                     å…«é›²
+","title":"Re: fogetable experience..","time":781571704,"poster":"Jschen",]),(["id":237,"title":"< no title >","body":" å—š~~  my data is lost,too.
+ Although I had mail to kitten,this afternoon I am level cat å—š~~~
  No money,No skills...
 ","time":781600679,"poster":"Graycat",]),(["id":238,"title":"< no title >","body":"No money and skills' day.
 Waiting kitten.
 How long the day is.
 Oh,deer kitten...where r u?
-","time":781600985,"poster":"Graycat",]),(["id":239,"title":"< no title >","body":"ÔÙpostÒ»´Î,ÎÒÊÇlulu.......:P
+","time":781600985,"poster":"Graycat",]),(["id":239,"title":"< no title >","body":"å†postä¸€æ¬¡,æˆ‘æ˜¯lulu.......:P
 
 
 
 ","time":781602105,"poster":"Mercury",]),(["id":240,"title":"Re: < no title >","body":"On Sat Oct  8, Mercury wrote:
-> ÔÙpostÒ»´Î,ÎÒÊÇlulu.......:P
+> å†postä¸€æ¬¡,æˆ‘æ˜¯lulu.......:P
 > 
 > 
 > 
@@ -76,12 +76,12 @@ lisa:.....................
 ","time":781613916,"poster":"Indra",]),(["id":242,"title":"for my name","body":"ccc...... i am vivian, know?
 
                       vivian
-","time":781650144,"poster":"Cool",]),(["id":243,"body":"£É¡¡£á£í¡¡£Ä£å£á£ô£è£®£®£®£®
+","time":781650144,"poster":"Cool",]),(["id":243,"body":"ï¼©ã€€ï½ï½ã€€ï¼¤ï½…ï½ï½”ï½ˆï¼ï¼ï¼ï¼
 
-£®
+ï¼
 ","title":"< no title >","time":781696286,"poster":"Death",]),(["id":244,"title":"< no title >","body":"Do I know that who I am ? ......
-","time":781712270,"poster":"Tsaih",]),(["id":245,"title":"< no title >","body":"ÌìÑ½,Death¹àË®¹àµ½Ò½Éú¹«»áÀ´À²...<grin>
-                          Ñ§Ğ£ÍøÂ·ËÀµôÀ²...¹àË®ÖĞHch...:P
+","time":781712270,"poster":"Tsaih",]),(["id":245,"title":"< no title >","body":"å¤©å‘€,DeathçŒæ°´çŒåˆ°é†«ç”Ÿå…¬æœƒä¾†å•¦...<grin>
+                          å­¸æ ¡ç¶²è·¯æ­»æ‰å•¦...çŒæ°´ä¸­Hch...:P
 ","time":781767101,"poster":"Hch",]),(["id":246,"title":"< no title >","body":"       
 
 
@@ -89,28 +89,28 @@ lisa:.....................
        ^_______^
 
 
-                                 lyre¹àË®ÖĞ~p
+                                 lyreçŒæ°´ä¸­~p
 ","time":781790712,"poster":"Lyre",]),(["id":247,"body":"hi....every healer ...:)
 
      i m slam in healer...:)
 do u know who i m in mages and monks and scholars and knights...giggle
 
 
-                       Î°´óµÄ»Æ½ğÊ·À³Ä· slam
-","title":"15","time":781803217,"poster":"Slam",]),(["id":248,"body":"ÎÒºÃÏñ½ĞJschen °É...
-                 °ËÔÆ
-","title":"Jschen","time":781855460,"poster":"Jschen",]),(["id":249,"body":"    ºÃÈÈÄÖµÄÒ½Éú¹«»áà¸,ÎÒÏ²»¶!!!^_^
-³õ´ÎµÇ³¡.´ó¼ÒºÃ!!
-","title":"< no title >","time":781857638,"poster":"Lody",]),(["id":250,"title":"ºÇºÇ ....","body":"Dont finger me (Jschen) .....
+                       å‰å¤§çš„é»ƒé‡‘å²èŠå§† slam
+","title":"15","time":781803217,"poster":"Slam",]),(["id":248,"body":"æˆ‘å¥½åƒå«Jschen å§...
+                 å…«é›²
+","title":"Jschen","time":781855460,"poster":"Jschen",]),(["id":249,"body":"    å¥½ç†±é¬§çš„é†«ç”Ÿå…¬æœƒå–”,æˆ‘å–œæ­¡!!!^_^
+åˆæ¬¡ç™»å ´.å¤§å®¶å¥½!!
+","title":"< no title >","time":781857638,"poster":"Lody",]),(["id":250,"title":"å‘µå‘µ ....","body":"Dont finger me (Jschen) .....
 Or .....
 Something bad will happen .....
 hee ....
 
                          ba yun
-","time":781880827,"poster":"Jschen",]),(["id":251,"title":"< no title >","body":"´ó¼Ò¶¼ÔÚ¹àË®...
-ÎÒÒ²²»ºÃÒâË¼²»¹àso ...
-i am Dey Ğ¡µûÒÂ
-Dey ¾ÍÊÇÎÒ..
+","time":781880827,"poster":"Jschen",]),(["id":251,"title":"< no title >","body":"å¤§å®¶éƒ½åœ¨çŒæ°´...
+æˆ‘ä¹Ÿä¸å¥½æ„æ€ä¸çŒso ...
+i am Dey å°è¶è¡£
+Dey å°±æ˜¯æˆ‘..
 Dey grin here,.....
 ","time":781880886,"poster":"Dey",]),(["id":252,"title":"chun","body":"hmm ...
 dont finger me oh ....

@@ -1,6 +1,6 @@
 /*
- * Ô­×÷Õß£ºMercury (1995.1)
- * ÐÞ¸ÄÕß£ºIshige (1995.12)
+ * åŽŸä½œè€…ï¼šMercury (1995.1)
+ * ä¿®æ”¹è€…ï¼šIshige (1995.12)
  */
 
 #include <mudlib.h>
@@ -10,16 +10,16 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("Thunder Sword","À×Éñ½£");
+       set_name("Thunder Sword","é›·ç¥žåŠ");
        add("id",({"sword"}) );
-       set_short("À×Éñ½£");
+       set_short("é›·ç¥žåŠ");
 	   set_long(@AAA
-ÕâÊÇÒ»°ÑÓµÓÐ¿ØÖÆÀ×µçÁ¦Á¿µÄÉñ½££¬ÆäÍþÁ¦Ö®´ó¾ÝËµ¿ÉÒÔÅü¿ªÒ»×ù¸ßÉ½£¡
+é€™æ˜¯ä¸€æŠŠæ“æœ‰æŽ§åˆ¶é›·é›»åŠ›é‡çš„ç¥žåŠï¼Œå…¶å¨åŠ›ä¹‹å¤§æ“šèªªå¯ä»¥åŠˆé–‹ä¸€åº§é«˜å±±ï¼
 AAA
 
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "second",1);
  	set( "weapon_class", 42 );
         set("type","longblade");
@@ -45,9 +45,9 @@ int sword_damage(object victim,int damage)
 	else {
 		
      tell_object(holder,
-     "\nÄãÊÖÉÏµÄÀ×Éñ½£¾Û¼¯ÆðÒ»¹É¾Þ´óµÄÀ×µç»÷ÏòµÐÈË\n\n");
+     "\nä½ æ‰‹ä¸Šçš„é›·ç¥žåŠèšé›†èµ·ä¸€è‚¡å·¨å¤§çš„é›·é›»æ“Šå‘æ•µäºº\n\n");
      tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"ÊÖÉÏµÄÀ×Éñ½£·¢³öÒ»µÀ¾Þ´óµÄÀ×µç»÷Ïò"+victim->query("c_name")+"\n\n",
+      "\n"+holder->query("c_name")+"æ‰‹ä¸Šçš„é›·ç¥žåŠç™¼å‡ºä¸€é“å·¨å¤§çš„é›·é›»æ“Šå‘"+victim->query("c_name")+"\n\n",
       holder);
     victim->receive_special_damage("electric",dam);
     victim->set("last_attacker",holder);

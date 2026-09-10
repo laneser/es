@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Crystal plate","Ë®¾§îø¼×" );
+     set_name( "Crystal plate","æ°´æ™¶é§ç”²" );
      add( "id",({ "plate" }) );
-     set_short( "Ë®¾§îø¼×" );
+     set_short( "æ°´æ™¶é§ç”²" );
      set_long(@C_LONG
-Ò»¼şË®¾§ÖÆ³ÉµÄîø¼×£¬±íÃæÈ´ÈçÍ¬¾µ×ÓÒ»°ã£¬Ã»ÓĞÈÎºÎÎÆÂ·¡£
+ä¸€ä»¶æ°´æ™¶è£½æˆçš„é§ç”²ï¼Œè¡¨é¢å»å¦‚åŒé¡å­ä¸€èˆ¬ï¼Œæ²’æœ‰ä»»ä½•ç´‹è·¯ã€‚
 C_LONG
      );
      set( "weight",110 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","element" );
      set( "armor_class",35 );

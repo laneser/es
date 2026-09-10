@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("΢��·");
+	ob->set_short("微風路");
 	ob->set_long( @LONG_DESCRIPTION
-������������΢��·�ϡ��㳡λ����������Զ����΢��·��
-һ·������ȥ�����ߵĽ�����Ŀǰ���ڳ��⡣
+你現在正走在微風路上。廣場位於你的西方不遠處，微風路向東
+一路延伸下去，北邊的建築物目前正在出租。
 LONG_DESCRIPTION
 	);
 

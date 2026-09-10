@@ -8,10 +8,10 @@ int find;
 void create()
 {
 	::create();
-	set_short("À¬»ø¿Ó");
+	set_short("åƒåœ¾å‘");
 	set_long( @C_LONG_DESCRIPTION
-ÕâÀïËÆºõÒÑÊÇÒÏÑ¨µÄµ×²¿£¬µ½´¦¶ÑÖø¾ŞÒÏÃÇµÄ·ÏÆúÎï¡£ÅÅĞ¹Îï(excreta)¡¢
-Ê³Îï²ĞÔü(dump)£¬ÄÇ³ôÎ¶ÁîÄãÄÑÊÜ¼«ÁË£¬ÄãÖ»Ïë¾¡¿ìµÄÀë¿ªÕâÀï¡£
+é€™è£¡ä¼¼ä¹å·²æ˜¯èŸ»ç©´çš„åº•éƒ¨ï¼Œåˆ°è™•å †è‘—å·¨èŸ»å€‘çš„å»¢æ£„ç‰©ã€‚æ’æ´©ç‰©(excreta)ã€
+é£Ÿç‰©æ®˜æ¸£(dump)ï¼Œé‚£è‡­å‘³ä»¤ä½ é›£å—æ¥µäº†ï¼Œä½ åªæƒ³å„˜å¿«çš„é›¢é–‹é€™è£¡ã€‚
 C_LONG_DESCRIPTION
 	);
 	set( "objects", ([
@@ -23,9 +23,9 @@ C_LONG_DESCRIPTION
 	  "dump" : "@@search_dump",
 	]) );
 	set( "item_desc", ([
-	  "excreta" : "¾¡ÊÇÂìÒÏµÄÅÅĞ¹Îï£¬³ôËÀÁË¡£\n",
-	  "dump" : "ÂìÒÏÃÇ³ÔÊ£µÄÊ³Îï£¬²»ÏşµÃËüÃÇÎªºÎÈç´ËÀË·Ñ¡£\n"+
-	           "×ĞÏ¸Ò»¿´ÀïÃæºÃÏñÓĞÊ²÷á¶«Î÷ÔÚÉ§¶¯¡£\n",
+	  "excreta" : "ç›¡æ˜¯èèŸ»çš„æ’æ´©ç‰©ï¼Œè‡­æ­»äº†ã€‚\n",
+	  "dump" : "èèŸ»å€‘åƒå‰©çš„é£Ÿç‰©ï¼Œä¸æ›‰å¾—å®ƒå€‘ç‚ºä½•å¦‚æ­¤æµªè²»ã€‚\n"+
+	           "ä»”ç´°ä¸€çœ‹è£¡é¢å¥½åƒæœ‰ä»€éº¼æ±è¥¿åœ¨é¨·å‹•ã€‚\n",
 	]) );
 	reset();
 }
@@ -45,7 +45,7 @@ int search_dump()
 	ob = new( MOYADA"monster/metal_slime" );
 	ob->move( this_object() );
 	tell_room( environment(this_object()),
-		"Í»È»Ò»Ö»½ğÊôÊ·À³Ä·´ÓÀ¬»ø¶ÑÖĞÌøÁË³öÀ´£¬¶ÔÖøÄãÎ¢Ğ¦¡£\n" );
+		"çªç„¶ä¸€éš»é‡‘å±¬å²èŠå§†å¾åƒåœ¾å †ä¸­è·³äº†å‡ºä¾†ï¼Œå°è‘—ä½ å¾®ç¬‘ã€‚\n" );
 	find = 1;
 	call_out( "disappear", 200, ob );
 	return 1;
@@ -58,7 +58,7 @@ void disappear(object ob)
 
 	if( !ob ) return;
 	tell_room( environment(ob), 
-		"ÄãÑÛÇ°µÄ½ğÊôÊ·À³Ä·Í»È»ÏûÊ§ÁË¡£\n" , ob
+		"ä½ çœ¼å‰çš„é‡‘å±¬å²èŠå§†çªç„¶æ¶ˆå¤±äº†ã€‚\n" , ob
 	);
 	item = all_inventory(ob);
 	for( i=0; i<sizeof(item); i++ ) item[i]->remove();
@@ -73,9 +73,9 @@ void init()
 int to_climb( string str )
 {
 	if( !str || str=="" )
-		return notify_fail("ÄãÒªÅÀÄÄ¸ö·½Ïò?\n");
+		return notify_fail("ä½ è¦çˆ¬å“ªå€‹æ–¹å‘?\n");
 	if( str != "up" )
-		return notify_fail("ÄÇ¸ö·½Ïò²»Í¨À²!\n");
+		return notify_fail("é‚£å€‹æ–¹å‘ä¸é€šå•¦!\n");
 	to_climb_up( this_player(), MOYADA"anthill/cellar3", 40 );
 	return 1;
 }

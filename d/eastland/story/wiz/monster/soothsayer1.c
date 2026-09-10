@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "soothsayer", "²·óßÕß" );
-	set_short( "²·óßÕß" );
+	set_name( "soothsayer", "åœç­®è€…" );
+	set_short( "åœç­®è€…" );
 	set_long(@C_LONG
-Ò»Î»°×·¢²Ô²ÔµÄÀÏÌ«ÆÅ£¬ËıÕıÃĞÖøÑÛ¾¦×¢ÊÓÖøĞØÇ°µÄË®¾§²£Á§Çò£¬ÉñÇé¼«ÊÇÓÆÏĞ¡£   
+ä¸€ä½ç™½é«®è’¼è’¼çš„è€å¤ªå©†ï¼Œå¥¹æ­£çœ¯è‘—çœ¼ç›æ³¨è¦–è‘—èƒ¸å‰çš„æ°´æ™¶ç»ç’ƒçƒï¼Œç¥æƒ…æ¥µæ˜¯æ‚ é–’ã€‚   
 C_LONG
         );
 	set( "gender", "female" );
-        set( "unit","Î»");
+        set( "unit","ä½");
         set( "wealth/silver",100);
         set_natural_armor(65,0); 
         set_natural_weapon( 23,9,23 );
@@ -25,8 +25,8 @@ void ask_crystal(object asker)
 {
     tell_room(environment(),@LONG
                             
-²·óßÕßÅ­µÀ£ºĞ¡º¢×ÓÃ»ÊÂÎÊÎÒµÄË®¾§²£Á§Çò¸ÉÂï£¿
-                                      ¡¡¡¡
+åœç­®è€…æ€’é“ï¼šå°å­©å­æ²’äº‹å•æˆ‘çš„æ°´æ™¶ç»ç’ƒçƒå¹¹å˜›ï¼Ÿ
+                                      ã€€ã€€
 LONG
    );
 }

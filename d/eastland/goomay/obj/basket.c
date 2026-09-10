@@ -5,9 +5,9 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_name("basket", "菜篮");
-	set_short("菜篮");
-	set_c_open_long("这是一个买菜用的篮子，可以装东西。\n");
+	set_name("basket", "鑿滅眱");
+	set_short("鑿滅眱");
+	set_c_open_long("閫欐槸涓�鍊嬭卜鑿滅敤鐨勭眱瀛愶紝鍙互瑁濇澅瑗裤�俓n");
 	set("weight", 50);
 	set("weight_apply", 80 );
 	set("max_load", 150);

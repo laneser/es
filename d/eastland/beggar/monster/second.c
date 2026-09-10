@@ -7,14 +7,14 @@ void create()
 	::create();
 	set("lvlimit",15);
 	set_level(7);
-	set_name( "two-bag beggar", "¶ş´üµÜ×Ó" );
+	set_name( "two-bag beggar", "äºŒè¢‹å¼Ÿå­" );
 	set("id",({"two","beggar"}));
-	set_short( "Ø¤°ï ¶ş´üµÜ×Ó" );
+	set_short( "ä¸å¹« äºŒè¢‹å¼Ÿå­" );
 	set_long(@C_LONG
-¶ş´üµÜ×ÓÕıĞÁÇÚµØÁ·Îä¹¦¡£
+äºŒè¢‹å¼Ÿå­æ­£è¾›å‹¤åœ°ç·´æ­¦åŠŸã€‚
 C_LONG
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set_perm_stat( "str", 7 );
 	set_perm_stat( "dex", 7 );
 	set_skill( "dodge", 50 );
@@ -28,5 +28,5 @@ C_LONG
 	set( "natural_min_damage2", 5 );
 	set( "natural_max_damage2", 10 );
 	set( "wealth/gold", 10 );
-	set_c_verbs( ({ "%sÌ¤²½ÏòÇ°£¬Ò»¼ÇÖ±È­´òÏò%s", "%s×óÍÈÍù%sÒ»Ìß" }) );
+	set_c_verbs( ({ "%sè¸æ­¥å‘å‰ï¼Œä¸€è¨˜ç›´æ‹³æ‰“å‘%s", "%så·¦è…¿å¾€%sä¸€è¸¢" }) );
 }

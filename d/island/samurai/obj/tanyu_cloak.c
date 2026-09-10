@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "tanyu cloak", "ÌìÓğÅû·ç");
+        set_name( "tanyu cloak", "å¤©ç¾½æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short("tanyu cloak", "ÌìÓğÅû·ç");
+        set_short("tanyu cloak", "å¤©ç¾½æŠ«é¢¨");
         set_long(@AAA
-ÕâÊÇÌìÓğ½£ÅÉÌØÓĞµÄÅû·ç£¬ÓĞ²»´íµÄ·À»¤Á¦
+é€™æ˜¯å¤©ç¾½åŠæ´¾ç‰¹æœ‰çš„æŠ«é¢¨ï¼Œæœ‰ä¸éŒ¯çš„é˜²è­·åŠ›
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "cloak" );
         set( "armor_class", 6 );
         set( "defense_bonus", 4 );

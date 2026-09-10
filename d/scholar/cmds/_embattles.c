@@ -17,22 +17,22 @@ int cmd_embattles(string str)
 
 	known = (mapping)this_player()->query("embattle");
 	if( !known || sizeof(known) == 0 ) {
-		write("ÄãÄ¿Ç°²»»áÈÎºÎÕó·¨¡£\n");
+		write("ä½ ç›®å‰ä¸æœƒä»»ä½•é™£æ³•ã€‚\n");
 		return 1;
 	}
 
-	msg = "ÄãÄ¿Ç°ËùÄÜÊ¹ÓÃµÄÕó·¨ÓĞ:\n" ;
+	msg = "ä½ ç›®å‰æ‰€èƒ½ä½¿ç”¨çš„é™£æ³•æœ‰:\n" ;
 
 	embat = keys(known);
 	for( i=0; i<sizeof(embat); i++ ) {
           switch (embat[i]) {
-          case "two" : str1="Á½ÒÇÎ¢³¾Õó";
+          case "two" : str1="å…©å„€å¾®å¡µé™£";
                break;
-          case "three" : str1="ÌìµØÈËÈı²ÅÕó";
+          case "three" : str1="å¤©åœ°äººä¸‰æ‰é™£";
                break;
-          case "four" : str1="ËÄÏóè¯çáÕó";
+          case "four" : str1="å››è±¡ç’‡ç’£é™£";
                break;
-          case "eight" : str1="°ËØÔÓÎÁúÕó";
+          case "eight" : str1="å…«å¦æ¸¸é¾é™£";
                break;
           default :
                break;
@@ -48,7 +48,7 @@ int help()
 	write( @HELP
 Usage: embattles
 
-Õâ¸öÖ¸Áî¿ÉÒÔ°ÑÄãËùÑ§¹ıµÄÕó·¨ÁĞ³öÀ´¡£
+é€™å€‹æŒ‡ä»¤å¯ä»¥æŠŠä½ æ‰€å­¸éçš„é™£æ³•åˆ—å‡ºä¾†ã€‚
 See also: embattle.
 HELP
 	      );

@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "paper man", "Ö½ÈË" );
+	set_name( "paper man", "ç´™äºº" );
 	add( "id",({"man"}) );
-	set_short( "Ö½ÈË" );
+	set_short( "ç´™äºº" );
 	set_long(@C_LONG
-Ò»¸öÓÉ·ûÖä±ä³öÀ´µÄÖ½ÈË£¬ËüÕıĞ×ÃÍµØ¹¥»÷µĞÈË¡£
+ä¸€å€‹ç”±ç¬¦å’’è®Šå‡ºä¾†çš„ç´™äººï¼Œå®ƒæ­£å‡¶çŒ›åœ°æ”»æ“Šæ•µäººã€‚
 C_LONG	
         );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
 	set( "killer", 1);
 	set_perm_stat( "str", 22 );
 	set_perm_stat( "dex", 16 );

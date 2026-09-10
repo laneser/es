@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "brontosaurus statue", "À×ÁúµñÏñ" );
+	set_name( "brontosaurus statue", "é›·é¾é›•åƒ" );
 	add("id",({"statue"}));
-	set_short( "À×ÁúµñÏñ" );
+	set_short( "é›·é¾é›•åƒ" );
 	set_long(
-   "Äã¿´µ½Ò»Ö»¾Ş´óµÄÀ×ÁúµñÏñ£¬Ñù×ÓÓĞµãÏñÕæµÄÒ»Ñù£¬ËäÈ»ºÜ¾ÉÁË£¬È´ÈÔÄÜ¸Ğ¾õ\n"
-   "Ò»Ë«µÎÁïÁïµÄÑÛÖé×ÓÕı¶¢ÖøÄãÇÆÖø¡£\n"
+   "ä½ çœ‹åˆ°ä¸€éš»å·¨å¤§çš„é›·é¾é›•åƒï¼Œæ¨£å­æœ‰é»åƒçœŸçš„ä¸€æ¨£ï¼Œé›–ç„¶å¾ˆèˆŠäº†ï¼Œå»ä»èƒ½æ„Ÿè¦º\n"
+   "ä¸€é›™æ»´æºœæºœçš„çœ¼ç å­æ­£ç›¯è‘—ä½ ç§è‘—ã€‚\n"
 	);
 	set( "alignment", -800 );
 	set_perm_stat( "dex", 18 );
@@ -32,12 +32,12 @@ int my_tactic()
   object victim;
 
     if( random(50)<30 || !(victim= query_attacker()) ) return 0;
-      tell_object(victim,"( Äã·¢ÏÖ±»µçµÄºÁÎŞÁ¦Æø! )\n" );
+      tell_object(victim,"( ä½ ç™¼ç¾è¢«é›»çš„æ¯«ç„¡åŠ›æ°£! )\n" );
       tell_room(environment(victim),
-          "Äã·¢ÏÖ"+victim->query("c_name")+
-          "±»µçµÄºÁÎŞÁ¦Æø!\n", victim);
+          "ä½ ç™¼ç¾"+victim->query("c_name")+
+          "è¢«é›»çš„æ¯«ç„¡åŠ›æ°£!\n", victim);
       victim->block_attack(3) ; 
-      victim->set_temp("msg_stop_attacker","( Äã·¢ÏÖ±»µçµÄºÁÎŞÁ¦Æø! )\n") ; 
+      victim->set_temp("msg_stop_attacker","( ä½ ç™¼ç¾è¢«é›»çš„æ¯«ç„¡åŠ›æ°£! )\n") ; 
       return 1;
 }
 
@@ -49,12 +49,12 @@ int accept_item(object who,object item)
   if ( (int)who->query_quest_level("lulu") >= 1 ) code = 1 ; else 
   if (!(who->query_temp("lulu_active"))) return 1 ;  
 
-    write("\nÍ»È»Ò»ÕóÒ«ÑÛµÄ¹âÃ¢ÕÕÁÁµÄÈÃÄã¼¸ºõ¿´²»Çå³şÑÛÇ°µÄ¶«Î÷......\n") ;
-    write("ß×£¿Äã²»½û»³ÒÉ×Ô¼ºÊÇ²»ÊÇÑÛ»¨ÁË...Ôõ÷áµñÏñ¾¹È»¶¯ÁË£¿\n") ;
+    write("\nçªç„¶ä¸€é™£è€€çœ¼çš„å…‰èŠ’ç…§äº®çš„è®“ä½ å¹¾ä¹çœ‹ä¸æ¸…æ¥šçœ¼å‰çš„æ±è¥¿......\n") ;
+    write("å’¦ï¼Ÿä½ ä¸ç¦æ‡·ç–‘è‡ªå·±æ˜¯ä¸æ˜¯çœ¼èŠ±äº†...æ€éº¼é›•åƒç«Ÿç„¶å‹•äº†ï¼Ÿ\n") ;
 
-// °Ñ²¼Æ¬ÊÕÆğÀ´*grin*
+// æŠŠå¸ƒç‰‡æ”¶èµ·ä¾†*grin*
    item->remove();
-    tell_object( who,"µñÏñËµµÀ: Ğ»Ğ»£¡ÎªÁË±¨´ğÄã¾ÍÈÃÎÒËÍÄãÉÏÎ÷Ìì°É!!\n");
+    tell_object( who,"é›•åƒèªªé“: è¬è¬ï¼ç‚ºäº†å ±ç­”ä½ å°±è®“æˆ‘é€ä½ ä¸Šè¥¿å¤©å§!!\n");
    kill_ob(who);
    if( who ) who->set_explore("noden#39");
     return 1;

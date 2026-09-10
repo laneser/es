@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("dragon wood","¶İÁú×®");
+        set_name("dragon wood","éé¾æ¨");
         add( "id" , ({ "wood" }) );
-        set_short( "¶İÁú×®");
+        set_short( "éé¾æ¨");
         set_long(@C_LONG
-ÕâÊÇÒ»¸öÍâĞÎºÜÏñÁúµÄÄ¾Í·£¬ÁíÍâÔÚÉÏÃæ»¹»­ÁËºÜ¶àÖäÓï£¬ÄÇÖäÓïµÄÒâË¼ÊÇ
-(use_dragon_wood)¡£
+é€™æ˜¯ä¸€å€‹å¤–å½¢å¾ˆåƒé¾çš„æœ¨é ­ï¼Œå¦å¤–åœ¨ä¸Šé¢é‚„ç•«äº†å¾ˆå¤šå’’èªï¼Œé‚£å’’èªçš„æ„æ€æ˜¯
+(use_dragon_wood)ã€‚
 C_LONG  );      
-        set("unit","¸ö");
+        set("unit","å€‹");
         set("weight",10);
         set("no_sale",1);
         set("value", ({10, "silver"}) );
@@ -28,10 +28,10 @@ int do_use(string arg)
     env=environment(player);
     name=player->query("c_name");
     tell_room(env,sprintf(
-      "%s¼ÀÆğÊÖÖĞµÄ¶İÁú×®£¬Ë²¼ä£¬Ò»ÕóÇå·ç°Ñ%s¹ÎÆğ£¬Ğı¼´ÏûÊ§ì¶¿Õ¼ä£¡\n",name,name),player);
-    tell_object(player,"Äã¼ÀÆğÊÖÖĞµÄ¶İÁú×®£¬ºöÈ»À´ÁËÒ»ÕóÇå·ç°ÑÄã¹ÎÀ´ÕâÀï£¡\n");
+      "%sç¥­èµ·æ‰‹ä¸­çš„éé¾æ¨ï¼Œç¬é–“ï¼Œä¸€é™£æ¸…é¢¨æŠŠ%sé¢³èµ·ï¼Œæ—‹å³æ¶ˆå¤±æ–¼ç©ºé–“ï¼\n",name,name),player);
+    tell_object(player,"ä½ ç¥­èµ·æ‰‹ä¸­çš„éé¾æ¨ï¼Œå¿½ç„¶ä¾†äº†ä¸€é™£æ¸…é¢¨æŠŠä½ åˆ®ä¾†é€™è£¡ï¼\n");
     player->move_player(SCITY"house3","SNEAK");
-    tell_room(environment(player),sprintf("Ò»ÕóÇå·ç°Ñ%s¹ÎÀ´´ËµØ£¡\n",name),player);
+    tell_room(environment(player),sprintf("ä¸€é™£æ¸…é¢¨æŠŠ%såˆ®ä¾†æ­¤åœ°ï¼\n",name),player);
     this_object()->remove();
     return 1;
 }

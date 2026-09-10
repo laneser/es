@@ -5,10 +5,10 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_name("kill hob paper", "ÊÕÑı·û");
+	set_name("kill hob paper", "æ”¶å¦–ç¬¦");
 	add( "id", ({ "paper" }) );
-	set_short("ÊÕÑı·û");
-	set_c_open_long("ÊÇÊÕÑıÓÃµÄ·ûÖä£¬µ±ÄãÊ¹ÓÃ(use paper)Ê±»á½µµÍÑıÎïµÄÄÜÁ¦¡£\n");
+	set_short("æ”¶å¦–ç¬¦");
+	set_c_open_long("æ˜¯æ”¶å¦–ç”¨çš„ç¬¦å’’ï¼Œç•¶ä½ ä½¿ç”¨(use paper)æ™‚æœƒé™ä½å¦–ç‰©çš„èƒ½åŠ›ã€‚\n");
 	set( "weight", 10);;
 	set( "max_load", 250);
 	set( "value", ({ 0, "silver" }));

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "tanyu gloves", "ÌìÓğÊÖÌ×");
+        set_name( "tanyu gloves", "å¤©ç¾½æ‰‹å¥—");
         add( "id", ({ "gloves" }) );
-        set_short("tanyu gloves", "ÌìÓğÊÖÌ×");
+        set_short("tanyu gloves", "å¤©ç¾½æ‰‹å¥—");
         set_long(@AAA
-ÕâÊÇÌìÓğ½£ÅÉÌØÓĞµÄÊÖÌ×
+é€™æ˜¯å¤©ç¾½åŠæ´¾ç‰¹æœ‰çš„æ‰‹å¥—
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "hands" );
         set( "armor_class", 3 );
         set( "defense_bonus", 3 );

@@ -16,18 +16,18 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_level(19);
-	set_name( "Rashudi", "À­ĞŞµÛ" );
+	set_name( "Rashudi", "æ‹‰ä¿®å¸" );
 	add ("id", ({ "rashudi", "mage", "archmage", "wizard", }) );
-	set_short( "ÒøËşÎ×Ê¦ À­ĞŞµÛ" );
+	set_short( "éŠ€å¡”å·«å¸« æ‹‰ä¿®å¸" );
 	set_long(@DESC
-    Ä§µ¼Ê¿À­ĞŞµÛÊÇºÜÀÏµ«Ê®·ÖÓĞ¾­ÑéµÄÄ§·¨Ê¦¡£µ¥ÓÉËûµÄÍâ±íÄã¼¸ºõÎŞ·¨Ïë
-ÏñËûµ½µ×ÓĞ¼¸Ëê£¡ÏÖÔÚËûÊÇÄ§·¨Ê¦¹«»áµÄÀÏ´ó£¬ËûºÜÀÖÒâ°ïÖúÄêÇáµÄÄ§·¨Ê¦£¬
-Äã¿ÉÒÔÑ¯ÎÊËûÓĞ¹ØÄ§·¨Ê¦¹«»áµÄÒ»Ğ©×ÊÑ¶(guild,spells)¡£
+    é­”å°å£«æ‹‰ä¿®å¸æ˜¯å¾ˆè€ä½†ååˆ†æœ‰ç¶“é©—çš„é­”æ³•å¸«ã€‚å–®ç”±ä»–çš„å¤–è¡¨ä½ å¹¾ä¹ç„¡æ³•æƒ³
+åƒä»–åˆ°åº•æœ‰å¹¾æ­²ï¼ç¾åœ¨ä»–æ˜¯é­”æ³•å¸«å…¬æœƒçš„è€å¤§ï¼Œä»–å¾ˆæ¨‚æ„å¹«åŠ©å¹´è¼•çš„é­”æ³•å¸«ï¼Œ
+ä½ å¯ä»¥è©¢å•ä»–æœ‰é—œé­”æ³•å¸«å…¬æœƒçš„ä¸€äº›è³‡è¨Š(guild,spells)ã€‚
 DESC
 	);
 	set( "alignment", 2500 );
     set( "gender", "male" );
-    set( "unit", "Î»" );
+    set( "unit", "ä½" );
     set( "class", "mage" );
 	set_perm_stat( "dex", 30 );
 	set_perm_stat( "str", 15 );
@@ -88,7 +88,7 @@ void init()
 			kill_ob( ob );
 			if( ! (this_object()->catch_huntee(ob) ))
 				tell_room( environment(this_object()), 
-					"À­ĞŞµÛ½ĞµÀ: ¿É¶ñ£¬ÓÖÊÇÄã£¡\n", 
+					"æ‹‰ä¿®å¸å«é“: å¯æƒ¡ï¼Œåˆæ˜¯ä½ ï¼\n", 
 					this_object() );
 		} 
  		// If heartbeat is turned off ... turn it back on.
@@ -109,10 +109,10 @@ void init()
 int catch_huntee( object who )
 {
     tell_room( environment(this_object()), 
-    sprintf("À­ĞŞµÛºÜ²»Ğ¼µÄÏò%sËµ: Äã»¹¸Ò½øÀ´£¬»îµÄ²»ÄÍ·³ÁË£¬ÎÒ¾Í³ÉÈ«Äã£¬ËÀ°É!\n",who->query("c_name"))
+    sprintf("æ‹‰ä¿®å¸å¾ˆä¸å±‘çš„å‘%sèªª: ä½ é‚„æ•¢é€²ä¾†ï¼Œæ´»çš„ä¸è€ç…©äº†ï¼Œæˆ‘å°±æˆå…¨ä½ ï¼Œæ­»å§!\n",who->query("c_name"))
     ,  ({ this_object(), who }) );
     tell_object( who, 
-      "À­ĞŞµÛºÜ²»Ğ¼µÄÏòÄãËµ: Äã»¹¸Ò½øÀ´£¬»îµÄ²»ÄÍ·³ÁË£¬ÎÒ¾Í³ÉÈ«Äã£¬ËÀ°É!\n"
+      "æ‹‰ä¿®å¸å¾ˆä¸å±‘çš„å‘ä½ èªª: ä½ é‚„æ•¢é€²ä¾†ï¼Œæ´»çš„ä¸è€ç…©äº†ï¼Œæˆ‘å°±æˆå…¨ä½ ï¼Œæ­»å§!\n"
     );
     return 1;
 }
@@ -142,9 +142,9 @@ void all_attack_spell(object caster)
     damage = 150 + random( (int)caster->query_stat("int") );
     tell_room( environment(caster), @MSG1
 
-À­ĞŞµÛµÄÊÖÍùÇ°Ò»»Ó£¬´óº°¡¸±ùÑ©·ç±©¡¹£¡
-Í»È»¼ä£¬ÎŞÊıµÄ±ù¾§¿ªÊ¼ÎŞÇéµÄËÁÂÓÆğÀ´£¡ÄãáİÈçÖÃÉíì¶¿ÉÅÂµÄ
-±©·çÑ©Ö®ÖĞ£¬ÎŞÊıµÄÑ©»¨ÔÚÄãµÄÃæÇ°·ÉÎè£¬áİ·ğÒª½«´óµØÍÌÊÉ£¡
+æ‹‰ä¿®å¸çš„æ‰‹å¾€å‰ä¸€æ®ï¼Œå¤§å–Šã€Œå†°é›ªé¢¨æš´ã€ï¼
+çªç„¶é–“ï¼Œç„¡æ•¸çš„å†°æ™¶é–‹å§‹ç„¡æƒ…çš„è‚†æ èµ·ä¾†ï¼ä½ å½·å¦‚ç½®èº«æ–¼å¯æ€•çš„
+æš´é¢¨é›ªä¹‹ä¸­ï¼Œç„¡æ•¸çš„é›ªèŠ±åœ¨ä½ çš„é¢å‰é£›èˆï¼Œå½·ä½›è¦å°‡å¤§åœ°åå™¬ï¼
 
 MSG1
 	, caster);
@@ -180,13 +180,13 @@ int cast_spell()
     mages = filter_array( all_inventory(env), "can_help", this_object() );
     for( i=0; i<sizeof(mages); i++ ) {
       tell_room( env,  
-        sprintf("%sÅÜ¹ıÈ¥°ïÖúÀ­ĞŞµÛ¹¥»÷%s¡£\n", mages[i]->query("c_name"),victim->query("c_name")),
+        sprintf("%sè·‘éå»å¹«åŠ©æ‹‰ä¿®å¸æ”»æ“Š%sã€‚\n", mages[i]->query("c_name"),victim->query("c_name")),
         ({ mages[i], victim })
       );
       tell_object( victim,
-        sprintf("%sÅÜ¹ıÀ´°ïÖúÀ­ĞŞµÛ¹¥»÷Äã¡£\n",mages[i]->query("c_name")));
+        sprintf("%sè·‘éä¾†å¹«åŠ©æ‹‰ä¿®å¸æ”»æ“Šä½ ã€‚\n",mages[i]->query("c_name")));
       tell_object( mages[i], 
-        sprintf("ÄãÅÜ¹ıÈ¥°ïÖúÀ­ĞŞµÛ¹¥»÷%s¡£\n",victim->query("c_name")));
+        sprintf("ä½ è·‘éå»å¹«åŠ©æ‹‰ä¿®å¸æ”»æ“Š%sã€‚\n",victim->query("c_name")));
       mages[i]->kill_ob(victim);
     }
     
@@ -195,7 +195,7 @@ int cast_spell()
       this_object()->set("spell_points", 2700);
     if( random(10) < 5 && !present("summon",environment(this_object())) ) {
       tell_room( environment(this_object()), 
-         "À­ĞŞµÛºô»½³öÕÙ»½ÊŞÀ´°ïËû¹¥»÷¡£\n");
+         "æ‹‰ä¿®å¸å‘¼å–šå‡ºå¬å–šç¸ä¾†å¹«ä»–æ”»æ“Šã€‚\n");
       if( random(10) < 6 )
         monster = new(TOWERMONSTER"summon_monster1");
       else
@@ -207,7 +207,7 @@ int cast_spell()
     
     if( (this_object()->query("hit_points")<100) && (random(100)<30) ) {
       tell_room( environment(this_object()), 
-      "À­ĞŞµÛÖÎÁÆËûµÄÉË¿Ú¡£\n", this_object()
+      "æ‹‰ä¿®å¸æ²»ç™‚ä»–çš„å‚·å£ã€‚\n", this_object()
       );
       this_object()->receive_healing(heal_point);
       return 1;
@@ -215,9 +215,9 @@ int cast_spell()
     
     if( (int)victim->query_level()<11 ||
         ( (random(10)<3) && !wizardp(victim) ) ) {
-      tell_object( victim, "À­ĞŞµÛÒ»½Å°ÑÄãõßÁË³öÈ¥¡£\n" );
+      tell_object( victim, "æ‹‰ä¿®å¸ä¸€è…³æŠŠä½ è¸¹äº†å‡ºå»ã€‚\n" );
       tell_room( environment(this_object()), 
-        sprintf("À­ĞŞµÛÒ»½Å°Ñ%sõßÁË³öÈ¥¡£\n",victim->query("c_name")),
+        sprintf("æ‹‰ä¿®å¸ä¸€è…³æŠŠ%sè¸¹äº†å‡ºå»ã€‚\n",victim->query("c_name")),
         victim);
       victim->receive_special_damage("physical", kick_damage+random(5), 1);
       victim->move_player(MOYADA"rndplza", "SNEAK", "");
@@ -232,7 +232,7 @@ int cast_spell()
       command("cast heal on rashudi");
     else {
       tell_room( environment(this_object()),  
-        "À­ĞŞµÛ¿ªÊ¼à«à«×ÔÓï¡£\n", this_object() 
+        "æ‹‰ä¿®å¸é–‹å§‹å–ƒå–ƒè‡ªèªã€‚\n", this_object() 
 	  );
 	  call_out( "all_attack_spell", 3, this_object() );
     }
@@ -250,7 +250,7 @@ int hunt_check( object rashudi, object victim )
     if( victim && !member_group( victim, attackers ) &&
         member_killer( (string)victim->query("name"), hunt_list ) ) {
       tell_room( environment(this_object()),
-        sprintf("À­ĞŞµÛ´óĞ¦ÖøËµ: %s£¬ÄãÒÔÎª quit ¾ÍÄÜÌÓ³öÎÒµÄÊÖÕÆĞÄÂğ? ËÀ°É!\n",victim->query("c_name"))
+        sprintf("æ‹‰ä¿®å¸å¤§ç¬‘è‘—èªª: %sï¼Œä½ ä»¥ç‚º quit å°±èƒ½é€ƒå‡ºæˆ‘çš„æ‰‹æŒå¿ƒå—? æ­»å§!\n",victim->query("c_name"))
         , rashudi
       );
       kill_ob( victim );
@@ -265,7 +265,7 @@ int to_join()
     race = this_player()->query("race");
     if( race == "lizardman" || race == "hawkman" || race == "orc" ) {
       tell_object( this_player(),
-        "À­ĞŞµÛ¿´ÁË¿´Äã£¬Ò¡Ò¡Í·Ëµ£º»ØÈ¥°É£¡Äã²»¿ÉÄÜ³ÉÎªÄ§·¨Ê¦µÄ¡£\n");
+        "æ‹‰ä¿®å¸çœ‹äº†çœ‹ä½ ï¼Œæ–æ–é ­èªªï¼šå›å»å§ï¼ä½ ä¸å¯èƒ½æˆç‚ºé­”æ³•å¸«çš„ã€‚\n");
       return 1;
     }
     return 0;
@@ -274,8 +274,8 @@ int to_join()
 void ask_mage( object who )
 {
     tell_object( who,@MSG2
-À­ĞŞµÛËµ: »¶Ó­¼ÓÈëÄ§·¨Ê¦¹«»á£¬³ıÁËòáòæÈË¡¢°ëÊŞÈËÒÔ¼°ÄñÈËÖ®Íâ£¬
-          ²»ÂÛÊ²÷áÖÖ×å£¬Ö»Òª¶ÔÄ§·¨ÓĞĞËÈ¤£¬¶¼ÄÜ¹»³ÉÎªÎÒÃÇµÄÒ»Ô±¡£
+æ‹‰ä¿®å¸èªª: æ­¡è¿åŠ å…¥é­”æ³•å¸«å…¬æœƒï¼Œé™¤äº†èœ¥èœ´äººã€åŠç¸äººä»¥åŠé³¥äººä¹‹å¤–ï¼Œ
+          ä¸è«–ä»€éº¼ç¨®æ—ï¼Œåªè¦å°é­”æ³•æœ‰èˆˆè¶£ï¼Œéƒ½èƒ½å¤ æˆç‚ºæˆ‘å€‘çš„ä¸€å“¡ã€‚
 MSG2
 );
 }
@@ -283,7 +283,7 @@ MSG2
 void ask_spells( object who )
 {
     tell_object( who,
-      "À­ĞŞµÛËµ: Äã¿ÉÒÔµ½Â¥ÉÏµÄÄ§·¨Í¼Êé¹İÈ¥²éÔÄÄãËùÒªÑ§µÄÖäÎÄ¡£\n");
+      "æ‹‰ä¿®å¸èªª: ä½ å¯ä»¥åˆ°æ¨“ä¸Šçš„é­”æ³•åœ–æ›¸é¤¨å»æŸ¥é–±ä½ æ‰€è¦å­¸çš„å’’æ–‡ã€‚\n");
 }
  
 void relay_message(string class1, string msg)
@@ -293,7 +293,7 @@ void relay_message(string class1, string msg)
      int ali;
      
      ::relay_message(class1, msg);
-if( sscanf( msg, "%s(%s)×ßÁË½øÀ´¡£", str,who )==2 ) {
+if( sscanf( msg, "%s(%s)èµ°äº†é€²ä¾†ã€‚", str,who )==2 ) {
                 if( !obj = find_player(lower_case(who)) ) return;
        if( hunt_check(this_object(), obj) ) return;
 if( wizardp(obj) || GUILD_MASTER("mage")->is_guild_member(obj) ) return;
@@ -313,9 +313,9 @@ void warning1(object obj)
 {
      if( !present( "rashudi", environment(obj) ) ) return;
      tell_object( obj,
-       "À­ĞŞµÛºİºİµØµÉÖøÄã£¡ºÃÏñ¶ÔÄãÊ®·Ö²»Ë¬£¡ËÆºõ×¼±¸ÒªÉ±ÁËÄã!\n" );
+       "æ‹‰ä¿®å¸ç‹ ç‹ åœ°çªè‘—ä½ ï¼å¥½åƒå°ä½ ååˆ†ä¸çˆ½ï¼ä¼¼ä¹æº–å‚™è¦æ®ºäº†ä½ !\n" );
      tell_room( environment( obj ), 
-       sprintf("À­ĞŞµÛºİºİµØµÉÖø%s£¡ºÃÏñ¶ÔËûÊ®·Ö²»Ë¬£¡\n" ,obj->query("c_name")), obj
+       sprintf("æ‹‰ä¿®å¸ç‹ ç‹ åœ°çªè‘—%sï¼å¥½åƒå°ä»–ååˆ†ä¸çˆ½ï¼\n" ,obj->query("c_name")), obj
      );
 }
  
@@ -323,9 +323,9 @@ void warning2(object obj)
 {
      if( !present( "rashudi", environment(obj) ) ) return;
      tell_object( obj,
-       "À­ĞŞµÛÊ®·Ö²»¸ßĞËµÄ¿´ÖøÄã¡£\n" );
+       "æ‹‰ä¿®å¸ååˆ†ä¸é«˜èˆˆçš„çœ‹è‘—ä½ ã€‚\n" );
      tell_room( environment( obj ), 
-       sprintf("À­ĞŞµÛÊ®·Ö²»¸ßĞËµÄ¿´Öø%s¡£\n" ,obj->query("c_name")), obj
+       sprintf("æ‹‰ä¿®å¸ååˆ†ä¸é«˜èˆˆçš„çœ‹è‘—%sã€‚\n" ,obj->query("c_name")), obj
      );
 }
  
@@ -338,9 +338,9 @@ void kick_out( object obj )
 {
      if( !present( "rashudi", environment(obj) ) ) return;
      tell_object( obj,
-       "À­ĞŞµÛ°ÑÄã¸ÏÁË³öÈ¥¡£\n" );
+       "æ‹‰ä¿®å¸æŠŠä½ è¶•äº†å‡ºå»ã€‚\n" );
      tell_room( environment(obj), 
-       sprintf("À­ĞŞµÛ°Ñ%s¸ÏÁË³öÈ¥¡£\n" ,obj->query("c_name"))
+       sprintf("æ‹‰ä¿®å¸æŠŠ%sè¶•äº†å‡ºå»ã€‚\n" ,obj->query("c_name"))
      );
      obj->move_player(MOYADA"rndplza", "SNEAK", "" );
 }
@@ -356,16 +356,16 @@ void die()
 		return;
 	}
 
-	tell_object( player,"\n\nÀ­ĞŞµÛºŞºŞµÄËµ: ±ğµÃÒâ£¬ËùÓĞµÄÄ§·¨Ê¦ÃÇ¶¼»á°ïÎÒ¸´³ğµÄ!\n\n\n");
+	tell_object( player,"\n\næ‹‰ä¿®å¸æ¨æ¨çš„èªª: åˆ¥å¾—æ„ï¼Œæ‰€æœ‰çš„é­”æ³•å¸«å€‘éƒ½æœƒå¹«æˆ‘å¾©ä»‡çš„!\n\n\n");
 	usr = users();
 	for( i=0; i<sizeof(usr); i++ ) {
 		if( !environment( usr[i] ) || usr[i] == player ) continue;
 		if( (string)usr[i]->query("class") == "mage" )
 			tell_object( usr[i], 
-			set_color(sprintf("\n\n[Ä§·¨Ê¦]¹«»áÀÏ´ó±»%sÉ±ÁË£¬´ó¼Ò¿ì»Ø¹«»á!\n\n\n",player->query("c_name")), "HIR"));
+			set_color(sprintf("\n\n[é­”æ³•å¸«]å…¬æœƒè€å¤§è¢«%sæ®ºäº†ï¼Œå¤§å®¶å¿«å›å…¬æœƒ!\n\n\n",player->query("c_name")), "HIR"));
 	  	else
 			tell_object( usr[i], 
-			sprintf("\n\nÀ­ĞŞµÛ±»%sÉ±ÁË£¬Ä§·¨Ê¦¹«»á±»ÈëÇÖÁË!\n\n\n" ,player->query("c_name")));
+			sprintf("\n\næ‹‰ä¿®å¸è¢«%sæ®ºäº†ï¼Œé­”æ³•å¸«å…¬æœƒè¢«å…¥ä¾µäº†!\n\n\n" ,player->query("c_name")));
 	}
 	::die();
 }

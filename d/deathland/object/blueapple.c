@@ -5,16 +5,16 @@ inherit POTION;
 void create()
 {
 	potion::create();
-	set_name( "blue apple juice", "À¶Æ»¹ûÖ­" );
+	set_name( "blue apple juice", "è—è˜‹æœæ±" );
 	add( "id", ({ "juice" }) );
-	set_short( " blue apple juice", "À¶Æ»¹ûÖ­" );
+	set_short( " blue apple juice", "è—è˜‹æœæ±" );
 	set_long(
 		"The juice is blue,maybe you can drink it.\n",
-		"Ò»Æ¿À¶Æ»¹ûÖ­,¿´ÆğÀ´ÓĞµã¶ñĞÄµ«ÊÇÓ¦¸ÃÊÇ¿ÉÒÔºÈµÄ¡£\n"
+		"ä¸€ç“¶è—è˜‹æœæ±,çœ‹èµ·ä¾†æœ‰é»å™å¿ƒä½†æ˜¯æ‡‰è©²æ˜¯å¯ä»¥å–çš„ã€‚\n"
 	);
 	set_healing( 90 );
 	set( "no_sale", 1 );
-	set( "unit", "Æ¿" );
+	set( "unit", "ç“¶" );
 	set( "weight", 30 );
 	set( "value", ({ 750, "silver" }) );
 	set( "medication", 30 );

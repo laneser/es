@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("skeleton beads","ÈË¶¥¹ÇÊıÖé");
+        set_name("skeleton beads","äººé ‚éª¨æ•¸ç ");
         add("id",({"skeleton","beads"}) );
-         set_short( "a skeleton beads","ÈË¶¥¹ÇÊıÖé");
+         set_short( "a skeleton beads","äººé ‚éª¨æ•¸ç ");
 	set_long(
 "This is a chain of beads make of skeleton . \n"
-"ÓÉÈË¶¥¹Ç×ö³ÉµÄ´óÊıÖé£¬¹²ÓĞÊ®°ËÁ££¬ÒşÒş·¢³öÁîÈË×÷Å»µÄÑªĞÈÆø£®\n"
+"ç”±äººé ‚éª¨åšæˆçš„å¤§æ•¸ç ï¼Œå…±æœ‰åå…«ç²’ï¼Œéš±éš±ç™¼å‡ºä»¤äººä½œå˜”çš„è¡€è…¥æ°£ï¼\n"
 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 100 );
 	set( "type", "misc" );
 	set( "material","stone");

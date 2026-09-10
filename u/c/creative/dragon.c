@@ -7,16 +7,16 @@ void create()
 {
         ::create();
         set_level(16);
-set_name( "Great dragon","Ó¦Áú");
+set_name( "Great dragon","æ‡‰é¾");
         add( "id", ({ "dragon" }) );
-        set_short( ""+HIY"Ó¦Áú"+NOR"");
+        set_short( ""+HIY"æ‡‰é¾"+NOR"");
         set_long(@C_LONG
-Ò»Ö»ÐÔÇéÆÄÎªÎÂÑ±µÄ¶¯Îï£¬Ëü±ÈÆðÐí¶àÐ×¶ñµÄÓ¦ÁúÖÐÎÂÉÆÐí¶àÁË¡£ËüÊÇ»ÆµÛ×îÐÄ°®
-µÄ³èÎï£¬ÏÖÔÚÕý·üÎÔÔÚµØÉÏ£¬ÆÄÎª¡£Èç¹ûÄãÊÇËüµÄÖ÷ÈË£¬¿ÉÒÔÓÃorder_dragonËü
+ä¸€éš»æ€§æƒ…é —ç‚ºæº«é¦´çš„å‹•ç‰©ï¼Œå®ƒæ¯”èµ·è¨±å¤šå…‡æƒ¡çš„æ‡‰é¾ä¸­æº«å–„è¨±å¤šäº†ã€‚å®ƒæ˜¯é»ƒå¸æœ€å¿ƒæ„›
+çš„å¯µç‰©ï¼Œç¾åœ¨æ­£ä¼è‡¥åœ¨åœ°ä¸Šï¼Œé —ç‚ºã€‚å¦‚æžœä½ æ˜¯å®ƒçš„ä¸»äººï¼Œå¯ä»¥ç”¨order_dragonå®ƒ
 C_LONG
         );        
-        set( "unit", "Ö»" );
-        set( "race", "Áú×å");
+        set( "unit", "åª" );
+        set( "race", "é¾æ—");
         set_perm_stat( "str", 20 );
         set_perm_stat( "dex", 20 );
         set_perm_stat( "int", 15 );
@@ -28,10 +28,10 @@ C_LONG
         set( "alignment", 0 );
         set( "mountable", 1);
 set( "max_load",4000 );
-        set_c_limbs(({"ÉíÌå","Í·²¿","Ç°×¦","áá×¦"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","å‰çˆª","å¾Œçˆª"}));
         set_c_verbs(({
-            "%sÓÃËüµÄÀû×¦Ïò%s×¥È¥",
-            "%sÉì³öËüÄÇ³¤ÂúÀûÑÀµÄ×ì°ÍÏò%sÒ§È¥"
+            "%sç”¨å®ƒçš„åˆ©çˆªå‘%sæŠ“åŽ»",
+            "%sä¼¸å‡ºå®ƒé‚£é•·æ»¿åˆ©ç‰™çš„å˜´å·´å‘%så’¬åŽ»"
         }));
 }
 void init()
@@ -42,7 +42,7 @@ int stop_attack()
 {
    object king;
    if ( king=present("the king huang",environment()) ) {
-      tell_room(environment(),"Ó¦ÁúÕÐ»½ËüµÄÖ÷ÈËÀ´¹¥»÷ËüµÄµÐÈË£¡\n\n");
+      tell_room(environment(),"æ‡‰é¾æ‹›å–šå®ƒçš„ä¸»äººä¾†æ”»æ“Šå®ƒçš„æ•µäººï¼\n\n");
       king->kill_ob(this_player());
    }
    return 0;
@@ -54,7 +54,7 @@ int do_mount(string arg)
    if ( arg!="dragon" ) return ::do_mount(arg);
    if ( this_player()->query_temp("mounting") ) return ::do_mount(arg);
    if ( king=present("the king huang",environment()) ) {
-     tell_room(environment(),sprintf("%sËµµÀ£ºÏëÆï°¡£¬ÏÈ´ò°ÜÎÒÔÙËµ£¡£¡\n"
+     tell_room(environment(),sprintf("%sèªªé“ï¼šæƒ³é¨Žå•Šï¼Œå…ˆæ‰“æ•—æˆ‘å†èªªï¼ï¼\n"
       ,king->query("c_name")));
      king->kill_ob(this_player());
    }

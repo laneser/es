@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("silken threads","ÂÚ½í");
+        set_name("silken threads","ç¶¸å·¾");
         add("id",({"threads","hat"}) );
-        set_short("ÂÚ½í");
+        set_short("ç¶¸å·¾");
         set_long(
-"ÕâÊÇÒ»¶¥ÂÚ½í£¬ÊÇ¶«·½´óÂ½µÄ¾üÊ¦²ÅÓĞ×Ê¸ñ´÷µÄ×°±¸¡£\n"
+"é€™æ˜¯ä¸€é ‚ç¶¸å·¾ï¼Œæ˜¯æ±æ–¹å¤§é™¸çš„è»å¸«æ‰æœ‰è³‡æ ¼æˆ´çš„è£å‚™ã€‚\n"
         );
-        set( "unit", "¶¥" );
+        set( "unit", "é ‚" );
         set( "weight", 50 );
         set( "type", "head" );
         set( "material", "cloth" );

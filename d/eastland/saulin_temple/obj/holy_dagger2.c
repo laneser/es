@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Holy dagger of Tenshin","ÌìĞÄĞ¡µ¶");
+    set_name("Holy dagger of Tenshin","å¤©å¿ƒå°åˆ€");
     add("id", ({ "dagger", }) );
-    set_short("ÌìĞÄĞ¡µ¶");
+    set_short("å¤©å¿ƒå°åˆ€");
     set_long(
-     	"Ò»°Ñ·ºÖøÎÂºÍ¹âÃ¢µÄĞ¡µ¶£¬ÊÇÌìĞÄ´óÊ¦Îª²¡ÈËÒ½ÁÆÊ±ËùÓÃµÄÊÖÊõµ¶¡£\n"
+     	"ä¸€æŠŠæ³›è‘—æº«å’Œå…‰èŠ’çš„å°åˆ€ï¼Œæ˜¯å¤©å¿ƒå¤§å¸«ç‚ºç—…äººé†«ç™‚æ™‚æ‰€ç”¨çš„æ‰‹è¡“åˆ€ã€‚\n"
     );
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 36 );
 	set( "type","dagger" );
 	set( "min_damage", 15 );
@@ -21,7 +21,7 @@ void create()
     set( "second", 1 );
 //    set( "hit_func","holy_damage" );
     set( "special_damage", 15);
-    set( "special_c_msg","·¢³öÒ»µÀÊ¥¹â£¬ÉäÈëµĞÈËµÄĞÄÔà¡£\n\n");
+    set( "special_c_msg","ç™¼å‡ºä¸€é“è–å…‰ï¼Œå°„å…¥æ•µäººçš„å¿ƒè‡Ÿã€‚\n\n");
 }
 
 int holy_damage(object victim,int damage)
@@ -37,8 +37,8 @@ int holy_damage(object victim,int damage)
    	dam = (int)query("special_damage");
    	if( my_ali < vic_ali )
       if( my_ali < 400 ) {
-        tell_object(holder,"\nÌìĞÄĞ¡µ¶·¢³öÒ»µÀÊ¥¹â£¬"
-      	    "È´ÉËµ½ÁËÄã×Ô¼º£¬ÄãµÄĞÄ±»âã»ÚËºÁÑ¡£\n\n");
+        tell_object(holder,"\nå¤©å¿ƒå°åˆ€ç™¼å‡ºä¸€é“è–å…‰ï¼Œ"
+      	    "å»å‚·åˆ°äº†ä½ è‡ªå·±ï¼Œä½ çš„å¿ƒè¢«æ‡ºæ‚”æ’•è£‚ã€‚\n\n");
         holder->receive_special_damage("divine", random(dam));
         victim->set("last_attacker", holder );
         return 1;
@@ -53,9 +53,9 @@ int holy_damage(object victim,int damage)
 	  victim->set("last_attacker", holder );
 	  if( !c_msg ) return 0;
 	  tell_object( holder,
-		"\nÄãµÄ"+query("c_name")+c_msg+"\n");
+		"\nä½ çš„"+query("c_name")+c_msg+"\n");
 	  tell_room( environment(holder), 
-		holder->query("c_name") + "µÄ"+query("c_name")+c_msg+"\n",
+		holder->query("c_name") + "çš„"+query("c_name")+c_msg+"\n",
 		holder );
 	  return dam + random(max);
     }

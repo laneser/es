@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "Moon pearl", "Ò¹Ã÷Öé" );
+	set_name( "Moon pearl", "å¤œæ˜ç " );
 	add( "id", ({ "pearl" }) );
-	set_short( "moon pearl", "Ò¹Ã÷Öé" );
+	set_short( "moon pearl", "å¤œæ˜ç " );
 	set_long(
 		".\n",
-		"ÕâÊÇÒ»¿Åº±¼ûµÄ´óÕäÖé£¬·¢³öÃÎ»Ã°ãµÄ¹âÃ¢£¬¾İ´«ÊÇ´ó°ö¾«\n"
-		"ÎüÊÕÔÂ¹â¾«»ªµÄ½á¾§¡£\n"
+		"é€™æ˜¯ä¸€é¡†ç½•è¦‹çš„å¤§çç ï¼Œç™¼å‡ºå¤¢å¹»èˆ¬çš„å…‰èŠ’ï¼Œæ“šå‚³æ˜¯å¤§èšŒç²¾\n"
+		"å¸æ”¶æœˆå…‰ç²¾è¯çš„çµæ™¶ã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "light", 1 );
 	set( "weight", 30 );
 	set( "value", ({ 3000, "silver" }) );

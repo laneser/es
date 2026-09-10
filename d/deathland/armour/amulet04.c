@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("song amulet","¸è³ªÖ®·û");
+        set_name("song amulet","æ­Œå”±ä¹‹ç¬¦");
         add("id",({"amulet"}) );
-         set_short( "a song amulet","¸è³ªÖ®·û");
+         set_short( "a song amulet","æ­Œå”±ä¹‹ç¬¦");
 	set_long(
-"ÕâÊÇ¸ö¸è³ª»¤Éí·û,ËÆºõÄãÄÜÌıµ½ÓĞ¸èÉù´ÓÀïÃæ´«³ö\n"
+"é€™æ˜¯å€‹æ­Œå”±è­·èº«ç¬¦,ä¼¼ä¹ä½ èƒ½è½åˆ°æœ‰æ­Œè²å¾è£¡é¢å‚³å‡º\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 12 );
 	set( "type", "misc" );
 	set( "material", "element" );

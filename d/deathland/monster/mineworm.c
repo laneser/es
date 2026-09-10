@@ -9,21 +9,21 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name("mine huge worm", "¿ó¿Ó¾Ş³æ");
+	set_name("mine huge worm", "ç¤¦å‘å·¨èŸ²");
 	add("id",({"worm"}));
-	set_short("A mine huge worm", "¿ó¿Ó¾Ş³æ");
+	set_short("A mine huge worm", "ç¤¦å‘å·¨èŸ²");
 	set_long(
 		"You see a very very huge worm,which is searching food\n"
 		"poisonus.\n",
-	    "ÕâÊÇÒ»ÌõÊ®·Ö¾Ş´óµÄ¹Ö³æ,ËÆºõ¿ÉÒÔÒ»¿Ú°ÑÄã¸øÍÌÏÂ.\n"
+	    "é€™æ˜¯ä¸€æ¢ååˆ†å·¨å¤§çš„æ€ªèŸ²,ä¼¼ä¹å¯ä»¥ä¸€å£æŠŠä½ çµ¦åä¸‹.\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "alignment", -400 );
 	set("aggressive",1);
 	set_natural_weapon(7,3,4);
 	set( "tactic_func", "emit_poison" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå" }) );
-	set_c_verbs( ({ "%sÕÅ¿ªËüµÄ´ó¿Ú£¬ÓÃËüµÄÑÀ³İÏò%sÒ§È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”" }) );
+	set_c_verbs( ({ "%så¼µé–‹å®ƒçš„å¤§å£ï¼Œç”¨å®ƒçš„ç‰™é½’å‘%så’¬å»" }) );
 }
 
 int emit_poison()
@@ -32,7 +32,7 @@ int emit_poison()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
 	tell_room( environment(this_object()), 
-		"¾Ş³æµÄ×ì°ÍÅç³öÒ»¹É×ÏÉ«µÄÅ¨³íÒºÌå£¬¸ÕºÃÅçÔÚÄãµÄÃæÇ° ....\n",
+		"å·¨èŸ²çš„å˜´å·´å™´å‡ºä¸€è‚¡ç´«è‰²çš„æ¿ƒç¨ æ¶²é«”ï¼Œå‰›å¥½å™´åœ¨ä½ çš„é¢å‰ ....\n",
 		this_object() );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 12, 4 );
 	return 1;

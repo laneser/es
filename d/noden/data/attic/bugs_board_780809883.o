@@ -1,19 +1,19 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":327,"body":"cant apply smelly plaster ...
-ÎÒÒªÍË»õÀ².....
-»¹ÎÒÇ®À´:~~~~~~~~~~~
-                             ±´ÄÉÀ×Ë¹
-","title":"smelly plasterµÄbug....","time":780806185,"poster":"Auto",]),(["id":328,"body":"ÎÒÒÑ¾­ÒòÎªÕâ¸öÎÊÌâ×ÔÉ±¹ıÒ»´ÎÁË!¿ÉÊÇÏÖÔÚÓÖ³öÏÖÍ¬ÑùµÄÎÊÌâ!
-ÎÒÓĞÇ®,¶øÇÒ²»Ö»ÊÇÒ©Æ·,Á¬×°±¸Ò²²»ÄÜÂò!
-½ñÌì·¢ÏÖÁ¬´¬Ò²²»ÄÜ  board ÁË..
-¶øÇÒÓĞĞ© semote ÀïµÄÖ¸ÁîÒ²²»ÄÜÓÃ..
-¿ÉÒÔÂé·³  check Ò»ÏÂÂğ?..thx..
+æˆ‘è¦é€€è²¨å•¦.....
+é‚„æˆ‘éŒ¢ä¾†:~~~~~~~~~~~
+                             è²ç´é›·æ–¯
+","title":"smelly plasterçš„bug....","time":780806185,"poster":"Auto",]),(["id":328,"body":"æˆ‘å·²ç¶“å› ç‚ºé€™å€‹å•é¡Œè‡ªæ®ºéä¸€æ¬¡äº†!å¯æ˜¯ç¾åœ¨åˆå‡ºç¾åŒæ¨£çš„å•é¡Œ!
+æˆ‘æœ‰éŒ¢,è€Œä¸”ä¸åªæ˜¯è—¥å“,é€£è£å‚™ä¹Ÿä¸èƒ½è²·!
+ä»Šå¤©ç™¼ç¾é€£èˆ¹ä¹Ÿä¸èƒ½  board äº†..
+è€Œä¸”æœ‰äº› semote è£¡çš„æŒ‡ä»¤ä¹Ÿä¸èƒ½ç”¨..
+å¯ä»¥éº»ç…©  check ä¸€ä¸‹å—?..thx..
     mela
-","title":"ÎÒ²»ÄÜÂòÈÎºÎ¶«Î÷À²..","time":780807988,"poster":"Mela",]),(["id":329,"body":"
+","title":"æˆ‘ä¸èƒ½è²·ä»»ä½•æ±è¥¿å•¦..","time":780807988,"poster":"Mela",]),(["id":329,"body":"
 ","title":"< no title >","time":780809792,"poster":"Bamboo",]),(["id":330,"body":"
 ","title":"< no title >","time":780809792,"poster":"Bamboo",]),(["id":331,"body":"
 ","title":"< no title >","time":780809813,"poster":"Bamboo",]),(["id":332,"body":"

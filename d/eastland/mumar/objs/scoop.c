@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "scoop", "É××Ó" );
+        set_name( "scoop", "å‹ºå­" );
         add( "id",({ "scoop" }) );
-        set_short("É××Ó");
+        set_short("å‹ºå­");
         set_long(
-            "ÕâÊÇ°ÑÖó·¹ÓÃµÄÉ××Ó¡£\n"
+            "é€™æ˜¯æŠŠç…®é£¯ç”¨çš„å‹ºå­ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 7 );
         set( "type", "blunt" );
         set( "min_damage", 2 );

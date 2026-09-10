@@ -23,31 +23,31 @@ void create()
 {
         seteuid(getuid());
         ::create();
-        set_short( "µ±ÆÌ" );
+        set_short( "ç•¶é‹ª" );
         set_long( @LONG_DESCRIPTION
-ÄãÏÖÔÚ×ß½øÁËÒ»¼ä²¼ÖÃµÃÏàµ±¿¼¾¿µÄÌüÔº£¬ÃÅ¿ÚÒ»ãÝÀ¶É«µÄ²¼Á±ÉÏÐ´Öø
-ËÄ¸ö´ó×Ö¡¸¶«·½µÚÒ»µ±¡¹£¬Ç½ÉÏÓÐÒ»ÕÅÖ½(paper)£¬´ó¸ÅÊÇËµÒ»Ð©µ±ÆÌµÄ
-ÐÐÊÂ¹æ¾Ø£¬ÎÚÌ´Ä¾×ö³ÉµÄ¸ô´°ááÃæÕýÓÐÒ»Î»ÀÏ³¯·î¶ÔÖøÄãÐ¦¡£
+ä½ ç¾åœ¨èµ°é€²äº†ä¸€é–“ä½ˆç½®å¾—ç›¸ç•¶è€ƒç©¶çš„å»³é™¢ï¼Œé–€å£ä¸€çˆ¿è—è‰²çš„å¸ƒç°¾ä¸Šå¯«è‘—
+å››å€‹å¤§å­—ã€Œæ±æ–¹ç¬¬ä¸€ç•¶ã€ï¼Œç‰†ä¸Šæœ‰ä¸€å¼µç´™(paper)ï¼Œå¤§æ¦‚æ˜¯èªªä¸€äº›ç•¶é‹ªçš„
+è¡Œäº‹è¦çŸ©ï¼Œçƒæª€æœ¨åšæˆçš„éš”çª—å¾Œé¢æ­£æœ‰ä¸€ä½è€æœå¥‰å°è‘—ä½ ç¬‘ã€‚
 LONG_DESCRIPTION
                 );
 
       set("c_item_desc",(["paper":@C_LONG
-ÕâÊÇÒ»ÕÅÊ®·Ö³Â¾ÉµÄ·º»ÆÆ¤Ö½£¬ÉÏÃæ±»ÈËÓÃÎÚÁÁµÄÅ¨Ä«»ÓÈ÷Öø
-Á÷ÀûµÄÁ¥Êé£¬Ê¹Äã¿´µÄÐÄ¿õÉñâù¡£Ð´Öø £º
+é€™æ˜¯ä¸€å¼µååˆ†é™³èˆŠçš„æ³›é»ƒçš®ç´™ï¼Œä¸Šé¢è¢«äººç”¨çƒäº®çš„æ¿ƒå¢¨æ®ç‘è‘—
+æµåˆ©çš„éš¸æ›¸ï¼Œä½¿ä½ çœ‹çš„å¿ƒæ› ç¥žæ€¡ã€‚å¯«è‘— ï¼š
           
-    Ç×°®µÄ¿Í»§´óÒ¯ÃÇ£¬Ð¡µêÒ»Ïò±ü³Ö³ÏÐÅÌ¬¶ÈÎª¿Í»§·þÎñ£¬È»Îª±Ü
-Ãâ²»±ØÒªÖ®¾À·×£¬ÌØ´Ë¹«¸æÐ¡ÆÌÖ®Ìõ¹æÒÔÕÑ´óÐÅ£¬ÅÎÐ¡µêÓë¿Í»§¹²Í¬
-×ñÑ­£¬Ïà»¥¹æ¾ØÎªÊÇ¡£ÏÂÁÐÌõ¹æ £º
+    è¦ªæ„›çš„å®¢æˆ¶å¤§çˆºå€‘ï¼Œå°åº—ä¸€å‘ç§‰æŒèª ä¿¡æ…‹åº¦ç‚ºå®¢æˆ¶æœå‹™ï¼Œç„¶ç‚ºé¿
+å…ä¸å¿…è¦ä¹‹ç³¾ç´›ï¼Œç‰¹æ­¤å…¬å‘Šå°é‹ªä¹‹æ¢è¦ä»¥æ˜­å¤§ä¿¡ï¼Œç›¼å°åº—èˆ‡å®¢æˆ¶å…±åŒ
+éµå¾ªï¼Œç›¸äº’è¦çŸ©ç‚ºæ˜¯ã€‚ä¸‹åˆ—æ¢è¦ ï¼š
              
-    Ò»¡¢ÎïÆ·µ±Öµ¾ùÒÔÊ±¼ÛÕÛµÖ±£¹Ü·Ñáá¼ÆËã¡£
-    ¶þ¡¢±¾µê×î¶àÖ»½ÓÊÜÍ¬Ò»Î»¿Í»§Ê®´Î±£¹ÜÎ¯ÍÐ¡£
-    Èý¡¢ËùÍÐÎïÆ·ÔÚ±¾µêÅÌµãÊ±¼äÖ®Ç°Î´È¡ÕßÊÓÍ¬Á÷µ±£¬Ð¡µêµÃÈÎÒâ´¦ÖÃ¡£
-    ËÄ¡¢È¡»ØÍÐÎïÊ±±¾ÆÌµÃ×ÃÁ¿ÊÕÈ¡±£¹Ü·ÑÓëÀûÏ¢¡£
+    ä¸€ã€ç‰©å“ç•¶å€¼å‡ä»¥æ™‚åƒ¹æŠ˜æŠµä¿ç®¡è²»å¾Œè¨ˆç®—ã€‚
+    äºŒã€æœ¬åº—æœ€å¤šåªæŽ¥å—åŒä¸€ä½å®¢æˆ¶åæ¬¡ä¿ç®¡å§”è¨—ã€‚
+    ä¸‰ã€æ‰€è¨—ç‰©å“åœ¨æœ¬åº—ç›¤é»žæ™‚é–“ä¹‹å‰æœªå–è€…è¦–åŒæµç•¶ï¼Œå°åº—å¾—ä»»æ„è™•ç½®ã€‚
+    å››ã€å–å›žè¨—ç‰©æ™‚æœ¬é‹ªå¾—é…Œé‡æ”¶å–ä¿ç®¡è²»èˆ‡åˆ©æ¯ã€‚
                      
-    Ð¡µêµÄÓªÒµÏîÄ¿ÓÐ£º µ±Îï (pawn)¡¢Êê»Øµ±Îï(take)¡¢²éÑ¯µ±Îï(list)
-£¬ÇëÄú¶à¶àÕÕ¹ËÐ¡µêµÄÉúÒâ¡£Ð»Ð» !!
+    å°åº—çš„ç‡Ÿæ¥­é …ç›®æœ‰ï¼š ç•¶ç‰© (pawn)ã€è´–å›žç•¶ç‰©(take)ã€æŸ¥è©¢ç•¶ç‰©(list)
+ï¼Œè«‹æ‚¨å¤šå¤šç…§é¡§å°åº—çš„ç”Ÿæ„ã€‚è¬è¬ !!
        
-    ÓÐÐèÒªÍÐÎï·þÎñµÄÇëÃæÇ¢±¾ÆÌ´ó³¯·î¡£                
+    æœ‰éœ€è¦è¨—ç‰©æœå‹™çš„è«‹é¢æ´½æœ¬é‹ªå¤§æœå¥‰ã€‚                
 C_LONG
 ]));
                                                             
@@ -165,7 +165,7 @@ int list(string arg)
         mixed *ob;
         string type;
 
-        write("Äãµ±ÔÚÕâÀïµÄÎïÆ·ÓÐ :\n");
+        write("ä½ ç•¶åœ¨é€™è£¡çš„ç‰©å“æœ‰ :\n");
 
         /* Objects in local storage */
         ob = all_inventory(storeroom);
@@ -211,7 +211,7 @@ int take(string str)
         /* Look for the object, first in central storage then in local storage. */
         if (!str)
                 return notify_fail( 
-                        "ÄúÒªÊê»ØÊ²÷á£¿\n");
+                        "æ‚¨è¦è´–å›žä»€éº¼ï¼Ÿ\n");
 
         if( str && str!="" )
         {
@@ -236,20 +236,20 @@ int take(string str)
 
         if (!ob)
                 return notify_fail(
-                        "ÄãÃ»ÓÐÔÚµêÀïµ±¹ýÕâÑùµÄ¶«Î÷¡£\n");
+                        "ä½ æ²’æœ‰åœ¨åº—è£¡ç•¶éŽé€™æ¨£çš„æ±è¥¿ã€‚\n");
 
         value = ob->query("value");
         if( !value) {
                 ob->remove();
                 return notify_fail( 
-                        "ÕâÑù¶«Î÷²»Ó¦¸Ã³öÏÖµêÀï....¡£\n");
+                        "é€™æ¨£æ±è¥¿ä¸æ‡‰è©²å‡ºç¾åº—è£¡....ã€‚\n");
         }
         type = value[1];
         number = value[0]*3/4;
         if( number==0) {
                 ob->remove();
                 return notify_fail( 
-                        "ÕâÑù¶«Î÷²»Ó¦¸Ã³öÏÖµêÀï....¡£\n");
+                        "é€™æ¨£æ±è¥¿ä¸æ‡‰è©²å‡ºç¾åº—è£¡....ã€‚\n");
         }
         skill = this_player()->query_skill("trading");
         number -= number * random(skill) / 300;
@@ -261,12 +261,12 @@ int take(string str)
                 if (res==MOVE_OK) {
                         ob->delete("owner");
                         if( skill > 0 ) write( 
-                                "¾­¹ýÒ»·¬ÌÖ¼Û»¹¼Û£¬");
-                        if( !(unit = ob->query("unit")) ) unit = "¸ö";
+                                "ç¶“éŽä¸€ç•ªè¨Žåƒ¹é‚„åƒ¹ï¼Œ");
+                        if( !(unit = ob->query("unit")) ) unit = "å€‹";
                         write(
-                                "Äã»¨ " + number + " Ã¶" + to_chinese(type + " coin") + "Êê»ØÒ»" + unit + ob->query("short") + "¡£\n");
+                                "ä½ èŠ± " + number + " æžš" + to_chinese(type + " coin") + "è´–å›žä¸€" + unit + ob->query("short") + "ã€‚\n");
                         tell_room( this_object(), 
-                                this_player()->query("c_name")+"Êê»ØÒ»"+unit+ob->query("short")+"¡£\n",
+                                this_player()->query("c_name")+"è´–å›žä¸€"+unit+ob->query("short")+"ã€‚\n",
                                 this_player());
 /* following was modified by moon   */
        me= this_player();
@@ -291,12 +291,12 @@ int take(string str)
                         // Give him his money back.
                         this_player()->credit( type , number );
                         return notify_fail(
-                                "ÄãÒÑ¾­¿¸²»¶¯ÆäËû¶«Î÷ÁË¡£\n");
+                                "ä½ å·²ç¶“æ‰›ä¸å‹•å…¶ä»–æ±è¥¿äº†ã€‚\n");
                 }
         }
 
         return notify_fail(
-                "ÄãÉíÉÏÃ»ÓÐºÏÊÊµÄÇ®±ÒÄÜÊê»ØÕâÑù¶«Î÷¡£\n");
+                "ä½ èº«ä¸Šæ²’æœ‰åˆé©çš„éŒ¢å¹£èƒ½è´–å›žé€™æ¨£æ±è¥¿ã€‚\n");
 }
 
 int impawn(string str)
@@ -308,23 +308,23 @@ int impawn(string str)
         int number ;
 
         skill = this_player()->query_skill( "trading" );
-        if (this_player()->query("make-up")) return notify_fail("±¾µê²»ºÍ´÷Ãæ¾ßµÄ¿ÍÈË½»Ò×¡£\n");
+        if (this_player()->query("make-up")) return notify_fail("æœ¬åº—ä¸å’Œæˆ´é¢å…·çš„å®¢äººäº¤æ˜“ã€‚\n");
         if (!str) 
                 return notify_fail( 
-                        "ÄãÒªµ±Ê²÷á¶«Î÷£¿\n");
+                        "ä½ è¦ç•¶ä»€éº¼æ±è¥¿ï¼Ÿ\n");
 
         ob = present(str, this_player()) ;
         if (!ob)
                 return notify_fail( 
-                        "ÄãÃ»ÓÐÕâÑù¶«Î÷¡£\n");
+                        "ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
         if ( this_player()->query("make-up"))
-                return notify_fail("ÇëÏÈÈ¥³ý»¯×°ááÔÙÀ´µ±¶«Î÷ !!\n");
+                return notify_fail("è«‹å…ˆåŽ»é™¤åŒ–è£å¾Œå†ä¾†ç•¶æ±è¥¿ !!\n");
 
         convert_value(ob);
         value = ob->query("value");
         if( !value )
                 return notify_fail( 
-                        "ÄÇ¶«Î÷²»ÖµÇ®\n");
+                        "é‚£æ±è¥¿ä¸å€¼éŒ¢\n");
 
         ob2 = all_inventory(storeroom);
         j=0;
@@ -335,7 +335,7 @@ int impawn(string str)
         }
         if (j>=MAX_ITEMS)
         return notify_fail( 
-        "Äãµ±µÄ¶«Î÷Ì«¶àÁË¡£\n" );
+        "ä½ ç•¶çš„æ±è¥¿å¤ªå¤šäº†ã€‚\n" );
     number = value[0]*3/4 ;
         if (!this_object()->query("rating"))
            number = number * SHOP_SALES_FRAC;
@@ -350,21 +350,21 @@ int impawn(string str)
                 ob->query("prevent_insert") )
 */
         if( ob->query("prevent_drop") )
-               return notify_fail("Äã²»ÄÜµ±ÕâÑù¶«Î÷¡£\n");
+               return notify_fail("ä½ ä¸èƒ½ç•¶é€™æ¨£æ±è¥¿ã€‚\n");
         type = value[1];
 
         res = ob->move(storeroom) ;
         if (res != MOVE_OK)
                 return notify_fail( 
-                        "¶Ô²»Æð£¬ÉÌµê²»ÊÕÕâÖÖ¶«Î÷¡£\n");
+                        "å°ä¸èµ·ï¼Œå•†åº—ä¸æ”¶é€™ç¨®æ±è¥¿ã€‚\n");
 
         this_player()->credit(type, number) ;
         ob->set("owner",this_player()->query("name"));
-        if( !(unit = ob->query("unit")) ) unit = "¸ö";
+        if( !(unit = ob->query("unit")) ) unit = "å€‹";
         write( 
-                "Äãµ±µô"+ob->query("short")+"£¬»ñµÃ "+ number +" ¿é"+ to_chinese(type+" coin")+"¡£\n");
+                "ä½ ç•¶æŽ‰"+ob->query("short")+"ï¼Œç²å¾— "+ number +" å¡Š"+ to_chinese(type+" coin")+"ã€‚\n");
         tell_room( this_object(), 
-                this_player()->query("c_name")+"µ±µôÒ»"+unit+ob->query("short")+"¡£\n",
+                this_player()->query("c_name")+"ç•¶æŽ‰ä¸€"+unit+ob->query("short")+"ã€‚\n",
                 this_player() );
 /* following was modified by moon  */
 
@@ -392,9 +392,9 @@ int do_enter(string str)
     me=this_player();
     if( wizardp(me)  )
     {
-       tell_object(me,"ÄãÁï½øµ±ÆÌ´¢²ØÊÒ\n");
+       tell_object(me,"ä½ æºœé€²ç•¶é‹ªå„²è—å®¤\n");
        tell_room(this_object(),
-        sprintf("%s³Ãµ±ÆÌÀÏ°å²»×¢Òâ£¬ ÍµÍµÁï½ø´¢²ØÊÒ!\n", 
+        sprintf("%sè¶ç•¶é‹ªè€é—†ä¸æ³¨æ„ï¼Œ å·å·æºœé€²å„²è—å®¤!\n", 
                  me->query("c_name")), ({me}));
 
        me->move(storeroom);

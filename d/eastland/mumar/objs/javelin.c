@@ -3,13 +3,13 @@ inherit WEAPON;
  
 void create()
 {
-        set_name("javelin", "³¤¸ê");
+        set_name("javelin", "é•·æˆˆ");
         add ("id",({ "javelin" }) );
-        set_short("³¤¸ê");
+        set_short("é•·æˆˆ");
         set_long(
-            "Ò»°Ñ³¤¸ê¡£\n"
+            "ä¸€æŠŠé•·æˆˆã€‚\n"
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 10 );
         set( "type", "thrusting" );
         set( "min_damage", 5 );

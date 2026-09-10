@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "round cap", "Ô²¶¥Ğ¡Ã±" );
+	set_name( "round cap", "åœ“é ‚å°å¸½" );
 	add( "id", ({ "cap" }) );
-	set_short( "Ô²¶¥Ğ¡Ã±" );
-	set_long("ÕâÊÇÒ»¶¥³ñ¶Ğ²¼ÃæµÄÔ²¶¥Ğ¡Ã±£¬¿´ÆğÀ´ÏñÊÇÓĞÇ®ÈËµÄÃ±×Ó¡£\n");
-	set( "unit", "¶¥" );
+	set_short( "åœ“é ‚å°å¸½" );
+	set_long("é€™æ˜¯ä¸€é ‚ç¶¢ç·å¸ƒé¢çš„åœ“é ‚å°å¸½ï¼Œçœ‹èµ·ä¾†åƒæ˜¯æœ‰éŒ¢äººçš„å¸½å­ã€‚\n");
+	set( "unit", "é ‚" );
 	set( "type", "head" );
 	set( "material", "cloth" );
 	set( "armor_class", 4 );

@@ -4,15 +4,15 @@ inherit ARMOR;
 inherit SARM"OR";
 void create()
 {
-     set_name( "God-Dragon helmet","¿ºÁú¿ø" );
+     set_name( "God-Dragon helmet","äº¢é¾ç›”" );
      add( "id",({ "helmet", }) );
-     set_short( "¿ºÁú¿ø" );
+     set_short( "äº¢é¾ç›”" );
      set_long(@C_LONG
-Ò»¶¥Ì«°×½ğ¾«ÖÆ³ÉµÄÍ·¿ø£¬áİÔìÁúµÄĞÎ×´×ö³ÉµÄ¡£
+ä¸€é ‚å¤ªç™½é‡‘ç²¾è£½æˆçš„é ­ç›”ï¼Œå½·é€ é¾çš„å½¢ç‹€åšæˆçš„ã€‚
 C_LONG
      );
      set( "weight",40 );
-     set( "unit", "¶¥");
+     set( "unit", "é ‚");
      set( "type", "head" );
      set( "material","element" );
      set( "armor_class",6 );

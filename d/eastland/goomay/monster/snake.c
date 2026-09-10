@@ -7,13 +7,13 @@ void create()
 {
 	::create();
 	set_level(17);
-        set_name( "daemonic snake", "��ħŮ" );
+        set_name( "daemonic snake", "蛇魔女" );
         add( "id", ({ "snake" }) );
-        set_short( "��ħŮ" );
+        set_short( "蛇魔女" );
         set_long( @C_LONG
-�㿴��һֻ��ͷ���������֣�����˫��ɢ����һ������Ĺ�â����ʹ
-��������ս���㣬���������һֻ���������ܴ�������ϵ����Ҳ
-�̲�ס����ֱð���⡣
+你看到一隻人頭蛇身的妖怪，它的雙眼散發出一種妖異的光芒，即使
+是身經百戰的你，面對著這樣一隻根本不可能存在於世上的妖物，也
+忍不住心中直冒寒意。
 C_LONG
 );
 	set("killer",1);
@@ -36,7 +36,7 @@ void report( object attacker, object victim )
 {
    seteuid(getuid());
    tell_object( victim,
-    sprintf("( ��%s )\n","/adm/daemons/statsd"->status_string(victim))
+    sprintf("( 你%s )\n","/adm/daemons/statsd"->status_string(victim))
    );
    return;
 }
@@ -53,7 +53,7 @@ int my_tactic()
 	if (spec <20)
 	{
 	tell_room( environment(this_object()), 
-		"\n��ħŮ���һ̲��Һ����ʴ������� !!\n\n" ,
+		"\n蛇魔女噴出一灘酸液，腐蝕你的身體 !!\n\n" ,
 		this_object() );
 	for( i=0; i<sizeof(victim); i++ )
 	    {
@@ -66,7 +66,7 @@ int my_tactic()
 	if ( spec<30 ) 
 	{
         tell_room( environment(this_object()), 
-		"\n��ħŮ���һ�Ŷ�������е�һ����ѣ !!\n\n" ,
+		"\n蛇魔女噴出一團毒霧，你感到一陣暈眩 !!\n\n" ,
                 this_object() );
         for( i=0; i<sizeof(victim); i++ )
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim[i], 10, 7 );
@@ -76,7 +76,7 @@ int my_tactic()
 	if ( spec<50)
 	{
 	tell_room( environment(this_object()), 
-		"\n��ħŮ�����Ƕ�������۾������㿴���������ͻȻһƬ�հ� !!\n\n" ,
+		"\n蛇魔女用她那對妖異的眼睛盯著你看，你的腦中突然一片空白 !!\n\n" ,
 		 this_object() );
 	for( i=0; i<sizeof(victim); i++ )
 		(CONDITION_PREFIX + "confused")->apply_effect( victim[i], 15, 5 );
@@ -94,12 +94,12 @@ void die()
         ob1->move(this_object());
                 ::die(1);
 	tell_room( environment(this_object()), @FLEE
-һ����ɫ������ͻȻ����ס��ħŮ�����������У�ȴ��Ů���񷢳�һƬʥ���
-���������������ȥ����Ͻ�����ץס����ֻ����һ�ɼ�ǿ�������ӱ˶˴���
-��Ȼ����ʧ����Ӱ���٣��㲻�����˿�ȥ������վ�������������Ѿ�ɢȥ�ˡ�
+一道黑色的煙霧突然籠罩住蛇魔女，你衝進黑霧中，卻見女神像發出一片聖潔的
+銀光逐漸向黑霧中隱去，你趕緊用手抓住它，只覺得一股極強的力道從彼端傳來
+，然後消失的無影無蹤，你不禁跌了開去，等你站起身來，黑霧已經散去了。
 
-һ��̶���Ц����������Ķ���: �������� ... �޴����˰� ...���С�����ˣ�
-����Ϊ�ڰ���������ʹ˷��� ... �һ������ ...
+一陣刺耳的笑聲回湯在你的耳際: 嘻嘻嘻嘻 ... 愚蠢的人啊 ...這次小讓你了，
+別以為黑暗的力量會就此放手 ... 我會回來的 ...
 
 FLEE
 		,this_object() );

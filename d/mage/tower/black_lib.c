@@ -9,15 +9,15 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("A empty room", "��ħ��ͼ����");
+	set_short("A empty room", "黑魔法圖書室");
 	set_long( @LONG_DESCRIPTION
 NEED TRANSLATE HERE.
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-������ר���ղغ�ħ��������ղ��ң����ƹ�����ղ��ҵ��˹��ƣ���Լ��
-�ٷ�֮��ʮ����Ŀǰ��֪�ĺ�ħ�����ﶼ���������ҵ����������ǰ��һ������
-��Ŀ¼(catalog)������԰������������ж�(study)ħ���飬���о�����(raise
-)ħ���ȼ���֪ʶ���������Իص�ħ��ͼ��ݵĴ�����
+這裡是專門收藏黑魔法卷軸的收藏室，據掌管這間收藏室的人估計，大約有
+百分之九十以上目前已知的黑魔法咒語都能在這裡找到，在你的面前有一本厚重
+的目錄(catalog)，你可以安靜地在這裡研讀(study)魔法書，或研究提升(raise
+)魔法等級的知識，往東可以回到魔法圖書館的大廳。
 C_LONG_DESCRIPTION
 	);
     set( "no_monster", 1);

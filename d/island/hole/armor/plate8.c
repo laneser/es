@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Fish Scale Scute","ÓãÁÛ¼×" );
+	set_name( "Fish Scale Scute","é­šé±—ç”²" );
 	add( "id", ({ "scute" }) );
-	set_short( "ÓãÁÛ¼×" );
+	set_short( "é­šé±—ç”²" );
 	set_long(@LONG
-	Ò»¼şÓÃòáòæÈË¶´Ñ¨Ë®µ×µÄºìÁúµÄÁÛÆ¬£¬ÅäºÍ²Ï
-	Ë¿±àÖ¯³ÉµÄÒÂ·ş¡£
+	ä¸€ä»¶ç”¨èœ¥èœ´äººæ´ç©´æ°´åº•çš„ç´…é¾çš„é±—ç‰‡ï¼Œé…å’Œè ¶
+	çµ²ç·¨ç¹”æˆçš„è¡£æœã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",110 );
 	set( "type","body" );
 	set( "material","cloth" );

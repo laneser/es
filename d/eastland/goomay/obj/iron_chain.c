@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "iron chain", "Ìú¡õ" );
+	set_name( "iron chain", "éµâ–¡" );
 	add( "id", ({ "chain","whip" }) );
-	set_short( "a iron chain", "Ìú¡õ" );
+	set_short( "a iron chain", "éµâ–¡" );
 	set_long(
 		"You see an iron chain which used to lock felonries.\n",
-		"ÕâÊÇÒ»Ìõ³¤³¤µÄÌú¡õ£¬ÊÇ¹«²îÃÇÓÃÀ´×·ÄÃ·¸ÈËµÄÎäÆ÷¡£\n"
+		"é€™æ˜¯ä¸€æ¢é•·é•·çš„éµâ–¡ï¼Œæ˜¯å…¬å·®å€‘ç”¨ä¾†è¿½æ‹¿çŠ¯äººçš„æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "weight", 70 );
 	setup_weapon( "whip", 15, 8, 16 );
 	set( "value", ({ 220, "silver" }) );
-        set_c_verbs(({"%sË¦Ïò%s","%sÔÒÏò%s","%s»ÓÏò%s"}));
+        set_c_verbs(({"%sç”©å‘%s","%sç ¸å‘%s","%sæ®å‘%s"}));
 }

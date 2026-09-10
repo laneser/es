@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("black silver plate","ºÚÉ«Òøîø¼×");
+        set_name("black silver plate","é»‘è‰²éŠ€é§ç”²");
         add("id",({"plate","platemail"}) );
-         set_short( "a black silver plate ","ºÚÉ«Òøîø¼×");
+         set_short( "a black silver plate ","é»‘è‰²éŠ€é§ç”²");
 	set_long(
 "This is a suit of plate worn by molader royality ,which can  \n"
 "protect your body against opponent's attacks.\n",
-"ÕâÊÇÒ»¸±°«ÈË»ÊÊÒÀú´úÏà´«µÄîø¼×,¿ÉÒÔ±£»¤ÄãµÖ¿¹µĞÈËµÄ¹¥»÷\n"
+"é€™æ˜¯ä¸€å‰¯çŸ®äººçš‡å®¤æ­·ä»£ç›¸å‚³çš„é§ç”²,å¯ä»¥ä¿è­·ä½ æŠµæŠ—æ•µäººçš„æ”»æ“Š\n"
 	);
 	//set("no_sale",1);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 320 );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );

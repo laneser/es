@@ -6,11 +6,11 @@ void create()
 {
         ::create();
         set_level(6);
-        set_name( "turtle", "¾Ş¹ê" );
-        set_short("¾Ş¹ê");
-        set("unit","Ö»");
+        set_name( "turtle", "å·¨é¾œ" );
+        set_short("å·¨é¾œ");
+        set("unit","åª");
         set_long(@LONG
-±¾µºÌØ²ú£¬´óĞÍº£¹ê£¬²»¹ı¾İËµÉ½ÉÏÒ²ÓĞ
+æœ¬å³¶ç‰¹ç”¢ï¼Œå¤§å‹æµ·é¾œï¼Œä¸éæ“šèªªå±±ä¸Šä¹Ÿæœ‰
 LONG
         );
         set_perm_stat("str", 8);
@@ -24,6 +24,6 @@ LONG
         set ("natural_max_damage1", 8);
         set ("natural_armor_class", 20);
         set ("likefish",1);
-        set_c_verbs(({"%sÓÃÕû¸öÉíÌåÏò%s×²À´","%sÓÃËüµÄÓ²¿ÇÏò%s¹¥»÷"}));
-        set_c_limbs(({"Î²°Í","¿Ç","½Å²¿","Í·²¿"}));      
+        set_c_verbs(({"%sç”¨æ•´å€‹èº«é«”å‘%sæ’ä¾†","%sç”¨å®ƒçš„ç¡¬æ®¼å‘%sæ”»æ“Š"}));
+        set_c_limbs(({"å°¾å·´","æ®¼","è…³éƒ¨","é ­éƒ¨"}));      
 }

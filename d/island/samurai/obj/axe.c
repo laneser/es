@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "steel axe", "¸Ö¸«" );
+        set_name( "steel axe", "é‹¼æ–§" );
         add( "id",({ "axe" }) );
-        set_short( "steel axe", "¸Ö¸«" );
+        set_short( "steel axe", "é‹¼æ–§" );
         set_long(@AAA
-ÕâÊÇÒ»°Ñ·æÀûµÄ´ó¸«£¬Ê¹ÎäÊ¿ÍÅ±ß¾³ÊØÎÀ¶Ó°®ÓÃµÄÎäÆ÷
+é€™æ˜¯ä¸€æŠŠé‹’åˆ©çš„å¤§æ–§ï¼Œä½¿æ­¦å£«åœ˜é‚Šå¢ƒå®ˆè¡›éšŠæ„›ç”¨çš„æ­¦å™¨
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 25 );
         set( "type", "axe" );
         set( "min_damage", 15 );

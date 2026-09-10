@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("halfling helmet", "°ëÉíÈËÍ·¿ø");
+        set_name("halfling helmet", "åŠèº«äººé ­ç›”");
         add( "id", ({ "helmet" }) );
-        set_short( "°ëÉíÈËÍ·¿ø");
+        set_short( "åŠèº«äººé ­ç›”");
         set_long(
-                "ÕâÊÇ°ëÉíÈËÊØÎÀ×¨ÓÃµÄÍ·¿ø \n"
+                "é€™æ˜¯åŠèº«äººå®ˆè¡›å°ˆç”¨çš„é ­ç›” \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set("material","light_metal") ;
         set( "armor_class", 5 );

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-     set_name("fish blunt","µö¸Ë");
+     set_name("fish blunt","é‡£æ†");
      add( "id",({"blunt"}) );
-     set_short("µö¸Ë");
+     set_short("é‡£æ†");
      set_long(@C_LONG
-Ò»¸ùÆÕÍ¨µÄµö¸Ë£¬ÉÏÃæÓĞÖøÇ§°ÙÌõµÄ¹ÎºÛ¡£
+ä¸€æ ¹æ™®é€šçš„é‡£æ†ï¼Œä¸Šé¢æœ‰è‘—åƒç™¾æ¢çš„åˆ®ç—•ã€‚
 C_LONG
       );
-     set( "unit", "¸ù");
+     set( "unit", "æ ¹");
      set("weight",90);
      set("value", ({ 250, "silver" }));
      setup_weapon( "blunt", 20, 8, 15 );

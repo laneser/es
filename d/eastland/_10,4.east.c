@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("ƽԭ");
+	ob->set_short("平原");
 	ob->set_long( @LONG_DESCRIPTION
-����������һƬƽ���ϣ��������ݵ�׺��һЩ��ʯ�����￪������
-Ұʹ���������ؿ���Զ���ľ��
+你現在走在一片平地上，疏落的青草點綴著一些碎石，這裡開闊的視
+野使你可以清楚地看到遠方的景物。
 LONG_DESCRIPTION
 	);
 

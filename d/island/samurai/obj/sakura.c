@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Sakura Clothes", "Ó£Ö®·ş");
+        set_name( "Sakura Clothes", "æ«»ä¹‹æœ");
         add( "id", ({ "clothes"}) );
-        set_short("Sakura Clothes", "Ó£Ö®·ş");
+        set_short("Sakura Clothes", "æ«»ä¹‹æœ");
         set_long(@AAA
-ÕâÊÇÒ»¼şĞåÓĞÓ£»¨Í¼°¸µÄ³¤ÅÛ
+é€™æ˜¯ä¸€ä»¶ç¹¡æœ‰æ«»èŠ±åœ–æ¡ˆçš„é•·è¢
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 31 );
         set( "defense_bonus", 2 );

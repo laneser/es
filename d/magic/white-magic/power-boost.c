@@ -14,13 +14,13 @@ int cast(int level, string target)
 	chinese_mode = can_read_chinese(me);
 	
 	if( (int)me->query_skill("white-magic") < query_need_skill(level) ) {
-		tell_object( me,"ÄãµÄ°×Ä§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n");
+		tell_object( me,"ä½ çš„ç™½é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n");
 		return 0;
 	}
 	
 	if( target == "NONE" ) dest = me;
 	else if( !(dest= present( target, environment(me) )) ) {
-	    tell_object( me,"Òª¶ÔË­Ê¹ÓÃÁ¦Á¿ÔöÇ¿·¨Êõ£¿\n");
+	    tell_object( me,"è¦å°èª°ä½¿ç”¨åŠ›é‡å¢žå¼·æ³•è¡“ï¼Ÿ\n");
         return 0;
 	}
 	if( me->query("npc") && me->query("magic_delay") )
@@ -30,9 +30,9 @@ int cast(int level, string target)
 	me->block_attack(delay_time);
 	me->set_temp("cast_busy", 1);
 	
- 	write("Äã¿ªÊ¼Ò÷ËÐ°×Ä§·¨ÖÐÁ¦Á¿ÔöÇ¿·¨ÊõµÄÖäÎÄ....¡£\n");
+ 	write("ä½ é–‹å§‹åŸèª¦ç™½é­”æ³•ä¸­åŠ›é‡å¢žå¼·æ³•è¡“çš„å’’æ–‡....ã€‚\n");
 	tell_room( environment(me),
-	     me->query("c_name") + "¿ªÊ¼ÒÔÒ»ÖÖ¼á¶¨µÄÉùÒôÒ÷ËÐÖäÎÄ....¡£\n",me );
+	     me->query("c_name") + "é–‹å§‹ä»¥ä¸€ç¨®å …å®šçš„è²éŸ³åŸèª¦å’’æ–‡....ã€‚\n",me );
 	
 	call_out( "effect", delay_time, level, me, dest );
 	return 1;
@@ -44,17 +44,17 @@ void effect(int level, object caster, object dest)
 
     caster->set_temp("cast_busy", 0);
 	if( !dest || !present(dest, environment(caster)) ) {
-	  tell_object( caster,"ÄãµÄÄ¿±ê×ßµôÁË¡£\n" );
+	  tell_object( caster,"ä½ çš„ç›®æ¨™èµ°æŽ‰äº†ã€‚\n" );
 	  return;
 	}
 	
 	if( dest->query_temp("effect/power-boost") ) {
 		tell_object( dest,
-		  "Ò»ÍÅÒ«ÑÛµÄºìÉ«¹âÃ¢ÁýÕÖÖøÄã£¬µ«ÊÇÄã¾õµÃ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n"
+		  "ä¸€åœ˜è€€çœ¼çš„ç´…è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½†æ˜¯ä½ è¦ºå¾—ä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n"
 		);
 	} else {
 		tell_object( dest,
-			"Ò»ÍÅÒ«ÑÛµÄºìÉ«¹âÃ¢ÁýÕÖÖøÄã£¬Äã¾õµÃÈ«Éí¿ªÊ¼³äÂúÁËÁ¦Á¿£¡\n"
+			"ä¸€åœ˜è€€çœ¼çš„ç´…è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ è¦ºå¾—å…¨èº«é–‹å§‹å……æ»¿äº†åŠ›é‡ï¼\n"
 		);
 		boost = level+1;
 		if( caster == dest )
@@ -66,14 +66,14 @@ void effect(int level, object caster, object dest)
 		call_out( "expire", duration, dest, boost );
 	}
 	tell_room( environment(dest), 
-		"Ò»ÍÅÒ«ÑÛµÄºìÉ«¹âÃ¢ÁýÕÖÖø"+dest->query("c_name")+"£¬È»ááÖð½¥É¢È¥¡£\n",
+		"ä¸€åœ˜è€€çœ¼çš„ç´…è‰²å…‰èŠ’ç± ç½©è‘—"+dest->query("c_name")+"ï¼Œç„¶å¾Œé€æ¼¸æ•£åŽ»ã€‚\n",
 		dest );
 }
 
 void expire( object player, int boost )
 {
     if( !player ) return;
-	tell_object( player,"Äã¾õµÃÈ«Éí¼¡Èâ·ÅËÉÁËÏÂÀ´£¬²»ÔÙ³äÂúÁËÄ§·¨°ãµÄÁ¦Á¿....¡£\n");
+	tell_object( player,"ä½ è¦ºå¾—å…¨èº«è‚Œè‚‰æ”¾é¬†äº†ä¸‹ä¾†ï¼Œä¸å†å……æ»¿äº†é­”æ³•èˆ¬çš„åŠ›é‡....ã€‚\n");
 	player->modify_stat("str", -boost);
 	player->set_temp("effect/power-boost", 0 );
 }

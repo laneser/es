@@ -5,18 +5,18 @@ void create()
 {
         ::create();
         set_level(2);
-        set_name( "squirrel", "ËÉÊó" );
+        set_name( "squirrel", "æ¾é¼ " );
         add( "id", ({ "squirrel" }) );
-        set_short( "ËÉÊó" );
+        set_short( "æ¾é¼ " );
         set_long(@LONG
-Äã¿´µ½Ò»Ö»ÓĞÖø³¤³¤Î²°Í£¬Áé»î´óÑÛ¾¦µÄĞ¡¶¯ÎïÔÚÖ¦Í·¼äÅÜÀ´ÅÜÈ¥¡£
+ä½ çœ‹åˆ°ä¸€åªæœ‰è‘—é•·é•·å°¾å·´ï¼Œéˆæ´»å¤§çœ¼ç›çš„å°å‹•ç‰©åœ¨æé ­é–“è·‘ä¾†è·‘å»ã€‚
 LONG
 );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set_perm_stat("kar", 3 );
         set_perm_stat("dex", 5 );
         set_natural_weapon(4,2,3);
         set_natural_armor(7,0);
-        set_c_verbs( ({ "%sÓÃ×¦×ÓÍù%s×¥È¥" }) );
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Î²°Í" }) );
+        set_c_verbs( ({ "%sç”¨çˆªå­å¾€%sæŠ“å»" }) );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å°¾å·´" }) );
 }

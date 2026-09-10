@@ -12,23 +12,23 @@ void create()
 	guild_ob::create();
 	set_class_name("knight");
 #include <compress_obj.h>
-	set_name("sabre", "Ååµ¶");
-	set_short("»Æ½ğÅåµ¶");
+	set_name("sabre", "ä½©åˆ€");
+	set_short("é»ƒé‡‘ä½©åˆ€");
 	set_long( @LONG
-ÕâÊÇÒ»°ÑÊôì¶Åµ¶ÙÆïÊ¿ÍÅ³ÉÔ±µÄ»Æ½ğÅåµ¶£¬Õâ°ÑÅåµ¶Ò²Ğí²¢²»ÊÇ×îºÃµÄÎäÆ÷£¬
-µ«ÊÇËü´ú±íÆïÊ¿µÄÈÙÓşÓëÉúÃü¡£Äã¿ÉÒÔÓÃ help sabre µÃµ½ÓĞ¹ØÕâ°ÑÅåµ¶µÄ½ø
-Ò»²½ËµÃ÷¡£
+é€™æ˜¯ä¸€æŠŠå±¬æ–¼è«¾é “é¨å£«åœ˜æˆå“¡çš„é»ƒé‡‘ä½©åˆ€ï¼Œé€™æŠŠä½©åˆ€ä¹Ÿè¨±ä¸¦ä¸æ˜¯æœ€å¥½çš„æ­¦å™¨ï¼Œ
+ä½†æ˜¯å®ƒä»£è¡¨é¨å£«çš„æ¦®è­½èˆ‡ç”Ÿå‘½ã€‚ä½ å¯ä»¥ç”¨ help sabre å¾—åˆ°æœ‰é—œé€™æŠŠä½©åˆ€çš„é€²
+ä¸€æ­¥èªªæ˜ã€‚
 LONG
 	);
 
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", "@@query_weapon_class" );
 	set( "type", "longblade" );
 	set( "min_damage", "@@query_min_damage" );
 	set( "max_damage", "@@query_max_damage" );
 	set( "wield_func", "wield_sabre" );
 	set( "weight", 60 );
-	set( "extra_look", "$N´øÖøÒ»°ÑÏóáçÆïÊ¿µÄ¾üµ¶¡£\n");
+	set( "extra_look", "$Nå¸¶è‘—ä¸€æŠŠè±¡å¾µé¨å£«çš„è»åˆ€ã€‚\n");
 }
 
 void init()
@@ -48,9 +48,9 @@ int query_max_damage() { return 10; }
 
 void wield_sabre()
 {
-	write("Äã½«Åäµ¶´Óµ¶ÇÊÖĞ³é³öÀ´£¬ÏòÅµ´ïÄáÑÇÍõ¹¬µÄ·½ÏòĞĞÁËÒ»¸ö¾üÀñ¡£\n");
+	write("ä½ å°‡é…åˆ€å¾åˆ€é˜ä¸­æŠ½å‡ºä¾†ï¼Œå‘è«¾é”å°¼äºç‹å®®çš„æ–¹å‘è¡Œäº†ä¸€å€‹è»ç¦®ã€‚\n");
     tell_room( environment(this_player()),
-		this_player()->query("c_name")+"³é³ö»Æ½ğÅäµ¶£¬ĞĞÁËÒ»¸öÆ¯ÁÁµÄ¾üÀñ¡£\n",
+		this_player()->query("c_name")+"æŠ½å‡ºé»ƒé‡‘é…åˆ€ï¼Œè¡Œäº†ä¸€å€‹æ¼‚äº®çš„è»ç¦®ã€‚\n",
 		({ this_player()}) );
 }
 
@@ -64,7 +64,7 @@ int do_chat(string arg)
 {
 	if( !arg )
 		return notify_fail( 
-			"ÄãÏë¶ÔÆäËüÆïÊ¿ËµÊ²÷á£¿\n");
+			"ä½ æƒ³å°å…¶å®ƒé¨å£«èªªä»€éº¼ï¼Ÿ\n");
 
 	return guild_ob::guild_line(arg);
 }

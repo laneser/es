@@ -10,5 +10,5 @@ void create()
 	set_save_file("plan_board");
 	set_location("/d/wiz/planning");
 	set( "short.text", "Board of Planning");
-	set( "c_short.text", "Æó»®ÁôÑÔ°å");
+	set( "c_short.text", "ä¼åŠƒç•™è¨€æ¿");
 }

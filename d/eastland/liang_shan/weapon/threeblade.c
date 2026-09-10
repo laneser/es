@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("two-faced blade","Èı¼âÁ½ÈĞµ¶");
+       set_name("two-faced blade","ä¸‰å°–å…©åˆƒåˆ€");
        add("id",({"blade"}) );
-       set_short("Èı¼âÁ½ÈĞµ¶");
+       set_short("ä¸‰å°–å…©åˆƒåˆ€");
 	   set_long(
-           "ÕâÊÇÒ»°ÑÔìĞÎÆæÌØµÄ±¦µ¶£¬µ¶¼â²¿ÓĞÈı¸ö·Ö²æ£¬ËÆºõ¿ÉÓÃÀ´¸ñ¿ªÎäÆ÷£®\n"
+           "é€™æ˜¯ä¸€æŠŠé€ å½¢å¥‡ç‰¹çš„å¯¶åˆ€ï¼Œåˆ€å°–éƒ¨æœ‰ä¸‰å€‹åˆ†å‰ï¼Œä¼¼ä¹å¯ç”¨ä¾†æ ¼é–‹æ­¦å™¨ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 25 );
     set("type","longblade");
 	set( "min_damage", 13 );

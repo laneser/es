@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Gold-God's shield","Çú¶Ü" );
+     set_name( "Gold-God's shield","æ›²ç›¾" );
      add( "id",({ "shield" }) );
-     set_short( "Çú¶Ü" );
+     set_short( "æ›²ç›¾" );
      set_long(@C_LONG
-Ò»Ãæ»Æ½ğÖÆ³ÉµÄ¶ÜÅÆ£¬Ô²Ô²µÄ£¬ºÃËÆÒ»¿Å´óÇò¡£
+ä¸€é¢é»ƒé‡‘è£½æˆçš„ç›¾ç‰Œï¼Œåœ“åœ“çš„ï¼Œå¥½ä¼¼ä¸€é¡†å¤§çƒã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "Ãæ");
+     set( "unit", "é¢");
      set( "type", "shield" );
      set( "material","heavy_metal" );
      set( "armor_class",5 );

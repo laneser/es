@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "yellow mushroom", "»ÆÄ¢¹½" );
+	set_name( "yellow mushroom", "é»ƒè˜‘è‡" );
         set("no_sale",1);
 	add( "id", ({"mushroom"}) );
-	set_short( "a yellow mushroom", "»ÆÄ¢¹½" );
+	set_short( "a yellow mushroom", "é»ƒè˜‘è‡" );
 	set_long(
 		"You see a yellow mushroom with small white mushroom.\n",
-		"ÕâÊÇÒ»ÖÖÓĞÖø»ÆÉ«Ş¦¶¥ºÍ°×É«Ğ¡°ßµãµÄÄ¢¹½¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ˜¯ä¸€ç¨®æœ‰è‘—é»ƒè‰²è•ˆé ‚å’Œç™½è‰²å°æ–‘é»çš„è˜‘è‡ã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
-        set( "unit", "¿Å");
+        set( "unit", "é¡†");
 	set( "ident", "YELLOW_MUSHROOM" );
 	set( "savour","acidity");
 	set( "effect","simple_poison");

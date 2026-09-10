@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Silvery Visor","ÒøÉ«ÃæÕÖ" );
+	set_name( "Silvery Visor","éŠ€è‰²é¢ç½©" );
 	add( "id", ({ "visor" }) );
-	set_short( "ÒøÉ«ÃæÕÖ" );
+	set_short( "éŠ€è‰²é¢ç½©" );
 	set_long(@LONG
-	Ò»¶¥ÉÁÒ«ÖøÒøÉ«¹âÃ¢µÄÃæÕÖ¡£
+	ä¸€é ‚é–ƒè€€è‘—éŠ€è‰²å…‰èŠ’çš„é¢ç½©ã€‚
 LONG
            );
-	set( "unit","¶¥" );
+	set( "unit","é ‚" );
 	set( "weight",50 );
 	set( "type","head" );
 	set( "material","light_metal" );

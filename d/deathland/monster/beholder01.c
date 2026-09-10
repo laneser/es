@@ -9,14 +9,14 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name("Dead eye", "ËÀÍöÖ®ÑÛ");
+	set_name("Dead eye", "æ­»äº¡ä¹‹çœ¼");
 	add("id",({"eye","beholder"}));
-	set_short("a dead eye", "ËÀÍöÖ®ÑÛ");
+	set_short("a dead eye", "æ­»äº¡ä¹‹çœ¼");
 	set_long(
 	    "A terrible dead eye,\n",
-	    "Ò»Ö»ÁîÈË¾åÅÂµÄËÀÍöÖ®ÑÛ.\n"
+	    "ä¸€éš»ä»¤äººæ‡¼æ€•çš„æ­»äº¡ä¹‹çœ¼.\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	
 	set_perm_stat("int",22);
 	set_perm_stat("str", 5);
@@ -26,8 +26,8 @@ void create()
 	set_natural_armor( 60, 10 );
 	set( "tactic_func", "magic_attack" );
 	set("special_defense",(["all":25, "none":10]) );
-	set_c_limbs( ({ "Í·²¿", "ÑÛ¾¦" }) );
-	set_c_verbs( ({ "%sÓÃËüµÄÑÛ¾¦µÉÖø%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "çœ¼ç›" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„çœ¼ç›çªè‘—%s" }) );
     equip_armor(Armour"/globe01");
 }
 
@@ -37,7 +37,7 @@ int magic_attack()
 
 	if( !(victim=query_attacker()) || random(10)<4 ) return 0;
 	tell_room( environment(this_object()), 
-		"ÕâËÀÍöÖ®ÑÛ,ÓÃÖøËüµÄÑÛ¾¦·¢³öÒ»µÀĞ°¶ñµÄËÀ¹â,Ö±Ïò"+victim->query("c_name")+"ÉäÈ¥\n"
+		"é€™æ­»äº¡ä¹‹çœ¼,ç”¨è‘—å®ƒçš„çœ¼ç›ç™¼å‡ºä¸€é“é‚ªæƒ¡çš„æ­»å…‰,ç›´å‘"+victim->query("c_name")+"å°„å»\n"
 	);
 	report(this_object(),victim);
 	victim->receive_special_damage("evil",14+random(8));	

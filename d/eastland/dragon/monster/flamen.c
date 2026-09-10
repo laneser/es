@@ -7,17 +7,17 @@ void create ()
         object cloak;
         ::create();
         set_level(18);
-        set_name( "draconian flamen budbadbump", "ÁúÈË¼ÀË¾ °ÍµÂ±±ÌØ.ÅÓ²©" );
+        set_name( "draconian flamen budbadbump", "é¾äººç¥­å¸ å·´å¾·åŒ—ç‰¹.é¾åš" );
         add ("id", ({ "draconian", "flamen","budbadbump" }) );
-        set_short( " ÁúÈË¼ÀË¾ °ÍµÂ±±ÌØ.ÅÓ²©");
-        set("unit","Î»");
+        set_short( " é¾äººç¥­å¸ å·´å¾·åŒ—ç‰¹.é¾åš");
+        set("unit","ä½");
         set("alignment",600);
         set("weight",400);
         set("wealth/gold",100);
         set_long(@C_LONG
-ÁúÈË¼ÀË¾ °ÍµÂ±±ÌØ.ÅÓ²©ÊÇÒ»¸ö²©Ñ§¶à²ÅµÄÈË£¬Ëû¶ÔÐí\¶àÉñÃØµÄÊÂ¼þÓÐ¶ÀÌØ
-µÄÑÐ¾¿£¬ÀýÈçÎ×Êõ£¬Õë¾Ä£¬ÄÚ¹¦\£¬ÒÔ¼°¹ÅÎÄÃ÷µÄ¼ÀµäµÈ¶¼ÓÐÆä¶Àµ½µÄ¼û½â£¬
-ÊµÊÇÒ»¸öÖµµÄ¾´ÖØµÄÀÏÏÈÉú¡£
+é¾äººç¥­å¸ å·´å¾·åŒ—ç‰¹.é¾åšæ˜¯ä¸€å€‹åšå­¸å¤šæ‰çš„äººï¼Œä»–å°è¨±å¤šç¥žç§˜çš„äº‹ä»¶æœ‰ç¨ç‰¹
+çš„ç ”ç©¶ï¼Œä¾‹å¦‚å·«è¡“ï¼Œé‡ç¸ï¼Œå…§åŠŸ\ï¼Œä»¥åŠå¤æ–‡æ˜Žçš„ç¥­å…¸ç­‰éƒ½æœ‰å…¶ç¨åˆ°çš„è¦‹è§£ï¼Œ
+å¯¦æ˜¯ä¸€å€‹å€¼çš„æ•¬é‡çš„è€å…ˆç”Ÿã€‚
 C_LONG
         );
         set_perm_stat("int", 26);
@@ -32,7 +32,7 @@ C_LONG
         set_skill("shortblade",100);
         set_skill("dodge",100);
         set("tactic_func","sleet_tactic");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
       
         cloak=new(Lditem"scroll");
         cloak->move(this_object());
@@ -49,7 +49,7 @@ int sleet_tactic()
   
   if ( !(magics=query_attacker()) || (random(10)>2)) return 0;
   tell_room(environment(this_object()),
-       "\nÍ»È»°ÍµÂ±±ÌØ.ÅÓ²©à«à«µÄÄî³öÉñÃØµÄÖäÓï£¬Ò»Õó±ùÑ©·ç±©ÏòÄãÏ®À´¡£\n\n");
+       "\nçªç„¶å·´å¾·åŒ—ç‰¹.é¾åšå–ƒå–ƒçš„å¿µå‡ºç¥žç§˜çš„å’’èªžï¼Œä¸€é™£å†°é›ªé¢¨æš´å‘ä½ è¥²ä¾†ã€‚\n\n");
   dam=50 + random(30);
   magics->receive_special_damage("sleet",dam);
   return 1;

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "karate_clothes", "¿ÕÊÖµÀ·ş");
+        set_name( "karate_clothes", "ç©ºæ‰‹é“æœ");
         add( "id", ({ "cloth","clothes" }) );
-        set_short("karate_clothes", "¿ÕÊÖµÀ·ş ");
+        set_short("karate_clothes", "ç©ºæ‰‹é“æœ ");
         set_long(@AAA
-Ò»¸öÁ·¿ÕÊÖµÀÈËËù´©µÄµÀ·ş
+ä¸€å€‹ç·´ç©ºæ‰‹é“äººæ‰€ç©¿çš„é“æœ
 AAA
        );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 10 );
         set( "defense_bonus", 1 );

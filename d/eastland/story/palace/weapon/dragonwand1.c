@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {    
-    set_name( "god wand", "ÉñÓíÁî" );
+    set_name( "god wand", "ç¥ç¦¹ä»¤" );
     add( "id", ({ "wand" }) );
-    set_short( "ÉñÓíÁî" );
+    set_short( "ç¥ç¦¹ä»¤" );
     set_long(@LONG
-Ò»Ãæ»­ÖøĞí¶à·û¡õµÄÅÆ×Ó£¬Õû¿éºÚÁïÁïµÄ£¬ÓĞµãÏñºÚÌ¿¡£
+ä¸€é¢ç•«è‘—è¨±å¤šç¬¦â–¡çš„ç‰Œå­ï¼Œæ•´å¡Šé»‘æºœæºœçš„ï¼Œæœ‰é»åƒé»‘ç‚­ã€‚
 LONG
     );
-    set( "unit", "Ãæ" );
+    set( "unit", "é¢" );
     set( "type", "wand" );
     set( "weapon_class", 23 );
     set( "min_damage", 7 );
@@ -24,5 +24,5 @@ LONG
     set( "max_charge", 10 );
     set( "special_damage_type", "evil" );
     set( "special_damage", 10 );
-    set( "special_c_msg", set_color(" ±©³öÒ»ÍÅ×ÏÉ«µÄÅ¨Îí! ","HIM") );
+    set( "special_c_msg", set_color(" æš´å‡ºä¸€åœ˜ç´«è‰²çš„æ¿ƒéœ§! ","HIM") );
 }

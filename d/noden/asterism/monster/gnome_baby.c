@@ -6,16 +6,16 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "Gnome baby", "µØ¾«Ó¤º¢" );
+	set_name( "Gnome baby", "åœ°ç²¾å¬°å­©" );
 	add ("id", ({ "baby", "gnome" }) );
-   set_short( "µØ¾«Ó¤º¢" );
+   set_short( "åœ°ç²¾å¬°å­©" );
 	set_long(
-                  "Ò»¸ö¹âÖøÆ¨¹ÉÕıÔÚÑ§ÅÀµÄĞ¡Ó¤¶ù.\n"
+                  "ä¸€å€‹å…‰è‘—å±è‚¡æ­£åœ¨å­¸çˆ¬çš„å°å¬°å…’.\n"
                  );
         set( "alignment",10);
         set( "gender", "male" );
         set( "race", "gnome" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
 	set_perm_stat( "kar", 3 );
 	set ("natural_weapon_class1", 3);
 	set ("natural_armor_class", 7);

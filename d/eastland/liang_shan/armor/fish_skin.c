@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("fish skin","ÓãÆ¤Ë®¿¿");
+    set_name("fish skin","é­šçš®æ°´é ");
     add("id",({"fish","skin"}) );
-    set_short( "fish skin","ÓãÆ¤Ë®¿¿");
+    set_short( "fish skin","é­šçš®æ°´é ");
 	set_long(
 		"This is a cloth made of skin of fish\n",
-		"ÕâÊÇÒ»´ó¿éÓãÆ¤×÷³ÉµÄÒÂ·ş£¬»¬ÁïÁï£¬ğ¤´î´î£¬ÃşÆğÀ´ÆÄÎª\n"
-		"¶ñĞÄ£¬µ«ÔÚË®ÖĞ´©ÖøÈ´¿É¿ÉÒÔ»î¶¯×ÔÈç£®\n"
+		"é€™æ˜¯ä¸€å¤§å¡Šé­šçš®ä½œæˆçš„è¡£æœï¼Œæ»‘æºœæºœï¼Œé»æ­æ­ï¼Œæ‘¸èµ·ä¾†é —ç‚º\n"
+		"å™å¿ƒï¼Œä½†åœ¨æ°´ä¸­ç©¿è‘—å»å¯å¯ä»¥æ´»å‹•è‡ªå¦‚ï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 90 );
 	set( "type", "body" );
 	set( "armor_class", 19 );

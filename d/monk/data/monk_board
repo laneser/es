@@ -1,35 +1,35 @@
 #d/monk/guild/monk_board.c
-ob_data (["hit_points":1,"endurance_points":1,"c_short.text":"ÎäÉ®¹«»áÁôÑÔ°å","id":({"board","bulletin board",}),"c_long":"@@query_c_long","short.text":"ÎäÉ®¹«»áÁôÑÔ°å","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","talk_points":1,"last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ÁôÑÔ°å","force_points":1,"long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","spell_points":1,"c_cap_name":"ÁôÑÔ°å","name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
-messages ({(["poster":"Nsr","time":879716516,"body":"ÎÒÊÇµÚÒ»¸ö...........ya!
-ÎÒ±¾À´ÏëÈëÊéÉú¹«»áµÄ.....sigh
+ob_data (["hit_points":1,"endurance_points":1,"c_short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","id":({"board","bulletin board",}),"c_long":"@@query_c_long","short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","talk_points":1,"last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ç•™è¨€æ¿","force_points":1,"long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","spell_points":1,"c_cap_name":"ç•™è¨€æ¿","name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
+messages ({(["poster":"Nsr","time":879716516,"body":"æˆ‘æ˜¯ç¬¬ä¸€å€‹...........ya!
+æˆ‘æœ¬ä¾†æƒ³å…¥æ›¸ç”Ÿå…¬æœƒçš„.....sigh
                         xixi.
-","title":"to all","id":944,]),(["poster":"Long","time":879816100,"title":"< no title >","body":"ÎÒÊÇÉÙÁÖ·½ÕÉ¡£
-Í³¹ÜÈ«ÉÙÉ®ÖÚ¡£ÁÖ
+","title":"to all","id":944,]),(["poster":"Long","time":879816100,"title":"< no title >","body":"æˆ‘æ˜¯å°‘æ—æ–¹ä¸ˆã€‚
+çµ±ç®¡å…¨å°‘åƒ§çœ¾ã€‚æ—
 ","id":945,]),(["poster":"Long","time":880577269,"body":"go gc read post
-","title":"to ÉÙÁÖµÜ×Ó","id":946,]),(["poster":"Monk","time":883065051,"title":"< no title >","body":"monk,ÄãÊÇÎÒ¼ûµ½¹ıµÄ×î¼áÇ¿µÄÅ®ĞÔ£¬ÕâÊÇÎÒËÍÄãµÄÊ¥µ®ÀñÎï.
-","id":947,]),(["poster":"Monk","time":883065511,"title":"< no title >","body":"monkËµµÀ£ºÎÒ»ØºïÈ­À²£¡
-","id":948,]),(["poster":"Long","time":883270171,"body":" ÇøÓò :      Åµ¶Ù´óÂ½    Ì½ÏÕ¶È : 25.0%  Éı¼¶±ê×¼ :  30%
-¿É¶ñµÄÉÙÁÖ
-","title":"< no title >","id":949,]),(["poster":"Long","time":883673353,"title":"< no title >","body":"monk,À´ÁËtell me,¼±ÊÂ
-","id":950,]),(["poster":"Long","time":884062014,"body":"hehe,±¾À´ÉÏÀ´ÊÇÏë°ïÄãµÄ£¬µ«¿´¼ûÄãÒÑ¾­Éı¼¶ÁË£¬¶øÇÒ¸ÕºÃÄãÓÖ¶ÏÏßÁË£¬
-ËùÒÔ²»´òÈÅÄãÁË£¬
-¹§Ï²ÄãÉı¼¶ÁË,hehe
-²»ÖªµÀÎªÊ²Ã´½ñÌìÕâÃ´ÉÙÈË.
+","title":"to å°‘æ—å¼Ÿå­","id":946,]),(["poster":"Monk","time":883065051,"title":"< no title >","body":"monk,ä½ æ˜¯æˆ‘è¦‹åˆ°éçš„æœ€å …å¼·çš„å¥³æ€§ï¼Œé€™æ˜¯æˆ‘é€ä½ çš„è–èª•ç¦®ç‰©.
+","id":947,]),(["poster":"Monk","time":883065511,"title":"< no title >","body":"monkèªªé“ï¼šæˆ‘å›çŒ´æ‹³å•¦ï¼
+","id":948,]),(["poster":"Long","time":883270171,"body":" å€åŸŸ :      è«¾é “å¤§é™¸    æ¢éšªåº¦ : 25.0%  å‡ç´šæ¨™æº– :  30%
+å¯æƒ¡çš„å°‘æ—
+","title":"< no title >","id":949,]),(["poster":"Long","time":883673353,"title":"< no title >","body":"monk,ä¾†äº†tell me,æ€¥äº‹
+","id":950,]),(["poster":"Long","time":884062014,"body":"hehe,æœ¬ä¾†ä¸Šä¾†æ˜¯æƒ³å¹«ä½ çš„ï¼Œä½†çœ‹è¦‹ä½ å·²ç¶“å‡ç´šäº†ï¼Œè€Œä¸”å‰›å¥½ä½ åˆæ–·ç·šäº†ï¼Œ
+æ‰€ä»¥ä¸æ‰“æ“¾ä½ äº†ï¼Œ
+æ­å–œä½ å‡ç´šäº†,hehe
+ä¸çŸ¥é“ç‚ºä»€éº¼ä»Šå¤©é€™éº¼å°‘äºº.
 bye monk
-                              ºÚÁú
-","title":"to monk","id":951,]),(["poster":"Shaoye","time":884651131,"title":"i come","body":"ÎÒÀ´ÁË,long&monk¶à¶à¹ØÕÕ
+                              é»‘é¾
+","title":"to monk","id":951,]),(["poster":"Shaoye","time":884651131,"title":"i come","body":"æˆ‘ä¾†äº†,long&monkå¤šå¤šé—œç…§
 good luck all
-","id":952,]),(["poster":"Accura","time":887273056,"body":"Ò²¶à¶à¹ØÕÕà¸. ^_^
-","title":"i come too","id":953,]),(["poster":"Abird","time":887487022,"title":"11","body":"ÊÇ²»ÊÇ½ñÌì´òÀÏ´ó
-Ê²Ã´Ê±ºò?¶àÉÙÈË?
-Ô¤ÂñÎÒ
-","id":954,]),(["poster":"Long","time":888965569,"body":"Í»È»´ÓÉÙÁÖËÂ·½Ïò´«À´ÕóÕóÖÓÉù¡«¡«¡«
-Í­ÈËÕó³¤ÀÏ»ÛÔª´óÉùº°µÀ£º ¹§ìû ÉÙÁÖÉ±ÊÖ ºÚÁú Ë³ÀûÍ¨¹ıÊ®°ËÍ­ÈËÕóµÄ¿¼Ñé £¡£¡
+","id":952,]),(["poster":"Accura","time":887273056,"body":"ä¹Ÿå¤šå¤šé—œç…§å–”. ^_^
+","title":"i come too","id":953,]),(["poster":"Abird","time":887487022,"title":"11","body":"æ˜¯ä¸æ˜¯ä»Šå¤©æ‰“è€å¤§
+ä»€éº¼æ™‚å€™?å¤šå°‘äºº?
+é åŸ‹æˆ‘
+","id":954,]),(["poster":"Long","time":888965569,"body":"çªç„¶å¾å°‘æ—å¯ºæ–¹å‘å‚³ä¾†é™£é™£é˜è²ï½ï½ï½
+éŠ…äººé™£é•·è€æ…§å…ƒå¤§è²å–Šé“ï¼š æ­ç¦§ å°‘æ—æ®ºæ‰‹ é»‘é¾ é †åˆ©é€šéåå…«éŠ…äººé™£çš„è€ƒé©— ï¼ï¼
 ","title":"< no title >","id":955,]),(["poster":"Long","time":889649620,"title":"< no title >","body":"i can't see chinese!
 help me to tell all:i am blind!
-","id":956,]),(["poster":"Long","time":891842320,"body":"[ÉÙÁÖºÍÉĞ] Ğş´È ÉñÉ®: ½ñÈÕ ºÚÁú(long) ³ÉÎªÉÙÁÖË×¼ÒµÜ×Ó !!
+","id":956,]),(["poster":"Long","time":891842320,"body":"[å°‘æ—å’Œå°š] ç„æ…ˆ ç¥åƒ§: ä»Šæ—¥ é»‘é¾(long) æˆç‚ºå°‘æ—ä¿—å®¶å¼Ÿå­ !!
 laugh
 ","title":"< no title >","id":957,]),})
 id_ref 957

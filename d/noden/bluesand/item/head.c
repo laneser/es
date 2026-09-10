@@ -6,11 +6,11 @@ inherit OBJECT;
 
 void create()
 {
-   set_name("head", "°ÂË¹ËşµÄÈËÍ·");
-   set_short("°ÂË¹ËşµÄÈËÍ·");
+   set_name("head", "å¥§æ–¯å¡”çš„äººé ­");
+   set_short("å¥§æ–¯å¡”çš„äººé ­");
 	set_long(
-"ÕâÊÇÒ»¿Å°ÂË¹ËşµÄÈËÍ·¡£\n"
+"é€™æ˜¯ä¸€é¡†å¥§æ–¯å¡”çš„äººé ­ã€‚\n"
 	);
-   set("unit", "¿Å");
+   set("unit", "é¡†");
    set("weight", 80);
 }

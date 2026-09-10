@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("iron lock", "´óÌúË÷");
+     set_name("iron lock", "å¤§éµç´¢");
      add("id", ({ "lock"}) );
-     set_short("´óÌúË÷");
+     set_short("å¤§éµç´¢");
      set_long(@C_LONG
-Ò»¼şÉòÖØµÄÌúËø¡£
+ä¸€ä»¶æ²ˆé‡çš„éµé–ã€‚
 C_LONG
      );                             
-     set( "unit", "¼ş" );
+     set( "unit", "ä»¶" );
      set( "no_sale",1);
 }
 void init()
@@ -27,24 +27,24 @@ int do_lock(string arg)
        return 0;    
     env=environment(holder);
     if ( !victim=present("beast",env) ) {
-       tell_object(holder,"¶Ô²»Æğ,Çë²»ÒªÂÒÀ´¡£\n");
+       tell_object(holder,"å°ä¸èµ·,è«‹ä¸è¦äº‚ä¾†ã€‚\n");
        return 1;
     }
     if ( !victim->query("npc") ) {
-       tell_object(holder,"ßã,Ëû¸úÄãÓĞ³ğÂğ?\n");
+       tell_object(holder,"å’©,ä»–è·Ÿä½ æœ‰ä»‡å—?\n");
        return 1;
     }
     if ( !victim->query("faint") ) {
-       tell_object(holder,"ÎØ,ËüÇåĞÑÖø¡«¡«\n");
+       tell_object(holder,"å—š,å®ƒæ¸…é†’è‘—ï½ï½\n");
        return 1;
     }
     if ( victim->query("locked") ) {
-       tell_object(holder,"¿ÉÁ¯µÄËüÒÑ¾­±»ËøÉÏÁË!\n");
+       tell_object(holder,"å¯æ†çš„å®ƒå·²ç¶“è¢«é–ä¸Šäº†!\n");
     }
-    tell_object(holder, sprintf("ÄãÓÃ´óÌúË÷ËøÔÚ%sµÄ¾±²±ÉÏ,±Ç¿×ÀïÓÖ¸ø´©ÉÏÁË½ğÁå!\n",
+    tell_object(holder, sprintf("ä½ ç”¨å¤§éµç´¢é–åœ¨%sçš„é ¸è„–ä¸Š,é¼»å­”è£¡åˆçµ¦ç©¿ä¸Šäº†é‡‘éˆ´!\n",
        victim->query("c_name")) );
     tell_room(env,sprintf(
-       "%sÓÃ´óÌúË÷ËøÔÚ%sµÄ¾±²±ÉÏ,±Ç¿×ÀïÓÖ¸ø´©ÉÏÁË½ğÁå!\n",holder->query("c_name"),victim->query("c_name")),holder);
+       "%sç”¨å¤§éµç´¢é–åœ¨%sçš„é ¸è„–ä¸Š,é¼»å­”è£¡åˆçµ¦ç©¿ä¸Šäº†é‡‘éˆ´!\n",holder->query("c_name"),victim->query("c_name")),holder);
     victim->set("locked",1);
     this_object()->remove();               
     return 1;

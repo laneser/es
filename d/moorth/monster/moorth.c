@@ -12,7 +12,7 @@ void kill_reward(object killer)
 		war_score = (int)query("war_value");
 		killer->add("war_score", war_score );
 		tell_object( killer, 
-			"ÄãµÃµ½ " + war_score + " µãÕ½¹¦\¡£\n");
+			"ä½ å¾—åˆ° " + war_score + " é»žæˆ°åŠŸ\ã€‚\n");
 //	}
 	::kill_reward(killer);
 }

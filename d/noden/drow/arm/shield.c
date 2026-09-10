@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Copper shield", "Í­¶Ü");
+        set_name("Copper shield", "éŠ…ç›¾");
         add( "id", ({ "shield" }) );
-        set_short( "Í­¶Ü" );
+        set_short( "éŠ…ç›¾" );
         set_long(
 @C_LONG
-ÕâÊÇÍ­ÖÆµÄ¶ÜÅÆ£¬¿´À´¼áÊµºñÖØ¡£
+é€™æ˜¯éŠ…è£½çš„ç›¾ç‰Œï¼Œçœ‹ä¾†å …å¯¦åšé‡ã€‚
 C_LONG
         );
-        set( "unit", "Ãæ");
+        set( "unit", "é¢");
         set( "type", "shield" );
         set( "material", "heavy_metal" );
         set( "armor_class", 6 );

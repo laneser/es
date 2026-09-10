@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("通往矮人的村落的小路");
+	ob->set_short("閫氬線鐭汉鐨勬潙钀界殑灏忚矾");
 	ob->set_long( @LONG_DESCRIPTION
-这小路是通往矮人的村落的唯一途径,但是似乎北方有一个很大的军营.
+閫欏皬璺槸閫氬線鐭汉鐨勬潙钀界殑鍞竴閫斿緫,浣嗘槸浼间箮鍖楁柟鏈変竴鍊嬪緢澶х殑杌嶇嚐.
 LONG_DESCRIPTION
 	);
 

@@ -2,14 +2,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "wedding ring", "½á»é½äÖ¸" );
+	set_name( "wedding ring", "çµå©šæˆ’æŒ‡" );
 	add( "id", ({ "ring" }) );
-	set_short( "a wedding ring", "½á»é½äÖ¸" );
+	set_short( "a wedding ring", "çµå©šæˆ’æŒ‡" );
 	set_long(
 	"This is a beautiful diamond wedding ring. And what even more\n"
 	"beautiful is what it means - love.\n",
-	"ÕâÊÇÒ»¸ö²ÓÀÃÃÀÀöµÄ×êÊ¯½äÖ¸£¬²»¹ı¸üÃÀÀöµÄÊÇËüËù´ú±íµÄÒâÒå: ÓÀºã\n"
-	"²»±äµÄ°®Çé¡£\n");
+	"é€™æ˜¯ä¸€å€‹ç‡¦çˆ›ç¾éº—çš„é‘½çŸ³æˆ’æŒ‡ï¼Œä¸éæ›´ç¾éº—çš„æ˜¯å®ƒæ‰€ä»£è¡¨çš„æ„ç¾©: æ°¸æ†\n"
+	"ä¸è®Šçš„æ„›æƒ…ã€‚\n");
 	set("prevent_drop",1);
 	set("no_sale",1);
 	set("material","cloth");

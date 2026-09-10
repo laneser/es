@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("tiger ring","·ü»¢Ö¸Ì×");
+    set_name("tiger ring","ä¼è™æŒ‡å¥—");
     add("id",({"ring"}) );
-    set_short("·ü»¢Ö¸Ì×");
+    set_short("ä¼è™æŒ‡å¥—");
 	set_long(
-		"ÕâÊÇ·ü»¢ÂŞººËùÊ¹ÓÃµÄÖ¸Ì×,¿ÉÒÔÌá¹©Äã²»´íµÄ·À»¤Á¦\n"
+		"é€™æ˜¯ä¼è™ç¾…æ¼¢æ‰€ä½¿ç”¨çš„æŒ‡å¥—,å¯ä»¥æä¾›ä½ ä¸éŒ¯çš„é˜²è­·åŠ›\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 19 );
         set("material","leather");
 	set( "type", "finger" );

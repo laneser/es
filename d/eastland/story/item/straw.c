@@ -5,14 +5,14 @@ inherit OBJECT;
 void create()
 {
         seteuid(getuid());
-        set_name("wonderful straw","ÆæÃîÎü¹Ü");
+        set_name("wonderful straw","å¥‡å¦™å¸ç®¡");
         add( "id" , ({ "straw" }) );
-        set_short( "ÆæÃîÎü¹Ü");
+        set_short( "å¥‡å¦™å¸ç®¡");
         set_long(@C_LONG
-Ò»¸ù³¤³¤µÄµÄÎü¹Ü£¬ËüµÄÒ»Í·ÓĞ¸ö´óÔ²Çò£¬Ô²ÇòÊÇÖĞ¿ÕµÄ£¬»òĞí£¬Äã¿ÉÓÃËüÀ´ÉãÈ¡
-(suck)Ä³Ğ©¶¯ÎïËÀáá¡õÌåÀïµÄÒºÌå¡£
+ä¸€æ ¹é•·é•·çš„çš„å¸ç®¡ï¼Œå®ƒçš„ä¸€é ­æœ‰å€‹å¤§åœ“çƒï¼Œåœ“çƒæ˜¯ä¸­ç©ºçš„ï¼Œæˆ–è¨±ï¼Œä½ å¯ç”¨å®ƒä¾†æ”å–
+(suck)æŸäº›å‹•ç‰©æ­»å¾Œâ–¡é«”è£¡çš„æ¶²é«”ã€‚
 C_LONG  );      
-        set("unit","¸ù");
+        set("unit","æ ¹");
         set("weight",10);
         set("no_sale",1);
         set("value", ({500, "silver"}) );
@@ -29,13 +29,13 @@ int do_suck(string arg)
     player=this_player();
     env=environment(player);
     if (!target=present(arg,env)) 
-       return notify_fail("ÕâÀïÃ»ÓĞÄÇÑù¶«Î÷¡£\n");
+       return notify_fail("é€™è£¡æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n");
     cname=target->query("c_name");
     if( target->query("npc")!=SMOB"spider1" )
-       return notify_fail("Õâ¸ö¶«Î÷Ã»ÓĞÈÎºÎÒºÌå¿É¹©ÄãÉãÈ¡£¡\n");
+       return notify_fail("é€™å€‹æ±è¥¿æ²’æœ‰ä»»ä½•æ¶²é«”å¯ä¾›ä½ æ”å–ï¼\n");
     liquid=new(SITEM"liquid");
     liquid->move(env);   
-    write(sprintf("ÄãÁéÇÉµØ´Ó%sÉÏÈ¡µÃÒ»Ğ©ÒºÌå£¡È´²»Ğ¡ĞÄÅª¶ÏÁËÎü¹Ü£¬°ÑÒºÌåÈ÷ÔÚµØÉÏ£¡\n",cname));
+    write(sprintf("ä½ éˆå·§åœ°å¾%sä¸Šå–å¾—ä¸€äº›æ¶²é«”ï¼å»ä¸å°å¿ƒå¼„æ–·äº†å¸ç®¡ï¼ŒæŠŠæ¶²é«”ç‘åœ¨åœ°ä¸Šï¼\n",cname));
     target->remove();
     this_object()->remove();
     return 1;

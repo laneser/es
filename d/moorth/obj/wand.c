@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "icewind wand", "±ùá°ÕÈ" );
+	set_name( "icewind wand", "å†°åµæ–" );
 	add( "id", ({ "wand" }) );
-	set_short( "±ùá°ÕÈ" );
+	set_short( "å†°åµæ–" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÀ¶É«µÄÄ§ÕÈ£¬ÉÏÃæ»¹ÓĞĞí¶àËª×´µÄÄı½áÎï¸½ÖøÔÚÕÈÍ·¡£\n"
+		"é€™æ˜¯ä¸€æŠŠè—è‰²çš„é­”æ–ï¼Œä¸Šé¢é‚„æœ‰è¨±å¤šéœœç‹€çš„å‡çµç‰©é™„è‘—åœ¨æ–é ­ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "wand" );
 	set( "weapon_class", 30 );
 	set( "min_damage", 8 );
@@ -23,6 +23,6 @@ void create()
 	set( "max_charge", 10 );
 	set( "special_damage_type", "cold" );
 	set( "special_damage", 50 );
-	set( "special_c_msg", "´ÓÕÈÍ··¢³öÒ»¹ÉÀää£µÄº®·ç£¬Äã¿´µ½ÖÜÎ§µÄ¿ÕÆø±»´ø³öÒ»ÍÅ±ùÎí£¡" );
+	set( "special_c_msg", "å¾æ–é ­ç™¼å‡ºä¸€è‚¡å†·æ´Œçš„å¯’é¢¨ï¼Œä½ çœ‹åˆ°å‘¨åœçš„ç©ºæ°£è¢«å¸¶å‡ºä¸€åœ˜å†°éœ§ï¼" );
 }
 

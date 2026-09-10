@@ -33,12 +33,12 @@ void create()
 // when the bank creates a card for the player it also sets new descriptions.
 // See the assign function.
 	seteuid(getuid());
-	set_name( "bank card", "Ìá¿î¿¨" );
-//	set_short( "Ò»ÕÅ¿Õ°×µÄÌá¿î¿¨" );
+	set_name( "bank card", "ææ¬¾å¡" );
+//	set_short( "ä¸€å¼µç©ºç™½çš„ææ¬¾å¡" );
 	set("short","@@query_short");
 	set("long","@@query_long");
 //	set_long(
-//		"ÄãÖ»Òª³ÖÓĞÕâÕÅ¿¨Æ¬£¬¾Í¿ÉÒÔÈÃÄãÔÚÒøĞĞ´æÇ®¡¢Ìá¿î¡£\n"
+//		"ä½ åªè¦æŒæœ‰é€™å¼µå¡ç‰‡ï¼Œå°±å¯ä»¥è®“ä½ åœ¨éŠ€è¡Œå­˜éŒ¢ã€ææ¬¾ã€‚\n"
 //	);
 	add ("id", ({ "card" }) ) ;
 	set ("weight", 5);
@@ -84,12 +84,12 @@ void init()
 void assign(object owner)
 {
 //	seteuid(geteuid(owner));
-//	set_short( (string)owner->query("c_name")+"µÄÌá¿î¿¨");
+//	set_short( (string)owner->query("c_name")+"çš„ææ¬¾å¡");
 /*
 	set_long(
-		"ÕâÊÇÒ»ÕÅÊôì¶"+(string)owner->query("c_name")
-		+"µÄÌá¿î¿¨£¬Äã¿ÉÒÔÓÃËüÔÚÔ¶·çÕòµÄÒøĞĞ´æ¡¢Ìá¿î¡£\n"+
-		"ÓÃ balance Ö¸Áî¿ÉÒÔ²é¿´ÄãÄ¿Ç°µÄÕÊ»§½ğ¶î¡£\n") ;
+		"é€™æ˜¯ä¸€å¼µå±¬æ–¼"+(string)owner->query("c_name")
+		+"çš„ææ¬¾å¡ï¼Œä½ å¯ä»¥ç”¨å®ƒåœ¨é é¢¨é®çš„éŠ€è¡Œå­˜ã€ææ¬¾ã€‚\n"+
+		"ç”¨ balance æŒ‡ä»¤å¯ä»¥æŸ¥çœ‹ä½ ç›®å‰çš„å¸³æˆ¶é‡‘é¡ã€‚\n") ;
 */
 	move(owner);
 	set ("owner", owner->query("name"));
@@ -97,18 +97,18 @@ void assign(object owner)
 string query_short()
 {
 	if ( !environment() )
-		return "¿Õ°×Ìá¿î¿¨" ;
+		return "ç©ºç™½ææ¬¾å¡" ;
 	else
-		return (environment()->query("c_name")+"µÄÌá¿î¿¨") ;
+		return (environment()->query("c_name")+"çš„ææ¬¾å¡") ;
 }
 string query_long()
 {
 		if ( !environment() )
-			return "ÕâÊÇÒ»ÕÅ¿Õ°×µÄÌá¿î¿¨£¬Ã»Ê²÷áÓÃ ...\n";
+			return "é€™æ˜¯ä¸€å¼µç©ºç™½çš„ææ¬¾å¡ï¼Œæ²’ä»€éº¼ç”¨ ...\n";
 		else
 		return sprintf(
-		"ÕâÊÇÒ»ÕÅÊôì¶%sµÄÌá¿î¿¨£¬Äã¿ÉÒÔÓÃËüÔÚ¸÷µØµÄÒøĞĞ´æ¡¢Ìá¿î¡£\n"
-		"ÓÃ balance Ö¸Áî¿ÉÒÔ²é¿´ÄãÄ¿Ç°µÄÕÊ»§½ğ¶î¡£\n",
+		"é€™æ˜¯ä¸€å¼µå±¬æ–¼%sçš„ææ¬¾å¡ï¼Œä½ å¯ä»¥ç”¨å®ƒåœ¨å„åœ°çš„éŠ€è¡Œå­˜ã€ææ¬¾ã€‚\n"
+		"ç”¨ balance æŒ‡ä»¤å¯ä»¥æŸ¥çœ‹ä½ ç›®å‰çš„å¸³æˆ¶é‡‘é¡ã€‚\n",
 		environment()->query("c_name")) ;
 }
 // Only the player has the right to move his bank card, ie drop it and pick
@@ -118,7 +118,7 @@ int move(mixed dest)
 {
 	string str;
 
-	sscanf (query("short"), "%sµÄÌá¿î¿¨",str) ;
+	sscanf (query("short"), "%sçš„ææ¬¾å¡",str) ;
 	if ((string)this_player()->query("c_name")==str) {
 		return ::move(dest) ;
 	} else {
@@ -164,19 +164,19 @@ int balance() {
 	flag = 0;
 	wealth = find_player(query("owner"))->query("bank_balance") ;
 	if (!wealth || wealth==([])) {
-		write ("ÄãÏÖÔÚÒøĞĞÀï°ëÃ«Ç®Ò²Ã»ÓĞ¡£\n");
+		write ("ä½ ç¾åœ¨éŠ€è¡Œè£¡åŠæ¯›éŒ¢ä¹Ÿæ²’æœ‰ã€‚\n");
 		return 1 ;
 	}
 	types = keys(wealth) ;
 	for (i=0;i<sizeof(types);i++) {
 	    if (wealth[types[i]]>0) {
 		if (flag==0) 
-		    write("ÄãÄ¿Ç°ÔÚÒøĞĞÀïµÄ´æ¿îÓĞ:\n");
+		    write("ä½ ç›®å‰åœ¨éŠ€è¡Œè£¡çš„å­˜æ¬¾æœ‰:\n");
 		write( sprintf("   %-12s : %d\n", to_chinese(types[i]+" coin"), wealth[types[i]]));
 		flag=1 ;
 	    }
 	}
 	if (flag==0)
-		write ("ÄãÏÖÔÚÒøĞĞÀï°ëÃ«Ç®Ò²Ã»ÓĞ¡£\n");
+		write ("ä½ ç¾åœ¨éŠ€è¡Œè£¡åŠæ¯›éŒ¢ä¹Ÿæ²’æœ‰ã€‚\n");
 	return 1 ;
 }

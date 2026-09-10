@@ -3,14 +3,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "steel sword", "¾«¸Ö³¤½£" );
+        set_name( "steel sword", "ç²¾é‹¼é•·åŠ" );
         add( "id",({ "sword" }) );
-        set_short( "steel sword", "¾«¸Ö³¤½£" );
+        set_short( "steel sword", "ç²¾é‹¼é•·åŠ" );
         set_long(@AAA
-ÕâÊÇÒÔ°Ñ·æÀûµÄ³¤½££¬ÊÇÓÃÌØÊâ¸Ö²Ä×ö³ÉµÄ£¬ÊÇÎäÊ¿ÍÅ±ß¾³ÊØ±¸¶ÓµÄÖÆÊ½ÎäÆ÷
+é€™æ˜¯ä»¥æŠŠé‹’åˆ©çš„é•·åŠï¼Œæ˜¯ç”¨ç‰¹æ®Šé‹¼æåšæˆçš„ï¼Œæ˜¯æ­¦å£«åœ˜é‚Šå¢ƒå®ˆå‚™éšŠçš„åˆ¶å¼æ­¦å™¨
 AAA
 );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 30 );
 //        set( "bleeding", 5 );
         set( "type", "longblade" );

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("golden battleaxe", "»Æ½ğÕ½¸«");
+        set_name("golden battleaxe", "é»ƒé‡‘æˆ°æ–§");
         add ("id",({ "axe", "battleaxe" }) );
-        set_short( "»Æ½ğÕ½¸«" );
+        set_short( "é»ƒé‡‘æˆ°æ–§" );
         set_long(
-            "ÕâÊÇÒ»°ÑÉÁÁÁµÄ»Æ½ğÕ½¸«£¬Ëü¾Ş´ó¸«ÈĞÏÔÊ¾³öÕâÊÇ°Ñº±¼ûµÄÇ¿Á¦ÎäÆ÷¡£\n"
+            "é€™æ˜¯ä¸€æŠŠé–ƒäº®çš„é»ƒé‡‘æˆ°æ–§ï¼Œå®ƒå·¨å¤§æ–§åˆƒé¡¯ç¤ºå‡ºé€™æ˜¯æŠŠç½•è¦‹çš„å¼·åŠ›æ­¦å™¨ã€‚\n"
         );
         set("nosecond", 1);
-        set("unit", "°Ñ");
+        set("unit", "æŠŠ");
         set( "weapon_class", 33 );
         set( "type", "axe" );
         set( "min_damage", 20 );

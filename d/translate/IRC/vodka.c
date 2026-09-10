@@ -9,11 +9,11 @@ void create()
 {
     ::create();
     seteuid(getuid());
-    set_name("vodka","·üÌØ¼Ó");
-    set_short("vodka","·üÌØ¼Ó");
+    set_name("vodka","ä¼ç‰¹åŠ ");
+    set_short("vodka","ä¼ç‰¹åŠ ");
     set_long("A small flat bottle vodka. You see the clear liquid inside.\n",
-    "ÕâÊÇÒ»Ğ¡Æ¿·üÌØ¼Ó, Äã¿ÉÒÔ¿´¼ûÎŞÉ«µÄÒºÌåÔÚ±âÆ¿ÖĞÁ÷¶¯.\n");
-    set("unit","Æ¿");
+    "é€™æ˜¯ä¸€å°ç“¶ä¼ç‰¹åŠ , ä½ å¯ä»¥çœ‹è¦‹ç„¡è‰²çš„æ¶²é«”åœ¨æ‰ç“¶ä¸­æµå‹•.\n");
+    set("unit","ç“¶");
     set("e_unit","bottle");
  
     set("value",({75,"silver"}));

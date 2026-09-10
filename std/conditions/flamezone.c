@@ -29,10 +29,10 @@ void effect(object player)
 //	if( !cond_data[2]%4 ) cond_data[1]++;
 	player->receive_special_damage( "fire",cond_data[1],0 );
 	tell_object(player, 
-	    set_color("ËÄÖÜµÄÁÒÑæÌÚ¿Õ£¬Äã¾õµÃ¼¡·ô³ãÈÈ¡¢º¹³öÈç½¬...\n", "HIB", player)
+	    set_color("å››å‘¨çš„çƒˆç„°é¨°ç©ºï¼Œä½ è¦ºå¾—è‚Œè†šç†¾ç†±ã€æ±—å‡ºå¦‚æ¼¿...\n", "HIB", player)
 		);
 	tell_room( environment(player), 
-		player->query("c_name") + "ÈÈµÃ»Óº¹ÈçÓê....\n",	player );
+		player->query("c_name") + "ç†±å¾—æ®æ±—å¦‚é›¨....\n",	player );
 	player->set("conditions/" + EFFECT_NAME, cond_data);
 }
 
@@ -40,7 +40,7 @@ varargs void remove_effect(object player, int silent)
 {
 	if( !silent )
 		tell_object(player, 
-			set_color("´ÓÁÒÑæÖ®ÖÐÌÓ¿ª, ÄãÉîÉîµÄÎüÁËÒ»¿ÚÇåÁ¹µÄ¿ÕÆø, ¾õµÃÊæ·þ¶àÁË...\n","HIC",player)
+			set_color("å¾žçƒˆç„°ä¹‹ä¸­é€ƒé–‹, ä½ æ·±æ·±çš„å¸äº†ä¸€å£æ¸…æ¶¼çš„ç©ºæ°£, è¦ºå¾—èˆ’æœå¤šäº†...\n","HIC",player)
 			);
 	player->delete("conditions/" + EFFECT_NAME );
 }
@@ -54,13 +54,13 @@ varargs void apply_effect(object player, int frequency, int damage)
 	cond_data = player->query("conditions/" + EFFECT_NAME);
 	if( !cond_data ) {
 		tell_object( player, 
-			"Äã½øÈëÒ»¸öÆæÌØµÄµØ·½£¬ËÄÖÜ¶¼ÊÇÐÜÐÜµÄÁÒÑæ...\n"	);
+			"ä½ é€²å…¥ä¸€å€‹å¥‡ç‰¹çš„åœ°æ–¹ï¼Œå››å‘¨éƒ½æ˜¯ç†Šç†Šçš„çƒˆç„°...\n"	);
 		player->set("conditions/" + EFFECT_NAME, ({ frequency, damage}) );
 	} else {
 		if( frequency < cond_data[0] ) {
 			cond_data[0] = frequency;
 			tell_object( player, 
-				"È¼ÉÕµÄÁÒÑæËÆºõÔ½À´Ô½³ãÈÈ£¬Äã¸Ðµ½ËÀÍö½¥½¥±Æ½ü ...\n" );
+				"ç‡ƒç‡’çš„çƒˆç„°ä¼¼ä¹Žè¶Šä¾†è¶Šç†¾ç†±ï¼Œä½ æ„Ÿåˆ°æ­»äº¡æ¼¸æ¼¸é€¼è¿‘ ...\n" );
 		}
 		if( damage > cond_data[1] ) cond_data[1] = damage;
 		player->set("conditions/" + EFFECT_NAME, cond_data);

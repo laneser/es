@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wind ring","ÊøÔÆ½äÖ¸");
+        set_name("wind ring","æŸé›²æˆ’æŒ‡");
         add( "id", ({ "ring" }) );
-        set_short( "ÊøÔÆ½äÖ¸");
+        set_short( "æŸé›²æˆ’æŒ‡");
         set_long(@C_LONG
-ÊøÔÆ½äÖ¸ÊÇÕğ°Ë·½ºÍËûÆŞ×ÓµÄ¶¨ÇéÖ®Îï,¾İËµ,Õğ°Ë·½ÔÚÕâ½äÖ¸¸½ÉÏÒ»Ğ©ÄÚ¾¢¡£
+æŸé›²æˆ’æŒ‡æ˜¯éœ‡å…«æ–¹å’Œä»–å¦»å­çš„å®šæƒ…ä¹‹ç‰©,æ“šèªª,éœ‡å…«æ–¹åœ¨é€™æˆ’æŒ‡é™„ä¸Šä¸€äº›å…§å‹ã€‚
 C_LONG
         );
-        set("unit","Ö»");
+        set("unit","åª");
         set( "type", "finger" );
         set("material","element");
         set( "armor_class", 0 );

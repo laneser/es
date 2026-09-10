@@ -1,77 +1,77 @@
 
- µµ°¸Ãû         ÎïÆ·Ãû           ac db  wgt  val  material  special
+ æª”æ¡ˆå         ç‰©å“å           ac db  wgt  val  material  special
                                                            
 amulet_g01.c small gold amulet    0  2   5    50  lig_metal  no
-                »Æ½ğËøÆ¬
+                é»ƒé‡‘é–ç‰‡
 amulet_g02.c    orb amulet        0 10   5  1000   element   no 
-                Ë®¾§»¤Éí·û                                   
+                æ°´æ™¶è­·èº«ç¬¦                                   
 
 amulet_h01.c  shinning amulet     0  7  15  1220    cloth    no
-              ÉÁÉÁ·¢¹âµÄ»¤Éí·û  
+              é–ƒé–ƒç™¼å…‰çš„è­·èº«ç¬¦  
 amulet_h02.c   bronze amulet      0  7   5   600  lig_metal  no (no sale)
-                ÇàÍ­»¤Éí·û
+                é’éŠ…è­·èº«ç¬¦
 
 
 boots01.c      mithril boots      5  2 100  1450  lig_metal  no 
-                Ã×ËÕÀïÕ½Ñ¥
+                ç±³è˜‡é‡Œæˆ°é´
 boots02.c     obsidian boots      6  3 130   700   element   no 
-                ºÚê×Ê¯³¤Ñ¥
+                é»‘æ›œçŸ³é•·é´
 boots03.c     platinum boots     10  4 120  2500  hav_metal  no
-                °×½ğÑ¥
+                ç™½é‡‘é´
 
 cloak_d01.c   dwarven cloak       7  0  70  1550  cloth      no
-               °«ÈËÅû·ç
+               çŸ®äººæŠ«é¢¨
 cloak_h01.c   halfling cloak      5  3  70  1550  cloht      no
-              °ëÉíÈËÄ§·¨Ê¦Åû·ç
+              åŠèº«äººé­”æ³•å¸«æŠ«é¢¨
 cloak_g01.c    elder cloak        8  4  90  2050  cloth    fire cold 10
-                ³¤ÀÏ¶·Åî                                   evil 20
+                é•·è€æ–—ç¯·                                   evil 20
 
 gloves01.c     lead gloves        2  2  60   560  lig_matel  no
-                °×Ç¦ÊÖÌ×
+                ç™½é‰›æ‰‹å¥—
 gloves02.c    leather gloves      5  2  60   700  leather    no
-               °×É«Æ¤¸ïÊÖÌ×
+               ç™½è‰²çš®é©æ‰‹å¥—
 gloves03.c    obsidian gloves     3  3  65  1500  element    no
-               ºÚê×Ê¯ÊÖÌ×
+               é»‘æ›œçŸ³æ‰‹å¥—
 
- µµ°¸Ãû         ÎïÆ·Ãû           ac db  wgt  val  material  special
+ æª”æ¡ˆå         ç‰©å“å           ac db  wgt  val  material  special
 
 helmet01.c    halfling helmet     5  0  70  1350  lig_matel  no
-               °ëÉíÈËÍ·¿ø
+               åŠèº«äººé ­ç›”
 helmet02.c     steel helmet       6  2  75  1650  hav_matel  no
-                ¸ß¼¶¸Ö¿ø
+                é«˜ç´šé‹¼ç›”
 helmet03.c    head tangeler       7  3  30    20  cloth      no
-                ²øÍ·½í
+                çºé ­å·¾
 
 leggings01.c  brass leggings      6  0  110  700  lig_matel  no
-               »ÆÍ­ëÖ¼× 
+               é»ƒéŠ…è„›ç”² 
 leggings02.c  bronze leggings     7  0  100 1800  lig_matel  no  
-               ÇàÍ­ëÖ¼×
+               é’éŠ…è„›ç”²
 
 mithril       mithril saddle     10  2  120  950  lig_matel  no
-  _saddle.c    Ã×ËÕÀïÂí°°
+  _saddle.c    ç±³è˜‡é‡Œé¦¬é
 
 obsidian     obsidian platemail  35  5  330 2700   element    no
-   _plate.c    ºÚê×Ê¯îø¼×
+   _plate.c    é»‘æ›œçŸ³é§ç”²
 
 ring01.c    large platinum ring   0  4   25  780  lig_matel  no
-               °×½ğ½äÖ¸ 
+               ç™½é‡‘æˆ’æŒ‡ 
 ring02.c    shining green ring    0  6   15  770  element    no
-              ÉÁÁÁÂÌÉ«½äÖ¸
+              é–ƒäº®ç¶ è‰²æˆ’æŒ‡
 ring03.c    crystal orb ring      0 10   15 1600  element    no sale
-              µØ¾«Ë®¾§½äÖ¸                                   (uniqual)
+              åœ°ç²¾æ°´æ™¶æˆ’æŒ‡                                   (uniqual)
 
 ringmail01.c  halfling ringmail  25  2  250 2000  lig_matel  no
-                °ëÉíÈË»·¼×
+                åŠèº«äººç’°ç”²
 ringmail02.c  bronze ringmail    26  0  300 2100  lig_matel  no
-                ÇàÍ­»·¼×
+                é’éŠ…ç’°ç”²
 ringmail03.c  lead ringmail      28  3  270 1500  lig_matel  no
-                °×Ç¦»·¼× 
+                ç™½é‰›ç’°ç”² 
 
 robe01.c       holy robe         35  5  170 2200   cloth     evil 20
-                 Ê¥ÅÛ
+                 è–è¢
 robe02.c       holy robe         40  7  170 2700   cloth     evil 20
-                 Ê¥ÅÛ                                          (uniqual)
+                 è–è¢                                          (uniqual)
 robe03.c       magic robe        27  2  170 1200   cloth    
-                 ·¨ÅÛ
+                 æ³•è¢
 
 

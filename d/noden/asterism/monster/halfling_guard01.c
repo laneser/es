@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "halfling guard", "°ëÉíÈËÊØÎÀ" );
+	set_name( "halfling guard", "åŠèº«äººå®ˆè¡›" );
 	add("id",({"guard","halfling"}) );
-   set_short( "°ëÉíÈËÊØÎÀ" );
+   set_short( "åŠèº«äººå®ˆè¡›" );
 	set_long(
-		"Äã¿´µ½´øÖøĞ¦Á³µÄ°ëÉíÈËÊØÎÀ,ËûÕı¿´ÖøÄãºÍÏëÒªÓëÄãÏĞÁÄ , µ«ÓÉì¶ËûµÄÖ°ÔğËùÔÚ.\n"
-		"Òò´ËËûÖ»ºÃ¹Ô¹ÔµØÕ¾ÖøÊØÎÀÕâÀï\n"
+		"ä½ çœ‹åˆ°å¸¶è‘—ç¬‘è‡‰çš„åŠèº«äººå®ˆè¡›,ä»–æ­£çœ‹è‘—ä½ å’Œæƒ³è¦èˆ‡ä½ é–’èŠ , ä½†ç”±æ–¼ä»–çš„è·è²¬æ‰€åœ¨.\n"
+		"å› æ­¤ä»–åªå¥½ä¹–ä¹–åœ°ç«™è‘—å®ˆè¡›é€™è£¡\n"
 	);
 	set( "gender", "male" );
 	set( "race", "halfling" );
@@ -46,7 +46,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-        "°ëÉíÈËÊØÎÀ´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i] );
+        "åŠèº«äººå®ˆè¡›å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i] );
       guard[i]->kill_ob(victim);
     }
      return 0;

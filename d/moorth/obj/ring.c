@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "crystal ring", "水晶戒指" );
+	set_name( "crystal ring", "姘存櫠鎴掓寚" );
 	add( "id", ({ "ring" }) );
-	set_short( "a crystal ring", "水晶戒指" );
+	set_short( "a crystal ring", "姘存櫠鎴掓寚" );
 	set_long(
 		"You see a crystal ring. It is glowing in a soft aura.\n",
-		"这个水晶戒指上面镶著一粒鲜红色的水晶，水晶周围似乎围绕著一\n"
-		"圈水气，被水晶内部发出的微光照得朦朦胧胧。\n"
+		"閫欏�嬫按鏅舵垝鎸囦笂闈㈤懖钁椾竴绮掗绱呰壊鐨勬按鏅讹紝姘存櫠鍛ㄥ湇浼间箮鍦嶇篂钁椾竴\n"
+		"鍦堟按姘ｏ紝琚按鏅跺収閮ㄧ櫦鍑虹殑寰厜鐓у緱鏈︽湨鏈ф湩銆俓n"
 	);
 	set( "type", "finger" );
 	set( "material", "element" );

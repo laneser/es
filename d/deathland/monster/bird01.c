@@ -9,13 +9,13 @@ void create()
     
 	::create();
 	set_level(16);
-	set_name( "death falcon", "ËÀÍöÁÔÓ¥" );
+	set_name( "death falcon", "æ­»äº¡çµé·¹" );
 	add("id",({"falcon"}));
-	set_short( "a death falcon", "ËÀÍöÁÔÓ¥" );
+	set_short( "a death falcon", "æ­»äº¡çµé·¹" );
 	set_long(
 		"a death falcon.\n",
-		"ËæÊ±¶¼»áÆËÏÂÀ´¹¥»÷ÈËµÄËÀÍöÁÔÓ¥. ËüµÄ·ÉÐÐ¸ß¶ÈºÜµÍ, ¶øÇÒÄãÄÜ\n"
-		"Çå³þµÄ¿´¼ûËüÕýÓÃËüÈñÀûµÄÑÛÉñ¶¢ÖøÄã.\n"
+		"éš¨æ™‚éƒ½æœƒæ’²ä¸‹ä¾†æ”»æ“Šäººçš„æ­»äº¡çµé·¹. å®ƒçš„é£›è¡Œé«˜åº¦å¾ˆä½Ž, è€Œä¸”ä½ èƒ½\n"
+		"æ¸…æ¥šçš„çœ‹è¦‹å®ƒæ­£ç”¨å®ƒéŠ³åˆ©çš„çœ¼ç¥žç›¯è‘—ä½ .\n"
 	);
 	set( "alignment",-100 );
 	set_perm_stat( "dex", 25 );
@@ -31,8 +31,8 @@ void create()
     set ("moving",1);
     set ("speed",50);
     set( "tactic_func", "my_tactic");
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå","³á°ò" }) );
-	set_c_verbs( ({ "%sÓÃËüµÄÀû×¦Ïò%s×½È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”","ç¿…è†€" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„åˆ©çˆªå‘%sæ‰åŽ»" }) );
     
 }
 
@@ -43,10 +43,10 @@ int my_tactic()
 	if( random(20)>3 || !(victim= query_attacker()) ) return 0;
     else {
       tell_object(victim,
-          "ÕâÁÔÓ¥ÓÃËüµÄÀû×ìÒ§Äã.\n"
+          "é€™çµé·¹ç”¨å®ƒçš„åˆ©å˜´å’¬ä½ .\n"
           );
       tell_room(environment(this_object()),
-          "ÕâÁÔÓ¥ÓÃËüµÄÀû×ìÒ§"+victim->query("c_name")+".\n"
+          "é€™çµé·¹ç”¨å®ƒçš„åˆ©å˜´å’¬"+victim->query("c_name")+".\n"
           ,({victim,this_object()}) );
       victim->receive_damage( 10 + random(20) );
       report(this_object(),victim);

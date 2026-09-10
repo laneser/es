@@ -1,9 +1,9 @@
 #include <mudlib.h>
 
-#define c_name ({"ÆÆÓêÉ¡","ÀÃÄ¾Í·","¾ÉÒÂ·ş","ÆÆĞ¬","¹·´ó±ã","ËÀÈË¹ÇÍ·","ÆÑÒ¶"})
+#define c_name ({"ç ´é›¨å‚˜","çˆ›æœ¨é ­","èˆŠè¡£æœ","ç ´é‹","ç‹—å¤§ä¾¿","æ­»äººéª¨é ­","è’²è‘‰"})
 #define ID ({"umbrella","trunk","cloth","shoes","shit","bone","leave"})
 #define name ({"broken umbrella","rotten trunk","old clothes","poor shoes","dog's shit","bone of human","huge leave"})
-#define UNITS ({ "°Ñ","¸ù","¼ş","Ë«","ãû","¸ù","Æ¬" })
+#define UNITS ({ "æŠŠ","æ ¹","ä»¶","é›™","æ²±","æ ¹","ç‰‡" })
 #define TYPES ({ "head","shield","body","feet","feet","misc","cloak" })
 #define ARMORS ({ 1,1,4,1,1,0,1 })
 #define DEFENSE ({ 1,2,2,1,2,2,1 })
@@ -18,7 +18,7 @@ void create()
 	add( "id" , ({ ID[i] }) );
 	set_short(c_name[i]);
 	set_long(
-	"ÕâÊÇÒ»"+UNITS[i]+c_name[i]+"£¬²»ÖªµÀÄÜÄÃÀ´¸ÉÂï??\n"
+	"é€™æ˜¯ä¸€"+UNITS[i]+c_name[i]+"ï¼Œä¸çŸ¥é“èƒ½æ‹¿ä¾†å¹¹å˜›??\n"
 	);
    	set( "material","adventurer");
    	set("type",TYPES[i]);

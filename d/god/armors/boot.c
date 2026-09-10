@@ -2,7 +2,7 @@
 
 inherit ARMOR;
 
-string C_NAME="ħ��սѥ";
+string C_NAME="魔神戰靴";
 
 void create()
 {
@@ -10,9 +10,9 @@ void create()
         add( "id", ({ "boots" }) );
         set_short( C_NAME );
         set_long(
-                "����֮Ь��\n"
+                "無名之鞋。\n"
         );
-        set( "unit", "˫" );
+        set( "unit", "雙" );
         set( "type", "feet" );
         set( "material", "knight");
         set( "extra_skills", ([ "defend":20 ]) ); 

@@ -10,11 +10,11 @@ void init()
 
 void create(){
 
-	set_name("pastil","ÏßÏã");
-	set_short("ÆæÒìµÄÏßÏã");
-	set_long("ÕâÊÇÒ»ÖÖÆæÒìµÄÏßÏã\n");
+	set_name("pastil","ç·šé¦™");
+	set_short("å¥‡ç•°çš„ç·šé¦™");
+	set_long("é€™æ˜¯ä¸€ç¨®å¥‡ç•°çš„ç·šé¦™\n");
     set("value" , ({10,"silver"}) );
-	set("unit","Êø");
+	set("unit","æŸ");
 }
 
 int light_pastil(string arg)
@@ -23,15 +23,15 @@ int light_pastil(string arg)
 	old_str = (int)this_player()->query_perm_stat("str");
 
 	set("prevent_drop",1);
-//	add("c_cap_name","£¨µãÈ¼ÖĞ£©");
+//	add("c_cap_name","ï¼ˆé»ç‡ƒä¸­ï¼‰");
 //	add("cap_name","(light)");
 
 	if( arg != "pastil" ) return 0;
 	write( 
-		"ÄãµãÆğÁËÕâÊøÏßÏã£¬Ò»Õóµ­À¶É«µÄÑÌÎíÈ½È½ÉıÆğ£¬Î§ÈÆÖøÄãµÄÉíÅÔ£¬Äã¸Ğµ½ÁËÒ»ÖÖÁ¦Á¿¡£\n"
+		"ä½ é»èµ·äº†é€™æŸç·šé¦™ï¼Œä¸€é™£æ·¡è—è‰²çš„ç…™éœ§å†‰å†‰å‡èµ·ï¼Œåœç¹è‘—ä½ çš„èº«æ—ï¼Œä½ æ„Ÿåˆ°äº†ä¸€ç¨®åŠ›é‡ã€‚\n"
 	);
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"µãÆğÁËÒ»ÊøÏßÏã£¬Ò»Õóµ­À¶É«µÄÑÌÎ§ÈÆÔÚËûµÄÉíÅÔ¡£¡£\n",
+		this_player()->query("c_name")+"é»èµ·äº†ä¸€æŸç·šé¦™ï¼Œä¸€é™£æ·¡è—è‰²çš„ç…™åœç¹åœ¨ä»–çš„èº«æ—ã€‚ã€‚\n",
 		this_player() );
 
 	this_player()->set_perm_stat("str",old_str+2);
@@ -44,7 +44,7 @@ void restore(object player){
 	int new_str;
 	new_str = (int)player->query_perm_stat("str");
 	tell_object(player,
-		"Î§ÈÆÔÚÄãÉíÅÔµÄÑÌÎíÂıÂıµØÏûÊ§ÁË...\n");
+		"åœç¹åœ¨ä½ èº«æ—çš„ç…™éœ§æ…¢æ…¢åœ°æ¶ˆå¤±äº†...\n");
 	player->set_perm_stat("str",new_str-2);
 	remove();
 }
@@ -53,7 +53,7 @@ int want_quit(){
 	int new_str;
 	new_str = (int)this_player()->query_perm_stat("str");
 	tell_object(this_player(), 
-	        "Î§ÈÆÔÚÄãÉíÅÔµÄÑÌÎíÂıÂıµØÏûÊ§ÁË...\n");
+	        "åœç¹åœ¨ä½ èº«æ—çš„ç…™éœ§æ…¢æ…¢åœ°æ¶ˆå¤±äº†...\n");
 	this_player()->set_perm_stat("str",new_str-2);
 	remove();
 }

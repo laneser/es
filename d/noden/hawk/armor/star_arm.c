@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "Star Armband","Á÷ĞÇ±Û»·" );
+	set_name( "Star Armband","æµæ˜Ÿè‡‚ç’°" );
         add( "id", ({ "armband" }) );
-        set_short( "Á÷ĞÇ±Û»·" );
+        set_short( "æµæ˜Ÿè‡‚ç’°" );
         set_long(
-                "Ò»¶ÔÓÉÇàÓñÖÆ³ÉµÄ±Û»·£¬ÉÏÃæ¿ÌÖøµ­µ­µÄÁ÷ĞÇÓê¡£\n"
+                "ä¸€å°ç”±é’ç‰è£½æˆçš„è‡‚ç’°ï¼Œä¸Šé¢åˆ»è‘—æ·¡æ·¡çš„æµæ˜Ÿé›¨ã€‚\n"
         );
-        set( "unit", "¶Ô" );
+        set( "unit", "å°" );
 	set("material","element");
         set( "type", "arms" );
         set( "armor_class", 4 );

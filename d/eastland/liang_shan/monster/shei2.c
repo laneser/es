@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "Zhe Zhen", "解珍" );
+	set_name( "Zhe Zhen", "瑙ｇ弽" );
 	add("id",({"zhe","zhen"}));
-	set_short( "解珍" );
+	set_short( "瑙ｇ弽" );
 	set_long(
-		"他的外号是两头蛇，登州人，解宝是他弟弟，原是当地猎户，能使钢叉，为梁\n"
-		"山泊步军头领．如果你不想死的话，最好别去招惹他。\n"
+		"浠栫殑澶栬櫉鏄叐闋泧锛岀櫥宸炰汉锛岃В瀵舵槸浠栧紵寮燂紝鍘熸槸鐣跺湴鐛垫埗锛岃兘浣块嫾鍙夛紝鐐烘\n"
+		"灞辨硦姝ヨ粛闋牁锛庡鏋滀綘涓嶆兂姝荤殑瑭憋紝鏈�濂藉垾鍘绘嫑鎯逛粬銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

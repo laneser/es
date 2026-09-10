@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "steel gauntlets", "¸ÖÊÖÌ×" );
+	set_name( "steel gauntlets", "é‹¼æ‰‹å¥—" );
 	add( "id", ({ "gauntlets" }) );
-	set_short( "¸ÖÊÖÌ×" );
+	set_short( "é‹¼æ‰‹å¥—" );
 	set_long(
-		"ÕâÊÇÒ»Ë«¸ÖÖÆµÄÊÖÌ×¡£\n"
+		"é€™æ˜¯ä¸€é›™é‹¼è£½çš„æ‰‹å¥—ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "hands" );
 	set( "material", "heavy_metal" );
 	set( "armor_class", 4 );

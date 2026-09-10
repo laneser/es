@@ -4,19 +4,19 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "dog beater bo", "´ò¹·°ô" );
+	set_name( "dog beater bo", "æ‰“ç‹—æ£’" );
 	add ("id", ({ "dog beater", "bo" }) );
-	set_short( "Dog Beater Bo", "´ò¹·°ô" );
+	set_short( "Dog Beater Bo", "æ‰“ç‹—æ£’" );
 	set_long(
 		"This is the legendary weapon of beggar's gang. It looks thin\n"
 		"and light, but it is certainly a powerful weapon if you have\n"
 		"learned skill of dog beating.\n",
-		"ÕâÊÇØ¤°ïµÄÕò°ïÖ®±¦´ò¹·°ô£¬Ëü¿´ÆğÀ´ÂÌÓÍÓÍµÄÒ»¸ùÏ¸Öñ°ô£¬µ«È´ÊÇ\n"
-		"ÍşÁ¦Ê®·ÖÇ¿´óµÄÎäÆ÷£¬Èç¹ûÄãÓĞ»ú»áÑ§µ½´ò¹·°ô·¨µÄ»°¡£\n"
+		"é€™æ˜¯ä¸å¹«çš„é®å¹«ä¹‹å¯¶æ‰“ç‹—æ£’ï¼Œå®ƒçœ‹èµ·ä¾†ç¶ æ²¹æ²¹çš„ä¸€æ ¹ç´°ç«¹æ£’ï¼Œä½†å»æ˜¯\n"
+		"å¨åŠ›ååˆ†å¼·å¤§çš„æ­¦å™¨ï¼Œå¦‚æœä½ æœ‰æ©Ÿæœƒå­¸åˆ°æ‰“ç‹—æ£’æ³•çš„è©±ã€‚\n"
 	);
 	set_c_verbs( ({
-		"%sÍùÇ°Ò»Ì½£¬´ÌÏò%s", "µ¹Ìá%s£¬Ğ±Ìô%s", "%s¼²µã%s",
-		"ºá¾Ù%s£¬È´Í»È»Ò»ÍÈÌßÏò%s" 
+		"%så¾€å‰ä¸€æ¢ï¼Œåˆºå‘%s", "å€’æ%sï¼Œæ–œæŒ‘%s", "%sç–¾é»%s",
+		"æ©«èˆ‰%sï¼Œå»çªç„¶ä¸€è…¿è¸¢å‘%s" 
 	}) );
 	set ("type", "thrusting");
 	set ("weapon_class", 40);

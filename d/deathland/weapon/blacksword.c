@@ -5,12 +5,12 @@ int damage_count = 0;
 int damage_num = 20;
 void create()
 {
-    set_name("Black Sword", "ºÚ½£" );
+    set_name("Black Sword", "é»‘åŠ" );
     add("id", ({"sword","blacksword",}) );
-    set_short("ºÚ½£");
+    set_short("é»‘åŠ");
 	set_long("@@desc");
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
     	set( "type","longblade");
 	set( "min_damage", 25 );
@@ -19,7 +19,7 @@ void create()
 	set( "value", ({ 500, "gold" }) );
    	set("hit_func","sword_damage");
     	set("special_damage",15);
-    	set("special_c_msg","ºô»½¹Å´úµÄ°«ÈËÍõ×åÁé»ê\¹¥\»÷µĞÈË¡£\n\n");
+    	set("special_c_msg","å‘¼å–šå¤ä»£çš„çŸ®äººç‹æ—éˆé­‚æ”»æ“Šæ•µäººã€‚\n\n");
 }
 
 int sword_damage(object victim,int damage)
@@ -44,13 +44,13 @@ int sword_damage(object victim,int damage)
                 victim->receive_special_damage("mental",dam);
 		victim->set("last_attacker", holder );
 		tell_object( holder, 
-                     sprintf("\nÄãµÄ%s%s\n",query("c_name"),c_msg));
+                     sprintf("\nä½ çš„%s%s\n",query("c_name"),c_msg));
 		tell_room( environment(holder), 
-                        sprintf("%sµÄ%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
+                        sprintf("%sçš„%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
 			holder );
 		damage_count=0;
 		if (damage_num == 0)
-			tell_object( holder,"\nºÚ½£ÉÏµÄºÚÉ«¹âÔó½¥½¥ÏûÊ§ÁË¡£\n");
+			tell_object( holder,"\né»‘åŠä¸Šçš„é»‘è‰²å…‰æ¾¤æ¼¸æ¼¸æ¶ˆå¤±äº†ã€‚\n");
 		return dam;
 	}
 	
@@ -58,8 +58,8 @@ int sword_damage(object victim,int damage)
 string desc()
 {
 if (damage_num == 0)
-return ("ÓÃÒøÓëÃ×ËÕÀï½ğÊô»ìºÏÖÆ³ÉµÄºÚ½££¬µ«ÊÇÈ´ËÆºõÊ§È¥ÁËÔ­ÓĞµÄ¹âÔó¡£\n");
+return ("ç”¨éŠ€èˆ‡ç±³è˜‡é‡Œé‡‘å±¬æ··åˆè£½æˆçš„é»‘åŠï¼Œä½†æ˜¯å»ä¼¼ä¹å¤±å»äº†åŸæœ‰çš„å…‰æ¾¤ã€‚\n");
 else 
-return ("ÓÃÒøÓëÃ×ËÕÀï½ğÊô»ìºÏÖÆ³ÉµÄºÚ½££¬ÉÏÃæÓĞÖøÉñÃØµÄºÚÉ«¹âÔó¡£\n");
+return ("ç”¨éŠ€èˆ‡ç±³è˜‡é‡Œé‡‘å±¬æ··åˆè£½æˆçš„é»‘åŠï¼Œä¸Šé¢æœ‰è‘—ç¥ç§˜çš„é»‘è‰²å…‰æ¾¤ã€‚\n");
 }
 

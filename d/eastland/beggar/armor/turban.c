@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("white turban", "°×ÂÚ½í");
+        set_name("white turban", "ç™½ç¶¸å·¾");
         add( "id", ({ "turban" }) );
-        set_short( "°×ÂÚ½í");
+        set_short( "ç™½ç¶¸å·¾");
         set_long(@C_LONG
-°×ÂÚ½íÊÇÒ»°ãÊÀË×ÈËÎï×îÏ²°®Åå´øµÄÍ·´øÁË¡£ 
+ç™½ç¶¸å·¾æ˜¯ä¸€èˆ¬ä¸–ä¿—äººç‰©æœ€å–œæ„›ä½©å¸¶çš„é ­å¸¶äº†ã€‚ 
 C_LONG
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set("material","cloth") ;
         set( "armor_class", 7 );

@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "large shield", "´óĞÍ¶Ü" );
+	set_name( "large shield", "å¤§å‹ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "´óĞÍ¶Ü" );
+	set_short( "å¤§å‹ç›¾" );
 	set_long(
-		"Õâ¸ö¶ÜÅÆÓÖ´óÓÖºñ£¬Èç¹ûÄãÊìÏ¤ÓÃ¶Ü×èµ²µĞÈËµÄ·½·¨£¬Õâ»áÊÇ¸ö²»´íµÄÑ¡Ôñ¡£\n"
+		"é€™å€‹ç›¾ç‰Œåˆå¤§åˆåšï¼Œå¦‚æœä½ ç†Ÿæ‚‰ç”¨ç›¾é˜»æ“‹æ•µäººçš„æ–¹æ³•ï¼Œé€™æœƒæ˜¯å€‹ä¸éŒ¯çš„é¸æ“‡ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "weight", 160 );
 	set( "type", "shield" );
 	set( "material" ,"heavy_metal" );

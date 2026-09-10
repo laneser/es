@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "thunder guard", "À×Ö®»¤ÎÀ" );
+        set_name( "thunder guard", "é›·ä¹‹è­·è¡›" );
         add ("id", ({ "thunder", "guard" }) );
-        set_short( "À×Ö®»¤ÎÀ");
-        set("unit","Î»");
+        set_short( "é›·ä¹‹è­·è¡›");
+        set("unit","ä½");
         set("alignment",500);
         set("wealth/gold",100);
         set_long(
-"Ò»Î»À×Ö®»¤ÎÀ£¬ÊÇ´ó¹úÊ¦ÓÃµÀ¼ÒÕýÍ³ÐÄ·¨ËùÕÐ»½³öÀ´µÄ£¬Ëû¸ºÓÐÊØÎÀ´ËµØµÄÉñÊ¥
-Ê¹Ãü\¡£\n"
+"ä¸€ä½é›·ä¹‹è­·è¡›ï¼Œæ˜¯å¤§åœ‹å¸«ç”¨é“å®¶æ­£çµ±å¿ƒæ³•æ‰€æ‹›å–šå‡ºä¾†çš„ï¼Œä»–è² æœ‰å®ˆè¡›æ­¤åœ°çš„ç¥žè–
+ä½¿å‘½\ã€‚\n"
         );
         set_perm_stat("int", 25);
         set_perm_stat("str", 20);
@@ -28,7 +28,7 @@ void create()
         set("race", "daemon");
         set("tactic_func","thunder_tactic");
         set("special_defense",(["electricl":40,"all":20]));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         equip_armor(ARMORS"/thunder_gloves");
         equip_armor(ARMORS"/thunder_amulet");
 }
@@ -40,7 +40,7 @@ int thunder_tactic()
   
   if ( !(victim=query_attacker()) || (random(10)>2)) return 0;
   tell_room(environment(),
-       "\n"+"À×Ö®»¤ÎÀÍ»È»¸ß¾ÙËûµÄ»¤·û£¬Á½ÈýÌõµç¹â×Ô»¤·ûÖÐ·¢³öÏòÄãÉäÀ´ !!\n",
+       "\n"+"é›·ä¹‹è­·è¡›çªç„¶é«˜èˆ‰ä»–çš„è­·ç¬¦ï¼Œå…©ä¸‰æ¢é›»å…‰è‡ªè­·ç¬¦ä¸­ç™¼å‡ºå‘ä½ å°„ä¾† !!\n",
        this_object() );
   dam = 50 + random(30);
   victim->receive_special_damage("electric",dam);

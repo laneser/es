@@ -8,16 +8,16 @@ void create()
 	
 	::create();
 	set_level(5);
-	set_name( "Dwarf older", "°«ÈËÀÏÕß" );
+	set_name( "Dwarf older", "çŸ®äººè€è€…" );
 	add ("id", ({ "older", "dwarf", }) );
-	set_short( "Dwarf older", "°«ÈËÀÏÕß" );
+	set_short( "Dwarf older", "çŸ®äººè€è€…" );
 	set_long(
-    "Ò»¸öÀÏ°«ÈË,»òĞí\ÄêÇáÊ±ËûÊÇ¸öÕ½Ê¿,µ«ÊÇÏÖÔÚËûÖ»ÏëÆ½Æ½°²°²µÄ»îÖø\n"
+    "ä¸€å€‹è€çŸ®äºº,æˆ–è¨±å¹´è¼•æ™‚ä»–æ˜¯å€‹æˆ°å£«,ä½†æ˜¯ç¾åœ¨ä»–åªæƒ³å¹³å¹³å®‰å®‰çš„æ´»è‘—\n"
      );
     set("alignment",0);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "str", 7 );
 	set ("wealth", ([ "silver": 100 ]) );
 	set_natural_weapon(4,2,6);

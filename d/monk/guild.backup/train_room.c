@@ -11,25 +11,25 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_gonfu_level_exp();
-	set_short("Training Room", "ÉÙÁÖÎäÉ®Á·Îä·¿");
+	set_short("Training Room", "å°‘æ—æ­¦åƒ§ç·´æ­¦æˆ¿");
 	set_long( @LONG_DESCRIPTION
 This is a simple room created by roommaker.
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-Äã¿´µ½Ò»ÈºÈºµÄÎäÉ®ÔÚ´ËÑµÁ·ÎäÑ§£¬´ËµØÄËÉÙÁÖÎäÉ®ÑµÁ·ËùÑ§Ö®´¦¡£ËùÎ½Ê¦¸¸´ø
-½øÃÅ£¬ĞŞĞĞÔÚ¸÷ÈË¡£ËùÓĞµÄÉÙÁÖÎäÑ§ºÍÆßÊ®¶ş¾ø¼¼¶¼ÓĞ¶şÊ®ÎåÖØ¾³½ç£¬µ±ÄãÇÚÁ·Ò»ÖÖ
-ÎäÑ§ÖÁÒ»¶¨³Ì¶È£¬¿ÉÔÚ´ËµØĞŞÁ·³É¸ü¸ßµÄ¾³½ç¡£ÏêÏ¸µÄËµÃ÷Çë¿´Ç½ÉÏ(wall) 
+ä½ çœ‹åˆ°ä¸€ç¾¤ç¾¤çš„æ­¦åƒ§åœ¨æ­¤è¨“ç·´æ­¦å­¸ï¼Œæ­¤åœ°ä¹ƒå°‘æ—æ­¦åƒ§è¨“ç·´æ‰€å­¸ä¹‹è™•ã€‚æ‰€è¬‚å¸«çˆ¶å¸¶
+é€²é–€ï¼Œä¿®è¡Œåœ¨å„äººã€‚æ‰€æœ‰çš„å°‘æ—æ­¦å­¸å’Œä¸ƒåäºŒçµ•æŠ€éƒ½æœ‰äºŒåäº”é‡å¢ƒç•Œï¼Œç•¶ä½ å‹¤ç·´ä¸€ç¨®
+æ­¦å­¸è‡³ä¸€å®šç¨‹åº¦ï¼Œå¯åœ¨æ­¤åœ°ä¿®ç·´æˆæ›´é«˜çš„å¢ƒç•Œã€‚è©³ç´°çš„èªªæ˜è«‹çœ‹ç‰†ä¸Š(wall) 
 C_LONG_DESCRIPTION
 	);
 	set( "light", 1 );
 	set( "c_item_desc", ([ 
           	"wall" : @LONG_TEXT
-¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-cost              ¸æËßÄãÃ¿ÖØÎäÑ§µÄÉı¼¶ÒªÇó
-train <¹¦\·òÃû×Ö>  ÓÃ´ËÖ¸ÁîÒÔÑµÁ·ÏÂÒ»ÖØÎäÑ§ 
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+cost              å‘Šè¨´ä½ æ¯é‡æ­¦å­¸çš„å‡ç´šè¦æ±‚
+train <åŠŸå¤«åå­—>  ç”¨æ­¤æŒ‡ä»¤ä»¥è¨“ç·´ä¸‹ä¸€é‡æ­¦å­¸ 
 
-ÄãµÄ¸÷ÖÖÎäÑ§ĞŞÎªµ½ µÚ¼¸ÖØ ºÍ ÊìÁ·¾­ÑéÖµ ¶¼ÏÔÊ¾ÔÚ gonfus ÖĞ¡£
-¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
+ä½ çš„å„ç¨®æ­¦å­¸ä¿®ç‚ºåˆ° ç¬¬å¹¾é‡ å’Œ ç†Ÿç·´ç¶“é©—å€¼ éƒ½é¡¯ç¤ºåœ¨ gonfus ä¸­ã€‚
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 LONG_TEXT
  ]) );
 
@@ -75,19 +75,19 @@ int do_advance(string arg)
 	lvl = (int)this_player()->query("monk_gonfu/"+arg);
 	if( member_array(arg, needed) != -1 && undefinedp(lvl) )
 		return notify_fail( can_read_chinese()?
-			"Äã»¹²»»áÕâÎä¹¦\, Ôõ÷áÑµÁ·?\n":
+			"ä½ é‚„ä¸æœƒé€™æ­¦åŠŸ\, æ€éº¼è¨“ç·´?\n":
 			"You don't know such a gonfu!\n");
 
 	if( member_array(arg, needed) == -1  ) {
 		write(can_read_chinese()?
-			"Ã»ÓĞÕâ¸ö¹¦\·ò!(Ö»ÓĞÉÙÁÖÎäÑ§ºÍÆßÊ®¶ş¾ø¼¼ĞèÒªÑµÁ·Å¶!È­·¨ºÍÒ½ÁÆÎä¹¦\²»±Ø) \nÈç¹û²»ÊÇÄã´ò´í×ÖÁË£¬ÇëÍ¨ÖªÎ×Ê¦¡£\n":
+			"æ²’æœ‰é€™å€‹åŠŸå¤«!(åªæœ‰å°‘æ—æ­¦å­¸å’Œä¸ƒåäºŒçµ•æŠ€éœ€è¦è¨“ç·´å“¦!æ‹³æ³•å’Œé†«ç™‚æ­¦åŠŸä¸å¿…) \nå¦‚æœä¸æ˜¯ä½ æ‰“éŒ¯å­—äº†ï¼Œè«‹é€šçŸ¥å·«å¸«ã€‚\n":
 			"You can't train that here, please report to wizard.\n" );
 		return 1;
         }
 
 	if( lvl >= MAX_GONFU_LEVEL ) {
 		write(can_read_chinese()?
-			"ÄãÒÑ¾­ÍêÈ«ÁË½â"+to_chinese(arg)+"ÎäÑ§µÄ¾«ÒåÁË¡£\n":
+			"ä½ å·²ç¶“å®Œå…¨ç­è§£"+to_chinese(arg)+"æ­¦å­¸çš„ç²¾ç¾©äº†ã€‚\n":
 			"You can't train any more.\n" );
 		return 1;
 	}
@@ -96,15 +96,15 @@ int do_advance(string arg)
 	need_exp = gonfu_level_exp[lvl];
 	if( exp < need_exp ) {
 		write(can_read_chinese()?
-			"Äã»¹ĞèÒª "+(need_exp-exp)+" µã¾­Ñé²ÅÄÜÌáÉı"+
-			to_chinese(arg)+"µÄÎäÑ§¾³½ç¡£\n" :
+			"ä½ é‚„éœ€è¦ "+(need_exp-exp)+" é»ç¶“é©—æ‰èƒ½æå‡"+
+			to_chinese(arg)+"çš„æ­¦å­¸å¢ƒç•Œã€‚\n" :
 			"You need more "+(need_exp-exp)+" to advance your "+arg+" gonfu.\n"
 		);
 		return 1;
 	} else {
 		this_player()->set("monk_gonfu/"+arg, lvl+1);
 		write(can_read_chinese()?
-			"¾­¹ıÒ»·¬¶ĞÁ·, Äã "+to_chinese(arg)+" ÎäÑ§µÄ¾³½çÔö¼ÓÁË¡£\n":
+			"ç¶“éä¸€ç•ªç·ç·´, ä½  "+to_chinese(arg)+" æ­¦å­¸çš„å¢ƒç•Œå¢åŠ äº†ã€‚\n":
 			"Your practiced of "+arg+" increases.\n"
 		);
 		return 1;
@@ -114,13 +114,13 @@ int do_advance(string arg)
 int do_cost()
 {
 	int i;
-	write( can_read_chinese()? "ÌáÉı¸÷ÀàÎä¹¦\ËùĞèÒªµÄÊìÁ·¾­ÑéÖµ\n":"");
+	write( can_read_chinese()? "æå‡å„é¡æ­¦åŠŸæ‰€éœ€è¦çš„ç†Ÿç·´ç¶“é©—å€¼\n":"");
 	for( i=0; i<MAX_GONFU_LEVEL; i++ ) {
 	  if( can_read_chinese() )
 
- printf("µÚ%2dÖØ¾³½ç: %8d µãÊìÁ·¾­Ñé¡£%s",i+1,gonfu_level_exp[i],(i%2?"\n":"\t") );
+ printf("ç¬¬%2dé‡å¢ƒç•Œ: %8d é»ç†Ÿç·´ç¶“é©—ã€‚%s",i+1,gonfu_level_exp[i],(i%2?"\n":"\t") );
 	  else
-	    printf("  Level %2d : %15d experiences¡£\n",i+1,gonfu_level_exp[i]);
+	    printf("  Level %2d : %15d experiencesã€‚\n",i+1,gonfu_level_exp[i]);
 	}
  printf("\n\n");
 	return 1;

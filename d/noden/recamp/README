@@ -1,28 +1,28 @@
-±êÌâ: Ê§ÂäµÄ°ëÊÞÈËÍõ×å
+æ¨™é¡Œ: å¤±è½çš„åŠç¸äººçŽ‹æ—
 
-    Ò». Æðµã: Ô¶·çÕòÓªµØ(/d/noden/recamp/camp1 )
-    ¶þ. Ö÷Ö¼: Â¶Â¶¸´»î,»ñµÃ´îÕÊÅï¼¼ÄÜ¡£
-    Èý. µÈ¼¶: Èý¡£
-    ËÄ. ÂÔ½â: ÕÊÅï( camp4 )     (touch picture,down)
-   => Ê¯ÊÒ( camp_wall ) (search here,kill sheet,search box,get all)
-   => Ë®³Ø( camp_pool ) (wet stone)
-   => Ê¯ÊÒ( camp_wall ) (apply wall,squeeze wall)
-   => µØµÀ( camp5 )     (give paper to fool) (get explore)
+    ä¸€. èµ·é»ž: é é¢¨éŽ®ç‡Ÿåœ°(/d/noden/recamp/camp1 )
+    äºŒ. ä¸»æ—¨: éœ²éœ²è¦†æ´»,ç²å¾—æ­å¸³æ£šæŠ€èƒ½ã€‚
+    ä¸‰. ç­‰ç´š: ä¸‰ã€‚
+    å››. ç•¥è§£: å¸³æ£š( camp4 )     (touch picture,down)
+   => çŸ³å®¤( camp_wall ) (search here,kill sheet,search box,get all)
+   => æ°´æ± ( camp_pool ) (wet stone)
+   => çŸ³å®¤( camp_wall ) (apply wall,squeeze wall)
+   => åœ°é“( camp5 )     (give paper to fool) (get explore)
    => 18,4.noden        (give paper to statue)
    => 17,14.noden       (give paper to statue)
    => 3,5.noden         (give paper to statue)
    => 2,15.noden     (give paper to statue) (will be k..get explore)     
-   => µØµÀ( camp5 )  (give paper to lulu,finish quest can train camp skill)
+   => åœ°é“( camp5 )  (give paper to lulu,finish quest can train camp skill)
 
-    Îå. µØÍ¼:
+    äº”. åœ°åœ–:
         1.  /d/noden/recamp:
 
-                    ¡Ñ  camp4
-                    ¡õ
-       camp8  ¡Ñ¡ª¡ª¡Ñ¡ª¡ª¡Ñ  camp6
-              ¡õ    camp5 ¡õ
-              ¡õ          ¡õ
-   camp_pool  ¡Ñ¡ª¡ª¡ª¡ª¡ª¡Ñ  camp7
-              ¡õ    camp5 ¡õ
-              ¡õ          ¡õ
-       camp9  ¡Ñ¡ª¡ª¡ª¡ª¡ª¡Ñ  camp_wall
+                    âŠ™  camp4
+                    â–¡
+       camp8  âŠ™â€”â€”âŠ™â€”â€”âŠ™  camp6
+              â–¡    camp5 â–¡
+              â–¡          â–¡
+   camp_pool  âŠ™â€”â€”â€”â€”â€”âŠ™  camp7
+              â–¡    camp5 â–¡
+              â–¡          â–¡
+       camp9  âŠ™â€”â€”â€”â€”â€”âŠ™  camp_wall

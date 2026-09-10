@@ -6,13 +6,13 @@ void create ()
 {
         ::create();
         set_level(16);
-        set_name( "guard samurai", "ÊØÎÀÎäÊ¿" );
+        set_name( "guard samurai", "å®ˆè¡›æ­¦å£«" );
         add ("id", ({ "samurai","guard"}) );
-        set_short( "guard samurai","ÊØÎÀÎäÊ¿");
-        set("unit","Î»");
+        set_short( "guard samurai","å®ˆè¡›æ­¦å£«");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇ¸ö×¨ÃÅ¸ºÔğÇ§´¨Â¥°²È«µÄÎäÊ¿£¬Ò²ÊÇÎäÊ¿ÍÅÖĞ×îÇ¿µÄÎäÊ¿£¬ÄãÈç¹ûÏë
-ÔÚÇ§´¨Â¥×ö»µÊÂµÄ»°£¬×îºÃ±ğ±»Ëû¿´¼û£¡
+é€™æ˜¯å€‹å°ˆé–€è² è²¬åƒå·æ¨“å®‰å…¨çš„æ­¦å£«ï¼Œä¹Ÿæ˜¯æ­¦å£«åœ˜ä¸­æœ€å¼·çš„æ­¦å£«ï¼Œä½ å¦‚æœæƒ³
+åœ¨åƒå·æ¨“åšå£äº‹çš„è©±ï¼Œæœ€å¥½åˆ¥è¢«ä»–çœ‹è¦‹ï¼
 ANGEL
         );
         
@@ -28,7 +28,7 @@ ANGEL
         set ("gender", "male");
         set("wealth/silver",400);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(MOBJ"lakonia_sword.c");
         equip_armor(MOBJ"samurai_vest.c");

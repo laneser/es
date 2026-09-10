@@ -28,10 +28,10 @@ string query_c_min()
     str = (string)this_object()->getenv("C_MIN");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N" }) );
-    if( str == "" ) str = "$N("+capitalize((string)this_object()->query("name"))+")×ßÁË¹ýÀ´¡£";
+    if( str == "" ) str = "$N("+capitalize((string)this_object()->query("name"))+")èµ°äº†éŽä¾†ã€‚";
     ob = this_object()->query_temp("mounting");
     str = substr( str, "$N", this_object()->query("c_name") + (ob?
-    	"ÆïÖøÒ»" + ob->query("unit") + ob->query("c_name"): "") );
+    	"é¨Žè‘—ä¸€" + ob->query("unit") + ob->query("c_name"): "") );
     return set_color(str, color);
 }
 
@@ -43,10 +43,10 @@ string query_c_mout(string dir)
     str = (string)this_object()->getenv("C_MOUT");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N", "$D" }) );
-    if( str == "" ) str = "$N("+capitalize((string)this_object()->query("name"))+")Íù$D±ßÀë¿ª¡£";
+    if( str == "" ) str = "$N("+capitalize((string)this_object()->query("name"))+")å¾€$Dé‚Šé›¢é–‹ã€‚";
     ob = this_object()->query_temp("mounting");
     str = substr( str, "$N", this_object()->query("c_name") + (ob?
-    	"ÆïÖøÒ»" + ob->query("unit") + ob->query("c_name"):"") );
+    	"é¨Žè‘—ä¸€" + ob->query("unit") + ob->query("c_name"):"") );
     if (dir == "" || dir == 0) return str;
     str = substr( str, "$D", to_chinese(dir) );
     return set_color(str, color);
@@ -59,7 +59,7 @@ string query_c_mmin()
     str = (string)this_object()->getenv("C_MMIN");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N" }) );
-    if( str == "" ) str = "ÔÚÒ»ÕóÑÌÎíÖÐ£¬$N³öÏÖÔÚÄãµÄÃæÇ°¡£";
+    if( str == "" ) str = "åœ¨ä¸€é™£ç…™éœ§ä¸­ï¼Œ$Nå‡ºç¾åœ¨ä½ çš„é¢å‰ã€‚";
     str = substr( str, "$N", (string)this_object()->query("c_name") );
     return set_color(str, color);
 }
@@ -71,7 +71,7 @@ string query_c_mmout()
     str = (string)this_object()->getenv("C_MMOUT");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N" }) );
-    if( str == "" ) str = "Ò»ÕóÑÌÎí¹ýáá£¬$NÏûÊ§ÔÚ¿ÕÆøÖÐ¡£";
+    if( str == "" ) str = "ä¸€é™£ç…™éœ§éŽå¾Œï¼Œ$Næ¶ˆå¤±åœ¨ç©ºæ°£ä¸­ã€‚";
     str = substr( str, "$N", (string)this_object()->query("c_name") );
     return set_color(str, color);
 }
@@ -83,7 +83,7 @@ string query_c_mhome()
     str = (string)this_object()->getenv("C_MHOME");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N" }) );
-    if( str == "" ) str = "Ò»ÕóÑÌÎí¹ýáá£¬$NÏûÊ§ÔÚ¿ÕÆøÖÐ¡£";
+    if( str == "" ) str = "ä¸€é™£ç…™éœ§éŽå¾Œï¼Œ$Næ¶ˆå¤±åœ¨ç©ºæ°£ä¸­ã€‚";
     str = substr( str, "$N", (string)this_object()->query("c_name") );
     return set_color(str, color);
 }
@@ -95,13 +95,13 @@ string query_c_mdest(object obj)
     str = (string)this_object()->getenv("C_MDEST");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N", "$O" }) );
-    if( str == "" ) str = "$NÕÙÀ´Ò»µÀÉÁµç£¬°Ñ$O»¯Îª»Ò½ý¡£";
+    if( str == "" ) str = "$Nå¬ä¾†ä¸€é“é–ƒé›»ï¼ŒæŠŠ$OåŒ–ç‚ºç°ç‡¼ã€‚";
     str = substr( str, "$N", (string)this_object()->query("c_name") );
     if (obj == 0) return str;
     if( obj->query("short") )
         str = substr( str, "$O", (string)obj->query("short") );
     else
-        str = substr( str, "$O", "Ä³Ñù¶«Î÷" );
+        str = substr( str, "$O", "æŸæ¨£æ±è¥¿" );
     return set_color(str, color);
 }
 
@@ -112,12 +112,12 @@ string query_c_mclone(object obj)
 	str = (string)this_object()->getenv("C_MCLONE");
 	color = (string)this_object()->getenv("ENV_COLOR");
 	str = validate( str, ({ "$N", "$O" }) );
-	if( str == "" ) str = "Ö»¼û$NÓÃÊÖÔÚ¿ÕÖÐÒ»»­£¬$O¾Í³öÏÖÔÚÄãµÄÃæÇ°¡£";
+	if( str == "" ) str = "åªè¦‹$Nç”¨æ‰‹åœ¨ç©ºä¸­ä¸€ç•«ï¼Œ$Oå°±å‡ºç¾åœ¨ä½ çš„é¢å‰ã€‚";
 	str = substr( str, "$N", (string)this_object()->query("c_name") );
        if (obj == 0) return str;
 	if( obj->query("short") )
 		str = substr( str, "$O", (string)obj->query("short") );
-	else str = substr( str, "$O", "Ä³Ñù¶«Î÷" );
+	else str = substr( str, "$O", "æŸæ¨£æ±è¥¿" );
 	return set_color(str, color);
 }
 
@@ -128,7 +128,7 @@ string query_c_mvis()
     str = (string)this_object()->getenv("C_MVIS");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N" }) );
-    if( str == "" ) str = "Äã¿´µ½$NµÄÈËÓ°´ÓÍ¸Ã÷±ä³ÉÇåÎú¿É¼û¡£";
+    if( str == "" ) str = "ä½ çœ‹åˆ°$Nçš„äººå½±å¾žé€æ˜Žè®Šæˆæ¸…æ™°å¯è¦‹ã€‚";
     str = substr( str, "$N", (string)this_object()->query("c_name") );
     return set_color(str, color);
 }
@@ -140,7 +140,7 @@ string query_c_minvis()
     str = (string)this_object()->getenv("C_MINVIS");
     color = (string)this_object()->getenv("ENV_COLOR");
     str = validate( str, ({ "$N" }) );
-    if( str == "" ) str = "$NµÄÓ°×Ó¿ªÊ¼±äµ­£¬×îááÖÕì¶ÍêÈ«ÏûÊ§ÁË¡£";
+    if( str == "" ) str = "$Nçš„å½±å­é–‹å§‹è®Šæ·¡ï¼Œæœ€å¾Œçµ‚æ–¼å®Œå…¨æ¶ˆå¤±äº†ã€‚";
     str = substr( str, "$N", (string)this_object()->query("c_name") );
     return set_color(str, color);
 }

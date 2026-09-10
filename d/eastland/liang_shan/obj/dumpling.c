@@ -10,13 +10,13 @@ void init()
 
 void create()
 {
-	set_name("dumpling","╟Эвс");
+	set_name("dumpling","Е▄┘Е╜░");
 	add( "id" , ({ "dumpling" }) );
-	set_short("a dumpling." , "╟Эвс");
+	set_short("a dumpling." , "Е▄┘Е╜░");
 	set_long(".." , 
-		"ф╓╠║оз╨Яё╛хК©з╪╢╩╞ё╛уБ╬мйгкО╤ЧдО╣дйж╧╓льжфойхБ╟Э║ё\n"
+		"Г ╝Х√└И╓║Е▌ О╪▄Е┘╔Е▐ёЕ█ЁЕ▄√О╪▄И─≥Е╟╠Ф≤╞Е╜╚Д╨▄Е╜┐Г └Ф┴▀Е╥╔Г┴╧Хё╫И╝╝Х┌┴Е▄┘Ц─┌\n"
 	);
-   	set("unit","ел");
+   	set("unit","Г⌡╓");
    	set("weight", 10);
    	set("value",({ 100, "silver" }) );
 //	call_out("not_fresh", FRESH_TIME, this_object() );
@@ -33,10 +33,10 @@ int move(mixed ob)
 int eat_food(string arg)
 {
 		if( !arg || arg != "dumpling" ) return 0;
-		write( "дЦюгмл╩╒║У╣дЁтобуБел╟Эвс..ъв? тУВАсп╦ЫфФ╧ж╣дц╚?\n" );
+		write( "Д╫═Г▀╪Е░·Х≥▌Б√║Г └Е░┐Д╦▀И─≥Г⌡╓Е▄┘Е╜░..Е▓╕? Ф─▌И╨╪Ф°┴Ф═╧Е╔┤Ф─╙Г └Ф╞⌡?\n" );
 		tell_room( environment(this_player()),
-		this_player()->query("c_name")+"╥и©Л╣ьЁт╣Такр╩ел╟Эвсё╛х╩АА\n"     
-	        "р╩аЁ╨Эри╣д╢свЛ╫гю╜ЁЖр╩╦Ыц╚...\n" , this_player());
+		this_player()->query("c_name")+"Иё⌡Е©╚Е°╟Е░┐Ф▌┴Д╨├Д╦─Г⌡╓Е▄┘Е╜░О╪▄Г└╤Е╬▄\n"     
+	        "Д╦─Х┤┴Г▀░Г√▒Г └Е╬·Е≤╢Х╖▓Ф▀┴Е┤╨Д╦─Ф═╧Ф╞⌡...\n" , this_player());
 		this_player()->receive_healing( 8+random(2) );
 	remove();
 	return 1;
@@ -48,12 +48,12 @@ void not_fresh(object what)
 	owner = environment(what);
 	if ( !owner ) { 
 //	what->set ("value", ({ 1, "silver" }));
-//	what->set_short("╩╣ак╣дЁ╢гЮ╡к");
-//	what->set_long("уБелгЮ╡к╠ДЁи╩фи╚ё╛╡╩дэЁтак║ё\n");
+//	what->set_short("Её·Д╨├Г └Г┌▓И²▓Х▐°");
+//	what->set_long("И─≥Г⌡╓И²▓Х▐°Х╝┼Ф┬░И╩┐Х┴╡О╪▄Д╦█Х┐╫Е░┐Д╨├Ц─┌\n");
 //	what->set("is_fresh",0);
 	if( living(owner) )
-	tell_object(owner,"дЦне╣╫дЦ╣д╟Эвс╥╒ЁЖр╩╧икА╡к╣дн╤╣юё╛дЦ╬У╣ц╤╙аккЭ╠х╫о╨ц!!\n"
-	"дЦ╤╙╣Тр╩елБхак╣дхБ╟Э║ё\n");
+	tell_object(owner,"Д╫═Х│·Е┬╟Д╫═Г └Е▄┘Е╜░Г≥╪Е┤╨Д╦─Х┌║И┘╦Х▐°Г └Е▒ЁИ│⌠О╪▄Д╫═Х╕╨Е╬≈Д╦÷Д╨├Е╝┐Ф╞■Х╪┐Е╔╫!!\n"
+	"Д╫═Д╦÷Ф▌┴Д╦─Г⌡╓И╓©Д╨├Г └Х┌┴Е▄┘Ц─┌\n");
 	}
 	remove();
 }

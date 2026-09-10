@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "alloyed shield", "ºÏ½ğ¶Ü" );
+	set_name( "alloyed shield", "åˆé‡‘ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "an alloyed shield", "ºÏ½ğ¶Ü" );
+	set_short( "an alloyed shield", "åˆé‡‘ç›¾" );
 	set_long(
 		"You see an alloyed shield. It looks pretty heavy and\n"
 		"can supply good protection.\n",
-		"ÕâÊÇÒ»ÃæÓÃÄ³ÖÖ²»ÖªÃûºÏ½ğ´òÔìµÄ¶Ü£¬¿´ÆğÀ´Ïàµ±ÖØ¡£\n"
+		"é€™æ˜¯ä¸€é¢ç”¨æŸç¨®ä¸çŸ¥ååˆé‡‘æ‰“é€ çš„ç›¾ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶é‡ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "heavy" );
 	set( "armor_class", 6 );

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("black cloak", "ºÚ¶·Åî");
+        set_name("black cloak", "é»‘é¬¥è“¬");
         add( "id", ({ "cloak" }) );
-        set_short("black cloak", "ºÚ¶·Åî");
+        set_short("black cloak", "é»‘é¬¥è“¬");
         set_long(
                 "A black robe prayed by Evil Yang,a legendary evil_god .\n",
-                "±»ÓÃÀ´¼Àìë´«ËµĞ°ÉñYangµÄÒ»¼şºÚÅÛ\n"
+                "è¢«ç”¨ä¾†ç¥­ç¥€å‚³èªªé‚ªç¥Yangçš„ä¸€ä»¶é»‘è¢\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "cloth" );
         set( "armor_class", 5 );

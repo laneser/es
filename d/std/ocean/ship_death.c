@@ -6,8 +6,8 @@ inherit OBJECT;
 
 int loc;
 mixed *schedule = ({
-	({ "Bluesand", "À¶É³¸Û", "/d/noden/bluesand/jetty", 30, 70 }),
-	({ "Deathland", "ËÀÍö´óµØ", "/d/deathland/main/d1", 30, 70 })
+	({ "Bluesand", "è—æ²™æ¸¯", "/d/noden/bluesand/jetty", 30, 70 }),
+	({ "Deathland", "æ­»äº¡å¤§åœ°", "/d/deathland/main/d1", 30, 70 })
 });
 
 void announce();
@@ -17,9 +17,9 @@ void arrive();
 void create()
 {
 	seteuid(getuid());
-	set_name( "ship of darkmerchant", "ºÚ°µÉÌÈËºÅ" );
+	set_name( "ship of darkmerchant", "é»‘æš—å•†äººè™Ÿ" );
 	add( "id", ({ "ship", "darkmerchant" }) );
-	set_short( "ºÚ°µÉÌÈËºÅ" );
+	set_short( "é»‘æš—å•†äººè™Ÿ" );
 	set( "long","@@query_c_long" );
 	set( "prevent_get", 1 );
 	set( "prevent_drop", 1 );
@@ -31,9 +31,9 @@ void create()
 string query_c_long()
 {
 	return
-		"ÕâÊÇÒ»ËÒ½Ğ×öºÚ°µÉÌÈËºÅµÄÆÆ´¬£¬ÄãÈç¹ûÏëÒª´î³ËºÚ°µÉÌÈËºÅ£¬¿ÉÒÔ\n"
-		"ÓÃ board Ö¸Áî´î´¬¡£\n"
-		"ºÚ°µÉÌÈËºÅµÄÏÂÒ»¸öÄ¿µÄµØÊÇ" + schedule[(loc+1)%sizeof(schedule)][1] + "¡£\n";
+		"é€™æ˜¯ä¸€è‰˜å«åšé»‘æš—å•†äººè™Ÿçš„ç ´èˆ¹ï¼Œä½ å¦‚æœæƒ³è¦æ­ä¹˜é»‘æš—å•†äººè™Ÿï¼Œå¯ä»¥\n"
+		"ç”¨ board æŒ‡ä»¤æ­èˆ¹ã€‚\n"
+		"é»‘æš—å•†äººè™Ÿçš„ä¸‹ä¸€å€‹ç›®çš„åœ°æ˜¯" + schedule[(loc+1)%sizeof(schedule)][1] + "ã€‚\n";
 }
 
 void init()
@@ -45,8 +45,8 @@ int do_board(string arg)
 {
 	if( !arg || !id(arg) ) return 0;
 	this_player()->move_player( ROOM_OBJ, ({
-		"%s×ßÉÏºÚ°µÉÌÈËºÅ¡£\n",
-		"%s´ÓÂëÍ·µÇÉÏºÚ°µÉÌÈËºÅ¡£\n" }) );
+		"%sèµ°ä¸Šé»‘æš—å•†äººè™Ÿã€‚\n",
+		"%så¾ç¢¼é ­ç™»ä¸Šé»‘æš—å•†äººè™Ÿã€‚\n" }) );
 	return 1;
 }
 
@@ -62,9 +62,9 @@ void announce()
 	ship_room = find_object(ROOM_OBJ);
 
 	tell_room( ship_room, 
-		"ºÚ°µÉÌÈËºÅµÄË®ÊÖ´ó½Ğ: ¶şÊ®Ãëáá¿ª´¬£¡ÏÂÒ»Õ¾ÊÇ" + schedule[next_loc][1] + "£¡\n" );
+		"é»‘æš—å•†äººè™Ÿçš„æ°´æ‰‹å¤§å«: äºŒåç§’å¾Œé–‹èˆ¹ï¼ä¸‹ä¸€ç«™æ˜¯" + schedule[next_loc][1] + "ï¼\n" );
 	tell_room( environment(this_object()), 
-		"ºÚ°µÉÌÈËºÅµÄË®ÊÖ´ó½Ğ: ¶şÊ®Ãëáá¿ª´¬£¡ÏÂÒ»¸öÄ¿µÄµØÊÇ" + schedule[next_loc][1] + "£¬ÒªÉÏ´¬µÄÂÃ¿ÍÇë¸Ï¿ì£¡\n");
+		"é»‘æš—å•†äººè™Ÿçš„æ°´æ‰‹å¤§å«: äºŒåç§’å¾Œé–‹èˆ¹ï¼ä¸‹ä¸€å€‹ç›®çš„åœ°æ˜¯" + schedule[next_loc][1] + "ï¼Œè¦ä¸Šèˆ¹çš„æ—…å®¢è«‹è¶•å¿«ï¼\n");
 	call_out( "lets_go", 20 );
 }
 
@@ -80,11 +80,11 @@ void lets_go()
 	ship_room = find_object(ROOM_OBJ);
 
 	tell_room( ship_room, 
-		"ºÚ°µÉÌÈËºÅµÄË®ÊÖ´ó½Ğ: ¿ª´¬ÂŞ£¡\n"
-		"Äã¸Ğµ½´¬ÉíÒ»ÕóÇáÎ¢µÄÕğ¶¯£¬ºÚ°µÉÌÈËºÅÀë¿ªÁËÂëÍ· ....\n" );
+		"é»‘æš—å•†äººè™Ÿçš„æ°´æ‰‹å¤§å«: é–‹èˆ¹ç¾…ï¼\n"
+		"ä½ æ„Ÿåˆ°èˆ¹èº«ä¸€é™£è¼•å¾®çš„éœ‡å‹•ï¼Œé»‘æš—å•†äººè™Ÿé›¢é–‹äº†ç¢¼é ­ ....\n" );
 	tell_room( environment(this_object()), 
-		"ºÚ°µÉÌÈËºÅµÄË®ÊÖ´ó½Ğ: ¿ª´¬ÂŞ£¡\n"
-		"ºÚ°µÉÌÈËºÅ»º»ºµØ¿ª³ö¸Û¿Ú£¬º½ÏòÁÉÀ«µÄ´óº£ ....\n");
+		"é»‘æš—å•†äººè™Ÿçš„æ°´æ‰‹å¤§å«: é–‹èˆ¹ç¾…ï¼\n"
+		"é»‘æš—å•†äººè™Ÿç·©ç·©åœ°é–‹å‡ºæ¸¯å£ï¼Œèˆªå‘é¼é—Šçš„å¤§æµ· ....\n");
 	call_out( "arrive", schedule[loc][4] );
 	ROOM_OBJ->set_location( "ocean" );
 	loc = next_loc;
@@ -101,9 +101,9 @@ void arrive()
 
 	ROOM_OBJ->set_location( schedule[loc][0], schedule[loc][2] );
 	tell_room( ship_room, 
-		"ºÚ°µÉÌÈËºÅµÄË®ÊÖ´ó½Ğ: " + schedule[loc][1] + "µ½ÂŞ£¡\n" );
+		"é»‘æš—å•†äººè™Ÿçš„æ°´æ‰‹å¤§å«: " + schedule[loc][1] + "åˆ°ç¾…ï¼\n" );
 	tell_room( environment(this_object()), 
-		"Äã¿´µ½ºÚ°µÉÌÈËºÅ»º»ºµØ¿ª½øÂëÍ· ....\n" );
+		"ä½ çœ‹åˆ°é»‘æš—å•†äººè™Ÿç·©ç·©åœ°é–‹é€²ç¢¼é ­ ....\n" );
 	call_out( "announce", schedule[loc][3]-10 );
 }
 

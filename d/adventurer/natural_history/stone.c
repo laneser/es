@@ -10,12 +10,12 @@ void init()
 
 void create()
 {
-	set_name("stone","Ð¡Ê¯×Ó");
-	set_short("Ð¡Ê¯×Ó");
+	set_name("stone","å°çŸ³å­");
+	set_short("å°çŸ³å­");
 	set_long(
-		"Ò»¿ÅËæ´¦¿É¼ûµÄÐ¡Ô²Ê¯£¬¿´À´ÂùÓ²µÄ£¬ÄÃËüÀ´¶ªÈËÒ»¶¨ºÜÍ´µÄ¡£\n"
+		"ä¸€é¡†éš¨è™•å¯è¦‹çš„å°åœ“çŸ³ï¼Œçœ‹ä¾†è »ç¡¬çš„ï¼Œæ‹¿å®ƒä¾†ä¸Ÿäººä¸€å®šå¾ˆç—›çš„ã€‚\n"
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("weight", 10);
    	set("value",({ 1, "silver" }) );
 }
@@ -26,16 +26,16 @@ int throw_stone(string arg)
 
         if (!arg) {
                 return notify_fail(
-                        "°ÑÊ²÷á¶ªÈ¥ÄÇ?\n");
+                        "æŠŠä»€éº¼ä¸ŸåŽ»é‚£?\n");
                 }
         sscanf(arg, "%s to %s", s1, s2);
         if ((!s1) || (lower_case(s1) != "stone"   )) {
                 return notify_fail( 
-                        "ÄãÒª¶ªÊ²÷áÄØ?\n");
+                        "ä½ è¦ä¸Ÿä»€éº¼å‘¢?\n");
                 }
         if (!s2) {
                 return notify_fail( 
-                        "ÄãÒªÄÃÊ¯Í·¶ªË­?\n");
+                        "ä½ è¦æ‹¿çŸ³é ­ä¸Ÿèª°?\n");
                 }
 
         target = present(s2,environment(this_player()));
@@ -43,25 +43,25 @@ int throw_stone(string arg)
         if ( (!target) ||
                 ( environment(target)!=environment(this_player()) ) ) {
                 return notify_fail( 
-                        "Ëû²¢²»ÔÚÕâ¶ùà¡!\n");
+                        "ä»–ä¸¦ä¸åœ¨é€™å…’å”·!\n");
                 }
         if ( target->query("no_attack") ) {
-                 return notify_fail("Õâ¼Ò»ï£­²»ÄÜÉ±¡£\n");
+                 return notify_fail("é€™å‚¢ä¼™ï¼ä¸èƒ½æ®ºã€‚\n");
                 }
         if ( userp(target) ) {
                      if ( (int)target->query_level()< 5 ||
                       (int)this_player()->query_level()<5 )
-                     return notify_fail("Äã²»ÄÜ PK Ëû !!\n");
+                     return notify_fail("ä½ ä¸èƒ½ PK ä»– !!\n");
                      }
         
         if (target == this_player()) {
                 return notify_fail( 
-                        "ÄÃÊ¯Í·¶ª×Ô¼º?\n");
+                        "æ‹¿çŸ³é ­ä¸Ÿè‡ªå·±?\n");
                 }
-		write("ÄãºÜÓÃÁ¦µÄ°ÑÊ¯Í·¶ªÏò"+target->query("c_name")+"¡£\n");
+		write("ä½ å¾ˆç”¨åŠ›çš„æŠŠçŸ³é ­ä¸Ÿå‘"+target->query("c_name")+"ã€‚\n");
 		tell_room( environment(this_player()), 
 			this_player()->query("c_name")+
-			"´Ó»³ÖÐÌÍ³öÒ»¿ÅÊ¯Í·£¬ºÜÓÃÁ¦µÄ¶ªÏò"+target->query("c_name")+"\n" , this_player()
+			"å¾žæ‡·ä¸­æŽå‡ºä¸€é¡†çŸ³é ­ï¼Œå¾ˆç”¨åŠ›çš„ä¸Ÿå‘"+target->query("c_name")+"\n" , this_player()
 		);
 		target->receive_damage( this_player()->query_perm_stat("str")/2+random(5) );
                 this_player()->gain_experience(20);

@@ -15,8 +15,8 @@ int busy;
  
 void create() {
   seteuid(getuid());
-  set_name("counter","¼ÆÊýÆ÷");
-  set_short("(invis)counter","(invis)¼ÆÊýÆ÷");
+  set_name("counter","è¨ˆæ•¸å™¨");
+  set_short("(invis)counter","(invis)è¨ˆæ•¸å™¨");
   set_long(
 @LONG
 some toy by elon.. to do some stats calculation..

@@ -9,16 +9,16 @@ void init()
 
 void create()
 {
-	set_name( "snow_lily", "ÌìÉ½Ñ©Á«" );
+	set_name( "snow_lily", "å¤©å±±é›ªè“®" );
 	add( "id", ({ "lily" }) );
-	set_short( "ÌìÉ½Ñ©Á«" );
+	set_short( "å¤©å±±é›ªè“®" );
 	set_long(@C_LONG
-ÕâÊÇÒ»¶äÁ·ÎäÖ®ÈËÃÎÃÂÒÔÇóµÄ±¦ÎïÌìÉ½Ñ©Á«£¬·þÓÃ(eat)Ëü¿ÉÒÔÊ¹ÈËÉñÍêÆø×ã
-£¬¹¦\Á¦»Ö¸´¡£
+é€™æ˜¯ä¸€æœµç·´æ­¦ä¹‹äººå¤¢å¯ä»¥æ±‚çš„å¯¶ç‰©å¤©å±±é›ªè“®ï¼Œæœç”¨(eat)å®ƒå¯ä»¥ä½¿äººç¥žå®Œæ°£è¶³
+ï¼ŒåŠŸåŠ›æ¢å¾©ã€‚
 C_LONG
 	);
 	set( "no_sale", 1 );
-	set( "unit","¶ä");
+	set( "unit","æœµ");
 	set( "weight", 1 );
 	set( "value", ({ 450, "gold" }) );
 }
@@ -26,12 +26,12 @@ C_LONG
 int eat_food(string arg)
 {
 	if( !arg || ( arg !="lily" && arg !="snow_lily")  ) 
-	return notify_fail("³ÔÊ²÷á??"); 
+	return notify_fail("åƒä»€éº¼??"); 
 	write( 
-	"Äã³ÔÏÂÒ»¶äÌìÉ½Ñ©Á«£¬´Óµ¤ÌïÉýÆðÒ»¹ÉÕæÆø£¬ÓÎ×ßÈ«Éí...\n" );
+	"ä½ åƒä¸‹ä¸€æœµå¤©å±±é›ªè“®ï¼Œå¾žä¸¹ç”°å‡èµ·ä¸€è‚¡çœŸæ°£ï¼ŒéŠèµ°å…¨èº«...\n" );
 	tell_room( environment(this_player()), 
 	this_player()->query("c_cap_name")+
-	"³ÔÏÂÒ»¶äÌìÉ½Ñ©Á«£¬ÓÖ»Ø¸´ÁËÉúÁú»î»¢µÄÑù×Ó\n" , this_player()
+	"åƒä¸‹ä¸€æœµå¤©å±±é›ªè“®ï¼Œåˆå›žå¾©äº†ç”Ÿé¾æ´»è™Žçš„æ¨£å­\n" , this_player()
 		);
 		this_player()->receive_healing( 3+random(2) );
 	        this_player()->set("force_points",(int)this_player()->query("max_fp"));

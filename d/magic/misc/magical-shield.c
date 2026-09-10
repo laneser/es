@@ -88,21 +88,21 @@ int cast(int level)
 	me = this_player();
 
 	if( (int)me->query_skill(TYPE) < query_need_skill(level) ) {
-	  tell_object( me, "ÄãµÄ"+to_chinese(TYPE)+"¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n"
+	  tell_object( me, "ä½ çš„"+to_chinese(TYPE)+"æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n"
       );
       return 0;
     }
 
     if( me->query_temp("effect/magical-shield") ) {
-      tell_object( me, "ÄãÉÏÒ»¸öÄ§·¨Ö®¶Ü»¹Ã»ÏûÊ§ÄØ! ±ðÀË·Ñ·¨Á¦ÁË¡£\n" );
+      tell_object( me, "ä½ ä¸Šä¸€å€‹é­”æ³•ä¹‹ç›¾é‚„æ²’æ¶ˆå¤±å‘¢! åˆ¥æµªè²»æ³•åŠ›äº†ã€‚\n" );
       return 0;
     }
-	write( "ÄãÊ©Õ¹Ä§·¨Ö®¶ÜÖäÎÄ£¬Ò»ÕóÆæÃîµÄÁ¦³¡Öð½¥ÔÚÄãµÄÃæÇ°ÐÎ³ÉÒ»²ãÎÞÐÎ"
-		   "µÄÄ§·¨¶Ü¡£\n"
+	write( "ä½ æ–½å±•é­”æ³•ä¹‹ç›¾å’’æ–‡ï¼Œä¸€é™£å¥‡å¦™çš„åŠ›å ´é€æ¼¸åœ¨ä½ çš„é¢å‰å½¢æˆä¸€å±¤ç„¡å½¢"
+		   "çš„é­”æ³•ç›¾ã€‚\n"
 	);
 	tell_room( environment(me), me->query("c_name") 
-		+ "à«à«µØÄîÁËÒ»¶ÎÖäÎÄ£¬Ò»ÕóÆæÃîµÄÁ¦³¡Öð½¥ÔÚ" + me->query("c_name")+
-		"µÄÃæÇ°ÐÎ³ÉÒ»²ãÎÞÐÎµÄÄ§·¨¶Ü¡£\n", me );
+		+ "å–ƒå–ƒåœ°å¿µäº†ä¸€æ®µå’’æ–‡ï¼Œä¸€é™£å¥‡å¦™çš„åŠ›å ´é€æ¼¸åœ¨" + me->query("c_name")+
+		"çš„é¢å‰å½¢æˆä¸€å±¤ç„¡å½¢çš„é­”æ³•ç›¾ã€‚\n", me );
 	me->set_temp("effect/magical-shield", 1);
 	gain_spell_experience(me, TYPE, query_gain_spell_exp(level));
     me->set_temp("extra_ac/magical-shield", query_extra_ac(level));
@@ -115,7 +115,7 @@ int cast(int level)
 void release( object caster, int level )
 {
     if( !caster ) return;
-    tell_object( caster , "Äã¸Ð¾õµ½ÄãµÄÄ§·¨¶ÜËÆºõÏûÊ§ÁË¡£\n" );
+    tell_object( caster , "ä½ æ„Ÿè¦ºåˆ°ä½ çš„é­”æ³•ç›¾ä¼¼ä¹Žæ¶ˆå¤±äº†ã€‚\n" );
     caster->delete_temp("extra_ac/magical-shield");
     caster->delete_temp("extra_db/magical-shield");
     caster->set_temp("effect/magical-shield", 0);

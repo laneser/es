@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "scale mail", "ÌúÁÛ¼×" );
+	set_name( "scale mail", "éµé±—ç”²" );
 	add( "id", ({ "scale", "mail" }) );
-	set_short( "ÌúÁÛ¼×" );
-	set_long("ÕâÊÇÒ»¼şÏâÖø\Ğí\¶àÌúÆ¬µÄÁÛ¼×¡£\n");
-	set( "unit", "¼ş" );
+	set_short( "éµé±—ç”²" );
+	set_long("é€™æ˜¯ä¸€ä»¶é‘²è‘—è¨±å¤šéµç‰‡çš„é±—ç”²ã€‚\n");
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );
 	set( "weight", 180 );

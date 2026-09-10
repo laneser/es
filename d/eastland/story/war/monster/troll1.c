@@ -5,16 +5,16 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "troll soldier", "¾ŞÈË×åÊ¿±ø" );
+	set_name( "troll soldier", "å·¨äººæ—å£«å…µ" );
 	add( "id", ({ "soldier","troll" }) );
-	set_short( "¾ŞÈË×åÊ¿±ø" );
+	set_short( "å·¨äººæ—å£«å…µ" );
 	set_long(@LONG
-Ò»¸öĞ×ÃÍµÄ¾ŞÈË×åÕ½Ê¿£¬ËûÕıÔÚò¿ÓÈ´ó¾üÀï·ÜÓÂÉ±µĞ¡£
+ä¸€å€‹å…‡çŒ›çš„å·¨äººæ—æˆ°å£«ï¼Œä»–æ­£åœ¨èš©å°¤å¤§è»è£¡å¥®å‹‡æ®ºæ•µã€‚
 LONG
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "gender","male");
-	set( "race","¾ŞÈË");
+	set( "race","å·¨äºº");
 	set( "alignment", -100 );
 	set_natural_armor(35,1);
 	set_natural_weapon(1,2,3);

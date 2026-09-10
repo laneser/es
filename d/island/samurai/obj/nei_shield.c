@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Thunder Shield", "À×µçÉñ¶Ü");
+        set_name( "Thunder Shield", "é›·é›»ç¥ç›¾");
         add( "id", ({ "thunder","shield" }) );
-        set_short("Thunder Shield", "À×µçÉñ¶Ü");
+        set_short("Thunder Shield", "é›·é›»ç¥ç›¾");
         set_long(@AAA
-ÕâÊÇÒ»¼ş¸½ÓĞÀ×µç¾«ÁéÁ¦Á¿µÄ¶ÜÅÆ
+é€™æ˜¯ä¸€ä»¶é™„æœ‰é›·é›»ç²¾éˆåŠ›é‡çš„ç›¾ç‰Œ
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "shield" );
         set( "armor_class", 8 );
         set( "defense_bonus", 6 );

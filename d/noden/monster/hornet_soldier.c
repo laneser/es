@@ -10,14 +10,14 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name("soldier hornet", "»Æ·ä±ø·ä");
+	set_name("soldier hornet", "é»ƒèœ‚å…µèœ‚");
 	add( "id", ({ "soldier", "hornet" }) );
-   set_short("»Æ·ä±ø·ä");
+   set_short("é»ƒèœ‚å…µèœ‚");
 	set_long(
-		"Äã¿´µ½Ò»Ö»ÎËÎË½ĞµÄ»Æ·ä±ø·ä£¬×îºÃÔÚÄã±»Ëü¶¢ÉÏÖ®Ç°¸Ï¿ìÁï°É¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»å—¡å—¡å«çš„é»ƒèœ‚å…µèœ‚ï¼Œæœ€å¥½åœ¨ä½ è¢«å®ƒç›¯ä¸Šä¹‹å‰è¶•å¿«æºœå§ã€‚\n"
 	);
    set( "race", "insect" );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
    set( "exp_reward", 258 );
 	set( "alignment", -200 );
 	set( "tactic_func", "sting" );
@@ -26,11 +26,11 @@ void create()
 	set( "moving", 1 );
 	set( "speed", 25 );
 	set( "natural_weapon_class1", 5 );
-	set( "c_death_msg", "%sÎŞÁ¦µØÂäµ½µØÉÏ£¬ËÀÇÌÇÌÁË ....\n" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
-	set_c_verbs( ({ "%s·¢³öÎËÎËµÄ½ĞÉù£¬Íù%s¶£È¥" }) );
-	setenv( "C_MIN", "Ò»Ö»$N·ÉÁË¹ıÀ´¡£" );
-	setenv( "C_MOUT", "$NÍù$D±ß·É×ß¡£" );
+	set( "c_death_msg", "%sç„¡åŠ›åœ°è½åˆ°åœ°ä¸Šï¼Œæ­»ç¿¹ç¿¹äº† ....\n" );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
+	set_c_verbs( ({ "%sç™¼å‡ºå—¡å—¡çš„å«è²ï¼Œå¾€%så®å»" }) );
+	setenv( "C_MIN", "ä¸€éš»$Né£›äº†éä¾†ã€‚" );
+	setenv( "C_MOUT", "$Nå¾€$Dé‚Šé£›èµ°ã€‚" );
 }
 
 int sting()
@@ -39,9 +39,9 @@ int sting()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
     tell_object( victim,
-            "»Æ·ä·Éµ½ÄãµÄÁ³ÉÏ£¬Äã¸Ğµ½Á³ÉÏÒ»Õó´ÌÍ´£¡\n" );
+            "é»ƒèœ‚é£›åˆ°ä½ çš„è‡‰ä¸Šï¼Œä½ æ„Ÿåˆ°è‡‰ä¸Šä¸€é™£åˆºç—›ï¼\n" );
     tell_room( environment(this_object()),
-            "»Æ·ä·Éµ½" + victim->query("c_name") + "µÄÁ³ÉÏ£¬ÓÃÎ²ÕëÍùÏÂÒ»ó§£¡\n",
+            "é»ƒèœ‚é£›åˆ°" + victim->query("c_name") + "çš„è‡‰ä¸Šï¼Œç”¨å°¾é‡å¾€ä¸‹ä¸€è«ï¼\n",
                 ({this_object(),victim }) );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 5, 5 );
 	return 1;

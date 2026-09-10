@@ -1,14 +1,14 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
-messages ({(["id":443,"body":"          Ã»ÊÂ ...
-","title":"¹ş¹ş¹ş","time":781540417,"poster":"Did",]),(["id":444,"title":"sigh","body":"sigh no chinese ..............
-","time":781571038,"poster":"Jschen",]),(["id":445,"title":"emote","body":"Ò»Ğ©emoteÃ»ÓĞÖĞÎÄ....
-Çë¼ñ²éÒ»ÏÂ....
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
+messages ({(["id":443,"body":"          æ²’äº‹ ...
+","title":"å“ˆå“ˆå“ˆ","time":781540417,"poster":"Did",]),(["id":444,"title":"sigh","body":"sigh no chinese ..............
+","time":781571038,"poster":"Jschen",]),(["id":445,"title":"emote","body":"ä¸€äº›emoteæ²’æœ‰ä¸­æ–‡....
+è«‹æ’¿æŸ¥ä¸€ä¸‹....
 
-                           °ËÔÆ
+                           å…«é›²
 ","time":781572056,"poster":"Jschen",]),(["id":446,"body":"God help:
    My poor scholar char Laputa body can't restore, plz help me
                    Thanks                           Lv 19 scholar Laputa
@@ -23,17 +23,17 @@ messages ({(["id":443,"body":"          Ã»ÊÂ ...
 ","title":"< no title >","time":781604070,"poster":"Oat",]),(["id":448,"title":"< no title >","body":"God help:
          my poor friend Beejoe body can't restore,too...
          please help him........
-                    Thanks.....        lv19 Death(´úBeejoe ·¢ÑÔ)
-","time":782061268,"poster":"Death",]),(["id":449,"title":"< no title >","body":"ÏÖÔÚcommands : quests and explore µ½µ×Ôõ÷áÁË??
-»µÁËÂğ??ÎªºÎÎÒ¿ÉÒÔÓÃexplore, ÎÒµÄmonk ²»ÄÜÓÃ??
-ÎÒ¿ÉÓÃquests, my monk cant use,
-but type quests, Äã»¹Î´Íê³ÉÈÎºÎÈÎÎñ??
+                    Thanks.....        lv19 Death(ä»£Beejoe ç™¼è¨€)
+","time":782061268,"poster":"Death",]),(["id":449,"title":"< no title >","body":"ç¾åœ¨commands : quests and explore åˆ°åº•æ€éº¼äº†??
+å£äº†å—??ç‚ºä½•æˆ‘å¯ä»¥ç”¨explore, æˆ‘çš„monk ä¸èƒ½ç”¨??
+æˆ‘å¯ç”¨quests, my monk cant use,
+but type quests, ä½ é‚„æœªå®Œæˆä»»ä½•ä»»å‹™??
 
 ","time":782063298,"poster":"Nin",]),(["id":450,"title":"Re: < no title >","body":"On Thu Oct 13, Nin wrote:
-> ÏÖÔÚcommands : quests and explore µ½µ×Ôõ÷áÁË??
-> »µÁËÂğ??ÎªºÎÎÒ¿ÉÒÔÓÃexplore, ÎÒµÄmonk ²»ÄÜÓÃ??
-> ÎÒ¿ÉÓÃquests, my monk cant use,
-> but type quests, Äã»¹Î´Íê³ÉÈÎºÎÈÎÎñ??
+> ç¾åœ¨commands : quests and explore åˆ°åº•æ€éº¼äº†??
+> å£äº†å—??ç‚ºä½•æˆ‘å¯ä»¥ç”¨explore, æˆ‘çš„monk ä¸èƒ½ç”¨??
+> æˆ‘å¯ç”¨quests, my monk cant use,
+> but type quests, ä½ é‚„æœªå®Œæˆä»»ä½•ä»»å‹™??
 > 
 :P sorry wrong, all can use explore and quests, but why it sats i have not finish quests??
 
@@ -56,18 +56,18 @@ please fix it...
 thanks very much...
 Bigboar
 ","time":782115228,"poster":"Helpboar",]),(["id":456,"body":"help!! my old player <polaris> can't restore!! become new player now!!  :(
-please help me!! thanks!!£º£ğ
+please help me!! thanks!!ï¼šï½
 thanks a lot!!!
-","title":"< no title >","time":782117361,"poster":"Norikosakai",]),(["id":457,"title":"< no title >","body":"okok...ÎÒÒ»´ÎËµÒ»¶ÑÈË±ğÏÅµ½...
+","title":"< no title >","time":782117361,"poster":"Norikosakai",]),(["id":457,"title":"< no title >","body":"okok...æˆ‘ä¸€æ¬¡èªªä¸€å †äººåˆ¥åš‡åˆ°...
 
 bamboo: level 18, attr full, skill almost full..
 chensy: level 16, attr skill almost full...
 x: level 14, attr skill little poor..
-wusong: ÓĞÉè okip..and level 16, attr skill almost full..Ëûµ±±øÈ¥ÁË..
+wusong: æœ‰è¨­ okip..and level 16, attr skill almost full..ä»–ç•¶å…µå»äº†..
 ","time":782126272,"poster":"Sutanic",]),(["id":460,"title":"< no title >","body":"
 	Please help Eekt. Eekt can't restore body....
 	Thanks very much
-						Ğ°¶ñÆïÊ¿ °×ÀÇ
+						é‚ªæƒ¡é¨å£« ç™½ç‹¼
 ","time":782133402,"poster":"Ai",]),(["id":461,"title":"< no title >","body":"I can't k mobs ! Can k , but it don't attack me , don't die , i can't get any
 experience ... :~~~ 
 i'm a lizardman , ruby tell me bcz of race ...
@@ -78,9 +78,9 @@ HELP !
 > i'm a lizardman , ruby tell me bcz of race ...
 > HELP !
 
-	ĞŞºÃÁË ...
+	ä¿®å¥½äº† ...
 
-						Èã±È
+						èŒ¹æ¯”
 ","time":782155943,"poster":"Ruby",]),(["id":464,"title":"it's unfair about some commenc about scholar","body":"some wizard said if scholar unknow no train to [30], he has no right to say comment about monk and scholar which is power
 today i have ask monk, they train 72 skill's practice from 0 to 100 only cost less then 100 hour, maybe only need 50 hour less.
 Do u know scholar train unknow from 0 to 30 need how much time?
@@ -95,15 +95,15 @@ It's hard to train a scholar more hard then monk 10 times
 he become noname and hp down to 25..
 God..can help..plz..
                         thax....Maggie
-","title":"< no title >","time":782204736,"poster":"Maggie",]),(["id":467,"body":"	¶Ô²»Æğ ,ÓĞÒ»¸öÓŞ±¿µÄÎÊÌâÇë½Ì...
+","title":"< no title >","time":782204736,"poster":"Maggie",]),(["id":467,"body":"	å°ä¸èµ· ,æœ‰ä¸€å€‹æ„šç¬¨çš„å•é¡Œè«‹æ•™...
 
-	ÔÚ°ËÔÂÊ±ÎÒ´´ÁËÒ»¸öid summer....µ«Òò¾ÃÃ»ÓÃËü...
+	åœ¨å…«æœˆæ™‚æˆ‘å‰µäº†ä¸€å€‹id summer....ä½†å› ä¹…æ²’ç”¨å®ƒ...
 
-	¾¹°Ñ summer µÄ ÃÜÂëÍüÁË....
+	ç«ŸæŠŠ summer çš„ å¯†ç¢¼å¿˜äº†....
 
-	ÏÖÔÚ¸ÃÔõ÷á°ì?  ¿É·ñ°Ñ summer µÄ½ÇÉ«É±µô?
+	ç¾åœ¨è©²æ€éº¼è¾¦?  å¯å¦æŠŠ summer çš„è§’è‰²æ®ºæ‰?
 
-	»ò......Õæ¶Ô²»Æğ...
+	æˆ–......çœŸå°ä¸èµ·...
 							Rust.
 ","title":"< no title >","time":782205582,"poster":"Rust",]),})
 id_ref 477

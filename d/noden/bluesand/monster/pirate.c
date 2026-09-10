@@ -8,10 +8,10 @@ void create()
 
 	::create();
 	set_level(5);
-	set_name( "pirate", "海盗水手" );
-   set_short( "海盗水手" );
+	set_name( "pirate", "娴风洔姘存墜" );
+   set_short( "娴风洔姘存墜" );
 	set_long(
-		"你看到一个长相粗鲁，浑身肌肉的海盗水手。\n"
+		"浣犵湅鍒颁竴鍊嬮暦鐩哥矖榄紝娓捐韩鑲岃倝鐨勬捣鐩滄按鎵嬨�俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

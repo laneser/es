@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "steel braso mail", "¸ÖÐØ¼×" );
+	set_name( "steel braso mail", "é‹¼èƒ¸ç”²" );
 	add( "id", ({ "scale", "mail" }) );
-	set_short( "an steel braso mail", "¸ÖÐØ¼×" );
+	set_short( "an steel braso mail", "é‹¼èƒ¸ç”²" );
 	set_long(
 		"You see a braso mail covered with many steel scales.\n",
-		"ÕâÊÇÒ»¼þÏâÖø\Ðí\¶à¸ÖÆ¬µÄÐØ¼×¡£\n"
+		"é€™æ˜¯ä¸€ä»¶é‘²è‘—è¨±å¤šé‹¼ç‰‡çš„èƒ¸ç”²ã€‚\n"
 	);
-	set( "unit", "¼þ" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
         set("material","heavy_metal");
 	set( "weight", 180 );

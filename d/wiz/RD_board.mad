@@ -8,5 +8,5 @@ void create()
 	set_save_file("RD_board");
 	set_location("/d/wiz/RandD");
 	set( "short.text", "Board of R & D");
-	set( "c_short.text", "ÑĞ·¢²¿ÁôÑÔ°å");
+	set( "c_short.text", "ç ”ç™¼éƒ¨ç•™è¨€æ¿");
 }

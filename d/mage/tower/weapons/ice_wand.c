@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("ice wand", "º®±ùÕÈ");
+	set_name("ice wand", "å¯’å†°æ–");
 	add ("id",({ "wand",}) );
-	set_short("a ice wand","º®±ùÕÈ");
+	set_short("a ice wand","å¯’å†°æ–");
 	set_long(
 	    "A magical wand which can cast sleet.\n",
-        "ÓÃĞşÌìº®±ùÖÆ³É£¬¾İËµÄÜÒıÆğ¡¸±ù±¢¡¹µÄÄ§ÕÈ¡£\n"
+        "ç”¨ç„å¤©å¯’å†°è£½æˆï¼Œæ“šèªªèƒ½å¼•èµ·ã€Œå†°é›¹ã€çš„é­”æ–ã€‚\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 45 );
 	set( "type", "wand" );
         set( "min_damage", 20 );
@@ -28,5 +28,5 @@ void create()
 	set( "special_damage_type", "cold" );
 	set( "special_damage", 75 );
 	set( "special_msg", " causes sleet." );
-	set( "special_c_msg", "Òı·¢¡¸±ù±¢¡¹£¬·çÑ©ÎŞÇéµÄËÁÅ°£¡" );
+	set( "special_c_msg", "å¼•ç™¼ã€Œå†°é›¹ã€ï¼Œé¢¨é›ªç„¡æƒ…çš„è‚†è™ï¼" );
 }

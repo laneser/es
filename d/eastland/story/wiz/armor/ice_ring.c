@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("ice-ghost ring","Ñ©»êÄıÖ¸");
+        set_name("ice-ghost ring","é›ªé­‚å‡æŒ‡");
         add( "id", ({ "ring" }) );
-        set_short("Ñ©»êÄıÖ¸");
+        set_short("é›ªé­‚å‡æŒ‡");
         set_long(@C_LONG
-Ò»Ö»Ç§Äêº®¡õ½á¾§³ÉµÄ½äÖ¸£¬ÈÎ¶à´óÁÒÑæÖÕ²»ÄÜÊ¹Ö®ÈÛ»¯¡£
+ä¸€éš»åƒå¹´å¯’â–¡çµæ™¶æˆçš„æˆ’æŒ‡ï¼Œä»»å¤šå¤§çƒˆç„°çµ‚ä¸èƒ½ä½¿ä¹‹ç†”åŒ–ã€‚
 C_LONG
         );
-        set( "unit","Ö»");
+        set( "unit","åª");
         set( "type", "finger" );
         set( "material","element");
         set( "defense_bonus", 5 );

@@ -90,7 +90,7 @@ string format_c_time(int tm, int verbose)
     str = "";
 
     if(!tm) 
-		if(verbose)  return "0 Ãë";  
+		if(verbose)  return "0 ç§’";  
 		else	     return "0s";
 
     years = tm / 31449600;
@@ -110,27 +110,27 @@ string format_c_time(int tm, int verbose)
 
     if(years)
 		if(!verbose)  str += years + "y ";
-		else str += years + " Äê ";
+		else str += years + " å¹´ ";
  
     if(weeks)
 		if(!verbose)  str += weeks + "w ";
-		else str += weeks + " ÖÜ ";
+		else str += weeks + " å‘¨ ";
  
     if(days)
 		if(!verbose)  str += days + "d ";
-		else str += days + " Ìì ";
+		else str += days + " å¤© ";
  
     if(hours)
 		if(!verbose)  str += hours + "h ";
-		else str += hours + " Ğ¡Ê± ";
+		else str += hours + " å°æ™‚ ";
  
     if(minutes)
 		if(!verbose)  str += minutes + "m ";
-		else str += minutes + " ·ÖÖÓ ";
+		else str += minutes + " åˆ†é˜ ";
  
     if(seconds)
 		if(!verbose)  str += seconds + "s ";
-		else str += seconds + " Ãë";
+		else str += seconds + " ç§’";
 
     if(str[strlen(str)-1] == ' ')  str = str[0..strlen(str)-2];
  

@@ -1,22 +1,22 @@
 #d/scholar/scholar/scholar_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Scholar's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÊéÉúÁôÑÔ°å",])
-messages ({(["id":145,"title":"< no title >","body":"Çë´ó¼ÒÔÚ·¢ÏÖbugÊ±ÄÜ½«ËüÓÃ\"bug\"Ö¸Áî¼ÇÂ¼ÏÂÀ´,
-ÒÔ·½±ã×÷Òµ,Ğ»Ğ»!
-","time":787400442,"poster":"Tsunami",]),(["id":146,"body":"´óÉñ\\ÃÇ\\¼°Î×Ê¦ÃÇ...ÊéÉúÏÖÔÚÕæµÄÎŞĞĞÀ²À²...too weak..ÎÒÃÇ¸ú±¾Ã»ÄÜÁ¦ÄÃeq...
-°İÍÏÏÈ¸Ä»ØÀ´ºÃÂğ???ÔÚĞÂÏµÍ³»¹Ã»³ö¡õ Ö®Ç°...
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Scholar's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"æ›¸ç”Ÿç•™è¨€æ¿",])
+messages ({(["id":145,"title":"< no title >","body":"è«‹å¤§å®¶åœ¨ç™¼ç¾bugæ™‚èƒ½å°‡å®ƒç”¨\"bug\"æŒ‡ä»¤è¨˜éŒ„ä¸‹ä¾†,
+ä»¥æ–¹ä¾¿ä½œæ¥­,è¬è¬!
+","time":787400442,"poster":"Tsunami",]),(["id":146,"body":"å¤§ç¥\\å€‘\\åŠå·«å¸«å€‘...æ›¸ç”Ÿç¾åœ¨çœŸçš„ç„¡è¡Œå•¦å•¦...too weak..æˆ‘å€‘è·Ÿæœ¬æ²’èƒ½åŠ›æ‹¿eq...
+æ‹œæ‹–å…ˆæ”¹å›ä¾†å¥½å—???åœ¨æ–°ç³»çµ±é‚„æ²’å‡ºâ–¡ ä¹‹å‰...
 .
 ","title":"< no title >","time":787508121,"poster":"Bigcat",]),(["id":147,"body":"On Fri Dec 16, Bigcat wrote:
-> ´óÉñ\\ÃÇ\\¼°Î×Ê¦ÃÇ...ÊéÉúÏÖÔÚÕæµÄÎŞĞĞÀ²À²...too weak..ÎÒÃÇ¸ú±¾Ã»ÄÜÁ¦ÄÃeq...
-> °İÍÏÏÈ¸Ä»ØÀ´ºÃÂğ???ÔÚĞÂÏµÍ³»¹Ã»³ö¡õ Ö®Ç°...
+> å¤§ç¥\\å€‘\\åŠå·«å¸«å€‘...æ›¸ç”Ÿç¾åœ¨çœŸçš„ç„¡è¡Œå•¦å•¦...too weak..æˆ‘å€‘è·Ÿæœ¬æ²’èƒ½åŠ›æ‹¿eq...
+> æ‹œæ‹–å…ˆæ”¹å›ä¾†å¥½å—???åœ¨æ–°ç³»çµ±é‚„æ²’å‡ºâ–¡ ä¹‹å‰...
 > .
 
-   Èç¹ûÒÔÇ°µÄµµ°¸»¹ÔÚ ... ÎÒÒ»¶¨»áÔİÊ±¸Ä»ØÀ´ ...
+   å¦‚æœä»¥å‰çš„æª”æ¡ˆé‚„åœ¨ ... æˆ‘ä¸€å®šæœƒæš«æ™‚æ”¹å›ä¾† ...
 
-	¿ÉÊÇ .....
+	å¯æ˜¯ .....
 
-							Èã±È
+							èŒ¹æ¯”
 ","title":"Re: < no title >","time":787509314,"poster":"Ruby",]),(["id":148,"body":"so interesting area in goomei and ground city, but now scholar so weak, hard to explore :~~~
 now only the no eq mob easy k,others all so hard...
 
@@ -31,9 +31,9 @@ hope can get some help for u scholar :P
 really scholar guild... still has a long long way la
 
  :P
-","time":788641321,"poster":"Angel",]),(["id":150,"title":"< no title >","body":" ÕæµÄ¸ĞĞ»angel...thx,..:)
+","time":788641321,"poster":"Angel",]),(["id":150,"title":"< no title >","body":" çœŸçš„æ„Ÿè¬angel...thx,..:)
 ","time":788642064,"poster":"Bigcat",]),(["id":151,"title":"7","body":"wa... great.. :) thx too :)
-et ßµÊ×
+et å©é¦–
 
 ","time":788693431,"poster":"Et",]),(["id":152,"body":" and now scholar's shortblade is 85 lo
 ","title":"and","time":788727242,"poster":"Angel",]),(["id":153,"body":"h
@@ -45,7 +45,7 @@ i call angel to change shortblade to 85 now we can use scythe loh !ya1
 test lah 
         thx all scholars
 ","title":"this my first post","time":788727538,"poster":"Laws",]),(["id":155,"body":"     
-    £á£î£ç£å£ìÌ«¸ĞĞ»ÁË...:)
+    ï½ï½ï½‡ï½…ï½Œå¤ªæ„Ÿè¬äº†...:)
     i think all scholars will like you so much..
     [A[A[3~[3~[3~[B[Breally thanks..
 ","title":"< no title >","time":788748214,"poster":"Bigcat",]),(["id":156,"body":"On Fri Dec 30, Laws wrote:
@@ -59,9 +59,9 @@ Death Scythe seem to be a kind of longblade weapon in many stories.
 Nothing...just think the setting is different to my memeory.
 
         Sincerely your mad...
-","title":"Re: < no title >","time":788772043,"poster":"Mad",]),(["id":157,"title":"< no title >","body":"  ÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØ,
-ÎÒÒ²ÊÇÊéÉú¨Ë¨ß, ÄãÃÇ¶¼²»¼ÇµÃÎÒ,
-ÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØÎØ
+","title":"Re: < no title >","time":788772043,"poster":"Mad",]),(["id":157,"title":"< no title >","body":"  å—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—š,
+æˆ‘ä¹Ÿæ˜¯æ›¸ç”Ÿã„‹ã„Ÿ, ä½ å€‘éƒ½ä¸è¨˜å¾—æˆ‘,
+å—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—šå—š
 GIVE ME REMEMBER!!!!!
                                       tsunami
 ","time":788932973,"poster":"Tsunami",]),(["id":159,"body":"Dear all :
@@ -69,17 +69,17 @@ GIVE ME REMEMBER!!!!!
 
 					almuhara
 ","title":"< no title >","time":789640292,"poster":"Almuhara",]),(["id":162,"title":"< no title >","body":"
-       Çë¸÷Î»ÊéÉú»¹²»ÒªÁ·Õó·¨¼¼ÄÜÒòÎªÁ·ÁËÒ²Ã»ÓÃ
+       è«‹å„ä½æ›¸ç”Ÿé‚„ä¸è¦ç·´é™£æ³•æŠ€èƒ½å› ç‚ºç·´äº†ä¹Ÿæ²’ç”¨
 
-       ÒòÎªÏÖÔÚ´ËÕó·¨¼¼ÄÜ±ØĞëÓÃ¾«ÉñÁ¦ÍÆ¶¯¶ø·ÇÄÚÁ¦.
+       å› ç‚ºç¾åœ¨æ­¤é™£æ³•æŠ€èƒ½å¿…é ˆç”¨ç²¾ç¥åŠ›æ¨å‹•è€Œéå…§åŠ›.
 ","time":789689917,"poster":"Oldcat",]),(["id":163,"body":"
     Dear all scholars : 
  
-        ÏÖÔÚ¿ª·ÅÕó·¨²âÊÔ,ÓĞÎÊÌâÇë¼ÄĞÅ¸øÎÒ»òpostÔÚÕâÀï
-","title":"about Õó·¨","time":789822179,"poster":"Oldcat",]),(["id":164,"title":"ÊéÉú¿ª·Å²âÊÔ","body":"
-    ÏÖÔÚÊéÉú¹«»á¿ª·Å²âÊÔ...ÓĞÎÊÌâÇëpost»òmail¸øÎÒ...
+        ç¾åœ¨é–‹æ”¾é™£æ³•æ¸¬è©¦,æœ‰å•é¡Œè«‹å¯„ä¿¡çµ¦æˆ‘æˆ–poståœ¨é€™è£¡
+","title":"about é™£æ³•","time":789822179,"poster":"Oldcat",]),(["id":164,"title":"æ›¸ç”Ÿé–‹æ”¾æ¸¬è©¦","body":"
+    ç¾åœ¨æ›¸ç”Ÿå…¬æœƒé–‹æ”¾æ¸¬è©¦...æœ‰å•é¡Œè«‹postæˆ–mailçµ¦æˆ‘...
 
-                                     ÀÏÃ¨
+                                     è€è²“
 ","time":789916663,"poster":"Oldcat",]),(["id":165,"body":"Dear Wiz:
            I can't train \"demand\" 
 please check it..thanks :)
@@ -90,11 +90,11 @@ please check it..thanks :)
 > please check it..thanks :)
 >                                           purple
 
-    ÇëÄã list ¿´Ò»ÏÂ ... Õâ¸ö skill ÒÑ¾­±»´êÌÀÔ²´êµôÁË :P)
+    è«‹ä½  list çœ‹ä¸€ä¸‹ ... é€™å€‹ skill å·²ç¶“è¢«æ“æ¹¯åœ“æ“æ‰äº† :P)
 
-	µ±È»²»ÄÜ train loh ... sorry .. scholar skill under fixing ..
+	ç•¶ç„¶ä¸èƒ½ train loh ... sorry .. scholar skill under fixing ..
 
-							Èã±È
+							èŒ¹æ¯”
 ","title":"Re: < no title >","time":790097141,"poster":"Ruby",]),(["id":167,"body":"On Sat Jan 14, Ruby wrote:
 > On Sat Jan 14, Purple wrote:
 > > Dear Wiz:
@@ -102,13 +102,13 @@ please check it..thanks :)
 > > please check it..thanks :)
 > >                                           purple
 > 
->     ÇëÄã list ¿´Ò»ÏÂ ... Õâ¸ö skill ÒÑ¾­±»´êÌÀÔ²´êµôÁË :P)
+>     è«‹ä½  list çœ‹ä¸€ä¸‹ ... é€™å€‹ skill å·²ç¶“è¢«æ“æ¹¯åœ“æ“æ‰äº† :P)
 > 
-> 	µ±È»²»ÄÜ train loh ... sorry .. scholar skill under fixing ..
+> 	ç•¶ç„¶ä¸èƒ½ train loh ... sorry .. scholar skill under fixing ..
 > 
-> 							Èã±È
+> 							èŒ¹æ¯”
 
-    wah... ÎÒ²Å¸Õ°ÑËüÁ·ÂúµÄËµ, ¾Í±»´êµôÁË... wooooo......
+    wah... æˆ‘æ‰å‰›æŠŠå®ƒç·´æ»¿çš„èªª, å°±è¢«æ“æ‰äº†... wooooo......
 
 ","title":"Re: Re: < no title >","time":790140545,"poster":"Karl",]),})
 id_ref 181

@@ -19,23 +19,23 @@ int cmd_eujian(string str)
         if ( !str ) return help();
         
         if ( !weapon || (string)weapon->query("type") != "longblade" ) 
-        	return notify_fail( "ÄãÃ»ÓĞÊÊµ±µÄÎäÆ÷Ò® !!\n" );
+        	return notify_fail( "ä½ æ²’æœ‰é©ç•¶çš„æ­¦å™¨è€¶ !!\n" );
         
         if ( me->query_attackers() )
-        	return notify_fail( "Î¹ !! Äã»¹ÔÚÕ½¶·ÖĞÒ®£¬Ïë±»´òÏÂÀ´Âğ ??\n" );
+        	return notify_fail( "å–‚ !! ä½ é‚„åœ¨æˆ°é¬¥ä¸­è€¶ï¼Œæƒ³è¢«æ‰“ä¸‹ä¾†å— ??\n" );
         	
         if ( me->query("gonfu_busy") || me->query_temp("gonfu_busy") ) 
-        	return notify_fail( "ÄãÕıÔÚÊ¹ÓÃÆäËû¹¦\·ò£¬ËùÒÔÎŞ·¨Ô¦½£¡£\n" );
+        	return notify_fail( "ä½ æ­£åœ¨ä½¿ç”¨å…¶ä»–åŠŸå¤«ï¼Œæ‰€ä»¥ç„¡æ³•é¦­åŠã€‚\n" );
         
 	if ( str == "where" ) {
 		where = (mapping)me->query("node");
 		
 		if (!where || sizeof(where) == 0 ) {
-			write("Äã²»¼ÇµÃÈÎºÎµØ·½¿ÉÒÔÔ¦½£·ÉÈ¥¡£\n");
+			write("ä½ ä¸è¨˜å¾—ä»»ä½•åœ°æ–¹å¯ä»¥é¦­åŠé£›å»ã€‚\n");
 			return 1; }
 		else {
 		
-		msg = "ÄãÄ¿Ç°¼ÇµÃµÄµØ·½ÓĞ : \n" ;
+		msg = "ä½ ç›®å‰è¨˜å¾—çš„åœ°æ–¹æœ‰ : \n" ;
 		
 		node_name = keys(where);
 		for( i=0; i < sizeof(node_name); i++ ) 
@@ -59,12 +59,12 @@ int cmd_eujian(string str)
 	
         if ( str == "guild" ) {
         	tell_object( me,
-        		"Äã¾Û¾«»áÉñ¡¢Ä¬ÔËĞş¹¦\ì¶½£ÉíÉÏ£¬Éí½£ºÏÒ»ÏòÄ¿µÄµØ·ÉÈ¥ !!\n" );
+        		"ä½ èšç²¾æœƒç¥ã€é»˜é‹ç„åŠŸæ–¼åŠèº«ä¸Šï¼Œèº«åŠåˆä¸€å‘ç›®çš„åœ°é£›å» !!\n" );
  		tell_room( environment(me), 
- 			sprintf("%sÊÖÆş½£¾÷£¬Éí½£ºÏÒ»ÏòÔ¶·½·ÉÈ¥ !!\n", me->query("c_name")), me );       		
+ 			sprintf("%sæ‰‹æåŠè¨£ï¼Œèº«åŠåˆä¸€å‘é æ–¹é£›å» !!\n", me->query("c_name")), me );       		
         	me->move_player( "/d/scholar/scholar/scholar_guild", "SNEAK" );
         	tell_room( "/d/scholar/scholar/scholar_guild", 
-        		sprintf("Ò»µÀÒø°×É«µÄ½£ÆøÔØÖø%s¶øÀ´ !!\n", me->query("c_name")), me );
+        		sprintf("ä¸€é“éŠ€ç™½è‰²çš„åŠæ°£è¼‰è‘—%sè€Œä¾† !!\n", me->query("c_name")), me );
  		return 1; }      
 	return 1;
 }
@@ -73,14 +73,14 @@ int cmd_eujian(string str)
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: eujian <²ÎÊı>
+æŒ‡ä»¤æ ¼å¼: eujian <åƒæ•¸>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ô¦½£·ÉĞĞ¡£Äã¿ÉÒÔ¼ÓÉÏÏÂÁĞµÄ²ÎÊı :
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†é¦­åŠé£›è¡Œã€‚ä½ å¯ä»¥åŠ ä¸Šä¸‹åˆ—çš„åƒæ•¸ :
 
-	where       :     ÁĞ³öÄãÄ¿Ç°Ëù¼ÇµÃµÄµØ·½¡£
-	guild       :     ·É»Ø¹«»á¡£
-	here 1,2,3  :     ¼Ç×¡´ËµØ¡£
-	1,2,3       :     Ô¦½£µ½ÄÇ¶ù¡£ 
+	where       :     åˆ—å‡ºä½ ç›®å‰æ‰€è¨˜å¾—çš„åœ°æ–¹ã€‚
+	guild       :     é£›å›å…¬æœƒã€‚
+	here 1,2,3  :     è¨˜ä½æ­¤åœ°ã€‚
+	1,2,3       :     é¦­åŠåˆ°é‚£å…’ã€‚ 
 C_HELP
 		);
     return 1;

@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("stone long hammer", "Ê¯ÖÆ³¤é³");
+        set_name("stone long hammer", "çŸ³åˆ¶é•·æ§Œ");
         add ("id",({ "hammer" }) );
-        set_short("Ê¯ÖÆ³¤é³");
+        set_short("çŸ³åˆ¶é•·æ§Œ");
         set_long(
-            "ÕâÊÇÒ»°ÑÊ¯ÖÆ³¤é³,ËüÄÜ¹¥»÷Ô¶·½µÄµĞÈË¡£\n"
+            "é€™æ˜¯ä¸€æŠŠçŸ³åˆ¶é•·æ§Œ,å®ƒèƒ½æ”»æ“Šé æ–¹çš„æ•µäººã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 23 );
         set( "type", "blunt" );
         set( "min_damage", 15);

@@ -103,15 +103,15 @@ int advance_level(object player)
 //    write("advance level test2!\n");
 
     if( !living(player) || !userp(player) )
-        return notify_fail("Ö»ÓĞÍæ¼ÒÄÜÌáÉıµÈ¼¶!!\n");
+        return notify_fail("åªæœ‰ç©å®¶èƒ½æå‡ç­‰ç´š!!\n");
 //    write("advance level test3!\n");
 
     lvl = (int)player->query_level();
 //    write("advance level test4!\n");
     if( lvl >= MAX_PLAYER_LEVEL )
-        return notify_fail("ÕâÊÇÄãÄÜÉıµÄ×î¸ß¼¶ÊıÁË!!\n");
+        return notify_fail("é€™æ˜¯ä½ èƒ½å‡çš„æœ€é«˜ç´šæ•¸äº†!!\n");
 
-    notify_fail("·¢Éú´íÎó, ÇëÍ¨ÖªÎ×Ê¦!!\n");
+    notify_fail("ç™¼ç”ŸéŒ¯èª¤, è«‹é€šçŸ¥å·«å¸«!!\n");
     return ((int)player->set_level(lvl+1));
 }
 
@@ -123,15 +123,15 @@ int advance_stat(object player, string arg)
     if( !valid_statsd_check(previous_object()) ) return 0;
 //    write("advance stat test2!\n");
     if( !living(player) || !userp(player) )
-        return notify_fail("Ö»ÓĞÍæ¼ÒÄÜÌáÉıÊôĞÔ!!\n");
+        return notify_fail("åªæœ‰ç©å®¶èƒ½æå‡å±¬æ€§!!\n");
 //    write("advance stat test3!\n");
     if( !(arg=check_stat_name(arg)) ) return 0;
 //    write("advance stat test4!\n");
     stat = player->query_perm_stat(arg);
     if( stat >= MAX_ATTRIBUTE ) return notify_fail(
-        sprintf("ÄãµÄ %s(%s) ÒÑ´ï×î´óÖµÁË!!\n", to_chinese(arg), arg) );
+        sprintf("ä½ çš„ %s(%s) å·²é”æœ€å¤§å€¼äº†!!\n", to_chinese(arg), arg) );
 //    write("advance stat test5!\n");
-    notify_fail("·¢Éú´íÎó, ÇëÍ¨ÖªÎ×Ê¦!!\n");
+    notify_fail("ç™¼ç”ŸéŒ¯èª¤, è«‹é€šçŸ¥å·«å¸«!!\n");
     return (int)player->set_perm_stat(arg, stat+1);
 }
 
@@ -140,14 +140,14 @@ int train_skill(object player, string arg)
     int skill;
 
     if( !living(player) || !userp(player) )
-        return notify_fail("Ö»ÓĞÍæ¼ÒÄÜÌáÉı¼¼ÄÜ!!\n");
+        return notify_fail("åªæœ‰ç©å®¶èƒ½æå‡æŠ€èƒ½!!\n");
 
     skill = player->query_perm_skill(arg);
 
     if( skill >= MAX_SKILL ) return notify_fail(
-        sprintf("Äã %s(%s) µÄ¼¼ÄÜÒÔ´ï×î´óÖµÁË!!\n", to_chinese(arg), arg) );
+        sprintf("ä½  %s(%s) çš„æŠ€èƒ½ä»¥é”æœ€å¤§å€¼äº†!!\n", to_chinese(arg), arg) );
 
-    notify_fail("·¢Éú´íÎó, ÇëÍ¨ÖªÎ×Ê¦!!\n");
+    notify_fail("ç™¼ç”ŸéŒ¯èª¤, è«‹é€šçŸ¥å·«å¸«!!\n");
     return (int)player->set_skill(arg, skill+1);
 }
 
@@ -183,45 +183,45 @@ int change_perm_stat(object player, string arg, int stat)
     int limit;
 
     if( !valid_statsd_check(previous_object()) ) return 0;
-    if( !living(player) ) return notify_fail("Ö»ÓĞÉúÎï²ÅÓĞÊôĞÔ!!\n");
+    if( !living(player) ) return notify_fail("åªæœ‰ç”Ÿç‰©æ‰æœ‰å±¬æ€§!!\n");
     arg = check_stat_name(arg);
     if( !arg || arg == "" ) return 0;
     limit = player->query_user()? MAX_ATTRIBUTE : MAX_MONSTER_ATTRIBUTE;
     if( stat > limit )
-        return notify_fail(sprintf("±§Ç¸! ÉÏÏŞÊÇ: %d ¡£\n", limit));
+        return notify_fail(sprintf("æŠ±æ­‰! ä¸Šé™æ˜¯: %d ã€‚\n", limit));
 
-    notify_fail("ĞŞÕıÊ§°Ü, ÇëÍ¨ÖªÎ×Ê¦!!\n");
+    notify_fail("ä¿®æ­£å¤±æ•—, è«‹é€šçŸ¥å·«å¸«!!\n");
     return (int)player->set_perm_stat(arg, stat);
 }
 
 int change_skill(object player, string arg, int skill)
 {
     if( !valid_statsd_check(previous_object()) ) return 0;
-    if( !living(player) ) return notify_fail("Ö»ÓĞÉúÎï²ÅÓĞ¼¼ÄÜ!!\n");
+    if( !living(player) ) return notify_fail("åªæœ‰ç”Ÿç‰©æ‰æœ‰æŠ€èƒ½!!\n");
     if( skill > MAX_SKILL )
-        return notify_fail(sprintf("±§Ç¸! ÉÏÏŞÊÇ: %d ¡£\n", MAX_SKILL));
+        return notify_fail(sprintf("æŠ±æ­‰! ä¸Šé™æ˜¯: %d ã€‚\n", MAX_SKILL));
 
-    notify_fail("ĞŞÕıÊ§°Ü, ÇëÍ¨ÖªÎ×Ê¦!!\n");
+    notify_fail("ä¿®æ­£å¤±æ•—, è«‹é€šçŸ¥å·«å¸«!!\n");
     return (int)player->set_skill(arg, skill);
 }
 
 string alignment_string(int align)
 {
-    if( align < -5000 ) return set_color("¶ñ¹áÂúÓ¯", "HIR");
-    else if( align < -2500 ) return set_color("×ï´ó¶ñ¼«", "HIR");
-    else if( align < -1500 ) return set_color("Ê®¶ñ²»Éâ", "HIM");
-    else if( align < -1000 ) return set_color("¶ñÃûÕÑÕÃ", "HIM");
-    else if( align < -700 ) return set_color("×÷¶ñ¶à¶Ë", "HIY");
-    else if( align < -400 ) return set_color("¶ñĞĞ¶ñ×´", "HIY");
-    else if( align < -200 ) return set_color("ËØĞĞ²»Á¼", "HIY");
-    else if( align < 200 ) return set_color("ÎŞ¹¦ÎŞ¹ı", "HIW");
-    else if( align < 400 ) return set_color("¼ûÒåÓÂÎª", "HIG");
-    else if( align < 700 ) return set_color("ÒåĞĞ¿É¼Î", "HIG");
-    else if( align < 1000 ) return set_color("ĞĞÏÀÕÌÒå", "HIB");
-    else if( align < 1500 ) return set_color("ÒåÃûÔ¶²¥", "HIB");
-    else if( align < 2500 ) return set_color("Òå±¡ÔÆÌì", "HIB");
-    else if( align < 5000 ) return set_color("¹¦µÂÎŞÁ¿", "HIC");
-    else return set_color("Ò»´ú´óÏÀ", "HIC");
+    if( align < -5000 ) return set_color("æƒ¡è²«æ»¿ç›ˆ", "HIR");
+    else if( align < -2500 ) return set_color("ç½ªå¤§æƒ¡æ¥µ", "HIR");
+    else if( align < -1500 ) return set_color("åæƒ¡ä¸èµ¦", "HIM");
+    else if( align < -1000 ) return set_color("æƒ¡åæ˜­å½°", "HIM");
+    else if( align < -700 ) return set_color("ä½œæƒ¡å¤šç«¯", "HIY");
+    else if( align < -400 ) return set_color("æƒ¡è¡Œæƒ¡ç‹€", "HIY");
+    else if( align < -200 ) return set_color("ç´ è¡Œä¸è‰¯", "HIY");
+    else if( align < 200 ) return set_color("ç„¡åŠŸç„¡é", "HIW");
+    else if( align < 400 ) return set_color("è¦‹ç¾©å‹‡ç‚º", "HIG");
+    else if( align < 700 ) return set_color("ç¾©è¡Œå¯å˜‰", "HIG");
+    else if( align < 1000 ) return set_color("è¡Œä¿ ä»—ç¾©", "HIB");
+    else if( align < 1500 ) return set_color("ç¾©åé æ’­", "HIB");
+    else if( align < 2500 ) return set_color("ç¾©è–„é›²å¤©", "HIB");
+    else if( align < 5000 ) return set_color("åŠŸå¾·ç„¡é‡", "HIC");
+    else return set_color("ä¸€ä»£å¤§ä¿ ", "HIC");
 }
 
 string body_status_string(object obj)
@@ -232,12 +232,12 @@ string body_status_string(object obj)
     max = (int)obj->query("critical_med_res");
     if( !max || max < 0 ) max = 1000;
     percent = 100 * med / max;
-    if( percent < 20 ) return set_color("Äã¾õµÃÉíÌåÒ»ÇĞÕı³££¬¾«Éñ±¥Âú¡£", "HIC", obj);
-    else if( percent < 40 ) return set_color("Äã¾õµÃÍ·ÓĞµãÔÎ£¬²»¹ıÃ»ÓĞÊ²÷á´ó°­¡£", "HIY", obj);
-    else if( percent < 60 ) return set_color("Äã¾õµÃÍ·ÖØ½ÅÇá¡¢È«Éí·¦Á¦£¬Ò²ĞíÊÇÒ©³ÔÌ«¶àÁË¡£", "HIG", obj);
-    else if( percent < 75 ) return set_color("Äã¾õµÃÍ·Í´ÓûÁÑ¡¢È«ÉíÖ±Ã°Àäº¹£¬×îºÃÕÒ¸öµØ·½ĞİÏ¢Ò»ÏÂ¡£", "HIM", obj);
-    else if( percent < 90 ) return set_color("Äã¾õµÃÌìĞıµØ×ª£¬Á¬Õ¾¶¼Õ¾²»ÎÈ£¬ºÃÏëÌÉÏÂÀ´Ë¯ÉÏÒ»¾õ¡£", "HIR", obj);
-    else return set_color("Äã¾õµÃÈ«ÉíÉÏÏÂ¶¼²»¶Ô¾¢£¬Ò»µãÁ¦ÆøÒ²Ã»ÓĞ¡£", "HIC", obj);
+    if( percent < 20 ) return set_color("ä½ è¦ºå¾—èº«é«”ä¸€åˆ‡æ­£å¸¸ï¼Œç²¾ç¥é£½æ»¿ã€‚", "HIC", obj);
+    else if( percent < 40 ) return set_color("ä½ è¦ºå¾—é ­æœ‰é»æšˆï¼Œä¸éæ²’æœ‰ä»€éº¼å¤§ç¤™ã€‚", "HIY", obj);
+    else if( percent < 60 ) return set_color("ä½ è¦ºå¾—é ­é‡è…³è¼•ã€å…¨èº«ä¹åŠ›ï¼Œä¹Ÿè¨±æ˜¯è—¥åƒå¤ªå¤šäº†ã€‚", "HIG", obj);
+    else if( percent < 75 ) return set_color("ä½ è¦ºå¾—é ­ç—›æ¬²è£‚ã€å…¨èº«ç›´å†’å†·æ±—ï¼Œæœ€å¥½æ‰¾å€‹åœ°æ–¹ä¼‘æ¯ä¸€ä¸‹ã€‚", "HIM", obj);
+    else if( percent < 90 ) return set_color("ä½ è¦ºå¾—å¤©æ—‹åœ°è½‰ï¼Œé€£ç«™éƒ½ç«™ä¸ç©©ï¼Œå¥½æƒ³èººä¸‹ä¾†ç¡ä¸Šä¸€è¦ºã€‚", "HIR", obj);
+    else return set_color("ä½ è¦ºå¾—å…¨èº«ä¸Šä¸‹éƒ½ä¸å°å‹ï¼Œä¸€é»åŠ›æ°£ä¹Ÿæ²’æœ‰ã€‚", "HIC", obj);
 }
 
 varargs string status_string(object obj)
@@ -248,27 +248,27 @@ varargs string status_string(object obj)
 
     tar_hp = (int)obj->query("hit_points");
     max_hp = (int)obj->query("max_hp");
-    if( !max_hp ) return set_color("×´¿ö²»Ã÷", "HIR", obj);
+    if( !max_hp ) return set_color("ç‹€æ³ä¸æ˜", "HIR", obj);
 
     percent = 100 * tar_hp / max_hp;
         if (userp(obj)) {
-    if( percent < 0 ) return sprintf("%s¡£", set_color("ËÀÁË", "HIR", obj));
-    else if( percent < 10 ) return sprintf("ÒÑ¾­%sÁË¡£", set_color("ÑÙÑÙÒ»Ï¢", "HIR", obj));
-    else if( percent < 25 ) return sprintf("»ëÉíÊÇÑª£¬ÊÜÉË¼«ÖØ£¬%s¡£", set_color("ÓĞÉúÃüÎ£ÏÕ", "HIM", obj));
-    else if( percent < 40 ) return sprintf("ÉíÉÏµ½´¦¶¼ÊÇÉË¿Ú£¬%s¡£", set_color("ÑªÁ÷²»Ö¹", "HIY", obj));
-    else if( percent < 60 ) return sprintf("ÉËµ½²»ÉÙµØ·½£¬%s¡£", set_color("Á÷ÁËĞí¶àÏÊÑª", "HIY", obj));
-    else if( percent < 80 ) return sprintf("ÊÜÁË¼¸´¦ÉË£¬µ«¶¼%s¡£", set_color("Ã»ÓĞÉËµ½Òªº¦", "HIG", obj));
-    else if( percent < 100 ) return sprintf("ËÆºõÊÜÁËµãÉË£¬µ«ÊÇ%s¡£", set_color("¿´ÆğÀ´²¢²»Òª½ô", "HIG", obj));
-    else return sprintf("ÏÖÔÚÕı´¦ì¶%s¡£", set_color("×î¼Ñ×´¿ö£¬Ã»ÓĞÊÜÉË", "HIC", obj));
+    if( percent < 0 ) return sprintf("%sã€‚", set_color("æ­»äº†", "HIR", obj));
+    else if( percent < 10 ) return sprintf("å·²ç¶“%säº†ã€‚", set_color("å¥„å¥„ä¸€æ¯", "HIR", obj));
+    else if( percent < 25 ) return sprintf("æ¸¾èº«æ˜¯è¡€ï¼Œå—å‚·æ¥µé‡ï¼Œ%sã€‚", set_color("æœ‰ç”Ÿå‘½å±éšª", "HIM", obj));
+    else if( percent < 40 ) return sprintf("èº«ä¸Šåˆ°è™•éƒ½æ˜¯å‚·å£ï¼Œ%sã€‚", set_color("è¡€æµä¸æ­¢", "HIY", obj));
+    else if( percent < 60 ) return sprintf("å‚·åˆ°ä¸å°‘åœ°æ–¹ï¼Œ%sã€‚", set_color("æµäº†è¨±å¤šé®®è¡€", "HIY", obj));
+    else if( percent < 80 ) return sprintf("å—äº†å¹¾è™•å‚·ï¼Œä½†éƒ½%sã€‚", set_color("æ²’æœ‰å‚·åˆ°è¦å®³", "HIG", obj));
+    else if( percent < 100 ) return sprintf("ä¼¼ä¹å—äº†é»å‚·ï¼Œä½†æ˜¯%sã€‚", set_color("çœ‹èµ·ä¾†ä¸¦ä¸è¦ç·Š", "HIG", obj));
+    else return sprintf("ç¾åœ¨æ­£è™•æ–¼%sã€‚", set_color("æœ€ä½³ç‹€æ³ï¼Œæ²’æœ‰å—å‚·", "HIC", obj));
         } else {
-    if( percent < 0 ) return "ËÀÁË¡£";
-    else if( percent < 10 ) return "ÒÑ¾­ÑÙÑÙÒ»Ï¢ÁË¡£";
-    else if( percent < 25 ) return "»ëÉíÊÇÑª£¬ÊÜÉË¼«ÖØ£¬ÓĞÉúÃüÎ£ÏÕ¡£" ;
-    else if( percent < 40 ) return "ÉíÉÏµ½´¦¶¼ÊÇÉË¿Ú£¬ÑªÁ÷²»Ö¹¡£" ;
-    else if( percent < 60 ) return "ÉËµ½²»ÉÙµØ·½£¬Á÷ÁËĞí¶àÏÊÑª¡£" ;
-    else if( percent < 80 ) return "ÊÜÁË¼¸´¦ÉË£¬µ«¶¼Ã»ÓĞÉËµ½Òªº¦¡£" ;
-    else if( percent < 100 ) return "ËÆºõÊÜÁËµãÉË£¬µ«ÊÇ¿´ÆğÀ´²¢²»Òª½ô¡£";
-    else return "ÏÖÔÚÕı´¦ì¶×î¼Ñ×´¿ö£¬Ã»ÓĞÊÜÉË¡£";
+    if( percent < 0 ) return "æ­»äº†ã€‚";
+    else if( percent < 10 ) return "å·²ç¶“å¥„å¥„ä¸€æ¯äº†ã€‚";
+    else if( percent < 25 ) return "æ¸¾èº«æ˜¯è¡€ï¼Œå—å‚·æ¥µé‡ï¼Œæœ‰ç”Ÿå‘½å±éšªã€‚" ;
+    else if( percent < 40 ) return "èº«ä¸Šåˆ°è™•éƒ½æ˜¯å‚·å£ï¼Œè¡€æµä¸æ­¢ã€‚" ;
+    else if( percent < 60 ) return "å‚·åˆ°ä¸å°‘åœ°æ–¹ï¼Œæµäº†è¨±å¤šé®®è¡€ã€‚" ;
+    else if( percent < 80 ) return "å—äº†å¹¾è™•å‚·ï¼Œä½†éƒ½æ²’æœ‰å‚·åˆ°è¦å®³ã€‚" ;
+    else if( percent < 100 ) return "ä¼¼ä¹å—äº†é»å‚·ï¼Œä½†æ˜¯çœ‹èµ·ä¾†ä¸¦ä¸è¦ç·Šã€‚";
+    else return "ç¾åœ¨æ­£è™•æ–¼æœ€ä½³ç‹€æ³ï¼Œæ²’æœ‰å—å‚·ã€‚";
         }
 }
 varargs string c_status_string( object obj)

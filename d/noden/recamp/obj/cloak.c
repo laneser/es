@@ -5,13 +5,13 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-	set_name( "feather cloak", "ÓğÃ«Åû·ç" );
+	set_name( "feather cloak", "ç¾½æ¯›æŠ«é¢¨" );
 	add( "id", ({ "feather","cloak" }) );
-   set_short( "ÓğÃ«Åû·ç" );
+   set_short( "ç¾½æ¯›æŠ«é¢¨" );
 	set_long(
-		"Õâ¼şÓğÃ«×ö³ÉµÄÅû·ç¿´ÆğÀ´ºÜ....ĞÂ³±£¬Èç¹ûÄã´©ÖøËüÉÏ½ÖµÄ»°¡£\n"
+		"é€™ä»¶ç¾½æ¯›åšæˆçš„æŠ«é¢¨çœ‹èµ·ä¾†å¾ˆ....æ–°æ½®ï¼Œå¦‚æœä½ ç©¿è‘—å®ƒä¸Šè¡—çš„è©±ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "cloak" );
 	set( "material", "leather" );
 	set( "armor_class", 4 );

@@ -9,11 +9,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("Ô¶·çÕòÎ÷ÃÅ");
+	set_short("é é¢¨éŽ®è¥¿é–€");
 	set_long( @C_LONG_DESCRIPTION
-ÕâÀïÊÇÔ¶·çÕòÎ÷±ßµÄ´óÃÅ£¬Â·ÅÔÓÐÒ»¿Ã´óÊ÷(tree)£¬±±±ßÊÇÒ»¼ä°×É«
-µÄÎÝ×Ó(house)£¬ÍùÄÏÊÇÒ»ÌõÐ¡Â·Í¨ÍùºÓ±ß£¬Î÷±ß³öÁË´óÃÅÊÇÒ»×ùÇÅ£¬Äã
-Ìýµ½ÇÅÏÂ³ýÁËäýäýµÄÁ÷Ë®ÉùÍâ£¬ºÃÏñ»¹ÓÐÒ»Ð©¶ì½ÐÉù¡£
+é€™è£¡æ˜¯é é¢¨éŽ®è¥¿é‚Šçš„å¤§é–€ï¼Œè·¯æ—æœ‰ä¸€æ£µå¤§æ¨¹(tree)ï¼ŒåŒ—é‚Šæ˜¯ä¸€é–“ç™½è‰²
+çš„å±‹å­(house)ï¼Œå¾€å—æ˜¯ä¸€æ¢å°è·¯é€šå¾€æ²³é‚Šï¼Œè¥¿é‚Šå‡ºäº†å¤§é–€æ˜¯ä¸€åº§æ©‹ï¼Œä½ 
+è½åˆ°æ©‹ä¸‹é™¤äº†æ½ºæ½ºçš„æµæ°´è²å¤–ï¼Œå¥½åƒé‚„æœ‰ä¸€äº›éµå«è²ã€‚
 C_LONG_DESCRIPTION
 	);
 
@@ -26,10 +26,10 @@ C_LONG_DESCRIPTION
 	]) );
 	set( "item_desc", ([
 		"tree" :
-			"Ò»¿ÃÓÖ´ÖÓÖ´óµÄéÅÊ÷£¬³¤ÔÚÂ·ÅÔ£¬Ò²ÐíÄã¿ÉÒÔÅÀ(climb)ÉÏÈ¥ÇÆÇÆ£¿\n",
+			"ä¸€æ£µåˆç²—åˆå¤§çš„æ¦•æ¨¹ï¼Œé•·åœ¨è·¯æ—ï¼Œä¹Ÿè¨±ä½ å¯ä»¥çˆ¬(climb)ä¸ŠåŽ»çž§çž§ï¼Ÿ\n",
 		"house" :
-			"Ò»¼ä¿´ÆðÀ´Ïàµ±½²¾¿µÄÎÝ×Ó£¬ËäÈ»Íâ¹ÛÓÐÐ©ÆÆ¾É£¬µ«ÊÇÎÝÖ÷ËÆºõºÜÐ¡\n"
-			"ÐÄµØ±£ÑøÕâ¶°·¿×Ó£¬ÎÝ×ÓµÄÃÅÃ»ÓÐ¹Ø£¬Äã¿ÉÒÔ½øÈ¥(enter)ÇÆÇÆ¡£\n",
+			"ä¸€é–“çœ‹èµ·ä¾†ç›¸ç•¶è¬›ç©¶çš„å±‹å­ï¼Œé›–ç„¶å¤–è§€æœ‰äº›ç ´èˆŠï¼Œä½†æ˜¯å±‹ä¸»ä¼¼ä¹Žå¾ˆå°\n"
+			"å¿ƒåœ°ä¿é¤Šé€™æ£Ÿæˆ¿å­ï¼Œå±‹å­çš„é–€æ²’æœ‰é—œï¼Œä½ å¯ä»¥é€²åŽ»(enter)çž§çž§ã€‚\n",
     ]) );
     set( "objects", ([
 		"wild dog" : "/d/noden/farwind/monster/dog"
@@ -46,12 +46,12 @@ void init()
 int climb_tree( string arg )
 {
 	if( !arg || arg!="tree" )
-		return notify_fail( "ÅÀÊ²÷á£¿\n" );
+		return notify_fail( "çˆ¬ä»€éº¼ï¼Ÿ\n" );
         if( random( 15 ) >=this_player()->query_skill("climbing") )
-		return notify_fail( "ÄãÆóÍ¼ÅÀÉÏéÅÊ÷£¬µ«ÊÇÒ»²»Ð¡ÐÄµôÁËÏÂÀ´¡£\n");
+		return notify_fail( "ä½ ä¼åœ–çˆ¬ä¸Šæ¦•æ¨¹ï¼Œä½†æ˜¯ä¸€ä¸å°å¿ƒæŽ‰äº†ä¸‹ä¾†ã€‚\n");
 	this_player()->move_player( "/d/noden/farwind/tree1", "SNEAK" );
 	tell_room( this_object(), 
-		this_player()->query("c_name") + "ÅÀµ½Ê÷ÉÏ¡£\n",
+		this_player()->query("c_name") + "çˆ¬åˆ°æ¨¹ä¸Šã€‚\n",
 		this_player() );
 	return 1;
 }
@@ -59,7 +59,7 @@ int climb_tree( string arg )
 int enter_house( string arg )
 {
 	if( !arg || arg!= "house" )
-		return notify_fail( "½øÈëÄÄÀï£¿\n" );
+		return notify_fail( "é€²å…¥å“ªè£¡ï¼Ÿ\n" );
 	this_player()->move_player( "/d/noden/farwind/healer", "SNEAK" );
 	return 1;
 }

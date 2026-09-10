@@ -6,11 +6,11 @@ void create()
 {
 	set_name( "Evil Sword");
 	add( "id", ({ "sword" }) );
-	set_short( "Ñýµ¶ ´åÕý" );
+	set_short( "å¦–åˆ€ æ‘æ­£" );
 	set_long
-		"ÕâÊÇÒ»°Ñ´«ËµÖÐµÄÑýµ¶ ´åÕý,µ¶ÉíÉÏ·º³öÒ»¹ÉÆæÒìµÄ¹âÃ¢\n" 
-		"¾ÝËµ´Ëµ¶Òþ²ØÖøÒ»¹ÉÉñÃØµÄÁ¦Á¿\n");
-	set( "unit", "°Ñ" );
+		"é€™æ˜¯ä¸€æŠŠå‚³èªªä¸­çš„å¦–åˆ€ æ‘æ­£,åˆ€èº«ä¸Šæ³›å‡ºä¸€è‚¡å¥‡ç•°çš„å…‰èŠ’\n" 
+		"æ“šèªªæ­¤åˆ€éš±è—è‘—ä¸€è‚¡ç¥žç§˜çš„åŠ›é‡\n");
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 //	set( "hit_func", "weapon_hit" );
 	set( "weight", 150 );
@@ -30,20 +30,20 @@ int weapon_hit( object victim, kar damage )
 	hp = owner->query("hit_points");
 	if( random(karma)>19 && hp > 5 ) {
 		tell_object( owner, 
-			"\nÄãµÄ¸Ð¾õµ½Ñýµ¶ ´åÕý¿ªÊ¼ÎüÊÕÄãµÄÉúÃüÁ¦£¬´Ó"+victim->query("c_cap_name")+
-			"ÉíÉÏÒ§ÏÂÒ»¿éÑªÁÜÁÜµÄÈâ£¡\nÄã¾õµÃÒ»¹ÉÁ¦Á¿´ÓÈ¨ÕÈÉÏ×¢ÈëÄãµÄÌåÄÚ....\n\n":
+			"\nä½ çš„æ„Ÿè¦ºåˆ°å¦–åˆ€ æ‘æ­£é–‹å§‹å¸æ”¶ä½ çš„ç”Ÿå‘½åŠ›ï¼Œå¾ž"+victim->query("c_cap_name")+
+			"èº«ä¸Šå’¬ä¸‹ä¸€å¡Šè¡€æ·‹æ·‹çš„è‚‰ï¼\nä½ è¦ºå¾—ä¸€è‚¡åŠ›é‡å¾žæ¬Šæ–ä¸Šæ³¨å…¥ä½ çš„é«”å…§....\n\n":
 			
 			 );
 		tell_object( victim, can_read_chinese(victim)?
-			owner->query("c_cap_name") + "µÄÏÊºìÉ«È¨ÕÈÉÏµÄ¶ñÄ§Í·Í»È»Õö¿ªÑÛ¾¦£¬²¢ÇÒÒ»¿Ú´ÓÄãÉíÉÏÒ§ÏÂÒ»¿éÑªÁÜ\n"
-			"ÁÜµÄÈâ£¡\n":
+			owner->query("c_cap_name") + "çš„é®®ç´…è‰²æ¬Šæ–ä¸Šçš„æƒ¡é­”é ­çªç„¶çœé–‹çœ¼ç›ï¼Œä¸¦ä¸”ä¸€å£å¾žä½ èº«ä¸Šå’¬ä¸‹ä¸€å¡Šè¡€æ·‹\n"
+			"æ·‹çš„è‚‰ï¼\n":
 			"The devil head on " + owner->query("cap_name") + "'s crimson scepter suddenly\n"
 			"come alive and bite a piece of flesh off you!\n" );
 		tell_room( environment(owner), ({
 			"The devil head on " + owner->query("cap_name") + "'s crimson scepter suddenly\n"
 			"come alive and bite a piece of flesh off its victim!\n",
-			owner->query("c_cap_name") + "µÄÏÊºìÉ«È¨ÕÈÉÏµÄ¶ñÄ§Í·Í»È»Õö¿ªÑÛ¾¦£¬²¢ÇÒ´Ó"
-			+ victim->query("c_cap_name") + "ÉíÉÏÒ§ÏÂÒ»¿éÑªÁÜÁÜµÄÈâ£¡\n"}),
+			owner->query("c_cap_name") + "çš„é®®ç´…è‰²æ¬Šæ–ä¸Šçš„æƒ¡é­”é ­çªç„¶çœé–‹çœ¼ç›ï¼Œä¸¦ä¸”å¾ž"
+			+ victim->query("c_cap_name") + "èº«ä¸Šå’¬ä¸‹ä¸€å¡Šè¡€æ·‹æ·‹çš„è‚‰ï¼\n"}),
 			({ victim, owner }) );
 		victim->receive_special_damage( "evil", intelligence );
 		owner->receive_healing( intelligence );

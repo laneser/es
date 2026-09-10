@@ -6,10 +6,10 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Silver flute", "ÒøÉ«³¤µÑ");
-    set_short("ÒøÉ«³¤µÑ");
+    set_name("Silver flute", "éŠ€è‰²é•·ç¬›");
+    set_short("éŠ€è‰²é•·ç¬›");
     add("id", ({"flute"}));
-    set("unit", "°Ñ");
+    set("unit", "æŠŠ");
     set("weapon_class", 35);
     set("type", "blunt");
     set("min_damage", 10);
@@ -27,8 +27,8 @@ int fireball(object victim, int damage)
     if (random(10) > 4) return 0;
     victim->receive_special_damage("fire", 5);
     victim->set("last_attacker", p);
-    tell_object(p, set_color("\nÄãµÄÒøÉ«³¤µÑ´µ×à³öÒ»¿Å»ðÇòÈ¼ÉÕÖøµÐÈË£¡\n", "HIR"));
-    tell_room(environment(p), set_color(p->query("c_name")+"µÄÒøÉ«³¤µÑ´µ×à³öÒ»¿Å»ðÇòÈ¼ÉÕÖø"+victim->query("c_name"), "HIR"), p);
+    tell_object(p, set_color("\nä½ çš„éŠ€è‰²é•·ç¬›å¹å¥å‡ºä¸€é¡†ç«çƒç‡ƒç‡’è‘—æ•µäººï¼\n", "HIR"));
+    tell_room(environment(p), set_color(p->query("c_name")+"çš„éŠ€è‰²é•·ç¬›å¹å¥å‡ºä¸€é¡†ç«çƒç‡ƒç‡’è‘—"+victim->query("c_name"), "HIR"), p);
 
     return 1;
 }

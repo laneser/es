@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("gold helmet", "ºì×º½ğÊø·¢¿ø");
+        set_name("gold helmet", "ç´…ç¶´é‡‘æŸé«®ç›”");
         add( "id", ({ "helmet" }) );
-        set_short( "gold helmet", "ºì×º½ğÊø·¢¿ø");
+        set_short( "gold helmet", "ç´…ç¶´é‡‘æŸé«®ç›”");
         set_long(
                 "A beautiful golden helmet .\n",
-                "Äã¿´µ½Ò»¶¥ÓÃ½ğË¿ÅÌ³ÉµÄÍ·¿ø£¬±ßÔµÓĞĞÑÄ¿µÄºìË¿´ø£®ÃÀÀöÇÒ²»Ê§Æä·À»¤ÄÜÁ¦£®\n"
+                "ä½ çœ‹åˆ°ä¸€é ‚ç”¨é‡‘çµ²ç›¤æˆçš„é ­ç›”ï¼Œé‚Šç·£æœ‰é†’ç›®çš„ç´…çµ²å¸¶ï¼ç¾éº—ä¸”ä¸å¤±å…¶é˜²è­·èƒ½åŠ›ï¼\n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "light_metal");
         set( "armor_class", 6 );

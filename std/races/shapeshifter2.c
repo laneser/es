@@ -33,10 +33,10 @@ void setup_race_body()
 
 	// These variables are used for /adm/daemons/combat_d.c
 /*
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ",
-		"%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ĞØ", "×óÍÈ", "ÓÒÍÈ",
-		"²±×Ó", "×ó¼ç", "ÓÒ¼ç", "ááĞÄ", "Ğ¡¸¹", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"è„–å­", "å·¦è‚©", "å³è‚©", "å¾Œå¿ƒ", "å°è…¹", }) );
 */
 	// Shapeshifter will drop all when be scared.
 	remove_call_out("drop_eq");
@@ -107,7 +107,7 @@ void drop_eq()
 	// only user has this property.
 	if( !userp(this_object()) || this_object()->query_linkdead() ) return;
 
-	tell_object(this_object(),"Í»È»¡¸ºä¡¹µÄÒ»Éù´Ó±³áá´«À´, ÄãÏÅÁËÒ»´óÌø¡£\n");
+	tell_object(this_object(),"çªç„¶ã€Œè½Ÿã€çš„ä¸€è²å¾èƒŒå¾Œå‚³ä¾†, ä½ åš‡äº†ä¸€å¤§è·³ã€‚\n");
 	inv = all_inventory( this_object() );
 	if( sizeof(inv) ) {
 		if( this_object()->query_temp("mounting") ) command("dismount");
@@ -120,15 +120,15 @@ void drop_eq()
 void shift_idle(object me,int time)
 {
 	if ( !present(target,environment(me) ) {
-		tell_object(me,"ÄãµÄÄ¿±êÒÑ¾­²»ÔÚÕâÀïÁË !!\n");
+		tell_object(me,"ä½ çš„ç›®æ¨™å·²ç¶“ä¸åœ¨é€™è£¡äº† !!\n");
 		return;
 	}
 		
 	if ( time =< (int)target->query_level()/4 ) {
-		printf("Äã¼¯ÖĞ¾«ÉñÏëÏñÄãÊÇ%s !!\n",
+		printf("ä½ é›†ä¸­ç²¾ç¥æƒ³åƒä½ æ˜¯%s !!\n",
 				target->query("c_name"),target->query("c_name"));
 		tell_room(environment(me),
-			sprintf("%s¶×ÔÚµØÉÏ±§ÖøÍ·£¬à«à«µÄÄîÖø : ÎÒÊÇ%s !! ÎÒÊÇ %s !!\n",
+			sprintf("%sè¹²åœ¨åœ°ä¸ŠæŠ±è‘—é ­ï¼Œå–ƒå–ƒçš„å¿µè‘— : æˆ‘æ˜¯%s !! æˆ‘æ˜¯ %s !!\n",
 			me->query("c_name"),target->query("c_name"),target->query("c_name"))
 			,me );
 		call_out("shift_idle",me,target,time+1);
@@ -136,7 +136,7 @@ void shift_idle(object me,int time)
 	}
 	if ( (int)me->query_level() >= (int)target->query_level() ) {
 		if ( (int)me->query("spell_points") < (int)target->query_level()*2 ) ) {
-			tell_object(me,"ÄãµÄ¾«ÉñÁ¦²»¹»£¬
+			tell_object(me,"ä½ çš„ç²¾ç¥åŠ›ä¸å¤ ï¼Œ
 	}
 	return ;	
 }
@@ -144,14 +144,14 @@ int shapeshift(string arg)
 {
 	object target ;
 	if ( ! arg )
-		return notify_fail("ÄãÏë±äĞÎ³ÉÊ²÷á£¿\n");
+		return notify_fail("ä½ æƒ³è®Šå½¢æˆä»€éº¼ï¼Ÿ\n");
 	if ( !target = present(arg,envoronment()) )
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ "+arg+" µÄ¶«¶« !!\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å« "+arg+" çš„æ±æ± !!\n");
 //	if ( !living(target) )
 //		return notify_fail("
-	printf("Äã¶ÔÖø%s¿ªÊ¼¾Û¾«»áÉñµÄÚ¤Ïë ....\n",target->query("c_name"));
+	printf("ä½ å°è‘—%sé–‹å§‹èšç²¾æœƒç¥çš„å†¥æƒ³ ....\n",target->query("c_name"));
 	tell_room(environment(),
-		sprintf("%sÍ»È»Á½ÑÛ·¢Ö±µÄ¶¢Öø%s£¬×ìÀï»¹à«à«µÄ²»ÖªµÀÔÚÄîĞ©Ê²÷á ...\n",
+		sprintf("%sçªç„¶å…©çœ¼ç™¼ç›´çš„ç›¯è‘—%sï¼Œå˜´è£¡é‚„å–ƒå–ƒçš„ä¸çŸ¥é“åœ¨å”¸äº›ä»€éº¼ ...\n",
 		this_object()->query("c_name"),target->query("c_name") ), 
 		({ this_object(), target }) );
 	call_out("shift_idle",2,this_object(),target,0);

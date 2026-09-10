@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "black platemail", "ºÚÉ«¿ø¼×" );
+	set_name( "black platemail", "é»‘è‰²ç›”ç”²" );
 	add( "id", ({ "plate", "platemail" }) );
-	set_short( "ºÚÉ«¿ø¼×" );
+	set_short( "é»‘è‰²ç›”ç”²" );
 	set_long(@AA
-ÕâÊÇÒ»Ì×ºÍºÚÉ«»¤Ï¥²»Í¬ÖÊÁÏµÄ¿ø¼×£¬²»¹ıËüËäÈ»²»ÆğÑÛ£¬È´ÄÜÌá¹©Ïàµ±²»´íµÄ·ÀÓùÁ¦¡£
+é€™æ˜¯ä¸€å¥—å’Œé»‘è‰²è­·è†ä¸åŒè³ªæ–™çš„ç›”ç”²ï¼Œä¸éå®ƒé›–ç„¶ä¸èµ·çœ¼ï¼Œå»èƒ½æä¾›ç›¸ç•¶ä¸éŒ¯çš„é˜²ç¦¦åŠ›ã€‚
 AA
 	);
-	set( "unit", "Ì×" );
+	set( "unit", "å¥—" );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );
 	set( "armor_class", 33 );
@@ -28,7 +28,7 @@ void bonus_up()
         set( "defense_bonus",6);
         set( "armor_class",35);
         tell_object(environment(this_object()),
-"µ±Äã´©ÉÏºÚÉ«¿ø¼×Ê±£¬·¢ÏÖËûºÍºÚÄ¾±Û»·½ô½ôÃÜºÏĞÎ³ÉÒ»Ì×¼«°ôµÄÕ½¶··ş\n"
+"ç•¶ä½ ç©¿ä¸Šé»‘è‰²ç›”ç”²æ™‚ï¼Œç™¼ç¾ä»–å’Œé»‘æœ¨è‡‚ç’°ç·Šç·Šå¯†åˆå½¢æˆä¸€å¥—æ¥µæ£’çš„æˆ°é¬¥æœ\n"
 );
 return 0;
 }

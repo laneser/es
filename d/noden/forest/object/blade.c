@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "sharp blade", "´óµ¶" );
+        set_name( "sharp blade", "å¤§åˆ€" );
         add( "id",({ "blade", "sharp blade" }) );
-        set_short( "·æÀûµÄ´óµ¶" );
+        set_short( "é‹’åˆ©çš„å¤§åˆ€" );
         set_long( @CLONG
-ÕâÊÇÒ»°ÑÏàµ±·æÀûµÄ´óµ¶, °×»Î»ÎµÄÈñÀûµ¶·æ, ÁîÈË¸ĞÊÜµ½Ò»ÖÖÒ»³ö
-ÇÊ¾ÍÏë¼ûÑªµÄ°ÔÆø¡£
+é€™æ˜¯ä¸€æŠŠç›¸ç•¶é‹’åˆ©çš„å¤§åˆ€, ç™½æ™ƒæ™ƒçš„éŠ³åˆ©åˆ€é‹’, ä»¤äººæ„Ÿå—åˆ°ä¸€ç¨®ä¸€å‡º
+é˜å°±æƒ³è¦‹è¡€çš„éœ¸æ°£ã€‚
 CLONG
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 18 );
         set( "type", "longblade" );
         set( "min_damage", 8 );

@@ -14,13 +14,13 @@ void create()
 		set_default_ob(__FILE__);
 		return ;
 	}
-	set_name("vegetable","Ё╢гЮ╡к");
+	set_name("vegetable","Г┌▓И²▓Х▐°");
 	add( "id" , ({ "vegetable" }) );
-	set_short("Ё╢гЮ╡к");
+	set_short("Г┌▓И²▓Х▐°");
 	set_long(
-		"р╩елЁ╢гЮ╡кё╛©╢ю╢гЮ╢Д©и╟╝║ё\n"
+		"Д╦─Г⌡╓Г┌▓И²▓Х▐°О╪▄Г°▀Д╬├И²▓Г©═Е▐╞Ф└⌡Ц─┌\n"
 	);
-   	set("unit","ел");
+   	set("unit","Г⌡╓");
    	set("weight", 10);
    	set("value",({ 130, "silver" }) );
 	set("is_fresh",1);
@@ -35,10 +35,10 @@ int move(mixed ob)
 int eat_food(string arg)
 {
 		if( !arg || arg != "vegetable" ) return 0;
-		write("дЦ╨э╦ъпк╣дЁтобуБелгЮ╡кё╛╦п╬У╣╫Ёткь╣д╨ц╢╕║ё\n");
+		write("Д╫═Е╬┬И╚≤Х┬┬Г └Е░┐Д╦▀И─≥Г⌡╓И²▓Х▐°О╪▄Ф└÷Х╕╨Е┬╟Е░┐Г╢═Г └Е╔╫Х≥∙Ц─┌\n");
 		tell_room( environment(this_player()), 
 			this_player()->query("c_name")+
-			"Ёт╧Бакр╩елЁ╢гЮ╡кё╛х╩ААхТспкЫк╪...\n" , this_player()
+			"Е░┐Е┘┴Д╨├Д╦─Г⌡╓Г┌▓И²▓Х▐°О╪▄Г└╤Е╬▄Х▀╔Ф°┴Ф┴─Ф─²...\n" , this_player()
 		);
 		this_player()->receive_healing( 3+random(2) );
 	    this_player()->set("spell_points",(int)this_player()->query("spell_points")+8);
@@ -52,12 +52,12 @@ void not_fresh(object what)
 	owner = environment(what);
 	if ( !owner ) { 
 //	what->set ("value", ({ 1, "silver" }));
-//	what->set_short("╩╣ак╣дЁ╢гЮ╡к");
-//	what->set_long("уБелгЮ╡к╠ДЁи╩фи╚ё╛╡╩дэЁтак║ё\n");
+//	what->set_short("Её·Д╨├Г └Г┌▓И²▓Х▐°");
+//	what->set_long("И─≥Г⌡╓И²▓Х▐°Х╝┼Ф┬░И╩┐Х┴╡О╪▄Д╦█Х┐╫Е░┐Д╨├Ц─┌\n");
 //	what->set("is_fresh",0);
 	if( living(owner) )
 	tell_object(owner,
-		"дЦ╥╒ождЦ╣дгЮ╡к╠ДЁиак╩ф╩ф╣дё╛╨цоЯ╡╩дэтыЁтакё╛дЦж╩╨ц╟якЭ╣╧╣Т║ё\n" 
+		"Д╫═Г≥╪Г▐╬Д╫═Г └И²▓Х▐°Х╝┼Ф┬░Д╨├И╩┐И╩┐Г └О╪▄Е╔╫Е┐▐Д╦█Х┐╫Е├█Е░┐Д╨├О╪▄Д╫═Е▐╙Е╔╫Ф┼┼Е╝┐Е─▓Ф▌┴Ц─┌\n" 
 		);
 	}
 	remove();

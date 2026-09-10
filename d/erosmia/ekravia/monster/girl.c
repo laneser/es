@@ -1,5 +1,5 @@
 /*
-	Õâ¸öĞ¡Å®º¢ÊÇ QUEST µÄµÚÒ»¸ö¶¯»ú
+	é€™å€‹å°å¥³å­©æ˜¯ QUEST çš„ç¬¬ä¸€å€‹å‹•æ©Ÿ
 */
 #include "/d/erosmia/ekravia/ekravia.h"
 #include <mudlib.h>
@@ -13,12 +13,12 @@ void	create()
 {
 	::create();
 	set_level(3);
-	set_name( "little girl", "Ğ¡Å®º¢" );
+	set_name( "little girl", "å°å¥³å­©" );
 	add( "id", ({ "girl" }) );
-	set_short( "Ò»¸öĞ¡Å®º¢Õ¾ÔÚÇ½±ß, ¿´ÖøÄã" );
+	set_short( "ä¸€å€‹å°å¥³å­©ç«™åœ¨ç‰†é‚Š, çœ‹è‘—ä½ " );
 	set_long(@LONG
-Äã¿´µ½Ò»¸öÔ¼Ê®Ëê×óÓÒµÄĞ¡Å®º¢¡£Ëı´©Öø°×É«Ñó×°¡¢Í·ÉÏ´øÖø¶¥ºìÉ«µÄ
-´ó²İÃ±, Ò»Ë«ÕöµÃ´ó´óµÄÑÛ¾¦ÌìÕæÎŞĞ°µØ¿´ÖøÄã¡£
+ä½ çœ‹åˆ°ä¸€å€‹ç´„åæ­²å·¦å³çš„å°å¥³å­©ã€‚å¥¹ç©¿è‘—ç™½è‰²æ´‹è£ã€é ­ä¸Šå¸¶è‘—é ‚ç´…è‰²çš„
+å¤§è‰å¸½, ä¸€é›™çœå¾—å¤§å¤§çš„çœ¼ç›å¤©çœŸç„¡é‚ªåœ°çœ‹è‘—ä½ ã€‚
 LONG
 	);
 	set( "gender", "female" );
@@ -43,12 +43,12 @@ int		do_look( string s )
 	if ( (!target = present(s, environment(this_player())) ) ||
 		(target != this_object()) )	return 0;
 		
-// ÒÑÈ·¶¨ player Ëù¿´µÄÕıÊÇÕâ¸öĞ¡Å®º¢, ¿ªÊ¼¸É»îÁË!
+// å·²ç¢ºå®š player æ‰€çœ‹çš„æ­£æ˜¯é€™å€‹å°å¥³å­©, é–‹å§‹å¹¹æ´»äº†!
 	tell_room( environment(this_object()), emote_message_other(
-		"$NS½«$GSµÄÊÓÏßÍ¶ÏòĞ¡Å®º¢ÉíÉÏ¡£\n", this_player()),
+		"$NSå°‡$GSçš„è¦–ç·šæŠ•å‘å°å¥³å­©èº«ä¸Šã€‚\n", this_player()),
 		({ this_player(), this_object() }) );
 	tell_object( this_player(), query("long") );
-// Ğ¡Å®º¢±»¿´µ½ááµÄ¶¯×÷¡£
+// å°å¥³å­©è¢«çœ‹åˆ°å¾Œçš„å‹•ä½œã€‚
 	
 	if (looked)	return 1;
 	looked = 1;
@@ -60,8 +60,8 @@ void	do_disappear( object me, object player )
 {
 	if (environment(me) != environment(player)) return;
 	
-	emote( "$NSÕÅ¿ªË«ÊÖ, ´øÖøÇá¿ìµÄĞ¦ÉùÅÜÏò$NOÉí±ß¡£È»¶ø¾ÍÔÚÒ»Ë²¼ä,\n" +
-		"ËıÈçÍ¬º£ÊĞò×Â¥°ãÏûÊ§ÁË, Ö»ÁôÏÂÕóÕóÎŞĞ°µÄĞ¦ÉùÔÚ¿ÕÆøÖĞ»ØÏìÖø...\n",
+	emote( "$NSå¼µé–‹é›™æ‰‹, å¸¶è‘—è¼•å¿«çš„ç¬‘è²è·‘å‘$NOèº«é‚Šã€‚ç„¶è€Œå°±åœ¨ä¸€ç¬é–“,\n" +
+		"å¥¹å¦‚åŒæµ·å¸‚èœƒæ¨“èˆ¬æ¶ˆå¤±äº†, åªç•™ä¸‹é™£é™£ç„¡é‚ªçš„ç¬‘è²åœ¨ç©ºæ°£ä¸­è¿´éŸ¿è‘—...\n",
 		me, environment(player), player );
 	find_object_or_load( QUEST"girl" )->girl_disappear();
 }

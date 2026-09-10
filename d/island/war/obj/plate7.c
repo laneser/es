@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Silvery Scute","ÒøÉ«ÁÛ¼×" );
+	set_name( "Silvery Scute","éŠ€è‰²é±—ç”²" );
 	add( "id", ({ "scute" }) );
-	set_short( "ÒøÉ«ÁÛ¼×" );
+	set_short( "éŠ€è‰²é±—ç”²" );
 	set_long(@LONG
-	Ò»¼şÉÁÒ«ÖøÒøÉ«¹âÃ¢µÄÁÛ¼×¡£
+	ä¸€ä»¶é–ƒè€€è‘—éŠ€è‰²å…‰èŠ’çš„é±—ç”²ã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",100 );
 	set( "type","body" );
 	set( "material","light_metal" );

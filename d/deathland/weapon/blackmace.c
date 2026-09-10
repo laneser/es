@@ -4,12 +4,12 @@ inherit WEAPON;
 int damage_num = 20;
 void create()
 {
-        set_name("drain mace","Ë÷»ê¶¤Í·é³");
+        set_name("drain mace","ç´¢é­‚é‡˜é ­æ§Œ");
         add("id",({"mace",}) );
-       set_short("Ë÷»ê¶¤Í·é³");
+       set_short("ç´¢é­‚é‡˜é ­æ§Œ");
 	set_long("@@desc");
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
     	set("type","blunt");
 	set( "min_damage", 10 );
@@ -18,7 +18,7 @@ void create()
 	set( "value", ({ 340, "gold" }) );
     	set("hit_func","mace_damage");
     	set("special_damage",13);
-    	set("special_c_msg","ÎüÈ¡µĞÈËµÄÉúÃüÁ¦.\n\n");
+    	set("special_c_msg","å¸å–æ•µäººçš„ç”Ÿå‘½åŠ›.\n\n");
 }
 
 int mace_damage(object victim,int damage)
@@ -44,12 +44,12 @@ int mace_damage(object victim,int damage)
 		victim->receive_special_damage( "evil" , dam );
 		victim->set("last_attacker", holder );
 		tell_object( holder,
-                        sprintf("\nÄãµÄ%s%s\n",query("c_name"),c_msg));
+                        sprintf("\nä½ çš„%s%s\n",query("c_name"),c_msg));
 		tell_room( environment(holder), 
-                        sprintf("%sµÄ%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
+                        sprintf("%sçš„%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
 			holder );
 		if (damage_num == 0)
-			tell_object( holder,"\nË÷»ê¶¤Í·é³ÉÏµÄºÚÉ«¹âÔó½¥½¥ÏûÊ§ÁË¡£\n");
+			tell_object( holder,"\nç´¢é­‚é‡˜é ­æ§Œä¸Šçš„é»‘è‰²å…‰æ¾¤æ¼¸æ¼¸æ¶ˆå¤±äº†ã€‚\n");
 		return dam;
 	}
 	
@@ -57,7 +57,7 @@ int mace_damage(object victim,int damage)
 string desc()
 {
 if (damage_num == 0)
-return ("ÓÉÃ×ËÕÀïÓëÒø»ìºÏÔì³ÉµÄºÚÉ«Ë÷»ê¶¤Í·é³£¬µ«ÊÇÈ´ËÆºõÊ§È¥ÁËÔ­ÓĞµÄ¹âÔó¡£\n");
+return ("ç”±ç±³è˜‡é‡Œèˆ‡éŠ€æ··åˆé€ æˆçš„é»‘è‰²ç´¢é­‚é‡˜é ­æ§Œï¼Œä½†æ˜¯å»ä¼¼ä¹å¤±å»äº†åŸæœ‰çš„å…‰æ¾¤ã€‚\n");
 else 
-return ("ÓÉÃ×ËÕÀïÓëÒø»ìºÏÔì³ÉµÄºÚÉ«Ë÷»ê¶¤Í·é³£¬ÉÏÃæÓĞÖøÉñÃØµÄºÚÉ«¹âÔó¡£\n");
+return ("ç”±ç±³è˜‡é‡Œèˆ‡éŠ€æ··åˆé€ æˆçš„é»‘è‰²ç´¢é­‚é‡˜é ­æ§Œï¼Œä¸Šé¢æœ‰è‘—ç¥ç§˜çš„é»‘è‰²å…‰æ¾¤ã€‚\n");
 }

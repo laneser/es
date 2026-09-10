@@ -6,19 +6,19 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name( "little chicken", "Ð¡¹«¼¦" );
+	set_name( "little chicken", "å°å…¬é›ž" );
 	add( "id", ({ "chicken" }) );
-        set_short( "Ð¡¹«¼¦" );
+        set_short( "å°å…¬é›ž" );
 	set_long(@C_LONG
-Ò»Ö§µ½´¦ÕÒÊ³ÎïµÄÐ¡¹«¼¦¡£
+ä¸€æ”¯åˆ°è™•æ‰¾é£Ÿç‰©çš„å°å…¬é›žã€‚
 C_LONG
 	);
 	set( "race","monster");
 	set( "chicken",1);
 	set( "natural_armor_class", 5 );
-	set( "unit", "Ö»" );
-	set_c_verbs( ({ "%sÓÃËüµÄ¾×Ïò%sÒ»×Ä" }) );
-	set_c_limbs( ({ "·ï×¦","¼¦¹Ú","¼¦ÐØ" }) );
+	set( "unit", "åª" );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„å’€å‘%sä¸€å•„" }) );
+	set_c_limbs( ({ "é³³çˆª","é›žå† ","é›žèƒ¸" }) );
         set( "tactic_func", "my_attack" );
 }
 int my_attack()
@@ -45,7 +45,7 @@ void die()
     ::die();
     killer = query("last_attacker");
     tell_room( environment(this_object()),
-          "ÅÔ±ßÒ»Ö»´ó¹«¼¦ÉúÆøµÀ:ÄÇÀïÀ´µÄÒ°º¢×Ó¾¹¸ÒÔ×ÎÒÐ¡º¢,¸øÎÒÈ¥ËÀ°É!!\n");
+          "æ—é‚Šä¸€éš»å¤§å…¬é›žç”Ÿæ°£é“:é‚£è£¡ä¾†çš„é‡Žå­©å­ç«Ÿæ•¢å®°æˆ‘å°å­©,çµ¦æˆ‘åŽ»æ­»å§!!\n");
     if( !( big=present("big chicken", environment()) ) ) {
         big = new( DMONSTER"big_chicken" );
         big->move( environment(killer) );

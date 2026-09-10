@@ -6,17 +6,17 @@ void create ()
 {
         ::create();
         set_level(6);
-        set_name( "vagetable merchant","²Ë··" );
+        set_name( "vagetable merchant","èœè²©" );
         add ("id", ({ "merchant"}) );
-        set_short( "vagetable merchant","²Ë··");
-        set("unit","Î»");
+        set_short( "vagetable merchant","èœè²©");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇÒ»¸öÂôÊß²ËµÄĞ¡··
+é€™æ˜¯ä¸€å€‹è³£è”¬èœçš„å°è²©
 ANGEL
         );
         
         set ("gender", "male");
         set("wealth/gold",7);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
 }

@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "willow club", "°×Ñî¹÷");
+        set_name( "willow club", "ç™½æ¥Šæ£");
         add ("id",({ "club"}) );
-        set_short("°×Ñî¹÷");
-        set("unit", "°Ñ");
+        set_short("ç™½æ¥Šæ£");
+        set("unit", "æŠŠ");
         set_long(@C_LONG
-Õâ°Ñ°×Ñî¹÷ÊÇÀûÓÃ°×ÑîÖÊÇáµÄÌØĞÔÖÆ³ÉµÄ£¬ÊÇ³õÑ§¹÷·¨µÄÈËµÄ×î¼ÑÑ¡Ôñ¡£
+é€™æŠŠç™½æ¥Šæ£æ˜¯åˆ©ç”¨ç™½æ¥Šè³ªè¼•çš„ç‰¹æ€§è£½æˆçš„ï¼Œæ˜¯åˆå­¸æ£æ³•çš„äººçš„æœ€ä½³é¸æ“‡ã€‚
 C_LONG
         );
         set( "weapon_class", 11 );

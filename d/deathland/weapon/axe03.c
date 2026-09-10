@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Black Axe","ºÚ¸«");
+       set_name("Black Axe","é»‘æ–§");
        add("id",({"axe",}) );
-       set_short("ºÚ¸«");
+       set_short("é»‘æ–§");
        set_long(
-           "¿¨¶û·þµÂ,°«ÈË»ÊÊÒÊÌÎÀ³¤ÓÃµÄÒ»°ÑÄ§·¨¸«Í·\n"
+           "å¡çˆ¾æœå¾·,çŸ®äººçš‡å®¤ä¾è¡›é•·ç”¨çš„ä¸€æŠŠé­”æ³•æ–§é ­\n"
      	);
 	
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 40 );
     	set("type","axe");
     	set("bleeding",10);
@@ -22,7 +22,7 @@ void create()
 	set( "value", ({ 300, "gold" }) );
 	set("hit_func","sword_damage");
     	set("special_damage",13);
-    	set("special_c_msg","»Ó³öÒ»µÀÉÁ¹â,²¢ÉîÉîµØÇÐÈëµÐÈËµÄÐÄÔà.\n\n");
+    	set("special_c_msg","æ®å‡ºä¸€é“é–ƒå…‰,ä¸¦æ·±æ·±åœ°åˆ‡å…¥æ•µäººçš„å¿ƒè‡Ÿ.\n\n");
 }
 
 int sword_damage(object victim,int damage)
@@ -44,9 +44,9 @@ int sword_damage(object victim,int damage)
 		victim->receive_damage( dam );
 		victim->set("last_attacker", holder );
 		tell_object( holder, 
-                        sprintf("\nÄãµÄ%s%s\n",query("c_name"),c_msg));
+                        sprintf("\nä½ çš„%s%s\n",query("c_name"),c_msg));
 		tell_room( environment(holder), 
-                        sprintf("%sµÄ%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
+                        sprintf("%sçš„%s%s\n",holder->query("c_name"),query("c_name"),c_msg),
 			holder );
 		return dam;
      }

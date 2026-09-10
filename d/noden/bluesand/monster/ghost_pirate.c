@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level(10);
-	set_name( "ghost pirate", "¹íº£µÁ" );
+	set_name( "ghost pirate", "é¬¼æµ·ç›œ" );
 	add("id", ({"ghost", "pirate"}) );
-   set_short( "¹íº£µÁ" );
+   set_short( "é¬¼æµ·ç›œ" );
 	set_long(
-		"Äã¿´µ½Ò»ÍÅÄ£ºıµÄ¹âÓ°£¬ÏñÊÇÒ»¸öÊÖÄÃÍäµ¶µÄº£µÁÉíÓ°¡£\n"
+		"ä½ çœ‹åˆ°ä¸€åœ˜æ¨¡ç³Šçš„å…‰å½±ï¼Œåƒæ˜¯ä¸€å€‹æ‰‹æ‹¿å½åˆ€çš„æµ·ç›œèº«å½±ã€‚\n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

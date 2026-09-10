@@ -13,7 +13,7 @@ inherit DAEMON ;
 int cmd_give()
 {
 	write( can_read_chinese()?
-		"你已经死了，身上什麽也没有。\n":
+		"浣犲凡缍撴浜嗭紝韬笂浠�楹间篃娌掓湁銆俓n":
 		"Alas, as a ghost, you have nothing to give.\n");
 	return 1;
 }

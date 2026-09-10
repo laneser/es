@@ -9,13 +9,13 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "Red scorpion", "´óºìĞ«" );
+	set_name( "Red scorpion", "å¤§ç´…è " );
 	add ("id", ({ "scorpion" }) );
-	set_short( "scorpion","´óºìĞ«");
-	set("unit","Î²");
+	set_short( "scorpion","å¤§ç´…è ");
+	set("unit","å°¾");
 	set_long("",
-	   "Äã¿´µ½Ò»Î²·Ç³£ÃÀÀöµÄ¾Ş´óÏÊºìĞ«×Ó£¬¡õºìµÄ±íÃæ³¤ÂúÈñÀûµÄ¼¬Í»\n"
-	   "ÃÀÀöµÄÍâ±íÏÂ£¬ËÆºõÓĞÒ»¹ÉĞ°Æø´æÔÚ¡£\n"
+	   "ä½ çœ‹åˆ°ä¸€å°¾éå¸¸ç¾éº—çš„å·¨å¤§é®®ç´…è å­ï¼Œâ–¡ç´…çš„è¡¨é¢é•·æ»¿éŠ³åˆ©çš„æ£˜çª\n"
+	   "ç¾éº—çš„å¤–è¡¨ä¸‹ï¼Œä¼¼ä¹æœ‰ä¸€è‚¡é‚ªæ°£å­˜åœ¨ã€‚\n"
 	   
 	);
 	set( "likefish",1);
@@ -31,8 +31,8 @@ void create()
 	set_natural_armor( 45, 20 );
 	set ("tactic_func","poison");
 	set ("race", "monster");
-	set_c_limbs(({"Ğ«Î²","Ğ«Éí","Î²°Í","´óòü"}));
-	set_c_verbs( ({"%s»ÓÎèË«Ç¯Ï®Ïò%s","%s¶¾Î²Íù%s£¬ºİºİó§ÏÂ¡£"}));
+	set_c_limbs(({"è å°¾","è èº«","å°¾å·´","å¤§è¯"}));
+	set_c_verbs( ({"%sæ®èˆé›™é‰—è¥²å‘%s","%sæ¯’å°¾å¾€%sï¼Œç‹ ç‹ è«ä¸‹ã€‚"}));
 }
 
 void die()
@@ -46,8 +46,8 @@ void die()
      return;
    }
    tell_room(environment(this_object()),
-      "\nÄãµÄ×îááÒ»»÷ÃüÖĞÁË´óºìĞ«£¬ËüµÄÎ²°ÍÎŞÁ¦µÄÌÉÔÚÒ»ÅÔ\n\n\n\n"
-      "Äã¿´ÁË¾õµÃÊ®·Ö¿É°®£¬Ë³ÊÖ°ÑËüµÄÎ²°Í¸îÏÂÀ´ÉÍÍæ¡£\n"
+      "\nä½ çš„æœ€å¾Œä¸€æ“Šå‘½ä¸­äº†å¤§ç´…è ï¼Œå®ƒçš„å°¾å·´ç„¡åŠ›çš„èººåœ¨ä¸€æ—\n\n\n\n"
+      "ä½ çœ‹äº†è¦ºå¾—ååˆ†å¯æ„›ï¼Œé †æ‰‹æŠŠå®ƒçš„å°¾å·´å‰²ä¸‹ä¾†è³ç©ã€‚\n"
       ,this_object() );
    if( (int)(ob1->move(killer)) != MOVE_OK )
 		ob1->move(environment(this_object()));  
@@ -61,9 +61,9 @@ int poison()
 
 	if( random(20)>4 || !(victim = query_attacker()) ) return 0;
 	tell_object( victim, 
-		"ºìĞ«¶¾Î²Ò»Ë¦£¬×¼È·µÄó§ÖĞÄãµÄÊÖÍó£¡\n" );
+		"ç´…è æ¯’å°¾ä¸€ç”©ï¼Œæº–ç¢ºçš„è«ä¸­ä½ çš„æ‰‹è…•ï¼\n" );
 	tell_room( environment(this_object()), 
-		"ºìĞ«×ÓĞ«Î²ó§ÖĞ" + victim->query("c_name") + "µÄÊÖÍó£¡\n",
+		"ç´…è å­è å°¾è«ä¸­" + victim->query("c_name") + "çš„æ‰‹è…•ï¼\n",
 		({ this_object(), victim }) );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 10, 10 );
 	return 1;

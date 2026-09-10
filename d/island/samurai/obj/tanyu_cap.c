@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "tanyu cap", "ÌìÓğÍ·½í");
+        set_name( "tanyu cap", "å¤©ç¾½é ­å·¾");
         add( "id", ({ "cap" }) );
-        set_short("tanyu cap", "ÌìÓğÍ·½í");
+        set_short("tanyu cap", "å¤©ç¾½é ­å·¾");
         set_long(@AAA
-ÕâÊÇÌìÓğ½£ÅÉÌØÓĞµÄÍ·½í
+é€™æ˜¯å¤©ç¾½åŠæ´¾ç‰¹æœ‰çš„é ­å·¾
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "head" );
         set( "armor_class", 7 );
         set( "defense_bonus", 3 );

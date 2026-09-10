@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wind amulet", "·çÖ®»¤·û" );
+	set_name( "wind amulet", "é¢¨ä¹‹è­·ç¬¦" );
 	add( "id", ({ "amulet" }) );
-	set_short( "·çÖ®»¤·û" );
+	set_short( "é¢¨ä¹‹è­·ç¬¦" );
 	set_long(
-		"ÕâÊÇÒ»ÕÅÆæÒìµÄ»¤·û£¬ÉÁÒ«ÖøÇ³×ÏÉ«µÄ¹âÃ¢£¬Äã¿ÉÒÔ¸ĞÊÜµ½Ëü³äÂúÁËÄÜÁ¿¡£\n"
+		"é€™æ˜¯ä¸€å¼µå¥‡ç•°çš„è­·ç¬¦ï¼Œé–ƒè€€è‘—æ·ºç´«è‰²çš„å…‰èŠ’ï¼Œä½ å¯ä»¥æ„Ÿå—åˆ°å®ƒå……æ»¿äº†èƒ½é‡ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "misc" );
 	set( "material", "cloth" );
 	set( "defense_bonus", 5 );

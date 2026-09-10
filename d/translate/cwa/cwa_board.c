@@ -9,7 +9,7 @@ void create()
 	set_save_file("cwa_board");
 	set_location("/u/s/supertramp/cwa/cwa_club") ;
 	set ("short.text", "CWA's bulletin board");
-	set ("c_short.text", "É«ÀÇĞ­»áÁôÑÔ°å");
-	set ("c_long.text", "ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©É«ÀÇÃÇÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£\n"
+	set ("c_short.text", "è‰²ç‹¼å”æœƒç•™è¨€æ¿");
+	set ("c_long.text", "é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›è‰²ç‹¼å€‘ç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚\n"
         );
 }

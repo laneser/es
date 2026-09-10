@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "Ninja sword", "ÈÌÕßµ¶" );
+        set_name( "Ninja sword", "å¿è€…åˆ€" );
         add( "id",({ "sword" }) );
-        set_short( "Ninja sword", "ÈÌÕßµ¶" );
+        set_short( "Ninja sword", "å¿è€…åˆ€" );
         set_long(@AAA
-ÈÌÕß×¨ÓÃµÄÎäÆ÷£¬ËäËµÃû³ÆÊÇµ¶µ«È´±ÈÆ½³£µÄµ¶Òª¶ÌÁËĞí¶à£¬
-»òĞíÊÇÈÌÕßÎªÁË·½±ãÒÆ¶¯¶ø¸ÄµÄ°É
+å¿è€…å°ˆç”¨çš„æ­¦å™¨ï¼Œé›–èªªåç¨±æ˜¯åˆ€ä½†å»æ¯”å¹³å¸¸çš„åˆ€è¦çŸ­äº†è¨±å¤šï¼Œ
+æˆ–è¨±æ˜¯å¿è€…ç‚ºäº†æ–¹ä¾¿ç§»å‹•è€Œæ”¹çš„å§
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
 //        set( "bleeding",13);
         set( "weapon_class", 25 );
         set( "type", "dagger" );

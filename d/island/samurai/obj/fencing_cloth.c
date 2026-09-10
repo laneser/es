@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "fencing clothes", "½£ÊõµÀ·ş ");
+        set_name( "fencing clothes", "åŠè¡“é“æœ ");
         add( "id", ({ "cloth","clothes" }) );
-        set_short("fencing clothes", "½£ÊõµÀ·ş");
+        set_short("fencing clothes", "åŠè¡“é“æœ");
         set_long(@AAA
-Ò»¸öÁ·½£µÀÈËËù´©µÄµÀ·ş£¬ÊÇÓÃºñÂé²¼ËùÖ¯³É£¬ÓµÓĞ²»´íµÄ·À»¤Á¦
+ä¸€å€‹ç·´åŠé“äººæ‰€ç©¿çš„é“æœï¼Œæ˜¯ç”¨åšéº»å¸ƒæ‰€ç¹”æˆï¼Œæ“æœ‰ä¸éŒ¯çš„é˜²è­·åŠ›
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 20 );
         set( "defense_bonus", 2 );

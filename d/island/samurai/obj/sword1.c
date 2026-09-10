@@ -5,16 +5,16 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("unknow sword","ÌìÓðÆæ½£");
+       set_name("unknow sword","å¤©ç¾½å¥‡åŠ");
        add("id",({"sword"}) );
-       set_short("ÌìÓðÆæ½£");
+       set_short("å¤©ç¾½å¥‡åŠ");
 	   set_long(@AAA
-Ò»°ÑÌìÓð½£ÅÉµÄÕÆÃÅÐÅÎï£¬Ò²ÊÇÒ»°ÑÉÏ¹ÅÉñ±ø£¬¾ÝËµ³ÖÓÐËü¾Í¿ÉÒÔÊ¹³öÌìÓð¶þÊ®ËÄ½£
+ä¸€æŠŠå¤©ç¾½åŠæ´¾çš„æŽŒé–€ä¿¡ç‰©ï¼Œä¹Ÿæ˜¯ä¸€æŠŠä¸Šå¤ç¥žå…µï¼Œæ“šèªªæŒæœ‰å®ƒå°±å¯ä»¥ä½¿å‡ºå¤©ç¾½äºŒåå››åŠ
 AAA
 
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
         set("type","longblade");
 //        set("bleeding",10);
@@ -23,10 +23,10 @@ AAA
 	set( "weight", 110 );
 	set( "value", ({ 501, "gold" }) );
 //        set("hit_func","sword_damage");
-        set("extra_look","$NÄÃÖøÒ»°ÑÏóáçÌìÓð½£ÅÉÕÆÃÅµÄ½£");
+        set("extra_look","$Næ‹¿è‘—ä¸€æŠŠè±¡å¾µå¤©ç¾½åŠæ´¾æŽŒé–€çš„åŠ");
         set("special_damage",5);
-        set_c_verbs( ({"µÄ%s»®³öÒ»µÀ½£Ã¢Õ¶Ïò%s","»Ó¶¯%s·É¿ìµÄÏò%sÁ¬´ÌÈý½£",
-                       "µÄ%sÎè³ö¶ä¶äµÄ½£»¨ÕÖÏò%s","»Ø×ª%sÒÔÒ»¸ö¹îÒìµÄ½Ç¶ÈÕ¶Ïò%s"}));
+        set_c_verbs( ({"çš„%såŠƒå‡ºä¸€é“åŠèŠ’æ–¬å‘%s","æ®å‹•%sé£›å¿«çš„å‘%sé€£åˆºä¸‰åŠ",
+                       "çš„%sèˆžå‡ºæœµæœµçš„åŠèŠ±ç½©å‘%s","è¿´è½‰%sä»¥ä¸€å€‹è©­ç•°çš„è§’åº¦æ–¬å‘%s"}));
 }
 
 int sword_damage(object victim,int damage)
@@ -46,9 +46,9 @@ int sword_damage(object victim,int damage)
 { case 0:			 
  {    
      tell_object(holder,
-     "\nÄãÊ¹³öÌìÓð½£·¨Ö® ³¤ºç¹áÈÕ ½£Èç³¤ºç°ã·ÉÉäµÐÈË\n\n");
+     "\nä½ ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ é•·è™¹è²«æ—¥ åŠå¦‚é•·è™¹èˆ¬é£›å°„æ•µäºº\n\n");
      tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"Ê¹³öÌìÓð½£·¨Ö® ³¤ºç¹áÈÕ ½£Èç³¤ºç°ã·ÉÉäµÐÈË\n\n",
+      "\n"+holder->query("c_name")+"ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ é•·è™¹è²«æ—¥ åŠå¦‚é•·è™¹èˆ¬é£›å°„æ•µäºº\n\n",
       holder);
     victim->receive_special_damage("magic",dam+random(15));
     victim->set("last_attacker",holder);
@@ -57,9 +57,9 @@ int sword_damage(object victim,int damage)
  case 1:   
  {
       tell_object(holder,
-      "\nÄãÊ¹³öÌìÓð½£·¨Ö® ¾Å»¡ÕðÈÕ ½£ÉíÉÏ·º³ö¹îÒìµÄ½£Ã¢¾íÏòµÐÈË\n\n");
+      "\nä½ ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ ä¹å¼§éœ‡æ—¥ åŠèº«ä¸Šæ³›å‡ºè©­ç•°çš„åŠèŠ’å·å‘æ•µäºº\n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"Ê¹³öÌìÓð½£·¨Ö® ¾Å»¡ÕðÈÕ ½£ÉíÉÏ·º³ö¹îÒìµÄ½£Ã¢¾íÏòµÐÈË\n\n",
+      "\n"+holder->query("c_name")+"ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ ä¹å¼§éœ‡æ—¥ åŠèº«ä¸Šæ³›å‡ºè©­ç•°çš„åŠèŠ’å·å‘æ•µäºº\n\n",
       holder);
       victim->receive_special_damage("magic",dam+random(20));
       victim->set("last_attacker",holder);
@@ -68,9 +68,9 @@ int sword_damage(object victim,int damage)
  case 2:
    {
       tell_object(holder,
-      "\nÄãÊ¹³öÌìÓð½£·¨Ö® Ñª×ÙÍòÀï ½£ÉíÉÏ·º³öÎÞÊý½£ÆøÉäÏòµÐÈË \n\n");
+      "\nä½ ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ è¡€è¹¤è¬é‡Œ åŠèº«ä¸Šæ³›å‡ºç„¡æ•¸åŠæ°£å°„å‘æ•µäºº \n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"Ê¹³öÌìÓð½£·¨Ö® Ñª×ÙÍòÀï µÄ½£ÉíÉÏ·º³öÎÞÊý½£ÆøÏòµÐÈËÉäÈ¥\n\n",
+      "\n"+holder->query("c_name")+"ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ è¡€è¹¤è¬é‡Œ çš„åŠèº«ä¸Šæ³›å‡ºç„¡æ•¸åŠæ°£å‘æ•µäººå°„åŽ»\n\n",
       holder);
       victim->set("last_attacker",holder);
       victim->receive_special_damage("magic",dam+random(25));
@@ -80,9 +80,9 @@ int sword_damage(object victim,int damage)
    {
      
      tell_object(holder,
-      "\nÄãÊ¹³öÌìÓð½£·¨Ö® ÓñÊ¯¾ã·Ù Õû¸öÈËÂ£ÕÖÔÚ½£ÆøÖ®ÏÂÉäÏòµÐÈË\n\n");
+      "\nä½ ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ çŽ‰çŸ³ä¿±ç„š æ•´å€‹äººæ”ç½©åœ¨åŠæ°£ä¹‹ä¸‹å°„å‘æ•µäºº\n\n");
       tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"Ê¹³öÌìÓð½£·¨Ö® ÓñÊ¯¾ã·Ù Õû¸öÈËÂ£ÕÖÔÚ½£ÆøÖ®ÏÂÉäÏòµÐÈË\n\n",
+      "\n"+holder->query("c_name")+"ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ çŽ‰çŸ³ä¿±ç„š æ•´å€‹äººæ”ç½©åœ¨åŠæ°£ä¹‹ä¸‹å°„å‘æ•µäºº\n\n",
       holder);
       victim->set("last_attacker",holder);
       victim->receive_special_damage("magic",dam+random(30));
@@ -91,9 +91,9 @@ int sword_damage(object victim,int damage)
  case 4:
  {
     tell_object(holder,
-    "\nÄãÊ¹³öÌìÓð½£·¨Ö® ÈýÌ¶Ó¡ÔÂ ½£»¯ÎªÈýÒÔÈý¸ö¹îÒìµÄ½Ç¶È´ÌÏòµÐÈË\n\n");
+    "\nä½ ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ ä¸‰æ½­å°æœˆ åŠåŒ–ç‚ºä¸‰ä»¥ä¸‰å€‹è©­ç•°çš„è§’åº¦åˆºå‘æ•µäºº\n\n");
     tell_room(environment(holder),
-    "\n"+holder->query("c_name")+"Ê¹³öÌìÓð½£·¨Ö® ÈýÌ¶Ó¡ÔÂ ½£»¯ÎªÈýÒÔÈý¸ö¹îÒìµÄ½Ç¶È´ÌÏòµÐÈË \n\n", 
+    "\n"+holder->query("c_name")+"ä½¿å‡ºå¤©ç¾½åŠæ³•ä¹‹ ä¸‰æ½­å°æœˆ åŠåŒ–ç‚ºä¸‰ä»¥ä¸‰å€‹è©­ç•°çš„è§’åº¦åˆºå‘æ•µäºº \n\n", 
     holder);
     victim->set("last_attcaker",holder);
     victim->receive_special_damage("magic",dam+random(15));

@@ -3,13 +3,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "we-tow staff", "Τ����");
+        set_name( "we-tow staff", "韋陀杵");
         add ("id",({ "staff"}) );
-        set_short("Τ����");
-        set("unit", "��");
+        set_short("韋陀杵");
+        set("unit", "把");
         set_long(@C_LONG
-����һ����ǧ����̴ľ���ɵ����ȣ�����ĵ�ʮ�ֵľ�ϸ����һ����֪��
-��һ����ĳ��ʦ��������ľ�������ɵġ�ͬʱ��Ҳ�������·��ɵ����
+這是一把由千年紫檀木做成的禪杖，上面的雕工十分的精細，你一看就知道
+這一定是某個師傅窮畢生的精力所完成的。同時這也是少林寺方丈的信物。
 C_LONG
         );
         set("weapon_class", 30);

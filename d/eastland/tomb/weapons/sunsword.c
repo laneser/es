@@ -5,15 +5,15 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-    set_name("Sun Sword", "½ðºç½£" );
+    set_name("Sun Sword", "é‡‘è™¹åŠ" );
     add("id", ({"sword","sunsword",}) );
-    set_short("½ðºç½£");
+    set_short("é‡‘è™¹åŠ");
 	set_long(
-           "Ò»°Ñ½ð¹âÉÁÉÁµÄ¶Ì½££¬½£Éí±¡ÇÒÕ­£¬µ«ÊÇÈ´·Ç³£ÓÐµ¯ÐÔ¡£ÔÚ¿¿½ü½£ïÉÖ®´¦ÖýÁË\n"
-           "Á½¸öÐ¡\×­\  --- ¡º½ðºç¡»\n"
+           "ä¸€æŠŠé‡‘å…‰é–ƒé–ƒçš„çŸ­åŠï¼ŒåŠèº«è–„ä¸”çª„ï¼Œä½†æ˜¯å»éžå¸¸æœ‰å½ˆæ€§ã€‚åœ¨é è¿‘åŠé”ä¹‹è™•é‘„äº†\n"
+           "å…©å€‹å°ç¯†\  --- ã€Žé‡‘è™¹ã€\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
         set( "type","shortblade");
 	set( "min_damage", 18 );
@@ -23,7 +23,7 @@ void create()
 	set( "value", ({ 210, "gold" }) );
 //    set("hit_func","sword_damage");
     set("special_damage",18);
-    set("special_c_msg","±¬Éä³öÇ¿ÁÒµÄ½ð»ÆÉ«¹âÃ¢£¬´ÌÍ´ÄãµÄÑÛ¡£\n\n");
+    set("special_c_msg","çˆ†å°„å‡ºå¼·çƒˆçš„é‡‘é»ƒè‰²å…‰èŠ’ï¼Œåˆºç—›ä½ çš„çœ¼ã€‚\n\n");
 }
 
 int sword_damage(object victim,int damage)
@@ -45,9 +45,9 @@ int sword_damage(object victim,int damage)
 		victim->set("last_attacker", holder );
 		if( !c_msg ) return 0;
 		tell_object( holder, 
-			"\nÄãµÄ"+query("c_name")+set_color(c_msg,"HIY")+"\n");
+			"\nä½ çš„"+query("c_name")+set_color(c_msg,"HIY")+"\n");
 		tell_room( environment(holder), 
-                        holder->query("c_name") + "µÄ"+query("c_name")+set_color(c_msg,"HIY")+"\n",
+                        holder->query("c_name") + "çš„"+query("c_name")+set_color(c_msg,"HIY")+"\n",
 			holder );
 		damage_count=0;
 		return dam;

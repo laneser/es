@@ -13,7 +13,7 @@
 #include "/d/healer/healer.h"
 #define CHECK_USE "/d/healer/acupuncture/use_points"
 #define CHECK_ALL "/d/healer/acupuncture/points"
-#define part ({"²»Ã÷²¿Î»","Í·²¿","¾±²¿","ÐØÇ°","¸¹²¿","Ñü²¿","±³²¿","ÊÖÉÏ","ÍÈ²¿"})
+#define part ({"ä¸æ˜Žéƒ¨ä½","é ­éƒ¨","é ¸éƒ¨","èƒ¸å‰","è…¹éƒ¨","è…°éƒ¨","èƒŒéƒ¨","æ‰‹ä¸Š","è…¿éƒ¨"})
 
 inherit DAEMON ;
 
@@ -62,7 +62,7 @@ int do_acupuncture(string tar_point,object target)
        
        if( result[1] == -1 )
           {
-           write("ÄãÃ»Á·Ï°¹ýÕâÌõ¾­Âç,Ã»·¨¿Ï¶¨ÕýÈ·µÄÎ»ÖÃ,²»¸ÒÏÂÕë¡£\n") ; 
+           write("ä½ æ²’ç·´ç¿’éŽé€™æ¢ç¶“çµ¡,æ²’æ³•è‚¯å®šæ­£ç¢ºçš„ä½ç½®,ä¸æ•¢ä¸‹é‡ã€‚\n") ; 
            return 1 ;
            }  
        if( (result[0]==1) && (living_flag) )
@@ -76,19 +76,19 @@ int do_acupuncture(string tar_point,object target)
            return 1 ;
         }
 
-// ²»ÊÇËÀÑ¨Ò²²»ÊÇÓÐÐ§Ñ¨, µ½È«±íÕÒ
+// ä¸æ˜¯æ­»ç©´ä¹Ÿä¸æ˜¯æœ‰æ•ˆç©´, åˆ°å…¨è¡¨æ‰¾
 
         if( result[0] == 0 )
             result = CHECK_ALL->do_check(tar_point) ;
 
        if( result[1] == -1 )
-           return notify_fail("ÄãÃ»Á·Ï°¹ýÕâÌõ¾­Âç,Ã»·¨¿Ï¶¨ÕýÈ·µÄÎ»ÖÃ,²»¸ÒÏÂÕë¡£\n") ; 
+           return notify_fail("ä½ æ²’ç·´ç¿’éŽé€™æ¢ç¶“çµ¡,æ²’æ³•è‚¯å®šæ­£ç¢ºçš„ä½ç½®,ä¸æ•¢ä¸‹é‡ã€‚\n") ; 
 
 // Ok , had checked point, now do effective acupuncture
 
         if(result[0]!=1&&result[0]!=2&&result[0]!=3)
            { 
-            write("Ã»ÓÐÕâ¸öÑ¨µÀ¡£\n") ;
+            write("æ²’æœ‰é€™å€‹ç©´é“ã€‚\n") ;
             return 1 ;
            } 
            
@@ -103,33 +103,33 @@ int do_acupuncture(string tar_point,object target)
         
         if(check_repeat(tar_point,acuped)==0)
           {
-             write("ÄÇ¸öÑ¨µÀÒÑ¾­ÓÐÕëÔÚÉÏÃæÁË¡£\n");
+             write("é‚£å€‹ç©´é“å·²ç¶“æœ‰é‡åœ¨ä¸Šé¢äº†ã€‚\n");
              return 1 ;
           }
         acuped = acuped + ({ tar_point }) ;
 
         part_name = part[result[1]] ;
         if((((string)target->query("race"))=="hawkman")&&(result[1]==7))
-               part_name = "³á°òÉÏ" ;
+               part_name = "ç¿…è†€ä¸Š" ;
         
         if(target==me)
             {
-             tar_name = "×Ô¼º" ;
+             tar_name = "è‡ªå·±" ;
              if(result[1]==6)
                 { 
-                  tell_object(me,"ÄãÕë²»µ½×Ô¼ºµÄ±³¡£\n") ;
+                  tell_object(me,"ä½ é‡ä¸åˆ°è‡ªå·±çš„èƒŒã€‚\n") ;
                   return 1 ;
                 }
              }   
         else{ 
-             tell_object(target,sprintf("%sÓÃÒøÕëÍùÄã%sµÄ%sÑ¨ÔúÁËÏÂÈ¥¡£\n"
+             tell_object(target,sprintf("%sç”¨éŠ€é‡å¾€ä½ %sçš„%sç©´ç´®äº†ä¸‹åŽ»ã€‚\n"
                          ,my_name,part_name,tar_point)) ;          
              }
              
-        write(sprintf("ÄãÓÃÒøÕëÍù%s%sµÄ%sÑ¨ÔúÁËÏÂÈ¥¡£\n"
+        write(sprintf("ä½ ç”¨éŠ€é‡å¾€%s%sçš„%sç©´ç´®äº†ä¸‹åŽ»ã€‚\n"
                         ,tar_name,part_name,tar_point));
 
-        tell_room(environment(me),sprintf("%sÈ¡³öÒøÕëÍù%s%sÔúÁËÏÂÈ¥¡£\n"
+        tell_room(environment(me),sprintf("%så–å‡ºéŠ€é‡å¾€%s%sç´®äº†ä¸‹åŽ»ã€‚\n"
                                  ,my_name,tar_name,part_name),({me,target}) ) ;
 
         if(living_flag) target->set_temp("acupuncted_pts",acuped) ;       
@@ -151,23 +151,23 @@ int cmd_acupunc (string str)
 	if( !str ) return help();
 
         if(!wizardp(me))
-                return notify_fail("ÏÖÔÚÕë¾ÄÔÝÊ±Ö»¿ª·Å¸øÎ×Ê¦²âÊÔÓÃ¡£\n") ;
+                return notify_fail("ç¾åœ¨é‡ç¸æš«æ™‚åªé–‹æ”¾çµ¦å·«å¸«æ¸¬è©¦ç”¨ã€‚\n") ;
                 
         if(!( !(me->query_current_attacker()) ))
-                return notify_fail("Äã»¹ÔÚÕ½¶·ÖÐ,Ã»Ê±¼äÍ£ÏÂÀ´ÄÃÕë¡£\n");
+                return notify_fail("ä½ é‚„åœ¨æˆ°é¬¥ä¸­,æ²’æ™‚é–“åœä¸‹ä¾†æ‹¿é‡ã€‚\n");
          
 	if( !me->query("vision") )
-      		return notify_fail("Äã¿´²»¼ûÄ¿±ê£¬Ã»°ì·¨ÏÂÕë !!\n"); 
+      		return notify_fail("ä½ çœ‹ä¸è¦‹ç›®æ¨™ï¼Œæ²’è¾¦æ³•ä¸‹é‡ !!\n"); 
 	
 	if( me->query("weapon1") && ( me->query("weapon2") ||
 	     me->query("armor/shield") ) )
-	    return notify_fail( "ÄãÃ»ÓÐ¶àâÅµÄÊÖÀ´È¡Õë !!\n" );
+	    return notify_fail( "ä½ æ²’æœ‰å¤šé¤˜çš„æ‰‹ä¾†å–é‡ !!\n" );
 
         if( me->query_temp("no_concentrate"))
-            return notify_fail("ÄãµÄ×¢ÒâÁ¦»¹²»ÄÜ¼¯ÖÐ,ÎÞ·¨×¨ÐÄÏÂÕë¡£\n") ;
+            return notify_fail("ä½ çš„æ³¨æ„åŠ›é‚„ä¸èƒ½é›†ä¸­,ç„¡æ³•å°ˆå¿ƒä¸‹é‡ã€‚\n") ;
              
 	if( (int)me->query("stop_attack")>0 )
-	    return notify_fail ("ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓÐÍê³É£¬²»ÄÜ×¨ÐÄÏÂÕë¡£\n" );
+	    return notify_fail ("ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œä¸èƒ½å°ˆå¿ƒä¸‹é‡ã€‚\n" );
             
         if ( sscanf( str,"remove from %s",targetname)==1 || 
              sscanf( str,"remove %s",targetname)==1 )
@@ -176,28 +176,28 @@ int cmd_acupunc (string str)
               else 
                {
                 if(!(target=present(targetname,environment(me))))
-                     return notify_fail("ÄãÏë°ÎË­µÄÕë ??\n") ;
+                     return notify_fail("ä½ æƒ³æ‹”èª°çš„é‡ ??\n") ;
                }  
               if(!target->query_temp("acupuncted_pts"))
-                 return notify_fail("ÄãÁ¬¸ùÃ«¶¼Ã»¿´µ½, Òª°ÎÊ²÷áÕë ? \n") ;
+                 return notify_fail("ä½ é€£æ ¹æ¯›éƒ½æ²’çœ‹åˆ°, è¦æ‹”ä»€éº¼é‡ ? \n") ;
                  
               target->delete_temp("acupuncted_pts");   
               target->delete_temp("acupunct_healer") ;
               if(target==me)
                 {
-                  write("Äã½«×Ô¼ºÉíÉÏÔúµÄÕëÒ»¸ù¸ùµÄ°Î³öÀ´¡£\n") ;
-                  targetname == "×Ô¼º" ;
+                  write("ä½ å°‡è‡ªå·±èº«ä¸Šæ‰Žçš„é‡ä¸€æ ¹æ ¹çš„æ‹”å‡ºä¾†ã€‚\n") ;
+                  targetname == "è‡ªå·±" ;
                 }
               else 
                 {
                   targetname = target->query("c_name") ;
-                  write(sprintf("Äã½«%sÉíÉÏÔúµÄÕëÒ»¸ù¸ùµÄ°Î³öÀ´¡£\n"
+                  write(sprintf("ä½ å°‡%sèº«ä¸Šæ‰Žçš„é‡ä¸€æ ¹æ ¹çš„æ‹”å‡ºä¾†ã€‚\n"
                                  ,targetname)) ;
                   
-                  tell_object(target,sprintf("%s½«ÄãÉíÉÏÔúµÄÕëÒ»¸ù¸ùµÄ°Î³öÀ´¡£\n"
+                  tell_object(target,sprintf("%så°‡ä½ èº«ä¸Šæ‰Žçš„é‡ä¸€æ ¹æ ¹çš„æ‹”å‡ºä¾†ã€‚\n"
                          ,my_name)) ;
                 }
-              tell_room(environment(me),sprintf("%s½«%sÉíÉÏÔúµÄÕëÒ»¸ù¸ùµÄ°Î³öÀ´¡£\n"
+              tell_room(environment(me),sprintf("%så°‡%sèº«ä¸Šæ‰Žçš„é‡ä¸€æ ¹æ ¹çš„æ‹”å‡ºä¾†ã€‚\n"
                           ,my_name,targetname)
                           ,({me,target}) ) ;
                             
@@ -211,18 +211,18 @@ int cmd_acupunc (string str)
 	        {
 	          if(!(target=present(targetname,environment(me)))
 	             &&(!(target=find_player(targetname))))
-	               return notify_fail("ÕâÀïÃ»ÓÐÕâ¸ö¶«¶«¡£\n") ;
+	               return notify_fail("é€™è£¡æ²’æœ‰é€™å€‹æ±æ±ã€‚\n") ;
 	         }
 	      else if(!(target=find_player(targetname)))
-	              return notify_fail("Õâ¸öÊÀ½çÃ»ÓÐÕâºÅÈËÎï¡£\n") ;
+	              return notify_fail("é€™å€‹ä¸–ç•Œæ²’æœ‰é€™è™Ÿäººç‰©ã€‚\n") ;
               
               if(!present( target,environment(me) ))
                  {
                    tell_room(environment(me),me->query("c_name")+
-                       "ÄÃÆðÒøÕë¶Ô¿ÕÖÐ¿ÕµãÁËÁ½ÏÂ,È»áá¿´ÁË¿´ËÄÖÜ´øÖø³ÜÐ¦ÉñÇéµÄÂ·ÈË\n"+
-                       "ºìÖøÁ³ÊÕÆðÁËÒøÕë¡£\n",me) ;                              
+                       "æ‹¿èµ·éŠ€é‡å°ç©ºä¸­ç©ºé»žäº†å…©ä¸‹,ç„¶å¾Œçœ‹äº†çœ‹å››å‘¨å¸¶è‘—æ¥ç¬‘ç¥žæƒ…çš„è·¯äºº\n"+
+                       "ç´…è‘—è‡‰æ”¶èµ·äº†éŠ€é‡ã€‚\n",me) ;                              
                    return notify_fail
-                         ("ÄãÒÔÎªÄãÊÇÀ×ÉñÖ®×ÓÂð ? ¾¹Ïë¸ô¿ÕÕë¾Ä¡£\n");
+                         ("ä½ ä»¥ç‚ºä½ æ˜¯é›·ç¥žä¹‹å­å—Ž ? ç«Ÿæƒ³éš”ç©ºé‡ç¸ã€‚\n");
                    }
 	      } 
 	else {
@@ -233,18 +233,18 @@ int cmd_acupunc (string str)
 	      }
 
 	if((target->query("npc"))&&(!target->query("acupunctable")) )
-	       return notify_fail("ÄãÎÞ·¨¶Ô·ÇÍæ¼Ò½ÇÉ«Ê©ÒÔÕë¾Ä¡£\n ") ;    
+	       return notify_fail("ä½ ç„¡æ³•å°éžçŽ©å®¶è§’è‰²æ–½ä»¥é‡ç¸ã€‚\n ") ;    
 
         if(!( !(target->query_current_attacker()) ))
-                return notify_fail("ÄãµÄÄ¿±ê»¹ÔÚÕ½¶·ÖÐ,Ã»Ê±¼äÍ£ÏÂÀ´ÈÃÄãÏÂÕë¡£\n");
+                return notify_fail("ä½ çš„ç›®æ¨™é‚„åœ¨æˆ°é¬¥ä¸­,æ²’æ™‚é–“åœä¸‹ä¾†è®“ä½ ä¸‹é‡ã€‚\n");
 
         donator = target->query_temp("acupunct_healer") ;
 
         if( donator && donator!=my_name )
-                return notify_fail("ÄãµÄ¶ÔÏóÕýÔÚ½ÓÊÜÕë¾ÄÖÐ,Äã²»ÄÜÖÐÍ¾½éÈë¡£\n");
+                return notify_fail("ä½ çš„å°è±¡æ­£åœ¨æŽ¥å—é‡ç¸ä¸­,ä½ ä¸èƒ½ä¸­é€”ä»‹å…¥ã€‚\n");
                 
         if((string)target->query("race")=="beholder") 
-           return notify_fail("¶Ô·½³¤µÄÌ«Ææ¹ÖÁË,Äã²»Öª´ÓºÎÏÂÕë¡£\n") ;
+           return notify_fail("å°æ–¹é•·çš„å¤ªå¥‡æ€ªäº†,ä½ ä¸çŸ¥å¾žä½•ä¸‹é‡ã€‚\n") ;
            
         do_acupuncture(point,target) ;
         
@@ -254,19 +254,19 @@ int cmd_acupunc (string str)
 int help()
 {
 	write( @C_HELP
-Ö¸Áî¸ñÊ½: acupunct <Ä¿±ê> [on|at] <Ñ¨µÀÃû³Æ>
-          acupunct remove from <Ä¿±ê>
+æŒ‡ä»¤æ ¼å¼: acupunct <ç›®æ¨™> [on|at] <ç©´é“åç¨±>
+          acupunct remove from <ç›®æ¨™>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹ÄãµÄÕë¾ÄÉñ¼¼£¬²»Ö¸¶¨Ä¿±êÔò»á¶Ô×Ô¼ºÏÂÕë£¬µ«ÓÐÐ©Ñ¨µÀ
-Äã×Ô¼ºÕë²»µ½¡£Äã¿ÉÒÔÓÃ meridian Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§¹ýµÄ¾­ÂçÁÐ±í¡£ÎªÃâÈË¶à
-ÊÖÔÓ£¬Ò»¸ö»¼Õß±ØÐèÍê³ÉÕë¾Äáá£¬²ÅÄÜÈÃÁíÒ»Î»Ò½ÉúÕë¡£ ÕëÍêáá±ØÐë¶Ô»¼ÕßÊ©ÒÔ
-µ¼ÒýÊõ<¼´Æø¹¦>ÒÔ¼Ó¿ìÁÆÐ§¡£(ÏêÇéÇë¼û help douin)
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•ä½ çš„é‡ç¸ç¥žæŠ€ï¼Œä¸æŒ‡å®šç›®æ¨™å‰‡æœƒå°è‡ªå·±ä¸‹é‡ï¼Œä½†æœ‰äº›ç©´é“
+ä½ è‡ªå·±é‡ä¸åˆ°ã€‚ä½ å¯ä»¥ç”¨ meridian æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸éŽçš„ç¶“çµ¡åˆ—è¡¨ã€‚ç‚ºå…äººå¤š
+æ‰‹é›œï¼Œä¸€å€‹æ‚£è€…å¿…éœ€å®Œæˆé‡ç¸å¾Œï¼Œæ‰èƒ½è®“å¦ä¸€ä½é†«ç”Ÿé‡ã€‚ é‡å®Œå¾Œå¿…é ˆå°æ‚£è€…æ–½ä»¥
+å°Žå¼•è¡“<å³æ°£åŠŸ>ä»¥åŠ å¿«ç™‚æ•ˆã€‚(è©³æƒ…è«‹è¦‹ help douin)
 
-ÔË¹¦³öÁ¦¿ÉÎª max, regular, normal, minor, mini ¡£
-ÇëÏÈºÃºÃ¿¼ÂÇÇå³þÔÙÏÂÕë£¬µ±ÑªÆøÔËÐÐ´íÎóÊÜ×èÊ±£¬¿ÉÄÜ»áÄæÁ÷³åÏòÔË¹¦Õß¡£
-ÇáÕßÊÜÉË£¬ÖØÕß²Ð·ÏÌ±»¾£¬É÷Ö®É÷Ö®...
+é‹åŠŸå‡ºåŠ›å¯ç‚º max, regular, normal, minor, mini ã€‚
+è«‹å…ˆå¥½å¥½è€ƒæ…®æ¸…æ¥šå†ä¸‹é‡ï¼Œç•¶è¡€æ°£é‹è¡ŒéŒ¯èª¤å—é˜»æ™‚ï¼Œå¯èƒ½æœƒé€†æµè¡å‘é‹åŠŸè€…ã€‚
+è¼•è€…å—å‚·ï¼Œé‡è€…æ®˜å»¢ç™±ç˜“ï¼Œæ…Žä¹‹æ…Žä¹‹...
 
-ÎªÇóÈ¡Ñ¨ÕýÈ·£¬¶ÔÈËÊ©ÕëÖÎÁÆÇ°±ØÐëÒªÔÚÍ­ÈËÉÏ½«¸ÃÑ¨µÀËùÊôµÄ¾­ÂçÁ·Êì¡£
+ç‚ºæ±‚å–ç©´æ­£ç¢ºï¼Œå°äººæ–½é‡æ²»ç™‚å‰å¿…é ˆè¦åœ¨éŠ…äººä¸Šå°‡è©²ç©´é“æ‰€å±¬çš„ç¶“çµ¡ç·´ç†Ÿã€‚
 C_HELP
 		);
     return 1;

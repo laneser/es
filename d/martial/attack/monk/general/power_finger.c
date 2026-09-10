@@ -32,21 +32,21 @@ varargs int can_use(object me, object victim, object weapon)
 }
 
 string *attack_msg = ({
-		"%sÁ¦¹áÖ¸¼â£¬Ò»Ö¸Ïò%sµãÈ¥", 
-		"%s»ØÉíÄıÉñ£¬Ò»¼Ç¡ºÁ¦¹á³¤ºç¡»»º»º¾íÏò%s",
-		"%s²àÅüÒ»ÕÆ£¬»®³öÒ»ÕĞ¡º½ğ¸Õ·ü»¢¡»£¬¹¥Ïò%s",
-		"%sÒâÊØµ¤Ìï£¬ÓÒÊÖ¡º·ÉºèÑïÒí¡»ÆøÊÆ»Öºê£¬»÷Ïò%s",
-		"%sÌ¤³öÓÒ½Å£¬Ë«Ö¸×ÔÉÏ¶øÏÂ¹¥³ö£¬Ò»ÕĞ¡º¼ıÖ¸Á¬»·¡»¿ìËÙ¹¥Ïò%s",   
-		"%sË«Ä¿Ô²Õö£¬Ò»¹ÉÇ¿¾¢Ö¸Á¦Ó¿Ïò%s£¬ÄËÊÇ¡º½ğ¸ÕÅ­Ä¿¡»",
-		"%sÑöÌì´óºÈÒ»Éù£¬Åü³ö¡º¾ŞÀËÌÎÌì¡»´ó¹ÉÄÚ¾¢¾íÏò%s",
-		"%sÆø¹áÈ«Éí£¬Ê¹³öÖÕ¼«Ò»Ê½¡º½ğ¸ÕÆÆÄ§¡»Ò»´ó¹ÉÄÚ¾¢±¼Ó¿¹¥Ïò%s",
+		"%såŠ›è²«æŒ‡å°–ï¼Œä¸€æŒ‡å‘%sé»å»", 
+		"%så›èº«å‡ç¥ï¼Œä¸€è¨˜ã€åŠ›è²«é•·è™¹ã€ç·©ç·©å·å‘%s",
+		"%så´åŠˆä¸€æŒï¼ŒåŠƒå‡ºä¸€æ‹›ã€é‡‘å‰›ä¼è™ã€ï¼Œæ”»å‘%s",
+		"%sæ„å®ˆä¸¹ç”°ï¼Œå³æ‰‹ã€é£›é´»æšç¿¼ã€æ°£å‹¢æ¢å®ï¼Œæ“Šå‘%s",
+		"%sè¸å‡ºå³è…³ï¼Œé›™æŒ‡è‡ªä¸Šè€Œä¸‹æ”»å‡ºï¼Œä¸€æ‹›ã€ç®­æŒ‡é€£ç’°ã€å¿«é€Ÿæ”»å‘%s",   
+		"%sé›™ç›®åœ“çœï¼Œä¸€è‚¡å¼·å‹æŒ‡åŠ›æ¹§å‘%sï¼Œä¹ƒæ˜¯ã€é‡‘å‰›æ€’ç›®ã€",
+		"%sä»°å¤©å¤§å–ä¸€è²ï¼ŒåŠˆå‡ºã€å·¨æµªæ¿¤å¤©ã€å¤§è‚¡å…§å‹å·å‘%s",
+		"%sæ°£è²«å…¨èº«ï¼Œä½¿å‡ºçµ‚æ¥µä¸€å¼ã€é‡‘å‰›ç ´é­”ã€ä¸€å¤§è‚¡å…§å‹å¥”æ¹§æ”»å‘%s",
 });
 
 
 int *hits = ({  75, 80, 96, 132, 92, 104,  95, 154 });
 int *pens = ({  49, 88, 60, 115, 80,  85,  98, 130 });
 int *dams = ({  27, 33, 34, 43, 40, 44, 50, 63 });
-// »úÂÊ:        1  .9  .75 .58 .41 .27 .17 .10   type*10+lvl(max 25)*4 
+// æ©Ÿç‡:        1  .9  .75 .58 .41 .27 .17 .10   type*10+lvl(max 25)*4 
 
 varargs int hit_modify(int hit, object me, object victim, object weapon,int type)
 {
@@ -74,11 +74,11 @@ varargs int damage_modify(int damage, object me, object victim, object weapon,in
         if (random(350)<lv) { 
            me->add("force_points", query_need_fp());
            this_player() -> continue_attack();   
-           tell_object( me, set_color("Äã³¤Ğ¥Ò»Éù£¬½ğ¸ÕÖ¸Á¦·¢¶¯Ê×´Î½ø»÷! \n","HIR") ); 
+           tell_object( me, set_color("ä½ é•·å˜¯ä¸€è²ï¼Œé‡‘å‰›æŒ‡åŠ›ç™¼å‹•é¦–æ¬¡é€²æ“Š! \n","HIR") ); 
         if (random(180)<lv) { 
            me->add("force_points", query_need_fp());
            this_player() -> continue_attack();   
-           tell_object( me, set_color("Äã³¤Ğ¥Ò»Éù£¬½ğ¸ÕÖ¸Á¦·¢¶¯ÔÙ´Î½ø»÷! \n","HIR") );  
+           tell_object( me, set_color("ä½ é•·å˜¯ä¸€è²ï¼Œé‡‘å‰›æŒ‡åŠ›ç™¼å‹•å†æ¬¡é€²æ“Š! \n","HIR") );  
                             }  
                             }
 	return (dams[type-1]*monk_modify(victim)/100);
@@ -88,6 +88,6 @@ varargs string query_attack_msg(object me, object victim, int type)
 {
 	if( type < 1 || type > 8 ) return 0;
         if( (int)me->query("force_points") < query_need_fp() )
-        return attack_msg[type-1]+"Î©³öÊÖÊ±ÏÔµÃÄÚÁ¦²»×ã"; 
+        return attack_msg[type-1]+"æƒŸå‡ºæ‰‹æ™‚é¡¯å¾—å…§åŠ›ä¸è¶³"; 
 	return attack_msg[type-1];
 }

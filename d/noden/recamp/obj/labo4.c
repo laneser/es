@@ -7,13 +7,13 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-  set_name("den bo", "µç»÷°ô");
+  set_name("den bo", "é›»æ“Šæ£’");
   add("id", ({"den","bo","den bo"}) );
-  set_short("den bo","µç»÷°ô");
+  set_short("den bo","é›»æ“Šæ£’");
   set_long(
-   "Ò»°Ñµç»÷°ô£¬µ±ÐÄ±»µçÔÎÁË¡£\n"
+   "ä¸€æŠŠé›»æ“Šæ£’ï¼Œç•¶å¿ƒè¢«é›»æšˆäº†ã€‚\n"
   );
-  set( "unit", "°Ñ" );
+  set( "unit", "æŠŠ" );
   set( "weapon_class", 35 );
   set( "type","bo");
   set( "min_damage", 15 );

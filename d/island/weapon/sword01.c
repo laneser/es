@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "lizardman shortsword", "òáòæÈË¶Ì½£" );
+	set_name( "lizardman shortsword", "èœ¥èœ´äººçŸ­åŠ" );
 	add( "id", ({ "sword","shortsword" }) );
-	set_short( "òáòæÈË¶Ì½£" );
+	set_short( "èœ¥èœ´äººçŸ­åŠ" );
 	set_long(@LONG
-Ò»°ÑÄ¾ÖÊ½£±úµÄ¶Ì½££¬ËüËÆºõ²¢²»ÊÇºÜ·æÀû£¬µ«ÊÊºÏ¿³»÷¡£
+ä¸€æŠŠæœ¨è³ªåŠæŸ„çš„çŸ­åŠï¼Œå®ƒä¼¼ä¹ä¸¦ä¸æ˜¯å¾ˆé‹’åˆ©ï¼Œä½†é©åˆç æ“Šã€‚
 LONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "shortblade" );
 	set( "weapon_class", 15 );
 	set( "min_damage", 8 );

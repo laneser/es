@@ -18,14 +18,14 @@ int cast(int level, string target)
 
     me = this_player();
 	if( (int)me->query_skill("green-magic") < query_need_skill(level) ) {
-		tell_object(me,set_color("ÄãµÄÂÌÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n","HIG"));
+		tell_object(me,set_color("ä½ çš„ç¶ é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n","HIG"));
 		return 0;
 	}
 	
 	if( target == "NONE" ) dest = me;
 	else if( !(dest= present( target, environment(me) )) ) {
 		tell_object( me,
-			"Òª¶ÔË­Ê¹ÓÃ½ÇÖÊ»¯·¨Êõ£¿\n"
+			"è¦å°èª°ä½¿ç”¨è§’è³ªåŒ–æ³•è¡“ï¼Ÿ\n"
 		);
 	    return 0;
 	}
@@ -35,9 +35,9 @@ int cast(int level, string target)
 	    delay_time = 3;
 	me->block_attack(delay_time);
 	me->set_temp("cast_busy", 1);
-	tell_object(me,set_color("Äã¿ªÊ¼Ò÷ËÐÂÌÄ§·¨ÖÐÆ¤·ô½ÇÖÊÊõµÄÖäÎÄ....¡£\n","HIG",me));
+	tell_object(me,set_color("ä½ é–‹å§‹åŸèª¦ç¶ é­”æ³•ä¸­çš®è†šè§’è³ªè¡“çš„å’’æ–‡....ã€‚\n","HIG",me));
 	tell_room( environment(me), 
-		me->query("c_name") + "¿ªÊ¼ÓÃÒ»ÖÖµÍ³ÁµÄÉùÒôÒ÷ËÐÖäÎÄ¡£\n",
+		me->query("c_name") + "é–‹å§‹ç”¨ä¸€ç¨®ä½Žæ²‰çš„è²éŸ³åŸèª¦å’’æ–‡ã€‚\n",
 		me );
 	call_out( "effect", delay_time, level, me, dest );
 	return 1;
@@ -49,15 +49,15 @@ void effect(int level, object caster, object dest)
 	
 	caster->set_temp("cast_busy", 0);
     if( !dest || !present(dest, environment(caster)) ) {
-        tell_object( caster,  "ÄãµÄÄ¿±ê×ßµôÁË¡£\n" );
+        tell_object( caster,  "ä½ çš„ç›®æ¨™èµ°æŽ‰äº†ã€‚\n" );
         return;
     }
 	if( dest->query_temp("effect/barkskin") ) {
 		tell_object( dest,
-			"Ò»ÍÅÏÊÂÌÉ«µÄ¹âÃ¢ÁýÕÖÖøÄã£¬µ«ÊÇÄã¾õµÃ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n");
+			"ä¸€åœ˜é®®ç¶ è‰²çš„å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½†æ˜¯ä½ è¦ºå¾—ä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n");
 	} else {
 		tell_object( dest, 
-			"Ò»ÍÅÏÊÂÌÉ«µÄ¹âÃ¢ÁýÕÖÖøÄã£¬Äã¾õµÃÄãµÄÆ¤·ô¿ªÊ¼²»Õý³£µÄÔö³¤£¡\n"
+			"ä¸€åœ˜é®®ç¶ è‰²çš„å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ è¦ºå¾—ä½ çš„çš®è†šé–‹å§‹ä¸æ­£å¸¸çš„å¢žé•·ï¼\n"
 		);
 		boost = (level+1) * 3;
 		if( caster == dest )
@@ -70,8 +70,8 @@ void effect(int level, object caster, object dest)
 		call_out( "expire", duration, dest);
 	}
 	tell_room( environment(dest),
-		"Ò»ÍÅÏÊÂÌÉ«¹âÃ¢ÁýÕÖÖø"+dest->query("c_name")+"£¬µ±¹âÃ¢É¢È¥£¬ËûµÄÆ¤·ô¿ªÊ¼\n"
-		"²»Õý³£µÄÔö³¤¡£\n"
+		"ä¸€åœ˜é®®ç¶ è‰²å…‰èŠ’ç± ç½©è‘—"+dest->query("c_name")+"ï¼Œç•¶å…‰èŠ’æ•£åŽ»ï¼Œä»–çš„çš®è†šé–‹å§‹\n"
+		"ä¸æ­£å¸¸çš„å¢žé•·ã€‚\n"
 		, dest 
     );
 }
@@ -80,7 +80,7 @@ void expire( object player )
 {
     if( !player ) return;
 	tell_object( player,
-		"Ò»Ë²¼ä£¬ÄãµÄ¼áÓ²Æ¤·ôÈ«²¿ÍÑÂä.....\n"
+		"ä¸€çž¬é–“ï¼Œä½ çš„å …ç¡¬çš®è†šå…¨éƒ¨è„«è½.....\n"
     );
 	player->receive_damage(30);
 	player->set_temp("extra_db/barkskin",0);

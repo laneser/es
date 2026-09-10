@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-  set_name("Turtle Boots","Éñ¹êÕ½Ñ¥");
+  set_name("Turtle Boots","ç¥é¾œæˆ°é´");
   add("id",({"turtle","boots"}) );
-  set_short("Éñ¹êÕ½Ñ¥");
+  set_short("ç¥é¾œæˆ°é´");
   set_long(@LONG
-Õâ¾ÍÊÇ´«ËµÖĞÓÃÉñ¹êµÄ¹ê¼×Ëù×÷³ÉµÄÕ½Ñ¥¡£
+é€™å°±æ˜¯å‚³èªªä¸­ç”¨ç¥é¾œçš„é¾œç”²æ‰€ä½œæˆçš„æˆ°é´ã€‚
 LONG
           );
-  set("unit","Ë«");
+  set("unit","é›™");
   set("type","feet");
   set("material","stone");
   set("armor_class",8);

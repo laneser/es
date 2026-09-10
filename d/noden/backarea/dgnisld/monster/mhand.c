@@ -8,14 +8,14 @@ void create ()
 
 	::create();
 	set_level(10);
-	set_name( "Hand", "ÄàÊÖ" );
+	set_name( "Hand", "æ³¥æ‰‹" );
 	add ("id", ({ "hand", "mire","mire hand" }) );
-	set_short( "a mired hand", "ÄàÊÖ" );
+	set_short( "a mired hand", "æ³¥æ‰‹" );
 	set_long(
            "A mired hand, the dusty mire will make it strong. It lies on\n"
         "the swamp, its favorite home.\n",
-           "Ò»Ö»ÄàÊÖ£¬ÌÉÔÚÄàÕÓÉÏ¡£°¹ÔàµÄÄà°ÍËü×îÏ²»¶£¬ÄÇ»áÈÃËü¸üÓĞÁ¦Á¿¡£\n"
-        "Ğ¡ĞÄËüÒ»µ«×¥×¡ÁËÁÔÎï¾Í²»»áÔÙ·ÅÊÖ¡£\n"
+           "ä¸€éš»æ³¥æ‰‹ï¼Œèººåœ¨æ³¥æ²¼ä¸Šã€‚éª¯é«’çš„æ³¥å·´å®ƒæœ€å–œæ­¡ï¼Œé‚£æœƒè®“å®ƒæ›´æœ‰åŠ›é‡ã€‚\n"
+        "å°å¿ƒå®ƒä¸€ä½†æŠ“ä½äº†çµç‰©å°±ä¸æœƒå†æ”¾æ‰‹ã€‚\n"
 	);
 	
 	set_perm_stat( "dex", 5 );
@@ -37,6 +37,6 @@ void create ()
     set ("aggressive",1);
     set ("weight", 200);
     set ("exp_reward",1000);
-    set ("unit", "Ö»");
-    set_c_verbs( ({"×¥"}) );
+    set ("unit", "åª");
+    set_c_verbs( ({"æŠ“"}) );
 }

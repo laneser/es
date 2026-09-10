@@ -5,15 +5,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name("unknown rock","Ææ¹ÖµÄÊ¯Í·");
+	set_name("unknown rock","å¥‡æ€ªçš„çŸ³é ­");
 	add( "id" , ({ "rock" }) );
-	set_short("Ææ¹ÖµÄÊ¯Í·");
+	set_short("å¥‡æ€ªçš„çŸ³é ­");
 	set_long(
-		"ÕâÊÇÒ»¿Å¿´À´ÆÄÌØÊâµÄÊ¯Í·£¬µ«ÓÉì¶±»É³Ê¯Âñ×¡ÁË£¬Ö»ÁôÏÂÒ»µã±íÃæ\n"
-		"Â¶³öµØ±í£¬ÄãÒ²²»ÄÜ·Ç³£È·¶¨ËûÊÇÊ²÷á£¬Ò²Ğí°ÑËüÍÚ³öÀ´²ÅÄÜ\n"
-		"¸ãÇå³şËüÊÇÊ²÷á...\n"
+		"é€™æ˜¯ä¸€é¡†çœ‹ä¾†é —ç‰¹æ®Šçš„çŸ³é ­ï¼Œä½†ç”±æ–¼è¢«æ²™çŸ³åŸ‹ä½äº†ï¼Œåªç•™ä¸‹ä¸€é»è¡¨é¢\n"
+		"éœ²å‡ºåœ°è¡¨ï¼Œä½ ä¹Ÿä¸èƒ½éå¸¸ç¢ºå®šä»–æ˜¯ä»€éº¼ï¼Œä¹Ÿè¨±æŠŠå®ƒæŒ–å‡ºä¾†æ‰èƒ½\n"
+		"ææ¸…æ¥šå®ƒæ˜¯ä»€éº¼...\n"
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("dig",1);
    	set("weight", 10000);
    	set("value",({ 0, "silver" }) );
@@ -30,15 +30,15 @@ int do_dig( string arg )
      string str;      
            
            if ( !arg || arg != "rock") {
-           write("ÄãÏëÍÚÊ²÷á??\n");
+           write("ä½ æƒ³æŒ–ä»€éº¼??\n");
            return 1;
            }
            seteuid(getuid());
-           write("ÄãË«ÊÖ²¢ÓÃ£¬°ÑÕâ¿Å¹ÖÊ¯Í·ÍÚÁË³öÀ´£¬²¢ÇÒ×ĞÏ¸µÄ¹Û²ìËû£¡\n");
+           write("ä½ é›™æ‰‹ä¸¦ç”¨ï¼ŒæŠŠé€™é¡†æ€ªçŸ³é ­æŒ–äº†å‡ºä¾†ï¼Œä¸¦ä¸”ä»”ç´°çš„è§€å¯Ÿä»–ï¼\n");
            
            tell_room( environment(this_player()),
-           "\n"+this_player()->query("c_name")+"Ë«ÊÖ²¢ÓÃ£¬°ÑÂ·±ßµÄÒ»¿ÅÊ¯Í·ÍÚÁË³öÀ´\n"
-           "£¬²¢ÇÒÄÃÔÚÊÖÉÏ×ĞÏ¸¹Û²ì...\n\n", ({this_player()}) );
+           "\n"+this_player()->query("c_name")+"é›™æ‰‹ä¸¦ç”¨ï¼ŒæŠŠè·¯é‚Šçš„ä¸€é¡†çŸ³é ­æŒ–äº†å‡ºä¾†\n"
+           "ï¼Œä¸¦ä¸”æ‹¿åœ¨æ‰‹ä¸Šä»”ç´°è§€å¯Ÿ...\n\n", ({this_player()}) );
            
            switch( n= random(2) ) {
            case 0: obj = new("/d/adventurer/natural_history/stone");break;
@@ -46,19 +46,19 @@ int do_dig( string arg )
            default : break;
            }
            
-           if (obj->query("c_name")=="Ğ¡Ê¯×Ó") {
+           if (obj->query("c_name")=="å°çŸ³å­") {
            obj->set("need_skill",1);
-           str = "ÆÕÍ¨µÄ\n";
+           str = "æ™®é€šçš„\n";
            }
-           else str = "º±¼ûµÄ\n";
+           else str = "ç½•è¦‹çš„\n";
            if ((int)obj->query("need_skill") < (int)this_player()->query_skill("natural_history")-1) {              
                
-                write("¸ù¾İÄã¶Ô²©ÎïÑ§Óë×ÔÈ»ÉúÎïµÄÈÏÊ¶£¬Äã¶Ï¶¨ÕâÊÇÒ»"+obj->query("unit")+ str
-                +obj->query("c_name")+"¡£ÄãºÜ¿ìµÄ°ÑËüÊÕÆğÀ´...\n");      
+                write("æ ¹æ“šä½ å°åšç‰©å­¸èˆ‡è‡ªç„¶ç”Ÿç‰©çš„èªè­˜ï¼Œä½ æ–·å®šé€™æ˜¯ä¸€"+obj->query("unit")+ str
+                +obj->query("c_name")+"ã€‚ä½ å¾ˆå¿«çš„æŠŠå®ƒæ”¶èµ·ä¾†...\n");      
                
                 tell_room( environment(this_player()),
-                "\n"+this_player()->query("c_name")+"ËµµÀ: ¹ş£¬ÕÒµ½Ò»"+obj->query("unit")+"±¦¹óµÄ"
-                +obj->query("c_name")+"£¬ÕæÊÇ×¬µ½ÁË...\n\n", ({this_player()}) );
+                "\n"+this_player()->query("c_name")+"èªªé“: å“ˆï¼Œæ‰¾åˆ°ä¸€"+obj->query("unit")+"å¯¶è²´çš„"
+                +obj->query("c_name")+"ï¼ŒçœŸæ˜¯è³ºåˆ°äº†...\n\n", ({this_player()}) );
                
                 this_player()->gain_experience(5*(int)obj->query("need_skill"));
                 obj->move(this_player());
@@ -68,11 +68,11 @@ int do_dig( string arg )
            
            else {
                
-                write("Äã´ÓÀ´Ã»¼û¹ıÕâÍæÒâ£¬»òĞíËüÃ»Ê²÷áÓÃ°É..ÄãË³ÊÖ°ÑËü¶ªÔÚÂ·±ß\n");
+                write("ä½ å¾ä¾†æ²’è¦‹éé€™ç©æ„ï¼Œæˆ–è¨±å®ƒæ²’ä»€éº¼ç”¨å§..ä½ é †æ‰‹æŠŠå®ƒä¸Ÿåœ¨è·¯é‚Š\n");
                
                 tell_room( environment(this_player()),
-                "\n"+this_player()->query("c_name")+"ËÆºõ²»ÖªµÀÍÚ³öµÄ¶«¶«ÊÇÊ²÷á£¬Ëæ±ã°ÑËû\n"
-                "¶ªÔÚÂ·±ß...\n\n",({this_player()}) );
+                "\n"+this_player()->query("c_name")+"ä¼¼ä¹ä¸çŸ¥é“æŒ–å‡ºçš„æ±æ±æ˜¯ä»€éº¼ï¼Œéš¨ä¾¿æŠŠä»–\n"
+                "ä¸Ÿåœ¨è·¯é‚Š...\n\n",({this_player()}) );
                
                 remove();
                 return 1;

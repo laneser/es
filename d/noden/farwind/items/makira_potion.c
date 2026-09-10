@@ -6,15 +6,15 @@ void create()
 {
 	potion::create();
 #include <compress_obj.h>
-	set_name( "makira potion", "Âê¼ªÀ­Ò©Ë®" );
+	set_name( "makira potion", "ç‘ªå‰æ‹‰è—¥æ°´" );
 	add( "id", ({ "potion", "makira" }) );
-	set_short( "Âê¼ªÀ­Ò©Ë®" );
+	set_short( "ç‘ªå‰æ‹‰è—¥æ°´" );
 	set_long(
-		"ÕâÆ¿Ò©Ë®ÉÏÃæ±êÊ¾Öø: ¡¸Âê¼ªÀ­¡¹£¬ÅÔ±ß×¢Ã÷: ½ô¼±Ò½ÁÆÓÃ¡£\n"
+		"é€™ç“¶è—¥æ°´ä¸Šé¢æ¨™ç¤ºè‘—: ã€Œç‘ªå‰æ‹‰ã€ï¼Œæ—é‚Šè¨»æ˜: ç·Šæ€¥é†«ç™‚ç”¨ã€‚\n"
 	);
 	set_healing( 90 );
 	set( "no_sale", 1 );
-	set( "unit", "Æ¿" );
+	set( "unit", "ç“¶" );
 	set( "weight", 30 );
 	set( "value", ({ 500, "silver" }) );
 	set( "medication", 70 );

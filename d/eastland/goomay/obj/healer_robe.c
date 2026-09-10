@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "healer's robe", "Ò½ÉúÕïÅÛ" );
+	set_name( "healer's robe", "é†«ç”Ÿè¨ºè¢" );
 	add( "id", ({ "robe" }) );
-	set_short( "an healer's robe", "Ò½ÉúÕïÅÛ" );
+	set_short( "an healer's robe", "é†«ç”Ÿè¨ºè¢" );
 	set_long(
 		"You see a healer's robe.\n",
-		"ÕâÊÇÒ»¼şÒ½Éú³£´©µÄ°×É«³¤ÅÛ£¬ÉÏÃæÕ´ÁËÒ»Ğ©°ß°ßµãµãµÄÑª¼£¡£\n"
+		"é€™æ˜¯ä¸€ä»¶é†«ç”Ÿå¸¸ç©¿çš„ç™½è‰²é•·è¢ï¼Œä¸Šé¢æ²¾äº†ä¸€äº›æ–‘æ–‘é»é»çš„è¡€è·¡ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
         set("material","healer");
 	set( "type", "body" );
 	set( "weight", 80 );

@@ -6,7 +6,7 @@ void create()
 {
 	::create();
 	set("light", 1);
-    set_short( "Midair","°ë¿ÕÖÐ" );
+    set_short( "Midair","åŠç©ºä¸­" );
     set_long( @LONG
 LONG
 	,@C_LONG
@@ -18,9 +18,9 @@ void init()
 {
     write(can_read_chinese()?
 		"\nWeeeeeeeeeeeeee..............\n"+
-		"Äã¿´µ½µ×ÏÂÐ¡Ð¡µÄÊ÷, ºÓÁ÷½¥½¥½Ó½üÄã...\n"+
-		"wowowowowowow.....\nÔ½À´Ô½½üÁË!!!\n"+
-		"WHAM!!!!!\nÍ»È»Äã±»Ò»¹ÉÁ¦Á¿À­×¡¶øÍ£ÁËÏÂÀ´¡£\n":
+		"ä½ çœ‹åˆ°åº•ä¸‹å°å°çš„æ¨¹, æ²³æµæ¼¸æ¼¸æŽ¥è¿‘ä½ ...\n"+
+		"wowowowowowow.....\nè¶Šä¾†è¶Šè¿‘äº†!!!\n"+
+		"WHAM!!!!!\nçªç„¶ä½ è¢«ä¸€è‚¡åŠ›é‡æ‹‰ä½è€Œåœäº†ä¸‹ä¾†ã€‚\n":
 		"\nWeeeeeeeeee......\n"+
 		"You see little trees and rivers below you...\n"+
 		"wowowowowowow...\nIt's getting closer!!!\n"+
@@ -33,8 +33,8 @@ int look_here(string str)
 {
     if( str ) return 0;
     write(can_read_chinese()?
-        "\nÄãÍùÏÂ¿´, ÉîÀ¶É«µÄºÓË®¼±ËÙµÄÁ÷¹ý¹Èµ×¡£ÍùÉÏ¿´, ÐüÑÂÀëÄã»¹ÓÐ\n"+
-        "Ò»¶Î¾àÀë¡£Äã... ÏÖÔÚ¡¸¹Ò¡¹ÔÚ°ë¿ÕÖÐ¡£\n":
+        "\nä½ å¾€ä¸‹çœ‹, æ·±è—è‰²çš„æ²³æ°´æ€¥é€Ÿçš„æµéŽè°·åº•ã€‚å¾€ä¸Šçœ‹, æ‡¸å´–é›¢ä½ é‚„æœ‰\n"+
+        "ä¸€æ®µè·é›¢ã€‚ä½ ... ç¾åœ¨ã€ŒæŽ›ã€åœ¨åŠç©ºä¸­ã€‚\n":
         "\nYou are hanging in mid-air. Above you is the cliff and below\n"+
         "you, the dark blue river runs through the valley.\n"
     );
@@ -45,17 +45,17 @@ void hanging(object player)
 {
 	if( !player ) return;
     tell_object(player, can_read_chinese(player)?
-    	"Äã¾õµÃÄã¡¸¹Ò¡¹ÔÚÕâÀïÌ«¾Ã, ¸ÃÉÏÈ¥ÁË.... \n":
+    	"ä½ è¦ºå¾—ä½ ã€ŒæŽ›ã€åœ¨é€™è£¡å¤ªä¹…, è©²ä¸ŠåŽ»äº†.... \n":
     	"You think you are here long enough, time to climb back!\n"
    	);
     tell_object( player, can_read_chinese(player)?
-    	"Äã×¥½ôÉþ×ÓË³ÖøÑÂ±ÚÅÀÁËÉÏÈ¥¡£\n":
+    	"ä½ æŠ“ç·Šç¹©å­é †è‘—å´–å£çˆ¬äº†ä¸ŠåŽ»ã€‚\n":
     	"You climb up along the cliff wall.\n"
    	);
     player->move_player(IRC"deck_3.c","SNEAK");
     tell_room(environment(this_player()),({
     	player->query("cap_name")+" climbs up.\n",
-    	player->query("c_cap_name")+"´ÓÑÂÏÂÅÀÁËÉÏÀ´¡£\n" }),player
+    	player->query("c_cap_name")+"å¾žå´–ä¸‹çˆ¬äº†ä¸Šä¾†ã€‚\n" }),player
     );
     find_object(IRC"deck_3")->set("busy",0);
 }

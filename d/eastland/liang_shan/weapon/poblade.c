@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("pu blade","ÆÓµ¶");
+       set_name("pu blade","æœ´åˆ€");
        add("id",({"blade"}) );
-       set_short("ÆÓµ¶");
+       set_short("æœ´åˆ€");
 	   set_long(
-           "ÕâÊÇÒ»°Ñ·Ç³£ÆÕÍ¨µÄµ¶×Ó£¬ÊÇÁºÉ½²´Ç¿µÁµÄÖÆÊ½ÎäÆ÷£®\n"
+           "é€™æ˜¯ä¸€æŠŠéå¸¸æ™®é€šçš„åˆ€å­ï¼Œæ˜¯æ¢å±±æ³Šå¼·ç›œçš„åˆ¶å¼æ­¦å™¨ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 17 );
     set("type","longblade");
 	set( "min_damage", 9 );

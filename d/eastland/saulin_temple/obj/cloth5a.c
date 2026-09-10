@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "deer plate","Â¹Æ¤ÒÂĞÎ" );
+	set_name( "deer plate","é¹¿çš®è¡£å½¢" );
 	add( "id", ({ "plate", "platemail", "mail" }) );
-	set_short( "Â¹Æ¤ÒÂĞÎ" );
+	set_short( "é¹¿çš®è¡£å½¢" );
 	set_long(
-		"ÕâÊÇÒ»Ì×²»¶¯Ã÷ÍõÊÌÎÀ´©ÖøµÄ¼×ëĞ, Î½Ö®Â¹Æ¤ÒÂĞÎ¡£\n"
+		"é€™æ˜¯ä¸€å¥—ä¸å‹•æ˜ç‹ä¾è¡›ç©¿è‘—çš„ç”²å†‘, è¬‚ä¹‹é¹¿çš®è¡£å½¢ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
         set("material","leather");
 	set( "armor_class", 28 );

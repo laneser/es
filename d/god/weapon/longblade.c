@@ -2,19 +2,19 @@
 
 inherit WEAPON;
 
-string C_NAME="Ä§ÉñÖ®½£";
+string C_NAME="é­”ç¥ä¹‹åŠ";
 
 void create()
 {
         seteuid(getuid());
         set_name( "sword of demogorgod", C_NAME );
         add( "id", ({ "sword", "demogorgod" }) );
-        set_short( "ĞÇÔÂÖ®(ÌìÁú)±¦½£" );
+        set_short( "æ˜Ÿæœˆä¹‹(å¤©é¾)å¯¶åŠ" );
         set_long(
-       "ÕâÊÇĞÇÔÂÉ±ÁËĞ°¶ñµÄÌìÁú,ÓÃÌìÁúµÄÑÀ×ö³ÉµÄÒ»°Ñ½£¡£\n"
-       "¶ÔÁúÓĞÌØ±ğµÄ¹¥»÷Á¦¡£\n"
+       "é€™æ˜¯æ˜Ÿæœˆæ®ºäº†é‚ªæƒ¡çš„å¤©é¾,ç”¨å¤©é¾çš„ç‰™åšæˆçš„ä¸€æŠŠåŠã€‚\n"
+       "å°é¾æœ‰ç‰¹åˆ¥çš„æ”»æ“ŠåŠ›ã€‚\n"
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "type", "longblade" );
         set( "weapon_class", 10 );
         set( "min_damage", 35 );

@@ -3,18 +3,18 @@
 void create()
 {
   set_name("Scry ball","Scry ball");
-  set("c_short","Ë®¾§Çò");
+  set("c_short","æ°´æ™¶çƒ");
   set("c_long",@ScryBall
-Ò»¿ÅÄ§·¨Ë®¾§Çò,ÓÃÀ´×·×ÙÄãµÄµĞÈË,ÊÇPKµÄÀûÆ÷
+ä¸€é¡†é­”æ³•æ°´æ™¶çƒ,ç”¨ä¾†è¿½è¹¤ä½ çš„æ•µäºº,æ˜¯PKçš„åˆ©å™¨
 use <scry someone>.
 ------------creator Echobomber--------
 ScryBall
 );
   set("id",({"ball","scryball"}));
-  set( "unit", "¿Å");
+  set( "unit", "é¡†");
   set("weight", 0);
   set("invisible",1);
-  set("c_extra_look","$NµÄÄ§·¨ÇòÕıÈÆÖøËûĞı×ª.\n");
+  set("c_extra_look","$Nçš„é­”æ³•çƒæ­£ç¹è‘—ä»–æ—‹è½‰.\n");
   set("prevent_drop",1);
 }
 

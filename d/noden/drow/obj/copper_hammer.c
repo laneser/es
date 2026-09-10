@@ -3,16 +3,16 @@
 inherit WEAPON;
 void create()
 {
-       set_name("copper hammer","Í­½Ç¡õ");
+       set_name("copper hammer","éŠ…è§’â–¡");
    add("id",({"hammer"}));
-   set_short("Í­½Ç¡õ");
+   set_short("éŠ…è§’â–¡");
        set_long(
 @C_LONG
-ÕâÊÇ°ÑÓÉÍ­Æ¬ÏâÔÚÔ­Ä¾¿éÉÏµÄ¡õ×Ó£¬ÎÕ°ÑµÄµØ·½¿ÌÓĞÖ©ÖëµÄÍ¼°¸¡£
+é€™æ˜¯æŠŠç”±éŠ…ç‰‡é‘²åœ¨åŸæœ¨å¡Šä¸Šçš„â–¡å­ï¼Œæ¡æŠŠçš„åœ°æ–¹åˆ»æœ‰èœ˜è››çš„åœ–æ¡ˆã€‚
 C_LONG
         );
 
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 15 );
         set("type","blunt");
         set( "min_damage", 14 );

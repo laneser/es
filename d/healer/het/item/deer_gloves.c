@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "deer gloves", "Â¹Æ¤ÊÖÌ×" );
+	set_name( "deer gloves", "é¹¿çš®æ‰‹å¥—" );
 	add( "id", ({ "gloves" }) );
-	set_short( "Â¹Æ¤ÊÖÌ×" );
+	set_short( "é¹¿çš®æ‰‹å¥—" );
 	set_long(
-	"ÕâÊÇÒ»Ë«Â¹Æ¤×öµÄÊÖÌ×£¬Í¨³£Ê©¶¾µÄÈË¶¼»á´øÖøËü£¬ÒÔÃâ×Ô¼ºÖĞ¶¾¡£\n"
+	"é€™æ˜¯ä¸€é›™é¹¿çš®åšçš„æ‰‹å¥—ï¼Œé€šå¸¸æ–½æ¯’çš„äººéƒ½æœƒå¸¶è‘—å®ƒï¼Œä»¥å…è‡ªå·±ä¸­æ¯’ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
         set("material","leather");
 	set( "type", "hands" );
 	set( "weight", 30 );

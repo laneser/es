@@ -9,12 +9,12 @@ void create()
 
 	::create();
 	set_level(7);
-	set_name( "dwarf nurse", "矮人护士" );
+	set_name( "dwarf nurse", "鐭汉璀峰＋" );
 	add( "id", ({ "nurse", }) );
-	set_short( "a dwarf nurse", "矮人护士" );
+	set_short( "a dwarf nurse", "鐭汉璀峰＋" );
 	set_long(
 		"NEED TRANSLATION.\n",
-		"负责看管与照顾婴儿的护士.\n"
+		"璨犺铂鐪嬬鑸囩収椤у鍏掔殑璀峰＋.\n"
 	);
 	set("alignment",300);
 	set( "race", "dwarf" );

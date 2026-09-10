@@ -24,28 +24,28 @@ void consistency_check()
 
 int do_joke()
 {
-	string laugh,*action = ({ "%sÖ¸Öø%sµÄ±Ç×ÓĞ¦µÃÖ±²»ÆğÑüÀ´¡£\n", 
-			"%sÔÚ%sµÄËÄÖÜÌøÀ´ÌøÈ¥£¬ÄÃ´ó¶¦¡¢·­¸ú¶·¡£\n", 
-			"%s×°ÉÏÒ»¸öºìºìµÄĞ¡³ó±Ç×Ó£¬¶ÔÖø%sÒ¡Í·»ÎÄÔ¡£\n", 
-			"%sÒ»Æ¨¹É×øÔÚµØÉÏ£¬Ö¸Öø%sÍÛÀ²ÍÛÀ²µÄ¿ŞÁËÆğÀ´¡£\n",
-			"%sÓÃÄà°ÍÂÒÍ¿%sµÄÁ³¡£\n" }) ;
+	string laugh,*action = ({ "%sæŒ‡è‘—%sçš„é¼»å­ç¬‘å¾—ç›´ä¸èµ·è…°ä¾†ã€‚\n", 
+			"%såœ¨%sçš„å››å‘¨è·³ä¾†è·³å»ï¼Œæ‹¿å¤§é¼ã€ç¿»è·Ÿæ–—ã€‚\n", 
+			"%sè£ä¸Šä¸€å€‹ç´…ç´…çš„å°ä¸‘é¼»å­ï¼Œå°è‘—%sæ–é ­æ™ƒè…¦ã€‚\n", 
+			"%sä¸€å±è‚¡ååœ¨åœ°ä¸Šï¼ŒæŒ‡è‘—%så“‡å•¦å“‡å•¦çš„å“­äº†èµ·ä¾†ã€‚\n",
+			"%sç”¨æ³¥å·´äº‚å¡—%sçš„è‡‰ã€‚\n" }) ;
 	object victim ;
 	if ( !victim = query_attacker())
-		return notify_fail("¸ÉÂï£¿Ë£±¦Âğ£¿ÄãÓÖ²»ÔÚÕ½¶·ÖĞ¡£\n");
+		return notify_fail("å¹¹å˜›ï¼Ÿè€å¯¶å—ï¼Ÿä½ åˆä¸åœ¨æˆ°é¬¥ä¸­ã€‚\n");
 
         if ( query_temp("joking") )
-                return notify_fail("ÄãÕıÔÚÅ¬Á¦Ë£±¦ÖĞ ... \n");
+                return notify_fail("ä½ æ­£åœ¨åŠªåŠ›è€å¯¶ä¸­ ... \n");
     if( query_temp("busy") )
-    	return notify_fail("\n  ÄãÕıÔÚ×¨ĞÄ×÷±ğµÄÊÂÇé£¬²»ÄÜ·ÖĞÄË£±¦¡£\n");
+    	return notify_fail("\n  ä½ æ­£åœ¨å°ˆå¿ƒä½œåˆ¥çš„äº‹æƒ…ï¼Œä¸èƒ½åˆ†å¿ƒè€å¯¶ã€‚\n");
 	if ( victim->query("stop_attack") || 
 		(int)victim->query_temp("be_joke")==3 )
-		return notify_fail("¹ş ! ±ğ°×·ÑÁ¦ÆøÁË£¬ËûÏÖÔÚ¿É²»»áÉÏµ±ÁË¡£\n");
+		return notify_fail("å“ˆ ! åˆ¥ç™½è²»åŠ›æ°£äº†ï¼Œä»–ç¾åœ¨å¯ä¸æœƒä¸Šç•¶äº†ã€‚\n");
 
         laugh = action[random(5)];
 
-	tell_object(this_object(),"Äã¶ÔÖøµĞÈËÅ¬Á¦µÄË£±¦ ...\n");
+	tell_object(this_object(),"ä½ å°è‘—æ•µäººåŠªåŠ›çš„è€å¯¶ ...\n");
 
-	tell_object(victim,sprintf(laugh,query("c_name"),"Äã"));
+	tell_object(victim,sprintf(laugh,query("c_name"),"ä½ "));
 
 	tell_room(environment(this_object()),
 		  sprintf(laugh,query("c_name"),
@@ -68,14 +68,14 @@ void funny(object me,object victim)
 	i=i/10;
         if (i < 0) i = 0;
 	if ( random(3) < (i+(int)victim->query_temp("be_joke")) ) {
-		tell_object(me,set_color("µ«ÊÇµĞÈË²»ÎªËù¶¯ ...\n","HIC",me));
-		tell_object(victim,"ÄãÆ´ÃüµÄÈÌ×¡Ğ¦£¬²»ÄÜÉÏµ±¡£\n");
+		tell_object(me,set_color("ä½†æ˜¯æ•µäººä¸ç‚ºæ‰€å‹• ...\n","HIC",me));
+		tell_object(victim,"ä½ æ‹¼å‘½çš„å¿ä½ç¬‘ï¼Œä¸èƒ½ä¸Šç•¶ã€‚\n");
 		return;
 	}
         victim->block_attack(4);
 	victim->set_temp("msg_stop_attack",
-		"( ÄãÏÖÔÚĞ¦µÃ»ëÉíÃ»Á¦£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+		"( ä½ ç¾åœ¨ç¬‘å¾—æ¸¾èº«æ²’åŠ›ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
 	victim->add_temp("be_joke",1);
-	tell_object(me,set_color("µĞÈËĞ¦µÃÖ±²»ÆğÑüÀ´£¬ºÃ»ú»á ...\n","HIY",me));
+	tell_object(me,set_color("æ•µäººç¬‘å¾—ç›´ä¸èµ·è…°ä¾†ï¼Œå¥½æ©Ÿæœƒ ...\n","HIY",me));
 	return ;
 }

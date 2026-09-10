@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("halfling ringmail", "°ëÉíÈË»·¼×");
+        set_name("halfling ringmail", "åŠèº«äººç’°ç”²");
         add( "id", ({ "ringmail","mail" }) );
-        set_short("°ëÉíÈË»·¼×");
+        set_short("åŠèº«äººç’°ç”²");
         set_long(
-                "ÕâÊÇ°ëÉíÈËÊØÎÀËù×¨ÓÃµÄ»·¼×¡£\n"
+                "é€™æ˜¯åŠèº«äººå®ˆè¡›æ‰€å°ˆç”¨çš„ç’°ç”²ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set("material","light_metal");
         set( "armor_class", 25 );

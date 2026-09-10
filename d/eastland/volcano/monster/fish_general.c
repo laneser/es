@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "The General", "Îä½«" );
+	set_name( "The General", "æ­¦å°‡" );
 	add( "id", ({ "general" }) );
-	set_short( "Îä½«" );
+	set_short( "æ­¦å°‡" );
 	set_long(
-		"Äã¿´µ½Ò»Î»¿×ÎäÓĞÁ¦µÄÓãÍ·ÈËÉíµÄ¹ÖÎï£¬ËûÊÇÁúÍõµÄÏÈ·æ´ó½«¡£\n"
+		"ä½ çœ‹åˆ°ä¸€ä½å­”æ­¦æœ‰åŠ›çš„é­šé ­äººèº«çš„æ€ªç‰©ï¼Œä»–æ˜¯é¾ç‹çš„å…ˆé‹’å¤§å°‡ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "monster" );
 	set( "gender", "male" );
 	set( "alignment",  800 );
@@ -35,7 +35,7 @@ void create()
 	set_skill( "dodge", 100 );
         set("chat_chance",10);
         set("chat_output", ({
-         "Îä½«£º×î½ü¶¼Ã»ÓĞ¿´µ½¹«Ö÷³öÀ´¡£\n"
+         "æ­¦å°‡ï¼šæœ€è¿‘éƒ½æ²’æœ‰çœ‹åˆ°å…¬ä¸»å‡ºä¾†ã€‚\n"
         }) );
 
 	wield_weapon(OWEAPON"staff1" );

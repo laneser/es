@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("dark amulet","ºÚ°µ»¤Éí·û");
+        set_name("dark amulet","é»‘æš—è­·èº«ç¬¦");
         add("id",({"amulet"}) );
-         set_short( "a dark amulet","ºÚ°µ»¤Éí·û");
+         set_short( "a dark amulet","é»‘æš—è­·èº«ç¬¦");
 	set_long(
-"ÕâÊÇÒ»¸öÔø±»Ğ°Éñ Yang ×£¸£¹ıµÄ»¤Éí·û\n"
+"é€™æ˜¯ä¸€å€‹æ›¾è¢«é‚ªç¥ Yang ç¥ç¦éçš„è­·èº«ç¬¦\n"
 	);
 	set( "no_sale",1);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "misc" );
 	set( "material", "element" );

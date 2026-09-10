@@ -6,15 +6,15 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("thief's dagger","µÁÔôØ°Ê×");
+       set_name("thief's dagger","ç›œè³ŠåŒ•é¦–");
        add("id",({"dagger"}) );
-       set_short("µÁÔôØ°Ê×");
+       set_short("ç›œè³ŠåŒ•é¦–");
 	   set_long(
-           "ÕâÊÇÒ»°ÑµÁÔô³£ÓÃµÄØ°Ê×£¬Îª±ãÀû×÷°¸£¬µ¶·æÉÏ»¹Ä¨ÁËĞ©¶¾£¬\n"
-	   "ÕæÊÇ±°±ÉµÄĞĞÎª......\n"
+           "é€™æ˜¯ä¸€æŠŠç›œè³Šå¸¸ç”¨çš„åŒ•é¦–ï¼Œç‚ºä¾¿åˆ©ä½œæ¡ˆï¼Œåˆ€é‹’ä¸Šé‚„æŠ¹äº†äº›æ¯’ï¼Œ\n"
+	   "çœŸæ˜¯å‘é„™çš„è¡Œç‚º......\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 18 );
         set( "type","dagger");
 	set( "second",1);
@@ -34,7 +34,7 @@ if (random(8)>1) return 0;
 victim->set("last_attacker",holder);
 
 tell_room( environment(holder),
-"\n"+holder->query("c_name")+"µÄØ°Ê×Ê¹µĞÈËÖĞ¶¾£®\n",
+"\n"+holder->query("c_name")+"çš„åŒ•é¦–ä½¿æ•µäººä¸­æ¯’ï¼\n",
 this_object());
 (CONDITION_PREFIX + "simple_poison")->apply_effect(victim,8,5);
 return 1;

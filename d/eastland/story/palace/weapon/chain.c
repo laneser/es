@@ -3,14 +3,14 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Wolf chain","ÇàÀÇËø");
+    set_name("Wolf chain","é’ç‹¼é–");
     add("id", ({ "chain" }) );
-    set_short("ÇàÀÇËø");
+    set_short("é’ç‹¼é–");
     set_long(@C_LONG
-Ò»ÌõÕÉ³¤µÄÎäÆ÷£¬Ç°¶Ë¿ÌÖøÒ»¸öÇàÓôÓôµÄÀÇÍ·£¬ÕÅÑÀÎè×¦£¬¿É²ÀÒÑ¼«¡£
+ä¸€æ¢ä¸ˆé•·çš„æ­¦å™¨ï¼Œå‰ç«¯åˆ»è‘—ä¸€å€‹é’é¬±éƒçš„ç‹¼é ­ï¼Œå¼µç‰™èˆçˆªï¼Œå¯æ€–å·²æ¥µã€‚
 C_LONG
     );
-    set( "unit", "¼ş" );
+    set( "unit", "ä»¶" );
     setup_weapon("chain", 30,15,23);
     set( "weight",100);
     set( "value", ({ 1500, "silver" }) );

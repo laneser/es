@@ -8,12 +8,12 @@ void create()
 {
 	::create();
 set("light",1);
-set_short("»ÊºóÀòÀòË¿µÄÆð¾ÓÊÒ");
+set_short("çš‡åŽèŽ‰èŽ‰çµ²çš„èµ·å±…å®¤");
   set_long(@Long
 Long
 ,@CLong
-ÕâÀïÊÇ»ÊºóÀòÀòË¿µÄÇÞ¹¬.ÓÐÒ»ÕÅ´²,Ò»×ù»¯×±Ì¨±»·ÅÖÃÔÚ½ÇÂäÀï.³ý´ËÒÔÍâ,
-²¢Ã»ÓÐÈÎºÎ¶àâÅµÄÎïÆ·.
+é€™è£¡æ˜¯çš‡åŽèŽ‰èŽ‰çµ²çš„å¯¢å®®.æœ‰ä¸€å¼µåºŠ,ä¸€åº§åŒ–å¦è‡ºè¢«æ”¾ç½®åœ¨è§’è½è£¡.é™¤æ­¤ä»¥å¤–,
+ä¸¦æ²’æœ‰ä»»ä½•å¤šé¤˜çš„ç‰©å“.
 CLong
 );
 set("echo_special_place",1);
@@ -22,9 +22,9 @@ set("exits",([
              ]));
 create_door("west","east",([
              "name":"gold door",
-             "c_name":"½ðÉ«µÄÃÅ",
+             "c_name":"é‡‘è‰²çš„é–€",
              "keyword":({"gold door","door",}),
-             "c_desc":"½ðÉ«µÄÃÅ",
+             "c_desc":"é‡‘è‰²çš„é–€",
              "status":"locked",
              "desc":"a gold door",
              "lock":"ECHO_DWARF_CITY_1",
@@ -48,7 +48,7 @@ void release(object player,object box)
      
      if ( (string)box->query("bottle_lock")=="leit" ) {
        tell_object(player,
-      "À³ÌØµÄÁé»ê±»ÊÍ·Åáá, Ò»ÏÂ×Ó¾ÍÏûÊ§µÄÎÞÓ°ÎÞ×ÙÁË.\n");    
+      "èŠç‰¹çš„éˆé­‚è¢«é‡‹æ”¾å¾Œ, ä¸€ä¸‹å­å°±æ¶ˆå¤±çš„ç„¡å½±ç„¡è¹¤äº†.\n");    
        box->delete("quest_action/bottle_lock");
        return; 
        }
@@ -56,40 +56,40 @@ void release(object player,object box)
      for(i=0;i<sizeof(monster);i++) 
         if ( monster[i]->id("queen") && monster[i]->query("npc") ) {
           tell_object(player,
-          "ÄãÊÍ·Å³ö·¨À­µÚµÄÁé»ê.\n"
-          "·¨À­µÚÂýÂýµØ³öÏÖÔÚÄãµÄÃæÇ°.\n"
+          "ä½ é‡‹æ”¾å‡ºæ³•æ‹‰ç¬¬çš„éˆé­‚.\n"
+          "æ³•æ‹‰ç¬¬æ…¢æ…¢åœ°å‡ºç¾åœ¨ä½ çš„é¢å‰.\n"
           );
           box->delete("quest_action/bottle_lock");
           falady=new(Monster"/falady");
           falady->move(this_object());
           tell_room(this_object(),
-          "µ±»Êºó¼ûµ½Ëû¶ù×ÓµÄÊ±ºò, ¸ßÐËµØÁ÷ÏÂÁËÑÛÀá.\n"
-          "·¨À­µÚÒ²ÊÇºÜ¸ßÐË,Á½ÈËì¶ÊÇÁÄÁËºÜ¾Ã.\n",
+          "ç•¶çš‡åŽè¦‹åˆ°ä»–å…’å­çš„æ™‚å€™, é«˜èˆˆåœ°æµä¸‹äº†çœ¼æ·š.\n"
+          "æ³•æ‹‰ç¬¬ä¹Ÿæ˜¯å¾ˆé«˜èˆˆ,å…©äººæ–¼æ˜¯èŠäº†å¾ˆä¹….\n",
           ({falady,monster[i],}) ); 
           call_out("quest_info",10,player,falady,box);
           return;
           } 
      box->delete("quest_action/bottle_lock");
      tell_object(player,
-      "·¨À­µÚµÄÁé»ê±»ÊÍ·Åáá, Ò»ÏÂ×Ó¾ÍÏûÊ§µÄÎÞÓ°ÎÞ×ÙÁË.\n");
+      "æ³•æ‹‰ç¬¬çš„éˆé­‚è¢«é‡‹æ”¾å¾Œ, ä¸€ä¸‹å­å°±æ¶ˆå¤±çš„ç„¡å½±ç„¡è¹¤äº†.\n");
      return; 
 }
 
 void quest_info(object player,object falady,object box)
 {
      tell_room(this_object(),
-     "¹ýÁËºÜ¾Ã, ·¨À­µÚÏòËýÄ¸Ç×»Ó»ÓÊÖ, È»áá¾ÍÏûÊ§ÁË.\n"
+     "éŽäº†å¾ˆä¹…, æ³•æ‹‰ç¬¬å‘å¥¹æ¯è¦ªæ®æ®æ‰‹, ç„¶å¾Œå°±æ¶ˆå¤±äº†.\n"
      );
      falady->remove();
      tell_object(player,
-     "»ÊºóÕâÊ±¶ÔÄãËµ: Ð»Ð»Äã, ÎÒÒÑ¾­ÖªµÀÎÒ¶ù×ÓÔÚÁíÒ»¸öÊÀ½çÀï»îµÄºÜºÃ.\n"
-     "ÎÒÒ²Ó¦¸ÃÍüµô±¯ÉË, ²»ÒªÈÃÆäËûÈËÎªÎÒµ£ÐÄÁË.\n"
-     "»ÊºóÓä¿ìµØÎ¢Ð¦Öø.\n" 
+     "çš‡åŽé€™æ™‚å°ä½ èªª: è¬è¬ä½ , æˆ‘å·²ç¶“çŸ¥é“æˆ‘å…’å­åœ¨å¦ä¸€å€‹ä¸–ç•Œè£¡æ´»çš„å¾ˆå¥½.\n"
+     "æˆ‘ä¹Ÿæ‡‰è©²å¿˜æŽ‰æ‚²å‚·, ä¸è¦è®“å…¶ä»–äººç‚ºæˆ‘æ“”å¿ƒäº†.\n"
+     "çš‡åŽæ„‰å¿«åœ°å¾®ç¬‘è‘—.\n" 
      "**********************************\n"
-     "ÄãÍê³ÉÁËÕâ¸ö¼èÄÑµÄÈÎÎñ.\n"
+     "ä½ å®Œæˆäº†é€™å€‹è‰±é›£çš„ä»»å‹™.\n"
      "**********************************\n"
      );
-     tell_room(this_object(),"»ÊºóÓä¿ìµØÎ¢Ð¦Öø.\n",player);
+     tell_room(this_object(),"çš‡åŽæ„‰å¿«åœ°å¾®ç¬‘è‘—.\n",player);
      if ( (int)player->query_quest_level("queen_smile")< 5 )
        player->finish_quest("queen_smile",5);
      return;

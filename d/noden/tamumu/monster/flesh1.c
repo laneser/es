@@ -4,15 +4,15 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name( "flesheater", "ÈâÊ³ÊÞ" );
-	set_short( "ÈâÊ³ÊÞ" );
+	set_name( "flesheater", "è‚‰é£Ÿç¸" );
+	set_short( "è‚‰é£Ÿç¸" );
 	set( "post_name","'s flesheater" );
-	set( "c_post_name","Ñ±·þµÄÈâÊ³ÊÞ" );
+	set( "c_post_name","é¦´æœçš„è‚‰é£Ÿç¸" );
 	set_long(
-		"ÈâÊ³ÊÞ....\n"
+		"è‚‰é£Ÿç¸....\n"
 	);
-	setenv( "C_MMIN","$N×ßÁË¹ýÀ´¡£");
-	setenv( "C_MMOUT","$N¸úÖøÖ÷ÈËÀë¿ª¡£");
+	setenv( "C_MMIN","$Nèµ°äº†éŽä¾†ã€‚");
+	setenv( "C_MMOUT","$Nè·Ÿè‘—ä¸»äººé›¢é–‹ã€‚");
 	
 	set( "gender", "male" );
 	set( "war_score", 1 );
@@ -30,7 +30,7 @@ int do_send(string s)
 	if (this_player()->query_temp("control_flesh") != 2)
 		return 0;
 	tell_object(this_player(),@LONG
-ÈâÊ³ÊÞÖªµÀÄã²»ÔÙÐèÒªËûÁË£¬ËÊËÊ¼ç¾Í»Ø¼ÒÈ¥ÁË¡£
+è‚‰é£Ÿç¸çŸ¥é“ä½ ä¸å†éœ€è¦ä»–äº†ï¼Œè³è³è‚©å°±å›žå®¶åŽ»äº†ã€‚
 LONG
 	);
 	this_player()->delete_temp("now_guard");

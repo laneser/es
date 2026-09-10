@@ -6,12 +6,12 @@ void create()
 {
 	pill::create();
 #include <compress_obj.h>
-	set_name( "green pill", "°Ù²İµ¤" );
+	set_name( "green pill", "ç™¾è‰ä¸¹" );
 	add( "id", ({ "pill" }) );
-	set_short( "°Ù²İµ¤" );
+	set_short( "ç™¾è‰ä¸¹" );
 	set_long(@C_LONG
-ÕâÊÇÒ»Á£ÓÃÉÏ°ÙÖÖ×Ì²¹Ò©²ÄÁ¶ÖÆ³ÉµÄ°Ù²İµ¤£¬·şÓÃ(eat)áá¿ÉÒÔ
-»Ö¸´²»ÉÙÌåÁ¦¡£
+é€™æ˜¯ä¸€ç²’ç”¨ä¸Šç™¾ç¨®æ»‹è£œè—¥æç…‰è£½æˆçš„ç™¾è‰ä¸¹ï¼Œæœç”¨(eat)å¾Œå¯ä»¥
+æ¢å¾©ä¸å°‘é«”åŠ›ã€‚
 C_LONG
 	);
 	set_healing( 30 );

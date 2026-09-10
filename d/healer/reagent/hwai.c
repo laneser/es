@@ -3,12 +3,12 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "Hwai", "»±Ä¾" );
+	set_name( "Hwai", "æ§æœ¨" );
 	add("id",({"plant","tree","hwai"}) );
-	set_short("»±Ä¾");
-	set_long( "ÕâÊÇÒ»¶Î»±Ä¾µÄÊ÷Ö¦¡£\n");
+	set_short("æ§æœ¨");
+	set_long( "é€™æ˜¯ä¸€æ®µæ§æœ¨çš„æ¨¹æã€‚\n");
 	set( "ident", "HWAI" );
-	set( "unit", "¶Î" );
+	set( "unit", "æ®µ" );
         set( "weight", 4 );
 	set( "value", ({ 10, "silver" }) );
 }

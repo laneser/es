@@ -13,13 +13,13 @@ void create()
 {
     ::create();
       set_level(18);
-      set_name( "evil scholar", "Ğ°¶ñÊéÉú" );
+      set_name( "evil scholar", "é‚ªæƒ¡æ›¸ç”Ÿ" );
       add ("id", ({ "scholar" }) );
-      set_short( "Ğ°¶ñÊéÉú");
-      set("unit","Î»");
+      set_short( "é‚ªæƒ¡æ›¸ç”Ÿ");
+      set("unit","ä½");
       set("alignment",-1300);
       set("weight",400);
-      set_long(query("c_name")+"´øÖøĞ¡Íµ×¨ÓÃµÄÍòÓÃĞ¡µ¶¡£\n");
+      set_long(query("c_name")+"å¸¶è‘—å°å·å°ˆç”¨çš„è¬ç”¨å°åˆ€ã€‚\n");
       set( "alt_corpse", "NONE" );
       set( "moving", 1 );
       set( "speed", 40 );
@@ -72,8 +72,8 @@ void make_angry(object obj)
     if( random(8) > 1 ) return ; 
     env=environment(obj);
     tell_room(env,C_NAME(obj)+
-      "´óºÈ:¡¸×¢Òâ£¬ÕâÀïÓĞµĞÈËà¸....¡¹\n"
-      "Ò»´óÈºÉßÈË²»Öª´ÓÄÇ¶ùÅÜÁË³öÀ´£¬°ÑÄãÍÅÍÅÎ§×¡... \n\n");
+      "å¤§å–:ã€Œæ³¨æ„ï¼Œé€™è£¡æœ‰æ•µäººå–”....ã€\n"
+      "ä¸€å¤§ç¾¤è›‡äººä¸çŸ¥å¾é‚£å…’è·‘äº†å‡ºä¾†ï¼ŒæŠŠä½ åœ˜åœ˜åœä½... \n\n");
     set("have_party",1);
     set("party_num",4);
     set_temp("embattle_busy",0);
@@ -119,17 +119,17 @@ int my_tactic()
      switch( query("party_num") ) {
      case 2:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸½áÁ½ÒÇÎ¢³¾Õó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçµå…©å„€å¾®å¡µé™£ã€!\n");
                command("embattle two at "+name); 
                return 0;
      case 3:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸½áÌìµØÈËÈı²ÅÕó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçµå¤©åœ°äººä¸‰æ‰é™£ã€!\n");
                command("embattle three at "+name);
                return 0;
      case 4:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸½áËÄÏóè¯çáÕó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçµå››è±¡ç’‡ç’£é™£ã€!\n");
                command("embattle four at "+name);  
                return 0;
      default :
@@ -138,24 +138,24 @@ int my_tactic()
        if (random(10) > 1) return 1;
        switch (random(4)) {
        case 0:
-         tell_object(victim,set_color( "Äã¼ûµ½µØÃæÍ»È»ÁÑ¿ª£¬´óµØ¾«Áé´ÓÖĞ³åÁË³öÀ´ÏòÄãÊ©Õ¹ËüµÄ±ØÉ±¼¼£ºÊ®×ÖËøºí·´¿Û¡£\n","HIM",victim));
-         tell_room(environment(this_object()),set_color("Äã¼ûµ½µØÃæÍ»È»ÁÑ¿ª£¬´óµØ¾«Áé´ÓÖĞ³åÁË³öÀ´Ïò"+victim->query("c_name")+"Ê©Õ¹ËüµÄ±ØÉ±¼¼£ºÊ®×ÖËøºí·´¿Û¡£\n","HIM",victim),victim);
+         tell_object(victim,set_color( "ä½ è¦‹åˆ°åœ°é¢çªç„¶è£‚é–‹ï¼Œå¤§åœ°ç²¾éˆå¾ä¸­è¡äº†å‡ºä¾†å‘ä½ æ–½å±•å®ƒçš„å¿…æ®ºæŠ€ï¼šåå­—é–å–‰åæ‰£ã€‚\n","HIM",victim));
+         tell_room(environment(this_object()),set_color("ä½ è¦‹åˆ°åœ°é¢çªç„¶è£‚é–‹ï¼Œå¤§åœ°ç²¾éˆå¾ä¸­è¡äº†å‡ºä¾†å‘"+victim->query("c_name")+"æ–½å±•å®ƒçš„å¿…æ®ºæŠ€ï¼šåå­—é–å–‰åæ‰£ã€‚\n","HIM",victim),victim);
          victim->block_attack(2);
-         victim->set_temp("msg_stop_attack", "£¨ ÄãÏÖÔÚ±»´óµØ¾«Áé¿Û×¡£¬¶¯µ¯²»µÃ£¬ÎŞ·¨¹¥»÷ £©\n");
+         victim->set_temp("msg_stop_attack", "ï¼ˆ ä½ ç¾åœ¨è¢«å¤§åœ°ç²¾éˆæ‰£ä½ï¼Œå‹•å½ˆä¸å¾—ï¼Œç„¡æ³•æ”»æ“Š ï¼‰\n");
          return 0;
        case 1:
-         tell_object(victim,set_color("Í»È»ÇçÌìÒ»ÉùÅùö¨£¬»ğ¾«ÁéĞ®ÖøÀ×öªÖ®ÊÆ´ÓÌì¶ø½µ£¬»ğ¾«Áé°Ñ¿ÚÒ»ÕÅ£¬´Ó×ìÀïÏòÄãÉä³öÒ»ÍÅ»ğ¡õ¡£\n","HIR",victim));
-         tell_room(environment(this_object()),set_color("Í»È»ÇçÌìÒ»ÉùÅùö¨£¬»ğ¾«ÁéĞ®ÖøÀ×öªÖ®ÊÆ´ÓÌì¶ø½µ£¬»ğ¾«Áé°Ñ¿ÚÒ»ÕÅ£¬´Ó×ìÀïÏò"+victim->query("c_name")+"Éä³öÒ»ÍÅ»ğ¡õ¡£\n","HIR",victim),victim);
+         tell_object(victim,set_color("çªç„¶æ™´å¤©ä¸€è²éœ¹é‚ï¼Œç«ç²¾éˆæŒ¾è‘—é›·éœ†ä¹‹å‹¢å¾å¤©è€Œé™ï¼Œç«ç²¾éˆæŠŠå£ä¸€å¼µï¼Œå¾å˜´è£¡å‘ä½ å°„å‡ºä¸€åœ˜ç«â–¡ã€‚\n","HIR",victim));
+         tell_room(environment(this_object()),set_color("çªç„¶æ™´å¤©ä¸€è²éœ¹é‚ï¼Œç«ç²¾éˆæŒ¾è‘—é›·éœ†ä¹‹å‹¢å¾å¤©è€Œé™ï¼Œç«ç²¾éˆæŠŠå£ä¸€å¼µï¼Œå¾å˜´è£¡å‘"+victim->query("c_name")+"å°„å‡ºä¸€åœ˜ç«â–¡ã€‚\n","HIR",victim),victim);
          victim->receive_special_damage("fire",20);
          return 0;
        case 2:
-         tell_object(victim,set_color( "Äã¸Ğ¾õµ½Ò»µÀ½£ÆøÖ±Éä¶øÖÁ£¬½£»ê»¯³ÉÒ»°Ñ±¦½£ÔÚ¿ÕÖĞ·ÉÎèÖø£¬Í»È»£¬±¦½£Ò»Æø»¯ÈıÔª£¬Èı°Ñ±¦½£½£·æÏòÄãÍÂ³öºìÀ¶ÂÌÈıÉ«½£Ã¢¡£\n","HIW",victim));
-         tell_room(environment(this_object()),set_color( "Äã¸Ğ¾õµ½Ò»µÀ½£ÆøÖ±Éä¶øÖÁ£¬½£»ê»¯³ÉÒ»°Ñ±¦½£ÔÚ
-         ¿ÕÖĞ·ÉÎèÖø£¬Í»È»£¬±¦½£Ò»Æø»¯ÈıÔª£¬Èı°Ñ±¦½£½£·æÏò"+victim->query("c_name")+"ÍÂ³öºìÀ¶ÂÌÈıÉ«½£Ã¢¡£\n","HIW",victim),victim);
+         tell_object(victim,set_color( "ä½ æ„Ÿè¦ºåˆ°ä¸€é“åŠæ°£ç›´å°„è€Œè‡³ï¼ŒåŠé­‚åŒ–æˆä¸€æŠŠå¯¶åŠåœ¨ç©ºä¸­é£›èˆè‘—ï¼Œçªç„¶ï¼Œå¯¶åŠä¸€æ°£åŒ–ä¸‰å…ƒï¼Œä¸‰æŠŠå¯¶åŠåŠé‹’å‘ä½ åå‡ºç´…è—ç¶ ä¸‰è‰²åŠèŠ’ã€‚\n","HIW",victim));
+         tell_room(environment(this_object()),set_color( "ä½ æ„Ÿè¦ºåˆ°ä¸€é“åŠæ°£ç›´å°„è€Œè‡³ï¼ŒåŠé­‚åŒ–æˆä¸€æŠŠå¯¶åŠåœ¨
+         ç©ºä¸­é£›èˆè‘—ï¼Œçªç„¶ï¼Œå¯¶åŠä¸€æ°£åŒ–ä¸‰å…ƒï¼Œä¸‰æŠŠå¯¶åŠåŠé‹’å‘"+victim->query("c_name")+"åå‡ºç´…è—ç¶ ä¸‰è‰²åŠèŠ’ã€‚\n","HIW",victim),victim);
          BLEEDING->apply_effect(victim,5,5);
          return 0;
        case 3:
-         tell_room(environment(this_object()),set_color("Äã¼ûµ½Ìì¿ÕÒ»¶äÎÚÔÆÆ®À´£¬Ë®¾«Áé´ÓÖĞÆ®ÁË³öÀ´£¬Ë®¾«ÁéÓÃÊÖ´¥Ãş"+this_object()->query("c_name")+"µÄÉË¿ÚÖ®áá£¬Ë®¾«ÁéÓÖËæÖøÎÚÔÆÆ®×ßÁË¡£\n","HIB",victim));
+         tell_room(environment(this_object()),set_color("ä½ è¦‹åˆ°å¤©ç©ºä¸€æœµçƒé›²é£„ä¾†ï¼Œæ°´ç²¾éˆå¾ä¸­é£„äº†å‡ºä¾†ï¼Œæ°´ç²¾éˆç”¨æ‰‹è§¸æ‘¸"+this_object()->query("c_name")+"çš„å‚·å£ä¹‹å¾Œï¼Œæ°´ç²¾éˆåˆéš¨è‘—çƒé›²é£„èµ°äº†ã€‚\n","HIB",victim));
          this_object()->receive_healing(20);
          return 0;
       default: return 0;
@@ -171,6 +171,6 @@ void die()
   ::die(1);
   }
   else
-  write(query("c_name")+"»¯ÎªÒ»µÀÇàÑÌ£¬ÏûÊ§ÔÚ¿ÕÆøÖĞ...\n");
+  write(query("c_name")+"åŒ–ç‚ºä¸€é“é’ç…™ï¼Œæ¶ˆå¤±åœ¨ç©ºæ°£ä¸­...\n");
   ::die(1);
 }

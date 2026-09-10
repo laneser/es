@@ -5,14 +5,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("scalpel","½âÆÊµ¶");
+       set_name("scalpel","è§£å‰–åˆ€");
        add("id",({"scalpel",}) );
-       set_short("½âÆÊµ¶");
+       set_short("è§£å‰–åˆ€");
        set_long(
-     	 "Ò»°Ñ½âÆÊµ¶,¿ÉÒÔÓÃÀ´½âÆÊÊ¬Ìå.Ò²¿ÉÒÔµ±»¤ÉíÎäÆ÷¡£\n"
+     	 "ä¸€æŠŠè§£å‰–åˆ€,å¯ä»¥ç”¨ä¾†è§£å‰–å±é«”.ä¹Ÿå¯ä»¥ç•¶è­·èº«æ­¦å™¨ã€‚\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 30 );
 	set( "type","dagger");
 	set( "min_damage",15);

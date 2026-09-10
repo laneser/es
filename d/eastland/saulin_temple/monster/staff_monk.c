@@ -4,18 +4,18 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name( "A monk with staff", "¹÷·¨É®" );
+	set_name( "A monk with staff", "æ£æ³•åƒ§" );
 	add ("id", ({ "monk", "staff", }) );
-	set_short( "¹÷·¨É®" );
+	set_short( "æ£æ³•åƒ§" );
 	set_long(@DESC
-ËûÊÇÒ»¸öÖĞÄêºÍÉĞ£¬ÒòÎªËûÑĞÏ°»ù±¾ÎäÑ§ÒÑÓĞĞ¡³É£¬ÏÖÔÚ¸ü½øÒ»²½
-ĞŞÁ·¹÷·¨£¬ËûÕıÀûÓÃÓÍµÆÀ´¼ìÑé¹÷¶ËËùÄÜ·¢³öµÄ¾¢Á¦¡£
+ä»–æ˜¯ä¸€ç®‡ä¸­å¹´å’Œå°šï¼Œå› ç‚ºä»–ç ”ç¿’åŸºæœ¬æ­¦å­¸å·²æœ‰å°æˆï¼Œç¾åœ¨æ›´é€²ä¸€æ­¥
+ä¿®ç·´æ£æ³•ï¼Œä»–æ­£åˆ©ç”¨æ²¹ç‡ˆä¾†æª¢é©—æ£ç«¯æ‰€èƒ½ç™¼å‡ºçš„å‹åŠ›ã€‚
 DESC
 	);
 	set("alignment", 200);
 	set("gender", "male");
 	set("race", "orc");
-	set("unit", "Î»");
+	set("unit", "ä½");
 	set_perm_stat( "dex", 16 );
 	set_perm_stat( "str", 18 );
 	set("wealth/gold", 15 );

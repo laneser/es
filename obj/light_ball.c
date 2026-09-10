@@ -5,14 +5,14 @@ inherit OBJECT;
 void create()     
 {
 #include <compress_obj.h>
-	set_name( "light ball", "¹âÇò" );
-	set_short( "·¢¹âµÄÇò");
+	set_name( "light ball", "å…‰çƒ" );
+	set_short( "ç™¼å…‰çš„çƒ");
 	set_long( @LONG
-Õâ¹âÇòÊÇÓÉ·¢¹âÁ£×Ó¼¯ºÏ¶ø³É, ËüÉ¢·¢³öµ­µ­µÄ¹âÃ¢, ÈÃÄã¿ÉÒÔ¿´ÇåËÄÖÜµÄ¾°Îï¡£
+é€™å…‰çƒæ˜¯ç”±ç™¼å…‰ç²’å­é›†åˆè€Œæˆ, å®ƒæ•£ç™¼å‡ºæ·¡æ·¡çš„å…‰èŠ’, è®“ä½ å¯ä»¥çœ‹æ¸…å››å‘¨çš„æ™¯ç‰©ã€‚
 LONG
     );
 	set("id", ({ "ball" }));
-	set("unit", "¿Å");
+	set("unit", "é¡†");
 	set("weight", 0);
 	set("light", 1);
 	set("no_insert", 1);
@@ -32,9 +32,9 @@ void burn_out(object obj)
 
 	owner = environment(obj);
 	if( living(owner) ) {
-	  tell_object( owner,"ÄãµÄ¹âÇòÉÁÁË¼¸ÏÂ£¬ÏûÊ§ÁË¡£\n");
+	  tell_object( owner,"ä½ çš„å…‰çƒé–ƒäº†å¹¾ä¸‹ï¼Œæ¶ˆå¤±äº†ã€‚\n");
 	  tell_room( environment( owner ), 
-	    owner->query("c_name")+"µÄ¹âÇòÉÁÁË¼¸ÏÂ£¬ÏûÊ§ÁË¡£\n" ,
+	    owner->query("c_name")+"çš„å…‰çƒé–ƒäº†å¹¾ä¸‹ï¼Œæ¶ˆå¤±äº†ã€‚\n" ,
 	    owner
 	  );
 	}
@@ -51,7 +51,7 @@ int move( mixed place )
 void disappear( object obj )
 {
     tell_room( environment(obj), 
-      "¹âÇòÉÁÁË¼¸ÏÂ£¬ÏûÊ§ÁË¡£\n" , obj
+      "å…‰çƒé–ƒäº†å¹¾ä¸‹ï¼Œæ¶ˆå¤±äº†ã€‚\n" , obj
     );
     obj->remove();
 }

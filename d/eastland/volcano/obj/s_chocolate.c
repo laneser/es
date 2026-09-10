@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "silver_chocolate", "ÒøÉ«ÇÉ¿ËÁ¦" );
+	set_name( "silver_chocolate", "éŠ€è‰²å·§å…‹åŠ›" );
 	add( "id", ({ "chocolate" }) );
-	set_short( "ÒøÉ«ÇÉ¿ËÁ¦" );
+	set_short( "éŠ€è‰²å·§å…‹åŠ›" );
 	set_long(
-		"ÕâÊÇÒ»¸ö°üÖø»ðÉ½¶¹µÄÇÉ¿ËÁ¦£¬Äã¿ÉÒÔ¡õ¡õ¿´(taste)¡£\n"
+		"é€™æ˜¯ä¸€å€‹åŒ…è‘—ç«å±±è±†çš„å·§å…‹åŠ›ï¼Œä½ å¯ä»¥â–¡â–¡çœ‹(taste)ã€‚\n"
 	);
 	set( "type", "misc" );
 	set( "weight", 10 );
@@ -25,12 +25,12 @@ int do_eat(string arg)
 {
    int sp,spmax;
    if(!arg || arg!="chocolate")
-   { write("ÄãÒª³ÔÊ²÷á£¿\n");
+   { write("ä½ è¦åƒä»€éº¼ï¼Ÿ\n");
      return 1;
    };
 
-   write("Äã³ÔÁËÒ»¿é°üÖø»ðÉ½¶¹µÄÇÉ¿ËÁ¦£¬Å¨Å¨µÄÇÉ¿ËÁ¦Ïã»ìÖø»ðÉ½¶¹¶ÀÌØµÄÎ¶µÀ¡£\n");
-   write("Äã¸Ðµ½Ëµ²»³öµÄÊæ·þ£¬ÕæÏëÔÙ³ÔÒ»¿é¡£\n");
+   write("ä½ åƒäº†ä¸€å¡ŠåŒ…è‘—ç«å±±è±†çš„å·§å…‹åŠ›ï¼Œæ¿ƒæ¿ƒçš„å·§å…‹åŠ›é¦™æ··è‘—ç«å±±è±†ç¨ç‰¹çš„å‘³é“ã€‚\n");
+   write("ä½ æ„Ÿåˆ°èªªä¸å‡ºçš„èˆ’æœï¼ŒçœŸæƒ³å†åƒä¸€å¡Šã€‚\n");
    sp=this_player()->query("spell_points");
    spmax=this_player()->query("max_sp");
    if (spmax<(sp+10))

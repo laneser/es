@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "amulet", "»¤Éí·û" );
-	add( "id", ({ "ÖÇÕß»¤Éí·û" }) );
-	set_short( "a wiser amulet", "ÖÇÕß»¤Éí·û" );
+	set_name( "amulet", "è­·èº«ç¬¦" );
+	add( "id", ({ "æ™ºè€…è­·èº«ç¬¦" }) );
+	set_short( "a wiser amulet", "æ™ºè€…è­·èº«ç¬¦" );
 	set_long(
 		"This is Yamor's wiser amulet. You can see many symbols\n"
 		"of fortune on it.\n",
-		"Õâ¸ö»¤Éí·ûÒ»ÏòÊÇÑÇÄ¬³¤ÀÏ×î³£´øÔÚÉí±ßµÄ£¬ÉÏÃæ»­ÂúÁË¸÷ÖÖ\n"
-		"´ú±íÆ½°²¡¢ĞÒÔËµÄÖäÎÄ¡£\n"
+		"é€™å€‹è­·èº«ç¬¦ä¸€å‘æ˜¯äºé»˜é•·è€æœ€å¸¸å¸¶åœ¨èº«é‚Šçš„ï¼Œä¸Šé¢ç•«æ»¿äº†å„ç¨®\n"
+		"ä»£è¡¨å¹³å®‰ã€å¹¸é‹çš„å’’æ–‡ã€‚\n"
 	);
 	set( "type", "misc" );
 	set( "material", "cloth");

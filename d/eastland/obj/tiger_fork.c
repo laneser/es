@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "tiger fork", "»¢²æ" );
+	set_name( "tiger fork", "è™å‰" );
 	add( "id", ({ "fork" }) );
-   set_short( "»¢²æ" );
+   set_short( "è™å‰" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÓÖ³¤ÓÖÖØµÄ»¢²æ£¬Èı¸ö¸Ö¼âÔÚ¹âÏßÏÂÁÁ»Î»ÎµØÉ±ÆøÌÚÌÚ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠåˆé•·åˆé‡çš„è™å‰ï¼Œä¸‰å€‹é‹¼å°–åœ¨å…‰ç·šä¸‹äº®æ™ƒæ™ƒåœ°æ®ºæ°£é¨°é¨°ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 190 );
 	setup_weapon( "thrusting", 23, 9, 27 );
 	set( "nosecond", 1 );

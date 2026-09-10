@@ -4,13 +4,13 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(6);
-	ob->set_name("lizardman hunter", "òáòæÈËÁÔÈË");
+	ob->set_name("lizardman hunter", "èœ¥èœ´äººçµäºº");
 	ob->add( "id", ({ "hunter" }) );
-   ob->set_short("òáòæÈËÁÔÈË");
+   ob->set_short("èœ¥èœ´äººçµäºº");
 	ob->set_long(
-		"Õâ¸öòáòæÈËÈ«ÉíÅûÖøÓÍÁÁµÄÉîÂÌÉ«ÁÛÆ¬£¬²»¹ýËû¿´ÆðÀ´Ò»¸±´ôÍ·´ôÄÔµÄÑù×Ó¡£\n"
+		"é€™å€‹èœ¥èœ´äººå…¨èº«æŠ«è‘—æ²¹äº®çš„æ·±ç¶ è‰²é±—ç‰‡ï¼Œä¸éŽä»–çœ‹èµ·ä¾†ä¸€å‰¯å‘†é ­å‘†è…¦çš„æ¨£å­ã€‚\n"
 	);
-	ob->set( "unit", "Ãû" );
+	ob->set( "unit", "å" );
 	ob->set_perm_stat("str", 10);
 	ob->set_perm_stat("dex", 10);
 	ob->set( "time_to_heal", 4 );

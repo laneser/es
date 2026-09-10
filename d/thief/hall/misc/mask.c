@@ -9,10 +9,10 @@ int query_sp_cost(object me);
 void create()
 {
 	seteuid(getuid());
-	set_name("mask","Ãæ¾ß");
-	set_short("Ãæ¾ß");
+	set_name("mask","é¢å…·");
+	set_short("é¢å…·");
 	set( "long","@@query_long");
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set( "type","head");
 	set( "armor_class",1);
 	set( "defense_bonus",0);
@@ -22,7 +22,7 @@ void create()
 	set( "no_sale", 1);
 	set( "equip_func","wear_me");
 	set( "unequip_func","unwear_me");
-	set( "c_mask_name","Ãæ¾ß");
+	set( "c_mask_name","é¢å…·");
 	set( "mask_name","mask");
 	set( "extra_ids",({}));
 }
@@ -30,9 +30,9 @@ void create()
 string query_long()
 {
 	if ( (string) this_object()->query("mask_name") != "mask" )
-		return "ÕâÊÇÒ»ÕÅ" + (string) this_object()->query("c_mask_name") + "µÄÃæ¾ß£¬×÷µÃèòèòÈçÉú¡£\n";
+		return "é€™æ˜¯ä¸€å¼µ" + (string) this_object()->query("c_mask_name") + "çš„é¢å…·ï¼Œä½œå¾—æ ©æ ©å¦‚ç”Ÿã€‚\n";
 	else
-		return "ÕâÊÇÒ»ÕÅÃæ¾ß¡£\n";
+		return "é€™æ˜¯ä¸€å¼µé¢å…·ã€‚\n";
 }
 
 
@@ -45,18 +45,18 @@ void wear_me()
 	me = this_player();
 	mask = this_object();
 
-	tell_room(environment(me),sprintf("%sÄÃÆðÒ»ÕÅÃæ¾ß,¿ªÊ¼ÔÚÁ³ÉÏ´êÈà, ²»Ò»»á¶ù\¹¦\·ò, ËûµÄÑù×ÓÈ«±äÁË !\n",me->query("c_name") ),me);
-	write(sprintf("ÄãÄÃÆðÒ»ÕÅ%sµÄÃæ¾ß, ¿ªÊ¼»¯×°..\n",(string) mask->query("c_mask_name") ));
+	tell_room(environment(me),sprintf("%sæ‹¿èµ·ä¸€å¼µé¢å…·,é–‹å§‹åœ¨è‡‰ä¸Šæ“æ‰, ä¸ä¸€æœƒå…’åŠŸå¤«, ä»–çš„æ¨£å­å…¨è®Šäº† !\n",me->query("c_name") ),me);
+	write(sprintf("ä½ æ‹¿èµ·ä¸€å¼µ%sçš„é¢å…·, é–‹å§‹åŒ–è£..\n",(string) mask->query("c_mask_name") ));
 
 	org_name = (string) me->query("name");
 	c_org_name = (string) me->query("c_name");
 	old_ids = (string *) me->query("id");
 
-	//  ¼Ç×¡Ô­À´µÄ id
+	//  è¨˜ä½åŽŸä¾†çš„ id
 	me->set("org_name",org_name);
 	me->set("c_org_name",c_org_name);
 
-	if ( (string) mask->query("c_mask_name") == "Ãæ¾ß" || (string) mask->query("mask_name") == "mask" ) {
+	if ( (string) mask->query("c_mask_name") == "é¢å…·" || (string) mask->query("mask_name") == "mask" ) {
 	} else {
 		me->add( "id",mask->query("extra_ids") );
 		me->set( "name",(string) mask->query("mask_name") );
@@ -91,11 +91,11 @@ void unwear_me()
 int stop_equip(object me)
 {
 	if ( (int) me->query_skill("trick") < 1 ) {
-		tell_object(me,"ÄãµÄÒ×ÈÝÊõÌ«ÔãÁË, »¹ÊÇ²»ÒªÊÔµÄºÃ, ÃâµÄÅª»µÃæ¾ß\n");
+		tell_object(me,"ä½ çš„æ˜“å®¹è¡“å¤ªç³Ÿäº†, é‚„æ˜¯ä¸è¦è©¦çš„å¥½, å…çš„å¼„å£žé¢å…·\n");
 		return 1;
 	}
 	if ( (int) me->query("spell_points") < query_sp_cost(me) ) {
-		tell_object(me,"ÄãµÄ¾«ÉñÁ¦Ì«µÍÁË, ÎÞ·¨¼¯ÖÐ¾«Éñ»¯×°¡£\n");
+		tell_object(me,"ä½ çš„ç²¾ç¥žåŠ›å¤ªä½Žäº†, ç„¡æ³•é›†ä¸­ç²¾ç¥žåŒ–è£ã€‚\n");
 		return 1;
 	}
 	return 0;
@@ -107,5 +107,5 @@ int query_sp_cost(object me)
 
 string unequip_c_verb(string type)
 {
-	return "Ð¡ÐÄÒíÒíµÄÍÑÏÂ";
+	return "å°å¿ƒç¿¼ç¿¼çš„è„«ä¸‹";
 }

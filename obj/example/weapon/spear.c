@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "spear", "³¤Ã¬" );
-	set_short( "a hunting spear", "á÷ÁÔÓÃ³¤Ã¬" );
+	set_name( "spear", "é•·çŸ›" );
+	set_short( "a hunting spear", "ç‹©çµç”¨é•·çŸ›" );
 	set_long(
 		"A long spear designed for hunting boars.\n",
-		"Ò»°ÑÓÃÀ´ÁÔÉ±Ò°ÖíÓÃµÄ³¤Ã¬¡£\n"
+		"ä¸€æŠŠç”¨ä¾†çµæ®ºé‡è±¬ç”¨çš„é•·çŸ›ã€‚\n"
 	);
 	set( "weapon_class", 6 );
 	set( "type", "thrusting" );

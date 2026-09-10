@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {    
-    set_name( "blood scythe", "ÑªÁ­µ¶" );
+    set_name( "blood scythe", "è¡€é®åˆ€" );
     add( "id", ({ "scythe" }) );
-    set_short( "ÑªÁ­µ¶" );
+    set_short( "è¡€é®åˆ€" );
     set_long(@LONG
-Ò»°ÑÕ´ÂúÑª¼£µÄÁ­µ¶£¬µ¶Éí³ÊÏÖ³àºìÉ«¡£
+ä¸€æŠŠæ²¾æ»¿è¡€è·¡çš„é®åˆ€ï¼Œåˆ€èº«å‘ˆç¾èµ¤ç´…è‰²ã€‚
 LONG
     );
-    set( "unit", "°Ñ" );
+    set( "unit", "æŠŠ" );
     set( "weight", 40 );
     set( "value", ({ 800, "silver" }) );
     setup_weapon("longblade", 20,14,22);

@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("wood oar", "ÔæÄ¾éÃ");
+	set_name("wood oar", "æ£—æœ¨æ§Š");
 	add("id",({"oar"}));
-	set_short("ÔæÄ¾éÃ");
+	set_short("æ£—æœ¨æ§Š");
 	set_long(
-		"ÕâÊÇÒ»°ÑÔæÄ¾ÖÆµÄ´ó´¬½°£¬¸øËü´òÉÏÒ»ÏÂ¿É²»ºÃÍæ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠæ£—æœ¨è£½çš„å¤§èˆ¹æ§³ï¼Œçµ¦å®ƒæ‰“ä¸Šä¸€ä¸‹å¯ä¸å¥½ç©ã€‚\n"
 	);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	set( "weight", 170 );
 	set( "type", "blunt" );
 	set( "weapon_class", 20 );

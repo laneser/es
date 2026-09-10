@@ -19,19 +19,19 @@ void create()
 	seteuid( getuid() );
 	set_class_name("mage");
 #include <compress_obj.h>
-	set_name("spellbook", "Ä§·¨Êé");
+	set_name("spellbook", "é­”æ³•æ›¸");
 //	add( "id", ({ "book" }) );
-	set("unit","±¾");
-	set_short("Ä§·¨Êé");
+	set("unit","æœ¬");
+	set_short("é­”æ³•æ›¸");
 	set_long( @LONG
-ÕâÊÇÄ§·¨Ê¦ÃÇÊÀ´úÏà´«µÄÄ§·¨Êé£¬ÀïÃæ¼ÇÔØÁË´ÓÇ°ÆßÎ»Î°´óÄ§·¨Ê¦ËùÁ÷´«
-ÏÂÀ´µÄÖªÊ¶Óë·¨Êõ£¬Èç¹ûÄãÏëÖªµÀÆäËüÓĞ¹ØÄ§·¨ÊéµÄ×ÊÁÏ£¬¿ÉÓÃ
-	"help spellbook" Ö¸Áî¡£
+é€™æ˜¯é­”æ³•å¸«å€‘ä¸–ä»£ç›¸å‚³çš„é­”æ³•æ›¸ï¼Œè£¡é¢è¨˜è¼‰äº†å¾å‰ä¸ƒä½å‰å¤§é­”æ³•å¸«æ‰€æµå‚³
+ä¸‹ä¾†çš„çŸ¥è­˜èˆ‡æ³•è¡“ï¼Œå¦‚æœä½ æƒ³çŸ¥é“å…¶å®ƒæœ‰é—œé­”æ³•æ›¸çš„è³‡æ–™ï¼Œå¯ç”¨
+	"help spellbook" æŒ‡ä»¤ã€‚
 LONG
 	);
 
 	set( "weight", 10 );
-	set( "extra_look", "$N´øÖøÒ»±¾Ä§·¨Ê¦ÃÇ¶¼ÓĞµÄÄ§·¨Êé¡£\n");
+	set( "extra_look", "$Nå¸¶è‘—ä¸€æœ¬é­”æ³•å¸«å€‘éƒ½æœ‰çš„é­”æ³•æ›¸ã€‚\n");
 }
 
 void init()
@@ -55,14 +55,14 @@ int do_comrades()
 	usr = sort_array( usr, "sort_mages", this_object() );
 	n = sizeof(usr);
 	if( n ) {
-		write( sprintf("Ä¿Ç°¹²ÓĞ %d Î»Ä§·¨Ê¦Á¬ÏßÖĞ:\n==================================\n",n));
+		write( sprintf("ç›®å‰å…±æœ‰ %d ä½é­”æ³•å¸«é€£ç·šä¸­:\n==================================\n",n));
 		for( i=0; i<n; i++ )
 				printf( "[ %2d | %2d ] %s (%s)\n", usr[i]->query_level(),
 					usr[i]->query("spell_levels/guild"),
 					usr[i]->query("short"), capitalize(usr[i]->query("name"))
 				);
 	} else
-		write( "ËÆºõÃ»ÓĞÈÎºÎÄ§·¨Ê¦¹«»áµÄ³ÉÔ±ÔÚÏßÉÏ....¡£\n");
+		write( "ä¼¼ä¹æ²’æœ‰ä»»ä½•é­”æ³•å¸«å…¬æœƒçš„æˆå“¡åœ¨ç·šä¸Š....ã€‚\n");
 	return 1;
 }
 
@@ -83,7 +83,7 @@ int filter_mages( object plr )
 
 int do_chat(string arg)
 {
-	if( !arg ) return notify_fail("ÄãÏë¶ÔÆäËüÄ§·¨Ê¦ËµÊ²÷á£¿\n");
+	if( !arg ) return notify_fail("ä½ æƒ³å°å…¶å®ƒé­”æ³•å¸«èªªä»€éº¼ï¼Ÿ\n");
 
 	return guild_ob::guild_line(arg);
 }
@@ -96,14 +96,14 @@ int do_read(string arg)
 
 	if( !id(arg) ) return 0;
 	me = this_player();
-		printf("     Ä§·¨ÖÖÀà     ÊìÁ·µÈ¼¶            Ä§·¨¾­Ñé\n");
+		printf("     é­”æ³•ç¨®é¡     ç†Ÿç·´ç­‰ç´š            é­”æ³•ç¶“é©—\n");
 		for( i=0; i<sizeof(MAGIC_TYPES); i++ )
 			printf("     %8s        %2d        %15d\n",
 				to_chinese(MAGIC_TYPES[i]),
 				me->query("spell_levels/"+MAGIC_TYPES[i]),
 				me->query("spell_exps/"+MAGIC_TYPES[i])
 			);
-		printf("×ÛºÏ(Æ½¾ù)Ä§·¨µÈ¼¶ : %2d\n", me->query("spell_levels/guild"));
+		printf("ç¶œåˆ(å¹³å‡)é­”æ³•ç­‰ç´š : %2d\n", me->query("spell_levels/guild"));
 
 	return 1;
 }

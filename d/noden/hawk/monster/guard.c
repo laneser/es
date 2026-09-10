@@ -5,11 +5,11 @@ void create()
 {
         ::create();
         set_level(17);
-        set_name("hawkman guard", "³¤ÀÏ»¤ÎÀ");
+        set_name("hawkman guard", "é•·è€è­·è¡›");
         add( "id", ({"hawkman", "guard"}) );
-        set_short("³¤ÀÏ»¤ÎÀ");
+        set_short("é•·è€è­·è¡›");
         set_long(
-                "ÄñÈË×åÀï°ÙÖĞÑ¡Ò»µÄÕ½Ê¿£¬×¨Ö°±£»¤³¤ÀÏ¡£\n"
+                "é³¥äººæ—è£¡ç™¾ä¸­é¸ä¸€çš„æˆ°å£«ï¼Œå°ˆè·ä¿è­·é•·è€ã€‚\n"
         );
         set( "gender", "male" );
         set( "race", "hawkman" );
@@ -55,7 +55,7 @@ int tac_func()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()),
-      guard[i]->query("c_name")+"´óº°: ÓĞµĞÈË£¬¿ì±£»¤ºÃ³¤ÀÏ£¡\n", guard[i]
+      guard[i]->query("c_name")+"å¤§å–Š: æœ‰æ•µäººï¼Œå¿«ä¿è­·å¥½é•·è€ï¼\n", guard[i]
       );
       guard[i]->kill_ob(victim);
     }

@@ -8,17 +8,17 @@ void create()
 	
 	::create();
 	set_level(3);
-	set_name( "Dwarf little girl", "°«ÈËĞ¡Å®º¢" );
+	set_name( "Dwarf little girl", "çŸ®äººå°å¥³å­©" );
 	add ("id", ({ "girl", "dwarf","little girl" }) );
-	set_short( "Dwarf little girl", "°«ÈËĞ¡Å®º¢" );
+	set_short( "Dwarf little girl", "çŸ®äººå°å¥³å­©" );
 	set_long(
 	"   \n",
-    "Ò»¸öÎÄÎÄ¾²¾²µÄ°«ÈËĞ¡Å®º¢\n");
+    "ä¸€å€‹æ–‡æ–‡éœéœçš„çŸ®äººå°å¥³å­©\n");
 
     set ("alignment",200 );
     set( "gender", "female" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 6 );
 	set ("wealth", ([ "silver": 5 ]) );
 	set_natural_weapon(3,1,5);

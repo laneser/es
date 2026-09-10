@@ -6,18 +6,18 @@ inherit OBJECT;
 int create()
 {
 	seteuid(getuid());
-	set_name("skeleton", "\¾Ş´óµÄ÷Ç÷Ã\");
-	set_short("\¾Ş´óµÄ÷Ç÷Ã\");
-        set_long("Õâ¾ß¾Ş´óµÄ÷Ç÷Ã\£¬¿´ÆğÀ´ÏñÊÇÈËÀàµÄÒÅº¡£¬µ«ÊÇÈ´Òì³£µÄ¾Ş´ó£¬\n"
-                 "¸ü¹ÖµÄÊÇ£¬ÔÚÍ·ÉÏ¾¹È»ÉúÁËÁ½Ö»Àû½Ç£¬Äã¿´ÁË²»½ûµ¹ÎüÒ»¿ÚÁ¹Æø¡£\n"
-                 "²»¹ı²»¹ÜÔõ÷áËµ£¬Ò»¸öËÀÈËÊÇ²»»áÍşĞ²µ½ÄãµÄ....\n"
-                 "Ëü¿´ÆğÀ´ÂùÖØµÄ£¬²»ÖªµÀÊÇÄÇ¸ö¼Ò»ï°ÑËü·Å(put) ÔÚÕâ?\n");
-	set("unit","¾ß");
+	set_name("skeleton", "\å·¨å¤§çš„é«‘é«\");
+	set_short("\å·¨å¤§çš„é«‘é«\");
+        set_long("é€™å…·å·¨å¤§çš„é«‘é«\ï¼Œçœ‹èµ·ä¾†åƒæ˜¯äººé¡çš„éºéª¸ï¼Œä½†æ˜¯å»ç•°å¸¸çš„å·¨å¤§ï¼Œ\n"
+                 "æ›´æ€ªçš„æ˜¯ï¼Œåœ¨é ­ä¸Šç«Ÿç„¶ç”Ÿäº†å…©éš»åˆ©è§’ï¼Œä½ çœ‹äº†ä¸ç¦å€’å¸ä¸€å£æ¶¼æ°£ã€‚\n"
+                 "ä¸éä¸ç®¡æ€éº¼èªªï¼Œä¸€å€‹æ­»äººæ˜¯ä¸æœƒå¨è„…åˆ°ä½ çš„....\n"
+                 "å®ƒçœ‹èµ·ä¾†è »é‡çš„ï¼Œä¸çŸ¥é“æ˜¯é‚£å€‹å‚¢ä¼™æŠŠå®ƒæ”¾(put) åœ¨é€™?\n");
+	set("unit","å…·");
         set("weight",3000);
 	set("value",({ 0, "silver"}) );
 	set("prevent_get",1);
-	set("prevent_get_c_msg","Õâ¶«Î÷Ì«ÖØÁË£¬×îºÃÊÇÁ½¸öÈËÒÔÉÏ²ÅÌ§µÄ(shift)ÆğÀ´\n"+
-				"Òª°ÑËû·ÅÏÂ£¬Ö»Òª(put)ËüÔÚµØÉÏ¾Í¿ÉÒÔÁË\n");
+	set("prevent_get_c_msg","é€™æ±è¥¿å¤ªé‡äº†ï¼Œæœ€å¥½æ˜¯å…©å€‹äººä»¥ä¸Šæ‰æŠ¬çš„(shift)èµ·ä¾†\n"+
+				"è¦æŠŠä»–æ”¾ä¸‹ï¼Œåªè¦(put)å®ƒåœ¨åœ°ä¸Šå°±å¯ä»¥äº†\n");
 	set("prevent_drop",1);
 }
 
@@ -54,19 +54,19 @@ int to_get(string arg)
 {	
 	int i,num;
 	object *usr,me,obj;
-	if( !arg || arg != "skeleton" ) return notify_fail("ÄÃÊ²÷á?\n");
+	if( !arg || arg != "skeleton" ) return notify_fail("æ‹¿ä»€éº¼?\n");
 	me=this_player();
         usr = (mixed *)me->query_temp("party_members");
 	num = sizeof(usr);
 	if ( !check_member(usr)) 
-		return notify_fail("Ôã¸â !! ÕâÊµÔÚÌ«ÖØÁËÓÖ²»ºÃÊ©Á¦£¬ÕÒ¸öÈË°ïÄã°É !!\n"); 
+		return notify_fail("ç³Ÿç³• !! é€™å¯¦åœ¨å¤ªé‡äº†åˆä¸å¥½æ–½åŠ›ï¼Œæ‰¾å€‹äººå¹«ä½ å§ !!\n"); 
 	else if ( (string)me->query_temp("leader") != (string)me->query("name"))
-		return notify_fail("Ö»ÓĞ¶ÓÎéµÄÁìµ¼Õß£¬²ÅÄÜÏÂÃüÁîà¸¡£\n"); 
+		return notify_fail("åªæœ‰éšŠä¼çš„é ˜å°è€…ï¼Œæ‰èƒ½ä¸‹å‘½ä»¤å–”ã€‚\n"); 
 	else if ( !check_force(usr,num)) 
-		return notify_fail("ÄãÃÇºÃÏñ°á²»¶¯Õâ¾ß¾Ş´óµÄ÷Ç÷Ã\£¬¶ªµôÒ»Ğ©×°±¸°É\n");
+		return notify_fail("ä½ å€‘å¥½åƒæ¬ä¸å‹•é€™å…·å·¨å¤§çš„é«‘é«\ï¼Œä¸Ÿæ‰ä¸€äº›è£å‚™å§\n");
         for( i=0; i<sizeof(usr); i++ ) 
 	{	usr[i]->set_temp("carry_skeleton",1); 
-		tell_object(usr[i],"Ò»£¬¶ş£¬Èı....Äã·Ñ¾¡³ÔÄÌµÄÁ¦Æø°ÑËüÄÃÆğÀ´\n");
+		tell_object(usr[i],"ä¸€ï¼ŒäºŒï¼Œä¸‰....ä½ è²»ç›¡åƒå¥¶çš„åŠ›æ°£æŠŠå®ƒæ‹¿èµ·ä¾†\n");
                 obj = new("/d/eastland/liang_shan/obj/invis_load");
         	obj->set("weight",3000/num);
         	obj->move(usr[i]);

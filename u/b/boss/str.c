@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("wine","Á¦Á¿Ö®Ë®");
+        set_name("wine","åŠ›é‡ä¹‹æ°´");
         add( "id", ({ "wine" }) );
-        set_short("Á¦Á¿Ö®Ë®");
+        set_short("åŠ›é‡ä¹‹æ°´");
         set( "weight", 10);
         set( "value", ({ 0, "coin" }));
-        set("long", "Ò»±¾ÄÜ¼ÓÁ¦Á¿µÄÄ§·¨Êé¡£\n");
-        set("unit", "±¾");
+        set("long", "ä¸€æœ¬èƒ½åŠ åŠ›é‡çš„é­”æ³•æ›¸ã€‚\n");
+        set("unit", "æœ¬");
         set("no_sale",1);
 }
 
@@ -29,16 +29,16 @@ int to_drink(string arg)
         if( !arg || arg=="" || arg !="wine")
         {
                 tell_object(this_player(),
-                "ÄãÏë¸ÉÊ²Ã´?\n"
+                "ä½ æƒ³å¹¹ä»€éº¼?\n"
                 );
         }
         else 
         {
                 tell_object(this_player(),
-                "Äã¸Ðµ½È«Éí¶¼ÊÇÁ¦Á¿¡£\n");
+                "ä½ æ„Ÿåˆ°å…¨èº«éƒ½æ˜¯åŠ›é‡ã€‚\n");
         
         tell_room( environment( me ),
-                me->query("c_name")+"¸Ðµ½È«Éí¶¼ÊÇÁ¦Á¿¡£\n"
+                me->query("c_name")+"æ„Ÿåˆ°å…¨èº«éƒ½æ˜¯åŠ›é‡ã€‚\n"
                 , me);
                 
         me->set("gonfus_exp/bolo-fist",20000);

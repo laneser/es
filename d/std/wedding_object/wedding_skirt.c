@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "wedding skirt", "°×É«ĞÂÄïÒ·µØ³¤È¹");
+        set_name( "wedding skirt", "ç™½è‰²æ–°å¨˜æ›³åœ°é•·è£™");
         add( "id", ({ "skirt" }) );
-        set_short( "a wedding skirt", "°×É«ĞÂÄïÒ·µØ³¤È¹");
+        set_short( "a wedding skirt", "ç™½è‰²æ–°å¨˜æ›³åœ°é•·è£™");
         set_long(
                 "A white wedding skirt made of white silk.\n",
-                "ÕâÊÇÒ»¼şÓÉÌìÈ»²ÏË¿Ö¯³ÉµÄÒ·µØ°×É«ĞÂÄï³¤È¹¡£\n"
+                "é€™æ˜¯ä¸€ä»¶ç”±å¤©ç„¶è ¶çµ²ç¹”æˆçš„æ›³åœ°ç™½è‰²æ–°å¨˜é•·è£™ã€‚\n"
         );
-        set( "unit", "¼ş");
+        set( "unit", "ä»¶");
         set( "type", "legs" );
         set( "armor_class", 8 );
         set("material","cloth");

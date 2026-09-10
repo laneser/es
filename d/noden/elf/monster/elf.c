@@ -8,12 +8,12 @@ void create()
 
         ::create();
         set_level(5);
-        set_name( "elf", "¾«Áé" );
+        set_name( "elf", "ç²¾éˆ" );
         add ("id", ({ "elf" }) );
-        set_short( "¾«Áé" );
-        set("unit","Î»");
+        set_short( "ç²¾éˆ" );
+        set("unit","ä½");
         set_long(
-           " ËûÊÇÎ»ºÍ°ª¿ÉÇ×µÄ¾«Áé£¬Á³ÉÏ×ÜÊÇ´øÖøÇ×ÇÐµÄÐ¦ÈÝ\n"
+           " ä»–æ˜¯ä½å’Œè—¹å¯è¦ªçš„ç²¾éˆï¼Œè‡‰ä¸Šç¸½æ˜¯å¸¶è‘—è¦ªåˆ‡çš„ç¬‘å®¹\n"
         );
         set("alignment",100);
         set("wealth/silver",10);
@@ -25,8 +25,8 @@ void create()
         set ("natural_armor_class", 15);
         set ("gender", "male");
         set ("race", "elf");
-        set_c_verbs(({"ÓÃ%sÏò%s¿³È¥","ÓÃ%sÏò%s¹¥»÷","ÓÃ%sÏò%s´ÌÈ¥"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_verbs(({"ç”¨%så‘%sç åŽ»","ç”¨%så‘%sæ”»æ“Š","ç”¨%så‘%såˆºåŽ»"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
        
         sword= new(LWEAPON"elf_sword");       
         sword->move(this_object());

@@ -35,9 +35,9 @@ int cmd_halt(string str)
 		for(loop=0; loop<sizeof(attackers); loop++) 
 		attackers[loop]->cease_all_attacks();
 
-		write("Halt: ÄãÖÆÖ¹ÁËÕâ³¡Õ½¶·¡£\n");
+		write("Halt: ä½ åˆ¶æ­¢äº†é€™å ´æˆ°é¬¥ã€‚\n");
 		tell_room(environment(this_player()), 
-			(string)this_player()->query("c_name") + "ÓÃÎ×Ê¦µÄÉñÁ¦ÖÆÖ¹ÁËÕâ³¡Õ½¶·¡£\n",
+			(string)this_player()->query("c_name") + "ç”¨å·«å¸«çš„ç¥žåŠ›åˆ¶æ­¢äº†é€™å ´æˆ°é¬¥ã€‚\n",
 			this_player());
 
 	return 1; }
@@ -46,7 +46,7 @@ int cmd_halt(string str)
 
 	whoenv = environment(this_player());
 	if (!whoenv) {
-		notify_fail("ÄãÈÏÎªÔÚÒ»Æ¬ÐéÎÞÖÐ»áÓÐÕ½¶·Âð£¿\n");
+		notify_fail("ä½ èªç‚ºåœ¨ä¸€ç‰‡è™›ç„¡ä¸­æœƒæœ‰æˆ°é¬¥å—Žï¼Ÿ\n");
 		return 0;
 	} 
 	who = present(str, whoenv);
@@ -57,15 +57,15 @@ int cmd_halt(string str)
 	//		If the requested user isn't here ... tell em so.
 
 	if(!who || !living(who)) {
-	write("Halt: ÕâÀïÃ»ÓÐ½ÐÕâÖÖÃû×ÖµÄÉúÎï.\n");
+	write("Halt: é€™è£¡æ²’æœ‰å«é€™ç¨®åå­—çš„ç”Ÿç‰©.\n");
 	return 1; }
  
 	//		Confirm the requested object is actually in a battle.
  
 	if(!who->query_attacker()) {
 		if(this_player() == who)
-		write("Halt: ÄãÏÖÔÚ²»ÔÚÕ½¶·ÖÐ.\n");
-		else write("Halt: Õâ¸ö¶«¶«Ä¿Ç°Ã»ÓÐÔÚ×÷Õ½°¡ !!\n");
+		write("Halt: ä½ ç¾åœ¨ä¸åœ¨æˆ°é¬¥ä¸­.\n");
+		else write("Halt: é€™å€‹æ±æ±ç›®å‰æ²’æœ‰åœ¨ä½œæˆ°å•Š !!\n");
 	return 1; }
  
 	//		Get a list of all the object's attackers.
@@ -82,13 +82,13 @@ int cmd_halt(string str)
 	who->cease_all_attacks();
 
 	if(who == this_player())
-			write("Halt: ÄãÍ£Ö¹ÄãµÄÕ½¶·.\n");
-	else write("Halt: ÄãÖÆÖ¹ÁË"+who->query("c_name")+"µÄÕ½¶·.\n");
+			write("Halt: ä½ åœæ­¢ä½ çš„æˆ°é¬¥.\n");
+	else write("Halt: ä½ åˆ¶æ­¢äº†"+who->query("c_name")+"çš„æˆ°é¬¥.\n");
  
 	tell_room(environment(this_player()),
-		this_player()->query("c_name") + "ÓÃÎ×Ê¦µÄÉñÁ¦ÖÆÖ¹ÁË"
-		+( who == this_player() ? "Ëû" : who->query("c_name") )
-		+"µÄÕ½¶·¡£\n",
+		this_player()->query("c_name") + "ç”¨å·«å¸«çš„ç¥žåŠ›åˆ¶æ­¢äº†"
+		+( who == this_player() ? "ä»–" : who->query("c_name") )
+		+"çš„æˆ°é¬¥ã€‚\n",
 		this_player());
  
 return 1; }

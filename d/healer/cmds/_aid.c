@@ -10,70 +10,70 @@ int cmd_aid(string arg)
         string target,target1,myname ;
 
         if( this_player()->query("stop_attack")!=0) 
-             return notify_fail( "ÄãµÄÉÏ¸ö¶¯×÷»¹Ã»Íê³É,ÎŞ·¨Ê©ĞĞ¼±¾È¡£\n" );
+             return notify_fail( "ä½ çš„ä¸Šå€‹å‹•ä½œé‚„æ²’å®Œæˆ,ç„¡æ³•æ–½è¡Œæ€¥æ•‘ã€‚\n" );
 
 	if( !arg || arg=="" || !(dest = present(arg, environment(this_player()))) )
-		return notify_fail( "ÄãÒª¶ÔË­Ê©ĞĞ¼±¾È£¿\n" );
+		return notify_fail( "ä½ è¦å°èª°æ–½è¡Œæ€¥æ•‘ï¼Ÿ\n" );
 
 	if( !living(dest) ) 
-		return notify_fail( "ÄÇ¸ö¡¸¶«Î÷¡¹²»ĞèÒª¼±¾È¡£\n" );
+		return notify_fail( "é‚£å€‹ã€Œæ±è¥¿ã€ä¸éœ€è¦æ€¥æ•‘ã€‚\n" );
         
         target  = dest->query("c_name") ;
         target1 = dest->query("c_name") ;
         
 	if( dest->query("ghost") ) return notify_fail( 
-		sprintf("Ì«³ÙÁË .... %sÒÑ¾­ËÀÁË¡£\n",target ) );
+		sprintf("å¤ªé²äº† .... %så·²ç¶“æ­»äº†ã€‚\n",target ) );
 	if( dest->query("no_aid") ) return notify_fail(
 	        dest->query("c_name") +
-	        "Ğ¦Öø¶ÔÄãËµ:Ğ»Ğ»ÄãµÄºÃÒâ, ²»¹ıÎÒÏëÓĞ±ØÒªÊ±, ÎÒ×Ô¼º¶¯ÊÖ¿ÉÄÜ±È½ÏºÃ¡£\n"
+	        "ç¬‘è‘—å°ä½ èªª:è¬è¬ä½ çš„å¥½æ„, ä¸éæˆ‘æƒ³æœ‰å¿…è¦æ™‚, æˆ‘è‡ªå·±å‹•æ‰‹å¯èƒ½æ¯”è¼ƒå¥½ã€‚\n"
 	);	
         if( dest->query_current_attacker()!=0) 
-             return notify_fail( "ÄãµÄÄ¿±êÕıÔÚÕ½¶·ÖĞ,ÄãÎŞ·¨¶ÔËû¼±¾È¡£\n" );
+             return notify_fail( "ä½ çš„ç›®æ¨™æ­£åœ¨æˆ°é¬¥ä¸­,ä½ ç„¡æ³•å°ä»–æ€¥æ•‘ã€‚\n" );
 
 	hp = (int)dest->query( "hit_points" );
 	max_hp = (int)dest->query( "max_hp" );
 
-//   ÉËÌ«ÖØÔò²»ÄÜ¶Ô×Ô¼º¼±¾È...
+//   å‚·å¤ªé‡å‰‡ä¸èƒ½å°è‡ªå·±æ€¥æ•‘...
 
 	if( dest==this_player()&& hp < max_hp/6 ) 
-               return notify_fail( "ÄãÉËÊÆÌ«ÖØ¶øÎŞ·¨¶Ô×Ô¼ºÊ©ĞĞ¼±¾È¡£\n" );        
+               return notify_fail( "ä½ å‚·å‹¢å¤ªé‡è€Œç„¡æ³•å°è‡ªå·±æ–½è¡Œæ€¥æ•‘ã€‚\n" );        
 
         if(dest == this_player())
            {
-               target = "×Ô¼º" ;
-               target1 = "Äã×Ô¼º" ;
+               target = "è‡ªå·±" ;
+               target1 = "ä½ è‡ªå·±" ;
             }                    
 
 	if( hp==max_hp ) return notify_fail( 
-		sprintf( "%s²¢Ã»ÓĞÊÜÉË¡£\n",target1 ) );
+		sprintf( "%sä¸¦æ²’æœ‰å—å‚·ã€‚\n",target1 ) );
 
 	if( dest->query_temp("aided") ) return notify_fail( 
-		sprintf( "%sÒÑ¾­±»¼±¾È¹ıÁË¡£\n",target1 ) );
+		sprintf( "%så·²ç¶“è¢«æ€¥æ•‘éäº†ã€‚\n",target1 ) );
 
 	if( hp > max_hp/3 ) return notify_fail(
-		sprintf("%sµÄÉËÊÆ»¹Ã»ÓĞÑÏÖØµ½ĞèÒª¼±¾ÈµÄµØ²½¡£\n",target1) );
+		sprintf("%sçš„å‚·å‹¢é‚„æ²’æœ‰åš´é‡åˆ°éœ€è¦æ€¥æ•‘çš„åœ°æ­¥ã€‚\n",target1) );
 
 	skill = (int)this_player()->query_skill( "first-aid");
 	if( !skill ) return notify_fail( 
-		"Äã²¢Ã»ÓĞÑ§¹ı¼±¾ÈµÄ¼¼ÄÜ¡£\n");
+		"ä½ ä¸¦æ²’æœ‰å­¸éæ€¥æ•‘çš„æŠ€èƒ½ã€‚\n");
 
 
-	write(sprintf("Äã¶Ô%s½øĞĞ¼±¾È ....\n",target1) );
+	write(sprintf("ä½ å°%sé€²è¡Œæ€¥æ•‘ ....\n",target1) );
 
         myname = this_player()->query("c_name") ;
         
         if(dest != this_player())
      	    tell_object( dest, 
-		sprintf("%s¶ÔÄã½øĞĞ¼±¾È .... Äã¾õµÃºÃ¶àÁË£¡\n",myname ) );
+		sprintf("%så°ä½ é€²è¡Œæ€¥æ•‘ .... ä½ è¦ºå¾—å¥½å¤šäº†ï¼\n",myname ) );
 
 	tell_room( environment(this_player()), 
-		sprintf("%s¶Ô%s½øĞĞ¼±¾È ....\n",myname,target),
+		sprintf("%så°%sé€²è¡Œæ€¥æ•‘ ....\n",myname,target),
 		({ this_player(), dest }) );
 		
 	if( dest!=this_player() ) this_player()->add( "alignment", 25 );
 	dest->receive_healing( skill/2 + random(skill/2) );
 
- //    ¼±¾È¶ÔÍæ¼Ò×î¶àÖ»ÄÜ¼Óµ½Ò»°ëµÄ HP
+ //    æ€¥æ•‘å°ç©å®¶æœ€å¤šåªèƒ½åŠ åˆ°ä¸€åŠçš„ HP
 	hp = (int)dest->query( "hit_points" );
         if( !wizardp(this_player()) && hp > max_hp/2 ) 
            dest->set("hit_points",max_hp/2) ;
@@ -93,10 +93,10 @@ int help()
 {
     write(
     @C_HELP
-Ö¸Áî¸ñÊ½: aid <Ä³ÈË>
+æŒ‡ä»¤æ ¼å¼: aid <æŸäºº>
 
-Õâ¸öÖ¸ÁîÈÃÄã¶ÔÄ³¸öÈËÎï( »ò NPC )Ê©ĞĞ¼±¾È£¬ÓĞ¹Ø¼±¾ÈµÄÏ¸½ÚÓëÏŞÖÆÇë²Î
-¿¼ help first-aid¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ å°æŸå€‹äººç‰©( æˆ– NPC )æ–½è¡Œæ€¥æ•‘ï¼Œæœ‰é—œæ€¥æ•‘çš„ç´°ç¯€èˆ‡é™åˆ¶è«‹åƒ
+è€ƒ help first-aidã€‚
 C_HELP
 	);
     return 1;

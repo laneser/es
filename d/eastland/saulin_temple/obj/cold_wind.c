@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "hell wand", "Ú¤Ô¨ÕÈ" );
+	set_name( "hell wand", "å†¥æ·µæ–" );
 	add( "id", ({ "wand" }) );
-	set_short( "Ú¤Ô¨ÕÈ" );
+	set_short( "å†¥æ·µæ–" );
 	set_long(
-"ÕâÊÇÒ»°ÑºÚÉ«ÓÖÀÏ¾ÉµÄÄ§ÕÈ£¬ÕÈ±úÉÏÒÀÏ¡µñÖøÒ»¸öÒ¹²æµÄÍ·Ïñ¡£\n"
+"é€™æ˜¯ä¸€æŠŠé»‘è‰²åˆè€èˆŠçš„é­”æ–ï¼Œæ–æŸ„ä¸Šä¾ç¨€é›•è‘—ä¸€å€‹å¤œå‰çš„é ­åƒã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "wand" );
 	set( "weapon_class", 30 );
 	set( "min_damage", 8 );
@@ -24,6 +24,6 @@ void create()
 	set( "special_damage_type", "cold" );
 	set( "special_damage", 45+random(10));
 	set( "special_c_msg",
- "´ÓÕÈÍ·Ó¿³öÒ»¹É¿áº®µÄÒõ·ç£¬Äã¿´µ½ËüÅçµ½µÄµØ·½¶¼½á±ùÁË£¡" );
+ "å¾æ–é ­æ¹§å‡ºä¸€è‚¡é…·å¯’çš„é™°é¢¨ï¼Œä½ çœ‹åˆ°å®ƒå™´åˆ°çš„åœ°æ–¹éƒ½çµå†°äº†ï¼" );
 }
 

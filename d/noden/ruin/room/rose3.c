@@ -8,11 +8,11 @@ void create()
 {
     ::create();
 
-    set_short("��˹�����ǣ�����");
+    set_short("羅斯托麗城．城門");
     set_long(@C_LONG
-����վ��һ�����µĶ��ˣ��԰�����˹�����ǵĳ��š���ǰ���ԫ�бڵ�
-�����Ȼ��ͬ������������ɺ�ΰ�ޱȣ���������������ħ��۹��ĻԻ͡���
-���鷳���ǣ�Ҫ��ζɹ�������µ��԰��أ�
+你正站在一個懸崖的頂端，對岸是羅斯托麗城的城門。和前面斷垣殘壁的
+景像截然不同，這個城門氣派宏偉無比，不禁令人神往古魔族帝國的輝煌。不
+過麻煩的是，要如何渡過這個懸崖到對岸呢？
 C_LONG
     );
     set("exits", (["south" : AREA"rose2"]) );
@@ -30,7 +30,7 @@ void init()
 
 int do_search()
 {
-    tell_object(this_player(), "�㷢�ֽ��²���һ��ʯ��������д��һЩ���֡�\n");
+    tell_object(this_player(), "你發現腳下踩著一塊石碑，上面寫著一些文字。\n");
     return 1;
 }
 
@@ -42,12 +42,12 @@ int do_read(string str)
     if (str == "rune" || str == "runes")
     {
 	if (p->query_temp("lilia_dic") == 1)
-	    tell_object(p, "ʯ����д�������ش����Ů���ٹⳣ�项\n");
+	    tell_object(p, "石碑上寫著：「回答密語，女王榮光常伴」\n");
 	else
-	    return notify_fail("�㿴�˰��죬���ǲ�֪������дЩʲ�ᡣ\n");
+	    return notify_fail("你看了半天，還是不知道上面寫些什麼。\n");
     }
     else
-	return notify_fail("�����ʲ��?\n");
+	return notify_fail("你想讀什麼?\n");
     return 1;
 }
 
@@ -57,12 +57,12 @@ int do_jump(string str)
     p = this_player();
 
     if (!str || str != "down")
-	return notify_fail("�����ʲ��? ���������Ļ����������Ŷ ...\n");
+	return notify_fail("你想幹什麼? 想往下跳的話想清楚再跳哦 ...\n");
     else
     {
-	tell_object(p, "�������ǰһԾ ....\n\n");
-	tell_room(environment(p), sprintf("%s�ܳ嶯�������µ�������ȥ ....\n", p->query("c_name")), ({p}));
-	tell_object(p, "�㱻ˮ���嵽һ���µĵط� ....\n\n");
+	tell_object(p, "你奮力向前一躍 ....\n\n");
+	tell_room(environment(p), sprintf("%s很衝動地向懸崖底跳了下去 ....\n", p->query("c_name")), ({p}));
+	tell_object(p, "你被水流衝到一個新的地方 ....\n\n");
 	p->move("/d/noden/11,6.noden");
     }
 
@@ -74,16 +74,16 @@ int do_answer(string str)
     object p;
     p = this_player();
 	
-    if (str == "֥�鿪��" || str == "open sesame")
+    if (str == "芝麻開門" || str == "open sesame")
     {
 	if (p->query_temp("lilia_dic") != 1)
-	    return notify_fail("��ͻȻ�����㻹û���ֵ䣬����ȥҲû�ã���Ǿ�Ӳ�����ذ�˵��һ��Ļ����˻�ȥ��\n");
+	    return notify_fail("你突然想起你還沒拿字典，進城去也沒用，於是就硬生生地把說到一半的話吞了回去。\n");
 	p->set_explore("noden#47");
-	tell_object(p, "��Ȼһ���ɫ�Ĺ�â�����������ܣ�����ɢȥʱ���㷢�����ܵľ����Ѿ�����!\n");
-	p->move_player(AREA"rose4", ({"%s��һ���׹⴫������!\n", "%s������һ����â���������\n"}), "");
+	tell_object(p, "忽然一陣白色的光芒籠罩在你四周，當光散去時，你發現四周的景物已經變了!\n");
+	p->move_player(AREA"rose4", ({"%s被一道白光傳送走了!\n", "%s伴隨著一道光芒出現在這裡。\n"}), "");
     }
     else
-	return notify_fail("Ů��������������˷�����������������Ͳ�Ҫ������ ok?��\n");
+	return notify_fail("女王的聲音從四面八方傳來：「不懂密碼就不要來吵我 ok?」\n");
     return 1;
 }
 

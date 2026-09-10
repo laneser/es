@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("black hood", "Ôí½í");
+        set_name("black hood", "çš‚å·¾");
         add( "id", ({ "hood","black" }) );
-        set_short( "a black hood", "Ôí½í");
+        set_short( "a black hood", "çš‚å·¾");
         set_long(
                 "A black hood .\n",
-                "ÕâÊÇÒ»¶¥ÆÆÆÆÀÃÀÃµÄºÚÍ·½í£¬Í¨³£ÊÇÃ»Ê²÷áÉí·İµØÎ»µÄÈË´©µÄ \n"
+                "é€™æ˜¯ä¸€é ‚ç ´ç ´çˆ›çˆ›çš„é»‘é ­å·¾ï¼Œé€šå¸¸æ˜¯æ²’ä»€éº¼èº«ä»½åœ°ä½çš„äººç©¿çš„ \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "cloth");
         set( "armor_class", 3 );

@@ -8,22 +8,22 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_level(13);
-	set_name( "Cid Previa", "Ê©µÃ ÅËÎ¬¶û" );
+	set_name( "Cid Previa", "æ–½å¾— æ½˜ç¶­çˆ¾" );
 	add( "id", ({ "cid", "Cid", "engineer", }) );
-	set_short( "a engineer Cid Previa", "¼¼Ê¦ Ê©µÃ ÅËÎ¬¶û" );
+	set_short( "a engineer Cid Previa", "æŠ€å¸« æ–½å¾— æ½˜ç¶­çˆ¾" );
 	set_long( @LONG
 NEED WORK HERE!
 LONG
              , @C_LONG
-    ÉÃ³¤·¢Ã÷ºÍ·¢ÏÖ¸÷ÖÖ¶«Î÷£¬ÎªÊÀ½ç´øÀ´·±ÈÙµÄ¼¼Ê¦¡£×î½ü×íĞÄì¶Ä§·¨
-ÄÜÔ´µÄÑĞ¾¿£¬Ä¿Ç°ÂÊÁìÁËĞí¶àÑ§Õß£¬Å¬Á¦ÑĞ¾¿²¢¿ª·¢ĞÂµÄÄ§·¨ÄÜÔ´¡£Äã¿É
-ÒÔÎÊËûÓĞ¹Ø recharge µÄÎÊÌâ¡£
+    æ“…é•·ç™¼æ˜å’Œç™¼ç¾å„ç¨®æ±è¥¿ï¼Œç‚ºä¸–ç•Œå¸¶ä¾†ç¹æ¦®çš„æŠ€å¸«ã€‚æœ€è¿‘é†‰å¿ƒæ–¼é­”æ³•
+èƒ½æºçš„ç ”ç©¶ï¼Œç›®å‰ç‡é ˜äº†è¨±å¤šå­¸è€…ï¼ŒåŠªåŠ›ç ”ç©¶ä¸¦é–‹ç™¼æ–°çš„é­”æ³•èƒ½æºã€‚ä½ å¯
+ä»¥å•ä»–æœ‰é—œ recharge çš„å•é¡Œã€‚
 C_LONG
 	);
 	set( "alignment", 2000 );
     set( "gender", "male" );
     set( "race", "human" );
-    set( "unit", "Î»" );
+    set( "unit", "ä½" );
 	set_perm_stat( "dex", 23 );
 	set_perm_stat( "str", 10 );
 	set_perm_stat( "int", 24 );
@@ -53,8 +53,8 @@ void init()
 void ask_recharge( object who )
 {
     tell_object( who,
-      "Ê©µÃËµ: Äã¿ÉÒÔÓÃ recharge item À´²¹³äÄ§·¨ÎïÆ·µÄÄÜÔ´»ò\n"+
-      "        value item À´¿´¿´²¹³äËüĞèÒª¶àÉÙÇ®¼°¾­ÑéÖµ¡£\n" 
+      "æ–½å¾—èªª: ä½ å¯ä»¥ç”¨ recharge item ä¾†è£œå……é­”æ³•ç‰©å“çš„èƒ½æºæˆ–\n"+
+      "        value item ä¾†çœ‹çœ‹è£œå……å®ƒéœ€è¦å¤šå°‘éŒ¢åŠç¶“é©—å€¼ã€‚\n" 
     );
 }
 
@@ -67,11 +67,11 @@ int to_value( string str )
       return notify_fail("Value what ?\n");
     if( !(item=present( str, who )) )
       return notify_fail( can_read_chinese() ?
-        "Ê©µÃËµ: ÄãÉíÉÏÃ»Õâ¸ö¶«Î÷¡£\n" : "Cid says: You have no this item.\n"
+        "æ–½å¾—èªª: ä½ èº«ä¸Šæ²’é€™å€‹æ±è¥¿ã€‚\n" : "Cid says: You have no this item.\n"
       );
     if( !item->query("max_charge") )
       return notify_fail(
-        "Ê©µÃËµ: Õâ²»ÊÇÄ§·¨ÎïÆ·£¬ÎŞ·¨²¹³äÄ§·¨ÄÜÔ´!\n" 
+        "æ–½å¾—èªª: é€™ä¸æ˜¯é­”æ³•ç‰©å“ï¼Œç„¡æ³•è£œå……é­”æ³•èƒ½æº!\n" 
       );
     wc = (int)item->query("weapon_class");
     damage = (int)item->query("special_damage");
@@ -83,12 +83,12 @@ int to_value( string str )
     cost_exp = wc*damage*damage*(150-skill)/exp;
     if( !cost_money )
       tell_object( who,
-        "Ê©µÃËµ: ÕâÎïÆ·²»ĞëÒª²¹³äÄÜÔ´¡£\n"
+        "æ–½å¾—èªª: é€™ç‰©å“ä¸é ˆè¦è£œå……èƒ½æºã€‚\n"
       );
     else
       tell_object( who,
-        "Ê©µÃËµ: ²¹³äÕâÎïÆ·µÄÄÜÔ´Ğè "+cost_money+" Òø±Ò¼° "+cost_exp+
-        " µã¾­ÑéÖµ¡£\n"
+        "æ–½å¾—èªª: è£œå……é€™ç‰©å“çš„èƒ½æºéœ€ "+cost_money+" éŠ€å¹£åŠ "+cost_exp+
+        " é»ç¶“é©—å€¼ã€‚\n"
       );
     return 1;
 }

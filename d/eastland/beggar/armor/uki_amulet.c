@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("doctor amulet", "Ò½Õß»¤·û");
+        set_name("doctor amulet", "é†«è€…è­·ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short( "Ò½Õß»¤·û");
+        set_short( "é†«è€…è­·ç¬¦");
         set_long(@C_LONG
-ÕâÊÇÒ»¸öºÜÆÕÍ¨µÄ»¤·û,ÉÏÃæĞåÓĞÒ»¶Ñ¼òÒªµÄĞĞÒ½ÓÃÊõÓï, ÓëÆäËµÊÇÒ»±¾×Öµä»¹±È
-½ÏÇ¡µ±¡£
+é€™æ˜¯ä¸€å€‹å¾ˆæ™®é€šçš„è­·ç¬¦,ä¸Šé¢ç¹¡æœ‰ä¸€å †ç°¡è¦çš„è¡Œé†«ç”¨è¡“èª, èˆ‡å…¶èªªæ˜¯ä¸€æœ¬å­—å…¸é‚„æ¯”
+è¼ƒæ°ç•¶ã€‚
 C_LONG               
                );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set("material","element");
         set( "type", "misc" );
         set( "armor_class", 0 );

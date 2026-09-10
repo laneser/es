@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Pracrice pants","ÎäµÀ¿ãÈ¹");
+    set_name("Pracrice pants","æ­¦é“è¤²è£™");
     add("id",({"skirt","pants"}) );
-    set_short("ÎäµÀ¿ãÈ¹");
+    set_short("æ­¦é“è¤²è£™");
     set_long(@LONG
-ÕâÊÇÒ»°ãµÄÎäµÀ¿ãÈ¹£¬ÄËÒ»°ãÏ°ÎäÖ®Ê¿Ï°ÎäÊ±±ØÖøÖ®×°±¸£¡
+é€™æ˜¯ä¸€èˆ¬çš„æ­¦é“è¤²è£™ï¼Œä¹ƒä¸€èˆ¬ç¿’æ­¦ä¹‹å£«ç¿’æ­¦æ™‚å¿…è‘—ä¹‹è£å‚™ï¼
 LONG
             );
-    set("unit","¼ş");
+    set("unit","ä»¶");
     set("type","legs");
     set("material","cloth");
     set("armor_class",2);

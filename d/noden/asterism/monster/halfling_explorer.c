@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "halfling explorer Solodem", "°ëÉíÈËÃ°ÏÕ¼ÒË÷ÂŞµÇ" );
+	set_name( "halfling explorer Solodem", "åŠèº«äººå†’éšªå®¶ç´¢ç¾…ç™»" );
 	add("id",({"explorer","solodem","halfling"}) );
-   set_short( "°ëÉíÈËÃ°ÏÕ¼ÒË÷ÂŞµÇ" );
+   set_short( "åŠèº«äººå†’éšªå®¶ç´¢ç¾…ç™»" );
 	set_long(
-		"Äã¿´µ½´øÖøĞ¦Á³µÄ°ëÉíÈËÃ°ÏÕ¼Ò,ËûÕı¿´ÖøÄãºÍÏëÒªÓëÄãÏĞÁÄ \n"
+		"ä½ çœ‹åˆ°å¸¶è‘—ç¬‘è‡‰çš„åŠèº«äººå†’éšªå®¶,ä»–æ­£çœ‹è‘—ä½ å’Œæƒ³è¦èˆ‡ä½ é–’èŠ \n"
 	);
 	set( "gender", "male" );
 	set( "race", "halfling" );

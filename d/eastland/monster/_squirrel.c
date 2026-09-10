@@ -4,14 +4,14 @@ void create(object ob)
 {
 	if ( !ob ) return ;
 	ob->set_level(1);
-	ob->set_name( "squirrel", "ËÉÊó" );
-	ob->set_short( "ËÉÊó" );
+	ob->set_name( "squirrel", "æ¾é¼ " );
+	ob->set_short( "æ¾é¼ " );
 	ob->set_long(
-		"Äã¿´µ½Ò»Ö»Ð¡ËÉÊóÔÚÖ¦Í·¼äÅÜÀ´ÅÜÈ¥¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»å°æ¾é¼ åœ¨æžé ­é–“è·‘ä¾†è·‘åŽ»ã€‚\n"
 	);
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set_perm_stat("kar", 3 );
 	ob->set_perm_stat("dex", 4 );
-	ob->set_c_verbs( ({ "%sÓÃ×¦×ÓÍù%s×¥È¥" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Î²°Í" }) );
+	ob->set_c_verbs( ({ "%sç”¨çˆªå­å¾€%sæŠ“åŽ»" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å°¾å·´" }) );
 }

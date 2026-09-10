@@ -8,16 +8,16 @@ void create()
 	
 	::create();
 	set_level(1);
-	set_name( "little goblin", "Ğ¡¶ñ¹í" );
+	set_name( "little goblin", "å°æƒ¡é¬¼" );
 	add ("id", ({"goblin", }) );
-	set_short( "little goblin", "Ğ¡¶ñ¹í" );
+	set_short( "little goblin", "å°æƒ¡é¬¼" );
 	set_long(
 	"a little goblin.\n",
-    "Ò»Ö»Ğ¡Ğ¡µÄĞ¡¶ñ¹í¡£\n");
+    "ä¸€éš»å°å°çš„å°æƒ¡é¬¼ã€‚\n");
 
     set( "alignment",-100);
     set( "gender", "male" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "kar", 2 );
 	set ("wealth", ([ "silver": 10 ]) );
 

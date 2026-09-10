@@ -7,19 +7,19 @@ inherit ROOM;
 void create()
 {
     ::create();
-    set_short("ÉñÎäÐüÑÂ");
+    set_short("ç¥žæ­¦æ‡¸å´–");
     set_long(@LONG
-ÕóÕóµÄÇ¿·çÓ­ÖøÐüÑÂ±ÚÏòÄãµÄÉíÇûÏ®ÁË¹ýÀ´£¬áÝ·ðÕýÎÞÇéµÄ±Þ´òÖøÄãËÆ
-µÄ£»Ã»´í£¬Õâ¶ùÕýÊÇÄ§×å¹ú¾³µÄ×î¸ß´¦£¬·ÅÑÛ¿´È¥£¬¹ú¾³¾¡ÈëÑÛÖÐ£»Ç°·½¼¸
-²½´¦ÊÇÒ»Æ¬´ó¶ÏÑÂ£¬Ã»ÓÐÈË¸ÒÇáÒ×¿¿½ü£¬ÉîÅÂ±»Ç¿·ç¾íÂä£»Ò²ÓÐÈËÎªÖ¤Ã÷×Ô
-¼ºÊÇÓÂÕß¶øÌøÁËÏÂÈ¥(jump)£¬µ«¶¼Ã»»ØÒô£»ÖÐ¼äÊ¯Í·ÉÏÓÐ¼¸¸ö×Ö(words)£¡
+é™£é™£çš„å¼·é¢¨è¿Žè‘—æ‡¸å´–å£å‘ä½ çš„èº«è»€è¥²äº†éŽä¾†ï¼Œå½·ä½›æ­£ç„¡æƒ…çš„éž­æ‰“è‘—ä½ ä¼¼
+çš„ï¼›æ²’éŒ¯ï¼Œé€™å…’æ­£æ˜¯é­”æ—åœ‹å¢ƒçš„æœ€é«˜è™•ï¼Œæ”¾çœ¼çœ‹åŽ»ï¼Œåœ‹å¢ƒç›¡å…¥çœ¼ä¸­ï¼›å‰æ–¹å‡ 
+æ­¥è™•æ˜¯ä¸€ç‰‡å¤§æ–·å´–ï¼Œæ²’æœ‰äººæ•¢è¼•æ˜“é è¿‘ï¼Œæ·±æ€•è¢«å¼·é¢¨æ²è½ï¼›ä¹Ÿæœ‰äººç‚ºè­‰æ˜Žè‡ª
+å·±æ˜¯å‹‡è€…è€Œè·³äº†ä¸‹åŽ»(jump)ï¼Œä½†éƒ½æ²’å›žéŸ³ï¼›ä¸­é–“çŸ³é ­ä¸Šæœ‰å¹¾å€‹å­—(words)ï¼
 LONG
             );
      set("light",1);
      set_outside("island");
      set("item_desc",(["words":@WORDS
 
-¡¡¡¡¡ºÎ¨ÓÐÏàÐÅÉñµÄ´æÔÚ£¬·½ÄÜÖ¤Ã÷×ÔÎÒµÄ¼ÛÖµ£¬²ÅÄÜ³ÉÎªÕæÕýÖÇÓÂ¼æ±¸µÄÓÂÕß£¡¡»
+ã€€ã€€ã€Žå”¯æœ‰ç›¸ä¿¡ç¥žçš„å­˜åœ¨ï¼Œæ–¹èƒ½è­‰æ˜Žè‡ªæˆ‘çš„åƒ¹å€¼ï¼Œæ‰èƒ½æˆç‚ºçœŸæ­£æ™ºå‹‡å…¼å‚™çš„å‹‡è€…ï¼ã€
          
 WORDS
                      ]) );
@@ -39,14 +39,14 @@ int do_jump(string str)
      if( !str || str!="down" )
      {
      write(@ALONG
-    ÄãÒªÍùÄÄ¶ùÌøÑ½£¿Õâ¶ùÖ»ÄÜÍùÏÂÌøÒ®£¡£¡
+    ä½ è¦å¾€å“ªå…’è·³å‘€ï¼Ÿé€™å…’åªèƒ½å¾€ä¸‹è·³è€¶ï¼ï¼
 ALONG
           );
      return 1;
      }      
 
      if( !this_player()->query_explore("island#1") ) {
-     write("\nÄãÍ»È»Ò»¸öÊ§×ã ..... \n");
+     write("\nä½ çªç„¶ä¸€å€‹å¤±è¶³ ..... \n");
      this_player()->move_player(AREA"upriver2","SNEAK");
      this_player()->set("hit_points",1);
      this_player()->set("spell_points",1);
@@ -58,29 +58,29 @@ ALONG
      }
      else {
          write(@BLONG
-               Äã·ÜÁ¦µÄ£¬Å¬Á¦µÄÏòÇ°Ò»Ô¾........
+               ä½ å¥®åŠ›çš„ï¼ŒåŠªåŠ›çš„å‘å‰ä¸€èº........
 BLONG
           );                                                             
      
      sscanf(WEATHER_D->query_game_time(),"%d",hour);
      if( hour >= 16 && hour <= 23){
        tell_room(environment(this_player()),
-         this_player()->query("c_name")+"ºÜ³å¶¯µØÏòÐüÑÂÔ¾ÁËÏÂÈ¥........\n"
+         this_player()->query("c_name")+"å¾ˆè¡å‹•åœ°å‘æ‡¸å´–èºäº†ä¸‹åŽ»........\n"
          ,this_player() );
        this_player()->move_player(AREA"upriver2","SNEAK");
-       write("Ìì¿Õ´«À´Ò»ÕóÇáÈáµÄÉùÒô£ººÃº¢×Ó£¬´ÏÃ÷µÄ¾ñÔñ£¡\n");
+       write("å¤©ç©ºå‚³ä¾†ä¸€é™£è¼•æŸ”çš„è²éŸ³ï¼šå¥½å­©å­ï¼Œè°æ˜Žçš„æŠ‰æ“‡ï¼\n");
        tell_room(environment(this_player()),
-         this_player()->query("c_name")+"ÒÔÍêÃÀµÄ×ËÊÆ×ÔÌì¿ÕÆ®ÏÂ.......\n"
+         this_player()->query("c_name")+"ä»¥å®Œç¾Žçš„å§¿å‹¢è‡ªå¤©ç©ºé£„ä¸‹.......\n"
          ,this_player() );
        return 1;
      }
      else{
        tell_room(environment(this_player()),
-         "Í»È»´ó·çÒ»´µ£¬"+this_player()->query("c_name")+"Ò»²»Ð¡ÐÄµôÏÂÐüÑÂÁË£¡\n"
+         "çªç„¶å¤§é¢¨ä¸€å¹ï¼Œ"+this_player()->query("c_name")+"ä¸€ä¸å°å¿ƒæŽ‰ä¸‹æ‡¸å´–äº†ï¼\n"
          ,this_player() );
        this_player()->move_player(AREA"river2","SNEAK");
        tell_room(environment(this_player()),
-         this_player()->query("c_name")+"ÒÔ¼«ÄÑ¿´µÄ×ËÊÆÌøÈëË®ÖÐ£¬ÄãÐÄÏë£º°¦£¬Á½·Ö..\n"
+         this_player()->query("c_name")+"ä»¥æ¥µé›£çœ‹çš„å§¿å‹¢è·³å…¥æ°´ä¸­ï¼Œä½ å¿ƒæƒ³ï¼šå”‰ï¼Œå…©åˆ†..\n"
          ,this_player() );
      this_player()->set("hit_points",(int)this_player()->query("hit_points") / 10);
      report(this_object(),this_player());

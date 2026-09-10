@@ -5,11 +5,11 @@ inherit MAP;
 void create()
 {
          seteuid(getuid());
-	set_name( "map", "µØÍ¼" );
-	set_short( "Åµ¶ÙÍõ¹úµØÍ¼" );
+	set_name( "map", "åœ°åœ–" );
+	set_short( "è«¾é “ç‹åœ‹åœ°åœ–" );
 	set_long(@CLONG
-ÕâÊÇÅµ¶ÙÍõ¹úµÄÈ«Í¼£¬Äã¿ÉÒÔ read map ¿´µØÍ¼ÄÚÈİ£¬»òÓÃ
-read legend ¿´µØÍ¼ÉÏ·ûºÅËù´ú±íµÄÒâÒå¡£
+é€™æ˜¯è«¾é “ç‹åœ‹çš„å…¨åœ–ï¼Œä½ å¯ä»¥ read map çœ‹åœ°åœ–å…§å®¹ï¼Œæˆ–ç”¨
+read legend çœ‹åœ°åœ–ä¸Šç¬¦è™Ÿæ‰€ä»£è¡¨çš„æ„ç¾©ã€‚
 CLONG
 	);
 	set_size( 21, 21 );

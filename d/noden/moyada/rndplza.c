@@ -9,12 +9,12 @@ void create()
 {
     object *obs, ob;
 	::create();
-	set_short("Ô²ĞÎ¹ã³¡");
+	set_short("åœ“å½¢å»£å ´");
 	set_long( @LONG_DESCRIPTION
-ÄãÏÖÔÚÕ¾ÔÚÄ¦ÑÇ´ï³Ç×îÖøÃûµÄÔ²ĞÎ¹ã³¡£¬ÕâÊÇÄ¦ÑÇ´ï³Ç×îÖøÃûµÄµØ·½¡£
-Äã¿ÉÒÔ¿´µ½ºÜ¶à¶ÔÄ§·¨ÓĞĞËÈ¤µÄÈË¾Û¼¯ÔÚÕâÀï£¬ËûÃÇÌ¸ÂÛÖøÒ»Ğ©ÓĞ¹Øì¶Ä§·¨
-µÄ»°Ìâ¡ª¡ªÖäÎÄ¡¢¾íÖáµÈµÈ¡£¡¸ÒøÉ«Ö®Ëş¡¹(silver tower)¾ÍÔÚ¹ã³¡µÄÕıÖĞ
-Ñë£¬ËüÊÇÒ»¶°ÒøÉ«µÄÔ²ĞÎ½¨ÖşÎï£¬Äã¿´µ½ÓĞÒ»¸öºÜ´óµÄÌúÃÅ¿É¹©³öÈë¡£
+ä½ ç¾åœ¨ç«™åœ¨æ‘©äºé”åŸæœ€è‘—åçš„åœ“å½¢å»£å ´ï¼Œé€™æ˜¯æ‘©äºé”åŸæœ€è‘—åçš„åœ°æ–¹ã€‚
+ä½ å¯ä»¥çœ‹åˆ°å¾ˆå¤šå°é­”æ³•æœ‰èˆˆè¶£çš„äººèšé›†åœ¨é€™è£¡ï¼Œä»–å€‘è«‡è«–è‘—ä¸€äº›æœ‰é—œæ–¼é­”æ³•
+çš„è©±é¡Œâ€”â€”å’’æ–‡ã€å·è»¸ç­‰ç­‰ã€‚ã€ŒéŠ€è‰²ä¹‹å¡”ã€(silver tower)å°±åœ¨å»£å ´çš„æ­£ä¸­
+å¤®ï¼Œå®ƒæ˜¯ä¸€æ£ŸéŠ€è‰²çš„åœ“å½¢å»ºç¯‰ç‰©ï¼Œä½ çœ‹åˆ°æœ‰ä¸€å€‹å¾ˆå¤§çš„éµé–€å¯ä¾›å‡ºå…¥ã€‚
 LONG_DESCRIPTION
 	);
 
@@ -26,7 +26,7 @@ LONG_DESCRIPTION
 		"east"  : MOYADA"mainrd8.c",
 	]) );
 	set( "item_desc", ([
-      "tower" : "Ò»¶°ÒøÉ«µÄÔ²ĞÎ½¨ÖşÎï£¬Ò²ĞíÄã¿ÉÒÔ½øÈ¥(enter)¿´¿´¡£\n",
+      "tower" : "ä¸€æ£ŸéŠ€è‰²çš„åœ“å½¢å»ºç¯‰ç‰©ï¼Œä¹Ÿè¨±ä½ å¯ä»¥é€²å»(enter)çœ‹çœ‹ã€‚\n",
 	]) );
 	reset();
 }
@@ -61,9 +61,9 @@ int to_enter( string arg )
     if( !arg || arg != "tower" )
       return notify_fail("Enter what?\n");
     tell_room( this_object(), 
-      sprintf("%s×ß½øËşÄÚ¡£\n", player->query("c_name") ), player );
+      sprintf("%sèµ°é€²å¡”å…§ã€‚\n", player->query("c_name") ), player );
     player->move_player("/d/mage/tower/mage_guild","SNEAK");
     tell_room( environment(player), 
-      sprintf("%s(%s)×ßÁË½øÀ´¡£\n", player->query("c_name"),player->query("name") ), player );
+      sprintf("%s(%s)èµ°äº†é€²ä¾†ã€‚\n", player->query("c_name"),player->query("name") ), player );
     return 1;
 }

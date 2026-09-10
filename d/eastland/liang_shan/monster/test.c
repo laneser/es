@@ -9,16 +9,16 @@ void create()
 {
     ::create();
       set_level(17);
-      set_name( "Zhu Wu", "ÖìÎä" );
+      set_name( "Zhu Wu", "æœ±æ­¦" );
       add ("id", ({ "zhu", "wu" }) );
-      set_short( "ÖìÎä");
-      set("unit","Î»");
+      set_short( "æœ±æ­¦");
+      set("unit","ä½");
       set("alignment",300);
       set("weight",400);
       set("wealth/platinum",8);
       set_long(
-      "¶¨Ô¶ÏØÈË£¬ÍâºÅÉñ»ú¾üÊ¦£¬Ê¹Ò»±úÈı¼âÁ½ÈĞµ¶£¬ÎäÒÕ¸ßÇ¿ÇÒ¾«Í¨Õó·¨£®\n"
-      "ÎªÁºÉ½²´Ò»Í¬²ÎÔŞ¾üÎñÍ·Áì¡£\n"
+      "å®šé ç¸£äººï¼Œå¤–è™Ÿç¥æ©Ÿè»å¸«ï¼Œä½¿ä¸€æŸ„ä¸‰å°–å…©åˆƒåˆ€ï¼Œæ­¦è—é«˜å¼·ä¸”ç²¾é€šé™£æ³•ï¼\n"
+      "ç‚ºæ¢å±±æ³Šä¸€åŒåƒè´Šè»å‹™é ­é ˜ã€‚\n"
       );
        set_perm_stat("dex", 25);
        set_perm_stat("str",18);
@@ -68,19 +68,19 @@ int ask_join()
 if ( this_player()->query_temp("ready_join") >2 ) {
 command("look "+(string)this_player()->query("name"));
 command("kick "+(string)this_player()->query("name"));
-command("say "+"ÄãÒÑ¾­Í¨¹ıÕçÊÔÁË£¬²»ÒªÀ´Ë£±¦ºÃÂğ?");
+command("say "+"ä½ å·²ç¶“é€šéç”„è©¦äº†ï¼Œä¸è¦ä¾†è€å¯¶å¥½å—?");
 return 1;
 } 
 command("look "+(string)this_player()->query("name"));
-command("say "+"Èç¹ûÄãÏë¼ÓÈëÉ½Ôô£¬Ê×ÏÈÄãÒªÏÈÖ¤Ã÷ÄãµÄÄÜÁ¦¡£Äã×¼±¸ºÃÁËÂğ?");
+command("say "+"å¦‚æœä½ æƒ³åŠ å…¥å±±è³Šï¼Œé¦–å…ˆä½ è¦å…ˆè­‰æ˜ä½ çš„èƒ½åŠ›ã€‚ä½ æº–å‚™å¥½äº†å—?");
 this_player()->set_temp("ready_join",1);
 return 1;
 }
 int do_nod()
 {
   if ( (int)this_player()->query_temp("ready_join") == 1 ) {
-  write("ÄãÓÃÁ¦µÄµãÁËµãÍ·\n");
-  write("ÖìÎäËµµÀ: ºÃ°É£¬Ö»ÒªÄÜ´ò°ÜÎÒ¾ÍÖ¤Ã÷ÁËÄãµÄÄÜÁ¦...\n");
+  write("ä½ ç”¨åŠ›çš„é»äº†é»é ­\n");
+  write("æœ±æ­¦èªªé“: å¥½å§ï¼Œåªè¦èƒ½æ‰“æ•—æˆ‘å°±è­‰æ˜äº†ä½ çš„èƒ½åŠ›...\n");
   this_object()->kill_ob(this_player());
   this_player()->set_temp("ready_join",2);
   return 1;
@@ -102,8 +102,8 @@ void make_angry(object obj)
     if( random(8) > 1 ) return ; 
     env=environment(obj);
     tell_room(env,C_NAME(obj)+
-      "´óºÈ:¡¸µÜĞÖÃÇ£¬ÓÖÓĞÈËÀ´¸øÎÒÃÇÁ·Õó·¨ÁË....¡¹\n"
-      "Ò»´óÈºÉ½Ôô²»Öª´ÓÄÇ¶ùÅÜÁË³öÀ´£¬°ÑÄãÍÅÍÅÎ§×¡... \n\n");
+      "å¤§å–:ã€Œå¼Ÿå…„å€‘ï¼Œåˆæœ‰äººä¾†çµ¦æˆ‘å€‘ç·´é™£æ³•äº†....ã€\n"
+      "ä¸€å¤§ç¾¤å±±è³Šä¸çŸ¥å¾é‚£å…’è·‘äº†å‡ºä¾†ï¼ŒæŠŠä½ åœ˜åœ˜åœä½... \n\n");
     set("party_num",4);
     command("party disband");
     command("party form");
@@ -153,17 +153,17 @@ int my_tactic()
      switch( query("party_num") ) {
      case 2:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸½áÁ½ÒÇÎ¢³¾Õó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçµå…©å„€å¾®å¡µé™£ã€!\n");
                command("embattle two at "+name); 
             return 0;
      case 3:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸½áÌìµØÈËÈı²ÅÕó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçµå¤©åœ°äººä¸‰æ‰é™£ã€!\n");
                command("embattle three at "+name);
             return 0;
      case 4:
                tell_room(environment(this_object()),
-                  C_NAME(this_object())+"ºÈµÀ:¡¸½áËÄÏóè¯çáÕó¡¹!\n");
+                  C_NAME(this_object())+"å–é“:ã€Œçµå››è±¡ç’‡ç’£é™£ã€!\n");
                command("embattle four at "+name);  
             return 0;
      default :
@@ -185,16 +185,16 @@ void die()
     ob1->move(environment(this_object()));
     ob1->set("owner",killer);
     tell_room(environment(this_object()),
-        C_NAME(this_object())+"Ğ¦µÀ:¡¸¹§Ï²Äã£¬ÄãÍ¨¹ıÁË×Ê¸ñµÄÕçÊÔ£¬ÎÒ¿ª¸öÖ¤Ã÷¸øÄã°É¡¹\n"
-        "ËµÍê£¬ÖìÎä´Ó»³ÖĞÃş³öÒ»ÕÅÖ½Æ¬£¬½»¸ø"+killer->query("c_name")+"\n\n");
+        C_NAME(this_object())+"ç¬‘é“:ã€Œæ­å–œä½ ï¼Œä½ é€šéäº†è³‡æ ¼çš„ç”„è©¦ï¼Œæˆ‘é–‹å€‹è­‰æ˜çµ¦ä½ å§ã€\n"
+        "èªªå®Œï¼Œæœ±æ­¦å¾æ‡·ä¸­æ‘¸å‡ºä¸€å¼µç´™ç‰‡ï¼Œäº¤çµ¦"+killer->query("c_name")+"\n\n");
     tell_room(environment(this_object()),
-        C_NAME(this_object())+"ÎŞÄÎµØÌ¾µÀ:¡¸Äã°ÑÎÒ´ò³ÉÕâÑù£¬ÎÒÒªÈ¥ĞİÏ¢ĞİÏ¢ÁË....¡¹\n");
+        C_NAME(this_object())+"ç„¡å¥ˆåœ°å˜†é“:ã€Œä½ æŠŠæˆ‘æ‰“æˆé€™æ¨£ï¼Œæˆ‘è¦å»ä¼‘æ¯ä¼‘æ¯äº†....ã€\n");
     }
     else {
     tell_room(environment(this_object()),
-    C_NAME(this_object())+"ºÈµÀ:¡¸¿ì½áÕó¡¹!\n\n\n");
+    C_NAME(this_object())+"å–é“:ã€Œå¿«çµé™£ã€!\n\n\n");
     tell_room(environment(this_object()),
-    C_NAME(this_object())+"Ì¾µÀ:¡¸Ôõ÷á¶¼ÅÜ¹âÁË? ÈıÊ®Áù¼Æ£¬»¹ÊÇ×ßÎªÉÏ²ß....¡¹\n");
+    C_NAME(this_object())+"å˜†é“:ã€Œæ€éº¼éƒ½è·‘å…‰äº†? ä¸‰åå…­è¨ˆï¼Œé‚„æ˜¯èµ°ç‚ºä¸Šç­–....ã€\n");
     }
     command("wave");
     command("drop all");

@@ -3,16 +3,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("lucky shoes", "ĞÒÔËĞ¬");
+        set_name("lucky shoes", "å¹¸é‹é‹");
         add( "id", ({ "boots","shoes" }) );
-        set_short( "ĞÒÔËĞ¬" );
+        set_short( "å¹¸é‹é‹" );
         set_long(
 @C_LONG
-ÕâÊÇÒ»Ë«ÄÜ´øÀ´ĞÒÔËµÄĞ¬×Ó¡£ÓÉ°×É«·«²¼Ï¸ÃÜµÄÖ¯³É£¬Ğ¬¸ú´¦ÓĞÒ»
-°ÑĞ¡µ¶µÄ±êÖ¾¡£
+é€™æ˜¯ä¸€é›™èƒ½å¸¶ä¾†å¹¸é‹çš„é‹å­ã€‚ç”±ç™½è‰²å¸†å¸ƒç´°å¯†çš„ç¹”æˆï¼Œé‹è·Ÿè™•æœ‰ä¸€
+æŠŠå°åˆ€çš„æ¨™èªŒã€‚
 C_LONG
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "cloth" );
         set( "armor_class", 6 );

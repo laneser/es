@@ -5,9 +5,9 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_c_open_long("ÎŞµ×´üÊÇ¡¸Î×ÏÌ¹ú¡¹µÄÌØ²úÖ®Ò»£¬¿ÉÒÔ×°ÎŞÊıµÄ¶«Î÷¡£\n");
-	set_name("bag", "ÎŞµ×´ü");
-	set_short("ÎŞµ×´ü");
+	set_c_open_long("ç„¡åº•è¢‹æ˜¯ã€Œå·«å’¸åœ‹ã€çš„ç‰¹ç”¢ä¹‹ä¸€ï¼Œå¯ä»¥è£ç„¡æ•¸çš„æ±è¥¿ã€‚\n");
+	set_name("bag", "ç„¡åº•è¢‹");
+	set_short("ç„¡åº•è¢‹");
 	set( "weight", 20);
  	set( "weight_apply", 50 );
         set( "max_load", 230 );

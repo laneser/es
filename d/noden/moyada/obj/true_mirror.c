@@ -4,18 +4,18 @@ inherit OBJECT;
 
 void create()
 {
-        set_name( "Mirror of True", "À­Ö®¾µ" );
+        set_name( "Mirror of True", "æ‹‰ä¹‹é¡" );
         add( "id", ({ "mirror" ,}) );
-        set_short("À­Ö®¾µ");
+        set_short("æ‹‰ä¹‹é¡");
         set_long(@CLONG
-Ò»ÃæÉÁÉÁ·¢ÁÁµÄ¾µ×Ó£¬¾ÝËµÄÜÓ³³öÒ»¸öÈËµÄÕæÃæÄ¿¡£
-Äã¿ÉÒÔÓÃËüÕÕ(show)¹ÖÎïÀ´Ê¶ÆÆËûµÄÎ±×°¡£
+ä¸€é¢é–ƒé–ƒç™¼äº®çš„é¡å­ï¼Œæ“šèªªèƒ½æ˜ å‡ºä¸€å€‹äººçš„çœŸé¢ç›®ã€‚
+ä½ å¯ä»¥ç”¨å®ƒç…§(show)æ€ªç‰©ä¾†è­˜ç ´ä»–çš„å½è£ã€‚
 CLONG
         );
         set("weight", 15 );
         set("no_sale",1);
         set("value", ({ 200 , "silver" }) );
-        set("unit", "Ãæ");
+        set("unit", "é¢");
 }           
 
 void init()
@@ -32,11 +32,11 @@ int to_show( string msg )
       return notify_fail("Show what to whom ??\n");
     ob = present( who, environment(this_player()) );
     if( !ob ) {
-      tell_object( this_player(), "ÕâÀïÃ»Õâ¸öÈË¡£\n");
+      tell_object( this_player(), "é€™è£¡æ²’é€™å€‹äººã€‚\n");
       return 1;
     }
     if( undefinedp(ob->change(ob, this_player())) )
       tell_object( this_player(), 
-        ob->query("c_name")+"Ëµ: Äã¸ÉÊ²÷á?\n" );
+        ob->query("c_name")+"èªª: ä½ å¹¹ä»€éº¼?\n" );
     return 1;
 }

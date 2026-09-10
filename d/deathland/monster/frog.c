@@ -9,22 +9,22 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name("frog", "ÇàÍÜ");
+	set_name("frog", "é’è›™");
 	add("id",({"frog"}));
-	set_short("A frog", "ÇàÍÜ");
+	set_short("A frog", "é’è›™");
 	set_long(
 	    "A frog is searching the fly to eat.",
-	    "Ò»Ö»ÕýÔÚÑ°ÕÒ²ÔÓ¬À´³ÔµÄÇàÍÜ.\n"
+	    "ä¸€éš»æ­£åœ¨å°‹æ‰¾è’¼è …ä¾†åƒçš„é’è›™.\n"
 	);
 	set("race","frog");
-	set("c_race","ÇàÍÜ");
-	set( "unit", "Ö»" );
+	set("c_race","é’è›™");
+	set( "unit", "åª" );
 	set( "alignment", -50 );
 	set_natural_weapon(5,2,7);
 	set_natural_armor(10,0);
 	set( "tactic_func", "emit_lick" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå" }) );
-	set_c_verbs( ({ "%sÕÅ¿ªËüµÄ´ó¿Ú£¬ÓÃËüµÄÉàÍ·Ïò%sÌòÈ¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”" }) );
+	set_c_verbs( ({ "%så¼µé–‹å®ƒçš„å¤§å£ï¼Œç”¨å®ƒçš„èˆŒé ­å‘%sèˆ”åŽ»" }) );
 }
 
 int emit_lick()
@@ -34,7 +34,7 @@ int emit_lick()
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
 	else {
 	  tell_room( environment(this_object()), 
-		  "ÕâÇàÍÜÌòµ½ÁËÄãµÄÁ³,ÈÃÄã¾õµÃÊ®·ÖÄÑÊÜ....\n"
+		  "é€™é’è›™èˆ”åˆ°äº†ä½ çš„è‡‰,è®“ä½ è¦ºå¾—ååˆ†é›£å—....\n"
 		  );
 	  victim->receive_damage(6+random(5));	
 	  report(this_object(),victim);

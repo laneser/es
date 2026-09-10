@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "fish sword", "Ãûµ¶Óã³Ğ" );
+        set_name( "fish sword", "ååˆ€é­šæ‰¿" );
         add( "id",({ "fish","sword" }) );
-        set_short( "fish sword", "Ãûµ¶Óã³Ğ" );
+        set_short( "fish sword", "ååˆ€é­šæ‰¿" );
         set_long(@ANGEL
-ÕâÊÇÒ»°ÑÓĞÃûµÄ¹Åµ¶Óã³Ğ,½£ÉíÉÏ»¹¿ÌÓĞÒ»Ö»ÓãµÄÍ¼°¸
+é€™æ˜¯ä¸€æŠŠæœ‰åçš„å¤åˆ€é­šæ‰¿,åŠèº«ä¸Šé‚„åˆ»æœ‰ä¸€éš»é­šçš„åœ–æ¡ˆ
 ANGEL
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 26 );
         set( "type", "longblade" );
         set( "min_damage", 15 );

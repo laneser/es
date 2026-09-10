@@ -40,34 +40,34 @@ int cast(int level, string target)
 	chinese_mode = can_read_chinese(me);
 	
 	if( (int)me->query_skill("green-magic") < query_need_skill(level) ) {
-		tell_object(me,set_color("ÄãµÄÂÌÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n","HIG"));
+		tell_object(me,set_color("ä½ çš„ç¶ é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n","HIG"));
 		return 0;
 	}
 	
 	  if( target=="NONE" && !(dest = me->query_attacker()) ) {
-	  write( "Òª¶ÔË­Ê©Õ¹»úÄÜÍ£Ö¹Êõ£¿\n");
+	  write( "è¦å°èª°æ–½å±•æ©Ÿèƒ½åœæ­¢è¡“ï¼Ÿ\n");
 	  return 0;
 	  } else {
 	  if( !dest ) 
 	  dest = present( target, environment(me) );
 	  if( !dest ) {
-	         write("ÄãµÄÄ¿±ê²¢²»ÔÚÕâÀï£¡\n");
+	         write("ä½ çš„ç›®æ¨™ä¸¦ä¸åœ¨é€™è£¡ï¼\n");
 	         return 0;
 	              }}                                       
 	    if( !living(dest) ) {
-	              write( "»úÄÜÍ£Ö¹ÊõµÄÄ¿±ê±ØÐëÊÇÉúÎï£¡\n");
+	              write( "æ©Ÿèƒ½åœæ­¢è¡“çš„ç›®æ¨™å¿…é ˆæ˜¯ç”Ÿç‰©ï¼\n");
 	                    return 0;
 	                        }
 	          if( dest->query("no_attack") ) {
-	                    write("Õâ¼Ò»ï²»ÄÜÉ±¡£\n");
+	                    write("é€™å‚¢ä¼™ä¸èƒ½æ®ºã€‚\n");
 	                    return 0;
 	                    }
 	          if( dest==me ) {
-	                    write("Äã¿ÉÒÔ´òsuicide ±È½ÏºÃ¡£\n");
+	                    write("ä½ å¯ä»¥æ‰“suicide æ¯”è¼ƒå¥½ã€‚\n");
 	                    return 0; 
 	                    } 
 	          if( dest->query_level()<5 ) {
-	                    write("ÐÂÊÖ»áËµÄãÃ»ÓÐÈËÇéÎ¶...\n");
+	                    write("æ–°æ‰‹æœƒèªªä½ æ²’æœ‰äººæƒ…å‘³...\n");
 	                    return 0;
 	                    }                       
 	if( me->query("npc") && me->query("magic_delay") )
@@ -76,18 +76,18 @@ int cast(int level, string target)
 	    delay_time = 3;
 	me->set("stop_attack",delay_time);
 	me->set_temp("cast_busy", 1);
-	tell_object(me,set_color("Äã¿ªÊ¼Ò÷ËÐÂÌÄ§·¨ÖÐ»úÄÜÍ£Ö¹ÊõµÄÖäÎÄ....¡£\n","HIG",me));
+	tell_object(me,set_color("ä½ é–‹å§‹åŸèª¦ç¶ é­”æ³•ä¸­æ©Ÿèƒ½åœæ­¢è¡“çš„å’’æ–‡....ã€‚\n","HIG",me));
 	tell_room( environment(me),
-		me->query("c_name") + "¿ªÊ¼Ò÷ËÐÂÌÄ§·¨ÖÐ»úÄÜÍ£Ö¹ÊõµÄÖäÎÄ....¡£\n",
+		me->query("c_name") + "é–‹å§‹åŸèª¦ç¶ é­”æ³•ä¸­æ©Ÿèƒ½åœæ­¢è¡“çš„å’’æ–‡....ã€‚\n",
 		me );
 	call_out( "effect", delay_time, level, me, dest );
 	if( !dest->query_attackers() &&
 	        (random(find_rate)<query_find_rate(me,dest)) ) {
 	        tell_object( me, dest->query("c_name")+
-                "·¢ÏÖÄã¶ÔËû²»»³ºÃÒâ¶ø¿ªÊ¼¹¥»÷Äã¡£\n" );
+                "ç™¼ç¾ä½ å°ä»–ä¸æ‡·å¥½æ„è€Œé–‹å§‹æ”»æ“Šä½ ã€‚\n" );
 	tell_room( environment(dest),
-	        dest->query("c_name")+"·¢ÏÖ"+me->query("c_name")+
-	        "¶ÔËû²»»³ºÃÒâ¶ø·¢¶¯¹¥»÷¡£\n", me
+	        dest->query("c_name")+"ç™¼ç¾"+me->query("c_name")+
+	        "å°ä»–ä¸æ‡·å¥½æ„è€Œç™¼å‹•æ”»æ“Šã€‚\n", me
 	        );
 	        dest->kill_ob(me);
 	        me->kill_ob(dest);
@@ -103,17 +103,17 @@ void effect(int level, object caster, object dest)
 	caster->set_temp("cast_busy", 0);
 	
 	if( !dest ) {
-	      tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­ËÀÁË¡£\n");
+	      tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“æ­»äº†ã€‚\n");
 	      return;
 	            }
 	if( !dest || !present(dest, environment(caster)) ) {
-	      tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­Àë¿ªÕâÀïÁË¡£\n");
+	      tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“é›¢é–‹é€™è£¡äº†ã€‚\n");
 	      return;
 	            }
 	tell_room( environment(dest),
-		"Ò»Ð©°µºìÉ«µÄ¹âÆø´Ó"+dest->query("c_name")+"ÉíÉÏÉýÆð£¬È»ááÖð½¥ÏûÊ§¡£\n",
+		"ä¸€äº›æš—ç´…è‰²çš„å…‰æ°£å¾ž"+dest->query("c_name")+"èº«ä¸Šå‡èµ·ï¼Œç„¶å¾Œé€æ¼¸æ¶ˆå¤±ã€‚\n",
 		dest );
-	tell_object( dest,"ÄãÍ»È»ÓÐÒ»ÖÖÆæ¹ÖµÄ¸Ð¾õ£¬ºÃÏñÊÇÍ»È»Ê§È¥ÁËËùÓÐµÄÉúÃüÁ¦\n",dest );	
+	tell_object( dest,"ä½ çªç„¶æœ‰ä¸€ç¨®å¥‡æ€ªçš„æ„Ÿè¦ºï¼Œå¥½åƒæ˜¯çªç„¶å¤±åŽ»äº†æ‰€æœ‰çš„ç”Ÿå‘½åŠ›\n",dest );	
 		dest->set_temp("stop_heal_hp",1);
 		dest->set_temp("stop_heal_tp",1);
 		dest->set_temp("stop_heal_sp",1);
@@ -127,7 +127,7 @@ void expire( object dest )
 {
     if( !dest ) return;
 	tell_object( dest,
-		"Äã¾õµÃÈ«ÉíÒ»ÕóÊæ³©£¬ÉíÌå¸÷²¿ºÃÏñÓÖ¿ªÊ¼ÔË×÷ÆðÀ´..¡£\n"
+		"ä½ è¦ºå¾—å…¨èº«ä¸€é™£èˆ’æš¢ï¼Œèº«é«”å„éƒ¨å¥½åƒåˆé–‹å§‹é‹ä½œèµ·ä¾†..ã€‚\n"
     );
                  dest->set_temp("stop_heal_hp",0);
                  dest->set_temp("stop_heal_tp",0);

@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "crimson scepter", "È¨ÕÈ" );
+	set_name( "crimson scepter", "æ¬Šæ–" );
 	add( "id", ({ "mace","scepter" }) );
-	set_short( "ÏÊºìÉ«È¨ÕÈ" );
+	set_short( "é®®ç´…è‰²æ¬Šæ–" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÏÊºìÉ«µÄÈ¨ÕÈ£¬ËüµÄÄ©¶ËÖýÖøÒ»¸öÓÐÖøÈýÖ»ê÷½Ç¶ñÄ§µÄÍ·¡£\n" );
-	set( "unit", "°Ñ" );
+		"é€™æ˜¯ä¸€æŠŠé®®ç´…è‰²çš„æ¬Šæ–ï¼Œå®ƒçš„æœ«ç«¯é‘„è‘—ä¸€å€‹æœ‰è‘—ä¸‰éš»çŠ„è§’æƒ¡é­”çš„é ­ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "blunt" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 150 );
@@ -30,16 +30,16 @@ int weapon_hit( object victim, int damage )
 	sp = owner->query("spell_points");
 	if( random(intelligence)>19 && sp > 5 ) {
 		tell_object( owner, 
-			"\nÄãµÄÏÊºìÉ«È¨ÕÈÉÏµÄ¶ñÄ§Í·Í»È»Õö¿ªÑÛ¾¦£¬´Ó"+victim->query("c_name")+
-			"ÉíÉÏÒ§ÏÂÒ»¿éÑªÁÜÁÜµÄÈâ£¡\nÄã¾õµÃÒ»¹ÉÁ¦Á¿´ÓÈ¨ÕÈÉÏ×¢ÈëÄãµÄÌåÄÚ....\n\n"
+			"\nä½ çš„é®®ç´…è‰²æ¬Šæ–ä¸Šçš„æƒ¡é­”é ­çªç„¶çœé–‹çœ¼ç›ï¼Œå¾ž"+victim->query("c_name")+
+			"èº«ä¸Šå’¬ä¸‹ä¸€å¡Šè¡€æ·‹æ·‹çš„è‚‰ï¼\nä½ è¦ºå¾—ä¸€è‚¡åŠ›é‡å¾žæ¬Šæ–ä¸Šæ³¨å…¥ä½ çš„é«”å…§....\n\n"
 			);
 		tell_object( victim, 
-			owner->query("c_name") + "µÄÏÊºìÉ«È¨ÕÈÉÏµÄ¶ñÄ§Í·Í»È»Õö¿ªÑÛ¾¦£¬²¢ÇÒÒ»¿Ú´ÓÄãÉíÉÏÒ§ÏÂÒ»¿éÑªÁÜ\n"
-			"ÁÜµÄÈâ£¡\n"
+			owner->query("c_name") + "çš„é®®ç´…è‰²æ¬Šæ–ä¸Šçš„æƒ¡é­”é ­çªç„¶çœé–‹çœ¼ç›ï¼Œä¸¦ä¸”ä¸€å£å¾žä½ èº«ä¸Šå’¬ä¸‹ä¸€å¡Šè¡€æ·‹\n"
+			"æ·‹çš„è‚‰ï¼\n"
                         );
        		tell_room( environment(owner),
-			owner->query("c_name") + "µÄÏÊºìÉ«È¨ÕÈÉÏµÄ¶ñÄ§Í·Í»È»Õö¿ªÑÛ¾¦£¬²¢ÇÒ´Ó"
-			+ victim->query("c_name") + "ÉíÉÏÒ§ÏÂÒ»¿éÑªÁÜÁÜµÄÈâ£¡\n"
+			owner->query("c_name") + "çš„é®®ç´…è‰²æ¬Šæ–ä¸Šçš„æƒ¡é­”é ­çªç„¶çœé–‹çœ¼ç›ï¼Œä¸¦ä¸”å¾ž"
+			+ victim->query("c_name") + "èº«ä¸Šå’¬ä¸‹ä¸€å¡Šè¡€æ·‹æ·‹çš„è‚‰ï¼\n"
 			,({ victim, owner }) );
 		victim->receive_special_damage( "evil", intelligence );
 		owner->receive_healing( intelligence );

@@ -513,3 +513,15 @@ d/noden/hawk/hawk.h line 5: Warning: redefinition of #define WEAPON
 
 d/noden/hawk/hawk.h line 6: Warning: redefinition of #define ARMOR
 
+/d/noden/farwind/monster/traveller.c:3:9: warning: Redeclaration of global variable 'alias'.
+    3 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+/d/noden/farwind/monster/shopowner.c:3:9: warning: Redeclaration of global variable 'alias'.
+    3 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^

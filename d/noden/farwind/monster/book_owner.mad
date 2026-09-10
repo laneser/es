@@ -8,22 +8,22 @@ void create()
 {
         ::create();
         set_level( 10 );
-        set_name( "book shop owner", "����ϰ�" );
+        set_name( "book shop owner", "書店老闆" );
         add( "id", ({ "owner" }) );
-        set_short( "the book shop owner", "����ϰ�" );
+        set_short( "the book shop owner", "書店老闆" );
    set_long( @LONG
-�����ϰ���Լ��ʮ, ��������ʱ����־Ҫ��Ϊѧ��, ��ȴ�����
-���Ѷ�δ����Ը--����Լ�ʮ��Ļ���˴˼���ꡣ
+書店的老闆年約五十, 他在青年時曾立志要成為學者, 但卻因機運
+不佳而未能如願--因此以幾十年的積蓄開了此間書店。
 LONG
         );
         set( "no_attack", 1 );
         set( "gender", "male" );
 	set( "inquiry", ([
 		"sexstory" : @SEXSTORY
-���ð�...:) 
+不好吧...:) 
 SEXSTORY
 		,"lost"   : @SECRET
-���û���ˣ�����Ҫ��һ��
+最近沒書了，可能要等一等
 SECRET
  ]) );
 

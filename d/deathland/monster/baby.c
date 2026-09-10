@@ -7,17 +7,17 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "Dwarf baby", "°«ÈËÓ¤º¢" );
+	set_name( "Dwarf baby", "çŸ®äººå¬°å­©" );
 	add ("id", ({ "baby", "dwarf", }) );
-	set_short( "Dwarf baby", "°«ÈËÓ¤º¢" );
+	set_short( "Dwarf baby", "çŸ®äººå¬°å­©" );
 	set_long(
 	" a crying baby.\n",
-    "Ò»¸ößÉßÉ´ó¿ŞµÄĞ¡Ó¤¶ù.\n"
+    "ä¸€å€‹å‘±å‘±å¤§å“­çš„å°å¬°å…’.\n"
     );
     set( "alignment",10);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "kar", 3 );
 	set ("natural_weapon_class1", 3);
 	set ("natural_armor_class", 7);

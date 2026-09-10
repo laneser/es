@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cloak of Wing race", "´óÊ×ÁìÅû·ç");
+        set_name("cloak of Wing race", "å¤§é¦–é ˜æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short( "´óÊ×ÁìÅû·ç");
+        set_short( "å¤§é¦–é ˜æŠ«é¢¨");
         set_long(@C_LONG
-ÕâÊÇÒ»¼şÓÉÇ§Äê²ÏË¿·ìÖÆ³ÉµÄ¶·Åî£¬ÊÖ¹¤Ï¸ÖÂ£¬²»µ«Í¨·ç£¬´©ÆğÀ´Òà¶¬Å¯ÏÄÁ¹£¬Êæ
-ÊÊ¼«ÁË¡£
+é€™æ˜¯ä¸€ä»¶ç”±åƒå¹´è ¶çµ²ç¸«è£½æˆçš„é¬¥è“¬ï¼Œæ‰‹å·¥ç´°ç·»ï¼Œä¸ä½†é€šé¢¨ï¼Œç©¿èµ·ä¾†äº¦å†¬æš–å¤æ¶¼ï¼Œèˆ’
+é©æ¥µäº†ã€‚
 C_LONG
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set("type", "cloak" );
         set("material","cloth") ;
         set( "armor_class",7 );

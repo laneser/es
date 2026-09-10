@@ -5,9 +5,9 @@ int help();
 make_hurt(object me, object target, object weapon);
 int result(object me,object target,object weapon,int succeed);
 /* return value : 
-   0 : Ê§°Ü
-   1 : Ò»°ã
-   2 ÒÔÉÏ : special 
+   0 : å¤±æ•—
+   1 : ä¸€èˆ¬
+   2 ä»¥ä¸Š : special 
  */
 int check_throw(object me,object target)
 {
@@ -74,27 +74,27 @@ int cmd_throw(string arg)
 
 	me = this_player();
 	if ( (int)me->query_temp("throwing") == 1 )
-		return notify_fail("ÄãÊÖÉÏµÄ·Éµ¶»¹Ã»Éä³öÈ¥£¬¼±Ê²÷á¡£\n");
-	if ( ! arg ) return notify_fail("ÄãÒªÍ¶ÖÀÊ²÷á?\n");
+		return notify_fail("ä½ æ‰‹ä¸Šçš„é£›åˆ€é‚„æ²’å°„å‡ºåŽ»ï¼Œæ€¥ä»€éº¼ã€‚\n");
+	if ( ! arg ) return notify_fail("ä½ è¦æŠ•æ“²ä»€éº¼?\n");
 	if ( sscanf( arg,"%s at %s",tmp1,tmp2) != 2 ) return 0;
 	if ( ! target = present(tmp2,(env=environment(me))))
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð"+tmp2+"µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+tmp2+"çš„ç”Ÿç‰©ã€‚\n");
 	if ( ! living(target) )
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð"+tmp2+"µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+tmp2+"çš„ç”Ÿç‰©ã€‚\n");
 	if ( ! (weapon = present(tmp1,me)) )
-		return notify_fail("ÄãÃ»ÓÐ´øÖø½Ð"+tmp1+"µÄ¶«¶«¡£\n");
+		return notify_fail("ä½ æ²’æœ‰å¸¶è‘—å«"+tmp1+"çš„æ±æ±ã€‚\n");
 	if ( target == me )
-		return notify_fail("Äã²»»áÆ´suicideÂð?\n");
+		return notify_fail("ä½ ä¸æœƒæ‹¼suicideå—Ž?\n");
 	if ( target->query("no_attack") )
-		return notify_fail("Äã²»ÄÜ¹¥»÷Ëû¡£\n");
-// ²»ÄÜÉä invisible µÄ player
+		return notify_fail("ä½ ä¸èƒ½æ”»æ“Šä»–ã€‚\n");
+// ä¸èƒ½å°„ invisible çš„ player
 	if(!visible(target,me)||target->query("invisible_player") ) 
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð"+tmp2+"µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+tmp2+"çš„ç”Ÿç‰©ã€‚\n");
 	if ( weapon && ( (string )weapon->query("type") != "dagger" || weapon->query("prevent_drop") || weapon->query("wielded") || weapon->query("equipped")))
-		return notify_fail("Õâ¼þ¶«Î÷²»ÄÜµ±·Éµ¶..\n");
+		return notify_fail("é€™ä»¶æ±è¥¿ä¸èƒ½ç•¶é£›åˆ€..\n");
 
 	me->set_temp("throwing",1);
-	tell_object( me,sprintf("Äã°µÖÐÄÃÁËÒ»%s%s, µÈ´ýÊÊµ±µÄ»ú»á..\n",weapon->query("unit"),weapon->query("c_name")) );
+	tell_object( me,sprintf("ä½ æš—ä¸­æ‹¿äº†ä¸€%s%s, ç­‰å¾…é©ç•¶çš„æ©Ÿæœƒ..\n",weapon->query("unit"),weapon->query("c_name")) );
 	call_out("result",1,me,target,weapon,check_throw(this_player(),target) );
 
 	return 1;
@@ -108,11 +108,11 @@ int result(object me,object target,object weapon,int succeed)
 	me->set_temp("throwing",0);
 	env = environment(me);
 	if ( ! target || nullp(target) || target->query("hit_points") < 1 ) {
-		write("ÄÇ¼Ò»ïÒÑ¾­ËÀÁË¡£\n");
+		write("é‚£å‚¢ä¼™å·²ç¶“æ­»äº†ã€‚\n");
 		return 1;
 	}
 	if ( !present(target,env) ) {
-		write(sprintf("%sÒÑ¾­Áï×ßÁË!!\n",target->query("c_name")));
+		write(sprintf("%så·²ç¶“æºœèµ°äº†!!\n",target->query("c_name")));
 		return 1;
 	}
 /*
@@ -123,44 +123,44 @@ int result(object me,object target,object weapon,int succeed)
 	    case 4 :
 	    case 5 :
 	    default :
-		message = "%sÃþ³öÒ»"+weapon->query("unit")+weapon->query("c_name")+", ßÝµÄÒ»ÉùÉäÏò%s, ½á¹û%s!!\n";
+		message = "%sæ‘¸å‡ºä¸€"+weapon->query("unit")+weapon->query("c_name")+", å’»çš„ä¸€è²å°„å‘%s, çµæžœ%s!!\n";
 		tell_room(env,set_color(
-		  sprintf(message,me->query("c_name"),target->query("c_name"),"Ã»ÖÐ"),"HIY",me),({me,target}));
+		  sprintf(message,me->query("c_name"),target->query("c_name"),"æ²’ä¸­"),"HIY",me),({me,target}));
 		tell_object(target,set_color(
-		  sprintf(message,me->query("c_name"),"Äã","±»ÄãÉÁ¹ýÁË"),"HIR",target));
+		  sprintf(message,me->query("c_name"),"ä½ ","è¢«ä½ é–ƒéŽäº†"),"HIR",target));
 
 		tell_object(me,
-		sprintf(message,"Äã",target->query("c_name"),"Ã»ÖÐ"));
+		sprintf(message,"ä½ ",target->query("c_name"),"æ²’ä¸­"));
 		weapon->move(env);
 	}
 */
 
 	if ( succeed ) {
 		tell_room( environment(me),
-		set_color(sprintf("\n%sÃþ³öÒ»%s%s, ßÝµÄÒ»ÉùÉäÖÐÁË%s!!\n",
+		set_color(sprintf("\n%sæ‘¸å‡ºä¸€%s%s, å’»çš„ä¸€è²å°„ä¸­äº†%s!!\n",
 		me->query("c_name"),weapon->query("unit"),weapon->query("c_name"),target->query("c_name")),"HIY"),
 		({me,target}),
 		);
-		tell_object(target,sprintf("%s Éä³ö°µÆ÷, Äã¾õµÃ²»Ãî!! \n",me->query("c_name")) );
-		tell_object(me,sprintf("%sÒ»¸ö²»ÁôÒâ, ÖÐÁËÄãµÄ°µÆ÷!\n",target->query("c_name")));
+		tell_object(target,sprintf("%s å°„å‡ºæš—å™¨, ä½ è¦ºå¾—ä¸å¦™!! \n",me->query("c_name")) );
+		tell_object(me,sprintf("%sä¸€å€‹ä¸ç•™æ„, ä¸­äº†ä½ çš„æš—å™¨!\n",target->query("c_name")));
 		dam=make_hurt(this_player(),target,weapon);
 		weapon->move(target);
 	} else {
 		tell_room(env,
-		set_color(sprintf("%sÃþ³öÒ»%s%s, ßÝµÄÒ»ÉùÉäÏò%s, ½á¹ûÃ»ÖÐ.\n",
+		set_color(sprintf("%sæ‘¸å‡ºä¸€%s%s, å’»çš„ä¸€è²å°„å‘%s, çµæžœæ²’ä¸­.\n",
 		me->query("c_name"),weapon->query("unit"),weapon->query("c_name"),target->query("c_name")),"HIY"),
 		({me,target})
 		);
-		tell_object(target,sprintf("%sÉä³öÒ»°Ñ·Éµ¶, ½á¹û±»ÄãÉÁ¹ýÁË¡£\n",me->query("c_name")));
+		tell_object(target,sprintf("%så°„å‡ºä¸€æŠŠé£›åˆ€, çµæžœè¢«ä½ é–ƒéŽäº†ã€‚\n",me->query("c_name")));
 		tell_object(me,
-		sprintf("ÄãÉä³öÒ»°Ñ·Éµ¶, ½á¹û±»%sÉÁ¹ýÁË! %sµôÔÚµØÉÏ...\n",target->query("c_name"),weapon->query("c_name")) );
+		sprintf("ä½ å°„å‡ºä¸€æŠŠé£›åˆ€, çµæžœè¢«%sé–ƒéŽäº†! %sæŽ‰åœ¨åœ°ä¸Š...\n",target->query("c_name"),weapon->query("c_name")) );
 		weapon->move(env);
 	}
 
 
 	if ( ! target->query_attackers() || member_array(me,target->query_attackers()) == -1 ) {
 		tell_object(me,
-		sprintf("%sº°µÀ : %sÄãÕâ¸öÐ¡ÈË, ÒªÎÒµÄÃü¾ÍÀ´ÄÃ°É !\n",target->query("c_name"),me->query("c_name")));
+		sprintf("%så–Šé“ : %sä½ é€™å€‹å°äºº, è¦æˆ‘çš„å‘½å°±ä¾†æ‹¿å§ !\n",target->query("c_name"),me->query("c_name")));
 	}
 	target->kill_ob(me);
 	calc_exp(me,dam);
@@ -186,9 +186,9 @@ make_hurt(object me, object target, object weapon)
 		if ( wizardp(me)) 
 			tell_object(me,"dam = "+dam+ " exp = "+exp+"\n");	
      		msg = "/adm/daemons/statsd"->status_string(target) ;
-		tell_object(target,sprintf("( Äã%s )\n",msg));
+		tell_object(target,sprintf("( ä½ %s )\n",msg));
 		tell_object(me,sprintf("( %s%s )\n",target->query("c_name"),msg));
-    	} else { /* ¶¾µ¶ */
+    	} else { /* æ¯’åˆ€ */
 	}
 	return dam;
 }
@@ -198,10 +198,10 @@ int help()
 	write (@HELP
 Usage: throw <weapon> at <target>
 
-Éä·Éµ¶¾ÍÊÇÉä³öÒ»°ÑÐ¡µ¶£¬³ÃÖøµÐÈË²»Ð¡ÐÄµÄÊ±ºòÈÃËûÖÐ±êÊÜÉË£¬
-ÕâÖÖ·Éµ¶µÄºÃ´¦ÓÐÁ½¸ö£¬Ò»À´ÈÝÒ×È¡µÃ£¬¶þÀ´Èç¹û³É\¹¦»¹¿ÉÒÔ»ØÊÕ£¬
-µ±È»ÊÇ´ÓµÐÈËµÄ¡õÌåÉÏ°Î»ØÀ´¡£·Éµ¶µÄÖÖÀàµ±È»ÊÇØ°Ê×ÀàµÈÇáÇÉµÄ
-ÎäÆ÷¡£
+å°„é£›åˆ€å°±æ˜¯å°„å‡ºä¸€æŠŠå°åˆ€ï¼Œè¶è‘—æ•µäººä¸å°å¿ƒçš„æ™‚å€™è®“ä»–ä¸­æ¨™å—å‚·ï¼Œ
+é€™ç¨®é£›åˆ€çš„å¥½è™•æœ‰å…©å€‹ï¼Œä¸€ä¾†å®¹æ˜“å–å¾—ï¼ŒäºŒä¾†å¦‚æžœæˆåŠŸé‚„å¯ä»¥å›žæ”¶ï¼Œ
+ç•¶ç„¶æ˜¯å¾žæ•µäººçš„â–¡é«”ä¸Šæ‹”å›žä¾†ã€‚é£›åˆ€çš„ç¨®é¡žç•¶ç„¶æ˜¯åŒ•é¦–é¡žç­‰è¼•å·§çš„
+æ­¦å™¨ã€‚
 HELP
 );
 	return 1;

@@ -1,95 +1,95 @@
 #d/scholar/scholar/scholar_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Scholar's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÊéÉúÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Scholar's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"æ›¸ç”Ÿç•™è¨€æ¿",])
 messages ({(["id":46,"title":"about monk","body":"1. monk still in test, not open yet
-2. ÎÒÊÔ¹ıÁË! 4 sp.. plaster and 4 potions.. ha.. ¿´ÄãÈçºÎ´ò! i dono
-3. do u train unknow to 30? and had the best weapon that u can wield.. ÄãÁ·¹ıÂğ? if no.. ÄãÎŞÈ¨Ëµ scholar ¶àÇ¿!
+2. æˆ‘è©¦éäº†! 4 sp.. plaster and 4 potions.. ha.. çœ‹ä½ å¦‚ä½•æ‰“! i dono
+3. do u train unknow to 30? and had the best weapon that u can wield.. ä½ ç·´éå—? if no.. ä½ ç„¡æ¬Šèªª scholar å¤šå¼·!
 
-gnome elder use spells, ¹¥»÷Á¦»¹²»²î. ¶Ô¸ºËü ÓĞºÜ¶àµÄ·½·¨..
+gnome elder use spells, æ”»æ“ŠåŠ›é‚„ä¸å·®. å°è² å®ƒ æœ‰å¾ˆå¤šçš„æ–¹æ³•..
 
-cool µÄ72 ¾ø¼¼Á·µ½100 ¶øÄãÄØ? 
-ËûÒ»¶¨ÄÜÔÙ´òÒ»´ÎÂğ?
-ÎÒµÄ¹Û²ìºÍËüËµµÄ²»Í¬.. and Äã½ĞËümonk guild open ááÔÙ´ò´ò¿´°É!
-ÎÒÊÇÑ§¿ÆÑ§µÄ! sorry ÄãµÄÖ¸¿Ø(a example.. just he said.. ) ÎÒÎŞ·¨ÈÏÍ¬!
+cool çš„72 çµ•æŠ€ç·´åˆ°100 è€Œä½ å‘¢? 
+ä»–ä¸€å®šèƒ½å†æ‰“ä¸€æ¬¡å—?
+æˆ‘çš„è§€å¯Ÿå’Œå®ƒèªªçš„ä¸åŒ.. and ä½ å«å®ƒmonk guild open å¾Œå†æ‰“æ‰“çœ‹å§!
+æˆ‘æ˜¯å­¸ç§‘å­¸çš„! sorry ä½ çš„æŒ‡æ§(a example.. just he said.. ) æˆ‘ç„¡æ³•èªåŒ!
 if i said i can use a knight, kill elder .. do u believe me?
 
-monk µÄ²ÎÊıÎÒµ÷ÁË²»ÏÂ°Ù±é, now player is 40 monk has 6 person.. monk good? why so few monk?
+monk çš„åƒæ•¸æˆ‘èª¿äº†ä¸ä¸‹ç™¾é, now player is 40 monk has 6 person.. monk good? why so few monk?
 i see 20/50 healer before....
-( sorry ÎÒÕâÖÖ½²·¨Ò²²»¿ÆÑ§ sorry)
+( sorry æˆ‘é€™ç¨®è¬›æ³•ä¹Ÿä¸ç§‘å­¸ sorry)
 
 what i want to said is....
-1. ÄãµÄÖ¸¿ØÌ«Æ¬Ãæ ²»¿ÆÑ§... ÎÒ²»ÒÔÎªÈ»!
-2. now is test time. monk is a new guild, ÎÒ²»¶ÏÔÚĞŞÕıËü
-   ÔÚ¹¦\ÄÜÉÏËü»¹Ëã³ÉÊì Éè¶¨ÉÏÎÒÔøpost in bbs ÖÁì¶Ç¿¶È
-ÎÒ±£Ö¤open ááµÄÇé¿ö»áÎÈ¶¨ ÖÁì¶ÕâĞ©ÈÕ×Ó Ëü²»¶ÏÔÚµ÷ÕûÖĞ ¶àÇëº£º­
-3. u r not ²ÎÊıÈ«Âú level 30 ¶øÇÒ°Ù·ÖÖ®°Ù·¢»Óscholar power's player ´Ë¿ÌÂÛ¶Î(¶Ï)...
-4. if u say gnome elder ÎÒÒ²ÄÜÕÒµ½¸ömob monk É±²»Ì«µôµÄ! :p
+1. ä½ çš„æŒ‡æ§å¤ªç‰‡é¢ ä¸ç§‘å­¸... æˆ‘ä¸ä»¥ç‚ºç„¶!
+2. now is test time. monk is a new guild, æˆ‘ä¸æ–·åœ¨ä¿®æ­£å®ƒ
+   åœ¨åŠŸèƒ½ä¸Šå®ƒé‚„ç®—æˆç†Ÿ è¨­å®šä¸Šæˆ‘æ›¾post in bbs è‡³æ–¼å¼·åº¦
+æˆ‘ä¿è­‰open å¾Œçš„æƒ…æ³æœƒç©©å®š è‡³æ–¼é€™äº›æ—¥å­ å®ƒä¸æ–·åœ¨èª¿æ•´ä¸­ å¤šè«‹æµ·æ¶µ
+3. u r not åƒæ•¸å…¨æ»¿ level 30 è€Œä¸”ç™¾åˆ†ä¹‹ç™¾ç™¼æ®scholar power's player æ­¤åˆ»è«–æ®µ(æ–·)...
+4. if u say gnome elder æˆ‘ä¹Ÿèƒ½æ‰¾åˆ°å€‹mob monk æ®ºä¸å¤ªæ‰çš„! :p
 
-5. ÎÒÁË½âscholar Ê§È¥unknow µÄÍ´¿à ÎÒÔÚbbs ÉÏÌ¸¹ıÎÒµÄ¿´·¨!
-knight mage monk [D(²ÎÊıµ÷ÕûÖĞ) ´óÖÂÉè¶¨¿É¿ª·ÅÁË µ«scholar ÎÒÄ¿Ç°²»ÈÏÎªËüÍêÕû
+5. æˆ‘ç­è§£scholar å¤±å»unknow çš„ç—›è‹¦ æˆ‘åœ¨bbs ä¸Šè«‡éæˆ‘çš„çœ‹æ³•!
+knight mage monk [D(åƒæ•¸èª¿æ•´ä¸­) å¤§è‡´è¨­å®šå¯é–‹æ”¾äº† ä½†scholar æˆ‘ç›®å‰ä¸èªç‚ºå®ƒå®Œæ•´
 Knight use all armor weapons, mage use spells, monk use gonfu
-µ«scholar µÄÌØÉ« ËÆºõ»¹²»¹»Ç¿ Èç¹ûÄãÃÇÓĞ±çÊı ÒõÑôÑ§ Õó·¨(kitten now make it) ÄÇ²ÅÏñÊéÉú
-ÏÖÔÚµÄÊéÉúÖ»ÊÇ´óÔÓëÚ.. :P
-annihilator Ğï]Ğí\ÊéÉú¹«»á¸Ã¹ØÃÅĞŞºÃÔÙopen.. sorry i say so.. ÎÒ¸öÈËÒÔÎª´Ë...
-ÎÒÊÇ×ömonk guildÃ»´í µ«ÎÒ²»»áÏ£Íûmonk ºÃ... Ò»¾ä»° ¸ÃÓĞµÄÓĞ ÌØÉ«Ç¿ ÓĞĞÔ¸öµÄ¹«»á±ãÊÇÎÒĞÀÉÍµÄ¹«»á monk Ò²»¹ÔÚÆğ²½ ÎÒ¸øËü60 °É!....
-ÎÒÎŞÈ¨¹ıÎÊscholar guild, ÆäÊµºÜ¶àÎ×Ê¦, layuter, kyoko ¶¼ÔÚ²¹ scholar guild µÄ¶´... Ò»¸öopen µÄ¹«»á ÔÚopen Ò»Äêáá»¹Òª´óĞŞ ÕæÊÇºÜÎŞÄÎ!
-ÎÒ½öÒÔ¸öÈËÁ¢³¡Ïò´ó¼ÒÊéÉúÃÇÖÂÇ¸! µ«ÎÒÎŞÈ¨ÎªÄãÃÇ×öÊ²÷á! sorry all scholar...
+ä½†scholar çš„ç‰¹è‰² ä¼¼ä¹é‚„ä¸å¤ å¼· å¦‚æœä½ å€‘æœ‰è¾¯æ•¸ é™°é™½å­¸ é™£æ³•(kitten now make it) é‚£æ‰åƒæ›¸ç”Ÿ
+ç¾åœ¨çš„æ›¸ç”Ÿåªæ˜¯å¤§é›œè†¾.. :P
+annihilator é…—]è¨±æ›¸ç”Ÿå…¬æœƒè©²é—œé–€ä¿®å¥½å†open.. sorry i say so.. æˆ‘å€‹äººä»¥ç‚ºæ­¤...
+æˆ‘æ˜¯åšmonk guildæ²’éŒ¯ ä½†æˆ‘ä¸æœƒå¸Œæœ›monk å¥½... ä¸€å¥è©± è©²æœ‰çš„æœ‰ ç‰¹è‰²å¼· æœ‰æ€§å€‹çš„å…¬æœƒä¾¿æ˜¯æˆ‘æ¬£è³çš„å…¬æœƒ monk ä¹Ÿé‚„åœ¨èµ·æ­¥ æˆ‘çµ¦å®ƒ60 å§!....
+æˆ‘ç„¡æ¬Šéå•scholar guild, å…¶å¯¦å¾ˆå¤šå·«å¸«, layuter, kyoko éƒ½åœ¨è£œ scholar guild çš„æ´... ä¸€å€‹open çš„å…¬æœƒ åœ¨open ä¸€å¹´å¾Œé‚„è¦å¤§ä¿® çœŸæ˜¯å¾ˆç„¡å¥ˆ!
+æˆ‘åƒ…ä»¥å€‹äººç«‹å ´å‘å¤§å®¶æ›¸ç”Ÿå€‘è‡´æ­‰! ä½†æˆ‘ç„¡æ¬Šç‚ºä½ å€‘åšä»€éº¼! sorry all scholar...
 
 angel
 ","time":781986960,"poster":"Angel",]),(["id":47,"title":"< no title >","body":"see ur skills
-È¥µô Â×Àí(100% see mob's ÕóÓª? :p) ±èÊõ(100)
-Õ¼ÆÕ ÒõÑôÑ§(Õó·¨?)
-ÄãÃÇÏñ²»Ïñ Knight, healer and Monk µÄËõĞ¡×ÛºÏ°æ?
-ÆäÊ±ÊéÉú±¾¾ÍÊÇÑù''ÑùÍ¨ ÑùÑùËÉ skill ²¢Ã»´í!
-Ö»ÊÇÌØÉ«²»Ã÷ÏÕÏÔ(»¹Ã»×öºÃ)
-Kyoko Ò»¸öÉñ(Ò²ÊÇ¸öÈË°¡)»¹ÒªÃ¦ÊéÉú¹«»á Äã»¹ÄÜÈçºÎ?
-Annihilator Ã¦system and Knight guild
-echobomber ±ÏÒµÁË»¹ÔÚÃ¦ ĞŞĞŞdeathland
-Ruby Ã¦¹ı cemote µ¥ÈË×ö¹ÅÃ· ºÍÎÒ×öÉÙÁÖ(Ëı×öµÄ¶à¹ıÎÒÀ²!)
-Kitten ĞŞbug, ¸Ä ×°±¸martial
-elon ×ötranslate
-angel ĞÂ½¨monk guild (kyoko help me much , and also ruby)
-indra ĞŞ½¨ asterism(?) ³Ç
-ÆäËüĞ¡µÄĞ¡ Ã¦µÄÃ¦(Î´ÁĞÈëÕßsorry ÎÒ¼ÇĞÔ²»Ì«ºÃ) these seem all wiz ½×¼¶´óì¶ Ò»°ãÎ×Ê¦ ¶ù
-¶øÎÒ»¹ÄÜ³£¿´µ½µÄ!
-ÊéÉú¹¤»áÒªÈË×ö µ«ÎÒÃÇÄ¾Ç°Ã»ÈËÊÖ°¡!:P
+å»æ‰ å€«ç†(100% see mob's é™£ç‡Ÿ? :p) è¾®è¡“(100)
+ä½”æ™® é™°é™½å­¸(é™£æ³•?)
+ä½ å€‘åƒä¸åƒ Knight, healer and Monk çš„ç¸®å°ç¶œåˆç‰ˆ?
+å…¶æ™‚æ›¸ç”Ÿæœ¬å°±æ˜¯æ¨£''æ¨£é€š æ¨£æ¨£æ¾ skill ä¸¦æ²’éŒ¯!
+åªæ˜¯ç‰¹è‰²ä¸æ˜éšªé¡¯(é‚„æ²’åšå¥½)
+Kyoko ä¸€å€‹ç¥(ä¹Ÿæ˜¯å€‹äººå•Š)é‚„è¦å¿™æ›¸ç”Ÿå…¬æœƒ ä½ é‚„èƒ½å¦‚ä½•?
+Annihilator å¿™system and Knight guild
+echobomber ç•¢æ¥­äº†é‚„åœ¨å¿™ ä¿®ä¿®deathland
+Ruby å¿™é cemote å–®äººåšå¤æ¢… å’Œæˆ‘åšå°‘æ—(å¥¹åšçš„å¤šéæˆ‘å•¦!)
+Kitten ä¿®bug, æ”¹ è£å‚™martial
+elon åštranslate
+angel æ–°å»ºmonk guild (kyoko help me much , and also ruby)
+indra ä¿®å»º asterism(?) åŸ
+å…¶å®ƒå°çš„å° å¿™çš„å¿™(æœªåˆ—å…¥è€…sorry æˆ‘è¨˜æ€§ä¸å¤ªå¥½) these seem all wiz éšç´šå¤§æ–¼ ä¸€èˆ¬å·«å¸« å…’
+è€Œæˆ‘é‚„èƒ½å¸¸çœ‹åˆ°çš„!
+æ›¸ç”Ÿå·¥æœƒè¦äººåš ä½†æˆ‘å€‘æœ¨å‰æ²’äººæ‰‹å•Š!:P
 how can i do? :P
-ËùÒÔÀ²! ÒªËµ±§Ç¸ ÒªÇë¶à¶à°üº­! :p
-that is my Ë½ÈËÒâ¼û .....         angel
-","time":781988363,"poster":"Angel",]),(["id":48,"title":"< no title >","body":"    àÅ......²»ºÃÒâË¼ÔÙ±§Ô¹ÁË!±Ï¾¹ÎÒµÄpractice»¹Ã»30........
-Ö»ÄÜËµ,Ò»ÇĞÔÙ¹Û²ì°É!!
-³ÏÈçangelËùÑÔ,ÊéÉú»¹ÊÇ¸ö²»ÍêÈ«µÄ¹«»á,ÎÒÃÇ¾ÍÏÈÈÌÈÌ°É,
-Ëµ²»¶¨practice 30Ê±,»áÈçrubyËµµÄ,±È¹ÊÓĞµÄunknowÇ¿¨Ë¨ß!!^_^
-´óÉñ¼°Î×Ê¦ÃÇ,ĞÁ¿àÁË!!
-ÔÚ´Ë½ö¾´ÉÏ¸öÈËµÄ¾´Òâ!!^_^
-","time":782015307,"poster":"Adad",]),(["id":49,"title":"ÉùÃ÷..","body":"  ±§Ç¸..ÒòÎªtoo many player µÄ¹ØÏµ...post form 15 to 20 ÊÇÎÒpost µÄ..
-²¢²»ÊÇjan....
-                     ĞÌĞ¡½Üjj
-","time":782025410,"poster":"Jmo",]),(["id":52,"title":"< no title >","body":"µÄÈ·...unknow Ö»ÓĞ20 now..ÊÇ²»×ãÒÔºÍother gonfu ±È½Ï...
-µ«ÎÒËùÖ¸µÄunknow ÊÇchange Ö®Ç°µÄ..ÒòÎªÄ¿Ç°µÄunknowºÍÒÔÇ°±ÈÆğÀ´»¹²îºÜ¶à(20)..
-best weapon .?? you mean scythe..k big mob ÊÇÃ»Ê²Ãş²î±ğµÄ..ÒÔÇ°Æ¾µÄÊÇunknow..
-ÖÁì¶´µÑ©½£¾Í¸ü²îÁË..
-ÎÒµÄÏë·¨ÊÇÒÔÇ°µÄ unknow Ì«Ç¿ËùÒÔ²Å¸ÄµÄ ..ËùÒÔÈç¹ûunknow 30 will more powerul than before...ºÜ±§Ç¸ÎÒ´í¶ñµÄ¼ÙÉä...
-ÎÒÒ²ÊÇÑ§¿ÆÑ§µÄ..ºÜ¶Ô²»ÆğÓÃÕâÖÖÀÃ·½·¨À´ÏÔÊ¾monk µÄÇ¿¶È..
-ÎÒÖ»ÊÇ¾Ù¸ö×î½üµÄÀı×Ó¶øÒÔ..ÆäÊµÊÇ×î½øÒ»¸ö¶àÔÂÀ´µÄ¿´·¨...
-ÆäÊµÓĞÊ±ºòÔÚmonk chanel Äã²»Ò²Ìıµ½Ò»Ğ©ÏûÏ¢æÖ..Ö»ÊÇµ±ÄãÎÊÆğÊ±,´ó¼ÒÓÖÓĞÖ¾Ò»Í¬..
-Èç¹ûÄã¾õµÄÖ»ÊÇÎÒÒ»ÏàÇéÔ¸µÄ¿´·¨..ÎÒµÄÈ·Ò²Ö»ÄÜÓĞÒ»°ãplayer µÄ \" ¿´ \" ·¨°ÕÁË...
-¿´ÎÒÍ¬Ñ§Íæ..ÎÒ×Ô¼ºÍæ..ºÍ¿´ÏßÉÏÍæ¼ÒµÄÍæ·¨..
-ÖÁì¶monk ÔÚre open Ö®áá...ÎÒµÄ¹Û²ìºÍËüËµµÄ²»Í¬.. and Äã½ĞËümonk guild open ááÔÙ´ò´ò¿´°É!
-ÎÒÓÖÔõ÷áÖªµÀmonkÉè¶¨ÎªºÎ????
-ÎÒÖ»ÊÇÒÔÎªÄÇ÷á¶àwiz ¸ÄÀ´¸ÄÈ¥,,,¿ÉÄÜÏëÖªµ½Ò»Ğ©Íæ¼ÒµÄ¿´·¨...
-¿´À´ÎÒÒ²Ì«×ÔÒÔÎªÊÇÁË..ËãÎÒ¶àÊÂ..ÓÃÕâÖÖÃ»¸ú¾İµÃ¹ØµãÀ´post..
-                               °×³Õjj
-","time":782027196,"poster":"Jmo",]),(["id":54,"body":"Äã¼ÇµÃÕâ÷áÇå³ş°¡..  ÕæÊÇµ±¾ÖÕßÃÔ,ÅÔ¹ÛÕßÇå.. :p
+æ‰€ä»¥å•¦! è¦èªªæŠ±æ­‰ è¦è«‹å¤šå¤šåŒ…æ¶µ! :p
+that is my ç§äººæ„è¦‹ .....         angel
+","time":781988363,"poster":"Angel",]),(["id":48,"title":"< no title >","body":"    å—¯......ä¸å¥½æ„æ€å†æŠ±æ€¨äº†!ç•¢ç«Ÿæˆ‘çš„practiceé‚„æ²’30........
+åªèƒ½èªª,ä¸€åˆ‡å†è§€å¯Ÿå§!!
+èª å¦‚angelæ‰€è¨€,æ›¸ç”Ÿé‚„æ˜¯å€‹ä¸å®Œå…¨çš„å…¬æœƒ,æˆ‘å€‘å°±å…ˆå¿å¿å§,
+èªªä¸å®špractice 30æ™‚,æœƒå¦‚rubyèªªçš„,æ¯”æ•…æœ‰çš„unknowå¼·ã„‹ã„Ÿ!!^_^
+å¤§ç¥åŠå·«å¸«å€‘,è¾›è‹¦äº†!!
+åœ¨æ­¤åƒ…æ•¬ä¸Šå€‹äººçš„æ•¬æ„!!^_^
+","time":782015307,"poster":"Adad",]),(["id":49,"title":"è²æ˜..","body":"  æŠ±æ­‰..å› ç‚ºtoo many player çš„é—œä¿‚...post form 15 to 20 æ˜¯æˆ‘post çš„..
+ä¸¦ä¸æ˜¯jan....
+                     åˆ‘å°æ°jj
+","time":782025410,"poster":"Jmo",]),(["id":52,"title":"< no title >","body":"çš„ç¢º...unknow åªæœ‰20 now..æ˜¯ä¸è¶³ä»¥å’Œother gonfu æ¯”è¼ƒ...
+ä½†æˆ‘æ‰€æŒ‡çš„unknow æ˜¯change ä¹‹å‰çš„..å› ç‚ºç›®å‰çš„unknowå’Œä»¥å‰æ¯”èµ·ä¾†é‚„å·®å¾ˆå¤š(20)..
+best weapon .?? you mean scythe..k big mob æ˜¯æ²’ä»€æ‘¸å·®åˆ¥çš„..ä»¥å‰æ†‘çš„æ˜¯unknow..
+è‡³æ–¼å¹é›ªåŠå°±æ›´å·®äº†..
+æˆ‘çš„æƒ³æ³•æ˜¯ä»¥å‰çš„ unknow å¤ªå¼·æ‰€ä»¥æ‰æ”¹çš„ ..æ‰€ä»¥å¦‚æœunknow 30 will more powerul than before...å¾ˆæŠ±æ­‰æˆ‘éŒ¯æƒ¡çš„å‡å°„...
+æˆ‘ä¹Ÿæ˜¯å­¸ç§‘å­¸çš„..å¾ˆå°ä¸èµ·ç”¨é€™ç¨®çˆ›æ–¹æ³•ä¾†é¡¯ç¤ºmonk çš„å¼·åº¦..
+æˆ‘åªæ˜¯èˆ‰å€‹æœ€è¿‘çš„ä¾‹å­è€Œä»¥..å…¶å¯¦æ˜¯æœ€é€²ä¸€å€‹å¤šæœˆä¾†çš„çœ‹æ³•...
+å…¶å¯¦æœ‰æ™‚å€™åœ¨monk chanel ä½ ä¸ä¹Ÿè½åˆ°ä¸€äº›æ¶ˆæ¯å¬¤..åªæ˜¯ç•¶ä½ å•èµ·æ™‚,å¤§å®¶åˆæœ‰å¿—ä¸€åŒ..
+å¦‚æœä½ è¦ºçš„åªæ˜¯æˆ‘ä¸€ç›¸æƒ…é¡˜çš„çœ‹æ³•..æˆ‘çš„ç¢ºä¹Ÿåªèƒ½æœ‰ä¸€èˆ¬player çš„ \" çœ‹ \" æ³•ç½·äº†...
+çœ‹æˆ‘åŒå­¸ç©..æˆ‘è‡ªå·±ç©..å’Œçœ‹ç·šä¸Šç©å®¶çš„ç©æ³•..
+è‡³æ–¼monk åœ¨re open ä¹‹å¾Œ...æˆ‘çš„è§€å¯Ÿå’Œå®ƒèªªçš„ä¸åŒ.. and ä½ å«å®ƒmonk guild open å¾Œå†æ‰“æ‰“çœ‹å§!
+æˆ‘åˆæ€éº¼çŸ¥é“monkè¨­å®šç‚ºä½•????
+æˆ‘åªæ˜¯ä»¥ç‚ºé‚£éº¼å¤šwiz æ”¹ä¾†æ”¹å»,,,å¯èƒ½æƒ³çŸ¥åˆ°ä¸€äº›ç©å®¶çš„çœ‹æ³•...
+çœ‹ä¾†æˆ‘ä¹Ÿå¤ªè‡ªä»¥ç‚ºæ˜¯äº†..ç®—æˆ‘å¤šäº‹..ç”¨é€™ç¨®æ²’è·Ÿæ“šå¾—é—œé»ä¾†post..
+                               ç™½ç—´jj
+","time":782027196,"poster":"Jmo",]),(["id":54,"body":"ä½ è¨˜å¾—é€™éº¼æ¸…æ¥šå•Š..  çœŸæ˜¯ç•¶å±€è€…è¿·,æ—è§€è€…æ¸….. :p
 vivian
-","title":"....","time":782111269,"poster":"Vivian",]),(["id":55,"body":" ºÙºÙ...ÏÈ¿´ÎÒµÄpostÔÙËµ°É?
- ¿öÇÒÄÜ¸Ä¹«»áµÄÈËºÜÉÙÒ®,»áÌá³öÒâ¼ûÓÖ±»½ÓÊÜÒ²²»¶àÀ²!
+","title":"....","time":782111269,"poster":"Vivian",]),(["id":55,"body":" å˜¿å˜¿...å…ˆçœ‹æˆ‘çš„postå†èªªå§?
+ æ³ä¸”èƒ½æ”¹å…¬æœƒçš„äººå¾ˆå°‘è€¶,æœƒæå‡ºæ„è¦‹åˆè¢«æ¥å—ä¹Ÿä¸å¤šå•¦!
 
        Sincerely your mad...
-","title":"< no title >","time":782113286,"poster":"Mad",]),(["id":56,"title":"< no title >","body":"ÎÒÏëwiz or god µ±È»Ï£Íû¶àÌı´ó¼ÒÒâ¼û
-µ«ÊÇ ½¨ÒéºÍ ÄãÄÇÆªµÄÓïÆø.. :)
-ÖÁÉÙ ÔÚÀíĞÔµÄÉùÒôÖĞ ÎÒ»áºÜÔ¸ÒâÌıÌı´ó¼ÒµÄÉùÒô!
+","title":"< no title >","time":782113286,"poster":"Mad",]),(["id":56,"title":"< no title >","body":"æˆ‘æƒ³wiz or god ç•¶ç„¶å¸Œæœ›å¤šè½å¤§å®¶æ„è¦‹
+ä½†æ˜¯ å»ºè­°å’Œ ä½ é‚£ç¯‡çš„èªæ°£.. :)
+è‡³å°‘ åœ¨ç†æ€§çš„è²éŸ³ä¸­ æˆ‘æœƒå¾ˆé¡˜æ„è½è½å¤§å®¶çš„è²éŸ³!
 :p
 
 ","time":782122556,"poster":"Angel",]),(["id":57,"title":"< no title >","body":"god..plz scholar can use shortblade to use unknow lah...or our best weapon is
@@ -115,7 +115,7 @@ I think u should consider all the way
 ","time":782158946,"poster":"Laputa",]),(["id":62,"title":"too weak la, don't join scholar","body":"today party with iaa to k 2 warrior and 2 royal guard with gloves
 cost more then 2 hour... 
 k ling cost about 50 min...
-the unknow always ²Á¹ı. ²»ÉÙ. Ò»Ğ©. on mob
+the unknow always æ“¦é. ä¸å°‘. ä¸€äº›. on mob
 it's too weakest la
 ","time":782159215,"poster":"Laputa",]),(["id":63,"body":"we have say so much..but god no reply...:(
 scholar is really too weak lah...because we only can use bastard blade-best

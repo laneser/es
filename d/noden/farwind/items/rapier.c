@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "light rapier", "ÇáĞÍ½£" );
+	set_name( "light rapier", "è¼•å‹åŠ" );
 	add( "id", ({ "rapier" }) );
-	set_short( "ÇáĞÍ½£" );
+	set_short( "è¼•å‹åŠ" );
 	set_long(@CLONG
-ÕâÊÇÒ»ÖÖÆÕÍ¨½£Ê¿Ê®·ÖÏ²°®µÄ½££¬½£ÉíÏ¸³¤¶øÇÒÒ×ì¶»Ó¶¯£¬½£±ú
-²¿·İ»¹ÓĞ½ğÊôµÄ»¤ÊÖ°¼²Û¡£
+é€™æ˜¯ä¸€ç¨®æ™®é€šåŠå£«ååˆ†å–œæ„›çš„åŠï¼ŒåŠèº«ç´°é•·è€Œä¸”æ˜“æ–¼æ®å‹•ï¼ŒåŠæŸ„
+éƒ¨ä»½é‚„æœ‰é‡‘å±¬çš„è­·æ‰‹å‡¹æ§½ã€‚
 CLONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weapon_class", 13 );
 	set( "min_damage", 6 );

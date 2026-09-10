@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "dwarf royal body guard", "°«ÈË»ÊÊÒ±£ïÚ" );
+	set_name( "dwarf royal body guard", "çŸ®äººçš‡å®¤ä¿é¢" );
 	add("id",({"bodyguard","guard","dwarf"}) );
-   set_short( "°«ÈË»ÊÊÒ±£ïÚ" );
+   set_short( "çŸ®äººçš‡å®¤ä¿é¢" );
 	set_long(
-		"Ò»¸öÑÏËàµÄ°«ÈË»ÊÊÒ±£ïÚ,Ëû¸ºÔğ±£»¤°«ÈË¹úÍõµÄ°²È«.\n"
+		"ä¸€å€‹åš´è‚…çš„çŸ®äººçš‡å®¤ä¿é¢,ä»–è² è²¬ä¿è­·çŸ®äººåœ‹ç‹çš„å®‰å…¨.\n"
 	);
 	set( "gender", "male" );
 	set( "race", "dwarf" );
@@ -50,7 +50,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-      guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i]
+      guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i]
       );
       guard[i]->kill_ob(victim);
     }

@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "fire guard", "»ðÖ®»¤ÎÀ" );
+        set_name( "fire guard", "ç«ä¹‹è­·è¡›" );
         add ("id", ({ "fire", "guard" }) );
-        set_short( "»ðÖ®»¤ÎÀ");
-        set("unit","Î»");
+        set_short( "ç«ä¹‹è­·è¡›");
+        set("unit","ä½");
         set("alignment",500);
         set("wealth/gold",100);
         set_long(
-"Ò»Î»»ðÖ®»¤ÎÀ£¬ÊÇ´ó¹úÊ¦ÓÃµÀ¼ÒÕýÍ³ÐÄ·¨ËùÕÐ»½³öÀ´µÄ£¬Ëû¸ºÓÐÊØÎÀ´ËµØµÄÉñÊ¥
-Ê¹Ãü\¡£\n"
+"ä¸€ä½ç«ä¹‹è­·è¡›ï¼Œæ˜¯å¤§åœ‹å¸«ç”¨é“å®¶æ­£çµ±å¿ƒæ³•æ‰€æ‹›å–šå‡ºä¾†çš„ï¼Œä»–è² æœ‰å®ˆè¡›æ­¤åœ°çš„ç¥žè–
+ä½¿å‘½\ã€‚\n"
         );
         set_perm_stat("int", 20);
         set_perm_stat("dex", 20);
@@ -26,7 +26,7 @@ void create()
         set ("race", "daemon");
         set("tactic_func","fire_tactic");
         set("special_defense",(["all":30,"none":30,"fire":50]));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         equip_armor(ARMORS"/fire_leggings");
         equip_armor(ARMORS"/fire_amulet");
 }
@@ -38,7 +38,7 @@ int fire_tactic()
   
   if ( !(victim=query_attacker()) || (random(10)>2)) return 0;
   tell_room(environment(),
-       "\n"+"»ðÖ®»¤ÎÀÍ»È»½«Ë«ÊÖ°´ÔÚ»¤·ûÉÏ£¬±ä³ÉÁËÒ»ÍÅ»ðÑæÏòÄã×²À´ !!\n",
+       "\n"+"ç«ä¹‹è­·è¡›çªç„¶å°‡é›™æ‰‹æŒ‰åœ¨è­·ç¬¦ä¸Šï¼Œè®Šæˆäº†ä¸€åœ˜ç«ç„°å‘ä½ æ’žä¾† !!\n",
        this_object() );
   dam = 45 + random(25);
   victim->receive_special_damage("fire",dam);

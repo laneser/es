@@ -4,11 +4,11 @@ void create()
 {
         ::create();
         set_level(3);
-        set_name( "hawkman woman", "ÄñÈË×å¸¾ÈË" );
+        set_name( "hawkman woman", "é³¥äººæ—å©¦äºº" );
         add("id",({"woman","hawkman"}) );
-        set_short( "ÄñÈË×å¸¾ÈË" );
+        set_short( "é³¥äººæ—å©¦äºº" );
         set_long(
-                "Äã¿´µ½Ò»¸öÕıÎª¼ÒÊÂ²ÙÀÍµÄÄñÈËÖ÷¸¾.\n"
+                "ä½ çœ‹åˆ°ä¸€å€‹æ­£ç‚ºå®¶äº‹æ“å‹çš„é³¥äººä¸»å©¦.\n"
         );
         set( "gender", "female" );
         set( "race", "hawkman" );

@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "silk tail", "ºÚË¿°óÎ²" );
+	set_name( "silk tail", "é»‘çµ²ç¶å°¾" );
 	add( "id", ({ "silk","tail" }) );
-	set_short( "ºÚË¿°óÎ²" );
+	set_short( "é»‘çµ²ç¶å°¾" );
 	set_long(
-"ÕâÊÇÒ»¸±ÓÃºÚ²ÏË¿±à³ÉµÄ»¤Ì×£¬×¨ÃÅÓÃÀ´±£»¤òáòæÈËµÄÎ²°Í¡£\n"
+"é€™æ˜¯ä¸€å‰¯ç”¨é»‘è ¶çµ²ç·¨æˆçš„è­·å¥—ï¼Œå°ˆé–€ç”¨ä¾†ä¿è­·èœ¥èœ´äººçš„å°¾å·´ã€‚\n"
 	);
-	set( "unit", "¸±" );
+	set( "unit", "å‰¯" );
         set("material","cloth");
 	set( "type", "tail" );
 	set( "armor_class", 5 );

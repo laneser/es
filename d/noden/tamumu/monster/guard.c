@@ -44,7 +44,7 @@ void disappear(object guard)
         if( !guard ) return;
         guard_name=guard->query("c_name");
         tell_room( environment(guard),
-        	sprintf("%sµÄ³¤¹ÙÊ§×ÙÁË,%s¾ö¶¨¿ªÊ¼ËÄ´¦ÂÒ»Î¡£\n",
+        	sprintf("%sçš„é•·å®˜å¤±è¹¤äº†,%sæ±ºå®šé–‹å§‹å››è™•äº‚æ™ƒã€‚\n",
         		guard_name,guard_name)
         );
 	distruct(guard);
@@ -84,10 +84,10 @@ void set_master(object master,object guard)
 	ob->set("name", master->query("name")+name);
 	ob->add("id",({ (string)ob->query("name") }) );
 	ob->set("c_name", master->query("c_name")+c_name);
-	ob->set("long" , sprintf("%s²»¹ýËûÏÖÔÚÕý¹Ô¹ÔµÄ¸úÔÚ%sµÄÉíáá%s",
+	ob->set("long" , sprintf("%sä¸éŽä»–ç¾åœ¨æ­£ä¹–ä¹–çš„è·Ÿåœ¨%sçš„èº«å¾Œ%s",
 			guard->query("long"),
 			master->query("c_name"),
-			"£¬Äã²»ÔÙÐèÒªËüµÄ°ïÖúµÄ»°£¬\nÇë°ÑËüËÍ(send)»Ø¼Ò¡£\n")
+			"ï¼Œä½ ä¸å†éœ€è¦å®ƒçš„å¹«åŠ©çš„è©±ï¼Œ\nè«‹æŠŠå®ƒé€(send)å›žå®¶ã€‚\n")
 	);
 	ob->set("short",ob->query("c_name") );
 //master->query("c_name"),c_name,ob->query("short") ));

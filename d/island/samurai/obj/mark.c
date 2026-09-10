@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "chrysanthemum marks", "¾ÕĞÎ¼Ò»Õ");
+        set_name( "chrysanthemum marks", "èŠå½¢å®¶å¾½");
         add( "id", ({ "marks","marks" }) );
-        set_short("chrysanthemum marks", "¾ÕĞÎ¼Ò»Õ");
+        set_short("chrysanthemum marks", "èŠå½¢å®¶å¾½");
         set_long(@AAA
-Ò»¸ö¾ÕĞÎ¼Ò»Õ,´ú±íÖøÎäÊ¿¶Ó³¤Ô¼ĞŞ¼ÒµÄ¼Ò»Õ
+ä¸€å€‹èŠå½¢å®¶å¾½,ä»£è¡¨è‘—æ­¦å£«éšŠé•·ç´„ä¿®å®¶çš„å®¶å¾½
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "misc" );
         set( "armor_class", 0 );
         set( "defense_bonus", 6 );

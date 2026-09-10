@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(19);
-        set_name( "blowblood", "Î÷ÃÅ´µÑª" );
+        set_name( "blowblood", "è¥¿é–€å¹è¡€" );
 	add ("id", ({ "captain", "knight", "royal knight" }) );
-        set_short( "Laice the Captain of Royal Knights", "É±ÊÖ°ï°ïÖ÷ Î÷ÃÅ´µÑª");
+        set_short( "Laice the Captain of Royal Knights", "æ®ºæ‰‹å¹«å¹«ä¸» è¥¿é–€å¹è¡€");
 	set_long(
 		"Laice is the greatest knight Noden Kingdom. His duty is\n"
 		"to recurit more adventurers as fighters to defend Noden.\n",
-                "Î÷ÃÅ´µÑªÊÇÉ±ÊÖ°ïÖĞ×îÎ°´óµÄÉ±ÊÖ£¬ËûÄ¿Ç°ÊÇÉ±ÊÖ°ïµÄ°ïÖ÷£¬Ï£ÍûÄÜ¹»\n"
-                "ÕĞÄ¼¸ü¶àÇ¿×³µÄÄêÇàÈË²Î¼ÓÉ±ÊÖ°ïµÄĞĞÁĞ£¬À´Íê³ÉÒ»¸öÖØ´óµÄÊ¹Ãü¡£\n"
+                "è¥¿é–€å¹è¡€æ˜¯æ®ºæ‰‹å¹«ä¸­æœ€å‰å¤§çš„æ®ºæ‰‹ï¼Œä»–ç›®å‰æ˜¯æ®ºæ‰‹å¹«çš„å¹«ä¸»ï¼Œå¸Œæœ›èƒ½å¤ \n"
+                "æ‹›å‹Ÿæ›´å¤šå¼·å£¯çš„å¹´é’äººåƒåŠ æ®ºæ‰‹å¹«çš„è¡Œåˆ—ï¼Œä¾†å®Œæˆä¸€å€‹é‡å¤§çš„ä½¿å‘½ã€‚\n"
 	);
 	set_perm_stat("str", 30 );
 	set_perm_stat("con", 25 );

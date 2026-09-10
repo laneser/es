@@ -7,12 +7,12 @@ void create()
 		object ob;
         ::create();
         set_level(16);
-        set_name( "Charming woman of fox", "ºüÀê¾«" );
+        set_name( "Charming woman of fox", "ç‹ç‹¸ç²¾" );
         add ("id", ({ "fox","woman" }) );
-        set_short( "ºüÀê¾«");
-        set("unit","Ö»");
+        set_short( "ç‹ç‹¸ç²¾");
+        set("unit","åª");
         set_long(@C_LONG
-ÕâÊÇÒ»Ö»Ê®·Ö¼¢¿ÊµÄÇ§ÄêºüÀê¾«£¬×¨ÃÅÎüÈ¡ÑôÆø£¬ÄĞĞÔÅóÓÑÇëÌØ±ğĞ¡ĞÄ¡£
+é€™æ˜¯ä¸€éš»ååˆ†é£¢æ¸´çš„åƒå¹´ç‹ç‹¸ç²¾ï¼Œå°ˆé–€å¸å–é™½æ°£ï¼Œç”·æ€§æœ‹å‹è«‹ç‰¹åˆ¥å°å¿ƒã€‚
 C_LONG
         );
 	set("killer",1);
@@ -30,11 +30,11 @@ C_LONG
         set_natural_armor(80, 36);
         set_skill("dodge",100);
         set("gender", "female");
-        set_c_limbs(({ "ÉíÌå", "Í·²¿", "½Å²¿", "ÊÖ±Û" }));
+        set_c_limbs(({ "èº«é«”", "é ­éƒ¨", "è…³éƒ¨", "æ‰‹è‡‚" }));
         set("tactic_func","special_att");
         set("chat_chance", 10 );
         set("att_chat_output", ({
-            "ºüÀê¾«ÃÄĞ¦µÀ£º Ç×°®µÄ£¬ÈÃÈË¼ÒÎüÎüÄãµÄÑôÆøÂï!!\n",
+            "ç‹ç‹¸ç²¾åªšç¬‘é“ï¼š è¦ªæ„›çš„ï¼Œè®“äººå®¶å¸å¸ä½ çš„é™½æ°£å˜›!!\n",
 	    }) );
         ob = new( SAULIN_OBJ"fox_tail" );
         ob->move(this_object());
@@ -46,7 +46,7 @@ void report( object attacker, object victim )
    seteuid(getuid());
    message= "/adm/daemons/statsd"->status_string(victim);
    tell_object( victim,
-     set_color(sprintf("Ò»Õóº®ÆøÏòÄãÏ®À´£¬áİ·ğÉúÃüÕıÒ»µãÒ»µÎµÄÀëÄã¶øÈ¥!!\n( Äã%s )\n",message),"HIR",victim)
+     set_color(sprintf("ä¸€é™£å¯’æ°£å‘ä½ è¥²ä¾†ï¼Œå½·ä½›ç”Ÿå‘½æ­£ä¸€é»ä¸€æ»´çš„é›¢ä½ è€Œå»!!\n( ä½ %s )\n",message),"HIR",victim)
    );
 }
 
@@ -63,11 +63,11 @@ int special_att()
     att_type = random(100);
     if( att_type < 20 ) {
       tell_room( environment(this_object()), 
-        sprintf("\nºüÀê¾«°Ñ%s±§¸öÕıÖø£¬ĞË·ÜµØÎüÊÕËûµÄÑôÆø\n",c_name),
+        sprintf("\nç‹ç‹¸ç²¾æŠŠ%sæŠ±å€‹æ­£è‘—ï¼Œèˆˆå¥®åœ°å¸æ”¶ä»–çš„é™½æ°£\n",c_name),
         this_player()
       );
       tell_object( victim, 
-        set_color("\nºüÀê¾«°ÑÄã±§¸öÕıÖø£¬ĞË·ÜµØÎüÊÕÄãµÄÑôÆø\n","HIY",victim ));
+        set_color("\nç‹ç‹¸ç²¾æŠŠä½ æŠ±å€‹æ­£è‘—ï¼Œèˆˆå¥®åœ°å¸æ”¶ä½ çš„é™½æ°£\n","HIY",victim ));
 
       victim->receive_special_damage("cold", 30+random(12));
       report(this_object(),victim);
@@ -75,15 +75,15 @@ int special_att()
     } else if( att_type >= 20 && att_type < 40 ) {
       if( victim->query("stop_attack") ) return 0;
       tell_object( victim, 
-        set_color("\nºüÀê¾«ÑıÃÄµÄÑÛÉñ°ÑÄãÃÔ»ó×¡ÁË¡£\n","HIG",victim));
+        set_color("\nç‹ç‹¸ç²¾å¦–åªšçš„çœ¼ç¥æŠŠä½ è¿·æƒ‘ä½äº†ã€‚\n","HIG",victim));
 
       tell_room( environment(), 
-        sprintf("ºüÀê¾«ÓÃÑıÃÄµÄÑÛÉñ°Ñ%sÃÔ»ó×¡ÁË !\n",c_name),
+        sprintf("ç‹ç‹¸ç²¾ç”¨å¦–åªšçš„çœ¼ç¥æŠŠ%sè¿·æƒ‘ä½äº† !\n",c_name),
         ({ victim, this_object() })
       );
       victim->block_attack(6);
       victim->set_temp("msg_stop_attack", 
-        "( ÄãÏÖÔÚ±»ÃÔ»ó×¡ÁË£¬ÎŞ·¨¹¥»÷£¡ )\n" );
+        "( ä½ ç¾åœ¨è¢«è¿·æƒ‘ä½äº†ï¼Œç„¡æ³•æ”»æ“Šï¼ )\n" );
       return 1;
     } else return 0;
 }

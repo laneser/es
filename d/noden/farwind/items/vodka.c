@@ -10,11 +10,11 @@ void init()
 
 void create(){
 
-	set_name("vodka","╥Эль╪с");
+	set_name("vodka","Д╪▐Г┴╧Е┼═");
 	add( "id" , ({ "vodka","wine" }) );
-	set_short( "╥Эль╪с" );
-	set_long("╨ц╢л╠г╣д╬ф...р╩╤╗╨эар!!\n");
-   	set("unit","ф©");
+	set_short( "Д╪▐Г┴╧Е┼═" );
+	set_long("Е╔╫Е┬╨И╪╩Г └И┘▓...Д╦─Е╝ Е╬┬Г┐┬!!\n");
+   	set("unit","Г⌠╤");
    	set("weight", 10);
    	set("value",({30, "silver"}) );
 }
@@ -24,10 +24,10 @@ int quaff_potion(string arg)
 
 	if( ! id(arg) ) return 0;
 	write( 
-		"дЦ╨хобр╩ф©╥Эль╪сё╛╦п╣╫уШ╦ЖхктОххфПю╢║ё\n"
+		"Д╫═Е√²Д╦▀Д╦─Г⌠╤Д╪▐Г┴╧Е┼═О╪▄Ф└÷Е┬╟Ф∙╢Е─▀Д╨╨Г┤╔Г├╠Х╣╥Д╬├Ц─┌\n"
 	);
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"р╩©з╨хобр╩ф©╥Эль╪сё╛х╩ААбМиобЗаЁм╗╨Л╣ди╣п╕фПю╢!!\n",
+		this_player()->query("c_name")+"Д╦─Е▐ёЕ√²Д╦▀Д╦─Г⌠╤Д╪▐Г┴╧Е┼═О╪▄Г└╤Е╬▄И╕╛Д╦┼Ф╩©Х┤┴И─ Г╢┘Г └Е┌╩Г╛▒Х╣╥Д╬├!!\n",
 		this_player() );
 
 	remove();

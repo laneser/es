@@ -8,6 +8,6 @@ void die()
 		if ( ob1=present("blade",this_object()) )
 			ob1->remove();	
 	if ( killer = this_object()->query("last_attacker") )
-		tell_object(killer,set_color("Ò»ÕóÇáÏì¹ıáá£¬Í­ÈË²»¶¯ÁË !!\n","HIG") );
+		tell_object(killer,set_color("ä¸€é™£è¼•éŸ¿éå¾Œï¼ŒéŠ…äººä¸å‹•äº† !!\n","HIG") );
 	call_out("remove",0);
 }

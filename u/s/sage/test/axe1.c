@@ -6,19 +6,19 @@
 inherit WEAPON;
 
 int form;
-string AXE_NAME="¡¸µØÓü¹í¸«¡¹";
+string AXE_NAME="ã€Œåœ°ç„é¬¼æ–§ã€";
 
 void create()
 {
-        set_name( "Stone Axe","÷öµ­ÎÞ¹âµÄÊ¯¸«" );
+        set_name( "Stone Axe","é»¯æ·¡ç„¡å…‰çš„çŸ³æ–§" );
         add( "id",({ "axe" }) );
-        set_short( "÷öµ­ÎÞ¹âµÄÊ¯¸«" );
+        set_short( "é»¯æ·¡ç„¡å…‰çš„çŸ³æ–§" );
         set_long(@LONG
-        Ò»°Ñ÷öµ­ÎÞ¹âµÄ¸«Í·£¬ËÆºõÕýÒòÎªÃ»ÈËÄÜÁË½â
-        Ëü¶ø¸Ðµ½±¯ÉË¡£
+        ä¸€æŠŠé»¯æ·¡ç„¡å…‰çš„æ–§é ­ï¼Œä¼¼ä¹Žæ­£å› ç‚ºæ²’äººèƒ½çž­è§£
+        å®ƒè€Œæ„Ÿåˆ°æ‚²å‚·ã€‚
 LONG
                 );
-        set( "unit","±ú" );
+        set( "unit","æŸ„" );
         set( "type","axe" );
         set( "weapon_class",45 );
         set( "min_damage",10 );
@@ -42,10 +42,10 @@ void unwield_axe()
         if( !holder=environment(this_object()) ) return;
         name=holder->query( "c_name" );
         if( form==1 ){
-                tell_room( environment(holder),name+"ÊÖÖÐµÄ"+AXE_NAME+"£¬½¥½¥±ä»ØÔ­À´µÄÑù×Ó¡£\n",holder );
-                tell_object( holder,"Ê§È¥Ð°¶ñÁ¦Á¿µÄÖ¸Ê¹£¬ÄãÊÖÖÐµÄ"+AXE_NAME+"½¥½¥±ä»ØÊ¯¸«¡£\n" );
-                set_name( "Stone Axe","÷öµ­ÎÞ¹âµÄÊ¯¸«" );
-                set_short( "÷öµ­ÎÞ¹âµÄÊ¯¸«" );
+                tell_room( environment(holder),name+"æ‰‹ä¸­çš„"+AXE_NAME+"ï¼Œæ¼¸æ¼¸è®Šå›žåŽŸä¾†çš„æ¨£å­ã€‚\n",holder );
+                tell_object( holder,"å¤±åŽ»é‚ªæƒ¡åŠ›é‡çš„æŒ‡ä½¿ï¼Œä½ æ‰‹ä¸­çš„"+AXE_NAME+"æ¼¸æ¼¸è®Šå›žçŸ³æ–§ã€‚\n" );
+                set_name( "Stone Axe","é»¯æ·¡ç„¡å…‰çš„çŸ³æ–§" );
+                set_short( "é»¯æ·¡ç„¡å…‰çš„çŸ³æ–§" );
                 set( "min_damage",10 );
                 set( "max_damage",25 );
 //              set( "prevent_drop",0 );
@@ -66,10 +66,10 @@ void wield_axe()
         name = holder->query("c_name");
         
         if ( (int)holder->query("alignment") < -1500 ) {
-                tell_room( env,name+"µÄÊ¯¸«ºöÈ»ÎËÎË×÷Ïì£¬Öð½¥±ä³ÉÒ»°ÑÐ°¶ñµÄÎäÆ÷"+AXE_NAME+"¡£\n",holder );
-                tell_object( holder,"ÄãÐ°¶ñµÄ±¾ÐÔ»½ÆðÊ¯¸«µÄÁ¦Á¿£¬Ê¹Ëü»Ã»¯³ÉÈË¼äÐ×Æ÷"+AXE_NAME+"¡£\n" );
-                set_name( "Abyss Axe","¡¸µØÓü¹í¸«¡¹" );
-                set_short( "¡¸µØÓü¹í¸«¡¹" );
+                tell_room( env,name+"çš„çŸ³æ–§å¿½ç„¶å—¡å—¡ä½œéŸ¿ï¼Œé€æ¼¸è®Šæˆä¸€æŠŠé‚ªæƒ¡çš„æ­¦å™¨"+AXE_NAME+"ã€‚\n",holder );
+                tell_object( holder,"ä½ é‚ªæƒ¡çš„æœ¬æ€§å–šèµ·çŸ³æ–§çš„åŠ›é‡ï¼Œä½¿å®ƒå¹»åŒ–æˆäººé–“å…‡å™¨"+AXE_NAME+"ã€‚\n" );
+                set_name( "Abyss Axe","ã€Œåœ°ç„é¬¼æ–§ã€" );
+                set_short( "ã€Œåœ°ç„é¬¼æ–§ã€" );
                 set( "min_damage",25 );
                 set( "max_damage",50 );
 //              set( "prevent_drop",1 );
@@ -89,7 +89,7 @@ int ghost_fight(object victim,int dam)
         if ( !victim ) return 0;
         if( !holder = environment(this_object()) || !living(holder) ) return 0;
         else {
-                /* ¾ö¶¨ÌØÊâ¹¥»÷µÄÉËº¦¶È */
+                /* æ±ºå®šç‰¹æ®Šæ”»æ“Šçš„å‚·å®³åº¦ */
                 align=holder->query( "alignment" );
                 if( align >= -150000 ) { dam=40; }
                 else if( align < -150000 ) { dam=35; }
@@ -101,18 +101,18 @@ int ghost_fight(object victim,int dam)
                 
                 if ( random(50) < 50 ) {
  //                       if ( (int)holder->query( "spell_points" )< 5 ) {
- //                               tell_object( holder,set_color( "ÄãµÄ¾«Éñ²»×ãÒÔÕÙ»½µØÓü¶ñÄ§....\n","HIR" ) );
+ //                               tell_object( holder,set_color( "ä½ çš„ç²¾ç¥žä¸è¶³ä»¥å¬å–šåœ°ç„æƒ¡é­”....\n","HIR" ) );
  //                               return 1;
 //                        }
                         
                         him=victim->query( "c_name" );
                         me=holder->query( "c_name" );
                         tell_object( holder,set_color(
-                                "Äã½«ÊÖÉÏµÄ","HIR")+AXE_NAME+set_color("Å×µ½¿ÕÖÐ»¯³É³ÉÇ§ÉÏÍòµÄ¶ñ¹í³åÏò"+him+"¡£\n","HIR") );
+                                "ä½ å°‡æ‰‹ä¸Šçš„","HIR")+AXE_NAME+set_color("æ‹‹åˆ°ç©ºä¸­åŒ–æˆæˆåƒä¸Šè¬çš„æƒ¡é¬¼è¡å‘"+him+"ã€‚\n","HIR") );
                         tell_object( victim,set_color(
-                                me+"½«ÊÖÉÏµÄ","HIR")+AXE_NAME+set_color("Å×µ½¿ÕÖÐ»¯³É³ÉÇ§ÉÏÍòµÄ¶ñ¹íÏòÄãÏ®À´¡£\n","HIR") );
+                                me+"å°‡æ‰‹ä¸Šçš„","HIR")+AXE_NAME+set_color("æ‹‹åˆ°ç©ºä¸­åŒ–æˆæˆåƒä¸Šè¬çš„æƒ¡é¬¼å‘ä½ è¥²ä¾†ã€‚\n","HIR") );
                         tell_room( environment(holder),set_color(
-                                me+"½«ÊÖÉÏµÄ","HIR")+AXE_NAME+set_color("Å×µ½¿ÕÖÐ»¯³É³ÉÇ§ÉÏÍòµÄ¶ñ¹í³åÏò"+him+"¡£\n","HIR"),({ holder,victim }) );
+                                me+"å°‡æ‰‹ä¸Šçš„","HIR")+AXE_NAME+set_color("æ‹‹åˆ°ç©ºä¸­åŒ–æˆæˆåƒä¸Šè¬çš„æƒ¡é¬¼è¡å‘"+him+"ã€‚\n","HIR"),({ holder,victim }) );
                         victim->receive_special_damage( "evil",dam );
 //                      report( victim );
 //                        holder->add( "spell_points",-5 );

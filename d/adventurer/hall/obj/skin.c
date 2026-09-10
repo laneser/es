@@ -5,14 +5,14 @@ inherit OBJECT;
 void create()
 {
 	seteuid(getuid());
-	set_name("skin","Ã«Æ¤");
-	set_short("Ã«Æ¤");
+	set_name("skin","æ¯›çš®");
+	set_short("æ¯›çš®");
 	set( "long","@@query_long");
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set( "weight",10 );
 	set( "value",({10,"silver"}));
 	set( "no_sale", 1);
-	set( "c_skin_name","Ã«Æ¤");
+	set( "c_skin_name","æ¯›çš®");
 	set( "skin_name","skin"); 
 	set( "extra_ids",({}));
 }
@@ -20,9 +20,9 @@ void create()
 string query_long()
 {
 	if ( (string) this_object()->query("c_skin_name") != "skin" )
-		return "ÕâÊÇÒ»¿é" + (string) this_object()->query("c_skin_name") + "µÄÃ«Æ¤¡£\n";
+		return "é€™æ˜¯ä¸€å¡Š" + (string) this_object()->query("c_skin_name") + "çš„æ¯›çš®ã€‚\n";
 	else
-		return "ÕâÊÇÒ»¿éÃ«Æ¤¡£\n";	
+		return "é€™æ˜¯ä¸€å¡Šæ¯›çš®ã€‚\n";	
 }
 
 

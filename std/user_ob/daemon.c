@@ -25,48 +25,48 @@ int do_claw(string str)
 {
 	object victim;
 	if ( ! str )
-		return notify_fail("ÄãÏë×¥Ë­£¿\n");
+		return notify_fail("ä½ æƒ³æŠ“èª°ï¼Ÿ\n");
 	if ( !victim = present(str,environment(this_object())))
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð "+str+" µÄ¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å« "+str+" çš„ã€‚\n");
 
 	if ( !living(victim) ) {
-		tell_object(this_object(),sprintf("ÄãÔÚ%sÒ»ÕóÂÒ×¥£¬Ä¥Ä¥×¦×Ó¡£\n",victim->query("short")));
+		tell_object(this_object(),sprintf("ä½ åœ¨%sä¸€é™£äº‚æŠ“ï¼Œç£¨ç£¨çˆªå­ã€‚\n",victim->query("short")));
 		tell_room(environment(this_object()),
-			sprintf("%sÔÚ%sÉÏÒ»ÕóÂÒ×¥£¬ºÃÏñÔÚÄ¥×¦×Ó¡£\n",
+			sprintf("%såœ¨%sä¸Šä¸€é™£äº‚æŠ“ï¼Œå¥½åƒåœ¨ç£¨çˆªå­ã€‚\n",
 				query("c_name"),victim->query("short"))
 			  ,this_object());
 		return 1;
 	}
 	if ( userp(victim) && (((int)victim->query_level()<5) || ((int)this_object()->query_level()<5)) )
-		return notify_fail("µÍµÈ¼¶Íæ¼Ò²»ÄÜPK !!\n");
+		return notify_fail("ä½Žç­‰ç´šçŽ©å®¶ä¸èƒ½PK !!\n");
 
 	if (victim->query_temp("be_clawed"))
-		return notify_fail("ËûµÄ¾¯¾õÐÔºÜ¸ß£¬²»ÈÝÒ×ÏÂÊÖ¡£\n");
+		return notify_fail("ä»–çš„è­¦è¦ºæ€§å¾ˆé«˜ï¼Œä¸å®¹æ˜“ä¸‹æ‰‹ã€‚\n");
 	if ( victim->query("no_attack") )
-		return notify_fail("²»¿ÉÒÔÆÛ¸ºËû ... ");
+		return notify_fail("ä¸å¯ä»¥æ¬ºè² ä»– ... ");
 	victim->set_temp("be_clawed",1);
 
 	tell_object(this_object(),
-		    sprintf("/nÄãÇÄÇÄµÄ×ßµ½%sµÄ±³áá£¬ºÝºÝµØÍùËûÉíÉÏ×¥ÏÂÈ¥ ...",
+		    sprintf("/nä½ æ‚„æ‚„çš„èµ°åˆ°%sçš„èƒŒå¾Œï¼Œç‹ ç‹ åœ°å¾€ä»–èº«ä¸ŠæŠ“ä¸‹åŽ» ...",
 			    victim->query("short"))
 		    );
-	tell_object(victim,sprintf("/n%sÈôÎÞÆäÊÂµÄ×ß¹ýÀ´£¬Í»È»ÓÃËûµÄÀû×¦ºÝºÝµØ×¥Äã¡£",
+	tell_object(victim,sprintf("/n%sè‹¥ç„¡å…¶äº‹çš„èµ°éŽä¾†ï¼Œçªç„¶ç”¨ä»–çš„åˆ©çˆªç‹ ç‹ åœ°æŠ“ä½ ã€‚",
 				query("c_name"))
 		    );
 	tell_room(environment(this_object()),
-		  sprintf("/n%sÂýÂý×ßµ½%sÉí±ß£¬Í»È»Ò»×¦ÍùËûÉíÉÏ×¥ÏÂÈ¥¡£",
+		  sprintf("/n%sæ…¢æ…¢èµ°åˆ°%sèº«é‚Šï¼Œçªç„¶ä¸€çˆªå¾€ä»–èº«ä¸ŠæŠ“ä¸‹åŽ»ã€‚",
 			  query("c_name"),victim->query("short")),
 		  ({ this_object(),victim })
 		  );
 	if ( random(query_level()) < (int)victim->query_level()/2) {
 		tell_room(environment(this_object()),
-			  set_color("µ«ÊÇ±»·¢ÏÖÁË !!\n","HIY"),({})
+			  set_color("ä½†æ˜¯è¢«ç™¼ç¾äº† !!\n","HIY"),({})
 			  );
 		victim->kill_ob(this_object());
 		return 1;
 	}
 	tell_room(environment(this_object()),
-		  set_color("ö®Ê±Ñª»¨ËÄ½¦ !!\n","HIR"),({})
+		  set_color("éœŽæ™‚è¡€èŠ±å››æ¿º !!\n","HIR"),({})
 		  );
 		victim->kill_ob(this_object());
 		victim->receive_damage(random(query_level()*2));

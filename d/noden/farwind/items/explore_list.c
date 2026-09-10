@@ -8,10 +8,10 @@ inherit OBJECT;
 void create()
 {
 	seteuid(getuid());
-	set_name( "list", "ÅÅĞĞ°ñ" );
-	set_short( "Ì½ÏÕ¶ÈÅÅĞĞ°ñ" );
+	set_name( "list", "æ’è¡Œæ¦œ" );
+	set_short( "æ¢éšªåº¦æ’è¡Œæ¦œ" );
 	set_long((string)find_object_or_load("/d/noden/farwind/items/top_explore")->get_list());
-	set( "unit", "¾í" );
+	set( "unit", "å·" );
 	set( "weight", 5 );
 	set( "value", ({ 20, "silver" }) );
 	set( "useless", 1 );

@@ -36,18 +36,18 @@ int open_account(string str)
 
 	if (!str || str != "account")
 		return notify_fail(
-			"ÄãÒª¿ª»§µÄ»°£¬ÇëÓÃ open account¡£\n");
+			"ä½ è¦é–‹æˆ¶çš„è©±ï¼Œè«‹ç”¨ open accountã€‚\n");
 
 	if( present("bank card", this_player())||
 		present("credit card", this_player()) ) {
 		write(
-			"ÄãÒÑ¾­ÓĞÕÊ»§ÁË¡£\n" );
+			"ä½ å·²ç¶“æœ‰å¸³æˆ¶äº†ã€‚\n" );
 		return 1 ;
 	}
 
 	if(this_player()->query("bank_balance")) {
 		write (
-			"ß×£¿Äã°ÑÌá¿î¿¨¸ã¶ªÁË .... Ã»¹ØÏµ£¬ÎÒÃÇÂíÉÏ·¢¸øÄãÒ»ÕÅĞÂµÄÌá¿î¿¨¡£\n");
+			"å’¦ï¼Ÿä½ æŠŠææ¬¾å¡æä¸Ÿäº† .... æ²’é—œä¿‚ï¼Œæˆ‘å€‘é¦¬ä¸Šç™¼çµ¦ä½ ä¸€å¼µæ–°çš„ææ¬¾å¡ã€‚\n");
 		if( member_group(geteuid(this_player()), "admin") )
 			ob = clone_object(ADM_CREDIT_CARD_FILE);
 		else
@@ -57,7 +57,7 @@ int open_account(string str)
 	}
 	if( !this_player()->debit("gold", 25) ) {
 		write( 
-			"ÄãĞèÒª 25 ¿é½ğ±Ò²ÅÄÜ¿ª»§£¡\n");
+			"ä½ éœ€è¦ 25 å¡Šé‡‘å¹£æ‰èƒ½é–‹æˆ¶ï¼\n");
 		return 1 ;
 	}
 //	if( member_group((string)this_player()->query("name"), "admin") )
@@ -67,9 +67,9 @@ int open_account(string str)
 //	ob->assign(this_player());
 	ob->move(this_player());
 	write ( 
-		"ÄãÏÖÔÚÓĞÁËÊôì¶Äã×Ô¼ºµÄÕÊ»§ÁË£¡ÕâÊÇÄãµÄÌá¿î¿¨£¬ºÃºÃ±£¹Ü°É£¡\n");
+		"ä½ ç¾åœ¨æœ‰äº†å±¬æ–¼ä½ è‡ªå·±çš„å¸³æˆ¶äº†ï¼é€™æ˜¯ä½ çš„ææ¬¾å¡ï¼Œå¥½å¥½ä¿ç®¡å§ï¼\n");
 	tell_room( this_object(), 
-		this_player()->query("c_name")+"ÏòÒøĞĞÉêÇëÁËÒ»¸öÕÊºÅ¡£\n",
+		this_player()->query("c_name")+"å‘éŠ€è¡Œç”³è«‹äº†ä¸€å€‹å¸³è™Ÿã€‚\n",
 		this_player() );
 	this_player()->set("bank_balance", ([ ]) ) ;
 	return 1 ;
@@ -92,37 +92,37 @@ int withdraw (string str)
 
 	if (!str || sscanf(str,"%d %s",number,type)!=2 )
 		return notify_fail( 
-			"Ö¸Áî¸ñÊ½: withdraw <ÊıÁ¿> <Ç®±ÒÖÖÀà>\n");
+			"æŒ‡ä»¤æ ¼å¼: withdraw <æ•¸é‡> <éŒ¢å¹£ç¨®é¡>\n");
 
 	if (number<1)
 		return notify_fail(
-			"ÄãÏëÌá³ö¡¸¸ºÊı¡¹µÄÇ®À´Ôö¼Ó´æ¿î£¿±ğÉµÁË£¡\n");
+			"ä½ æƒ³æå‡ºã€Œè² æ•¸ã€çš„éŒ¢ä¾†å¢åŠ å­˜æ¬¾ï¼Ÿåˆ¥å‚»äº†ï¼\n");
 
 	card = present("bank card", this_player());
 	if( !card ) card = present("credit card", this_player());
 	if( !card )
 		return notify_fail( 
-			"ÄãÉíÉÏÃ»ÓĞÌá¿î¿¨ .... ÇëÓÃ open account ¿ª»§»òÉêÇë²¹·¢¡£\n");
+			"ä½ èº«ä¸Šæ²’æœ‰ææ¬¾å¡ .... è«‹ç”¨ open account é–‹æˆ¶æˆ–ç”³è«‹è£œç™¼ã€‚\n");
 			
 //	if( (int)card->query_val(type)>=number ) {
 	if( (int)this_player()->query("bank_balance/"+type) >= number ) {
 		if (this_player()->credit(type, number)) {
 			if (number==1) word = "coin" ; else word="coins" ;
 			write( 
-				"Äã´ÓÕÊ»§Ìá³ö "+ number+ " ¿é" + to_chinese(type + " coin") + "¡£\n");
+				"ä½ å¾å¸³æˆ¶æå‡º "+ number+ " å¡Š" + to_chinese(type + " coin") + "ã€‚\n");
 			tell_room( this_object(), 
-				this_player()->query("c_name")+"´ÓÒøĞĞÁì³öÒ»Ğ©"+to_chinese(type+" coin")+"¡£\n",
+				this_player()->query("c_name")+"å¾éŠ€è¡Œé ˜å‡ºä¸€äº›"+to_chinese(type+" coin")+"ã€‚\n",
 				this_player() );
 			this_player()->add("bank_balance/"+type,-number);
 //			card -> add_val (type,-number) ;
 			return 1 ;
 		} else
 			return notify_fail(
-				"ÄãÉíÉÏÎŞ·¨Ğ¯´øÕâĞ©Ç®±Ò£¬ÇëÍ¨ÖªÎ×Ê¦´¦Àí¡£\n");
+				"ä½ èº«ä¸Šç„¡æ³•æ”œå¸¶é€™äº›éŒ¢å¹£ï¼Œè«‹é€šçŸ¥å·«å¸«è™•ç†ã€‚\n");
 	}
 	
 	return notify_fail(
-		"ÄãµÄÕÊ»§ÀïÃ»ÓĞÕâ÷á¶à" + to_chinese( type + " coin") + "¡£\n");
+		"ä½ çš„å¸³æˆ¶è£¡æ²’æœ‰é€™éº¼å¤š" + to_chinese( type + " coin") + "ã€‚\n");
 }
 
 // Deposit allows a player to put his money in the bank.
@@ -135,35 +135,35 @@ int deposit(string str)
 
 	if (!str || sscanf(str,"%d %s",number,type)!=2 )
 		return notify_fail(
-			"Ö¸Áî¸ñÊ½: deposit <ÊıÁ¿> <Ö¸ÁîÖÖÀà>\n");
+			"æŒ‡ä»¤æ ¼å¼: deposit <æ•¸é‡> <æŒ‡ä»¤ç¨®é¡>\n");
 
 	if (number<1)
 		return notify_fail(
-			"Äã²»ÄÜ´æÈë¡¸¸ºÊı¡¹µÄÇ®£¬Ã÷°×Âğ£¿\n");
+			"ä½ ä¸èƒ½å­˜å…¥ã€Œè² æ•¸ã€çš„éŒ¢ï¼Œæ˜ç™½å—ï¼Ÿ\n");
 
 	i = this_player()->query("wealth/"+type) ;
 	if (i<number)
 		return notify_fail( 
-			"ÄãÉíÉÏÃ»ÓĞÄÇ÷á¶à" + to_chinese( type + " coin" ) + "¡£\n");
+			"ä½ èº«ä¸Šæ²’æœ‰é‚£éº¼å¤š" + to_chinese( type + " coin" ) + "ã€‚\n");
 
 	card = present( "bank card", this_player() );
 	if( !card ) card = present( "credit card",this_player() );
 	if( !card )
 		return notify_fail(
-			"Äã±ØĞëÏÈ¿ª»§(open account)²ÅÄÜÔÚÒøĞĞ´æÇ®¡£\n");
+			"ä½ å¿…é ˆå…ˆé–‹æˆ¶(open account)æ‰èƒ½åœ¨éŠ€è¡Œå­˜éŒ¢ã€‚\n");
 
 	if( !this_player()->debit( type, number ) ) {
 		write(
-			"ÄãÄ¿Ç°ÉíÉÏµÄÇ®¿ÉÄÜÓĞµãÎÊÌâ£¬ÇëÍ¨ÖªÎ×Ê¦´¦Àí¡£\n");
+			"ä½ ç›®å‰èº«ä¸Šçš„éŒ¢å¯èƒ½æœ‰é»å•é¡Œï¼Œè«‹é€šçŸ¥å·«å¸«è™•ç†ã€‚\n");
 		return 1;
 	}
 	this_player()->add("bank_balance/"+type,number);
 //	card->add_val(type,number) ;
 	if (number==1) word="coin" ; else word="coins" ;
 	write( 
-		"ÄãÔÚ×Ô¼ºµÄÕÊ»§´æÈë "+number+" ¿é"+to_chinese(type+" coin")+"¡£\n");
+		"ä½ åœ¨è‡ªå·±çš„å¸³æˆ¶å­˜å…¥ "+number+" å¡Š"+to_chinese(type+" coin")+"ã€‚\n");
 	tell_room( this_object(), 
-		this_player()->query("c_name")+"½«Ò»Ğ©"+to_chinese(type+" coin") +"´æÈë×Ô¼ºµÄÕÊ»§¡£\n",
+		this_player()->query("c_name")+"å°‡ä¸€äº›"+to_chinese(type+" coin") +"å­˜å…¥è‡ªå·±çš„å¸³æˆ¶ã€‚\n",
 		this_player() );
 	return 1 ;
 }

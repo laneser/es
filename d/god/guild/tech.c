@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
         ::create();
-      set_short( "�������޳�" );
+      set_short( "技術進修場" );
 set_long(
-"�ö�"+HIB"ħ��սʿ"NOR"������ȥ����Ҷ���Ŭ���Ľ����Լ���\n"
-"ϣ����Ϊ���յ�"+HIC"ǿ��"+NOR"��\n"
+"好多"+HIB"魔神戰士"NOR"走來走去，大家都在努力的進修自己。\n"
+"希望成為最終的"+HIC"強者"+NOR"。\n"
   NOR
         );
         set( "light",1 );

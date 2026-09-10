@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-     set_name("the evil wand", "ÌìÄ§¡õÕÈ");
+     set_name("the evil wand", "å¤©é­”â–¡æ–");
      add ("id",({ "wand",}) );
-     set_short("ÌìÄ§¡õÕÈ");
+     set_short("å¤©é­”â–¡æ–");
      set_long(@LONG
-ÌìÄ§¡õÕÈÊÇÓÉÌìÄ§Çî¾¡±ÏÉúµÄ·¨Á¦ÑĞÖÆ¶ø³ÉµÄÒ»°ÑÄ§ÕÈ¡£ÕÈÇ°¿ÌÖøÒ»¿ÅÇàÓôÓôµÄ÷¼
-÷ÃÍ·£¬Í·ÉÏÓĞÁ½¸ö³àºìÉ«µÄÑÛ¾¦£¬ÈÃÈËÒ»Íû²»º®¶øÀõ¡£
+å¤©é­”â–¡æ–æ˜¯ç”±å¤©é­”çª®ç›¡ç•¢ç”Ÿçš„æ³•åŠ›ç ”è£½è€Œæˆçš„ä¸€æŠŠé­”æ–ã€‚æ–å‰åˆ»è‘—ä¸€é¡†é’é¬±éƒçš„éª·
+é«é ­ï¼Œé ­ä¸Šæœ‰å…©å€‹èµ¤ç´…è‰²çš„çœ¼ç›ï¼Œè®“äººä¸€æœ›ä¸å¯’è€Œæ…„ã€‚
 LONG
      );
-     set( "unit", "°Ñ" );
+     set( "unit", "æŠŠ" );
      set( "weapon_class", 40 );
      set( "type", "wand" );
      set( "min_damage", 15 );
@@ -40,11 +40,11 @@ int wand_damage(object victim,int damage)
     if( (query("left_times")<1 ) && ( !query("damaged") ) ) {
        set("damaged",1);
        tell_object(holder,
-           sprintf("\nºöµØ£¬µĞÈËºİºİÍùÄãÊÖÖĞµÄ%sÒ»»÷£¬½á¹û%s±»µĞÈËÇÃ»µÁË!!!\n\n",my_name,my_name));
+           sprintf("\nå¿½åœ°ï¼Œæ•µäººç‹ ç‹ å¾€ä½ æ‰‹ä¸­çš„%sä¸€æ“Šï¼Œçµæœ%sè¢«æ•µäººæ•²å£äº†!!!\n\n",my_name,my_name));
        tell_room(environment(holder),
-           sprintf("%sÊÖÖĞµÄ%s±»µĞÈËÇÃ»µÁË¡«\n",ho_name,my_name),holder);
-       add("short"," (ÊÜËğ)") ;
-       add("c_name"," (ÊÜËğ)");
+           sprintf("%sæ‰‹ä¸­çš„%sè¢«æ•µäººæ•²å£äº†ï½\n",ho_name,my_name),holder);
+       add("short"," (å—æ)") ;
+       add("c_name"," (å—æ)");
        setup_weapon("wand",30,12,20);
        return 0;
     }
@@ -56,9 +56,9 @@ int wand_damage(object victim,int damage)
         
     dam=70+random(30);
     tell_object( holder,sprintf(
-       "\nÄãÊÖÖĞµÄ%s·¢³ö¹ÅÀÏµÄÉñÃØÖäÓïÏòµĞÈËÏ®È¥!\n\n",my_name)); 
+       "\nä½ æ‰‹ä¸­çš„%sç™¼å‡ºå¤è€çš„ç¥ç§˜å’’èªå‘æ•µäººè¥²å»!\n\n",my_name)); 
     tell_room( environment(holder),sprintf(
-       "\n\n%sÊÖÖĞµÄ%s·¢³ö¹ÅÀÏµÄÉñÃØÖäÓï£¡\n",ho_name,my_name),holder);
+       "\n\n%sæ‰‹ä¸­çš„%sç™¼å‡ºå¤è€çš„ç¥ç§˜å’’èªï¼\n",ho_name,my_name),holder);
     if ( !holder->query("npc") ) {
        add("left_times",-1);
        holder->add("spell_points",-20);

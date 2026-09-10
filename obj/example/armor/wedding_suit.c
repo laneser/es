@@ -9,20 +9,20 @@ inherit ARMOR ;
 
 void create()
 {
-	set_name( "wedding suit", "ĞÂÄïÀñ·ş");
+	set_name( "wedding suit", "æ–°å¨˜ç¦®æœ");
 	add( "id", ({ "suit", "wedding suit" }) );
-	set_short( "a white wedding suit", "°×É«ĞÂÄïÀñ·ş");
+	set_short( "a white wedding suit", "ç™½è‰²æ–°å¨˜ç¦®æœ");
 	set_long(
 		"This is a white, beautiful wedding suit.\n",
-		"ÕâÊÇÒ»¼ş´¿°×É«µÄ½á»éÀñ·ş, ÔÚ»éÀñÊ±ĞÂÄï´©ÉÏËü½ÓÊÜ´ó¼ÒµÄ×£¸£¡£\n" +
-		"ËüÃÀÀöµÄÑùÊ½ÓëÆäËù´ú±íµÄÒâÒå²»ÖªÁî¶àÉÙÉÙÅ®ÏòÍù²»ÒÑ¡£\n"
+		"é€™æ˜¯ä¸€ä»¶ç´”ç™½è‰²çš„çµå©šç¦®æœ, åœ¨å©šç¦®æ™‚æ–°å¨˜ç©¿ä¸Šå®ƒæ¥å—å¤§å®¶çš„ç¥ç¦ã€‚\n" +
+		"å®ƒç¾éº—çš„æ¨£å¼èˆ‡å…¶æ‰€ä»£è¡¨çš„æ„ç¾©ä¸çŸ¥ä»¤å¤šå°‘å°‘å¥³åš®å¾€ä¸å·²ã€‚\n"
 	);
 	set( "type", "body" );
 	set( "armor_class", 20 );
 	set( "defense_bonus", 15 );
 	set( "weight", 10 );
 	set( "value", ({ 100, "gold" }) );
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 }
 
 void init()
@@ -34,7 +34,7 @@ int do_wear(string str)
 {
 	if ( (string)this_player()->query("gender") != "female") {
 	printf( can_read_chinese() ? 
-				"±ğ¿ªÍæĞ¦ÁË, ÄãÏëµ±ÈËÑıÂğ?\n" :
+				"åˆ¥é–‹ç©ç¬‘äº†, ä½ æƒ³ç•¶äººå¦–å—?\n" :
 				"You are sure kidding!\n");
 	return 1;
 	}

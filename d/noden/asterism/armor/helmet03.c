@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("turban", "²øÍ·½í");
+        set_name("turban", "çºé ­å·¾");
         add( "id", ({ "turban" }) );
-        set_short( "²øÍ·½í");
+        set_short( "çºé ­å·¾");
         set_long(
-                "µØ¾«°®ÓÃµÄ²øÍ·²¼¡£\n"
+                "åœ°ç²¾æ„›ç”¨çš„çºé ­å¸ƒã€‚\n"
         );
-        set("unit","Ìõ");
+        set("unit","æ¢");
         set( "type", "head" );
         set("material","cloth") ;
 // set( "armor_class", 3 );

@@ -3,16 +3,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("copper feet ring", "»ÆÍ­×ã»·");
+        set_name("copper feet ring", "é»ƒéŠ…è¶³ç’°");
         add( "id", ({ "ring","boots" }) );
-        set_short( "»ÆÍ­×ã»·" );
+        set_short( "é»ƒéŠ…è¶³ç’°" );
         set_long(
 @C_LONG
-ÕâÊÇÒ»¶ÔÓÃ»ÆÍ­´òÔìµÄ½Å»·£¬ÊÇºÚ°µ¾«ÁéÌØÓĞµÄ²úÆ·£¬ËüÄÜ½ôÃÜµÄ
-¿Û×¡ÄãµÄ×ãõ×£¬¿ÉÒÔÔ¤·ÀÉËº¦¡£
+é€™æ˜¯ä¸€å°ç”¨é»ƒéŠ…æ‰“é€ çš„è…³ç’°ï¼Œæ˜¯é»‘æš—ç²¾éˆç‰¹æœ‰çš„ç”¢å“ï¼Œå®ƒèƒ½ç·Šå¯†çš„
+æ‰£ä½ä½ çš„è¶³è¸ï¼Œå¯ä»¥é é˜²å‚·å®³ã€‚
 C_LONG
         );
-        set( "unit", "¶Ô");
+        set( "unit", "å°");
         set( "type", "feet" );
    set( "material", "light_metal" );
         set( "armor_class", 3 );

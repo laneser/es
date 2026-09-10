@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(9);
-	set_name( "female servant", "¹¬Å®" );
+	set_name( "female servant", "å®®å¥³" );
 	add("id",({"servant"}));
-	set_short( "¹¬Å®");
+	set_short( "å®®å¥³");
 	set_long(@C_LONG
-Ò»É«Ç³»Æ¹¬×°µÄÅ®¨Ú¡õ£¬ÕıÔÚ·şÊÌÖø¹«Ö÷¡£
+ä¸€è‰²æ·ºé»ƒå®®è£çš„å¥³ã„šâ–¡ï¼Œæ­£åœ¨æœä¾è‘—å…¬ä¸»ã€‚
 C_LONG
         );
         set( "wealth/silver",80);

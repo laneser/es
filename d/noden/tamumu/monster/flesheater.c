@@ -8,14 +8,14 @@ void create()
 
         ::create();
         set_level(19);
-        set_name( "flesheater", "ÈâÊ³ÊŞ" );
-        set_short( "ÈâÊ³ÊŞ" );
+        set_name( "flesheater", "è‚‰é£Ÿç¸" );
+        set_short( "è‚‰é£Ÿç¸" );
         set_long(@C_LONG
-ÍÛßÖ....Õâ¼Ò»ïµ½µ×ÊÇ´ÓÄÄÀïÀ´µÄ¹ÖÎï£¿Ëü¿´ÆğÀ´ÏñÊÇÈËÀà£¬¿ÉÊÇÄã°Ù·ÖÖ®°Ù
-¿Ï¶¨Ëü²»ÊÇÈË£¡¿´À´Óöµ½ËüËãÊÇÄãµ¹é¹ÁË....¡£
+å“‡å’§....é€™å‚¢ä¼™åˆ°åº•æ˜¯å¾å“ªè£¡ä¾†çš„æ€ªç‰©ï¼Ÿå®ƒçœ‹èµ·ä¾†åƒæ˜¯äººé¡ï¼Œå¯æ˜¯ä½ ç™¾åˆ†ä¹‹ç™¾
+è‚¯å®šå®ƒä¸æ˜¯äººï¼çœ‹ä¾†é‡åˆ°å®ƒç®—æ˜¯ä½ å€’æ¥£äº†....ã€‚
 C_LONG
                 );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set( "max_hp", 600 );
         set( "hit_points", 600 );
         set_perm_stat( "str", 28 );
@@ -62,15 +62,15 @@ int to_control(string str)
                 return 0;
         this_player()->set_temp("control_flesh",2);
         tell_object(this_player(),@LONG
-Äã³É¹¦µÄÑ±·şÁËÈâÊ³ÊŞ¡£ÏÖÔÚËüÕıÏñÌõÎÂÑ±µÄĞ¡Ã¨°ã¸úÔÚÄãµÄ×óÓÒ¡£
+ä½ æˆåŠŸçš„é¦´æœäº†è‚‰é£Ÿç¸ã€‚ç¾åœ¨å®ƒæ­£åƒæ¢æº«é¦´çš„å°è²“èˆ¬è·Ÿåœ¨ä½ çš„å·¦å³ã€‚
 LONG
         );
 	tell_room(environment(this_object()),this_player()->query("c_name")+
-		"³É¹¦µÄÑ±·şÁËÈâÊ³ÊŞ¡£\n",this_player() );
+		"æˆåŠŸçš„é¦´æœäº†è‚‰é£Ÿç¸ã€‚\n",this_player() );
 	if( this_player()->query_temp("now_pet") )
-        	return notify_fail("¶Ô²»Æğ, ÄãÒÑ¾­´øÁË³èÎïÔÚÉí±ßÁË¡£\n");
+        	return notify_fail("å°ä¸èµ·, ä½ å·²ç¶“å¸¶äº†å¯µç‰©åœ¨èº«é‚Šäº†ã€‚\n");
 	if( this_player()->query_temp("now_guard") )
-        	return notify_fail("¶Ô²»Æğ, ÄãµÄÊÌÎÀËÆºõ¿´ÈâÊ³ÊŞ²»Ë³ÑÛ¡£\n");
+        	return notify_fail("å°ä¸èµ·, ä½ çš„ä¾è¡›ä¼¼ä¹çœ‹è‚‰é£Ÿç¸ä¸é †çœ¼ã€‚\n");
 	master->set_temp( "now_guard", 1 );
 	pet_flesh = new("/d/noden/tamumu/monster/flesh1" );
 	pet_flesh->set_master( master, this_object() );

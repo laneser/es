@@ -5,6 +5,6 @@ void report( object victim )
    string message;
    seteuid(getuid());
    message= "/adm/daemons/statsd"->c_status_string(victim);
-   tell_object( victim,"( Äã"+message+" )\n\n" );
+   tell_object( victim,"( ä½ "+message+" )\n\n" );
    return ;
 }

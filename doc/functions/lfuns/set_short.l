@@ -14,7 +14,7 @@ DESCRIPTION
      if <c_short> not present, use <short> instead ).
 
 EXAMPLE
-     set_short( "An ugly orc", "Ò»Ö»³óÂªµÄ°ëÊŞÈË");
+     set_short( "An ugly orc", "ä¸€éš»é†œé™‹çš„åŠç¸äºº");
 
 SEE ALSO
      set_long(),   set_name().

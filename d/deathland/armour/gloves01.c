@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("silk gloves", "Ë¿ÖÊÊÖÌ×");
+        set_name("silk gloves", "çµ²è³ªæ‰‹å¥—");
         add( "id", ({"gloves" }) );
-        set_short("a silk gloves", "Ë¿ÖÊÊÖÌ×");
+        set_short("a silk gloves", "çµ²è³ªæ‰‹å¥—");
         set_long(
                 "An gloves made of silk.\n",
-                "Ò»Ë«Ë¿ÖÊÊÖÌ×,¿ÉÒÔÈÃÎäÆ÷µÄÊ¹ÓÃ¸ü¼ÓÁ÷³©\n"
+                "ä¸€é›™çµ²è³ªæ‰‹å¥—,å¯ä»¥è®“æ­¦å™¨çš„ä½¿ç”¨æ›´åŠ æµæš¢\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "hands" );
         set( "material", "cloth" );
         set( "armor_class", 2 );

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-     set_name("broom","ÆÆÉ¨Öã");
+     set_name("broom","ç ´æƒå¸š");
      add( "id",({"broom"}) );
-     set_short("ÆÆÉ¨Öã");
+     set_short("ç ´æƒå¸š");
      set_long(@C_LONG
-Ò»°ÑÆÕÆÕÍ¨Í¨µÄÆÆÉ¨Öã¡£³ıÁËÄÃÀ´É¨µØÖ®Íâ,Äã¿´²»³öÓĞÊ²÷á¹¦ÓÃ¡£
+ä¸€æŠŠæ™®æ™®é€šé€šçš„ç ´æƒå¸šã€‚é™¤äº†æ‹¿ä¾†æƒåœ°ä¹‹å¤–,ä½ çœ‹ä¸å‡ºæœ‰ä»€éº¼åŠŸç”¨ã€‚
 C_LONG
       );
-     set( "unit", "°Ñ");
+     set( "unit", "æŠŠ");
      set("weight",30);
      set("value", ({ 25, "silver" }));
      setup_weapon( "blunt", 30, 15, 30 );

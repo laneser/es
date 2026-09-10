@@ -6,11 +6,11 @@ void create ()
 {
 	::create();
 	set_level(3);
-	set_name( "Bats", "òùòğ" );
+	set_name( "Bats", "è™è " );
 	add ("id", ({ "bat", "small_bat", "bats" }) );
-	set_short( "Ğ¡òùòğ" );
+	set_short( "å°è™è " );
 	set_long(
-           "Ò»Ö»Ğ¡òùòğ¡£\n"         
+           "ä¸€éš»å°è™è ã€‚\n"         
 	);
 	
 	set_perm_stat( "dex", 10 );
@@ -26,8 +26,8 @@ void create ()
     set ("natural_min_damage1", 5);
     set ("natural_max_damage1", 10);
     set ("weight", 50);
-    set ("unit", "Ö»");
+    set ("unit", "åª");
     set ("exp_reward",120);
-    set_c_verbs( ({ "%s×¥%s", "%sÒ§%s", }) );
-    set_c_limbs( ({ "Í·", "³á°ò", "ÉíÌå" }) );
+    set_c_verbs( ({ "%sæŠ“%s", "%så’¬%s", }) );
+    set_c_limbs( ({ "é ­", "ç¿…è†€", "èº«é«”" }) );
 }

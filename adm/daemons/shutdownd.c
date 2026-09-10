@@ -78,21 +78,21 @@ varargs int start_shutdown(int how, int delay, string who)
 		c_name = (string)this_player()->query("c_name");
 	} else {
 		name = "God of Eastern Stories";
-		c_name = "¶«·½¹ÊÊÂµÄÖîÉñ";
+		c_name = "æ±æ–¹æ•…äº‹çš„è«¸ç¥";
 	}
 
 	switch( name ) {
 		case "Kyoko":
 //			msg = sprintf("\n%s cackles: The end of the world is nigh."+
 //	    		" Prepare to meet thy DOOM!\n\n", name);
-			c_msg = sprintf("\nÌìÉÏÍ»È»´«À´´È±¯µÄÉÆÉñ¡ª¡ª%sÎÂÈáµÄÉùÒô: "+
-				"Õâ¸ö»ìÂÒµÄÊÀ½çÒÑ¾­¿ªÊ¼Òª»ÙÃğÁË£¬Çë¿ì×¼±¸×¼±¸°É!!\n\n", c_name);
+			c_msg = sprintf("\nå¤©ä¸Šçªç„¶å‚³ä¾†æ…ˆæ‚²çš„å–„ç¥â€”â€”%sæº«æŸ”çš„è²éŸ³: "+
+				"é€™å€‹æ··äº‚çš„ä¸–ç•Œå·²ç¶“é–‹å§‹è¦æ¯€æ»…äº†ï¼Œè«‹å¿«æº–å‚™æº–å‚™å§!!\n\n", c_name);
 			break;
 		default:
 //			msg = sprintf("\n%s cackles: The end of the world is nigh."+
 //				" Prepare to meet thy DOOM!\n\n", name);
-			c_msg = sprintf("\nÌìÉÏÍ»È»´«À´´È±¯µÄÉÆÉñ¡ª¡ª%sÎÂÈáµÄÉùÒô: "+
-				"Õâ¸ö»ìÂÒµÄÊÀ½çÒÑ¾­¿ªÊ¼Òª»ÙÃğÁË£¬Çë¿ì×¼±¸×¼±¸°É!!\n\n", c_name);
+			c_msg = sprintf("\nå¤©ä¸Šçªç„¶å‚³ä¾†æ…ˆæ‚²çš„å–„ç¥â€”â€”%sæº«æŸ”çš„è²éŸ³: "+
+				"é€™å€‹æ··äº‚çš„ä¸–ç•Œå·²ç¶“é–‹å§‹è¦æ¯€æ»…äº†ï¼Œè«‹å¿«æº–å‚™æº–å‚™å§!!\n\n", c_name);
 			break;
 	}
 	user = users();
@@ -144,7 +144,7 @@ void count_down(int how)
 	if( delay > 0 ) {
 //		msg = sprintf("%s\nEastern Stories will reboot after %d mins.\n\n",
 //			get_emote(delay, 0), delay);
-		c_msg = sprintf("%s\n¾àÀëÊÀ½çÄ©ÈÕ»¹ÓĞ %d ·ÖÖÓ¡£\n\n",
+		c_msg = sprintf("%s\nè·é›¢ä¸–ç•Œæœ«æ—¥é‚„æœ‰ %d åˆ†é˜ã€‚\n\n",
 			get_emote(delay, 1), delay);
 		user = users();
 		for( i=sizeof(user)-1; i>=0; i-- )
@@ -172,19 +172,19 @@ int stop_shutdown()
 		c_name = (string)this_player()->query("c_name");
 	} else {
 		name = "Gods in Eastern Stories";
-		c_name = "¶«·½¹ÊÊÂµÄÖîÉñ";
+		c_name = "æ±æ–¹æ•…äº‹çš„è«¸ç¥";
 	}
 
 	switch( name ) {
 		case "Kyoko":
 //			msg = sprintf("\nThe Mighty %s intervenes to save the world.\n\n", name);
-			c_msg = sprintf("\nÌìÉÏÍ»È»´«À´´È±¯µÄÉÆÉñ¡ª¡ª%sÎÂÈáµÄÉùÒô: "+
-				"ÎÒÒÑ¾­ÊÊÊ±×èÖ¹ÁËÊÀ½çµÄ»ÙÃğ£¬Çë´ó¼Ò°²ĞÄµØÍæ!!\n\n", c_name);
+			c_msg = sprintf("\nå¤©ä¸Šçªç„¶å‚³ä¾†æ…ˆæ‚²çš„å–„ç¥â€”â€”%sæº«æŸ”çš„è²éŸ³: "+
+				"æˆ‘å·²ç¶“é©æ™‚é˜»æ­¢äº†ä¸–ç•Œçš„æ¯€æ»…ï¼Œè«‹å¤§å®¶å®‰å¿ƒåœ°ç©!!\n\n", c_name);
 			break;
 		default:
 //			msg = sprintf("\nThe Mighty %s intervenes to save the world.\n\n", name);
-			c_msg = sprintf("\nÌìÉÏÍ»È»´«À´´È±¯µÄÉÆÉñ¡ª¡ª%sÎÂÈáµÄÉùÒô: "+ 
-                                "ÎÒÒÑ¾­ÊÊÊ±×èÖ¹ÁËÊÀ½çµÄ»ÙÃğ£¬Çë´ó¼Ò°²ĞÄµØÍæ!!\n\n",c_name);
+			c_msg = sprintf("\nå¤©ä¸Šçªç„¶å‚³ä¾†æ…ˆæ‚²çš„å–„ç¥â€”â€”%sæº«æŸ”çš„è²éŸ³: "+ 
+                                "æˆ‘å·²ç¶“é©æ™‚é˜»æ­¢äº†ä¸–ç•Œçš„æ¯€æ»…ï¼Œè«‹å¤§å®¶å®‰å¿ƒåœ°ç©!!\n\n",c_name);
 			break;
 	}
 	user = users();

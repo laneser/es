@@ -8,18 +8,18 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name("carrion creeper", "Ê³¡õ³æ");
+	set_name("carrion creeper", "é£Ÿâ–¡èŸ²");
 	add( "id", ({ "creeper" }) );
-	set_short( "Ê³¡õ³æ");
+	set_short( "é£Ÿâ–¡èŸ²");
 	set_long(
-	  "Äã¿´µ½Ò»Ö»Ê³¡õ³æ£¬ÕıÈäÈä¶ø¶¯£¬Ëü×¨ÃÅ³Ô¸¯ÀÃµÄ¡õÌå£¬ÊÇ´ó×ÔÈ»µÄÇåµÀ·ò¡£\n"
+	  "ä½ çœ‹åˆ°ä¸€éš»é£Ÿâ–¡èŸ²ï¼Œæ­£è •è •è€Œå‹•ï¼Œå®ƒå°ˆé–€åƒè…çˆ›çš„â–¡é«”ï¼Œæ˜¯å¤§è‡ªç„¶çš„æ¸…é“å¤«ã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", 50 );
 	set( "tactic_func", "wormattack" );
         set_natural_weapon(2,4,5);
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå" }) );
-	set_c_verbs( ({ "%sÕÅ¿ª´ó¿ÚÏò%sÒ§È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”" }) );
+	set_c_verbs( ({ "%så¼µé–‹å¤§å£å‘%så’¬å»" }) );
 }
 
 int sting()
@@ -28,9 +28,9 @@ int sting()
 
 	if( random(20)>7 || !(victim= query_attacker()) ) return 0;
 	tell_object( victim, 
-		"Ê³¡õ³æµÄ×ìÀïÍÂ³öÒ»¹É¶ñ³ô£¬ÄãÎÅÁË²îÒ»µãÃ»ÓĞÔÎ¹ıÈ¥£¡\n");
+		"é£Ÿâ–¡èŸ²çš„å˜´è£¡åå‡ºä¸€è‚¡æƒ¡è‡­ï¼Œä½ èäº†å·®ä¸€é»æ²’æœ‰æšˆéå»ï¼\n");
 	tell_room( environment(this_object()),
-		"Ê³¡õ³æÍù"+victim->query("c_cap_name")+"ÍÂ³öÒ»¹É¶ñ³ô\n",
+		"é£Ÿâ–¡èŸ²å¾€"+victim->query("c_cap_name")+"åå‡ºä¸€è‚¡æƒ¡è‡­\n",
 		this_object() );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 5, 5 );
 	return 1;

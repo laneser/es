@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "silver shield","°×Òø¶ÜÅÆ" );
+     set_name( "silver shield","ç™½éŠ€ç›¾ç‰Œ" );
      add( "id",({ "shield" }) );
-     set_short( "°×Òø¶ÜÅÆ" );
+     set_short( "ç™½éŠ€ç›¾ç‰Œ" );
      set_long(@C_LONG
-Ò»¼ş°×ÒøÖÆ³ÉµÄ¶ÜÅÆ£¬²»Ê±ÔÚ¶ÜÃæÉÁÒ«ÖøÒø¹â£¬´ÌÑÛ¼«ÁË¡£
+ä¸€ä»¶ç™½éŠ€è£½æˆçš„ç›¾ç‰Œï¼Œä¸æ™‚åœ¨ç›¾é¢é–ƒè€€è‘—éŠ€å…‰ï¼Œåˆºçœ¼æ¥µäº†ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "shield" );
      set( "material","heavy_metal" );
      set( "armor_class",7 );

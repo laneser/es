@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name( "prisoner", "Çô·¸" );
-	set_short( "Çô·¸" );
+	set_name( "prisoner", "å›šçŠ¯" );
+	set_short( "å›šçŠ¯" );
 	set_long(
-		"Ò»¸ö¿´ÆğÀ´ºÜ¿ÉÁ¯µÄ¼Ò»ï£¬ËûÓÃÃ£È»µÄÑÛÉñ¿´ÖøÄã¡£\n"
+		"ä¸€å€‹çœ‹èµ·ä¾†å¾ˆå¯æ†çš„å‚¢ä¼™ï¼Œä»–ç”¨èŒ«ç„¶çš„çœ¼ç¥çœ‹è‘—ä½ ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "gender", "male" );
 	set_skill( "dodge", 40 );
 	set( "natural_armor_class", 20 );

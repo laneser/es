@@ -2,8 +2,8 @@ about negative index handling::
 
   Dear All :
 
-        ´ó¼Ò¶¼ÖªµÀ string »ù±¾ÉÏÊÇ char array.
-    ÔÚ Lpc Ò²ÓĞÕâÖÖĞ´·¨ , ·¶ÀıÈçÏÂ 
+        å¤§å®¶éƒ½çŸ¥é“ string åŸºæœ¬ä¸Šæ˜¯ char array.
+    åœ¨ Lpc ä¹Ÿæœ‰é€™ç¨®å¯«æ³• , ç¯„ä¾‹å¦‚ä¸‹ 
         Examples:
        
           str = "abcdefg"
@@ -14,9 +14,9 @@ about negative index handling::
           str[-7..6] ==      "abcdefg"
           str[3..2] ==       ""
      
-    µ«ÊÇĞÂµÄ driver ²»Ìá¹© negative index .
-    Ò²¾ÍÊÇarray ÖĞ¸ºÊıµÄ¶«¶«..ËùÒÔÄØ.ĞèÒª×öĞ©ĞŞ¸Ä.
-    ·³Çë¸÷Î»ÔÚ¿´µ½ÕâÖÖĞ´·¨Ê±Ë³ÊÖ¸Äµô.¸Ä·¨ÈçÏÂ
+    ä½†æ˜¯æ–°çš„ driver ä¸æä¾› negative index .
+    ä¹Ÿå°±æ˜¯array ä¸­è² æ•¸çš„æ±æ±..æ‰€ä»¥å‘¢.éœ€è¦åšäº›ä¿®æ”¹.
+    ç…©è«‹å„ä½åœ¨çœ‹åˆ°é€™ç¨®å¯«æ³•æ™‚é †æ‰‹æ”¹æ‰.æ”¹æ³•å¦‚ä¸‹
  
           str[0..0] ==       "a"
           str[0..strlen(str)] ==      "abcdefg"
@@ -25,13 +25,13 @@ about negative index handling::
           str[strlen(str)-7..6] ==      "abcdefg"
           str[3..2] ==       ""
      
-     Ò²¾ÍÊÇËµ , str[i..j] ÖĞ, i j Îª¸ºÊıÊ±
+     ä¹Ÿå°±æ˜¯èªª , str[i..j] ä¸­, i j ç‚ºè² æ•¸æ™‚
           i => strlen(str)+i
           j => strlen(str)+j+1 (i,j == nagetive)
 
-     ×îáá, ÒòÎªÕâÖÖĞ´·¨É¢¼ûì¶¸÷´¦,ÓÈÆäÊÇ /adm /std ..etc 
-     Èç¹ûÄãÃ»ÓĞ access right ·³Çë·¢¸ö mail ¸øÄÜ¶¯µÄÈË
-     À´×öĞŞ¸Ä.¸Ğ¼¤²»½û.´ó¼Ò¸Ä code Óä¿ì.. *grin*
+     æœ€å¾Œ, å› ç‚ºé€™ç¨®å¯«æ³•æ•£è¦‹æ–¼å„è™•,å°¤å…¶æ˜¯ /adm /std ..etc 
+     å¦‚æœä½ æ²’æœ‰ access right ç…©è«‹ç™¼å€‹ mail çµ¦èƒ½å‹•çš„äºº
+     ä¾†åšä¿®æ”¹.æ„Ÿæ¿€ä¸ç¦.å¤§å®¶æ”¹ code æ„‰å¿«.. *grin*
 
                                   Indra.
 

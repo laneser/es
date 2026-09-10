@@ -14,15 +14,15 @@ int cmd_gonfus()
 
 	known = (mapping)this_player()->query("gonfus");
 	if (!known || sizeof(known)==0) {
-		write( "ÄãÄ¿Ç°²»»áÈÎºÎ\¹¦\·ò¡£\n");
+		write( "ä½ ç›®å‰ä¸æœƒä»»ä½•åŠŸå¤«ã€‚\n");
 		return 1 ;
 	}
 
-	s = "ÄãÄ¿Ç°ËùÄÜÊ¹ÓÃµÄ\¹¦\·òÓÐ:\n";
+	s = "ä½ ç›®å‰æ‰€èƒ½ä½¿ç”¨çš„åŠŸå¤«æœ‰:\n";
 	gonfu = keys(known);
 	for(i=0; i<sizeof(gonfu); i++)
 		s += 
-		sprintf("  %s(%s) : ÊìÁ·¶È [%d] \n", to_chinese(gonfu[i]), 
+		sprintf("  %s(%s) : ç†Ÿç·´åº¦ [%d] \n", to_chinese(gonfu[i]), 
 			  capitalize(gonfu[i]),known[gonfu[i]]  );
 	write(s);
 	return 1;

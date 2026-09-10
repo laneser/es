@@ -28,7 +28,7 @@ void effect(object player)
 	if( !sizeof(cond_data)==3 ) return;
 	player->receive_special_damage( "mental", cond_data[2] );
 	tell_object(player, can_read_chinese(player)?
-		set_color("Äã¾õµÃÄÔÖÐÒ»ÍÅ»ìÂÒ£¬ºÃÏñÓÐÊ²÷á²»ÖªÃûµÄ¶«Î÷ÔÚ¿Ð¡õÖøÄã....\n","HIM",player):
+		set_color("ä½ è¦ºå¾—è…¦ä¸­ä¸€åœ˜æ··äº‚ï¼Œå¥½åƒæœ‰ä»€éº¼ä¸çŸ¥åçš„æ±è¥¿åœ¨å•ƒâ–¡è‘—ä½ ....\n","HIM",player):
 		"You feel confused, with unknown pain ....\n");
 	cond_data[1]--;
 	player->set( "conditions/" + EFFECT_NAME, cond_data );
@@ -38,7 +38,7 @@ void effect(object player)
 void remove_effect(object player)
 {
 	tell_object(player, can_read_chinese()?
-		set_color("Äã¾õµÃÄÔ×ÓÇåÐÑ¶àÁË ....\n","HIC",player):
+		set_color("ä½ è¦ºå¾—è…¦å­æ¸…é†’å¤šäº† ....\n","HIC",player):
 		"You feel no more confused .... \n");
 	player->delete("conditions/" + EFFECT_NAME );
 	player->delete_temp("confused");
@@ -51,7 +51,7 @@ void apply_effect(object player, int duration, int damage)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !cond_data ) {
 		tell_object(player, can_read_chinese(player)?
-			set_color("Äã¾õµÃÒ»ÕóÌìÐýµØ×ª£¬ÄÔ×Ó¿ªÊ¼¾õµÃ²»Ì«¶Ô¾¢£¡\n","HIM",player):
+			set_color("ä½ è¦ºå¾—ä¸€é™£å¤©æ—‹åœ°è½‰ï¼Œè…¦å­é–‹å§‹è¦ºå¾—ä¸å¤ªå°å‹ï¼\n","HIM",player):
 			"You are confused!\n");
 		player->set( "conditions/" + EFFECT_NAME, ({ 6, duration, damage }) );
 	} else {
@@ -59,7 +59,7 @@ void apply_effect(object player, int duration, int damage)
 		if( damage > cond_data[2] ) cond_data[2] = damage;
 		else if( userp(player) ) cond_data[2]++;
 		tell_object(player, can_read_chinese(player)?
-			set_color("Äã¾õµÃÄãµÄË¼Â·Ô½À´Ô½ÂÒ£¬Ò»ÇÐ¶¼²»¶Ô¾¢£¡\n","HIM",player):
+			set_color("ä½ è¦ºå¾—ä½ çš„æ€è·¯è¶Šä¾†è¶Šäº‚ï¼Œä¸€åˆ‡éƒ½ä¸å°å‹ï¼\n","HIM",player):
 			"You feel confused!\n");
 		player->set( "conditions/" + EFFECT_NAME, cond_data );
 	}

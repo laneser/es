@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name( "a gnome magic student", "ħ��ѧͽ" );
+	set_name( "a gnome magic student", "魔法學徒" );
 	add("id",({"mage","gnome","student"}) );
-   set_short( "ħ��ѧͽ" );
+   set_short( "魔法學徒" );
 	set_long(
-	"����ؾ�������ϰħ����������ʱ��͵�����,��ʱҪ��ͷ������ӡ������.\n"
-        "��϶����ŸսӴ�ħ��û��á�\n"
+	"這個地精正在練習魔法。聽他有時結巴的咒文,有時要歪頭回想手印的神情.\n"
+        "你斷定他才剛接觸魔法沒多久。\n"
 	);
 	set( "gender", "female" );
 	set( "race", "gnome" );

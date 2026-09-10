@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("damo plate","ÆÆÄ§Ê¥¼×");
+    set_name("damo plate","ç ´é­”è–ç”²");
     add("id",({"plate","damo"}) );
-    set_short( "damo plate","ÆÆÄ§Ê¥¼×");
+    set_short( "damo plate","ç ´é­”è–ç”²");
 	set_long(
 "This is a suit of plate, and it is worn by damo.\n",
-"ÕâÊÇÒ»¼ş¿´À´ºÜÆÆ¾ÉµÄÕ½¼×, Ïà´«ÊÇµ±ÄêµÛÊÍÌìºÍ°¢ĞŞÂŞÕ½¶·Ê±ËùÁôÏÂÀ´µÄ, ËüÒşÒş\n"
-"°üÎ§ÖøÒ»Õó¹âÔÎ, É¢·¢³öÒ»¹ÉÉñÊ¥µÄÆøÏ¢... \n"
+"é€™æ˜¯ä¸€ä»¶çœ‹ä¾†å¾ˆç ´èˆŠçš„æˆ°ç”², ç›¸å‚³æ˜¯ç•¶å¹´å¸é‡‹å¤©å’Œé˜¿ä¿®ç¾…æˆ°é¬¥æ™‚æ‰€ç•™ä¸‹ä¾†çš„, å®ƒéš±éš±\n"
+"åŒ…åœè‘—ä¸€é™£å…‰æšˆ, æ•£ç™¼å‡ºä¸€è‚¡ç¥è–çš„æ°£æ¯... \n"
 	);
     set( "no_sale",1);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 360 );
 	set( "type", "body" );
     set( "material","monk");

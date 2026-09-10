@@ -3,11 +3,11 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("occult chainmail", "ÉñÃØ¡õ¼×");
+        set_name("occult chainmail", "ç¥žç§˜â–¡ç”²");
         add( "id", ({ "mail","chainmail" }) );
-        set_short("ÉñÃØ¡õ¼×");
-        set_long("ÉñÃØ¡õ¼×\n");
-        set("unit","¼þ");
+        set_short("ç¥žç§˜â–¡ç”²");
+        set_long("ç¥žç§˜â–¡ç”²\n");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "light_metal" );
         set( "armor_class", 25 );

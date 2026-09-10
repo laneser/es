@@ -8,12 +8,12 @@ void create()
 {
 	::create();
 	set_level(18);
-	set_name("judge", "判官");
-	set_short("the assistant judge", "冥府判官");
+	set_name("judge", "鍒ゅ畼");
+	set_short("the assistant judge", "鍐ュ簻鍒ゅ畼");
 	set_long(
 		"This is a simple monster created by npc maker.\n",
-		"这位判官正板著脸孔瞪著你，不知道他毫无血色的脸孔後面隐藏著\n"
-		"什麽样的想法。\n"
+		"閫欎綅鍒ゅ畼姝ｆ澘钁楄噳瀛旂灙钁椾綘锛屼笉鐭ラ亾浠栨鐒¤鑹茬殑鑷夊瓟寰岄潰闅辫棌钁梊n"
+		"浠�楹兼ǎ鐨勬兂娉曘�俓n"
 	);
 	set( "gender", "male" );
 	set( "no_attack", 1 );

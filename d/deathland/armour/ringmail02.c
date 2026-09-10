@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Luck ringmail","ĞÒÔË»·¼×");
+        set_name("Luck ringmail","å¹¸é‹ç’°ç”²");
         add("id",({"ringmail"}) );
-         set_short( "a luck ringmail","ĞÒÔË»·¼×");
+         set_short( "a luck ringmail","å¹¸é‹ç’°ç”²");
 	set_long(
 "This is a suit of ringmail made of mithril meterial,which can  \n"
 "protect your body against opponent's attacks.\n",
-"ÕâÊÇÒ»¸±»·¼×,¿ÉÒÔ±£»¤ÄãµÖ¿¹µĞÈËµÄ¹¥»÷,¾İËµ´©ÉÏÕâ»·¼×µÄÈËÔÚÕ½¶·ÖĞÄÜ¹»ĞÒÔË\n"
-"µÄ±Ü¿ªµĞÈËµÄÖØ»÷.\n"
+"é€™æ˜¯ä¸€å‰¯ç’°ç”²,å¯ä»¥ä¿è­·ä½ æŠµæŠ—æ•µäººçš„æ”»æ“Š,æ“šèªªç©¿ä¸Šé€™ç’°ç”²çš„äººåœ¨æˆ°é¬¥ä¸­èƒ½å¤ å¹¸é‹\n"
+"çš„é¿é–‹æ•µäººçš„é‡æ“Š.\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 250 );
 	set( "type", "body" );
 	set( "material", "light_metal");

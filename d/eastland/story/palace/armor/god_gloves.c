@@ -4,15 +4,15 @@ inherit ARMOR;
 inherit SARM"OR";
 void create()
 {
-     set_name( "God-Dragon bracers","ÌìÁúïí" );
+     set_name( "God-Dragon bracers","å¤©é¾é²" );
      add( "id",({ "bracers","gloves" }) );
-     set_short( "ÌìÁúïí" );
+     set_short( "å¤©é¾é²" );
      set_long(@C_LONG
-Ò»Ë«¿ÌÖøÁú×¦µÄ°×É«ÊÖÌ×£¬µñ¹¤¾«ÃÀ¡£
+ä¸€é›™åˆ»è‘—é¾çˆªçš„ç™½è‰²æ‰‹å¥—ï¼Œé›•å·¥ç²¾ç¾ã€‚
 C_LONG
      );
      set( "weight",40 );
-     set( "unit", "Ë«");
+     set( "unit", "é›™");
      set( "type", "hands" );
      set( "material","element" );
      set( "armor_class",3 );

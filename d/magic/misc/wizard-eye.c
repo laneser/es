@@ -68,18 +68,18 @@ int cast(int level)
 	if ((string)this_player()->query_env("vt100") == "color") color = 1;
 
 	if( (int)player->query_skill(TYPE) < query_need_skill(level) )
-	{	tell_object( player,"�����ڵ�"+to_chinese(TYPE)+"������ʹ����ȼ���ħ��!\n");
+	{	tell_object( player,"你現在的"+to_chinese(TYPE)+"不足以使用這等級的魔法!\n");
     		return 0;
 	}
 	if( !env || !(v_server = env->query("virtual_server")) )
-	{	tell_object( player,"��ʦ֮��ֻ����Ұ�����ʹ�á�\n");
+	{	tell_object( player,"巫師之眼只有在野外才能使用。\n");
 		return 0;
 	}
 
 	player->set_temp("cast_busy",1);
 
-	tell_object( player,"��ʩչ��ʦ֮�ۣ��������ǰ��ʾ���⸽�����ε��\n" );
-	tell_room( env, player->query("c_name")+"��ʼ�����\n", player );
+	tell_object( player,"你施展巫師之眼，在你的面前顯示出這附近地形地物。\n" );
+	tell_room( env, player->query("c_name")+"開始喃喃自語。\n", player );
 	gain_spell_experience(player, TYPE, query_gain_spell_exp(level));
 	x = (int)env->query("x_coordinate");
 	y = (int)env->query("y_coordinate");
@@ -119,7 +119,7 @@ int cast(int level)
 		str += "|\n";
 	}
 	str += bar;
-	str += sprintf("��Ŀǰ��λ��: (X = %d, Y = %d)\n", x, y);
+	str += sprintf("你目前的位置: (X = %d, Y = %d)\n", x, y);
 	tell_object(player, str);
 
 	call_out("eye_effect", 2,player);

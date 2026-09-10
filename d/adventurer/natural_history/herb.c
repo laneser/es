@@ -6,10 +6,10 @@
 #define TP_RECOVER ({0,15,0,20,-20,0,0}) 
 #define name ({"moon herb","red berry","black_head","monk fruit","red pepper","star herb","kira fruit"})
 #define ID ({"herb","berry","head","fruit","pepper","herb","fruit"})
-#define c_name ({"ÂúÔÂ²Ý","Ð¡ºìÝ®","ºÎÊ×ÎÚ","ÂÞºº¹û","À±½·","ÌìÐÇ²Ý","¼ªÀ­¹û"})
+#define c_name ({"æ»¿æœˆè‰","å°ç´…èŽ“","ä½•é¦–çƒ","ç¾…æ¼¢æžœ","è¾£æ¤’","å¤©æ˜Ÿè‰","å‰æ‹‰æžœ"})
 #define value ({ 250,100,200,220,100,150,200 })
-#define UNITS ({ "Öê","¿Å","¿é","¿Å","Ìõ","Öê","¿Å" })
-#define POWER ({ "ÌáÉñ","½â¿Ê","²¹Æø","½â¿Ê","ÌáÉñ","ÌáÉñ","ÖÎÉË" })
+#define UNITS ({ "æ ª","é¡†","å¡Š","é¡†","æ¢","æ ª","é¡†" })
+#define POWER ({ "æç¥ž","è§£æ¸´","è£œæ°£","è§£æ¸´","æç¥ž","æç¥ž","æ²»å‚·" })
 inherit OBJECT;
 
 void init()
@@ -25,8 +25,8 @@ void create()
 	add( "id" , ({ ID[i] }) );
 	set_short(c_name[i]);
 	set_long(
-	"ÕâÊÇÒ»"+UNITS[i]+"Ò°ÉúµÄ"+c_name[i]+"£¬¸ù¾ÝÄãËùÑÐ¶Á¹ýµÄÖ²ÎïÍ¼¼ø\n"
-	"£¬ËüËÆºõ¾ßÓÐ"+POWER[i]+"µÄ¹¦Ð§??\n"
+	"é€™æ˜¯ä¸€"+UNITS[i]+"é‡Žç”Ÿçš„"+c_name[i]+"ï¼Œæ ¹æ“šä½ æ‰€ç ”è®€éŽçš„æ¤ç‰©åœ–é‘‘\n"
+	"ï¼Œå®ƒä¼¼ä¹Žå…·æœ‰"+POWER[i]+"çš„åŠŸæ•ˆ??\n"
 	);
    	set("unit",UNITS[i]);
    	set("weight", 10);
@@ -43,10 +43,10 @@ int eat_food(string arg)
 		if ( !present(arg,this_player()) ) return 0;
 		str = present(arg,this_player())->query("name");
 		i = member_array(str,name) ;
-		write("Äã³ÔÏÂÒ»"+ UNITS[i] +"Ò°ÉúµÄ"+c_name[i] +"£¬¸Ð¾õÌåÄÚÓÐÒ»Ð©±ä»¯²úÉú¡£\n");
+		write("ä½ åƒä¸‹ä¸€"+ UNITS[i] +"é‡Žç”Ÿçš„"+c_name[i] +"ï¼Œæ„Ÿè¦ºé«”å…§æœ‰ä¸€äº›è®ŠåŒ–ç”¢ç”Ÿã€‚\n");
 		tell_room( environment(this_player()), 
 			this_player()->query("c_name")+
-			"³ÔÏÂÒ»"+ UNITS[i] +"Ò°ÉúµÄ"+ c_name[i] +"£¬²¢ÇÒÂ¶³öÒ»Ð©Ææ¹ÖµÄ±íÇé...\n" , this_player()
+			"åƒä¸‹ä¸€"+ UNITS[i] +"é‡Žç”Ÿçš„"+ c_name[i] +"ï¼Œä¸¦ä¸”éœ²å‡ºä¸€äº›å¥‡æ€ªçš„è¡¨æƒ…...\n" , this_player()
 		);
 		this_player()->receive_healing(HP_RECOVER[i]);
 

@@ -8,15 +8,15 @@ int query_need_fp()
 int gonfu_level(object me)
 {
   int skill; 
-       // ´«»ØÊìÁ·Öµ
+       // å‚³å›ç†Ÿç·´å€¼
         skill=(int)me->query("gonfus/"+(string)me->query_temp("gonfu_now"));
         if (skill >100) skill=100; 
         return skill; 
-        //    ^^^^^^^^^^^^ÊìÁ·¶È
+        //    ^^^^^^^^^^^^ç†Ÿç·´åº¦
 }
 varargs int can_use(object me, object victim, object weapon)
 {
-        // È·¶¨ËùÊ¹ÓÃÎäÆ÷ÊÇ·ñÕıÈ·
+        // ç¢ºå®šæ‰€ä½¿ç”¨æ­¦å™¨æ˜¯å¦æ­£ç¢º
 	int type,i;
 	string last;
         if( weapon ) return 0;
@@ -38,17 +38,17 @@ varargs int can_use(object me, object victim, object weapon)
         return type;
 }
 
-// ¸÷Ê½Õ½¶·Ñ¶Ï¢
+// å„å¼æˆ°é¬¥è¨Šæ¯
 string *attack_msg = ({
 
-        "%sÊÖÖ¸µãÏò%s", 
-        "%sÒ»Ö¸¡º¾²¼«±ã¾õ¡»µ¯Ïò%s",
-        "%sÁ³Â¶Î¢Ğ¦£¬Ò»µãÖ¸Á¦·ÉÏò%s",
-        "%sÉñÉ«ÎÂºÍ£¬Ò»ÕĞ¡ºÎŞÊ¼ÎŞÃû¡»Ê¹³ö£¬Ò»µÀÖ¸Á¦¹¥Ïò%s",   
-        "%sÌ¬¶ÈÆ½ºÍ×ÔµÃ£¬Ò»¼Ç¡º»¨ÂäÁ«³É¡»£¬¼¸µãÄÚ¾¢»÷Ïò%s",
-        "%sË«Ä¿Î¢±Õ£¬Ò»¹ÉÇ¿¾¢Ö¸Á¦¹¥Ïò%s",
-        "%sË«Ã¼Î¢õ¾£¬Ò»¼Ç¡ºÖî»Ã¾¡Ãğ¡»´ó¹ÉÖ¸Á¦¾íÏò%s",
-        "%sÔËÆøì¶Ö¸£¬Ê¹³ö×îÇ¿µÄ¡ºÔ²ÎòÄùÅÌ¡»Ò»Á¬ÈıÖ¸Ğ®Ç¿¾¢ÄÚÁ¦Ï®Ïò%s",
+        "%sæ‰‹æŒ‡é»å‘%s", 
+        "%sä¸€æŒ‡ã€éœæ¥µä¾¿è¦ºã€å½ˆå‘%s",
+        "%sè‡‰éœ²å¾®ç¬‘ï¼Œä¸€é»æŒ‡åŠ›é£›å‘%s",
+        "%sç¥è‰²æº«å’Œï¼Œä¸€æ‹›ã€ç„¡å§‹ç„¡åã€ä½¿å‡ºï¼Œä¸€é“æŒ‡åŠ›æ”»å‘%s",   
+        "%sæ…‹åº¦å¹³å’Œè‡ªå¾—ï¼Œä¸€è¨˜ã€èŠ±è½è“®æˆã€ï¼Œå¹¾é»å…§å‹æ“Šå‘%s",
+        "%sé›™ç›®å¾®é–‰ï¼Œä¸€è‚¡å¼·å‹æŒ‡åŠ›æ”»å‘%s",
+        "%sé›™çœ‰å¾®è¹™ï¼Œä¸€è¨˜ã€è«¸å¹»ç›¡æ»…ã€å¤§è‚¡æŒ‡åŠ›å·å‘%s",
+        "%sé‹æ°£æ–¼æŒ‡ï¼Œä½¿å‡ºæœ€å¼·çš„ã€åœ“æ‚Ÿæ¶…ç›¤ã€ä¸€é€£ä¸‰æŒ‡æŒ¾å¼·å‹å…§åŠ›è¥²å‘%s",
                      });
 
 
@@ -61,12 +61,12 @@ int *hits   = ({0,50,50,50,66,63,50,50,46,50,53,75,50,50,50,50,40,33,33,33});
 varargs int hit_modify(int hit_chance, object me, object victim, object weapon,int type)
 {
 	int i;
-        // ÃüÖĞÂÊµ÷Õû
+        // å‘½ä¸­ç‡èª¿æ•´
         if( (type<1||type>8) ) return 0;
  
-       // ÃüÖĞÂÊµ÷ÕûÖµÎª °Ù·ÖÖ®£¨  ÊìÁ·¶È/5 + 100~120 £©
+       // å‘½ä¸­ç‡èª¿æ•´å€¼ç‚º ç™¾åˆ†ä¹‹ï¼ˆ  ç†Ÿç·´åº¦/5 + 100~120 ï¼‰
 //	i =  gonfu_level(me)/5 + hits[type-1] -10 + (int)this_player()->query("force_effect")*5;
-//	ÃüÖĞÂÊµ÷Õû - by Ruby
+//	å‘½ä¸­ç‡èª¿æ•´ - by Ruby
 	i = hits[(int)victim->query_level()]-63+
 		(int)victim->query_perm_stat("dex")*3 ;
    	if( (int)me->query("force_points") < query_need_fp() ){	i = -5; }
@@ -77,15 +77,15 @@ varargs int penetrate_modify(int pene_chance, object me, object victim, object w
 {
 
         int i,delta_str;
-        // ´©Í¸ÂÊµ÷Õû
+        // ç©¿é€ç‡èª¿æ•´
         if( (type<1||type>8) ) return 0;
 //	delta_str = (int)me->query_stat("str")-(int)victim->quert_stat("str");
 //	if (delta_str<0) { delta_str=0; } 
 //	i = gonfu_level(me)/6 +9+random(21)+ delta_str/2 + (int)this_player()->query("force_effect");
 	i = 64-(int)me->query_perm_stat("str")*3 + (int)victim->query("armor_class") ;
         if( (int)me->query("force_points") < query_need_fp() ){	i = -5; }
-//	´©Í¸ÂÊµ÷Îª 120 %  - by Ruby
-        // ´©Í¸ÂÊµ÷ÕûÎª°Ù·ÖÖ®£¨ÊìÁ·¶È/4 + Ë«·½Á¦Á¿²î/2£©£¬µÍì¶ÁãÔò²»¼Æ
+//	ç©¿é€ç‡èª¿ç‚º 120 %  - by Ruby
+        // ç©¿é€ç‡èª¿æ•´ç‚ºç™¾åˆ†ä¹‹ï¼ˆç†Ÿç·´åº¦/4 + é›™æ–¹åŠ›é‡å·®/2ï¼‰ï¼Œä½æ–¼é›¶å‰‡ä¸è¨ˆ
         return i;
 
 }
@@ -102,11 +102,11 @@ varargs int damage_modify(int damage, object me, object victim, object weapon,in
 	i = (int)victim->query("max_hp")/counts[(int)victim->query_level()] +db ;
 
 //	i =gonfu_level(me)/10+dams[type-1]+extra_damage+(int)this_player()->query("force_effect");
-        // ¹¥»÷Á¦µ÷Õû
+        // æ”»æ“ŠåŠ›èª¿æ•´
         if( (int)me->query("force_points") < query_need_fp() ){	i = -5; }
             else {me->add("force_points",-query_need_fp()); } 
         if( (type<1||type>8) ) return 0;
-        // ¹¥»÷Á¦µ÷ÕûÎª°Ù·ÖÖ®£¨  ÊìÁ·¶È/4+ 4~12£©
+        // æ”»æ“ŠåŠ›èª¿æ•´ç‚ºç™¾åˆ†ä¹‹ï¼ˆ  ç†Ÿç·´åº¦/4+ 4~12ï¼‰
   
         return i;
 }
@@ -117,6 +117,6 @@ varargs string query_attack_msg(object me, object victim, int type)
         if( (type<1||type>8) ) return 0;
         a_msg = attack_msg[type-1];
         if( (int)me->query("force_points") < query_need_fp() )
-        { a_msg = a_msg+"£¬µ«ÊÇ³öÊÖÊ±ÏÔµÃÄÚÁ¦²»×ãµÄ¸Ğ¾õ";}
+        { a_msg = a_msg+"ï¼Œä½†æ˜¯å‡ºæ‰‹æ™‚é¡¯å¾—å…§åŠ›ä¸è¶³çš„æ„Ÿè¦º";}
         return a_msg;
 }

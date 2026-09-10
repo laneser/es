@@ -1,7 +1,7 @@
-// HellParadise.c	µØÓüÏÉ¾³
+// HellParadise.c	åœ°ç„ä»™å¢ƒ
 //
 //	Effect: +MP100 +FP100
-//		(ÃÔ»ÃÒ©Ïµ)
+//		(è¿·å¹»è—¥ç³»)
 //
 //			Lilia
 
@@ -14,11 +14,11 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("hell paradise", "µØÓüÏÉ¾³");
+    set_name("hell paradise", "åœ°ç„ä»™å¢ƒ");
     add("id", ({"hell", "paradise"}));
-    set_short("µØÓüÏÉ¾³");
-    set_long("ÕâÊÇÒ»Á£ºÚÉ«µÄÍèÒ©£¬ÓĞ¹É´Ì±ÇµÄÎ¶µÀ¡£\n");
-    set("unit", "Á£");
+    set_short("åœ°ç„ä»™å¢ƒ");
+    set_long("é€™æ˜¯ä¸€ç²’é»‘è‰²çš„ä¸¸è—¥ï¼Œæœ‰è‚¡åˆºé¼»çš„å‘³é“ã€‚\n");
+    set("unit", "ç²’");
     set("weight", 15);
     set("value", ({ 500, "silver" }));
 }
@@ -36,8 +36,8 @@ int do_eat(string arg)
     p = this_player();
 
     if (!arg || (arg != "pill" && arg != "hell" && arg != "paradise"))
-	return notify_fail("³ÔÊ²÷á??");
-    write("Äã³ÔÏÂÁËµØÓüÏÉ¾³£¬¶ÙÊ±ÄÔÖĞ¸¡ÏÖÁËÎŞÊıµÄ»Ã¾õ ....\n");
+	return notify_fail("åƒä»€éº¼??");
+    write("ä½ åƒä¸‹äº†åœ°ç„ä»™å¢ƒï¼Œé “æ™‚è…¦ä¸­æµ®ç¾äº†ç„¡æ•¸çš„å¹»è¦º ....\n");
 
     (CONDITION_PREFIX + "sick")->apply_effect(p, 4, 10, 5);
     (CONDITION_PREFIX + "weak")->apply_effect(p, 10, 2);

@@ -20,7 +20,7 @@ int sneak_idle(object me,int succeed,string dir,string exit)
 		me->move_player(exit,"",dir);
         	this_player()->block_attack(4);
         	this_player()->set_temp("msg_stop_attack",
-        	"( ��Ǳ��ʧ�ܣ�������ͻϮ��һ����æ���ң� )\n" );
+        	"( 你潛行失敗，被敵人突襲，一陣手忙腳亂！ )\n" );
    	}	
 	return 1;
 }
@@ -51,19 +51,19 @@ int cmd_sneak(string arg)
 	env = environment(this_player()) ;
 
 	if ( (int)this_player()->query_temp("next_action") > time() )
-		return notify_fail("���������������� ...\n");
+		return notify_fail("你正在做其他事情 ...\n");
 
-	if ( ! arg ) return notify_fail("��Ҫ������Ǳ�У�\n");
+	if ( ! arg ) return notify_fail("你要往哪裡潛行？\n");
 	if ( !exit = env->query("exits/"+arg) )
-		return notify_fail("����û���κγ�·��\n");
+		return notify_fail("那裡沒有任何出路。\n");
 	if ( door = env->query("doors/"+arg) )
 		if ( (string)env->query("doors/"+arg+"/status") != "open" )
-			return notify_fail("������Ź��������봩��ȥ��\n");
+			return notify_fail("那裡的門關著，你想穿過去嗎？\n");
 
-	write(set_color(sprintf("�㿪ʼ��%sǱ�� ...\n",
+	write(set_color(sprintf("你開始向%s潛行 ...\n",
 			to_chinese(arg)),"HIY"));
 	tell_room(env,
-		sprintf("%s��ʼ��%sǱ�� ...\n",this_player()->query("c_name"),
+		sprintf("%s開始向%s潛行 ...\n",this_player()->query("c_name"),
 			to_chinese(arg)),this_player());
 	delay = 2 + random(4);
 	this_player()->set_temp("hidding",0);
@@ -78,9 +78,9 @@ int help()
 	write (@HELP
 Usage: sneak <dir>
 
-���ָ����ʹ�����ø��ֵ��Σ����ص��������ķ����ƶ������������
-�ڱ��˺���֪����������ƶ��������ڵ�λ�ã���Ȼ���е��ѣ�����ֻ
-Ҫ�ɹ�\�ˣ����͸������ܲ����Ĵ��ڡ�
+這個指令能使你利用各種地形，隱秘的向期望的方向移動，這樣你可以
+在別人毫不知覺的情況下移動到他所在的位置，雖然這有點難，但是隻
+要成功了，他就根本不能查覺你的存在。
 
 HELP
 );

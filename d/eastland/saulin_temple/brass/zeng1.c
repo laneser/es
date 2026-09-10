@@ -5,11 +5,11 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short( "ͭ������" );
+        set_short( "銅人陣中" );
         set_long(
 @C_LONG
-�������һ�������ʯ�ң�ӭ����������������������ͭ�ˣ�ҡ
-ҡ�λε�����Ϯ������������ο���Ҫ���汣����.....
+你進入了一個寬廣的石室，迎面而來的是三個金光閃閃的銅人，搖
+搖晃晃地向你襲來。你心想這次可真要佛祖保佑了.....
 C_LONG
         );
 
@@ -44,10 +44,10 @@ int do_knock(string str)
 	if( !str || str == "" ) return 0;
 	if( str == "wall" ) {
 		tell_object(obj,
-			"ͻȻ���������޺���ǽ�а����߳�������̧�˳�ȥ��\n" );
+			"突然兩個紅衣羅漢自牆中暗門走出，將你抬了出去。\n" );
 		ob1=find_object_or_load(SAULIN"/entrance");
 		tell_room(ob1,
-			sprintf("�㿴�����������޺���%s��̧����һ��̧�˳�����\n",
+			sprintf("你看到兩個紅衣羅漢將%s像抬豬公一樣抬了出來。\n",
 				obj->query("c_name") ) );
 		obj->add("monk_score",-100);
 		obj->move_player(SAULIN"/entrance","SNEAK");
@@ -62,10 +62,10 @@ int do_quit()
 	obj = this_player();
 	
 	tell_object(obj,
-			"ͻȻ���������޺���ǽ�а����߳�������̧�˳�ȥ��\n" );
+			"突然兩個紅衣羅漢自牆中暗門走出，將你抬了出去。\n" );
 	ob1=find_object_or_load(SAULIN"/entrance");
 	tell_room(ob1,
-		sprintf("�㿴�����������޺���%s��̧����һ��̧�˳�����\n",
+		sprintf("你看到兩個紅衣羅漢將%s像抬豬公一樣抬了出來。\n",
 			obj->query("c_name") ) );
 	obj->add("monk_score",-100);
 	obj->move_player(SAULIN"/entrance","SNEAK");
@@ -76,7 +76,7 @@ int do_quit()
 int pre_north()
 {
 	if ( present("brassman",this_object()) ) {
-		write("ͭ�˵������ȥ·��\n");
+		write("銅人擋著你的去路。\n");
 		return 1; }
 	else return 0;
 }

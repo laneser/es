@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "elven knife", "¾«ÁéĞ¡µ¶");
+        set_name( "elven knife", "ç²¾éˆå°åˆ€");
         add ("id",({ "knife"}) );
-        set_short( "¾«ÁéĞ¡µ¶" );
-        set("unit", "°Ñ");
+        set_short( "ç²¾éˆå°åˆ€" );
+        set("unit", "æŠŠ");
         set_long(
-            "ÕâÊÇÓ×Ğ¡µÄ¾«ÁéÃÇÓÃÊ¯Í·×ö³ÉµÄÍæ¾ßĞ¡µ¶¡£\n"
+            "é€™æ˜¯å¹¼å°çš„ç²¾éˆå€‘ç”¨çŸ³é ­åšæˆçš„ç©å…·å°åˆ€ã€‚\n"
         );
         set( "weapon_class", 4 );
         set( "type", "dagger" );                        

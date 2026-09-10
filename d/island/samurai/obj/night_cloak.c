@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "night_shadow_cloak", "Ò¹Ó°Åû·ç");
+        set_name( "night_shadow_cloak", "å¤œå½±æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short("night_shadow_cloak", "Ò¹Ó°Åû·ç");
+        set_short("night_shadow_cloak", "å¤œå½±æŠ«é¢¨");
         set_long(@AAA
-ÕâÊÇÒ»¼ş°µºÚÉ«µÄÅû·ç,¿ÉÒÔÈÃÄãÔÚÒ¹ÍíÊ±,ÈİÒ×¶ã²Ø²»±»ÈË·¢ÏÖ
+é€™æ˜¯ä¸€ä»¶æš—é»‘è‰²çš„æŠ«é¢¨,å¯ä»¥è®“ä½ åœ¨å¤œæ™šæ™‚,å®¹æ˜“èº²è—ä¸è¢«äººç™¼ç¾
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "cloak" );
         set( "armor_class", 5 );
         set( "defense_bonus", 4 );

@@ -5,13 +5,13 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-	set_name( "colorful hood", "»¨²¼Í·½í" );
+	set_name( "colorful hood", "èŠ±å¸ƒé ­å·¾" );
 	add( "id", ({ "hood" }) );
-   set_short( "»¨²¼Í·½í" );
+   set_short( "èŠ±å¸ƒé ­å·¾" );
 	set_long(
-		"ÕâÌõ»¨²¼Í·½íÒÑ¾­ºÜÆÆ¾ÉÁË£¬´÷ÖøËü¿´ÆğÀ´Ò»¶¨ºÜÍÁ¡£\n"
+		"é€™æ¢èŠ±å¸ƒé ­å·¾å·²ç¶“å¾ˆç ´èˆŠäº†ï¼Œæˆ´è‘—å®ƒçœ‹èµ·ä¾†ä¸€å®šå¾ˆåœŸã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "type", "head" );
 	set( "material", "cloth");
 	set( "armor_class", 1 );

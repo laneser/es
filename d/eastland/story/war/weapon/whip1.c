@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {    
-    set_name( "Raingod's whip", "ÓêÉñ±Ş" );
+    set_name( "Raingod's whip", "é›¨ç¥é­" );
     add( "id", ({ "whip" }) );
-    set_short( "ÓêÉñ±Ş" );
+    set_short( "é›¨ç¥é­" );
     set_long(@LONG
-Ò»¸ù³¤ÓâÁùÊ®³ßµÄ±Ş×Ó£¬±Ş×ÓÉÏÃæÓĞĞí¶àÍ»³öÀ´µÄ´Ì¡£
+ä¸€æ ¹é•·é€¾å…­åå°ºçš„é­å­ï¼Œé­å­ä¸Šé¢æœ‰è¨±å¤šçªå‡ºä¾†çš„åˆºã€‚
 LONG
     );
-    set( "unit", "¸ù" );
+    set( "unit", "æ ¹" );
     set( "weight", 50 );
     set( "value", ({ 1000, "silver" }) );
     setup_weapon("whip", 30,13,22);

@@ -2,7 +2,7 @@
 #define GUILD_TOKEN	 "/d/healer/needle"
 #define GUILD_LOCATION   "/d/healer/building/healer_guild"
 
-#define GUILD_MASTER     ({ "Father Hsin", "׀ְּֿµש" })
+#define GUILD_MASTER     ({ "Father Hsin", "וˆ‘ט€חˆ¹" })
 #define ALLOWED_MATERIAL ({ "cloth", "leather", "wood", "element" })
 #define SECOND_MATERIAL  ({ "light_metal", })
 

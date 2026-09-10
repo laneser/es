@@ -5,21 +5,21 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("ru-lai rope","ÈçÀ´Ëø");
+       set_name("ru-lai rope","å¦‚ä¾†éŽ–");
        add("id",({"so","rope",}) );
-       set_short("ÈçÀ´Ëø");
+       set_short("å¦‚ä¾†éŽ–");
 	   set_long(@C_LONG
-ËøÒàÎª·¨Æ÷Ö®Ò»ÖÖ,¿ÉÒÔÓÃËüÀ´ÕÙÇë¾ÅÌìÉñ·ð,Í£Ö¹µÐÈËµÄ¹¥»÷... 
-ÈçÀ´Ë÷ÄËÈçÀ´·ðÊ¹ÓÃµÄ·¨Æ÷,¿ÉÓÃÀ´ÕÙÇëÎå´óÃ÷Íõ°ïÃ¦ 
+éŽ–äº¦ç‚ºæ³•å™¨ä¹‹ä¸€ç¨®,å¯ä»¥ç”¨å®ƒä¾†å¬è«‹ä¹å¤©ç¥žä½›,åœæ­¢æ•µäººçš„æ”»æ“Š... 
+å¦‚ä¾†ç´¢ä¹ƒå¦‚ä¾†ä½›ä½¿ç”¨çš„æ³•å™¨,å¯ç”¨ä¾†å¬è«‹äº”å¤§æ˜ŽçŽ‹å¹«å¿™ 
 C_LONG
 	);
 	
-	set( "unit", "À¦" );
+	set( "unit", "æ†" );
  	set( "weapon_class", 20 );
         set("type","whip");
 
         set("second",1);
-        set_c_verbs(({ "%sà§µÄÒ»ÉùÏò%s¾íÈ¥","%sÑ¸ËÙµÄÏò%sÔÒÈ¥" 
+        set_c_verbs(({ "%så”°çš„ä¸€è²å‘%sæ²åŽ»","%sè¿…é€Ÿçš„å‘%sç ¸åŽ»" 
   
          }));
 
@@ -30,8 +30,8 @@ C_LONG
 //    set("hit_func","tie_enemy");
     set("special_damage",1);
     set("special_c_msg",
-"Ïò±±·½Ò»»Ó,Ëø¡õ·¢³öÎËÎËµÄÐ¥Éù... ¶ÙÊ±ÌìµØ»è°µÁËÏÂÀ´... \n"
-"Îå´óÃ÷ÍõÖÐµÄÂíÍ·Ã÷Íõ±»ÈçÀ´ËøÕÙ»½³öÀ´,À¦°ó×¡ËüµÄµÐÈË!!! \n\n "
+"å‘åŒ—æ–¹ä¸€æ®,éŽ–â–¡ç™¼å‡ºå—¡å—¡çš„å˜¯è²... é “æ™‚å¤©åœ°æ˜æš—äº†ä¸‹ä¾†... \n"
+"äº”å¤§æ˜ŽçŽ‹ä¸­çš„é¦¬é ­æ˜ŽçŽ‹è¢«å¦‚ä¾†éŽ–å¬å–šå‡ºä¾†,æ†ç¶ä½å®ƒçš„æ•µäºº!!! \n\n "
 
 );
 }
@@ -50,14 +50,14 @@ int tie_enemy(object victim,int damage)
 		c_msg = (string)query("special_c_msg");
 		victim->block_attack(4);
                 victim->set_temp("msg_stop_attack", 
-                "(Äã±»ÂíÍ·Ã÷Íõ½ô½ôÀ§×¡,ÎÞ·¨¹¥»÷)\n");
+                "(ä½ è¢«é¦¬é ­æ˜ŽçŽ‹ç·Šç·Šå›°ä½,ç„¡æ³•æ”»æ“Š)\n");
 
                   victim->set("last_attacker", holder );
 		if( !c_msg ) return 0;
 		tell_object( holder, 
-			"\nÄãµÄ"+query("c_name")+c_msg+"\n");
+			"\nä½ çš„"+query("c_name")+c_msg+"\n");
 		tell_room( environment(holder), 
-			holder->query("c_cap_name") + "µÄ"+query("c_name")+c_msg+"\n",
+			holder->query("c_cap_name") + "çš„"+query("c_name")+c_msg+"\n",
 			holder );
      }
 	

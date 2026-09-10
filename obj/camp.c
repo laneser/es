@@ -22,7 +22,7 @@ int decay_time(object me)
          environment(me)->delete_temp( "adv_camp" );
          }
          tell_room(environment(me),
-         "Í»È»Ò»Õó´ó·ç´µÀ´£¬Äã¿´µ½Â·±ßµÄÕÊÅî±»¸ø·ç´µÅÜÁË¡£\n");
+         "çªç„¶ä¸€é™£å¤§é¢¨å¹ä¾†ï¼Œä½ çœ‹åˆ°è·¯é‚Šçš„å¸³è“¬è¢«çµ¦é¢¨å¹è·‘äº†ã€‚\n");
          rm("/open/camp/"+name+"_incamp.c");
          remove();         
          return 1;
@@ -30,8 +30,8 @@ int decay_time(object me)
 }
 void create()
 {
-	set_name("camp", "ÕÊÅî");
-	set_short("ÕÊÅî");
+	set_name("camp", "å¸³è“¬");
+	set_short("å¸³è“¬");
 	set( "long","@@query_long");
 	set("num",0);
 	set("size",1);
@@ -43,10 +43,10 @@ string query_long()
 {
 
         if ( (string)this_object()->query("creater") )
-        return "ÕâÊÇÒ»¶¥ÓÉ" + (string)this_object()->query("creater")
-          + "½¨ÔìµÄĞ¡ÕÊÅî£¬Ò²ĞíÄã¿ÉÒÔ½øÈ¥²Î¹Û²Î¹Û¡£\n";
+        return "é€™æ˜¯ä¸€é ‚ç”±" + (string)this_object()->query("creater")
+          + "å»ºé€ çš„å°å¸³è“¬ï¼Œä¹Ÿè¨±ä½ å¯ä»¥é€²å»åƒè§€åƒè§€ã€‚\n";
           else
-          return "ÕâÊÇÒ»¶¥²»Öª´ÓÄÇÀ´µÄÕÊÅî¡£\n";
+          return "é€™æ˜¯ä¸€é ‚ä¸çŸ¥å¾é‚£ä¾†çš„å¸³è“¬ã€‚\n";
 }
 
 void init()
@@ -67,20 +67,20 @@ int cmd_enter(string arg)
                skill = this_object()->query("skill");
                if ( !arg || arg != "camp")
                return notify_fail(
-               "ÄãÏëÒª½øÈ¥ÄÇ¶ù?\n");
+               "ä½ æƒ³è¦é€²å»é‚£å…’?\n");
                
                num = this_object()->query("num");
                if ( !num ) num = 0;
                if ( num > size - 1 )
-               return notify_fail("Äã°ÑÍ·Í·Éì½øÕÊÅîÀï¹Û²ì£¬·¢ÏÖÀïÃæÒÑ¾­¼·²»ÏÂÁË....\n");
+               return notify_fail("ä½ æŠŠé ­é ­ä¼¸é€²å¸³è“¬è£¡è§€å¯Ÿï¼Œç™¼ç¾è£¡é¢å·²ç¶“æ“ ä¸ä¸‹äº†....\n");
              
                write (
-               "ÄãÏÆ¿ªÕÊÅîµÄÃÅ£¬Ò»Í·×êÁË½øÈ¥\n");
+               "ä½ æ€é–‹å¸³è“¬çš„é–€ï¼Œä¸€é ­é‘½äº†é€²å»\n");
                tell_room(environment(this_player()),
-               "Äã¿´µ½"+this_player()->query("c_name")+ "Ò»Í·×ê½øÁËÕÊÅîÄÚ¡£\n" ,
+               "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ä¸€é ­é‘½é€²äº†å¸³è“¬å…§ã€‚\n" ,
                this_player());
                tell_room(to_where,
-               "Äã¿´µ½"+this_player()->query("c_name")+ "Ò»Í·×ê½øÁËÕÊÅîÄÚ¡£\n" ,
+               "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ä¸€é ­é‘½é€²äº†å¸³è“¬å…§ã€‚\n" ,
                this_player());
          
           this_player()->set_temp("last_locate",LAST_LOCATE);
@@ -103,15 +103,15 @@ int cmd_destroy(string arg)
               num = this_object()->query("num");
               if ( !arg || arg != "camp")
               return notify_fail(
-              "ÄãÏëÒª²ğÊ²÷á?\n");
+              "ä½ æƒ³è¦æ‹†ä»€éº¼?\n");
 	      if ( !this_player()->query_skill("camp") )
 	      return notify_fail(
-	      "ÄãÃ»Ñ§¹ıÔúÓª¼¼ÄÜ, ²»ÖªÈçºÎÏÂÊÖ²ğÕÊÅî\n");
+	      "ä½ æ²’å­¸éç´®ç‡ŸæŠ€èƒ½, ä¸çŸ¥å¦‚ä½•ä¸‹æ‰‹æ‹†å¸³è“¬\n");
               if ( num > 0 )
-              return notify_fail("Äã²»ÄÜ²ğÀïÃæ»¹ÓĞÈËµÄÕÊÅî...\n");
-              write ("ÄãÆßÊÖ°Ë½Å°ÑÕâ¸öÕÊÅî²ğµô....\n");
+              return notify_fail("ä½ ä¸èƒ½æ‹†è£¡é¢é‚„æœ‰äººçš„å¸³è“¬...\n");
+              write ("ä½ ä¸ƒæ‰‹å…«è…³æŠŠé€™å€‹å¸³è“¬æ‹†æ‰....\n");
               tell_room(environment(this_player()),
-              "Äã¿´µ½"+this_player()->query("c_name")+ "ÆßÊÖ°Ë½Å°ÑÕÊÅî²ğµô¡£\n" ,
+              "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ä¸ƒæ‰‹å…«è…³æŠŠå¸³è“¬æ‹†æ‰ã€‚\n" ,
               this_player());
               env = environment(this_player());
               env->delete_temp( "adv_camp" );
@@ -128,7 +128,7 @@ int cmd_destroy(string arg)
               tool = new("/obj/camp_tool");
               tool->move(this_player());
               write (
-              "Äã°ÑÕÊÅî¹¤¾ßÊÕºÃ£¬×°½øĞ¡°ü°üÀï.....\n");    
+              "ä½ æŠŠå¸³è“¬å·¥å…·æ”¶å¥½ï¼Œè£é€²å°åŒ…åŒ…è£¡.....\n");    
               rm("/open/camp/"+ name +"_incamp.c");
               remove();
               return 1;

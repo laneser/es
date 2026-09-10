@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-   set_name( "electrum sword", "µç¹â½£" );
+   set_name( "electrum sword", "é›»å…‰åŠ" );
 	add( "id", ({ "short sword", "sword" }) );
-   set_short( "µç¹â½£" );
+   set_short( "é›»å…‰åŠ" );
 	set_long(
-             "ÕâÊÇÒ»°ÑÓÃÄ¬¶ûË¹×îĞÂÖı½£Êõ´òÔì¶ø³ÉµÄ¶ÌÈĞ, ºÚÉ«µÄµ¶ÉíÖĞÒşÒş\n"
-             "Í¸³ö¼¸Ë¿ÉÁ»ÆµÄ¹âÃ¢¡£\n"
+             "é€™æ˜¯ä¸€æŠŠç”¨é»˜çˆ¾æ–¯æœ€æ–°é‘„åŠè¡“æ‰“é€ è€Œæˆçš„çŸ­åˆƒ, é»‘è‰²çš„åˆ€èº«ä¸­éš±éš±\n"
+             "é€å‡ºå¹¾çµ²é–ƒé»ƒçš„å…‰èŠ’ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "shortblade" );
    set( "weight", 72 );
    set( "second", 1 );

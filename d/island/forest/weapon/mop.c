@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Mop","ÍÏ°Ñ");
-    set_short("ÍÏ°Ñ");
+    set_name("Mop","æ‹–æŠŠ");
+    set_short("æ‹–æŠŠ");
     set_long(@LONG
-ÕâÊÇ°ÑÍÏ°Ñ£¬Ëü²»»á·É£¬Ö»ÄÜÓÃÀ´ÍÏµØ£®
+é€™æ˜¯æŠŠæ‹–æŠŠï¼Œå®ƒä¸æœƒé£›ï¼Œåªèƒ½ç”¨ä¾†æ‹–åœ°ï¼
 LONG
             );
-     set("unit","°Ñ");
+     set("unit","æŠŠ");
      set("type","longblade");
      set("weapon_class",5);
      set("min_damage",5);

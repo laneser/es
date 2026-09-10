@@ -8,16 +8,16 @@ void create ()
 
         ::create();
     set_level(10);
-    set_name("shadow guardian","Ó°ÎäÕß");
+    set_name("shadow guardian","å½±æ­¦è€…");
     add ("id", ({ "guardian","shadow",}) );
-    set_short("Ó°ÎäÕß");
+    set_short("å½±æ­¦è€…");
         set_long(@C_LONG
-Ò»¸öÈ«ÉíºÚÒÂµÄÈÌÕß£¬ËÆºõÊÇÒ»¸ö°üÔÚ»ÃÓ°ÖĞµÄÈË£¬ËûÖ»ÖªµÀÒ»Ö±ÖÒĞÄµØÊØ»¤Ö÷ÈË¡£
+ä¸€å€‹å…¨èº«é»‘è¡£çš„å¿è€…ï¼Œä¼¼ä¹æ˜¯ä¸€å€‹åŒ…åœ¨å¹»å½±ä¸­çš„äººï¼Œä»–åªçŸ¥é“ä¸€ç›´å¿ å¿ƒåœ°å®ˆè­·ä¸»äººã€‚
 C_LONG
  );
 	set("alignment" , -700 );
 	set( "gender", "male" );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
         set( "pursuing", 1 );
         set( "killer", 1 );
         set( "monk_value", 30 );

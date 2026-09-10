@@ -1,13 +1,13 @@
 #d/knight/fortress/knight_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÆïÊ¿ÁôÑÔ°å",])
-messages ({(["id":276,"title":"< no title >","body":"Ìì°¡!!Ã¿´Î¶¼Ã»ÈËÑûÇëÎÒ²Î¼Ó»éÀñ!!ÎÒ¾ö¶¨ÇÀÇ×ÁË..^_^
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Knight's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"é¨å£«ç•™è¨€æ¿",])
+messages ({(["id":276,"title":"< no title >","body":"å¤©å•Š!!æ¯æ¬¡éƒ½æ²’äººé‚€è«‹æˆ‘åƒåŠ å©šç¦®!!æˆ‘æ±ºå®šæ¶è¦ªäº†..^_^
 
                              Ishige the evil knight ..
 
-","time":794905105,"poster":"Ishige",]),(["id":277,"body":"»µ isgige ...:PPP
-","title":"à¸,,,ishige ºÃ»µ","time":794915315,"poster":"Sbos",]),(["id":278,"title":"Ê£ËÄ¸ö¼¼ÄÜ¾ÍÈ«ÂúÀ²","body":"cccc...ÎÒÒª¼ÓÓÍ :))
+","time":794905105,"poster":"Ishige",]),(["id":277,"body":"å£ isgige ...:PPP
+","title":"å–”,,,ishige å¥½å£","time":794915315,"poster":"Sbos",]),(["id":278,"title":"å‰©å››å€‹æŠ€èƒ½å°±å…¨æ»¿å•¦","body":"cccc...æˆ‘è¦åŠ æ²¹ :))
 ","time":794920320,"poster":"Sbos",]),(["id":279,"body":"To all evil knight:
                    because the mob who have abyss axe got some bug ...
                    so i close it untill find out what's wrong with he ..
@@ -21,24 +21,24 @@ red_horse : 120 kg , 2000 silver
 ","time":795113486,"poster":"Belial",]),(["id":281,"title":"< no title >","body":"
    i have die twice today .., just bite by ant killer one time,.....
  it is so sad that i have to earn exp again to
-recover my ÊµÁ¦¡£
-   °¦...........
-   ÕæÊÇÃ»Á¦... cry.....
-                          yk £­£­£¾  Ã»Á¦ÆïÊ¿
-","time":795189333,"poster":"Yk",]),(["id":282,"body":"½ñÌìÓÃÁËÔ¼Á½¸öĞ¡Ê±µÄ key Tsunami,ÍêÈ«Ã»ÓĞÌØÊâ¹¥»÷µÄ³öÏÖ , ÊÇ²»ÊÇÍêÈ«È¥µôÁË 
+recover my å¯¦åŠ›ã€‚
+   å”‰...........
+   çœŸæ˜¯æ²’åŠ›... cry.....
+                          yk ï¼ï¼ï¼  æ²’åŠ›é¨å£«
+","time":795189333,"poster":"Yk",]),(["id":282,"body":"ä»Šå¤©ç”¨äº†ç´„å…©å€‹å°æ™‚çš„ key Tsunami,å®Œå…¨æ²’æœ‰ç‰¹æ®Šæ”»æ“Šçš„å‡ºç¾ , æ˜¯ä¸æ˜¯å®Œå…¨å»æ‰äº† 
 
-ps: neo Ò²ÍêÈ«ÓÃ²»³öÌØÊâ¹¦\»÷ .........
+ps: neo ä¹Ÿå®Œå…¨ç”¨ä¸å‡ºç‰¹æ®ŠåŠŸæ“Š .........
 
 								Koo
-","title":"Ê÷À×Ö÷Ô¿½òÃù÷ÈµÄÌØÊâ¹¦\»÷ÊÇ²»ÊÇÍêÈ«È¥µôÁË","time":795216451,"poster":"Koo",]),(["id":283,"body":"      ÏÈÊÇÂí±»¸ÄÁË......ÏÖÔÚ key ÓÖ·ÏÁË....
-","title":"×î½üµÄÆïÊ¿±äºÜÈõ....","time":795219627,"poster":"Neo",]),(["id":284,"body":"     Dear All Knights:
-   ÎÒÒ»Ö±ÏàĞÅ½«×Ô¼ºµÄÎäÆ÷¶¨Î»³É¸÷Î»µÄÒ»¸öÌ¤½ÅÊ¯,
-   À´µÃÈİÒ×,È¥µÃÒ²¿ì,»òĞí\Ò»¿ªÊ¼½«ÂÒÊıµÄ·¶Î§Ğ´µÃÌ«Ğ¡,ÊÇÎÒ·¸´íµÄµØ·½°É!!
-   ÎÒÏëËµµÄ²»¶à,ESÖĞºÃÎäÆ÷ÕæµÄ²»ÉÙ,ÌôÄã×îË³ÊÖµÄÓÃ°É,Õâ°Ñkey,Ö»²»¹ıÊÇ
-   ¸÷Î»´Õ×î¼Ñ×°±¸¹ı³ÌÖĞµÄÒ»Ğ¡²¿·İ¶øÒÑ,Çë²»ÒªÒÔÄÃµ½key×ÔÂú,¼ÓÓÍ°É!
+","title":"æ¨¹é›·ä¸»é‘°æ´¥é³´é­…çš„ç‰¹æ®ŠåŠŸæ“Šæ˜¯ä¸æ˜¯å®Œå…¨å»æ‰äº†","time":795216451,"poster":"Koo",]),(["id":283,"body":"      å…ˆæ˜¯é¦¬è¢«æ”¹äº†......ç¾åœ¨ key åˆå»¢äº†....
+","title":"æœ€è¿‘çš„é¨å£«è®Šå¾ˆå¼±....","time":795219627,"poster":"Neo",]),(["id":284,"body":"     Dear All Knights:
+   æˆ‘ä¸€ç›´ç›¸ä¿¡å°‡è‡ªå·±çš„æ­¦å™¨å®šä½æˆå„ä½çš„ä¸€å€‹è¸è…³çŸ³,
+   ä¾†å¾—å®¹æ˜“,å»å¾—ä¹Ÿå¿«,æˆ–è¨±ä¸€é–‹å§‹å°‡äº‚æ•¸çš„ç¯„åœå¯«å¾—å¤ªå°,æ˜¯æˆ‘çŠ¯éŒ¯çš„åœ°æ–¹å§!!
+   æˆ‘æƒ³èªªçš„ä¸å¤š,ESä¸­å¥½æ­¦å™¨çœŸçš„ä¸å°‘,æŒ‘ä½ æœ€é †æ‰‹çš„ç”¨å§,é€™æŠŠkey,åªä¸éæ˜¯
+   å„ä½æ¹Šæœ€ä½³è£å‚™éç¨‹ä¸­çš„ä¸€å°éƒ¨ä»½è€Œå·²,è«‹ä¸è¦ä»¥æ‹¿åˆ°keyè‡ªæ»¿,åŠ æ²¹å§!
 
                                                       Tsunami
-","title":"ÎÒµÄÏë·¨!","time":795250496,"poster":"Tsunami",]),(["id":285,"body":"To all knights:
+","title":"æˆ‘çš„æƒ³æ³•!","time":795250496,"poster":"Tsunami",]),(["id":285,"body":"To all knights:
               i think no one change tsunami's key ,
               about horse ...just because mount that horse will become super-trunk
                so reduce max load ....
@@ -52,49 +52,49 @@ ps: neo Ò²ÍêÈ«ÓÃ²»³öÌØÊâ¹¦\»÷ .........
 
                              Ishige 
 
-","title":"< no title >","time":795276751,"poster":"Ishige",]),(["id":286,"body":"       ÎÒÓĞµã×¥¿ñÁË...
-       Á¬ +4 ¨â¨ãÉ¨¡õ...ÎÒ½¨ÒéÒÔááÓĞ best weapon..¶¼½»¸ø lv high ±£¹Ü..
-    lv low ²»ÒªËµÎÒÃÇ×ÔË½..ÄãÃÇÒ²²»ÄÜÓÃ..ÄÃÁË³ıÁË sell »¹ÄÜ¸ÉÂğ ?
-[A[A[A[C[B[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[D¶¼¸ÒÂô[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[B[D
+","title":"< no title >","time":795276751,"poster":"Ishige",]),(["id":286,"body":"       æˆ‘æœ‰é»æŠ“ç‹‚äº†...
+       é€£ +4 ã„¢ã„£æƒâ–¡...æˆ‘å»ºè­°ä»¥å¾Œæœ‰ best weapon..éƒ½äº¤çµ¦ lv high ä¿ç®¡..
+    lv low ä¸è¦èªªæˆ‘å€‘è‡ªç§..ä½ å€‘ä¹Ÿä¸èƒ½ç”¨..æ‹¿äº†é™¤äº† sell é‚„èƒ½å¹¹å— ?
+[A[A[A[C[B[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Déƒ½æ•¢è³£[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[B[D
 [A[C[D.
-[A[A[C[A[C[C[C[C[C[C[C[C[C[C[C[C¶¼¸ÒÂô....[B[D[D[D[D[D[D[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D.
-[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[B[D[C[C[C.ÎÒ[B[BÎÒ[B[B[B[B[B[B[D[D.
+[A[A[C[A[C[C[C[C[C[C[C[C[C[C[C[Céƒ½æ•¢è³£....[B[D[D[D[D[D[D[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D.
+[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[B[D[C[C[C.æˆ‘[B[Bæˆ‘[B[B[B[B[B[B[D[D.
 [A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C       [B[D[D[D[D[D[D[D    [A[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[C[C[C[C[C[C[C[C
-","title":"×î½üÓĞÈËÂô´¢²ØÊÒµÄ×°±¸...","time":795358652,"poster":"Neo",]),(["id":287,"title":"°¢¿¨°Í¶É¼Ù»ØÀ´ÁË£¡","body":"To all:
+","title":"æœ€è¿‘æœ‰äººè³£å„²è—å®¤çš„è£å‚™...","time":795358652,"poster":"Neo",]),(["id":287,"title":"é˜¿å¡å·´æ¸¡å‡å›ä¾†äº†ï¼","body":"To all:
      the mob who owns abyss axe have fix .....
      you can goto k he again .....if see any bug again...
      please post here ...or tell me..
 
                                     ishige 
 
-","time":795377048,"poster":"Ishige",]),(["id":288,"title":"< no title >","body":"Íü¼ÇÒ»¼şÊÂ£¬ÕªÏÉµºÄ¿Ç°ÒòÎªÄ³ÖÖÒòËØ£¬Õı¹Ø±ÕÕûĞŞÖĞ...
-È¥´ß´ß Odin £¬½ĞËû¸Ï¿ìĞŞºÃ°É£¡
+","time":795377048,"poster":"Ishige",]),(["id":288,"title":"< no title >","body":"å¿˜è¨˜ä¸€ä»¶äº‹ï¼Œæ‘˜ä»™å³¶ç›®å‰å› ç‚ºæŸç¨®å› ç´ ï¼Œæ­£é—œé–‰æ•´ä¿®ä¸­...
+å»å‚¬å‚¬ Odin ï¼Œå«ä»–è¶•å¿«ä¿®å¥½å§ï¼
       
                                ishige
 
 ","time":795377295,"poster":"Ishige",]),(["id":289,"body":"hi knights:
-  ·¢ÏÖÂÒÒıÕ½ÕùµÄÈËÁË...
-  ËûËµËû»¶Ó­pk...
-  ÒªÉ±ËûµÄ×Ô¼ºÕÒ»ú»ápk ba...
-   samun¾ÍÊÇ...knights×Ô¼º¿´Öø°ì°É...
+  ç™¼ç¾äº‚å¼•æˆ°çˆ­çš„äººäº†...
+  ä»–èªªä»–æ­¡è¿pk...
+  è¦æ®ºä»–çš„è‡ªå·±æ‰¾æ©Ÿæœƒpk ba...
+   samunå°±æ˜¯...knightsè‡ªå·±çœ‹è‘—è¾¦å§...
   oh..forget samun said\"for fun so cause\"
 ------cowboy
-","title":"< no title >","time":795540391,"poster":"Cowboy",]),(["id":290,"title":"ÎØ~~ ±äÁË","body":"²ÅÒ»¸öÀñ°İÃ»ÍæÒ®,knight µÄ¸Ä±äÕâ÷á´ó,Á¬ÎÒ×îĞÄ°®µÄ house
-Ò² :~,hmm...ÌÖÑáµÄ auction ·Áº¦ÎÒĞ´ĞÅ,´ıÎÒ¹ØÁËËü
-~~Ğø~~
-","time":795689398,"poster":"Sbos",]),(["id":291,"title":"ÎØ~~ ±äÁË part II","body":"ºÇ...,ÖÕì¶¹ØÁË,hmm...ÌıËµÄÇÆïÊ¿±»¸ÄÁË,sigh...Õæ¿ÉÁ¯...:~~~,ÍÛ...auction ²»ÊÇ¡õ
-","time":795689672,"poster":"Sbos",]),(["id":292,"title":"ÎØ~~ ±äÁË part III","body":"hmm...ÓÈì¶¹Ø auction Ê§°ÜËùÒÔÓÖĞ´ÁËÒ»·âĞÅ,Ç§Íò²»ÒªÒÔÎªÊÇ¹ÛË®à¸,Ïëµ±³õ¾Í²»¸ÃÄÃ¡õÖø key ,Ëµ knight ÓĞ¶àÇ¿,ÎØ...±»¼É¶ÊµÄ°É,faint...swt µÈµÈ.
-","time":795689979,"poster":"Sbos",]),(["id":293,"title":"ÎØ~~ ±äÁË part IV","body":"hmm...ÓÈì¶ swt ÏòÎÒÒª sword so ²»µÃ²»ÖĞ¶Ï,hmm...knight ±»¼É¶ÊÊÇÒÔÖªµÄ,ÒòÎªÃ¿´Î
-Ö»ÒªÓĞÄÇ¸ö guild ÓĞºÃ¿µµÄ,¾Í»áÕĞÈË¼É¶Ê,ÏñÄÇÊéÉúµÄ´óµØ¾«Áé²»Ò²¸ÄÁË,àÅ..Ò²Ğí\ÊÇÒò
-ÕâĞ©¶«Î÷ÊÇ¸ÕÔì³öÀ´µÄ,ËùÒÔÒ»¿ªÊ¹»á±È½ÏÇ¿,but µÈ god ÖªµÀáá¾Í :~~,sigh...×î¿ÉÏ§¡õµÄÊÇÎÒµÄ house la,ÓĞ white_foot Ê±ºÃË¬,ÓÖ²»ÅÂ±»ÆäËûÈË k ËÀ,ÓÖ²»±ØµÈ,Ö»Òª»¨ $$ 
-¾Í¿ÉÒÔÂòµ½ ,ºÇ ... Õæ°ô,àÅ ... ²¡ºÃÏñºÃÁË,ÓÖ¿ÉÒÔºÈÀ²,go to k mobs loh.
-","time":795690842,"poster":"Sbos",]),(["id":294,"body":"ÏÖÔÚDalifore and Captain»á¼Ç³ğÁË...×Ô¼ºĞ¡ĞÄ...:P
+","title":"< no title >","time":795540391,"poster":"Cowboy",]),(["id":290,"title":"å—š~~ è®Šäº†","body":"æ‰ä¸€å€‹ç¦®æ‹œæ²’ç©è€¶,knight çš„æ”¹è®Šé€™éº¼å¤§,é€£æˆ‘æœ€å¿ƒæ„›çš„ house
+ä¹Ÿ :~,hmm...è¨å­çš„ auction å¦¨å®³æˆ‘å¯«ä¿¡,å¾…æˆ‘é—œäº†å®ƒ
+~~çºŒ~~
+","time":795689398,"poster":"Sbos",]),(["id":291,"title":"å—š~~ è®Šäº† part II","body":"å‘µ...,çµ‚æ–¼é—œäº†,hmm...è½èªªé‚£é¨å£«è¢«æ”¹äº†,sigh...çœŸå¯æ†...:~~~,å“‡...auction ä¸æ˜¯â–¡
+","time":795689672,"poster":"Sbos",]),(["id":292,"title":"å—š~~ è®Šäº† part III","body":"hmm...å°¤æ–¼é—œ auction å¤±æ•—æ‰€ä»¥åˆå¯«äº†ä¸€å°ä¿¡,åƒè¬ä¸è¦ä»¥ç‚ºæ˜¯è§€æ°´å–”,æƒ³ç•¶åˆå°±ä¸è©²æ‹¿â–¡è‘— key ,èªª knight æœ‰å¤šå¼·,å—š...è¢«å¿Œå¦’çš„å§,faint...swt ç­‰ç­‰.
+","time":795689979,"poster":"Sbos",]),(["id":293,"title":"å—š~~ è®Šäº† part IV","body":"hmm...å°¤æ–¼ swt å‘æˆ‘è¦ sword so ä¸å¾—ä¸ä¸­æ–·,hmm...knight è¢«å¿Œå¦’æ˜¯ä»¥çŸ¥çš„,å› ç‚ºæ¯æ¬¡
+åªè¦æœ‰é‚£å€‹ guild æœ‰å¥½åº·çš„,å°±æœƒæ‹›äººå¿Œå¦’,åƒé‚£æ›¸ç”Ÿçš„å¤§åœ°ç²¾éˆä¸ä¹Ÿæ”¹äº†,å—¯..ä¹Ÿè¨±æ˜¯å› 
+é€™äº›æ±è¥¿æ˜¯å‰›é€ å‡ºä¾†çš„,æ‰€ä»¥ä¸€é–‹ä½¿æœƒæ¯”è¼ƒå¼·,but ç­‰ god çŸ¥é“å¾Œå°± :~~,sigh...æœ€å¯æƒœâ–¡çš„æ˜¯æˆ‘çš„ house la,æœ‰ white_foot æ™‚å¥½çˆ½,åˆä¸æ€•è¢«å…¶ä»–äºº k æ­»,åˆä¸å¿…ç­‰,åªè¦èŠ± $$ 
+å°±å¯ä»¥è²·åˆ° ,å‘µ ... çœŸæ£’,å—¯ ... ç—…å¥½åƒå¥½äº†,åˆå¯ä»¥å–å•¦,go to k mobs loh.
+","time":795690842,"poster":"Sbos",]),(["id":294,"body":"ç¾åœ¨Dalifore and Captainæœƒè¨˜ä»‡äº†...è‡ªå·±å°å¿ƒ...:P
 
        Sincerely your mad...
-","title":"About Dalifore and Captain","time":795769868,"poster":"Mad",]),(["id":295,"title":"´¢²ØÊÒ......","body":"       ÈË¼Ò mages µÄ´¢²ØÊÒ¶¼ÓĞ lv µÄÏŞÖÆÁË...
-       ÎÒÃÇÒª²»Òª¿¼ÂÇÒ»ÏÂ?
-       ÎÒ²»ÊÇÖ¸¶¼²»Áô eq ¸ø lv low
-       Ö»ÊÇÓĞĞ©¶«¶« Èç +4,ÒøÁúÑªÇ¹,´´ÊÀÉñêª µÈ only for lv high ÄÜÓĞ¸öµØ·½·Å
-       ÓÖ²»±Øµ£ĞÄ²»¼û
+","title":"About Dalifore and Captain","time":795769868,"poster":"Mad",]),(["id":295,"title":"å„²è—å®¤......","body":"       äººå®¶ mages çš„å„²è—å®¤éƒ½æœ‰ lv çš„é™åˆ¶äº†...
+       æˆ‘å€‘è¦ä¸è¦è€ƒæ…®ä¸€ä¸‹?
+       æˆ‘ä¸æ˜¯æŒ‡éƒ½ä¸ç•™ eq çµ¦ lv low
+       åªæ˜¯æœ‰äº›æ±æ± å¦‚ +4,éŠ€é¾è¡€æ§,å‰µä¸–ç¥æˆŸ ç­‰ only for lv high èƒ½æœ‰å€‹åœ°æ–¹æ”¾
+       åˆä¸å¿…æ“”å¿ƒä¸è¦‹
 ","time":795804651,"poster":"Neo",]),})
 id_ref 307

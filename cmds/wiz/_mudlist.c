@@ -73,8 +73,8 @@ int cmd_mudlist(string str)
       output += sprintf("%-24s%-18s%8s\t %s \t %s\n", muds[loop], 
 			mud_list[muds[loop]]["HOSTADDRESS"],
 			mud_list[muds[loop]]["PORT"],
-			undefinedp(mud_svc[muds[loop]]) ? "" : "¡õ",
-			mud_list[muds[loop]]["MUDLIB"] == "Eastern Stories" ? "¡õ" : "");
+			undefinedp(mud_svc[muds[loop]]) ? "" : "â–¡",
+			mud_list[muds[loop]]["MUDLIB"] == "Eastern Stories" ? "â–¡" : "");
 
   //	Display dumped mudlist output through user's more pager
 

@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "water amulet", "Ë®Ö®»¤·û" );
+	set_name( "water amulet", "æ°´ä¹‹è­·ç¬¦" );
 	add( "id", ({ "amulet" }) );
-	set_short( "Ë®Ö®»¤·û" );
+	set_short( "æ°´ä¹‹è­·ç¬¦" );
 	set_long(
-		"ÕâÊÇÒ»ÕÅÆæÒìµÄ»¤·û£¬ÉÁÒ«Öøµ­À¶É«µÄ¹âÃ¢£¬Äã¿ÉÒÔ¸ĞÊÜµ½Ëü³äÂúÁËÄÜÁ¿¡£\n"
+		"é€™æ˜¯ä¸€å¼µå¥‡ç•°çš„è­·ç¬¦ï¼Œé–ƒè€€è‘—æ·¡è—è‰²çš„å…‰èŠ’ï¼Œä½ å¯ä»¥æ„Ÿå—åˆ°å®ƒå……æ»¿äº†èƒ½é‡ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "misc" );
 	set( "material", "cloth" );
 	set( "defense_bonus", 5 );

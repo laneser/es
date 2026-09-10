@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Earth Plate","´óµØîø¼×" );
+	set_name( "Earth Plate","å¤§åœ°é§ç”²" );
 	add( "id", ({ "plate" }) );
-	set_short( "´óµØîø¼×" );
+	set_short( "å¤§åœ°é§ç”²" );
 	set_long(@LONG
-	ÓÉ´óµØÖ®Ä¸Á¦Á¿±£»¤µÄîø¼×£¬¾İËµÖ»Òª´óµØ´æ
-	ÔÚ£¬¾Í²»»áÊÜËğº¦¡£
+	ç”±å¤§åœ°ä¹‹æ¯åŠ›é‡ä¿è­·çš„é§ç”²ï¼Œæ“šèªªåªè¦å¤§åœ°å­˜
+	åœ¨ï¼Œå°±ä¸æœƒå—æå®³ã€‚
 LONG
 	);
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",120 );
 	set( "type","body" );
 	set( "material","heavy_metal" );

@@ -9,15 +9,15 @@ void create ()
 
         ::create();
         set_level(16);
-        set_name( "draconian soldier", "ÁúÈËÊ¿±ø" );
+        set_name( "draconian soldier", "é¾äººå£«å…µ" );
         add ("id", ({ "draconian", "soldier" }) );
-        set_short( " ÁúÈËÊ¿±ø");
-        set("unit","Î»");
+        set_short( " é¾äººå£«å…µ");
+        set("unit","ä½");
         set("alignment",800);
         set("weight",400);
         set("wealth/silver",500);
         set_long(
-           "ÁúÈËÊ¿±øÊÇµØÏÂ³ÇÊØ»¤Õß¡£\n"
+           "é¾äººå£«å…µæ˜¯åœ°ä¸‹åŸå®ˆè­·è€…ã€‚\n"
         );
         set_perm_stat("int", 20);
         set_perm_stat("dex", 25);
@@ -40,7 +40,7 @@ void create ()
         set_skill("parry",80);
         set_skill("block",80);
         
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
       
    
         wield_weapon(Lditem"longsword3");

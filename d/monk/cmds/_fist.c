@@ -30,29 +30,29 @@ int cmd_fist(string str)
 
 	me = this_player();
 	if( me->query("gonfu_busy") || me->query_temp("gonfu_busy") )
-    	return notify_fail("ÄãÄ¿Ç°ÕıÔË¹¦\ËùÒÔÎŞ·¨ÁíÍâÔËÓÃÆäËüÎä¹¦\¡£\n");
+    	return notify_fail("ä½ ç›®å‰æ­£é‹åŠŸæ‰€ä»¥ç„¡æ³•å¦å¤–é‹ç”¨å…¶å®ƒæ­¦åŠŸ\ã€‚\n");
 
 	if( str=="now") {
 		fist_now=(string)me->query("attack_skill");
 		if( !fist_now || !sscanf(fist_now, FIST_DIR+"%s", fist_now) )
-			write("ÄãÄ¿Ç°Ã»ÓĞ´òËãÊ¹ÓÃÈÎºÎÈ­·¨.\n" );
-		else write("ÄãËæÉíÊ¹ÓÃµÄÈ­·¨ÊÇ: "+set_color(to_chinese(fist_now), "HIC")+"¡£\n");
+			write("ä½ ç›®å‰æ²’æœ‰æ‰“ç®—ä½¿ç”¨ä»»ä½•æ‹³æ³•.\n" );
+		else write("ä½ éš¨èº«ä½¿ç”¨çš„æ‹³æ³•æ˜¯: "+set_color(to_chinese(fist_now), "HIC")+"ã€‚\n");
 		return 1;
 	} else if( str == "none" ) {
-		write("Äã¾ö¶¨²»Ê¹ÓÃµÄ»ù´¡È­·¨¡£\n");
+		write("ä½ æ±ºå®šä¸ä½¿ç”¨çš„åŸºç¤æ‹³æ³•ã€‚\n");
 		me->delete("attack_skill");
 		me->delete("defense_skill");
 		return 1;
 	}
 
 	if( member_array(str, fist) == -1 )
-		return notify_fail("ÓĞÕâÖÖ»ù±¾È­·¨Âğ? \n");
+		return notify_fail("æœ‰é€™ç¨®åŸºæœ¬æ‹³æ³•å—? \n");
 
 	know = (string *)me->query("monk_gonfu/fist");
 	if( !know || !sizeof(know) || member_array(str, know) == -1 )
-		return notify_fail("Äã»áÕâÖÖ»ù±¾È­·¨Âğ? \n");
+		return notify_fail("ä½ æœƒé€™ç¨®åŸºæœ¬æ‹³æ³•å—? \n");
 
-	write("ÄãËæÉíÊ¹ÓÃµÄÈ­·¨ÏÖÔÚÊÇ: "+set_color(to_chinese(str),"HIC")+"¡£\n");
+	write("ä½ éš¨èº«ä½¿ç”¨çš„æ‹³æ³•ç¾åœ¨æ˜¯: "+set_color(to_chinese(str),"HIC")+"ã€‚\n");
 
 	me->set("attack_skill", FIST_DIR+str);
 	if( member_array(str, def_fist) != -1 )
@@ -65,14 +65,14 @@ int cmd_fist(string str)
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: fist <ÉÙÁÖ»ù±¾È­·¨Ãû³Æ> | <none>
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹È­·¨¡£Äã¿ÉÒÔÓÃ gonfus Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§»áµÄÕĞÊ½ÁĞ±í¡£
+æŒ‡ä»¤æ ¼å¼: fist <å°‘æ—åŸºæœ¬æ‹³æ³•åç¨±> | <none>
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•æ‹³æ³•ã€‚ä½ å¯ä»¥ç”¨ gonfus æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸æœƒçš„æ‹›å¼åˆ—è¡¨ã€‚
 
-Ö¸Áî¸ñÊ½: fist now
-ÏÔÊ¾Ä¿Ç°ÕıÊ¹ÓÃµÄ»ù±¾ÕÆ·¨ 
+æŒ‡ä»¤æ ¼å¼: fist now
+é¡¯ç¤ºç›®å‰æ­£ä½¿ç”¨çš„åŸºæœ¬æŒæ³• 
 
           fist none
-Í£Ö¹Ê¹ÓÃÈÎºÎÈ­·¨  
+åœæ­¢ä½¿ç”¨ä»»ä½•æ‹³æ³•  
 C_HELP
 		);
 	return 1;

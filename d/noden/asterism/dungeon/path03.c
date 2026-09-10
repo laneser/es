@@ -7,13 +7,13 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("halfling tower", "��ˮ�������");
+	set_short("halfling tower", "下水道的入口");
 	set_long( @LONG_DESCRIPTION
 LONG_DESCRIPTION
 		,@C_LONG_DESCRIPTION
-    ����ǰ�˹���ɶ�������Ϊ������ˮ��ϵͳ, վ�ڿ��������, ����֮̾��
-�㲻�����ɵ����������������̵ġ���ʵ�Ļ�����ʯǽ, �������ߵ�ˮ��, 
-������������ʩ�Ĺ��ܾ��Բ�ֻ����ˮ���ѡ�
+    這兒是艾斯特律恩城引以為傲的下水道系統, 站在寬闊的入口, 在讚歎之餘
+你不禁懷疑當初是怎樣完成這項工程的。堅實的花崗岩石牆, 寬達數尺的水道, 
+讓你覺得這個設施的功能絕對不只是排水而已。
 C_LONG_DESCRIPTION
 	);
 

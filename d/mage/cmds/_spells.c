@@ -15,11 +15,11 @@ int cmd_spells()
 
 	known = (mapping)this_player()->query("spells");
 	if (!known || sizeof(known)==0) {
-		write("ÄãÄ¿Ç°²»»áÈÎºÎ·¨Êõ¡£\n");
+		write("ä½ ç›®å‰ä¸æœƒä»»ä½•æ³•è¡“ã€‚\n");
 		return 1 ;
 	}
 
-	s = "ÄãÄ¿Ç°ËùÄÜÊ¹ÓÃµÄ·¨ÊõÓĞ:\n";
+	s = "ä½ ç›®å‰æ‰€èƒ½ä½¿ç”¨çš„æ³•è¡“æœ‰:\n";
 	spell = keys(known);
 	j = sizeof(spell);
 	for(i=0; i<j; i++)

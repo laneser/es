@@ -8,12 +8,12 @@ void create()
 {
 	set("short", "@@query_short");
 	set("long",@LONG
-ÕâÊÇ¡¸ÓğÃñ×å¡¹Ö®±¦£­·ÉÏèÖ®µÑ£¬ËüÄÜ´øÄã·ÉÍùÌì¶¼(cast-me)¡£
+é€™æ˜¯ã€Œç¾½æ°‘æ—ã€ä¹‹å¯¶ï¼é£›ç¿”ä¹‹ç¬›ï¼Œå®ƒèƒ½å¸¶ä½ é£›å¾€å¤©éƒ½(cast-me)ã€‚
 LONG
 );
- 	set_name( "fly flute", "·ÉÏèÖ®µÑ" );
+ 	set_name( "fly flute", "é£›ç¿”ä¹‹ç¬›" );
         add("id",({"flute"}));
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set("weight", 40);
 	set("value", ({ 100, "silver" }));
 }
@@ -39,24 +39,24 @@ int cast_me(string arg)
      int i;
      player=environment(this_object());
      if ( !living(player) )
-        return notify_fail("Çë¼ñÆğÀ´ÔÙÊ¹ÓÃ¡£\n");
+        return notify_fail("è«‹æ’¿èµ·ä¾†å†ä½¿ç”¨ã€‚\n");
      if ( !query("flute_left") )
-        return notify_fail("´Ë·ÉÏèÖ®µÑµÄÄÜÔ´ÒÑ¾­ÓÃ¾¡ÁË¡£\n");
+        return notify_fail("æ­¤é£›ç¿”ä¹‹ç¬›çš„èƒ½æºå·²ç¶“ç”¨ç›¡äº†ã€‚\n");
      env=environment(player);
      if ( !env->query("can_use_flute") )
-        return notify_fail("ÄãÎŞ·¨ÔÚÕâ¸öµØ·½Ê¹ÓÃ·ÉÏèÖ®µÑ£¡\n");
+        return notify_fail("ä½ ç„¡æ³•åœ¨é€™å€‹åœ°æ–¹ä½¿ç”¨é£›ç¿”ä¹‹ç¬›ï¼\n");
      tell_object(player,set_color(
-        "\nÄãÊÖÖĞµÄ¡¸·ÉÏèÖ®µÑ¡¹·¢³öÎËÎËÎËµÄÃùÉù£¬ÉÁË¸ÖøÒø¹â£¬²¢ÇÒ³¤³öÁË¾Ş´óµÄË«Òí£¡\n\n","HIW"));
+        "\nä½ æ‰‹ä¸­çš„ã€Œé£›ç¿”ä¹‹ç¬›ã€ç™¼å‡ºå—¡å—¡å—¡çš„é³´è²ï¼Œé–ƒçˆè‘—éŠ€å…‰ï¼Œä¸¦ä¸”é•·å‡ºäº†å·¨å¤§çš„é›™ç¿¼ï¼\n\n","HIW"));
      tell_room(env,set_color(sprintf(
-        "\n%sÊÖÖĞµÄ¡¸·ÉÏèÖ®µÑ¡¹·¢³öÎËÎËÎËµÄÃùÉù£¬ÉÁË¸ÖøÒø¹â£¬²¢ÇÒ³¤³öÁË¾Ş´óµÄË«Òí¡£\n\n",
+        "\n%sæ‰‹ä¸­çš„ã€Œé£›ç¿”ä¹‹ç¬›ã€ç™¼å‡ºå—¡å—¡å—¡çš„é³´è²ï¼Œé–ƒçˆè‘—éŠ€å…‰ï¼Œä¸¦ä¸”é•·å‡ºäº†å·¨å¤§çš„é›™ç¿¼ã€‚\n\n",
         CNAME(player)),"HIW"),player);
      if ( env->query("goto_palace") ) {
        target=SPALACE"plain1";
-       msg="Ò»Õó´ÌÑÛµÄÒø¹âÖ®áá£¬¡¸·ÉÏèÖ®µÑ¡¹°ÑÄã´øµ½ÁËÌì¶¼£¡\n\n";
+       msg="ä¸€é™£åˆºçœ¼çš„éŠ€å…‰ä¹‹å¾Œï¼Œã€Œé£›ç¿”ä¹‹ç¬›ã€æŠŠä½ å¸¶åˆ°äº†å¤©éƒ½ï¼\n\n";
      }
      else {
         target=SAREA"mountain2";   
-        msg="Ò»Õó´ÌÑÛµÄÒø¹âÖ®áá£¬¡¸·ÉÏèÖ®µÑ¡¹°ÑÄã´øÀë¿ªÁËÌì¶¼¡£\n\n";
+        msg="ä¸€é™£åˆºçœ¼çš„éŠ€å…‰ä¹‹å¾Œï¼Œã€Œé£›ç¿”ä¹‹ç¬›ã€æŠŠä½ å¸¶é›¢é–‹äº†å¤©éƒ½ã€‚\n\n";
      }
      if (!LEADER(player)||LEADER(player)!=NAME(player)) {
          sent(player,target,msg);
@@ -70,6 +70,6 @@ int cast_me(string arg)
 
 string query_short()
 {
-     return sprintf("·ÉÏèÖ®µÑ%s", (!query("flute_left") ? " (ÄÜÔ´ºÄ¾¡)" : "") );
+     return sprintf("é£›ç¿”ä¹‹ç¬›%s", (!query("flute_left") ? " (èƒ½æºè€—ç›¡)" : "") );
 }
 

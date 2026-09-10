@@ -6,12 +6,12 @@ void create ()
 {
         ::create();
         set_level(16);
-        set_name( "blue samurai", "À¶ÒÂÎäÊ¿" );
+        set_name( "blue samurai", "è—è¡£æ­¦å£«" );
         add ("id", ({ "samurai","blue"}) );
-        set_short("À¶ÒÂÎäÊ¿");
-        set("unit","Î»");
+        set_short("è—è¡£æ­¦å£«");
+        set("unit","ä½");
         set_long(@ANGEL
-À¶ÒÂÎäÊ¿ÊÇÎäÊ¿ÍÅ¸ºÔğÊØ±¸±ß¾³µÄÎäÊ¿
+è—è¡£æ­¦å£«æ˜¯æ­¦å£«åœ˜è² è²¬å®ˆå‚™é‚Šå¢ƒçš„æ­¦å£«
 ANGEL
         );
         
@@ -29,7 +29,7 @@ ANGEL
         set ("gender", "male");
         set("wealth/silver",350);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(IWARO"axe.c");
         equip_armor(IWARO"samurai_vest.c");

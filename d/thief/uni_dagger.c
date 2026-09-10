@@ -15,23 +15,23 @@ void create()
 		set_default_ob(__FILE__);
 		return ;
 	}
-	set_name("universal dagger", "ÍòÓÃĞ¡µ¶");
+	set_name("universal dagger", "è¬ç”¨å°åˆ€");
 	add("id",({ "dagger" }) );
-	set_short("ÍòÓÃĞ¡µ¶");
+	set_short("è¬ç”¨å°åˆ€");
 	set_long(@LONG
-ÕâÊÇÒ»°ÑĞ¡Íµ×¨ÓÃµÄ¶àÓÃÍ¾ß¡µşĞ¡µ¶£¬¿ÉÒÔÓÃÀ´¿ªËø¡¢ÍÚÇ½·ì¡¢¸îÇ®°üµÈµÈ
-£¬ËäÈ»¿´ÆğÀ´²»Ôõ÷áÆğÑÛ£¬µ«ÊÇÔÚÒ»¸öÓĞ¾­ÑéµÄĞ¡ÍµÊÖÖĞ£¬È´¿ÉÒÔ³ÉÎª¾ÈÃü
-Ä±ÉúµÄ¹¤¾ß¡£Äã¿ÉÒÔÊÔÊÔ help dagger ÒÔ»ñµÃ½øÒ»²½µÄËµÃ÷¡£
+é€™æ˜¯ä¸€æŠŠå°å·å°ˆç”¨çš„å¤šç”¨é€”æ‘ºç–Šå°åˆ€ï¼Œå¯ä»¥ç”¨ä¾†é–‹é–ã€æŒ–ç‰†ç¸«ã€å‰²éŒ¢åŒ…ç­‰ç­‰
+ï¼Œé›–ç„¶çœ‹èµ·ä¾†ä¸æ€éº¼èµ·çœ¼ï¼Œä½†æ˜¯åœ¨ä¸€å€‹æœ‰ç¶“é©—çš„å°å·æ‰‹ä¸­ï¼Œå»å¯ä»¥æˆç‚ºæ•‘å‘½
+è¬€ç”Ÿçš„å·¥å…·ã€‚ä½ å¯ä»¥è©¦è©¦ help dagger ä»¥ç²å¾—é€²ä¸€æ­¥çš„èªªæ˜ã€‚
 LONG
 	);
 
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
     	set( "weapon_class", 9 );
     	set("type","dagger");
     	set( "min_damage", 4 );
     	set( "max_damage", 8 );
 	set( "weight", 5 );
-	set( "extra_look", "$N´øÖøĞ¡Íµ×¨ÓÃµÄÍòÓÃĞ¡µ¶¡£\n");
+	set( "extra_look", "$Nå¸¶è‘—å°å·å°ˆç”¨çš„è¬ç”¨å°åˆ€ã€‚\n");
 }
 
 void init()
@@ -55,7 +55,7 @@ int do_fellows()
         usr = sort_array( usr, "sort_members", this_object() );
         if( sizeof(usr) ) {
                 owner->quick_message(
-          "Ä¿Ç°¹²ÓĞ " + sizeof(usr) + " Î»"+to_chinese(class_name)+"Á¬ÏßÖĞ:\n"
+          "ç›®å‰å…±æœ‰ " + sizeof(usr) + " ä½"+to_chinese(class_name)+"é€£ç·šä¸­:\n"
                         + "==================================\n");
              for( i=0; i<sizeof(usr); i++ ) {
 		
@@ -63,7 +63,7 @@ int do_fellows()
 			     (int)usr[i]->query("thief_level/throw-dagger") ) /2;
 		if ( wizardp(owner) && (int)usr[i]->query("make-up") == 1 )
                     owner->quick_message(
-			sprintf( "[ %2d | %2d ] %s (%s) [ÓÉ %s ×°°ç] \n",
+			sprintf( "[ %2d | %2d ] %s (%s) [ç”± %s è£æ‰®] \n",
 			usr[i]->query_level(),guild_lv,
 			usr[i]->query("short"),
 			capitalize(usr[i]->query("name")) ,
@@ -78,8 +78,8 @@ int do_fellows()
 	    }
         } else
                 owner->quick_message(
-                        "ËÆºõÃ»ÓĞÈÎºÎ"+to_chinese(class_name)+"¹«»áµÄ³ÉÔ±ÔÚÏßÉÏ.
-...¡£\n");
+                        "ä¼¼ä¹æ²’æœ‰ä»»ä½•"+to_chinese(class_name)+"å…¬æœƒçš„æˆå“¡åœ¨ç·šä¸Š.
+...ã€‚\n");
         return 1;
 }
 
@@ -87,7 +87,7 @@ int do_fellows()
 int do_chat(string arg)
 {
 	if( !arg )
-		return notify_fail("ÄãÏë¶ÔÆäËüĞ¡ÍµÍ¬ÒµËµÊ²÷á£¿\n");
+		return notify_fail("ä½ æƒ³å°å…¶å®ƒå°å·åŒæ¥­èªªä»€éº¼ï¼Ÿ\n");
 	return guild_ob::guild_line(arg);
 }
 
@@ -101,10 +101,10 @@ int info(string arg)
 		case "topics":
 		default: 
 write( @C_TOPICS
-Ğ¡Íµ¹«»áÊÇÒ»¸öÒşÃØĞÔºÜ¸ßµÄ¹«»á£¬Äã¿ÉÒÔÓÃ info Ö¸ÁîÈ¡µÃÓĞ¹ØÒÔÏÂÖ÷ÌâµÄ
-¹«»á×ÊÑ¶:
-    history    - ÓĞ¹ØĞ¡Íµ¹«»áµÄÀúÊ·¡£
-    commands   - ÓĞ¹ØĞ¡ÍµÄÜÊ¹ÓÃµÄÌØÊâÖ¸Áî¡£
+å°å·å…¬æœƒæ˜¯ä¸€å€‹éš±ç§˜æ€§å¾ˆé«˜çš„å…¬æœƒï¼Œä½ å¯ä»¥ç”¨ info æŒ‡ä»¤å–å¾—æœ‰é—œä»¥ä¸‹ä¸»é¡Œçš„
+å…¬æœƒè³‡è¨Š:
+    history    - æœ‰é—œå°å·å…¬æœƒçš„æ­·å²ã€‚
+    commands   - æœ‰é—œå°å·èƒ½ä½¿ç”¨çš„ç‰¹æ®ŠæŒ‡ä»¤ã€‚
     
 C_TOPICS
 			);

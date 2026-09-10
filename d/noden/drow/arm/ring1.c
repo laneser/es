@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("copper ring", "»ÆÍ­Ö¸Ì×");
+        set_name("copper ring", "é»ƒéŠ…æŒ‡å¥—");
    add( "id", ({ "ring" }) );
-        set_short( "»ÆÍ­Ö¸Ì×" );
+        set_short( "é»ƒéŠ…æŒ‡å¥—" );
         set_long(
 @C_LONG
-ÕâÊÇ¸ö»ÆÍ­ÖÆµÄÊÖÖ¸Ì×»·£¬ÉÏÃæ¿ÌÓĞÖ©ÖëµÄ±êÖ¾¡£
+é€™æ˜¯å€‹é»ƒéŠ…è£½çš„æ‰‹æŒ‡å¥—ç’°ï¼Œä¸Šé¢åˆ»æœ‰èœ˜è››çš„æ¨™èªŒã€‚
 C_LONG
         );
-        set( "unit", "Ö»");
+        set( "unit", "åª");
         set( "type", "finger" );
         set( "material", "heavy_metal" );
         set( "defense_bonus", 2 );

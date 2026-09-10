@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wedding suit","°×É«ĞÂÄïÀñ·ş");
+        set_name("wedding suit","ç™½è‰²æ–°å¨˜ç¦®æœ");
         add("id",({"suit"}) );
-   set_short( "°×É«ĞÂÄïÀñ·ş");
+   set_short( "ç™½è‰²æ–°å¨˜ç¦®æœ");
 	set_long(
-"ÕâÊÇÒ»¼ş°×É«µÄĞÂÄïÀñ·ş£¬´¿°×µÄÑÕÉ«´ú±í´¿½àÎŞÏ¾µÄ°®Çé¡£\n"
+"é€™æ˜¯ä¸€ä»¶ç™½è‰²çš„æ–°å¨˜ç¦®æœï¼Œç´”ç™½çš„é¡è‰²ä»£è¡¨ç´”æ½”ç„¡æš‡çš„æ„›æƒ…ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set("material","cloth");
 	set( "weight", 150 );
 	set( "type", "body" );
@@ -26,7 +26,7 @@ stop_equip(object owner)
 {
         if ( (string)this_player()->query("gender") != "female") {
         printf(
-                  "±ğ¿ªÍæĞ¦ÁË, ÄãÏëµ±ÈËÑıÂğ?\n" );
+                  "åˆ¥é–‹ç©ç¬‘äº†, ä½ æƒ³ç•¶äººå¦–å—?\n" );
         return 1;
         }
 }

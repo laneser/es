@@ -48,7 +48,7 @@ string find_spell(string spell)
 	}
 }
 
-/* Ö§Ô®·¨Êõ¼òĞ´ 		by EGA 06/09/95 */
+/* æ”¯æ´æ³•è¡“ç°¡å¯« 		by EGA 06/09/95 */
 string alias_spell(string spell)
 {
 	return (string)brief_names[spell];

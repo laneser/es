@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("Ӣ��Ĺ��");
+	ob->set_short("英雄墓場");
 	ob->set_long( @LONG_DESCRIPTION
-�����ǰ���Ӣ�۵�Ĺ��,Ĺ���������һλ�ݺ�ɳ����Ӣ��.��һ��Ĺ���ı�����
-д��: һλ���˾������޵�Ӣ��.
+這裡是矮人英雄的墓場,墓場裡埋藏著一位縱橫沙場的英雄.這一座墓碑的碑銘上
+寫著: 一位令人敬仰的無敵英雄.
 LONG_DESCRIPTION
 	);
 

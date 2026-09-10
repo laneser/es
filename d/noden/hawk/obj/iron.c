@@ -4,10 +4,10 @@
 inherit OBJECT;
 void create()
 {
-        set_name("iron", "ìÙ¶·");
+        set_name("iron", "ç†¨æ–—");
         add( "id", ({ "iron" }) );
-        set_short( "ìÙ¶·" );
-        set("long","ÕâÊÇÒ»¸ö´ó´óµÄìÙ¶·£¬¿´ÆğÀ´¿ÉÒÔìÙÇ¬(dry)ÊªµôµÄÒÂ·ş¡£\n");
+        set_short( "ç†¨æ–—" );
+        set("long","é€™æ˜¯ä¸€å€‹å¤§å¤§çš„ç†¨æ–—ï¼Œçœ‹èµ·ä¾†å¯ä»¥ç†¨ä¹¾(dry)æº¼æ‰çš„è¡£æœã€‚\n");
         set( "weight", 40 );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
 }

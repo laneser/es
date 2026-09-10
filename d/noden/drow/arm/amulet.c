@@ -3,16 +3,16 @@ inherit ARMOR;
 
 void create()
 {
-   set_name("copper rings", "Í­¾±»·");
+   set_name("copper rings", "éŠ…é ¸ç’°");
    add( "id", ({ "rings" }) );
-	set_short( "Í­¾±»·" );
+	set_short( "éŠ…é ¸ç’°" );
         set_long(
 @C_LONG
-Õâ¸öÍ­»·¿´ÆğÀ´ÒÑ¾­Äê´ú¾ÃÔ¶£¬µ«ÊÇÈÔÈ»Ä¥µÄ¹âÁÁ£¬ÊÇºÚ°µ¾«ÁéµÄ
-×°ÊÎÆ·¡£
+é€™å€‹éŠ…ç’°çœ‹èµ·ä¾†å·²ç¶“å¹´ä»£ä¹…é ï¼Œä½†æ˜¯ä»ç„¶ç£¨çš„å…‰äº®ï¼Œæ˜¯é»‘æš—ç²¾éˆçš„
+è£é£¾å“ã€‚
 C_LONG
         );
-	set( "unit", "¸ö");
+	set( "unit", "å€‹");
         set( "type", "misc" );
 	set( "material", "heavy_metal" );
 	set( "defense_bonus", 2 );                       

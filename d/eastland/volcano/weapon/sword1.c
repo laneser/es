@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "Dragon sword", "Áú½£" );
+	set_name( "Dragon sword", "é¾åŠ" );
 	add( "id", ({ "sword", "dragon sword" }) );
-	set_short( "Áú½£" );
+	set_short( "é¾åŠ" );
 	set_long(
-   "ÕâÊÇÒ»°ÑÓÃº£µ×¾«Ìú´âÁ¶°ÙÄêÔÙµÎÉÏÁúÑªËùÖý³ÉÖ®½££¬ÊÇ¾®ÁúÍõµÄ±ØÊ¤ÎäÆ÷¡£\n" );
-	set( "unit", "°Ñ" );
+   "é€™æ˜¯ä¸€æŠŠç”¨æµ·åº•ç²¾éµç²¹ç…‰ç™¾å¹´å†æ»´ä¸Šé¾è¡€æ‰€é‘„æˆä¹‹åŠï¼Œæ˜¯äº•é¾çŽ‹çš„å¿…å‹æ­¦å™¨ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 200 );
@@ -36,9 +36,9 @@ int weapon_hit( object victim, int damage )
         owner->set("spell_points",sp-6);
         if ((int)owner->query_skill("longblade")<95) {
           tell_object(owner,
-              "\nÄãÃãÇ¿»Ó¶¯Áú½£½£¹âËù»Ã³ÉµÄ±ùÁú·´Ê´ÁË×Ô¼º.\n\n");
+              "\nä½ å‹‰å¼·æ®å‹•é¾åŠåŠå…‰æ‰€å¹»æˆçš„å†°é¾åè•äº†è‡ªå·±.\n\n");
           tell_room(environment(owner),
-              "\n"+owner->query("c_name")+"µÄÁú½£½£¹âËù»Ã³ÉµÄ±ùÁú·´Ê´ÁË×Ô¼º
+              "\n"+owner->query("c_name")+"çš„é¾åŠåŠå…‰æ‰€å¹»æˆçš„å†°é¾åè•äº†è‡ªå·±
 .\n\n",
               owner );
           owner->receive_special_damage("cold",dam);
@@ -46,9 +46,9 @@ int weapon_hit( object victim, int damage )
         }
 
           tell_object(owner,
-           "\nÄãµÄÁú½£»Ó³öÒ»µÀ½£¹â£¬»Ã³ÉÒ»Ìõ±ùÁúÏòÄãµÄµÐÈËÆËÈ¥¡£\n\n");
+           "\nä½ çš„é¾åŠæ®å‡ºä¸€é“åŠå…‰ï¼Œå¹»æˆä¸€æ¢å†°é¾å‘ä½ çš„æ•µäººæ’²åŽ»ã€‚\n\n");
           tell_room(environment(owner),
-            "\n"+owner->query("c_name")+"µÄÁú½£»Ó³öÒ»µÀ½£¹â£¬»Ã³ÉÒ»Ìõ±ùÁúÏòµÐÈËÆËÈ¥¡£\n\n" 
+            "\n"+owner->query("c_name")+"çš„é¾åŠæ®å‡ºä¸€é“åŠå…‰ï¼Œå¹»æˆä¸€æ¢å†°é¾å‘æ•µäººæ’²åŽ»ã€‚\n\n" 
             , owner );
            victim->receive_special_damage("cold",dam);
            return dam; 

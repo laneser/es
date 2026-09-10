@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "stone axe", "Ê¯°å¸«" );
+	set_name( "stone axe", "çŸ³æ¿æ–§" );
 	add( "id", ({ "axe" }) );
-   set_short( "Ê¯°å¸«" );
+   set_short( "çŸ³æ¿æ–§" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÓÃ¼áÓ²µÄ»¨¸ÚÑÒÔä³ÉµÄÊ¯°å¸«£¬°óÖøÒ»¸ù¶ÌÄ¾¹÷×ö¸«±ú¡£\n"
+		"é€™æ˜¯ä¸€æŠŠç”¨å …ç¡¬çš„èŠ±å´—å²©é‘¿æˆçš„çŸ³æ¿æ–§ï¼Œç¶è‘—ä¸€æ ¹çŸ­æœ¨æ£åšæ–§æŸ„ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 100 );
 	setup_weapon( "axe", 10, 5, 13 );
 	set( "value", ({ 165, "silver" }) );

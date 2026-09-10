@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("thunder wand", "»ÃÀ×ÕÈ");
+	set_name("thunder wand", "å¹»é›·æ–");
 	add ("id",({ "wand",}) );
-	set_short("»ÃÀ×ÕÈ");
+	set_short("å¹»é›·æ–");
 	set_long(
-        "ÕâÊÇÒ»°ÑÄÜºô»½¡¸»ÃÀ×¡¹µÄÄ§ÕÈ£¬ÄãÒşÔ¼¿ÉÒÔ¿´¼ûÕÈÍ·ÉÁÖø¼¸Ë¿µç¹â¡£\n"
+        "é€™æ˜¯ä¸€æŠŠèƒ½å‘¼å–šã€Œå¹»é›·ã€çš„é­”æ–ï¼Œä½ éš±ç´„å¯ä»¥çœ‹è¦‹æ–é ­é–ƒè‘—å¹¾çµ²é›»å…‰ã€‚\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 39 );
 	set( "type", "wand" );
 	set( "min_damage", 20 );
@@ -26,5 +26,5 @@ void create()
 	set( "max_charge", 8 );
 	set( "special_damage_type", "electric" );
 	set( "special_damage", 80 );
-	set( "special_c_msg", "·¢³öÒ»¹ÉÇ¿´óµÄµçéê£¬ÕğµÃÔÚ³¡ËùÓĞÈËÈ«Éí·¢Âé£¡" );
+	set( "special_c_msg", "ç™¼å‡ºä¸€è‚¡å¼·å¤§çš„é›»æ®›ï¼Œéœ‡å¾—åœ¨å ´æ‰€æœ‰äººå…¨èº«ç™¼éº»ï¼" );
 }

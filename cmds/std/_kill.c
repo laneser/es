@@ -23,10 +23,10 @@ inherit DAEMON;
 // More fun. - Annihilator 12-08-93
 
 string *start_fight = ({
-	"%sºÈµÀ: ¿É¶ñµÄ%s£¬¿´ÕĞ£¡\n",
-	"%sºÈµÀ: ¸ÃËÀµÄ%s£¬ÏÂµØÓüÈ¥°É£¡\n",
-	"%sºÈµÀ: ÄÉÃüÀ´£¬%s£¡\n",
-	"%sºÈµÀ: È¥ËÀ°É !! %s !!\n"
+	"%så–é“: å¯æƒ¡çš„%sï¼Œçœ‹æ‹›ï¼\n",
+	"%så–é“: è©²æ­»çš„%sï¼Œä¸‹åœ°ç„å»å§ï¼\n",
+	"%så–é“: ç´å‘½ä¾†ï¼Œ%sï¼\n",
+	"%så–é“: å»æ­»å§ !! %s !!\n"
 });
 
 int help();
@@ -42,48 +42,48 @@ int cmd_kill(string str)
 
 	me = this_player();
 	if( (int)me->query("hit_points")<=0 )
-		return notify_fail("ºÜ±§Ç¸£¬ÄãÒÑ¾­ËÀÁË¡£\n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œä½ å·²ç¶“æ­»äº†ã€‚\n");
 
 	str = lower_case(str);
 	venv = environment(me);
 	if( !venv )
-		return notify_fail("Äã²»ÄÜÔÚÒ»Æ¬ĞéÎŞµ±ÖĞ¹¥»÷±ğÈË¡£\n");
+		return notify_fail("ä½ ä¸èƒ½åœ¨ä¸€ç‰‡è™›ç„¡ç•¶ä¸­æ”»æ“Šåˆ¥äººã€‚\n");
  
 	if( !me->query("vision") )
-		return notify_fail("¹¥»÷Ë­£¿ÄãÊ²÷áÒ²¿´²»¼û£¡\n");
+		return notify_fail("æ”»æ“Šèª°ï¼Ÿä½ ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ï¼\n");
  
 	victim = present(str, venv);
 	if( !victim || !visible(victim, me) )
-		return notify_fail("ÕâÀïÃ»ÓĞÄãÏë¹¥»÷µÄ¶ÔÏó¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰ä½ æƒ³æ”»æ“Šçš„å°è±¡ã€‚\n");
 
 	if( !living(victim) )
-		return notify_fail("¿´Çå³ş£¬ÄÇ²»ÊÇÖµµÃ¹¥»÷µÄ¶ÔÏó¡£\n");
+		return notify_fail("çœ‹æ¸…æ¥šï¼Œé‚£ä¸æ˜¯å€¼å¾—æ”»æ“Šçš„å°è±¡ã€‚\n");
 
 	if ( victim->query("no_attack") ) {
 		if( !member_group((string)me->query("name"), "admin") )
-		return notify_fail("±ğÇá¾ÙÍı¶¯£¬Õâ¼Ò»ïÄã²»ÄÜÉ±¾ÍÊÇ²»ÄÜÉ±¡£\n");
+		return notify_fail("åˆ¥è¼•èˆ‰å¦„å‹•ï¼Œé€™å‚¢ä¼™ä½ ä¸èƒ½æ®ºå°±æ˜¯ä¸èƒ½æ®ºã€‚\n");
 	}
 	if( (int)victim->query("ghost")==1 )
-		return notify_fail("Õâ¸ö¿ÉÁ¯³æÒÑ¾­ËÀÁË£¬Äã»¹ÏëÔõÑù£¿\n");
+		return notify_fail("é€™å€‹å¯æ†èŸ²å·²ç¶“æ­»äº†ï¼Œä½ é‚„æƒ³æ€æ¨£ï¼Ÿ\n");
 
 	if( victim == me )
-		return notify_fail("É±Äã×Ô¼º£¿Äã²»»áÆ´ suicide Âğ£¿\n");
+		return notify_fail("æ®ºä½ è‡ªå·±ï¼Ÿä½ ä¸æœƒæ‹¼ suicide å—ï¼Ÿ\n");
  
 	if( victim->query("linkdead") )
-		return notify_fail("Äã²»ÄÜ³ÃÈË¼Ò¶ÏÏßµÄÊ±ºò¸ÉÕâÖÖÊÂ£¡\n");
+		return notify_fail("ä½ ä¸èƒ½è¶äººå®¶æ–·ç·šçš„æ™‚å€™å¹¹é€™ç¨®äº‹ï¼\n");
  
  	if ( victim->query("user") ) {
 	 	if( !member_group((string)me->query("name"), "admin") &&
  			(victim->query_level()<5 || me->query_level()<5) )
- 		return notify_fail("ÔÚ¶«·½¹ÊÊÂÖĞÎå¼¶ÒÔÏÂµÄÍæ¼Ò²»×¼ PK ºÍ PK ±ğÈË¡£\n");
+ 		return notify_fail("åœ¨æ±æ–¹æ•…äº‹ä¸­äº”ç´šä»¥ä¸‹çš„ç©å®¶ä¸æº– PK å’Œ PK åˆ¥äººã€‚\n");
 	}
 	i = me->kill_ob(victim);
 	if( i==0 )
-		write( "¶Ô£¡¼ÓÓÍ£¡¼ÓÓÍ£¡¼ÓÓÍ£¡\n");
+		write( "å°ï¼åŠ æ²¹ï¼åŠ æ²¹ï¼åŠ æ²¹ï¼\n");
 	else {
 		i = random( sizeof(start_fight) );
 		write( 
-			sprintf( start_fight[i],"Äã", victim->query("c_name") ));
+			sprintf( start_fight[i],"ä½ ", victim->query("c_name") ));
 		tell_room( environment(me), 
 			sprintf( start_fight[i],
 				me->query("c_name"), victim->query("c_name") ) ,
@@ -115,10 +115,10 @@ int filter_npc(object obj)
 int help()
 {
 		write(@HELP
-Ö¸Áî¸ñÊ½: kill <¹ÖÎïÃû³Æ>
+æŒ‡ä»¤æ ¼å¼: kill <æ€ªç‰©åç¨±>
 
-É±npc»òÍæ¼Ò¡£µ±¿ªÊ¼ºó½«ÎŞ·¨È¡ÏûÖ¸Áî£¬³ı·ÇÓĞÒ»·½ËÀÍö¡£
-´ËÍânpc»á¼Ç³ğ£¬ÓĞĞ©ÉõÖÁ»á×·É±Äã¡£¡£
+æ®ºnpcæˆ–ç©å®¶ã€‚ç•¶é–‹å§‹å¾Œå°‡ç„¡æ³•å–æ¶ˆæŒ‡ä»¤ï¼Œé™¤éæœ‰ä¸€æ–¹æ­»äº¡ã€‚
+æ­¤å¤–npcæœƒè¨˜ä»‡ï¼Œæœ‰äº›ç”šè‡³æœƒè¿½æ®ºä½ ã€‚ã€‚
 HELP
 		);
 	return 1;

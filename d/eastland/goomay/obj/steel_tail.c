@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "highsteel tail armor", "¾«¸ÖÎ²¼×" );
+	set_name( "highsteel tail armor", "ç²¾é‹¼å°¾ç”²" );
 	add( "id", ({ "tail","armor" }) );
-	set_short( "a high \steel tail armor ", "¾«¸ÖÎ²¼×" );
+	set_short( "a high \steel tail armor ", "ç²¾é‹¼å°¾ç”²" );
 	set_long(
 		"You see a steel tail armor .\n",
-		"ÕâÊÇÒ»Ì×´¿¸Ö´òÔìµÄÎ²¼×£¬ÓÐ¸ß¶ÈµÄ·ÀÓùÁ¦¡£\n"
+		"é€™æ˜¯ä¸€å¥—ç´”é‹¼æ‰“é€ çš„å°¾ç”²ï¼Œæœ‰é«˜åº¦çš„é˜²ç¦¦åŠ›ã€‚\n"
 	);
-	set( "unit", "Ì×" );
+	set( "unit", "å¥—" );
 	set( "type", "tail" );
         set("material","heavy_metal");
 	set( "weight", 100 );

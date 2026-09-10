@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Fish Scale Tail","ÓãÁÛÎ²¼×" );
+	set_name( "Fish Scale Tail","é­šé±—å°¾ç”²" );
 	add( "id", ({ "tail" }) );
-	set_short( "ÓãÁÛÎ²¼×" );
+	set_short( "é­šé±—å°¾ç”²" );
 	set_long(@LONG
-	Ò»¸±ÓÃµØÏÂ¶´Ñ¨Ë®µ×µÄºìÁúµÄÁÛÆ¬ÅäºÏ²ÏË¿±à
-	³ÉµÄÎ²¼×£¬±ÈÒ»°ã½ğÊôÖÆµÄÎ²¼×Çá¶àÁË¡£
+	ä¸€å‰¯ç”¨åœ°ä¸‹æ´ç©´æ°´åº•çš„ç´…é¾çš„é±—ç‰‡é…åˆè ¶çµ²ç·¨
+	æˆçš„å°¾ç”²ï¼Œæ¯”ä¸€èˆ¬é‡‘å±¬è£½çš„å°¾ç”²è¼•å¤šäº†ã€‚
 LONG
            );
-	set( "unit","¸±" );
+	set( "unit","å‰¯" );
 	set( "weight",50 );
 	set( "type","tail" );
 	set( "material","cloth" );

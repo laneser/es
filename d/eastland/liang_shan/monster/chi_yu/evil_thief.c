@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "evil thief", "¶ñÔô" );
+	set_name( "evil thief", "æƒ¡è³Š" );
 	add("id",({"thief"}));
-	set_short( "evil thief", "¶ñÔô" );
-	set_long(query("c_name")+"´øÖøĞ¡Íµ×¨ÓÃµÄÍòÓÃĞ¡µ¶¡£\n");
+	set_short( "evil thief", "æƒ¡è³Š" );
+	set_long(query("c_name")+"å¸¶è‘—å°å·å°ˆç”¨çš„è¬ç”¨å°åˆ€ã€‚\n");
 	set( "gender", "male" );
 	set( "alignment", -2200 );
 	set("player_invisible",1);
@@ -26,7 +26,7 @@ void create()
 	set( "aiming_loc", "ganglion" );
 	set ("chat_chance",8);
 	    set ( "att_chat_output",({
-	    query("c_name")+"²»Í£µÄ¶ã¶ã²Ø²Ø...\n"
+	    query("c_name")+"ä¸åœçš„èº²èº²è—è—...\n"
 	    }));
 	set_natural_armor(60,22);
  	set_natural_weapon(35,10,27);
@@ -43,29 +43,29 @@ int my_tactic()
 	if( random(22)>2 || !(victim= query_attacker()) ) return 0;
     else {
         tell_room(environment(this_object()),set_color(
-	sprintf("%sÍ»È»Ò»ÁïÑÌ×ªµ½%s±³áá£¬ÑÛÖĞÉ±»úÖØÖØ ...\n",
+	sprintf("%sçªç„¶ä¸€æºœç…™è½‰åˆ°%sèƒŒå¾Œï¼Œçœ¼ä¸­æ®ºæ©Ÿé‡é‡ ...\n",
 	query("c_name"),victim->query("c_name")),"HIR"),
 	({this_object(),victim}));
     if ( random(5)<1 ) {
     tell_room(environment(this_object()),
-	sprintf("%s¾ÙÆğËûµÄÒ¹Ó°Ğ¡µ¶³¯Öø%sµÄ±³ÃÍÈ»´ÌÂä£¬°¥Ñ½ !! ¾¹È»Ê§ÊÖÁË ...\n",
+	sprintf("%sèˆ‰èµ·ä»–çš„å¤œå½±å°åˆ€æœè‘—%sçš„èƒŒçŒ›ç„¶åˆºè½ï¼Œå“å‘€ !! ç«Ÿç„¶å¤±æ‰‹äº† ...\n",
 	query("c_name"),victim->query("c_name")),
 	({ this_object(),victim}) );
 	tell_object(victim,set_color(
-	sprintf("ÄãÍ»È»¸Ğµ½Çé¿ö²»¶Ô£¬¸Ï¿ìÏòÅÔÒ»ÉÁ£¬Ò»µÀÇà°×µÄ»¡¹â¿°¿°»®¹ı\n"
-	"ÄãµÄ±³£¬Äã¸Ğµ½Ò»ÕóÃ«¹Çã¤È»£¬¿É¶ñ !! ÊÇ%sµÄ±³´Ì ...\n",
+	sprintf("ä½ çªç„¶æ„Ÿåˆ°æƒ…æ³ä¸å°ï¼Œè¶•å¿«å‘æ—ä¸€é–ƒï¼Œä¸€é“é’ç™½çš„å¼§å…‰å ªå ªåŠƒé\n"
+	"ä½ çš„èƒŒï¼Œä½ æ„Ÿåˆ°ä¸€é™£æ¯›éª¨æ‚šç„¶ï¼Œå¯æƒ¡ !! æ˜¯%sçš„èƒŒåˆº ...\n",
 	query("c_name")),"HIM"));
 	set("stop_attack", 2 );
 	return 1;
 	}	
 	else {
 	tell_room(environment(this_object()),
-	  sprintf("%s¾ÙÆğËûµÄÒ¹Ó°Ğ¡µ¶³¯Öø%sµÄ±³ÃÍÈ»´ÌÂä£¬ö®Ê±Ñª»¨ËÄ½¦ ...\n",
+	  sprintf("%sèˆ‰èµ·ä»–çš„å¤œå½±å°åˆ€æœè‘—%sçš„èƒŒçŒ›ç„¶åˆºè½ï¼Œéœæ™‚è¡€èŠ±å››æ¿º ...\n",
 	  query("c_name"),victim->query("c_name")),
 		({ this_object(),victim}) );
 	  tell_object(victim,set_color(
-	  sprintf("ÄãÍ»È»¸Ğµ½Ò»Õó¾çÍ´£¬Ò»½ØÑ©°×µÄµ¶ÈĞ´ÓÄãµÄĞØ¿ÚÃ°ÁË³öÀ´£¬\n"
-		  "Äã²»ÖªËù´ëµÄ¿´ÖøËü£¬ÄÔÖĞÒ»ÕóÔÎÑ££¬¿É¶ñ !! ÊÇ%sµÄ±³´Ì ...\n",
+	  sprintf("ä½ çªç„¶æ„Ÿåˆ°ä¸€é™£åŠ‡ç—›ï¼Œä¸€æˆªé›ªç™½çš„åˆ€åˆƒå¾ä½ çš„èƒ¸å£å†’äº†å‡ºä¾†ï¼Œ\n"
+		  "ä½ ä¸çŸ¥æ‰€æªçš„çœ‹è‘—å®ƒï¼Œè…¦ä¸­ä¸€é™£æšˆçœ©ï¼Œå¯æƒ¡ !! æ˜¯%sçš„èƒŒåˆº ...\n",
 				query("c_name")),"HIR"));
       victim->receive_special_damage("evil", 2*query("level") + random(20) );
       "/d/magic/magic"->report( this_object(), victim );
@@ -80,6 +80,6 @@ void die()
   ::die(1);
   }
   else 
-  write(query("c_name")+"»¯ÎªÒ»µÀÇàÑÌ£¬ÏûÊ§ÔÚ¿ÕÆøÖĞ...\n");
+  write(query("c_name")+"åŒ–ç‚ºä¸€é“é’ç…™ï¼Œæ¶ˆå¤±åœ¨ç©ºæ°£ä¸­...\n");
   ::die(1);
 }  

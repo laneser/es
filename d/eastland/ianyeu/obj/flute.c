@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-   set_name( "flute", "Óñóï" );
-   set_short( "Óñóï" );
+   set_name( "flute", "ç‰ç°«" );
+   set_short( "ç‰ç°«" );
    set_long(
-     "ÕâÊÇÒ»Ö»ÓÉ´äÓñËùµñ³ÉµÄÓñóï£¬ÓñóïÉÏÃæ²¼ÂúÁúĞÎ»¨ÎÆ£¬\n"
-     "»¹ÓĞÓÃ×­ÎÄ¿ÌÖø¼¸¸öĞ¡×Ö£º¡ºĞ¦°Á½­ºş¡»¡£\n" );
-   set( "unit", "Ö»" );
+     "é€™æ˜¯ä¸€éš»ç”±ç¿ ç‰æ‰€é›•æˆçš„ç‰ç°«ï¼Œç‰ç°«ä¸Šé¢ä½ˆæ»¿é¾å½¢èŠ±ç´‹ï¼Œ\n"
+     "é‚„æœ‰ç”¨ç¯†æ–‡åˆ»è‘—å¹¾å€‹å°å­—ï¼šã€ç¬‘å‚²æ±Ÿæ¹–ã€ã€‚\n" );
+   set( "unit", "åª" );
    set( "type", "shortblade" );
    set( "hit_func", "weapon_hit" );
    set( "weight", 80 );
@@ -32,26 +32,26 @@ int weapon_hit( object victim, int damage )
 
    if( dex < 25 ) {
      tell_object( owner,
-     "\nÓÉì¶Äã²»¹»Ãô½İ, Óñóï±»ÄãË¦ÁË³öÈ¥!\n\n" );
+     "\nç”±æ–¼ä½ ä¸å¤ æ•æ·, ç‰ç°«è¢«ä½ ç”©äº†å‡ºå»!\n\n" );
      this_object()->remove();
      return 0;
    }
    if( random(dex)<21 ) return 0;
    if( random(dex)>20 && fp<20 ) {
      tell_object( owner,
-     "\nÓÉì¶ÄãµÄÄÚÁ¦²»×ã, ÓñóïËù·¢³öµÄÒô²¨·´¶øÕğÉËÁËÄã×Ô¼º!\n\n" );
+     "\nç”±æ–¼ä½ çš„å…§åŠ›ä¸è¶³, ç‰ç°«æ‰€ç™¼å‡ºçš„éŸ³æ³¢åè€Œéœ‡å‚·äº†ä½ è‡ªå·±!\n\n" );
      owner->receive_special_damage( "energy", dex+random(15) );
      return 0;
      }
    else {
        tell_object( owner,
-       "\nÄã½«Ò»ÕóÄÚÁ¦¹áÊäì¶Óñóï, ¹ÜÖĞÍ»È»·¢³öÒ»ÕóÒô²¨Ïò"+victim->query("c_name")+"ÉäÈ¥\n\n" );
+       "\nä½ å°‡ä¸€é™£å…§åŠ›è²«è¼¸æ–¼ç‰ç°«, ç®¡ä¸­çªç„¶ç™¼å‡ºä¸€é™£éŸ³æ³¢å‘"+victim->query("c_name")+"å°„å»\n\n" );
        tell_object( victim,
      "\n" +
-          owner->query("c_name") + "µÄÓñóïÍ»È»·¢³öÒ»ÕóÒô²¨ÏòÄãÏ®À´!\n\n" );
+          owner->query("c_name") + "çš„ç‰ç°«çªç„¶ç™¼å‡ºä¸€é™£éŸ³æ³¢å‘ä½ è¥²ä¾†!\n\n" );
        tell_room( environment(owner),
      "\n" +
-         owner->query("c_name") + "µÄÓñóïÍ»È»Ïò" + victim->query("c_name") + "Éä³öÒ»ÕóÒô²¨!\n\n"
+         owner->query("c_name") + "çš„ç‰ç°«çªç„¶å‘" + victim->query("c_name") + "å°„å‡ºä¸€é™£éŸ³æ³¢!\n\n"
          , ({ victim, owner }) );
         victim->receive_special_damage( "energy", dex+10 );
         owner->add( "force_points", -20 );

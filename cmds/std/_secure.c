@@ -27,13 +27,13 @@ int cmd_secure(string str)
 	if(str == "all") {
 		inv = all_inventory(player);
 		if( !pointerp(inv) || sizeof(inv) < 1 )
-			return notify_fail("ÄãÉíÉÏÃ»ÓĞÈÎºÎ¶«Î÷¿É±ê¼Ç¡£\n");
+			return notify_fail("ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•æ±è¥¿å¯æ¨™è¨˜ã€‚\n");
 		for( i=0; i<sizeof(inv); i++) {
 			if( !inv[i] || inv[i]->query("prevent_drop") ||
 				inv[i]->query("secure") ) continue;
 			tell_object( player,
 				inv[i]->query("short")+"("+inv[i]->query("name")+
-				")"+" --> Éè¶¨±ê¼Ç¡£\n" );
+				")"+" --> è¨­å®šæ¨™è¨˜ã€‚\n" );
 			inv[i]->set("secure", 1);
 		}
 		write( "Ok.\n" );
@@ -44,13 +44,13 @@ int cmd_secure(string str)
 		inv = filter_array(all_inventory(player), "is_this_type",
 			this_object(), type );
 		if( !pointerp(inv) || sizeof(inv) < 1 )
-			return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÀà¶«Î÷¿É±ê¼Ç¡£\n");
+			return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™é¡æ±è¥¿å¯æ¨™è¨˜ã€‚\n");
 		for( i=0; i<sizeof(inv); i++) {
 			if( !inv[i] || inv[i]->query("prevent_drop") ||
 				inv[i]->query("secure") ) continue;
 			tell_object( player, 
 				inv[i]->query("short")+"("+inv[i]->query("name")+
-				")"+" --> Éè¶¨±ê¼Ç¡£\n" );
+				")"+" --> è¨­å®šæ¨™è¨˜ã€‚\n" );
 			inv[i]->set("secure", 1);
 		}
 		write( "Ok.\n" );
@@ -59,14 +59,14 @@ int cmd_secure(string str)
 
 	ob = present(str, player);
 	if( !ob )
-		return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 	if( ob->query("prevent_drop") )
-		return notify_fail("Äã±¾À´¾ÍÎŞ·¨¶ªµôÕâÑù¶«Î÷, ²»±Ø¶à´ËÒ»¾ÙÁË¡£\n");
+		return notify_fail("ä½ æœ¬ä¾†å°±ç„¡æ³•ä¸Ÿæ‰é€™æ¨£æ±è¥¿, ä¸å¿…å¤šæ­¤ä¸€èˆ‰äº†ã€‚\n");
 	if( ob->query("secure") )
-		return notify_fail("ËüÒÑ±»Éè¶¨±ê¼ÇÁË¡£\n");
+		return notify_fail("å®ƒå·²è¢«è¨­å®šæ¨™è¨˜äº†ã€‚\n");
 	tell_object( player, 
 		ob->query("short")+"("+ob->query("name")+
-		")"+" --> Éè¶¨±ê¼Ç¡£\n" );
+		")"+" --> è¨­å®šæ¨™è¨˜ã€‚\n" );
 	ob->set("secure", 1);
 	write( "Ok.\n" );
 	return 1;
@@ -80,11 +80,11 @@ int is_this_type(object item, string type)
 
 int help()
 {
-	  write("Ê¹ÓÃ¸ñÊ½: secure <item | all [type of items] | all>.\n\n"+
-	     "½åÓÉÕâ¸öÖ¸Áî, Äã¿ÉÒÔ½«ÎïÆ·±ê¼Ç, ·²ÊÇ±»±ê¼ÇµÄÎïÆ·½«²»»á±»ÒÆ×ß¡£\n"+
-	     "±ÈÈç: give, drop, sell & toss ÕâĞ©Ö¸Áî½«»á×Ô¶¯ºöÂÔËùÓĞ±»±ê¼ÇµÄ\n"+
-	     "ÎïÆ·¡£Äã¿ÉÒÔÓÃ unsecure ½«±ê¼ÇÒÆ×ß¡£\n"+
-	     "See also: unsecure¡£\n\n"
+	  write("ä½¿ç”¨æ ¼å¼: secure <item | all [type of items] | all>.\n\n"+
+	     "è—‰ç”±é€™å€‹æŒ‡ä»¤, ä½ å¯ä»¥å°‡ç‰©å“æ¨™è¨˜, å‡¡æ˜¯è¢«æ¨™è¨˜çš„ç‰©å“å°‡ä¸æœƒè¢«ç§»èµ°ã€‚\n"+
+	     "æ¯”å¦‚: give, drop, sell & toss é€™äº›æŒ‡ä»¤å°‡æœƒè‡ªå‹•å¿½ç•¥æ‰€æœ‰è¢«æ¨™è¨˜çš„\n"+
+	     "ç‰©å“ã€‚ä½ å¯ä»¥ç”¨ unsecure å°‡æ¨™è¨˜ç§»èµ°ã€‚\n"+
+	     "See also: unsecureã€‚\n\n"
 	  );
 	return 1;
 }

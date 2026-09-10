@@ -5,7 +5,7 @@ inherit ROOM;
 void create()
 {
         ::create();
-	set_short("·¿¼ä");
+	set_short("æˆ¿é–“");
 	set_long( @LONG
 LONG
 	);

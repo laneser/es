@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "dwarf trainer", "°«ÈËÑµÁ·Ê¦" );
+	set_name( "dwarf trainer", "çŸ®äººè¨“ç·´å¸«" );
 	add("id",({"trainer","dwarf"}) );
-	set_short( "°«ÈËÑµÁ·Ê¦" );
+	set_short( "çŸ®äººè¨“ç·´å¸«" );
 	set_long(
-		"Ò»¸ö°«ÈË×åµÄÊ¨ğÕÊŞÑµÁ·Ê¦.\n"
+		"ä¸€å€‹çŸ®äººæ—çš„ç…é·²ç¸è¨“ç·´å¸«.\n"
 	);
 	set( "gender", "male" );
 	set( "race", "dwarf" );
@@ -48,11 +48,11 @@ int block_mount(string ob)
                       
      if(mob->query("is_griffon"))
        {
-         write("ÑµÁ·Ê¦µ²ÔÚÄãÉíÇ°µÉÖøÄã,²»ÈÃÄãÏòÊ¨ğÕÊŞ¿¿½ü¡£\n") ;
+         write("è¨“ç·´å¸«æ“‹åœ¨ä½ èº«å‰çªè‘—ä½ ,ä¸è®“ä½ å‘ç…é·²ç¸é è¿‘ã€‚\n") ;
 
          tell_room(environment(this_object()),
-               "ÑµÁ·Ê¦µ²ÔÚ"+this_player()->query("c_name")+
-               "ÉíÇ°µÉÖøËû,²»ÈÃËûÏòÊ¨ğÕÊŞ¿¿½ü¡£\n"
+               "è¨“ç·´å¸«æ“‹åœ¨"+this_player()->query("c_name")+
+               "èº«å‰çªè‘—ä»–,ä¸è®“ä»–å‘ç…é·²ç¸é è¿‘ã€‚\n"
                ,this_player() ) ;
          return 1 ;
        }      
@@ -76,10 +76,10 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()),
-             sprintf("Ñ±ÊŞÊ¦ÉÚÉùÒ»´µ, Ê¨ğÕÊŞÏò%sÆËÁË¹ıÈ¥¡£\n",
+             sprintf("é¦´ç¸å¸«å“¨è²ä¸€å¹, ç…é·²ç¸å‘%sæ’²äº†éå»ã€‚\n",
                    victim->query("c_name")),({ guard[i],victim })
                );
-      tell_object(victim,"Ñ±ÊŞÊ¦ÉÚÉùÒ»´µ, Ê¨ğÕÊŞÏòÄãÆËÁË¹ıÀ´¡£\n");
+      tell_object(victim,"é¦´ç¸å¸«å“¨è²ä¸€å¹, ç…é·²ç¸å‘ä½ æ’²äº†éä¾†ã€‚\n");
       guard[i]->kill_ob(victim);
     }
      return 0;

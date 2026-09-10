@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("ruby ring","ºì±¦Ê¯½äÖ¸");
+        set_name("ruby ring","ç´…å¯¶çŸ³æˆ’æŒ‡");
         add("id",({"ring"}) );
-         set_short( "ruby ring","ºì±¦Ê¯½äÖ¸");
+         set_short( "ruby ring","ç´…å¯¶çŸ³æˆ’æŒ‡");
 	set_long(
-"ÕâÊÇÓÉºì±¦Ê¯ËùÖÆ³ÉµÄÃÀÀö½ä×Ó£¬¿´À´¼ÛÖµ²»·Æ....\n"
+"é€™æ˜¯ç”±ç´…å¯¶çŸ³æ‰€è£½æˆçš„ç¾éº—æˆ’å­ï¼Œçœ‹ä¾†åƒ¹å€¼ä¸è²....\n"
 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "finger" );
 	set( "material","element");
@@ -24,9 +24,9 @@ void equip_ring()
 object holder;
     holder=this_player();
     tell_room(environment(holder),
-    holder->query("c_name")+"Ì×ÉÏÒ»Ö»ÁÁÀöµÄºì±¦Ê¯½äÖ¸....\n"
+    holder->query("c_name")+"å¥—ä¸Šä¸€éš»äº®éº—çš„ç´…å¯¶çŸ³æˆ’æŒ‡....\n"
     ,({holder}));
     tell_object(holder,
-    "ÄãĞ¡ĞÄÒíÒíµÄÌ×ÉÏºì±¦Ê¯½äÖ¸....\n");
+    "ä½ å°å¿ƒç¿¼ç¿¼çš„å¥—ä¸Šç´…å¯¶çŸ³æˆ’æŒ‡....\n");
 return ;
 }

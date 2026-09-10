@@ -25,7 +25,7 @@ int cmd_chinese(string arg)
 //			write("Now you see English messages.\n");
 //			this_player()->delete("chinese");
 //		} else {
-//			write("现在你设定为接收中文讯息。\n");
+//			write("鐝惧湪浣犺ō瀹氱偤鎺ユ敹涓枃瑷婃伅銆俓n");
 //	 		this_player()->set("chinese", 1);
 //		}
 //		return 1;

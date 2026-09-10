@@ -3,12 +3,12 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("fish rod","µö¸Í");
-     set_short("fish rod","µö¸Í");
+     set_name("fish rod","é‡£ç«¿");
+     set_short("fish rod","é‡£ç«¿");
      set_long(
-      "Ò»¸ùÓÃÖñ×Ó×÷³ÉµÄ¼òµ¥µö¸Í£¬ÉÏÃæÁ¬ÖøµöÏß£¬¸¡±êºÍµö¹³¡£\n"
+      "ä¸€æ ¹ç”¨ç«¹å­ä½œæˆçš„ç°¡å–®é‡£ç«¿ï¼Œä¸Šé¢é€£è‘—é‡£ç·šï¼Œæµ®æ¨™å’Œé‡£é‰¤ã€‚\n"
       );
-     set( "unit", "¸ù");
+     set( "unit", "æ ¹");
      set("weight",40);
      set("value", ({ 20, "silver" }));
 }

@@ -8,18 +8,18 @@ inherit ROOM;
 void create()
 {
         ::create();
-        set_short("��ʯ���");
+        set_short("青石大道");
         set_long( @C_LONG_DESCRIPTION
-������������һ����ʯ����ϣ�������һ������¥�ߵĿ�ջ����ջ�ſڲ�����
-ʮ֦��ɫ��ױߵ�����(flags)��������һ�ҵ��̣����ϵĴ��ͨ��һƬ������
-Ұ��
+你現在正走在一條青石大道上，東邊是一間兩層樓高的客棧，客棧門口插著數
+十枝綠色鑲白邊的旗子(flags)，西邊是一家當鋪，往南的大道通往一片青翠的田
+野。
 C_LONG_DESCRIPTION
         );
 
         set_outside( "haiwei" );
         set( "light", 1 );
         set("item_desc",([
-                "flags" : "�⼸֦���ӿ��������Ǽ��ھֵ����ģ���������һ�����ġ��ܡ��֡�\n" ]) );
+                "flags" : "這幾枝旗子看起來像是家鏢局的旗幟，上面繡著一個大大的「周」字。\n" ]) );
         set( "exits", ([ 
                 "west" : "/d/eastland/haiwei/hockshop", 
                 "north" : "/d/eastland/haiwei/mroad3",

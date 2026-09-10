@@ -6,13 +6,13 @@ void create()
 	::create();
 	seteuid(getuid());
 	set_level(19);
-	set_name( "Lizardman Holy Knight","ʥ��ʿ����" );
+	set_name( "Lizardman Holy Knight","聖騎士金身" );
 	add( "id",({ "lizardman","knight" }) );
-	set_short( "ʥ��ʿ����" );
+	set_short( "聖騎士金身" );
 	set_long(@LONG
-    ���Ǵ���Ϊ�˼���ʥ��ʿ���ص����˴����һ�����񣬴������
-���������ݷ���������ȥ���ġ���Ȼֻ�Ǹ����񣬵����ְ�����Ȼ��
-���˸е����¡�
+    這是村人為了紀念聖騎士而特地請人打造的一座雕像，打造得栩
+栩如生，彷佛是用真人去做的。雖然只是個雕像，但那種霸氣依然能
+令人感到害怕。
 LONG
 		);
 	set( "exp_reward",50000 );
@@ -61,14 +61,14 @@ int accept_item(object me,object item)
 	name=this_player()->query( "c_name" );
 	iname=item->query( "c_name" );
 	
-	if ( iname!="ʥ��ʿԪ��" )
+	if ( iname!="聖騎士元神" )
 	{
 	obj=new( IOBJ"bill" );
-	obj->set_long( "\n��л��¡�"+name+"������������"+iname+"��\n\n\n           ��ƽ�����ù����������˾�����֤����\n");  
+	obj->set_long( "\n感謝大德『"+name+"』慷慨捐贈『"+iname+"』\n\n\n           和平紀念堂管理處特立此據以茲證明。\n");  
 	obj->move(me);
 	item->remove();
-	tell_room(environment(),"\n��֪��������Ĺ�����Ա����"+name+"Ц��Ц�����ͳ�һ��ֽ����"+name+"\n",this_player());
-	tell_object(this_player(),"\n��ʥ��ʿ�����߳�һ���ˣ����Ի��ɵ������˿��㣬���ͳ�һ��ֽ���㣬���书�����𣡣�\n\n");
+	tell_room(environment(),"\n不知從哪鑽出的工作人員，對"+name+"笑了笑，便掏出一張紙條給"+name+"\n",this_player());
+	tell_object(this_player(),"\n從聖騎士背後走出一個人，他以懷疑的眼神看了看你，便掏出一張紙給你，是武功密笈嗎！？\n\n");
 
 	return 1;
 	}
@@ -77,17 +77,17 @@ int accept_item(object me,object item)
 	if( (int)this_player()->query_temp("holy_knight")==1){
 	this_player()->set_temp("jousting",1);
 	}
-	tell_room(environment(),"\nͻȻʥ��ʿ�������Ϸ������ɹ�â��������Ȼ��������.....\n\n");
+	tell_room(environment(),"\n突然聖騎士金身身上發出萬丈光芒！金身竟然動了起來.....\n\n");
 	item->remove();
-	set_name( "lizardman Holy Knight","������ʥ��ʿ" );
-	set_short( "������ʥ��ʿ" );
+	set_name( "lizardman Holy Knight","蜥蜴人聖騎士" );
+	set_short( "蜥蜴人聖騎士" );
 	set_long(@C_LONG
-    ���������ľ��Ǵ�˵�С�������ꪡ������ˡ�ʥ��ʿ����Ҳ���ǵ���������
-���еġ�����սʿ������ʱ��������ս��ս����˵��ǰ���ң�����������ֱ��
-��ʥ��ʿ�����ֲ���ֹ�˷���������ʿ����ɱ¾����ս�����һ���䣻����ͣ
-������ڡ�ӳ���塻ǩ�º�ƽ��Լ��Ȼ��������Ϊ��ʾ��ƽ�ĳ��⣬��ǽ�����
-����ꪡ����ڡ�ӳ���塻�Ĺ㳡�ϣ�������ħ���÷�������������ꪡ���ӡס��
-�����Ϊ��ӳ���塻�к�ƽ�����硣
+    你所看到的就是傳說中『創世神戟』的主人『聖騎士』，也就是當年蜥蜴人
+口中的『最終戰士』。當時由於三族混戰，戰況可說空前慘烈，死傷無數。直到
+『聖騎士』出現才制止了瘋狂的忍者武士繼續殺戮，而戰爭亦告一段落；三方停
+火後便在『映世村』簽下和平條約，然而蜥蜴人為表示和平的誠意，於是將『創
+世神戟』插在『映世村』的廣場上，並且由魔族用法術將『創世神戟』封印住，
+日後成為『映世村』中和平的象徵。
 
 C_LONG
 		);
@@ -101,14 +101,14 @@ C_LONG
 void leave()
 {
 	command("go up");
-	tell_room(environment(),"\nʥ��ʿҡҡͷ��̾�˿����� ͻȻ��һ����â��ʥ��ʿ����������.....\nʥ��ʿ�ֱ�ɽ�����......\n\n");
+	tell_room(environment(),"\n聖騎士搖搖頭，嘆了口氣！ 突然，一道光芒從聖騎士的天靈蓋射出.....\n聖騎士又變成金身了......\n\n");
 	set( "no_attack" , 1 );
-	set_name( "Lizardman Holy Knight","ʥ��ʿ����" );
-	set_short( "ʥ��ʿ����" );
+	set_name( "Lizardman Holy Knight","聖騎士金身" );
+	set_short( "聖騎士金身" );
 	set_long(@LONG
-    ���Ǵ���Ϊ�˼���ʥ��ʿ���ص����˴����һ�����񣬴������
-���������ݷ���������ȥ���ġ���Ȼֻ�Ǹ����񣬵����ְ�����Ȼ��
-���˸е����¡�
+    這是村人為了紀念聖騎士而特地請人打造的一座雕像，打造得栩
+栩如生，彷佛是用真人去做的。雖然只是個雕像，但那種霸氣依然能
+令人感到害怕。
 LONG
 		);
 	return ;

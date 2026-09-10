@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "east_feather_blade", "¶«·½Æ¬Óğ½£" );
+        set_name( "east_feather_blade", "æ±æ–¹ç‰‡ç¾½åŠ" );
         add( "id",({ "blade","sword" }) );
-        set_short( "east£ßfeather£ßblade", "¶«·½Æ¬Óğ½£" );
+        set_short( "eastï¼¿featherï¼¿blade", "æ±æ–¹ç‰‡ç¾½åŠ" );
         set_long(@AAA
-ÕâÊÇÒ»°Ñ·æÀûµÄ³¤½££¬ÊÇÎäÊ¿ÍÅµÄÖÆÊ½ÎäÆ÷
+é€™æ˜¯ä¸€æŠŠé‹’åˆ©çš„é•·åŠï¼Œæ˜¯æ­¦å£«åœ˜çš„åˆ¶å¼æ­¦å™¨
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 22 );
         set( "type", "longblade" );
         set( "min_damage", 10 );

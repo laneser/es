@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Leather Jackboots","Æ¤¸ïÂíÑ¥" );
+	set_name( "Leather Jackboots","çš®é©é¦¬é´" );
 	add( "id",({ "jackboots","boots" }) );
-	set_short( "Æ¤¸ïÂíÑ¥" );
+	set_short( "çš®é©é¦¬é´" );
 	set_long(@LONG
-	ÕâÊÇÒ»Ë«ÓÃÂ¹Æ¤×öµÄ³¤Ñ¥£¬´©ÆğÀ´¿ÉÊÇ·Ç³£Êæ
-	·şµÄà¸¡£
+	é€™æ˜¯ä¸€é›™ç”¨é¹¿çš®åšçš„é•·é´ï¼Œç©¿èµ·ä¾†å¯æ˜¯éå¸¸èˆ’
+	æœçš„å–”ã€‚
 LONG
            );
-	set( "unit","Ë«" );
+	set( "unit","é›™" );
 	set( "weight",50 );
 	set( "type","feet" );
 	set( "material","leather" );

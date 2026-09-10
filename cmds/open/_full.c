@@ -11,7 +11,7 @@ int cmd_full()
     this_player()->set("force_points",this_player()->query("max_fp"));
     this_player()->set("talk_points",this_player()->query("max_tp"));
 
-    write("»Ö¸´³É¹¦¡£\n");
+    write("æ¢å¾©æˆåŠŸã€‚\n");
     return 1;
 }
 /*
@@ -23,7 +23,7 @@ int main(object me, string str)
     if( !str || str == "")
         obj = me;
     else if ( !obj = present(str,environment(me)))
-        return notify_fail("¶ÔÏó´íÎó: ÕÒ²»µ½"+str+"\n");
+        return notify_fail("å°è±¡éŒ¯èª¤: æ‰¾ä¸åˆ°"+str+"\n");
     
     for( i = 0; i < sizeof(gifts); i++ )
     {
@@ -37,16 +37,16 @@ int main(object me, string str)
     obj->set("food",obj->max_food_capacity());
     obj->set("water",obj->max_water_capacity());
     obj->clear_condition();
-    write("»Ö¸´³É¹¦¡£\n");
+    write("æ¢å¾©æˆåŠŸã€‚\n");
     return 1;
 }
 */
 int help(object obj)
 {
   write(@HELP
-Ö¸Áî¸ñÊ½ : full <¶ÔÏó>
+æŒ‡ä»¤æ ¼å¼ : full <å°è±¡>
 
-ÀûÓÃ´ËÖ¸Áî¿ÉÍêÈ«»Ö¸´ÉúÎïµÄ×´Ì¬²¢Çå³ıÒ»ÇĞcondition¡£
+åˆ©ç”¨æ­¤æŒ‡ä»¤å¯å®Œå…¨æ¢å¾©ç”Ÿç‰©çš„ç‹€æ…‹ä¸¦æ¸…é™¤ä¸€åˆ‡conditionã€‚
 HELP
     );
     return 1;

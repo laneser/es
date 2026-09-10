@@ -2,7 +2,7 @@
 #define GUILD_TOKEN	 "/d/thief/uni_dagger"
 #define GUILD_LOCATION   "/d/thief/hall/thief_guild"
 
-#define GUILD_MASTER     ({ "Pickering", "±Ï¿ËÁÖÀÏµù" })
+#define GUILD_MASTER     ({ "Pickering", "ç•¢å…‹æ—è€çˆ¹" })
 #define ALLOWED_MATERIAL ({ "cloth", "leather", "wood",\
 							"element", })
 #define SECOND_MATERIAL  ({ "light_metal", "stone", })

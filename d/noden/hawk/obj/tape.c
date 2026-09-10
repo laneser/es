@@ -5,11 +5,11 @@ inherit OBJECT;
 void create()
 {
         seteuid(getuid());
-        set_name("scotch tape","²âÊÔÓÃ");
+        set_name("scotch tape","æ¸¬è©¦ç”¨");
         add("id",({"tape"}));
         set("short","@@query_short");
         set("invisible",1);
-        set( "unit", "¾í");
+        set( "unit", "å·");
         set("weight",0);
 }
 
@@ -36,7 +36,7 @@ void init()
 int do_ok()
 {
         tell_object(this_player(),
-                "ÄãÖÕì¶¾õµÃºíÁüÊæ·şµãÁË£¬Ó¦¸Ã¿ÉÒÔËµ»°ÁË¡£\n");
+                "ä½ çµ‚æ–¼è¦ºå¾—å–‰åš¨èˆ’æœé»äº†ï¼Œæ‡‰è©²å¯ä»¥èªªè©±äº†ã€‚\n");
         this_object()->remove();
         return 1;
 }
@@ -44,6 +44,6 @@ int do_ok()
 
 int do_say(string arg)
 {
-        write("ÄãµÄºíÁüÊÜÁËÖØÉË£¬»¹ÊÇ¶àĞİÏ¢ÉÙËµ»°°É¡£\n");
+        write("ä½ çš„å–‰åš¨å—äº†é‡å‚·ï¼Œé‚„æ˜¯å¤šä¼‘æ¯å°‘èªªè©±å§ã€‚\n");
         return 1;
 }

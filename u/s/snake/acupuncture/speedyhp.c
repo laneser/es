@@ -27,21 +27,21 @@ int acu_effect(int level, object target)
 	target->delete("acupuncted_pts") ;
 	target->delete_temp("acupuncted_pts") ;	
        
-        if(target == me) targetname = "×Ô¼º" ;
+        if(target == me) targetname = "è‡ªå·±" ;
         else
         { 
           targetname = target->query("c_name") ;
           tell_object(target,sprintf(
-                     "%sËæµØ×øÏÂ²¢Ç£ÆðÄãµÄÊÖ,»º»º½«ÆøËÍ½øÀ´¡£\n",
+                     "%séš¨åœ°åä¸‹ä¸¦ç‰½èµ·ä½ çš„æ‰‹,ç·©ç·©å°‡æ°£é€é€²ä¾†ã€‚\n",
                      me->query("c_name")
                      ) ) ;
          }
 
-	write(sprintf("ÄãÏ¯µØ×øÏÂ²¢Ç£Æð%sµÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+	write(sprintf("ä½ å¸­åœ°åä¸‹ä¸¦ç‰½èµ·%sçš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n",
 	               targetname));
 
 	tell_room( environment(me),sprintf( 
-		"%sËæµØ×øÏÂ²¢Ç£Æð%sµÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+		"%séš¨åœ°åä¸‹ä¸¦ç‰½èµ·%sçš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n",
 		 me->query("c_name"),targetname ),
 		({ me ,target }) );
 
@@ -57,18 +57,18 @@ void effect(int level, object caster, object dest)
         caster->set_temp("cast_busy", 0);
 	if( !dest || !present(dest, environment(caster)) ) {
 	  tell_object( caster, 
-	    "²»ÖªÔõ÷áµÄ,Ò²ÐíÊÇ¾õµÃÄãÊÇ¸öÃÉ¹Å´ó·ò¡£×ÜÖ®,ÄãµÄ»¼Õß×ßµôÁË¡£\n" 
+	    "ä¸çŸ¥æ€Žéº¼çš„,ä¹Ÿè¨±æ˜¯è¦ºå¾—ä½ æ˜¯å€‹è’™å¤å¤§å¤«ã€‚ç¸½ä¹‹,ä½ çš„æ‚£è€…èµ°æŽ‰äº†ã€‚\n" 
 	  );
 	  return;
 	}
 	
 	if( dest->query_temp("acup_effect/"+EFFECT_ID) ) {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬µ«ÊÇºÃÏñ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼Œä½†æ˜¯å¥½åƒä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n"
 		);
 	} else {
 		tell_object( dest,
-	            "Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬Í¬Ê±È«ÉíµÄÉË¿Ú¿ªÊ¼ÓÐÐ©Î¢ÂéÑ÷£¡\n"
+	            "ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼ŒåŒæ™‚å…¨èº«çš„å‚·å£é–‹å§‹æœ‰äº›å¾®éº»ç™¢ï¼\n"
 		);
 		boost = level - BASIC_NEEDED + 1 ;		
 		if( caster == dest )
@@ -91,7 +91,7 @@ void effect(int level, object caster, object dest)
 		dest->set_temp("acup_effect/"EFFECT_ID, 1);
 		
         	tell_room( environment(dest),sprintf(
-	        	"²»ÖªÊÇ²»ÊÇ´í¾õ,Äã¾õµÃ%sµÄÉË¿ÚÒþÒþÉÁÖø½ðÉ«µÄ¹âÃ¢¡£\n"
+	        	"ä¸çŸ¥æ˜¯ä¸æ˜¯éŒ¯è¦º,ä½ è¦ºå¾—%sçš„å‚·å£éš±éš±é–ƒè‘—é‡‘è‰²çš„å…‰èŠ’ã€‚\n"
 	        	,dest->query("c_name")),dest ) ;
 		call_out( "expire", duration, dest, hp_cond, body_cond ) ;
 	}
@@ -102,7 +102,7 @@ void expire( object player,int *hp_cond,int *body_cond )
 {
     if( !player ) return;
     tell_object( player,
-		"Äã¾õµÃÉË¿ÚµÄ¸´Ô­²»ÔÙÏñÒÔÇ°¿ì£¬Í¬Ê±ÆøÑªµÄÁ÷¶¯±äµÃ»ººÍ....¡£\n" );
+		"ä½ è¦ºå¾—å‚·å£çš„å¾©åŽŸä¸å†åƒä»¥å‰å¿«ï¼ŒåŒæ™‚æ°£è¡€çš„æµå‹•è®Šå¾—ç·©å’Œ....ã€‚\n" );
     HEAL_HP->apply_effect(player,hp_cond[0],hp_cond[1]) ;
     HEAL_BODY->apply_effect(player,body_cond[0],body_cond[1]) ;
     player->delete_temp("acup_effect/"+EFFECT_ID);

@@ -8,12 +8,12 @@ varargs int can_use(object me, object victim, object weapon)
 }
 
 string *defense_msg = ({
-	"%sÉíĞÎÒ»»Î£¬ÏòááÍËÁËÆß²½",
-	"%s×İÉíÏòÉÏÒ»Ô¾",
-	"%s½ÅÌ¤Ç¬¹¬£¬×ªôŞÎ»",
-	"%sË«ÕÆÒ»¸ñ",
-	"%sĞäÅÛÒ»»Ó",
-	"%sÍ»È»µÍÉíÇ°½ø",
+	"%sèº«å½¢ä¸€æ™ƒï¼Œå‘å¾Œé€€äº†ä¸ƒæ­¥",
+	"%sç¸±èº«å‘ä¸Šä¸€èº",
+	"%sè…³è¸ä¹¾å®®ï¼Œè½‰è‰®ä½",
+	"%sé›™æŒä¸€æ ¼",
+	"%sè¢–è¢ä¸€æ®",
+	"%sçªç„¶ä½èº«å‰é€²",
 });
 
 varargs int hit_modify(int hit_chance, object me, object victim, object weapon)

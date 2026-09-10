@@ -15,16 +15,16 @@ void create()
 
 	::create();
 	set_level(15);
-	set_name( "snaky shaman", "ÉßÈËÎ×Ò½" );
+	set_name( "snaky shaman", "è›‡äººå·«é†«" );
 	add( "id", ({ "healer", "shaman" }) );
-	set_short( "ÉßÈËÎ×Ò½" );
+	set_short( "è›‡äººå·«é†«" );
 	set_long(
-		"ÉßÈËÆäÊµ¿ÉÒÔËµÊÇÃ»ÓĞ½ÅµÄòáòæÈË£¬ËäÃ»ÓĞòáòæÈËÄÇ÷áÇ¿×³\n"
-		"µ«ÊÇÈ´ÓĞÔ¶¸ßì¶ËûÃÇµÄÖÇ»Û¡£ÉßÈËÎ×Ò½ÄÜ¹»ÀûÓÃËüËùÑ§µÄÒ½Êõ\n"
-	        "ºÍÂÌÄ§·¨ÒÔ°ïÖúĞèÒª°ïÖúµÄ¶ÓÓÑ¡£\n"
+		"è›‡äººå…¶å¯¦å¯ä»¥èªªæ˜¯æ²’æœ‰è…³çš„èœ¥èœ´äººï¼Œé›–æ²’æœ‰èœ¥èœ´äººé‚£éº¼å¼·å£¯\n"
+		"ä½†æ˜¯å»æœ‰é é«˜æ–¼ä»–å€‘çš„æ™ºæ…§ã€‚è›‡äººå·«é†«èƒ½å¤ åˆ©ç”¨å®ƒæ‰€å­¸çš„é†«è¡“\n"
+	        "å’Œç¶ é­”æ³•ä»¥å¹«åŠ©éœ€è¦å¹«åŠ©çš„éšŠå‹ã€‚\n"
 	);
 	set("chi_yu_group",1);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "monster" );
 	set( "gender", "female" );
 	set( "alignment", -200 );
@@ -47,9 +47,9 @@ void create()
 	set_temp( "aiming_loc", "ganglion" );
 	set( "chat_chance", 20 );
 	set( "att_chat_output", ({
-		"[1mÉßÈËÎ×Ò½ËµµÀ: ÄãÃÇ»¹ÊÇ·ÅÆú°É£¬Î°´óµÄò¿ÓÈ´óÈË²»ÊÇ±°Î¢µÄÉúÎïËùÄÜµÖ¿¹µÄ£¡[0m\n",
-		"[1mÉßÈËÎ×Ò½ËµµÀ: ÄãÃÇÒÑ¾­±»°üÎ§ÁË£¬·ÅÏÂÎäÆ÷Í¶½µ°É¡£[0m\n",
-		"[1mÉßÈËÎ×Ò½ËµµÀ: Í¬°éÃÇ£¬ĞèÒªÖÎÁÆ×Ô¼ºÒªËµà¸£¿[0m\n"
+		"[1mè›‡äººå·«é†«èªªé“: ä½ å€‘é‚„æ˜¯æ”¾æ£„å§ï¼Œå‰å¤§çš„èš©å°¤å¤§äººä¸æ˜¯å‘å¾®çš„ç”Ÿç‰©æ‰€èƒ½æŠµæŠ—çš„ï¼[0m\n",
+		"[1mè›‡äººå·«é†«èªªé“: ä½ å€‘å·²ç¶“è¢«åŒ…åœäº†ï¼Œæ”¾ä¸‹æ­¦å™¨æŠ•é™å§ã€‚[0m\n",
+		"[1mè›‡äººå·«é†«èªªé“: åŒä¼´å€‘ï¼Œéœ€è¦æ²»ç™‚è‡ªå·±è¦èªªå–”ï¼Ÿ[0m\n"
 	}) );
 
 	wield_weapon( "/d/noden/house/obj/mace" );
@@ -72,7 +72,7 @@ void relay_message(string class, string str)
         
         
         if( !str || str == "" ) return;
-        if( sscanf(str,"%s(%s)×ßÁË¹ıÀ´¡£", tmp,name)==2 ) {
+        if( sscanf(str,"%s(%s)èµ°äº†éä¾†ã€‚", tmp,name)==2 ) {
         name = lower_case(name);
         victim = present(name, environment(this_object()));
         if( !victim || victim->query("npc") || victim->query("no_attack")) return ;
@@ -81,11 +81,11 @@ void relay_message(string class, string str)
         
         if( !pointerp(attackers) || member_array(victim, attackers)==-1 ) {
         
-        tell_object(victim,query("c_name")+"½ĞµÀ : Í¨Í¨È¥ËÀ°É£¬Í¬Ê±²»»³ºÃÒâµÄÍùÄãÕâÀï³å¹ıÀ´....\n");
+        tell_object(victim,query("c_name")+"å«é“ : é€šé€šå»æ­»å§ï¼ŒåŒæ™‚ä¸æ‡·å¥½æ„çš„å¾€ä½ é€™è£¡è¡éä¾†....\n");
          kill_ob(victim);
          } } }
         
-         if( sscanf(str,"%s(%s)ËµµÀ: µĞÈËÒÑ¾­ÌÓ×ßÁË£¬¿ìÀ´°ïÎÒÖÎÁÆ°É.....",tmp,name)==2) 
+         if( sscanf(str,"%s(%s)èªªé“: æ•µäººå·²ç¶“é€ƒèµ°äº†ï¼Œå¿«ä¾†å¹«æˆ‘æ²»ç™‚å§.....",tmp,name)==2) 
          {
          if ( query_attacker() ) return ; 
          if ( !target = present(name,environment(this_object()) )) return ;
@@ -95,7 +95,7 @@ void relay_message(string class, string str)
          if ( query_temp("clotted") == 0) {
          
          tell_room(environment(this_object()),set_color(
-               "\nÉßÈËÎ×Ò½³ÃÖøÕ½¶·¸æÒ»¶ÎÂä£¬ºÜ¿ìµÄ¶Ô×Ô¼ºµÄÉË¿Ú½øĞĞÖ¹Ñª¡£\n\n"
+               "\nè›‡äººå·«é†«è¶è‘—æˆ°é¬¥å‘Šä¸€æ®µè½ï¼Œå¾ˆå¿«çš„å°è‡ªå·±çš„å‚·å£é€²è¡Œæ­¢è¡€ã€‚\n\n"
                ,"HIY",this_object()),this_object());
          
          (CONDITION_PREFIX + "bleeding")->remove_effect(this_object());
@@ -105,7 +105,7 @@ void relay_message(string class, string str)
         if ( this_object()->query("hit_points") < this_object()->query("max_hp")/2 ) {
         if (!bandaged = query("conditions/bandaged")) {
          tell_room(environment(this_object()),set_color(
-                  "\nÉßÈËÎ×Ò½´Ó»³ÖĞÌÍ³öÒ»Ğ©Ò©¸à£¬ºÜ¿ìµÄÌùÔÚ×Ô¼ºµÄÉË¿ÚÉÏ¡£\n\n"
+                  "\nè›‡äººå·«é†«å¾æ‡·ä¸­æå‡ºä¸€äº›è—¥è†ï¼Œå¾ˆå¿«çš„è²¼åœ¨è‡ªå·±çš„å‚·å£ä¸Šã€‚\n\n"
                   ,"HIY",this_object()),this_object());
          
          HERB_APPLY->apply_effect(this_object(), 8, 5, 30);
@@ -115,8 +115,8 @@ void relay_message(string class, string str)
     if ( this_object()->query("hit_points") < this_object()->query("max_hp")/3) {
     if (!this_object()->query_temp("aided") || this_object()->query_temp("aided")==0) {
        tell_room(environment(this_object()),set_color(
-          "\nÉßÈËÎ×Ò½³ÃÖøÕ½¶·¸æÒ»¶ÎÂä£¬ºÜ¿ìµÄ¶Ô×Ô¼ºµÄÉË¿Ú"
-          "½øĞĞ¼±¾È¡£\n\n","HIY",this_object()),this_object());
+          "\nè›‡äººå·«é†«è¶è‘—æˆ°é¬¥å‘Šä¸€æ®µè½ï¼Œå¾ˆå¿«çš„å°è‡ªå·±çš„å‚·å£"
+          "é€²è¡Œæ€¥æ•‘ã€‚\n\n","HIY",this_object()),this_object());
          
          
          this_object()->receive_healing(65+random(30));
@@ -133,12 +133,12 @@ void relay_message(string class, string str)
          target->set( "conditions/bleeding", bleed );
          }
          tell_room(environment(this_object()),set_color(
-         "\nÉßÈËÎ×Ò½³ÃÖøÕ½¶·¸æÒ»¶ÎÂä£¬ºÜ¿ìµÄ¶Ô"+target->query("c_name")+
-         "½øĞĞÖ¹Ñª¡£\n\n","HIY",target),target);
+         "\nè›‡äººå·«é†«è¶è‘—æˆ°é¬¥å‘Šä¸€æ®µè½ï¼Œå¾ˆå¿«çš„å°"+target->query("c_name")+
+         "é€²è¡Œæ­¢è¡€ã€‚\n\n","HIY",target),target);
          target->set_temp("clotted", 1 );
          call_out( "remove_clotted", 45, target );
          }
-         else command("say "+target->query("c_name")+"£¬ÄãµÄÉË¿ÚÒÑ¾­±»Ö¹Ñª´¦Àí¹ıÁË...");
+         else command("say "+target->query("c_name")+"ï¼Œä½ çš„å‚·å£å·²ç¶“è¢«æ­¢è¡€è™•ç†éäº†...");
 }          
           hitp = target->query("hit_points");
           hp1 = target->query("max_hp")/2;
@@ -151,10 +151,10 @@ void relay_message(string class, string str)
              target->set_temp("aided",1);
              call_out("can_aid_again",180,target);
              tell_room(environment(this_object()),set_color(
-             "\nÉßÈËÎ×Ò½³ÃÖøÕ½¶·¸æÒ»¶ÎÂä£¬ºÜ¿ìµÄ¶Ô"+target->query("c_name")+
-             "½øĞĞ¼±¾È¡£\n\n","HIY",target),target);
+             "\nè›‡äººå·«é†«è¶è‘—æˆ°é¬¥å‘Šä¸€æ®µè½ï¼Œå¾ˆå¿«çš„å°"+target->query("c_name")+
+             "é€²è¡Œæ€¥æ•‘ã€‚\n\n","HIY",target),target);
               }
-             else command("say "+target->query("c_name")+"£¬ÄãÒÑ¾­±»¼±¾È¹ıÁË..."); 
+             else command("say "+target->query("c_name")+"ï¼Œä½ å·²ç¶“è¢«æ€¥æ•‘éäº†..."); 
               }
          
           if (hitp < hp1)  {
@@ -162,8 +162,8 @@ void relay_message(string class, string str)
           if (!bandaged = target->query("conditions/bandaged")) {
          
           tell_room(environment(this_object()),set_color(
-          "\nÉßÈËÎ×Ò½´Ó»³ÖĞÌÍ³öÒ»Ğ©Ò©¸à£¬ºÜ¿ìµÄÄ¨ÔÚ"+target->query("c_name")+
-          "ÉË¿ÚÉÏ¡£\n\n","HIY",target),target);
+          "\nè›‡äººå·«é†«å¾æ‡·ä¸­æå‡ºä¸€äº›è—¥è†ï¼Œå¾ˆå¿«çš„æŠ¹åœ¨"+target->query("c_name")+
+          "å‚·å£ä¸Šã€‚\n\n","HIY",target),target);
           HERB_APPLY->apply_effect(target, 8, 5, 30);
           command("bandage "+target->query("name"));         
           return ;
@@ -177,8 +177,8 @@ int my_tactic()
 
 	if( random(12)<2 ) {
         tell_room( environment(this_object()), 
-	     "ÉßÈËÎ×Ò½¿ÚÖĞÄîµÀ: Grignar-substun exnAr quinolenee...\n"
-	     "[32m\nÒ»ÍÅ°µÂÌÉ«µÄ¹âÆø´ÓËÄÃæ»ã¼¯£¬²¢ÇÒÁıÕÖÖøÔÚ³¡µÄËùÓĞÈË£¬È»ááÏûÊ§¡£[0m\n\n",
+	     "è›‡äººå·«é†«å£ä¸­å¿µé“: Grignar-substun exnAr quinolenee...\n"
+	     "[32m\nä¸€åœ˜æš—ç¶ è‰²çš„å…‰æ°£å¾å››é¢å½™é›†ï¼Œä¸¦ä¸”ç± ç½©è‘—åœ¨å ´çš„æ‰€æœ‰äººï¼Œç„¶å¾Œæ¶ˆå¤±ã€‚[0m\n\n",
 			this_object() );
 		people = all_inventory(environment());
 		people->heal_chi(30);

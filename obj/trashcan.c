@@ -8,10 +8,10 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_name( "trashcan", "À¬»øÍ°" );
-	set_short( "À¬»øÍ°" );
-	set_c_open_long( "Ò»¸öÔìĞÍĞÂ³±µÄÀ¬»øÍ°£¬ÉÏÃæĞ´Öø¡¸×ÊÔ´»ØÊÕ£¬´ó¼ÒÒ»ÆğÀ´¡¹¡£\n"
-		"Äã¿ÉÒÔÓÃ toss Ö¸Áî½«²»ÓÃµÄÎïÆ·¶ª½øÀ¬»øÍ°¡£\n" );
+	set_name( "trashcan", "åƒåœ¾æ¡¶" );
+	set_short( "åƒåœ¾æ¡¶" );
+	set_c_open_long( "ä¸€å€‹é€ å‹æ–°æ½®çš„åƒåœ¾æ¡¶ï¼Œä¸Šé¢å¯«è‘—ã€Œè³‡æºå›æ”¶ï¼Œå¤§å®¶ä¸€èµ·ä¾†ã€ã€‚\n"
+		"ä½ å¯ä»¥ç”¨ toss æŒ‡ä»¤å°‡ä¸ç”¨çš„ç‰©å“ä¸Ÿé€²åƒåœ¾æ¡¶ã€‚\n" );
 	set( "prevent_get", 1 );
 	set( "max_load", 200000 );
 }
@@ -26,12 +26,12 @@ int do_toss(string arg)
 	object dest;
 
 	if( !arg || !(dest = present(arg, this_player())) )
-		return notify_fail("ÄãÒª°ÑÊ²÷á¶«Î÷¶ª½øÀ¬»øÍ°£¿\n");
+		return notify_fail("ä½ è¦æŠŠä»€éº¼æ±è¥¿ä¸Ÿé€²åƒåœ¾æ¡¶ï¼Ÿ\n");
 	if( dest->query("prevent_drop") || dest->query("secure") )
-		return notify_fail("Äã²»ÄÜ¶ªµôÕâÑù¶«Î÷¡£\n");
-	write("Äã½«" + dest->query("short") + "¶ª½øÀ¬»øÍ°¡£\n");
+		return notify_fail("ä½ ä¸èƒ½ä¸Ÿæ‰é€™æ¨£æ±è¥¿ã€‚\n");
+	write("ä½ å°‡" + dest->query("short") + "ä¸Ÿé€²åƒåœ¾æ¡¶ã€‚\n");
 	tell_room( environment(), 
-		this_player()->query("c_name") + "°Ñ" + dest->query("short") + "¶ª½øÀ¬»øÍ°¡£\n",
+		this_player()->query("c_name") + "æŠŠ" + dest->query("short") + "ä¸Ÿé€²åƒåœ¾æ¡¶ã€‚\n",
 		this_player() );
 	call_out( "reward", 5 );
 	dest->remove();
@@ -42,7 +42,7 @@ void reward()
 {
 	object coin;
 	tell_room( environment(), 
-		"ÄãÌıµ½À¬»øÍ°Àï´«À´Ò»Õó¿ÉÅÂµÄĞ¦Éù¡£\n" );
+		"ä½ è½åˆ°åƒåœ¾æ¡¶è£¡å‚³ä¾†ä¸€é™£å¯æ€•çš„ç¬‘è²ã€‚\n" );
 	coin = new("/std/coins");
 	coin->set_type( "silver" );
 	coin->set_number(1);

@@ -51,7 +51,7 @@ void effect(object player)
 	  if( damage > 0 ) player->receive_damage(damage);
         }
 	tell_object(player, 
-		set_color("你觉得一阵因中毒而带来的痛苦....\n","HIG",player));
+		set_color("浣犺寰椾竴闄ｅ洜涓瘨鑰屽付渚嗙殑鐥涜嫤....\n","HIG",player));
 	msg = player->query_temp("poison_msg");
 	if ( msg )
 		tell_room(environment(player),sprintf(msg,player->query("c_name")),player);
@@ -63,7 +63,7 @@ void effect(object player)
 		if( random(skill) > cond_data[1] * cond_data[2] ) {
 			remove_effect( player );
 			tell_object(player,
-				set_color("你的体内生出一股力量，将毒素完全排除了。\n","HIC",player));
+				set_color("浣犵殑楂斿収鐢熷嚭涓�鑲″姏閲忥紝灏囨瘨绱犲畬鍏ㄦ帓闄や簡銆俓n","HIC",player));
 		}
 	}
 }
@@ -71,7 +71,7 @@ void effect(object player)
 void remove_effect(object player)
 {
 	tell_object(player,
-		set_color("你觉得好多了 ....\n","HIC",player));
+		set_color("浣犺寰楀ソ澶氫簡 ....\n","HIC",player));
 	player->delete("conditions/" + EFFECT_NAME );
 //	player->delete_temp("poison_msg");
 }
@@ -83,7 +83,7 @@ void apply_effect(object player, int duration, int damage)
 	cond_data = player->query("conditions/" + EFFECT_NAME );
 	if( !cond_data ) {
 		tell_object(player, can_read_chinese(player)?
-			set_color("你中毒了!!\n","HIC",player):
+			set_color("浣犱腑姣掍簡!!\n","HIC",player):
 			"You are poisoned!\n");
 		player->set( "conditions/" + EFFECT_NAME, ({ 4, duration, damage }) );
 	} else {
@@ -91,7 +91,7 @@ void apply_effect(object player, int duration, int damage)
 		if( damage > cond_data[2] ) cond_data[2] = damage;
 		else cond_data[2]++;
 		tell_object(player,
-			set_color("你中的毒加深了！\n","HIG",player));
+			set_color("浣犱腑鐨勬瘨鍔犳繁浜嗭紒\n","HIG",player));
 		player->set( "conditions/" + EFFECT_NAME, cond_data );
 	}
 }

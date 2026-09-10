@@ -6,13 +6,13 @@
 string *magic_name =
     ({ "fire","cold","electric","energy","mental","acid","poison","magic","evil","devine","none" });
 string *magic_c_name =
-    ({ "»ğ","±ù","µç","ÄÜÔ´","¾«Éñ","Ëá","¶¾","Ä§·¨","Ğ°¶ñ","ÉñÊ¥","ºËÈÚ" });
+    ({ "ç«","å†°","é›»","èƒ½æº","ç²¾ç¥","é…¸","æ¯’","é­”æ³•","é‚ªæƒ¡","ç¥è–","æ ¸è" });
 
 string *magic_name1 =
     ({ "fire","cold","electric","energy","evil","none" });
 
 string *magic_c_name1 =
-    ({ "»ğÇòÊõ","±ù±¢Êõ","»ÃÀ×Êõ","ÒÔÌ«Ö®¼ı","½ÊĞÄÊõ","ºËÈÚÊõ" });
+    ({ "ç«çƒè¡“","å†°é›¹è¡“","å¹»é›·è¡“","ä»¥å¤ªä¹‹ç®­","çµå¿ƒè¡“","æ ¸èè¡“" });
 
 string identify_armor(object obj, int skill)
 {
@@ -27,26 +27,26 @@ string identify_armor(object obj, int skill)
 			if (random(2)==0) 
 				sp_def=sp_def+(random(108- skill))/2;
 			else 	sp_def=sp_def-(random(108- skill))/2;
-			msg+="Õâ¸ö·À¾ß¶Ô"+magic_c_name[i]+"ÏµµÄÄ§·¨";
+			msg+="é€™å€‹é˜²å…·å°"+magic_c_name[i]+"ç³»çš„é­”æ³•";
 
-			if (sp_def > 60) msg+="ÓĞÖø²»¿ÉË¼ÒéµÄ·ÀÓùÔöÇ¿¡£\n";
-			else if (sp_def > 38) msg+="ÓĞÖøÊ®·ÖÓÅÁ¼µÄ·ÀÓùÔöÇ¿¡£\n";
-			else if (sp_def > 28) msg+="ÓĞÖø·Ç³£ÓÅÁ¼µÄ·ÀÓùÔöÇ¿¡£\n";
-			else if (sp_def > 18) msg+="ÓĞÖøÓÅÁ¼µÄ·ÀÓùÔöÇ¿¡£\n";
-			else if (sp_def > 8) msg+="ÓĞÖøÏÔÖøµÄ·ÀÓùÔöÇ¿¡£\n";
-			else if (sp_def >= 0) msg+="ÓĞÖøÂÔÎ¢µÄ·ÀÓùÔöÇ¿¡£\n";
-			else if (sp_def >= -8) msg+="ÓĞÖøÂÔÎ¢µÄ·ÀÓùÈ±Ïİ¡£\n";
-			else if (sp_def >= -18) msg+="ÓĞÖøÏÔÖøµÄ·ÀÓùÈ±Ïİ¡£\n";
-			else if (sp_def >= -28) msg+="ÓĞÖøÑÏÖØµÄ·ÀÓùÈ±Ïİ¡£\n";
-			else if (sp_def >= -38) msg+="ÓĞÖøÊ®·ÖÑÏÖØµÄ·ÀÓùÈ±Ïİ¡£\n";
-			else  msg+="ÓĞÖø²»¿ÉË¼ÒéµÄ·ÀÓùÈ±Ïİ¡£\n";
+			if (sp_def > 60) msg+="æœ‰è‘—ä¸å¯æ€è­°çš„é˜²ç¦¦å¢å¼·ã€‚\n";
+			else if (sp_def > 38) msg+="æœ‰è‘—ååˆ†å„ªè‰¯çš„é˜²ç¦¦å¢å¼·ã€‚\n";
+			else if (sp_def > 28) msg+="æœ‰è‘—éå¸¸å„ªè‰¯çš„é˜²ç¦¦å¢å¼·ã€‚\n";
+			else if (sp_def > 18) msg+="æœ‰è‘—å„ªè‰¯çš„é˜²ç¦¦å¢å¼·ã€‚\n";
+			else if (sp_def > 8) msg+="æœ‰è‘—é¡¯è‘—çš„é˜²ç¦¦å¢å¼·ã€‚\n";
+			else if (sp_def >= 0) msg+="æœ‰è‘—ç•¥å¾®çš„é˜²ç¦¦å¢å¼·ã€‚\n";
+			else if (sp_def >= -8) msg+="æœ‰è‘—ç•¥å¾®çš„é˜²ç¦¦ç¼ºé™·ã€‚\n";
+			else if (sp_def >= -18) msg+="æœ‰è‘—é¡¯è‘—çš„é˜²ç¦¦ç¼ºé™·ã€‚\n";
+			else if (sp_def >= -28) msg+="æœ‰è‘—åš´é‡çš„é˜²ç¦¦ç¼ºé™·ã€‚\n";
+			else if (sp_def >= -38) msg+="æœ‰è‘—ååˆ†åš´é‡çš„é˜²ç¦¦ç¼ºé™·ã€‚\n";
+			else  msg+="æœ‰è‘—ä¸å¯æ€è­°çš„é˜²ç¦¦ç¼ºé™·ã€‚\n";
 		}
 		}
 	return msg;
 	}
-	else return("Õâ¸ö·À¾ßÃ»ÓĞÈÎºÎÄ§·¨·ÀÓùÌØĞÔ¡£\n");
+	else return("é€™å€‹é˜²å…·æ²’æœ‰ä»»ä½•é­”æ³•é˜²ç¦¦ç‰¹æ€§ã€‚\n");
 	}
-	else return("Õâ¸öÎïÆ·²»ÊÇ·À¾ß¡£\n");
+	else return("é€™å€‹ç‰©å“ä¸æ˜¯é˜²å…·ã€‚\n");
 
 }
 
@@ -61,18 +61,18 @@ string consider_magic(object dest, int skill)
 		if (random(2)==0) 
 			sp_def=sp_def+(random(110- skill))/2;
 		else 	sp_def=sp_def-(random(110- skill))/2;
-		msg+="Õâ¸öÉúÎï¶Ô"+magic_c_name1[i]+"µÄ¹¥»÷";
+		msg+="é€™å€‹ç”Ÿç‰©å°"+magic_c_name1[i]+"çš„æ”»æ“Š";
 
-		if (sp_def > 80) msg+="ÓĞÖø²»¿ÉË¼ÒéµÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def > 60) msg+="ÓĞÖøÊ®·ÖÓÅÁ¼µÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def > 40) msg+="ÓĞÖø·Ç³£ÓÅÁ¼µÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def > 20) msg+="ÓĞÖøÓÅÁ¼µÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def >= 10) msg+="ÓĞÖø²»´íµÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def >= 0) msg+="ÓĞÖøÒ»Ğ©µÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def >= -10) msg+="ÓĞÖøºÜ²îµÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def >= -20) msg+="ÓĞÖø·Ç³£²îµÄ·ÀÓùÄÜÁ¦¡£\n";
-		else if (sp_def >= -40) msg+="ÓĞÖøÊ®·Ö²îµÄ·ÀÓùÄÜÁ¦¡£\n";
-		else  msg+="¼¸ºõÃ»ÓĞ·ÀÓùÄÜÁ¦¡£\n";
+		if (sp_def > 80) msg+="æœ‰è‘—ä¸å¯æ€è­°çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def > 60) msg+="æœ‰è‘—ååˆ†å„ªè‰¯çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def > 40) msg+="æœ‰è‘—éå¸¸å„ªè‰¯çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def > 20) msg+="æœ‰è‘—å„ªè‰¯çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def >= 10) msg+="æœ‰è‘—ä¸éŒ¯çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def >= 0) msg+="æœ‰è‘—ä¸€äº›çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def >= -10) msg+="æœ‰è‘—å¾ˆå·®çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def >= -20) msg+="æœ‰è‘—éå¸¸å·®çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else if (sp_def >= -40) msg+="æœ‰è‘—ååˆ†å·®çš„é˜²ç¦¦èƒ½åŠ›ã€‚\n";
+		else  msg+="å¹¾ä¹æ²’æœ‰é˜²ç¦¦èƒ½åŠ›ã€‚\n";
 	}
 	return msg;
 

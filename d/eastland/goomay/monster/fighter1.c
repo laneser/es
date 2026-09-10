@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "wrestler wu-bu-la-kuei", "�ڲ�����" );
-	set_short( "ˤ�����ڲ�����" );
+	set_name( "wrestler wu-bu-la-kuei", "烏不拉龜" );
+	set_short( "摔角手烏不拉龜" );
 	set_long(@C_LONG
-�ڲ������Ǵ���������ˤ�Ǻ��֣���˵��������\���书\���ⲫ�ı������䶷
-���ر�Զ�Ӽ�������μӡ�����һ����ʵ�ļ��⣬�����ǳ���ǿ׳�� 
+烏不拉龜是從塞外來的摔角好手，聽說東方有許多武功和肉搏的比賽和武鬥
+他特別遠從家鄉趕來參加。他有一身結實的肌肉，看來非常的強壯。 
 C_LONG
 	);
-	set( "unit", "��" );
+	set( "unit", "名" );
 	add ("id", ({"wu","bu","la","kuei","wrestler" }) );
 	set_perm_stat( "str", 25 );
 	set_perm_stat( "dex", 16 );
@@ -30,11 +30,11 @@ C_LONG
 	set_natural_armor( 65, 27 );
 	set_natural_weapon( 32, 17, 28 );
 	set( "wealth/gold", 60 );
-	set_c_verbs( ({ "%s��ǰһ����һ����ȭ����%s", "%s������%sһ��",
-		"%s���һ������ȭ����%s", "%s��ǰһ�ݣ���%s���˶�ȥ",
-		"%s���˶�����˫�Ƚ���%s", "%s������ת������������%s",
-		"%sѹס%s�ļ����ͷײ��", "%s��ȭ�Խ�����ȭ��磬ֱȡ%s",
-		"%s��Цһ��ͻȻ������ɨ��%s" }) );
+	set_c_verbs( ({ "%s向前一進，一記猛拳打向%s", "%s左腿往%s一踢",
+		"%s大吼一聲，右拳劈向%s", "%s往前一縱，往%s飛撲而去",
+		"%s橫撲而來，雙腿絞向%s", "%s如旋風轉了起來，飛向%s",
+		"%s壓住%s的肩膀，用頭撞他", "%s右拳臥緊，左拳如風，直取%s",
+		"%s狂笑一陣，突然用手腕掃向%s" }) );
 
 	set( "tactic_func", "my_tactic" );
         equip_armor( Obj"stone_armband");
@@ -49,9 +49,9 @@ int my_tactic()
         int n;
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
-	tell_object( victim, "\n�ڲ�������һ�������ҵġ���ţ���졻������һ��ץ���˳�ȥ! \n");
+	tell_object( victim, "\n烏不拉龜大叫一聲，看我的『笨牛飛天』，把你一把抓起丟了出去! \n");
 
-	tell_room( environment(victim),"\n�ڲ�����ͻȻһ��ץס" + victim->query("c_name") + "����������ͷ��ת��������\n",
+	tell_room( environment(victim),"\n烏不拉龜突然一把抓住" + victim->query("c_name") + "，將他舉在頭上轉了起來！\n",
 		({ victim, this_object() }) );
 
 	switch( n= random(4) ) {
@@ -63,13 +63,13 @@ int my_tactic()
 	}
 
  victim->receive_damage(8);
- victim->move_player( stat,"*** �㿴��"+victim->query("c_name")+"��һ�����ǰ���˳�ȥ ***","");
+ victim->move_player( stat,"*** 你看到"+victim->query("c_name")+"像一顆流星般飛了出去 ***","");
 
  tell_object( victim, 
- "\n�㱻ˤ�˸�����ʺ��һЩ��Ѫ�������������˳��������ܵ����ƺ�����Ц�� \n\n");
+ "\n你被摔了個狗吃屎，一些鮮血從你的嘴角中流了出來，四周的人似乎都在笑你 \n\n");
 
 	tell_room( environment(victim), 
-		  "\n" +  victim->query("c_name") + "��������ѽ����ѽ��С����...���������Ϸ������������ǳ�����? ��ȥ����ǩ��!!! \n\n",
+		  "\n" +  victim->query("c_name") + "唱著『飛呀、飛呀、小飛俠...』，從天上飛了下來，他是超人嗎? 快去找他簽名!!! \n\n",
 		({ victim, this_object() }) );
 	return 1;
 }

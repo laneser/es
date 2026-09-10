@@ -70,13 +70,13 @@ int cmd_backup(string user)
 	write_file(body_file, body_data);
 
 	if( !user || user == uid )
-		write(can_read_chinese()? "±¸·İ×ÊÁÏ... Ok.\n":
+		write(can_read_chinese()? "å‚™ä»½è³‡æ–™... Ok.\n":
 			"Backup save data... Ok.\n");
 	else
-		write(can_read_chinese()? "±¸·İ "+user+" µÄ×ÊÁÏ... Ok.\n":
+		write(can_read_chinese()? "å‚™ä»½ "+user+" çš„è³‡æ–™... Ok.\n":
 			"Backup "+user+"'s save data... Ok.\n");
 	if( wizardp(this_player()) ) {
-		write(can_read_chinese()? "±¸·İ×ÊÁÏ´æì¶:\n": "Save data to:\n");
+		write(can_read_chinese()? "å‚™ä»½è³‡æ–™å­˜æ–¼:\n": "Save data to:\n");
 		write("Link: "+set_color(link_file, "HIC")+".\n");
 		write("Body: "+set_color(body_file, "HIC")+".\n");
 	}
@@ -89,10 +89,10 @@ int help()
 {
 	if( can_read_chinese() )
 		write( @C_HELP
-HÖ¸Áî¸ñÊ½: backup
+HæŒ‡ä»¤æ ¼å¼: backup
 
-½«ÄãµÄ×ÊÁÏ±¸·İÆğÀ´£¬¼ÙÊ¹²»ĞÒÓöµ½ crash »òÊÇ×ÊÁÏ´íÎó»¹ÄÜ¾ÈµÃ»ØÀ´¡£
-¼ÙÈçÄãÏë±¸·İµÄÊÇÏÖÔÚµÄ×´Ì¬, ÇëÏÈÏÂ save Ö¸Áî¡£
+å°‡ä½ çš„è³‡æ–™å‚™ä»½èµ·ä¾†ï¼Œå‡ä½¿ä¸å¹¸é‡åˆ° crash æˆ–æ˜¯è³‡æ–™éŒ¯èª¤é‚„èƒ½æ•‘å¾—å›ä¾†ã€‚
+å‡å¦‚ä½ æƒ³å‚™ä»½çš„æ˜¯ç¾åœ¨çš„ç‹€æ…‹, è«‹å…ˆä¸‹ save æŒ‡ä»¤ã€‚
 
 C_HELP
 		);

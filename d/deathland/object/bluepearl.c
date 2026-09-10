@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "blue pearl", "À¶ÕäÖé" );
+	set_name( "blue pearl", "è—çç " );
 	add( "id", ({ "pearl" }) );
-	set_short( " blue pearl", "À¶ÕäÖé" );
+	set_short( " blue pearl", "è—çç " );
 	set_long(
 		"The very expensive pearl,but you think nobody can understand its value\n",
-		"·Ç³£°º¹óµÄÕäÖé,µ«ÊÇÄãÏë´ó¸ÅÃ»ÓĞÈËÄÜÁË½âËüµÄ¼ÛÖµ\n"
+		"éå¸¸æ˜‚è²´çš„çç ,ä½†æ˜¯ä½ æƒ³å¤§æ¦‚æ²’æœ‰äººèƒ½ç­è§£å®ƒçš„åƒ¹å€¼\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "echo_pearl",1);
 	set( "weight", 13 );
 	set( "value", ({ 1, "silver" }) );

@@ -8,13 +8,13 @@ inherit DOORS;
 void create()
 {
 	::create();
-	set_short("the count of conference room", "»áÒéÊÒÇ°´óÌü");
+	set_short("the count of conference room", "æœƒè­°å®¤å‰å¤§å»³");
 	set_long( @LONG_DESCRIPTION
 LONG_DESCRIPTION
 		,@C_LONG_DESCRIPTION
-          ÕâÀïÊÇÈý×åÆÀÒé»á»áÒéÊÒÇ°µÄ¹ã³¡£¬Èý×åÆ½Ê±¸÷ÊÂÆäÕþ£¬³ýÓÐ
-½ô¼±ÊÂ¼þ·¢ÉúÍâ£¬Èý×å³¤ÀÏÖ»ÓÐÔÚÃ¿Äê"Ê¥Õ½¼ÍÄîÈÕ"Ê±£¬²Å»á½áºÏ"ÓÀºãÖ®Ô¿"
-´ò¿ª»áÒéÊÒ´óÃÅ¡£
+          é€™è£¡æ˜¯ä¸‰æ—è©•è­°æœƒæœƒè­°å®¤å‰çš„å»£å ´ï¼Œä¸‰æ—å¹³æ™‚å„äº‹å…¶æ”¿ï¼Œé™¤æœ‰
+ç·Šæ€¥äº‹ä»¶ç™¼ç”Ÿå¤–ï¼Œä¸‰æ—é•·è€åªæœ‰åœ¨æ¯å¹´"è–æˆ°ç´€å¿µæ—¥"æ™‚ï¼Œæ‰æœƒçµåˆ"æ°¸æ†ä¹‹é‘°"
+æ‰“é–‹æœƒè­°å®¤å¤§é–€ã€‚
 C_LONG_DESCRIPTION
 	);
 
@@ -27,9 +27,9 @@ C_LONG_DESCRIPTION
 		]) ) ;
 	create_door("north","south",([
                "name" : "obsidian door",
-                "c_name" : "ºÚê×Ê¯´óÃÅ",
+                "c_name" : "é»‘æ›œçŸ³å¤§é–€",
                "keyword" : ({"obsidian door","door",}),
-               "c_desc" : "ºÚê×Ê¯´óÃÅ",
+               "c_desc" : "é»‘æ›œçŸ³å¤§é–€",
                "status" : "locked",
                "lock" : "ASTERISM_2",
 	                         ])

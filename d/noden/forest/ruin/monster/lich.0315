@@ -8,18 +8,18 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(18);
-	set_name( "Lich", "ºÚÄ§" );
+	set_name( "Lich", "é»‘é­”" );
 	add ("id", ({ "lich", "mage", }) );
-	set_short( "Ú¤ºÚÄ§µ¼Ê¿ ºÚÄ§" );
+	set_short( "å†¥é»‘é­”å°å£« é»‘é­”" );
 	set_long( @C_LONG
-Ğ°¶ñµÄÚ¤ºÚÄ§µ¼Ê¿ÎªÁËÊ¹×Ô¼ºµÄÓÀÉú£¬¶ø¶Ô×Ô¼ºÊ©ÓëºÚ°µÄ§·¨¡£ÈâÌå¾ùÒÑ¸¯ÀÃ£¬
-È«Éí¸²\¸Ç\ÖøºÚÒÂ£¬ÓµÓĞÔÙÉúµÄÄÜÁ¦£¬ÄÜÊ¹ÓÃ¿ÉÅÂºÚÄ§·¨µÄº¡¹Ç¡£
+é‚ªæƒ¡çš„å†¥é»‘é­”å°å£«ç‚ºäº†ä½¿è‡ªå·±çš„æ°¸ç”Ÿï¼Œè€Œå°è‡ªå·±æ–½èˆ‡é»‘æš—é­”æ³•ã€‚è‚‰é«”å‡å·²è…çˆ›ï¼Œ
+å…¨èº«è¦†è“‹è‘—é»‘è¡£ï¼Œæ“æœ‰å†ç”Ÿçš„èƒ½åŠ›ï¼Œèƒ½ä½¿ç”¨å¯æ€•é»‘é­”æ³•çš„éª¸éª¨ã€‚
 C_LONG
 	);
 	set( "alignment", -8000 );
     set( "gender", "male" );
     set( "race", "undead" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 27 );
 	set_perm_stat( "str", 15 );
 	set_perm_stat( "int", 30 );
@@ -51,7 +51,7 @@ C_LONG
     set("spells/sleet",3);
     set("spells/lightning",5);
     set("spells/ether-bolt",8);
-    set("c_death_msg","%sµÄÉíÌå¿ªÊ¼·ÛËé... ÖÕÖÁÏûÊ§¡£\n");
+    set("c_death_msg","%sçš„èº«é«”é–‹å§‹ç²‰ç¢... çµ‚è‡³æ¶ˆå¤±ã€‚\n");
     
     wield_weapon(OBJ"thunder_wand");
     equip_armor(OBJ"black_cloak");
@@ -59,7 +59,7 @@ C_LONG
 
 int cast_spell()
 {// 40% call demon -> 60% little 40% great and continue attack.
- // if( hp < 100 ) -> 100% ÔÙÉú hp add 20-40 and continue attack.
+ // if( hp < 100 ) -> 100% å†ç”Ÿ hp add 20-40 and continue attack.
  // if( hp < 300 ) -> 25% steal life force, damage 30-40 stop.
  // else 40% cast spell -> 70% sleet 3,  21% ether-bolt 8, 9% lightning 5.
  //      60% normal attack.
@@ -72,11 +72,11 @@ int cast_spell()
     if( (random(10)<4) && !present("daemon", environment(this_object())) ) {
       if( random(10) < 6 ) {
         tell_room( environment(this_object()),
-          "ºÚÄ§ºô»½³öĞ¡¶ñÄ§À´°ïËû¹¥»÷¡£\n" );
+          "é»‘é­”å‘¼å–šå‡ºå°æƒ¡é­”ä¾†å¹«ä»–æ”»æ“Šã€‚\n" );
         monster = new(MOB"little_demon");
       } else {
         tell_room( environment(this_object()),
-          "ºÚÄ§ºô»½³ö´ó¶ñÄ§À´°ïËû¹¥»÷¡£\n");
+          "é»‘é­”å‘¼å–šå‡ºå¤§æƒ¡é­”ä¾†å¹«ä»–æ”»æ“Šã€‚\n");
         monster = new(MOB"great_demon");
       }
       monster->move(environment(this_object()));
@@ -85,15 +85,15 @@ int cast_spell()
     
     if( (this_object()->query("hit_points")<100) ) {
       tell_room( environment(victim),
-        "ºÚÄ§µÄÉíÌåÔÙÉúÓÖ¸´Ô­ÁË¡£\n");
+        "é»‘é­”çš„èº«é«”å†ç”Ÿåˆå¾©åŸäº†ã€‚\n");
       this_object()->receive_heal( auto_heal+random(auto_heal) );
     }
     
     if( (this_object()->query("hit_points")<300) && (random(20)<5) ) {
-      tell_object( victim, "ºÚÄ§ÎüÈ¡ÄãµÄÉúÃüÁ¦£¬Äã¸Ğ¾õÓĞµãĞéÍÑ¡£\n");
+      tell_object( victim, "é»‘é­”å¸å–ä½ çš„ç”Ÿå‘½åŠ›ï¼Œä½ æ„Ÿè¦ºæœ‰é»è™›è„«ã€‚\n");
       tell_room( environment(victim), 
-        "Äã¿´µ½Ò»¹ÉÎŞĞÎµÄÆøÌå´Ó"+victim->query("c_name")+
-        "Æ®ÖÁºÚÄ§ÉíÉÏ£¬\nºÚÄ§µÄÉíÌåÓÖ¸´Ô­ÁË¡£\n" ,
+        "ä½ çœ‹åˆ°ä¸€è‚¡ç„¡å½¢çš„æ°£é«”å¾"+victim->query("c_name")+
+        "é£„è‡³é»‘é­”èº«ä¸Šï¼Œ\né»‘é­”çš„èº«é«”åˆå¾©åŸäº†ã€‚\n" ,
         victim);
       damage = life_damage + random(10);
       victim->receive_special_damage("life", damage, 1);

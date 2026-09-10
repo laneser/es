@@ -23,16 +23,16 @@ mapping skill_list = ([
 ]);
 
 string *c_titles = ({
-        "É±ÊÖ°ï´òÔÓ¹¤",
-        "É±ÊÖ°ï¿´ÃÅ·ò ",
-        "É±ÊÖ°ï²ËÄñÉ±ÊÖ",
-        "É±ÊÖ°ïÀÏÄñÉ±ÊÖ",
-        "É±ÊÖ°ï°×»¢ÌÃÌÃÖ÷",
-        "É±ÊÖ°ïÇàÁú¶æ¶æÖ÷",
-        "É±ÊÖ°ï×ó»¤·¨",    
-        "É±ÊÖ°ïÓÒ»¤·¨",
-        "É±ÊÖ°ï³¤ÀÏ",
-        "É±ÊÖ°ï¸±°ïÖ÷",
+        "æ®ºæ‰‹å¹«æ‰“é›œå·¥",
+        "æ®ºæ‰‹å¹«çœ‹é–€å¤« ",
+        "æ®ºæ‰‹å¹«èœé³¥æ®ºæ‰‹",
+        "æ®ºæ‰‹å¹«è€é³¥æ®ºæ‰‹",
+        "æ®ºæ‰‹å¹«ç™½è™å ‚å ‚ä¸»",
+        "æ®ºæ‰‹å¹«é’é¾èˆµèˆµä¸»",
+        "æ®ºæ‰‹å¹«å·¦è­·æ³•",    
+        "æ®ºæ‰‹å¹«å³è­·æ³•",
+        "æ®ºæ‰‹å¹«é•·è€",
+        "æ®ºæ‰‹å¹«å‰¯å¹«ä¸»",
 
 });
 
@@ -112,7 +112,7 @@ int check_token(object player)
         string old_org;
         if( !is_guild_member( player ) ) 
         {
-           write("Äã²»ÊÇ±¾×éÖ¯µÄ!\n");
+           write("ä½ ä¸æ˜¯æœ¬çµ„ç¹”çš„!\n");
            return 1;
         }
         old_org = (string)player->query("organization");
@@ -121,7 +121,7 @@ int check_token(object player)
         player->set("organization", ORG_NAME );
                 // just add for a while.
         PATH_D->add_path(player, "/d/"+ORG_NAME+"/cmds");
-        write("Éí·İÈ·ÈÏ³É¹¦!\n");
+        write("èº«ä»½ç¢ºèªæˆåŠŸ!\n");
         return 1;
 
 
@@ -139,7 +139,7 @@ int join_player(object player)
 	race = (string)player->query("race");
         if( member_array(race, ({"imp", "beholder", "vampire" }))!=-1 )
                 return notify_fail( 
-                        "¶Ô²»Æğ£¬±¾¹«»á²»ÊÕÑı¾«¡¢ÑÛÄ§ÓëÎüÑª¹í¡£\n");
+                        "å°ä¸èµ·ï¼Œæœ¬å…¬æœƒä¸æ”¶å¦–ç²¾ã€çœ¼é­”èˆ‡å¸è¡€é¬¼ã€‚\n");
 
         old_org = (string)player->query("organization");
         player->delete( "organization" );
@@ -224,7 +224,7 @@ int list_guild_members()
         usr = sort_array( usr, "sort_members", this_object() );
         if( sizeof(usr) ) {
                 this_player()->quick_message(
-             "Ä¿Ç°¹²ÓĞ " + sizeof(usr) + " Î»"+to_chinese(ORG_NAME)+"Á¬ÏßÖĞ:\n"
+             "ç›®å‰å…±æœ‰ " + sizeof(usr) + " ä½"+to_chinese(ORG_NAME)+"é€£ç·šä¸­:\n"
                          "==================================\n");
                 for( i=0; i<sizeof(usr); i++ )
                         this_player()->quick_message(
@@ -232,7 +232,7 @@ int list_guild_members()
                                         usr[i]->query("short"), capitalize(usr[i]->query("name")) ) );
         } else 
                 this_player()->quick_message(
-                        "ËÆºõÃ»ÓĞÈÎºÎ"+to_chinese(ORG_NAME)+"¹«»áµÄ³ÉÔ±ÔÚÏßÉÏ....¡£\n");
+                        "ä¼¼ä¹æ²’æœ‰ä»»ä½•"+to_chinese(ORG_NAME)+"å…¬æœƒçš„æˆå“¡åœ¨ç·šä¸Š....ã€‚\n");
         return 1;
 }
 
@@ -245,7 +245,7 @@ int guild_line(string msg)
         string color;
 
         if( !msg ) return notify_fail(
-                "ÄãÒª¶Ô±¾×éÖ¯µÄÍ¬°éËµÊ²÷á£¿\n");
+                "ä½ è¦å°æœ¬çµ„ç¹”çš„åŒä¼´èªªä»€éº¼ï¼Ÿ\n");
         usr = filter_array( users(), "filter_member", this_object() );
         if( sizeof(usr) )
                 for( i=0; i<sizeof(usr); i++ )

@@ -1,15 +1,15 @@
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
- AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+ AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1.ºÚ¶·Åî (/d/noden/forest/ruin/object/black_cloak)
+1.é»‘é¬¥è“¬ (/d/noden/forest/ruin/object/black_cloak)
   8     6      40       ok       mage        mad   
   ( int +3, con -4, pie -5 )
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1.»ÃÀ×ÕÈ (/d/noden/forest/ruin/object/thunder_wand)
- *39    *20    *30      50      ÌØ¹¥ : 80     mad
+1.å¹»é›·æ– (/d/noden/forest/ruin/object/thunder_wand)
+ *39    *20    *30      50      ç‰¹æ”» : 80     mad
 

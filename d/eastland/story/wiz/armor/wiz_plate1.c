@@ -1,15 +1,15 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "golden plate","»Æ½ğîø¼×" );
+     set_name( "golden plate","é»ƒé‡‘é§ç”²" );
      add( "id",({ "plate","cloth" }) );
-     set_short( "»Æ½ğîø¼×" );
+     set_short( "é»ƒé‡‘é§ç”²" );
      set_long(@C_LONG
-Ò»¼ş´¿½ğ´òÔìµÄîø¼×£¬½ğ¹âÉÁÉÁÏàµ±°º¹ó¡£
+ä¸€ä»¶ç´”é‡‘æ‰“é€ çš„é§ç”²ï¼Œé‡‘å…‰é–ƒé–ƒç›¸ç•¶æ˜‚è²´ã€‚
 C_LONG
      );
      set( "weight",250 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","heavy_metal" );
      set( "armor_class",34);

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("dwarven royal ring","°«ÈË»ÊÊÒ½äÖ¸");
+        set_name("dwarven royal ring","çŸ®äººçš‡å®¤æˆ’æŒ‡");
         add("id",({"ring"}) );
-         set_short( "a dwarven royal ring","°«ÈË»ÊÊÒ½äÖ¸");
+         set_short( "a dwarven royal ring","çŸ®äººçš‡å®¤æˆ’æŒ‡");
 	set_long(
 "This is a dwarven royal ring. \n"
-"ÕâÊÇÒ»¸ö°«ÈË»ÊÊÒÀú´úÏà´«µÄ½äÖ¸,µ«ÊÇËæÖøÄªÀ­µÂ¶şÊÀÒ»ÆğÊ§×ÙÁË\n"
+"é€™æ˜¯ä¸€å€‹çŸ®äººçš‡å®¤æ­·ä»£ç›¸å‚³çš„æˆ’æŒ‡,ä½†æ˜¯éš¨è‘—è«æ‹‰å¾·äºŒä¸–ä¸€èµ·å¤±è¹¤äº†\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "finger" );
 	set( "material", "element" );

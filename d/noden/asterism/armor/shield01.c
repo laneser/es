@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "shield of Alaits", "°¢À³ÌØË¹Ö®¶Ü");
+        set_name( "shield of Alaits", "é˜¿èŠç‰¹æ–¯ä¹‹ç›¾");
         add( "id", ({ "shield" }) );
-        set_short( "°¢À³ÌØË¹Ö®¶Ü");
+        set_short( "é˜¿èŠç‰¹æ–¯ä¹‹ç›¾");
         set_long(
-           "°«ÈË»ÊÊÒ°¢À³Ë¹ÌØ¼Ò×å´«¼ÒµÄ¶ÜÅÆ,¶ÜÉÏ»¹¿ÌÁËÁ½Ö»ĞÛ×³µÄÊ¨ğÕÊŞ¡£\n"
+           "çŸ®äººçš‡å®¤é˜¿èŠæ–¯ç‰¹å®¶æ—å‚³å®¶çš„ç›¾ç‰Œ,ç›¾ä¸Šé‚„åˆ»äº†å…©éš»é›„å£¯çš„ç…é·²ç¸ã€‚\n"
         );
-        set( "unit", "Ãæ"); 
+        set( "unit", "é¢"); 
         set( "type", "shield" );
         set( "material", "light_metal" );
         set( "armor_class", 10 );

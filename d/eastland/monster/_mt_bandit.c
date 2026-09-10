@@ -4,11 +4,11 @@ void create(object ob)
 {
 	if ( ! ob ) return ;
 	ob->set_level(6);
-	ob->set_name( "mountain thief", "ɽ��" );
+	ob->set_name( "mountain thief", "山賊" );
 	ob->add( "id", ({ "thief", "bandit" }) );
-	ob->set_short( "ɽ��" );
+	ob->set_short( "山賊" );
 	ob->set_long(
-		"���ɽ��һ����ͷ���Ե����ӣ��˳ɸո���ʲ�ỵ�»�����\n"
+		"這個山賊一副賊頭賊腦的樣子，八成剛乾了什麼壞事回來。\n"
 	);
 	ob->set( "race", "human" );
 	ob->set( "gender", "male" );

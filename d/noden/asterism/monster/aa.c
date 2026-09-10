@@ -9,14 +9,14 @@ void create()
         object obj ;
         ::create();
         set_level(19);
-        set_name( "Gnome Elder","�ؾ�����" );
+        set_name( "Gnome Elder","地精長老" );
         add ("id", ({ "gnome", "elder" }) );
-        set_short( "�ؾ�����");
-        set("unit","λ");
+        set_short( "地精長老");
+        set("unit","位");
         set("alignment",500);
         set("wealth/gold",150);
         set_long(
-            "�ؾ��Ǹ���춷��������壬���ؾ����ϸ��Ǹ����µ�ʩ���ߡ�\n"
+            "地精是個精於法術的種族，而地精長老更是個可怕的施法者。\n"
         );
         set_perm_stat("int", 30);
         set_perm_stat("dex", 25);
@@ -94,7 +94,7 @@ int cast_help()
 int accept_item(object me,object ob)
 {
          tell_room( environment(),
-                 "�ؾ����ϰ�"+ob->query("c_name")+"���һ�����,�ս��˿ڴ���\n"
+                 "地精長老把"+ob->query("c_name")+"變成一個金幣,收進了口袋。\n"
                   , this_object() ) ;
          this_object()->add("wealth/gold",1) ;
          ob->remove() ;           
@@ -119,15 +119,15 @@ int false_attack()
 
     if(no == 0) 
        {
-         msg = sprintf("�ؾ����ϵ�����֮����������һ�ӣ���ɼ������ص��˺���\n"+set_color("( �����ˡ�)\t~~~^_^~~~\n","HIR",player[i])) ;
+         msg = sprintf("地精長老的永恆之杖往你門面一揮，造成極其嚴重的傷害。\n"+set_color("( 你死了。)\t~~~^_^~~~\n","HIR",player[i])) ;
         }
     if(no == 1)
        { 
-         msg = sprintf("�ؾ����ϵ�����֮����������һ�ӣ���ɼ������ص��˺���\n( ���Ѿ�%s�ˡ�)\n",set_color("����һϢ","HIR",player[i]))  ;
+         msg = sprintf("地精長老的永恆之杖往你門面一揮，造成極其嚴重的傷害。\n( 你已經%s了。)\n",set_color("奄奄一息","HIR",player[i]))  ;
         }
     if(no == 2)  
        {
-         msg = sprintf("�ؾ����ϵ�����֮����������һ�ӣ���ɼ������ص��˺���\n( �������Ѫ�����˼��أ�%s��)\n",set_color("������Σ��","HIM",player[i]))  ;
+         msg = sprintf("地精長老的永恆之杖往你門面一揮，造成極其嚴重的傷害。\n( 你渾身是血，受傷極重，%s。)\n",set_color("有生命危險","HIM",player[i]))  ;
        }            
        
     say(msg) ;  

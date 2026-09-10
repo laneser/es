@@ -20,10 +20,10 @@ int cmd_skills(string arg)
 	list = sort_array(skillnames, "sort_skills", this_object());
 	if( !sizeof(list) ) {
 		write(
-			"ÄãÄ¿Ç°²¢Ã»ÓĞÑ§¹ıÈÎºÎ¼¼ÄÜ¡£\n");
+			"ä½ ç›®å‰ä¸¦æ²’æœ‰å­¸éä»»ä½•æŠ€èƒ½ã€‚\n");
 		return 1;
 	}
-	s = "ÄãµÄ¼¼ÄÜÈçÏÂ:\n";
+	s = "ä½ çš„æŠ€èƒ½å¦‚ä¸‹:\n";
 	for (i=0; i<sizeof(skills); i++) {
 		j = act_ob->query_skill(list[i]);
 		k = act_ob->query_perm_skill(list[i]);
@@ -43,9 +43,9 @@ int sort_skills (string s1, string s2)
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: skills
+æŒ‡ä»¤æ ¼å¼: skills
 
-ÏÔÊ¾ÄãÄ¿Ç°µÄËùÓĞ¼¼ÄÜ£¬Äã¿ÉÒÔÓÃ score Ö¸Áî¿´ÄãÏÖÔÚÆäËûµÄ×´Ì¬¡£
+é¡¯ç¤ºä½ ç›®å‰çš„æ‰€æœ‰æŠ€èƒ½ï¼Œä½ å¯ä»¥ç”¨ score æŒ‡ä»¤çœ‹ä½ ç¾åœ¨å…¶ä»–çš„ç‹€æ…‹ã€‚
 C_HELP
 		);
 	return 1;

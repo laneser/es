@@ -1,9 +1,9 @@
-                        ��Ʒ��ʹ�õ� Props
+                        物品所使用的 Props
                         ------------------
 
-���������� Properties �����趨��ֵ������ "@@funcname" ��ȡ����
-  ϵͳ���� funcname �����ص�ֵ��Ϊ Properties �����ֵ��
-��������:
+＊以下所有 Properties 所需設定的值都可以 "@@funcname" 來取代。
+  系統將以 funcname 所傳回的值作為 Properties 所需的值。
+範例如下:
 set("light","@@test_light");
 int test_light()
 {
@@ -14,29 +14,29 @@ int test_light()
 
 "name"
 -------
-�趨�ִ���
-�趨��Ʒ��Ӣ�����ơ�
+設定字串。
+設定物品的英文名稱。
 
 "c_name"
 --------
-�趨�ִ���
-�趨��Ʒ���������ơ�
+設定字串。
+設定物品的中文名稱。
 
-�������� set_name( "English_name", "Chinese_name"); ��ȡ�� 
+＊可利用 set_name( "English_name", "Chinese_name"); 來取代 
   set( "name", "English_name") ;
   set( "c_name", "Chinese_name) ;
 
 "cap_name"
 ----------
-�趨�ִ���
-�趨��Ʒ�Ĵ�дӢ�����ơ�
+設定字串。
+設定物品的大寫英文名稱。
 
 "c_cap_name"
 ------------
-�趨�ִ���
-�趨��Ʒ�Ĵ�д�������ơ�
+設定字串。
+設定物品的大寫中文名稱。
 
-�������� set_name( "English_name", "Chinese_name"); ��ȡ��
+＊可利用 set_name( "English_name", "Chinese_name"); 來取代
   set( "name", "English_name") ;
   set( "c_name", "Chinese_name) ;
   set( "cap_name", "English_name") ;
@@ -44,101 +44,101 @@ int test_light()
 
 "plural"
 --------
-�趨�ִ���
-һ����Ʒ�����ж�����֣��� set("plural", "another_name") ����
-�趨��Ʒ��������֡�
+設定字串。
+一個物品可以有多個名字，而 set("plural", "another_name") 可以
+設定物品額外的名字。
 
 "short"
 --------
-�趨�ִ���
-�趨��Ʒ��Ӣ�� short_description��Ҳ�͵��㿴�������Ʒʱ������ʾ��������
+設定字串。
+設定物品的英文 short_description，也就當你看到這個物品時它所顯示的描述。
 
 "c_short"
 ---------
-�趨�ִ���
-�趨���ĵ� short_description��
+設定字串。
+設定中文的 short_description。
 
 "long"
 -------
-�趨�ִ���
-�趨��Ʒ��Ӣ�� long_description��Ҳ�͵��� look �����Ʒʱ������ʾ��������
+設定字串。
+設定物品的英文 long_description，也就當你 look 這個物品時它所顯示的描述。
 
 
 "c_long"
 --------
-�趨�ִ���
-�趨���ĵ� long_description��
+設定字串。
+設定中文的 long_description。
 
 
 "id"
 ----
-�趨�ִ����С�
-�趨������ʹ�� present() function ʱ�������������ִ����С�
-������ʹ�� set_name ʱ����ʵ�Ѿ��� name �趨Ϊ id ֮һ�ˡ�
-����� set id ��ֻ���趨�� name ��� id ���ɡ�
-��: set( "id", ({"biff", "bam", "kappow"}) );
+設定字串陣列。
+設定當我們使用 present() function 時所欲傳回來的字串陣列。
+當我們使用 set_name 時，其實已經將 name 設定為 id 之一了。
+因此在 set id 中只需設定除 name 外的 id 即可。
+例: set( "id", ({"biff", "bam", "kappow"}) );
 
 "light"
 -------
-�趨ֵ��
-�趨����Ƿ�Ϊ��Դ��
-��:set( "light", 1);�� �����Ϊ��Դ����֮�����
+設定值。
+設定物件是否為光源。
+例:set( "light", 1);， 則物件為光源，反之，則否。
 
 "unit"
 ------
-�趨�ִ���
-�趨������ļ�����λ��
+設定字串。
+設定該物件的計數單位。
 
 "weight"
 --------
-�趨ֵ��
-�趨����������� 0.1 kg Ϊ��λ��
-��:set( "weight", 100);�������Ϊ 10 kg �ء�
+設定值。
+設定物件重量，以 0.1 kg 為單位。
+例:set( "weight", 100);，則物件為 10 kg 重。
 
 "max_load"
 ----------
-�趨ֵ��
-�趨����װ���������� 0.1 kg Ϊ��λ��ֻ�е���� inherit CONTAINER ʱ
-�����趨��ֵ��
+設定值。
+設定最大的裝載重量，以 0.1 kg 為單位。只有當物件 inherit CONTAINER 時
+才需設定此值。
 
 "extra_look"
 ------------
-�趨�ִ���
-���� look �����趨������� player ʱ���㽫��࿴�����趨��Ӣ���ִ���
+設定字串。
+當你 look 帶有設定此物件的 player 時，你將會多看到所設定的英文字串。
 
 "c_extra_look'
 --------------
-�趨�ִ���
-�� look �����趨������� player ʱ���㽫��࿴�����趨��Ӣ���ִ���
+設定字串。
+你 look 帶有設定此物件的 player 時，你將會多看到所設定的英文字串。
 
 "invisible"
 -----------
-�趨ֵ��
-�趨һ��ֵ�Ա��������� invisible ״̬��ֵΪ 0�������˶��ɿ����������
-ֵΪ 1��players ���ɿ����������ֵΪ 2��ֻ�� admins �ɿ����������
-�������޷��������������Ҳ�޷����������������ѶϢ��������趨ĳ 
-aggressive mob �� invisible to players �ģ��� players ���޷�֪���� mob
-���ڴ��㡣 
+設定值。
+設定一個值以便決定物件的 invisible 狀態。值為 0，所有人都可看到此物件，
+值為 1，players 不可看到此物件，值為 2，只有 admins 可看到此物件。
+假如你無法看到該物件，你也無法看到該物件所傳的訊息。因此若設定某 
+aggressive mob 是 invisible to players 的，則 players 將無法知道該 mob
+正在打你。 
 
 "prevent_drop"
 ---------------
-�趨ֵ��
-ֵΪ 1 ���趨���Ϊ���� drop �� 
+設定值。
+值為 1 ，設定物件為不可 drop 。 
 
 "prevent_get"
 -------------
-�趨ֵ��
-ֵΪ 1�� �趨���Ϊ���� get ��
+設定值。
+值為 1， 設定物件為不可 get 。
 
 "prevent_insert"
 -----------------
-�趨ֵ��
-ֵΪ 1�� �趨���Ϊ���ɱ����������С�
+設定值。
+值為 1， 設定物件為不可被放入容器中。
 
 "silent_look"
 -------------
-�趨ֵ��
-���趨ֵΪ 1�� ������ look �����ʱ�������˽������յ����ڿ��������ѶϢ��
+設定值。
+當設定值為 1， 當有人 look 此物件時，其他人將不會收到他在看該物件的訊息。
 
 
                                               By Kitten...1994/9/24

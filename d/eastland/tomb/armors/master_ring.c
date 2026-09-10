@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "chaos ring", "»ëãç½ä" );
+	set_name( "chaos ring", "æ¸¾æ²Œæˆ’" );
 	add( "id", ({ "ring" }) );
-	set_short( "»ëãç½ä" );
+	set_short( "æ¸¾æ²Œæˆ’" );
 	set_long( 
 @C_LONG
-Ò»¸öÉÁÒ«ÖøÇ³×ÏÉ«¹âÃ¢µÄ½ä×Ó£¬µ±Äã×¢ÊÓÖøËüÊ±£¬È´·¢ÏÖÆäÄÚ²¿Ò»Æ¬Éîåä£¬
-ÁîÄã¿´²»Çå³ş¡£
+ä¸€å€‹é–ƒè€€è‘—æ·ºç´«è‰²å…‰èŠ’çš„æˆ’å­ï¼Œç•¶ä½ æ³¨è¦–è‘—å®ƒæ™‚ï¼Œå»ç™¼ç¾å…¶å…§éƒ¨ä¸€ç‰‡æ·±é‚ƒï¼Œ
+ä»¤ä½ çœ‹ä¸æ¸…æ¥šã€‚
 C_LONG
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "type", "finger" );
 	set( "material", "element" );
 	set( "defense_bonus", 7 );

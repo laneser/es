@@ -7,10 +7,10 @@ inherit DOORS;
 void create()
 {
 	::create();
-	set_short("´ó»áÒéÊÒ");
+	set_short("å¤§æœƒè­°å®¤");
 	set_long(
 		@C_LONG
-ÕâÀïÊÇÈı×å×î¸ßÆÀÒé»áµÄ´ó»áÒéÊÒ£¬¶øÕâÀïÒ²ÊÇÆÀÒé»áËù¶¨µÄ½ûµØ¡£
+é€™è£¡æ˜¯ä¸‰æ—æœ€é«˜è©•è­°æœƒçš„å¤§æœƒè­°å®¤ï¼Œè€Œé€™è£¡ä¹Ÿæ˜¯è©•è­°æœƒæ‰€å®šçš„ç¦åœ°ã€‚
 C_LONG
 	);
   	set( "light", 1 );
@@ -20,18 +20,18 @@ C_LONG
 		      ])  ) ;
 	create_door("north","south",([
 	            "name"   : "obsidian door",
-               "c_name" : "ºÚê×Ê¯´óÃÅ",
+               "c_name" : "é»‘æ›œçŸ³å¤§é–€",
                "keyword": ({ "north door", "obsidian door", "door","gate", }),
-	            "c_desc" : "ºÚê×Ê¯´óÃÅ",
+	            "c_desc" : "é»‘æ›œçŸ³å¤§é–€",
 	            "status" : "locked",
 	            "lock"   : "ASTERISM_2",
 	                             ])
 	            ) ;
    create_door("south","north",([
         "name"   : "obsidian door",
-        "c_name" : "ºÚê×Ê¯´óÃÅ",
+        "c_name" : "é»‘æ›œçŸ³å¤§é–€",
         "keyword": ({ "south door", "obsidian door", "door","gate", }),
-        "c_desc" : "ºÚê×Ê¯´óÃÅ",
+        "c_desc" : "é»‘æ›œçŸ³å¤§é–€",
         "status" : "locked",
         "lock"   : "ASTERISM_2",
    ]) );

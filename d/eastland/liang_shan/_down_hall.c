@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("������¥��");
+	ob->set_short("忠義廳樓下");
 	ob->set_long( @LONG_DESCRIPTION
-����һ��СС�ķ��䣬�ıڶ��Ǽ�Ӳ��ʯ�ڣ��������ƺ��и�С�š�
+這是一間小小的房間，四壁都是堅硬的石壁，東北方似乎有個小門。
 LONG_DESCRIPTION
 	);
 

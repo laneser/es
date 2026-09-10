@@ -33,19 +33,19 @@ int acu_effect(int level, object target)
 	target->delete("acupuncted_pts") ;
 	target->delete_temp("acupuncted_pts") ;	
 
-        if(target == me) targetname = "×Ô¼º" ;
+        if(target == me) targetname = "è‡ªå·±" ;
         else
         { 
           targetname = target->query("c_name") ;
-          tell_object(target,sprintf("%sËæµØ×øÏÂ²¢Ç£ÆðÄãµÄÊÖ,»º»º½«ÆøËÍ½øÀ´¡£\n",
+          tell_object(target,sprintf("%séš¨åœ°åä¸‹ä¸¦ç‰½èµ·ä½ çš„æ‰‹,ç·©ç·©å°‡æ°£é€é€²ä¾†ã€‚\n",
                              me->query("c_name")) ) ;
          }
 	
-	write(sprintf("ÄãÏ¯µØ×øÏÂ²¢Ç£Æð%sµÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+	write(sprintf("ä½ å¸­åœ°åä¸‹ä¸¦ç‰½èµ·%sçš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n",
 	               targetname));
 
 	tell_room( environment(me),sprintf( 
-		"%sËæµØ×øÏÂ²¢Ç£Æð%sµÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+		"%séš¨åœ°åä¸‹ä¸¦ç‰½èµ·%sçš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n",
 		 me->query("c_name"),targetname ) ,
 		({ me ,target }) );
 
@@ -60,18 +60,18 @@ void effect(int level, object caster, object dest)
         caster->set_temp("cast_busy", 0);
 	if( !dest || !present(dest, environment(caster)) ) {
 	  tell_object( caster, 
-	    "²»ÖªÔõ÷áµÄ,Ò²ÐíÊÇ¾õµÃÄãÊÇ¸öÃÉ¹Å´ó·ò¡£×ÜÖ®,ÄãµÄ»¼Õß×ßµôÁË¡£\n" 
+	    "ä¸çŸ¥æ€Žéº¼çš„,ä¹Ÿè¨±æ˜¯è¦ºå¾—ä½ æ˜¯å€‹è’™å¤å¤§å¤«ã€‚ç¸½ä¹‹,ä½ çš„æ‚£è€…èµ°æŽ‰äº†ã€‚\n" 
 	  );
 	  return;
 	}
 	
 	if( dest->query_temp("acup_effect/"+EFFECT_ID) ) {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬µ«ÊÇºÃÏñ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼Œä½†æ˜¯å¥½åƒä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n"
 		);
 	} else {
 		tell_object( dest,
-			"Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼·ÐÌÚ£¬¶øÇÒ»îÁ¦ÎÞÏÞ,ÌåÁ¦³äÅæ£¡\n"
+			"ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹æ²¸é¨°ï¼Œè€Œä¸”æ´»åŠ›ç„¡é™,é«”åŠ›å……æ²›ï¼\n"
 		);
 
 		drain = (level - BASIC_NEEDED + 1)*2 ;
@@ -87,7 +87,7 @@ void effect(int level, object caster, object dest)
 		dest->modify_stat("con", drain);
 		dest->set_temp("acup_effect/"+EFFECT_ID, 1);
 		tell_room( environment(dest), sprintf(
-	        	"ÄãÏÅÈ»·¢ÏÖ%sÈ«ÉíÇà½î±©ÕÇ,ÑÛÖÐ±é²¼ºìË¿,É·ÊÇÏÅÈË¡£\n"
+	        	"ä½ åš‡ç„¶ç™¼ç¾%så…¨èº«é’ç­‹æš´æ¼²,çœ¼ä¸­éä½ˆç´…çµ²,ç…žæ˜¯åš‡äººã€‚\n"
 	        	, dest->query("c_name") ),dest );
 		call_out( "expire", duration, dest, drain );
 	}
@@ -100,7 +100,7 @@ void expire( object player, int drain)
     
     if( !player ) return;
     tell_object( player,
-		"Äã¾õµÃÄãµÄÌåÁ¦±ä²îÁË£¬¼¸ºõÃ»Á¦Æø×öÈÎºÎÊÂ....¡£\n" );
+		"ä½ è¦ºå¾—ä½ çš„é«”åŠ›è®Šå·®äº†ï¼Œå¹¾ä¹Žæ²’åŠ›æ°£åšä»»ä½•äº‹....ã€‚\n" );
     player->modify_stat("con", -drain);
     hp = player->query("hit_points") ;
     player->set("hit_points",hp/5+1) ;

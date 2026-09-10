@@ -13,7 +13,7 @@
 #define GUILD_LOCATION  "/d/monk/guild/monk_guild"
 #define GUILD_DATA      "/d/monk/doc/"
 
-#define GUILD_MASTER   ({ "shan chi", "Ðþ´ÈÉñÉ®" })
+#define GUILD_MASTER   ({ "shan chi", "çŽ„æ…ˆç¥žåƒ§" })
 #define MONK_GONFU     ({ "heal-cycle", "fist-technic", "martial-art", })
 
 #define ALLOWED_MATERIAL  ({ "cloth", "stone", "leather", "wood", })

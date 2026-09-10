@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("daemonic boots", "ºÚÉ«¹ÖĞ¬");
+        set_name("daemonic boots", "é»‘è‰²æ€ªé‹");
         add( "id", ({ "boots" }) );
-        set_short("daemonic boots", "ºÚÉ«¹ÖĞ¬");
+        set_short("daemonic boots", "é»‘è‰²æ€ªé‹");
         set_long(@CLONG
-ÕâÊÇÒ»Ë«ºÚÉ«µÄ¹ÖĞ¬£¬¿´²»³öÊÇÊ²÷á×ö³ÉµÄ£¬²»¹ıËÆºõÒş²ØÁËÒ»¹É
-ÄªÃûµÄÁ¦Á¿
+é€™æ˜¯ä¸€é›™é»‘è‰²çš„æ€ªé‹ï¼Œçœ‹ä¸å‡ºæ˜¯ä»€éº¼åšæˆçš„ï¼Œä¸éä¼¼ä¹éš±è—äº†ä¸€è‚¡
+è«åçš„åŠ›é‡
 CLONG
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "heavy_metal");
         set( "armor_class", 6 );

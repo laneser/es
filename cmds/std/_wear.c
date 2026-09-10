@@ -10,27 +10,27 @@ string equip_verb(object armor, string type)
 	string verb;
 	
 	switch( armor->query("equip_level") ) {
-		case 0 : verb = "Ë³ÀûµØ";   break;
-		case 1 : verb = "ÃãÇ¿µØ";   break;
-		case 2 : verb = "Ó²ÉúÉúµØ"; break;
+		case 0 : verb = "é †åˆ©åœ°";   break;
+		case 1 : verb = "å‹‰å¼·åœ°";   break;
+		case 2 : verb = "ç¡¬ç”Ÿç”Ÿåœ°"; break;
 		default : verb = "";        break;
 	}
 	switch( type ) {
 		case "body":
 		case "legs": 
 		case "feet": 
-		case "cloak": verb += "´©ÉÏ"; break;
-		case "head":  verb += "´÷ÉÏ"; break;
-		case "arms": verb += "Ì×ÉÏ"; break;
-		case "misc": verb += "´÷ÉÏ"; break;
-		case "finger": verb += "´÷ÉÏ"; break;
-		case "hands": verb += "´÷ÉÏ"; break;
-		case "globe": verb += "ÕÅ¿ª"; break;
-		case "shield": verb += "ÓÃÊÖÄÃÆğ"; break;
-		case "saddle": verb += "×°ÅäÉÏ"; break;
-		case "kernel": verb += "ÍÌÏÂ"; break;
-		case "tail": verb += "Ì×ÉÏ"; break;
-		default: verb += "´©ÉÏ"; break;
+		case "cloak": verb += "ç©¿ä¸Š"; break;
+		case "head":  verb += "æˆ´ä¸Š"; break;
+		case "arms": verb += "å¥—ä¸Š"; break;
+		case "misc": verb += "æˆ´ä¸Š"; break;
+		case "finger": verb += "æˆ´ä¸Š"; break;
+		case "hands": verb += "æˆ´ä¸Š"; break;
+		case "globe": verb += "å¼µé–‹"; break;
+		case "shield": verb += "ç”¨æ‰‹æ‹¿èµ·"; break;
+		case "saddle": verb += "è£é…ä¸Š"; break;
+		case "kernel": verb += "åä¸‹"; break;
+		case "tail": verb += "å¥—ä¸Š"; break;
+		default: verb += "ç©¿ä¸Š"; break;
 	}
 	return verb;
 }
@@ -44,19 +44,19 @@ int wear_armors(object player, object armor, int silent)
 	type = armor->query("type");
 	// Check armor type to decide it is a armor?
 	if( member_array(type, ARMOR_TYPES) == -1 ) {
-		tell_object(player, "ÄÇ²»ÊÇ»¤¼×¡£\n");
+		tell_object(player, "é‚£ä¸æ˜¯è­·ç”²ã€‚\n");
 		return 0;
 	}
 
 	// If he's already equipping it. Tell him so.
 	if( armor->query("equipped") ) {
-		tell_object(player, "ÄãÒÑ¾­´©ÖøÄÇ¼ş»¤¼×ÁË¡£\n");
+		tell_object(player, "ä½ å·²ç¶“ç©¿è‘—é‚£ä»¶è­·ç”²äº†ã€‚\n");
 		return 0;
 	}
 			
 	// check if any he can't wear this armor.	
 	if( player->block_wear(armor) ) {
-		printf("Äã²»ÄÜ´©%s !\n",armor->query("c_name"));
+		printf("ä½ ä¸èƒ½ç©¿%s !\n",armor->query("c_name"));
 		return 0;
 	}
 
@@ -65,18 +65,18 @@ int wear_armors(object player, object armor, int silent)
 		fwep = player->query("weapon1");
 		swep = player->query("weapon2");
 		if( swep ) {
-			tell_object(player, "ÄãÁ½Ö»ÊÖ¶¼Ã»ÓĞ¿Õ¡£\n");
+			tell_object(player, "ä½ å…©éš»æ‰‹éƒ½æ²’æœ‰ç©ºã€‚\n");
 			return 0;
 		}
 		if( fwep && (int)fwep->query("nosecond")==1 ) {
-			tell_object(player, "Äã²»ÄÜÍ¬Ê±×°±¸¶ÜºÍË«ÊÖÎäÆ÷¡£\n"
+			tell_object(player, "ä½ ä¸èƒ½åŒæ™‚è£å‚™ç›¾å’Œé›™æ‰‹æ­¦å™¨ã€‚\n"
 			);
 			return 0;
 		}
 	}
 
 	if( player->query("armor/"+type) ) {
-		tell_object(player, "ÄãÒÑ¾­´©ÁËÍ¬ÀàĞÍµÄ»¤¼×ÁË¡£\n");
+		tell_object(player, "ä½ å·²ç¶“ç©¿äº†åŒé¡å‹çš„è­·ç”²äº†ã€‚\n");
 		return 0;
 	}
 
@@ -84,7 +84,7 @@ int wear_armors(object player, object armor, int silent)
 	armor->equip();
 	
 	if ( !armor->query("equipped") ) {
-		printf("Äã²»ÄÜ´©%s !\n",armor->query("c_name"));
+		printf("ä½ ä¸èƒ½ç©¿%s !\n",armor->query("c_name"));
 		return 0;
 	}
 	// display worn message.
@@ -94,9 +94,9 @@ int wear_armors(object player, object armor, int silent)
 			else tell_object(player, equip_msg[1] );
 		} else {
 			verb = equip_verb(armor, type);
-			printf("Äã%s%s¡£\n",verb,armor->query("short"));
+			printf("ä½ %s%sã€‚\n",verb,armor->query("short"));
 		  	tell_room( environment(player), 
-			sprintf("%s%s%s¡£\n", player->query("c_name"),verb,armor->query("short")),player );
+			sprintf("%s%s%sã€‚\n", player->query("c_name"),verb,armor->query("short")),player );
 	    }
 	}
 	return 1;
@@ -108,7 +108,7 @@ int cmd_wear(string str, int silent)
 	int i;
 
 	if( !str || str == "" )
-		return notify_fail("×°±¸Ê²÷á»¤¼×£¿\n");
+		return notify_fail("è£å‚™ä»€éº¼è­·ç”²ï¼Ÿ\n");
 
 	if( str=="all" ) {
 		this_player()->block_attack(10);
@@ -119,7 +119,7 @@ int cmd_wear(string str, int silent)
 			   || this_player()->query("armor/"+(string)ob[i]->query("type")) )
 			    continue;
 
-	//		write("×°±¸ "+ob[i]->query("short")+" -> ");
+	//		write("è£å‚™ "+ob[i]->query("short")+" -> ");
 			wear_armors(this_player(), ob[i], silent);
 		}
 		this_player()->calc_armor_class();
@@ -130,7 +130,7 @@ int cmd_wear(string str, int silent)
 	this_player()->block_attack(4);
 	obj = present(str, this_player());
 	if( !obj ) 
-		return notify_fail(sprintf("ÄãÉíÉÏÃ»ÓĞÈÎºÎ½Ğ×ö%sµÄ¶«Î÷¡£\n",str));
+		return notify_fail(sprintf("ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•å«åš%sçš„æ±è¥¿ã€‚\n",str));
 	wear_armors(this_player(), obj, silent);
 	this_player()->calc_armor_class();
 	return 1;
@@ -139,11 +139,11 @@ int cmd_wear(string str, int silent)
 int help()
 {
 	write (@HELP
-Usage: wear <»¤¾ß>
-Õâ¸öÖ¸Áî¿ÉÒÔÈÃÄã´©ÉÏ¸÷ÖÖ»¤¾ß -- Èç¹ûÄãµÄÖ°Òµ»òÖÖ×åÔÊĞí\µÄ»°.
-»¤¾ßµÄÖÖÀàÓĞºÜ¶àÖÖ, ÓĞ¹Ø»¤¾ßÖÖÀà, ÏŞÖÆµÈÇëÓÃ help armor_types 
-²éÑ¯. 
-Ïà¹ØÖ¸Áî: remove, wield, unwield.
+Usage: wear <è­·å…·>
+é€™å€‹æŒ‡ä»¤å¯ä»¥è®“ä½ ç©¿ä¸Šå„ç¨®è­·å…· -- å¦‚æœä½ çš„è·æ¥­æˆ–ç¨®æ—å…è¨±çš„è©±.
+è­·å…·çš„ç¨®é¡æœ‰å¾ˆå¤šç¨®, æœ‰é—œè­·å…·ç¨®é¡, é™åˆ¶ç­‰è«‹ç”¨ help armor_types 
+æŸ¥è©¢. 
+ç›¸é—œæŒ‡ä»¤: remove, wield, unwield.
 HELP
 	);
 	return 1 ;

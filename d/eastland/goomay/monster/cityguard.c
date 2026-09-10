@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name( "cityguard", "镇口守卫" );
+	set_name( "cityguard", "閹彛瀹堣" );
 	add( "id", ({ "guard" }) );
-	set_short( "镇口守卫" );
+	set_short( "閹彛瀹堣" );
 	set_long(
-		"你看到一个守卫古梅镇镇口的卫兵。\n"
+		"浣犵湅鍒颁竴鍊嬪畧琛涘彜姊呴幃閹彛鐨勮鍏点�俓n"
 	);
 	set( "gender", "male" );
 	set( "race", "human" );

@@ -3,12 +3,12 @@
 inherit OBJECT;
 void create()
 {
-	set_name( "Yellew Flower","Ğ¡»Æ»¨" );
+	set_name( "Yellew Flower","å°é»ƒèŠ±" );
 	add( "id",({ "flower" }) );
-	set_short( "Ğ¡»Æ»¨" );
-	set_long( "Ò»¶äĞ¡»Æ»¨\n" );
+	set_short( "å°é»ƒèŠ±" );
+	set_long( "ä¸€æœµå°é»ƒèŠ±\n" );
 	set( "weight",1 );
-	set( "unit","¶ä");
+	set( "unit","æœµ");
 	set( "prevent_get",1 );
 }           
 
@@ -17,9 +17,9 @@ void init(){ add_action( "to_cull","cull" ); }
 int to_cull(string arg)
 {
 	if( !arg || arg!="flower" )
-		return notify_fail( "²ÉÊ²÷á£¿\n" );
+		return notify_fail( "æ¡ä»€éº¼ï¼Ÿ\n" );
 		
-	write( "ÄãÕªÏÂÒ»¶ä»ÆÉ«Ò°»¨¡£\n" );
+	write( "ä½ æ‘˜ä¸‹ä¸€æœµé»ƒè‰²é‡èŠ±ã€‚\n" );
 	this_object()->set( "prevent_drop",0 );
 	this_object()->move( this_player() );
 	return 1;

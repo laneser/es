@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("ring of cat eye","Ã¨ÑÛÊ¯Ö¸»·");
+    set_name("ring of cat eye","è²“çœ¼çŸ³æŒ‡ç’°");
     add("id",({"ring"}) );
-    set_short("Ã¨ÑÛÊ¯Ö¸»·");
+    set_short("è²“çœ¼çŸ³æŒ‡ç’°");
 	set_long(@C_LONG
-Ã¨ÑÛÊ¯ÊÇÒ»ÖÖ»áËæÖøÑô¹â±ä»»É«²ÊµÄ±¦Ê¯, 
-ÓÃËü×ö³ÉµÄÖ¸»·ÄÜ°ïÈË´øÀ´¸£Æø¡£
+è²“çœ¼çŸ³æ˜¯ä¸€ç¨®æœƒéš¨è‘—é™½å…‰è®Šæ›è‰²å½©çš„å¯¶çŸ³, 
+ç”¨å®ƒåšæˆçš„æŒ‡ç’°èƒ½å¹«äººå¸¶ä¾†ç¦æ°£ã€‚
 C_LONG
  	        );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "weight", 10 );
         set("material","stone");
 	set( "type", "finger" );

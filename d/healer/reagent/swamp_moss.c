@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "swamp moss", "ÕÓÔóÌ¦" );
+	set_name( "swamp moss", "æ²¼æ¾¤è‹”" );
         set("no_sale",1);
 	add( "id", ({"moss"}) );
-	set_short( "some swamp moss", "ÕÓÔóÌ¦" );
+	set_short( "some swamp moss", "æ²¼æ¾¤è‹”" );
 	set_long(
 		"You see some green moss with dark spots.\n",
-		"ÕâÊÇÒ»ÖÖÉú³¤ÔÚÕÓÔóµØÇøµÄÌ¦Àà£¬ÉÏÃæÓĞÒ»Ğ©ºÚÉ«°ßµã¡£Äã¿ÉÒÔ³¢³¢(taste)¿´¡£\n"
+		"é€™æ˜¯ä¸€ç¨®ç”Ÿé•·åœ¨æ²¼æ¾¤åœ°å€çš„è‹”é¡ï¼Œä¸Šé¢æœ‰ä¸€äº›é»‘è‰²æ–‘é»ã€‚ä½ å¯ä»¥åšåš(taste)çœ‹ã€‚\n"
 	);
-	set( "unit", "ÍÅ" );
+	set( "unit", "åœ˜" );
 	set( "ident", "SWAMP_MOSS" );
 	set( "effect","slow");
 	set( "frequency",3);

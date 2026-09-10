@@ -39,7 +39,7 @@ int cmd_restore(string user)
 	if( !member_group(getuid(this_player()), "admin") )
 		return notify_fail("Only Admins can restore user's data file!\n");
 	if( find_player(user) )
-		return notify_fail("Õâ¸öÈËÄ¿Ç°ÔÚÏßÉÏ£¬ÒªÇëËûÏÈ quit à¸ !\n");
+		return notify_fail("é€™å€‹äººç›®å‰åœ¨ç·šä¸Šï¼Œè¦è«‹ä»–å…ˆ quit å–” !\n");
 	link_name = "/data/backup/std/connection/"+user[0..0]+"/"+user+".o" ;
 
 	if (file_size(link_name) > 0) {
@@ -89,8 +89,8 @@ int cmd_restore(string user)
 	if (body_data)
 		write_file(body_file, body_data);
 
-	write("¸´Ô­ "+user+" µÄ×ÊÁÏ... Ok.\n");
-	write("½«±¸·İ×ÊÁÏ´æ»Ø:\n");
+	write("å¾©åŸ "+user+" çš„è³‡æ–™... Ok.\n");
+	write("å°‡å‚™ä»½è³‡æ–™å­˜å›:\n");
 	if ( link_data )
 		write("Link: "+set_color(link_file, "HIC")+".\n");
 	if ( body_data )
@@ -102,9 +102,9 @@ int help()
 {
 	if( can_read_chinese() )
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: restore <user's name>
+æŒ‡ä»¤æ ¼å¼: restore <user's name>
 
-½«Íæ¼ÒµÄ±¸·İ×ÊÁÏ¿½±´»ØÀ´¡£
+å°‡ç©å®¶çš„å‚™ä»½è³‡æ–™æ‹·è²å›ä¾†ã€‚
 
 C_HELP
 		);

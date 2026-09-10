@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "steel seal", "¾«¸Ö·âÓ¡" );
+	set_name( "steel seal", "ç²¾é‹¼å°å°" );
 	add( "id", ({ "key","seal" }) );
-	set_short( "a steel seal", "¾«¸Ö·âÓ¡" );
+	set_short( "a steel seal", "ç²¾é‹¼å°å°" );
 	set_long(
 		"A magic seal made by high steel.\n",
-		"ÕâÊÇÒ»¸öÖı³É»ğÑæĞÎµÄ´¿¸Ö·âÓ¡£¬ºÃÏñ¿ÉÒÔ¡õÈëÄ³¸öÃÅÀï¡£\n"
+		"é€™æ˜¯ä¸€å€‹é‘„æˆç«ç„°å½¢çš„ç´”é‹¼å°å°ï¼Œå¥½åƒå¯ä»¥â–¡å…¥æŸå€‹é–€è£¡ã€‚\n"
 	);
-	set( "unit", "¿é" );
+	set( "unit", "å¡Š" );
 	set( "to_lock", "FIRE_ELEMENT_KEY" );
 	set( "weight", 15 );
 	set( "value", ({ 10, "silver" }) );

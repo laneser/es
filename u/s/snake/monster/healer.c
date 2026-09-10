@@ -11,13 +11,13 @@ void create()
 	::create();
 	seteuid(getuid());
 	set_level(19);
-	set_name( "Father Hsin", "ĞÌÀÏµù" );
+	set_name( "Father Hsin", "åˆ‘è€çˆ¹" );
 	add( "id", ({ "father", "hsin", "blind", "father hsin" }) );
-	set_short( "ĞÌÀÏµù" );
+	set_short( "åˆ‘è€çˆ¹" );
 	set_long(
-		"ĞÌÀÏµù±¾À´µÄÃû×ÖÒÑ¾­Ã»ÓĞÈËÖªµÀÁË£¬Ö»ÖªµÀËûÔ­À´ÊÇ¶«·½´ó¹ú\n"
-		"É±ÊÖ×éÖ¯ÖĞµÄÒ»Ô±£¬ÒòÎª±³ÅÑ×éÖ¯¶øÔâµ½´ÌÏ¹Ë«ÑÛµÄ´¦·££¬ĞÌÀÏ\n"
-		"µùÎªÁË±Ü»ö£¬À´µ½ÕâÀïÒşĞÕÂñÃû£¬Ï£ÍûÄÜ°²¶ÈÍíÄê¡£\n"
+		"åˆ‘è€çˆ¹æœ¬ä¾†çš„åå­—å·²ç¶“æ²’æœ‰äººçŸ¥é“äº†ï¼ŒåªçŸ¥é“ä»–åŸä¾†æ˜¯æ±æ–¹å¤§åœ‹\n"
+		"æ®ºæ‰‹çµ„ç¹”ä¸­çš„ä¸€å“¡ï¼Œå› ç‚ºèƒŒå›çµ„ç¹”è€Œé­åˆ°åˆºçé›™çœ¼çš„è™•ç½°ï¼Œåˆ‘è€\n"
+		"çˆ¹ç‚ºäº†é¿ç¦ï¼Œä¾†åˆ°é€™è£¡éš±å§“åŸ‹åï¼Œå¸Œæœ›èƒ½å®‰åº¦æ™šå¹´ã€‚\n"
 	);
 	set_temp( "aided",0);
 	set( "race", "human" );
@@ -34,7 +34,7 @@ void create()
 	set_skill( "bandage", 100 );
 	set( "aiming_loc", "weakest" );
         set("inquiry" , ([ 
-                           "ÒıÎï" : "@@astrquest" ,
+                           "å¼•ç‰©" : "@@astrquest" ,
                            "catalyst" : "@@astrquest"
                             ]) ) ;
 	set( "max_hp", 1000 );
@@ -71,7 +71,7 @@ void relay_message(string class, string msg)
                
    ::relay_message(class, msg);
    me=this_object();
-   if( sscanf( msg, "%sÍù%sÀë¿ª¡£",who,str)==2)
+   if( sscanf( msg, "%så¾€%sé›¢é–‹ã€‚",who,str)==2)
    {
      hp=me->query("hit_points");
      if (hp>800) return;
@@ -108,7 +108,7 @@ int my_heal()
 //   }   
    if ( (bleed = me->query("conditions/bleeding")) && 
         ( (int) me->query_temp("clotted") !=1 ) ) {
-      tell_room(environment(me), "ĞÌÀÏµùÌæĞÌÀÏµùµÄÉË¿ÚÖ¹Ñª¡£\n");
+      tell_room(environment(me), "åˆ‘è€çˆ¹æ›¿åˆ‘è€çˆ¹çš„å‚·å£æ­¢è¡€ã€‚\n");
       if( 50 + random(50) > bleed[1] * bleed[2] ) {
 	 (CONDITION_PREFIX + "bleeding")->remove_effect( me );
       } else {
@@ -124,9 +124,9 @@ int my_heal()
         receive_healing(100+random(50));
         set_temp("aided",1);
         call_out("can_aid_again",180,me);    
-        tell_room(environment(me),"ĞÌÀÏµù¶Ô×Ô¼º½øĞĞ¼±¾È....\n");
+        tell_room(environment(me),"åˆ‘è€çˆ¹å°è‡ªå·±é€²è¡Œæ€¥æ•‘....\n");
       } else tell_room(environment(me),
-                       "ĞÌÀÏµù²Ò½ĞÒ»ÉùµÀ: ÍÛ....¿ìËÀÁË»¹²»ÄÜ¼±¾È:~~\n");  
+                       "åˆ‘è€çˆ¹æ…˜å«ä¸€è²é“: å“‡....å¿«æ­»äº†é‚„ä¸èƒ½æ€¥æ•‘:~~\n");  
     }   
 }   
    
@@ -137,7 +137,7 @@ void remove_clotted(object me)
    set_temp("clotted",0);
    if ( (bleed = me->query("conditions/bleeding")) )
    {
-      tell_room(environment(me), "ĞÌÀÏµùÌæĞÌÀÏµùµÄÉË¿ÚÖ¹Ñª¡£\n");
+      tell_room(environment(me), "åˆ‘è€çˆ¹æ›¿åˆ‘è€çˆ¹çš„å‚·å£æ­¢è¡€ã€‚\n");
       if( 50 + random(50) > bleed[1] * bleed[2] ) {
 	 (CONDITION_PREFIX + "bleeding")->remove_effect( me );
       } else {
@@ -156,7 +156,7 @@ void can_aid_again(object me)
         receive_healing(100+random(50));
         set_temp("aided",1);
         call_out("can_aid_again",180,me);    
-        tell_room(environment(me),"ĞÌÀÏµù¶Ô×Ô¼º½øĞĞ¼±¾È....\n");
+        tell_room(environment(me),"åˆ‘è€çˆ¹å°è‡ªå·±é€²è¡Œæ€¥æ•‘....\n");
      }
 }       
    
@@ -169,16 +169,16 @@ void astrquest(object ob)
    if( !questflag || questflag!=3 || !stepflag || stepflag <1 )
      {
        tell_room(environment(),
-                 "ĞÏÀÏµùÒ¡Ò¡Í·Ëµ:ÎÒ²»ÖªµÀ¡£\n"
+                 "é‚¢è€çˆ¹æ–æ–é ­èªª:æˆ‘ä¸çŸ¥é“ã€‚\n"
                  ,this_object()  ) ;
        return ;
       }
 
    write(
-         "ĞÏÀÏµùÏëÁËÒ»ÏÂ×ÓááËµµÀ:ÎÒºÃÏñÔø¸ø¹ıÕâ÷áÒ»¸ö¶«Î÷¸øÅ·Èğ°²³¤ÀÏ,\n"
-         "    µ«ÊÇÎÒÍüÁËÔÚÄÇÕÒµ½ÄÇ¸ö¶«Î÷µÄ,Ö»¼ÇµÃÄÇ¸ö¶«Î÷½Ğ¡°ÓÅ²¨ÂŞ»¨¡±¡£\n"
-         "    ÖÁì¶ÔÚÄÇ»áÓĞ,ÎÒ¾Í²»Çå³şÁË¡£\n"
-         "ĞÏÀÏµù»°Ò»ËµÍê¾Í²»ÀíÄã£¬×¨ĞÄ»ØÈ¥×öËûµÄÊÂÁË¡£\n"
+         "é‚¢è€çˆ¹æƒ³äº†ä¸€ä¸‹å­å¾Œèªªé“:æˆ‘å¥½åƒæ›¾çµ¦éé€™éº¼ä¸€å€‹æ±è¥¿çµ¦æ­ç‘å®‰é•·è€,\n"
+         "    ä½†æ˜¯æˆ‘å¿˜äº†åœ¨é‚£æ‰¾åˆ°é‚£å€‹æ±è¥¿çš„,åªè¨˜å¾—é‚£å€‹æ±è¥¿å«â€œå„ªæ³¢ç¾…èŠ±â€ã€‚\n"
+         "    è‡³æ–¼åœ¨é‚£æœƒæœ‰,æˆ‘å°±ä¸æ¸…æ¥šäº†ã€‚\n"
+         "é‚¢è€çˆ¹è©±ä¸€èªªå®Œå°±ä¸ç†ä½ ï¼Œå°ˆå¿ƒå›å»åšä»–çš„äº‹äº†ã€‚\n"
          );
       
    this_player()->set_temp("astr/quest1",2) ;

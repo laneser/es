@@ -3,15 +3,15 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "Dragon Knight's Lance","ÁúÆïÊ¿Ç¹" );
+	set_name( "Dragon Knight's Lance","é¾é¨å£«æ§" );
 	add( "id",({ "jousting","lance" }) );
-	set_short( "ÁúÆïÊ¿Ç¹" );
+	set_short( "é¾é¨å£«æ§" );
 	set_long(@LONG
-	ÁúÆïÊ¿ÆïÂíÊ±ËùÓÃµÄÇ¹£¬áã²½Ê±Òà¿É·¢»ÓÇ¿´ó
-	ÍşÁ¦¡£
+	é¾é¨å£«é¨é¦¬æ™‚æ‰€ç”¨çš„æ§ï¼Œå¾™æ­¥æ™‚äº¦å¯ç™¼æ®å¼·å¤§
+	å¨åŠ›ã€‚
 LONG
 		);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","jousting" );
 	set( "weapon_class",50 );
 	set( "min_damage",25 );

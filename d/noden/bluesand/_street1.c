@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("�ֵ�");
+	ob->set_short("街道");
 	ob->set_long( @LONG_DESCRIPTION
-������һ�������Ľֵ��ϣ��������Զ��������Ǵ�Ż���Ĳֿ⡣�ֵ�
-�����˲��࣬����ÿ���˵����ο���������Ϊ�߹�
+你走在一條寬敞的街道上，左右兩旁都是商人們存放貨物的倉庫。街道
+上行人不多，但是每個人的衣飾看起來都頗為高貴。
 LONG_DESCRIPTION
 	);
 

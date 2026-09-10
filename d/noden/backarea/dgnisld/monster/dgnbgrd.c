@@ -9,12 +9,12 @@ void create ()
 
 	::create();
 	set_level(10);
-	set_name( "Guard", "ÊØ»¤Õß" );
+	set_name( "Guard", "å®ˆè­·è€…" );
 	add ("id", ({ "guard",}) );
-	set_short( "a guard for dragon ball", "±£»¤ÁúÖéµÄÊØ»¤Õß" );
+	set_short( "a guard for dragon ball", "ä¿è­·é¾ç çš„å®ˆè­·è€…" );
 	set_long(
             "The guard protects the dragon ball from others.\n",
-	    "ËûÊÇ±£»¤ÁúÖéµÄÈË£¬ÄãÏëµÃµ½ÁúÖé±ã±ØÐë´ò°ÜËû¡£\n"
+	    "ä»–æ˜¯ä¿è­·é¾ç çš„äººï¼Œä½ æƒ³å¾—åˆ°é¾ç ä¾¿å¿…é ˆæ‰“æ•—ä»–ã€‚\n"
 	);
 	
 	set_perm_stat( "dex", 10 );
@@ -30,7 +30,7 @@ void create ()
 	set ("wealth", ([ "gold": 5 ]) );
 	set ("gender", "male");
 	set ("exp_reward",2000);
-	set ("unit", "¸ö");
+	set ("unit", "å€‹");
 	set ("natural_weapon_class1", 10);
 	set ("natural_armor_class", 10);
 	set ("natural_min_damage1", 20);
@@ -40,7 +40,7 @@ void create ()
 	set ("chat_chance", 5);
 	set ("chat_output", ({
 	    "Guard says: You can never get the Dragon Ball!\n",
-        "ÊØ»¤ÕßËµ£ºÄã±ðÏë´ÓÎÒÕâ¶ùÄÃµ½ÁúÖé¡£\n",
+        "å®ˆè­·è€…èªªï¼šä½ åˆ¥æƒ³å¾žæˆ‘é€™å…’æ‹¿åˆ°é¾ç ã€‚\n",
 	    }) );
 	obj=new(DGNISLD"obj/dgnbal-7.c");
 	obj->move(this_object());

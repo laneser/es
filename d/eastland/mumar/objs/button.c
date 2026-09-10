@@ -3,14 +3,14 @@ inherit OBJECT;
  
 void create()
 {
-        set_name( "golden button", "½ğ¿Û×Ó" );
+        set_name( "golden button", "é‡‘é‡¦å­" );
         add( "id", ({ "button" }) );
-        set_short(  "½ğ¿Û×Ó" );
+        set_short(  "é‡‘é‡¦å­" );
         set_long( @C_LONG
-ÕâÊÇÒ»¿Å´¿½ğÖÆµÄ¿Û×Ó£¬ÉÏÃæ¿ÌÖøÒ»¸ö¡ºÀî¡»¡£
+é€™æ˜¯ä¸€é¡†ç´”é‡‘åˆ¶çš„æ‰£å­ï¼Œä¸Šé¢åˆ»è‘—ä¸€å€‹ã€æã€ã€‚
 C_LONG
                 );
-                set("unit","¿Å");
+                set("unit","é¡†");
                 set("weight", 5);
                 set("value",({1, "silver"}) );
         set("no_sale", 1 );

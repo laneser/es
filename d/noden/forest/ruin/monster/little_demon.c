@@ -8,16 +8,16 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(11);
-	set_name( "little demon", "Ğ¡¶ñÄ§" );
+	set_name( "little demon", "å°æƒ¡é­”" );
 	add ("id", ({ "daemon", "demon", }) );
-	set_short( "Ğ¡¶ñÄ§" );
+	set_short( "å°æƒ¡é­”" );
 	set_long( @C_LONG
-ºÚÄ§´ÓÚ¤ºÚµÄÊÀ½çºô»½³öÀ´µÄ¶ñÄ§£¬ÔÚÄ§½çµÄµØÎ»²»¸ß£¬µ«»áËÀĞÄËúµØµÄ
-ÎªÖ÷ÈËÂôÃü£¬Ìı´ÓÖ÷ÈËµÄÃüÁî£¬ÖÁËÀ·½Ğİ¡£
+é»‘é­”å¾å†¥é»‘çš„ä¸–ç•Œå‘¼å–šå‡ºä¾†çš„æƒ¡é­”ï¼Œåœ¨é­”ç•Œçš„åœ°ä½ä¸é«˜ï¼Œä½†æœƒæ­»å¿ƒå¡Œåœ°çš„
+ç‚ºä¸»äººè³£å‘½ï¼Œè½å¾ä¸»äººçš„å‘½ä»¤ï¼Œè‡³æ­»æ–¹ä¼‘ã€‚
 C_LONG
 	);
 	set( "alignment", -1000 );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
 	set_perm_stat( "dex", 20 );
 	set_perm_stat( "str", 15 );
 	set_perm_stat( "int", 17 );
@@ -37,8 +37,8 @@ C_LONG
     set ("special_defense", ([ "all":25, ]) );
     set_experience(20000);
     set_skill("dodge",50);
-    set_c_verbs( ({ "%sÓÃ×¦×Ó×¥%s", "%sÓÃ½Ç´Ì%s", "%sÌß%s",
-                    "%sÒ§%s", "%sÓÃÁ­µ¶ºáÅü%s", }) );
-    set_c_limbs( ({ "Í·", "ÉíÌå", "½Å", "½Ç", "³á°ò", }) );
+    set_c_verbs( ({ "%sç”¨çˆªå­æŠ“%s", "%sç”¨è§’åˆº%s", "%sè¸¢%s",
+                    "%så’¬%s", "%sç”¨é®åˆ€æ©«åŠˆ%s", }) );
+    set_c_limbs( ({ "é ­", "èº«é«”", "è…³", "è§’", "ç¿…è†€", }) );
     wield_weapon(OBJ"scythe");
 }

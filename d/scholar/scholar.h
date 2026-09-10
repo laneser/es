@@ -2,7 +2,7 @@
 #define GUILD_TOKEN	 "/d/scholar/jade_mark"
 #define GUILD_LOCATION   "/d/scholar/scholar/scholar_guild"
 
-#define GUILD_MASTER     ({ "Ro Yubin", "ÂæÓï±ù" })
+#define GUILD_MASTER     ({ "Ro Yubin", "é§±èªžå†°" })
 #define ALLOWED_MATERIAL ({ "cloth", "element", "light_metal", })
 #define SECOND_MATERIAL  ({ "leather", "wood", })
 

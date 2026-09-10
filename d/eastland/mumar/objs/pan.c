@@ -4,12 +4,12 @@ inherit WEAPON;
  
 void create()
 {
-        set_name("pan", "Æ½µ×¹ø");
-        set_short("Æ½µ×¹ø");
+        set_name("pan", "å¹³åº•é‹");
+        set_short("å¹³åº•é‹");
         set_long(
-                "ÕâÊÇÒ»Ö§³øÊ¦ÓÃµÄÆ½µ×¹ø¡£\n"
+                "é€™æ˜¯ä¸€æ”¯å»šå¸«ç”¨çš„å¹³åº•é‹ã€‚\n"
         );
-        set( "unit", "Ö§" );
+        set( "unit", "æ”¯" );
         set( "weight", 80 );
         set( "type", "blunt" );
         set( "weapon_class",10 );

@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Fire Scale Shield","»ğ÷ë¶Ü" );
+	set_name( "Fire Scale Shield","ç«éºŸç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "»ğ÷ë¶Ü" );
+	set_short( "ç«éºŸç›¾" );
 	set_long(@LONG
-	ÕâÊÇÒ»ÃæÓÃ²ÄÖÊ½ÏÇáµÄ½ğÊô´òÔìµÄ¶Ü£¬ÉÏÃæÒ»
-	¹²ÏâÁËÎåÆ¬»ğ÷è÷ëµÄÁÛÆ¬¡£
+	é€™æ˜¯ä¸€é¢ç”¨æè³ªè¼ƒè¼•çš„é‡‘å±¬æ‰“é€ çš„ç›¾ï¼Œä¸Šé¢ä¸€
+	å…±é‘²äº†äº”ç‰‡ç«éº’éºŸçš„é±—ç‰‡ã€‚
 LONG
            );
-	set( "unit","Ãæ" );
+	set( "unit","é¢" );
 	set( "weight",100 );
 	set( "type","shield" );
 	set( "material","heavy_metal" );

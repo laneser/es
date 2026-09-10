@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("twilight amulet", "ÀèÃ÷»¤Éí·û");
+        set_name("twilight amulet", "é»æ˜è­·èº«ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short("twilight amulet", "ÀèÃ÷»¤Éí·û");
+        set_short("twilight amulet", "é»æ˜è­·èº«ç¬¦");
         set_long(
-                "ÕâÊÇÒ»¸ö±£»¤Ò¹ĞĞÈË²»ÊÜ¶¾³æ¼°Ğ°÷ÈÇÖº¦µÄ»¤Éí·û\n"
+                "é€™æ˜¯ä¸€å€‹ä¿è­·å¤œè¡Œäººä¸å—æ¯’èŸ²åŠé‚ªé­…ä¾µå®³çš„è­·èº«ç¬¦\n"
         );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set( "type", "misc" );
         set( "material", "cloth");
         set( "armor_class", 0);

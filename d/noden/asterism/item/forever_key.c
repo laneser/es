@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "key of forever", "ÓÀºãÖ®Ô¿" );
+	set_name( "key of forever", "æ°¸æ†ä¹‹é‘°" );
 	add( "id", ({ "key" }) );
-   set_short( "ÓÀºãÖ®Ô¿" );
+   set_short( "æ°¸æ†ä¹‹é‘°" );
 	set_long(
-		"Ò»°ÑÉÁÒ«ÖøÆæÒì¹âÃ¢µÄÈı½ÇĞÎºÚê×Ê¯Ô¿³×¡£\n"
+		"ä¸€æŠŠé–ƒè€€è‘—å¥‡ç•°å…‰èŠ’çš„ä¸‰è§’å½¢é»‘æ›œçŸ³é‘°åŒ™ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "ASTERISM_2" );
 	set( "weight", 3 );
 	set( "value", ({ 10, "silver" }) );

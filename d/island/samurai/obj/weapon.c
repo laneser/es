@@ -11,7 +11,7 @@ void create()
            "  .\n",
            " \n"
         );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("weapon_class",50);
     set("type","shortblade");
     set("min_damage",180);
@@ -21,8 +21,8 @@ void create()
 //    set("hit_func","pen_damage");
     set("special_damage",100);
     set("special_msg","Suddenly a big waterfall hit u .\n\n");
-    set("special_c_msg"," Ë®ÐÇÖ®±ÊÉ¢·¢³öÒ»ÕóÕóµÄË®Îí !! \n\n"
-        "Í»È»ËÄÖÜµÄË®Îí¾Û¼¯³ÉÒ»°ÑÀûÈÐ£¬´ÌÈëµÐÈËµÄÑÊºí!!\n\n");
+    set("special_c_msg"," æ°´æ˜Ÿä¹‹ç­†æ•£ç™¼å‡ºä¸€é™£é™£çš„æ°´éœ§ !! \n\n"
+        "çªç„¶å››å‘¨çš„æ°´éœ§èšé›†æˆä¸€æŠŠåˆ©åˆƒï¼Œåˆºå…¥æ•µäººçš„å’½å–‰!!\n\n");
     set("extra_stats",(["kar":1000]));
     set("extra_skills",(["longblade":1000]));
     set("extra_skills",(["riding":1000]));
@@ -52,9 +52,9 @@ int pen_damage(object victim,int damage)
                 if( !c_msg ) c_msg = msg;
                 if( !msg ) return 0;
                 tell_object( holder, 
-                        "\nÄãµÄ"+query("c_name")+c_msg+"\n" );
+                        "\nä½ çš„"+query("c_name")+c_msg+"\n" );
                 tell_room( environment(holder), 
-                        holder->query("c_name") + "µÄ"+query("c_name")+c_msg+"\n",
+                        holder->query("c_name") + "çš„"+query("c_name")+c_msg+"\n",
                         holder );
                 return dam;
      }

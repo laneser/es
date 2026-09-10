@@ -4,17 +4,17 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Glaive", "´óµ¶");
+	set_name("Glaive", "å¤§åˆ€");
 	add ("id",({ "blade","glaive","sword",}) );
-	set_short("Õ¶Èâ´óÅÙµ¶");
+	set_short("æ–¬è‚‰å¤§åˆ¨åˆ€");
 	set_long(@C_LONG
-ÕâÊÇÒ»°ÑÍõ»¢Ê¹ÓÃµÄ´óµ¶£¬µ¶ÉÏ¿ÌÖøÒ»ÌõÆøÓîĞù°ºµÄÁú£¬
-×ã¼ûÆä°ÔÆøÊ®×ã¡£
+é€™æ˜¯ä¸€æŠŠç‹è™ä½¿ç”¨çš„å¤§åˆ€ï¼Œåˆ€ä¸Šåˆ»è‘—ä¸€æ¢æ°£å®‡è»’æ˜‚çš„é¾ï¼Œ
+è¶³è¦‹å…¶éœ¸æ°£åè¶³ã€‚
 C_LONG
 	);
 	
-	set( "unit", "°Ñ" );
-	set_c_verbs( ({ "%sÅüÏò%s",  }) );
+	set( "unit", "æŠŠ" );
+	set_c_verbs( ({ "%såŠˆå‘%s",  }) );
  	set( "weapon_class", 29 );
  	set( "nosecond", 1);
 	set( "type", "longblade" );

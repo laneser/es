@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "chai hu", "²ñºú" );
+	set_name( "chai hu", "æŸ´èƒ¡" );
           set("no_sale",1);
 	add("id",({"chai","hu"}) );
-	set_short( "²ñºú" );
+	set_short( "æŸ´èƒ¡" );
 	set_long(
-		"ÕâÊÇÒ»Ö§ÓÃÀ´ÖÆÒ©µÄ²ñºú¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ˜¯ä¸€æ”¯ç”¨ä¾†è£½è—¥çš„æŸ´èƒ¡ã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "CHAI_HU" );
-	set( "unit", "Ö§" );
+	set( "unit", "æ”¯" );
         set( "weight", 2 );
 	set( "savour","bitter");
 	set( "effect","slow");

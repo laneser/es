@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wedding cape", "°×É«ĞÂÄïÅû¼ç");
+        set_name("wedding cape", "ç™½è‰²æ–°å¨˜æŠ«è‚©");
         add( "id", ({ "cape" }) );
-        set_short("a wedding cape", "°×É«ĞÂÄïÅû¼ç");
+        set_short("a wedding cape", "ç™½è‰²æ–°å¨˜æŠ«è‚©");
         set_long(
                 "A beautiful white wedding cape.\n",
-                "Ò»¼şĞåÖøÀÙË¿»¨±ßµÄ°×É«ĞÂÄïÅû¼ç.\n" 
+                "ä¸€ä»¶ç¹¡è‘—è•¾çµ²èŠ±é‚Šçš„ç™½è‰²æ–°å¨˜æŠ«è‚©.\n" 
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "armor_class", 6 );
         set( "defense_bonus", 2 );

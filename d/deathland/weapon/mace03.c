@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("little mace","С�ɵĶ�ͷ�");
+        set_name("little mace","小巧的釘頭槌");
         add("id",({"mace",}) );
-       set_short("С�ɵĶ�ͷ�");
+       set_short("小巧的釘頭槌");
        set_long(
-         "һ��С�ɵĶ�ͷ�.\n"
+         "一把小巧的釘頭槌.\n"
                );
 	
-	set( "unit", "��" );
+	set( "unit", "把" );
  	set( "weapon_class", 20 );
        set("type","blunt");
 	set( "min_damage", 14 );

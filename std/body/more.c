@@ -77,7 +77,7 @@ varargs int more(mixed str, int flag, int mask)
 	int i;
 	string tmp, hold, hold2;
 
-	if( !str ) return notify_fail("Ê¹ÓÃ¸ñÊ½: more <filename>\n");
+	if( !str ) return notify_fail("ä½¿ç”¨æ ¼å¼: more <filename>\n");
 	previous = previous_object();
 	direction = 1;
 	last_regexp = "";
@@ -90,11 +90,11 @@ varargs int more(mixed str, int flag, int mask)
  		if( !flag ) {
  			files = wild_card(str,1);
  			if( !(i = sizeof(files)) )
- 				return notify_fail("Ã»ÓĞÕâµµ°¸»òÄ¿Â¼¡£\n");
+ 				return notify_fail("æ²’æœ‰é€™æª”æ¡ˆæˆ–ç›®éŒ„ã€‚\n");
  			else if( i == 1 && file_size(files[0]) == -2 ) {
  				files = wild_card(str + "/*");
  				if( !sizeof(files) )
-					return notify_fail("Ã»ÓĞÈÎºÎ×ÊÁÏ¡£\n");
+					return notify_fail("æ²’æœ‰ä»»ä½•è³‡æ–™ã€‚\n");
 			}
 			while( 1 ) {
 				if( file_size(files[0]) <= 0 ) {
@@ -117,7 +117,7 @@ varargs int more(mixed str, int flag, int mask)
 					if( hold2 = read_file(tmp) )
 						more( explode(hold, "\n") + explode(hold2,"\n") );
 					else
-						return notify_fail(sprintf("*¾¯¸æ: Äã²¢Ã»ÓĞ¶ÁÈ¡Õâµµ°¸(%s)µÄÈ¨Á¦!!\n", tmp));
+						return notify_fail(sprintf("*è­¦å‘Š: ä½ ä¸¦æ²’æœ‰è®€å–é€™æª”æ¡ˆ(%s)çš„æ¬ŠåŠ›!!\n", tmp));
 				}
 				return 1;
 			}
@@ -247,22 +247,22 @@ protected void even_more(string str)
 		write( clear_screen() );
 		write( @HELP_LONG
 ---------------------------------------------------------------------
-               [ Ö¸Áî: more - help »­Ãæ ]
+               [ æŒ‡ä»¤: more - help ç•«é¢ ]
 ---------------------------------------------------------------------
-    <space>     ÏÔÊ¾ÏÂÒ»Ò³¡£
-    B,b         ÏÔÊ¾Ç°Ò»Ò³¡£
-    <return>    ÏÔÊ¾ÏÂÒ»ĞĞ¡£
-    <           »Øµ½ÎÄ¼şµÄ¿ªÍ·¡£
-    >           ÒÆµ½ÎÄ¼şµÄ½áÎ²¡£
-    =           ÏÔÊ¾ÏÖÔÚÎ»ì¶ÄÇÒ»ĞĞ¡£
+    <space>     é¡¯ç¤ºä¸‹ä¸€é ã€‚
+    B,b         é¡¯ç¤ºå‰ä¸€é ã€‚
+    <return>    é¡¯ç¤ºä¸‹ä¸€è¡Œã€‚
+    <           å›åˆ°æ–‡ä»¶çš„é–‹é ­ã€‚
+    >           ç§»åˆ°æ–‡ä»¶çš„çµå°¾ã€‚
+    =           é¡¯ç¤ºç¾åœ¨ä½æ–¼é‚£ä¸€è¡Œã€‚
     /           Regexp search forward.
     \           Regexp search backward.
     n           Continue last regexp search. (maintain direction)
-    ^L          ÖØĞÂÏÔÊ¾ÒøÄ»¡£
-    !           Ö´ĞĞ MUD ÀïµÄÃüÁî¡£
-    v           Ó¡³ö×÷ÕßÃû³Æ¡£
-    h,?         ÏÔÊ¾ help »­Ãæ¡£
-    Q,q         Àë¿ª¡£
+    ^L          é‡æ–°é¡¯ç¤ºéŠ€å¹•ã€‚
+    !           åŸ·è¡Œ MUD è£¡çš„å‘½ä»¤ã€‚
+    v           å°å‡ºä½œè€…åç¨±ã€‚
+    h,?         é¡¯ç¤º help ç•«é¢ã€‚
+    Q,q         é›¢é–‹ã€‚
 HELP_LONG
 		);
 		write_more_line();

@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "moraz dagger", "ÄªÀ××ÈØ°Ê×" );
+	set_name( "moraz dagger", "è«é›·èŒ²åŒ•é¦–" );
 	add( "id", ({ "dagger" }) );
-	set_short( "a moraz dagger", "ÄªÀ××ÈØ°Ê×" );
+	set_short( "a moraz dagger", "è«é›·èŒ²åŒ•é¦–" );
 	set_long(
 		"This is a sharp moraz dagger.\n",
-		"ÕâÊÇÒ»°ÑÔìĞÍÆæÌØµÄØ°Ê×£¬ÖØÁ¿¾­¹ı¾«ÃÜµÄ¼ÆËãÓëÆ½ºâ£¬Ê¹µÃÁ¦Á¿\n"
-		"²»´óµÄÈËÒ²¿ÉÒÔÓÃÕâ°ÑØ°Ê×ÇáÒ×µØÏ÷¶ÏµĞÈËµÄ±øÈĞ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠé€ å‹å¥‡ç‰¹çš„åŒ•é¦–ï¼Œé‡é‡ç¶“éç²¾å¯†çš„è¨ˆç®—èˆ‡å¹³è¡¡ï¼Œä½¿å¾—åŠ›é‡\n"
+		"ä¸å¤§çš„äººä¹Ÿå¯ä»¥ç”¨é€™æŠŠåŒ•é¦–è¼•æ˜“åœ°å‰Šæ–·æ•µäººçš„å…µåˆƒã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "dagger" );
 	set( "weight", 30 );
 	set( "weapon_class", 34 );

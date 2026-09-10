@@ -18,9 +18,9 @@ void create()
 	string shop;
 	
 	::create();
-	set_short( "²Ö¿â" );
+	set_short( "å€‰åº«" );
 	set_long( 
-		"ÕâÀïÊÇÒ»¼ä²Ö¿â£¬ÉÌµêÀïËùÂôµÄ¶«Î÷¶¼¶ÑÔÚÕâÀï¡£\n"
+		"é€™è£¡æ˜¯ä¸€é–“å€‰åº«ï¼Œå•†åº—è£¡æ‰€è³£çš„æ±è¥¿éƒ½å †åœ¨é€™è£¡ã€‚\n"
 	);
 	set( "light", 1);
 	set( "linked_shop", previous_object() ); 

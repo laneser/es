@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "ascomycete", "¸¶×Ó¾ú" );
+	set_name( "ascomycete", "ä»˜å­èŒ" );
 	add( "id", ({"reagent"}) );
-	set_short("¸¶×Ó¾ú" );
+	set_short("ä»˜å­èŒ" );
 	set_long(
-		"Õâ¶Ñ¸¶×Ó¾ú±íÃæ³ÉºÚÉ«, »¹ÉÁË¸ÖøÒ»Ğ©ÁÛ¹â¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™å †ä»˜å­èŒè¡¨é¢æˆé»‘è‰², é‚„é–ƒçˆè‘—ä¸€äº›é±—å…‰ã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "ASCOMYCETE" );
-	set( "unit", "¶Ñ" );
+	set( "unit", "å †" );
         set( "weight", 1 );
 	set( "effect","slow");
 	set( "frequency",5);

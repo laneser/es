@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Zeus Amulet","ÖæË¹µ­Óñ»¤Éí·û" );
+        set_name( "Zeus Amulet","å®™æ–¯æ·¡ç‰è­·èº«ç¬¦" );
         add( "id", ({ "amulet","zeus amulet" }) );
-        set_short( "ÖæË¹µ­Óñ»¤Éí·û" );
+        set_short( "å®™æ–¯æ·¡ç‰è­·èº«ç¬¦" );
         set_long(
-                "Ï£À°ÖîÉñÖ®Ê×ÖæË¹µÄ»¤Éí·û£¬¾§Ó¨µ­ÑÅµÄ´äÓñ·´¶ø¸üÏÔ³ö»¤Éí"+
-                "·ûµÄÆøÅÉ\n"
+                "å¸Œè‡˜è«¸ç¥ä¹‹é¦–å®™æ–¯çš„è­·èº«ç¬¦ï¼Œæ™¶ç‘©æ·¡é›…çš„ç¿ ç‰åè€Œæ›´é¡¯å‡ºè­·èº«"+
+                "ç¬¦çš„æ°£æ´¾\n"
         );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set("material","scholar");
         set( "type", "misc" );
         set( "armor_class", 0 );

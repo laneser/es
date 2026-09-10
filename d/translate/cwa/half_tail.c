@@ -8,19 +8,19 @@ mapping levels = ([]);
 void create()
 {
     seteuid(getuid());
-    set_name( "a half tail", "°ë½ØÀÇÎ²°Í" );
+    set_name( "a half tail", "åŠæˆªç‹¼å°¾å·´" );
     add( "id", ({ "tail", "half" }) );
-    set_short( "wolf tail", "°ë½ØÀÇÎ²°Í" );
+    set_short( "wolf tail", "åŠæˆªç‹¼å°¾å·´" );
 	set_long(
 "\n",
-"ÕâÊÇÉ«ÀÇĞ­»áµÄĞÅÎï. Èç¹ûÄãÏëÖªµÀÏà¹Ø×ÊÁÏ, ÇëÓÃ <wolfinfo>. \n\n",
+"é€™æ˜¯è‰²ç‹¼å”æœƒçš„ä¿¡ç‰©. å¦‚æœä½ æƒ³çŸ¥é“ç›¸é—œè³‡æ–™, è«‹ç”¨ <wolfinfo>. \n\n",
     );
     set( "weight", 2 );
     set( "no_sell", 1 );
     set( "prevent_drop",1);
     set( "extra_look", "$N is a member of C.W.A.\n");
-    set( "c_extra_look", "$NÊÇÒ»Ö»±»¿³µô°ë½ØÎ²°ÍµÄÎÑÄÒÀÇ, ËûÒÑÎŞ·¨ÔÙÉ«ÁË\n");
-    set( "unit", "Ìõ" );
+    set( "c_extra_look", "$Næ˜¯ä¸€éš»è¢«ç æ‰åŠæˆªå°¾å·´çš„çª©å›Šç‹¼, ä»–å·²ç„¡æ³•å†è‰²äº†\n");
+    set( "unit", "æ¢" );
 }
  
 void init()
@@ -39,26 +39,26 @@ int bark(string str)  {
 
 	if(!str || str=="") {
 		write(can_read_chinese()?
-"Äã·¢³öÒ»Õó¿Şº¿!  woooof...  Ïëµ½Î²°Í±»"+this_player()->query_temp("c_cutter")+"¿³¶ÏÁË, ÕæÏëÒ»Í·×²ËÀËãÁË.\n" :
+"ä½ ç™¼å‡ºä¸€é™£å“­åš!  woooof...  æƒ³åˆ°å°¾å·´è¢«"+this_player()->query_temp("c_cutter")+"ç æ–·äº†, çœŸæƒ³ä¸€é ­æ’æ­»ç®—äº†.\n" :
 "You bark like a wolf! Woof! Woof!\n");
 		tell_room(environment(this_player()), ({
-this_player()->query("c_cap_name")+"·¢³öÒ»Õó±¯ÆàµÄ°§º¿!\n",
+this_player()->query("c_cap_name")+"ç™¼å‡ºä¸€é™£æ‚²æ‚½çš„å“€åš!\n",
 this_player()->query("cap_name")+" barks like a wolf! Woof! Woof!\n" }),
 		this_player());
 		return 1;
 	}
 	if(!dest=present(str,environment(this_player())))
 		return notify_fail(can_read_chinese()?
-"ÄãÒª¶ÔÊ²÷á¶«Î÷½Ğ?\n" : 
+"ä½ è¦å°ä»€éº¼æ±è¥¿å«?\n" : 
 "What do you want to bark at?");
 		
 	write(can_read_chinese()?
-"Äã¶ÔÖø"+dest->query("c_cap_name")+"·¢³ö°§Á¯µÄµÍº¿, ÒâÍ¼¹´¶¯Ëû¶ÔÄãµÄ²àÒşÖ®ĞÄ.\n" :
+"ä½ å°è‘—"+dest->query("c_cap_name")+"ç™¼å‡ºå“€æ†çš„ä½åš, æ„åœ–å‹¾å‹•ä»–å°ä½ çš„å´éš±ä¹‹å¿ƒ.\n" :
 "You bark at "+dest->query("cap_name"));
 
 	tell_object(dest, can_read_chinese(dest)?
 this_player()->query("c_cap_name")+
-"¶ÔÄã·¢³öÒ»Õó±¯Á¹µÄ¿Şº¿, ¹´ÆğÁËÄã¶ÔËûµÄ²àÒıÖ®ĞÄ.\n" :
+"å°ä½ ç™¼å‡ºä¸€é™£æ‚²æ¶¼çš„å“­åš, å‹¾èµ·äº†ä½ å°ä»–çš„å´å¼•ä¹‹å¿ƒ.\n" :
 this_player()->query("cap_name")+" wolf cries sadly to you\n");
 	return(1);
 }
@@ -75,7 +75,7 @@ int wolves(string str) {
 	i=sizeof(wolves_online);
 	if(i) {
 		write(can_read_chinese()?
-"Ä¿Ç°¹²ÓĞ "+i+" Ö»É«ÀÇÔÚÉ«:\n" : 
+"ç›®å‰å…±æœ‰ "+i+" åªè‰²ç‹¼åœ¨è‰²:\n" : 
 "There are "+i+" color wolves on line:\n");
 		write("========================\n");
 		while(i--)  {
@@ -84,7 +84,7 @@ int wolves(string str) {
 		}
 		write("========================\n");
 	} else write(can_read_chinese()?
-"ÏÖÔÚÏÖÉÏÒ»Ö»É«ÀÇÒ²Ã»ÓĞ!\n" :
+"ç¾åœ¨ç¾ä¸Šä¸€éš»è‰²ç‹¼ä¹Ÿæ²’æœ‰!\n" :
 "There is no color wolf on line now\n");
 	return 1;
 }
@@ -99,7 +99,7 @@ int enemies() {
         i=sizeof(wka);
         if(i) {
                 write(can_read_chinese()?
-"ÏÖÔÚÓĞ"+i+"¸ö WKA ÎÚºÏÖ®ÖÚÉÏÏß\n" :
+"ç¾åœ¨æœ‰"+i+"å€‹ WKA çƒåˆä¹‹çœ¾ä¸Šç·š\n" :
 "There are "+i+" WKA member(s) on line.\n");
                 write("========================\n");
                 while(i--)  {
@@ -108,7 +108,7 @@ wka[i]->query(can_read_chinese()? "c_short" : "short"));
                 }
                 write("========================\n");
         } else write(can_read_chinese()?
-"ÀÇÍşÌ«´ó! WKA ²»¸ÒÉÏÏßÁË!\n" :
+"ç‹¼å¨å¤ªå¤§! WKA ä¸æ•¢ä¸Šç·šäº†!\n" :
 "There is NO WKA member on line now!\n");
         return 1;
 }
@@ -133,19 +133,19 @@ int wtalk(string str)  {
         int i;
 
         if (!str || str=="") return notify_fail(can_read_chinese()?
-"ÄãÏë¶ÔÆäËûÀÇÃÇËµÉ¶?\n" : "What do you wanna tell other wolves?\n");
+"ä½ æƒ³å°å…¶ä»–ç‹¼å€‘èªªå•¥?\n" : "What do you wanna tell other wolves?\n");
 
         wolves_online=filter_array(users(),"filter_wolf",this_object());
         wolves_online=sort_array(wolves_online,"sort_usrs",this_object());
         i = sizeof(wolves_online);
 
         if(i==1) return notify_fail(can_read_chinese()?
-"ÏÖÔÚÖ»ÓĞÄãÒ»Æ¥ÀÇÔÚÏßÉÏ, »¹ÊÇÊ¡Ê¡ÄãµÄ¿ÚË®°É!\n" :
+"ç¾åœ¨åªæœ‰ä½ ä¸€åŒ¹ç‹¼åœ¨ç·šä¸Š, é‚„æ˜¯çœçœä½ çš„å£æ°´å§!\n" :
 "You are the ONLY wolf on line now!\n");
 
         while(i--)  {
                 message("wolf_line",sprintf(can_read_chinese(wolves_online[i])?
-"[ÀÇÓï] %s: %s\n":"[WOLF] %s: %s\n",this_player()->query(can_read_chinese(
+"[ç‹¼èª] %s: %s\n":"[WOLF] %s: %s\n",this_player()->query(can_read_chinese(
 wolves_online[i])? "c_cap_name":"cap_name"), str), wolves_online[i]);
         }
         return 1;
@@ -186,31 +186,31 @@ int rmall(string str)  {
 	if (!str || str =="")
 	{
 		write(can_read_chinese()?
-"ÄãÔÚ´óÍ¥¹ãÖÚÖ®ÏÂÍÑ¹âÒÂ·ş! µ«Ïëµ½Î²°Í±»"+this_player()->query_temp("c_cutter")+"¸îµôÁË, Ğß²Ñ»ÚºŞ\nµÄĞÄÇé¶ÙÊ±Ã°ÉÏĞÄÍ·!\n" :
+"ä½ åœ¨å¤§åº­å»£çœ¾ä¹‹ä¸‹è„«å…‰è¡£æœ! ä½†æƒ³åˆ°å°¾å·´è¢«"+this_player()->query_temp("c_cutter")+"å‰²æ‰äº†, ç¾æ…šæ‚”æ¨\nçš„å¿ƒæƒ…é “æ™‚å†’ä¸Šå¿ƒé ­!\n" :
 "You take off your all clothes.\n");
 
 		tell_room(environment(this_player()), ({
 this_player()->query("cap_name")+" takes off all clothes in front of you!\n",
-c_cap_name+"ÔÚÄãÃæÇ°ÍÑ¹âËùÓĞÒÂ·ş, ÄãÊÜµ½¾ªÏÅËÆµØ°ÑÁ³±ğÏòÒ»±ß,\n"+
-"µ«ÄãÔÙ¶¨ÉñÒ»¿´, Ô­À´"+c_cap_name+"ÊÇÒ»Ö»Ö»Ê£°ë½ØÎ²°ÍµÄÎÑÄÒÀÇ!\n"
+c_cap_name+"åœ¨ä½ é¢å‰è„«å…‰æ‰€æœ‰è¡£æœ, ä½ å—åˆ°é©šåš‡ä¼¼åœ°æŠŠè‡‰åˆ¥å‘ä¸€é‚Š,\n"+
+"ä½†ä½ å†å®šç¥ä¸€çœ‹, åŸä¾†"+c_cap_name+"æ˜¯ä¸€éš»åªå‰©åŠæˆªå°¾å·´çš„çª©å›Šç‹¼!\n"
 		}), this_player());
 		return 1;
 	}
 	if(!dest=present(str,environment(this_player())))
 		return notify_fail(can_read_chinese()?
-"¶ÔË­ÍÑÒÂ·ş?\n" :
+"å°èª°è„«è¡£æœ?\n" :
 "To whom you wanna take off the clothes?\n");
 	
 	if(!living(dest) || (int)dest->query("npc"))
 		return notify_fail(can_read_chinese()?
-"ÄãÔÚ¶ÔÅ£µ¯ÇÙÂğ?\n" :
+"ä½ åœ¨å°ç‰›å½ˆç´å—?\n" :
 "Oops! You must have a SPECIAL taste!\n");
 
 	write(can_read_chinese()?
-"Äã¶Ô"+dest->query("c_cap_name")+"ÍÑ¹âÒÂ·ş! ÒıÀ´Ëû¶ÔÄã²»Ğ¼µÄ³°Ğ¦! \n" :
+"ä½ å°"+dest->query("c_cap_name")+"è„«å…‰è¡£æœ! å¼•ä¾†ä»–å°ä½ ä¸å±‘çš„å˜²ç¬‘! \n" :
 "You take off all clothes before "+dest->query("cap_name"));
 	tell_object(dest, can_read_chinese(dest)?
-c_cap_name+"¶ÔÖøÄã°ÑËùÓĞÒÂ·şÍÑ¹â, ÄãÒ»ÑÛ¾Í¿´µ½Ëû½öÊ£°ë½ØµÄ¿ÉÁ¯Î²°Í, \nÊµÔÚÈÌ²»×¡²»¶ÔËû´óĞ¦ÈıÉù! ¹ş! ¹ş! ¹ş!\n" :
+c_cap_name+"å°è‘—ä½ æŠŠæ‰€æœ‰è¡£æœè„«å…‰, ä½ ä¸€çœ¼å°±çœ‹åˆ°ä»–åƒ…å‰©åŠæˆªçš„å¯æ†å°¾å·´, \nå¯¦åœ¨å¿ä¸ä½ä¸å°ä»–å¤§ç¬‘ä¸‰è²! å“ˆ! å“ˆ! å“ˆ!\n" :
 cap_name+" removes all clothes in front of you. You can't help yourself\nnot to laugh at him because you see his tail has been cut!\n");
 	return(1);
 }

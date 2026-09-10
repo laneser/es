@@ -6,14 +6,14 @@ void create()
 {
         ::create();
         set_level(19);
-        set_name( "laice", "À×Ë¼" );
+        set_name( "laice", "é›·æ€" );
         add ("id", ({ "captain", "knight", "royal knight" }) );
-        set_short( "Laice the Captain of Royal Knights", "»Ê¼ÒÆïÊ¿ÍÅÍÅ³¤ À×Ë¼ ¹«¾ô");
+        set_short( "Laice the Captain of Royal Knights", "çš‡å®¶é¨å£«åœ˜åœ˜é•· é›·æ€ å…¬çˆµ");
         set_long(
                 "Laice is the greatest knight Noden Kingdom. His duty is\n"
                 "to recurit more adventurers as fighters to defend Noden.\n",
-                "À×Ë¼ÊÇÅµ¶ÙÍõ¹úÖĞ×îÎ°´óµÄÆïÊ¿£¬ËûÄ¿Ç°±»ÅÉÀ´Ö÷³ÖÆïÊ¿¹«»á£¬Ï£Íû\n"
-                "ÄÜÕĞÄ¼¸ü¶àÇ¿×³µÄÄêÇàÈË²Î¼Ó±£ÎÀ¹ú¼ÒµÄĞĞÁĞ¡£\n"
+                "é›·æ€æ˜¯è«¾é “ç‹åœ‹ä¸­æœ€å‰å¤§çš„é¨å£«ï¼Œä»–ç›®å‰è¢«æ´¾ä¾†ä¸»æŒé¨å£«å…¬æœƒï¼Œå¸Œæœ›\n"
+                "èƒ½æ‹›å‹Ÿæ›´å¤šå¼·å£¯çš„å¹´é’äººåƒåŠ ä¿è¡›åœ‹å®¶çš„è¡Œåˆ—ã€‚\n"
         );
         set_perm_stat("str", 30 );
         set_perm_stat("con", 25 );

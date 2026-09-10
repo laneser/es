@@ -1,21 +1,21 @@
-area	: ES ÇøÓòµÄ½âËµÎÄ¼ş?
-attic	: À¬»ø³¡
-build	: »ù±¾³ÌÊ½Îï¼ş
-concepts: ÓĞ¹Ø mudlib µÄÎÄ¼ş
-daemons : daemons µÄÏà¹Ø×ÊÁÏ
+area	: ES å€åŸŸçš„è§£èªªæ–‡ä»¶?
+attic	: åƒåœ¾å ´
+build	: åŸºæœ¬ç¨‹å¼ç‰©ä»¶
+concepts: æœ‰é—œ mudlib çš„æ–‡ä»¶
+daemons : daemons çš„ç›¸é—œè³‡æ–™
 defines	:
-driver	: driver ÎÄ¼ş
-es2	: ES II µÄ»ù±¾ÎÄ¼ş, ¿ÉÄÜÓĞĞ©¹ıÆÚÁË.
-etc	: ÔÓÆßÔÓ°Ë²»ÖªµÀ·ÅÄÇµÄÎÄ¼ş
-functions: efun, lfun.. etc µÄ manual page
-help	: Íæ¼ÒµÄ help Ä¿Â¼
-lpc	: Ò»Ğ©»ù±¾µÄ LPC ³ÌÊ½Óï·¨, ¼¼ÇÉ
+driver	: driver æ–‡ä»¶
+es2	: ES II çš„åŸºæœ¬æ–‡ä»¶, å¯èƒ½æœ‰äº›éæœŸäº†.
+etc	: é›œä¸ƒé›œå…«ä¸çŸ¥é“æ”¾é‚£çš„æ–‡ä»¶
+functions: efun, lfun.. etc çš„ manual page
+help	: ç©å®¶çš„ help ç›®éŒ„
+lpc	: ä¸€äº›åŸºæœ¬çš„ LPC ç¨‹å¼èªæ³•, æŠ€å·§
 mudlib	: 
-new_wiz	: ĞÂ½øÎ×Ê¦ÎÄ¼ş
-properties: ³£ÓÃµÄÎï¼ş property.
-quests  : quest µÄÌáÊ¾ÎÄ¼ş
-skills  : skill µÄ help ÎÄ¼ş
-wizhelp	: Ò»°ãÎ×Ê¦µÄÎÄ¼ş
+new_wiz	: æ–°é€²å·«å¸«æ–‡ä»¶
+properties: å¸¸ç”¨çš„ç‰©ä»¶ property.
+quests  : quest çš„æç¤ºæ–‡ä»¶
+skills  : skill çš„ help æ–‡ä»¶
+wizhelp	: ä¸€èˆ¬å·«å¸«çš„æ–‡ä»¶
 
 
 (created: 12-31-94)

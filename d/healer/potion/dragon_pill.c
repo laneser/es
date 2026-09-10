@@ -9,17 +9,17 @@ void init()
 }  
 void create()
 {
-	set_name("dragon pill", "ÇàÁúµ¤" );
+	set_name("dragon pill", "é’é¾ä¸¹" );
 	add( "id", ({"pill"}) );
-	set_short("ÇàÁúµ¤");
+	set_short("é’é¾ä¸¹");
 	set_long(
-		"ÕâÖÖÒ©ÍèÊÇÂùÓĞÃûÆøµÄ²¹Ò©, ¶Ôì¶ÂÒ·ş³ÉÒ©Ôì³ÉµÄÉíÌå²»ÊÊ:p\n"
-		"ÆÄÓĞÁÆĞ§¡£Èç¹ûÄã¾õµÃÍ·»èÑÛ»¨, ½¨ÒéÄãÁ¢¿Ì³Ô(eat)Ò»¿ÅÇàÁú\n"
-		"µ¤¡£²»¹ıÈç¹ûÄãÒÑ¾­Éú²¡, ÕâÖÖ²¹Ò©²¢²»ÄÜÖÎ²¡, Äã»¹ÊÇÓ¦¸ÃÈ¥\n"
-		"¿´Ò½Éú¡£\n"
+		"é€™ç¨®è—¥ä¸¸æ˜¯è »æœ‰åæ°£çš„è£œè—¥, å°æ–¼äº‚æœæˆè—¥é€ æˆçš„èº«é«”ä¸é©:p\n"
+		"é —æœ‰ç™‚æ•ˆã€‚å¦‚æœä½ è¦ºå¾—é ­æ˜çœ¼èŠ±, å»ºè­°ä½ ç«‹åˆ»åƒ(eat)ä¸€é¡†é’é¾\n"
+		"ä¸¹ã€‚ä¸éå¦‚æœä½ å·²ç¶“ç”Ÿç—…, é€™ç¨®è£œè—¥ä¸¦ä¸èƒ½æ²»ç—…, ä½ é‚„æ˜¯æ‡‰è©²å»\n"
+		"çœ‹é†«ç”Ÿã€‚\n"
 	);
 	set( "can_eat", 1 );
-	set( "unit", "Á£" );
+	set( "unit", "ç²’" );
 	set( "weight", 15 );
 	set( "value", ({ 3000, "silver" }) );
 }
@@ -30,14 +30,14 @@ int eat_pill(string str)
     object player;
         
         if (!str || str!="pill") 
-          return notify_fail("ÄãÒª³ÔÊ²÷á?\n");
+          return notify_fail("ä½ è¦åƒä»€éº¼?\n");
         player=this_player();
 	stat = (int) player->query("medication_resistance");
 	// 1 dragon pill can recover from 3 makira potion
 	stat = stat - 210 ;
 	if (stat<0) stat=0; 
 	player->set("medication_resistance",stat);	
-        tell_object(player,"Äã¾õµÃÉíÌå×´¿öºÃ¶àÁË, Í·Ò²²»ÔÙÄÇ÷áÔÎ¡£\n");
+        tell_object(player,"ä½ è¦ºå¾—èº«é«”ç‹€æ³å¥½å¤šäº†, é ­ä¹Ÿä¸å†é‚£éº¼æšˆã€‚\n");
         remove();
         return 1;
 }

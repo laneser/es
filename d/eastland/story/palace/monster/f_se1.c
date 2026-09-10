@@ -4,12 +4,12 @@ void create ()
 {
 	::create();
 	set_level(13);
-	set_name( "The palace's lady", "�춼��Ů" );
+	set_name( "The palace's lady", "天都仙女" );
 	add ("id", ({"lady"}) );
-	set_short( "�춼��Ů");
+	set_short( "天都仙女");
 	set_long(@CLONG
-�춼��Ů����ѩ����ò��������ǣ�һɫǳ��ɫ��װ�����޷��ߣ����˴�Լ��ͤͤ
-��������ִ���ȣ�����һ�ԡ�
+天都仙女生得雪膚花貌，秀麗入骨，一色淺黃色宮裝，雲鬢風鬟，仙姿綽約，亭亭
+玉立，手執蒲扇，侍立一旁。
 CLONG
 	);
 	set("race","god");

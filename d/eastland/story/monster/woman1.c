@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "wing woman", "ÓğÃñÂèÂè" );
+	set_name( "wing woman", "ç¾½æ°‘åª½åª½" );
 	add( "id", ({ "woman" }) );
-	set_short( "ÓğÃñÂèÂè" );
+	set_short( "ç¾½æ°‘åª½åª½" );
 	set_long(@C_LONG
-Ò»Î»µäĞÍµÄÓğÃñ×å³ÉÄêÅ®×Ó£¬ËıÕıÔÚÃ¦Öø´¦Àí¸Õ²ÉÊÕÏÂÀ´µÄÆÏÌÑ¡£
+ä¸€ä½å…¸å‹çš„ç¾½æ°‘æ—æˆå¹´å¥³å­ï¼Œå¥¹æ­£åœ¨å¿™è‘—è™•ç†å‰›æ¡æ”¶ä¸‹ä¾†çš„è‘¡è„ã€‚
 C_LONG
         );
-        set( "race","ÓğÃñ" );
+        set( "race","ç¾½æ°‘" );
 	set( "gender", "female" );
 	set( "alignment", 100 );
         set_natural_armor(50,2);

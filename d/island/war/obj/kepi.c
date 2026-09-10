@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-        set_name( "Kepi","¾üÃ±" );
+        set_name( "Kepi","è»å¸½" );
         add( "id",({ "kepi" }) );
-        set_short( "¾üÃ±" );
+        set_short( "è»å¸½" );
 	set_long( @LONG
-	Ò»¶¥Æ½·²µÄ¾üÃ±¡£
+	ä¸€é ‚å¹³å‡¡çš„è»å¸½ã€‚
 LONG
 		);
-        set( "unit","¶¥" );
+        set( "unit","é ‚" );
         set( "type","head" );
         set( "material","cloth" );
         set( "armor_class",4 );

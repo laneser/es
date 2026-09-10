@@ -11,13 +11,13 @@ void create()
 {
       ::create();
       set_level(18);
-      set_name( "evil mage", "Ğ°¶ñ·¨Ê¦" );
+      set_name( "evil mage", "é‚ªæƒ¡æ³•å¸«" );
       add ("id", ({ "mage" }) );
-      set_short( "Ğ°¶ñ·¨Ê¦");
-      set("unit","Î»");
+      set_short( "é‚ªæƒ¡æ³•å¸«");
+      set("unit","ä½");
       set("alignment",-1300);
       set("weight",400);
-      set_long(query("c_name")+"´øÖøÒ»±¾Ä§·¨Ê¦ÃÇ¶¼ÓĞµÄÄ§·¨Êé¡õn");
+      set_long(query("c_name")+"å¸¶è‘—ä¸€æœ¬é­”æ³•å¸«å€‘éƒ½æœ‰çš„é­”æ³•æ›¸â–¡n");
       set( "alt_corpse", "NONE" );
       set( "moving", 1 );
       set( "speed", 40 );
@@ -67,8 +67,8 @@ void make_angry(object obj,object victim)
     if( query("have_party") ) return ;
     env=environment(obj);
     tell_room(env,C_NAME(obj)+
-      "´óºÈ:¡¸×¢Òâ£¬ÕâÀïÓĞµĞÈËà¸....¡¹\n"
-      "Ò»´óÈºÉßÈË²»Öª´ÓÄÇ¶ùÅÜÁË³öÀ´£¬°ÑÄãÍÅÍÅÎ§×¡... \n\n");
+      "å¤§å–:ã€Œæ³¨æ„ï¼Œé€™è£¡æœ‰æ•µäººå–”....ã€\n"
+      "ä¸€å¤§ç¾¤è›‡äººä¸çŸ¥å¾é‚£å…’è·‘äº†å‡ºä¾†ï¼ŒæŠŠä½ åœ˜åœ˜åœä½... \n\n");
     set("have_party",1);
     set("party_num",4);
     set_temp("embattle_busy",0);
@@ -128,6 +128,6 @@ void die()
   ::die(1);
   }
   else
-  write(query("c_name")+"»¯ÎªÒ»µÀÇàÑÌ£¬ÏûÊ§ÔÚ¿ÕÆøÖĞ...\n");
+  write(query("c_name")+"åŒ–ç‚ºä¸€é“é’ç…™ï¼Œæ¶ˆå¤±åœ¨ç©ºæ°£ä¸­...\n");
   ::die(1);
 }

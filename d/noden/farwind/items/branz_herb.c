@@ -5,13 +5,13 @@ inherit HERB;
 void create()
 {
 	herb::create();
-	set_name( "branz herb", "²¼À¼×ÈÒ©²İ" );
+	set_name( "branz herb", "å¸ƒè˜­èŒ²è—¥è‰" );
 	add( "id", ({ "herb" }) );
-	set_short( "²¼À¼×ÈÒ©²İ" );
+	set_short( "å¸ƒè˜­èŒ²è—¥è‰" );
 	set_long(
-		"¾İËµÈç¹û°Ñ²¼À¼×ÈÒ©²İ·ó(apply)ÔÚÉË¿ÚÉÏ£¬»áÊ¹ÉË¿Ú»Ö¸´µÃ±È½Ï¿ì¡£\n"
+		"æ“šèªªå¦‚æœæŠŠå¸ƒè˜­èŒ²è—¥è‰æ•·(apply)åœ¨å‚·å£ä¸Šï¼Œæœƒä½¿å‚·å£æ¢å¾©å¾—æ¯”è¼ƒå¿«ã€‚\n"
 	);
-	set( "unit", "Êø" );
+	set( "unit", "æŸ" );
 	set( "heal_apply", 2 );
 	set( "duration", 10 );
 	set( "weight", 5 );

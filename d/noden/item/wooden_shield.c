@@ -5,13 +5,13 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-	set_name( "wooden shield", "Ä¾¶Ü" );
+	set_name( "wooden shield", "æœ¨ç›¾" );
 	add( "id", ({ "shield"  }) );
-   set_short( "Ä¾¶Ü" );
+   set_short( "æœ¨ç›¾" );
 	set_long(
-		"Ò»Ãæ¼áÓ²µÄÄ¾ÖÆ¶ÜÅÆ£¬ÉÏÃæ»­ÁËÒ»Ö»ÕÅÑÀÎè×¦µÄ»ğÁú¡£\n"
+		"ä¸€é¢å …ç¡¬çš„æœ¨è£½ç›¾ç‰Œï¼Œä¸Šé¢ç•«äº†ä¸€éš»å¼µç‰™èˆçˆªçš„ç«é¾ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "wood" );
 	set( "weight", 60 );

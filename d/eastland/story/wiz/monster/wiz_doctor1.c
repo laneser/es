@@ -9,19 +9,19 @@ void create()
 {
     ::create();
     set_level(17);
-    set_name( "Wizard Doctor", "�׹�" );
+    set_name( "Wizard Doctor", "巫姑" );
     add( "id",({"doctor","wizard"}) );
-    set_short( "ҩʦ �׹�");
+    set_short( "藥師 巫姑");
     set_long(@LONG
-����ǰ��������һλ��Ŀ����Ͱ����׵���̫�š��׹��ǳ���ҽ��������Ĵ��
-���������������β������в��Ҳ�������ҽ���Ʒ�����Ȼ���߲�̫���ϵ������Ч
-֮��ȴ��������֮�⡣�׹��������������������β�����Ȼ�������࣬��ȴ˿��
-û���κ�ƣ������ӣ������ĺ�������������κεط��������������Ҫ������
-�㿴��(diagnose)��
+你眼前所見的是一位面目慈祥和藹可親的老太婆。巫姑是城中醫術最高明的大夫，
+她善用巫術替人治病，其中並且參雜了中醫的療法，雖然兩者不太相干系，但成效
+之大，卻出乎意料之外。巫姑現在正持著金針替人治病，雖然病患堪多，她卻絲毫
+沒有任何疲倦的樣子，精神還頗好哩！如果你有任何地方不舒服或許可以要求她替
+你看看(diagnose)。
 LONG
             );
-    set("unit","λ");
-    set("race","��ʦ");
+    set("unit","位");
+    set("race","巫師");
     set("age",79);
     set("gender","female" );
     set("alignment",800);
@@ -58,13 +58,13 @@ LONG
        "diagnose":"@@ask_diagnose",
               "1":"@@ask_clot",
            "clot":"@@ask_clot",
-           "ֹѪ":"@@ask_clot",
+           "止血":"@@ask_clot",
               "2":"@@ask_poison",
        "depoison":"@@ask_poison",
-           "����":"@@ask_poison",
+           "驅毒":"@@ask_poison",
               "3":"@@ask_bandage",
         "bandage":"@@ask_bandage",
-           "����":"@@ask_bandage",
+           "包紮":"@@ask_bandage",
       "disappear":"@@ask_disappear",   
               "4":"@@ask_disappear",
     ]) );
@@ -72,15 +72,15 @@ LONG
 void ask_dog(object asker)
 {
 write(@LONG
-�׹�˵����lucky?Ī�����ʵĻ���ʦ��Ů����С�׹����������㣬ǰ���컹��
-����������������ȥ�ﹷ��
+巫姑說道：lucky?莫非你問的護國師孫女養的小白狗？不曉得咩，前幾天還有
+　　　　　看到她去溜狗。
 LONG
    );
 }
 int hate()
 {
    if ( this_player()->query_attacker() ) {
-      write("\n�׹�������˵���ߣ��޳�С������Ȼ�� Pk �Ҿ�����Ҫ�����㿴����\n\n");
+      write("\n巫姑生氣地說：哼，無恥小賊，既然敢 Pk 我就休想要我替你看病！\n\n");
       return 1;
    }         
    return 0;
@@ -91,19 +91,19 @@ int ask_diagnose( object asker )
    command(sprintf("look %s",NAME(asker)));
    write(@LONG
 
-�׹ÿ��Լ���Ȼ��˵����Ҫ�������ԣ��������븶Щ���á�����
-�������������������������ҵĹ����۸�
+巫姑咳嗽幾聲然後說道：要看病可以，不過先請付些費用。以下
+　　　　　　　　　　　是我的公訂價格。
     
           *****************************************************
           **			                	     **
-          **   1.ֹѪ(clot)           :  15   GOLD (��) ��   **
-          **   2.����(depoison)       :  25   GOLD (��) ��   **
-          **   3.����(bandage)        :  6    GOLD (��) ��   **
-          **   4.������ɢ(disappear)  :  100  GOLD (��) ��   **
+          **   1.止血(clot)           :  15   GOLD (次) 。   **
+          **   2.驅毒(depoison)       :  25   GOLD (次) 。   **
+          **   3.包紮(bandage)        :  6    GOLD (次) 。   **
+          **   4.惡靈驅散(disappear)  :  100  GOLD (次) 。   **
           ** 				                     **
           *****************************************************
 
-��֪��Ҫ��һ����
+不知您要那一樣？
 LONG
    );
 }
@@ -114,23 +114,23 @@ void ask_bandage( object asker )
      command(sprintf("look %s",NAME(asker)));
 
      if ( !asker->debit("gold",6) ) { 
-        write("�׹�˵�����Բ�����Ǯ����������һ����Ҫ 6 GOLD��\n");
+        write("巫姑說道：對不起，你錢不夠，包紮一次需要 6 GOLD。\n");
         return;
      }  
      if ( HP(asker)>MAX_HP(asker) ) { 
-        write("�׹�˵�����ú��ӣ���úõ���\n");
+        write("巫姑說道：好孩子，你好好的嗎。\n");
         return ;
      }
      if ( asker->query_temp("bandaged") ) { 
-        write("�׹�˵�����ú��ӣ����ƺ������˰�������Ӵ��\n");
+        write("巫姑說道：好孩子，你似乎被別人包紮過了喲。\n");
         return ;
      }
      if ( !present("bandage",this_object()) ) {
-        write("�׹�˵�������������ϵ�һЩ�����Ѿ��ù��ˣ�����Ը���һЩ��\n");
+        write("巫姑說道：唉，我身上的一些繃帶已經用光了，你可以給我一些嗎？\n");
         return ;
      }
      command(sprintf("bandage %s",NAME(asker)) );
-     write("�׹�˵�����ţ��������ˣ���һ�¿��˿ڴ��Ƿ��׵���\n");
+     write("巫姑說道：嗯，包紮好了，你活動一下看傷口處是否妥當。\n");
      command(sprintf("pat %s",NAME(asker)));
      return ;
 }
@@ -140,20 +140,20 @@ void ask_poison( object asker )
      command(sprintf("look %s",NAME(asker)));
           
      if ( !asker->debit("gold",25) ) {
-        write("�׹�˵�����Բ�����Ǯ����������һ����Ҫ 25 GOLD��\n");
+        write("巫姑說道：對不起，你錢不夠，驅毒一次需要 25 GOLD。\n");
         return;
      }
      if ( !asker->query("conditions/simple_poison") ) {
-        write("�׹�˵�����ú��ӣ������ϲ�û���κ��ж��ļ���\n");
+        write("巫姑說道：好孩子，你身上並沒有任何中毒的跡象。\n");
         return ;
      }
      write(@LONG
 
-�׹��ý��������ж��Ĳ�λһ�̣�������������ĺ�Ѫ��
-����Ѫ�������ֺ�ɫʱ���׹ó�����Ļ��������˲
-�䣬����˿������ˣ�ֻ����һ��СС�İ̺ۣ�
+巫姑用金針往你中毒的部位一刺，緩緩流出傾盆的黑血，
+當黑血漸漸呈現紅色時，巫姑朝著你的患部喃喃自語，瞬
+間，你的傷口愈和了，只留下一個小小的疤痕！
 
-�׹�˵�����ú��ӣ������еĶ�ҵ������ˡ�
+巫姑說道：好孩子，你所中的毒業已清除了。
 LONG
     );   
     asker->delete("conditions/simple_poison");
@@ -166,20 +166,20 @@ void ask_clot( object asker )
         command(sprintf("look %s",NAME(asker)));
           
      if ( !asker->debit("gold",15) ) {
-        write("�׹�˵�����Բ�����Ǯ������ֹѪһ����Ҫ 15 GOLD��\n");
+        write("巫姑說道：對不起，你錢不夠，止血一次需要 15 GOLD。\n");
         return;
      }
      if ( !asker->query("conditions/bleeding") ) {
-        write("�׹�˵�����ú��ӣ������ϲ�û����Ѫ�㡣\n");
+        write("巫姑說道：好孩子，你身上並沒有流血咩。\n");
         return ;
      }
      write(@LONG
 
-�׹��������еĽ���������˿ڴ����˼��룬Ȼ��
-�������˿ڴ������˲�䣬����Ҳ����Ѫ����
-����ֻ����һ��СС�İ̺ۡ�
+巫姑用她手中的金針在你的傷口處縫了幾針，然後
+對著你傷口處喃喃自語，瞬間，你再也不流血，而
+患部只留下一個小小的疤痕。
 
-�׹�˵�����ţ����ˣ��Ѿ������Ѫ�ˡ�     
+巫姑說道：嗯，好了，已經幫你過血了。     
 
 LONG
      );     
@@ -194,20 +194,20 @@ void ask_disappear( object asker )
      command(sprintf("look %s",NAME(asker)));
              
      if ( !asker->debit("gold",100) ) {
-        write("�׹�˵�����Բ�����������Ǯ��������ɢһ����Ҫ 100 GOLD��\n");
+        write("巫姑說道：對不起，你所帶的錢不夠，驅散一次需要 100 GOLD。\n");
         return;
      }
      damn=present("evil damn",asker);
      if ( !damn ) {
-        write("�׹�˵�����ú��ӣ��㲢û�б������������\n");
+        write("巫姑說道：好孩子，你並沒有被下詛咒的現象。\n");
         return ;
      }
      damn->remove();
      write(@LONG
                                                                       
-ֻ���׹�һ�������赸�����������дʣ���������һ�� ...
+只見巫姑一陣手足舞蹈，口中唸唸有詞，好像起乩一樣 ...
 
-�������ã��׹���������˵�����ţ�����Ҳû�б�а�鸽���ˣ�
+過了良久，巫姑慢慢回神說道：嗯，你再也沒有被邪靈附身了！
 
 LONG
      );

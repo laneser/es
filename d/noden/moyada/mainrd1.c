@@ -9,11 +9,11 @@ inherit DOORS;
 void create()
 {
 	::create();
-   set_short( "��Ҫ��·" );
+   set_short( "主要道路" );
 	set_long( @LONG_DESCRIPTION
-������վ��Ħ�Ǵ�ǵ���Ҫ��·��������������שʯ�����ƶ���
-�������ǳ����ĵ�Բ�ι㳡�롸��ɫ֮�����������Ǳ��š�������һ
-���¸ǵ�ľ�췿�ӡ�
+你現在站在摩亞達城的主要道路，它大多以破碎的磚石所鋪制而成
+。往南是城中心的圓形廣場與「銀色之塔」，向北則是北門。東邊有一
+棟新蓋的木造房子。
 LONG_DESCRIPTION
 	);
 
@@ -26,8 +26,8 @@ LONG_DESCRIPTION
     create_door( "east", "west", ([
         "keyword" : ({ "wooden door", "door", }),
         "name"    : "wooden door",
-        "c_name"  : "ľ��",
-        "c_desc"  : "ȫ�µ�ľ��",
+        "c_name"  : "木門",
+        "c_desc"  : "全新的木門",
         "status"  : "open",
     ]) );
 	reset();

@@ -3,17 +3,17 @@ void create()
 {
         ::create();
         set_level(3);
-        set_name( "Servant","ÆÍÈË" );
+        set_name( "Servant","åƒ•äºº" );
         add("id",({"servant"}) );
-        set_short( "ÆÍÈË" );
+        set_short( "åƒ•äºº" );
         set_long(@LONG
-À×¶à¼ÒµÄÆÍÈË£¬ÉíÉÏ´©µÄÆÆÆÆÀÃÀÃ£¬²»¹ı¹¤×÷µÄÂúÈÏÕæµÄ£¬ÆÄµÃÀ×¶àµÄÏ²°®¡£
+é›·å¤šå®¶çš„åƒ•äººï¼Œèº«ä¸Šç©¿çš„ç ´ç ´çˆ›çˆ›ï¼Œä¸éå·¥ä½œçš„æ»¿èªçœŸçš„ï¼Œé —å¾—é›·å¤šçš„å–œæ„›ã€‚
 LONG
         );
         set( "alignment", 200 );
         set( "gender","male" );
         set( "race","hawkman" );
         set( "chat_chance",12);
-        set("chat_output",({"ÆÍÈË×ÔÑÔ×ÔÓï: À×¶à´óÈËµÄ¾ÆÄØ...?\n"}));
+        set("chat_output",({"åƒ•äººè‡ªè¨€è‡ªèª: é›·å¤šå¤§äººçš„é…’å‘¢...?\n"}));
         set( "wealth/silver", 300 );
 }

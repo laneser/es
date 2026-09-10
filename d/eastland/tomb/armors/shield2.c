@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "holy shield", "³ıÄ§¶Ü" );
+	set_name( "holy shield", "é™¤é­”ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "³ıÄ§¶Ü" );
+	set_short( "é™¤é­”ç›¾" );
 	set_long( @C_LONG
-Ò»Ãæ½ğ¹âÉÁÉÁµÄ¶Ü£¬áİ·ğÏñ¿ÅĞ¡Ì«ÑôËÆµÄ¡£
+ä¸€é¢é‡‘å…‰é–ƒé–ƒçš„ç›¾ï¼Œå½·ä½›åƒé¡†å°å¤ªé™½ä¼¼çš„ã€‚
 C_LONG
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "light_metal");
 	set( "armor_class", 6 );

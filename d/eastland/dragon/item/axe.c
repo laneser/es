@@ -6,11 +6,11 @@ void create()
 {
         
         seteuid(getuid());
-        set_name( "stell axe", "�ָ�" );
+        set_name( "stell axe", "鋼斧" );
         add( "id",({ "axe" }) );
-        set_short( "�ָ�" );
+        set_short( "鋼斧" );
         set("long","@@layuter_c_long");     
-        set( "unit", "��");
+        set( "unit", "把");
         set( "weapon_class", 20 );
         set( "type", "axe" );
         set( "min_damage", 6 );
@@ -27,9 +27,9 @@ void init()
  string layuter_c_long()
  {
   if (query("woodman_die"))
-    return "����һ��մ��Ѫ���ĸ�ͷ��\n";
+    return "這是一把沾滿血跡的斧頭。\n";
   else 
-    return "�����Է������Կ�(chop)���ĸ�ͷ��\n";  
+    return "這是樵夫所用以砍(chop)樹的斧頭。\n";  
  } 
   
 int to_chop(string str)
@@ -39,7 +39,7 @@ int to_chop(string str)
    
    layuter_test=this_object()->query("woodman_die");
    if (!str||str==""){
-     write("��Ҫ��ʲ��\n");
+     write("你要砍什麼\n");
           return 0;
            }        
    else if (str=="tree"){
@@ -48,24 +48,24 @@ int to_chop(string str)
        ob2=environment(ob1);
        layuter_test=this_object()->query("woodman_die");
        if (layuter_test==1){
-           write("��Ѹ�ͷ����մ��Ѫ�������̫�����㲻������������\n");
+           write("這把斧頭上因沾滿血跡而變得太滑，你不能拿它砍樹。\n");
            return 1;
            }
        else if (ob3=(present("layuter_tree",ob2))){
          ob3->remove(); 
          ob4=new(Lditem"layuter_tree1");
          ob4->move(ob2);
-         write("������ͷ��ʼ���������㿳�������������ķ���һ�����ص�ľ��\n");
+         write("你拿起斧頭開始砍樹，當你砍開此樹你在樹心發現一根奇特的木棍\n");
          return 1; 
           }              
         else {
-          write("���ﲢû�����뿳����\n");
+          write("這裡並沒有你想砍的樹\n");
             return 1; 
             } 
         }
     else {
       write(
-       " �ܱ�Ǹ���㲢û�к��ʵĹ��߿��Կ���\n");
+       " 很抱歉，你並沒有合適的工具可以砍樹\n");
        return 1;
        }
     }   

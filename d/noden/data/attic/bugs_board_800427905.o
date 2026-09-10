@@ -1,24 +1,24 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":683,"title":"wrong word in last post","body":"      at 3rd lines..\"can mount it\" --> \"can't mount it\"
 ","time":796658574,"poster":"Saint",]),(["id":684,"body":"On Wed Mar 22, Neo wrote:
->       ÒÑ¾­Á½´Î cause new area war and no see trident lo....
+>       å·²ç¶“å…©æ¬¡ cause new area war and no see trident lo....
 >       can god and wiz cheak?
 > [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D.
 > [A[C~q
 > 
-¸üÕıTsunamiËùËµ£¬²¢·ÇÃ¿¸ö·¢¶¯Õ½ÕùµÄÈË¶¼¿ÉÒÔ»ñµÃtrident...
-ÄãÈ·¶¨ÄãµÄ³ÌĞò¶¼ÕıÈ·Âğ£¿£¿
-ÖÁì¶ÄÇÈıÖ»ÀÏ´ó²»»á³öÏÖ³õ²½ÅĞ¶ÏÊÇÏµÍ³ÔÚ run ³ÌÊ½Ê±Ã»ÅÜÍêÈ«....
-ËùÒÔÓĞÊ±ºò»á³öÏÖ£¬ÓĞÊ±ºò²»»á³öÏÖ.......
+æ›´æ­£Tsunamiæ‰€èªªï¼Œä¸¦éæ¯å€‹ç™¼å‹•æˆ°çˆ­çš„äººéƒ½å¯ä»¥ç²å¾—trident...
+ä½ ç¢ºå®šä½ çš„ç¨‹åºéƒ½æ­£ç¢ºå—ï¼Ÿï¼Ÿ
+è‡³æ–¼é‚£ä¸‰éš»è€å¤§ä¸æœƒå‡ºç¾åˆæ­¥åˆ¤æ–·æ˜¯ç³»çµ±åœ¨ run ç¨‹å¼æ™‚æ²’è·‘å®Œå…¨....
+æ‰€ä»¥æœ‰æ™‚å€™æœƒå‡ºç¾ï¼Œæœ‰æ™‚å€™ä¸æœƒå‡ºç¾.......
 that's all......
 
 				ishige
 
-","title":"Re: ´´ÊÀÉñêª.....","time":796696944,"poster":"Ishige",]),(["id":685,"body":"On Fri Mar 31, Saint wrote:
+","title":"Re: å‰µä¸–ç¥æˆŸ.....","time":796696944,"poster":"Ishige",]),(["id":685,"body":"On Fri Mar 31, Saint wrote:
 > Dear MAD:
 >         now chocobo seem will cause bug..
 >         i mount it & give him things eat...first several times is ok..
@@ -35,31 +35,31 @@ I don't know the reason of your problem.
 
         Sincerely your mad...
 ","title":"Re: chocobo bug..","time":796706314,"poster":"Mad",]),(["id":686,"title":"Re: < no title >","body":"On Thu Mar 30, Oda wrote:
-> ²»ÊÇ°É....Cure and Ginny ¾ÍÊÇÔÚÎÒÖ¤»éÏÂË½±¼µÄ...¿ÉÊÇËûÃÇÓĞ½äÖ¸°¡...
-    ÄÇ¿ÉÄÜÒª¿ªÊ¼µ£ĞÄËûÃÇµÄ½äÖ¸»á²»»á±»Ã»ÊÕÁË.
+> ä¸æ˜¯å§....Cure and Ginny å°±æ˜¯åœ¨æˆ‘è­‰å©šä¸‹ç§å¥”çš„...å¯æ˜¯ä»–å€‘æœ‰æˆ’æŒ‡å•Š...
+    é‚£å¯èƒ½è¦é–‹å§‹æ“”å¿ƒä»–å€‘çš„æˆ’æŒ‡æœƒä¸æœƒè¢«æ²’æ”¶äº†.
 
                                where is Skuld ??
-","time":796844003,"poster":"Skuld",]),(["id":687,"body":"  ÎÒ½á»éÁË,ÊÇÎ×Ê¦Ö¤»éµÄ...¿ÉÊÇ..
-ÎÒÃÇ¶¼Ã»ÓĞ½äÖ¸Ò®...
+","time":796844003,"poster":"Skuld",]),(["id":687,"body":"  æˆ‘çµå©šäº†,æ˜¯å·«å¸«è­‰å©šçš„...å¯æ˜¯..
+æˆ‘å€‘éƒ½æ²’æœ‰æˆ’æŒ‡è€¶...
 
-","title":"< no title >","time":796998234,"poster":"Terryh",]),(["id":688,"title":"< no title >","body":"maggie µÄokip set wrong,now he can't login!!
+","title":"< no title >","time":796998234,"poster":"Terryh",]),(["id":688,"title":"< no title >","body":"maggie çš„okip set wrong,now he can't login!!
 so plz help fix it!! ruby help!!
 ","time":797243188,"poster":"Sjy",]),(["id":689,"body":"On Fri Apr  7, Sjy wrote:
-> maggie µÄokip set wrong,now he can't login!!
+> maggie çš„okip set wrong,now he can't login!!
 > so plz help fix it!! ruby help!!
-    ÔÙÊÔÊÔ.. ²»ĞĞµÄ»°ÔÙpost Ò»´Î...
+    å†è©¦è©¦.. ä¸è¡Œçš„è©±å†post ä¸€æ¬¡...
                              Indra.
-","title":"Re: < no title >","time":797278705,"poster":"Indra",]),(["id":690,"title":"board","body":"    ²»ÖªÕâÊÇ²»ÊÇbug£¬µ±ÎÒ»¨ÎÒÉíÉÏËùÓĞÇ®ÂòÅÄÂôÎïáá
-    Ã»Âòµ½¶«Î÷£¨¾ÍÊÇ±»µ±³ÉÆ­×ÓÀ²£©
-    Ö®ááÉíÉÏÒàÉíÎŞ·ÖÎÄ
-    ¼ÇµÃÉÏ´Îcnf Ò²ÓĞÕâÑùµÄÇéĞÎ·¢Éú£¬ÄÜ·ñcheck neh? 
+","title":"Re: < no title >","time":797278705,"poster":"Indra",]),(["id":690,"title":"board","body":"    ä¸çŸ¥é€™æ˜¯ä¸æ˜¯bugï¼Œç•¶æˆ‘èŠ±æˆ‘èº«ä¸Šæ‰€æœ‰éŒ¢è²·æ‹è³£ç‰©å¾Œ
+    æ²’è²·åˆ°æ±è¥¿ï¼ˆå°±æ˜¯è¢«ç•¶æˆé¨™å­å•¦ï¼‰
+    ä¹‹å¾Œèº«ä¸Šäº¦èº«ç„¡åˆ†æ–‡
+    è¨˜å¾—ä¸Šæ¬¡cnf ä¹Ÿæœ‰é€™æ¨£çš„æƒ…å½¢ç™¼ç”Ÿï¼Œèƒ½å¦check neh? 
     thanx :)
-","time":797353304,"poster":"Ppm",]),(["id":691,"title":"< no title >","body":"Ì«too hard!
+","time":797353304,"poster":"Ppm",]),(["id":691,"title":"< no title >","body":"å¤ªtoo hard!
 too gard!
-","time":797376827,"poster":"Pomelo",]),(["id":694,"title":"< no title >","body":"        God please help ..I think I had meet a bug½ñÌìÎÒ»ØÀ´Éı¼¶µÄÊ±ºò,ºÕÈ»·¢ÏÖ piety ´Ó 20 ±äµ½1 ,¶øÔÚÆÚ¼äÃ»ÓĞ·¢ÏÖÈÎºÎµÄÑ¶Ï¢..¾ÍÖ»ÓĞpie ±ä³É 1¶øÏÖÔÚÒªÔÙadvance ºÃÏñÒ²²»ĞĞ, ÊÇ²»ÊÇoverflow µÄbug ÄØ?»¹ÓĞ´óÉñ¿É²»¿ÉÒÔ°ïÎÒ»Ö¸´? Ğ»Ğ»:))                        Autumn ÉÏ
+","time":797376827,"poster":"Pomelo",]),(["id":694,"title":"< no title >","body":"        God please help ..I think I had meet a bugä»Šå¤©æˆ‘å›ä¾†å‡ç´šçš„æ™‚å€™,èµ«ç„¶ç™¼ç¾ piety å¾ 20 è®Šåˆ°1 ,è€Œåœ¨æœŸé–“æ²’æœ‰ç™¼ç¾ä»»ä½•çš„è¨Šæ¯..å°±åªæœ‰pie è®Šæˆ 1è€Œç¾åœ¨è¦å†advance å¥½åƒä¹Ÿä¸è¡Œ, æ˜¯ä¸æ˜¯overflow çš„bug å‘¢?é‚„æœ‰å¤§ç¥å¯ä¸å¯ä»¥å¹«æˆ‘æ¢å¾©? è¬è¬:))                        Autumn ä¸Š
 ","time":797379063,"poster":"Autumn",]),(["id":695,"title":"Re: < no title >","body":"On Sun Apr  9, Autumn wrote:
->         God please help ..I think I had meet a bug½ñÌìÎÒ»ØÀ´Éı¼¶µÄÊ±ºò,ºÕÈ»·¢ÏÖ piety ´Ó 20 ±äµ½1 ,¶øÔÚÆÚ¼äÃ»ÓĞ·¢ÏÖÈÎºÎµÄÑ¶Ï¢..¾ÍÖ»ÓĞpie ±ä³É 1¶øÏÖÔÚÒªÔÙadvance ºÃÏñÒ²²»ĞĞ, ÊÇ²»ÊÇoverflow µÄbug ÄØ?»¹ÓĞ´óÉñ¿É²»¿ÉÒÔ°ïÎÒ»Ö¸´? Ğ»Ğ»:))                        Autumn ÉÏ
-ĞŞºÃÁË
+>         God please help ..I think I had meet a bugä»Šå¤©æˆ‘å›ä¾†å‡ç´šçš„æ™‚å€™,èµ«ç„¶ç™¼ç¾ piety å¾ 20 è®Šåˆ°1 ,è€Œåœ¨æœŸé–“æ²’æœ‰ç™¼ç¾ä»»ä½•çš„è¨Šæ¯..å°±åªæœ‰pie è®Šæˆ 1è€Œç¾åœ¨è¦å†advance å¥½åƒä¹Ÿä¸è¡Œ, æ˜¯ä¸æ˜¯overflow çš„bug å‘¢?é‚„æœ‰å¤§ç¥å¯ä¸å¯ä»¥å¹«æˆ‘æ¢å¾©? è¬è¬:))                        Autumn ä¸Š
+ä¿®å¥½äº†
                                              Iris
 ","time":797391912,"poster":"Iris",]),(["id":696,"body":"	Thanks Iris :))
 			Autumn
@@ -72,23 +72,23 @@ too gard!
     already fix loh ..  Thanks !!
 
 						Ruby
-","time":797656236,"poster":"Ruby",]),(["id":700,"body":"ÎÒÏëparty,¿ÉÊÇparty formÖ®áá,
-´òparty invite someone»òparty disband¶¼»á³öÏÖ:
+","time":797656236,"poster":"Ruby",]),(["id":700,"body":"æˆ‘æƒ³party,å¯æ˜¯party formä¹‹å¾Œ,
+æ‰“party invite someoneæˆ–party disbandéƒ½æœƒå‡ºç¾:
 Oops, there's something wrong with that!
-²»ÖªÊÇÄÇÀï´íÁË?
+ä¸çŸ¥æ˜¯é‚£è£¡éŒ¯äº†?
 			Schpeltor
 ","title":"About party","time":798006815,"poster":"Schpeltor",]),(["id":701,"body":"On Sun Apr 16, Schpeltor wrote:
-> ÎÒÏëparty,¿ÉÊÇparty formÖ®áá,
-> ´òparty invite someone»òparty disband¶¼»á³öÏÖ:
+> æˆ‘æƒ³party,å¯æ˜¯party formä¹‹å¾Œ,
+> æ‰“party invite someoneæˆ–party disbandéƒ½æœƒå‡ºç¾:
 > Oops, there's something wrong with that!
-> ²»ÖªÊÇÄÇÀï´íÁË?
+> ä¸çŸ¥æ˜¯é‚£è£¡éŒ¯äº†?
 > 			Schpeltor
-ÒòÎªÄãÉèÁËÒ»¸ö alias party do party form; party invite $*
-party Õâ¸öcommand¾ÍÕÒ²»µ½À²,
-µ±È»²»ÄÜÓÃ
+å› ç‚ºä½ è¨­äº†ä¸€å€‹ alias party do party form; party invite $*
+party é€™å€‹commandå°±æ‰¾ä¸åˆ°å•¦,
+ç•¶ç„¶ä¸èƒ½ç”¨
                               Iris
-","title":"Re: About party","time":798026082,"poster":"Iris",]),(["id":702,"title":"³ç´Ó´Ô³æ³æ","body":"
-Äã·¢ÏÖ0ÔÚÄãÃæÇ°¿İ\Î®¶øËÀÁË¡£
+","title":"Re: About party","time":798026082,"poster":"Iris",]),(["id":702,"title":"å´‡å¾å¢èŸ²èŸ²","body":"
+ä½ ç™¼ç¾0åœ¨ä½ é¢å‰æ¯èè€Œæ­»äº†ã€‚
 
 +----------------------+
 | ww YY YY YY YY /\\ /\\ |
@@ -99,21 +99,21 @@ party Õâ¸öcommand¾ÍÕÒ²»µ½À²,
 | .. YY YY ++ ++ /\\ /\\ |
 | YY ww YY ++ /\\ /\\ /\\ |
 +----------------------+
-ÄãÄ¿Ç°µÄÎ»ÖÃ: (X = 5, Y = 9)
+ä½ ç›®å‰çš„ä½ç½®: (X = 5, Y = 9)
 
 in main land...
 						beautiful miky
-","time":798384913,"poster":"Miky",]),(["id":703,"title":"dark land small ´Ó³ç³æ³æ","body":"
-	dark land µÄpost ( Ê«ÈËdagger ÄÇÖ») ..ËµÓ¢ÎÄµÄÊ±áá,
-	¶¼²»»á»»ĞĞÒ®....
+","time":798384913,"poster":"Miky",]),(["id":703,"title":"dark land small å¾å´‡èŸ²èŸ²","body":"
+	dark land çš„post ( è©©äººdagger é‚£éš») ..èªªè‹±æ–‡çš„æ™‚å¾Œ,
+	éƒ½ä¸æœƒæ›è¡Œè€¶....
 
 						beautiful miky
 read 18
 mp
-","time":798385754,"poster":"Miky",]),(["id":704,"body":"ha...ÊÇ²»ÊÇiris ÍüÁËÉächi_name?...:P
+","time":798385754,"poster":"Miky",]),(["id":704,"body":"ha...æ˜¯ä¸æ˜¯iris å¿˜äº†å°„chi_name?...:P
                 Hch grin here...
-","title":"about Äã·¢ÏÖ0ÔÚÄãÃæÇ°¿İ\Î®¶øËÀÁË¡£","time":798465424,"poster":"Hch",]),(["id":705,"title":"about petals...","body":"when i type\"sprinkle and\" then appear :
-Äã°Ñ»¨°êÈöÏòÌì¿Õ£¬ö®Ê±Ìì¿ÕÂäÏÂÒ»Õó»¨Óê¡£
+","title":"about ä½ ç™¼ç¾0åœ¨ä½ é¢å‰æ¯èè€Œæ­»äº†ã€‚","time":798465424,"poster":"Hch",]),(["id":705,"title":"about petals...","body":"when i type\"sprinkle and\" then appear :
+ä½ æŠŠèŠ±ç“£æ’’å‘å¤©ç©ºï¼Œéœæ™‚å¤©ç©ºè½ä¸‹ä¸€é™£èŠ±é›¨ã€‚
 Oops, there's something wrong with that!
     so ,this is bug?     
 ","time":799099252,"poster":"And",]),})

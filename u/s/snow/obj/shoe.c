@@ -1,6 +1,6 @@
 inherit ARMOR;
 
-string C_NAME="��Ь";
+string C_NAME="冰鞋";
 
 void create()
 {
@@ -8,9 +8,9 @@ void create()
         add( "id", ({ "shoe" }) );
         set_short( C_NAME );
         set_long(
-                "һ˫��Ө�ı�ѩ���ɵ�Ь�ӣ�\n"
+                "一雙晶瑩的冰雪做成的鞋子．\n"
         );
-        set( "unit", "˫" );
+        set( "unit", "雙" );
         set( "type", "feet" );
         set( "armor_class", 150 );
         set( "defense_bonus", 150 );

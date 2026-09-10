@@ -5,17 +5,17 @@ void create(object ob)
         if (!ob) return ;
         seteuid(getuid()) ;
 	ob->set_level(1);
-	ob->set_name( "stone frog", "Ê¯Í·ÍÜ" );
+	ob->set_name( "stone frog", "çŸ³é ­è›™" );
 	ob->add( "id", ({ "frog" }) );
-	ob->set_short( "Ê¯Í·ÍÜ" );
+	ob->set_short( "çŸ³é ­è›™" );
 	ob->set_long(
-	 "Äã¿´µ½Ò»Ö»»ÒºÖÉ«µÄÇàÍÜ£¬ÉíÉÏÓÐÖøÊ¯Í·°ãÎÆÂ·µÄÆ¤·ô£¬Õý²»¶ÏµØ
-´«À´¡¸¿©¿©¡¹µÄµÍÉò½ÐÉù¡£\n"
+	 "ä½ çœ‹åˆ°ä¸€éš»ç°è¤è‰²çš„é’è›™ï¼Œèº«ä¸Šæœ‰è‘—çŸ³é ­èˆ¬ç´‹è·¯çš„çš®è†šï¼Œæ­£ä¸æ–·åœ°
+å‚³ä¾†ã€Œå’¯å’¯ã€çš„ä½Žæ²ˆå«è²ã€‚\n"
 	);
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set( "alignment", 500 );
 	ob->set( "unbleeding", 1 );
 	ob->set_perm_stat("str", 5);
-	ob->set_c_verbs( ({ "%sÓÃááÍÈÍù%sÒ»Ìß" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿" }) );
+	ob->set_c_verbs( ({ "%sç”¨å¾Œè…¿å¾€%sä¸€è¸¢" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨" }) );
 }

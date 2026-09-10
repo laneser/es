@@ -1,7 +1,7 @@
 //#pragma save_binary
 //   create by Indra@Eastern_Story
 //
-//  µ¼ÒıÊõ(¼´Æø¹¦\) , ÓÉspellpower ¸Ä³É..
+//  å°å¼•è¡“(å³æ°£åŠŸ\) , ç”±spellpower æ”¹æˆ..
 //  
 #include <mudlib.h>
 #include "/d/healer/healer.h"
@@ -25,19 +25,19 @@ int cmd_douin(string str)
 
 	skill = this_player()->query("dou-in") ;         
         if(!skill)
-           return notify_fail("Äã»¹Ã»Á·¹ıÆø¹¦, ²»ÖªµÀµ¼ÆøµÄ·½·¨¡£\n") ; 
+           return notify_fail("ä½ é‚„æ²’ç·´éæ°£åŠŸ, ä¸çŸ¥é“å°æ°£çš„æ–¹æ³•ã€‚\n") ; 
 
         temp = int_to_str(skill) ;
 
         if( !str ) 
           {
-             write(sprintf("ÄãµÄÆø¹¦Ä¿Ç°Á·µ½%s¡£\n",temp)) ;
+             write(sprintf("ä½ çš„æ°£åŠŸç›®å‰ç·´åˆ°%sã€‚\n",temp)) ;
              return 1 ; 
            }
            
         if( (int)this_player()->query("stop_attack")>0 )
              return notify_fail (
-                "( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨×¨ĞÄÔËÆø¡£ )\n" );
+                "( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•å°ˆå¿ƒé‹æ°£ã€‚ )\n" );
         
                                                     
 	if( sscanf( str, "%s on %s", type,who )==2 ) 
@@ -46,7 +46,7 @@ int cmd_douin(string str)
 	           if(who=="me") target = this_player() ;
 	           else if(!target=present(who,environment(this_player()) ))
                           {
-	                     write("ÄãÏëµ¼Ë­µÄÆø ?\n") ;
+	                     write("ä½ æƒ³å°èª°çš„æ°£ ?\n") ;
                              return 1 ;
                            }   
 	         }
@@ -54,20 +54,20 @@ int cmd_douin(string str)
  
         me = this_player() ;       
         if(!( !(me->query_current_attacker()) ))
-                return notify_fail("Äã»¹ÔÚÕ½¶·ÖĞ,Ã»Ê±¼äÍ£ÏÂÀ´¾ÛÆø¡£\n");
+                return notify_fail("ä½ é‚„åœ¨æˆ°é¬¥ä¸­,æ²’æ™‚é–“åœä¸‹ä¾†èšæ°£ã€‚\n");
          
 	if( !me->query("vision") )
-      		return notify_fail("Äã¿´²»¼ûÄ¿±ê£¬Ã»°ì·¨µ¼Æø !!\n"); 
+      		return notify_fail("ä½ çœ‹ä¸è¦‹ç›®æ¨™ï¼Œæ²’è¾¦æ³•å°æ°£ !!\n"); 
 	
 	if( me->query("weapon1") && ( me->query("weapon2") ||
 	     me->query("armor/shield") ) )
-	    return notify_fail( "ÄãÃ»ÓĞ¶àâÅµÄÊÖÀ´µ¼Æø !!\n" );
+	    return notify_fail( "ä½ æ²’æœ‰å¤šé¤˜çš„æ‰‹ä¾†å°æ°£ !!\n" );
 
         if( me->query_temp("no_concentrate"))
-            return notify_fail("ÄãµÄ×¢ÒâÁ¦»¹²»ÄÜ¼¯ÖĞ,ÎŞ·¨×¨ĞÄ¡£\n") ;
+            return notify_fail("ä½ çš„æ³¨æ„åŠ›é‚„ä¸èƒ½é›†ä¸­,ç„¡æ³•å°ˆå¿ƒã€‚\n") ;
 
         if(!( !(target->query_current_attacker()) ))
-                return notify_fail("ÄãµÄÄ¿±ê»¹ÔÚÕ½¶·ÖĞ,Ã»Ê±¼äÍ£ÏÂÀ´ÈÃÄãµ¼Æø¡£\n");
+                return notify_fail("ä½ çš„ç›®æ¨™é‚„åœ¨æˆ°é¬¥ä¸­,æ²’æ™‚é–“åœä¸‹ä¾†è®“ä½ å°æ°£ã€‚\n");
        
         switch(type)
                {
@@ -84,7 +84,7 @@ int cmd_douin(string str)
 
         acu_pts = target->query_temp("acupuncted_pts") ;
         if(!(acu_pts)) return notify_fail
-            ("¹âµ¼Æø,²»Ê©ÕëÊÇ¿´²»³öÊ²÷áĞ§¹ûµÄ¡£\n") ;
+            ("å…‰å°æ°£,ä¸æ–½é‡æ˜¯çœ‹ä¸å‡ºä»€éº¼æ•ˆæœçš„ã€‚\n") ;
      
         eff_no  = USE_POINTS->check_allwork(acu_pts) ;
         if(eff_no!=0)
@@ -92,51 +92,51 @@ int cmd_douin(string str)
              eff_file = USE_POINTS->query_eff_file(eff_no) ; 
         
              if( file_size( eff_file + ".c" ) == -1 )
-               return notify_fail("Õë¾ÄÖĞµÄĞ§¹û²¿·İµµ°¸ÊÜËğ,ÇëÓëÎ×Ê¦Á¬Ïµ¡£\n") ;
+               return notify_fail("é‡ç¸ä¸­çš„æ•ˆæœéƒ¨ä»½æª”æ¡ˆå—æ,è«‹èˆ‡å·«å¸«é€£ç¹«ã€‚\n") ;
            }
         else
           {
              sp_cost = eff_lv*20 ;
              if((int)this_player()->query("spell_points")<sp_cost)
-                  return notify_fail("ÄãÏÖÓĞµÄ¾«Éñ²»×ãÒÔËÍ³öÕâ÷áÇ¿µÄÆø¡£");
+                  return notify_fail("ä½ ç¾æœ‰çš„ç²¾ç¥ä¸è¶³ä»¥é€å‡ºé€™éº¼å¼·çš„æ°£ã€‚");
 
              this_player()->set_temp("block_command",1) ;
              this_player()->receive_damage(eff_lv*10) ;
              this_player()->add("spell_points",-sp_cost) ;
              this_player()->block_attack(3) ;
-             me->set_temp("msg_stop_attack","Äã¾õµÃÈ«Éí¾çÍ´,ÎŞ·¨¶¯µ¯¡£\n" ) ;
+             me->set_temp("msg_stop_attack","ä½ è¦ºå¾—å…¨èº«åŠ‡ç—›,ç„¡æ³•å‹•å½ˆã€‚\n" ) ;
              target->receive_damage(eff_lv*3) ;             
              target->delete_temp("acupuncted_pts") ;
              
              tell_object( target,
-                "Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬µ«ÊÇÍ»È»ÄãÈ«Éí¿ªÊ¼¾çÍ´....¡£\n"
+                "ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼Œä½†æ˜¯çªç„¶ä½ å…¨èº«é–‹å§‹åŠ‡ç—›....ã€‚\n"
                 ) ;
                 
              tell_room( environment(target),
-                        sprintf("%sµÄÁ³¿ªÊ¼·¢ºì, ºìµÃÏñÊÇÒªÉø³öÑªÀ´ÁË¡£\n"
+                        sprintf("%sçš„è‡‰é–‹å§‹ç™¼ç´…, ç´…å¾—åƒæ˜¯è¦æ»²å‡ºè¡€ä¾†äº†ã€‚\n"
                        ,target->query("c_name")),target );
             
              tell_object( this_player(),
-                "ÄãÍ»È»·¢ÏÖ¶Ô·½ÑªÆøÏòÄã¼¤ÌÀ¹ıÀ´,µ±ÄãÏëÊÕÊÖÒÑ¾­À´²»¼°....¡£\n"
+                "ä½ çªç„¶ç™¼ç¾å°æ–¹è¡€æ°£å‘ä½ æ¿€æ¹¯éä¾†,ç•¶ä½ æƒ³æ”¶æ‰‹å·²ç¶“ä¾†ä¸åŠ....ã€‚\n"
                      );
              call_out("remove_block",5,this_player()) ;
              return 1 ;                          
           }    
         if(eff_lv>skill)
-           return notify_fail("ÄãÏÖÔÚµÄÆø¹¦Ö»Ñ§µ½"+ temp +"¡£ \n"+
-                              "Ç¿ÒªÓÃ¸ü¸ß²ãµÄÆø, ¶ÔÄãÖ»ÊÇÓĞº¦ÎŞÒæ\n") ;
+           return notify_fail("ä½ ç¾åœ¨çš„æ°£åŠŸåªå­¸åˆ°"+ temp +"ã€‚ \n"+
+                              "å¼·è¦ç”¨æ›´é«˜å±¤çš„æ°£, å°ä½ åªæ˜¯æœ‰å®³ç„¡ç›Š\n") ;
            
         sp_cost = eff_file->query_sp_cost(eff_lv,skill) ;
         if((int)this_player()->query("spell_points")<sp_cost)
-           return notify_fail("ÄãÏÖÓĞµÄ¾«Éñ²»×ãÒÔËÍ³öÕâ÷áÇ¿µÄÆø¡£") ;
+           return notify_fail("ä½ ç¾æœ‰çš„ç²¾ç¥ä¸è¶³ä»¥é€å‡ºé€™éº¼å¼·çš„æ°£ã€‚") ;
         
         needed = eff_file->query_need_level() ;
-        if(!needed) return notify_fail("Ğ§¹û²¿·İµµ°¸Ëğ»µ¡£\n") ;
+        if(!needed) return notify_fail("æ•ˆæœéƒ¨ä»½æª”æ¡ˆæå£ã€‚\n") ;
                  
         if( needed > eff_lv)
            {
               temp = int_to_str(needed) ;
-              return notify_fail("Òª·¢»ÓĞ§¹û,ÖÁÉÙĞëÒª"+temp+"µÄÆø¹¦¡£\n");
+              return notify_fail("è¦ç™¼æ®æ•ˆæœ,è‡³å°‘é ˆè¦"+temp+"çš„æ°£åŠŸã€‚\n");
            }         
         this_player()->add("spell_points", -sp_cost );
         this_player()->gain_experience( eff_lv * 10 ) ;
@@ -150,14 +150,14 @@ string int_to_str(int arg)
       string temp ;     
       switch(arg)
             {
-              case 1 : temp = "µÚ¶ş²ã"; break ;
-              case 2 : temp = "µÚËÄ²ã"; break ;                
-              case 3 : temp = "µÚÁù²ã"; break ;              
-              case 4 : temp = "µÚ°Ë²ã"; break ;
-              case 5 : temp = "µÚÊ®²ã"; break ;
-              case 6 : temp = "µÚÊ®¶ş²ã"; break ;              
-              case 7 : temp = "µÚÊ®ËÄ²ã"; break ;
-              default: temp = "ÎåÂö¾ã¶Ï,²»Ô¶ÈËÊÀ" ;
+              case 1 : temp = "ç¬¬äºŒå±¤"; break ;
+              case 2 : temp = "ç¬¬å››å±¤"; break ;                
+              case 3 : temp = "ç¬¬å…­å±¤"; break ;              
+              case 4 : temp = "ç¬¬å…«å±¤"; break ;
+              case 5 : temp = "ç¬¬åå±¤"; break ;
+              case 6 : temp = "ç¬¬åäºŒå±¤"; break ;              
+              case 7 : temp = "ç¬¬åå››å±¤"; break ;
+              default: temp = "äº”è„ˆä¿±æ–·,ä¸é äººä¸–" ;
             }
       return temp ; 
 }
@@ -165,15 +165,15 @@ string int_to_str(int arg)
 int help()
 {
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: douin [³öÁ¦] on [Íæ¼Ò]
+æŒ‡ä»¤æ ¼å¼: douin [å‡ºåŠ›] on [ç©å®¶]
 
-  ÆøÊÇÎŞËù²»ÔÚµÄÄÜÁ¿, Ò½ÉúÄÜÒÔÕë¾ÄÅäºÏÆø¹¦ÎªÈËÃÇÁÆÉËÖÎ²¡, Éõ»ò
-ÔÚ¶ÌÊ±¼äÔöÇ¿ÈËµÄÄ³Ğ©ÄÜÁ¦¡£ÔÚÈ·¶¨ÏÂÕëµÄÑ¨µÀ¶¼ÕıÈ·áá, ±ã¿ÉÒÔÊ©ÒÔ
-µ¼ÒıÊõÀ´Ôö¿ìÆøµÄÁ÷¶¯, Ê¹µÃÕë¾ÄµÄĞ§¹ûÄÜÔÚ×î¶ÌµÄÊ±¼äÄÚÏÔÏÖ³öÀ´¡£
-¶øÆøµ¼³öµÄÁ¿¿ÉÒÔÉè¶¨Îª max, regular, normal, minor, mini  ÎåÖÖ
-Ò»°ã¶øÑÔ, Á¿Ô½´óÔòºÄÊ±Ô½¾Ã, ÏûºÄµÄ¾«ÉñÁ¦Ò²Ô½¶à, È»¶øÆäĞ§¹ûÒ²Ô½
-ºÃ¡£
-    Ö±½Ó´òdouin ¿ÉÒÔÖªµÀÄãÏÖÔÚËùÑ§¹ı,¶øÄÜÊ¹ÓÃµÄ×î´ó³öÁ¦¡£
+  æ°£æ˜¯ç„¡æ‰€ä¸åœ¨çš„èƒ½é‡, é†«ç”Ÿèƒ½ä»¥é‡ç¸é…åˆæ°£åŠŸç‚ºäººå€‘ç™‚å‚·æ²»ç—…, ç”šæˆ–
+åœ¨çŸ­æ™‚é–“å¢å¼·äººçš„æŸäº›èƒ½åŠ›ã€‚åœ¨ç¢ºå®šä¸‹é‡çš„ç©´é“éƒ½æ­£ç¢ºå¾Œ, ä¾¿å¯ä»¥æ–½ä»¥
+å°å¼•è¡“ä¾†å¢å¿«æ°£çš„æµå‹•, ä½¿å¾—é‡ç¸çš„æ•ˆæœèƒ½åœ¨æœ€çŸ­çš„æ™‚é–“å…§é¡¯ç¾å‡ºä¾†ã€‚
+è€Œæ°£å°å‡ºçš„é‡å¯ä»¥è¨­å®šç‚º max, regular, normal, minor, mini  äº”ç¨®
+ä¸€èˆ¬è€Œè¨€, é‡è¶Šå¤§å‰‡è€—æ™‚è¶Šä¹…, æ¶ˆè€—çš„ç²¾ç¥åŠ›ä¹Ÿè¶Šå¤š, ç„¶è€Œå…¶æ•ˆæœä¹Ÿè¶Š
+å¥½ã€‚
+    ç›´æ¥æ‰“douin å¯ä»¥çŸ¥é“ä½ ç¾åœ¨æ‰€å­¸é,è€Œèƒ½ä½¿ç”¨çš„æœ€å¤§å‡ºåŠ›ã€‚
 C_HELP
 		);
     return 1;

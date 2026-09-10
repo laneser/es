@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Spirit robe","ÁéÁ¦Ö®ÅÛ" );
+        set_name( "Spirit robe","éˆåŠ›ä¹‹è¢" );
         add( "id", ({ "robe","cloth" }) );
-        set_short( "ÁéÁ¦Ö®ÅÛ" );
+        set_short( "éˆåŠ›ä¹‹è¢" );
         set_long(
-                "Ò»¼ş¿´ÆğÀ´ÆÆÆÆÀÃÀÃµÄÅÛ×Ó£¬µ«È´ÓĞÖøÏàµ±²»´íµÄ·À»¤Á¦¡£\n"
+                "ä¸€ä»¶çœ‹èµ·ä¾†ç ´ç ´çˆ›çˆ›çš„è¢å­ï¼Œä½†å»æœ‰è‘—ç›¸ç•¶ä¸éŒ¯çš„é˜²è­·åŠ›ã€‚\n"
         );
-        set( "unit", "Áì" );
+        set( "unit", "é ˜" );
         set("material","cloth");
         set( "type", "body" );
         set( "armor_class", 26 );

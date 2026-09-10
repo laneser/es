@@ -5,8 +5,8 @@ inherit OBJECT;
 void create()
 {
    
-   set_name("bill","收据");
+   set_name("bill","鏀舵摎");
    
-   set_short("布施收据");
+   set_short("浣堟柦鏀舵摎");
    
 }    

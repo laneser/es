@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("golden scalemail", "»Æ½ğË÷×Ó¼×");
+        set_name("golden scalemail", "é»ƒé‡‘ç´¢å­ç”²");
         add( "id", ({ "mail" }) );
-        set_short("»Æ½ğË÷×Ó¼×");
+        set_short("é»ƒé‡‘ç´¢å­ç”²");
         set_long(
-                "Õâ¼ş»¤¼×ÄËÊÇÓÃÒ»Æ¬Æ¬µÄ»Æ½ğ½ôÃÜ·ìºÏ¶ø³É¡£\n"
+                "é€™ä»¶è­·ç”²ä¹ƒæ˜¯ç”¨ä¸€ç‰‡ç‰‡çš„é»ƒé‡‘ç·Šå¯†ç¸«åˆè€Œæˆã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "heavy_metal");
         set( "armor_class", 35 );

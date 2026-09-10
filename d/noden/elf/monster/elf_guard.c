@@ -6,12 +6,12 @@ void create()
 {
         ::create();
         set_level(14);
-        set_name( "Elf guard", "¾«ÁéÊØÎÀ" );
+        set_name( "Elf guard", "ç²¾éˆå®ˆè¡›" );
         add ("id", ({ "elf", "guard" }) );
-        set_short( "¾«ÁéÊØÎÀ" );
-        set("unit","Î»");
+        set_short( "ç²¾éˆå®ˆè¡›" );
+        set("unit","ä½");
         set_long(
-          "Õâ¸ö¾«ÁéÊØÎÀ¸ºÔğ±£»¤´ó²İÔ­µÄºÍÆ½£¬ËûÊÇÎ»³¬Ç¿Á¦Õ½Ê¿£¬ÇëÎğµÈÏĞÊÓÖ®¡£\n"
+          "é€™å€‹ç²¾éˆå®ˆè¡›è² è²¬ä¿è­·å¤§è‰åŸçš„å’Œå¹³ï¼Œä»–æ˜¯ä½è¶…å¼·åŠ›æˆ°å£«ï¼Œè«‹å‹¿ç­‰é–’è¦–ä¹‹ã€‚\n"
         );
         set("max_hp", 1000);
         set("hit_points", 1000);
@@ -25,7 +25,7 @@ void create()
         set("gender", "male");
         set("wealth/gold",35);
         set("race", "elf");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(LWEAPON"guard_sword");
         equip_armor(LARMOR"mail");

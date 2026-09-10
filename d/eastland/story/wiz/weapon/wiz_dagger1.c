@@ -2,14 +2,14 @@
 inherit WEAPON;
 void create()
 {
-	set_name("golden needle","¶É½Ù½ğÕë");
+	set_name("golden needle","æ¸¡åŠ«é‡‘é‡");
 	add ("id",({ "needle","dagger"}) );
-        set_short("¶É½Ù½ğÕë");
+        set_short("æ¸¡åŠ«é‡‘é‡");
 	set_long(@C_LONG
-ÕâÊÇÒ»°Ñ´¿½ğ´òÔìµÄÏ¸Õë£¬¼ÈÇáÇÒ±¡£¬ÈÍĞÔÆæ¼Ñ£¬ÄÃÀ´ÕëÖËÖÎ²¡ÊÇ×îºÃ²»¹ıÁË¡£
+é€™æ˜¯ä¸€æŠŠç´”é‡‘æ‰“é€ çš„ç´°é‡ï¼Œæ—¢è¼•ä¸”è–„ï¼ŒéŸŒæ€§å¥‡ä½³ï¼Œæ‹¿ä¾†é‡ç‚™æ²»ç—…æ˜¯æœ€å¥½ä¸éäº†ã€‚
 C_LONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
         setup_weapon("dagger", 30,19,33);
         set( "special_things",1);
 	set( "weight", 70 );

@@ -1,19 +1,19 @@
 #include <mudlib.h>
 
-#define FORCE ({ "ÁùºÏ", "ÐþÒõ", "×ÏÏ¼", "Ìì»ú", })
+#define FORCE ({ "å…­åˆ", "çŽ„é™°", "ç´«éœž", "å¤©æ©Ÿ", })
 
 inherit ROOM;
 
 void create()
 {
 	::create();
-        set_short("°ÁÃ·Ðù");
+        set_short("å‚²æ¢…è»’");
 	set("long","@@query_c_long");
 	set("long.txt", "Need Translation.\n");
 	set("c_long.txt",
-"ÕâÊÇÎèÄ«ÐùÄÚÈÃÊéÉúÃÇ¾²ÐÞµÄµØ·½, ÃûÔ»¡¸°ÁÃ·¡¹¡£¼òµ¥µÄ²¼ÖÃ¼ÓÉÏ\n"
-"Ò»×ùÌ´ÏãÂ¯, Äã¾õµÃÕâ¾ø¶ÔÊÇÒ»¸ö¾²ÐÞ(ponder)µÄºÃ³¡Ëù¡£¿ÕÆøÖÐÃÖÂþ\n"
-"ÖøÒ»¹ÉËàÄÂµÄÆøÏ¢, Ê¹ÈËºÜÈÝÒ×½øÈëÍüÎÒµÄ¾³½ç¡£\n");
+"é€™æ˜¯èˆžå¢¨è»’å…§è®“æ›¸ç”Ÿå€‘éœä¿®çš„åœ°æ–¹, åæ›°ã€Œå‚²æ¢…ã€ã€‚ç°¡å–®çš„ä½ˆç½®åŠ ä¸Š\n"
+"ä¸€åº§æª€é¦™çˆ, ä½ è¦ºå¾—é€™çµ•å°æ˜¯ä¸€å€‹éœä¿®(ponder)çš„å¥½å ´æ‰€ã€‚ç©ºæ°£ä¸­ç€°æ¼«\n"
+"è‘—ä¸€è‚¡è‚…ç©†çš„æ°£æ¯, ä½¿äººå¾ˆå®¹æ˜“é€²å…¥å¿˜æˆ‘çš„å¢ƒç•Œã€‚\n");
 	set("light", 1);
 	set("has_one", 0);
 	set("exits", ([ 
@@ -37,7 +37,7 @@ string query_c_long()
 		return query("c_long.txt");
 	else
 		return ( query("c_long.txt")+"    "+me->query("c_name")+
-			"Õý¶Ë×øÔÚÆÑÍÅÉÏ¾²ÐÞ¡£\n" );
+			"æ­£ç«¯ååœ¨è’²åœ˜ä¸Šéœä¿®ã€‚\n" );
 }
 
 void init()
@@ -52,13 +52,13 @@ int to_ponder(string arg)
 	me = this_player();
 	if( arg ) return 0;
 	if( query("has_one") ) {
-	  write("ÒÑ¾­ÓÐÈË½Ý×ãÏÈµÇÁË, ÄãÕÒ²»µ½ºÃµØ·½×øÏÂÀ´¾²ÐÞ¡£\n");
+	  write("å·²ç¶“æœ‰äººæ·è¶³å…ˆç™»äº†, ä½ æ‰¾ä¸åˆ°å¥½åœ°æ–¹åä¸‹ä¾†éœä¿®ã€‚\n");
 	  return 1;
 	}
 	set("has_one", me);
-	write("Äã¾²ÏÂÐÄÀ´¶Ë×øÔÚÆÑÍÅÉÏ, Ë¼ÏëÖð½¥¿ÕÃ÷, ½øÈëÍüÎÒÖ®¾³...\n");
+	write("ä½ éœä¸‹å¿ƒä¾†ç«¯ååœ¨è’²åœ˜ä¸Š, æ€æƒ³é€æ¼¸ç©ºæ˜Ž, é€²å…¥å¿˜æˆ‘ä¹‹å¢ƒ...\n");
 	tell_room(this_object(),
-		me->query("c_name")+"¶Ë×øì¶ÆÑÍÅÉÏ, Ë«ÑÛÎ¢±Õ, ½øÈëÍüÎÒÖ®¾³¡£\n"
+		me->query("c_name")+"ç«¯åæ–¼è’²åœ˜ä¸Š, é›™çœ¼å¾®é–‰, é€²å…¥å¿˜æˆ‘ä¹‹å¢ƒã€‚\n"
 		, me);
 	me->set_temp("block_command", 1);
 	call_out("result", 3+random(3), me, 0, this_object());
@@ -86,13 +86,13 @@ void result(object me, int count, object place)
 	place->set("has_one", 0);
 	me->delete_temp("block_command");
 	tell_object(me,
-		"ÄãµÄË¼ÏëÖð½¥ÇåÏ¤, ÖÕì¶»Øµ½ÁËÏÖÊµ¡£\n");
+		"ä½ çš„æ€æƒ³é€æ¼¸æ¸…æ‚‰, çµ‚æ–¼å›žåˆ°äº†ç¾å¯¦ã€‚\n");
 	if( random((int)me->query_level()) > 15 &&
 		(int)me->query("force_effect") < 3 ) {
 		mtd = FORCE[random(sizeof(FORCE))];
 		tell_object(me, 
-			"....... Äã¾¹Îò³öÁË"+set_color(mtd+"ÐÄ·¨", "HIY", me)+"!!\n"+
-			"Í»È»Äã¸Ðµ½Ò»¹ÉÐÜÐÜµÄÄÚÁ¦Ó¿Ïòµ¤Ìï!!\n");
+			"....... ä½ ç«Ÿæ‚Ÿå‡ºäº†"+set_color(mtd+"å¿ƒæ³•", "HIY", me)+"!!\n"+
+			"çªç„¶ä½ æ„Ÿåˆ°ä¸€è‚¡ç†Šç†Šçš„å…§åŠ›æ¹§å‘ä¸¹ç”°!!\n");
 		me->add("force_effect", 1);
 		me->set("force_points", (int)me->query("max_fp"));
 	}
@@ -100,12 +100,12 @@ void result(object me, int count, object place)
           if (!me->query("scholar_gonfu/couples_sword"))
              if (me->query_level() > 17) {
                me->set("scholar_gonfu/couples_sword",1);
-               tell_object(me,set_color("ÄãÍ»È»Îò³öÁË¶àÇé½£·¨µÄÕæÒå¡£\n","HIR"));
-               tell_object(me,"Äã¿ÉÒÔ enhant couples_sword À´Ê©Õ¹¶àÇé½£·¨¡£\n");
+               tell_object(me,set_color("ä½ çªç„¶æ‚Ÿå‡ºäº†å¤šæƒ…åŠæ³•çš„çœŸç¾©ã€‚\n","HIR"));
+               tell_object(me,"ä½ å¯ä»¥ enhant couples_sword ä¾†æ–½å±•å¤šæƒ…åŠæ³•ã€‚\n");
                me->delete("couples");
              }
 	tell_room(place,
-		me->query("c_name")+"´ÓÆÑÍÅÉÏÕ¾ÁËÆðÀ´¡£\n" , me);
+		me->query("c_name")+"å¾žè’²åœ˜ä¸Šç«™äº†èµ·ä¾†ã€‚\n" , me);
 }
 void reset()
 {

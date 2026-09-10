@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "dirty coat", "ÔàÍâÌ×" );
+	set_name( "dirty coat", "é«’å¤–å¥—" );
 	add( "id", ({ "coat" }) );
-	set_short( "ÔàÍâÌ×" );
+	set_short( "é«’å¤–å¥—" );
 	set_long(
-		"Õâ¼şÍâÌ×ÉÏÂúÊÇÎÛÄàÓëÓÍ×Õ£¬»¹ÓĞÒ»¹ÉÅ¨Å¨µÄ¾Æ³ôÎ¶¡£\n"
+		"é€™ä»¶å¤–å¥—ä¸Šæ»¿æ˜¯æ±™æ³¥èˆ‡æ²¹æ¼¬ï¼Œé‚„æœ‰ä¸€è‚¡æ¿ƒæ¿ƒçš„é…’è‡­å‘³ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "cloak" );
 	set( "material", "cloth");
 	set( "armor_class", 1 );

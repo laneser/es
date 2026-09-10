@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Mithril LongSword","Ã×ËÕÀï³¤½£");
+        set_name("Mithril LongSword","ç±³è˜‡é‡Œé•·åŠ");
        add("id",({"sword","longsword",}) );
-       set_short("Ã×ËÕÀï³¤½£");
+       set_short("ç±³è˜‡é‡Œé•·åŠ");
       	set_long(
-           "°«ÈËÓÃµÄÃ×ËÕÀï³¤½£\n"
+           "çŸ®äººç”¨çš„ç±³è˜‡é‡Œé•·åŠ\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 28 );
     set("type","longblade");
 	set( "min_damage", 10 );

@@ -24,14 +24,14 @@ int acu_effect(int level, object target)
 	target->delete("acupuncted_pts") ;
 	target->delete_temp("acupuncted_pts") ;	
 	
-	write(  "ÄãËæµØ×øÏÂ²¢Ç£Æð"+target->query("c_name")+
-		"µÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n" );
+	write(  "ä½ éš¨åœ°åä¸‹ä¸¦ç‰½èµ·"+target->query("c_name")+
+		"çš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n" );
 	tell_room( environment(me), 
-		me->query("c_name") + "ËæµØ×øÏÂ²¢Ç£Æð"
-		+target->query("c_name")+"µÄÊÖ,»º»º½«ÆøËÍ³öÈ¥¡£\n",
+		me->query("c_name") + "éš¨åœ°åä¸‹ä¸¦ç‰½èµ·"
+		+target->query("c_name")+"çš„æ‰‹,ç·©ç·©å°‡æ°£é€å‡ºåŽ»ã€‚\n",
 		({ me ,target}) );
         tell_object(target,me->query("c_name") + 
-                           "ËæµØ×øÏÂ²¢Ç£ÆðÄãµÄÊÖ,»º»º½«ÆøËÍ½øÀ´¡£\n" ) ;
+                           "éš¨åœ°åä¸‹ä¸¦ç‰½èµ·ä½ çš„æ‰‹,ç·©ç·©å°‡æ°£é€é€²ä¾†ã€‚\n" ) ;
 
 	call_out( "effect", delay_time, level, me, target );
 	return 1;
@@ -42,17 +42,17 @@ void effect(int level, object caster, object dest)
 	if( !dest || !present(dest, environment(caster)) ) 
 	{
 	  tell_object( caster, 
-	    "²»ÖªÔõ÷áµÄ,Ò²ÐíÊÇ¾õµÃÄãÊÇ¸öÃÉ¹Å´ó·ò¡£×ÜÖ®,ÄãµÄ»¼Õß×ßµôÁË¡£\n");
+	    "ä¸çŸ¥æ€Žéº¼çš„,ä¹Ÿè¨±æ˜¯è¦ºå¾—ä½ æ˜¯å€‹è’™å¤å¤§å¤«ã€‚ç¸½ä¹‹,ä½ çš„æ‚£è€…èµ°æŽ‰äº†ã€‚\n");
 	  return;
 	}
 	
 	tell_object( dest,
-	    "Äã¾õµÃÌåÄÚµÄÑªÆø¿ªÊ¼¿ìËÙÁ÷¶¯£¬µ«ÊÇÄãÈ«ÉíÍ»È»¿ªÊ¼¾çÍ´....¡£\n");
+	    "ä½ è¦ºå¾—é«”å…§çš„è¡€æ°£é–‹å§‹å¿«é€Ÿæµå‹•ï¼Œä½†æ˜¯ä½ å…¨èº«çªç„¶é–‹å§‹åŠ‡ç—›....ã€‚\n");
 	tell_room( environment(dest), 
-	        dest->query("c_name")+"µÄÁ³¿ªÊ¼·¢ºì, ºìµÃÏñÊÇÒªÉø³öÑªÀ´ÁË¡£\n"
+	        dest->query("c_name")+"çš„è‡‰é–‹å§‹ç™¼ç´…, ç´…å¾—åƒæ˜¯è¦æ»²å‡ºè¡€ä¾†äº†ã€‚\n"
 		,dest );
 	tell_object( caster,
-	    "ÄãÍ»È»·¢ÏÖ¶Ô·½ÑªÆøÏòÄã¼¤ÌÀ¹ýÀ´,µ±ÄãÏëÊÕÊÖÒÑ¾­À´²»¼°....¡£\n");
+	    "ä½ çªç„¶ç™¼ç¾å°æ–¹è¡€æ°£å‘ä½ æ¿€æ¹¯éŽä¾†,ç•¶ä½ æƒ³æ”¶æ‰‹å·²ç¶“ä¾†ä¸åŠ....ã€‚\n");
 	dest->receive_damage( level * 5 );        
 	caster->receive_damage( level * 5 );        
         return ;

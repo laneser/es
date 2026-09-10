@@ -8,17 +8,17 @@ void create ()
 	object ob;
 	::create();
     set_level(3);
-    set_name("lost thief","ÃÔÂ·µÄĞ¡Ôô");
+    set_name("lost thief","è¿·è·¯çš„å°è³Š");
     add ("id", ({ "thief"}) );
-    set_short("ÃÔÂ·µÄĞ¡Ôô");
+    set_short("è¿·è·¯çš„å°è³Š");
 	set_long(@LONG
-Ò»¸öÃÔÂ·µÄĞ¡Ôô,Ëû²¢²»ÄÜ·¢ÏÖ³öÂ·¶øÃÔÊ§ÔÚÕâÀï
+ä¸€å€‹è¿·è·¯çš„å°è³Š,ä»–ä¸¦ä¸èƒ½ç™¼ç¾å‡ºè·¯è€Œè¿·å¤±åœ¨é€™è£¡
 LONG
 	);
     set("alignment",-300);
     set( "gender", "male" );
     set( "race", "human");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",  6);
 	set_skill("dagger",30);
     set ("max_hp",75);
@@ -31,7 +31,7 @@ LONG
     set ("weight", 350);
     set("chat_chance",15);
     set("chat_output",({
-        "Ğ¡ÔôËµ:Ë­ÄÜ¸æËßÎÒÈçºÎÀë¿ªÕâÀïÄØ ?\n"
+        "å°è³Šèªª:èª°èƒ½å‘Šè¨´æˆ‘å¦‚ä½•é›¢é–‹é€™è£¡å‘¢ ?\n"
        }) );
     wield_weapon(Weapon"/dagger06");
     ob = new(Object"/opiate");

@@ -2,15 +2,15 @@
 inherit WEAPON;
 void create()
 {
-	set_name("ice-ghost","±ù¾«");
+	set_name("ice-ghost","å†°ç²¾");
 	add ("id",({ "dagger","ghost","ice"}) );
-        set_short("±ù¾«");
+        set_short("å†°ç²¾");
 	set_long(@C_LONG
-ÕâÊÇÒ»¿éÇ§Äêº®±ùµÄ¾«»ª£¬ËäÈ»»ëÉíÔ²¶ÛÉĞÎ´¼ÓÒÔ×ÁÄ¥£¬µ«Ëüº®Æø±ÆÈË£¬±¦¹âÍ¸¶¥
-£¬ÊÇ¿éè±Óñ¡£  
+é€™æ˜¯ä¸€å¡Šåƒå¹´å¯’å†°çš„ç²¾è¯ï¼Œé›–ç„¶æ¸¾èº«åœ“éˆå°šæœªåŠ ä»¥ç¢ç£¨ï¼Œä½†å®ƒå¯’æ°£é€¼äººï¼Œå¯¶å…‰é€é ‚
+ï¼Œæ˜¯å¡Šç’ç‰ã€‚  
 C_LONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
         setup_weapon("dagger", 20,13,20);
         set( "special_things",1);
 	set( "weight", 50 );

@@ -34,10 +34,10 @@ void setup_race_body()
 //	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 7);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¿ÚÒ§ÏÂ", "%sÃÍõß%sÒ»ÍÈ",
-		"%sºİºİµÄÍù%sÒ§ÏÂ", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "Ç°½Å", "áá½Å", "Í·²¿",
-		"´¥½Ç", "³á°ò", "Ğ¡¸¹", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€å£å’¬ä¸‹", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sç‹ ç‹ çš„å¾€%så’¬ä¸‹", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å‰è…³", "å¾Œè…³", "é ­éƒ¨",
+		"è§¸è§’", "ç¿…è†€", "å°è…¹", }) );
 }
 
 // These functions are used for race Insect.

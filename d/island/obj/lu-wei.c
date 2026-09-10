@@ -15,14 +15,14 @@ void create()
 {
         
         seteuid(getuid());
-	set_name("lu wei","ÁúÃÅÂ±Î¶");
+	set_name("lu wei","é¾é–€æ»·å‘³");
 	add( "id" , ({ "lu","wei" }) );
-   set_short("ÁúÃÅÂ±Î¶");
+   set_short("é¾é–€æ»·å‘³");
    set_long(@LONG
-ÁúÃÅ¿ÍÕ»ÌØÖÆÊ²½õÂ±Î¶£¬×¨ÎªÄúÏÂ¾ÆÓÃµÄĞ¡²Ë¡£
+é¾é–€å®¢æ£§ç‰¹è£½ä»€éŒ¦æ»·å‘³ï¼Œå°ˆç‚ºæ‚¨ä¸‹é…’ç”¨çš„å°èœã€‚
 LONG
 	);
-   	set("unit","ÅÌ");
+   	set("unit","ç›¤");
    	set("weight", 10);
    	set("value",({ 150, "silver" }) );
 	call_out("be_spoiled", SPOILED_TIME );
@@ -37,17 +37,17 @@ int eat_food(string arg)
 	 {
 		write(@LONG
 		
-ÍÛ!ËáµôÁË¡«¡«¡«À´²»¼±ÁËÄãÒÑ¾­ÍÌÏÂÈ¥ÁË£¡Äã¶Ç×Ó¹Ö¹ÖµÄ£¬¿ÉÄÜÉú²¡ÁË¡£
+å“‡!é…¸æ‰äº†ï½ï½ï½ä¾†ä¸æ€¥äº†ä½ å·²ç¶“åä¸‹å»äº†ï¼ä½ è‚šå­æ€ªæ€ªçš„ï¼Œå¯èƒ½ç”Ÿç—…äº†ã€‚
 
 LONG
      );	
         SICK->apply_effect(this_player(),5,10,5);    
-     	tell_room( environment(this_player()),this_player()->query("c_name")+"³ÔÁËÒ»¿ÚÂ±Î¶£¬Á³É«¹Ö¹ÖµÄ£¬¿ÉÄÜÊÇÂ±Î¶»µÁË...\n", this_player());
+     	tell_room( environment(this_player()),this_player()->query("c_name")+"åƒäº†ä¸€å£æ»·å‘³ï¼Œè‡‰è‰²æ€ªæ€ªçš„ï¼Œå¯èƒ½æ˜¯æ»·å‘³å£äº†...\n", this_player());
 		}
 	        else {
-		write( "¹ûÈ»ÊÇÃû²»Ğé´«µÄÂ±Î¶£¬ÒªÊÇÄÜºÈĞ©¾Æ¾Í¸üºÃÁË...:)\n" );
+		write( "æœç„¶æ˜¯åä¸è™›å‚³çš„æ»·å‘³ï¼Œè¦æ˜¯èƒ½å–äº›é…’å°±æ›´å¥½äº†...:)\n" );
 		tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"ÕÅ´óÁË¿Ú£¬ÈıÁ½ÏÂ¾Í°ÑÂ±Î¶³ÔÍêÁË¡£\n" , this_player());
+		this_player()->query("c_name")+"å¼µå¤§äº†å£ï¼Œä¸‰å…©ä¸‹å°±æŠŠæ»·å‘³åƒå®Œäº†ã€‚\n" , this_player());
 		this_player()->receive_healing( 20+random(20) );
 	}
 	remove();
@@ -59,13 +59,13 @@ void be_spoiled()
 	object owner;
 	owner = environment(this_object());
 	set ("value", ({ 1, "silver" }));
-	set_short("ÁúÃÅÂ±Î¶(·¢Ëá)");
+	set_short("é¾é–€æ»·å‘³(ç™¼é…¸)");
 	set_long(@LONG
-ÁúÃÅ¿ÍÕ»ÌØÖÆÊ²½õÂ±Î¶£¬×¨ÎªÄúÏÂ¾ÆÓÃµÄĞ¡²Ë¡£(ÒÑ¾­ËáÁË£¬²»ÖªµÀÄÜ²»ÄÜ³Ô)	
+é¾é–€å®¢æ£§ç‰¹è£½ä»€éŒ¦æ»·å‘³ï¼Œå°ˆç‚ºæ‚¨ä¸‹é…’ç”¨çš„å°èœã€‚(å·²ç¶“é…¸äº†ï¼Œä¸çŸ¥é“èƒ½ä¸èƒ½åƒ)	
 LONG
       );
 	set("spoiled",1);
-	tell_object( owner,"ºÃÏñÓĞ¹ÉËáÎ¶£¬ÊÇÄãµÄÍà×Ó´«³öÀ´µÄÂğ?\n" );
+	tell_object( owner,"å¥½åƒæœ‰è‚¡é…¸å‘³ï¼Œæ˜¯ä½ çš„è¥ªå­å‚³å‡ºä¾†çš„å—?\n" );
 }
 
 

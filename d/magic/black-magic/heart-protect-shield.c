@@ -119,26 +119,26 @@ int cast(int level)
 	chinese_mode = can_read_chinese();
 
 	if( (int)me->query_skill(TYPE) < query_need_skill(level) ) {
-	  tell_object( me, "ÄãµÄ"+to_chinese(TYPE)+"¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n" );
+	  tell_object( me, "ä½ çš„"+to_chinese(TYPE)+"æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n" );
       return 0;
     }
 	
     if( me->query_temp("effect/heart-protect-shield") ) {
-      tell_object( me, "ÄãÉÏÒ»¸öÄ§·¨»¤ÐÄ¶Ü»¹Ã»ÏûÊ§ÄØ! ±ðÀË·Ñ·¨Á¦ÁË¡£\n" );
+      tell_object( me, "ä½ ä¸Šä¸€å€‹é­”æ³•è­·å¿ƒç›¾é‚„æ²’æ¶ˆå¤±å‘¢! åˆ¥æµªè²»æ³•åŠ›äº†ã€‚\n" );
       return 0;
     }
 	ali = (int) me->query("alignment") ;
 	if ( ali > -200){
-		write( "ÄãÊ©Õ¹»¤ÐÄÖ®¶ÜÖäÎÄ£¬µ«ÊÇÈ´Ã»ÓÐÈÎºÎÊÂ·¢Éú¡£\n");
-		tell_room( environment(me), me->query("c_name") + "à«à«µØÄîÁËÒ»¶ÎÖäÎÄ£¬µ«ÊÇÈ´Ã»ÓÐÈÎºÎÊÂ·¢Éú¡£\n" , me);
+		write( "ä½ æ–½å±•è­·å¿ƒä¹‹ç›¾å’’æ–‡ï¼Œä½†æ˜¯å»æ²’æœ‰ä»»ä½•äº‹ç™¼ç”Ÿã€‚\n");
+		tell_room( environment(me), me->query("c_name") + "å–ƒå–ƒåœ°å¿µäº†ä¸€æ®µå’’æ–‡ï¼Œä½†æ˜¯å»æ²’æœ‰ä»»ä½•äº‹ç™¼ç”Ÿã€‚\n" , me);
 	return 1;
 	}
 
-	write( "ÄãÊ©Õ¹»¤ÐÄÖ®¶ÜÖäÎÄ£¬ÔÚÄãµÄÃæÇ°Öð½¥ÐÎ³ÉÒ»²ãÎÞÐÎµÄÁ¦³¡¡£\n");
+	write( "ä½ æ–½å±•è­·å¿ƒä¹‹ç›¾å’’æ–‡ï¼Œåœ¨ä½ çš„é¢å‰é€æ¼¸å½¢æˆä¸€å±¤ç„¡å½¢çš„åŠ›å ´ã€‚\n");
 	tell_room( environment(me), 
 		me->query("c_name") 
-		+ "à«à«µØÄîÁËÒ»¶ÎÖäÎÄ£¬Ò»¹ÉÐ°¶ñµÄÁ¦Á¿ÔÚ"+
-		me->query("c_name")+"µÄÃæÇ°Öð½¥ÐÎ³ÉÒ»²ãÎÞÐÎµÄÁ¦³¡¡£\n" ,	me
+		+ "å–ƒå–ƒåœ°å¿µäº†ä¸€æ®µå’’æ–‡ï¼Œä¸€è‚¡é‚ªæƒ¡çš„åŠ›é‡åœ¨"+
+		me->query("c_name")+"çš„é¢å‰é€æ¼¸å½¢æˆä¸€å±¤ç„¡å½¢çš„åŠ›å ´ã€‚\n" ,	me
 	);
 	gain_spell_experience(me, TYPE, query_gain_spell_exp(level));
 	me->set_temp("effect/heart-protect-shield", 1);
@@ -155,7 +155,7 @@ int cast(int level)
 void release( object caster, int level )
 {
     if( !caster ) return;
-    tell_object( caster , "Äã¸Ð¾õµ½ÄãµÄÄ§·¨»¤ÐÄ¶ÜËÆºõÏûÊ§ÁË¡£\n" );
+    tell_object( caster , "ä½ æ„Ÿè¦ºåˆ°ä½ çš„é­”æ³•è­·å¿ƒç›¾ä¼¼ä¹Žæ¶ˆå¤±äº†ã€‚\n" );
     caster->apply_special_defense("evil", -query_proportion(level) );
     caster->apply_special_defense("divine", query_reverse_proportion(level) );
     caster->set_temp("effect/heart-protect-shield", 0);

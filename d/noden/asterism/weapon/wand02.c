@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "sleet wand", "±ù¾§ÕÈ" );
+	set_name( "sleet wand", "å†°æ™¶æ–" );
 	add( "id", ({ "wand" }) );
-	set_short( "±ù¾§ÕÈ" );
+	set_short( "å†°æ™¶æ–" );
 	set_long(
-		"ÕâÊÇÒ»°Ñ±ù¾§ÕÈ£¬Èç¹ûÄã¶ÔÄ§·¨ÎäÆ÷ÓĞÑĞ¾¿µÄ»°£¬Õâ¸öÎäÆ÷\n"
-		"½«»áÊÇ²»´íµÄÑ¡Ôñ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠå†°æ™¶æ–ï¼Œå¦‚æœä½ å°é­”æ³•æ­¦å™¨æœ‰ç ”ç©¶çš„è©±ï¼Œé€™å€‹æ­¦å™¨\n"
+		"å°‡æœƒæ˜¯ä¸éŒ¯çš„é¸æ“‡ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "wand" );
 	set( "weapon_class", 23 );
 	set( "min_damage", 14 );
@@ -25,5 +25,5 @@ void create()
 	set( "max_charge", 10 );
 	set( "special_damage_type", "cold" );
 	set( "special_damage", 35 );
-	set( "special_c_msg", "´ÓÕÈÍ·Åç³öÒ»ÍÅ±ù±©£¡" );
+	set( "special_c_msg", "å¾æ–é ­å™´å‡ºä¸€åœ˜å†°æš´ï¼" );
 }

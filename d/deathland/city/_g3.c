@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("����Ĺ��");
+	ob->set_short("矮人墓場");
 	ob->set_long( @LONG_DESCRIPTION
-�����ǰ��˹��ȵ�Ĺ��,Ĺ���������һЩӢ��ս����ʿ���ĹǺ�.ÿһ��Ĺ��
-�ĵ��¶���һ��Ӣ�µ���갲Ϣ��.
+這裡是矮人國度的墓場,墓場裡埋藏著一些英勇戰死的士兵的骨骸.每一座墓碑
+的底下都有一個英勇的靈魂安息著.
 LONG_DESCRIPTION
 	);
 

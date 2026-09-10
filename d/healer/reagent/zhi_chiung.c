@@ -3,15 +3,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "zhi chiung", "Öªñ·²İ" );
+	set_name( "zhi chiung", "çŸ¥ç©¹è‰" );
 	add("id",({"grass","chiung"}) );
-	set_short("Öªñ·²İ" );
+	set_short("çŸ¥ç©¹è‰" );
 	set_long(
-	"Öªñ·²İÉú³¤ÔÚ¿í¹ãµÄ²İÔ­, °«°«µÄ, ´óÔ¼Ö»ÓĞÁ½´ç¡£\n"
-	"Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+	"çŸ¥ç©¹è‰ç”Ÿé•·åœ¨å¯¬å»£çš„è‰åŸ, çŸ®çŸ®çš„, å¤§ç´„åªæœ‰å…©å¯¸ã€‚\n"
+	"ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "ZHI_CHIUNG" );
-	set( "unit", "Öê" );
+	set( "unit", "æ ª" );
         set( "weight", 1 );
 	set( "savour","bitter");
 	set( "effect","weak");

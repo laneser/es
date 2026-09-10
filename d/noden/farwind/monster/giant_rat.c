@@ -6,19 +6,19 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name( "giant rat", "¾ŞÀÏÊó" );
+	set_name( "giant rat", "å·¨è€é¼ " );
 	add( "id", ({ "rat" }) );
-	set_short( "¾ŞÀÏÊó" );
+	set_short( "å·¨è€é¼ " );
 	set_long(
-		"Ò»Ö»¾Ş´óµÄÀÏÊó£¬Äã»³ÒÉÊÀ½çÉÏÓĞÃ»ÓĞÄÄÒ»Ö»Ã¨ÄÜ´òÓ®ÕâÖ»ÀÏÊó¡£\n"
+		"ä¸€éš»å·¨å¤§çš„è€é¼ ï¼Œä½ æ‡·ç–‘ä¸–ç•Œä¸Šæœ‰æ²’æœ‰å“ªä¸€éš»è²“èƒ½æ‰“è´é€™éš»è€é¼ ã€‚\n"
 	);
 	set_perm_stat("dex", 5 );
 	set_perm_stat("str", 7 );
 
-	set_c_verbs( ({ "%sÓÃ×¦×ÓÂÒ×¥%s", "%sÕÅ×ìÍù%sÒ§ÏÂ" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ááÍÈ", "Î²°Í" }) );
+	set_c_verbs( ({ "%sç”¨çˆªå­äº‚æŠ“%s", "%så¼µå˜´å¾€%så’¬ä¸‹" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰çˆª", "å¾Œè…¿", "å°¾å·´" }) );
 
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "natural_armor_class", 18 );
 	set( "natural_weapon_class1", 9 );
 	set( "natural_min_damage1", 5 );

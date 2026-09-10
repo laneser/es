@@ -10,7 +10,7 @@ void create()
 {
 	::create();
 	set("light", 1);
-    set_short( "Ted\'s Corner","Ì©µÂµÄ½ÇÂä" );
+    set_short( "Ted\'s Corner","æ³°å¾·çš„è§’è½" );
     set_long(
 @LONG
 The room was lit dimly enough to be cozy, but not so dark as
@@ -20,8 +20,8 @@ is a menu pinned on the south wall.
 LONG
 ,
 @CLONG
-ÕâÊÇÒ»¼äÓÐµã°µÈ´ÓÖ²»Ì«°µµÄÐ¡µê. Ìì»¨°åÉÏµõÖøÒ»¸öºÚ÷î÷îµÄÓÍµÆ.
-ÄÏ±ßÇ½ÉÏ¶¤ÁËÒ»¸öÄ¿Â¼ (menu).
+é€™æ˜¯ä¸€é–“æœ‰é»žæš—å»åˆä¸å¤ªæš—çš„å°åº—. å¤©èŠ±æ¿ä¸ŠåŠè‘—ä¸€å€‹é»‘é»é»çš„æ²¹ç‡ˆ.
+å—é‚Šç‰†ä¸Šé‡˜äº†ä¸€å€‹ç›®éŒ„ (menu).
  
 CLONG
     );
@@ -50,17 +50,17 @@ MENU
     set("c_item_desc",([
     "menu":
 @CMENU
-Ì©µÂµÄ½ÇÂä -- ¸½½üÎ¨Ò»ÓÐÂôÒûÁÏµÄµØ·½.
+æ³°å¾·çš„è§’è½ -- é™„è¿‘å”¯ä¸€æœ‰è³£é£²æ–™çš„åœ°æ–¹.
 ----------------------------------------------------------------
-¿É¿Ú¿ÉÀÖ (Coke)    50 silvers
-°ÙÊÂ¿ÉÀÖ (Pepsi)   50 silvers
+å¯å£å¯æ¨‚ (Coke)    50 silvers
+ç™¾äº‹å¯æ¨‚ (Pepsi)   50 silvers
  
-·üÌØ¼Ó (Vodka)     75 silvers
+ä¼ç‰¹åŠ  (Vodka)     75 silvers
  
-Ë® (Water)         10 silvers
+æ°´ (Water)         10 silvers
 ----------------------------------------------------------------
-Çë±¸Í×ÁãÇ®Ö±½ÓÏòÌ©µÂ order.
-(ÐÂÒûÁÏ»áÂ½ÐøÍÆ³ö, ÈçÓÐ½¨ÒéÇë post)
+è«‹å‚™å¦¥é›¶éŒ¢ç›´æŽ¥å‘æ³°å¾· order.
+(æ–°é£²æ–™æœƒé™¸çºŒæŽ¨å‡º, å¦‚æœ‰å»ºè­°è«‹ post)
 CMENU
                 ]) );
 }
@@ -99,13 +99,13 @@ int order_drink(string str)
     if (ob->move(this_player())!=MOVE_OK) {
         ob->remove();
         write(can_read_chinese()?
-        "Ì©µÂ¸æËßÄã: ÄãÄÃ²»¶¯Õâ¸öÒûÁÏ.\n":
+        "æ³°å¾·å‘Šè¨´ä½ : ä½ æ‹¿ä¸å‹•é€™å€‹é£²æ–™.\n":
         "Ted tells you: Your hands are too full to take this.\n");
         return 1;
     }
     if (!this_player()->debit(value[1],value[0])) {
         write(can_read_chinese()?
-        "Ì©µÂµÉÄãÒ»ÑÛ, ÀäÀäµØËµ: Ã»Ç®¾Í²»ÒªÀ´.\n":
+        "æ³°å¾·çžªä½ ä¸€çœ¼, å†·å†·åœ°èªª: æ²’éŒ¢å°±ä¸è¦ä¾†.\n":
         "Ted stares at you, and says, Hey man, you can't afford to buy this.\n");
         ob->remove();
         return 1;
@@ -113,11 +113,11 @@ int order_drink(string str)
     tell_room(environment(this_player()),({
         "Ted says out loud: One order of "+name+" coming up "+
         "for "+this_player()->query("cap_name")+".\n",
-        "Ì©µÂ´óÉùµØËµ: "+this_player()->query("c_name")+"µãÁËÒ»"+
+        "æ³°å¾·å¤§è²åœ°èªª: "+this_player()->query("c_name")+"é»žäº†ä¸€"+
         ob->query("unit")+ob->query("c_short")+".\n",
         }), ({this_object(),this_player()}));
     write(can_read_chinese()?
-        "Ì©µÂ×ß½üÄã, µÝ¸øÄãÒ»"+ob->query("unit")+ob->query("c_short")+".\n":
+        "æ³°å¾·èµ°è¿‘ä½ , éžçµ¦ä½ ä¸€"+ob->query("unit")+ob->query("c_short")+".\n":
         "Ted approaches you and says: Here you go. One "+
         ob->query("e_unit")+" of "+name+".\n");
     return 1;

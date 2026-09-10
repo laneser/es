@@ -2,7 +2,7 @@
 
 #include <mudlib.h>
 
-#define MESSAGE ({"¶×ÏÂÀ´¿ªÊ¼¼ì²éÂ·±ßµÄÒ°»¨...\n","ÄÃÖ»·Å´ó¾µ¶ÔµØÃæÃÍÇÆ...\n","ÔÚµØÉÏÍÚÁËºÃ´óÒ»¸ö¶´È»ááÌø½øÈ¥...\n","Å¿ÔÚµØÉÏ¶«ÕÅÎ÷Íû...\n","ÉìÊÖ²ÁÁË²Á¶îÍ·ÉÏµÄº¹Ë®...\n" })
+#define MESSAGE ({"è¹²ä¸‹ä¾†é–‹å§‹æª¢æŸ¥è·¯é‚Šçš„é‡èŠ±...\n","æ‹¿åªæ”¾å¤§é¡å°åœ°é¢çŒ›ç§...\n","åœ¨åœ°ä¸ŠæŒ–äº†å¥½å¤§ä¸€å€‹æ´ç„¶å¾Œè·³é€²å»...\n","è¶´åœ¨åœ°ä¸Šæ±å¼µè¥¿æœ›...\n","ä¼¸æ‰‹æ“¦äº†æ“¦é¡é ­ä¸Šçš„æ±—æ°´...\n" })
 inherit DAEMON;
 
 
@@ -16,27 +16,27 @@ int cmd_explore()
 	time = 5;
 	me = this_player();
     if( me->query_attacker() )
-        return notify_fail("Äã»¹ÔÚÕ½¶·à¸£¬²»Òª·ÖĞÄà¸...\n");
+        return notify_fail("ä½ é‚„åœ¨æˆ°é¬¥å–”ï¼Œä¸è¦åˆ†å¿ƒå–”...\n");
     if( me->query_temp("explore_busy") )
-    	return notify_fail("±ğÄÖÁË£¬Äã²»ÊÇÕıÔÚ×÷Âğ¡£ \n");
+    	return notify_fail("åˆ¥é¬§äº†ï¼Œä½ ä¸æ˜¯æ­£åœ¨ä½œå—ã€‚ \n");
 
 	env = environment(me);
 	
 	if( !env ) return 0;
     if( !env->query("outside") )
-        return notify_fail("ÕâÀïºÃÏñÃ»ÓĞÊ²÷áÌØ±ğÖµµÃ×¢ÒâµÄ×ÔÈ»Îï¡£ \n");	
+        return notify_fail("é€™è£¡å¥½åƒæ²’æœ‰ä»€éº¼ç‰¹åˆ¥å€¼å¾—æ³¨æ„çš„è‡ªç„¶ç‰©ã€‚ \n");	
 	if( !skill = (int)me->query_skill("natural_history") )
-		return notify_fail( "ÄãÃ»ÓĞÑ§¹ı²©ÎïÑ§£¬²»ÓÃÀË·ÑÊ±¼äÀ² !!!\n");
+		return notify_fail( "ä½ æ²’æœ‰å­¸éåšç‰©å­¸ï¼Œä¸ç”¨æµªè²»æ™‚é–“å•¦ !!!\n");
 	tp_cost = 60 - skill/5 ;
 	sp_cost = 15 - skill/10 ;
 	hp_cost = 20 - skill/10 ;
 	
 	if( !tp_cost || (int)me->query("talk_points") < (tp_cost + 1) )
-		return notify_fail("ÄãÌ«¿ÊÁË£¬ÔÙ²»ÕÒµãË®À´²¹³äÒ»ÏÂ¿É²»Ì«ºÃ£¡\n");
+		return notify_fail("ä½ å¤ªæ¸´äº†ï¼Œå†ä¸æ‰¾é»æ°´ä¾†è£œå……ä¸€ä¸‹å¯ä¸å¤ªå¥½ï¼\n");
 	if( !sp_cost || (int)me->query("spell_points") < (sp_cost + 1) )
-	        return notify_fail("Äã¾«ÉñÁ¦Ì«²îÁË£¬¿ìµãÕÒµØ·½ĞİÏ¢°É£¡\n");
+	        return notify_fail("ä½ ç²¾ç¥åŠ›å¤ªå·®äº†ï¼Œå¿«é»æ‰¾åœ°æ–¹ä¼‘æ¯å§ï¼\n");
 	if( !hp_cost || (int)me->query("hit_points") < (hp_cost + 1) )
-	        return notify_fail("Äã¾Í¿ì¼İº×Î÷¹éÁË£¬»¹ÏëÒª¸ÉÂï°¡£¡\n");
+	        return notify_fail("ä½ å°±å¿«é§•é¶´è¥¿æ­¸äº†ï¼Œé‚„æƒ³è¦å¹¹å˜›å•Šï¼\n");
 	                
 	                
 	else
@@ -44,12 +44,12 @@ int cmd_explore()
 		me->add("spell_points", -sp_cost );
 		me->add("hit_points", -hp_cost );
 
-	tell_object(me, set_color("Äã°ÑĞä×Ó¾íÁËÆğÀ´£¬¿ªÊ¼×ĞÏ¸µÄÌ½Ë÷¸½½üµÄÒ»²İÒ»Ä¾ ! \n", "HIC",me) ); 
+	tell_object(me, set_color("ä½ æŠŠè¢–å­æ²äº†èµ·ä¾†ï¼Œé–‹å§‹ä»”ç´°çš„æ¢ç´¢é™„è¿‘çš„ä¸€è‰ä¸€æœ¨ ! \n", "HIC",me) ); 
 	
 	me->set_temp("explore_busy",1);
 	me->set_temp("block_command", 1 );
 	me->set_temp("msg_stop_attack",
-	         "( ÄãÕıì¶³ÁÃÔì¶Ì½Ë÷´ó×ÔÈ»µÄÀÖÈ¤Ö®ÖĞ£¡ÎŞ·¨¹¥»÷... )\n" );
+	         "( ä½ æ­£æ–¼æ²‰è¿·æ–¼æ¢ç´¢å¤§è‡ªç„¶çš„æ¨‚è¶£ä¹‹ä¸­ï¼ç„¡æ³•æ”»æ“Š... )\n" );
 	call_out("explore_work", 5, me, env, time);
 	return 1;
 }
@@ -64,9 +64,9 @@ int explore_work(object me,object env,int time)
 	time = time + 5 ;
 	i = random(4);
 	tell_object( me, set_color(
-	 "Äã"+MESSAGE[i] , "HIY", me) );
+	 "ä½ "+MESSAGE[i] , "HIY", me) );
 	tell_room( env,
-	                "Äã¿´µ½"+ me->query("c_name")+MESSAGE[i],me );
+	                "ä½ çœ‹åˆ°"+ me->query("c_name")+MESSAGE[i],me );
 	
 	call_out("explore_work", 5, me, env, time, delay);
 	return 1;
@@ -81,9 +81,9 @@ int explore_work(object me,object env,int time)
 	
 	if ( random(chance) >3 ) {
 	tell_object( me, set_color( 
-		"ÄãÕÒÁË°ëÌì£¬Ê²÷á¶¼Ã»ÓĞÕÒµ½£¬Äã¾ö¶¨·ÅÆúËÑË÷´Ë´¦...\n", "HIY", me) );
+		"ä½ æ‰¾äº†åŠå¤©ï¼Œä»€éº¼éƒ½æ²’æœ‰æ‰¾åˆ°ï¼Œä½ æ±ºå®šæ”¾æ£„æœç´¢æ­¤è™•...\n", "HIY", me) );
 	tell_room( env, 
-		"Äã¿´µ½"+ me->query("c_name")+"´ÓÒ»¶Ñ²İ´ÔÖĞ×ê³öÀ´£¬Á³ÉÏÂúÊÇÊ§ÍûµÄ±íÇé¡£\n\n" ,me );
+		"ä½ çœ‹åˆ°"+ me->query("c_name")+"å¾ä¸€å †è‰å¢ä¸­é‘½å‡ºä¾†ï¼Œè‡‰ä¸Šæ»¿æ˜¯å¤±æœ›çš„è¡¨æƒ…ã€‚\n\n" ,me );
                 return 1;
                 }
          switch( n= random(4) ) {
@@ -95,9 +95,9 @@ int explore_work(object me,object env,int time)
                     }
                   thing->move(environment(this_player()));
                   tell_object( me,
-                      "»ÊÌì²»¸º¿àĞÄÈË£¬ÄãÕÒµ½Ò»"+thing->query("unit")+thing->query("c_name")+"...\n");
+                      "çš‡å¤©ä¸è² è‹¦å¿ƒäººï¼Œä½ æ‰¾åˆ°ä¸€"+thing->query("unit")+thing->query("c_name")+"...\n");
                   tell_room( env,
-                      me->query("c_name")+"´Ó²İ´ÔÖĞÕÒµ½ÁË"+thing->query("unit")+thing->query("c_name")+"...\n",me);
+                      me->query("c_name")+"å¾è‰å¢ä¸­æ‰¾åˆ°äº†"+thing->query("unit")+thing->query("c_name")+"...\n",me);
                       
                   me->gain_experience(100);
                   if (n < 2) thing->kill_ob(this_player());
@@ -108,10 +108,10 @@ int help()
 {
 write(
 @C_LONG
-Ö¸Áî¸ñÊ½: explore
+æŒ‡ä»¤æ ¼å¼: explore
 
-Õâ¸öÖ¸ÁîÄÜ¹»Ê¹ÄãÔËÓÃËùÑ§µÄ²©ÎïÑ§(natural_history) ÖªÊ¶£¬´Ó´ó×ÔÈ»ÖĞ
-Ñ°ÕÒÓĞÓÃµÄ×ÔÈ»Îï£¬¶ø·¢ÏÖÓë·ñµÄ»úÂÊÓëÄãµÄ²©ÎïÑ§£¬ÔËÆøÒÔ¼°ÄÍĞÄ¶¼ÓĞ¹Ø
+é€™å€‹æŒ‡ä»¤èƒ½å¤ ä½¿ä½ é‹ç”¨æ‰€å­¸çš„åšç‰©å­¸(natural_history) çŸ¥è­˜ï¼Œå¾å¤§è‡ªç„¶ä¸­
+å°‹æ‰¾æœ‰ç”¨çš„è‡ªç„¶ç‰©ï¼Œè€Œç™¼ç¾èˆ‡å¦çš„æ©Ÿç‡èˆ‡ä½ çš„åšç‰©å­¸ï¼Œé‹æ°£ä»¥åŠè€å¿ƒéƒ½æœ‰é—œ
 
 C_LONG
 );

@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "alloyed gauntlets", "ºÏ½ğ»¤ÊÖ" );
+	set_name( "alloyed gauntlets", "åˆé‡‘è­·æ‰‹" );
 	add( "id", ({ "gauntlets" }) );
-	set_short( "a pair of alloyed gauntlets", "ºÏ½ğ»¤ÊÖ" );
+	set_short( "a pair of alloyed gauntlets", "åˆé‡‘è­·æ‰‹" );
 	set_long(
 		"You see a pair of alloyed gauntlets. It looks pretty heavy and\n"
 		"can supply good protection.\n",
-		"ÕâÊÇÒ»Ë«ÓÃÄ³ÖÖ²»ÖªÃûºÏ½ğ´òÔìµÄ»¤ÊÖ£¬¿´ÆğÀ´Ïàµ±ÖØ¡£\n"
+		"é€™æ˜¯ä¸€é›™ç”¨æŸç¨®ä¸çŸ¥ååˆé‡‘æ‰“é€ çš„è­·æ‰‹ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶é‡ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "hands" );
 	set( "material", "heavy_metal");
 	set( "armor_class", 5 );

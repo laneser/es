@@ -18,11 +18,11 @@ void create()
 		set_default_ob(__FILE__);
 		return;
 	}
-	set_name("trace object","·¢±¨Æ÷");
+	set_name("trace object","ç™¼å ±å™¨");
 	add( "id", ({ "ob" }) );
-	set_short("·¢±¨Æ÷");
+	set_short("ç™¼å ±å™¨");
 	set_long(
-	"ÕâÊÇÓÃÀ´¸ú×ÙÄ³ÈËÓÃµÄ¶«Î÷, Íæ¼ÒÊÇ¿´²»µ½µÄ, Çë²»ÒªËæ±ã dest µô¡£\n"
+	"é€™æ˜¯ç”¨ä¾†è·Ÿè¹¤æŸäººç”¨çš„æ±è¥¿, çŽ©å®¶æ˜¯çœ‹ä¸åˆ°çš„, è«‹ä¸è¦éš¨ä¾¿ dest æŽ‰ã€‚\n"
 	);
 	set("prevent_drop", 1);
 	set("prevent_insert", 1);
@@ -57,12 +57,12 @@ int do_go(string dir)
 	    if ( ! visible(target,tracers[i]) ) continue;
 	    if ( present(tracers[i],oldenv) ) {	
 		tracers[i]->quick_message( 
-			sprintf("ÄãÇÄÇÄµØ¸úÖø%sÍù%sÒÆ¶¯....\n",target->query("c_name"),to_chinese(dir)));
+			sprintf("ä½ æ‚„æ‚„åœ°è·Ÿè‘—%så¾€%sç§»å‹•....\n",target->query("c_name"),to_chinese(dir)));
 /*
 	//	if ( random(30) > 20 )  
 		  if ( be_found(tracers[i],target) ) {
-		    	tracers[i]->quick_message( sprintf("²»Ãî! %s·¢ÏÖÄãµÄÐÐ×Ù, ²»ÄÜÔÙ¸úÁË¡£\n",target->query("c_name")));
-			target->quick_message(sprintf("\nÄã·¢ÏÖ%s¶ã¶ã²Ø²ØµÄ¸úÖøÄã×ß¹ýÀ´,²»ÖªµÀÓÐÊ²÷áÆóÍ¼...\n",tracers[i]->query("c_name")) );	
+		    	tracers[i]->quick_message( sprintf("ä¸å¦™! %sç™¼ç¾ä½ çš„è¡Œè¹¤, ä¸èƒ½å†è·Ÿäº†ã€‚\n",target->query("c_name")));
+			target->quick_message(sprintf("\nä½ ç™¼ç¾%sèº²èº²è—è—çš„è·Ÿè‘—ä½ èµ°éŽä¾†,ä¸çŸ¥é“æœ‰ä»€éº¼ä¼åœ–...\n",tracers[i]->query("c_name")) );	
 			stop_trace(target,tracers[i]);
 		  }
 */

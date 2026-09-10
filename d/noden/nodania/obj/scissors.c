@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "pruning scissors", "»¨¼ô" );
+	set_name( "pruning scissors", "èŠ±å‰ª" );
 	add( "id", ({ "scissors", "scissor" }) );
-	set_short( "»¨¼ô" );
+	set_short( "èŠ±å‰ª" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÓÃÀ´ĞŞ¼ôÖ²ÎïµÄ´ó¼ôµ¶¡£\n"
+		"é€™æ˜¯ä¸€æŠŠç”¨ä¾†ä¿®å‰ªæ¤ç‰©çš„å¤§å‰ªåˆ€ã€‚\n"
 	);
 	set( "type", "shortblade" );
 	set( "weapon_class", 8 );
@@ -17,5 +17,5 @@ void create()
 	set( "weight", 80 );
 	set( "nosecond", 1 );
 	set( "value", ({ 65, "silver" }) );
-	set_c_verbs( ({ "µÄ%sÍù%sÒ»¼Ğ" }) );
+	set_c_verbs( ({ "çš„%så¾€%sä¸€å¤¾" }) );
 }

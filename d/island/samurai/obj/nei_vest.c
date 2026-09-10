@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Thunder Vest", "À×µçÕ½¼×");
+        set_name( "Thunder Vest", "é›·é›»æˆ°ç”²");
         add( "id", ({ "thunder","vest" }) );
-        set_short("Thunder Vest", "À×µçÕ½¼×");
+        set_short("Thunder Vest", "é›·é›»æˆ°ç”²");
         set_long(@AAA
-ÕâÊÇÒ»¼ş¸½ÓĞÀ×µç¾«ÁéÁ¦Á¿µÄîø¼×£¬ÊÇÄİ×÷Õ½Ê±Ëù´©µÄ·À¾ß£¬îø¼×
-Ç°Ãæ»¹¿ÌÓĞÒ»¸ö·ç¾«Áé·¨Ó¡£¡¡¡
+é€™æ˜¯ä¸€ä»¶é™„æœ‰é›·é›»ç²¾éˆåŠ›é‡çš„é§ç”²ï¼Œæ˜¯å¦®ä½œæˆ°æ™‚æ‰€ç©¿çš„é˜²å…·ï¼Œé§ç”²
+å‰é¢é‚„åˆ»æœ‰ä¸€å€‹é¢¨ç²¾éˆæ³•å°ï¼ã€€
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 37 );
         set( "defense_bonus", 6 );

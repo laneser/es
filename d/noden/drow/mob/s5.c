@@ -7,16 +7,16 @@ void create()
 {
         ::create();
         set_level(14);
-        set_name("cobra", "·¹³×Ù»" );
-        set_short("·¹³×Ù»" );
+        set_name("cobra", "é£¯åŒ™å€©" );
+        set_short("é£¯åŒ™å€©" );
         set_long(
 @C_LONG
-ºÅ³ÆÉßÍõµÄ·¹³×Ù»£¬ÓÖÃûÑÛ¾µÉß£¬ÊÇÉßÀàÖÐ×î¶¾×îÐ×ÃÍÕß
-ÒÀÕÕÄã¶ÔÉßÀà´ÖÇ³µÄÈÏÖª£¬ÄãÒ²Ã÷°×£¬²»È¥ÈÇËü²ÅÊÇÕýÈ·
-µÄÑ¡Ôñ¡£
+è™Ÿç¨±è›‡çŽ‹çš„é£¯åŒ™å€©ï¼Œåˆåçœ¼é¡è›‡ï¼Œæ˜¯è›‡é¡žä¸­æœ€æ¯’æœ€å…‡çŒ›è€…
+ä¾ç…§ä½ å°è›‡é¡žç²—æ·ºçš„èªçŸ¥ï¼Œä½ ä¹Ÿæ˜Žç™½ï¼Œä¸åŽ»æƒ¹å®ƒæ‰æ˜¯æ­£ç¢º
+çš„é¸æ“‡ã€‚
 C_LONG
         );
-        set( "unit", "Ìõ" );
+        set( "unit", "æ¢" );
         set( "alignment", -730 );
         set( "natural_weapon_class1", 10 );
         set( "natural_min_damage1", 14 );
@@ -25,8 +25,8 @@ C_LONG
         set( "chat_chance",15);
 //        set( "chat_output", ({
 //                                         });
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
-        set_c_verbs( ({ "%s°ºÍ·ÕÅ×ì£¬Íù%sÒ§È¥" }) );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
+        set_c_verbs( ({ "%sæ˜‚é ­å¼µå˜´ï¼Œå¾€%så’¬åŽ»" }) );
 }
 int emit_poison()
 {
@@ -34,7 +34,7 @@ int emit_poison()
 
         if( random(15)>4 || !(victim= query_attacker()) ) return 0;
         tell_room( environment(this_object()),
-                "·¹³×Ù»ÑïÆð¾±²¿µÄ´óÑÛ£¬ºÝºÝÏòÄãÒ§ÏÂ£¬Äã¾õµÃÒ»Õó´ÌÍ´ ....\n",
+                "é£¯åŒ™å€©æšèµ·é ¸éƒ¨çš„å¤§çœ¼ï¼Œç‹ ç‹ å‘ä½ å’¬ä¸‹ï¼Œä½ è¦ºå¾—ä¸€é™£åˆºç—› ....\n",
                 this_object() );
         (CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 
 25, 6 );

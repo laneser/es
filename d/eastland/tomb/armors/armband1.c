@@ -4,13 +4,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("Green bracelet", "ÂÌÓñïí×Ó");
+        set_name("Green bracelet", "ç¶ ç‰é²å­");
         add( "id", ({"bracelet" }) );
         set_short("@@looks");
         set_long(
-                "ÕâÊÇÒ»¸öµ­ÂÌÉ«µÄ´äÓñïí×Ó£¬ÒşÔ¼Á÷¶¯ÖøÇ³Ç³µÄ¹âÃ¢¡£\n"
+                "é€™æ˜¯ä¸€å€‹æ·¡ç¶ è‰²çš„ç¿ ç‰é²å­ï¼Œéš±ç´„æµå‹•è‘—æ·ºæ·ºçš„å…‰èŠ’ã€‚\n"
         );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set( "type", "arms" );
         set( "material", "element" );
         set( "defense_bonus",4 );
@@ -23,5 +23,5 @@ void create()
 
 string looks()
 {
-	return set_color("ÂÌÓñïí×Ó","GRN");
+	return set_color("ç¶ ç‰é²å­","GRN");
 }

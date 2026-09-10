@@ -1,4 +1,4 @@
-// Fp cost = 5 - stun_skill/30 ( that is 5~2)   +    5 (if µãÖĞ!) 
+// Fp cost = 5 - stun_skill/30 ( that is 5~2)   +    5 (if é»ä¸­!) 
 ////#pragma save_binary
 
 #include <mudlib.h>
@@ -6,7 +6,7 @@
 
 inherit DAEMON;
 
-#define stun_point ({ "ÇàÁé", "È±Åè", "Ì´ÖĞ", "Öş±ö", "¼çÕê" })
+#define stun_point ({ "é’éˆ", "ç¼ºç›†", "æª€ä¸­", "ç¯‰è³“", "è‚©è²" })
 
 int block_victim(object me, object victim); 
 int stun_work(object me, object victim);
@@ -18,23 +18,23 @@ int cmd_stun()
 	
 	me = this_player();
     if( me->query_temp("stun_busy") )
-    	return notify_fail("\n *** Äã»¹ÔÚµÈ´ı»ú»áµãÑ¨£¬²»ÄÜ·ÖĞÄ¡£*** \n");
+    	return notify_fail("\n *** ä½ é‚„åœ¨ç­‰å¾…æ©Ÿæœƒé»ç©´ï¼Œä¸èƒ½åˆ†å¿ƒã€‚*** \n");
     if( me->query_temp("busy") )
-    	return notify_fail("\n  ÄãÕıÔÚ×¨ĞÄ×÷±ğµÄÊÂÇé£¬²»ÄÜ·ÖĞÄµãÑ¨¡£\n");
+    	return notify_fail("\n  ä½ æ­£åœ¨å°ˆå¿ƒä½œåˆ¥çš„äº‹æƒ…ï¼Œä¸èƒ½åˆ†å¿ƒé»ç©´ã€‚\n");
 	victim = me->query_attacker();
-	if( !victim ) return notify_fail("ÄãÃ»ÔÚÕ½¶·ÖĞ£¬ÕÒ²»µ½¶ÔÊÖÔÚÄÄÀï!\n");
+	if( !victim ) return notify_fail("ä½ æ²’åœ¨æˆ°é¬¥ä¸­ï¼Œæ‰¾ä¸åˆ°å°æ‰‹åœ¨å“ªè£¡!\n");
 		
 	if( !skill = (int)me->query_skill("force-stun") )
-		return notify_fail( "ÄãÃ»ÓĞÁ·¹ıµãÑ¨£¬²»ÁË½âÑ¨µÀÎ»ÖÃ£¬Á·¸ö¼¸ÄêÔÙÀ´°É !!!\n");
+		return notify_fail( "ä½ æ²’æœ‰ç·´éé»ç©´ï¼Œä¸ç­è§£ç©´é“ä½ç½®ï¼Œç·´å€‹å¹¾å¹´å†ä¾†å§ !!!\n");
 
 	fp_cost = 5 - skill / 30;
 	if( !fp_cost || (int)me->query("force_points") < (fp_cost + 5) )
-		return notify_fail("\n *** ÄãµÄÄÚÁ¦²»×ã£¡*** \n");
+		return notify_fail("\n *** ä½ çš„å…§åŠ›ä¸è¶³ï¼*** \n");
 	else
 		me->add("force_points", -fp_cost );
 
 
-	tell_object(me, set_color("\n *** ÄãÈ«Éñ¹á×¢£¬¿ªÊ¼ÒªÕÒ»ú»áÊ©Õ¹ÄãµãÑ¨µÄÉñ¼¼ ! ***\n", "HIC",me) );
+	tell_object(me, set_color("\n *** ä½ å…¨ç¥è²«æ³¨ï¼Œé–‹å§‹è¦æ‰¾æ©Ÿæœƒæ–½å±•ä½ é»ç©´çš„ç¥æŠ€ ! ***\n", "HIC",me) );
 
 	delay = 15 - skill/20 - random((int)me->query("force_effect"));
 	if( delay < 1 ) delay = 1;
@@ -54,7 +54,7 @@ int stun_work(object me, object victim)
 	me->delete_temp("stun_busy");
 	me->delete_temp("busy");
 	if ( ! me->query_attackers() || !victim) {
-		tell_object(me,"ÄãµÄÕ½¶·½áÊøÁË£¬²»ĞèÒªµãÑ¨ÁË! \n");
+		tell_object(me,"ä½ çš„æˆ°é¬¥çµæŸäº†ï¼Œä¸éœ€è¦é»ç©´äº†! \n");
 		return 1;
 	}
 
@@ -81,7 +81,7 @@ int stun_work(object me, object victim)
 	skill -= (int)victim->query_stat("dex")*2 +(int)victim->query_stat("int");
 	if (intp(victim->query("stun_difficulty")) )
 	      if( random(skill) < (58 + (int)victim->query("stun_difficulty")) ) {
-		tell_object(me,set_color("\n *** ÍÛ!!! Ã»µãµ½! ¿´À´ÄãÑ§ÒÕ²»¾«Å¶! *** \n", "HIG",me) );
+		tell_object(me,set_color("\n *** å“‡!!! æ²’é»åˆ°! çœ‹ä¾†ä½ å­¸è—ä¸ç²¾å“¦! *** \n", "HIG",me) );
 		return 1;
 		}
 	
@@ -94,15 +94,15 @@ int block_victim( object me, object victim )
 	int my_str, vic_kar, times;
 
 	tell_object( me, set_color( 
-		"\n *** Äã·É¿ìµÄÏò¶Ô·½Ò»µã£¬µãµ½ÁË"+victim->query("c_name")+
-		"µÄ"+stun_point[random(5)]+"Ñ¨£¬ËüÎŞ·¨¹¥»÷ÁË!!! ***\n", "HIY",me) );
+		"\n *** ä½ é£›å¿«çš„å‘å°æ–¹ä¸€é»ï¼Œé»åˆ°äº†"+victim->query("c_name")+
+		"çš„"+stun_point[random(5)]+"ç©´ï¼Œå®ƒç„¡æ³•æ”»æ“Šäº†!!! ***\n", "HIY",me) );
 		
 	tell_object(victim, set_color( 
-		me->query("c_name")+"µç¹â»ğÊ¯µÄÒ»µã£¬µãµ½ÄãµÄÑ¨µÀ½îÂö¡£\n", "HIM",victim));
+		me->query("c_name")+"é›»å…‰ç«çŸ³çš„ä¸€é»ï¼Œé»åˆ°ä½ çš„ç©´é“ç­‹è„ˆã€‚\n", "HIM",victim));
 
 	tell_room( environment(me), 
-		me->query("c_name")+"Í»È»Éì³öÊÖÖ¸·É¿ìµØÍù"+
-		victim->query("c_name")+"µÄÉíÉÏÒ»µã¡£\n\n" ,
+		me->query("c_name")+"çªç„¶ä¼¸å‡ºæ‰‹æŒ‡é£›å¿«åœ°å¾€"+
+		victim->query("c_name")+"çš„èº«ä¸Šä¸€é»ã€‚\n\n" ,
 		({ me, victim }) );
 
 	my_str = me->query_stat("str");
@@ -113,6 +113,6 @@ int block_victim( object me, object victim )
 	me->add("force_points", -5 );
 	victim->block_attack(times*2);
 	victim->set_temp("msg_stop_attack", 
-		set_color("( Äã¾õµÃ±»µãÖĞµÄ²¿Î»ËáÂéÄÑµ±£¬Ò»µãÁ¦ÆøÒ²Ê¹²»³öÀ´¡£ )\n", "HIM", victim) );
+		set_color("( ä½ è¦ºå¾—è¢«é»ä¸­çš„éƒ¨ä½ç— éº»é›£ç•¶ï¼Œä¸€é»åŠ›æ°£ä¹Ÿä½¿ä¸å‡ºä¾†ã€‚ )\n", "HIM", victim) );
 	return 1;
 }

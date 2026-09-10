@@ -9,65 +9,65 @@ inherit F_AUTOLOAD;
 string *special_props = ({
         "short", "long" });
 varargs mapping map_dirs = ([
-        "north":                "±±",
-        "south":                "ÄÏ",
-        "east":                 "¶«",
-        "west":                 "Î÷",
-        "northup":              "±±±ßÍùÉÏ",
-        "southdown":            "ÄÏ±ßÍùÏÂ",
-        "southup":              "ÄÏ±ßÍùÉÏ",
-        "northdown":            "±±±ßÍùÏÂ",
-        "eastup":               "¶«±ßÍùÉÏ",
-        "westdown":             "Î÷±ßÍùÏÂ",
-        "westup":               "Î÷±ßÍùÉÏ",
-        "eastdown":             "¶«±ßÍùÏÂ",
-        "northeast":            "¶«±±",
-        "northwest":            "Î÷±±",
-        "southeast":            "¶«ÄÏ",
-        "southwest":            "Î÷ÄÏ",
-        "up":                   "ÉÏ",
-        "down":                 "ÏÂ",
-        "out":                  "Íâ",
+        "north":                "åŒ—",
+        "south":                "å—",
+        "east":                 "æ±",
+        "west":                 "è¥¿",
+        "northup":              "åŒ—é‚Šå¾€ä¸Š",
+        "southdown":            "å—é‚Šå¾€ä¸‹",
+        "southup":              "å—é‚Šå¾€ä¸Š",
+        "northdown":            "åŒ—é‚Šå¾€ä¸‹",
+        "eastup":               "æ±é‚Šå¾€ä¸Š",
+        "westdown":             "è¥¿é‚Šå¾€ä¸‹",
+        "westup":               "è¥¿é‚Šå¾€ä¸Š",
+        "eastdown":             "æ±é‚Šå¾€ä¸‹",
+        "northeast":            "æ±åŒ—",
+        "northwest":            "è¥¿åŒ—",
+        "southeast":            "æ±å—",
+        "southwest":            "è¥¿å—",
+        "up":                   "ä¸Š",
+        "down":                 "ä¸‹",
+        "out":                  "å¤–",
 ]);
 
 int save_room_file(string yn, string file, string str);
 
 void create()
 {
-        set_name("·¿¼ä±à¼­Æ÷" + RMK_VERSION, ({ "roommaker", "maker" }) );
+        set_name("æˆ¿é–“ç·¨è¼¯å™¨" + RMK_VERSION, ({ "roommaker", "maker" }) );
         set_weight(100);
-        set("unit", "¸ö" );
+        set("unit", "å€‹" );
         set("long", @LONG
-ÕâÊÇÒ»¸öÓÃÀ´¡¸¿ìËÙ¡¹ÖÆÔì·¿¼äµÄ¹¤¾ß£¬°ïÖúÊ±¼ä²»¶à»òÓĞÑÏÖØ  lag µÄÎ×Ê¦
-ÀûÓÃÏßÉÏÊäÈëÖÆÔì¼òµ¥µÄ·¿¼ä£¬²»¹ıÈç¹ûÄãÏëÌá¸ß×Ô¼ºÇøÓò·¿¼äµÄÆ·ÖÊ£¬×îºÃ
-²»ÒªÌ«ÒÀÀµÕâ¸ö¶«Î÷£¬Äã¿ÉÒÔÊ¹ÓÃÒÔÏÂ¼¸¸öÖ¸Áî£º
+é€™æ˜¯ä¸€å€‹ç”¨ä¾†ã€Œå¿«é€Ÿã€è£½é€ æˆ¿é–“çš„å·¥å…·ï¼Œå¹«åŠ©æ™‚é–“ä¸å¤šæˆ–æœ‰åš´é‡  lag çš„å·«å¸«
+åˆ©ç”¨ç·šä¸Šè¼¸å…¥è£½é€ ç°¡å–®çš„æˆ¿é–“ï¼Œä¸éå¦‚æœä½ æƒ³æé«˜è‡ªå·±å€åŸŸæˆ¿é–“çš„å“è³ªï¼Œæœ€å¥½
+ä¸è¦å¤ªä¾è³´é€™å€‹æ±è¥¿ï¼Œä½ å¯ä»¥ä½¿ç”¨ä»¥ä¸‹å¹¾å€‹æŒ‡ä»¤ï¼š
 
-mkroom <·¿¼äµµÃû>
-    Ôì³öÒ»¸ö¡¸¿Õ¡¹·¿¼ä£¬Ö®ááÄã¿ÉÒÔ goto µ½Õâ¸ö·¿¼äÓÃ rset Éè¶¨·¿¼äµÄ
-    ĞğÊö»òÊôĞÔ¡£
+mkroom <æˆ¿é–“æª”å>
+    é€ å‡ºä¸€å€‹ã€Œç©ºã€æˆ¿é–“ï¼Œä¹‹å¾Œä½ å¯ä»¥ goto åˆ°é€™å€‹æˆ¿é–“ç”¨ rset è¨­å®šæˆ¿é–“çš„
+    æ•˜è¿°æˆ–å±¬æ€§ã€‚
 
-rset <·¿¼äÊôĞÔ> <ÊôĞÔÄÚÈİ>
-    Éè¶¨ÄãÄ¿Ç°ËùÔÚ·¿¼äµÄÊôĞÔ£¬Èç short,outdoors,valid_startroomµÈ¡£
+rset <æˆ¿é–“å±¬æ€§> <å±¬æ€§å…§å®¹>
+    è¨­å®šä½ ç›®å‰æ‰€åœ¨æˆ¿é–“çš„å±¬æ€§ï¼Œå¦‚ short,outdoors,valid_startroomç­‰ã€‚
 
-rdelete <·¿¼äÊôĞÔ>
-    É¾³ıÄãÄ¿Ç°ËùÔÚ·¿¼äµÄÊôĞÔ£¬ÈçrsetÉè¶¨µÄÊôĞÔºÍlong,objects,exitsµÈ¡£
+rdelete <æˆ¿é–“å±¬æ€§>
+    åˆªé™¤ä½ ç›®å‰æ‰€åœ¨æˆ¿é–“çš„å±¬æ€§ï¼Œå¦‚rsetè¨­å®šçš„å±¬æ€§å’Œlong,objects,exitsç­‰ã€‚
 
 long
-    Éè¶¨ÄãÄ¿Ç°ËùÔÚ·¿¼äµÄÃèÊöÊôĞÔ¡£
+    è¨­å®šä½ ç›®å‰æ‰€åœ¨æˆ¿é–“çš„æè¿°å±¬æ€§ã€‚
 
-connect <·½Ïò> <·¿¼äµµÃû>||<none>
-    ½«ÄãÄ¿Ç°ËùÔÚµÄ·¿¼äÁ¬½ÓÒ»¸ö³ö¿Úµ½ÁíÒ»¸ö·¿¼ä£¬·¿¼äµµÃû=noneÔòÉ¾³ıÕâ¸ö·½Ïò¡£
+connect <æ–¹å‘> <æˆ¿é–“æª”å>||<none>
+    å°‡ä½ ç›®å‰æ‰€åœ¨çš„æˆ¿é–“é€£æ¥ä¸€å€‹å‡ºå£åˆ°å¦ä¸€å€‹æˆ¿é–“ï¼Œæˆ¿é–“æª”å=noneå‰‡åˆªé™¤é€™å€‹æ–¹å‘ã€‚
 
-addobj <NPCµµÃû> <ÊıÁ¿>
-    Éè¶¨ÄãÄ¿Ç°ËùÔÚ·¿¼äµÄNPCºÍÆäÊıÁ¿¡£
+addobj <NPCæª”å> <æ•¸é‡>
+    è¨­å®šä½ ç›®å‰æ‰€åœ¨æˆ¿é–“çš„NPCå’Œå…¶æ•¸é‡ã€‚
 
 saveroom
-    ½«ÄãÄ¿Ç°ËùÔÚµÄ·¿¼ä´æµµ¡£
+    å°‡ä½ ç›®å‰æ‰€åœ¨çš„æˆ¿é–“å­˜æª”ã€‚
 LONG
         );
 }
 
-== Î´Íê¼ÌĞø 18% == (ENTER ¼ÌĞøÏÂÒ»Ò³£¬q Àë¿ª£¬b Ç°Ò»Ò³)
+== æœªå®Œç¹¼çºŒ 18% == (ENTER ç¹¼çºŒä¸‹ä¸€é ï¼Œq é›¢é–‹ï¼Œb å‰ä¸€é )
 int query_autoload() { return 1; }
 
 void init()
@@ -88,14 +88,14 @@ int do_mkroom(string arg)
 {
         string file, dir, code;
 
-        if( !arg ) return notify_fail("Ö¸Áî¸ñÊ½£ºmkroom <·¿¼äµµÃû> [<·½Ïò>]\n");
+        if( !arg ) return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šmkroom <æˆ¿é–“æª”å> [<æ–¹å‘>]\n");
         if( sscanf(arg, "%s %s", file, dir)!=2 )
                 file = arg;
-== Î´Íê¼ÌĞø 24% == (ENTER ¼ÌĞøÏÂÒ»Ò³£¬q Àë¿ª£¬b Ç°Ò»Ò³)
+== æœªå®Œç¹¼çºŒ 24% == (ENTER ç¹¼çºŒä¸‹ä¸€é ï¼Œq é›¢é–‹ï¼Œb å‰ä¸€é )
         seteuid(geteuid(this_player()));
         file = resolve_path(this_player()->query("cwd"), file) + ".c";
         if( file_size(file)!=-1 )
-                return notify_fail("µµ°¸ " + file + " ÒÑ¾­´æÔÚÁË¡£\n");
+                return notify_fail("æª”æ¡ˆ " + file + " å·²ç¶“å­˜åœ¨äº†ã€‚\n");
         if( !write_file(file, @ROOM_CODE
 // This is a room made by roommaker.
 
@@ -103,14 +103,14 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "¿Õ·¿¼ä");
-        set("long", "ÕâÊÇÒ»¼äÊ²÷áÒ²Ã»ÓĞµÄ¿Õ·¿¼ä¡£\n");
+        set("short", "ç©ºæˆ¿é–“");
+        set("long", "é€™æ˜¯ä¸€é–“ä»€éº¼ä¹Ÿæ²’æœ‰çš„ç©ºæˆ¿é–“ã€‚\n");
         setup();
         replace_program(ROOM);
 }
 ROOM_CODE
-) ) return notify_fail("ÄãÃ»ÓĞĞ´Èëµµ°¸(" + file +")µÄÈ¨Àû¡£\n");
-        message_vision("Ö»Ìıµ½$N×óÓÒÊÖÒ»³Å£¬¡¸ßÙ¡¹µÄÒ»Éù£¬Äã¾õµÃÕâ¸öÊÀ½çÓÖ±ä´óÁËÒ»µã¡£\n", this_player());
+) ) return notify_fail("ä½ æ²’æœ‰å¯«å…¥æª”æ¡ˆ(" + file +")çš„æ¬Šåˆ©ã€‚\n");
+        message_vision("åªè½åˆ°$Nå·¦å³æ‰‹ä¸€æ’ï¼Œã€Œå—¶ã€çš„ä¸€è²ï¼Œä½ è¦ºå¾—é€™å€‹ä¸–ç•Œåˆè®Šå¤§äº†ä¸€é»ã€‚\n", this_player());
         return 1;
 }
 
@@ -121,12 +121,12 @@ int do_rset(string arg)
         mixed data;
 
         if( !arg || sscanf(arg, "%s %s", prop, str)!=2 )
-                return notify_fail("Ö¸Áî¸ñÊ½£ºrset <·¿¼äÊôĞÔ> <ÊôĞÔÄÚÈİ>\n
-\t rset short           £¨Éè¶¨Õâ¼ä·¿¼äµÄ¼òÂÔÃèÊö£©\n
-\t rset outdoors        £¨Éè¶¨ÕâÀïÊÇ»§ÍâÊôĞÔ£©\n
-\t rset valid_startroom £¨Éè¶¨ÕâÀïÊÇÏÂ´ÎÁ¬Ïß¿ªÊ¼µÄÊôĞÔ£©\n
-\t ÆäËûµÄÈç£ºrset no_fight rset no_magic µÈ...\n\n");
-        write("ÉèÖÃ"+prop+"µÄÊôĞÔÎª"+str);
+                return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šrset <æˆ¿é–“å±¬æ€§> <å±¬æ€§å…§å®¹>\n
+\t rset short           ï¼ˆè¨­å®šé€™é–“æˆ¿é–“çš„ç°¡ç•¥æè¿°ï¼‰\n
+\t rset outdoors        ï¼ˆè¨­å®šé€™è£¡æ˜¯æˆ¶å¤–å±¬æ€§ï¼‰\n
+\t rset valid_startroom ï¼ˆè¨­å®šé€™è£¡æ˜¯ä¸‹æ¬¡é€£ç·šé–‹å§‹çš„å±¬æ€§ï¼‰\n
+\t å…¶ä»–çš„å¦‚ï¼šrset no_fight rset no_magic ç­‰...\n\n");
+        write("è¨­ç½®"+prop+"çš„å±¬æ€§ç‚º"+str);
         if( sscanf(str, "%d", data)!=1 )
                 data = str;
         environment(this_player())->set(prop, str);
@@ -139,7 +139,7 @@ int do_delete(string arg)
         int i;
         mixed data;
         if( !arg)
-                return notify_fail("Ö¸Áî¸ñÊ½£ºrdelete <·¿¼äÊôĞÔ>\n");
+                return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šrdelete <æˆ¿é–“å±¬æ€§>\n");
         environment(this_player())->delete(arg);
         write("Ok.\n");
         return 1;
@@ -149,8 +149,8 @@ int do_long()
         int i;
         string arg;
         arg="";
-        write("Ñ¶Ï¢¿ÉÒÔÓĞºÃ¼¸ĞĞ£¬ĞĞÊ×ÓÃ . ±íÊ¾½áÊø¡£\n");
-        write("¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª\n");
+        write("è¨Šæ¯å¯ä»¥æœ‰å¥½å¹¾è¡Œï¼Œè¡Œé¦–ç”¨ . è¡¨ç¤ºçµæŸã€‚\n");
+        write("â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”\n");
         input_to("get_long",arg);
         return 1;
 }
@@ -176,30 +176,30 @@ int do_connect(string arg)
         exits = environment(this_player())->query("exits");
         if( !arg || sscanf(arg, "%s %s", dir, file)!=2 ){
                 dirs=sort_array( keys(map_dirs),(: strcmp :) );
-                dir=" Ò»°ãÇé¿öÏÂ£¬Ê¹ÓÃµÄ³ö¿Ú·½ÏòÓĞÒÔÏÂ¼¸ÖÖ: \n";
+                dir=" ä¸€èˆ¬æƒ…æ³ä¸‹ï¼Œä½¿ç”¨çš„å‡ºå£æ–¹å‘æœ‰ä»¥ä¸‹å¹¾ç¨®: \n";
                 for (i=0;i<sizeof(map_dirs);i++)
                         dir+=sprintf("%-12s \t %-12s \n",dirs[i],map_dirs[dirs[i]]);
                 if( mapp(exits) ){
-                        dir+="ÕâÀïµÄ³ö¿ÚÓĞ£º\n";
+                        dir+="é€™è£¡çš„å‡ºå£æœ‰ï¼š\n";
                         dirs=keys(exits);
                         for (i=0;i<sizeof(exits);i++){
                         if (!room=find_object(exits[dirs[i]]))
                                 room=load_object(exits[dirs[i]]);
                         if (room)       dir+=sprintf(BOLD"\t%-12s"+NOR+YEL+" --> "+CYN+"%s"+RED+"(%s) \n"+NOR,dirs[i],room->query("short"),exits[dirs[i]]);
-                        else    dir+=sprintf(BOLD"\t%-12s"+NOR+YEL+" --> "+RED+"Ã»ÓĞÕı³£³ö¿Ú¡£\n"+NOR,dirs[i]);
+                        else    dir+=sprintf(BOLD"\t%-12s"+NOR+YEL+" --> "+RED+"æ²’æœ‰æ­£å¸¸å‡ºå£ã€‚\n"+NOR,dirs[i]);
                         }
                 }
-                return notify_fail(dir+"\nÖ¸Áî¸ñÊ½£ºconnect <·½Ïò> <·¿¼äµµÃû>||<none>\n");
+                return notify_fail(dir+"\næŒ‡ä»¤æ ¼å¼ï¼šconnect <æ–¹å‘> <æˆ¿é–“æª”å>||<none>\n");
         }
         if (file=="none"){
                 environment(this_player())->delete("exits/"+dir);
-                write("É¾³ı³ö¿Ú...Ok.\n");
+                write("åˆªé™¤å‡ºå£...Ok.\n");
                 return 1;
         }
         file = resolve_path(this_player()->query("cwd"), file);
         if (!room=find_object(file))
                 room=load_object(file);
-        if (!room)      return notify_fail("»¹Ã»ÓĞ"+file+"Õâ¸ö·¿¼ä...\n");
+        if (!room)      return notify_fail("é‚„æ²’æœ‰"+file+"é€™å€‹æˆ¿é–“...\n");
         if( mapp(exits) )
                 exits[dir] = file;
         else
@@ -245,17 +245,17 @@ int do_addobj(string arg
         if( !arg || sscanf(arg, "%s %d", file,amount)!=2 )
         if( mapp(objects) 
                 files=keys(objects)
-                file=" Õâ¸ö·¿¼äµÄNPCÓĞ£º\n"
+                file=" é€™å€‹æˆ¿é–“çš„NPCæœ‰ï¼š\n"
                 for (amount=0;amount<sizeof(objects);amount++
-                        file+=sprintf(BOLD+"%20s %10s¸ö\n"+NOR,files[amount]->short(),chinese_number(objects[files[amount]]) )
-                return notify_fail(file+"\nÖ¸Áî¸ñÊ½£ºaddobj <NPCµµÃû> <ÊıÁ¿>\n")
+                        file+=sprintf(BOLD+"%20s %10så€‹\n"+NOR,files[amount]->short(),chinese_number(objects[files[amount]]) )
+                return notify_fail(file+"\næŒ‡ä»¤æ ¼å¼ï¼šaddobj <NPCæª”å> <æ•¸é‡>\n")
         
         if ( file_size(file+".c")<0 )   file = resolve_path(this_player()->query("cwd"), file)
         if ( file_size(file+".c")<0 
-                return notify_fail("Ã»ÓĞÕâ¸öÎï¼ş......\n")
+                return notify_fail("æ²’æœ‰é€™å€‹ç‰©ä»¶......\n")
                 if (amount==0)
                         environment(this_player())->delete("objects/"+file)
-                        write("É¾³ıNPC£¬Ok.\n")
+                        write("åˆªé™¤NPCï¼ŒOk.\n")
                         return 1
                 
         if( mapp(objects) 
@@ -271,12 +271,12 @@ int update(object me, string file
         seteuid( geteuid(me) )
         if( !sscanf(file, "%*s.c") ) file += ".c"
         if( file_size(file)==-1 
-                return notify_fail("Ã»ÓĞÕâ¸öµµ°¸¡£\n")
+                return notify_fail("æ²’æœ‰é€™å€‹æª”æ¡ˆã€‚\n")
         if (obj = find_object(file)) 
                 if( obj==environment(me) ) 
                         if( file_name(obj)==VOID_OB 
-                                return notify_fail("Äã²»ÄÜÔÚ VOID_O
-ÀïÖØĞÂ±àÒë VOID_OB¡£\n")
+                                return notify_fail("ä½ ä¸èƒ½åœ¨ VOID_O
+è£¡é‡æ–°ç·¨è­¯ VOID_OBã€‚\n")
                         inv = all_inventory(obj)
                         i = sizeof(inv)
                         while(i--
@@ -285,14 +285,14 @@ int update(object me, string file
                 
                 destruct(obj)
         
-        if (obj) return notify_fail("ÎŞ·¨Çå³ı¾É³ÌÊ½Âë¡£\n")
-    write("ÖØĞÂ±àÒë " + file + "£º")
+        if (obj) return notify_fail("ç„¡æ³•æ¸…é™¤èˆŠç¨‹å¼ç¢¼ã€‚\n")
+    write("é‡æ–°ç·¨è­¯ " + file + "ï¼š")
         err = catch( call_other(file, "???") )
         if (err
-                printf( "·¢Éú´íÎó£º\n%s\n", err )
-     (åİ
+                printf( "ç™¼ç”ŸéŒ¯èª¤ï¼š\n%s\n", err )
+     (é¢
 lse 
-                write("³É¹¦£¡\n")
+                write("æˆåŠŸï¼\n")
                 if( (i=sizeof(inv)) && (obj = find_object(file))) 
                         while(i--
                                 if( inv[i] && userp(inv[i]) 

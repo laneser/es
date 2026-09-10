@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("holy ring","°®È¾Ã÷Íõ½äÖ¸");
+    set_name("holy ring","æ„›æŸ“æ˜ç‹æˆ’æŒ‡");
     add("id",({"ring"}) );
-    set_short( "a holy ring","°®È¾Ã÷Íõ½äÖ¸");
+    set_short( "a holy ring","æ„›æŸ“æ˜ç‹æˆ’æŒ‡");
 	set_long(
 		"This is a ring blessed by God.\n"
-		"ÕâÊÇÎå´óÃ÷ÍõÖ®Ò» ¡ª °®È¾Ã÷ÍõÊ¹ÓÃ¹ıµÄ½äÖ¸,Èç¹ûÄãÊÇÉÆÁ¼\n"
-		"ÕıÒåÖ®Ê¿, Ëü½«ÒÔÃ÷ÍõÖ®Ãû¼Ó»¤ÄãµÄ¡£\n" 
+		"é€™æ˜¯äº”å¤§æ˜ç‹ä¹‹ä¸€ â€” æ„›æŸ“æ˜ç‹ä½¿ç”¨éçš„æˆ’æŒ‡,å¦‚æœä½ æ˜¯å–„è‰¯\n"
+		"æ­£ç¾©ä¹‹å£«, å®ƒå°‡ä»¥æ˜ç‹ä¹‹ååŠ è­·ä½ çš„ã€‚\n" 
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 12 );
 	set( "type", "finger" );
     set( "material","monk");

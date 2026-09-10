@@ -5,13 +5,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wraith flamen ring", "°«Áé¼ÀË¾Ö®½ä");
+        set_name("wraith flamen ring", "çŸ®éˆç¥­å¸ä¹‹æˆ’");
         add( "id", ({ "ring" }) );
-        set_short("°«Áé¼ÀË¾Ö®½ä");
+        set_short("çŸ®éˆç¥­å¸ä¹‹æˆ’");
         set_long(
-     "ÕâÊÇÀú´ú°«Áé×åÉñµî¼ÀË¾¼ÀìëÊ±´©´÷µÄÊ¥Îï£¬ÓµÓĞÎŞÉÏµÄÈ¨Á¦ºÍÉñÁ¦¡£\n"
+     "é€™æ˜¯æ­·ä»£çŸ®éˆæ—ç¥æ®¿ç¥­å¸ç¥­ç¥€æ™‚ç©¿æˆ´çš„è–ç‰©ï¼Œæ“æœ‰ç„¡ä¸Šçš„æ¬ŠåŠ›å’Œç¥åŠ›ã€‚\n"
         );
-	set("unit","Ö»");
+	set("unit","åª");
         set( "type", "finger" );
         set( "material" ,"element" );
         set( "defense_bonus", 6 );

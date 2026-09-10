@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "sword of love", "¶ÏµôµÄ»¹Çé½£" );
+        set_name( "sword of love", "æ–·æŽ‰çš„é‚„æƒ…åŠ" );
         add( "id", ({ "sword" }) );
-        set_short( "¶ÏµôµÄ»¹Çé½£" );
+        set_short( "æ–·æŽ‰çš„é‚„æƒ…åŠ" );
         set_long(
-                "ÕâÊÇÒ»°ÑÍ¨Ìå³ÊÇà±ÌÉ«µÄ½££¬Äã°Ñ½£ÈÐÏòÖøÁÁ¹â´¦Ò»ÕÕ£¬¾¹ÊÇ°ëµã\n"
-                "¹âÔóÒ²Ã»ÓÐ¡£ÄãÒþÔ¼¿ÉÒÔ¸Ð¾õµ½½£ÉíÉ¢·¢³öÒ»ÖÖÎÂºÍÓäÔÃµÄ¸Ð¾õ£¬\n"
-                "ÔÚ½£±ú½üïÉ´¦£¬Äã·¢ÏÖ¿ÌÖøÒ»ÐÐÐ¡×Ö £º ÇéË¿ÄÑÕ¶ ¶Ï½£»¹Çé¡£\n"
+                "é€™æ˜¯ä¸€æŠŠé€šé«”å‘ˆé’ç¢§è‰²çš„åŠï¼Œä½ æŠŠåŠåˆƒå‘è‘—äº®å…‰è™•ä¸€ç…§ï¼Œç«Ÿæ˜¯åŠé»ž\n"
+                "å…‰æ¾¤ä¹Ÿæ²’æœ‰ã€‚ä½ éš±ç´„å¯ä»¥æ„Ÿè¦ºåˆ°åŠèº«æ•£ç™¼å‡ºä¸€ç¨®æº«å’Œæ„‰æ‚…çš„æ„Ÿè¦ºï¼Œ\n"
+                "åœ¨åŠæŸ„è¿‘é”è™•ï¼Œä½ ç™¼ç¾åˆ»è‘—ä¸€è¡Œå°å­— ï¼š æƒ…çµ²é›£æ–¬ æ–·åŠé‚„æƒ…ã€‚\n"
         );
 
-	set( "unit", "±ú" );
+	set( "unit", "æŸ„" );
 	set( "weight", 150 );
 	setup_weapon( "longblade", 40, 20, 40 );
 	set( "value", ({ 400, "gold" }) );
@@ -21,15 +21,15 @@ void create()
 
 //	set("hit_func","love_damage");
 	set("special_damage",10);
-    set("special_c_msg","ÄãµÄ»¹Çé½£µÄ¶Ï´¦Í»È»·¢³ö¹â»Ô£¬Ò»µÀÇàÃ¢Ö±Ö±¹áÈëÄãµÄÐØÌÅ£¬\n
-ÄãÍ»È»ÏëÆðÁË¹ýÈ¥ÔøÓÐµÄÎÂÈáÊ±¹â£¬ÐÄÖÐÒ»Õó¾çÍ´£¬¼¸ºõÁ¬ÎäÆ÷Ò²ÎÕ²»×¡ÁË .\n\n");
-	set("special_c_msg2","%sµÄ»¹Çé½£¶Ï´¦Í»È»·¢³ö¹â»Ô£¬Ò»µÀÇàÃ¢Ö±Ö±¹áÈë%sµÄÐØÌÅ .\n\n");
+    set("special_c_msg","ä½ çš„é‚„æƒ…åŠçš„æ–·è™•çªç„¶ç™¼å‡ºå…‰è¼ï¼Œä¸€é“é’èŠ’ç›´ç›´è²«å…¥ä½ çš„èƒ¸è†›ï¼Œ\n
+ä½ çªç„¶æƒ³èµ·äº†éŽåŽ»æ›¾æœ‰çš„æº«æŸ”æ™‚å…‰ï¼Œå¿ƒä¸­ä¸€é™£åŠ‡ç—›ï¼Œå¹¾ä¹Žé€£æ­¦å™¨ä¹Ÿæ¡ä¸ä½äº† .\n\n");
+	set("special_c_msg2","%sçš„é‚„æƒ…åŠæ–·è™•çªç„¶ç™¼å‡ºå…‰è¼ï¼Œä¸€é“é’èŠ’ç›´ç›´è²«å…¥%sçš„èƒ¸è†› .\n\n");
 }
 void report( object attacker, object victim )
 {
    seteuid(getuid());
    tell_object( victim,
-   sprintf("( Äã%s )\n","/adm/daemons/statsd"->status_string(victim))
+   sprintf("( ä½ %s )\n","/adm/daemons/statsd"->status_string(victim))
    );
 }
 int love_damage(object victim,int damage)
@@ -56,7 +56,7 @@ int love_damage(object victim,int damage)
                 victim->receive_special_damage( "mental",dam+max );
                 victim->set("last_attacker", holder );
                 tell_object( holder, 
-                        sprintf(c_msg,"\nÄã",victim->query("c_name")));
+                        sprintf(c_msg,"\nä½ ",victim->query("c_name")));
                 tell_room( environment(holder), 
                         sprintf(c_msg,holder->query("c_name"),victim->query("c_name")),
                         holder );

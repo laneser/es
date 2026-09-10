@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("toy dagger","Íæ¾ßØ°Ê×");
+       set_name("toy dagger","ç©å…·åŒ•é¦–");
        add("id",({"dagger",}) );
-       set_short("Íæ¾ßØ°Ê×");
+       set_short("ç©å…·åŒ•é¦–");
        set_long(
-           "Ò»°ÑÍæ¾ßØ°Ê×\n"
+           "ä¸€æŠŠç©å…·åŒ•é¦–\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 4 );
         set( "type","dagger");
 	set( "min_damage", 4 );

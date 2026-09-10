@@ -9,10 +9,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-   set_short("������");
+   set_short("地下室");
 	set_long( @LONG_DESCRIPTION
-����������һ�������ĵ����ң���ʪ�Ŀ������ƺ�������һ˿˿��ζ��Ҳ����
-�����������˴��ؾ���ĵؽѣ�������һ��������ʴ���ѵ�ľ��ͨ��һ¥�Ŀ�����
+你現在來到一個陰暗的地下室，潮溼的空氣中似乎還帶著一絲絲酒味，也許這
+裡是屋子主人儲藏酒類的地窖，角落裡一個幾乎腐蝕斷裂的木梯通往一樓的客廳。
 LONG_DESCRIPTION
 	);
 
@@ -22,8 +22,8 @@ LONG_DESCRIPTION
 	create_door( "south", "north", ([
 		"keyword" : ({ "wooden door", "door" }),
 		"name" : "wooden door",
-		"c_name" : "ľ��",
-		"c_desc" : "һ�Ⱥ���ͨ��ľ��",
+		"c_name" : "木門",
+		"c_desc" : "一扇很普通的木門",
 		"status" : "locked",
 		"lock" : "GHOST_HAROLD_CELLAR"
 	]) );

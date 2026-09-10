@@ -32,7 +32,7 @@ void send_msg(string channel, string id, string name, string msg, int emoted,
 	||	!ACCESS_CHECK(previous_object())) return;
 
 #ifdef DEBUG
-	set("channel_id", "ÍøÂ·ÆµµÀ¾«Áé");
+	set("channel_id", "ç¶²è·¯é »é“ç²¾éˆ");
 	CHANNELD_D->do_channel(this_object(), "sys", "prepare to send gchannel message.");
 #endif
 	muds = (mapping)DNS_MASTER->query_muds();
@@ -53,7 +53,7 @@ void send_msg(string channel, string id, string name, string msg, int emoted,
 			minfo = muds[names[i]];
 			if(!mapp(minfo)) continue;
 #ifdef DEBUG
-	set("channel_id", "ÍøÂ·ÆµµÀ¾«Áé");
+	set("channel_id", "ç¶²è·¯é »é“ç²¾éˆ");
 	CHANNELD_D->do_channel(this_object(), "sys",
 		sprintf("gchannel message sent to %s.", minfo["NAME"]));
 #endif

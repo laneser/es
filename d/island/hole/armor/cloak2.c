@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Death Cloak","ËÀÉñÅû·ç" );
+	set_name( "Death Cloak","æ­»ç¥æŠ«é¢¨" );
 	add( "id",({ "cloak" }) );
-	set_short( "ËÀÉñÅû·ç" );
+	set_short( "æ­»ç¥æŠ«é¢¨" );
 	set_long(@LONG
-	ÕâÊÇ´«ËµÖĞ»áÏ¨ÃğÉúÃü»ğÑæµÄÅû·ç£¬Ö»ÓĞËÀÉñ
-	²ÅÄÜÓµÓĞËü¡£
+	é€™æ˜¯å‚³èªªä¸­æœƒç†„æ»…ç”Ÿå‘½ç«ç„°çš„æŠ«é¢¨ï¼Œåªæœ‰æ­»ç¥
+	æ‰èƒ½æ“æœ‰å®ƒã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",40 );
 	set( "type","cloak" );
 	set( "material","cloth" );

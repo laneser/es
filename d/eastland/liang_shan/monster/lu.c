@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "Lu Fang", "吕方" );
+	set_name( "Lu Fang", "鍛傛柟" );
 	add("id",({"lu","fang"}));
-	set_short( "吕方" );
+	set_short( "鍛傛柟" );
 	set_long(
-		"吕方外号小温侯，湖南潭州人，红衣红甲，善使方天画戟，为\n"
-		"梁山泊马军小彪将兼远探出哨头领，武艺不凡。\n"
+		"鍛傛柟澶栬櫉灏忔韩渚紝婀栧崡娼窞浜猴紝绱呰。绱呯敳锛屽杽浣挎柟澶╃暙鎴燂紝鐐篭n"
+		"姊佸北娉婇Μ杌嶅皬褰皣鍏奸仩鎺㈠嚭鍝ㄩ牠闋橈紝姝﹁棟涓嶅嚒銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

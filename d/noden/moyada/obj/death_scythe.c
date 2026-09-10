@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Controlled Death Scythe", "Ìı»°µÄËÀÉñÁ­µ¶");
+	set_name("Controlled Death Scythe", "è½è©±çš„æ­»ç¥é®åˆ€");
 	add ("id",({ "scythe", }) );
-    set_short("Ìı»°µÄËÀÉñÁ­µ¶");
+    set_short("è½è©±çš„æ­»ç¥é®åˆ€");
 	set_long(
-	    "Ò»°ÑºÜÊ®·Ö·æÀûµÄ´óÁ­µ¶£¬¾İËµÊÇËÀÉñĞÄ°®µÄÎäÆ÷¡£\n"+
-	    "Ëü¿ÉÒÔÓÃÀ´¸î²İ(cropp)Âğ? \n"
+	    "ä¸€æŠŠå¾ˆååˆ†é‹’åˆ©çš„å¤§é®åˆ€ï¼Œæ“šèªªæ˜¯æ­»ç¥å¿ƒæ„›çš„æ­¦å™¨ã€‚\n"+
+	    "å®ƒå¯ä»¥ç”¨ä¾†å‰²è‰(cropp)å—? \n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", 42 );
 // set( "type", "shortblade" );
    set( "type", "longblade" );
@@ -31,7 +31,7 @@ void init()
 int to_cropp(string str)
 {
      write( 
-       "ËÀÉñÁ­µ¶¿à¿à°§ÇóµØËµ: Çë²»ÒªÅ°´ıÎÒ¡£\n"
+       "æ­»ç¥é®åˆ€è‹¦è‹¦å“€æ±‚åœ°èªª: è«‹ä¸è¦è™å¾…æˆ‘ã€‚\n"
     );
     return 1;
 }

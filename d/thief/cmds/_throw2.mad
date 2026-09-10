@@ -14,10 +14,10 @@ make_hurt(object me, object target, object weapon);
 
 /* ************************************************
    return value : 
-   0 : ʧ��
-   1 : һ��
-   2 ���� : special 
-   ����ȷ�� return value С����ϴ��� dagger
+   0 : 失敗
+   1 : 一般
+   2 以上 : special 
+   必須確定 return value 小於身上帶的 dagger
 
 skill level  0..10 can throw max 1 dagger
        11..20		    1 dagger + aim g rate++
@@ -119,27 +119,27 @@ int cmd_throw2(string arg)
 
 	me = this_player();
 	if ( (int)me->query_temp("throwing") == 1 )
-		return notify_fail("�����ϵķɵ���û���ȥ����ʲ�ᡣ\n");
-	if ( ! arg ) return notify_fail("��ҪͶ��ʲ��?\n");
+		return notify_fail("你手上的飛刀還沒射出去，急什麼。\n");
+	if ( ! arg ) return notify_fail("你要投擲什麼?\n");
 	if ( sscanf( arg,"%s at %s",tmp1,tmp2) != 2 ) return 0;
 	if ( ! target = present(tmp2,(env=environment(me))))
-		return notify_fail("����û�н�"+tmp2+"�����\n");
+		return notify_fail("這裡沒有叫"+tmp2+"的生物。\n");
 	if ( ! living(target) )
-		return notify_fail("����û�н�"+tmp2+"�����\n");
+		return notify_fail("這裡沒有叫"+tmp2+"的生物。\n");
 	if ( ! (weapon = present(tmp1,me)) )
-		return notify_fail("��û�д�����"+tmp1+"�Ķ�����\n");
+		return notify_fail("你沒有帶著叫"+tmp1+"的東東。\n");
 	if ( target == me )
-		return notify_fail("�㲻��ƴsuicide��?\n");
+		return notify_fail("你不會拼suicide嗎?\n");
 	if ( target->query("no_attack") )
-		return notify_fail("�㲻�ܹ�������\n");
-// ������ invisible �� player
+		return notify_fail("你不能攻擊他。\n");
+// 不能射 invisible 的 player
 	if(!visible(target,me)||target->query("invisible_player") ) 
-		return notify_fail("����û�н�"+tmp2+"�����\n");
+		return notify_fail("這裡沒有叫"+tmp2+"的生物。\n");
 	if ( weapon && ( (string )weapon->query("type") != "dagger" || weapon->query("prevent_drop") || weapon->query("wielded") || weapon->query("equipped")))
-		return notify_fail("����������ܵ��ɵ�..\n");
+		return notify_fail("這件東西不能當飛刀..\n");
 
 	me->set_temp("throwing",1);
-	tell_object( me,sprintf("�㰵������һ%s%s, �ȴ��ʵ��Ļ���..\n",weapon->query("unit"),weapon->query("c_name")) );
+	tell_object( me,sprintf("你暗中拿了一%s%s, 等待適當的機會..\n",weapon->query("unit"),weapon->query("c_name")) );
 	call_out("result",1,me,target,weapon,attack_type(this_player()) );
 
 	return 1;
@@ -148,13 +148,13 @@ int cmd_throw2(string arg)
 
 result(object me,object target,object weapon,int type)
 {
-	// ֻ��������, ��Ȼ��Ҫ�� attack_type
+	// 只能有五招, 不然就要改 attack_type
 	string *mm = ({ "",
-		"%s����һ�ѷɵ�, �ݵ�һ������%s!!\n",
-		"%s������ѷɵ�, ֱȡ%s˫Ŀ!!\n",
-		"%s�ķɵ�������·����%s!!\n",
-		"%s��������İѷɵ�,��ס%s��ȫ����·!!\n",
-		"%sһ�����컨��, ����ɵ���%s��ȥ!!\n",
+		"%s摸出一把飛刀, 咻的一聲射向%s!!\n",
+		"%s射出兩把飛刀, 直取%s雙目!!\n",
+		"%s的飛刀分作三路飛向%s!!\n",
+		"%s連續射出四把飛刀,封住%s的全部退路!!\n",
+		"%s一招滿天花雨, 許多飛刀向%s飛去!!\n",
 		});
 	object env,dagger;
 	int i,dam=0,aim;
@@ -163,24 +163,24 @@ result(object me,object target,object weapon,int type)
 	me->set_temp("throwing",0);
 	env = environment(me);
 	if ( ! target || nullp(target) || target->query("hit_points") < 1 ) {
-		write("�Ǽһ��Ѿ����ˡ�\n");
+		write("那傢伙已經死了。\n");
 		return 1;
 	}
 	if ( !present(target,env) ) {
-		write(sprintf("%s�Ѿ�������!!\n",target->query("c_name")));
+		write(sprintf("%s已經溜走了!!\n",target->query("c_name")));
 		return 1;
 	}
 
 	if ( type != 0 )  {
 	    tell_room(env,set_color(sprintf(mm[type],me->query("c_name"),target->query("c_name")),"HIY",me),({me,target}));
-	    tell_object(target,set_color(sprintf(mm[type],me->query("c_name"),"��"),"HIR",target));
-	    tell_object(me,set_color(sprintf(mm[type],"��",target->query("c_name")),"HIR",me));
+	    tell_object(target,set_color(sprintf(mm[type],me->query("c_name"),"你"),"HIR",target));
+	    tell_object(me,set_color(sprintf(mm[type],"你",target->query("c_name")),"HIR",me));
 
 	} else {
-	    msg = "%s����һ�ѷɵ�, �ݵ�һ������%s, ���û��!!\n",
+	    msg = "%s摸出一把飛刀, 咻的一聲射向%s, 結果沒中!!\n",
 	    tell_room(env,set_color(sprintf(msg,me->query("c_name"),target->query("c_name")),"HIY",me),({me,target}));
-	    tell_object(target,set_color(sprintf(msg,me->query("c_name"),"��"),"HIR",target));
-	    tell_object(me,set_color(sprintf(msg,"��",target->query("c_name")),"HIR",me));
+	    tell_object(target,set_color(sprintf(msg,me->query("c_name"),"你"),"HIR",target));
+	    tell_object(me,set_color(sprintf(msg,"你",target->query("c_name")),"HIR",me));
 	}
 
 	dagger = weapon;
@@ -194,7 +194,7 @@ result(object me,object target,object weapon,int type)
 			dagger->move(target);
 			if ( ! target->query_attackers() || member_array(me,target->query_attackers()) == -1 ) 
 			tell_room(env,
-				sprintf("%s���� : %s�����С��, Ҫ�ҵ��������ð� !\n",target->query("c_name"),me->query("c_name")));
+				sprintf("%s喊道 : %s你這個小人, 要我的命就來拿吧 !\n",target->query("c_name"),me->query("c_name")));
 			target->kill_ob(me);
 		} else {
 			dagger->move(env);
@@ -225,9 +225,9 @@ make_hurt(object me, object target, object weapon)
 		if ( wizardp(me)) 
 			tell_object(me,"dam = "+dam+" \n");	
      		msg = "/adm/daemons/statsd"->status_string(target) ;
-		tell_object(target,sprintf("( ��%s )\n",msg));
+		tell_object(target,sprintf("( 你%s )\n",msg));
 		tell_object(me,sprintf("( %s%s )\n",target->query("c_name"),msg));
-    	} else { /* ���� */
+    	} else { /* 毒刀 */
 	}
 	return dam;
 }
@@ -237,10 +237,10 @@ int help()
 	write (@HELP
 Usage: throw <weapon> at <target>
 
-��ɵ��������һ��С�����������˲�С�ĵ�ʱ�������б����ˣ�
-���ַɵ��ĺô���������һ������ȡ�ã����������\�������Ի��գ�
-��Ȼ�Ǵӵ��˵ġ����ϰλ������ɵ������൱Ȼ��ذ��������ɵ�
-������
+射飛刀就是射出一把小刀，趁著敵人不小心的時候讓他中標受傷，
+這種飛刀的好處有兩個，一來容易取得，二來如果成功還可以回收，
+當然是從敵人的□體上拔回來。飛刀的種類當然是匕首類等輕巧的
+武器。
 HELP
 );
 	return 1;

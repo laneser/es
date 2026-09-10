@@ -30,9 +30,9 @@ void create()
         set_natural_weapon(5,1,4);
         set("weight", 300);
         set_limbs( ({"body","head","legs","hands"}) );
-        set_c_limbs( ({"µÄÉíÌå ","µÄÍ· ","µÄ½Å ","µÄÊÖ "}) );
+        set_c_limbs( ({"çš„èº«é«” ","çš„é ­ ","çš„è…³ ","çš„æ‰‹ "}) );
         set_verbs( ({"kick","hit","bite"}) );
-        set_c_verbs( ({"%sÌß %s","%s´ò %s","%sÒ§ %sÒ»¿Ú"}) );
+        set_c_verbs( ({"%sè¸¢ %s","%sæ‰“ %s","%så’¬ %sä¸€å£"}) );
 }
  
 void init()
@@ -40,7 +40,7 @@ void init()
     ::init();
     if ((string)this_player()->query("race")=="gnome") {
         write(can_read_chinese()?
-        "Kobold ´ó½Ğ: ÎÒ×îÌÖÑáµØ¾«ÁË! ¹öÔ¶Ò»µã!\n":
+        "Kobold å¤§å«: æˆ‘æœ€è¨å­åœ°ç²¾äº†! æ»¾é ä¸€é»!\n":
         "Kobold yells: Gnomes!! I hate them!\n");
         kill_ob(this_player());
     }
@@ -50,7 +50,7 @@ int catch_huntee(object who)
 {
     if ((string)who->query("race")=="gnome") {
         write(can_read_chinese()?
-        "Kobold ½ĞµÀ: ¹ş, À´ËÍËÀÁË?\n":
+        "Kobold å«é“: å“ˆ, ä¾†é€æ­»äº†?\n":
         "Kobold shouts: come for your death again?\n");
         return 1;
     }

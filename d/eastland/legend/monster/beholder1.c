@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name("occult eye", "ÇàÁéÖ®ÑÛ");
+	set_name("occult eye", "é’éˆä¹‹çœ¼");
 	add("id",({"eye","beholder"}));
-	set_short("ÇàÁéÖ®ÑÛ");
+	set_short("é’éˆä¹‹çœ¼");
 	set_long(
-	    "ÉñÃØµÄÖÖ×å£¬ÑÛÄ§£¬»º»ºµÄ´ÓÄãÑÛÇ°·É¹ı¡£\n"
+	    "ç¥ç§˜çš„ç¨®æ—ï¼Œçœ¼é­”ï¼Œç·©ç·©çš„å¾ä½ çœ¼å‰é£›éã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set_perm_stat("int",30);
 	set_natural_weapon( 55, 23, 27 );
 	set_natural_armor( 60, 1 );
@@ -20,8 +20,8 @@ void create()
         set("hit_points",500);
 	set( "tactic_func", "magic_attack" );
 	set("special_defense",(["all":100, "none":50]) );
-	set_c_limbs( ({ "Í·²¿", "ÑÛ¾¦" }) );
-	set_c_verbs( ({ "%sÓÃËüµÄÑÛ¾¦µÉÖø%s","%sÉä³öÒ»µÀ¹âÊøÉ¨Ïò%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "çœ¼ç›" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„çœ¼ç›çªè‘—%s","%så°„å‡ºä¸€é“å…‰æŸæƒå‘%s" }) );
         equip_armor(LARMOR"globe1");
 }
 
@@ -31,7 +31,7 @@ int magic_attack()
 
 	if( !(victim=query_attacker()) || random(10)<4 ) return 0;
 	tell_room( environment(this_object()), 
-    sprintf("ÇàÁéÖ®ÑÛÓÃÖøËüµÄÑÛ¾¦·¢³öÒ»µÀÉÁÁÁµÄ°×¹â£¬Ö±Ïò%sÉäÈ¥¡£\n",
+    sprintf("é’éˆä¹‹çœ¼ç”¨è‘—å®ƒçš„çœ¼ç›ç™¼å‡ºä¸€é“é–ƒäº®çš„ç™½å…‰ï¼Œç›´å‘%så°„å»ã€‚\n",
     victim->query("c_name")));
 	victim->receive_special_damage("magic",30+random(20));	
 	return 1;

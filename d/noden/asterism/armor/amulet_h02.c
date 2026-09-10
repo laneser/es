@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Bronze amulet", "ÇàÍ­»¤Éí·û");
+        set_name("Bronze amulet", "é’éŠ…è­·èº«ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short( "ÇàÍ­»¤Éí·û");
+        set_short( "é’éŠ…è­·èº«ç¬¦");
         set_long(
-                " Ò»¸öÇàÍ­»¤Éí·û,ÖØÁ¿ºÜÇáµ«ÊÇËÆºõÄÜÌá¹©ºÜºÃµÄ±£»¤Á¦\n"
+                " ä¸€å€‹é’éŠ…è­·èº«ç¬¦,é‡é‡å¾ˆè¼•ä½†æ˜¯ä¼¼ä¹èƒ½æä¾›å¾ˆå¥½çš„ä¿è­·åŠ›\n"
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "misc" );
         set("material","light_metal") ;
         set( "armor_class", 0 );

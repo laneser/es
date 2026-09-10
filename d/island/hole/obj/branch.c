@@ -3,13 +3,13 @@
 inherit OBJECT;
 void create()
 {
-	set_name( "Mahogany Branch","ÌÒÄ¾" );
+	set_name( "Mahogany Branch","æ¡ƒæœ¨" );
 	add( "id",({ "branch" }) );
-	set_short( "ÌÒÄ¾" );
+	set_short( "æ¡ƒæœ¨" );
 	set_long(@LONG
-	Ò»¸ù½áÊµµÄÌÒÄ¾£¬ËÆºõÊÇºÜºÃµÄÄ¾²Ä¡£
+	ä¸€æ ¹çµå¯¦çš„æ¡ƒæœ¨ï¼Œä¼¼ä¹æ˜¯å¾ˆå¥½çš„æœ¨æã€‚
 LONG
 		);
 	set( "weight",5 );
-	set( "unit","¸ù");
+	set( "unit","æ ¹");
 }

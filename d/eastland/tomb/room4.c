@@ -5,11 +5,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("地下甬道");
+	set_short("鍦颁笅鐢亾");
 	set_long( 
 @C_LONG_DESCRIPTION
-这儿是一个长长的甬道，你可以看到前方隐约传来的亮光。一阵阵的风从前方吹来，
-你想大概快到了吧.......
+閫欏厭鏄竴鍊嬮暦闀风殑鐢亾锛屼綘鍙互鐪嬪埌鍓嶆柟闅辩磩鍌充締鐨勪寒鍏夈�備竴闄ｉ櫍鐨勯ⅷ寰炲墠鏂瑰惞渚嗭紝
+浣犳兂澶ф蹇埌浜嗗惂.......
 C_LONG_DESCRIPTION
 	);
 
@@ -30,7 +30,7 @@ int check_guard()
 
    guard = present("guard", this_object());
    if( present("guard", this_object()) && guard->query("right_guard") )  {
-		write("守卫说道: 国师有令，任何人不得进入。\n");
+		write("瀹堣瑾亾: 鍦嬪斧鏈変护锛屼换浣曚汉涓嶅緱閫插叆銆俓n");
 		return 1; }
 	return 0;
 }

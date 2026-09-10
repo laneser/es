@@ -1,8 +1,8 @@
-//  ÉËº¦ÄÜÁ¦ = 10 + Ëæ»ú(level) + ÊìÁ·¶È/20  = (10~34)
+//  å‚·å®³èƒ½åŠ› = 10 + éš¨æ©Ÿ(level) + ç†Ÿç·´åº¦/20  = (10~34)
 //  skill=weapon_type_skill+piety*3+str*3+con+kar+(int)gonfu_level/5-victim(dex*2+piety*2+kar)
-//  ¼´ skill= (1~195) - victim( dex*2 + int*2 +kar)
-//  ÃüÖÐÂÊ=random(skill) > query_hit_chance(20 ~70) 
-//  ¹¥»÷´ÎÊý= 3 ´Î
+//  å³ skill= (1~195) - victim( dex*2 + int*2 +kar)
+//  å‘½ä¸­çŽ‡=random(skill) > query_hit_chance(20 ~70) 
+//  æ”»æ“Šæ¬¡æ•¸= 3 æ¬¡
 
 #include </u/w/wind/wind.h>
 inherit DAEMON;
@@ -55,19 +55,19 @@ int eungon(int gonfu_level,string victim_name)
 
         if (skill<1){
            write( chinese_mode?
-                "ÄãÃ»ÓÐ×°±¸ÊÊÓÃµÄÎäÆ÷£¬²»ÄÜÊ¹³ö·èÄ§¹÷·¨ .... ¡£\n":
+                "ä½ æ²’æœ‰è£å‚™é©ç”¨çš„æ­¦å™¨ï¼Œä¸èƒ½ä½¿å‡ºç˜‹é­”æ£æ³• .... ã€‚\n":
                 "This weapon is not suit to use fon-mo skill, maybe a blunt is better... \n");
            return 1;
         }
 
         weapon_name=(string)weapon->query("c_cap_name"); 
         write( chinese_mode?
-                "ÄãÎÕ½ôÊÖÖÐµÄ" + weapon_name + "£¬Ê¦¸¸½ÌÄãµÄ·èÄ§¹÷·¨Ò»Ò»ÔÚÄãÄÔÖÐ¸¡ÏÖ .... ¡£\n ":
+                "ä½ æ¡ç·Šæ‰‹ä¸­çš„" + weapon_name + "ï¼Œå¸«çˆ¶æ•™ä½ çš„ç˜‹é­”æ£æ³•ä¸€ä¸€åœ¨ä½ è…¦ä¸­æµ®ç¾ .... ã€‚\n ":
                 "You begin to wave the polearm  ....\n"
         );
         tell_room(
           environment(ob1), ({ sprintf(""),
-          sprintf(C_NAME + "½«ÊÖÖÐµÄ" + weapon_name + "Æ½¾Ù£¬Ò»¹ÉÆøÊÆ´ÓÖÐÕ¹Â¶..\n" )
+          sprintf(C_NAME + "å°‡æ‰‹ä¸­çš„" + weapon_name + "å¹³èˆ‰ï¼Œä¸€è‚¡æ°£å‹¢å¾žä¸­å±•éœ²..\n" )
           }),
           ob1
         );
@@ -75,17 +75,17 @@ int eungon(int gonfu_level,string victim_name)
        if ( !(victim_name=="NONE") ) { 
        targ=present( victim_name,environment(this_player()) );
        if(! targ ) {
-          write(chinese_mode? "ÄãµÄÄ¿±ê²»ÔÚÕâÀ²!!! \n":" it is not here!\n" );
+          write(chinese_mode? "ä½ çš„ç›®æ¨™ä¸åœ¨é€™å•¦!!! \n":" it is not here!\n" );
           return 0;
                    } 
        if (!living(targ) ) {
-          write(chinese_mode? "Ä¿±ê±ØÐëÊÇÉúÎï!\n":"It is not a living creature!\n");           
+          write(chinese_mode? "ç›®æ¨™å¿…é ˆæ˜¯ç”Ÿç‰©!\n":"It is not a living creature!\n");           
            return 0;       }
        if (targ->query("no_attack") ) {
-           write(chinese_mode? "²»¿ÉÒÔ´òËüÀ²!!! \n":"U cannot attack it! \n");
+           write(chinese_mode? "ä¸å¯ä»¥æ‰“å®ƒå•¦!!! \n":"U cannot attack it! \n");
            return 0;                  }
        if (targ==this_player() ) {
-           write(chinese_mode? "×ÔÉ±°¡? ²»ÒªÀ².... :) \n":"Hmm.. u dont really want to do it? \n");
+           write(chinese_mode? "è‡ªæ®ºå•Š? ä¸è¦å•¦.... :) \n":"Hmm.. u dont really want to do it? \n");
           return 0 ;                  }
                                       
                ob1->kill_ob(targ); 
@@ -114,21 +114,21 @@ void gonfu_effect( object player, string gonfu, int skill )
           player->set_temp("gonfu_busy",0);           
 
           write( can_read_chinese()?
-   "\nÄãË«ÊÖºÏÊ®£¬ÊÕ¹÷¶øÁ¢...¡£\n":
+   "\nä½ é›™æ‰‹åˆåï¼Œæ”¶æ£è€Œç«‹...ã€‚\n":
                 "You end the po-shan polearm skill....\n"
         );
-        say(C_NAME+"½«ÊÖÖÐ¹÷×ÓÊÕÆð£¬Ë«ÊÖºÏÊ®£¬Ïò´ó¼ÒËµÉù  Ï×³óÁË...¡£\n");
+        say(C_NAME+"å°‡æ‰‹ä¸­æ£å­æ”¶èµ·ï¼Œé›™æ‰‹åˆåï¼Œå‘å¤§å®¶èªªè²  ç»é†œäº†...ã€‚\n");
     } else {
       delay_time -= query_step();
       victim=player->query_attacker();
 
-///////////////////////////Ã»ÓÐµÐÈË///////////////////////////////////
+///////////////////////////æ²’æœ‰æ•µäºº///////////////////////////////////
       if (!victim){
           write( can_read_chinese()?
-                "Äã½«¹÷×ÓÍùµØÉÏÒ»ÔÒ£¬ÏÅ£¡..×¼È·µØÔÒËÀÁËÒ»Ö»ÂìÒÏ¡£\n":
+                "ä½ å°‡æ£å­å¾€åœ°ä¸Šä¸€ç ¸ï¼Œåš‡ï¼..æº–ç¢ºåœ°ç ¸æ­»äº†ä¸€éš»èžžèŸ»ã€‚\n":
                 " ....\n"
           );
-          say(C_NAME+"½«¹÷×ÓÍùµØÉÏÒ»ÔÒ£¬ÏÅ£¡..×¼È·µØÔÒËÀÁËÒ»Ö»ÂìÒÏ... ¸øËû¸öÕÆÉù°É..¡£\n");
+          say(C_NAME+"å°‡æ£å­å¾€åœ°ä¸Šä¸€ç ¸ï¼Œåš‡ï¼..æº–ç¢ºåœ°ç ¸æ­»äº†ä¸€éš»èžžèŸ»... çµ¦ä»–å€‹æŽŒè²å§..ã€‚\n");
        }
   else {     
           skill+=(int)player->query_stat("piety") *3 +(int)player->query_stat("str")*3+(int)player->query_stat("con")+(int)player->query_stat("dex")+gonfu_level/5;
@@ -137,52 +137,52 @@ void gonfu_effect( object player, string gonfu, int skill )
           damage1=query_damage();
           player_name=victim->query("c_cap_name");
 
-//  ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î Ò»¼¶ÉËº¦ ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î
+//  â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜† ä¸€ç´šå‚·å®³ â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†
           if (damage1<15){
                 write( can_read_chinese()?
-                  "\nÄãÊ¹³ö·èÄ§¹÷·¨ÖÐµÄÒ»ÕÐ¡¸Íì»¨¡¹¡£¹÷°ôÖ±»÷"+player_name+"¡£\n\n":
+                  "\nä½ ä½¿å‡ºç˜‹é­”æ£æ³•ä¸­çš„ä¸€æ‹›ã€ŒæŒ½èŠ±ã€ã€‚æ£æ£’ç›´æ“Š"+player_name+"ã€‚\n\n":
                         " ....\n"
                 );
          tell_room( environment(this_player()), ({ 
                  sprintf(""),
-       sprintf("\n%sÊÖÖÐµÄ¹÷°ôÊ¹³ö¡ºÍì»¨¡»ÏòÖø%s¹¥È¥¡£\n\n",this_player()->query("c_cap_name"),player_name) }),
+       sprintf("\n%sæ‰‹ä¸­çš„æ£æ£’ä½¿å‡ºã€ŽæŒ½èŠ±ã€å‘è‘—%sæ”»åŽ»ã€‚\n\n",this_player()->query("c_cap_name"),player_name) }),
                  player
          );
         }
-// ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î ¶þ¼¶ÉËº¦ ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î
+// â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜† äºŒç´šå‚·å®³ â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†
         else if (damage1<22){
            write( can_read_chinese()?
-                  "\nÄãÊ¹³ö·èÄ§¹÷·¨ÖÐµÄµÚ¶þÕÐ¡¸µÎË®ÏÂ´Ì¡¹¡£¹÷°ô¿ìËÙµÄÏòÖø"+player_name+"ÅüÈ¥¡£\n\n":
+                  "\nä½ ä½¿å‡ºç˜‹é­”æ£æ³•ä¸­çš„ç¬¬äºŒæ‹›ã€Œæ»´æ°´ä¸‹åˆºã€ã€‚æ£æ£’å¿«é€Ÿçš„å‘è‘—"+player_name+"åŠˆåŽ»ã€‚\n\n":
                         " ....\n"
            );
          tell_room( environment(this_player()), ({ 
                  sprintf(""),
-                 sprintf("\n%s¾ÙÆðÊÖÖÐµÄ¹÷°ô£¬Ò»ÕÐ¡ºµÎË®ÏÂ´Ì¡»ÏòÖø%s»÷ÏÂ¡£\n\n",this_player()->query("c_cap_name"),player_name) }),
+                 sprintf("\n%sèˆ‰èµ·æ‰‹ä¸­çš„æ£æ£’ï¼Œä¸€æ‹›ã€Žæ»´æ°´ä¸‹åˆºã€å‘è‘—%sæ“Šä¸‹ã€‚\n\n",this_player()->query("c_cap_name"),player_name) }),
                  player
          );
         }
-// ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î Èý¼¶ÉËº¦ ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î
+// â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜† ä¸‰ç´šå‚·å®³ â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†
         else if (damage1<30){
            write( can_read_chinese()?
-                  "\nÄãÊ¹³ö·èÄ§¹÷·¨µÄµÚÈýÕÐ¡¸°ÔÍõÐ¶¼×¡¹£¬³öÆæ²»ÒâµÄ½«¹÷¶Ë´ÌÏò"+player_name+"µÄÒªº¦¡£\n\n":
+                  "\nä½ ä½¿å‡ºç˜‹é­”æ£æ³•çš„ç¬¬ä¸‰æ‹›ã€Œéœ¸çŽ‹å¸ç”²ã€ï¼Œå‡ºå¥‡ä¸æ„çš„å°‡æ£ç«¯åˆºå‘"+player_name+"çš„è¦å®³ã€‚\n\n":
                         " ....\n"
                 );
          tell_room( environment(this_player()), ({ 
                  sprintf(""),
-     sprintf("\n%s´óºÈÒ»Éù£¬Ö»¼ûËûÊÖÖÐµÄ¹÷°ôÒ»ÕÐ¡º°ÔÍõÐ¶¼×¡»Í»È»¸ÇÏò%s¡£\n\n",this_player()->query("c_cap_name"),player_name) }),
+     sprintf("\n%så¤§å–ä¸€è²ï¼Œåªè¦‹ä»–æ‰‹ä¸­çš„æ£æ£’ä¸€æ‹›ã€Žéœ¸çŽ‹å¸ç”²ã€çªç„¶è“‹å‘%sã€‚\n\n",this_player()->query("c_cap_name"),player_name) }),
                  player
                 );
         }       
 
-// ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î ËÄ¼¶ÉËº¦ ¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î
+// â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜† å››ç´šå‚·å®³ â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†â˜†
         else if (damage1>=30){
            write( can_read_chinese()?
-                  "\nÄãÊ¹³öÁË·èÄ§¹÷·¨µÄ×îááÒ»ÕÐ¡¸Ñ©»¨¸Ç\¶¥¡¹£¬¹÷Ó°Èç·­·É´µÑ©°üÎ§ÁË"+player_name+"¡£\n\n":
+                  "\nä½ ä½¿å‡ºäº†ç˜‹é­”æ£æ³•çš„æœ€å¾Œä¸€æ‹›ã€Œé›ªèŠ±è“‹é ‚ã€ï¼Œæ£å½±å¦‚ç¿»é£›å¹é›ªåŒ…åœäº†"+player_name+"ã€‚\n\n":
                         " ....\n"
                 );
          tell_room( environment(this_player()), ({ 
                  sprintf(""),
-                 sprintf("\n%sÉíÐÎÒ»¶¯£¬½«¹÷°ôÎè¶¯ÆðÀ´£¬¡ºÑ©»¨¸Ç¶¥¡»ÖØÖØ¹÷Ó°°üÎ§ÁË%s¡£\n\n",this_player()->query("c_cap_name"),player_name) }),
+                 sprintf("\n%sèº«å½¢ä¸€å‹•ï¼Œå°‡æ£æ£’èˆžå‹•èµ·ä¾†ï¼Œã€Žé›ªèŠ±è“‹é ‚ã€é‡é‡æ£å½±åŒ…åœäº†%sã€‚\n\n",this_player()->query("c_cap_name"),player_name) }),
                  player
                 );              
         }
@@ -205,7 +205,7 @@ void gonfu_effect( object player, string gonfu, int skill )
         if(random(8)>=7 && gonfu_level<100 )
        { gonfu_level +=1;
          write (can_read_chinese()?
-         "ÄãµÄ·èÄ§¹÷·¨\ÊìÁ·¶ÈÔö¼ÓÁË!!!\n":"your po-shan gonfu raised!!! \n");
+         "ä½ çš„ç˜‹é­”æ£æ³•ç†Ÿç·´åº¦å¢žåŠ äº†!!!\n":"your po-shan gonfu raised!!! \n");
          player->add("gonfus/"+query_name(),1);
       } 
 }

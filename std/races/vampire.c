@@ -33,10 +33,10 @@ void setup_race_body()
 
 	// These variables are used for /adm/daemons/combat_d.c
 /*
-	body->set_c_verbs( ({ "%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ",
-		"%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s", }) );
-	body->set_c_limbs( ({ "ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ÐØ", "×óÍÈ", "ÓÒÍÈ",
-		"²±×Ó", "×ó¼ç", "ÓÒ¼ç", "ááÐÄ", "Ð¡¸¹", }) );
+	body->set_c_verbs( ({ "%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿",
+		"%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s", }) );
+	body->set_c_limbs( ({ "é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿",
+		"è„–å­", "å·¦è‚©", "å³è‚©", "å¾Œå¿ƒ", "å°è…¹", }) );
 */
 	// The extra command for vampire.
 	add_action( "do_bloodsuck", "bloodsuck" );
@@ -103,37 +103,37 @@ int do_bloodsuck(string arg)
 	object me, dest;
 
 	if( !arg || arg == "" ) 
-		return notify_fail("ÄãÒªÎüË­µÄÑª£¿\n");
+		return notify_fail("ä½ è¦å¸èª°çš„è¡€ï¼Ÿ\n");
 
 	me = this_player();
 	dest = present( arg, environment(me) );
 	if( !dest || !living(dest) )
-		return notify_fail("ÕâÀïÃ»ÓÐÕâÖÖÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰é€™ç¨®ç”Ÿç‰©ã€‚\n");
 
 	if( dest->query("no_attack") )
-		return notify_fail("Äã²»ÄÜÎüÕâ¼Ò»ïµÄÑª¡£\n");
+		return notify_fail("ä½ ä¸èƒ½å¸é€™å‚¢ä¼™çš„è¡€ã€‚\n");
 
         if ( userp(dest) && ((int)dest->query_level()<5) )
-                return notify_fail("Äã²»ÄÜÆÛ¸ºµÍµÈ¼¶Íæ¼Ò !!\n");
+                return notify_fail("ä½ ä¸èƒ½æ¬ºè² ä½Žç­‰ç´šçŽ©å®¶ !!\n");
 	if ( userp(dest) && ((int)me->query_level()<5) )
-		return notify_fail("³á°ò¶¼»¹Ã»³¤Ó²,¾ÍÏëPKÈË?\n");
+		return notify_fail("ç¿…è†€éƒ½é‚„æ²’é•·ç¡¬,å°±æƒ³PKäºº?\n");
 	
 	if( dest->query_temp("be_sucked"))
-		return notify_fail("Õâ¼Ò»ï¸ù±¾²»ÈÃÄã¿¿½ü£¬ÄãÃ»ÓÐ»ú»áÎüÑª¡£\n");
+		return notify_fail("é€™å‚¢ä¼™æ ¹æœ¬ä¸è®“ä½ é è¿‘ï¼Œä½ æ²’æœ‰æ©Ÿæœƒå¸è¡€ã€‚\n");
 
 	if( userp(me) && me->query_temp("bloodsuck") )
-		return notify_fail("ºÙ! ³ÔÌ«±¥²»ºÃÅ¶..×ÜÒªÏû»¯Ò»ÏÂ°É¡£\n");
+		return notify_fail("å˜¿! åƒå¤ªé£½ä¸å¥½å“¦..ç¸½è¦æ¶ˆåŒ–ä¸€ä¸‹å§ã€‚\n");
 
-	write(sprintf("ÄãÕÅ×ìÍù%sµÄ²±×ÓÒ§È¥£¬",
+	write(sprintf("ä½ å¼µå˜´å¾€%sçš„è„–å­å’¬åŽ»ï¼Œ",
 			dest->query("c_name")));
 
 	tell_room( environment(me), 
-		sprintf("%sÍ»È»ÕÅ×ìÒ§Ïò%sµÄ²±×Ó£¬", 
+		sprintf("%sçªç„¶å¼µå˜´å’¬å‘%sçš„è„–å­ï¼Œ", 
 			me->query("c_name"), dest->query("c_name")) ,
 		({ me, dest }) );
 
 	tell_object( dest, 
-		sprintf("%sÍ»È»ÕÅ×ìÒ§ÏòÄãµÄ²±×Ó£¬",
+		sprintf("%sçªç„¶å¼µå˜´å’¬å‘ä½ çš„è„–å­ï¼Œ",
 			me->query("c_name")));
 
 	dest->set_temp("be_sucked",1);
@@ -144,13 +144,13 @@ int do_bloodsuck(string arg)
         me->block_attack(4);
 
 	if ( random((int)me->query_level()*2) < (int)dest->query_level() ) {
-		tell_room(environment(me),set_color("µ«ÊÇ±»·¢ÏÖÁË !!\n","HIY"),({}));
-		me->set_temp("msg_stop_attack","(ÄãÏÖÔÚÊÖÃ¦½ÅÂÒ£¬ÎÞ·¨¹¥»÷ £¡)\n");
+		tell_room(environment(me),set_color("ä½†æ˜¯è¢«ç™¼ç¾äº† !!\n","HIY"),({}));
+		me->set_temp("msg_stop_attack","(ä½ ç¾åœ¨æ‰‹å¿™è…³äº‚ï¼Œç„¡æ³•æ”»æ“Š ï¼)\n");
 		return 1;
 	}
 
-	tell_room(environment(me),set_color("¿ªÊ¼ÓÃÁ¦µÄÎüÑª !!\n","HIR"),({}));
-	me->set_temp("msg_stop_attack","(¡¸ÎüÑª»ÊµÛ´ó¡¹£¬ÆäËûÊÂ´ý»á¶ùÔÙËµ£¡)\n");
+	tell_room(environment(me),set_color("é–‹å§‹ç”¨åŠ›çš„å¸è¡€ !!\n","HIR"),({}));
+	me->set_temp("msg_stop_attack","(ã€Œå¸è¡€çš‡å¸å¤§ã€ï¼Œå…¶ä»–äº‹å¾…æœƒå…’å†èªªï¼)\n");
 	
 	me->set_temp("bloodsuck", 1);
 
@@ -167,10 +167,10 @@ void stop_suck(object me, object victim)
 		return;
 	}
 	tell_object( me, 
-		"ÄãÓä¿ìµØÌòÁËÌòÕ´ÂúÏÊÑªµÄ×ì´½£¬Ò»¹ÉÂú×ã¸ÐÊ¹Äã»Ö¸´ÁËÒ»Ð©ÌåÁ¦£¡\n");
+		"ä½ æ„‰å¿«åœ°èˆ”äº†èˆ”æ²¾æ»¿é®®è¡€çš„å˜´å”‡ï¼Œä¸€è‚¡æ»¿è¶³æ„Ÿä½¿ä½ æ¢å¾©äº†ä¸€äº›é«”åŠ›ï¼\n");
 
 	tell_room( environment(me), 
-		sprintf("%sÓä¿ìµØÌòÁËÌòÕ´ÂúÏÊÑªµÄ×ì´½£¬Â¶³öÒ»¸öÂú×ãµÄ±íÇé¡£\n",
+		sprintf("%sæ„‰å¿«åœ°èˆ”äº†èˆ”æ²¾æ»¿é®®è¡€çš„å˜´å”‡ï¼Œéœ²å‡ºä¸€å€‹æ»¿è¶³çš„è¡¨æƒ…ã€‚\n",
 			me->query("c_name")), me );
 	blood = random(me->query_level());
 	me->receive_healing( blood );

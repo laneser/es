@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "fruit", "¹ûÊµ" );
+	set_name( "fruit", "æœå¯¦" );
 	add("id",({"fruit"}) );
-	set_short("¹ûÊµ" );
+	set_short("æœå¯¦" );
 	set_long(
-		"Õâ¿Å¹ûÊµ¿´ÆğÀ´ºÜÏñÆ»¹û, µ«ÊÇ±íÃæ²¼ÂúÏ¸Ï¸µÄÈŞÃ«¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™é¡†æœå¯¦çœ‹èµ·ä¾†å¾ˆåƒè˜‹æœ, ä½†æ˜¯è¡¨é¢ä½ˆæ»¿ç´°ç´°çš„çµ¨æ¯›ã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "NO_NAME_FRUIT" );
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
         set( "weight", 2 );
 	set( "savour","sweet");
 	set( "effect","simple_poison");

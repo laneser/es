@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "sea general", "º£Ú¤½«¾ü" );
+	set_name( "sea general", "æµ·å†¥å°‡è»" );
 	add("id",({"sea","general"}));
-	set_short( "º£Ú¤½«¾ü" );
+	set_short( "æµ·å†¥å°‡è»" );
 	set_long(
-         "º£Ú¤½«¾üÓÐÖøÒ»Í·ÂÌÉ«µÄÍ··¢£¬Ïà´«ÊÇº£ÉñµÄááÒá£¬Ïàµ±¿×ÎäÓÐÁ¦¡£\n"
+         "æµ·å†¥å°‡è»æœ‰è‘—ä¸€é ­ç¶ è‰²çš„é ­é«®ï¼Œç›¸å‚³æ˜¯æµ·ç¥žçš„å¾Œè£”ï¼Œç›¸ç•¶å­”æ­¦æœ‰åŠ›ã€‚\n"
 	);
 	set( "alignment", 2000 );
 	set_perm_stat( "dex", 10 );
@@ -41,11 +41,11 @@ int my_tactic()
 
     if( random(40)>10 || !(victim= query_attacker()) ) return 0;
       tell_object(victim,
-          "\n½«¾ü¿ÚÖÐÄî¶¯ÖäÓï£¬Äã¿´µ½Ò»²¨º£ÀËÏòÄãÏ®¾í¶øÀ´.\n"
+          "\nå°‡è»å£ä¸­å¿µå‹•å’’èªžï¼Œä½ çœ‹åˆ°ä¸€æ³¢æµ·æµªå‘ä½ è¥²æ²è€Œä¾†.\n"
           );
       tell_room(environment(victim),
-          "\n½«¾ü¿ÚÖÐÄî¶¯ÖäÓï£¬Äã¿´µ½Ò»²¨º£ÀËÏò"
-          +victim->query("c_name")+"Ï®¾í¶øÈ¥.\n"
+          "\nå°‡è»å£ä¸­å¿µå‹•å’’èªžï¼Œä½ çœ‹åˆ°ä¸€æ³¢æµ·æµªå‘"
+          +victim->query("c_name")+"è¥²æ²è€ŒåŽ».\n"
           ,victim);
       victim->receive_special_damage("evil",40+random(10));
       "/d/magic/magic"->report(this_object(),victim);
@@ -60,8 +60,8 @@ int accept_item(object who,object item)
 
   command("give paper to "+who->query("name"));
   if ( (who->query_temp("lulu_mob3")) && (who->query_temp("lulu_mob4")) )  
-        tell_object( who,"ËµµÀ: Ð»Ð»£¡Çë°ÑËû½»¸øÂ¶Â¶°É!!\n");
-  else  tell_object( who,"ËµµÀ: Ð»Ð»£¡ÇëÔÙÑ°ÕÒÆäËû½«¾ü°É!!\n");
+        tell_object( who,"èªªé“: è¬è¬ï¼è«‹æŠŠä»–äº¤çµ¦éœ²éœ²å§!!\n");
+  else  tell_object( who,"èªªé“: è¬è¬ï¼è«‹å†å°‹æ‰¾å…¶ä»–å°‡è»å§!!\n");
 
   return 1;
 }

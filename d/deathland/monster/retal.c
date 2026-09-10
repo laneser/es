@@ -9,22 +9,22 @@ void create ()
 	::create();
 	//seteuid( getuid() );
 	set_level(20);
-	set_name( "Retal", "À×¶à" );
+	set_name( "Retal", "é›·å¤š" );
 	add ("id", ({ "retal", "mage","archmage" }) );
 	set_short( "Retal the archmage of the Echo city", 
-	           "Echo city µÄ´óÄ§µ¼Ê¿À×¶à" );
+	           "Echo city çš„å¤§é­”å°Žå£«é›·å¤š" );
 	set_long(@LONG
 Retal is an old experienced mage.When evil lich,firer,whelmed the 
     echo city ,he was the only man escaped. 
 LONG
     ,@C_LONG
-        Ä§µ¼Ê¿À×¶àÊÇEcho city µÄ´óÄ§·¨Ê¦. µ±Ð°¶ñµÄ Lich »³¶û°Ñ Echo city
-    ³ÁÈë´óº£Ö®ÖÐ,ËûÊÇÎ¨Ò»ÌÓ³öÀ´µÄÈË.
+        é­”å°Žå£«é›·å¤šæ˜¯Echo city çš„å¤§é­”æ³•å¸«. ç•¶é‚ªæƒ¡çš„ Lich æ‡·çˆ¾æŠŠ Echo city
+    æ²‰å…¥å¤§æµ·ä¹‹ä¸­,ä»–æ˜¯å”¯ä¸€é€ƒå‡ºä¾†çš„äºº.
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "human" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 20 );
 	set_perm_stat( "str", 15 );
 	set_perm_stat( "int", 25 );
@@ -59,8 +59,8 @@ C_LONG
 //void ask_mage( object who )
 //{
 //    tell_object( who, can_read_chinese(who) ?
-//      "À­ÐÞµÛËµ: »¶Ó­¼ÓÈëÄ§·¨Ê¦¹«»á£¬³ýÁËòáòæÈËÖ®Íâ£¬²»ÂÛÊ²÷áÖÖ×å£¬\n"
-//      "          Ö»Òª¶ÔÄ§·¨ÓÐÐËÈ¤£¬¶¼ÄÜ¹»³ÉÎªÎÒÃÇµÄÒ»Ô±¡£\n":
+//      "æ‹‰ä¿®å¸èªª: æ­¡è¿ŽåŠ å…¥é­”æ³•å¸«å…¬æœƒï¼Œé™¤äº†èœ¥èœ´äººä¹‹å¤–ï¼Œä¸è«–ä»€éº¼ç¨®æ—ï¼Œ\n"
+//      "          åªè¦å°é­”æ³•æœ‰èˆˆè¶£ï¼Œéƒ½èƒ½å¤ æˆç‚ºæˆ‘å€‘çš„ä¸€å“¡ã€‚\n":
 //      "Rashudi says: Welcome to join mage guild. Who is interesting\n"
 //      "              in the power of magic is welcome to be a mage\n"
 //      "              unless a lizardman.\n"  
@@ -79,11 +79,11 @@ C_LONG
 //           command("kill "+lower_case(who));
 //         else if( (int)obj->query("alignment")<(-2000) )
 //           tell_object( obj, can_read_chinese(obj) ?
-//             "À­ÐÞµÛËµ: ÔÙ´Î¾¯¸æÄã£¬±ð×öÌ«¶à»µÊÂÁË¡£\n":
+//             "æ‹‰ä¿®å¸èªª: å†æ¬¡è­¦å‘Šä½ ï¼Œåˆ¥åšå¤ªå¤šå£žäº‹äº†ã€‚\n":
 //             "Rashudi says: Warning! you are too bad!\n" );
 //         else if( (int)obj->query("alignment")<(-1000) )
 //           tell_object( obj, can_read_chinese(obj) ?
-//             "À­ÐÞµÛËµ: Ð¡ÐÄµã£¡±ð×öÌ«¶à»µÊÂÁË¡£\n":
+//             "æ‹‰ä¿®å¸èªª: å°å¿ƒé»žï¼åˆ¥åšå¤ªå¤šå£žäº‹äº†ã€‚\n":
 //             "Rashudi says: Be careful, don't be too bad!.\n" );
 //       }
 //     }

@@ -6,11 +6,11 @@ void create()
 	::create() ;
 	seteuid(getuid()) ;
 	set_level(8);
-	set_name("fisher", "µö¿Í");
+	set_name("fisher", "é‡£å®¢");
 	add ("id", ({ "fisher", "fish" }) );
-	set_short( "µö¿Í");
+	set_short( "é‡£å®¢");
 	set_long(
-		"ÕâÊÇÒ»Î»×¨³ÌÀ´´ËµöÓãµÄµö¿Í£¬²»¹ıËÆºõ³É¼¨²¢²»ÀíÏë...\n"
+		"é€™æ˜¯ä¸€ä½å°ˆç¨‹ä¾†æ­¤é‡£é­šçš„é‡£å®¢ï¼Œä¸éä¼¼ä¹æˆç¸¾ä¸¦ä¸ç†æƒ³...\n"
 		);
 	set_perm_stat("str", 12);
 	set_skill( "dodge", 40 );
@@ -22,10 +22,10 @@ void create()
 	set_natural_armor( 25, 5 );
 	set_natural_weapon( 20, 6, 15 );
         set( "chat_chance",16);  
-        set("chat_output",({"µö¿Í°Ñµö¸ÍÓÃÁ¦Ò»³¶£¬µ«ÊÇÊ²÷á¶¼Ã»ÓĞ...\n",
-                            "µö¿Í°Ñµö¸ÍÀ­ÆğµÍÍ·ÖØ°óÓã¶ü...\n",
-                            "µö¿ÍËµµÀ: ½ñÌìÕæµ¹Ã¹....\n",
-                            "µö¿Í²»Í£µÄÍæÅªËûµÄ½ÅÖº....\n"}));
+        set("chat_output",({"é‡£å®¢æŠŠé‡£ç«¿ç”¨åŠ›ä¸€æ‰¯ï¼Œä½†æ˜¯ä»€éº¼éƒ½æ²’æœ‰...\n",
+                            "é‡£å®¢æŠŠé‡£ç«¿æ‹‰èµ·ä½é ­é‡ç¶é­šé¤Œ...\n",
+                            "é‡£å®¢èªªé“: ä»Šå¤©çœŸå€’é»´....\n",
+                            "é‡£å®¢ä¸åœçš„ç©å¼„ä»–çš„è…³è¶¾....\n"}));
         equip_armor("/d/eastland/liang_shan/obj/rod");
         equip_armor("/d/eastland/liang_shan/armor/hat");
         set( "inquiry", ([
@@ -35,14 +35,14 @@ void create()
 string c_call(object who)
 {
 	if ((string)who->query("gender") == "female")
-	return (!who->query("spouse")) ? "Ğ¡½ã" : "´óÄï" ;
+	return (!who->query("spouse")) ? "å°å§" : "å¤§å¨˜" ;
 	else
-	return (!who->query("spouse")) ? "Ğ¡¸ç" : "´ó¸ç" ;
+	return (!who->query("spouse")) ? "å°å“¥" : "å¤§å“¥" ;
 }
 void ask_fish()
 {
 write (
-"ÕâÎ»µö¿ÍËµµÀ: " + c_call(this_player()) +"£¬Õâ¡õÓĞºÜ¶àÓãßÏ...\n");
+"é€™ä½é‡£å®¢èªªé“: " + c_call(this_player()) +"ï¼Œé€™â–¡æœ‰å¾ˆå¤šé­šå‘¦...\n");
 return ;
 }
 

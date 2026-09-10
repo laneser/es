@@ -12,14 +12,14 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_gonfu_level_exp();
-	set_short("Training Room", "±ÌÀ¼Ğù");
+	set_short("Training Room", "ç¢§è˜­è»’");
 	set_long( @LONG_DESCRIPTION
 This is a simple room created by roommaker.
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-ÕâÊÇÎèÄ«ĞùµÄ¶ÍÁ·ÊÒ, ÃûÔ»¡¸±ÌÀ¼¡¹¡£¼¸ÃûÓÎÑ§ÊéÉúÕıÁ·Ï°ÌÆÊ«½£·¨£¬Ò»Ãû
-°ñÑÛÊéÉúÕıÔÚÁ·Ï°ºº¸³½£·¨... ¡£ÔÚÕâÀïÄã¿ÉÒÔ¶ÍÁ·(train) ÄãÔËÓÃÎä¹¦\µÄÊìÁ·
-¶È¡£
+é€™æ˜¯èˆå¢¨è»’çš„é›ç·´å®¤, åæ›°ã€Œç¢§è˜­ã€ã€‚å¹¾åéŠå­¸æ›¸ç”Ÿæ­£ç·´ç¿’å”è©©åŠæ³•ï¼Œä¸€å
+æ¦œçœ¼æ›¸ç”Ÿæ­£åœ¨ç·´ç¿’æ¼¢è³¦åŠæ³•... ã€‚åœ¨é€™è£¡ä½ å¯ä»¥é›ç·´(train) ä½ é‹ç”¨æ­¦åŠŸçš„ç†Ÿç·´
+åº¦ã€‚
 C_LONG_DESCRIPTION
 	);
 	set( "light", 1 );
@@ -64,10 +64,10 @@ int do_advance(string arg)
 	if( !arg ) return do_help("train");
 	lvl = (int)this_player()->query("scholar_gonfu/"+arg);
 	if( undefinedp(lvl) )
-		return notify_fail("Äã»¹²»»áÕâÎä¹¦\, Ôõ÷áÁ·Ï°?\n" );
+		return notify_fail("ä½ é‚„ä¸æœƒé€™æ­¦åŠŸ\, æ€éº¼ç·´ç¿’?\n" );
 
 	if( member_array(arg, needed) == -1 || lvl >= MAX_GONFU_LVL ) {
-		write("ÄãÒÑ¾­ÍêÈ«ÁË½â"+to_chinese(arg)+"µÄ°ÂÒåÁË¡£\n");
+		write("ä½ å·²ç¶“å®Œå…¨ç­è§£"+to_chinese(arg)+"çš„å¥§ç¾©äº†ã€‚\n");
 		return 1;
 	}
 
@@ -75,15 +75,15 @@ int do_advance(string arg)
 	need_exp = gonfu_level_exp[lvl];
 	if( exp < need_exp ) {
 		write(can_read_chinese()?
-			"Äã»¹ĞèÒª "+(need_exp-exp)+" µã¾­Ñé²ÅÄÜÌáÉı"+
-			to_chinese(arg)+"µÄÊìÁ·µÈ¼¶¡£\n" :
+			"ä½ é‚„éœ€è¦ "+(need_exp-exp)+" é»ç¶“é©—æ‰èƒ½æå‡"+
+			to_chinese(arg)+"çš„ç†Ÿç·´ç­‰ç´šã€‚\n" :
 			"You need more "+(need_exp-exp)+" to advance your "+arg+" gonfu.\n"
 		);
 		return 1;
 	} else {
 		this_player()->set("scholar_gonfu/"+arg, lvl+1);
 		write(can_read_chinese()?
-			"¾­¹ıÒ»·¬¶ÍÁ·, Äã "+to_chinese(arg)+" µÄÊìÁ·¶ÈÔö¼ÓÁË¡£\n":
+			"ç¶“éä¸€ç•ªé›ç·´, ä½  "+to_chinese(arg)+" çš„ç†Ÿç·´åº¦å¢åŠ äº†ã€‚\n":
 			"Your practiced of "+arg+" increases.\n"
 		);
 		return 1;
@@ -93,12 +93,12 @@ int do_advance(string arg)
 int do_cost()
 {
 	int i;
-	write( "ÌáÉı¸÷ÀàÎä¹¦ËùĞèÒªµÄÊìÁ·¾­Ñé...\n");
+	write( "æå‡å„é¡æ­¦åŠŸæ‰€éœ€è¦çš„ç†Ÿç·´ç¶“é©—...\n");
 	for( i=0; i<MAX_GONFU_LVL; i++ ) {
 	  if( can_read_chinese() )
-	    printf("  ÊìÁ·µÈ¼¶ %2d : %15d µãÊìÁ·¾­Ñé¡£\n",i+1,gonfu_level_exp[i]);
+	    printf("  ç†Ÿç·´ç­‰ç´š %2d : %15d é»ç†Ÿç·´ç¶“é©—ã€‚\n",i+1,gonfu_level_exp[i]);
 	  else
-	    printf("  Level %2d : %15d experiences¡£\n",i+1,gonfu_level_exp[i]);
+	    printf("  Level %2d : %15d experiencesã€‚\n",i+1,gonfu_level_exp[i]);
 	}
 	return 1;
 }

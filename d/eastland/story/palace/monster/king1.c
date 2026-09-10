@@ -5,13 +5,13 @@ void create ()
 {
 	::create();
         set_level(19);
-        set_name( "The King Huang", "»ÆµÛ" );
+        set_name( "The King Huang", "é»ƒå¸" );
         add ("id", ({"king","huang","Huang"}) );
-        set_short( "ÖĞÑëÌìµÛ »ÆµÛ [ÆïÔÚÒ»Ö»[1;32m¡õ[1;36m¡õ[0;37m[1;32m¡õ[1;36ms[mÉÏ]");
+        set_short( "ä¸­å¤®å¤©å¸ é»ƒå¸ [é¨åœ¨ä¸€éš»[1;32mâ–¡[1;36mâ–¡[0;37m[1;32mâ–¡[1;36ms[mä¸Š]");
 	set_long(@CLONG
-»ÆµÛÉúµÃÉí²ÄĞŞ³¤£¬Ë«ÊÖ¹ıÏ¥£¬·ÛÃæÖì¡õ£¬Ï¸Ã¼·ïÄ¿£¬Á½¶ú´¹Öé£¬±ÇËÆÇíÑş£¬Ò»Éí
-´©Öø¼«ÎªÇ¬¾»£¬Ô¶Íû¼«¾ßÍşÒÇ£¬Ï¸¿´ÊÇÒ»±ò±òÎÄÉú£¬·Ö±ğ¸øÈË²»Í¬µÄ¸Ğ¾õ¡£»ÆµÛÊÇ
-Ìì½çÖÚÉñµÄ¹ÜÀíÕß£¬¾ßÓĞÎŞÉÏÈ¨Íş£¬ËûÔÚâÅÏ¾³£³£Ï²»¶ÔÚáá»¨Ô°ÀïÓÎÍæ¡£  ¡¡¡¡
+é»ƒå¸ç”Ÿå¾—èº«æä¿®é•·ï¼Œé›™æ‰‹éè†ï¼Œç²‰é¢æœ±â–¡ï¼Œç´°çœ‰é³³ç›®ï¼Œå…©è€³å‚ç ï¼Œé¼»ä¼¼ç“Šç‘¤ï¼Œä¸€èº«
+ç©¿è‘—æ¥µç‚ºä¹¾æ·¨ï¼Œé æœ›æ¥µå…·å¨å„€ï¼Œç´°çœ‹æ˜¯ä¸€å½¬å½¬æ–‡ç”Ÿï¼Œåˆ†åˆ¥çµ¦äººä¸åŒçš„æ„Ÿè¦ºã€‚é»ƒå¸æ˜¯
+å¤©ç•Œçœ¾ç¥çš„ç®¡ç†è€…ï¼Œå…·æœ‰ç„¡ä¸Šæ¬Šå¨ï¼Œä»–åœ¨é¤˜æš‡å¸¸å¸¸å–œæ­¡åœ¨å¾ŒèŠ±åœ’è£¡éŠç©ã€‚  ã€€ã€€
 CLONG
 	);
 	set("exp_reward", 55555 );
@@ -67,7 +67,7 @@ int stop_attack()
    atk=filter_array(all_inventory(env),"can_help",this_object());
    max=sizeof(atk);
    for ( i=0;i<max;i++ ) {
-        tell_room( env,sprintf("%s³åµ½»ÆµÛÃæÇ°£¬¿ªÊ¼±£»¤Ëû!!\n"
+        tell_room( env,sprintf("%sè¡åˆ°é»ƒå¸é¢å‰ï¼Œé–‹å§‹ä¿è­·ä»–!!\n"
           ,atk[i]->query("c_name")) );
         tmp = query_temp( "protectors" );
         if( !tmp || member_array( atk[i], tmp )==-1 ) {
@@ -93,8 +93,8 @@ void king()
    object inv,temp1;
    temp1=find_object_or_load(SPALACE"garden5");
    inv=environment(this_object());
-   tell_object(inv,"\n»ÆµÛ´óºğÒ»ÉùÕğµÃÄã»ê·ÉÆÇÉ¢£¡£¡\n\n\n");
-   tell_object(temp1,"ºöÈ»´ÓÁ¹Í¤´¦´«À´Ò»ÕóË»ºğ£¡\n");
+   tell_object(inv,"\né»ƒå¸å¤§å¼ä¸€è²éœ‡å¾—ä½ é­‚é£›é­„æ•£ï¼ï¼\n\n\n");
+   tell_object(temp1,"å¿½ç„¶å¾æ¶¼äº­è™•å‚³ä¾†ä¸€é™£å˜¶å¼ï¼\n");
    king_hurt_all(inv);
    king_hurt_all(temp1);
 }
@@ -106,7 +106,7 @@ int my_tactic()
     if ( !victim=query_attacker() ) return 0;
     switch( random(25) ) {
     case 0    : 
-                tell_object(victim,"\n»ÆµÛ´óº°£ºĞ°Áé¸½ÉíĞ°Áé¸½Éí£¡\n\n");
+                tell_object(victim,"\né»ƒå¸å¤§å–Šï¼šé‚ªéˆé™„èº«é‚ªéˆé™„èº«ï¼\n\n");
                 damn_player(victim);
                 return 1;
     case 1..4 : king();

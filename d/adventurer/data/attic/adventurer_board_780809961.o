@@ -1,85 +1,85 @@
 #d/adventurer/hall/adv_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"���԰�","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"���԰�","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Adventurer's bulletin board","c_long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷���ο� help board��
-���ð���߹�������춴�ҵģ�����κ��˶���ӭ���������ԡ�
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ð�������԰�",])
-messages ({(["id":1,"title":"��Ҫ�����!!","body":"hi all friend..
-   С����Ҫ�Ͱ�ѩ�������....
-   9/12 monday ����..
-   ��ӭ��������Ѳμ�!!
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Adventurer's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請參看 help board。
+由於冒險者公會是屬於大家的，因此任何人都歡迎在這裡留言。
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"冒險者留言板",])
+messages ({(["id":1,"title":"我要結婚啦!!","body":"hi all friend..
+   小笨蛋要和白雪兒結婚羅....
+   9/12 monday 中午..
+   歡迎眾親朋好友參加!!
                     fos bow 
-","time":779196095,"poster":"Fos",]),(["id":2,"body":"	��ϲ fos ��...
-	������û����ͽ�飬С�Ļ�....�ǺǺ�..
+","time":779196095,"poster":"Fos",]),(["id":2,"body":"	恭喜 fos 了...
+	不過還沒長大就結婚，小心會....呵呵呵..
 
-","title":"��ϲ..","time":779259670,"poster":"Sutanic",]),(["id":3,"title":"����������!!","body":"��˵�ǹ�.....����Alomar(�������� )�������Ѹ�...
-��....���Ѵ��ʻ�����..���Ҹ������ɾ�...
-���Ƿ��۸���Ӣ�ۺú�ʵ�ڲ�֪���ȡ��....�����صؽ���С�ܳﻭ��������
+","title":"恭喜..","time":779259670,"poster":"Sutanic",]),(["id":3,"title":"比武招親羅!!","body":"話說那鍋.....咱們Alomar(死神阿修羅 )姊姊年歲已高...
+不....是已達適婚年齡..想找個如意郎君...
+但是放眼各方英雄好漢實在不知如何取捨....所以特地交代小弟籌畫比武招親
 
-�ʸ�: ����,δ��,not monk
-ʱ��: 9-17 (Friday) ���� 1:30��ʼ
-�ص�: ��÷�䶷��
-����: 1. ����̨��..˳���ǩ
-      2. ������Ϊ��
-      3. ���һֻ����û��..��һֻ����ԭ������...���Ӯ
-      4. �����ֻ����..��bebo pk Ӯ��ʤ
-      5. �������ʤ��Ҫ��Alomar�ٱ�һ��..Ӯ�˲ſ��Ա������˹�
-      6. ���������ϰ����...����������ȱ���
-      7. �����в�����ҩ�����...���ǿ�����magic..healer can heal..etc.
+資格: 男性,未婚,not monk
+時間: 9-17 (Friday) 中午 1:30開始
+地點: 古梅武鬥場
+規則: 1. 採擂臺賽..順序抽籤
+      2. 先逃走為輸
+      3. 如果一隻逃走沒死..另一隻留在原地死了...活的贏
+      4. 如果兩隻都死..跟bebo pk 贏者勝
+      5. 最後的優勝者要跟Alomar再比一場..贏了才可以抱得美人歸
+      6. 比賽完買上辦婚禮...禮金禮物請先備妥
+      7. 比賽中不得用藥或繃帶...但是可以用magic..healer can heal..etc.
    scholar can use unknow mage can use cast.......
-      8. ���������ҽ����Jschen�ṩ
+      8. 比完後免費醫療由Jschen提供
 
-����������ǰ����...mail to Alomar
-���������⼸��úô�exp..:P
-ps: �����ֳ�����
-pss: ����ĵ�wiz or God ݰ��ָ��
+請在星期五前報名...mail to Alomar
+意者請在這幾天好好存exp..:P
+ps: 可以現場報名
+pss: 請好心的wiz or God 蒞臨指導
 ","time":779461247,"poster":"Fos",]),(["id":4,"title":"< no title >","body":"
-��÷����䶷�᳨������ !! PK ������ ....
+古梅鎮的武鬥會敞開放了 !! PK 不會死 ....
 
-    ��ӭ���� :P)
+    歡迎利用 :P)
 
-					���
-","time":779472544,"poster":"Ruby",]),(["id":6,"title":"< no title >","body":"fos ˵�������׵�����Ϊ 9��16�� (friday)
+					茹比
+","time":779472544,"poster":"Ruby",]),(["id":6,"title":"< no title >","body":"fos 說比武招親的日子為 9月16日 (friday)
 ...ccc..he type wrong...^_*
-","time":779473223,"poster":"Polaris",]),(["id":7,"body":"����ϲ���
+","time":779473223,"poster":"Polaris",]),(["id":7,"body":"恭恭喜結婚
 
-","title":"< no title >","time":779553329,"poster":"Apongo",]),(["id":8,"title":"��Լ","body":"hi all friends...
-     С����9-18�����..
-������������ǵ�̨�����д���.....���bbs post..
-�������������Ÿ��Һ���?..:P
+","title":"< no title >","time":779553329,"poster":"Apongo",]),(["id":8,"title":"邀約","body":"hi all friends...
+     小笨蛋9-18生日喔..
+我想請好朋友們到臺北我招待哩.....詳見bbs post..
+能來的請留個信給我好嗎?..:P
 
 Sincerely Fos
 ","time":779656816,"poster":"Fos",]),(["id":9,"body":".. I saw the help for the command \"advance\" has the option \"guild\" .. but no use :(
-","title":"what's 'advance guild' ?","time":779858075,"poster":"Amour",]),(["id":11,"body":"ǰ������һ����???id��Ҳ����...
-������˵Ҫ���� party..Ҫ����ȥ׬����ֵ..
-���Ҷ���˵..�Ҹ�����lv�������..������׬��������exp...
+","title":"what's 'advance guild' ?","time":779858075,"poster":"Amour",]),(["id":11,"body":"前幾天有一個叫???id我也忘了...
+他跟我說要跟我 party..要跟我去賺精驗值..
+但我恩它說..我跟它的lv差蠻多的..它可能賺不到幾個exp...
 so..
-��ȥ���˼�ǧ������һֻ���������ɱ..
-û�뵽...
-��ɱ�ҵĳ���,�һ���������,һצ��ɱ������...sorry..for that man..
-","title":"�������","time":780049405,"poster":"Noz",]),(["id":12,"title":"Re: �������","body":"On Tue Sep 20, Noz wrote:
-> ǰ������һ����???id��Ҳ����...
-> ������˵Ҫ���� party..Ҫ����ȥ׬����ֵ..
-> ���Ҷ���˵..�Ҹ�����lv�������..������׬��������exp...
+就去發了幾千塊買了一隻寵物想給它殺..
+沒想到...
+它殺我的寵物,我會主動反擊,一爪就殺死它了...sorry..for that man..
+","title":"真是奇怪","time":780049405,"poster":"Noz",]),(["id":12,"title":"Re: 真是奇怪","body":"On Tue Sep 20, Noz wrote:
+> 前幾天有一個叫???id我也忘了...
+> 他跟我說要跟我 party..要跟我去賺精驗值..
+> 但我恩它說..我跟它的lv差蠻多的..它可能賺不到幾個exp...
 > so..
-> ��ȥ���˼�ǧ������һֻ���������ɱ..
-> û�뵽...
-> ��ɱ�ҵĳ���,�һ���������,һצ��ɱ������...sorry..for that man..
+> 就去發了幾千塊買了一隻寵物想給它殺..
+> 沒想到...
+> 它殺我的寵物,我會主動反擊,一爪就殺死它了...sorry..for that man..
 ...................................
-һ������Ҫ��partyȥ׬exp!�Ҿ���Ӧ�þܾ�,��$��eq�Ͳ�����,
-·������,ָ��Ҳ�����,��Ҫexp,���ڵ����ֺ��񲻿�help?
-����pets' bug�����post,����ǰ��չʾһ��,
-����һ�����ֺ���?̫��С����:P
+一個新手要求party去賺exp!我覺得應該拒絕,給$及eq就不錯了,
+路都不熟,指令也不清楚,就要exp,現在的新手好像不看help?
+還有pets' bug我早就post,不久前又展示一次,
+還把一個新手害死?太不小心了:P
          Sincerely your mad...
 
-","time":780108662,"poster":"Mad",]),(["id":13,"body":"��...��...˵�ĺú�....��.....
-       �Ǻ� ....��....^.*
+","time":780108662,"poster":"Mad",]),(["id":13,"body":"對...對...說的好好....好.....
+       呵呵 ....呵....^.*
                                   Tick
 ","title":"< no title >","time":780144703,"poster":"Ticks",]),(["id":14,"body":"In real life.
-�����㰡��������˶��ˣ���ÿ����������������
-�£���������
-����ǰ�����ҿ���ֽ����һ��Ҫ��һ�򲽡���������н���
-�£�ร����а�������ÿ����Զ�����ͳ�����������½����ÿ�첻֪�߼����أ�
-","title":"��","time":780156618,"poster":"Noz",]),(["id":15,"title":"HELP START","body":"Often the hardest part of playing a character is getting the character
+Ａ：你啊．．你該運動了．．每天躲在冷氣室玩電腦
+Ｂ：好啦．．
+Ａ：前以天我看報紙，人一天要走一萬步□會對身體有建康
+Ｂ：喔．．有啊．．我每天在遠風鎮逛和常常到東方大陸．．每天不知走幾萬步呢．
+","title":"步","time":780156618,"poster":"Noz",]),(["id":15,"title":"HELP START","body":"Often the hardest part of playing a character is getting the character
 through the first few levels of experience.  But, after getting going, your
 familiarity is usually enough to see you through most future adventures.
 The first thing you need to do is become familiar with all of the
@@ -97,71 +97,71 @@ explored before, who can show you around and point out the dangers.
 
               Sincerely your mad...
 
-","time":780290419,"poster":"Mad",]),(["id":16,"body":".  ��û�к��ĵĴ���Ը���֪С�� ���� ...����׬�� e.s. �еĵ�һ��Ǯ ? 
-    ��ʤ�м� .....      Thank you ��� very...very .... much .....
+","time":780290419,"poster":"Mad",]),(["id":16,"body":".  有沒有好心的大俠願意告知小弟 瀟灑 ...怎麼賺得 e.s. 中的第一塊錢 ? 
+    不勝感激 .....      Thank you 真的 very...very .... much .....
 
 
- [A[A  [B                                            Confused ���� ...��Ѫ...
-","title":"\"����׬�������еĵ�һ��Ǯ????","time":780398966,"poster":"Xyz",]),(["id":17,"body":"On Sat Sep 24, Xyz wrote:
-> .  ��û�к��ĵĴ���Ը���֪С�� ���� ...����׬�� e.s. �еĵ�һ��Ǯ ? 
->     ��ʤ�м� .....      Thank you ��� very...very .... much .....
+ [A[A  [B                                            Confused 瀟灑 ...泣血...
+","title":"\"怎麼賺到人生中的第一塊錢????","time":780398966,"poster":"Xyz",]),(["id":17,"body":"On Sat Sep 24, Xyz wrote:
+> .  有沒有好心的大俠願意告知小弟 瀟灑 ...怎麼賺得 e.s. 中的第一塊錢 ? 
+>     不勝感激 .....      Thank you 真的 very...very .... much .....
 > 
 > 
->  [A[A  [B                                            Confused ���� ...��Ѫ...
+>  [A[A  [B                                            Confused 瀟灑 ...泣血...
 
 1. type who
-2. ��һ�� lv 19 ��
+2. 找一個 lv 19 的
 3. tell xxx can u give me some money.
-","title":"Re: \"����׬�������еĵ�һ��Ǯ????","time":780404475,"poster":"Rabbit",]),(["id":18,"body":"On Sat Sep 24, Xyz wrote:
-> .  ��û�к��ĵĴ���Ը���֪С�� ���� ...����׬�� e.s. �еĵ�һ��Ǯ ? 
->     ��ʤ�м� .....      Thank you ��� very...very .... much .....
+","title":"Re: \"怎麼賺到人生中的第一塊錢????","time":780404475,"poster":"Rabbit",]),(["id":18,"body":"On Sat Sep 24, Xyz wrote:
+> .  有沒有好心的大俠願意告知小弟 瀟灑 ...怎麼賺得 e.s. 中的第一塊錢 ? 
+>     不勝感激 .....      Thank you 真的 very...very .... much .....
 > 
 > 
->  [A[A  [B                                            Confused ���� ...��Ѫ...
-׬��һ��Ǯ������!!�������ȥ����N����.............
-:)                 ר��������Ӧ����(Callman)  ^__^
-","title":"Re: \"����׬�������еĵ�һ��Ǯ????","time":780425880,"poster":"Callman",]),(["id":23,"title":"��ע�⣡���뵱��ʦ���˿������","body":"��������ҶԵ���ʦ����Ը�ܸ�, Ϊ��ʹ����������, Gods ���״���
-, ���ҽ���ʦ�����뷽ʽ�ƶȻ�, �������һ����ʦ�����, ���������,
-�뽫���� mail Gods��
+>  [A[A  [B                                            Confused 瀟灑 ...泣血...
+賺第一塊錢還不簡單!!撿個垃圾去賣□N有了.............
+:)                 專撿垃圾的應召男(Callman)  ^__^
+","title":"Re: \"怎麼賺到人生中的第一塊錢????","time":780425880,"poster":"Callman",]),(["id":23,"title":"請注意！！想當巫師的人看這裡！！","body":"由於最近玩家對當巫師的意願很高, 為了使玩家易於申請, Gods 容易處理
+, 並且將巫師的申請方式制度化, 因此做了一份巫師申請表, 大家填完後,
+請將資料 mail Gods。
 
-1. Username                     : ����д��ʹ�õ���ʦusername��
+1. Username                     : 請填寫欲使用的巫師username。
 
-2. Email_address                : û�������ޡ�
+2. Email_address                : 沒有則填無。
 
-3. BBS_username                 : ���ĸ�BBSʹ��ʲ��username
-                                  , ��һ��Ϊ��, û�������ޡ�
+3. BBS_username                 : 在哪個BBS使用什麼username
+                                  , 以一個為主, 沒有則填無。
                                   
-4. ���������ES ���            : ���������Ķ�д��
+4. 曾經玩過的ES 玩家            : 最好有玩過的都寫。
 
-5. ��ϣ����ȡ�����緽ʽ         : 
+5. 最希望採取的連絡方式         : 
  
-6. �Ƿ������������� mud֮��ʦ   :what mud, what username
-                                 ��ְ�ơ�
+6. 是否曾經擔任其他 mud之巫師   :what mud, what username
+                                 和職稱。
  
-7. ��ʽ����                     :�Ƿ���д�� lpc or C ϵ������
-                                 �ĳ�ʽ��	
+7. 程式經驗                     :是否曾寫過 lpc or C 系列語言
+                                 的程式。	
 
-8. ���ڼƻ���                   :�κ�idea ������, Խ��ϸԽ��
-                                 �����������пա�
+8. 短期計劃書                   :任何idea 都可以, 越詳細越好
+                                 但請勿天馬行空。
                                  
-9. ���ڼƻ���                   : ��д�ɲ�д��                                
+9. 長期計劃書                   : 可寫可不寫。                                
                                  
 -----------------------------------------------------------
-PS:������û�е���Ŀ����д��, ������������հס�
+PS:如果真的沒有的項目請填寫無, 不想填則請填空白。
 ----------------------------------------------------------- 
 
 
-                                 Сè  Kitten
+                                 小貓  Kitten
                                              
 ","time":780555008,"poster":"Kitten",]),(["id":24,"title":"18","body":"On Sat Sep 24, Xyz wrote:
-> .  ��û�к��ĵĴ���Ը���֪С�� ���� ...����׬�� e.s. �еĵ�һ��Ǯ ? 
->     ��ʤ�м� .....      Thank you ��� very...very .... much .....
+> .  有沒有好心的大俠願意告知小弟 瀟灑 ...怎麼賺得 e.s. 中的第一塊錢 ? 
+>     不勝感激 .....      Thank you 真的 very...very .... much .....
 > 
 > 
->  [A[A  [B                                            Confused ���� ...��Ѫ...
+>  [A[A  [B                                            Confused 瀟灑 ...泣血...
      
-     �ܼ򵥡�������ֻҪ��ð���߹���¥�ϵ�reborn,�Ϳ��Եõ�һ��С��(knife)
-  ,���˾Ϳ��Եõ�4 silver.............^_^...............................
+     很簡單。。。。只要在冒險者公會樓上等reborn,就可以得到一把小刀(knife)
+  ,賣了就可以得到4 silver.............^_^...............................
                                                 007....:P
 ","time":780799185,"poster":"James",]),(["id":25,"body":"
 ","title":"< no title >","time":780809957,"poster":"Bamboo",]),(["id":26,"body":"

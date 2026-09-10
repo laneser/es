@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
 	seteuid(getuid());
-	set_name("waraxe", "Õ½¸«");
+	set_name("waraxe", "æˆ°æ–§");
 	add( "id", ({ "axe" }) );
-        set_short( "Õ½¸«" );
+        set_short( "æˆ°æ–§" );
 	set_long(
-		"ÕâÖÖ³ÁÖØµÄÕ½¸«ÊÇ×¨ÎªÇ¿×³µÄÕ½Ê¿Éè¼ÆµÄ¡£\n"
+		"é€™ç¨®æ²‰é‡çš„æˆ°æ–§æ˜¯å°ˆç‚ºå¼·å£¯çš„æˆ°å£«è¨­è¨ˆçš„ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 110 );
 	set( "no_second", 1 );
 	setup_weapon( "axe", 17, 10, 20 );

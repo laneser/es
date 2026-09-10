@@ -8,18 +8,18 @@ void create()
 	::create();
 	set_level(17);
 	seteuid(getuid());
-	set_name( "Gigger", "Æë¸ñ" );
+	set_name( "Gigger", "é½Šæ ¼" );
 	add ("id", ({ "gigger", }) );
-	set_short( "Dwarf royal mage Gigger", "°«ÈË¹¬Í¢Ä§·¨Ê¦Æë¸ñ" );
+	set_short( "Dwarf royal mage Gigger", "çŸ®äººå®®å»·é­”æ³•å¸«é½Šæ ¼" );
 	set_long(
-	"°«ÈË¹¬Í¢Ä§·¨Ê¦Æë¸ñ. Ò»¸öÀÏ×Ê¸ñµÄÄ§·¨Ê¦. ÒÑ¾­ÎªÁËÄªÀ­µÂÍõ¹ú¹±Ï×³ö\n"
-	"ËûµÄÒ»Éú, ÒÔËûµÄÄ§·¨ÊØ»¤ÖøÕâ¸ö¹ÅÀÏµÄ°«ÈËÍõ¹ú.\n"
+	"çŸ®äººå®®å»·é­”æ³•å¸«é½Šæ ¼. ä¸€å€‹è€è³‡æ ¼çš„é­”æ³•å¸«. å·²ç¶“ç‚ºäº†è«æ‹‰å¾·ç‹åœ‹è²¢ç»å‡º\n"
+	"ä»–çš„ä¸€ç”Ÿ, ä»¥ä»–çš„é­”æ³•å®ˆè­·è‘—é€™å€‹å¤è€çš„çŸ®äººç‹åœ‹.\n"
 	);
 
     set("alignment",-100);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 22 );
 	set_perm_stat( "int", 25 );
 	set_perm_stat( "karma", 20);
@@ -61,7 +61,7 @@ int cast_spell()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-        guard[i]->query("c_name")+"ÎªÁË°ïÖúâ·°é¶ø¿ªÊ¼¹¥»÷Äã!\n", guard[i]
+        guard[i]->query("c_name")+"ç‚ºäº†å¹«åŠ©å¤¥ä¼´è€Œé–‹å§‹æ”»æ“Šä½ !\n", guard[i]
       );
       guard[i]->kill_ob(victim);
     }

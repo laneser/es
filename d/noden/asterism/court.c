@@ -8,12 +8,12 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("������ǰ����");
+	set_short("會議室前大廳");
 	set_long(
 		@C_LONG_DESCRIPTION
-���������峤������������ǰ�Ĺ㳡������ƽʱ�������������н���
-�¼������⣬���峤��ֻ����ÿ��"ʥս������"ʱ���Ż���"����֮Կ"
-�򿪻����Ҵ��š�
+這裡是三族長老評議會會議室前的廣場，三族平時各事其政，除有緊急
+事件發生外，三族長老只有在每年"聖戰紀念日"時，才會結合"永恆之鑰"
+打開會議室大門。
 C_LONG_DESCRIPTION
 	);
 
@@ -25,10 +25,10 @@ C_LONG_DESCRIPTION
 		
 	create_door("south","north",([
 	            "name":"obsidian door",
-                    "c_name":"����ʯ����",
+                    "c_name":"黑曜石大門",
 	            "keyword":({"obsidian door","door",}),
-	            "c_desc":"һ�����ʯ���š�"
-	                     "��ע�⵽�������ŵ��м�ӷ촦�п������ΰ���",
+	            "c_desc":"一面黑曜石大門。"
+	                     "你注意到在兩扇門的中間接縫處有塊三角形凹槽",
 	            "status":"locked",
 	            "lock":"ASTERISM_2",
 	                         ])

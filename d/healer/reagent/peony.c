@@ -4,14 +4,14 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "peony", "ÉÖÒ©" );
+	set_name( "peony", "èŠè—¥" );
 set("no_sale",1);
-	set_short( "ÉÖÒ©" );
+	set_short( "èŠè—¥" );
 	set_long(
-		"ÕâÊÇÓÉÉÖÒ©µÄÒ¶×ÓÉ¹Ç¬ÖÆ³ÉµÄÒ©²Ä¡£Äã¿ÉÒÔ³¢³¢(taste)ËûµÄÎ¶µÀ¡£\n"
+		"é€™æ˜¯ç”±èŠè—¥çš„è‘‰å­æ›¬ä¹¾è£½æˆçš„è—¥æã€‚ä½ å¯ä»¥åšåš(taste)ä»–çš„å‘³é“ã€‚\n"
 	);
 	set( "ident", "PEONY" );
-	set( "unit", "°ü" );
+	set( "unit", "åŒ…" );
         set( "weight", 2 );
 	set( "savour","acidity");
 	set( "effect","weak");

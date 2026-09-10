@@ -25,24 +25,24 @@ int cmd_wield(string str, int silent)
 	usr->block_attack(2);
 	obj = present( str,usr );
 	if( !obj ) return notify_fail(
-		sprintf("ÄãµÄÉíÉÏÃ»ÓÐÈÎºÎ½Ð×÷%sµÄ¶«Î÷¡£\n",str));
+		sprintf("ä½ çš„èº«ä¸Šæ²’æœ‰ä»»ä½•å«ä½œ%sçš„æ±è¥¿ã€‚\n",str));
 
 	class1 = obj->query("weapon_class");
 	type = obj->query("type");
 	
 	if( member_array(type, WEAPON_TYPES) == -1 || !class1 )
-		return notify_fail("ÄÇ²¢²»ÊÇÎäÆ÷¡£\n");
+		return notify_fail("é‚£ä¸¦ä¸æ˜¯æ­¦å™¨ã€‚\n");
 			
 	if( class1 > 15 ) {
 		if( usr->query_perm_skill(type) < class1 * 2 )
 		     return notify_fail( sprintf(
-			"ÄãµÄ%s¼¼ÄÜ»¹²»×ãÒÔÊ¹ÓÃÕâÑùµÄÎäÆ÷¡£\n",to_chinese(type)));
+			"ä½ çš„%sæŠ€èƒ½é‚„ä¸è¶³ä»¥ä½¿ç”¨é€™æ¨£çš„æ­¦å™¨ã€‚\n",to_chinese(type)));
 	}
 	
 	weight = obj->query("weight");
 	if( weight > (int)usr->query_stat("str") * 10 + 30 )
 		return notify_fail(
-			"ÕâÑùÎäÆ÷¶ÔÄã¶øÑÔÌ«ÖØÁË¡£\n"
+			"é€™æ¨£æ­¦å™¨å°ä½ è€Œè¨€å¤ªé‡äº†ã€‚\n"
 		);
 
 	if( obj->stop_wield( usr ) ) return 0;
@@ -52,24 +52,24 @@ int cmd_wield(string str, int silent)
 	shield = usr->query("armor/shield");
 	
 	if( obj==firstwep || obj==secondwep )
-		return notify_fail ("ÄãÒÑ¾­×°±¸Õâ¸öÎäÆ÷ÁË¡£\n");
+		return notify_fail ("ä½ å·²ç¶“è£å‚™é€™å€‹æ­¦å™¨äº†ã€‚\n");
 
 	if( firstwep && secondwep )
-		return notify_fail ("Äã×î¶àÖ»ÄÜÍ¬Ê±×°±¸Á½ÖÖÎäÆ÷¡£\n");
+		return notify_fail ("ä½ æœ€å¤šåªèƒ½åŒæ™‚è£å‚™å…©ç¨®æ­¦å™¨ã€‚\n");
 
 	if( firstwep && shield )
-		return notify_fail("Òª×°±¸µÚ¶þÖÖÎäÆ÷£¬Äã±ØÐë¿Õ³öÒ»Ö»ÊÖ¡£\n"
+		return notify_fail("è¦è£å‚™ç¬¬äºŒç¨®æ­¦å™¨ï¼Œä½ å¿…é ˆç©ºå‡ºä¸€éš»æ‰‹ã€‚\n"
 		);
 	
 	if( !firstwep && !secondwep ) {
 		if( shield && (int)obj->query("nosecond")==1 )
-			return notify_fail("Õâ¸öÎäÆ÷±ØÐëÓÃË«ÊÖ²ÅÄÜÊ¹ÓÃ¡£\n"
+			return notify_fail("é€™å€‹æ­¦å™¨å¿…é ˆç”¨é›™æ‰‹æ‰èƒ½ä½¿ç”¨ã€‚\n"
 			);
 
 		if( !silent ) {
-			write( sprintf("Äã×°±¸%sÎªÎäÆ÷¡£\n",obj->query("short")));
+			write( sprintf("ä½ è£å‚™%sç‚ºæ­¦å™¨ã€‚\n",obj->query("short")));
 			tell_room( environment(usr), 
-				sprintf("%s×°±¸%s×÷ÎªÎäÆ÷¡£\n",
+				sprintf("%sè£å‚™%sä½œç‚ºæ­¦å™¨ã€‚\n",
 					usr->query("c_name"),obj->query("short")), usr);
 		}
 		
@@ -80,27 +80,27 @@ int cmd_wield(string str, int silent)
 
 	// If we got here, the player is already wielding one weapon.
 	if( firstwep->query("nosecond") )
-		return notify_fail("ÄãÒÑ¾­×°±¸ÖøÐèÒªË«ÊÖµÄÎäÆ÷ÁË¡£\n"
+		return notify_fail("ä½ å·²ç¶“è£å‚™è‘—éœ€è¦é›™æ‰‹çš„æ­¦å™¨äº†ã€‚\n"
 		);
 
 	if( obj->query("nosecond") )
-		return notify_fail(sprintf("%sÐèÒªÓÃË«ÊÖÊ¹ÓÃ¡£\n",obj->query("short"))
+		return notify_fail(sprintf("%séœ€è¦ç”¨é›™æ‰‹ä½¿ç”¨ã€‚\n",obj->query("short"))
 		) ;
 
 	if( !obj->query("second") && !firstwep->query("second") )
-		return notify_fail("Äã²»ÄÜÍ¬Ê±Ê¹ÓÃÁ½ÖÖÖ÷ÒªÎäÆ÷¡£\n"
+		return notify_fail("ä½ ä¸èƒ½åŒæ™‚ä½¿ç”¨å…©ç¨®ä¸»è¦æ­¦å™¨ã€‚\n"
 		);
 
 	if( (int)obj->query("second") ) {
 		usr->set("weapon2", obj);
 		if( !silent )
-			write(sprintf("Äã×°±¸%sÎª´ÎÒªÎäÆ÷¡£\n",obj->query("short")));
+			write(sprintf("ä½ è£å‚™%sç‚ºæ¬¡è¦æ­¦å™¨ã€‚\n",obj->query("short")));
 	} else {
 		usr->set("weapon2", firstwep);
 		usr->set("weapon1", obj);
 		if( !silent )
-			write(sprintf("Äã°Ñ%s»»ÏÂÀ´×÷´ÎÒªÎäÆ÷¡£\n",firstwep->query("short")));
-			write(sprintf("¸ÄÓÃ%sµ±Ö÷ÒªÎäÆ÷¡£\n",obj->query("short")));
+			write(sprintf("ä½ æŠŠ%sæ›ä¸‹ä¾†ä½œæ¬¡è¦æ­¦å™¨ã€‚\n",firstwep->query("short")));
+			write(sprintf("æ”¹ç”¨%sç•¶ä¸»è¦æ­¦å™¨ã€‚\n",obj->query("short")));
         if(firstwep->query("wield_func"))
           {  call_other(firstwep,firstwep->query("wield_func")) ; }
 	}
@@ -108,7 +108,7 @@ int cmd_wield(string str, int silent)
 	// if we got here, we have wielded the weapon. 
 	if( !silent )
 		tell_room( environment(usr), 
-			sprintf("%s×°±¸%s×÷ÎªÎäÆ÷¡£\n" ,
+			sprintf("%sè£å‚™%sä½œç‚ºæ­¦å™¨ã€‚\n" ,
 			usr->query("c_name"),obj->query("short")), usr);
 	
 	obj->wield();
@@ -118,13 +118,13 @@ int cmd_wield(string str, int silent)
 int help()
 {
 	write (@HELP
-Ö¸Áî¸ñÊ½: wield <ÎäÆ÷>
+æŒ‡ä»¤æ ¼å¼: wield <æ­¦å™¨>
 
-Õâ¸öÖ¸ÁîÈÃÄã×°±»Ä³Ñù¶«Î÷×öÎªÎäÆ÷. Äã×î¶à¿ÉÒÔ×°±¸Á½ÑùÎäÆ÷, µ«Ä³Ð©
-ÎäÆ÷ÒòÎªÖØÁ¿»òÊ¹ÓÃ·½·¨µÄ¹ØÏµ¿ÉÄÜÐèÒªÓÃµ½Á½Ö»ÊÖ. ÁíÍâ, ÄãÒ²²»ÄÜÒ»
-ÊÖÄÃ¶ÜÒ»ÊÖÄÃË«ÊÖÎäÆ÷.
+é€™å€‹æŒ‡ä»¤è®“ä½ è£è¢«æŸæ¨£æ±è¥¿åšç‚ºæ­¦å™¨. ä½ æœ€å¤šå¯ä»¥è£å‚™å…©æ¨£æ­¦å™¨, ä½†æŸäº›
+æ­¦å™¨å› ç‚ºé‡é‡æˆ–ä½¿ç”¨æ–¹æ³•çš„é—œä¿‚å¯èƒ½éœ€è¦ç”¨åˆ°å…©éš»æ‰‹. å¦å¤–, ä½ ä¹Ÿä¸èƒ½ä¸€
+æ‰‹æ‹¿ç›¾ä¸€æ‰‹æ‹¿é›™æ‰‹æ­¦å™¨.
 
-Ïà¹ØÖ¸Áî: wear, remove, unwield.
+ç›¸é—œæŒ‡ä»¤: wear, remove, unwield.
 HELP
 	);
 	return 1 ;

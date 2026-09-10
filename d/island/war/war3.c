@@ -6,12 +6,12 @@ void create ()
 {
         ::create();
         set_level(13);
-        set_name( " soldier ", "ÎäÊ¿ÍÅÊ¿±ø" );
+        set_name( " soldier ", "æ­¦å£«åœ˜å£«å…µ" );
         add ("id", ({ "soldier"}) );
-        set_short( "ÎäÊ¿ÍÅÊ¿±ø");
-        set("unit","Î»");
+        set_short( "æ­¦å£«åœ˜å£«å…µ");
+        set("unit","ä½");
         set_long(@ANGEL
-ÕâÊÇÒ»¸ö¾­¹ıÁ¼ºÃÑµÁ·µÄÊ¿±ø£¬¸ºÔğ¿´ÊØÎäÊ¿ÍÅµÄ±ß¾³µØÇø
+é€™æ˜¯ä¸€å€‹ç¶“éè‰¯å¥½è¨“ç·´çš„å£«å…µï¼Œè² è²¬çœ‹å®ˆæ­¦å£«åœ˜çš„é‚Šå¢ƒåœ°å€
 ANGEL
         );
         set("killer",1);
@@ -27,7 +27,7 @@ ANGEL
         set ("gender", "male");
         set("wealth/silver",350);
         set ("race", "human");
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         
         wield_weapon(IWARO"wind_blade_sword.c");
 }

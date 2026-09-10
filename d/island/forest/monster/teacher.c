@@ -7,14 +7,14 @@ void create()
 {
     ::create();
     set_level(10);
-    set_name("School Teacher","Ë½ÛÓÏÈÉú");
+    set_name("School Teacher","ç§å¡¾å…ˆç”Ÿ");
     add("id",({"teacher"}) );
-    set_short("Ë½ÛÓÏÈÉú");
+    set_short("ç§å¡¾å…ˆç”Ÿ");
     set_long(@LONG
-ÕâÊÇÒ»Î»¾¡Ö°µÄÏÈÉú£¬ÕıÎªÁËÉú»î¶øÈÏÕæµÄ½²¿Î¡£
+é€™æ˜¯ä¸€ä½ç›¡è·çš„å…ˆç”Ÿï¼Œæ­£ç‚ºäº†ç”Ÿæ´»è€ŒèªçœŸçš„è¬›èª²ã€‚
 LONG
             );
-    set("unit","Î»");
+    set("unit","ä½");
     set("race","daemon");
     set("weight",300);
     set("hit_points",300);
@@ -28,7 +28,7 @@ LONG
     set("tactic_func","my_tactic");
     set("chat_chance",10);
     set("chat_output",({
- "ÏÈÉú±ß»ÎÖøÍ·±ßà«à«µÀ£ºÈËÖ®³õ£¬ĞÔ±¾ÉÆ£»ĞÔÏà½ü£¬Ï¢ÏàÔ¶..................\n"}) );
+ "å…ˆç”Ÿé‚Šæ™ƒè‘—é ­é‚Šå–ƒå–ƒé“ï¼šäººä¹‹åˆï¼Œæ€§æœ¬å–„ï¼›æ€§ç›¸è¿‘ï¼Œæ¯ç›¸é ..................\n"}) );
 }
 
 int my_tactic(object victim)
@@ -37,12 +37,12 @@ int my_tactic(object victim)
     if( random(20)<3){
     tell_object(victim,@ALONG
 
-Ë½ÛÓÏÈÉú´óÂî£ººÃ´óµÄ¹·µ¨£¬¸Òµ²ÀÏ×Ó·¢²Æ£¬¸øÄãÑÕÉ«ÇÆÇÆ.......
-ÂîÖøÂîÖø£¬Ò»¿éÑâÌ¨ÏòÄãÁ³ÉÏÔÒÀ´!!!!!
+ç§å¡¾å…ˆç”Ÿå¤§ç½µï¼šå¥½å¤§çš„ç‹—è†½ï¼Œæ•¢æ“‹è€å­ç™¼è²¡ï¼Œçµ¦ä½ é¡è‰²ç§ç§.......
+ç½µè‘—ç½µè‘—ï¼Œä¸€å¡Šç¡¯è‡ºå‘ä½ è‡‰ä¸Šç ¸ä¾†!!!!!
 ALONG
          );
     tell_room(environment(victim),
-    "Ë½ÛÓÏÈÉú¶Ô"+victim->query("c_name")+"ÆÆ¿Ú´óÂî£¬Ëæ¼´ÄÃÆğÑâÌ¨ÂÒÈÓ!!\n"
+    "ç§å¡¾å…ˆç”Ÿå°"+victim->query("c_name")+"ç ´å£å¤§ç½µï¼Œéš¨å³æ‹¿èµ·ç¡¯è‡ºäº‚æ‰”!!\n"
     ,victim );
     victim->receive_special_damage("evil",20);
     report(this_object(),victim);

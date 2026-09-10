@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("英雄墓场");
+	ob->set_short("鑻遍泟澧撳牬");
 	ob->set_long( @LONG_DESCRIPTION
-这里是矮人英雄的墓场,墓场里埋藏著一个悲天悯人的医生.
+閫欒！鏄煯浜鸿嫳闆勭殑澧撳牬,澧撳牬瑁″煁钘忚憲涓�鍊嬫偛澶╂啱浜虹殑閱敓.
 LONG_DESCRIPTION
 	);
 

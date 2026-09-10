@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "Club", "Ä¾¹÷" );
+        set_name( "Club", "æœ¨æ£" );
         add( "id",({ "club" }) );
-        set_short( "club", "Ä¾¹÷" );
+        set_short( "club", "æœ¨æ£" );
         set_long(@AAA
-ÕâÊÇÊĞ³¡¾¯ÎÀËùÓÃµÄÄ¾¹÷
+é€™æ˜¯å¸‚å ´è­¦è¡›æ‰€ç”¨çš„æœ¨æ£
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 22 );
         set( "type", "blunt" );
         set( "min_damage", 7 );

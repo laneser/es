@@ -1,74 +1,74 @@
 #d/std/IRC/irc_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a board for chat room. You can leave suggestions here as well. Use help board for help on usage.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"chatroom board","c_long.text":"ÁÄÌì, ¹àË®¼Ó½¨Òé°å¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÁÄÌìÊÒÁôÑÔ°å",])
-messages ({(["id":2,"title":"< no title >","body":"ÓĞÕâµØ·½, haha :)
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a board for chat room. You can leave suggestions here as well. Use help board for help on usage.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"chatroom board","c_long.text":"èŠå¤©, çŒæ°´åŠ å»ºè­°æ¿ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"èŠå¤©å®¤ç•™è¨€æ¿",])
+messages ({(["id":2,"title":"< no title >","body":"æœ‰é€™åœ°æ–¹, haha :)
                         bigp
 ","time":773472515,"poster":"Bigp",]),(["id":3,"body":",
 
-","title":"ºÃÎŞÁÄµÃµØ·½","time":773547975,"poster":"Radar",]),(["id":4,"title":"z.z..z.z.z..z","body":"too small place to talk lah...
+","title":"å¥½ç„¡èŠå¾—åœ°æ–¹","time":773547975,"poster":"Radar",]),(["id":4,"title":"z.z..z.z.z..z","body":"too small place to talk lah...
 we want big room to talk.. :))
 Or make a long passing line as time travel pass road can let
 us back to ES.. 
 maybe put some junk weapon let us PK for fun here. :)
 :)
 ","time":773566756,"poster":"Ice",]),(["id":5,"body":"
-¡õ ÔÚ Farwind Âô´¬Æ±À´ÕâÀï, ÕâÑùÈç¹ûÄãÓĞÅóÓÑÔÚ IRC, Äã¿ÉÒÔÀ´¡¸Ì½¼à¡¹
+â–¡ åœ¨ Farwind è³£èˆ¹ç¥¨ä¾†é€™è£¡, é€™æ¨£å¦‚æœä½ æœ‰æœ‹å‹åœ¨ IRC, ä½ å¯ä»¥ä¾†ã€Œæ¢ç›£ã€
 
-¡õ ÒÔáá Party ¶¼ÔÚÕâÀï°É.. 
+â–¡ ä»¥å¾Œ Party éƒ½åœ¨é€™è£¡å§.. 
 
-¡õ PK? ÄÇÄãËÀáá¾Í¿ÉÒÔµ½ Farwind ÂŞ.. :)
+â–¡ PK? é‚£ä½ æ­»å¾Œå°±å¯ä»¥åˆ° Farwind ç¾….. :)
 
-Ö®ËùÒÔ»á¿ª·ÅÕâÀï, ¾ÍÊÇÒòÎª ES ²»ÄÜ·ÅÌ«¶à player, Mob »á²»¹»ÇÀ...
-So.. ¾ø¶Ô²»¿ÉÄÜÈÃ IRC µÄÈËµ½ game Àï..
+ä¹‹æ‰€ä»¥æœƒé–‹æ”¾é€™è£¡, å°±æ˜¯å› ç‚º ES ä¸èƒ½æ”¾å¤ªå¤š player, Mob æœƒä¸å¤ æ¶...
+So.. çµ•å°ä¸å¯èƒ½è®“ IRC çš„äººåˆ° game è£¡..
 
-ÖÁì¶.. hmm.. ÏÓ·¿¼ä²»¹»? Êî¼ÙÊ±ÕâÀîÒ²ÅÉ²»ÉÏÓÃ³¡ (´ó¼ÒÉÏ ES ¶¼ºÜÈİ
-Ò×Âï..) ËùÒÔ 3,4 ¼ä¹»ÓÃÁËÀ²..  ÒÔááÈË¶àÔÙËµ°É..
+è‡³æ–¼.. hmm.. å«Œæˆ¿é–“ä¸å¤ ? æš‘å‡æ™‚é€™æä¹Ÿæ´¾ä¸ä¸Šç”¨å ´ (å¤§å®¶ä¸Š ES éƒ½å¾ˆå®¹
+æ˜“å˜›..) æ‰€ä»¥ 3,4 é–“å¤ ç”¨äº†å•¦..  ä»¥å¾Œäººå¤šå†èªªå§..
 
 -Keni.
-","title":"idea..","time":773635759,"poster":"Keni",]),(["id":6,"title":"¸ß¿Õµ¯Ìø","body":"²»´íà¸ ! ´ó¼Ò¿ÉÒÔÊÔÊÔ¿´ :)
+","title":"idea..","time":773635759,"poster":"Keni",]),(["id":6,"title":"é«˜ç©ºå½ˆè·³","body":"ä¸éŒ¯å–” ! å¤§å®¶å¯ä»¥è©¦è©¦çœ‹ :)
 ","time":773775153,"poster":"Tycoon",]),(["id":7,"body":"On Fri Jul  8, Keni wrote:
-> ¡õ ÔÚ Farwind Âô´¬Æ±À´ÕâÀï, ÕâÑùÈç¹ûÄãÓĞÅóÓÑÔÚ IRC, Äã¿ÉÒÔÀ´¡¸Ì½¼à¡¹
+> â–¡ åœ¨ Farwind è³£èˆ¹ç¥¨ä¾†é€™è£¡, é€™æ¨£å¦‚æœä½ æœ‰æœ‹å‹åœ¨ IRC, ä½ å¯ä»¥ä¾†ã€Œæ¢ç›£ã€
 > 
-> ¡õ ÒÔáá Party ¶¼ÔÚÕâÀï°É.. 
+> â–¡ ä»¥å¾Œ Party éƒ½åœ¨é€™è£¡å§.. 
 > 
-> ¡õ PK? ÄÇÄãËÀáá¾Í¿ÉÒÔµ½ Farwind ÂŞ.. :)
+> â–¡ PK? é‚£ä½ æ­»å¾Œå°±å¯ä»¥åˆ° Farwind ç¾….. :)
 > 
-> Ö®ËùÒÔ»á¿ª·ÅÕâÀï, ¾ÍÊÇÒòÎª ES ²»ÄÜ·ÅÌ«¶à player, Mob »á²»¹»ÇÀ...
-> So.. ¾ø¶Ô²»¿ÉÄÜÈÃ IRC µÄÈËµ½ game Àï..
+> ä¹‹æ‰€ä»¥æœƒé–‹æ”¾é€™è£¡, å°±æ˜¯å› ç‚º ES ä¸èƒ½æ”¾å¤ªå¤š player, Mob æœƒä¸å¤ æ¶...
+> So.. çµ•å°ä¸å¯èƒ½è®“ IRC çš„äººåˆ° game è£¡..
 > 
-> ÖÁì¶.. hmm.. ÏÓ·¿¼ä²»¹»? Êî¼ÙÊ±ÕâÀîÒ²ÅÉ²»ÉÏÓÃ³¡ (´ó¼ÒÉÏ ES ¶¼ºÜÈİ
-> Ò×Âï..) ËùÒÔ 3,4 ¼ä¹»ÓÃÁËÀ²..  ÒÔááÈË¶àÔÙËµ°É..
+> è‡³æ–¼.. hmm.. å«Œæˆ¿é–“ä¸å¤ ? æš‘å‡æ™‚é€™æä¹Ÿæ´¾ä¸ä¸Šç”¨å ´ (å¤§å®¶ä¸Š ES éƒ½å¾ˆå®¹
+> æ˜“å˜›..) æ‰€ä»¥ 3,4 é–“å¤ ç”¨äº†å•¦..  ä»¥å¾Œäººå¤šå†èªªå§..
 > 
 > -Keni.
 
-²»ÊÇmob²»¹»ÇÀµÄÎÊÌâ...ÊÇloadµÄÎÊÌâ..
-ÔÚÕâÀï´ó¼Ò´¿ÁÄÌì£¬¹Ô¹ÔµÄ²»ÒªÂÒÅÜ..ÕâÑùload¾Í²»»áÌ«ÖØÁË...:)
-ÕæºÃ..ÕæµÄ¿ªÁËÁÄÌìÊÒÁË
+ä¸æ˜¯mobä¸å¤ æ¶çš„å•é¡Œ...æ˜¯loadçš„å•é¡Œ..
+åœ¨é€™è£¡å¤§å®¶ç´”èŠå¤©ï¼Œä¹–ä¹–çš„ä¸è¦äº‚è·‘..é€™æ¨£loadå°±ä¸æœƒå¤ªé‡äº†...:)
+çœŸå¥½..çœŸçš„é–‹äº†èŠå¤©å®¤äº†
 
 Wind... :)
-","title":"Re: idea..","time":773853358,"poster":"Metaphor",]),(["id":8,"title":"< no title >","body":"ÄÇ...¿ª¸ö¾Æ°ÉÈçºÎ?
-Âôµãµ÷¾Æ,¿ÉÒÔ»Ö¸´Ì¸»°µãÊıÒ²²»´í..:)
-ÃâµÃ....¿ÚË®ÓÃÍêÁË..ÎûÎû
+","title":"Re: idea..","time":773853358,"poster":"Metaphor",]),(["id":8,"title":"< no title >","body":"é‚£...é–‹å€‹é…’å§å¦‚ä½•?
+è³£é»èª¿é…’,å¯ä»¥æ¢å¾©è«‡è©±é»æ•¸ä¹Ÿä¸éŒ¯..:)
+å…å¾—....å£æ°´ç”¨å®Œäº†..å˜»å˜»
 ","time":773862004,"poster":"Maverick",]),(["id":9,"body":"On Sun Jul 10, Metaphor wrote:
 > On Fri Jul  8, Keni wrote:
-> > ¡õ ÔÚ Farwind Âô´¬Æ±À´ÕâÀï, ÕâÑùÈç¹ûÄãÓĞÅóÓÑÔÚ IRC, Äã¿ÉÒÔÀ´¡¸Ì½¼à¡¹
+> > â–¡ åœ¨ Farwind è³£èˆ¹ç¥¨ä¾†é€™è£¡, é€™æ¨£å¦‚æœä½ æœ‰æœ‹å‹åœ¨ IRC, ä½ å¯ä»¥ä¾†ã€Œæ¢ç›£ã€
 > > 
-> > ¡õ ÒÔáá Party ¶¼ÔÚÕâÀï°É.. 
+> > â–¡ ä»¥å¾Œ Party éƒ½åœ¨é€™è£¡å§.. 
 > > 
-> > ¡õ PK? ÄÇÄãËÀáá¾Í¿ÉÒÔµ½ Farwind ÂŞ.. :)
+> > â–¡ PK? é‚£ä½ æ­»å¾Œå°±å¯ä»¥åˆ° Farwind ç¾….. :)
 > > 
-> > Ö®ËùÒÔ»á¿ª·ÅÕâÀï, ¾ÍÊÇÒòÎª ES ²»ÄÜ·ÅÌ«¶à player, Mob »á²»¹»ÇÀ...
-> > So.. ¾ø¶Ô²»¿ÉÄÜÈÃ IRC µÄÈËµ½ game Àï..
+> > ä¹‹æ‰€ä»¥æœƒé–‹æ”¾é€™è£¡, å°±æ˜¯å› ç‚º ES ä¸èƒ½æ”¾å¤ªå¤š player, Mob æœƒä¸å¤ æ¶...
+> > So.. çµ•å°ä¸å¯èƒ½è®“ IRC çš„äººåˆ° game è£¡..
 > > 
-> > ÖÁì¶.. hmm.. ÏÓ·¿¼ä²»¹»? Êî¼ÙÊ±ÕâÀîÒ²ÅÉ²»ÉÏÓÃ³¡ (´ó¼ÒÉÏ ES ¶¼ºÜÈİ
-> > Ò×Âï..) ËùÒÔ 3,4 ¼ä¹»ÓÃÁËÀ²..  ÒÔááÈË¶àÔÙËµ°É..
+> > è‡³æ–¼.. hmm.. å«Œæˆ¿é–“ä¸å¤ ? æš‘å‡æ™‚é€™æä¹Ÿæ´¾ä¸ä¸Šç”¨å ´ (å¤§å®¶ä¸Š ES éƒ½å¾ˆå®¹
+> > æ˜“å˜›..) æ‰€ä»¥ 3,4 é–“å¤ ç”¨äº†å•¦..  ä»¥å¾Œäººå¤šå†èªªå§..
 > > 
 > > -Keni.
 > 
-> ²»ÊÇmob²»¹»ÇÀµÄÎÊÌâ...ÊÇloadµÄÎÊÌâ..
-> ÔÚÕâÀï´ó¼Ò´¿ÁÄÌì£¬¹Ô¹ÔµÄ²»ÒªÂÒÅÜ..ÕâÑùload¾Í²»»áÌ«ÖØÁË...:)
-> ÕæºÃ..ÕæµÄ¿ªÁËÁÄÌìÊÒÁË
+> ä¸æ˜¯mobä¸å¤ æ¶çš„å•é¡Œ...æ˜¯loadçš„å•é¡Œ..
+> åœ¨é€™è£¡å¤§å®¶ç´”èŠå¤©ï¼Œä¹–ä¹–çš„ä¸è¦äº‚è·‘..é€™æ¨£loadå°±ä¸æœƒå¤ªé‡äº†...:)
+> çœŸå¥½..çœŸçš„é–‹äº†èŠå¤©å®¤äº†
 > 
 > Wind... :)
 
@@ -86,13 +86,13 @@ so.. I still insist that's because mob not enough :P
 - Quota won't recover.
  
 So..
-ËùÒÔÈç¹ûÄã´ÓÕâÀï½øµ½ Game World, ±ğ¸ßĞËµÄÌ«Ôç... Ã»ÓÃµÄ.. cccc
-Ğ¡ĞÄ±» k ËÀÁË»¹²»ÖªµÀ..
+æ‰€ä»¥å¦‚æœä½ å¾é€™è£¡é€²åˆ° Game World, åˆ¥é«˜èˆˆçš„å¤ªæ—©... æ²’ç”¨çš„.. cccc
+å°å¿ƒè¢« k æ­»äº†é‚„ä¸çŸ¥é“..
  
 -Elon was here.
  
-ps. ÒâË¼¾ÍÊÇËµ, ÎÒ»°ËµÔÚÇ°Ãæ... Èç¹ûÄãÅÜµ½ game world ±» k ËÀ,
-    ²»Òª¹ÖÈÎºÎÈË.. ×Ô¼º»î¸Ã.
+ps. æ„æ€å°±æ˜¯èªª, æˆ‘è©±èªªåœ¨å‰é¢... å¦‚æœä½ è·‘åˆ° game world è¢« k æ­»,
+    ä¸è¦æ€ªä»»ä½•äºº.. è‡ªå·±æ´»è©².
 
 ","title":"About IRC, READ!!","time":774168752,"poster":"Elon",]),(["id":11,"title":"about tp","body":"why tp will not recover..i think talking room..tp should can be recover...or can set a pub like maverick say..have drink to let tp up...but plz free...:)~q
 
@@ -105,21 +105,21 @@ pub will be done. but won't be free :P
 maybe can suggest god open tp recover. just maybe.
 
 -elon was here.
-","title":"Re: about tp","time":774237116,"poster":"Elon",]),(["id":13,"title":"ÁÄÌìÊÒÀïÄÜ¼Ó¸öÓÊ¾ÖÂğ?","body":"As title!
+","title":"Re: about tp","time":774237116,"poster":"Elon",]),(["id":13,"title":"èŠå¤©å®¤è£¡èƒ½åŠ å€‹éƒµå±€å—?","body":"As title!
 ","time":774631265,"poster":"Irisa",]),(["id":14,"body":"On Tue Jul 19, Irisa wrote:
 > As title!
 
-ok. ¼ÇÏÂÀ´ÁË. ÏÂ´Î update Ê±»áÒ»²¢·Å½øÀ´..
+ok. è¨˜ä¸‹ä¾†äº†. ä¸‹æ¬¡ update æ™‚æœƒä¸€ä½µæ”¾é€²ä¾†..
 
 -Elon was here.
-","title":"Re: ÁÄÌìÊÒÀïÄÜ¼Ó¸öÓÊ¾ÖÂğ?","time":774750951,"poster":"Elon",]),(["id":15,"title":"< no title >","body":"¿ÉÒÔ¼Ó×Ô¶¯··Âô»úÂô¿ÉÀÖºô£¿
-","time":774793365,"poster":"King",]),(["id":16,"body":"½¨Òé¼Ó¸öÑÓ³ÙĞ§¹û
-","title":"about ×İÉíÍùÏÂÒ»Ìø","time":775296611,"poster":"Jinna",]),(["id":17,"title":"< no title >","body":" ¸ÃËÀµÄ range claus morran ¾ÓÈ» cause 3 war
+","title":"Re: èŠå¤©å®¤è£¡èƒ½åŠ å€‹éƒµå±€å—?","time":774750951,"poster":"Elon",]),(["id":15,"title":"< no title >","body":"å¯ä»¥åŠ è‡ªå‹•è²©è³£æ©Ÿè³£å¯æ¨‚å‘¼ï¼Ÿ
+","time":774793365,"poster":"King",]),(["id":16,"body":"å»ºè­°åŠ å€‹å»¶é²æ•ˆæœ
+","title":"about ç¸±èº«å¾€ä¸‹ä¸€è·³","time":775296611,"poster":"Jinna",]),(["id":17,"title":"< no title >","body":" è©²æ­»çš„ range claus morran å±…ç„¶ cause 3 war
  and no shout.....
-","time":776069928,"poster":"Luz",]),(["id":18,"body":"Ò²Ğí\.....Ö»ÊÇÒ»¸öÎŞ·¨Íê³ÉµÄ³ĞÅµ...
-µ«ÎŞÂÛÌìÑÄº£½Ç.....ÎÒ»á²»¶ÏµØÑ°ÕÒÄã....
-                      °ËÔÆ
-","title":"ÇëÌø¹ı","time":776085991,"poster":"Jschen",]),(["id":19,"title":"new stuff","body":"
+","time":776069928,"poster":"Luz",]),(["id":18,"body":"ä¹Ÿè¨±\.....åªæ˜¯ä¸€å€‹ç„¡æ³•å®Œæˆçš„æ‰¿è«¾...
+ä½†ç„¡è«–å¤©æ¶¯æµ·è§’.....æˆ‘æœƒä¸æ–·åœ°å°‹æ‰¾ä½ ....
+                      å…«é›²
+","title":"è«‹è·³é","time":776085991,"poster":"Jschen",]),(["id":19,"title":"new stuff","body":"
 ok.. we just got a post office and a new pub.
 check them out..
 

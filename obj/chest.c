@@ -9,8 +9,8 @@ inherit LOCK ;
 
 void create() {
 	::create() ;
-	set_name("chest", "Ïä×Ó");
-	set_short("a chest", "Ïä×Ó");
+	set_name("chest", "ç®±å­");
+	set_short("a chest", "ç®±å­");
 // Containers have two long descriptions, one for open and one for closed.
 	set_closed_long("A treasure chest. Its lid is closed.\n");
 	set_open_long("An treasure chest with its lid wide open.\n");

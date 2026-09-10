@@ -5,17 +5,17 @@ inherit PILL;
 void create()
 {
 	pill::create();
-	set_name( "herb pill", "Ğ¡¿éÁéÖ¥" );
+	set_name( "herb pill", "å°å¡ŠéˆèŠ" );
 	add( "id", ({ "pill" }) );
-	set_short( "Ğ¡¿éÁéÖ¥" );
+	set_short( "å°å¡ŠéˆèŠ" );
 	set_long(
-		"ÕâÊÇÒ»¿é³ÉĞÎÁéÖ¥µÄ¾«»ª£¬·şÓÃ(eat)áá¿ÉÒÔ»Ö¸´Ò»Ğ©ÌåÁ¦¡£\n"
+		"é€™æ˜¯ä¸€å¡Šæˆå½¢éˆèŠçš„ç²¾è¯ï¼Œæœç”¨(eat)å¾Œå¯ä»¥æ¢å¾©ä¸€äº›é«”åŠ›ã€‚\n"
 	);
 	set_healing( 20 );
 	set( "no_sale", 1 );
 	set( "weight", 10 );
 	set( "value", ({ 5, "gold" }) );
-	set( "unit", "¿é" );
+	set( "unit", "å¡Š" );
 	set( "medication", 20 );
 	set( "effect_critical", 80 );
 }

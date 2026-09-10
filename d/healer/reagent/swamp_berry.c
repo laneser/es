@@ -4,15 +4,15 @@ inherit "/std/reagent";
 
 void create()
 {
-	set_name( "swamp berry", "ÕÓÔóİ®¹û" );
+	set_name( "swamp berry", "æ²¼æ¾¤è“æœ" );
         set("no_sale",1);
 	add( "id", ({"berry"}) );
-	set_short( "ÕÓÔóİ®¹û" );
+	set_short( "æ²¼æ¾¤è“æœ" );
 	set_long(
-		"ÕâÊÇÒ»ÖÖÓĞÖøÄÑÎÅ³ôÎ¶µÄºÚÉ«ÕÓÔóİ®¹û¡£Äã¿ÉÒÔ³¢³¢(taste)¿´¡£\n"
+		"é€™æ˜¯ä¸€ç¨®æœ‰è‘—é›£èè‡­å‘³çš„é»‘è‰²æ²¼æ¾¤è“æœã€‚ä½ å¯ä»¥åšåš(taste)çœ‹ã€‚\n"
 	);
 	set( "ident", "SWAMP_BERRY" );
-set("unit","¿Å");
+set("unit","é¡†");
 	set( "savour","acrimony");
 	set( "effect","simple_poison");
 	set( "duration",3);

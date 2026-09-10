@@ -1,5 +1,5 @@
 // This is an example file..
-// pepsi.c, unit is can (¹Ş×°)
+// pepsi.c, unit is can (ç½è£)
 // Elon@Eastern.Stories Mon  08-01-94
  
 inherit "/d/translate/tmp/drink.c";
@@ -8,11 +8,11 @@ void create()
 {
     ::create();
     seteuid(getuid());
-    set_name("pepsi","°ÙÊÂ¿ÉÀÖ");
-    set_short("Pepsi Cola","°ÙÊÂ¿ÉÀÖ");
+    set_name("pepsi","ç™¾äº‹å¯æ¨‚");
+    set_short("Pepsi Cola","ç™¾äº‹å¯æ¨‚");
     set_long("Pepsi, Uh-Huh!\n",
-    "ĞÂÉú´úµÄ°ÙÊÂ¿ÉÀÖ.\n");
-    set("unit","¹Ş");  // Æ¿, ±­, ¹Ş, ´ü(?)
+    "æ–°ç”Ÿä»£çš„ç™¾äº‹å¯æ¨‚.\n");
+    set("unit","ç½");  // ç“¶, æ¯, ç½, è¢‹(?)
     set("e_unit","can"); // can, bottle, cup, bag(?)
     set("value",({45,"silver"}));
     set("tp",45);

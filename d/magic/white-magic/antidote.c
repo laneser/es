@@ -16,13 +16,13 @@ int cast(int level, string target)
 	chinese_mode = can_read_chinese(me);
 	
 	if( (int)me->query_skill("white-magic") < query_need_skill(level) ) {
-		tell_object( me,"ÄãµÄ°×Ä§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n");
+		tell_object( me,"ä½ çš„ç™½é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n");
 		return 0;
 	}
 	
 	if( target == "NONE" ) dest = me;
 	else if( !(dest= present( target, environment(me) )) ) {
-	    tell_object( me,"Òª¶ÔË­Ê©Õ¹½â¶¾Êõ£¿\n");
+	    tell_object( me,"è¦å°èª°æ–½å±•è§£æ¯’è¡“ï¼Ÿ\n");
 	    return 0;
 	}
 	if( me->query("npc") && me->query("magic_delay") )
@@ -31,9 +31,9 @@ int cast(int level, string target)
 	    delay_time = 3;
 	me->block_attack(delay_time);
 	me->set_temp("cast_busy", 1);
-	write("Äã¿ªÊ¼Ò÷ËĞ°×Ä§·¨ÖĞ½â¶¾ÊõµÄÖäÎÄ....¡£\n");
+	write("ä½ é–‹å§‹åŸèª¦ç™½é­”æ³•ä¸­è§£æ¯’è¡“çš„å’’æ–‡....ã€‚\n");
 	tell_room( environment(me),
-		me->query("c_name") + "¿ªÊ¼ÒÔÒ»ÖÖÈáºÍµÄÉùÒôÒ÷ËĞÖäÎÄ....¡£\n",
+		me->query("c_name") + "é–‹å§‹ä»¥ä¸€ç¨®æŸ”å’Œçš„è²éŸ³åŸèª¦å’’æ–‡....ã€‚\n",
 		me );
 	call_out( "effect", delay_time, level, me, dest );
 	return 1;
@@ -46,11 +46,11 @@ void effect(int level, object caster, object dest)
 
 	caster->set_temp("cast_busy", 0);
 	if( !dest || !present(dest, environment(caster)) ) {
-	  tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­Àë¿ªÕâÀïÁË¡£\n");
+	  tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“é›¢é–‹é€™è£¡äº†ã€‚\n");
 	  return;
 	}
 	if( !(cond = (mixed *)dest->query("conditions/simple_poison")) ) {
-		tell_object( dest,"Ò»ÍÅÈáºÍµÄ°×É«¹âÃ¢ÁıÕÖÖøÄã£¬µ«ÊÇÊ²÷áÒ²Ã»ÓĞ·¢Éú¡£\n");
+		tell_object( dest,"ä¸€åœ˜æŸ”å’Œçš„ç™½è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½†æ˜¯ä»€éº¼ä¹Ÿæ²’æœ‰ç™¼ç”Ÿã€‚\n");
 		return;
 	}
 	if( caster == dest )
@@ -58,16 +58,16 @@ void effect(int level, object caster, object dest)
 	else
 		power = level * 15 + (int)caster->query_stat("int");
 	if( power - cond[1]*cond[2] > random(cond[1]*cond[2]) ) {
-		tell_object( dest,"Ò»ÍÅÈáºÍµÄ°×É«¹âÃ¢ÁıÕÖÖøÄã£¬ÄãËùÖĞµÄ¶¾½â³ıÁË£¡\n");
+		tell_object( dest,"ä¸€åœ˜æŸ”å’Œçš„ç™½è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ æ‰€ä¸­çš„æ¯’è§£é™¤äº†ï¼\n");
 		caster->gain_experience(cond[1]*cond[2]);
 		call_other( CONDITION_PREFIX+"simple_poison", "remove_effect", dest );
 	} else {
-		tell_object( dest,"Ò»ÍÅÈáºÍµÄ°×É«¹âÃ¢ÁıÕÖÖøÄã£¬ÄãËùÖĞµÄ¶¾¼õÇáÁË£¡\n");
+		tell_object( dest,"ä¸€åœ˜æŸ”å’Œçš„ç™½è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ æ‰€ä¸­çš„æ¯’æ¸›è¼•äº†ï¼\n");
 		cond[1]--;
 		cond[2]--;
 		dest->set("conditions/simple_poison", cond);
 	}
 	tell_room( environment(dest),
-		"Ò»ÍÅÈáºÍµÄ°×É«¹âÃ¢ÁıÕÖÖø"+dest->query("c_name")+"£¬È»ááÖğ½¥É¢È¥¡£\n",
+		"ä¸€åœ˜æŸ”å’Œçš„ç™½è‰²å…‰èŠ’ç± ç½©è‘—"+dest->query("c_name")+"ï¼Œç„¶å¾Œé€æ¼¸æ•£å»ã€‚\n",
 		dest );
 }

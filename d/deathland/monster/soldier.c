@@ -9,20 +9,20 @@ void create ()
 	::create();
 	//seteuid( getuid() );
  set_level(16);
- set_name("dwarf soldier","°«ÈËÊ¿±ø");
+ set_name("dwarf soldier","çŸ®äººå£«å…µ");
  add ("id", ({ "soldier","dwarf"}) );
  set_short( "a dwarf soldier defending the troll",
-           "¶Ô¿¹¾ŞÈËµÄ°«ÈËÊ¿±ø");
+           "å°æŠ—å·¨äººçš„çŸ®äººå£«å…µ");
 	set_long(@LONG
 A dwarf soldier is defending the evil troll and protecting his country.
 LONG
     ,@C_LONG
-Õâ°«ÈËÊ¿±øÕıÎªÁË¶Ô¿¹¾ŞÈËºÍ±£ÎÀ×Ô¼ºµÄ¹ú¼Ò×öÅ¬Á¦
+é€™çŸ®äººå£«å…µæ­£ç‚ºäº†å°æŠ—å·¨äººå’Œä¿è¡›è‡ªå·±çš„åœ‹å®¶åšåŠªåŠ›
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
       set_perm_stat( "dex",15);
       set_perm_stat( "str",22);
       set_perm_stat( "int",8);
@@ -61,7 +61,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-        guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i]
+        guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i]
       );
       guard[i]->kill_ob(victim);
     }

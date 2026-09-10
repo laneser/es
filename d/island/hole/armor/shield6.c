@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Fire Shield","×ÆÈÈ¶Ü" );
+	set_name( "Fire Shield","ç¼ç†±ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short( "×ÆÈÈ¶Ü" );
+	set_short( "ç¼ç†±ç›¾" );
 	set_long(@LONG
-	ÄÜ¹»·â±Õ»ğÑæµÄ¶Ü¡£
+	èƒ½å¤ å°é–‰ç«ç„°çš„ç›¾ã€‚
 LONG
 		);
-	set( "unit","Ãæ" );
+	set( "unit","é¢" );
 	set( "weight",120 );
 	set( "type","shield" );
 	set( "material","light_metal" );

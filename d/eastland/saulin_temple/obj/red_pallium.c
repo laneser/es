@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "red pallium","´óºìôÂôÄ" );
+	set_name( "red pallium","å¤§ç´…è¢ˆè£Ÿ" );
 	add( "id", ({ "pallium","cloth" }) );
-	set_short( "´óºìôÂôÄ" );
+	set_short( "å¤§ç´…è¢ˆè£Ÿ" );
 	set_long(
-		"ÕâÊÇÒ»Ì×ÂŞºº¸ß¼¶µÜ×Ó²ÅÓĞ×Ê¸ñ´©ÖøµÄ´óºìôÂôÄ¡£\n"
+		"é€™æ˜¯ä¸€å¥—ç¾…æ¼¢é«˜ç´šå¼Ÿå­æ‰æœ‰è³‡æ ¼ç©¿è‘—çš„å¤§ç´…è¢ˆè£Ÿã€‚\n"
 	);
-	set( "unit", "Áì" );
+	set( "unit", "é ˜" );
         set("material","cloth");
 	set( "type", "body" );
         set( "armor_class", 15 );

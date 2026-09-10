@@ -7,11 +7,11 @@ void create()
 
 	::create();
 	set_level(14);
-	set_name( "miner", "矿工" );
+	set_name( "miner", "绀﹀伐" );
 	add( "id", ({ "miner" }) );
-	set_short( "矿工" );
+	set_short( "绀﹀伐" );
 	set_long(
-		"一个正在辛勤努力工作的工人\n"
+		"涓�鍊嬫鍦ㄨ緵鍕ゅ姫鍔涘伐浣滅殑宸ヤ汉\n"
 	);
 	set_perm_stat( "str", 20 );
 	set_perm_stat( "dex", 13 );
@@ -28,7 +28,7 @@ void create()
 	set( "alignment", 200 );
 	set( "wealth/silver", 200 );
         set( "inquiry",([
-             "detonation" : "我不清楚，发生爆炸时我不在这里．\n",
+             "detonation" : "鎴戜笉娓呮锛岀櫦鐢熺垎鐐告檪鎴戜笉鍦ㄩ�欒！锛嶾n",
      		 ]));
 	wield_weapon("/d/noden/moyada/obj/pick.c");
 	}

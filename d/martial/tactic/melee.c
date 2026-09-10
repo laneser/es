@@ -12,7 +12,7 @@ int can_use_tactic(object player)
 	if( !weap=player->query("weapon1") ) return 1;
 	if( !type = weap->query("type") || member_array(type, UNVALID_TYPES)>=0 )
 		return notify_fail( can_read_chinese()?
-			"你的武器并不适合这种战术。\n":
+			"浣犵殑姝﹀櫒涓︿笉閬╁悎閫欑ó鎴拌銆俓n":
 			"You can't use such tactic with your weapon.\n" );
 	return 1;
 }

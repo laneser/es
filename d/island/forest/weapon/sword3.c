@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Koku Sword","ºÚÍõ½£");
+    set_name("Koku Sword","é»‘ç‹åŠ");
     add("id",({"koku","sword"}) );
-    set_short("ºÚÍõ½£");
+    set_short("é»‘ç‹åŠ");
     set_long(@C_LONG
-ÊÇ´«ËµÖĞÄ§ÈËºÚÍõµÄ½££¬Ëû»áÎüÊ³Ê§°ÜÕßµÄÑª£¬ËùÒÔÔçÒÑ»¯Îª
-°ëÑı½£¡£
+æ˜¯å‚³èªªä¸­é­”äººé»‘ç‹çš„åŠï¼Œä»–æœƒå¸é£Ÿå¤±æ•—è€…çš„è¡€ï¼Œæ‰€ä»¥æ—©å·²åŒ–ç‚º
+åŠå¦–åŠã€‚
 C_LONG
     );
 
-    set("unit","±ú");
+    set("unit","æŸ„");
     set("weight",150);
     set("type","longblade");
     set("weapon_class",25);

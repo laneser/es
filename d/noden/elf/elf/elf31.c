@@ -8,14 +8,14 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("Ê÷Ö¦");
+	set_short("æ¨¹æž");
 	set_long( @LONG_DESCRIPTION
-ÄãÏÖÔÚÊÇÎ»ì¶Å¨ÃÜµÄÊ÷´ÔÖÐ£¬´ÓÊ÷´ÔµÄÏ¶·ìÖÐ£¬Äã·¢ÏÖÒ»¸ö´óÊ÷¶´(hole)
-£¬ºÃÏñÓÐÒ»Ð©»ð¹â´ÓÆäÖÐÍ¸³ö¡£
+ä½ ç¾åœ¨æ˜¯ä½æ–¼æ¿ƒå¯†çš„æ¨¹å¢ä¸­ï¼Œå¾žæ¨¹å¢çš„éš™ç¸«ä¸­ï¼Œä½ ç™¼ç¾ä¸€å€‹å¤§æ¨¹æ´ž(hole)
+ï¼Œå¥½åƒæœ‰ä¸€äº›ç«å…‰å¾žå…¶ä¸­é€å‡ºã€‚
 LONG_DESCRIPTION
 	);	
 	set("item_desc",([
-	    "hole" : "ÕâÊÇÒ»¸ö´óÊ÷¶´£¬¿´ÆðÀ´Ó¦¸ÃÓÐ×ã¹»µÄ¿Õ¼ä¿ÉÒÔ½øÈë(enter)Ëü¡£\n"]));
+	    "hole" : "é€™æ˜¯ä¸€å€‹å¤§æ¨¹æ´žï¼Œçœ‹èµ·ä¾†æ‡‰è©²æœ‰è¶³å¤ çš„ç©ºé–“å¯ä»¥é€²å…¥(enter)å®ƒã€‚\n"]));
 	set( "light", 0);
 	set("exits",([
 	    "down" : LELF"elf18"]));
@@ -29,6 +29,6 @@ int do_enter(string arg)
 {
     if(!arg || arg!="hole") return 0;
     this_player()->move_player(LELF"elf32","SNEAK");
-    tell_room(this_object(),this_player()->query("c_name")+" ½øÈë¶´Ñ¨ÖÐ \n",this_player());
+    tell_room(this_object(),this_player()->query("c_name")+" é€²å…¥æ´žç©´ä¸­ \n",this_player());
     return 1;
     } 

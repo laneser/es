@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("snow iron-blade","Ñ©»¨ïÙÌúµ¶");
+       set_name("snow iron-blade","é›ªèŠ±é‘Œéµåˆ€");
        add("id",({"iron-blade","blade",}) );
-       set_short("Ñ©»¨ïÙÌúµ¶");
+       set_short("é›ªèŠ±é‘Œéµåˆ€");
 	   set_long(
-           "Ò»°ÑÓÃÉÏºÃïÙÌú´òÔì³ÉµÄµ¶£¬µ¶ÈĞ·´ÉäÉ­É­µÄº®¹â£¬¿´À´Ïàµ±·æÀû£®\n"
+           "ä¸€æŠŠç”¨ä¸Šå¥½é‘Œéµæ‰“é€ æˆçš„åˆ€ï¼Œåˆ€åˆƒåå°„æ£®æ£®çš„å¯’å…‰ï¼Œçœ‹ä¾†ç›¸ç•¶é‹’åˆ©ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 37 );
         set("type","longblade");
 	set( "min_damage", 25 );

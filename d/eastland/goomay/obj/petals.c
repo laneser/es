@@ -2,16 +2,16 @@
 inherit OBJECT;
 void create()
 {
-        set_name("petals", "»¨°ê");
-        set_short("petals", "»¨°ê");
+        set_name("petals", "èŠ±ç“£");
+        set_short("petals", "èŠ±ç“£");
         set_long(@LONG
 This is a lot of petals . sprinkle it at somebody will bring fun.
 LONG
 , @CLONG
-»éÀñ»òÇìµãÊ±ÓÃµÄ»¨°ê£¬µ±Ëü±»Èö(sprinkle)Ïò¿ÕÖĞÊ±£¬½«»áĞÎ³ÉÒ»·ù¾øÃÀµÄÍ¼°¸¡£\n
+å©šç¦®æˆ–æ…¶é»æ™‚ç”¨çš„èŠ±ç“£ï¼Œç•¶å®ƒè¢«æ’’(sprinkle)å‘ç©ºä¸­æ™‚ï¼Œå°‡æœƒå½¢æˆä¸€å¹…çµ•ç¾çš„åœ–æ¡ˆã€‚\n
 CLONG
         );
-        set("unit", "°Ñ");
+        set("unit", "æŠŠ");
         set( "weight", 0 );
         set ("value", ({ 10, "silver" }) );
         seteuid( getuid() );
@@ -29,33 +29,33 @@ int do_use(string arg)
 
         if ( !arg || arg=="" )
 	return  notify_fail( 
-                "ÄãÏë¶ÔË­Èö»¨°ê £¿  uasge : sprinkle <who> \n" );
+                "ä½ æƒ³å°èª°æ’’èŠ±ç“£ ï¼Ÿ  uasge : sprinkle <who> \n" );
 
         target = present( arg , environment(this_player() )) ;
 	if ( !target )
-	return notify_fail( "ÕâÀïÃ»ÓĞÕâ¸öÈË¡£\n" );
+	return notify_fail( "é€™è£¡æ²’æœ‰é€™å€‹äººã€‚\n" );
 
         if (target == this_player()) 
                 {
                    write(
-                        "Äã°Ñ»¨°êÈöÏòÌì¿Õ£¬ö®Ê±Ìì¿ÕÂäÏÂÒ»Õó»¨Óê¡£\n" );
+                        "ä½ æŠŠèŠ±ç“£æ’’å‘å¤©ç©ºï¼Œéœæ™‚å¤©ç©ºè½ä¸‹ä¸€é™£èŠ±é›¨ã€‚\n" );
                   tell_room( environment(this_player()), 
 			             target->query("c_name") +
-                         "½«Ò»°Ñ»¨°êÈöÏòÌì¿Õ£¬ö®Ê±ÂäÏÂÒ»ÕóçÍ·×»¨Óê£¬ Äã¾õµÃÓĞµãĞÄ×í¡£\n",
+                         "å°‡ä¸€æŠŠèŠ±ç“£æ’’å‘å¤©ç©ºï¼Œéœæ™‚è½ä¸‹ä¸€é™£ç¹½ç´›èŠ±é›¨ï¼Œ ä½ è¦ºå¾—æœ‰é»å¿ƒé†‰ã€‚\n",
 			  this_player() );  
                   remove() ;
                   return 1 ;       
                 }
         else {
-                cmsg = "Äã½«»¨°êÏò"+
+                cmsg = "ä½ å°‡èŠ±ç“£å‘"+
                         target->query("c_name") +
-                        "µÄÉíÉÏÒ»Èö£¬ö®Ê±¹¹³ÉÒ»·ùÈËÃæÌÒ»¨ÏàÓ³ºìµÄÍ¼°¸¡£\n";
+                        "çš„èº«ä¸Šä¸€æ’’ï¼Œéœæ™‚æ§‹æˆä¸€å¹…äººé¢æ¡ƒèŠ±ç›¸æ˜ ç´…çš„åœ–æ¡ˆã€‚\n";
                 cmsg1 = this_player()->query("c_name")+
-                        "½«»¨°êÈ÷Ïò"+
+                        "å°‡èŠ±ç“£ç‘å‘"+
                         target->query("c_name") +
-                        "µÄÉíÉÏ£¬ö®Ê±¹¹³ÉÒ»·ùÈËÃæÌÒ»¨ÏàÓ³ºìµÄÍ¼°¸¡£\n";
+                        "çš„èº«ä¸Šï¼Œéœæ™‚æ§‹æˆä¸€å¹…äººé¢æ¡ƒèŠ±ç›¸æ˜ ç´…çš„åœ–æ¡ˆã€‚\n";
                 cmsg2 = this_player()->query("c_name")+
-                        "½«Ò»°Ñ»¨°êÏòÄãÈ÷À´£¬ÔÚçÍ·×µÄ»¨°êÓêÖĞ£¬Äã¾õµÃĞÄ×íÁË¡£\n";
+                        "å°‡ä¸€æŠŠèŠ±ç“£å‘ä½ ç‘ä¾†ï¼Œåœ¨ç¹½ç´›çš„èŠ±ç“£é›¨ä¸­ï¼Œä½ è¦ºå¾—å¿ƒé†‰äº†ã€‚\n";
 
                 tell_object( this_player(), cmsg );
                 tell_room( environment(this_player()), cmsg1 ,

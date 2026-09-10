@@ -12,13 +12,13 @@ void init()
 
 void create()
 {
-   set_name( "lamb", "Ñ¬ÑòÍÈ" );
+   set_name( "lamb", "ç‡»ç¾Šè…¿" );
    add( "id" , ({ "leg" } ) );
-   set_short( "Ñ¬ÑòÍÈ" );
+   set_short( "ç‡»ç¾Šè…¿" );
    set_long(
-        "Ò»Ö»É«ÔóÁÁÀö, ÏãÆøËÄÒçµÄ¿¾ÑòÍÈ, ÈÃÈË²»½ûÊ³Ö¸´ó¶¯¡£\n"
+        "ä¸€éš»è‰²æ¾¤äº®éº—, é¦™æ°£å››æº¢çš„çƒ¤ç¾Šè…¿, è®“äººä¸ç¦é£ŸæŒ‡å¤§å‹•ã€‚\n"
 	);
-   set( "unit", "Ö»" );
+   set( "unit", "åª" );
    set( "weight", 25 );
    set( "value", ({ 300, "silver" }) );
 	call_out("not_fresh", FRESH_TIME, this_object() );
@@ -29,16 +29,16 @@ int eat_food(string arg)
 {
    if( !arg || (arg != "leg" && arg != "lamb" ) ) return 0;
 	if( !query("is_fresh") ) {
-        write( "Äã³ÔÏÂÒ»Ö»âÈÁËµÄÑ¬ÑòÍÈ¡£\n" );
+        write( "ä½ åƒä¸‹ä¸€éš»é¤¿äº†çš„ç‡»ç¾Šè…¿ã€‚\n" );
         tell_room( environment(this_player()),
-                 this_player()->query("c_name")+"³ÔÏÂÒ»Ö»âÈÁËµÄÑ¬ÑòÍÈ¡£\n"
+                 this_player()->query("c_name")+"åƒä¸‹ä¸€éš»é¤¿äº†çš„ç‡»ç¾Šè…¿ã€‚\n"
                  , this_player() );
        (CONDITION_PREFIX + "sick")->apply_effect( this_player(), 15, 2 );
 	} else {
         write(
-                "ÄãÓä¿ìµØ³ÔµôÕâÒ»Ö»Ñ¬ÑòÍÈ¡£È»áá²Á²Á×ì½ÇµÄÓÍ×Õ¡£\n" );
+                "ä½ æ„‰å¿«åœ°åƒæ‰é€™ä¸€éš»ç‡»ç¾Šè…¿ã€‚ç„¶å¾Œæ“¦æ“¦å˜´è§’çš„æ²¹æ¼¬ã€‚\n" );
         tell_room( environment(this_player()),
-             this_player()->query("c_name")+"³ÔµôÁËÒ»Ö»Ñ¬ÑòÍÈ, ËûËÆºõ»¹ÏëÔÙ³ÔÒ»Ö».\n", this_player() );
+             this_player()->query("c_name")+"åƒæ‰äº†ä¸€éš»ç‡»ç¾Šè…¿, ä»–ä¼¼ä¹é‚„æƒ³å†åƒä¸€éš».\n", this_player() );
         this_player()->receive_healing( 25+random(5) );
 	}
 	remove();
@@ -50,12 +50,12 @@ void not_fresh(object what)
 	object owner;
 	owner = environment(what);
 	what->set ("value", ({ 1, "silver" }));
-   what->set_short( "âÈÁËµÄÑ¬ÑòÍÈ" );
-   what->set_long( "ÕâÊÇÒ»ÅÌâÈÁËµÄÑ¬ÑòÍÈ, ²»ÄÜ³ÔÁË¡£\n" );
+   what->set_short( "é¤¿äº†çš„ç‡»ç¾Šè…¿" );
+   what->set_long( "é€™æ˜¯ä¸€ç›¤é¤¿äº†çš„ç‡»ç¾Šè…¿, ä¸èƒ½åƒäº†ã€‚\n" );
 	what->set("is_fresh",0);
    if ( !owner ) { remove(); return ; }
    if( !living(owner) ) { remove() ; return; }
    write(
-        "ÄãÎÅµ½Ò»¹É³ôÎ¶´«À´, ºÃÏñÊÇÊ²÷á¶«Î÷âÈÁËµÄÑù×Ó¡£\n"
+        "ä½ èåˆ°ä¸€è‚¡è‡­å‘³å‚³ä¾†, å¥½åƒæ˜¯ä»€éº¼æ±è¥¿é¤¿äº†çš„æ¨£å­ã€‚\n"
 	);
 }

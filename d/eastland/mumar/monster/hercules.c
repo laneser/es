@@ -5,14 +5,14 @@ void create()
 {
         ::create();
         set_level(15);
-        set_name( "Hercules", "Á¦Ê¿" );
+        set_name( "Hercules", "åŠ›å£«" );
         add ("id", ({ "hercules", "yang" }) );
-        set_short( "Á¦Ê¿" );
+        set_short( "åŠ›å£«" );
         set_long(
-    "ÄÁÂí¹ØµÄÁ¦Ê¿ÃÇÔÚÕ½ÕùÖĞÍ¨³£ÊÇµ£ÈÎÇ°·æµÄÖ°Îñ£¬ÍùÍùÔì³ÉµĞÈËµÄÖØ´óËğÊ§¡£\n");
+    "ç‰§é¦¬é—œçš„åŠ›å£«å€‘åœ¨æˆ°çˆ­ä¸­é€šå¸¸æ˜¯æ“”ä»»å‰é‹’çš„è·å‹™ï¼Œå¾€å¾€é€ æˆæ•µäººçš„é‡å¤§æå¤±ã€‚\n");
     set( "gender", "male" );
     set( "race", "human" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
         set_perm_stat( "str", 30 );
         set_perm_stat( "dex", 10 );
         set_perm_stat( "int", 15 );
@@ -23,9 +23,9 @@ void create()
     set( "pursuing",1 );
     set ("chat_chance", 10);
     set( "att_chat_output", ({
-        "Á¦Ê¿±ß»ÓÎè´ó¡õÍ·±ß¿ñĞ¦Öø£º¿´ÎÒ°ÑÄã´ò³ÉÈâ±ı£¡\n"
+        "åŠ›å£«é‚Šæ®èˆå¤§â–¡é ­é‚Šç‹‚ç¬‘è‘—ï¼šçœ‹æˆ‘æŠŠä½ æ‰“æˆè‚‰é¤…ï¼\n"
         }));
-    set("c_death_msg","%s ÅÓ´óµÄÉíÇû»ÎÁËÒ»»Î£¬àÛÍ¨Ò»Éùµ¹ÔÚÄãÉíÉÏ£¬²îµã°ÑÄãÑ¹»è..\n");
+    set("c_death_msg","%s é¾å¤§çš„èº«è»€æ™ƒäº†ä¸€æ™ƒï¼Œå™—é€šä¸€è²å€’åœ¨ä½ èº«ä¸Šï¼Œå·®é»æŠŠä½ å£“æ˜..\n");
     set_skill("blunt",60);
     set_skill("parry",70);
     wield_weapon(OBJS"hammer1");

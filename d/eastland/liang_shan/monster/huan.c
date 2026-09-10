@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "Huang Shin", "黄信" );
+	set_name( "Huang Shin", "榛冧俊" );
 	add("id",({"huang","shin"}));
-	set_short( "黄信" );
+	set_short( "榛冧俊" );
 	set_long(
-		"黄信外号镇三山，善使一把丧门剑，为梁山泊马军小彪将兼远探出哨头领，\n"
-		"如果你不想死的话，最好别去招惹他。\n"
+		"榛冧俊澶栬櫉閹笁灞憋紝鍠勪娇涓�鎶婂柂闁�鍔嶏紝鐐烘灞辨硦棣粛灏忓姜灏囧吋閬犳帰鍑哄摠闋牁锛孿n"
+		"濡傛灉浣犱笉鎯虫鐨勮┍锛屾渶濂藉垾鍘绘嫑鎯逛粬銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

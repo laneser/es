@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wraith mail", "°«Áé»¤¼×");
+        set_name("wraith mail", "çŸ®éˆè­·ç”²");
         add( "id", ({ "mail" }) );
-        set_short( "°«Áé»¤¼×");
+        set_short( "çŸ®éˆè­·ç”²");
         set_long(
-                "Õâ¼ş»¤¼×ÄËÊÇ¾­¹ı¼ÀÊ¦¿ÆÀ­¿ËÒÔ¾«ÉñÁ¦Á¿Á¶ÖÆ¶ø³É¡£\n"
+                "é€™ä»¶è­·ç”²ä¹ƒæ˜¯ç¶“éç¥­å¸«ç§‘æ‹‰å…‹ä»¥ç²¾ç¥åŠ›é‡ç…‰è£½è€Œæˆã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "element");
         set( "armor_class", 27 );

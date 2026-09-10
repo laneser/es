@@ -5,18 +5,18 @@ void create()
 {
 	::create();
 	set_level(16);
-	set_name( "Black Cougar","ºÚ±ª" );
+	set_name( "Black Cougar","é»‘è±¹" );
 	add( "id",({ "cougar" }) );
-	set_short( "ºÚ±ª" );
+	set_short( "é»‘è±¹" );
 	set_long(@LONG
-Ò»Í·Ğ×ÃÍµÄºÚ±ªÕı¶ñºİºİµÄ¶¢ÖøÄã£¬Ğ¡ĞÄ³ÉÎªËüµÄÊ³Îïà¸¡£
+ä¸€é ­å…‡çŒ›çš„é»‘è±¹æ­£æƒ¡ç‹ ç‹ çš„ç›¯è‘—ä½ ï¼Œå°å¿ƒæˆç‚ºå®ƒçš„é£Ÿç‰©å–”ã€‚
 LONG
                 );
 	set( "killer",1 );
 	set( "pursuing",1 );
 	set( "alignment",-1000 );
 	set( "gender","male" );
-	set( "unit","Í·" );
+	set( "unit","é ­" );
 	set_perm_stat( "dex",25 );
 	set_perm_stat( "str",25 );
 	set_perm_stat( "int",25 );
@@ -36,6 +36,6 @@ LONG
 	set( "natural_max_damage2",35 );
 	set( "weight",400 );
 	set( "unbleeding",1 );
-	set_c_verbs( ({ "%sÓÃËüµÄÇ°×¦Ïò%sÃÍ×¥","%sÓÃËüµÄáá½ÅÏò%sÒ»ÏÆ","%sÓÃËüµÄÎ²°ÍÏò%sÒ»¼ô" }) );
-	set_c_limbs( ({ "Í·²¿","ÉíÌå","Î²°Í" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„å‰çˆªå‘%sçŒ›æŠ“","%sç”¨å®ƒçš„å¾Œè…³å‘%sä¸€æ€","%sç”¨å®ƒçš„å°¾å·´å‘%sä¸€å‰ª" }) );
+	set_c_limbs( ({ "é ­éƒ¨","èº«é«”","å°¾å·´" }) );
 }

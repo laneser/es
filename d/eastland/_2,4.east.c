@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("��·");
+	ob->set_short("道路");
 	ob->set_long( @LONG_DESCRIPTION
-������������һ����ʯ�̳ɵĵ�·�ϣ���·���ϡ��������졣·�ԵĲ�
-���ϳ���һЩ��֪����Ұ����Ұ�ݡ�
+你現在正走在一條碎石鋪成的道路上，道路向南、北方延伸。路旁的草
+地上長著一些不知名的野花及野草。
 LONG_DESCRIPTION
 	);
 

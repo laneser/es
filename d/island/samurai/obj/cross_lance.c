@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "cross lance","Ê®×ÖÇ¹" );
+        set_name( "cross lance","åå­—æ§" );
         add( "id",({ "lance","cross" }) );
-        set_short( "cross lance","Ê®×ÖÇ¹" );
+        set_short( "cross lance","åå­—æ§" );
         set_long(@AAA
-ÕâÊÇÒ»°Ñ¾Ş´óµÄÊ®×ÖÇ¹,³ı·ÇÊÇ¸öÏàµ±ÓĞÁ¦Á¿µÄÈË,²»È»ÊÇÓÃ²»ÆğÕâÖÖ´ó±øÆ÷µÄ
+é€™æ˜¯ä¸€æŠŠå·¨å¤§çš„åå­—æ§,é™¤éæ˜¯å€‹ç›¸ç•¶æœ‰åŠ›é‡çš„äºº,ä¸ç„¶æ˜¯ç”¨ä¸èµ·é€™ç¨®å¤§å…µå™¨çš„
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 36 );
         set( "type", "thrusting" );
         set( "min_damage", 15 );

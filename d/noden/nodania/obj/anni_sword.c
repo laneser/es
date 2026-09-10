@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
 	seteuid(getuid());
-	set_name("sword", "ÂÒ»·½£");
+	set_name("sword", "äº‚ç’°åŠ");
 	add( "id", ({ "sword" }) );
-	set_short("ÂÒ»·½£");
+	set_short("äº‚ç’°åŠ");
 	set_long(
-	"ÕâÊÇ°²ÄáÏ¯ÂåÌØ¶û´óÉñËæÉíĞ¯´øµÄ½££¬ÉÏÃæÏâÖøĞí¶àÉÁÁÁµÄË®¾§»·¡£\n"
+	"é€™æ˜¯å®‰å°¼å¸­æ´›ç‰¹çˆ¾å¤§ç¥éš¨èº«æ”œå¸¶çš„åŠï¼Œä¸Šé¢é‘²è‘—è¨±å¤šé–ƒäº®çš„æ°´æ™¶ç’°ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 10 );
 // Only wizards or monsters can wield this weapon.
 	set( "weapon_class", 33 );

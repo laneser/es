@@ -5,12 +5,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "iron claws", "Ìú×¦");
+        set_name( "iron claws", "éµçˆª");
         add ("id",({ "claws"}) );
-        set_short( "Ìú×¦");
-        set("unit", "¶Ô");
+        set_short( "éµçˆª");
+        set("unit", "å°");
         set_long(
-            "ÕâÊÇÒ»¶Ô¿ÉÒÔ×°ÔÚÊÖÉÏµÄÀû×¦£¬ËäÈ»¿´ÆğÀ´²»ÆğÑÛ£¬µ«·ºÀ¶µÄ×¦ÈĞÈ´ÓĞÖøÒìÑùµÄ¹â²Ê\n"
+            "é€™æ˜¯ä¸€å°å¯ä»¥è£åœ¨æ‰‹ä¸Šçš„åˆ©çˆªï¼Œé›–ç„¶çœ‹èµ·ä¾†ä¸èµ·çœ¼ï¼Œä½†æ³›è—çš„çˆªåˆƒå»æœ‰è‘—ç•°æ¨£çš„å…‰å½©\n"
         );
         set( "weapon_class", 10 );
         set( "type", "unarmed" );
@@ -20,7 +20,7 @@ void create()
 	set("unwield_func","unwield_claws");
         set( "weight", 55 );
 	set("nosecond",1);
-        set_c_verbs(({"%s´ÌÏò%s","%s×¥Ïò%s","%s»ÓÏò%s"}));
+        set_c_verbs(({"%såˆºå‘%s","%sæŠ“å‘%s","%sæ®å‘%s"}));
         set( "value", ({ 180, "silver" }) );
 }
 
@@ -35,13 +35,13 @@ void unwield_claws()
         set( "max_damage", 16);
 		set("prevent_drop",0);
         tell_room( environment(owner), 
-        	owner->query("c_name")+"µÄ»Æ½ğ×¦¹âÃ¢ÍËÈ¥£¬±ä»ØÔ­À´µÄÑù×Ó¡£\n"
+        	owner->query("c_name")+"çš„é»ƒé‡‘çˆªå…‰èŠ’é€€å»ï¼Œè®Šå›åŸä¾†çš„æ¨£å­ã€‚\n"
 			, ({ owner }) );
         tell_object( owner, 
-         "ÄãµÄ»Æ½ğ×¦Ææ¹âÁ²È¥£¬×Ô¶¯ÓëÄãµÄÊÖ·ÖÀë¡£\n");
+         "ä½ çš„é»ƒé‡‘çˆªå¥‡å…‰æ–‚å»ï¼Œè‡ªå‹•èˆ‡ä½ çš„æ‰‹åˆ†é›¢ã€‚\n");
 
-        set_name( "iron claws", "Ìú×¦");
-        set_short( "Ìú×¦");
+        set_name( "iron claws", "éµçˆª");
+        set_short( "éµçˆª");
 		set("form",0);
 		return ;
 	}
@@ -67,12 +67,12 @@ void wield_claws()
 	set("no_sale",1);
 	set("prevent_drop",1);
         tell_room( environment(owner), 
-         owner->query("c_name")+"µÄÌú×¦·¢³öÒ»Õó¹âÃ¢£¬ÓëËûµÄÊÖ½áºÏ£¬±ä³ÉËûÉíÌåµÄÒ»²¿·İ¡£\n"
+         owner->query("c_name")+"çš„éµçˆªç™¼å‡ºä¸€é™£å…‰èŠ’ï¼Œèˆ‡ä»–çš„æ‰‹çµåˆï¼Œè®Šæˆä»–èº«é«”çš„ä¸€éƒ¨ä»½ã€‚\n"
 	, ({ owner }) );
         tell_object( owner, 
-	      "ÄãµÄÌú×¦·º³öÒ»Æ¬Ææ¹â£¬×Ô¶¯ÓëÄãµÄÊÖ½ôÃÜ½áºÏ¡£\n");
-        set_name( "golden claws", "»Æ½ğ×¦");
-        set_short( "»Æ½ğ×¦");
+	      "ä½ çš„éµçˆªæ³›å‡ºä¸€ç‰‡å¥‡å…‰ï¼Œè‡ªå‹•èˆ‡ä½ çš„æ‰‹ç·Šå¯†çµåˆã€‚\n");
+        set_name( "golden claws", "é»ƒé‡‘çˆª");
+        set_short( "é»ƒé‡‘çˆª");
 	set("form",1);
 		return ;
 	}

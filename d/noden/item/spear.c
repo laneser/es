@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
 //	seteuid(getuid());
-	set_name( "short spear", "¶ÌÃ¬" );
-	//set_name( "¶ÌÃ¬",({"short spear","spear"]) );
+	set_name( "short spear", "çŸ­çŸ›" );
+	//set_name( "çŸ­çŸ›",({"short spear","spear"]) );
 	add( "id", ({ "spear" }) );
 	set( "id", ({ "spear" }) );
-   set_short( "¶ÌÃ¬" );
-	set_long("Ò»°ÑºÜ¶ÌµÄÃ¬£¬ËüµÄ¼â¶ËÊÇÓÃÊ¯Í·Ä¥¼â¶ø³ÉµÄ¡£\n"	);
-	set( "unit", "°Ñ" );
+   set_short( "çŸ­çŸ›" );
+	set_long("ä¸€æŠŠå¾ˆçŸ­çš„çŸ›ï¼Œå®ƒçš„å°–ç«¯æ˜¯ç”¨çŸ³é ­ç£¨å°–è€Œæˆçš„ã€‚\n"	);
+	set( "unit", "æŠŠ" );
 	set( "type", "polearm" );
 	set( "weapon_class", 6 );
 	set( "min_damage", 3 );
@@ -19,7 +19,7 @@ void create()
 	set( "weight", 40 );
 	set( "value", ({ 20, "silver" }) );
 }
-/* bmp ²âÊÔÓÃ
+/* bmp æ¸¬è©¦ç”¨
 void init()
 {
         add_action( "do_move", "move" );
@@ -27,7 +27,7 @@ void init()
 }
 int do_move(string arg)
 {
-        if( !arg || arg!= "Ã¬¼â" ) return 0;
+        if( !arg || arg!= "çŸ›å°–" ) return 0;
         if( box_moved ) {
                 write( "\n");
                 box_moved = 0;

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("bodyguard lance","»¤Éí³¤Ç¹");
+       set_name("bodyguard lance","è­·èº«é•·æ§");
        add("id",({"lance"}) );
-       set_short("»¤Éí³¤Ç¹");
+       set_short("è­·èº«é•·æ§");
        set_long(
-           "Ò»°ÑÓÉÉÏºÃ½ğÊô´òÔìµÄ³¤Ç¹\n"
+           "ä¸€æŠŠç”±ä¸Šå¥½é‡‘å±¬æ‰“é€ çš„é•·æ§\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 25 );
         set( "type","jousting");
 	set( "min_damage", 10 );

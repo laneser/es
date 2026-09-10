@@ -1,42 +1,42 @@
-ÁúÑ¨£º (-)±íÓëÒ»°ãÉè¼ÆÆ½,(+)±í¸ßì¶Ò»°ãÉè¼Æ,(*)±í´ïÉÏÏŞ
+é¾ç©´ï¼š (-)è¡¨èˆ‡ä¸€èˆ¬è¨­è¨ˆå¹³,(+)è¡¨é«˜æ–¼ä¸€èˆ¬è¨­è¨ˆ,(*)è¡¨é”ä¸Šé™
  
-ÎäÆ÷ÁĞ±í£º
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨åˆ—è¡¨ï¼š
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-¸Ö¸«     axe.c        20    6     15    axe               questÓÃ
-ÉñÁú¹Äé³ club.c       23    10    15    blt               questÓÃ
-ÄõÁúº®Ø° dagger.c     39(+) 23(+) 36(+) dag
-ÉñÃØØ°Ê× dagger1.c    25    10    20    dag
-ÉñÃØ³¤½£ guardsword.c 35(-) 16    30    lbl
-ÉñÃØĞ¡µ¶ knife.c       1     1     2    axe
-ÉñÃØ³¤½£ longsword.c  42(+) 25(+) 45(+) lbl
-ÉñÃØ³¤½£ longsword1.c 25    10    26    lbl
-ÉñÃØ³¤½£ longsword2.c 19    10    20    lbl
-ÉñÃØ³¤½£ longsword3.c 25    15    25    lbl
-ÉñÃØ¶Ì½£ shortsword   40(+) 25(+) 35(-) sbl
-Òø²ù×Ó   shovel.c     10     1     2    blt               questÓÃ
-÷è÷ëÑÀ   teeth.c      44(+) 20(-) 33    lbl
+é‹¼æ–§     axe.c        20    6     15    axe               questç”¨
+ç¥é¾é¼“æ§Œ club.c       23    10    15    blt               questç”¨
+å­½é¾å¯’åŒ• dagger.c     39(+) 23(+) 36(+) dag
+ç¥ç§˜åŒ•é¦– dagger1.c    25    10    20    dag
+ç¥ç§˜é•·åŠ guardsword.c 35(-) 16    30    lbl
+ç¥ç§˜å°åˆ€ knife.c       1     1     2    axe
+ç¥ç§˜é•·åŠ longsword.c  42(+) 25(+) 45(+) lbl
+ç¥ç§˜é•·åŠ longsword1.c 25    10    26    lbl
+ç¥ç§˜é•·åŠ longsword2.c 19    10    20    lbl
+ç¥ç§˜é•·åŠ longsword3.c 25    15    25    lbl
+ç¥ç§˜çŸ­åŠ shortsword   40(+) 25(+) 35(-) sbl
+éŠ€éŸå­   shovel.c     10     1     2    blt               questç”¨
+éº’éºŸç‰™   teeth.c      44(+) 20(-) 33    lbl
  
-Ãû³Æ     µµÃû         AC    DB    ÖÖÀà ÌØ·À                  ±¸×¢
+åç¨±     æª”å         AC    DB    ç¨®é¡ ç‰¹é˜²                  å‚™è¨»
 ======== ============ ===== ===== ==== ===================== ================
-îø¼×£º
-ÉñÃØ¡õ¼× chainmail.c  25    0     ltm
-ôä´ä¡õ¼× chainmail1.c 28    4     ele  divine 5,magic -7
-ÉñÃØîø¼× plate.c      33    2     ltm
-ÉñÃØîø¼× plate1.c     30    0     ltm
-ÉñÃØîø¼× plate2.c     25    0     ltm
-ëÖ¼×£º
-ÉñÃØëÖ¼× leggings.c    8(-) 2     ele
-Ğ¬×Ó£º
-»Æ½ğĞ¬   boots.c       8(-) 0     hvm
-¶ÜÅÆ£º
-ÉñÃØ¶ÜÅÆ shield.c      7    2     ltm
-ÉñÃØ¶ÜÅÆ shield1.c     7    0     ltm
-ôä´ä¶ÜÅÆ shield2.c     6    3     ele
-ÉñÃØ¶ÜÅÆ shield3.c     6    1     ltm
-Åû·ç£º
-ÉñÃØÅû·ç cloak.c       8(-) 5     ele
-»¤·û£º
-ÁúÖ®ÎÆÕÂ dragon_amulet 0    2     clo  fire 3                ¿ÉÄÜ¸ÄÎª¿É´æ
-½äÖ¸£º
-ÉñÃØ½äÖ¸ ring.c        0    7(+)  ltm  fire,cold 3 divine -4
+é§ç”²ï¼š
+ç¥ç§˜â–¡ç”² chainmail.c  25    0     ltm
+ç¿¡ç¿ â–¡ç”² chainmail1.c 28    4     ele  divine 5,magic -7
+ç¥ç§˜é§ç”² plate.c      33    2     ltm
+ç¥ç§˜é§ç”² plate1.c     30    0     ltm
+ç¥ç§˜é§ç”² plate2.c     25    0     ltm
+è„›ç”²ï¼š
+ç¥ç§˜è„›ç”² leggings.c    8(-) 2     ele
+é‹å­ï¼š
+é»ƒé‡‘é‹   boots.c       8(-) 0     hvm
+ç›¾ç‰Œï¼š
+ç¥ç§˜ç›¾ç‰Œ shield.c      7    2     ltm
+ç¥ç§˜ç›¾ç‰Œ shield1.c     7    0     ltm
+ç¿¡ç¿ ç›¾ç‰Œ shield2.c     6    3     ele
+ç¥ç§˜ç›¾ç‰Œ shield3.c     6    1     ltm
+æŠ«é¢¨ï¼š
+ç¥ç§˜æŠ«é¢¨ cloak.c       8(-) 5     ele
+è­·ç¬¦ï¼š
+é¾ä¹‹ç´‹ç«  dragon_amulet 0    2     clo  fire 3                å¯èƒ½æ”¹ç‚ºå¯å­˜
+æˆ’æŒ‡ï¼š
+ç¥ç§˜æˆ’æŒ‡ ring.c        0    7(+)  ltm  fire,cold 3 divine -4

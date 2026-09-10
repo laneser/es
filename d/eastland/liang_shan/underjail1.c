@@ -1,14 +1,14 @@
 #include </d/eastland/liang_shan/takeda.h>
 #include <conditions.h>
 
-#define LONG1 "ÕâÊÇÒ»¸öÉñÃØµÄ¶´¿ß£¬»Ò°µ¶øÇÒÒõÊª£¬äıäıµÄË®Á÷²»Í£µÄ´Ó½ÇÂäÒ»¸öÁÑ\n·ì(crack)ÖĞÁ÷³ö£¬¿´ÄÇÁÑ·ìµÄ´óĞ¡£¬Ó¦¸Ã¿ÉÒÔÈÃÄãÃãÇ¿³öÈë¡£\n"
-#define LONG2 "ÕâÊÇÒ»¸ö»ıÂúÁËË®µÄÉñÃØ¶´¿ß£¬´Ì¹ÇµÄº®ÒâÕı¾­ÓÉÄãÉí´¦µÄ±ùË®´«À´£¬\nÈç¹û²»¸Ï¿ìÀë¿ª´Ë´¦£¬¿ÖÅÂ»¹Ã»ÑÍËÀÖ®Ç°£¬¾Í»áÏÈ±»¶³ËÀÁË....\n" 
+#define LONG1 "é€™æ˜¯ä¸€å€‹ç¥ç§˜çš„æ´çªŸï¼Œç°æš—è€Œä¸”é™°æº¼ï¼Œæ½ºæ½ºçš„æ°´æµä¸åœçš„å¾è§’è½ä¸€å€‹è£‚\nç¸«(crack)ä¸­æµå‡ºï¼Œçœ‹é‚£è£‚ç¸«çš„å¤§å°ï¼Œæ‡‰è©²å¯ä»¥è®“ä½ å‹‰å¼·å‡ºå…¥ã€‚\n"
+#define LONG2 "é€™æ˜¯ä¸€å€‹ç©æ»¿äº†æ°´çš„ç¥ç§˜æ´çªŸï¼Œåˆºéª¨çš„å¯’æ„æ­£ç¶“ç”±ä½ èº«è™•çš„å†°æ°´å‚³ä¾†ï¼Œ\nå¦‚æœä¸è¶•å¿«é›¢é–‹æ­¤è™•ï¼Œææ€•é‚„æ²’æ·¹æ­»ä¹‹å‰ï¼Œå°±æœƒå…ˆè¢«å‡æ­»äº†....\n" 
 inherit ROOM;
 
 void create()
 {
 	::create();
-	set_short( "»ıË®¶´¿ß" );
+	set_short( "ç©æ°´æ´çªŸ" );
         set( "long","@@query_long");	
         set("objects",(["skeleton" : "/d/eastland/liang_shan/obj/skeleton"]));
         set("underwater",1);
@@ -34,13 +34,13 @@ void init()
 int do_enter(string arg)
 {
     if ( !arg || arg != "crack")
-        return notify_fail("ÄãÏë enter ÄÇÀïÄØ!\n");
+        return notify_fail("ä½ æƒ³ enter é‚£è£¡å‘¢!\n");
  
     if ( query("underwater") )
- 	return notify_fail("ÕâÀïÃ»ÓĞÈÎºÎÄãÄÜ½øÈëµÄÁÑ·ì...\n");
-    write ("ÄãÓÃ¾¡³ÔÄÌµÄÁ¦Æø£¬Ò»Í·×êÁË½øÈ¥...\n");
+ 	return notify_fail("é€™è£¡æ²’æœ‰ä»»ä½•ä½ èƒ½é€²å…¥çš„è£‚ç¸«...\n");
+    write ("ä½ ç”¨ç›¡åƒå¥¶çš„åŠ›æ°£ï¼Œä¸€é ­é‘½äº†é€²å»...\n");
     tell_room(this_object(),
-    "Äã¿´µ½"+this_player()->query("c_name")+ "Ò»Í·×ê½øÁËÇ½ÉÏµÄÒ»¸öÁÑ·ì.....\n" ,
+    "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ä¸€é ­é‘½é€²äº†ç‰†ä¸Šçš„ä¸€å€‹è£‚ç¸«.....\n" ,
     this_player());
     this_player()->move_player(TROOM"underjail2","SNEAK");
 return 1;
@@ -51,77 +51,77 @@ int do_break(string arg)
  int wc;
  
          if ( !arg || arg != "wall")
-         return notify_fail("ÄãÏë break ÄÇÀïÄØ!\n");
+         return notify_fail("ä½ æƒ³ break é‚£è£¡å‘¢!\n");
          weapon = this_player()->query("weapon1");
          
          if ( !query("underwater") )
-         return notify_fail("ÕâÀïÃ»ÓĞÈÎºÎÄãÄÜ´òÆÆµÄÇ½...\n");
+         return notify_fail("é€™è£¡æ²’æœ‰ä»»ä½•ä½ èƒ½æ‰“ç ´çš„ç‰†...\n");
                  
          if ( !weapon && (string)this_player()->query("class") != "monk" &&
               (string)this_player()->query("class") != "mage") {
-              write("³ı·ÇÊÇÉÙÁÖ¸ßÉ®»òÊÇ·¨Ê¦µÄ·¨Êõ£¬·ñÔò¿ÕÊÖÊÇ´ò²»ÆÆÇ½±ÚµÄ...\n");
+              write("é™¤éæ˜¯å°‘æ—é«˜åƒ§æˆ–æ˜¯æ³•å¸«çš„æ³•è¡“ï¼Œå¦å‰‡ç©ºæ‰‹æ˜¯æ‰“ä¸ç ´ç‰†å£çš„...\n");
                    return 1;
                         }
          if ( !weapon ) {
          
          if ((string)this_player()->query("class") == "monk") { 
-         write("ÄãÔËÆøÉÏÊÖ£¬ÍÂÆø¿ªÉù£¬Á½ÕÆÆ½ÍÆ£¬ÕâÇ½Ó¦Éù¶øÆÆ...\n");
+         write("ä½ é‹æ°£ä¸Šæ‰‹ï¼Œåæ°£é–‹è²ï¼Œå…©æŒå¹³æ¨ï¼Œé€™ç‰†æ‡‰è²è€Œç ´...\n");
          tell_room(this_object(),
-             "Äã¿´µ½"+this_player()->query("c_name")+ "ÓÃËûµÄÄÚÁ¦½«Ç½±ÚÕğ³öÒ»ÌõÁÑ·ì..\n"
+             "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ç”¨ä»–çš„å…§åŠ›å°‡ç‰†å£éœ‡å‡ºä¸€æ¢è£‚ç¸«..\n"
           ,this_player());
          this_player()->set("force_points",(int)this_player()->query("force_points")/2);
          }
          
          if ((string)this_player()->query("class") == "mage") {
-         write("Äãà«à«ÄîÆğÁË»ğÇòÊõÖäÓï£¬½«ÊÖÌùÔÚÇ½±ÚÉÏ£¬Ò»Éù±¬Õ¨Ö®áá£¬\n"
-               "Ç½Ó¦Éù¶øÆÆ...\n");
+         write("ä½ å–ƒå–ƒå¿µèµ·äº†ç«çƒè¡“å’’èªï¼Œå°‡æ‰‹è²¼åœ¨ç‰†å£ä¸Šï¼Œä¸€è²çˆ†ç‚¸ä¹‹å¾Œï¼Œ\n"
+               "ç‰†æ‡‰è²è€Œç ´...\n");
          tell_room(this_object(),
-             "Äã¿´µ½"+this_player()->query("c_name")+ "ÓÃËûµÄ·¨Êõ½«Ç½±ÚÕ¨³öÒ»ÌõÁÑ·ì..\n"
+             "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ç”¨ä»–çš„æ³•è¡“å°‡ç‰†å£ç‚¸å‡ºä¸€æ¢è£‚ç¸«..\n"
              ,this_player());
          this_player()->set("spell_points",(int)this_player()->query("spell_points")/2);
          }}    
     else {
-    write("ÄãÓÃ¾¡È«ÉíµÄÁ¦Æø£¬»ÓÎèÊÖÉÏµÄÎäÆ÷£¬³É¹¦\µØ½«Ç½¿ª³öÒ»ÌõÁÑ·ìÀ´£¬µ«Äã\n"
-          "µÄÎäÆ÷Ò²Òò´ËÊÜËğÁË¡£\n");  
+    write("ä½ ç”¨ç›¡å…¨èº«çš„åŠ›æ°£ï¼Œæ®èˆæ‰‹ä¸Šçš„æ­¦å™¨ï¼ŒæˆåŠŸåœ°å°‡ç‰†é–‹å‡ºä¸€æ¢è£‚ç¸«ä¾†ï¼Œä½†ä½ \n"
+          "çš„æ­¦å™¨ä¹Ÿå› æ­¤å—æäº†ã€‚\n");  
     tell_room(this_object(),
-    "Äã¿´µ½"+this_player()->query("c_name")+ "ÓÃËûµÄÎäÆ÷½«Ç½±Ú¿ª³öÒ»ÌõÁÑ·ì..\n" ,
+    "ä½ çœ‹åˆ°"+this_player()->query("c_name")+ "ç”¨ä»–çš„æ­¦å™¨å°‡ç‰†å£é–‹å‡ºä¸€æ¢è£‚ç¸«..\n" ,
     this_player());
             wc = weapon->query("weapon_class");
             wc -= weapon->query("wc_damaged");
             if( !weapon->query("wc_damaged") ) {
-                            weapon->add( "short", " (ÊÜËğ)" );
+                            weapon->add( "short", " (å—æ)" );
                                     }
             delete("underwater");
             weapon->add( "wc_damaged", wc/2 );
             this_player()->calc_weapon_class();
     }
-    write("ÓÉì¶´óÁ¿µÄË®´ÓÄã¸Õ´òÆÆµÄÁÑ·ìÖĞÁ÷³ö£¬ÄãÉí²»ÓÉ¼ºµÄ±»Õâ¹ÉºéÁ÷¾í×ß\n"
-          "ÕâÄÑµÀ¾ÍÊÇÄãÈËÉúµÄÖÕµãÂğ??\n");
+    write("ç”±æ–¼å¤§é‡çš„æ°´å¾ä½ å‰›æ‰“ç ´çš„è£‚ç¸«ä¸­æµå‡ºï¼Œä½ èº«ä¸ç”±å·±çš„è¢«é€™è‚¡æ´ªæµæ²èµ°\n"
+          "é€™é›£é“å°±æ˜¯ä½ äººç”Ÿçš„çµ‚é»å—??\n");
     tell_room(this_object(),
-    "ËæÖøËû´ò¿ªÒ»Ìõ·ìÏ¶£¬´óÁ¿µÄË®´ÓÄÇ¶ùÁ÷³ö£¬¿ÉÁ¯µÄ"+this_player()->query("c_name")+ "ÒòÎªÕ¾µÄÌ«½ü£¬±»¹ö¹ö\n"
-    "µÄºéÁ÷ÍÌÊÉ£¬ÄãÒòÎªÕ¾µÄ±È½ÏÔ¶£¬ĞÒÃâì¶ÄÑ....\n"
+    "éš¨è‘—ä»–æ‰“é–‹ä¸€æ¢ç¸«éš™ï¼Œå¤§é‡çš„æ°´å¾é‚£å…’æµå‡ºï¼Œå¯æ†çš„"+this_player()->query("c_name")+ "å› ç‚ºç«™çš„å¤ªè¿‘ï¼Œè¢«æ»¾æ»¾\n"
+    "çš„æ´ªæµåå™¬ï¼Œä½ å› ç‚ºç«™çš„æ¯”è¼ƒé ï¼Œå€–å…æ–¼é›£....\n"
     ,this_player());
     "/d/eastland/liang_shan/underjail2"->set("exits/crack","/d/eastland/liang_shan/underjail1");
-    this_player()->move_player(TROOM"underjail2","Í»È»Ò»¸öÈË±»Ò»¹ÉºéË®¾íÁË¹ıÀ´");
+    this_player()->move_player(TROOM"underjail2","çªç„¶ä¸€å€‹äººè¢«ä¸€è‚¡æ´ªæ°´æ²äº†éä¾†");
 return 1;
 }
 int do_search(string arg)
 {
  if ( arg == "wall") {   
-    write("Äã×ĞÏ¸ÇÃ´òÃ¿ÃæÑÒ±Ú£¬Äã·¢ÏÖÓĞÒ»¸öµØ·½ÉùÒôÌØ±ğ¿Õ¶´...\n"
-    "Ò²ĞíÄã¿ÉÒÔÉè·¨´òÆÆËû...\n");
+    write("ä½ ä»”ç´°æ•²æ‰“æ¯é¢å·–å£ï¼Œä½ ç™¼ç¾æœ‰ä¸€å€‹åœ°æ–¹è²éŸ³ç‰¹åˆ¥ç©ºæ´...\n"
+    "ä¹Ÿè¨±ä½ å¯ä»¥è¨­æ³•æ‰“ç ´ä»–...\n");
     return 1;
     } 
  if ( arg == "crack" ) { 
  if ( query("underwater") ) {
- 	write("ÕâÀïÃ»ÓĞÈÎºÎÁÑ·ì...\n");
+ 	write("é€™è£¡æ²’æœ‰ä»»ä½•è£‚ç¸«...\n");
  	return 0;
  	}
-    write ("Äã×ĞÏ¸µÄ¹Û²ìÕâ¸öÁÑ·ì£¬Ó¦¸Ã¿ÉÒÔÈÃÄãÃãÇ¿½øÈë(enter)...\n");
+    write ("ä½ ä»”ç´°çš„è§€å¯Ÿé€™å€‹è£‚ç¸«ï¼Œæ‡‰è©²å¯ä»¥è®“ä½ å‹‰å¼·é€²å…¥(enter)...\n");
     return 1;
     }
  else 
-   write("ÄãÔÚË®µ×ËÑË÷ÁË°ëÌì£¬³ıÁË¼áÓ²µÄÑÒ±Ú£¬ºÃÏñÃ»É¶ÌØ±ğµÄ!\n"); 
+   write("ä½ åœ¨æ°´åº•æœç´¢äº†åŠå¤©ï¼Œé™¤äº†å …ç¡¬çš„å·–å£ï¼Œå¥½åƒæ²’å•¥ç‰¹åˆ¥çš„!\n"); 
    return 1;
 }
 int clean_up() { return 0; }             

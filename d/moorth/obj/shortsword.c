@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "shortsword", "¶Ì½£" );
+	set_name( "shortsword", "çŸ­åŠ" );
 	add( "id", ({ "short sword", "sword" }) );
-	set_short( "an alloyed shortsword", "ºÏ½ğ¶Ì½£" );
+	set_short( "an alloyed shortsword", "åˆé‡‘çŸ­åŠ" );
 	set_long(
 		"You see a short sword made of some unknown alloyed metal.\n",
-		"ÕâÊÇÒ»°ÑÓÃÄ³ÖÖºÏ½ğÖı³ÉµÄ¶Ì½££¬½£ÈĞÎªÁÁÒøÉ«·ºÖøºìÉ«¹âÔó¡£\n"
+		"é€™æ˜¯ä¸€æŠŠç”¨æŸç¨®åˆé‡‘é‘„æˆçš„çŸ­åŠï¼ŒåŠåˆƒç‚ºäº®éŠ€è‰²æ³›è‘—ç´…è‰²å…‰æ¾¤ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "shortblade" );
 	set( "weight", 50 );
 	set( "weapon_class", 15 );

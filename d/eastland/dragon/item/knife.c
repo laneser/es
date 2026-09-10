@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
         seteuid(getuid());
-        set_name( "occult knife", "����С��" );
+        set_name( "occult knife", "神秘小刀" );
         add( "id",({ "axe" }) );
-        set_short( "����С��" );
+        set_short( "神秘小刀" );
         set_long(
-            "����һ�ѽ���(vivisect)����\n"
+            "這是一把解剖(vivisect)刀。\n"
         );
-        set( "unit", "��");
+        set( "unit", "把");
         set( "weapon_class", 1 );
 
         set( "type", "axe" );
@@ -31,7 +31,7 @@ int to_vivisect(string str)
    object ob1,ob2,ob3,ob4;
    
    if (!str||str==""){
-     write( "��Ҫ����ʲ��\n" );
+     write( "你要解剖什麼\n" );
           return 1;
            }
    else if (str=="corpse"){
@@ -42,17 +42,17 @@ int to_vivisect(string str)
          ob3->remove();
          ob4=new(Lditem"layuter_tree1");
          ob4->move(ob2);
-         write("������ͷ��ʼ���������㿳�������������ķ���һ�����ص�ľ��\n");
+         write("你拿起斧頭開始砍樹，當你砍開此樹你在樹心發現一根奇特的木棍\n");
          return 1; 
           }
         else {
-          write("���ﲢû�����뿳����\n");
+          write("這裡並沒有你想砍的樹\n");
             return 1; 
             } 
         }
     else {
       write(
-       " �ܱ�Ǹ���㲢û�к��ʵĹ��߿��Կ���\n");
+       " 很抱歉，你並沒有合適的工具可以砍樹\n");
        return 1;
        }
     }   

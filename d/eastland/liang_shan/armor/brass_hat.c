@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("brass dauist hat", "»ÆÍ­µÀ¹Ú");
+        set_name("brass dauist hat", "é»ƒéŠ…é“å† ");
         add( "id", ({ "hat" }) );
-        set_short( "brass dauist hat", "»ÆÍ­µÀ¹Ú");
+        set_short( "brass dauist hat", "é»ƒéŠ…é“å† ");
         set_long(
                 "A brass hat 6used by dauists .\n",
-                "Ã¿¸öµÀÊ¿Í·ÉÏ¶¼ÓĞµÄ×°ÊÎÎï£¬µ«²»ÖªÓĞÃ»ÓĞ·ÀÓù¹¦ÄÜ£® \n"
+                "æ¯å€‹é“å£«é ­ä¸Šéƒ½æœ‰çš„è£é£¾ç‰©ï¼Œä½†ä¸çŸ¥æœ‰æ²’æœ‰é˜²ç¦¦åŠŸèƒ½ï¼ \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "light_metal");
         set( "armor_class", 4 );

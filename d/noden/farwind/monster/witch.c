@@ -8,10 +8,10 @@ void create()
 
 	::create();
 	set_level(6);
-	set_name( "witch", "女巫" );
-	set_short( "女巫" );
+	set_name( "witch", "濂冲帆" );
+	set_short( "濂冲帆" );
 	set_long(
-		"你看到一个又老又丑的女巫，她正像疯子般地盯著你怪笑....。\n"
+		"浣犵湅鍒颁竴鍊嬪張鑰佸張閱滅殑濂冲帆锛屽ス姝ｅ儚鐦嬪瓙鑸湴鐩憲浣犳�瑧....銆俓n"
 	);
 	set( "race", "gnome" );
 	set( "gender", "female" );

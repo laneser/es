@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("round shield","¹æÔ²¶Ü");
+        set_name("round shield","è¦åœ“ç›¾");
         add("id",({"shield"}) );
-        set_short("¹æÔ²¶Ü");
+        set_short("è¦åœ“ç›¾");
         set_long(
-"ÕâÊÇÒ»ÃæÔ²ĞÎµÄ¶Ü£¬ÉÏÃæÊÇÒ»È¦Ò»È¦ÈÃÄã¿´ÁË·¢ÔÎµÄÔ²¡£\n"
+"é€™æ˜¯ä¸€é¢åœ“å½¢çš„ç›¾ï¼Œä¸Šé¢æ˜¯ä¸€åœˆä¸€åœˆè®“ä½ çœ‹äº†ç™¼æšˆçš„åœ“ã€‚\n"
         );
-        set( "unit", "Ãæ" );
+        set( "unit", "é¢" );
         set( "weight", 150 );
         set( "type", "shield" );
         set( "material", "element" );

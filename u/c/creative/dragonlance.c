@@ -2,20 +2,20 @@
 
 inherit WEAPON;
 
-string C_NAME="ÉñÁúÇ¹";
+string C_NAME="ç¥žé¾æ§";
 
 void create()
 {
         seteuid(getuid());
         set_name( "lance of dragon", C_NAME );
         add( "id", ({ "lance", "dragonlance" }) );
-        set_short( "³¤Ç¹ ÉñÁúÇ¹" );
+        set_short( "é•·æ§ ç¥žé¾æ§" );
         set_long(
-                "ÕâÊÇÑî¼ÒµÄ´«¼ÒÖ®±¦,ÑîÁùÀÉÊÓÖ®±ÈÐÔÃü¸üÎªÖØÒª\n"
-                "¾ÝËµÊÇÕâÇ¹ÖÐÓÐ×Å¿ÉÅÂµÄÄ§·¨ÎªÁ¿,Èç¹ûÄãÊÇÒ»¸ö³àµ¨¾«ÖÒµÄÈËÑî¼ÒÇ¹¾Í»á\n"
-                "Òý·¢Æä¿ÉÅÂµÄÄ§Á¦,´«ËµÇ¹ÖÐÉñÁú»áÖúÄã×÷Õ½!\n"
+                "é€™æ˜¯æ¥Šå®¶çš„å‚³å®¶ä¹‹å¯¶,æ¥Šå…­éƒŽè¦–ä¹‹æ¯”æ€§å‘½æ›´ç‚ºé‡è¦\n"
+                "æ“šèªªæ˜¯é€™æ§ä¸­æœ‰è‘—å¯æ€•çš„é­”æ³•ç‚ºé‡,å¦‚æžœä½ æ˜¯ä¸€å€‹èµ¤è†½ç²¾å¿ çš„äººæ¥Šå®¶æ§å°±æœƒ\n"
+                "å¼•ç™¼å…¶å¯æ€•çš„é­”åŠ›,å‚³èªªæ§ä¸­ç¥žé¾æœƒåŠ©ä½ ä½œæˆ°!\n"
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "type", "jousting" );
         set( "weapon_class", 49 );
         set( "min_damage", 35 );
@@ -36,7 +36,7 @@ int weapon_hit(object victim,int dam)
         if ( !victim ) return 0;
         if( !holder = environment(this_object()) || !living(holder) ) return 0;
         else {
-                /* ¾ö¶¨ÌØÊâ¹¥»÷µÄÉËº¦¶È */
+                /* æ±ºå®šç‰¹æ®Šæ”»æ“Šçš„å‚·å®³åº¦ */
                 align=holder->query( "alignment" );
                 if( align >= 150000 ) { dam=40; }
                 else if( align < 150000 ) { dam=35; }
@@ -48,18 +48,18 @@ int weapon_hit(object victim,int dam)
                 
                 if ( random(50) < 10 ) {
                         if ( (int)holder->query( "spell_points" )< 5 ) {
-                                tell_object( holder,set_color( "ÄãµÄ¾«Éñ²»×ãÒÔÕÙ»½µØÓü¶ñÄ§....\n","HIR" ) );
+                                tell_object( holder,set_color( "ä½ çš„ç²¾ç¥žä¸è¶³ä»¥å¬å–šåœ°ç„æƒ¡é­”....\n","HIR" ) );
                                 return 1;
                         }
                         
                         him=victim->query( "c_name" );
                         me=holder->query( "c_name" );
                         tell_object( holder,set_color(
-                                "ÄãÊÖÉÏµÄ","HIW")+C_NAME+set_color("Í»È»·É³ö¿ÕÖÐ»¯³ÉÒ»ÌõÒøÁú³åÏò"+him+"¡£\n","HIW") );
+                                "ä½ æ‰‹ä¸Šçš„","HIW")+C_NAME+set_color("çªç„¶é£›å‡ºç©ºä¸­åŒ–æˆä¸€æ¢éŠ€é¾è¡å‘"+him+"ã€‚\n","HIW") );
                         tell_object( victim,set_color(
-                                me+"ÊÖÉÏµÄ","HIW")+C_NAME+set_color("·Éµ½¿ÕÖÐ»¯³ÉÒ»µÚÒøÁúÏòÄãÏ®À´¡£\n","HIW") );
+                                me+"æ‰‹ä¸Šçš„","HIW")+C_NAME+set_color("é£›åˆ°ç©ºä¸­åŒ–æˆä¸€ç¬¬éŠ€é¾å‘ä½ è¥²ä¾†ã€‚\n","HIW") );
                         tell_room( environment(holder),set_color(
-                                me+"ÊÖÉÏµÄ","HIW")+C_NAME+set_color("·Éµ½¿ÕÖÐ»¯³ÉÒ»µÚÒøÁú³åÏò"+him+"¡£\n","HIW"),({ holder,victim }) );
+                                me+"æ‰‹ä¸Šçš„","HIW")+C_NAME+set_color("é£›åˆ°ç©ºä¸­åŒ–æˆä¸€ç¬¬éŠ€é¾è¡å‘"+him+"ã€‚\n","HIW"),({ holder,victim }) );
                         victim->receive_special_damage( "cold",dam );
 //                      report( victim );
                         holder->add( "spell_points",-5 );

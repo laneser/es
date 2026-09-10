@@ -4,10 +4,10 @@ void create(object ob)
 {
 	if ( ! ob ) return ;
 	ob->set_level(7);
-	ob->set_name( "barbarian", "Ò°ÈË" );
-	ob->set_short( "É­ÁÖÒ°ÈË" );
+	ob->set_name( "barbarian", "é‡äºº" );
+	ob->set_short( "æ£®æ—é‡äºº" );
 	ob->set_long(
-		"Äã¿´µ½Ò»¸ö»ëÉí¼¡ÈâµÄÒ°ÈË£¬ËûÕıºÃÆæµØµÉÖøÄã¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹æ¸¾èº«è‚Œè‚‰çš„é‡äººï¼Œä»–æ­£å¥½å¥‡åœ°çªè‘—ä½ ã€‚\n"
 	);
 	ob->set( "race", "human" );
 	ob->set( "gender", "male" );

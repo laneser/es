@@ -4,10 +4,10 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "jade ring", "翡翠戒指" );
+	set_name( "jade ring", "缈＄繝鎴掓寚" );
 	add( "id", ({ "ring" }) );
-	set_short( "翡翠戒指" );
-	set_long("这是一个很漂亮的翡翠戒指。\n");
+	set_short( "缈＄繝鎴掓寚" );
+	set_long("閫欐槸涓�鍊嬪緢婕備寒鐨勭俊缈犳垝鎸囥�俓n");
 	set( "type", "finger" );
 	set( "material", "element" );
 	set( "defense_bonus", 2 );

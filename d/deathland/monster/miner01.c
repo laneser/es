@@ -8,18 +8,18 @@ void create()
 	::create();
 	set_level(12);
 	seteuid(getuid());
-	set_name( "Dwarf Miner", "°«ÈË¿ó¹¤" );
+	set_name( "Dwarf Miner", "çŸ®äººç¤¦å·¥" );
 	add ("id", ({"dwarf", "miner"}) );
-	set_short( "a dwarf miner", "°«ÈË¿ó¹¤" );
+	set_short( "a dwarf miner", "çŸ®äººç¤¦å·¥" );
 	set_long(
 	"a working dwarf miner.\n",
-	"Ò»¸öĞÁ¿à¿ª¿óµÄ°«ÈË¿ó¹¤.ËûµÄÒ»Éú´ó²¿·İµÄÊ±¼ä¶¼ÊÇÔÚ¿ó¿ÓÀï¶É¹ı\n"
+	"ä¸€å€‹è¾›è‹¦é–‹ç¤¦çš„çŸ®äººç¤¦å·¥.ä»–çš„ä¸€ç”Ÿå¤§éƒ¨ä»½çš„æ™‚é–“éƒ½æ˜¯åœ¨ç¤¦å‘è£¡æ¸¡é\n"
 	);
 
     set("alignment",330);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 14 );
 	set_perm_stat( "str", 20 );
 	set_perm_stat( "int", 7 );
@@ -37,7 +37,7 @@ void create()
     set ("chat_chance", 7);
 	set ("chat_output", ({
 //             "Miner says: There are some strange monsters in the mine\n",
-	    "¿ó¹¤Ëµ:ÓĞÒ»Ğ©Ææ¹ÖµÄ¹ÖÎï´æÔÚì¶¿ó¿ÓµÄÉî´¦.\n",
+	    "ç¤¦å·¥èªª:æœ‰ä¸€äº›å¥‡æ€ªçš„æ€ªç‰©å­˜åœ¨æ–¼ç¤¦å‘çš„æ·±è™•.\n",
 	    }) );
 	wield_weapon(Weapon"/pick01.c");
 }

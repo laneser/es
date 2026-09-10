@@ -5,12 +5,12 @@ void create(object ob)
         seteuid(getuid()) ;
 
 	ob->set_level( 5 );
-	ob->set_name( "boarman leader", "Ò°ÖíÈËÁìĞä" );
+	ob->set_name( "boarman leader", "é‡è±¬äººé ˜è¢–" );
 	ob->add( "id", ({ "boarman", "leader" }) );
-        ob->set_short( "Ò°ÖíÈËÁìĞä" );
+        ob->set_short( "é‡è±¬äººé ˜è¢–" );
 	ob->set_long(
-		"Õâ¸öÒ°ÖíÈË³¤µÃºÜ¡¸Ğ×ÃÍ¡¹£¬ÂúÁ³ºáÈâ£¬ÂÌ¶¹°ã´óµÄÑÛ¾¦È´¾«ÉñÒàÒàµØ\n"
-		"´òÁ¿ÖøÄãÕâ¸ö²»ËÙÖ®¿Í¡£\n"
+		"é€™å€‹é‡è±¬äººé•·å¾—å¾ˆã€Œå…‡çŒ›ã€ï¼Œæ»¿è‡‰æ©«è‚‰ï¼Œç¶ è±†èˆ¬å¤§çš„çœ¼ç›å»ç²¾ç¥äº¦äº¦åœ°\n"
+		"æ‰“é‡è‘—ä½ é€™å€‹ä¸é€Ÿä¹‹å®¢ã€‚\n"
 	);
 	ob->set( "gender", "male" );
 	ob->set_perm_stat( "str", 8 );

@@ -10,13 +10,13 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name("snake", "¶¾Éß");
-   set_short("¶¾Éß");
+	set_name("snake", "æ¯’è›‡");
+   set_short("æ¯’è›‡");
 	set_long(
-		"ÕâÌõÉßµÄÍ·ÊÇÈı½ÇĞÎµÄ£¬ÄãÏëÆğĞ¡Ê±ºò´ÓÊéÉÏ¿´µ½µÄ£¬ÓĞÈı½ÇĞÎÍ·²¿µÄÉß\n"
-		"´ó²¿·ÖÊÇÓĞ¶¾µÄ¡£\n"
+		"é€™æ¢è›‡çš„é ­æ˜¯ä¸‰è§’å½¢çš„ï¼Œä½ æƒ³èµ·å°æ™‚å€™å¾æ›¸ä¸Šçœ‹åˆ°çš„ï¼Œæœ‰ä¸‰è§’å½¢é ­éƒ¨çš„è›‡\n"
+		"å¤§éƒ¨åˆ†æ˜¯æœ‰æ¯’çš„ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "alignment", -300 );
    set_perm_stat( "dex", 8 );
     set( "max_hp", 300 );
@@ -26,8 +26,8 @@ void create()
 	set( "natural_min_damage1", 3 );
 	set( "natural_max_damage1", 4 );
 	set( "tactic_func", "emit_poison" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
-	set_c_verbs( ({ "%s°ºÍ·ÕÅ×ì£¬Íù%sÒ§È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
+	set_c_verbs( ({ "%sæ˜‚é ­å¼µå˜´ï¼Œå¾€%så’¬å»" }) );
    set( "exp_reward", 513 );
 }
 
@@ -37,7 +37,7 @@ int emit_poison()
 
    if( random(20)>5 || !(victim= query_attacker()) ) return 0;
     tell_room( environment(this_object()),
-           "¶¾Éß´Ó×ì°ÍÅç³öÒ»¹ÉÂÌÉ«µÄÆøÌå£¬¸ÕºÃÅçÔÚÄãµÄÃæÇ° ....\n",
+           "æ¯’è›‡å¾å˜´å·´å™´å‡ºä¸€è‚¡ç¶ è‰²çš„æ°£é«”ï¼Œå‰›å¥½å™´åœ¨ä½ çš„é¢å‰ ....\n",
 		this_object() );
    (CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 10, 3 );
 	return 1;

@@ -3,16 +3,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("lucky ring", "ĞÒÔË½äÖ¸");
+        set_name("lucky ring", "å¹¸é‹æˆ’æŒ‡");
    add( "id", ({ "ring" }) );
-        set_short( "ĞÒÔË½äÖ¸" );
+        set_short( "å¹¸é‹æˆ’æŒ‡" );
         set_long(
 @C_LONG
-ÕâÊÇÒ»Ö»¿É°®¶ø¾«ÖÂµÄ½äÖ¸£¬ÏâÓĞÒ»¿ÅĞ¡Ğ¡µÄôä´ä£¬²¢ÇÒµñ¿ÌµÄÏñ
-Ğ¡µ¶×ÓµÄ±êÖ¾¡£
+é€™æ˜¯ä¸€éš»å¯æ„›è€Œç²¾ç·»çš„æˆ’æŒ‡ï¼Œé‘²æœ‰ä¸€é¡†å°å°çš„ç¿¡ç¿ ï¼Œä¸¦ä¸”é›•åˆ»çš„åƒ
+å°åˆ€å­çš„æ¨™èªŒã€‚
 C_LONG
         );
-        set( "unit", "Ö»");
+        set( "unit", "åª");
         set( "type", "finger" );
         set( "material","thief" );
         set( "extra_stats",([ "pie" : -1 ]) );

@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-    set_name( "cleaver", "ÍÀµ¶" );
-    set_short( "ÍÀµ¶" );
+    set_name( "cleaver", "å± åˆ€" );
+    set_short( "å± åˆ€" );
 	set_long(
-        "ÕâÊÇÒ»°ÑÊ®·Ö÷îºÚµÄ¾Şµ¶, ÁîÄãÊ®·Ö»³ÒÉÓĞË­ÄÜÊ¹¶¯´Ëµ¶?\n"
+        "é€™æ˜¯ä¸€æŠŠååˆ†é»é»‘çš„å·¨åˆ€, ä»¤ä½ ååˆ†æ‡·ç–‘æœ‰èª°èƒ½ä½¿å‹•æ­¤åˆ€?\n"
 	);
-    set( "unit", "°Ñ" );
+    set( "unit", "æŠŠ" );
     setup_weapon( "longblade", 20, 10, 25 );
     set( "weight", 350 );
     set( "value", ({ 3, "silver" }) );

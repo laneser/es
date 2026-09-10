@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "massive bo", "´óÊ¯°ô" );
+	set_name( "massive bo", "å¤§çŸ³æ£’" );
 	add( "id", ({ "bo" }) );
-	set_short( "´óÊ¯°ô" );
+	set_short( "å¤§çŸ³æ£’" );
 	set_long(
-		"ÕâÊÇÒ»¸ùºÜÖØµÄ´óÊ¯°ô£¬ÊÇÒ°ÂùÈËÕ½Ê¿¹ßÓÃµÄÎäÆ÷¡£\n"
+		"é€™æ˜¯ä¸€æ ¹å¾ˆé‡çš„å¤§çŸ³æ£’ï¼Œæ˜¯é‡è »äººæˆ°å£«æ…£ç”¨çš„æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	setup_weapon( "bo", 30, 15, 35 );
 	set( "nosecond", 1 );
 	set( "weight", 250 );

@@ -5,10 +5,10 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_name("traveller's bag", "ÂÃĞĞ´ü");
+	set_name("traveller's bag", "æ—…è¡Œè¢‹");
 	add( "id", ({ "bag" }) );
-	set_short("ÂÃĞĞ´ü");
-	set_c_open_long("ÕâÊÇÒ»ÖÖ´óĞÍµÄÂÃĞĞ´ü£¬¿ÉÒÔ×°ÏÂ²»ÉÙ¶«Î÷¡£\n");
+	set_short("æ—…è¡Œè¢‹");
+	set_c_open_long("é€™æ˜¯ä¸€ç¨®å¤§å‹çš„æ—…è¡Œè¢‹ï¼Œå¯ä»¥è£ä¸‹ä¸å°‘æ±è¥¿ã€‚\n");
 	set("weight", 30);
 	set("weight_apply", 50 );
 	set("max_load", 350);

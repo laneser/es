@@ -5,13 +5,13 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("broom","É¨°Ñ");
-     set_short("a broom","É¨°Ñ");
+     set_name("broom","æƒæŠŠ");
+     set_short("a broom","æƒæŠŠ");
      set_long(
       "just a broom.\n",
-      "Ò»°ÑÆÕÍ¨µÄÉ¨°Ñ.Äã¿ÉÒÔÄÃÖøËüÈ¥É¨É¨»Ò³¾.\n"
+      "ä¸€æŠŠæ™®é€šçš„æƒæŠŠ.ä½ å¯ä»¥æ‹¿è‘—å®ƒå»æƒæƒç°å¡µ.\n"
       );
-     set( "unit", "°Ñ");
+     set( "unit", "æŠŠ");
      set("weight",35);
      set("value", ({ 10, "silver" }));
 }

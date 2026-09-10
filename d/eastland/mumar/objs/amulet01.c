@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("Golden Necklace","½ğÁúÏî¡õ");
+        set_name("Golden Necklace","é‡‘é¾é …â–¡");
         add("id",({"necklace"}) );
-        set_short("½ğÁúÏî¡õ");
+        set_short("é‡‘é¾é …â–¡");
         set_long(
-"ÕâÊÇÒ»ÌõÓÃÏàµ±´ÖµÄ½ğ×Ó´òÔì³ÉÁúĞÍµÄÏî¡õ,¿´À´Ó¦¸ÃÖµ²»ÉÙÇ®²ÅÊÇ¡£\n"
+"é€™æ˜¯ä¸€æ¢ç”¨ç›¸ç•¶ç²—çš„é‡‘å­æ‰“é€ æˆé¾å‹çš„é …â–¡,çœ‹ä¾†æ‡‰è©²å€¼ä¸å°‘éŒ¢æ‰æ˜¯ã€‚\n"
         );
-        set( "unit", "Ìõ" );
+        set( "unit", "æ¢" );
         set( "weight", 50 );
         set( "type", "misc" );
         set( "material", "light_metal" );

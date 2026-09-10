@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Raingod's robe","ÓêÊ¦Ö®ÅÛ");
+        set_name("Raingod's robe","é›¨å¸«ä¹‹è¢");
         add("id",({"robe"}) );
-        set_short("ÓêÊ¦Ö®ÅÛ");
+        set_short("é›¨å¸«ä¹‹è¢");
 	set_long(@C_LONG
-Ò»¼şÍ¸Ã÷±¡Èç²õÒíµÄÒÂ·ş£¬µ«È´¼áÈÍÎŞ±È£¬ÁîÈËÎŞ·¨ÇáÒ×Ëº¿ªËü¡£
+ä¸€ä»¶é€æ˜è–„å¦‚èŸ¬ç¿¼çš„è¡£æœï¼Œä½†å»å …éŸŒç„¡æ¯”ï¼Œä»¤äººç„¡æ³•è¼•æ˜“æ’•é–‹å®ƒã€‚
 C_LONG	         );
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight",100 );
 	set( "type", "body" );
         set("material","cloth");

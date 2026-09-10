@@ -6,11 +6,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("magic plate", "ÔÂÉñ¼×");
-    set_short("ÔÂÉñ¼×");
+    set_name("magic plate", "æœˆç¥ç”²");
+    set_short("æœˆç¥ç”²");
     add("id", ({ "plate" }));
-    set_long("ÓÉÉñÁ¦»Ã»¯¶ø³ÉµÄîø¼×¡£\n");
-    set("unit", "¼ş");
+    set_long("ç”±ç¥åŠ›å¹»åŒ–è€Œæˆçš„é§ç”²ã€‚\n");
+    set("unit", "ä»¶");
     set("weight", 0);
     set("type", "body");
     set( "armor_class", 150 );
@@ -22,7 +22,7 @@ void create()
 
 void unequip(int silent)
 {
-    tell_object(this_player(), "ÔÂÉñ¼×¾Ü¾øÀë¿ªÄãµÄÉíÌå!\n");
+    tell_object(this_player(), "æœˆç¥ç”²æ‹’çµ•é›¢é–‹ä½ çš„èº«é«”!\n");
 }
 
 int remove()

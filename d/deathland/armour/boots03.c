@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("holy boots", "ÉñÊ¥Ö®Ğ¬");
+        set_name("holy boots", "ç¥è–ä¹‹é‹");
         add( "id", ({ "boots" }) );
-        set_short("a pair of holy boots", "ÉñÊ¥Ö®Ğ¬");
+        set_short("a pair of holy boots", "ç¥è–ä¹‹é‹");
         set_long(
                 "A pair of boots with holy power .\n",
-                "Ò»Ë«ÓĞÖøÉñÊ¥Á¦Á¿µÄĞ¬×Ó\n"
+                "ä¸€é›™æœ‰è‘—ç¥è–åŠ›é‡çš„é‹å­\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "leather"); 
         set( "armor_class", 6 );

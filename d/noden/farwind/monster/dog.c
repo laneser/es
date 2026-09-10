@@ -7,17 +7,17 @@ void create()
 {
         ::create();
         set_level(1);
-        set_name("dog" ,"¹·");
+        set_name("dog" ,"ç‹—");
         add( "id", ({ "dog" }) );
-        set_short( "Ò°¹·");
+        set_short( "é‡ç‹—");
         set_long(
-                "ÕâÊÇÒ»Ö»Ò°¹·, Äã×îºÃ²»ÒªËæ±ã¿¿½üËü¡£\n"
+                "é€™æ˜¯ä¸€éš»é‡ç‹—, ä½ æœ€å¥½ä¸è¦éš¨ä¾¿é è¿‘å®ƒã€‚\n"
         );
    set( "race", "beast" );
-        set("unit", "Ö»");
+        set("unit", "åª");
         set_perm_stat("str", 3);
         set_perm_stat("con", 2);
         set_perm_stat("dex", 3);
-        set_c_verbs( ({ "%sÕÅ×ìÍù%sÒ»Ò§", "%sÓÃËüµÄ×¦×Ó×¥%s" }) );
-        set_c_limbs( ({ "ááÍÈ", "Ç°½Å", "Í·²¿", "Î²°Í", "ÉíÌå" }) );
+        set_c_verbs( ({ "%så¼µå˜´å¾€%sä¸€å’¬", "%sç”¨å®ƒçš„çˆªå­æŠ“%s" }) );
+        set_c_limbs( ({ "å¾Œè…¿", "å‰è…³", "é ­éƒ¨", "å°¾å·´", "èº«é«”" }) );
 }

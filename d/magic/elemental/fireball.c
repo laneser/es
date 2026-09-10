@@ -123,52 +123,52 @@ int cast(int level, string target)
 	
 	if( (int)me->query_skill("elemental") < query_need_skill(level) ) {
 		tell_object( me, 
-        	"ÄãµÄÔªËØÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n" );
+        	"ä½ çš„å…ƒç´ é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n" );
     	return 0;
     }
 	
 	if( target=="NONE" && !(targ = me->query_attacker()) ) { 
-		write( "Òª¶ÔË­Ê©Õ¹»ðÇòÊõ£¿\n");
+		write( "è¦å°èª°æ–½å±•ç«çƒè¡“ï¼Ÿ\n");
 	    return 0;
 	} else {
 		if ( !targ)
 			targ = present( target, environment(me) );
 		if( !targ ) {
-			write( "ÄãµÄÄ¿±ê²¢²»ÔÚÕâÀï£¡\n");
+			write( "ä½ çš„ç›®æ¨™ä¸¦ä¸åœ¨é€™è£¡ï¼\n");
 	    	return 0;
 	    }
 	}
 
 	if( !living(targ) ) {
-		write( "»ðÇòÊõµÄÄ¿±ê±ØÐëÊÇÉúÎï£¡\n");
+		write( "ç«çƒè¡“çš„ç›®æ¨™å¿…é ˆæ˜¯ç”Ÿç‰©ï¼\n");
 		return 0;
 	}
 	if( targ->query("no_attack") ) {
-		write( "²»¡ª¿É¡ªÒÔ¡£\n");
+		write( "ä¸â€”å¯â€”ä»¥ã€‚\n");
 		return 0;
 	}
 	if( targ == me ) {
-		write( "Õâ .... ²»Ì«ºÃ°É¡£\n");
+		write( "é€™ .... ä¸å¤ªå¥½å§ã€‚\n");
 		return 0;
 	}
 	if( !check_level( me, targ, 1 ) ) return 0;
 	me->set_temp("cast_busy",1);
 	if( userp(me) ) me->block_attack(query_delay_time(level)*2);
  	me->set_temp("msg_stop_attack", 
-		set_color("( ÄãÕýÔÚÊ©·¨£¬ÎÞ·¨¹¥»÷¡£ )\n", "HIR", me) );
+		set_color("( ä½ æ­£åœ¨æ–½æ³•ï¼Œç„¡æ³•æ”»æ“Šã€‚ )\n", "HIR", me) );
 	write( 
-		set_color("\nÄã¿ªÊ¼ÄîÆð»ðÇòÊõÖäÎÄ ÃÀÀ­ Î÷ º±Äª .... \n", "HIR") );
+		set_color("\nä½ é–‹å§‹å¿µèµ·ç«çƒè¡“å’’æ–‡ ç¾Žæ‹‰ è¥¿ ç½•èŽ« .... \n", "HIR") );
 	tell_room( environment(me), 
-		sprintf("%s(%s)¿ªÊ¼à«à«×ÔÓï¡£\n", me->query("c_name"), me->query("name"))
+		sprintf("%s(%s)é–‹å§‹å–ƒå–ƒè‡ªèªžã€‚\n", me->query("c_name"), me->query("name"))
 		, me);
 	if( !targ->query_attackers() &&
 		(random(find_rate)<query_find_rate(me,targ)) ) {
 		tell_object( me, set_color(
-			sprintf("\n%s(%s)·¢ÏÖÄã¶ÔËû²»»³ºÃÒâ¶ø¿ªÊ¼¹¥»÷Äã¡£\n",
+			sprintf("\n%s(%s)ç™¼ç¾ä½ å°ä»–ä¸æ‡·å¥½æ„è€Œé–‹å§‹æ”»æ“Šä½ ã€‚\n",
 				targ->query("c_name"), targ->query("name")) ,"HIY",me));
 
 		tell_room( environment(targ), 
-			sprintf("%s·¢ÏÖ%s¶ÔËû²»»³ºÃÒâ¶øÖ÷¶¯¹¥»÷¡£\n",
+			sprintf("%sç™¼ç¾%så°ä»–ä¸æ‡·å¥½æ„è€Œä¸»å‹•æ”»æ“Šã€‚\n",
 				targ->query("c_name"), me->query("c_name")) , me);
 		targ->kill_ob(me);
 		me->block_attack(2);
@@ -191,26 +191,26 @@ void pre_effect(object caster, object target, int level)
 	if( !caster ) return;
 	switch( level ) {
 		case 0..1:
-			c_msg = "\n%sµÄÊÖÖÐ¿ªÊ¼¾Û¼¯Ò»ÍÅÐ¡Ð¡µÄ»ðÇò¡£\n\n";
+			c_msg = "\n%sçš„æ‰‹ä¸­é–‹å§‹èšé›†ä¸€åœ˜å°å°çš„ç«çƒã€‚\n\n";
 			break;
 		case 2..5:
-			c_msg = "%sµÄÊÖÖÐ¿ªÊ¼¾Û¼¯Ò»ÍÅÖËÈÈµÄ´ó»ðÇò¡£\n\n";
+			c_msg = "%sçš„æ‰‹ä¸­é–‹å§‹èšé›†ä¸€åœ˜ç‚™ç†±çš„å¤§ç«çƒã€‚\n\n";
 			break;
 		case 6:
-			c_msg = "\n%sµÄÊÖÖÐ¿ªÊ¼¾Û¼¯Ò»ÍÅ¿ÉÅÂ¶ø¾Þ´óµÄ»ðÇò¡£\n\n";
+			c_msg = "\n%sçš„æ‰‹ä¸­é–‹å§‹èšé›†ä¸€åœ˜å¯æ€•è€Œå·¨å¤§çš„ç«çƒã€‚\n\n";
 			break;
 		case 7:
-			c_msg = "\n%sµÄÊÖÖÐ¿ªÊ¼¾Û¼¯Ò»ÍÅÐÜÐÜµÄÁÒ»ð£¬ÐÎ³ÉÒ»¸ö¾Þ´óµÄ»ðÇò¡£\n\n";
+			c_msg = "\n%sçš„æ‰‹ä¸­é–‹å§‹èšé›†ä¸€åœ˜ç†Šç†Šçš„çƒˆç«ï¼Œå½¢æˆä¸€å€‹å·¨å¤§çš„ç«çƒã€‚\n\n";
 			break;
 		case 8:
-			c_msg = "\n%sµÄÊÖÖÐ¿ªÊ¼¾Û¼¯Ò»ÍÅ»ð¡õ, Öð½¥ÐÎ³ÉÒ»Ö»ÖËÈÈµÄ»ðÄñ £­ ¿­ÈöÖ®Ó¥¡£\n\n";
+			c_msg = "\n%sçš„æ‰‹ä¸­é–‹å§‹èšé›†ä¸€åœ˜ç«â–¡, é€æ¼¸å½¢æˆä¸€éš»ç‚™ç†±çš„ç«é³¥ ï¼ å‡±æ’’ä¹‹é·¹ã€‚\n\n";
 			break;
 		default:
-			c_msg = "\n%sµÄÊÖÖÐ¿ªÊ¼¾Û¼¯Ò»ÍÅ»ðÇò¡£\n\n";
+			c_msg = "\n%sçš„æ‰‹ä¸­é–‹å§‹èšé›†ä¸€åœ˜ç«çƒã€‚\n\n";
 			break;
 	}
 	tell_object(caster, set_color(
-		sprintf(c_msg, "Äã"), "HIR", caster));
+		sprintf(c_msg, "ä½ "), "HIR", caster));
 	tell_room(environment(caster), 
 		sprintf(c_msg, sprintf("%s(%s)", caster->query("c_name"),
 			caster->query("name"))), caster);
@@ -239,9 +239,9 @@ void effect_one(int level, object caster, object victim)
 	// Caster or dest moved or dest dead.
 	if( !victim || !present(victim, environment(caster)) ) {
 		tell_object( caster, 
-			"\nÄã½«ÊÖÖÐµÄ»ðÇòÍùµØÉÏÒ»¶ª, Õ¨³öÒ»¸ö´ó¶´¡£\n\n");
+			"\nä½ å°‡æ‰‹ä¸­çš„ç«çƒå¾€åœ°ä¸Šä¸€ä¸Ÿ, ç‚¸å‡ºä¸€å€‹å¤§æ´žã€‚\n\n");
 		tell_room( environment(caster), 
-			sprintf("%s(%s)½«ÊÖÖÐµÄ»ðÇòÍùµØÉÏÒ»¶ª, Õ¨³öÒ»¸ö´ó¶´¡£\n",
+			sprintf("%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒå¾€åœ°ä¸Šä¸€ä¸Ÿ, ç‚¸å‡ºä¸€å€‹å¤§æ´žã€‚\n",
 				caster->query("c_name"), caster->query("name")) ,caster);
 		gain_spell_experience(caster, TYPE, query_gain_spell_exp(level)/2);
 		return;
@@ -249,11 +249,11 @@ void effect_one(int level, object caster, object victim)
 	// Miss. :(
 	if( !success_hit( 5+level*10, caster, TYPE, query_need_spell_level(level) ) ) {
 		tell_object( caster, 
-			sprintf("Äã½«ÊÖÖÐµÄ»ðÇòÍù%s(%s)¶ª¹ýÈ¥, ¿ÉÏ§´òÍáÁË!\n",
+			sprintf("ä½ å°‡æ‰‹ä¸­çš„ç«çƒå¾€%s(%s)ä¸ŸéŽåŽ», å¯æƒœæ‰“æ­ªäº†!\n",
 				victim->query("c_name"), victim->query("name")));
 
 		tell_room( environment(caster), 
-			sprintf("%s(%s)½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥, ²»Öª·ÉÏòºÎ´¦?\n",
+			sprintf("%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ», ä¸çŸ¥é£›å‘ä½•è™•?\n",
 				caster->query("c_name"), caster->query("name")) , caster);
 		gain_spell_experience(caster, TYPE, query_gain_spell_exp(level)/2);
 		return;
@@ -262,24 +262,24 @@ void effect_one(int level, object caster, object victim)
 	// hit effect ...	
 	switch( level ) {
 		case 0..3:
-			cmsgc = "Äã½«ÊÖÖÐµÄ»ðÇòÍù¶ª³öÈ¥, ¡¸ºä¡¹µÄÒ»ÉùÔÚ%s(%s)µÄÁ³ÉÏÕ¨¿ª!\n";
-			cmsgv = "%s(%s)½«ÊÖÖÐµÄ»ðÇòÍùÄãµÄÁ³ÉÏ¶ª¹ýÀ´, ¡¸ºä¡¹µÄÒ»ÉùÕ¨¿ª!\n";
-			cmsgo = "%s(%s)½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥, ¡¸ºä¡¹µÄÒ»ÉùÔÚ%s(%s)Á³ÉÏÕ¨¿ª!\n";
+			cmsgc = "ä½ å°‡æ‰‹ä¸­çš„ç«çƒå¾€ä¸Ÿå‡ºåŽ», ã€Œè½Ÿã€çš„ä¸€è²åœ¨%s(%s)çš„è‡‰ä¸Šç‚¸é–‹!\n";
+			cmsgv = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒå¾€ä½ çš„è‡‰ä¸Šä¸ŸéŽä¾†, ã€Œè½Ÿã€çš„ä¸€è²ç‚¸é–‹!\n";
+			cmsgo = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ», ã€Œè½Ÿã€çš„ä¸€è²åœ¨%s(%s)è‡‰ä¸Šç‚¸é–‹!\n";
 			break;
 		case 4..6:
-			cmsgc = "Äã½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥, ¡¸ºäÂ¡¡¹µÄÒ»ÉùÕ¨ÔÚ%s(%s)ÉíÉÏ!\n";
-			cmsgv = "%s(%s)½«ÊÖÖÐµÄ»ðÇòÍùÄã¶ª¹ýÀ´, ¡¸ºäÂ¡¡¹µÄÒ»ÉùÕ¨¿ª!\n";
-			cmsgo = "%s(%s)½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥,¡¸ºäÂ¡¡¹µÄÒ»ÉùÕ¨ÔÚ%s(%s)ÉíÉÏ!\n";
+			cmsgc = "ä½ å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ», ã€Œè½Ÿéš†ã€çš„ä¸€è²ç‚¸åœ¨%s(%s)èº«ä¸Š!\n";
+			cmsgv = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒå¾€ä½ ä¸ŸéŽä¾†, ã€Œè½Ÿéš†ã€çš„ä¸€è²ç‚¸é–‹!\n";
+			cmsgo = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ»,ã€Œè½Ÿéš†ã€çš„ä¸€è²ç‚¸åœ¨%s(%s)èº«ä¸Š!\n";
 			break;
 		case 7:
-			cmsgc = "Äã½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥, ¡¸ºäÂ¡¡¹µÄÒ»Éù£¬%s(%s)ÁýÕÖÔÚÒ»ÍÅÐÜÐÜÁÒ»ðÖ®ÖÐ!\n";
-			cmsgv = "%s(%s)½«ÊÖÖÐµÄ»ðÇòÍùÄã¶ª¹ýÀ´, ¡¸ºäÂ¡¡¹µÄÒ»Éù£¬ÄãÁýÕÖÔÚÒ»ÍÅÐÜÐÜÁÒ»ðÖ®ÖÐ!\n";
-			cmsgo = "%s(%s)½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥,¡¸ºäÂ¡¡¹µÄÒ»Éù£¬%s(%s)ÁýÕÖÔÚÒ»ÍÅÐÜÐÜÁÒ»ðÖ®ÖÐ!\n";
+			cmsgc = "ä½ å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ», ã€Œè½Ÿéš†ã€çš„ä¸€è²ï¼Œ%s(%s)ç± ç½©åœ¨ä¸€åœ˜ç†Šç†Šçƒˆç«ä¹‹ä¸­!\n";
+			cmsgv = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒå¾€ä½ ä¸ŸéŽä¾†, ã€Œè½Ÿéš†ã€çš„ä¸€è²ï¼Œä½ ç± ç½©åœ¨ä¸€åœ˜ç†Šç†Šçƒˆç«ä¹‹ä¸­!\n";
+			cmsgo = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ»,ã€Œè½Ÿéš†ã€çš„ä¸€è²ï¼Œ%s(%s)ç± ç½©åœ¨ä¸€åœ˜ç†Šç†Šçƒˆç«ä¹‹ä¸­!\n";
 			break;
 		default:
-			cmsgc = "Äã½«ÊÖÖÐµÄ»ðÇòÍù¶ª³öÈ¥, ¡¸ºä¡¹µÄÒ»ÉùÔÚ%s(%s)Á³ÉÏÕ¨¿ª!\n";
-			cmsgv = "%s(%s)½«ÊÖÖÐµÄ»ðÇòÍùÄãµÄÁ³ÉÏ¶ª¹ýÀ´, ¡¸ºä¡¹µÄÒ»ÉùÕ¨¿ª!\n";
-			cmsgo = "%s(%s)½«ÊÖÖÐµÄ»ðÇò¶ª³öÈ¥, ¡¸ºä¡¹µÄÒ»ÉùÔÚ%s(%s)Á³ÉÏÕ¨¿ª!\n";
+			cmsgc = "ä½ å°‡æ‰‹ä¸­çš„ç«çƒå¾€ä¸Ÿå‡ºåŽ», ã€Œè½Ÿã€çš„ä¸€è²åœ¨%s(%s)è‡‰ä¸Šç‚¸é–‹!\n";
+			cmsgv = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒå¾€ä½ çš„è‡‰ä¸Šä¸ŸéŽä¾†, ã€Œè½Ÿã€çš„ä¸€è²ç‚¸é–‹!\n";
+			cmsgo = "%s(%s)å°‡æ‰‹ä¸­çš„ç«çƒä¸Ÿå‡ºåŽ», ã€Œè½Ÿã€çš„ä¸€è²åœ¨%s(%s)è‡‰ä¸Šç‚¸é–‹!\n";
 			break;
 	}
 	tell_object(caster, set_color(
@@ -327,16 +327,16 @@ void effect_all( int level, object caster, object targ )
 
 	if( !targ || !present(targ, environment(caster)) ) {
 		tell_room( environment(caster), 
-			"\nÑ×Äñ¡¸¿­ÈøÖ®Ó¥¡¹Ò»·É³åÌì£¬ÏûÊ§ÎÞ×Ù¡£\n\n" );
+			"\nç‚Žé³¥ã€Œå‡±è–©ä¹‹é·¹ã€ä¸€é£›æ²–å¤©ï¼Œæ¶ˆå¤±ç„¡è¹¤ã€‚\n\n" );
 		return;
 	}
 
 	tell_object( caster, 
-		set_color("\nÄãÊÖÏòÇ°Ò»Ö¸, Ñ×Äñ¡¸¿­ÈøÖ®Ó¥¡¹³åÏò´ËµØÖÐÐÄ,"+
-			"¡¸ºäÂ¡¡¹µÄÒ»ÉùÒýÆð´ó±¬Õ¨!\n\n", "HIR", caster) );
+		set_color("\nä½ æ‰‹å‘å‰ä¸€æŒ‡, ç‚Žé³¥ã€Œå‡±è–©ä¹‹é·¹ã€è¡å‘æ­¤åœ°ä¸­å¿ƒ,"+
+			"ã€Œè½Ÿéš†ã€çš„ä¸€è²å¼•èµ·å¤§çˆ†ç‚¸!\n\n", "HIR", caster) );
 	tell_room( environment(caster), 
-		sprintf("\n%sÊÖÖ¸ÏòÇ°Ò»Ö¸, Ñ×Äñ¡¸¿­ÈøÖ®Ó¥¡¹³åÏò´ËµØÖÐÐÄ, ¡¸ºäÂ¡¡¹µÄÒ»Éù\n"+
-			"ÔÚÄãÑÛÇ°Í»È»Ò»ÉÁ, ÄãÖ»¸Ðµ½ÖËÈÈµÄµØÓüÖ®Ñ×ËÆºõÒª½«Ò»ÇÐÉÕ³É»Ò½ý!\n\n",
+		sprintf("\n%sæ‰‹æŒ‡å‘å‰ä¸€æŒ‡, ç‚Žé³¥ã€Œå‡±è–©ä¹‹é·¹ã€è¡å‘æ­¤åœ°ä¸­å¿ƒ, ã€Œè½Ÿéš†ã€çš„ä¸€è²\n"+
+			"åœ¨ä½ çœ¼å‰çªç„¶ä¸€é–ƒ, ä½ åªæ„Ÿåˆ°ç‚™ç†±çš„åœ°ç„ä¹‹ç‚Žä¼¼ä¹Žè¦å°‡ä¸€åˆ‡ç‡’æˆç°ç‡¼!\n\n",
 			caster->query("c_name") ) , caster);
 	victim = filter_array(all_inventory(environment(caster)),
 		"is_a_victim", this_object(), caster);

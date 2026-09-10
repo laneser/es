@@ -6,13 +6,13 @@ void create()
 {
 	::create();
 	set_level( 10 );
-   set_name( "Meph", "»éÉ´µêÀÏ°åÄª·É" );
+   set_name( "Meph", "å©šç´—åº—è€é—†èŽ«é£›" );
    add( "id", ({ "owner", "boss" }) );
-   set_short( "Äª·É" );
+   set_short( "èŽ«é£›" );
 	set_long(@C_LONG
-    Äª·ÉÊÇÒ»¸öÄêÔ¼ÈýÊ®µÄÇàÄê, ËûÔÚÀú¾­Ò»³¡Ã»ÓÐ½á¾ÖµÄ¿àÁµáá,
-À´µ½´ËµØ¶¨¾Ó, ²¢¿ªÁË´ËÒ»½á»éÀñ·þµê, Ï£ÍûÌìÏÂÓÐÇéÈË¾ù³É¾ìÊô¡£
-Äã¿ÉÒÔÎÊËûÈçºÎ×â½è(rent)Àñ·þ¡£
+    èŽ«é£›æ˜¯ä¸€å€‹å¹´ç´„ä¸‰åçš„é’å¹´, ä»–åœ¨æ­·ç¶“ä¸€å ´æ²’æœ‰çµå±€çš„è‹¦æˆ€å¾Œ,
+ä¾†åˆ°æ­¤åœ°å®šå±…, ä¸¦é–‹äº†æ­¤ä¸€çµå©šç¦®æœåº—, å¸Œæœ›å¤©ä¸‹æœ‰æƒ…äººå‡æˆçœ·å±¬ã€‚
+ä½ å¯ä»¥å•ä»–å¦‚ä½•ç§Ÿå€Ÿ(rent)ç¦®æœã€‚
 C_LONG
     	       );
 	set( "no_attack", 1 );
@@ -20,11 +20,11 @@ C_LONG
    set( "inquiry", ([
          "rent" : 
 @LONG
-Ê×ÏÈ, ÇëÄúÏÈ¿´ÎÒÃÇµÄ¼ÛÄ¿±í(menu),
-Äú¿ÉÒÔÂò¶ÏÎÒÃÇËùÌá¹©Ö®Àñ·þ; µ«ÊÇÈç¹ûÄúÏÓ¹óµÄ»°, ¿ÉÒÔÔÚ
-Íê³É»éÀñááÍË»Ø(return)¸øÎÒ, ³ý»¨, ½äÖ¸, ¼°»¤¶ÜÔ²ÇòÍâ,
-Ã¿¼þ½«ÍË»¹Äú1500Òø±Ò. ÁíÍâÌáÐÑÄú, Èç¹ûÄã²»½á»é, ½äÖ¸¼°
-»¤¶ÜÔ²ÇòÊÇ²»ÄÜ´÷ÉÏÓë´¢´æµÄ.
+é¦–å…ˆ, è«‹æ‚¨å…ˆçœ‹æˆ‘å€‘çš„åƒ¹ç›®è¡¨(menu),
+æ‚¨å¯ä»¥è²·æ–·æˆ‘å€‘æ‰€æä¾›ä¹‹ç¦®æœ; ä½†æ˜¯å¦‚æžœæ‚¨å«Œè²´çš„è©±, å¯ä»¥åœ¨
+å®Œæˆå©šç¦®å¾Œé€€å›ž(return)çµ¦æˆ‘, é™¤èŠ±, æˆ’æŒ‡, åŠè­·ç›¾åœ“çƒå¤–,
+æ¯ä»¶å°‡é€€é‚„æ‚¨1500éŠ€å¹£. å¦å¤–æé†’æ‚¨, å¦‚æžœä½ ä¸çµå©š, æˆ’æŒ‡åŠ
+è­·ç›¾åœ“çƒæ˜¯ä¸èƒ½æˆ´ä¸Šèˆ‡å„²å­˜çš„.
 LONG
      ]) );
 }
@@ -32,8 +32,8 @@ LONG
 int accept_item(object who, object item)
 {
    tell_room( environment(),
-        "ÉÌµêÀÏ°å¼éÐ¦µÀ: Ð»ÁË! °×³Õ!\n"
-        "( ÉÌµêÀÏ°å°Ñ"+item->query("c_name")+"ÊÕÆðÀ´! )\n" );
+        "å•†åº—è€é—†å¥¸ç¬‘é“: è¬äº†! ç™½ç—´!\n"
+        "( å•†åº—è€é—†æŠŠ"+item->query("c_name")+"æ”¶èµ·ä¾†! )\n" );
    item->remove();
    return 1;
 }
@@ -50,34 +50,34 @@ int do_buy(string str)
 
    if( str == "ring" || str == "wedding ring" ) {
        if( present("wedding ring",this_player()) ) {
-       printf( "ÀÏ°åËµ: ½á»é½äÖ¸Ò»¸öÈËÖ»ÐèÒªÒ»Ö»!\n" );
+       printf( "è€é—†èªª: çµå©šæˆ’æŒ‡ä¸€å€‹äººåªéœ€è¦ä¸€éš»!\n" );
        return 1;
        }
        if( this_player()->query("wealth/silver")<5000 ) {
-       printf( "ÀÏ°åËµ: µÈÄãÓÐ×ã¹»µÄÒø±ÒÔÙÀ´°É!\n" );
+       printf( "è€é—†èªª: ç­‰ä½ æœ‰è¶³å¤ çš„éŠ€å¹£å†ä¾†å§!\n" );
        return 1;
        }
 
        ring = new( "/d/noden/farwind/wedding_obj/wedding_ring" );
 
-       printf( "ÄãÂòÏÂÒ»Ö»½á»é½äÖ¸.\n" );
+       printf( "ä½ è²·ä¸‹ä¸€éš»çµå©šæˆ’æŒ‡.\n" );
        ring->move(this_player());
        this_player()->credit("silver", -5000);
        return 1;
    }
    if( str == "globe" || str == "wedding globe" ) {
        if( present("wedding globe",this_player()) ) {
-       printf( "ÀÏ°åËµ: ½á»é»¤¶ÜÔ²ÇòÒ»¸öÈËÖ»ÐèÒªÒ»¸ö!\n" );
+       printf( "è€é—†èªª: çµå©šè­·ç›¾åœ“çƒä¸€å€‹äººåªéœ€è¦ä¸€å€‹!\n" );
        return 1;
        }
        if( this_player()->query("wealth/silver")<8000 ) {
-       printf( "ÀÏ°åËµ: µÈÄãÓÐ×ã¹»µÄÒø±ÒÔÙÀ´°É!\n" );
+       printf( "è€é—†èªª: ç­‰ä½ æœ‰è¶³å¤ çš„éŠ€å¹£å†ä¾†å§!\n" );
        return 1;
        }
 
         globe = new( "/d/noden/farwind/wedding_obj/wedding_globe" );
 
-       printf( "ÄãÂòÏÂÒ»¸ö½á»é»¤¶ÜÔ²Çò.\n" );
+       printf( "ä½ è²·ä¸‹ä¸€å€‹çµå©šè­·ç›¾åœ“çƒ.\n" );
        globe->move(this_player());
        this_player()->credit("silver", -8000);
        return 1;
@@ -85,7 +85,7 @@ int do_buy(string str)
    if( str != "ring" && str != "wedding ring" &&
        str != "globe" && str != "wedding globe" &&
        this_player()->query("spouse") ) {
-   printf( "ÀÏ°åÅ­µÀ: ÄãÏëÖØ»éÂð?\n" );
+   printf( "è€é—†æ€’é“: ä½ æƒ³é‡å©šå—Ž?\n" );
    return 1;
    }
 }
@@ -97,19 +97,19 @@ int do_return(string str)
 
    player = this_player();
 
-   if( !str || str =="" ) return notify_fail( "ÄãÒª»¹Ê²÷á¶«Î÷?\n" );
+   if( !str || str =="" ) return notify_fail( "ä½ è¦é‚„ä»€éº¼æ±è¥¿?\n" );
 
    if ( sscanf(str, "%s", armor)==1 ) {
      obj = present(armor,player);
 
-   if( !obj ) return notify_fail( "ÄãÃ»ÓÐÕâ¶«Î÷!\n" );
+   if( !obj ) return notify_fail( "ä½ æ²’æœ‰é€™æ±è¥¿!\n" );
    if( !obj->query("wedding_obj") )
-      return notify_fail( "Äª·ÉËµ: ¶Ô²»Æð! Õâ¼þ¶«Î÷±¾µê²»»ØÊÕ!\n" );
+      return notify_fail( "èŽ«é£›èªª: å°ä¸èµ·! é€™ä»¶æ±è¥¿æœ¬åº—ä¸å›žæ”¶!\n" );
    if( !this_player()->query("spouse") )
-      return notify_fail( "Äª·ÉËµ: Äã»¹Ã»½á»é°¡! ÏÈÁôÖøËü°É!\n" );
+      return notify_fail( "èŽ«é£›èªª: ä½ é‚„æ²’çµå©šå•Š! å…ˆç•™è‘—å®ƒå§!\n" );
    tell_room( environment(),
-        "Äª·ÉËµ: ÍË»ØÑº½ð1500Òø±Ò, Ð»Ð»»Ý¹Ë.\n"
-         "( Äª·É°Ñ"+obj->query("short")+"ÊÕÆðÀ´µÈ´ýÇåÏ´ )\n" );
+        "èŽ«é£›èªª: é€€å›žæŠ¼é‡‘1500éŠ€å¹£, è¬è¬æƒ é¡§.\n"
+         "( èŽ«é£›æŠŠ"+obj->query("short")+"æ”¶èµ·ä¾†ç­‰å¾…æ¸…æ´— )\n" );
    player->credit("silver", 1500);
    obj->remove();
    return 1;

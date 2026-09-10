@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("golden shield","»Æ½ğ¶Ü");
+        set_name("golden shield","é»ƒé‡‘ç›¾");
         add( "id", ({ "shield" }) );
-        set_short( "»Æ½ğ¶Ü");
+        set_short( "é»ƒé‡‘ç›¾");
         set_long(@C_LONG
-Ò»ÃæÓÃ18K½ğ×ö³ÉµÄ¶ÜÅÆ£¬ÕâÖ»ÓĞ¡¸Î×ÏÌ¹ú¡¹µÄÈË²ÅÓÃµÄÆğÕâÑù°º¹óµÄ¶ÜÅÆ¡£
+ä¸€é¢ç”¨18Ké‡‘åšæˆçš„ç›¾ç‰Œï¼Œé€™åªæœ‰ã€Œå·«å’¸åœ‹ã€çš„äººæ‰ç”¨çš„èµ·é€™æ¨£æ˜‚è²´çš„ç›¾ç‰Œã€‚
 C_LONG
         );
-        set( "unit","Ãæ");
+        set( "unit","é¢");
         set( "type", "shield" );
         set( "material","heavy_metal");
         set( "armor_class",5 );

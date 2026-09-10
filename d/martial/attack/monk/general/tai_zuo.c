@@ -1,4 +1,4 @@
-// ÉÙÁÖËÂÎä¹¦¡¸Ì«×óµ¶·¨¡¹
+// å°‘æž—å¯ºæ­¦åŠŸã€Œå¤ªå·¦åˆ€æ³•ã€
 inherit "/d/martial/attack/modify";
 int query_need_fp()
 { 
@@ -7,21 +7,21 @@ int query_need_fp()
 
 varargs int can_use(object me, object victim, object weapon)
 {
-        // È·¶¨ËùÊ¹ÓÃÎäÆ÷ÊÇ·ñÕýÈ·
+        // ç¢ºå®šæ‰€ä½¿ç”¨æ­¦å™¨æ˜¯å¦æ­£ç¢º
         if( !weapon || (string)weapon->query("type") != "longblade" ) return 0;
         return 1;
 }
 
 string *attack_msg = ({
-        "Ç°¹­áá¼ý£¬%sÏò%sÅüÏÂ",
-        "Ê¹³öÌ«×óµ¶·¨ÖÐ¡ººáÉ¨Ç§¾ü¡»£¬%s×Ô×ó¶øÓÒ£¬ºá¿³%s",
-        "Ò»Á¬ÈýÕÐ£¬ÊÖÖÐÖ®%s¹¥Ïò%s",
-        "µÄ%sÐ®ÖøÒ»Õó¾¢·ç£¬¹¥Ïò%s",
-        "Ê¹³öÒ»ÕÐ¡ºÁ¢µØ³É·ð¡»£¬%sÅüÏò%s",
-        "ÆÛÉíÏòÇ°£¬%sÈ«Á¦»÷Ïò%s",
-        "ÉíÐÎÒ»±ä£¬%s¿ìËÙµÄ¿³Ïò%s",
-        "Ê¹³öÌ«×óµ¶·¨µÄ×îááÒ»Ê½£¬%s»÷Ïò%s",
-        "Í»È»·´×ªµ¶Éí£¬%s¹¥Ïò%s",
+        "å‰å¼“å¾Œç®­ï¼Œ%så‘%såŠˆä¸‹",
+        "ä½¿å‡ºå¤ªå·¦åˆ€æ³•ä¸­ã€Žæ©«æŽƒåƒè»ã€ï¼Œ%sè‡ªå·¦è€Œå³ï¼Œæ©«ç %s",
+        "ä¸€é€£ä¸‰æ‹›ï¼Œæ‰‹ä¸­ä¹‹%sæ”»å‘%s",
+        "çš„%sæŒ¾è‘—ä¸€é™£å‹é¢¨ï¼Œæ”»å‘%s",
+        "ä½¿å‡ºä¸€æ‹›ã€Žç«‹åœ°æˆä½›ã€ï¼Œ%såŠˆå‘%s",
+        "æ¬ºèº«å‘å‰ï¼Œ%så…¨åŠ›æ“Šå‘%s",
+        "èº«å½¢ä¸€è®Šï¼Œ%så¿«é€Ÿçš„ç å‘%s",
+        "ä½¿å‡ºå¤ªå·¦åˆ€æ³•çš„æœ€å¾Œä¸€å¼ï¼Œ%sæ“Šå‘%s",
+        "çªç„¶åè½‰åˆ€èº«ï¼Œ%sæ”»å‘%s",
 });
 
 varargs int hit_modify(int hit, object me, object victim, object weapon,int type)
@@ -55,6 +55,6 @@ varargs string query_attack_msg(object me, object victim, int type)
 {
 	if( !type ) return 0;
         if( (int)me->query("force_points") < query_need_fp() )
-        return attack_msg[random(9)]+"µ«ÊÇ³öÊÖÊ±ÏÔµÃÄÚÁ¦²»×ã";
+        return attack_msg[random(9)]+"ä½†æ˜¯å‡ºæ‰‹æ™‚é¡¯å¾—å…§åŠ›ä¸è¶³";
         return attack_msg[random(9)];
 }

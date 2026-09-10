@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "blacksteel large shield", "´ó¶Ü" );
+	set_name( "blacksteel large shield", "å¤§ç›¾" );
 	add( "id", ({ "large shield", "shield", "blacksteel shield" }) );
-	set_short( "a blacksteel large shield", "ïÙÌú´ó¶Ü" );
+	set_short( "a blacksteel large shield", "é‘Œéµå¤§ç›¾" );
 	set_long(
 		"You see a blacksteel large shield.\n",
-		"Ò»ÃæÓÃ¼áÓ²µÄïÙÌúÖı³ÉµÄ´ó¶Ü¡£\n"
+		"ä¸€é¢ç”¨å …ç¡¬çš„é‘Œéµé‘„æˆçš„å¤§ç›¾ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "armor_class", 8 );
 	set( "defense_bonus", 2 );

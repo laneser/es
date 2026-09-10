@@ -8,17 +8,17 @@ void create ()
         ::create();
         seteuid( getuid() );
         set_level(18);
-        set_name( "yangsix", "ÑîÁùÀÉ" );
+        set_name( "yangsix", "æ¥Šå…­éƒ" );
         add ("id", ({ "yang","six"}) );
-        set_short( "Ç¹Éñ ÑîÁùÀÉ" );
+        set_short( "æ§ç¥ æ¥Šå…­éƒ" );
         set_long( @LONG
-    ÉúµÃ½£Ã¼ĞÇÄ¿,ĞÜÑü»¢±³,¼«coolµÄÑù×Ó,ËûÊÇÀ×Ë¼ÓÉÒ£Ô¶µÄ¶«·½´óÂ½ÖØ½ğÀñÆ¸
-À´½Ìµ¼ÆïÊ¿Ç¹·¨ºÍÄÚ¹¦µÄ¸ßÊÖ,Èç¹ûÄãµÄµÈ¼¶¹»¸ß¿ÉÒÔÏòËûÎÊÒ»Ğ©¹ØÁËtrainÊÂÇé
+    ç”Ÿå¾—åŠçœ‰æ˜Ÿç›®,ç†Šè…°è™èƒŒ,æ¥µcoolçš„æ¨£å­,ä»–æ˜¯é›·æ€ç”±é™é çš„æ±æ–¹å¤§é™¸é‡é‡‘ç¦®è˜
+ä¾†æ•™å°é¨å£«æ§æ³•å’Œå…§åŠŸçš„é«˜æ‰‹,å¦‚æœä½ çš„ç­‰ç´šå¤ é«˜å¯ä»¥å‘ä»–å•ä¸€äº›é—œäº†trainäº‹æƒ…
 LONG        );
         set( "alignment", 10000 );
     set( "gender", "male" );
     set( "race", "human" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set_perm_stat( "dex", 30 );
         set_perm_stat( "str", 30 );
         set_perm_stat( "int", 30 );
@@ -49,9 +49,9 @@ LONG        );
         equip_armor( "/d/knight/fortress/armors/silver_helmet" );
    set( "chat_chance", 12 );
    set( "chat_output", ({
-         "ÑîÁùÀÉÌ¾µÀ: ¶¼Ã»ÓĞÑ§Éú¿ÉÒÔ½Ì, ÕæÎŞÁÄ!\n" }) );
+         "æ¥Šå…­éƒå˜†é“: éƒ½æ²’æœ‰å­¸ç”Ÿå¯ä»¥æ•™, çœŸç„¡èŠ!\n" }) );
     set( "inquiry", ([
-            "Ñî¼ÒÇ¹" : "@@ask_lance",
+            "æ¥Šå®¶æ§" : "@@ask_lance",
             "train" : "@@ask_train" ]) );
     set("tactic_func", "special_attack"); 
     set_lessons( ([
@@ -69,8 +69,8 @@ void init()
 void ask_lance( object who )
 {
     tell_object( who, 
-      "¸ğÀ×Ëµ: ÄãÀ´µÄÕıºÃ, Õâ¼ÒµêµÄÀÏ°åºÃÏñÕıÏëÓÃÈË, \n"
-      "        Äã¿ÉÒÔÎÊËû¿´¿´»¹ÓĞÃ»ÓĞ(job)¡£\n" 
+      "è‘›é›·èªª: ä½ ä¾†çš„æ­£å¥½, é€™å®¶åº—çš„è€é—†å¥½åƒæ­£æƒ³ç”¨äºº, \n"
+      "        ä½ å¯ä»¥å•ä»–çœ‹çœ‹é‚„æœ‰æ²’æœ‰(job)ã€‚\n" 
     );
 }
 
@@ -81,8 +81,8 @@ int special_attack()
     int i;
     if( !(victim = query_attackers()) || (random(10)>1) ) return 0;
     tell_room( environment( this_object() ), 
-      "\nÑîÁùÀÉ´óº°: ¿´ÎÒµÄ¾øÕĞ Õæ¿ÕÕ¶! \n"+
-      "Ö»¼ûÑîÁùÀÉ°ÑÇ¹Ò»»Î£¬ÎŞÊıÌõÍäÔÂĞÍµÄ¹â²¨ÏòËùÓĞµĞÈËÉäÈ¥¡£\n" ,
+      "\næ¥Šå…­éƒå¤§å–Š: çœ‹æˆ‘çš„çµ•æ‹› çœŸç©ºæ–¬! \n"+
+      "åªè¦‹æ¥Šå…­éƒæŠŠæ§ä¸€æ™ƒï¼Œç„¡æ•¸æ¢å½æœˆå‹çš„å…‰æ³¢å‘æ‰€æœ‰æ•µäººå°„å»ã€‚\n" ,
       this_object()
     );
     i = sizeof(victim);
@@ -98,5 +98,5 @@ int check_trainee(object who)
         (int)who->query_level()>18 )
     return 1;
     else return notify_fail(
-      "ÑîÁùÀÉËµ: ÎÒÖ»½Ì¹»×Ê¸ñµÄÆïÊ¿¡£\n" );
+      "æ¥Šå…­éƒèªª: æˆ‘åªæ•™å¤ è³‡æ ¼çš„é¨å£«ã€‚\n" );
 }

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "black eye patch", "ºÚÑÛÕÖ" );
+	set_name( "black eye patch", "é»‘çœ¼ç½©" );
 	add( "id", ({ "eye patch", "patch" }) );
-   set_short( "ºÚÑÛÕÖ" );
+   set_short( "é»‘çœ¼ç½©" );
 	set_long(
-		"Ò»¸±¿´ÆğÀ´ºÜ»¬»üµÄºÚÉ«ÑÛÕÖ£¬Õâ¸±ÑÛÕÖµÄÖ÷ÈËÒ»¶¨ÊÇÈÏÎª´øÖøÕâÑùµÄÑÛÕÖ\n"
-		"¿´ÆğÀ´ºÜ¿á¡£\n"
+		"ä¸€å‰¯çœ‹èµ·ä¾†å¾ˆæ»‘ç¨½çš„é»‘è‰²çœ¼ç½©ï¼Œé€™å‰¯çœ¼ç½©çš„ä¸»äººä¸€å®šæ˜¯èªç‚ºå¸¶è‘—é€™æ¨£çš„çœ¼ç½©\n"
+		"çœ‹èµ·ä¾†å¾ˆé…·ã€‚\n"
 	);
-	set( "unit", "¸±" );
+	set( "unit", "å‰¯" );
 	set( "type", "head" );
 	set( "material","leather");
 	set( "armor_class", 2 );

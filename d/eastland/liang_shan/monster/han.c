@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name( "Han Tao", "韩滔" );
+	set_name( "Han Tao", "闊撴粩" );
 	add("id",({"han","tao"}));
-	set_short( "韩滔" );
+	set_short( "闊撴粩" );
 	set_long(
-		"他的外号是百胜将，东京人，使一条枣木槊，为梁山泊马军小彪将兼远\n"
-		"探出哨头领．如果你不想死的话，最好别去招惹他。\n"
+		"浠栫殑澶栬櫉鏄櫨鍕濆皣锛屾澅浜汉锛屼娇涓�姊濇鏈ㄦ锛岀偤姊佸北娉婇Μ杌嶅皬褰皣鍏奸仩\n"
+		"鎺㈠嚭鍝ㄩ牠闋橈紟濡傛灉浣犱笉鎯虫鐨勮┍锛屾渶濂藉垾鍘绘嫑鎯逛粬銆俓n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

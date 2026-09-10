@@ -27,10 +27,10 @@ void create()
 {
 //	seteuid(getuid());
 	::create();
-	set_short( "½ÌÌÃ" );
+	set_short( "æ•™å ‚" );
 	set_long( 
-	"ÕâÊÇÒ»¶°Îª¶Ô¸¶ÌìÔÖĞÂ¸Ï½¨µÄ½ÌÌÃ, ËÄ´¦¿É¼û×©ÍßµÄºÛ¼£, Ò²ĞíÄã¿ÉÒÔ\n"
-	"ÔÚÕâÀïÆíµ»(pray)¡£\n" );
+	"é€™æ˜¯ä¸€æ£Ÿç‚ºå°ä»˜å¤©ç½æ–°è¶•å»ºçš„æ•™å ‚, å››è™•å¯è¦‹ç£šç“¦çš„ç—•è·¡, ä¹Ÿè¨±ä½ å¯ä»¥\n"
+	"åœ¨é€™è£¡ç¥ˆç¦±(pray)ã€‚\n" );
 	set( "light", 1 );
 	set( "exits", ( [ "southdown": "/d/adventurer/hall/adv_guild"
 	]) );
@@ -63,7 +63,7 @@ int remember()
 	obs = all_inventory( me );
 	j = sizeof(obs);
 	if ( j > MAX_ITEMS )
-	    return notify_fail("ÄãÉíÉÏµÄ¶«Î÷Ì«¶àÁË¡£\n");
+	    return notify_fail("ä½ èº«ä¸Šçš„æ±è¥¿å¤ªå¤šäº†ã€‚\n");
 
 	me->set( REM_ITEM_PROP, j );
 	me->set( REM_TIME_PROP, time() );
@@ -72,7 +72,7 @@ int remember()
 	    me->set( REM_ITEM_PROP_+DIGITS[i], base_name( file_name(obs[i]) ) );
 
 //	command( "save", me );
-	tell_object( me, "Ìì¿ÕÖĞ´«À´Ò»ÕóÇáÈáµÄÉùÒô: º¢×Ó, ÎÒ¼Ç×¡ÁË¡£\n" );
+	tell_object( me, "å¤©ç©ºä¸­å‚³ä¾†ä¸€é™£è¼•æŸ”çš„è²éŸ³: å­©å­, æˆ‘è¨˜ä½äº†ã€‚\n" );
 	return 1;
 }
 
@@ -89,7 +89,7 @@ int back()
 	i = time2 - time1;
 	j = uptime2 - uptime1;
 	if ( i < j + 8 && !wizardp(me) )
-	    return notify_fail( "»¹Ã»µ±»ú, Äã¼±Ê²Ã´? \n" );
+	    return notify_fail( "é‚„æ²’ç•¶æ©Ÿ, ä½ æ€¥ä»€éº¼? \n" );
 
 	obs = all_inventory(me);
 	j = me->query( REM_ITEM_PROP );
@@ -108,19 +108,19 @@ int back()
 	}
 	if ( !wizardp(me) )
 	    me->set( REM_ITEM_PROP, 0 );
-	tell_object( me, "ÎïÆ·»Ö¸´Íê±Ï¡£ \n" );	
+	tell_object( me, "ç‰©å“æ¢å¾©å®Œç•¢ã€‚ \n" );	
 	return 1;
 }
 
 int pray( string str )
 {
 	if ( this_player()->query( "age" ) < 6*43200 ) // 3 years old?
-	    return notify_fail( "ÄãÄê¼ÍÌ«Ğ¡, ²»ÒªÓãÄ¿»ìÖé!\n");
+	    return notify_fail( "ä½ å¹´ç´€å¤ªå°, ä¸è¦é­šç›®æ··ç !\n");
 	switch ( str ) {
 	    case "remember": return remember();
 	    case "back" : return back();
 	    default : return notify_fail( 
-	"Äã±ÕÉÏÑÛ¾¦¿ªÊ¼ò¯³ÏµØÆíµ», Æíµ»Ğ©Ê²Ã´ÄØ, remember »¹ÊÇ back?\n" );
+	"ä½ é–‰ä¸Šçœ¼ç›é–‹å§‹è™”èª åœ°ç¥ˆç¦±, ç¥ˆç¦±äº›ä»€éº¼å‘¢, remember é‚„æ˜¯ back?\n" );
 	};
 }
 

@@ -1,4 +1,4 @@
-#define dead ({"»áÒõ","ëşÖĞ","ÈéÖĞ","ÉñãÚ","ÉñµÀ","ÁéÌ¨","°Ù»á" })
+#define dead ({"æœƒé™°","è†»ä¸­","ä¹³ä¸­","ç¥é—•","ç¥é“","éˆè‡º","ç™¾æœƒ" })
 #define diff ({ 6,3,5,3,4,3,5 })
 
 int dam,i,acu_sk,con_sk,my_dex,tar_con,tar_dex,tar_dod,diffculty;
@@ -35,14 +35,14 @@ int damage(object killer,object tar,string pt,string par)
 
      if(target == me)
        {
-          write("Ïë×ÔÉ±´òSUICIDE¾Í¹»ÁË,²»ÒªÌ«Å°´ı×Ô¼º¡£\n") ;
+          write("æƒ³è‡ªæ®ºæ‰“SUICIDEå°±å¤ äº†,ä¸è¦å¤ªè™å¾…è‡ªå·±ã€‚\n") ;
           return -1 ;
        } 
      if(target->query_level()<10)
        {
-          write("´óÉñÍùÄãÄÔ´üÇÃÁËÏÂÈ¥ËµµÀ: ²»ÒªÆÛ¸ºĞ¡ÅóÓÑ¡£\n") ;
-          tell_room(environment(me),my_name+"µÄÊÖÍ»È»Éìµ½"+tar_name+
-                "ÃæÇ°,Õıµ±Ç§¾ûÒ»·¢Ö®¼Ê,\nËûµÄÊÖÄªÃûÆäÃîµÄ½©ÔÚ°ë¿Õ, Í·ÉÏÍ¬Ê±¶àÁËºÃ¼¸¸ö°ü¡£\n",me);
+          write("å¤§ç¥å¾€ä½ è…¦è¢‹æ•²äº†ä¸‹å»èªªé“: ä¸è¦æ¬ºè² å°æœ‹å‹ã€‚\n") ;
+          tell_room(environment(me),my_name+"çš„æ‰‹çªç„¶ä¼¸åˆ°"+tar_name+
+                "é¢å‰,æ­£ç•¶åƒéˆä¸€é«®ä¹‹éš›,\nä»–çš„æ‰‹è«åå…¶å¦™çš„åƒµåœ¨åŠç©º, é ­ä¸ŠåŒæ™‚å¤šäº†å¥½å¹¾å€‹åŒ…ã€‚\n",me);
           return -1;
        }  
      me->set_temp("block_command",2) ; 
@@ -61,19 +61,19 @@ int damage(object killer,object tar,string pt,string par)
 int sucess(string point,string part)
 {
     int db = target->query("defense_bonus") ;
-    write(sprintf("ÄãÓÃÒøÕëÍù%s%sµÄ%sÑ¨ÔúÁËÏÂÈ¥¡£\nÔÚÒ»ÉùÆà²ÒµÄ°§ºÅáá,Ëû¿ªÊ¼¹¥»÷Äã¡£\n"
+    write(sprintf("ä½ ç”¨éŠ€é‡å¾€%s%sçš„%sç©´ç´®äº†ä¸‹å»ã€‚\nåœ¨ä¸€è²æ‚½æ…˜çš„å“€è™Ÿå¾Œ,ä»–é–‹å§‹æ”»æ“Šä½ ã€‚\n"
                   ,tar_name,part,point) );
     
     me->block_attack(2) ;
     me->set_temp("msg_stop_attack",
-            "( Ò»ÖÖÎ¥¿¹´«Í³µÀµÂ¼ÛÖµµÄ±äÌ¬¿ì¸ĞÈÃÄãÍüÁËÕıÔÚÕ½¶·ÖĞ¡£ ) \n" ) ;
+            "( ä¸€ç¨®é•æŠ—å‚³çµ±é“å¾·åƒ¹å€¼çš„è®Šæ…‹å¿«æ„Ÿè®“ä½ å¿˜äº†æ­£åœ¨æˆ°é¬¥ä¸­ã€‚ ) \n" ) ;
                
     tell_object(target,sprintf(
-              "%sÍùÄã%sµÄ%sÑ¨ÔúÁËÏÂÈ¥¡£\nÔÚÒ»Õó¾ŞÍ´áá,Äã¿ªÊ¼¹¥»÷%s¡£\n"
+              "%så¾€ä½ %sçš„%sç©´ç´®äº†ä¸‹å»ã€‚\nåœ¨ä¸€é™£å·¨ç—›å¾Œ,ä½ é–‹å§‹æ”»æ“Š%sã€‚\n"
               ,my_name,part,point,my_name) ) ;
                        
     tell_room(environment(me),sprintf(
-              "%sÄÃ³öÒøÕëÍù%s%sÔúÁËÏÂÈ¥,ËæÖøÒ»Éù²Ò½Ğ,\n%s¿ªÊ¼¹¥»÷%s¡£\n"
+              "%sæ‹¿å‡ºéŠ€é‡å¾€%s%sç´®äº†ä¸‹å»,éš¨è‘—ä¸€è²æ…˜å«,\n%sé–‹å§‹æ”»æ“Š%sã€‚\n"
               ,my_name,tar_name,part,tar_name,my_name)
               ,({me,target}) ) ;
     call_out("remove_block",3,me) ; 
@@ -84,18 +84,18 @@ int sucess(string point,string part)
 
 int fail(string point,string part)
 {
-    write(sprintf("µ±ÄãÓÃÒøÕëÍù%s%sµÄ%sÑ¨Ôú¹ıÈ¥Ê±¡£\n"
-                  "ËûËÆºõ·¢ÏÖÁËÄãµÄÒâÍ¼¶ø¿ªÊ¼¹¥»÷Äã¡£\n"
+    write(sprintf("ç•¶ä½ ç”¨éŠ€é‡å¾€%s%sçš„%sç©´æ‰éå»æ™‚ã€‚\n"
+                  "ä»–ä¼¼ä¹ç™¼ç¾äº†ä½ çš„æ„åœ–è€Œé–‹å§‹æ”»æ“Šä½ ã€‚\n"
                   ,tar_name,part,point) );
     
     tell_object(target,sprintf(
-              "%sÍùÄã%sµÄ%sÑ¨ÔúÁËÏÂÀ´¡£Äã·¢ÏÖËû²»»³ºÃÒâ¡£\n"
-              "ì¶ÊÇÄãÏÈ·¢ÖÆÈË¿ªÊ¼¹¥»÷%s¡£\n"
+              "%så¾€ä½ %sçš„%sç©´ç´®äº†ä¸‹ä¾†ã€‚ä½ ç™¼ç¾ä»–ä¸æ‡·å¥½æ„ã€‚\n"
+              "æ–¼æ˜¯ä½ å…ˆç™¼åˆ¶äººé–‹å§‹æ”»æ“Š%sã€‚\n"
               ,my_name,part,point,my_name) ) ;
                        
     tell_room(environment(me),sprintf(
-              "%sÄÃ³öÒøÕëÍù%s%sÔúÁËÏÂÈ¥,µ«ÊÇ%s´óºÈÒ»Éù:¡º ÄãÏë×öÊ²÷á? ¡»\n"
-              "%sºÍ%s²»ÖªÔõ÷áµÄ¾Í´òÁËÆğÀ´¡£\n"
+              "%sæ‹¿å‡ºéŠ€é‡å¾€%s%sç´®äº†ä¸‹å»,ä½†æ˜¯%så¤§å–ä¸€è²:ã€ ä½ æƒ³åšä»€éº¼? ã€\n"
+              "%så’Œ%sä¸çŸ¥æ€éº¼çš„å°±æ‰“äº†èµ·ä¾†ã€‚\n"
               ,my_name,tar_name,part,tar_name,tar_name,my_name)
               ,({me,target}) ) ;
     call_out("remove_block",3,me) ;

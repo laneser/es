@@ -16,12 +16,12 @@ inherit "/std/socket/telnet";
 
 #define DISCONNECTED "an internet terminal"
 #define CONNECTED "an internet terminal (connected)"
-#define C_DISCONNECTED "ÖÕ¶Ë»ú"
-#define C_CONNECTED "ÖÕ¶Ë»ú (Á¬ÏßÖÐ)"
+#define C_DISCONNECTED "çµ‚ç«¯æ©Ÿ"
+#define C_CONNECTED "çµ‚ç«¯æ©Ÿ (é€£ç·šä¸­)"
 
 void create()
 {
-	set_name( "terminal", "ÖÕ¶Ë»ú" );
+	set_name( "terminal", "çµ‚ç«¯æ©Ÿ" );
 	set_short( "@@query_short", "@@query_c_short" );
 	set_long( "@@query_long", "@@query_c_long" );
 	add("id", ({"term", "machine"}));

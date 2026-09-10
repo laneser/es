@@ -15,12 +15,12 @@ void create()
 	while(strsrch(name,".c")== -1)
 	  { name = race[random(sizeof(race)-1)] ;}
 	sscanf( name , "%s.c", name );
-	set_name( name + " visitor", to_chinese(name) + "ÓÎ¿Í" );
+	set_name( name + " visitor", to_chinese(name) + "éŠå®¢" );
 	add( "id", ({ name, "visitor" }) );
-	set_short( to_chinese(name) + "ÓÎ¿Í" );
+	set_short( to_chinese(name) + "éŠå®¢" );
 	set_long(@C_LONG
-Õâ¸ö´ÓÍâ¹úÀ´µÄÓÎ¿ÍËÆºõ¶ÔÈôá°³Ç×³ÀöµÄ½¨ÖşÊ®·ÖÏ²°®£¬ÕıµÉ´óÑÛ¾¦
-×ĞÏ¸ĞÀÉÍ³ÇÂ¥ÉÏµÄµñ¿Ì¡£
+é€™å€‹å¾å¤–åœ‹ä¾†çš„éŠå®¢ä¼¼ä¹å°è‹¥åµåŸå£¯éº—çš„å»ºç¯‰ååˆ†å–œæ„›ï¼Œæ­£çªå¤§çœ¼ç›
+ä»”ç´°æ¬£è³åŸæ¨“ä¸Šçš„é›•åˆ»ã€‚
 C_LONG
 	);
 	set( "gender", ({"male", "female" })[random(2)] );

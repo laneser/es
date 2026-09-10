@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "flinty longsword", "ìÝÊ¯³¤½£" );
+	set_name( "flinty longsword", "ç‡§çŸ³é•·åŠ" );
 	add( "id", ({ "longsword", "sword" }) );
-	set_short( "ìÝÊ¯³¤½£" );
+	set_short( "ç‡§çŸ³é•·åŠ" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÓÃ°µºìÉ«ìÝÊ¯×ö³ÉµÄµÄ³¤½££¬ÃþÆðÀ´¸Ð¾õÎÂÎÂµÄ¡£\n" );
-	set( "unit", "°Ñ" );
+		"é€™æ˜¯ä¸€æŠŠç”¨æš—ç´…è‰²ç‡§çŸ³åšæˆçš„çš„é•·åŠï¼Œæ‘¸èµ·ä¾†æ„Ÿè¦ºæº«æº«çš„ã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 110 );
@@ -28,16 +28,16 @@ int weapon_hit( object victim, int damage )
 	str = owner->query_stat("str");
 	if( random(str)>12 && (armor= victim->query("armor/body")) ) {
 		tell_object( owner, 
-		        "\nÄãµÄËíÊ¯³¤½£»÷ÖÐµÐÈËµÄ»¤¼×£¬ÔÚÉÏÃæÁôÏÂÒ»Ìõ½¹ºÚµÄºÛ¼££¡\n\n"
+		        "\nä½ çš„éš§çŸ³é•·åŠæ“Šä¸­æ•µäººçš„è­·ç”²ï¼Œåœ¨ä¸Šé¢ç•™ä¸‹ä¸€æ¢ç„¦é»‘çš„ç—•è·¡ï¼\n\n"
 			);
 		tell_object( victim, 
-			owner->query("c_name") + "µÄìÝÊ¯³¤½£»÷ÖÐÄãµÄµÄ»¤¼×£¬ÔÚÉÏÃæÁôÏÂÒ»Ìõ½¹ºÚµÄºÛ¼££¡\n"
+			owner->query("c_name") + "çš„ç‡§çŸ³é•·åŠæ“Šä¸­ä½ çš„çš„è­·ç”²ï¼Œåœ¨ä¸Šé¢ç•™ä¸‹ä¸€æ¢ç„¦é»‘çš„ç—•è·¡ï¼\n"
                         );
 		tell_room( environment(owner), 
-			owner->query("c_name") + "µÄìÝÊ¯³¤½£»÷ÖÐµÐÈËµÄ»¤¼×£¬ÔÚÉÏÃæÁôÏÂÒ»Ìõ½¹ºÚµÄºÛ¼££¡\n"
+			owner->query("c_name") + "çš„ç‡§çŸ³é•·åŠæ“Šä¸­æ•µäººçš„è­·ç”²ï¼Œåœ¨ä¸Šé¢ç•™ä¸‹ä¸€æ¢ç„¦é»‘çš„ç—•è·¡ï¼\n"
 			,({ owner, victim }) );
 		if( !armor->query("ac_damaged") ) 
-			armor->set_short((string)armor->query("short") + " (ÊÜËð)" );
+			armor->set_short((string)armor->query("short") + " (å—æ)" );
 		if( (int)armor->query("armor_class") > 1 )
 			armor->add( "ac_damaged", 1 );
 		victim->calc_armor_class();

@@ -6,22 +6,22 @@ void create()
 {
 	::create();
 	set("light", 1);
-    set_short( "Cliff","ÐüÑÂ±ß" );
+    set_short( "Cliff","æ‡¸å´–é‚Š" );
     set_long(
 "You are standing on top of a cliff. One more step will take\n"+
 "you to the deep darkness below. However you are quiet safe here,\n"+
 "as long as you don't jump over to it. You noticed there is a bolt\n"+
 "pinned near the edge.\n",
-"ÄãÕ¾ÔÚÐüÑÂ¶¥ÉÏ, ÍùÏÂ¿´È¥ÊÇÒ»Æ¬ÆáºÚ, ²»ÖªµÀÓÐ¶àÉî? µ«Ö»ÒªÄã²»\n"+
-"¿¿½ü±ßÔµ»ò×Ô¼ºÌøÏÂÈ¥, Õâ¸öÎ»ÖÃÊµÔÚÊÇ·ç¾°×î°ôµÄµØ·½. Äã×¢Òâµ½±ßÔµ\n"+
-"¶¤ÖøÒ»¸ù¸Ö¶¤(bolt)¡£\n"
+"ä½ ç«™åœ¨æ‡¸å´–é ‚ä¸Š, å¾€ä¸‹çœ‹åŽ»æ˜¯ä¸€ç‰‡æ¼†é»‘, ä¸çŸ¥é“æœ‰å¤šæ·±? ä½†åªè¦ä½ ä¸\n"+
+"é è¿‘é‚Šç·£æˆ–è‡ªå·±è·³ä¸‹åŽ», é€™å€‹ä½ç½®å¯¦åœ¨æ˜¯é¢¨æ™¯æœ€æ£’çš„åœ°æ–¹. ä½ æ³¨æ„åˆ°é‚Šç·£\n"+
+"é‡˜è‘—ä¸€æ ¹é‹¼é‡˜(bolt)ã€‚\n"
     );
     set("exits", ([ "west" : IRC"lobby", ]) );
 	set("item_desc",([
     	"bolt": "A bolt with a rope tide to it.\n\n",
     ]) );
     set("c_item_desc",([
-    	"bolt": "Ò»¸ù°óÖøÉþ×ÓµÄ¸Ö¶¤¡£\n\n",
+    	"bolt": "ä¸€æ ¹ç¶è‘—ç¹©å­çš„é‹¼é‡˜ã€‚\n\n",
     ]) );
     set("busy",0);
 }
@@ -37,17 +37,17 @@ int jump_down(string str)
 	if( !str || str!="down" ) return 0;
 	if( query("busy") ) {
       write( can_read_chinese()?
-        "ÓÐÈËÔÚÓÃÉþ×Ó.. µÈ»áÔÙÌø°É? ³ý·ÇÄãÏëÈ¥ËÀ!\n" :
+        "æœ‰äººåœ¨ç”¨ç¹©å­.. ç­‰æœƒå†è·³å§? é™¤éžä½ æƒ³åŽ»æ­»!\n" :
         "Someone is hanging down there, wait for your turn.\n" );
       return 1;
     }
     set("busy",1);
     write(can_read_chinese()?
-        "ÄãÊ°ÆðÉþ×Ó½«Ö®°óÔÚÑü¼ä, ×ÝÉíÍùÏÂÌø¡£\n":
+        "ä½ æ‹¾èµ·ç¹©å­å°‡ä¹‹ç¶åœ¨è…°é–“, ç¸±èº«å¾€ä¸‹è·³ã€‚\n":
         "You pick up the rope and tide to yourself, then jump down.\n");
 	tell_room(environment(this_player()),({
 	  this_player()->query("cap_name")+" tides the rope and jump over the cliff\n",
-	  this_player()->query("c_cap_name")+"Ê°ÆðÉþ×Ó½«×Ô¼º°ó×¡, È»áá×ÝÉíÍùÏÂÒ»Ìø¡£\n"
+	  this_player()->query("c_cap_name")+"æ‹¾èµ·ç¹©å­å°‡è‡ªå·±ç¶ä½, ç„¶å¾Œç¸±èº«å¾€ä¸‹ä¸€è·³ã€‚\n"
 	  }),this_player()
 	);
 	this_player()->move_player(IRC"midair.c","SNEAK");

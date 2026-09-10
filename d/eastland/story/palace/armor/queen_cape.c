@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Silver cape","ĞåË¿Ò·Î²ÔÆ¼ç" );
+     set_name( "Silver cape","ç¹¡çµ²æ›³å°¾é›²è‚©" );
      add( "id",({ "cape" }) );
-     set_short( "ĞåË¿Ò·Î²ÔÆ¼ç" );
+     set_short( "ç¹¡çµ²æ›³å°¾é›²è‚©" );
      set_long(@C_LONG
-Ò»¼şÊÖ¹¤Ï¸ÖÂµÄË¿ÖÊÔÆ¼ç£¬ááÃæÉĞÍÏÖøµØÃæ¡£
+ä¸€ä»¶æ‰‹å·¥ç´°ç·»çš„çµ²è³ªé›²è‚©ï¼Œå¾Œé¢å°šæ‹–è‘—åœ°é¢ã€‚
 C_LONG
      );
      set( "weight",70 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "cloak" );
      set( "material","cloth" );
      set( "defense_bonus",10 );

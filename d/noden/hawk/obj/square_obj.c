@@ -2,13 +2,13 @@
 inherit OBJECT;
 void create()
 {
-        set_name("Valor Amulet", "ÓÂÆø»ÕÕÂ");
+        set_name("Valor Amulet", "å‹‡æ°£å¾½ç« ");
         add( "id", ({ "valor amulet","amulet" }) );
-        set_short( "ÓÂÆø»ÕÕÂ" );
-        set("long","ÕâÊÇÒ»¸ö¾«ÃÀµÄĞ¡»ÕÕÂ£¬ÉÏÃæ¿ÌÁËÒ»¿ÅĞ¡Ğ¡µÄĞÄ¡£\n");
+        set_short( "å‹‡æ°£å¾½ç« " );
+        set("long","é€™æ˜¯ä¸€å€‹ç²¾ç¾çš„å°å¾½ç« ï¼Œä¸Šé¢åˆ»äº†ä¸€é¡†å°å°çš„å¿ƒã€‚\n");
         set( "weight", 5 );
 /*	 set( "prevent_drop", 1);
 	 set( "prevent_insert", 1);	*/
-        set( "unit", "Ã¶" );
+        set( "unit", "æš" );
 }
 

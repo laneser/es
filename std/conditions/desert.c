@@ -32,9 +32,9 @@ void effect(object player)
 	if( !cond_data[2]%4 ) cond_data[1]++;
 	player->receive_damage( cond_data[1] );
 	tell_object(player, 
-	    set_color("ÔÚÉ³Ä®ÖÐ, Äã¸Ðµ½¿ÚÇ¬ÉàÔï, Í·»èÑÛ»¨,.....\n", "HIY", player));
+	    set_color("åœ¨æ²™æ¼ ä¸­, ä½ æ„Ÿåˆ°å£ä¹¾èˆŒç‡¥, é ­æ˜çœ¼èŠ±,.....\n", "HIY", player));
 	tell_room( environment(player),
-		player->query("c_name") + "ÒòÈ±Ë®, ËÆºõ¿ìÒª³Å²»×¡ÁË....\n",
+		player->query("c_name") + "å› ç¼ºæ°´, ä¼¼ä¹Žå¿«è¦æ’ä¸ä½äº†....\n",
 		player );
 	if( cond_data[2] > DIE_LIMIT ) special_effect(player, 1);
 	else if( cond_data[2] > LIMIT ) special_effect(player, 0);
@@ -45,12 +45,12 @@ void special_effect(object player, int die)
 {
 	if( die ) {
         tell_object(player, 
-            set_color("Äã³¤Ê±¼äÈ±·¦Ë®·ÖÎ¬³ÖÄãµÄÉíÌå»úÄÜ, ÖÕì¶µ¼ÖÂËÀÍö!!\n",
+            set_color("ä½ é•·æ™‚é–“ç¼ºä¹æ°´åˆ†ç¶­æŒä½ çš„èº«é«”æ©Ÿèƒ½, çµ‚æ–¼å°Žè‡´æ­»äº¡!!\n",
             "HIY",player));
         player->receive_damage(player->query("max_hp"), 0);
 	} else
 	    tell_object(player,
-			set_color("×¢Òâ! Äã¿ìÒªÒòÈ±Ë®¶øËÀÁË!!\n","HIY",player));
+			set_color("æ³¨æ„! ä½ å¿«è¦å› ç¼ºæ°´è€Œæ­»äº†!!\n","HIY",player));
 	return;
 }
 
@@ -58,7 +58,7 @@ varargs void remove_effect(object player, int silent)
 {
 	if( !silent )
 		tell_object(player, 
-			set_color("Àë¿ªÉ³Ä®, ÄãÖÕì¶ÉîÉîµÄÎüÁËÒ»¿ÚÆø, ¾õµÃÊæ·þ¶àÁË...\n","HIC",player));
+			set_color("é›¢é–‹æ²™æ¼ , ä½ çµ‚æ–¼æ·±æ·±çš„å¸äº†ä¸€å£æ°£, è¦ºå¾—èˆ’æœå¤šäº†...\n","HIC",player));
 	player->delete("conditions/" + EFFECT_NAME );
 }
 
@@ -71,13 +71,13 @@ varargs void apply_effect(object player, int frequency, int damage)
 	cond_data = player->query("conditions/" + EFFECT_NAME);
 	if( !cond_data ) {
 		tell_object( player, 
-			set_color("Äã½øÈëÁËÉ³Ä®Ö®ÖÐ¡£\n","HIY",player));
+			set_color("ä½ é€²å…¥äº†æ²™æ¼ ä¹‹ä¸­ã€‚\n","HIY",player));
 		player->set("conditions/" + EFFECT_NAME, ({ frequency, damage, 0 }) );
 	} else {
 		if( frequency < cond_data[0] ) {
 			cond_data[0] = frequency;
 			tell_object( player, 
-	set_color("Äã¸Ðµ½×ì´½ºÍºíÁüÔ½À´Ô½Ç¬, áÝ·ð¾ÍÒªÁÑ¿ªÁË¡£\n","HIY",player));
+	set_color("ä½ æ„Ÿåˆ°å˜´å”‡å’Œå–‰åš¨è¶Šä¾†è¶Šä¹¾, å½·ä½›å°±è¦è£‚é–‹äº†ã€‚\n","HIY",player));
 		}
 		if( damage > cond_data[1] ) cond_data[1] = damage;
 		player->set("conditions/" + EFFECT_NAME, cond_data);

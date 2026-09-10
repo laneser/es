@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("hash blade", "¿ªÉ½µ¶");
+        set_name("hash blade", "é–‹å±±åˆ€");
         add ("id",({ "blade" }) );
-        set_short("¿ªÉ½µ¶");
+        set_short("é–‹å±±åˆ€");
         set_long(
-            "ÕâÊÇÒ»°ÑºñÖØµÄµ¶£¬Ã°ÏÕÕßÀûÓÃËüÔÚÉ½ÁÖÖĞÅû¾£Õ¶¼¬¡£\n"
+            "é€™æ˜¯ä¸€æŠŠåšé‡çš„åˆ€ï¼Œå†’éšªè€…åˆ©ç”¨å®ƒåœ¨å±±æ—ä¸­æŠ«èŠæ–¬æ£˜ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 28 );
         set( "type", "longblade" );
         set( "min_damage", 15);

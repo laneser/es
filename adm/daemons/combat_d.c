@@ -10,40 +10,40 @@
 
 mapping c_dflt_verbs = ([
 	"unarmed": ({
-		"%s¶Ô×¼%sÒ»¼ÇÖ±È­", "%sÃÍõß%sÒ»ÍÈ", "%s»ÓÈ­¹¥»÷%s", "%sÉìÊÖ×¥Ïò%s" }),
+		"%så°æº–%sä¸€è¨˜ç›´æ‹³", "%sçŒ›è¸¹%sä¸€è…¿", "%sæ®æ‹³æ”»æ“Š%s", "%sä¼¸æ‰‹æŠ“å‘%s" }),
 	"longblade": ({
-		"ÓÃ%sĞ±¿³%s", "µÄ%s´ÌÏò%s", "%sÒ»»Ó£¬Õ¶Ïò%s", "»Ó¶¯%s£¬Íù%sÏ÷È¥" }),
+		"ç”¨%sæ–œç %s", "çš„%såˆºå‘%s", "%sä¸€æ®ï¼Œæ–¬å‘%s", "æ®å‹•%sï¼Œå¾€%så‰Šå»" }),
 	"shortblade": ({
-		"ÓÃ%sĞ±¿³%s", "µÄ%s´ÌÏò%s", "µ¹ÎÕ%s£¬Ë³ÊÆÍù%sÒ»´Ì", "µÄ%s¶Ô×¼%s£¬±ÊÖ±´Ì³ö" }),
+		"ç”¨%sæ–œç %s", "çš„%såˆºå‘%s", "å€’æ¡%sï¼Œé †å‹¢å¾€%sä¸€åˆº", "çš„%så°æº–%sï¼Œç­†ç›´åˆºå‡º" }),
 	"dagger": ({
-		"½ôÎÕ%s£¬Íù%sºİºİÒ»´Á", "µ¹ÎÕ%s£¬Ë³ÊÆÍù%sÒ»´Ì", "µÄ%s¶Ô×¼%s£¬±ÊÖ±´Ì³ö",
-		"%s°×¹âÒ»ÉÁ£¬´Ó½ü¾àÀëÃÍ´Ì%s" }),
+		"ç·Šæ¡%sï¼Œå¾€%sç‹ ç‹ ä¸€æˆ³", "å€’æ¡%sï¼Œé †å‹¢å¾€%sä¸€åˆº", "çš„%så°æº–%sï¼Œç­†ç›´åˆºå‡º",
+		"%sç™½å…‰ä¸€é–ƒï¼Œå¾è¿‘è·é›¢çŒ›åˆº%s" }),
 	"thrusting": ({
-		"%s¶Ô×¼%sÉÁµç°ãµÄÒ»´Ì", "»Ø¹ı%s£¬Ö±Ö±´ÁÏò%s", "%s´ÌÏò%s",
-		"ÓÃ%sĞ±´Ì%s" }),
+		"%så°æº–%sé–ƒé›»èˆ¬çš„ä¸€åˆº", "å›é%sï¼Œç›´ç›´æˆ³å‘%s", "%såˆºå‘%s",
+		"ç”¨%sæ–œåˆº%s" }),
 	"blunt": ({
-		"¾ÙÆğ%s£¬Ãé×¼%sµ±Í·ÔÒÏÂ", "µÄ%sÍù%s»ÓÈ¥", "µÄ%sÖØÖØµØÍù%s¡¡È¥", "µÄ%sÉ¨¹ı%s" }),
+		"èˆ‰èµ·%sï¼Œç„æº–%sç•¶é ­ç ¸ä¸‹", "çš„%så¾€%sæ®å»", "çš„%sé‡é‡åœ°å¾€%sã€€å»", "çš„%sæƒé%s" }),
 	"axe": ({
-		"µÄ%sÍù%sÃÍÅü", "»ÓÎè%s£¬¿³Ïò%s", "µÄ%s¶Ô×¼%sÓÃÁ¦Ò»Åü", "µÄ%s¼ĞÖøÒ»µÀ¾¢·çÕ¶Ïò%s",
-		"¸ß¾Ù%s£¬Íù%s¿³Âä" }),
+		"çš„%så¾€%sçŒ›åŠˆ", "æ®èˆ%sï¼Œç å‘%s", "çš„%så°æº–%sç”¨åŠ›ä¸€åŠˆ", "çš„%så¤¾è‘—ä¸€é“å‹é¢¨æ–¬å‘%s",
+		"é«˜èˆ‰%sï¼Œå¾€%sç è½" }),
 	"polearm": ({
-		"»Ó¶¯%s£¬Íù%sÉ¨¹ı", "½«%s¶Ô×¼%sÍùÇ°Ö±´Ì", "%sÒ»»Ó£¬¿³Ïò%s", "Ë«ÊÖ»ÓÎèÖø%s£¬Íù%sºáÉ¨¹ıÈ¥" }),
+		"æ®å‹•%sï¼Œå¾€%sæƒé", "å°‡%så°æº–%så¾€å‰ç›´åˆº", "%sä¸€æ®ï¼Œç å‘%s", "é›™æ‰‹æ®èˆè‘—%sï¼Œå¾€%sæ©«æƒéå»" }),
 	"wand": ({
-		"¾ÙÆğ%s£¬»ÓÏò%s", "µÄ%sÍù%sÒ»»Ó", "ÓÃ%sÍù%sÒ»µã", "µÄ%sÉ¨¹ı%s" }),
+		"èˆ‰èµ·%sï¼Œæ®å‘%s", "çš„%så¾€%sä¸€æ®", "ç”¨%så¾€%sä¸€é»", "çš„%sæƒé%s" }),
 	"chain": ({
-		"Ë¦¶¯%s£¬»÷Ïò%s", "ÓÃ%sÍù%sÓÃÁ¦¡¡È¥", "µÄ%sÉ¨¹ı%s" }),
+		"ç”©å‹•%sï¼Œæ“Šå‘%s", "ç”¨%så¾€%sç”¨åŠ›ã€€å»", "çš„%sæƒé%s" }),
 	"whip": ({
-		"Ë¦¶¯%s£¬¾íÏò%s", "Îè¶¯%sÍù%sÒ»É¨", "ÓÃ%sÖ±Ö±µØ»÷Ïò%s" }),
+		"ç”©å‹•%sï¼Œå·å‘%s", "èˆå‹•%så¾€%sä¸€æƒ", "ç”¨%sç›´ç›´åœ°æ“Šå‘%s" }),
 	"jousting": ({
-		"%s¶Ô×¼%sÉÁµç°ãµÄÒ»´Ì", "µÄ%sÖ±Ö±´ÁÏò%s", "%s´ÌÏò%s",
-		"ÓÃ%sĞ±´Ì%s" }),
+		"%så°æº–%sé–ƒé›»èˆ¬çš„ä¸€åˆº", "çš„%sç›´ç›´æˆ³å‘%s", "%såˆºå‘%s",
+		"ç”¨%sæ–œåˆº%s" }),
 ]);
 
 // The default database of limb messages
 
 string *c_dflt_limbs = ({
-	"ÃÅÃæ", "×ó±Û", "ÓÒ±Û", "Ç°ĞØ", "×óÍÈ", "ÓÒÍÈ", "×ó¼ç", "ÓÒ¼ç",
-	"ááĞÄ", "Ğ¡¸¹" });
+	"é–€é¢", "å·¦è‡‚", "å³è‡‚", "å‰èƒ¸", "å·¦è…¿", "å³è…¿", "å·¦è‚©", "å³è‚©",
+	"å¾Œå¿ƒ", "å°è…¹" });
 
 // These parameter are used by many functions and are declared here to 
 // save time on passing parameter.
@@ -57,86 +57,86 @@ string c_msg_attacker, c_msg_defender, c_msg_others;
 // Ok, these are the message generators
  generate_action_message()
 {
-	c_msg_attacker	= sprintf("%s"+c_verb, "Äã", c_weap_name, c_vname + c_limb);
-	c_msg_defender	= sprintf("%s"+c_verb, c_name, c_weap_name, "Äã" + c_limb);
+	c_msg_attacker	= sprintf("%s"+c_verb, "ä½ ", c_weap_name, c_vname + c_limb);
+	c_msg_defender	= sprintf("%s"+c_verb, c_name, c_weap_name, "ä½ " + c_limb);
 	c_msg_others 	= sprintf("%s"+c_verb, c_name, c_weap_name, c_vname + c_limb);
 }
 
  generate_miss_message(int defend)
 {
 	if( !defend ) {
-		c_msg_attacker	+= "£¬µ«ÊÇÃ»ÖĞ.¡¡\n";
-		c_msg_defender	+= "£¬µ«ÊÇÃ»ÖĞ.¡¡\n";
-		c_msg_others 	+= "£¬µ«ÊÇÃ»ÖĞ.¡¡\n";
+		c_msg_attacker	+= "ï¼Œä½†æ˜¯æ²’ä¸­.ã€€\n";
+		c_msg_defender	+= "ï¼Œä½†æ˜¯æ²’ä¸­.ã€€\n";
+		c_msg_others 	+= "ï¼Œä½†æ˜¯æ²’ä¸­.ã€€\n";
 	} else {
-		c_msg_attacker	+= "Ã»´òÖĞ.\n";
-		c_msg_defender	+= "Ã»´òÖĞ.¡¡\n";
-		c_msg_others 	+= "Ã»´òÖĞ.¡¡\n";
+		c_msg_attacker	+= "æ²’æ‰“ä¸­.\n";
+		c_msg_defender	+= "æ²’æ‰“ä¸­.ã€€\n";
+		c_msg_others 	+= "æ²’æ‰“ä¸­.ã€€\n";
 	}
 }
 
  generate_parry_message(int defend)
 {
 	if( !defend ) {
-		c_msg_attacker	+= "£¬µ«ÊÇ±»¶Ô·½¸ñ¿ªÁË.¡¡\n";
-		c_msg_defender	+= "£¬µ«ÊÇ±»Äã¸ñ¿ªÁË.¡¡\n";
-		c_msg_others 	+= "£¬µ«ÊÇ±»"+c_vname+"¸ñ¿ªÁË.¡¡\n";
+		c_msg_attacker	+= "ï¼Œä½†æ˜¯è¢«å°æ–¹æ ¼é–‹äº†.ã€€\n";
+		c_msg_defender	+= "ï¼Œä½†æ˜¯è¢«ä½ æ ¼é–‹äº†.ã€€\n";
+		c_msg_others 	+= "ï¼Œä½†æ˜¯è¢«"+c_vname+"æ ¼é–‹äº†.ã€€\n";
 	} else {
-		c_msg_attacker	+= "±»¶Ô·½¸ñ¿ªÁË.¡¡\n";
-		c_msg_defender	+= "±»Äã¸ñ¿ªÁË.¡¡\n";
-		c_msg_others 	+= "±»"+c_vname+"¸ñ¿ªÁË.¡¡\n";
+		c_msg_attacker	+= "è¢«å°æ–¹æ ¼é–‹äº†.ã€€\n";
+		c_msg_defender	+= "è¢«ä½ æ ¼é–‹äº†.ã€€\n";
+		c_msg_others 	+= "è¢«"+c_vname+"æ ¼é–‹äº†.ã€€\n";
 	}
 }
 
  generate_unarmed_parry_message(int defend)
 {
 	if( !defend ) {
-		c_msg_attacker	+= "£¬µ«ÊÇ±»¶Ô·½ÓÃÊÖ¸ñ¿ª.¡¡\n";
-		c_msg_defender	+= "£¬µ«ÊÇ±»ÄãÓÃÊÖ¸ñ¿ª.¡¡\n";
-		c_msg_others 	+= "£¬µ«ÊÇ±»"+c_vname+"ÓÃÊÖ¸ñ¿ª.¡¡\n";
+		c_msg_attacker	+= "ï¼Œä½†æ˜¯è¢«å°æ–¹ç”¨æ‰‹æ ¼é–‹.ã€€\n";
+		c_msg_defender	+= "ï¼Œä½†æ˜¯è¢«ä½ ç”¨æ‰‹æ ¼é–‹.ã€€\n";
+		c_msg_others 	+= "ï¼Œä½†æ˜¯è¢«"+c_vname+"ç”¨æ‰‹æ ¼é–‹.ã€€\n";
 	} else {
-		c_msg_attacker	+= "±»¶Ô·½ÓÃÊÖ¸ñ¿ª.¡¡\n";
-		c_msg_defender	+= "±»ÄãÓÃÊÖ¸ñ¿ª.¡¡\n";
-		c_msg_others 	+= "±»"+c_vname+"ÓÃÊÖ¸ñ¿ª.¡¡\n";
+		c_msg_attacker	+= "è¢«å°æ–¹ç”¨æ‰‹æ ¼é–‹.ã€€\n";
+		c_msg_defender	+= "è¢«ä½ ç”¨æ‰‹æ ¼é–‹.ã€€\n";
+		c_msg_others 	+= "è¢«"+c_vname+"ç”¨æ‰‹æ ¼é–‹.ã€€\n";
 	}
 }
 
  generate_dodge_message(int defend)
 {
 	if( !defend ) {
-		c_msg_attacker	+= "£¬µ«ÊÇ±»¶Ô·½¶ã¿ªÁË.¡¡\n";
-		c_msg_defender	+= "£¬µ«ÊÇ±»Äã¶ã¿ªÁË.¡¡\n";
-		c_msg_others 	+= "£¬µ«ÊÇ±»"+c_vname+"¶ã¿ªÁË.¡¡\n";
+		c_msg_attacker	+= "ï¼Œä½†æ˜¯è¢«å°æ–¹èº²é–‹äº†.ã€€\n";
+		c_msg_defender	+= "ï¼Œä½†æ˜¯è¢«ä½ èº²é–‹äº†.ã€€\n";
+		c_msg_others 	+= "ï¼Œä½†æ˜¯è¢«"+c_vname+"èº²é–‹äº†.ã€€\n";
 	} else {
-		c_msg_attacker	+= "±»¶Ô·½¶ã¿ªÁË.¡¡\n";
-		c_msg_defender	+= "±»Äã¶ã¿ªÁË.¡¡\n";
-		c_msg_others 	+= "±»"+c_vname+"¶ã¿ªÁË.¡¡\n";
+		c_msg_attacker	+= "è¢«å°æ–¹èº²é–‹äº†.ã€€\n";
+		c_msg_defender	+= "è¢«ä½ èº²é–‹äº†.ã€€\n";
+		c_msg_others 	+= "è¢«"+c_vname+"èº²é–‹äº†.ã€€\n";
 	}
 }
 
  generate_block_message(int defend)
 {
 	if( !defend ) {
-		c_msg_attacker	+= "£¬µ«ÊÇ±»¶Ô·½ÓÃ¶Üµ²¿ª.¡¡\n";
-		c_msg_defender	+= "£¬µ«ÊÇ±»ÄãÓÃ¶Üµ²¿ª.¡¡\n";
-		c_msg_others 	+= "£¬µ«ÊÇ±»"+c_vname+"ÓÃ¶Üµ²¿ª.¡¡\n";
+		c_msg_attacker	+= "ï¼Œä½†æ˜¯è¢«å°æ–¹ç”¨ç›¾æ“‹é–‹.ã€€\n";
+		c_msg_defender	+= "ï¼Œä½†æ˜¯è¢«ä½ ç”¨ç›¾æ“‹é–‹.ã€€\n";
+		c_msg_others 	+= "ï¼Œä½†æ˜¯è¢«"+c_vname+"ç”¨ç›¾æ“‹é–‹.ã€€\n";
 	} else {
-		c_msg_attacker	+= "±»¶Ô·½ÓÃ¶Üµ²¿ª.¡¡\n";
-		c_msg_defender	+= "±»ÄãÓÃ¶Üµ²¿ª.¡¡\n";
-		c_msg_others 	+= "±»"+c_vname+"ÓÃ¶Üµ²¿ª.¡¡\n";
+		c_msg_attacker	+= "è¢«å°æ–¹ç”¨ç›¾æ“‹é–‹.ã€€\n";
+		c_msg_defender	+= "è¢«ä½ ç”¨ç›¾æ“‹é–‹.ã€€\n";
+		c_msg_others 	+= "è¢«"+c_vname+"ç”¨ç›¾æ“‹é–‹.ã€€\n";
 	}
 }
 
  generate_no_penetrate_message(int defend)
 {
 	if( !defend ) {
-		c_msg_attacker	+= "£¬µ«ÊÇÃ»ÓĞÔì³ÉÈÎºÎÉËº¦.¡¡\n";
-		c_msg_defender	+= "£¬µ«ÊÇÃ»ÓĞÔì³ÉÈÎºÎÉËº¦.¡¡\n";
-		c_msg_others	+= "£¬µ«ÊÇÃ»ÓĞÔì³ÉÈÎºÎÉËº¦.¡¡\n";
+		c_msg_attacker	+= "ï¼Œä½†æ˜¯æ²’æœ‰é€ æˆä»»ä½•å‚·å®³.ã€€\n";
+		c_msg_defender	+= "ï¼Œä½†æ˜¯æ²’æœ‰é€ æˆä»»ä½•å‚·å®³.ã€€\n";
+		c_msg_others	+= "ï¼Œä½†æ˜¯æ²’æœ‰é€ æˆä»»ä½•å‚·å®³.ã€€\n";
 	} else {
-		c_msg_attacker	+= "Ã»ÓĞÔì³ÉÈÎºÎµÄÉËº¦.¡¡\n";
-		c_msg_defender	+= "Ã»ÓĞÔì³ÉÈÎºÎµÄÉËº¦.¡¡\n";
-		c_msg_others	+= "Ã»ÓĞÔì³ÉÈÎºÎµÄÉËº¦.¡¡\n";
+		c_msg_attacker	+= "æ²’æœ‰é€ æˆä»»ä½•çš„å‚·å®³.ã€€\n";
+		c_msg_defender	+= "æ²’æœ‰é€ æˆä»»ä½•çš„å‚·å®³.ã€€\n";
+		c_msg_others	+= "æ²’æœ‰é€ æˆä»»ä½•çš„å‚·å®³.ã€€\n";
 	}
 }
 
@@ -144,29 +144,29 @@ string c_msg_attacker, c_msg_defender, c_msg_others;
 {
 	string c_dmsg;
 
-	if( !defend ) c_dmsg = "£¬";
+	if( !defend ) c_dmsg = "ï¼Œ";
 	else c_dmsg = "";
 	if( dam < 3 ) {
-		if( !defend ) c_dmsg += "µ«ÊÇÖ»´ÓÅÔ±ß²Á¹ı.¡¡\n";
-		else c_dmsg += "Ö»ÊÇ´ÓÅÔ±ß²Á¹ı.¡¡\n";
+		if( !defend ) c_dmsg += "ä½†æ˜¯åªå¾æ—é‚Šæ“¦é.ã€€\n";
+		else c_dmsg += "åªæ˜¯å¾æ—é‚Šæ“¦é.ã€€\n";
 	} else if( dam < 6 ) {
-		c_dmsg += "Ôì³ÉÇáÎ¢µÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆè¼•å¾®çš„å‚·å®³.ã€€\n";
 	} else if( dam < 10 ) {
-		c_dmsg += "Ôì³ÉÒ»Ğ©ÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆä¸€äº›å‚·å®³.ã€€\n";
 	} else if( dam < 15 ) {
-		c_dmsg += "Ôì³É²»ÉÙÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆä¸å°‘å‚·å®³.ã€€\n";
 	} else if( dam < 20 ) {
-		c_dmsg += "Ôì³ÉÑÏÖØµÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆåš´é‡çš„å‚·å®³.ã€€\n";
 	} else if( dam < 27 ) {
-		c_dmsg += "Ôì³ÉÆÄÎªÑÏÖØµÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆé —ç‚ºåš´é‡çš„å‚·å®³.ã€€\n";
 	} else if( dam < 35 ) {
-		c_dmsg += "Ôì³ÉÏàµ±ÑÏÖØµÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆç›¸ç•¶åš´é‡çš„å‚·å®³.ã€€\n";
 	} else if( dam < 45 ) {
-		c_dmsg += "Ôì³ÉÊ®·ÖÑÏÖØµÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆååˆ†åš´é‡çš„å‚·å®³.ã€€\n";
 	} else if( dam < 60 ) {
-		c_dmsg += "Ôì³É·Ç³£ÑÏÖØµÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆéå¸¸åš´é‡çš„å‚·å®³.ã€€\n";
 	} else {
-		c_dmsg += "Ôì³É¼«ÆäÑÏÖØµÄÉËº¦.¡¡\n";
+		c_dmsg += "é€ æˆæ¥µå…¶åš´é‡çš„å‚·å®³.ã€€\n";
 	}
 	c_msg_attacker	+= c_dmsg;
 	c_msg_defender	+= c_dmsg;
@@ -211,9 +211,9 @@ write(dd);*/
 	if( func = (string)defender->query("defense_skill") ) {
 		msg = DEFENSE_SKILL(func)->query_defense_msg(defender, attacker);
 		if( msg ) {
-			c_msg_attacker	+= sprintf("£¬¶ø"+msg+"£¬½á¹û", c_vname);
-			c_msg_defender	+= sprintf("£¬¶ø"+msg+"£¬½á¹û", "Äã");
-			c_msg_others 	+= sprintf("£¬¶ø"+msg+"£¬½á¹û", c_vname);
+			c_msg_attacker	+= sprintf("ï¼Œè€Œ"+msg+"ï¼Œçµæœ", c_vname);
+			c_msg_defender	+= sprintf("ï¼Œè€Œ"+msg+"ï¼Œçµæœ", "ä½ ");
+			c_msg_others 	+= sprintf("ï¼Œè€Œ"+msg+"ï¼Œçµæœ", c_vname);
 			defend = 1;
 		}
 	}
@@ -249,9 +249,9 @@ write(dd);*/
 		defender->quick_message(c_msg_defender);
 //		message( "combat", c_msg_defender, defender );
 		if( damage > 0 ) 
-			defender->quick_message(sprintf( "( Äã%s )\n",
+			defender->quick_message(sprintf( "( ä½ %s )\n",
 				STATS_D->status_string(defender) ) );
-//			message( "combat", sprintf( "( Äã%s )\n",
+//			message( "combat", sprintf( "( ä½ %s )\n",
 //				STATS_D->status_string(defender) ), defender );
 	} 
 
@@ -277,19 +277,19 @@ void report_death()
 	if( !stringp(c_msg = me->query("c_death_msg")) )
 		switch( random(5) )	{
 			case 0: 
-				c_msg = "%sÒ¡Ò¡»Î»ÎµØÍËÁË¼¸²½£¬µ¹ÔÚµØÉÏ ... ËÀÁË.¡¡\n";
+				c_msg = "%sæ–æ–æ™ƒæ™ƒåœ°é€€äº†å¹¾æ­¥ï¼Œå€’åœ¨åœ°ä¸Š ... æ­»äº†.ã€€\n";
 				break;
 			case 1: 
-				c_msg = "%s·¢³öÒ»ÉùÆàÀ÷µÄ²Ò½Ğ£¬µøÔÚµØÉÏ ... ËÀÁË.¡¡\n";
+				c_msg = "%sç™¼å‡ºä¸€è²æ·’å²çš„æ…˜å«ï¼Œè·Œåœ¨åœ°ä¸Š ... æ­»äº†.ã€€\n";
 				break;
 			case 2: 
-				c_msg = "%s¿È³ö¼¸¿ÚÏÊÑª£¬Èíµ¹ÔÚµØ ... ÑÛ¿´»î²»³ÉÁË.¡¡\n";
+				c_msg = "%så’³å‡ºå¹¾å£é®®è¡€ï¼Œè»Ÿå€’åœ¨åœ° ... çœ¼çœ‹æ´»ä¸æˆäº†.ã€€\n";
 				break;
-   /* bmp¼ÓÁËÁ½Ïî¡£*/   case 3:
-                                c_msg = "%sÖ±ÌÈÌÈµØÍùºóÒ»µ¹ ... ËÀÁË¡£\n";
+   /* bmpåŠ äº†å…©é …ã€‚*/   case 3:
+                                c_msg = "%sç›´å€˜å€˜åœ°å¾€å¾Œä¸€å€’ ... æ­»äº†ã€‚\n";
                                 break;
                         case 4:
-                                c_msg = "%s×ì½ÇÁ÷³öÁËÒ»Ë¿ºÚÑª£¬Íá×ÅÉí×ÓÒ»µ¹ ... ¾ÍÕâÑù¹ÒÁË¡£\n";
+                                c_msg = "%så˜´è§’æµå‡ºäº†ä¸€çµ²é»‘è¡€ï¼Œæ­ªè‘—èº«å­ä¸€å€’ ... å°±é€™æ¨£æ›äº†ã€‚\n";
                                 break;
  		}
 	if ( !environment(me) ) return ;

@@ -8,5 +8,5 @@ void create()
 	set_save_file("area_board");
 	set_location("/d/wiz/world");
 	set( "short.text", "Board of Area connections");
-	set( "c_short.text", "ĞÂÇøÓòÁôÑÔ°å");
+	set( "c_short.text", "æ–°å€åŸŸç•™è¨€æ¿");
 }

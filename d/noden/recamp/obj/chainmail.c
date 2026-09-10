@@ -5,14 +5,14 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-	set_name( "chainmail", "îø¼×" );
+	set_name( "chainmail", "é§ç”²" );
 	add( "id", ({ "chain", "mail" }) );
-   set_short( "îø¼×" );
+   set_short( "é§ç”²" );
 	set_long(
-		"Õâ¼şîø¼×ÉÏÓĞ²»ÉÙ±»ÎäÆ÷¿³³öÀ´µÄºÛ¼££¬¿´ÆğÀ´ËüÔ­À´µÄÖ÷ÈËÒ»¶¨\n"
-		"Éí¾­°ÙÕ½¡£\n"
+		"é€™ä»¶é§ç”²ä¸Šæœ‰ä¸å°‘è¢«æ­¦å™¨ç å‡ºä¾†çš„ç—•è·¡ï¼Œçœ‹èµ·ä¾†å®ƒåŸä¾†çš„ä¸»äººä¸€å®š\n"
+		"èº«ç¶“ç™¾æˆ°ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "material", "heavy_metal");
 	set( "armor_class", 12 );

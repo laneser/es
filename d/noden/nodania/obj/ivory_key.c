@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "ivory key", "ÏóÑÀÔ¿³×" );
+	set_name( "ivory key", "è±¡ç‰™é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "an ivory key", "ÏóÑÀÔ¿³×" );
+	set_short( "an ivory key", "è±¡ç‰™é‘°åŒ™" );
 	set_long(
 		"An ivory key with a large ruby on its handle.\n",
-		"Ò»°ÑÓÃÏóÑÀµñ¿Ì³ÉµÄÔ¿³×£¬ÔÚÔ¿³×µÄ±ú²¿»¹ÏâÖøÒ»Á£ºì±¦Ê¯¡£\n"
+		"ä¸€æŠŠç”¨è±¡ç‰™é›•åˆ»æˆçš„é‘°åŒ™ï¼Œåœ¨é‘°åŒ™çš„æŸ„éƒ¨é‚„é‘²è‘—ä¸€ç²’ç´…å¯¶çŸ³ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "KING_YARAMON_XI_LIBRARY" );
 	set( "weight", 3 );
 	set( "value", ({ 40, "silver" }) );

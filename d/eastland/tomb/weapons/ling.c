@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Tien-Shi baton","ÌìÊ¦Áî");
+    set_name("Tien-Shi baton","å¤©å¸«ä»¤");
     add("id",({"ling","baton"}) );
-    set_short("ÌìÊ¦Áî");
+    set_short("å¤©å¸«ä»¤");
     set_long(
-           "ÕâÊÇ°ÑÉÁÒ«ÖøÒøÉ«¹âÔóµÄÁîÅÆ£¬¾ÝËµÊÇÓÉ´«ËµÖÐµÄÁú»¢É½ÕÅÌìÊ¦ÒÔµØÄ¸¾«\n"
-           "Ó¢¼ÓÉÏÌìÉ½º®Ìú¶ÍÖý¶ø³É¡£ÕÅÌìÊ¦²¢ÒÔ¶àÄêµÄÊ±¼ä½«Æä±ÏÉú·¨Á¦¹à×¢ì¶Áî\n"
-           "ÄÚ£¬Ê¹Æä³ÉÎªÒ»°Ñ¾ßÓÐ¾Þ´óÆÆ»µÁ¦µÄÎäÆ÷¡£ÓÉì¶¸úËæÌìÊ¦¶àÄê£¬ËüËÆºõÒ²\n"
-           "ÓÐÁËÄ³ÖÖÁéÐÔ£¬»áÑ¡Ôñ×Ô¼ºµÄÖ÷ÈË¡£\n");
-    set("unit","°Ñ");
+           "é€™æ˜¯æŠŠé–ƒè€€è‘—éŠ€è‰²å…‰æ¾¤çš„ä»¤ç‰Œï¼Œæ“šèªªæ˜¯ç”±å‚³èªªä¸­çš„é¾è™Žå±±å¼µå¤©å¸«ä»¥åœ°æ¯ç²¾\n"
+           "è‹±åŠ ä¸Šå¤©å±±å¯’éµé›é‘„è€Œæˆã€‚å¼µå¤©å¸«ä¸¦ä»¥å¤šå¹´çš„æ™‚é–“å°‡å…¶ç•¢ç”Ÿæ³•åŠ›çŒæ³¨æ–¼ä»¤\n"
+           "å…§ï¼Œä½¿å…¶æˆç‚ºä¸€æŠŠå…·æœ‰å·¨å¤§ç ´å£žåŠ›çš„æ­¦å™¨ã€‚ç”±æ–¼è·Ÿéš¨å¤©å¸«å¤šå¹´ï¼Œå®ƒä¼¼ä¹Žä¹Ÿ\n"
+           "æœ‰äº†æŸç¨®éˆæ€§ï¼Œæœƒé¸æ“‡è‡ªå·±çš„ä¸»äººã€‚\n");
+    set("unit","æŠŠ");
     set("weapon_class",41);
     set("type","wand");
     set("min_damage",20);
@@ -22,7 +22,7 @@ void create()
     set("value",({50,"platinum"}));
     set("hit_func","wand_damage");
     set("special_damage",60);
-    set("special_c_msg","»Ó³öÒ»Æ¬Òø¹â£¬ÁýÕÖÖø");
+    set("special_c_msg","æ®å‡ºä¸€ç‰‡éŠ€å…‰ï¼Œç± ç½©è‘—");
     set("no_sale",1);
 
 }
@@ -40,7 +40,7 @@ int stop_wield()
 		return 0;
 	else {
 		notify_fail( 
-		"ÌìÊ¦ÁîÍ»È»±äµÃÍ¨ºì£¬Ò»Õó¾ÞÈÈÁîÄãÎÕ²»×¡Ëü¡£\n" 
+		"å¤©å¸«ä»¤çªç„¶è®Šå¾—é€šç´…ï¼Œä¸€é™£å·¨ç†±ä»¤ä½ æ¡ä¸ä½å®ƒã€‚\n" 
 			);
 		return 1;
 	}
@@ -82,9 +82,9 @@ int wand_damage(object victim,int damage)
     	if( ((int)holder->query("max_load") - (int)holder->query("load")) < (int)ob[i]->query("weight") )
     		return 0;
     	tell_object( holder, 
-    		"\n"+"ÌìÊ¦ÁîÉÏµÄ·ûÖä¿ªÊ¼±ä»Ã£¬ËÄÖÜµÄ¿ÕÆø¼±åáµÄÈÅ¶¯£¬Í»È»Ò»Ñù¶«Î÷³öÏÖÔÚÄãÉíÉÏ !! \n");     
+    		"\n"+"å¤©å¸«ä»¤ä¸Šçš„ç¬¦å’’é–‹å§‹è®Šå¹»ï¼Œå››å‘¨çš„ç©ºæ°£æ€¥é½çš„æ“¾å‹•ï¼Œçªç„¶ä¸€æ¨£æ±è¥¿å‡ºç¾åœ¨ä½ èº«ä¸Š !! \n");     
  	tell_room( environment(holder), 
- 		"\n"+"ÌìÊ¦ÁîÉÏµÄ·ûÖä¿ªÊ¼±ä»Ã£¬ÔÚ"+holder->query("c_name")+"ËÄÖÜµÄ¿ÕÆøÍ»È»¼±åáµÄÈÅ¶¯ !!\n",
+ 		"\n"+"å¤©å¸«ä»¤ä¸Šçš„ç¬¦å’’é–‹å§‹è®Šå¹»ï¼Œåœ¨"+holder->query("c_name")+"å››å‘¨çš„ç©ºæ°£çªç„¶æ€¥é½çš„æ“¾å‹• !!\n",
 		holder );
         ob[i]->move(holder);
        return 1;
@@ -96,7 +96,7 @@ int wand_damage(object victim,int damage)
     if(my_sp<40)
         { 
           tell_object(holder ,
-	        "ÄãµÄÌìÊ¦Áî·¢³öÎ¢ÈõµÄ¹âÃ¢£¬ËÆºõÓÐµãÁ¦²»´ÓÐÄ¡£\n");
+	        "ä½ çš„å¤©å¸«ä»¤ç™¼å‡ºå¾®å¼±çš„å…‰èŠ’ï¼Œä¼¼ä¹Žæœ‰é»žåŠ›ä¸å¾žå¿ƒã€‚\n");
           return 0 ;
          }  
 		       
@@ -105,10 +105,10 @@ int wand_damage(object victim,int damage)
     victim->set("last_attacker", holder );                       
                 
     tell_object( holder,
-           "\n\nÄãµÄ"+query("c_name")+c_msg+victim->query("c_name")+"\n");
+           "\n\nä½ çš„"+query("c_name")+c_msg+victim->query("c_name")+"\n");
 
     tell_room( environment(holder), 
-	   "\n"+holder->query("c_name") + "µÄ"+query("c_name")
+	   "\n"+holder->query("c_name") + "çš„"+query("c_name")
 		 +c_msg+victim->query("c_name")+"\n",
  	    holder );
  	    

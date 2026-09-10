@@ -5,14 +5,14 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("Black Sword","ºÚ½£");
+       set_name("Black Sword","é»‘åŠ");
        add("id",({"sword","blacksword",}) );
-       set_short("ºÚ½£");
+       set_short("é»‘åŠ");
        set_long(
-           "ÓÃÒøÓëÃ×ËÕÀï½ðÊô»ìºÏÖÆ³ÉµÄºÚ½£,ÏòÀ´ÊÇ°«ÈËÍõµÄÅå½£¡£\n"
+           "ç”¨éŠ€èˆ‡ç±³è˜‡é‡Œé‡‘å±¬æ··åˆè£½æˆçš„é»‘åŠ,å‘ä¾†æ˜¯çŸ®äººçŽ‹çš„ä½©åŠã€‚\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
     set("type","longblade");
 	set( "min_damage", 25 );
@@ -21,7 +21,7 @@ void create()
 	set( "value", ({ 500, "gold" }) );
     set("hit_func","sword_damage");
     set("special_damage",15);
-    set("special_c_msg","ºô»½¹Å´úµÄ°«ÈËÍõ×åÁé»ê¹¥»÷µÐÈË.\n");
+    set("special_c_msg","å‘¼å–šå¤ä»£çš„çŸ®äººçŽ‹æ—éˆé­‚æ”»æ“Šæ•µäºº.\n");
 }
 
 int sword_damage(object victim,int damage)
@@ -45,9 +45,9 @@ int sword_damage(object victim,int damage)
 		if( !c_msg ) c_msg = msg;
 		if( !msg ) return 0;
            tell_object( holder,
-                   "\nÄãµÄ"+query("c_name")+c_msg+"\n" );
+                   "\nä½ çš„"+query("c_name")+c_msg+"\n" );
            tell_room( environment(holder), 
-              holder->query("c_cap_name") + "µÄ"+query("c_name")+c_msg+"\n",
+              holder->query("c_cap_name") + "çš„"+query("c_name")+c_msg+"\n",
 			holder );
 		damage_count=0;
 		return dam;

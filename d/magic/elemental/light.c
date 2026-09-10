@@ -65,20 +65,20 @@ int cast(int level)
 	
 	me = this_player();
 	if( (int)me->query_skill("elemental") < query_need_skill(level) ) {
-	  tell_object( me,"ÄãµÄÔªËØÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨! \n" );
+	  tell_object( me,"ä½ çš„å…ƒç´ é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•! \n" );
       return 0;
     }
     inv=all_inventory(me);
     inv=filter_array(inv, "filter_inv", this_object());
     if( sizeof(inv) ) {
-      tell_object( me, "ÄãÒÑ¾­ÖÆÔì³öÒ»¿Å¹âÇòÁË£¬±ðÀË·Ñ·¨Á¦ÁË¡£\n");
+      tell_object( me, "ä½ å·²ç¶“è£½é€ å‡ºä¸€é¡†å…‰çƒäº†ï¼Œåˆ¥æµªè²»æ³•åŠ›äº†ã€‚\n");
       return 0;
     }
      else
      {
-	write("ÄãÊ©Õ¹ÕÕÃ÷Êõ£¬Ò»ÍÅ·¢¹âÁ£×ÓÖð½¥ÔÚÄãµÄÊÖÖÐÐÎ³ÉÒ»¿Å¹âÇò¡£\n");
+	write("ä½ æ–½å±•ç…§æ˜Žè¡“ï¼Œä¸€åœ˜ç™¼å…‰ç²’å­é€æ¼¸åœ¨ä½ çš„æ‰‹ä¸­å½¢æˆä¸€é¡†å…‰çƒã€‚\n");
 
-	tell_room( environment(me), sprintf("%sà«à«µØÄîÁËÒ»¶ÎÖäÎÄ£¬Ò»Ð©·¢¹âµÄÁ£×ÓÖð½¥ÔÚ%sµÄÊÖÖÐÐÎ³ÉÒ»¿Å¹âÇò¡£\n",me->query("c_name") ,me->query("c_name") ),me);
+	tell_room( environment(me), sprintf("%så–ƒå–ƒåœ°å¿µäº†ä¸€æ®µå’’æ–‡ï¼Œä¸€äº›ç™¼å…‰çš„ç²’å­é€æ¼¸åœ¨%sçš„æ‰‹ä¸­å½¢æˆä¸€é¡†å…‰çƒã€‚\n",me->query("c_name") ,me->query("c_name") ),me);
     ball=new("/obj/light_ball");
     ball->set_fuel(query_delay_time(me, level));
     ball->move(me);

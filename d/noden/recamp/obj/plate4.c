@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "Wooden plate", "Ä¾»¯îø¼×");
+        set_name( "Wooden plate", "æœ¨åŒ–é§ç”²");
         add( "id", ({ "plate" }) );
-        set_short("Wooden plate", "Ä¾»¯îø¼×");
+        set_short("Wooden plate", "æœ¨åŒ–é§ç”²");
         set_long(@AAA
-ÕâÊÇÒ»¼şÒÔÄ¾ÖÊ±àÖ¯¶ø³ÉµÄîø¼×£¬ÏÔµÄÏàµ±ÉñÆæÓĞÈ¤¡£
+é€™æ˜¯ä¸€ä»¶ä»¥æœ¨è³ªç·¨ç¹”è€Œæˆçš„é§ç”²ï¼Œé¡¯çš„ç›¸ç•¶ç¥å¥‡æœ‰è¶£ã€‚
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 30 );
         set( "defense_bonus", 10 );

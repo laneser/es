@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "brass helm", "Í­¿øÃ±" );
+	set_name( "brass helm", "éŠ…ç›”å¸½" );
 	add( "id", ({ "helm" }) );
-	set_short( "Í­¿øÃ±" );
-	set_long("ÕâÊÇÒ»¸öÔ²¶¥µÄÍ­ÖÆ¿øÃ±¡£\n");
-	set( "unit", "¶¥" );
+	set_short( "éŠ…ç›”å¸½" );
+	set_long("é€™æ˜¯ä¸€å€‹åœ“é ‚çš„éŠ…è£½ç›”å¸½ã€‚\n");
+	set( "unit", "é ‚" );
 	set( "type", "head" );
 	set( "material", "heavy_metal" );
 	set( "weight", 60 );

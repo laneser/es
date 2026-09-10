@@ -10,12 +10,12 @@ void create()
 	::create();
 	set_level(18);
 	add( "id", ({ "elf","taxman", "shilufu"}) );
-	set_name( "elf taxman shilufu" , "����˰�� ϣ¶ܽ");
-	set_short("����˰�� ϣ¶ܽ");
+	set_name( "elf taxman shilufu" , "精靈稅官 希露芙");
+	set_short("精靈稅官 希露芙");
 	set_long(@LONG
-���ǵ��������ľ��飬��Ϊ��ʮ�����ɣ����Դ���ί�����������
-�������ֺõĹ����������ؼ�����������˰�������Ͷ�����Ӵ��
-�Թ����Ŀ�ͷ��
+她是島上少數的精靈，因為她十分靈巧，所以村裡委託她來做這個
+吃力不討好的工作，她的特技是隱形來查稅，村裡的投機份子大多
+吃過她的苦頭。
 LONG
 	);
 	set( "gender", "female" );
@@ -57,9 +57,9 @@ do_kill(string arg)
 string c_call(object who)
 {
 	if ((string)who->query("gender") == "female")
-		return (!who->query("spouse")) ? "С��" : "̫̫" ;
+		return (!who->query("spouse")) ? "小姐" : "太太" ;
 	else
-		return (!who->query("spouse")) ? "˧��" : "����" ;
+		return (!who->query("spouse")) ? "帥哥" : "先生" ;
 }
 
 void check_wealth(object ob)
@@ -75,11 +75,11 @@ void check_wealth(object ob)
 	
 	if( !env || !present(ob, env) ) return;
 	if( name=="ishige" || name=="odin" || name=="tsunami" || name=="mercury") {
-		tell_room( env,"\nϣ¶ܽ���˸���: ��������, ��ʦ "+c_name+"��\n\n" ,this_object() );
+		tell_room( env,"\n希露芙道了個萬福: 辛苦您了, 巫師 "+c_name+"。\n\n" ,this_object() );
 		return;
 	}
 	if( wizardp(ob) ) {
-		tell_room( env,"\nϣ¶ܽ������һ����˵��: ԭ������ʦ "+c_name+" ,������Ϊ���Ǹ���鹵���������˰���ˡ�\n\n" );
+		tell_room( env,"\n希露芙瞪了你一眼後說道: 原來是巫師 "+c_name+" ,害我以為是那個倒楣的闊佬來交稅金了。\n\n" );
 		return;
 	}
 	money = (mapping)ob->query("wealth");
@@ -94,7 +94,7 @@ void check_wealth(object ob)
 	total += bank[types[i]] * coinvalue( types[i] );
 	if( total > (int)ob->query_level() * MAX_MONEY_EACH_LEVEL ) {
 		command( "visible" );
-		tell_room(env,"ϣ¶ܽ΢Ц˵������"+c_call(ob)+"����ץ����ࡣ���㽨�辭�Ѱɣ���\n\n",
+		tell_room(env,"希露芙微笑說道：『"+c_call(ob)+"被我抓到了唷！捐點建設經費吧！』\n\n",
 		this_object() );
 		
 		types = keys(money);
@@ -115,12 +115,12 @@ void check_wealth(object ob)
 		}
 		ob->set( "bank_balance", bank );
 
-		tell_object( ob,"�����������Ǯ�����Լ������ò�����˼���Զ��Է��ľ��������֮һ��Ǯ\n");
+		tell_object( ob,"暗藏了那麼多錢，你自己都覺得不好意思，自動自發的捐出了三分之一的錢\n");
 		call_out( "do_inv" , 10 );
 	} 
 	
 	else {
-	tell_room( env,"ϣ¶ܽЦ��˵: " +c_name+c_call(ob)+"���������۹����\n",this_object() );
+	tell_room( env,"希露芙笑著說: " +c_name+c_call(ob)+"，您是來觀光的嗎？\n",this_object() );
 	}
 	return;
 }

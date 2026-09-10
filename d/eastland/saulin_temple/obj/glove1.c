@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("king-kong bracers", "½ğ¸Õ»·");
+        set_name("king-kong bracers", "é‡‘å‰›ç’°");
         add( "id", ({"bracers","bracer" }) );
-        set_short("½ğ¸Õ»·");
+        set_short("é‡‘å‰›ç’°");
         set_long(@C_LONG
-Ò»Ë«±»ÉÏÀÖ½ğ¸Õ (ËÄ±ÛÂê¹ş¸ÂÀ­) ¼Ó³Ö¹ıµÄÊ¯ÊÖ»·,
-¼Ó³ÖÒÔ¼«´óÖ®Öï·¨¿ÉÒÔ°ïÄãÖï³ıÒ»ÇĞµÄÄÚÍâÕÏ¡£
+ä¸€é›™è¢«ä¸Šæ¨‚é‡‘å‰› (å››è‡‚ç‘ªå“ˆå˜æ‹‰) åŠ æŒéçš„çŸ³æ‰‹ç’°,
+åŠ æŒä»¥æ¥µå¤§ä¹‹èª…æ³•å¯ä»¥å¹«ä½ èª…é™¤ä¸€åˆ‡çš„å…§å¤–éšœã€‚
 C_LONG
                 );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "hands" );
         set("material","stone");
         set( "armor_class", 5 );

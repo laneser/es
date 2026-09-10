@@ -87,15 +87,15 @@ protected int sort_set(string one, string two)
 void help()
 {
     write( @HELP
-Usage: set <±äÁ¿>
+Usage: set <è®Šé‡>
 
-ÕâÌõÖ¸ÁîÉèÖÃÍâ½çµÄ¸÷Ïî²ÎÊý.
+é€™æ¢æŒ‡ä»¤è¨­ç½®å¤–ç•Œçš„å„é …åƒæ•¸.
 
-Ò»Ð©¿ÉÄÜÓÃµ½µÄÉèÖÃ:
-prompt - ÉèÖÃÄãµÄÌáÊ¾·û.
-vt100 - ÉèÖÃÏÔÊ¾¡¢¿ØÖÆÄ£Ê½(ÒÔvt100Îª±ê×¼)
-LINES - ÉèÖÃÄãÏÔÊ¾µÄÆÁ¿í(Ä¬ÈÏ 24).
-TZONE - ÉèÖÃÄãµÄÊ±Çø (one of EST, CST, MST, PST, BST, GMT, CET, EET, AST).
+ä¸€äº›å¯èƒ½ç”¨åˆ°çš„è¨­ç½®:
+prompt - è¨­ç½®ä½ çš„æç¤ºç¬¦.
+vt100 - è¨­ç½®é¡¯ç¤ºã€æŽ§åˆ¶æ¨¡å¼(ä»¥vt100ç‚ºæ¨™æº–)
+LINES - è¨­ç½®ä½ é¡¯ç¤ºçš„å±å¯¬(é»˜èª 24).
+TZONE - è¨­ç½®ä½ çš„æ™‚å€ (one of EST, CST, MST, PST, BST, GMT, CET, EET, AST).
 
 HELP
     );

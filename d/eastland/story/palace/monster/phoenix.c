@@ -6,17 +6,17 @@ void create()
 {
         ::create();
         set_level(16);
-        set_name( "Red phoenix","[0;31m¡õ[1;31m¡õ[0;37m[0;31m¡õ[1;31m¡õ[0;37m[0;31m¡õ[1;31m¡õ[m"  );
+        set_name( "Red phoenix","[0;31mâ–¡[1;31mâ–¡[0;37m[0;31mâ–¡[1;31mâ–¡[0;37m[0;31mâ–¡[1;31mâ–¡[m"  );
         add( "id", ({ "phoenix" }) );
-        set_short( "[0;31m¡õ[1;31m¡õ[0;37m[0;31m¡õ[1;31m¡õ[0;37m[0;31m¡õ[1;31m¡õ[m" );
+        set_short( "[0;31mâ–¡[1;31mâ–¡[0;37m[0;31mâ–¡[1;31mâ–¡[0;37m[0;31mâ–¡[1;31mâ–¡[m" );
         set_long(@C_LONG
-Ò»Ö»ò§çïÑøµÄ³èÎï£¬È«Éí»ðÌ¿Ò²ËÆµÄ·ï»Ë£¬È«ÉíÓðÃ«ºÁÎÞ°ßÔÓ£¬¿¡ÃÀ¼«ÁË¡£ÕâÖ»»ð
-·ï»ËÕýÔÚÌÞôáË¢Ã«£¬ÉñÇéÆÄÎª×ÔÔÚ¡£
+ä¸€éš»é¡“é Šé¤Šçš„å¯µç‰©ï¼Œå…¨èº«ç«ç‚­ä¹Ÿä¼¼çš„é³³å‡°ï¼Œå…¨èº«ç¾½æ¯›æ¯«ç„¡æ–‘é›œï¼Œä¿Šç¾Žæ¥µäº†ã€‚é€™éš»ç«
+é³³å‡°æ­£åœ¨å‰”ç¿Žåˆ·æ¯›ï¼Œç¥žæƒ…é —ç‚ºè‡ªåœ¨ã€‚
 C_LONG
         );        
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set( "race", "monster");
-        set( "race","·ïÄñ");
+        set( "race","é³³é³¥");
         set_perm_stat( "str", 20 );
         set_perm_stat( "dex", 20 );
         set_perm_stat( "int", 15 );
@@ -28,9 +28,9 @@ C_LONG
         set( "alignment", 0 );
         set( "mountable", 1);
         set( "max_load", 2600 );
-        set_c_limbs( ({ "·ï¹Ú", "ÉíÌå", "×¦", "Î²°Í","³á°ò" }) );
-        set_c_verbs( ({ "%sÌ§Æð·ï×¦, Íù%sÒ»×¥", 
-                        "%sÓÃËüµÄà¹×ÓÍù%sÒ»×Ä"}) );
+        set_c_limbs( ({ "é³³å† ", "èº«é«”", "çˆª", "å°¾å·´","ç¿…è†€" }) );
+        set_c_verbs( ({ "%sæŠ¬èµ·é³³çˆª, å¾€%sä¸€æŠ“", 
+                        "%sç”¨å®ƒçš„å–™å­å¾€%sä¸€å•„"}) );
 }
 void init()
 {
@@ -40,7 +40,7 @@ int stop_attack()
 {
    object king;
    if ( king=present("ra-shan",environment()) ) {
-      tell_room(environment(),"»ð·ï»ËÕÐ»½ËüµÄÖ÷ÈËÀ´¹¥»÷ËüµÄµÐÈË£¡\n\n");
+      tell_room(environment(),"ç«é³³å‡°æ‹›å–šå®ƒçš„ä¸»äººä¾†æ”»æ“Šå®ƒçš„æ•µäººï¼\n\n");
       king->kill_ob(this_player());
    }
    return 0;
@@ -52,7 +52,7 @@ int do_mount(string arg)
    if ( arg!="phoenix" ) return ::do_mount(arg);
    if ( this_player()->query_temp("mounting") ) return ::do_mount(arg);
    if ( king=present("ra-shan",environment()) ) {
-     tell_room(environment(),sprintf("%sÅ­µÀ£ºÏëÍµÎÒµÄ·ï»Ë£¬ÃÅ¶¼Ã»ÓÐ£¬¿´À´ÎÒ²»ºÃºÃ½ÌÑµÄã£¬ÄãÊÇ²»ÖªµÀÍµÇÔÊÇ·¸·¨µÄ£¬¸øÎÒËÀËÀÈ¥£¡£¡\n"
+     tell_room(environment(),sprintf("%sæ€’é“ï¼šæƒ³å·æˆ‘çš„é³³å‡°ï¼Œé–€éƒ½æ²’æœ‰ï¼Œçœ‹ä¾†æˆ‘ä¸å¥½å¥½æ•™è¨“ä½ ï¼Œä½ æ˜¯ä¸çŸ¥é“å·ç«Šæ˜¯çŠ¯æ³•çš„ï¼Œçµ¦æˆ‘æ­»æ­»åŽ»ï¼ï¼\n"
       ,king->query("c_name")));
      king->kill_ob(this_player());
    }

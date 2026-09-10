@@ -5,11 +5,11 @@ void create(object ob)
 
     if ( !ob ) return ;
 	ob->set_level(1);
-	ob->set_name( "fat farmer", "ÅÖÅ©·ò" );
+	ob->set_name( "fat farmer", "èƒ–è¾²å¤«" );
 	ob->add( "id", ({ "farmer" }) );
-   ob->set_short( "ÅÖÅ©·ò" );
+   ob->set_short( "èƒ–è¾²å¤«" );
 	ob->set_long(
-		"ÕâÎ»Å©·ò³¤µÃÅÖÅÖµÄ£¬¿´ÆðºÜÀÏÊµ¡£\n"
+		"é€™ä½è¾²å¤«é•·å¾—èƒ–èƒ–çš„ï¼Œçœ‹èµ·å¾ˆè€å¯¦ã€‚\n"
 	);
 	ob->set( "max_hp", 40 );
 	ob->set( "hit_points", 40 );

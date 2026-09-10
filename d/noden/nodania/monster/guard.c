@@ -35,11 +35,11 @@ int check_item()
 	for (i = 0; i < sizeof(items); i++)
 		if(items[i]->query("short"))
 			count++;
-	result = "ÄãµÄÌùÉíÊÌÎÀËµµÀ:ÆôÙ÷´óÈË,";		
-	result += count? ("ÎÒÏÖÔÚ×Ü¹²´øÖø "+count+" ÑùÎïÆ·")
-			 : ("ÎÒÏÖÔÚÉíÉÏÃ»ÓÐÈÎºÎ¶«Î÷");
+	result = "ä½ çš„è²¼èº«ä¾è¡›èªªé“:å•Ÿç¨Ÿå¤§äºº,";		
+	result += count? ("æˆ‘ç¾åœ¨ç¸½å…±å¸¶è‘— "+count+" æ¨£ç‰©å“")
+			 : ("æˆ‘ç¾åœ¨èº«ä¸Šæ²’æœ‰ä»»ä½•æ±è¥¿");
 
-	result += sprintf("\n(×ÜÖØÁ¿ %d.%d ¹«½ï, ÉÏÏÞ %d.%d ¹«½ï)\n",
+	result += sprintf("\n(ç¸½é‡é‡ %d.%d å…¬æ–¤, ä¸Šé™ %d.%d å…¬æ–¤)\n",
 		(int)me->query("load")/10,
 		(int)me->query("load")%10,
 		(int)me->query("max_load")/10,
@@ -47,17 +47,17 @@ int check_item()
 
 	ob = me->query_temp("mounting");
 	if( ob ) result += 
-		"ÎÒÏÖÔÚÕýÆïÔÚÒ»" + ob->query("unit") + ob->query("c_name") + "ÉÏ£¬ÓÐ * ¼ÇºÅµÄÎïÆ·\n"
-		"±íÊ¾ÕýÍÔÔÚËüÉíÉÏ¡£\n";
+		"æˆ‘ç¾åœ¨æ­£é¨Žåœ¨ä¸€" + ob->query("unit") + ob->query("c_name") + "ä¸Šï¼Œæœ‰ * è¨˜è™Ÿçš„ç‰©å“\n"
+		"è¡¨ç¤ºæ­£é¦±åœ¨å®ƒèº«ä¸Šã€‚\n";
 
 	for (x=0; x < sizeof(items); x++) {
 		if(tmp=(string)items[x]->query("short")) {
 		tmp += " ("+items[x]->query("name")+")";
-		if(items[x]->query("wielded")) tmp += " (ÎäÆ÷)";
-		if(items[x]->query("equipped")) tmp += " (»¤¼×)";
-		if(items[x]->query("invisible")) tmp += " (ÒþÐÎ)";
-		if(items[x]->query("mounted")) tmp += " (×ùÆï)";
-		if(items[x]->query("secure")) tmp += " [±ê¼ÇÉè¶¨]";
+		if(items[x]->query("wielded")) tmp += " (æ­¦å™¨)";
+		if(items[x]->query("equipped")) tmp += " (è­·ç”²)";
+		if(items[x]->query("invisible")) tmp += " (éš±å½¢)";
+		if(items[x]->query("mounted")) tmp += " (åº§é¨Ž)";
+		if(items[x]->query("secure")) tmp += " [æ¨™è¨˜è¨­å®š]";
 		if(items[x]->query("on_mounted")) result += "* " + tmp + ".\n";
 			else result += "  " + tmp + ".\n" ;
 		}
@@ -93,17 +93,17 @@ int report_stat()
 			cond_str += to_chinese(cond_name[i]);
 		}
 	}
-	if( cond_str == "" ) cond_str = "Õý³£";
+	if( cond_str == "" ) cond_str = "æ­£å¸¸";
 	
-	write("×´  Ì¬: "+ cond_str + "\n" );
+	write("ç‹€  æ…‹: "+ cond_str + "\n" );
 
-	write("¾­  Ñé: "+ob->query_experience() );
-        write("\n×´  ¿ö: "+STATS_D->body_status_string(ob));
+	write("ç¶“  é©—: "+ob->query_experience() );
+        write("\nç‹€  æ³: "+STATS_D->body_status_string(ob));
         
 
 
 	if( ob->query("max_hp") ) write( 
-		"\nÌå  Á¦: "+ob->query("hit_points")+"/"+ ob->query("max_hp")+"\n");
+		"\né«”  åŠ›: "+ob->query("hit_points")+"/"+ ob->query("max_hp")+"\n");
 
 	write( "\n" );
 	statnames = STATS_D->query_stat_names();
@@ -117,7 +117,7 @@ int report_stat()
 
 	wealth = ob->query("wealth") ;
 	if (!wealth) {
-		write ("ÉíÎÞ·ÖÎÄ¡£\n");
+		write ("èº«ç„¡åˆ†æ–‡ã€‚\n");
 	} else {
 		coins = keys(wealth) ;
 		list = sort_array(coins,"sort_coins",this_object()) ;
@@ -130,7 +130,7 @@ int report_stat()
 				flag=1 ;
 			}
 		}
-		if (flag==0) write( "ÉíÎÞ·ÖÎÄ¡£\n");
+		if (flag==0) write( "èº«ç„¡åˆ†æ–‡ã€‚\n");
 	}
 
 	skills = ob->query_skills() ;
@@ -181,7 +181,7 @@ void disappear(object guard)
         if( !guard ) return;
         guard_name=guard->query("c_name");
         tell_room( environment(guard),
-        	sprintf("%sµÄ³¤¹ÙÊ§×ÙÁË,%s¾ö¶¨¾¡¿ì¸Ï»ØÅµ´ïÄáÑÇÏò¹úÍõ±¨¸æ¡£\n",
+        	sprintf("%sçš„é•·å®˜å¤±è¹¤äº†,%sæ±ºå®šå„˜å¿«è¶•å›žè«¾é”å°¼äºžå‘åœ‹çŽ‹å ±å‘Šã€‚\n",
         		guard_name,guard_name)
         );
 	distruct(guard);
@@ -221,20 +221,20 @@ int order_me(string arg)
 	if( !arg || arg =="suicide" || arg == "quit" || 
 	    sscanf(arg,"drop %s",dir) || sscanf(arg,"give %s",dir) ||
 	    sscanf(arg,"party %s",dir) )
-		return notify_fail("ÄãµÄÌùÉíÊÌÎÀÂ¶³öÃÔ»óµÄÑÛÉñ, ËÆºõ²»Ã÷°×ÄãµÄÒâË¼!\n");
+		return notify_fail("ä½ çš„è²¼èº«ä¾è¡›éœ²å‡ºè¿·æƒ‘çš„çœ¼ç¥ž, ä¼¼ä¹Žä¸æ˜Žç™½ä½ çš„æ„æ€!\n");
 	if( arg == "stay" ) {
 		tell_object( master_player, 
-			"ÄãµÄÌùÉíÊÌÎÀÁ¢ÕýÕ¾ºÃ, Ò»¶¯Ò²²»¶¯¡£\n" 
+			"ä½ çš„è²¼èº«ä¾è¡›ç«‹æ­£ç«™å¥½, ä¸€å‹•ä¹Ÿä¸å‹•ã€‚\n" 
 		);
 		this_object()->set("stop", 1);
 	} else if( arg == "follow" ) {
 		tell_object( master_player, 
-			"ÄãµÄÌùÉíÊÌÎÀÕ¾µ½ÄãµÄ×óáá·½, ¸úÖøÄãÐÐ¶¯¡£\n" 
+			"ä½ çš„è²¼èº«ä¾è¡›ç«™åˆ°ä½ çš„å·¦å¾Œæ–¹, è·Ÿè‘—ä½ è¡Œå‹•ã€‚\n" 
 		);
 		this_object()->set("stop", 0);
 	} else if ( arg == "dismiss" ) {
 		tell_room(environment(this_object()),sprintf(
-			"%sËµµÀ:×ñÃü, ÔÚÏÂÁ¢¿Ì»ØÅµ´ïÄáÑÇÏòÀ×Ë¼ÍÅ³¤¸²Ãü¡£\n%s×ªÉíÀë¿ªÁË¡£\n",
+			"%sèªªé“:éµå‘½, åœ¨ä¸‹ç«‹åˆ»å›žè«¾é”å°¼äºžå‘é›·æ€åœ˜é•·è¦†å‘½ã€‚\n%sè½‰èº«é›¢é–‹äº†ã€‚\n",
 			this_object()->query("c_name"),this_object()->query("c_name"))
 		);
 		master_player->delete_temp("now_guard");
@@ -245,7 +245,7 @@ int order_me(string arg)
 		check_item();
 	} else command(arg);
 /*	if (!command(arg)) {
-		return notify_fail("ÄãµÄÌùÉíÊÌÎÀÂ¶³öÃÔ»óµÄÑÛÉñ, ËÆºõ²»Ã÷°×ÄãµÄÒâË¼!\n");
+		return notify_fail("ä½ çš„è²¼èº«ä¾è¡›éœ²å‡ºè¿·æƒ‘çš„çœ¼ç¥ž, ä¼¼ä¹Žä¸æ˜Žç™½ä½ çš„æ„æ€!\n");
 	}
 */	;
     return 1;
@@ -266,13 +266,13 @@ void set_master(object master,object guard)
 	ob->set("name", master->query("name")+name);
 	ob->add("id",({ (string)ob->query("name") }) );
 	ob->set("c_name", master->query("c_name")+c_name);
-	ob->set("long" , sprintf("%s²»¹ýËûÏÖÔÚÕýµ£ÈÎ%sµÄÌùÉíÊÌÎÀ\n%s%s",
+	ob->set("long" , sprintf("%sä¸éŽä»–ç¾åœ¨æ­£æ“”ä»»%sçš„è²¼èº«ä¾è¡›\n%s%s",
 			guard->query("long"),
 			master->query("c_name"),
-			"Èç¹ûÄãÊÇËûµÄÖ÷ÈË, ¿ÉÒÔÓÃorder_guard <command> ÃüÁîËû\n",
-			"ÄãÒ²¿ÉÒÔÓÃhelp_guardÀ´ÁË½â¸ü¶àËûÄÜ×öµÄÊÂ¡£\n")
+			"å¦‚æžœä½ æ˜¯ä»–çš„ä¸»äºº, å¯ä»¥ç”¨order_guard <command> å‘½ä»¤ä»–\n",
+			"ä½ ä¹Ÿå¯ä»¥ç”¨help_guardä¾†äº†è§£æ›´å¤šä»–èƒ½åšçš„äº‹ã€‚\n")
 	);
-	ob->set("short", sprintf("%s%s[ÓÉ%s×ªÖ°]",
+	ob->set("short", sprintf("%s%s[ç”±%sè½‰è·]",
 		master->query("c_name"),c_name,guard->query("short") )
 	);
 	ob->set("wimpy", 90);
@@ -288,7 +288,7 @@ void die()
 	master = (object)this_object()->query("guard_master");
 	if( killer && master ) {
 	  tell_object( master, 
-		sprintf("\n%sËµ: ¶Ô²»Æð, ÊôÏÂÎÞÄÜ±£ÎÀÅµ´ïÄáÑÇ....È»áá¾Í¹ÒÁË:(\n",
+		sprintf("\n%sèªª: å°ä¸èµ·, å±¬ä¸‹ç„¡èƒ½ä¿è¡›è«¾é”å°¼äºž....ç„¶å¾Œå°±æŽ›äº†:(\n",
 			this_object()->query("c_name"))
 	  );
 	}
@@ -298,8 +298,8 @@ void die()
 	if ( (score = score - lost_score) > 0 ) master->set("war_score",score);
 	else master->set("war_score",0);
 	tell_object(master,sprintf("%s%s%d%s",
-		"ÓÉì¶ÄãµÄÁìµ¼ÎÞ·½, Ê¹Åµ´ïÄáÑÇËðÊ§Ò»Ãû¾«ÈñµÄÊ¿±ø, \n",
-		"Ò®À­Âü¾ö¶¨¿ÛÄã",lost_score,"µãÕ½¹¦ÒÔÊ¾³Í½ä¡£\n")
+		"ç”±æ–¼ä½ çš„é ˜å°Žç„¡æ–¹, ä½¿è«¾é”å°¼äºžæå¤±ä¸€åç²¾éŠ³çš„å£«å…µ, \n",
+		"è€¶æ‹‰æ›¼æ±ºå®šæ‰£ä½ ",lost_score,"é»žæˆ°åŠŸä»¥ç¤ºæ‡²æˆ’ã€‚\n")
 	);	
 	::die();
 }
@@ -307,16 +307,16 @@ void die()
 int help_order(string arg)
 {
 	write( @HELP
-Òª½ÐÊÌÎÀ×öÊÂ, ¿ÉÓÃ
+è¦å«ä¾è¡›åšäº‹, å¯ç”¨
 order_guard <command>
-command ¿ÉÎªÒ»°ã user Ê¹ÓÃµÄÖ¸Áî, µ«ÊÌÎÀ²»ÄÜ¶ªÆúÈÎºÎ¶«Î÷,
-Ò²²»ÄÜ°Ñ¶«Î÷¸ø±ðÈË¡£
-ÁíÍâÊÌÎÀ»¹ÓÐ¼¸Ïî×¨ÓÃÖ¸Áî:
-1. stay   :ÃüÁîÊÌÎÀÁôÔÚÔ­µØ¡£
-2. follow :ÃüÁîÊÌÎÀ¸úÖøÄãÐÐ¶¯¡£
-3. dismiss:ÈÎÎñ½áÊø, ÈÃÊÌÎÀ·µ»ØÅµ´ïÄáÑÇ±¨¸æ, ÌýºòÀ×Ë¼ÍÅ³¤Ö¸Ê¾¡£
-4. report :ÈÃÊÌÎÀÏòÄã±¨¸æËûµÄ×´Ì¬¡£
-5. check_item: ÈÃÊÌÎÀ±¨¸æÉíÉÏÓÐÄÄÐ©ÎïÆ·¡£
+command å¯ç‚ºä¸€èˆ¬ user ä½¿ç”¨çš„æŒ‡ä»¤, ä½†ä¾è¡›ä¸èƒ½ä¸Ÿæ£„ä»»ä½•æ±è¥¿,
+ä¹Ÿä¸èƒ½æŠŠæ±è¥¿çµ¦åˆ¥äººã€‚
+å¦å¤–ä¾è¡›é‚„æœ‰å¹¾é …å°ˆç”¨æŒ‡ä»¤:
+1. stay   :å‘½ä»¤ä¾è¡›ç•™åœ¨åŽŸåœ°ã€‚
+2. follow :å‘½ä»¤ä¾è¡›è·Ÿè‘—ä½ è¡Œå‹•ã€‚
+3. dismiss:ä»»å‹™çµæŸ, è®“ä¾è¡›è¿”å›žè«¾é”å°¼äºžå ±å‘Š, è½å€™é›·æ€åœ˜é•·æŒ‡ç¤ºã€‚
+4. report :è®“ä¾è¡›å‘ä½ å ±å‘Šä»–çš„ç‹€æ…‹ã€‚
+5. check_item: è®“ä¾è¡›å ±å‘Šèº«ä¸Šæœ‰å“ªäº›ç‰©å“ã€‚
 HELP
 	);
 	return 1;

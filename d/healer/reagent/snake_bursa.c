@@ -4,15 +4,15 @@ inherit "/std/reagent.c";
 
 void create()
 {
-	set_name( "snake bursa", "¶¾Éß¶¾ÄÒ" );
+	set_name( "snake bursa", "æ¯’è›‡æ¯’å›Š" );
         set("no_sale",1);
 	add( "id", ({"bursa"}) );
-	set_short( "¶¾Éß¶¾ÄÒ" );
+	set_short( "æ¯’è›‡æ¯’å›Š" );
 	set_long(
-		"ÕâÊÇÒ»¿Å¶¾ÉßµÄ¶¾ÄÒ, ÓĞÈËÏ²»¶ÄÃËüÀ´Åİ¾Æ,ÌıËµ»¹Âù²¹µÄ¡£\n"
-		"Èç¹ûÄã²»ÅÂËÀµÄ»°,¿ÉÒÔ³¢³¢(taste)Ëü¡£\n"
+		"é€™æ˜¯ä¸€é¡†æ¯’è›‡çš„æ¯’å›Š, æœ‰äººå–œæ­¡æ‹¿å®ƒä¾†æ³¡é…’,è½èªªé‚„è »è£œçš„ã€‚\n"
+		"å¦‚æœä½ ä¸æ€•æ­»çš„è©±,å¯ä»¥åšåš(taste)å®ƒã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "ident", "SNAKE_BURSA" );
         set( "weight", 2 );
 	set( "value", ({ 40, "silver" }) );

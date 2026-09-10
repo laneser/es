@@ -1,19 +1,19 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":270,"title":"Re: < no title >","body":"On Tue Sep 13, Ghost wrote:
-> ÎÒ´´ÁËÒ»¸öĞÂ½ÇÉ«,¿ÉÊÇÆæ¹ÖµÄÊÇ¶¼²»ÂôÎÒÒ©Æ·
-> ËûÃ¿´Î¶¼Ëµ¶Ô²»Æğ£¬Îª·ÀÖ¹²»·¨ÉÌÈËÂ¢¶Ï£¬Õâ¶«Î÷ÄãÖ»ÄÜÂòÕâ÷á¶à¡£
+> æˆ‘å‰µäº†ä¸€å€‹æ–°è§’è‰²,å¯æ˜¯å¥‡æ€ªçš„æ˜¯éƒ½ä¸è³£æˆ‘è—¥å“
+> ä»–æ¯æ¬¡éƒ½èªªå°ä¸èµ·ï¼Œç‚ºé˜²æ­¢ä¸æ³•å•†äººå£Ÿæ–·ï¼Œé€™æ±è¥¿ä½ åªèƒ½è²·é€™éº¼å¤šã€‚
 > 
-> ÎÒ¶¼Ã»ÓĞÂò¹ı,Ôõ÷áÂ¢¶ÏÄØ?
->                    ....Ã»ÓĞÒ©Ë®µÄÈÕ×Ó...ghost
-¶à³Å¼¸Ğ¡Ê±°É!!
-×Ü²»ÄÜÒ»´´³öÀ´¾ÍÓĞquota,
-²»È»¶à´´¼¸¸öÔÙ×ÔÉ±,
-quota ÏŞÖÆ¾ÍÃ»ÒâÒåÁË¡£
-","time":779508449,"poster":"Irisa",]),(["id":271,"body":"ÏÖÔÚÖ»ÒªÒ»Õ½¶·¾Í»á×ß»ğÈëÄ§,ËÌ¾­Ò²»á,¿ÉÒÔ½â¾öÂğ£¿
+> æˆ‘éƒ½æ²’æœ‰è²·é,æ€éº¼å£Ÿæ–·å‘¢?
+>                    ....æ²’æœ‰è—¥æ°´çš„æ—¥å­...ghost
+å¤šæ’å¹¾å°æ™‚å§!!
+ç¸½ä¸èƒ½ä¸€å‰µå‡ºä¾†å°±æœ‰quota,
+ä¸ç„¶å¤šå‰µå¹¾å€‹å†è‡ªæ®º,
+quota é™åˆ¶å°±æ²’æ„ç¾©äº†ã€‚
+","time":779508449,"poster":"Irisa",]),(["id":271,"body":"ç¾åœ¨åªè¦ä¸€æˆ°é¬¥å°±æœƒèµ°ç«å…¥é­”,é Œç¶“ä¹Ÿæœƒ,å¯ä»¥è§£æ±ºå—ï¼Ÿ
 ","title":"< no title >","time":779677109,"poster":"Firefox",]),(["id":272,"body":"[Chi:
       this is my first post.......so happy....
 [C[C[C[C[C[C[C[Dgod....when i type\"who\" it will dead-connect........plz help ok????
@@ -38,59 +38,59 @@ dear god :
 [C[C[Cif i type it will be down.......................
 [C[C[C[C[C[C[C[C[C[Cso strange............
 [C[C[C[C[C[C[C[C[C[C[C[Dcan u help me god?????????
-","title":"< no title >","time":779909936,"poster":"Hahaha",]),(["id":277,"title":"Why??","body":"ÎÒ½ñÌì´ò°ëÊŞÈËĞ¡Å®º¢Ê±£¬Ó©Ä»ÉÏ³öÏÖÒ»ĞĞ×Ö£º
+","title":"< no title >","time":779909936,"poster":"Hahaha",]),(["id":277,"title":"Why??","body":"æˆ‘ä»Šå¤©æ‰“åŠç¸äººå°å¥³å­©æ™‚ï¼Œè¢å¹•ä¸Šå‡ºç¾ä¸€è¡Œå­—ï¼š
 
-[A[BÈ»ááÎÒ¾Í²»ÄÜ¹¥»÷£¨Ö»Ò»Ö±°¤´ò£©.......
-ááÀ´Á¬£È£ĞÒ²²»»á»Ö¸´........
+[A[Bç„¶å¾Œæˆ‘å°±ä¸èƒ½æ”»æ“Šï¼ˆåªä¸€ç›´æ±æ‰“ï¼‰.......
+å¾Œä¾†é€£ï¼¨ï¼°ä¹Ÿä¸æœƒæ¢å¾©........
 
 WHY.....
 ","time":779935553,"poster":"Eddie",]),(["id":278,"body":"Dear God....
 why quota need wait so long and no recover ye?
-ÄÑµ½Ç¿ÆÈÎÒÃÇÃ¿´Îlogin ¶¼ÒªÍæ>2 hours??
-²»Ì«ºÏÀí°É...
+é›£åˆ°å¼·è¿«æˆ‘å€‘æ¯æ¬¡login éƒ½è¦ç©>2 hours??
+ä¸å¤ªåˆç†å§...
 Hope God check it...Thanks....:)
-          Hch.......No Quota...¹àË®ÖĞ......
-","title":"< no title >","time":780140267,"poster":"Hch",]),(["id":279,"body":"²¹³äÒ»ÏÂ...today i wait more than 4 hours,
+          Hch.......No Quota...çŒæ°´ä¸­......
+","title":"< no title >","time":780140267,"poster":"Hch",]),(["id":279,"body":"è£œå……ä¸€ä¸‹...today i wait more than 4 hours,
 but still no quota nehh..
 this must be a bug lah...please check it..thx..:)
-               Hch....No Quota...ÎÒ¹àÎÒ¹á...
-","title":"< no title >","time":780140371,"poster":"Hch",]),(["id":280,"body":"                ¾È¾ÈÎÒ!!
-  ´Ó¿ªÊ¼Íæµ½ÏÖÔÚ»¹Ã»ÓĞ¹ıquota,ÇóÇóÄã!Ğ»Ğ»!
-                                        pisesÁô
+               Hch....No Quota...æˆ‘çŒæˆ‘è²«...
+","title":"< no title >","time":780140371,"poster":"Hch",]),(["id":280,"body":"                æ•‘æ•‘æˆ‘!!
+  å¾é–‹å§‹ç©åˆ°ç¾åœ¨é‚„æ²’æœ‰équota,æ±‚æ±‚ä½ !è¬è¬!
+                                        pisesç•™
 ","title":"help me","time":780140869,"poster":"Pises",]),(["id":281,"body":"Dear God...
 seem give other the second stuf have bug ye...
 <Example>give bandage 2 to hch
-the system will say ºÙ...ÄãÃ»ÓĞÄÇ÷á¶àÇ®?.....
+the system will say å˜¿...ä½ æ²’æœ‰é‚£éº¼å¤šéŒ¢?.....
 Please check it..thx...
-         Hch....ÓÖ¹àÒ»Æª....
+         Hch....åˆçŒä¸€ç¯‡....
 ","title":"< no title >","time":780142920,"poster":"Hch",]),(["id":282,"body":"Hch...do u have set alias ....as if gi or g or giv...?
-","title":"< no title >","time":780144904,"poster":"Ticks",]),(["id":283,"body":"Ææ¹Ö??  ³£ÌıÄãÃÇËµÃ»quota, ×òÌìĞŞºÃááÍæÁËÒ»ÕûÍí, quota ÂúÁËÈı´Î....Ã¿´Î¶¼ÓĞÈıÊ®¼¸¸ö±Á´ø.....
-ÓÖ, ÎÒquitÇ°, ÈçÇé¿öÔÊĞí\µÄ»°, ÎÒ»á³Åµ½quotaÉú³öÀ´ÔÙquit, ËÆºõ±ÈÍêÈ«Ã»quota¾ÍloginÀ´µÄ¿ì
-","title":"< no title >","time":780149486,"poster":"Nin",]),(["id":284,"body":"ºÃÏñËÀ¹ıáá,hp and mp ¶¼²»»á×Ô¶¯recover Ò®...
-","title":"< no title >","time":780162669,"poster":"Callman",]),(["id":285,"title":"< no title >","body":"Ã¿´ÎËÀÁË¶¼µÃrelogin,....·ñÔòhp and sp ¾Í²»»árecover
-ÈË¶àÊ±Ò»quit¾Í½ø²»À´À®!!
-¶øÇÒ×°±¸»¹»á±»ËûÈË \"¼ñ\" ×ß........
+","title":"< no title >","time":780144904,"poster":"Ticks",]),(["id":283,"body":"å¥‡æ€ª??  å¸¸è½ä½ å€‘èªªæ²’quota, æ˜¨å¤©ä¿®å¥½å¾Œç©äº†ä¸€æ•´æ™š, quota æ»¿äº†ä¸‰æ¬¡....æ¯æ¬¡éƒ½æœ‰ä¸‰åå¹¾å€‹ç¹ƒå¸¶.....
+åˆ, æˆ‘quitå‰, å¦‚æƒ…æ³å…è¨±çš„è©±, æˆ‘æœƒæ’åˆ°quotaç”Ÿå‡ºä¾†å†quit, ä¼¼ä¹æ¯”å®Œå…¨æ²’quotaå°±loginä¾†çš„å¿«
+","title":"< no title >","time":780149486,"poster":"Nin",]),(["id":284,"body":"å¥½åƒæ­»éå¾Œ,hp and mp éƒ½ä¸æœƒè‡ªå‹•recover è€¶...
+","title":"< no title >","time":780162669,"poster":"Callman",]),(["id":285,"title":"< no title >","body":"æ¯æ¬¡æ­»äº†éƒ½å¾—relogin,....å¦å‰‡hp and sp å°±ä¸æœƒrecover
+äººå¤šæ™‚ä¸€quitå°±é€²ä¸ä¾†å–‡!!
+è€Œä¸”è£å‚™é‚„æœƒè¢«ä»–äºº \"æ’¿\" èµ°........
 ,
-","time":780215754,"poster":"Nin",]),(["id":286,"title":"< no title >","body":"ÎÒ·¢ÏÖµØ½ÑÀïµÄÀÏÊó²»ÖªºÎÊ±±ä³ÉÌìóÃÊóÁË, Á½Ö»Ò®!!¶ÔµÍµÈ¼¶µÄÍæ¼Ò¶øÑÔ,
-ÀÏÊóÊÇÎÒÃÇ \"¶ØÆ·\", \"Ç¿Éí\", µÄĞ¡²¹Æ·, Èç½ñÈ´»»³ÉÖ»ÄÜ¿´²»ÄÜÉ±µÄÌìóÃÊó....
-»¹»áÍµ³ÔÎÒ¿Ú´üÄÚµÄ±ıÇ¬, :(
-Çë´óÉñ»òÎ×Ê¦ÓĞ¿Õ°ÑÀÏÊóÕÒ»ØÀ´°É!!ÀÏÊóÈâ±È½ÏºÃ³Ô....
-¶ÔÁË!!¹·ÈâÒ²²»´í, ¿ÉÊÇÏÖÔÚ»»³ÉÒ»Ö»´óÀÁ¹·, ²¡ÑÙÑÙµÄ²»ÄÜµ±ÏÂ¾Æ²Ë.
-»¹ÊÇÒ°¹·½ÏºÃ.....
+","time":780215754,"poster":"Nin",]),(["id":286,"title":"< no title >","body":"æˆ‘ç™¼ç¾åœ°çª–è£¡çš„è€é¼ ä¸çŸ¥ä½•æ™‚è®Šæˆå¤©ç«ºé¼ äº†, å…©éš»è€¶!!å°ä½ç­‰ç´šçš„ç©å®¶è€Œè¨€,
+è€é¼ æ˜¯æˆ‘å€‘ \"æ•¦å“\", \"å¼·èº«\", çš„å°è£œå“, å¦‚ä»Šå»æ›æˆåªèƒ½çœ‹ä¸èƒ½æ®ºçš„å¤©ç«ºé¼ ....
+é‚„æœƒå·åƒæˆ‘å£è¢‹å…§çš„é¤…ä¹¾, :(
+è«‹å¤§ç¥æˆ–å·«å¸«æœ‰ç©ºæŠŠè€é¼ æ‰¾å›ä¾†å§!!è€é¼ è‚‰æ¯”è¼ƒå¥½åƒ....
+å°äº†!!ç‹—è‚‰ä¹Ÿä¸éŒ¯, å¯æ˜¯ç¾åœ¨æ›æˆä¸€éš»å¤§æ‡¶ç‹—, ç—…å¥„å¥„çš„ä¸èƒ½ç•¶ä¸‹é…’èœ.
+é‚„æ˜¯é‡ç‹—è¼ƒå¥½.....
 ","time":780234406,"poster":"Callman",]),(["id":287,"title":"< no title >","body":"          Dear God and Wiz ..
-          My char clapton is a monk ...do exercise and Æğ²»À´
-     cant do anything ...¾ÍÍ£ÔÚÄÇ¶ù..¶¯¶¼²»ÄÜ¶¯ 
-       ºÃ¿ÉÁ¯à¡..¾È¾ÈÎÒ°É..
+          My char clapton is a monk ...do exercise and èµ·ä¸ä¾†
+     cant do anything ...å°±åœåœ¨é‚£å…’..å‹•éƒ½ä¸èƒ½å‹• 
+       å¥½å¯æ†å”·..æ•‘æ•‘æˆ‘å§..
 ","time":780254619,"poster":"Mai",]),(["id":289,"title":"Re: < no title >","body":"On Fri Sep 23, Mai wrote:
 >           Dear God and Wiz ..
->           My char clapton is a monk ...do exercise and Æğ²»À´
->      cant do anything ...¾ÍÍ£ÔÚÄÇ¶ù..¶¯¶¼²»ÄÜ¶¯ 
->        ºÃ¿ÉÁ¯à¡..¾È¾ÈÎÒ°É..
+>           My char clapton is a monk ...do exercise and èµ·ä¸ä¾†
+>      cant do anything ...å°±åœåœ¨é‚£å…’..å‹•éƒ½ä¸èƒ½å‹• 
+>        å¥½å¯æ†å”·..æ•‘æ•‘æˆ‘å§..
            
-            ³ĞÉÏ..»¹²»ÄÜquit ..Ö»ÄÜdeadline...ÎØÎØ...:~~
-","time":780255697,"poster":"Mai",]),(["id":291,"title":"< no title >","body":"ÎÒ½¨ÒéÊ¹ÓÃquotaÃüÁîÊ±¿ÉÖªµÀºÎÊ±²Å»áÔÙÓĞquotaµ±Íæ¼ÒÃ»ÓĞquotaµÄÊ±áá,ÒÔÃâÎÒÃÇÖ»ÊÇÎŞÒâÒåµÄ¿ÕµÈ.....Ò²²»ÖªµÀÒªµÈ¶à¾Ã.....
+            æ‰¿ä¸Š..é‚„ä¸èƒ½quit ..åªèƒ½deadline...å—šå—š...:~~
+","time":780255697,"poster":"Mai",]),(["id":291,"title":"< no title >","body":"æˆ‘å»ºè­°ä½¿ç”¨quotaå‘½ä»¤æ™‚å¯çŸ¥é“ä½•æ™‚æ‰æœƒå†æœ‰quotaç•¶ç©å®¶æ²’æœ‰quotaçš„æ™‚å¾Œ,ä»¥å…æˆ‘å€‘åªæ˜¯ç„¡æ„ç¾©çš„ç©ºç­‰.....ä¹Ÿä¸çŸ¥é“è¦ç­‰å¤šä¹….....
 Thx. God and Wizard.
-","time":780290583,"poster":"Mage",]),(["id":292,"title":"I can't buy \"anything\"","body":"I can't buy anything...not only Ò©Æ·,even eqs i still can't buy..
+","time":780290583,"poster":"Mage",]),(["id":292,"title":"I can't buy \"anything\"","body":"I can't buy anything...not only è—¥å“,even eqs i still can't buy..
 i don't know whether that's a bug...plz check it..thanks..
                     mela
 ","time":780292545,"poster":"Mela",]),})

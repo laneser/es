@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("Radish","ÂÜ²·");
-    set_short("ÂÜ²·");
+    set_name("Radish","è˜¿è””");
+    set_short("è˜¿è””");
     set_long(@LONG
-ÕâÖ»ÊÇÒ»°ãµÄºìÉ«Ô²ĞÎĞ¡ÂÜ²·!
+é€™åªæ˜¯ä¸€èˆ¬çš„ç´…è‰²åœ“å½¢å°è˜¿è””!
 LONG
             );
-    set("unit","Ö»");
+    set("unit","åª");
     set("weight",50);
     set("value",({0,"silver"}) );
     set("give_me_radish",1);

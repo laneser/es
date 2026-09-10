@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("occult plate", "ÉñÃØîø¼×");
+        set_name("occult plate", "ç¥ç§˜é§ç”²");
         add( "id", ({ "mail","plate","platemail" }) );
-        set_short("ÉñÃØîø¼×");
+        set_short("ç¥ç§˜é§ç”²");
         set_long(
-                "ÉñÃØîø¼×\n"
+                "ç¥ç§˜é§ç”²\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "light_metal");
         set( "armor_class", 33 );

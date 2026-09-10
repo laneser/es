@@ -24,12 +24,12 @@ int cmd_defend(string str)
 
 	damsel = present(str, environment(this_player())) ;
 	if (!damsel || !living(damsel))
-		return notify_fail( "ÄãÒª±£»¤Ë­£¿\n") ;
+		return notify_fail( "ä½ è¦ä¿è­·èª°ï¼Ÿ\n") ;
 	write( 
-                "ÄãÒÆ¶¯µ½" + damsel->query("c_name") + "Ç°Ãæ£¬Ìæ" + to_chinese(subjective(damsel))
-		+ "³ÐÊÜ¹¥»÷¡£\n") ;
+                "ä½ ç§»å‹•åˆ°" + damsel->query("c_name") + "å‰é¢ï¼Œæ›¿" + to_chinese(subjective(damsel))
+		+ "æ‰¿å—æ”»æ“Šã€‚\n") ;
 	tell_object( damsel, 
-		this_player()->query("c_name") + "ÒÆ¶¯µ½ÄãÇ°Ãæ£¬ÌæÄã³ÐÊÜµÐÈËµÄ¹¥»÷£¡\n");
+		this_player()->query("c_name") + "ç§»å‹•åˆ°ä½ å‰é¢ï¼Œæ›¿ä½ æ‰¿å—æ•µäººçš„æ”»æ“Šï¼\n");
 
 	damsel->add_temp("protectors", ({ this_player() }) ) ;
 	this_player()->add_temp("protectees", ({ damsel }) ) ;

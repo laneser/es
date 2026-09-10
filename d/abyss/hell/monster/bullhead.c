@@ -10,13 +10,13 @@ void create()
 
 	::create();
 	set_level(15);
-	set_name("bullhead", "ţͷ����");
-	set_short("General Bullhead", "ţͷ����");
+	set_name("bullhead", "牛頭將軍");
+	set_short("General Bullhead", "牛頭將軍");
 	set_long(
 		"You see a huge giant with bull's head. He looks as strong as his\n"
 		"mighty battleaxe.\n",
-		"ţͷ�����������ִ���׳����վ����ʱ�򼸺��������߸ߣ���������һ��\n"
-		"���б����ӻ���ľ���ս����\n"
+		"牛頭將軍看起來又粗又壯，他站立的時候幾乎有三公尺高，手中拿著一把\n"
+		"刀刃比桌子還大的巨型戰斧。\n"
 	);
 	set_skill( "axe", 100 );
 	set_skill( "parry", 100 );

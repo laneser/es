@@ -12,14 +12,14 @@ int cmd_switch_race(string arg) {
 	seteuid(getuid());
 	new_race = "/std/user_ob/"+arg;
 	if ( file_size(new_race+".c") == -1 )
-		return notify_fail("ºÜ±§Ç¸£¬Ã»ÓĞÕâ¸öÖÖ×å !! \n");
+		return notify_fail("å¾ˆæŠ±æ­‰ï¼Œæ²’æœ‰é€™å€‹ç¨®æ— !! \n");
 	link = this_player()->query_link();
 	link->save_data();
 
 	body = link->query("body_ob");
 	old_file = user_data_file(body)+".o";
 	if ( new_race+".o" == old_file )
-		return notify_fail("ÄãÏÖÔÚ¾ÍÊÇÕâ¸öÖÖ×å°¡ !!\n");
+		return notify_fail("ä½ ç¾åœ¨å°±æ˜¯é€™å€‹ç¨®æ—å•Š !!\n");
     body_data = read_file(old_file);
 
     name = (string)body->query("name");
@@ -30,14 +30,14 @@ int cmd_switch_race(string arg) {
             }
             else rm(new_file);
     if (write_file(new_file, body_data)) {
-	write("OK !! ÏÖÔÚÄãµÄÖÖ×åÇĞ»»ÖÁ"+to_chinese(arg)+"£¬ÏÖÔÚ Quit ÒÔÍê³É¸üĞÂ.\n");
+	write("OK !! ç¾åœ¨ä½ çš„ç¨®æ—åˆ‡æ›è‡³"+to_chinese(arg)+"ï¼Œç¾åœ¨ Quit ä»¥å®Œæˆæ›´æ–°.\n");
     this_player()->set("race",arg);
 	link->set("body",new_race);
 	this_player()->force_me("quit");
 	rm(old_file);
 	} 
 	else
-	write("µµ°¸Ğ´ÈëÎ´³É¹¦£¬ÇëÍ¨ÖªÉñÀ´´¦Àí¡£\n");
+	write("æª”æ¡ˆå¯«å…¥æœªæˆåŠŸï¼Œè«‹é€šçŸ¥ç¥ä¾†è™•ç†ã€‚\n");
 	return 1;
 }
 int help()
@@ -46,7 +46,7 @@ int help()
 Command : switch_race
 Syntax  : switch_race <new_race>
 
-    Õâ¸öÖ¸ÁîÊÇÓÃÀ´Ğ­ÖúÎ×Ê¦ÃÇ±ä»»×Ô¼ºµÄÖÖ×å£¬ÒÔÀû²âÊÔºÍ ... Ë¬ :P)
+    é€™å€‹æŒ‡ä»¤æ˜¯ç”¨ä¾†å”åŠ©å·«å¸«å€‘è®Šæ›è‡ªå·±çš„ç¨®æ—ï¼Œä»¥åˆ©æ¸¬è©¦å’Œ ... çˆ½ :P)
 HELP
 	);
   return 1;

@@ -81,17 +81,17 @@ varargs string get_list(int flag)
 	int i,day, hour, *savedata,size_list;
 	string msg;
 
-	if( !sizeof(top_list) ) return 	"Õ½¹¦ÅÅĞĞ°ñÄ¿Ç°ÊÇ¿ÕµÄ¡£\n";
+	if( !sizeof(top_list) ) return 	"æˆ°åŠŸæ’è¡Œæ¦œç›®å‰æ˜¯ç©ºçš„ã€‚\n";
 	size_list=sizeof(top_list);
 	if ((flag==1)&&(size_list>SIZE)) size_list=SIZE;
-	msg = sprintf("War scoreÅÅĞĞ°ñÇ° %d  Ãû:\n",size_list);
-	msg += sprintf(" Ãû´Î  Íæ¼ÒĞÕÃû           µÈ¼¶          ÉÏÏßÊ±¼ä                  war score \n");
+	msg = sprintf("War scoreæ’è¡Œæ¦œå‰ %d  å:\n",size_list);
+	msg += sprintf(" åæ¬¡  ç©å®¶å§“å           ç­‰ç´š          ä¸Šç·šæ™‚é–“                  war score \n");
 	for(i=0; i<size_list; i++) {
 		savedata = levels[top_list[i]];
 		day = savedata[2]/86400;
 		hour = savedata[2]%86400/3600;
 		msg += 
-			sprintf("  %2d. %20-s %2d %10d Ìì %2d Ğ¡Ê± %20d\n",i+1, 
+			sprintf("  %2d. %20-s %2d %10d å¤© %2d å°æ™‚ %20d\n",i+1, 
 			top_list[i], savedata[1], day, hour, savedata[0] );
 	}
 

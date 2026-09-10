@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "wind_blade_sword", "·çÈĞ½£" );
+        set_name( "wind_blade_sword", "é¢¨åˆƒåŠ" );
         add( "id",({ "blade","sword" }) );
-        set_short( "wind_blade_sword", "·çÈĞ½£" );
+        set_short( "wind_blade_sword", "é¢¨åˆƒåŠ" );
         set_long(@AAA
-ÕâÊÇÒ»°Ñ·æÀûµÄ³¤½££¬ÊÇÎäÊ¿ÍÅµÄÖÆÊ½ÎäÆ÷£¬ÓÉì¶ÆäÖÆÔì½ğÊôÌØÊâ
-Ê¹µÃÕâ°Ñ½£±ÈÆğÆÕÍ¨µÄ½£À´¿ÉÒÔÔì³É½Ï¶àÉËº¦
+é€™æ˜¯ä¸€æŠŠé‹’åˆ©çš„é•·åŠï¼Œæ˜¯æ­¦å£«åœ˜çš„åˆ¶å¼æ­¦å™¨ï¼Œç”±æ–¼å…¶è£½é€ é‡‘å±¬ç‰¹æ®Š
+ä½¿å¾—é€™æŠŠåŠæ¯”èµ·æ™®é€šçš„åŠä¾†å¯ä»¥é€ æˆè¼ƒå¤šå‚·å®³
 AAA
      );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
 //        set("bleeding", 10 );
         set("nosecond", 1 );
         set( "weapon_class", 27 );

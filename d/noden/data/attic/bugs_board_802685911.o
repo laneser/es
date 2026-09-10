@@ -1,9 +1,9 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
-messages ({(["id":787,"title":"Re: ÎªºÎ²»ÄÜ ÍæÐÂµÄ character???","body":"On Tue Jun  6, Guest wrote:
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
+messages ({(["id":787,"title":"Re: ç‚ºä½•ä¸èƒ½ çŽ©æ–°çš„ character???","body":"On Tue Jun  6, Guest wrote:
 > gopher*.* is banished.
 > 
 > 
@@ -13,20 +13,20 @@ messages ({(["id":787,"title":"Re: ÎªºÎ²»ÄÜ ÍæÐÂµÄ character???","body":"On Tue 
 >         and request a character.
 > 
 >                         --The Management
-> >ÎÒ¿´µ½ÁËÕâ¸öÑ¶Ï¢ ¿ÉÊÇÎÒ²»ÊÇ´Ó gopher Á¬ÉÏÀ´µÄ°¡.....
-> ÎÒµÄ ip ÀïÒ²Ã»ÓÐ gopher Õâ¸ö×Ö°¡ 
-> Ëü¾ÍÊÇ²»ÈÃÎÒÍæ
-> ÊÇ²»ÊÇÓÐÎÊÌâ°¡
-> ¼ì²éÒ»ÏÂ°É!
+> >æˆ‘çœ‹åˆ°äº†é€™å€‹è¨Šæ¯ å¯æ˜¯æˆ‘ä¸æ˜¯å¾ž gopher é€£ä¸Šä¾†çš„å•Š.....
+> æˆ‘çš„ ip è£¡ä¹Ÿæ²’æœ‰ gopher é€™å€‹å­—å•Š 
+> å®ƒå°±æ˜¯ä¸è®“æˆ‘çŽ©
+> æ˜¯ä¸æ˜¯æœ‰å•é¡Œå•Š
+> æª¢æŸ¥ä¸€ä¸‹å§!
 > 
-ÄÇÄãÊÇ´ÓÄÄ¡õÁ¬µÄ?
-¶¼Ã»½²Ôõ÷á²é?
+é‚£ä½ æ˜¯å¾žå“ªâ–¡é€£çš„?
+éƒ½æ²’è¬›æ€Žéº¼æŸ¥?
                            Iris
-","time":802370152,"poster":"Iris",]),(["id":788,"body":"½ñÌìcrash....½á¹ûlost exp Ô¼10Íòà¸...ÓÐÉñÉõ÷áÒÔÍì»ØµÄÂð??
+","time":802370152,"poster":"Iris",]),(["id":788,"body":"ä»Šå¤©crash....çµæžœlost exp ç´„10è¬å–”...æœ‰ç¥žç”šéº¼ä»¥æŒ½å›žçš„å—Ž??
 
 ","title":"cry....","time":802418646,"poster":"Cav",]),(["id":789,"body":"
 
-           ÎÒËÀÁË!! .
+           æˆ‘æ­»äº†!! .
 
 
 
@@ -35,24 +35,24 @@ messages ({(["id":787,"title":"Re: ÎªºÎ²»ÄÜ ÍæÐÂµÄ character???","body":"On Tue 
 
 
 ","title":"ha!","time":802419779,"poster":"Doloveme",]),(["id":790,"title":"about dark","body":"
-	dark µÄpriest ºÍ desyer·¢Æø¹¦\µÄÊ±ºòÃ»message
+	dark çš„priest å’Œ desyerç™¼æ°£åŠŸçš„æ™‚å€™æ²’message
 
 						beautiful jan
 ","time":802487826,"poster":"Jan",]),(["id":791,"title":"Re: about dark","body":"On Wed Jun  7, Jan wrote:
-> 	dark µÄpriest ºÍ desyer·¢Æø¹¦\µÄÊ±ºòÃ»message
+> 	dark çš„priest å’Œ desyerç™¼æ°£åŠŸçš„æ™‚å€™æ²’message
 > 
 > 						beautiful jan
 fixed...
-×î½üÔÚ deathland ¿ÉÄÜ»á³£ÓÐÕâÑùµÄÇé¿ö, ¿´µ½¾Í½²Ò»ÏÂ¡£
+æœ€è¿‘åœ¨ deathland å¯èƒ½æœƒå¸¸æœ‰é€™æ¨£çš„æƒ…æ³, çœ‹åˆ°å°±è¬›ä¸€ä¸‹ã€‚
 --
 EGA
 ","time":802516523,"poster":"Ega",]),(["id":792,"title":"< no title >","body":"
-Ê÷¶´ -
-      ÕâÀïÊÇÒ»¸öÊ÷¶´·¿¼ä£¬ÓÐÒ»ÕÅ´ó×À×Ó°Ú\ÔÚ·¿×ÓµÄÖÐ¼ä£¬¼¸ÕÅÒÎ×Ó
-  ÕûÆëµÄÅÅ·ÅÖø£¬Ç½ÉÏÓÐ¼¸Ö»´ó»ð°Ñ£¬Ê¹Õû¸ö·¿¼äÃ÷ÁÁÈçÖç¡£±±±ßÓÐÒ»
-  ¼äÆ¯ÁÁµÄ¶¯ÖÐÎÝ¡£
+æ¨¹æ´ž -
+      é€™è£¡æ˜¯ä¸€å€‹æ¨¹æ´žæˆ¿é–“ï¼Œæœ‰ä¸€å¼µå¤§æ¡Œå­æ“ºåœ¨æˆ¿å­çš„ä¸­é–“ï¼Œå¹¾å¼µæ¤…å­
+  æ•´é½Šçš„æŽ’æ”¾è‘—ï¼Œç‰†ä¸Šæœ‰å¹¾éš»å¤§ç«æŠŠï¼Œä½¿æ•´å€‹æˆ¿é–“æ˜Žäº®å¦‚æ™ã€‚åŒ—é‚Šæœ‰ä¸€
+  é–“æ¼‚äº®çš„å‹•ä¸­å±‹ã€‚
           ^^ 
-         Ó¦¸ÃÊÇ \"¶´\" °É.....
+         æ‡‰è©²æ˜¯ \"æ´ž\" å§.....
 ","time":802559289,"poster":"Atoll",]),(["id":793,"body":"cobalt file error .race is Orc
 ","title":"< no title >","time":802675027,"poster":"Argon",]),(["id":794,"body":"On Fri Jun  9, Argon wrote:
 > cobalt file error .race is Orc
@@ -60,7 +60,7 @@ cobalt no backup file... can't restore
                            Iris.
 ","title":"Re: < no title >","time":802675143,"poster":"Iris",]),(["id":795,"body":"Hi god...
   my player \"limay\"....race \"imp\"
-  [DÈËÎïµµ°¸»µµô....Çë°ïÃ¦ÐÞÀíÒ»ÏÂ..:)
+  [Däººç‰©æª”æ¡ˆå£žæŽ‰....è«‹å¹«å¿™ä¿®ç†ä¸€ä¸‹..:)
   thx..........
                                    limay
 ","title":"< no title >","time":802675155,"poster":"Guest",]),(["id":796,"body":"sorry .. my file broken too ...
@@ -72,7 +72,7 @@ pleast help recover .. thx god ...:)
 ","title":"33","time":802675230,"poster":"Sedney",]),(["id":798,"body":"On Fri Jun  9, Guest wrote:
 > Hi god...
 >   my player \"limay\"....race \"imp\"
->   [DÈËÎïµµ°¸»µµô....Çë°ïÃ¦ÐÞÀíÒ»ÏÂ..:)
+>   [Däººç‰©æª”æ¡ˆå£žæŽ‰....è«‹å¹«å¿™ä¿®ç†ä¸€ä¸‹..:)
 >   thx..........
 >                                    limay
 restore lo

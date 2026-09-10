@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("lucky dagger", "ĞÒÔËØ°Ê×");
+	set_name("lucky dagger", "å¹¸é‹åŒ•é¦–");
 	add( "id", ({ "dagger" }) );
-	set_short("ĞÒÔËØ°Ê×");
+	set_short("å¹¸é‹åŒ•é¦–");
 	set_long(
-		"ÕâÊÇÒ»°ÑµñÖøĞÒÔËÅ®ÉñµÄ¾«ÇÉØ°Ê×£¬·æÈñµÄÈĞÉÏ·ºµÄ¿É°®µÄ×Ï¹â¡£\n"
+		"é€™æ˜¯ä¸€æŠŠé›•è‘—å¹¸é‹å¥³ç¥çš„ç²¾å·§åŒ•é¦–ï¼Œé‹’éŠ³çš„åˆƒä¸Šæ³›çš„å¯æ„›çš„ç´«å…‰ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "dagger" );
 	set( "weapon_class", 30 );
 	set( "min_damage", 15 );

@@ -5,11 +5,11 @@ inherit PILL;
 void create()
 {
 	pill::create();
-	set_name( "shou-lin pill", "ÓñÁéÉ¢" );
+	set_name( "shou-lin pill", "ç‰éˆæ•£" );
 	add( "id", ({ "pill" }) );
-	set_short( "ÓñÁéÉ¢" );
+	set_short( "ç‰éˆæ•£" );
 	set_long(
-		"ÓñÁéÉ¢ÄËÉÙÁÖÄÚ·şÖÎÉËÁ¼Ò©\n" 
+		"ç‰éˆæ•£ä¹ƒå°‘æ—å…§æœæ²»å‚·è‰¯è—¥\n" 
 	);
 	set_healing( 40 );
 	set( "no_sale", 1 );

@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("statue", "MIYUKIµñÏñ");
+        set_name("statue", "MIYUKIé›•åƒ");
         add( "id", ({ "statue" }) );
-        set_short( "MIYUKIµñÏñ" );
+        set_short( "MIYUKIé›•åƒ" );
         set_long(
-                 "ÕâÊÇ°¬ÈûË¹Ì«Ì«MiyukiµÄµñÏñ¡£\n"
+                 "é€™æ˜¯è‰¾å¡æ–¯å¤ªå¤ªMiyukiçš„é›•åƒã€‚\n"
         );
-        set( "unit", "×ù");
+        set( "unit", "åº§");
         set( "weight", 50 );
         set( "value", ({ 0, "silver" }) );
         set("get_my_statue",1);

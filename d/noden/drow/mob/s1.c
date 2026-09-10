@@ -6,22 +6,22 @@ void create()
 {
         ::create();
         set_level(5);
-        set_name("snake", "Ğ¡²İÉß" );
-        set_short("snake", "Ğ¡²İÉß" );
+        set_name("snake", "å°è‰è›‡" );
+        set_short("snake", "å°è‰è›‡" );
         set_long(
 @C_LONG
-ÕâÊÇÌõĞ¡²İÉß£¬´ÓÄãµÄ³£Ê¶À´ÅĞ±ğ£¬ÄãÖªµÀÕâÊÇÎŞ¶¾µÄ
+é€™æ˜¯æ¢å°è‰è›‡ï¼Œå¾ä½ çš„å¸¸è­˜ä¾†åˆ¤åˆ¥ï¼Œä½ çŸ¥é“é€™æ˜¯ç„¡æ¯’çš„
 C_LONG
         );
-        set( "unit", "Ìõ" );
+        set( "unit", "æ¢" );
         set( "alignment", -200 );
         set( "natural_weapon_class1", 8 );
         set( "natural_min_damage1", 4 );
         set( "natural_max_damage1", 5 );
         set("chat_chance",5);
         set( "chat_output", ({
-                "Ğ¡²İÉßÔÚÄãµÄ½Å±ßÓÎ×ß¡£\n" }) );
-        set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
-        set_c_verbs( ({ "%s°ºÍ·ÕÅ×ì£¬Íù%sÒ§È¥" }) );
+                "å°è‰è›‡åœ¨ä½ çš„è…³é‚ŠéŠèµ°ã€‚\n" }) );
+        set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
+        set_c_verbs( ({ "%sæ˜‚é ­å¼µå˜´ï¼Œå¾€%så’¬å»" }) );
 }
 

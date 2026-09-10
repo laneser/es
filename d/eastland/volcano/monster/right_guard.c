@@ -8,19 +8,19 @@ void create ()
 {
 	::create();
 	set_level(17);
-	set_name( "Right Guard", "ÓÒ»¤·¨" );
+	set_name( "Right Guard", "å³è­·æ³•" );
 	add ("id", ({ "guard" }) );
-	set_short( "ÓÒ»¤·¨£­¡õ¡õ" );
+	set_short( "å³è­·æ³•ï¼â–¡â–¡" );
 	set_long( 
 @LONG
-ÓÒ»¤·¨£­¡õ¡õÔ­±¾ÊÇÒ»Ö»Ñı¹Ö£¬¾ßÓĞ¿ÉÅÂµÄÄ§Á¦£¬Ô­À´¾Ó×¡ÔÚÔÆÄÏ´óÔóÖĞ£¬
-ááÀ´±»ÁúÍõÊÕ·üáá£¬³ÉÎªÁúÍõµÄ»¤·¨£¬Ò»ÆğĞŞÁ¶¶ø³ÉÕı¹û¡£
+å³è­·æ³•ï¼â–¡â–¡åŸæœ¬æ˜¯ä¸€éš»å¦–æ€ªï¼Œå…·æœ‰å¯æ€•çš„é­”åŠ›ï¼ŒåŸä¾†å±…ä½åœ¨é›²å—å¤§æ¾¤ä¸­ï¼Œ
+å¾Œä¾†è¢«é¾ç‹æ”¶ä¼å¾Œï¼Œæˆç‚ºé¾ç‹çš„è­·æ³•ï¼Œä¸€èµ·ä¿®ç…‰è€Œæˆæ­£æœã€‚
 LONG
 	);
         set( "alignment", 8000 );
         set( "gender", "male" );
         set( "race", "undead" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
         set( "likefish",1);
 	set_perm_stat( "dex", 27 );
 	set_perm_stat( "str", 15 );
@@ -53,10 +53,10 @@ LONG
     set("spells/sleet",3);
     set("spells/lightning",5);
     set("spells/ether-bolt",8);
-    set("c_death_msg","%sµÄÉíÌå¿ªÊ¼ËéÁÑ....ÖÕÖÁÏûÊ§¡£\n");
+    set("c_death_msg","%sçš„èº«é«”é–‹å§‹ç¢è£‚....çµ‚è‡³æ¶ˆå¤±ã€‚\n");
     set("chat_chance",5);
     set("att_chat_output", ({
-      "\n¡õ¡õËµ£ºÄãµÄĞ¡ÃüÒÑ¾­ÔÚÎÒµÄÕÆÎÕÖ®ÖĞ£¬¿ìÍ¶½µ°É¡£\n\n"
+      "\nâ–¡â–¡èªªï¼šä½ çš„å°å‘½å·²ç¶“åœ¨æˆ‘çš„æŒæ¡ä¹‹ä¸­ï¼Œå¿«æŠ•é™å§ã€‚\n\n"
     }) );
     wield_weapon(OWEAPON"wand1");
     equip_armor(OARMOR"cloak2");
@@ -64,7 +64,7 @@ LONG
 
 int cast_spell()
 {// 40% call demon -> 60% little 40% great and continue attack.
- // if( hp < 100 ) -> 100% ÔÙÉú hp add 20-40 and continue attack.
+ // if( hp < 100 ) -> 100% å†ç”Ÿ hp add 20-40 and continue attack.
  // if( hp < 300 ) -> 25% steal life force, damage 30-40 stop.
  // else 40% cast spell -> 70% sleet 3,  21% ether-bolt 8
  //      60% normal attack.
@@ -78,17 +78,17 @@ int cast_spell()
 
     if( (this_object()->query("hit_points")<100) ) {
       tell_room( environment(victim), 
-        "¡õ¡õµÄÉíÌåÔÙÉúÓÖ¸´Ô­ÁË¡£\n"
+        "â–¡â–¡çš„èº«é«”å†ç”Ÿåˆå¾©åŸäº†ã€‚\n"
       );
       this_object()->receive_heal( auto_heal+random(auto_heal) );
     }
     if( (this_object()->query("hit_points")<300) && (random(20)<5) ) {
       tell_object( victim, 
-        "¡õ¡õÑÛ¾¦Éä³öÒ»µÀÇà¹â£¬ÎüÈ¡ÄãµÄÉúÃüÁ¦¡£\n"
+        "â–¡â–¡çœ¼ç›å°„å‡ºä¸€é“é’å…‰ï¼Œå¸å–ä½ çš„ç”Ÿå‘½åŠ›ã€‚\n"
       );
       tell_room( environment(victim),
-        "ÄãËÆºö¿´µ½"+victim->query("c_name")+
-        "µÄÁé»êÆ®ÖÁ¡õ¡õÉíÉÏ£¬¡õ¡õµÄÉíÌåÓÖ¸´Ô­ÁË¡£\n",
+        "ä½ ä¼¼å¿½çœ‹åˆ°"+victim->query("c_name")+
+        "çš„éˆé­‚é£„è‡³â–¡â–¡èº«ä¸Šï¼Œâ–¡â–¡çš„èº«é«”åˆå¾©åŸäº†ã€‚\n",
         victim
       );
       damage = life_damage + random(10);

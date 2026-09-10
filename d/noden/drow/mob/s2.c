@@ -6,14 +6,14 @@ void create()
 {
         ::create();
         set_level(9);
-        set_name("big snake", "¾ŞòşÉß");
-        set_short("¾ŞòşÉß");
+        set_name("big snake", "å·¨èŸ’è›‡");
+        set_short("å·¨èŸ’è›‡");
         set_long(
 @C_LONG
-ÕâÊÇÒ»ÌõĞ×ÃÍ¾Ş´óµÄ´óòşÉß£¬¿´Ëü·ÊÅÖµÄÉíÇû£¬²»ÖªÍÌÏÂ¶àÉÙ¶«Î÷£¡
+é€™æ˜¯ä¸€æ¢å…‡çŒ›å·¨å¤§çš„å¤§èŸ’è›‡ï¼Œçœ‹å®ƒè‚¥èƒ–çš„èº«è»€ï¼Œä¸çŸ¥åä¸‹å¤šå°‘æ±è¥¿ï¼
 C_LONG
         );
-        set( "unit", "Ìõ" );
+        set( "unit", "æ¢" );
         set( "pursuing", 1 );
         set( "aggressive", 1 );
         set( "moving", 1 );
@@ -24,7 +24,7 @@ C_LONG
         set( "natural_weapon_class1", 8 );
         set( "natural_min_damage1", 4 );
         set( "natural_max_damage1", 5 );
-        set_c_limbs( ({ "Í·²¿", "·Ê·ÊµÄÉíÌå", "´Ö´ÖµÄÎ²°Í" }) );
-        set_c_verbs( ({ "%sÓÃÁ¦Å¤¶¯£¬Íù%s¾íÈ¥" }) );
+        set_c_limbs( ({ "é ­éƒ¨", "è‚¥è‚¥çš„èº«é«”", "ç²—ç²—çš„å°¾å·´" }) );
+        set_c_verbs( ({ "%sç”¨åŠ›æ‰­å‹•ï¼Œå¾€%sæ²å»" }) );
 }
 

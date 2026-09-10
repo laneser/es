@@ -10,11 +10,11 @@ void create()
 	set_save_file("saulin_board");
         set_location(SAULIN"monk_guild");
 	set ("short.text", "openion board");
-	set ("c_short.text", "���ֹ������԰�");
+	set ("c_short.text", "少林公會留言板");
 	set ("c_long.text", 
 @DESC
-����һ�����԰壬���˱��� BUGS ���ṩ���ӣ���ϸ�÷���ο� help board��
-��������¼��乫����������ϣ����Ҷ�෢�ԣ����������ø��� !!
+這是一個留言板，供人報告 BUGS 、提供點子，詳細用法請參看 help board。
+由於少林寺及其公會是新區域，希望大家多多發言，讓我們做得更好 !!
 DESC
 );
 }

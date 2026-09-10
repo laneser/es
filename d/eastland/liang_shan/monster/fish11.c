@@ -7,12 +7,12 @@ void create ()
 {
         ::create();
         set_level(1);
-        set_name( "little fish", "Æ¯ÁÁÐ¡Óã" );
-        set_short("Æ¯ÁÁÐ¡Óã");
-        set("unit","Ìõ");
+        set_name( "little fish", "æ¼‚äº®å°é­š" );
+        set_short("æ¼‚äº®å°é­š");
+        set("unit","æ¢");
         set_long(
 @C_LONG
-    ÕâÊÇÒ»Ìõ·Ç³£¿É°®µÄÐ¡Óã£¬ËüÕýºÃÆæµÄ¿´ÖøÄã¡£
+    é€™æ˜¯ä¸€æ¢éžå¸¸å¯æ„›çš„å°é­šï¼Œå®ƒæ­£å¥½å¥‡çš„çœ‹è‘—ä½ ã€‚
 C_LONG
 );
         set ("gender", "female");
@@ -33,7 +33,7 @@ int accept_item(object me,object item)
 {
      tell_object(me,
 @CRUMB
-Ð¡Óã¿ªÊ¼¿ìÀÖµÄ³ÔÖøÃæ°üÐ¼.......
+å°é­šé–‹å§‹å¿«æ¨‚çš„åƒè‘—éºµåŒ…å±‘.......
 CRUMB
 	);
 		item->remove();

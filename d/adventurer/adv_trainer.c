@@ -24,30 +24,30 @@ int do_train(string arg)
 
 	if( !arg || arg=="" || undefinedp(lessons[arg]) )
 		return notify_fail( 
-			"ÄãÒªÑµÁ·Ê²÷á¼¼ÄÜ£¿\n" );
+			"ä½ è¦è¨“ç·´ä»€éº¼æŠ€èƒ½ï¼Ÿ\n" );
         explore  = (int)this_player()->query_explore_points();
 	total_points=EXPLORE_D->query_total_explore();
 	EXPLORE1=explore*100/total_points;
 	if (EXPLORE1 > 100) EXPLORE1 =100;
 	
 	if( EXPLORE1 < lessons[arg][2] )
-	        return notify_fail("°¬·ðÈðËµµÀ: Ã»ÓÐÃ°ÏÕ¾«ÉñµÄÃ°ÏÕÕß£¬²»ÖµµÃÎÒ´«ÊÚ¼¼ÇÉ!\n");
+	        return notify_fail("è‰¾ä½›ç‘žèªªé“: æ²’æœ‰å†’éšªç²¾ç¥žçš„å†’éšªè€…ï¼Œä¸å€¼å¾—æˆ‘å‚³æŽˆæŠ€å·§!\n");
 	if( !this_object()->check_trainee( this_player() ) )
 		return 0;
 
 	skill = (int)this_player()->query_perm_skill(arg);
 	if( skill > lessons[arg][1] )
 		return notify_fail( 
-			"ÕâÏî¼¼ÄÜÔÚÕâÀïÄãÖ»ÄÜÑ§µ½ " + lessons[arg][1] + "¡£\n");
+			"é€™é …æŠ€èƒ½åœ¨é€™è£¡ä½ åªèƒ½å­¸åˆ° " + lessons[arg][1] + "ã€‚\n");
 
 	exp = (int)STATS_D->query_skill_exp(skill) * lessons[arg][0] / 100;
 	if( exp > (int)this_player()->query_exp_stock() )
 		return notify_fail( 
-			"ÌáÉýÕâÏî¼¼ÄÜÐèÒª " + exp + " µã¾­Ñé£¬µ«ÊÇÄãµÄ¾­Ñé²»¹»¡£\n");
+			"æå‡é€™é …æŠ€èƒ½éœ€è¦ " + exp + " é»žç¶“é©—ï¼Œä½†æ˜¯ä½ çš„ç¶“é©—ä¸å¤ ã€‚\n");
 
 	this_player()->gain_experience( -exp );
 	STATS_D->train_skill( this_player(), arg );
-	write( "ÄãµÄ" + to_chinese(arg) + "¼¼ÄÜÏÖÔÚÌáÉýµ½ " + 
-		this_player()->query_perm_skill(arg) + " ÁË¡£\n");
+	write( "ä½ çš„" + to_chinese(arg) + "æŠ€èƒ½ç¾åœ¨æå‡åˆ° " + 
+		this_player()->query_perm_skill(arg) + " äº†ã€‚\n");
 	return 1;
 }

@@ -6,8 +6,8 @@ void create()
 {
 	::create();
 	set_level( 3 );
-	set_name( "smith", "Ìú½³" );
-	set_short( "Ìú½³" );
+	set_name( "smith", "éµåŒ " );
+	set_short( "éµåŒ " );
 	set("long",
 		"@@query_c_long"
 	);
@@ -27,8 +27,8 @@ string query_c_long()
 {
 
 	if( (int)this_player()->query_quest_level("Goddess_statue") > 1 )
-		return "Õâ¸öÌú½³ÕýÔÚ·¢´ô£¬ÒòÎªËûµÄÂ¯»ðÒ»Ö±Íú²»ÆðÀ´¡£\n";
-	else return "Ìú½³ÕýÔÚÐÁÇÚµØ¹¤×÷Öø£¬²»¹ý¿´ÆðÀ´ËûËÆºõÀÖÔÚÆäÖÐ¡£\n";
+		return "é€™å€‹éµåŒ æ­£åœ¨ç™¼å‘†ï¼Œå› ç‚ºä»–çš„çˆç«ä¸€ç›´æ—ºä¸èµ·ä¾†ã€‚\n";
+	else return "éµåŒ æ­£åœ¨è¾›å‹¤åœ°å·¥ä½œè‘—ï¼Œä¸éŽçœ‹èµ·ä¾†ä»–ä¼¼ä¹Žæ¨‚åœ¨å…¶ä¸­ã€‚\n";
 }
 
 int my_tactic()
@@ -42,15 +42,15 @@ int my_tactic()
 		weapon = victim->query("weapon2");
 	if( !weapon ) return 0;
 	tell_room( environment(), 
-		"Ìú½³¸ß¾ÙÌú¡õ£¬Íù" + victim->query("c_name") + "µÄ" + 
-		weapon->query("c_name") + "µÄÈõµã¡¸¿ïà¥¡¹Ò»ÉùÇÃÁËÏÂÈ¥¡£\n",
+		"éµåŒ é«˜èˆ‰éµâ–¡ï¼Œå¾€" + victim->query("c_name") + "çš„" + 
+		weapon->query("c_name") + "çš„å¼±é»žã€ŒåŒ¡å•·ã€ä¸€è²æ•²äº†ä¸‹åŽ»ã€‚\n",
 		({ this_object(), victim }) );
 	tell_object( victim, 
-		"Ìú½³¸ß¾ÙÌú¡õ£¬ÍùÄãµÄ" + 
-		weapon->query("c_name") + "µÄÈõµã¡¸¿ïà¥¡¹Ò»ÉùÇÃÁËÏÂÈ¥¡£\n");
+		"éµåŒ é«˜èˆ‰éµâ–¡ï¼Œå¾€ä½ çš„" + 
+		weapon->query("c_name") + "çš„å¼±é»žã€ŒåŒ¡å•·ã€ä¸€è²æ•²äº†ä¸‹åŽ»ã€‚\n");
 	wc = weapon->query("weapon_class");
 	if( !weapon->query("damaged") ) {
-		weapon->add( "short", " (ÊÜËð)" );
+		weapon->add( "short", " (å—æ)" );
 	}
 	weapon->add( "damaged", wc/2 );
 	weapon->add( "weapon_class", - wc/2 );

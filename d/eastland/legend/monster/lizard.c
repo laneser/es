@@ -8,15 +8,15 @@ void create()
 {
   ::create();
   set_level(13);
-  set_name("huge lizard", "Ê³ÈËòáòæ");
+  set_name("huge lizard", "é£Ÿäººèœ¥èœ´");
   add( "id", ({ "lizard" }) );
-  set_short("Ê³ÈËòáòæ");
+  set_short("é£Ÿäººèœ¥èœ´");
   set_long(
-    "Ò»Ö»¾Þ´óµÄòáòæ£¬»ëÉíÉÏÏÂ¶¼ÓÉÒ»²ãºìÉ«µÄÒºÌå¸²¸ÇÖø¡£\n"
+    "ä¸€éš»å·¨å¤§çš„èœ¥èœ´ï¼Œæ¸¾èº«ä¸Šä¸‹éƒ½ç”±ä¸€å±¤ç´…è‰²çš„æ¶²é«”è¦†è“‹è‘—ã€‚\n"
     );
   set( "race", "amphibia" );
   set("killer",1);
-  set( "unit", "Ö»" );
+  set( "unit", "åª" );
   set( "exp_reward", 1500 );
   set( "alignment", -800 );
   set_natural_weapon(40,20,20);
@@ -31,9 +31,9 @@ void create()
   set( "aggressive", 1 );
   set( "time_to_heal", 10 );
   set( "tactic_func", "emit_poison" );
-  set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å" }) );
-  set_c_verbs( ({ "%sÉì³ö¡õÂÌÉ«µÄÉàÍ·£¬¾íÏò%s" ,
-                  "%sÓÃËüµÄÎ²°Í×ªÉíÉ¨Ïò%s"
+  set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰è…³", "å¾Œè…³" }) );
+  set_c_verbs( ({ "%sä¼¸å‡ºâ–¡ç¶ è‰²çš„èˆŒé ­ï¼Œå·å‘%s" ,
+                  "%sç”¨å®ƒçš„å°¾å·´è½‰èº«æŽƒå‘%s"
                   }) );
 }
 
@@ -43,8 +43,8 @@ int emit_poison()
 
   if( random(20)>7 || !(victim= query_attacker()) ) return 0;
   tell_object( environment(this_object()),@LONG
-ÄãºÝºÝµÄ»÷ÖÐÁËÊ³ÈËòáòæµÄÎ²°Í£¬ µ«ÊÇÒ»¹ÉÐÈ³ôµÄ°µºìÉ«ÒºÌåÈ´ÓÉ
-òáòæµÄÉË¿ÚÅçÁË³öÀ´£¬½¦µ½ÁËÄãµÄÉíÉÏ......
+ä½ ç‹ ç‹ çš„æ“Šä¸­äº†é£Ÿäººèœ¥èœ´çš„å°¾å·´ï¼Œ ä½†æ˜¯ä¸€è‚¡è…¥è‡­çš„æš—ç´…è‰²æ¶²é«”å»ç”±
+èœ¥èœ´çš„å‚·å£å™´äº†å‡ºä¾†ï¼Œæ¿ºåˆ°äº†ä½ çš„èº«ä¸Š......
 LONG
     );
   (CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 5, 10 );

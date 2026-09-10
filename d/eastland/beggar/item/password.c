@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("password","ÊÖÚÍ");
+        set_name("password","æ‰‹è«­");
         add( "id" , ({ "password" }) );
-        set_short( "ÊÖÚÍ");
+        set_short( "æ‰‹è«­");
         set_long(@C_LONG
-ÕâÊÇØ¤°ï°ïÖ÷µÄÊÖÚÍ¡£
+é€™æ˜¯ä¸å¹«å¹«ä¸»çš„æ‰‹è«­ã€‚
 C_LONG  );      
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set("weight",5);
         set("no_sale",1);
         set("value", ({1, "silver"}) );

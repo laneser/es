@@ -15,7 +15,7 @@ int cast(int level, string target)
 	
 	if( (int)me->query_skill("white-magic") < query_need_skill(level) ) {
 		tell_object( me,
-			"ÄãµÄ°×Ä§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n"
+			"ä½ çš„ç™½é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n"
 		);
 		return 0;
 	}
@@ -23,7 +23,7 @@ int cast(int level, string target)
 	if( target == "NONE" ) dest = me;
 	else if( !(dest= present( target, environment(me) )) ) {
 		tell_object( me,
-			"Òª¶ÔË­Ê¹ÓÃ·ÀÓùÔöÇ¿·¨Êõ£¿\n"
+			"è¦å°èª°ä½¿ç”¨é˜²ç¦¦å¢žå¼·æ³•è¡“ï¼Ÿ\n"
 		);
 	    return 0;
 	}
@@ -33,9 +33,9 @@ int cast(int level, string target)
 	    delay_time = 3;
 	me->block_attack(delay_time);
 	me->set_temp("cast_busy", 1);
-	write( "Äã¿ªÊ¼Ò÷ËÐ°×Ä§·¨ÖÐ·ÀÓùÔöÇ¿·¨ÊõµÄÖäÎÄ....¡£\n");
+	write( "ä½ é–‹å§‹åŸèª¦ç™½é­”æ³•ä¸­é˜²ç¦¦å¢žå¼·æ³•è¡“çš„å’’æ–‡....ã€‚\n");
 	tell_room( environment(me), 
-		me->query("c_name") + "¿ªÊ¼ÒÔÒ»ÖÖ×¯ÑÏµÄÉùÒôÒ÷ËÐÖäÎÄ....¡£\n",
+		me->query("c_name") + "é–‹å§‹ä»¥ä¸€ç¨®èŽŠåš´çš„è²éŸ³åŸèª¦å’’æ–‡....ã€‚\n",
 		me );
 	call_out( "effect", delay_time, level, me, dest );
 	return 1;
@@ -47,15 +47,15 @@ void effect(int level, object caster, object dest)
 	
 	caster->set_temp("cast_busy", 0);
     if( !dest || !present(dest, environment(caster)) ) {
-        tell_object( caster,  "ÄãµÄÄ¿±ê×ßµôÁË¡£\n" );
+        tell_object( caster,  "ä½ çš„ç›®æ¨™èµ°æŽ‰äº†ã€‚\n" );
         return;
     }
 	if( dest->query_temp("effect/protect") ) {
 		tell_object( dest,
-			"Ò»ÍÅÉÁÁÁµÄ½ðÉ«¹âÃ¢ÁýÕÖÖøÄã£¬µ«ÊÇÄã¾õµÃ²¢Ã»ÓÐÊ²÷á²»Í¬....¡£\n");
+			"ä¸€åœ˜é–ƒäº®çš„é‡‘è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½†æ˜¯ä½ è¦ºå¾—ä¸¦æ²’æœ‰ä»€éº¼ä¸åŒ....ã€‚\n");
 	} else {
 		tell_object( dest, 
-			"Ò»ÍÅÉÁÁÁµÄ½ðÉ«¹âÃ¢ÁýÕÖÖøÄã£¬Äã¾õµÃÈ«ÉíÁ÷¶¯ÖøÒ»¹ÉÉñÆæµÄ±£»¤Á¦Á¿£¡\n"
+			"ä¸€åœ˜é–ƒäº®çš„é‡‘è‰²å…‰èŠ’ç± ç½©è‘—ä½ ï¼Œä½ è¦ºå¾—å…¨èº«æµå‹•è‘—ä¸€è‚¡ç¥žå¥‡çš„ä¿è­·åŠ›é‡ï¼\n"
 		);
 		boost = (level+1) * 3;
 		if( caster == dest )
@@ -68,7 +68,7 @@ void effect(int level, object caster, object dest)
 		call_out( "expire", duration, dest);
 	}
 	tell_room( environment(dest),
-		"Ò»ÍÅÉÁÁÁµÄ½ðÉ«¹âÃ¢ÁýÕÖÖø"+dest->query("c_name")+"£¬È»ááÖð½¥É¢È¥¡£\n"
+		"ä¸€åœ˜é–ƒäº®çš„é‡‘è‰²å…‰èŠ’ç± ç½©è‘—"+dest->query("c_name")+"ï¼Œç„¶å¾Œé€æ¼¸æ•£åŽ»ã€‚\n"
 		, dest 
     );
 }
@@ -77,7 +77,7 @@ void expire( object player )
 {
     if( !player ) return;
 	tell_object( player,
-		"Äã¾õµÃÈ«ÉíÓÐµã¿ÕÐé¸Ð£¬ÄÇ¹É±£»¤µÄÁ¦Á¿ÏûÊ§ÁË....¡£\n"
+		"ä½ è¦ºå¾—å…¨èº«æœ‰é»žç©ºè™›æ„Ÿï¼Œé‚£è‚¡ä¿è­·çš„åŠ›é‡æ¶ˆå¤±äº†....ã€‚\n"
     );
 	player->set_temp("extra_db/protect",0);
 	player->set_temp("effect/protect",0);

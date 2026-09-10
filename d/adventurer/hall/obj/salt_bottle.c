@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("salt bottle","ÑÎ¹Ş");
-     set_short("ÑÎ¹Ş");
-     set_long("ÑÎÊÇ×ö²ËÊ±²»¿É»òÈ±µÄ°ïÊÖ£¬²»½ö¿ÉÒÔÊ¹Ê³Îï¸ü¼ÓÃÀÎ¶£¬¸ü¿ÉÊ¹Ê³Îï³£±£ĞÂ\n"
-     "ÏÊ¡£Õâ¸öÑÎ¹Ş¾ÍÊÇ×°ÑÎÓÃµÄ£¬µ«ÊÇÓÉì¶¸Ç×ÓÊÇÃÜ·âµÄ£¬ÄãÒ²²»ÖªµÀÀïÃæ»¹\n"
-     "ÓĞ¶àÉÙÑÎ¡£\n"
+     set_name("salt bottle","é¹½ç½");
+     set_short("é¹½ç½");
+     set_long("é¹½æ˜¯åšèœæ™‚ä¸å¯æˆ–ç¼ºçš„å¹«æ‰‹ï¼Œä¸åƒ…å¯ä»¥ä½¿é£Ÿç‰©æ›´åŠ ç¾å‘³ï¼Œæ›´å¯ä½¿é£Ÿç‰©å¸¸ä¿æ–°\n"
+     "é®®ã€‚é€™å€‹é¹½ç½å°±æ˜¯è£é¹½ç”¨çš„ï¼Œä½†æ˜¯ç”±æ–¼è“‹å­æ˜¯å¯†å°çš„ï¼Œä½ ä¹Ÿä¸çŸ¥é“è£¡é¢é‚„\n"
+     "æœ‰å¤šå°‘é¹½ã€‚\n"
       );
      set("use_time",10);
      add("id",({ "bottle","salt" }) );
-     set( "unit", "Æ¿");
+     set( "unit", "ç“¶");
      set("weight",10);
      set("value", ({ 400, "silver" }));
 }
@@ -28,25 +28,25 @@ int do_cook(string arg)
 	skill1 = me->query_skill("anatomlogy");
 	skill2 = me->query_skill("cook");
     	if ( !skill2 || skill2=0 ) 
-    	        return notify_fail("ÄãÏë¸ÉÊ²÷á?");
-    	if (!arg) return notify_fail("ÄãÒªÓÃÊ²÷á²ÄÁÏÕ¹Â¶Äã³öÉ«µÄ³øÒÕ£¿\n");
+    	        return notify_fail("ä½ æƒ³å¹¹ä»€éº¼?");
+    	if (!arg) return notify_fail("ä½ è¦ç”¨ä»€éº¼ææ–™å±•éœ²ä½ å‡ºè‰²çš„å»šè—ï¼Ÿ\n");
 	env = environment(me);
 	if( !env || !target = present(arg, env) )
-		return notify_fail("ÄãÒªÅëâ¿µÄ²ÄÁÏ²»ÔÚÕâÀï¡£\n");
+		return notify_fail("ä½ è¦çƒ¹é£ªçš„ææ–™ä¸åœ¨é€™è£¡ã€‚\n");
         if ( !target->id("corpse")) {    
-	  tell_object(me,"Äã·èÁËÂğ?Õâ¸ö¶«Î÷²»ÄÜÄÃÀ´ÖóÀ²!!\n");
+	  tell_object(me,"ä½ ç˜‹äº†å—?é€™å€‹æ±è¥¿ä¸èƒ½æ‹¿ä¾†ç…®å•¦!!\n");
 	  tell_room( env, 
-	             me->query("c_name")+"¾¹È»ÆóÍ¼°Ñ"+
-	             target->query("c_name")+"×÷ÎªÁÏÀíµÄ²ÄÁÏ¡£\n", me);
+	             me->query("c_name")+"ç«Ÿç„¶ä¼åœ–æŠŠ"+
+	             target->query("c_name")+"ä½œç‚ºæ–™ç†çš„ææ–™ã€‚\n", me);
 	             return 1;
 	                            }
 	if ( !me->query_vision() )
-        return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+        return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
 	if ( !present("carver",me) )
-	        return notify_fail("Äã»¹ĞèÒªÒ»°Ñ²Ëµ¶²ÅÄÜ±íÏÖÄãÍêÃÀµÄ³øÒÕ¡£\n");
+	        return notify_fail("ä½ é‚„éœ€è¦ä¸€æŠŠèœåˆ€æ‰èƒ½è¡¨ç¾ä½ å®Œç¾çš„å»šè—ã€‚\n");
 	tell_object(me,
-		set_color("ÄãÌÍ³öÑÎ¹ŞºÍ²Ëµ¶£¬¶×ÔÚÂ·±ßµÄÊ¬ÌåÅÔ£¬¿ªÊ¼°şÏ´...\n","HIY") );
-	tell_room(environment(me),sprintf("%sÌÍ³öÒ»°ÑĞ¡²Ëµ¶ºÍÒ»¸öĞ¡¹Ş×Ó£¬¹í¹íËîËîµÄ¶×ÔÚÂ·±ßµÄÊ¬ÌåÅÔ±ß...",
+		set_color("ä½ æå‡ºé¹½ç½å’Œèœåˆ€ï¼Œè¹²åœ¨è·¯é‚Šçš„å±é«”æ—ï¼Œé–‹å§‹å‰æ´—...\n","HIY") );
+	tell_room(environment(me),sprintf("%sæå‡ºä¸€æŠŠå°èœåˆ€å’Œä¸€å€‹å°ç½å­ï¼Œé¬¼é¬¼ç¥Ÿç¥Ÿçš„è¹²åœ¨è·¯é‚Šçš„å±é«”æ—é‚Š...",
 		me->query("c_name")),
 		me );
         target->remove();
@@ -65,11 +65,11 @@ int cook(object me)
         heal1 = 7*skill2+2*skill1+3*level-random(10);
         heal = heal1/20;
         if ( !random(skill1)>9 ) 
-                return notify_fail("ÄãÆóÍ¼ÓÃ²Ëµ¶¸îÏÂÊ¬ÌåµÄÈâ£¬È´°Ñ¡õÌåÍÚµÄÃæÄ¿È«·Ç..\n");
+                return notify_fail("ä½ ä¼åœ–ç”¨èœåˆ€å‰²ä¸‹å±é«”çš„è‚‰ï¼Œå»æŠŠâ–¡é«”æŒ–çš„é¢ç›®å…¨é..\n");
         tell_object(me,
-        "ÄãÌÍ³ö²Ëµ¶£¬ÇĞÏÂÊ¬ÌåÉíÉÏµÄÉÏÈâ£¬ÔÙÈöÉÏÒ»Ğ©ÑÎ£¬°ÑËü×ö³ÉÇ¬Èâ¡£\n");
-        tell_room(environment(me),"Äã¿´µ½" +me->query("c_name")+                
-        "ÓÃ²Ëµ¶°ÑÊ¬ÌåÉÏµÄÈâÒ»Æ¬Æ¬ÇĞÏÂÀ´£¬ÓÖÔÚÈâÉÏÈöÉÏÒ»Ğ©¶«Î÷...\n",me);
+        "ä½ æå‡ºèœåˆ€ï¼Œåˆ‡ä¸‹å±é«”èº«ä¸Šçš„ä¸Šè‚‰ï¼Œå†æ’’ä¸Šä¸€äº›é¹½ï¼ŒæŠŠå®ƒåšæˆä¹¾è‚‰ã€‚\n");
+        tell_room(environment(me),"ä½ çœ‹åˆ°" +me->query("c_name")+                
+        "ç”¨èœåˆ€æŠŠå±é«”ä¸Šçš„è‚‰ä¸€ç‰‡ç‰‡åˆ‡ä¸‹ä¾†ï¼Œåˆåœ¨è‚‰ä¸Šæ’’ä¸Šä¸€äº›æ±è¥¿...\n",me);
         meat = new("/d/adventurer/hall/obj/dry_meat");
         meat->set("heal",heal);
         if (skill2/2-random(5)<1) 
@@ -79,7 +79,7 @@ int cook(object me)
                  set("use_time",query("use_time")-1);
                  if ( query("use_time")<1 ) {
                        tell_object(me,
-                       "Äã·¢ÏÖÑÎ¹ŞÒÑ¾­¿ÕÁË£¬ÄãËæÊÖ°ÑËü¶ªÔÚÂ·±ß¡£\n");
+                       "ä½ ç™¼ç¾é¹½ç½å·²ç¶“ç©ºäº†ï¼Œä½ éš¨æ‰‹æŠŠå®ƒä¸Ÿåœ¨è·¯é‚Šã€‚\n");
                        remove();
                        return 1;
                                             }
@@ -89,7 +89,7 @@ int cook(object me)
         set("use_time",query("use_time")-1);
         if ( query("use_time")<1 ) {
                         tell_object(me,
-                        "Äã·¢ÏÖÑÎ¹ŞÒÑ¾­¿ÕÁË£¬ÄãËæÊÖ°ÑËü¶ªÔÚÂ·±ß¡£\n");
+                        "ä½ ç™¼ç¾é¹½ç½å·²ç¶“ç©ºäº†ï¼Œä½ éš¨æ‰‹æŠŠå®ƒä¸Ÿåœ¨è·¯é‚Šã€‚\n");
                         remove();
                         return 1;
                                    }

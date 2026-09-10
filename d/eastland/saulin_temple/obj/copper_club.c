@@ -3,12 +3,12 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "copper club", "ÊìÍ­¹÷");
+        set_name( "copper club", "ç†ŸéŠ…æ£");
         add ("id",({ "club"}) );
-        set_short("ÊìÍ­¹÷");
-        set("unit", "°Ñ");
+        set_short("ç†ŸéŠ…æ£");
+        set("unit", "æŠŠ");
         set_long( @C_LONG
-ÕâÊÇÒ»°ÑÓÉÊìÍ­Öı³ÉµÄ¹÷×Ó£¬ÊÇÉÙÁÖÎäÉ®×îÏ²»¶ÓÃµÄÎäÆ÷Ö®Ò»¡£
+é€™æ˜¯ä¸€æŠŠç”±ç†ŸéŠ…é‘„æˆçš„æ£å­ï¼Œæ˜¯å°‘æ—æ­¦åƒ§æœ€å–œæ­¡ç”¨çš„æ­¦å™¨ä¹‹ä¸€ã€‚
 C_LONG
         );
         set( "weapon_class", 15 );

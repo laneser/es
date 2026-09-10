@@ -26,10 +26,10 @@ void effect(object player)
 	da -= da*(int)player->query("aim_difficulty/vascular")/100;
 	player->receive_damage( da );
 	tell_object(player,
-		set_color("ÄãµÄÉË¿ÚÕýÁ÷Ñª²»Ö¹£¬×îºÃ¾¡¿ìÖ¹Ñª ....\n","HIR")
+		set_color("ä½ çš„å‚·å£æ­£æµè¡€ä¸æ­¢ï¼Œæœ€å¥½å„˜å¿«æ­¢è¡€ ....\n","HIR")
 		       );
 	tell_room( environment(player), 
-		player->query("c_name") + "µÄÉË¿ÚÕý²»¶ÏµØÁ÷³öÏÊÑª ....\n",
+		player->query("c_name") + "çš„å‚·å£æ­£ä¸æ–·åœ°æµå‡ºé®®è¡€ ....\n",
 		player );
 	cond_data[1]--;
 	player->set( "conditions/" + EFFECT_NAME, cond_data );
@@ -40,7 +40,7 @@ varargs void remove_effect(object player, int silent)
 {
 	if( !silent )
 		tell_object(player,
-			set_color("ÄãµÄÉË¿ÚÍ£Ö¹Á÷ÑªÁË ....\n","HIC")
+			set_color("ä½ çš„å‚·å£åœæ­¢æµè¡€äº† ....\n","HIC")
 		);
 	player->delete("conditions/" + EFFECT_NAME );
 }

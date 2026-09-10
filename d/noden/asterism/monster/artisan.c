@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "Artisan Leo", "°ëÉíÈË¹¤½³ÀîÅ·" );
+	set_name( "Artisan Leo", "åŠèº«äººå·¥åŒ æŽæ­" );
 	add("id",({"artisan","halfling","leo"}) );
-	set_short( "°ëÉíÈË¹¤½³ÀîÅ·" );
+	set_short( "åŠèº«äººå·¥åŒ æŽæ­" );
 	set_long(
-		"Ò»¸öÕýÔÚÐÞÀí(fix)Ä§·¨ÎïÆ·µÄ°«ÈË¹¤½³¡£\n"
+		"ä¸€å€‹æ­£åœ¨ä¿®ç†(fix)é­”æ³•ç‰©å“çš„çŸ®äººå·¥åŒ ã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "race", "halfling" );
@@ -42,14 +42,14 @@ void init()
 
 void fixing(object who)
 {
-  tell_object(who,"ÀîÅ·Ëµ:ÊÇµÄ£¬Ö»ÒªÊÇ±¾³ÇµÄ²úÆ·£¬ÎÒÓ¦¸Ã»áÐÞ¡£\n") ;
+  tell_object(who,"æŽæ­èªª:æ˜¯çš„ï¼Œåªè¦æ˜¯æœ¬åŸŽçš„ç”¢å“ï¼Œæˆ‘æ‡‰è©²æœƒä¿®ã€‚\n") ;
 }
 
 int fix_item(string s)
 {
      if( !s || s!="wand" )
-        return notify_fail("ÀîÅ·Ëµ: ÐÞÀíÊ²÷á¶«Î÷ ? ÐÞÀíÄãÂð ??\n" );
-     write("ÐÞÀí·ÑÒªÈý°Ù¸ö½ð±Ò,ÒªÐÞ¾Í°Ñ¶«Î÷¸øÎÒ°É !!\n" );
+        return notify_fail("æŽæ­èªª: ä¿®ç†ä»€éº¼æ±è¥¿ ? ä¿®ç†ä½ å—Ž ??\n" );
+     write("ä¿®ç†è²»è¦ä¸‰ç™¾å€‹é‡‘å¹£,è¦ä¿®å°±æŠŠæ±è¥¿çµ¦æˆ‘å§ !!\n" );
      return 1;
 }
 
@@ -58,21 +58,21 @@ int accept_item(object me,object item)
 	string name ;
 	name = (string)item->query("name");
 	if ( name != "Wand of Ultimate" ) {
-		tell_object(me,"ÀîÅ·Ò¡Ò¡Í· : ÎÒ²»ÐÞÀíÕâÖÖ¶«Î÷¡£\n");
+		tell_object(me,"æŽæ­æ–æ–é ­ : æˆ‘ä¸ä¿®ç†é€™ç¨®æ±è¥¿ã€‚\n");
 		command("give "+name+" to "+(string)me->query("name"));
 		return 1;
 	} else
 	if (!item->query("damaged"))	{
-		tell_object(me,"ÀîÅ·Ò¡Ò¡Í· : Õâ°ÑÕÈ²¢Ã»ÓÐ»µ¡£ÀîÅ·°ÑÓÀºãÖ®ÕÈ»¹¸øÄã¡£\n");
+		tell_object(me,"æŽæ­æ–æ–é ­ : é€™æŠŠæ–ä¸¦æ²’æœ‰å£žã€‚æŽæ­æŠŠæ°¸æ†ä¹‹æ–é‚„çµ¦ä½ ã€‚\n");
 		item->move(me);
 		return 1;
 	} else
 	if ((int)me->query("wealth/gold")< 300)	{
-		tell_object(me,"ÀîÅ·Ò¡Ò¡Í· : ÄãµÄÇ®²»¹»¡£ÀîÅ·°ÑÓÀºãÖ®ÕÈ»¹¸øÄã¡£\n");
+		tell_object(me,"æŽæ­æ–æ–é ­ : ä½ çš„éŒ¢ä¸å¤ ã€‚æŽæ­æŠŠæ°¸æ†ä¹‹æ–é‚„çµ¦ä½ ã€‚\n");
 		item->move(me);
 		return 1;
 	} else {
-	tell_object(me,"ÀîÅ·×ª¹ýÍ·£¬¿ªÊ¼Å¬Á¦¹¤×÷ !!\n");
+	tell_object(me,"æŽæ­è½‰éŽé ­ï¼Œé–‹å§‹åŠªåŠ›å·¥ä½œ !!\n");
 	call_out("do_fix",4,me,item);
 	return 1;
 	}
@@ -81,12 +81,12 @@ int accept_item(object me,object item)
 int do_fix(object me,object wand)
 {         
           me->add("wealth/gold",-300) ;                
-          wand->set("short","ÓÀºãÖ®ÕÈ") ;
+          wand->set("short","æ°¸æ†ä¹‹æ–") ;
           wand->set("weapon_class",40) ;
           wand->set("damaged",0) ;
           wand->set("min_damage",24);
           wand->set("max_damage",37);             
-          write("ÀîÅ·Ëµ: ÐÞºÃÁË£¬Õâ÷áºÃµÄÎäÆ÷±ðÔÙÅª»µÁË¡£\n" );
+          write("æŽæ­èªª: ä¿®å¥½äº†ï¼Œé€™éº¼å¥½çš„æ­¦å™¨åˆ¥å†å¼„å£žäº†ã€‚\n" );
 		  command("give wand to "+(string)me->query("name"));
           return 1 ;
 }

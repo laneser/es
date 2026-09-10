@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Snow Cloak", "±ùÑ©Åû·ç");
+        set_name( "Snow Cloak", "å†°é›ªæŠ«é¢¨");
         add( "id", ({ "snow","cloak" }) );
-        set_short("Snow Cloak", "±ùÑ©Åû·ç");
+        set_short("Snow Cloak", "å†°é›ªæŠ«é¢¨");
         set_long(@AAA
-ÕâÊÇÒ»¼şÑ©°×É«µÄÅû·ç£¬ÊÇÓÃ¸ß¼¶Ë¿³ñ¼ÓÉÏÌØÊâ²ÄÁÏ»ìºÏÖ¯³ÉµÄ£¬ÄÜÌá¹©Ïà
-µ±¸ßµÄ·À»¤Á¦
+é€™æ˜¯ä¸€ä»¶é›ªç™½è‰²çš„æŠ«é¢¨ï¼Œæ˜¯ç”¨é«˜ç´šçµ²ç¶¢åŠ ä¸Šç‰¹æ®Šææ–™æ··åˆç¹”æˆçš„ï¼Œèƒ½æä¾›ç›¸
+ç•¶é«˜çš„é˜²è­·åŠ›
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "cloak" );
         set( "armor_class", 7 );
         set( "defense_bonus", 5 );

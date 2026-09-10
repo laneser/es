@@ -1,52 +1,52 @@
-±êÌâ: ÑÌÓê´åÖ®ÀÇ
+æ¨™é¡Œ: ç…™é›¨æ‘ä¹‹ç‹¼
 
-    Ò». Æğµã: ÍõÎå( wang_house )
-    ¶ş. Ö÷Ö¼: ÏûÃğÒùÔô¡£
-    Èı. µÈ¼¶: ¾Å¡£
-    ËÄ. ÂÔ½â: ÑÌÓê´å( including wang_house )
-           => Ä¹³¡( including grave_yard1 )
-           => É½Çğ( 14,12.east )
-           => Ä¹³¡
-           => ÑÌÓê´å
-           => ²èÅï( tea_booth )
-           => ÑÌÓê´å
-           => Ä¹³¡
-           => ÑÌÓê´å
+    ä¸€. èµ·é»: ç‹äº”( wang_house )
+    äºŒ. ä¸»æ—¨: æ¶ˆæ»…æ·«è³Šã€‚
+    ä¸‰. ç­‰ç´š: ä¹ã€‚
+    å››. ç•¥è§£: ç…™é›¨æ‘( including wang_house )
+           => å¢“å ´( including grave_yard1 )
+           => å±±ä¸˜( 14,12.east )
+           => å¢“å ´
+           => ç…™é›¨æ‘
+           => èŒ¶æ£š( tea_booth )
+           => ç…™é›¨æ‘
+           => å¢“å ´
+           => ç…™é›¨æ‘
 
-      ( Çë×¢Òâ /u/m/mad/mad.h )
-    Îå. µØÍ¼:
-        1. ÑÌÓê´å:
+      ( è«‹æ³¨æ„ /u/m/mad/mad.h )
+    äº”. åœ°åœ–:
+        1. ç…™é›¨æ‘:
 
-                    ¡Ñ  elder_house
-                    ¡õ
-  liang_home  ¡Ñ¡ª¡ª¡Ñ¡ª¡ª¡Ñ  guey_house
-                    ¡õhamlet_path2
-                    ¡õ
-hunter_house  ¡Ñ¡ª¡ª¡Ñ¡ª¡ª¡Ñ  wang_home
-                   £¯ hamlet_path1
-                 £¯
-               ¡Ñ  13,14.east
+                    âŠ™  elder_house
+                    â–¡
+  liang_home  âŠ™â€”â€”âŠ™â€”â€”âŠ™  guey_house
+                    â–¡hamlet_path2
+                    â–¡
+hunter_house  âŠ™â€”â€”âŠ™â€”â€”âŠ™  wang_home
+                   ï¼ hamlet_path1
+                 ï¼
+               âŠ™  13,14.east
 
-        2. Ä¹³¡:
+        2. å¢“å ´:
 
-                    ¡Ñ  grave_yard3
-                    ¡õ
-                    ¡õ
-                    ¡Ñ  grave_yard1
-                   £¯£Ü
-                 £¯    £Ü
-  grave_yard4  ¡Ñ        ¡Ñ  grave_yard2
+                    âŠ™  grave_yard3
+                    â–¡
+                    â–¡
+                    âŠ™  grave_yard1
+                   ï¼ï¼¼
+                 ï¼    ï¼¼
+  grave_yard4  âŠ™        âŠ™  grave_yard2
 
                down->
-  11,14.east ¡Ñ¡ª¡ª¡Ñ  grave_yard1
+  11,14.east âŠ™â€”â€”âŠ™  grave_yard1
                <-climb up
 
-        3. ²èÅï¼°ÊŞÑ¨:
+        3. èŒ¶æ£šåŠç¸ç©´:
 
                out->
-  tea_booth  ¡Ñ¡ª¡ª¡Ñ  10,13.east
+  tea_booth  âŠ™â€”â€”âŠ™  10,13.east
                <-enter
 
           out->
-  hole  ¡Ñ¡ª¡ª¡Ñ  14,12.east
+  hole  âŠ™â€”â€”âŠ™  14,12.east
           <-hole

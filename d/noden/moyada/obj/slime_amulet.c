@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "slime amulet", "»¤Éí·û" );
+	set_name( "slime amulet", "è­·èº«ç¬¦" );
 	add( "id", ({ "amulet" }) );
-	set_short( "Ê·À³Ä·»¤Éí·û" );
+	set_short( "å²èŠå§†è­·èº«ç¬¦" );
 	set_long(
-		"»­ÖøÊ·À³Ä··ûºÅµÄ»¤Éí·û¡£\n"
+		"ç•«è‘—å²èŠå§†ç¬¦è™Ÿçš„è­·èº«ç¬¦ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "misc" );
 	set( "material", "cloth" );
 	set( "defense_bonus", 6 );

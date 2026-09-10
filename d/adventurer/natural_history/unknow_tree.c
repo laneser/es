@@ -5,15 +5,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name("unknown plant","Ææ¹ÖµÄÖ²Îï");
+	set_name("unknown plant","å¥‡æ€ªçš„æ¤ç‰©");
 	add( "id" , ({ "plant" }) );
-	set_short("Ææ¹ÖµÄÖ²Îï");
+	set_short("å¥‡æ€ªçš„æ¤ç‰©");
 	set_long(
-		"ÕâÊÇÒ»Öê¿´À´ÆÄÌØÊâµÄÖ²Îï£¬µ«ÓÉì¶¸½½üµÄÖ²ÎïÌ«Ã¯ÃÜ£¬\n"
-		"ÄãÒ²²»ÄÜÈ·¶¨ËûÊÇ²»ÊÇÓĞÓÃ£¬Ò²ĞíÄÃ°Ñ»¨¼ô(cut)°ÑËü¸îÏÂÀ´²ÅÄÜ\n"
-		"¸ãÇå³şËüÊÇÊ²÷á...\n"
+		"é€™æ˜¯ä¸€æ ªçœ‹ä¾†é —ç‰¹æ®Šçš„æ¤ç‰©ï¼Œä½†ç”±æ–¼é™„è¿‘çš„æ¤ç‰©å¤ªèŒ‚å¯†ï¼Œ\n"
+		"ä½ ä¹Ÿä¸èƒ½ç¢ºå®šä»–æ˜¯ä¸æ˜¯æœ‰ç”¨ï¼Œä¹Ÿè¨±æ‹¿æŠŠèŠ±å‰ª(cut)æŠŠå®ƒå‰²ä¸‹ä¾†æ‰èƒ½\n"
+		"ææ¸…æ¥šå®ƒæ˜¯ä»€éº¼...\n"
 	);
-   	set("unit","Öê");
+   	set("unit","æ ª");
 //   	set("cropp",1);
    	set("weight", 10000);
    	set("value",({ 0, "silver" }) );
@@ -31,19 +31,19 @@ int do_cropp( string arg )
      string str;      
            
            if ( !arg || arg != "plant") {
-           write("ÄãÏë¸îÊ²÷á??\n");
+           write("ä½ æƒ³å‰²ä»€éº¼??\n");
            return 1;
            }
            if ( !present("scissors",this_player()) ) {
-           write("ÄãÃ»ÓĞÊÊºÏµÄ¹¤¾ßà¸...\n");
+           write("ä½ æ²’æœ‰é©åˆçš„å·¥å…·å–”...\n");
            return 1;
            }
            seteuid(getuid());
-           write("ÄãÄÃÆğ»¨¼ô£¬°ÑÕâÖê²»Ã÷Ö²Îï¸îÁËÏÂÀ´£¬²¢ÇÒ×ĞÏ¸µÄ¹Û²ìËû£¡\n");
+           write("ä½ æ‹¿èµ·èŠ±å‰ªï¼ŒæŠŠé€™æ ªä¸æ˜æ¤ç‰©å‰²äº†ä¸‹ä¾†ï¼Œä¸¦ä¸”ä»”ç´°çš„è§€å¯Ÿä»–ï¼\n");
            
            tell_room( environment(this_player()),
-           "\n"+this_player()->query("c_name")+"ÄÃ³öÒ»°Ñ·æÀûµÄ»¨¼ô£¬°ÑÂ·±ßµÄÒ»ÖêÖ²Îï¸îÁËÏÂÀ´\n"
-           "£¬²¢ÇÒÄÃÔÚÊÖÉÏ×ĞÏ¸¹Û²ì...\n\n", ({this_player()}) );
+           "\n"+this_player()->query("c_name")+"æ‹¿å‡ºä¸€æŠŠé‹’åˆ©çš„èŠ±å‰ªï¼ŒæŠŠè·¯é‚Šçš„ä¸€æ ªæ¤ç‰©å‰²äº†ä¸‹ä¾†\n"
+           "ï¼Œä¸¦ä¸”æ‹¿åœ¨æ‰‹ä¸Šä»”ç´°è§€å¯Ÿ...\n\n", ({this_player()}) );
            
            switch( n= random(2) ) {
            case 0: obj = new("/d/noden/farwind/items/branz_herb");break;
@@ -51,18 +51,18 @@ int do_cropp( string arg )
            default : break;
            }
            
-           if (obj->query("c_name")=="²¼À¼×ÈÒ©²İ")
+           if (obj->query("c_name")=="å¸ƒè˜­èŒ²è—¥è‰")
            obj->set("need_skill",1);
            
            
            if ((int)obj->query("need_skill") < (int)this_player()->query_skill("natural_history")-1) {              
                
-                write("¸ù¾İÄã¶Ô²©ÎïÑ§Óë×ÔÈ»ÉúÎïµÄÈÏÊ¶£¬Äã¶Ï¶¨ÕâÊÇÒ»"+obj->query("unit")+"Ò°ÉúµÄ\n"
-                +obj->query("c_name")+"¡£ÄãºÜ¿ìµÄ°ÑËüÊÕÆğÀ´...\n");      
+                write("æ ¹æ“šä½ å°åšç‰©å­¸èˆ‡è‡ªç„¶ç”Ÿç‰©çš„èªè­˜ï¼Œä½ æ–·å®šé€™æ˜¯ä¸€"+obj->query("unit")+"é‡ç”Ÿçš„\n"
+                +obj->query("c_name")+"ã€‚ä½ å¾ˆå¿«çš„æŠŠå®ƒæ”¶èµ·ä¾†...\n");      
                
                 tell_room( environment(this_player()),
-                "\n"+this_player()->query("c_name")+"ËµµÀ: ¹ş£¬ÕÒµ½Ò»"+obj->query("unit")+"Ò°ÉúµÄ"
-                +obj->query("c_name")+"\n£¬ÕæÊÇ×¬µ½ÁË...\n\n", ({this_player()}) );
+                "\n"+this_player()->query("c_name")+"èªªé“: å“ˆï¼Œæ‰¾åˆ°ä¸€"+obj->query("unit")+"é‡ç”Ÿçš„"
+                +obj->query("c_name")+"\nï¼ŒçœŸæ˜¯è³ºåˆ°äº†...\n\n", ({this_player()}) );
                 this_player()->gain_experience(5*(int)obj->query("need_skill"));
                 obj->move(this_player());
                 remove();
@@ -71,11 +71,11 @@ int do_cropp( string arg )
            
            else {
                
-                write("Äã´ÓÀ´Ã»¼û¹ıÕâÍæÒâ£¬»òĞíËüÃ»Ê²÷áÓÃ°É..ÄãË³ÊÖ°ÑËü¶ªÔÚÂ·±ß\n");
+                write("ä½ å¾ä¾†æ²’è¦‹éé€™ç©æ„ï¼Œæˆ–è¨±å®ƒæ²’ä»€éº¼ç”¨å§..ä½ é †æ‰‹æŠŠå®ƒä¸Ÿåœ¨è·¯é‚Š\n");
                
                 tell_room( environment(this_player()),
-                "\n"+this_player()->query("c_name")+"ËÆºõ²»ÖªµÀ²Éµ½µÄÖ²ÎïÊÇÊ²÷á£¬Ëæ±ã°ÑËû\n"
-                "¶ªÔÚÂ·±ß...\n\n",({this_player()}) );
+                "\n"+this_player()->query("c_name")+"ä¼¼ä¹ä¸çŸ¥é“æ¡åˆ°çš„æ¤ç‰©æ˜¯ä»€éº¼ï¼Œéš¨ä¾¿æŠŠä»–\n"
+                "ä¸Ÿåœ¨è·¯é‚Š...\n\n",({this_player()}) );
                
                 remove();
                 return 1;

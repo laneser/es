@@ -4,11 +4,11 @@ void create(object ob)
 {
     if ( !ob ) return ;
 	ob->set_level(16);
-	ob->set_name( "swamp troll", "ÕÓÔó¾ŞÈË" );
+	ob->set_name( "swamp troll", "æ²¼æ¾¤å·¨äºº" );
 	ob->add( "id", ({ "troll" }) );
-   ob->set_short( "ÕÓÔó¾ŞÈË" );
+   ob->set_short( "æ²¼æ¾¤å·¨äºº" );
 	ob->set_long(
-		"Õâ¸ö´ó¿éÍ·×ã×ã±ÈÄã¸ßÁËÈı±¶£¬°ëÍ¸Ã÷µÄÆ¤·ôÉÏ¸²¸ÇÖøÒ»²ãÉîÂÌÉ«µÄğ¤Òº¡£\n"
+		"é€™å€‹å¤§å¡Šé ­è¶³è¶³æ¯”ä½ é«˜äº†ä¸‰å€ï¼ŒåŠé€æ˜çš„çš®è†šä¸Šè¦†è“‹è‘—ä¸€å±¤æ·±ç¶ è‰²çš„é»æ¶²ã€‚\n"
 	);
 	ob->set_perm_stat( "str", 30 );
 	ob->set_perm_stat( "dex", 12 );

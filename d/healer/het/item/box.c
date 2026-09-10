@@ -11,9 +11,9 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_name("box", "ҩ��");
-	set_short("a box", "ҩ��");
-	set_c_open_long("����һ����ͨ��ҩ�ң�ͨ��������װ���ֲ�ҩ�ġ�\n");
+	set_name("box", "藥囊");
+	set_short("a box", "藥囊");
+	set_c_open_long("這是一個普通的藥囊，通常是用來裝各種草藥的。\n");
 	set( "weight", 10);
 	set( "weight_apply", 200 );
 	set( "max_load", 200);

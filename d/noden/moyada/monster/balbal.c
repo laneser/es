@@ -7,20 +7,20 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(11);
-	set_name( "Balbal", "°Í¶û°Í¶û" );
+	set_name( "Balbal", "å·´çˆ¾å·´çˆ¾" );
 	add ("id", ({ "balbal", }) );
-	set_short( "°Í¶û°Í¶û" );
+	set_short( "å·´çˆ¾å·´çˆ¾" );
 	set_long( @LONG
 A gargoyle with no wings.
 LONG
              , @C_LONG
-ÒòÎª³¤ÆÚÔÚÃÔ¹¬ÖĞÉú»îµÄÔµ¹Ê, ³á°òÒÑ¾­ÍË»¯µÄÊ¯Ïñ¹í¡£
+å› ç‚ºé•·æœŸåœ¨è¿·å®®ä¸­ç”Ÿæ´»çš„ç·£æ•…, ç¿…è†€å·²ç¶“é€€åŒ–çš„çŸ³åƒé¬¼ã€‚
 C_LONG
 	);
 	set( "alignment", -1000 );
     set( "gender", "male" );
     set( "race", "daemon" );
-    set( "unit", "Ö»" );
+    set( "unit", "åª" );
 	set_perm_stat( "dex", 13 );
 	set_perm_stat( "str", 18 );
 	set_perm_stat( "int", 5 );
@@ -35,8 +35,8 @@ C_LONG
 	set_natural_weapon( 22, 12, 20 );
 	set_natural_armor( 65, 20 );
     set ("weight", 600);
-    set_c_limbs( ({ "ÉíÌå", "Í·", "½Å", "½Ç"}) );
-    set_c_verbs( ({ "%sÓÃ½Ç´Ì%s", "%s¿ñÌß%s", "%sÃÍ×²%s",}) );
+    set_c_limbs( ({ "èº«é«”", "é ­", "è…³", "è§’"}) );
+    set_c_verbs( ({ "%sç”¨è§’åˆº%s", "%sç‹‚è¸¢%s", "%sçŒ›æ’%s",}) );
     set ("exp_reward", 1450 );
     set_experience(14000);
 }

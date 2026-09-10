@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "water ring", "ÉñË®½ä" );
+	set_name( "water ring", "ç¥æ°´æˆ’" );
 	add( "id", ({ "ring" }) );
-	set_short( "ÉñË®½ä" );
+	set_short( "ç¥æ°´æˆ’" );
 	set_long( 
 @C_LONG
-Ë®Ö®»¤ÎÀËù´÷µÄ½äÖ¸£¬Õ¿À¶µØÈçÍ¬´óº£Ò»ÑùÉîåä¡£
+æ°´ä¹‹è­·è¡›æ‰€æˆ´çš„æˆ’æŒ‡ï¼Œæ¹›è—åœ°å¦‚åŒå¤§æµ·ä¸€æ¨£æ·±é‚ƒã€‚
 C_LONG
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "type", "finger" );
 	set( "material", "element" );
 	set( "defense_bonus", 4 );

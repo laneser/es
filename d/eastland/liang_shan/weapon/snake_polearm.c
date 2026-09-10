@@ -5,14 +5,14 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("snake_polearm","ÕÉ°ËÉßÃ¬");
+       set_name("snake_polearm","ä¸ˆå…«è›‡çŸ›");
        add("id",({"polearm","snake polearm",}) );
-       set_short("ÕÉ°ËÉßÃ¬");
+       set_short("ä¸ˆå…«è›‡çŸ›");
 	   set_long(
-           "ÕâÊÇÒ»°Ñ³¤µÄÏÅËÀÈËµÄ¹ÖÃ¬£¬Ã¬ÉíÍäÍäÇúÇú£¬¾ÍÏñÒ»ÌõÅ¤ÇúµÄÉß£®\n"
+           "é€™æ˜¯ä¸€æŠŠé•·çš„åš‡æ­»äººçš„æ€ªçŸ›ï¼ŒçŸ›èº«å½å½æ›²æ›²ï¼Œå°±åƒä¸€æ¢æ‰­æ›²çš„è›‡ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 45 );
         set("type","polearm");
 	set( "min_damage", 30 );

@@ -2,16 +2,16 @@
 inherit WEAPON;
 void create()
 {
-       set_name("magic dagger","Ä§·¨Ø°Ê×");
+       set_name("magic dagger","é­”æ³•åŒ•é¦–");
        add("id",({"magic","dagger",}) );
-       set_short("Ä§·¨Ø°Ê×");
+       set_short("é­”æ³•åŒ•é¦–");
        set_long(@LONG
-ÕâÊÇÒ»°ÑÓÉÄ§·¨´ÅÌú¿óËù¶ÍÔì³öÀ´µÄØ°Ê×£¬Í¨Ìå·¢³öÁÁÒøÉ«µÄÉÁ¹â£¬
-ËÆºõ³äÂúÁËÎ´ÖªµÄÄ§·¨Á¦Á¿¡£
+é€™æ˜¯ä¸€æŠŠç”±é­”æ³•ç£éµç¤¦æ‰€é›é€ å‡ºä¾†çš„åŒ•é¦–ï¼Œé€šé«”ç™¼å‡ºäº®éŠ€è‰²çš„é–ƒå…‰ï¼Œ
+ä¼¼ä¹å……æ»¿äº†æœªçŸ¥çš„é­”æ³•åŠ›é‡ã€‚
 LONG
 );
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
         set("type","dagger");
 	set( "min_damage", 15 );
@@ -33,15 +33,15 @@ int chname()
         set( "weapon_class", 42 );
 	set( "min_damage", 25 );
         set( "max_damage", 39 );
-  who="Ó¢ĞÛ"+this_player()->query("c_name")+"µÄØ°Ê×";
+  who="è‹±é›„"+this_player()->query("c_name")+"çš„åŒ•é¦–";
    set_name("magic dagger",who);
    set_short(who);
-   tell_object(hero,"\nÄ§·¨Ø°Ê×Í»È»¹âÃ¢´óÊ¢£¬ÔÚØ°ÈĞÉÏÍ»È»¸¡ÏÖ³öÄãµÄÃû×Ö !!\n");
+   tell_object(hero,"\né­”æ³•åŒ•é¦–çªç„¶å…‰èŠ’å¤§ç››ï¼Œåœ¨åŒ•åˆƒä¸Šçªç„¶æµ®ç¾å‡ºä½ çš„åå­— !!\n");
    }
 }
 int rename()
-{ set_name("magic dagger","Ä§·¨Ø°Ê×");
-  set_short("magic dagger","Ä§·¨Ø°Ê×");
+{ set_name("magic dagger","é­”æ³•åŒ•é¦–");
+  set_short("magic dagger","é­”æ³•åŒ•é¦–");
  	set( "weapon_class", 30 );
 	set( "min_damage", 15 );
 	set( "max_damage", 30 );
@@ -62,9 +62,9 @@ int damage(object victim)
 		victim->receive_damage(10+random(max) );
 		victim->set("last_attacker", holder );
 		tell_object( holder,
-			"\nÄãµÄØ°Ê×·º³öÒ»µÀÀ¶Ã£Ã£µÄÎíÆøÆ®ÏòµĞÈË£¬½«Ëû¾íµ½°ë¿Õ£®½ÓÖøÒ»µÀ°×¹âÉä½øËûµÄĞÄÔà£®\n\n");
+			"\nä½ çš„åŒ•é¦–æ³›å‡ºä¸€é“è—èŒ«èŒ«çš„éœ§æ°£é£„å‘æ•µäººï¼Œå°‡ä»–æ²åˆ°åŠç©ºï¼æ¥è‘—ä¸€é“ç™½å…‰å°„é€²ä»–çš„å¿ƒè‡Ÿï¼\n\n");
 		tell_room(environment(holder),
-		"\nÄã·¢¾õ"+(string)this_object()->query("c_name")+"·¢³öÒ»µÀĞı·ç°ÑµĞÈË¾íÉÏ°ë¿ÕÖĞ£¬°×¹âÍ»È»Ò»ÉÁ£®\n\n",
+		"\nä½ ç™¼è¦º"+(string)this_object()->query("c_name")+"ç™¼å‡ºä¸€é“æ—‹é¢¨æŠŠæ•µäººæ²ä¸ŠåŠç©ºä¸­ï¼Œç™½å…‰çªç„¶ä¸€é–ƒï¼\n\n",
 		holder );
         }
       return 0;  

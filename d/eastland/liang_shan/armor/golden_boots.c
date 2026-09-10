@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("golden silk boots", "½ğÏßÄ¨ÂÌÔí³¯Ñ¥");
+        set_name("golden silk boots", "é‡‘ç·šæŠ¹ç¶ çš‚æœé´");
         add( "id", ({ "boots" }) );
-        set_short("golden silk boots", "½ğÏßÄ¨ÂÌÔí³¯Ñ¥");
+        set_short("golden silk boots", "é‡‘ç·šæŠ¹ç¶ çš‚æœé´");
         set_long(
                 "This is a pair of boots made of golden silk .\n",
-                "ÕâÊÇÓÃ½ğÏßºÍË¿³ñ×÷³ÉµÄĞ¬×Ó£¬ÃÀÀöµ½Äã²»ÈÌĞÄ´©ÖøËü×ßÂ·£®\n"
+                "é€™æ˜¯ç”¨é‡‘ç·šå’Œçµ²ç¶¢ä½œæˆçš„é‹å­ï¼Œç¾éº—åˆ°ä½ ä¸å¿å¿ƒç©¿è‘—å®ƒèµ°è·¯ï¼\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "leather");
         set( "armor_class", 6 );

@@ -19,14 +19,14 @@ varargs int move_player(object me,mixed dest, mixed message, string dir)
 	
 	prev = environment(me);
 	if( res = me->move(dest) ) {
-		tell_object(me, "( ÄãÁôÔÚÔ­µØ.... )\n");
+		tell_object(me, "( ä½ ç•™åœ¨åŽŸåœ°.... )\n");
 		return res;
 	}
 
 	if( me->query_attackers() && (int)me->clean_up_attackers() == 0) {
 		me->set_temp("last_attack_skill", 0);
 		//write("combat test7	!\n");
-		tell_object(me, "Õ½¶·½áÊøÁË.¡¡\n");
+		tell_object(me, "æˆ°é¬¥çµæŸäº†.ã€€\n");
 	}
 
 	if(message == "SLIENCE") return 0;
@@ -133,7 +133,7 @@ void kill_reward(object me,object killer)
 	} else {
 		killer->gain_experience(exp);
 		tell_object(killer, 
-			sprintf("ÄãµÃµ½ %d µã¾­ÑéÖµ.¡¡\n", exp));
+			sprintf("ä½ å¾—åˆ° %d é»žç¶“é©—å€¼.ã€€\n", exp));
 	}
 	return;
 }
@@ -202,7 +202,7 @@ varargs void die(object me,int silent)
 
 	// Announce the sad facts of life and non-life.
 	if( !silent ) {
-		tell_object(me,"ÄãËÀÁË.\n");
+		tell_object(me,"ä½ æ­»äº†.\n");
 		"/adm/daemons/combat_d_test"->report_death(me);
 	}
 

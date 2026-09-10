@@ -8,13 +8,13 @@ void create()
 
 	::create();
 	set_level(11);
-	set_name( "tamumu warrior", "ËşÄ·Ä·Õ½Ê¿" );
+	set_name( "tamumu warrior", "å¡”å§†å§†æˆ°å£«" );
 	add( "id", ({ "warrior", "tamumu" }) );
-	set_short( "ËşÄ·Ä·Õ½Ê¿" );
+	set_short( "å¡”å§†å§†æˆ°å£«" );
 	set_long(
-	"ÕâÎ»ËşÄ·Ä·Õ½Ê¿ÓÃ½¾°ÁµÄÑÛÉñ»ØÓ¦ÄãµÄ×¢ÊÓ£¬ËûÊÇËşÄ·Ä·×åÖĞ¹«ÈÏµÄÓÂÊ¿¡£\n"
+	"é€™ä½å¡”å§†å§†æˆ°å£«ç”¨é©•å‚²çš„çœ¼ç¥å›æ‡‰ä½ çš„æ³¨è¦–ï¼Œä»–æ˜¯å¡”å§†å§†æ—ä¸­å…¬èªçš„å‹‡å£«ã€‚\n"
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment", -500 );

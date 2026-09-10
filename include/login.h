@@ -32,19 +32,19 @@
 //  Standard mud-style login prompt
 #define OPEN_CHAT_ROOM 
 #define LOGIN_MSG read_file("/adm/news/welcome") + "\n" + \
-	capitalize(mud_name()) + "Ä¿Ç°Ê¹ÓÃ: " + \
+	capitalize(mud_name()) + "ç›®å‰ä½¿ç”¨: " + \
 	"Mudlib: " + MUDLIB_VERSION + "\n" + \
 	"Driver: " + version() + "\n"
 
-#define IP_FAIL "\n\t±§Ç¸, ÒòÎªÄãµÄIP ADDRESS ÎŞ·¨½â¶Á, ÎŞ·¨½øÈë¶«·½¹ÊÊÂ.¡¡\n\n"
+#define IP_FAIL "\n\tæŠ±æ­‰, å› ç‚ºä½ çš„IP ADDRESS ç„¡æ³•è§£è®€, ç„¡æ³•é€²å…¥æ±æ–¹æ•…äº‹.ã€€\n\n"
 
-#define BANISH_REPORT "\n\n\t±§Ç¸, ÒòÎªÄ³Ğ©Ô­Òò, ÄãËùÀ´×ÔµÄIP ±»ÁĞÎª¾Ü¾øÍùÀ´»§,¡¡" + \
-                      "\n\tÈôÓĞÈÎºÎÎÊÌâ, ÇëÓÉ±ğµÄIP ºÍ¹ÜÀíÕßÁ¬Âç.¡¡\n"
+#define BANISH_REPORT "\n\n\tæŠ±æ­‰, å› ç‚ºæŸäº›åŸå› , ä½ æ‰€ä¾†è‡ªçš„IP è¢«åˆ—ç‚ºæ‹’çµ•å¾€ä¾†æˆ¶,ã€€" + \
+                      "\n\tè‹¥æœ‰ä»»ä½•å•é¡Œ, è«‹ç”±åˆ¥çš„IP å’Œç®¡ç†è€…é€£çµ¡.ã€€\n"
                       
 #define WELCOME "/adm/news/welcome"
 #define C_WELCOME "/adm/news/c_welcome"	
-#define LOGIN_PROMPT "ÇëÊäÈëÄãµÄ½ÇÉ«ĞÕÃû: (Ó¢ÎÄ): "
-#define PASSWORD_PROMPT "ÇëÊäÈëÃÜÂë: "
+#define LOGIN_PROMPT "è«‹è¼¸å…¥ä½ çš„è§’è‰²å§“å: (è‹±æ–‡): "
+#define PASSWORD_PROMPT "è«‹è¼¸å…¥å¯†ç¢¼: "
  
 #define ONE_GUEST 
  

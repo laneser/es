@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("Explored Note","Ì½ÏÕ±Ê¼Ç±¾");
+    set_name("Explored Note","æ¢éšªç­†è¨˜æœ¬");
     add("id",({"note"}) );
-    set_short("Ì½ÏÕ±Ê¼Ç±¾");
+    set_short("æ¢éšªç­†è¨˜æœ¬");
     set_long(@C_LONG
-    ÕâÊÇÇíË¹µÄ¸¸Ç×¡«ÀÏºàÀûÇíË¹±ÏÆäÒ»ÉúÑĞ¾¿Ëù¼ÇÂ¼ÕûÀíµÄÚØÏÉµº±Ê¼Ç£¬
-ÀïÃæÏêÏ¸µÄ¼ÇÂ¼ÁË¸÷´¦µÄÌ½Ë÷ĞÄµÃ£¬Æ½³£Ò»¶¨ËæÉíĞ¯´ø£¬¾ø²»ÇáÒ×Íâ½è¡£ 
+    é€™æ˜¯ç“Šæ–¯çš„çˆ¶è¦ªï½è€äº¨åˆ©ç“Šæ–¯ç•¢å…¶ä¸€ç”Ÿç ”ç©¶æ‰€è¨˜éŒ„æ•´ç†çš„è¬«ä»™å³¶ç­†è¨˜ï¼Œ
+è£¡é¢è©³ç´°çš„è¨˜éŒ„äº†å„è™•çš„æ¢ç´¢å¿ƒå¾—ï¼Œå¹³å¸¸ä¸€å®šéš¨èº«æ”œå¸¶ï¼Œçµ•ä¸è¼•æ˜“å¤–å€Ÿã€‚ 
 C_LONG
             );
-    set("unit","±¾");
+    set("unit","æœ¬");
     set("weight",5);
     set("useless",1);
 	set("value",({ 1,"silver" }) );
@@ -26,7 +26,7 @@ void init()
 int do_read(string str)
 {
     if( !str || !id(str) ) 
-    return notify_fail("ÄãÒª¿´Ê²÷á£¿\n");
+    return notify_fail("ä½ è¦çœ‹ä»€éº¼ï¼Ÿ\n");
     this_player()->more("/d/island/forest/daemons/contents");
     this_player()->set_explore("island#1");
     return 1;

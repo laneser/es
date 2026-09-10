@@ -7,18 +7,18 @@ void create()
 	
 	::create();
 	set_level(1);
-	set_name( "Spirit of dwarf Prince Falady", "°«ÈËÍõ×Ó·¨À­µÚµÄÁé»ê" );
+	set_name( "Spirit of dwarf Prince Falady", "çŸ®äººçŽ‹å­æ³•æ‹‰ç¬¬çš„éˆé­‚" );
 	add ("id", ({ "prince", "falady", }) );
-	set_short( "Spirit of Dwarf Prince Falady", "°«ÈËÍõ×Ó·¨À­µÚµÄÁé»ê" );
+	set_short( "Spirit of Dwarf Prince Falady", "çŸ®äººçŽ‹å­æ³•æ‹‰ç¬¬çš„éˆé­‚" );
 	set_long(
     "a spirit of falady .\n",
-	"·¨À­µÚµÄÁé»ê.\n"
+	"æ³•æ‹‰ç¬¬çš„éˆé­‚.\n"
 	);
     set("can_be_duranced",1);
     set("no_attack",1);
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_natural_weapon(1,1,1);
 	set_natural_armor(10,10);
 }
@@ -27,16 +27,16 @@ void durance(object player,object box)
 {
    if ( box->query("quest_item/queen_amulet") ) {
      tell_object(player,
-      "Äã°Ñ·¨À­µÚ×½½øÁËÆ¿×ÓÀï.\n");
+      "ä½ æŠŠæ³•æ‹‰ç¬¬æ‰é€²äº†ç“¶å­è£¡.\n");
       tell_room(environment(player),
-        "·¨À­µÚ±»"+player->query("name")+"¸ø×½½øÁËÆ¿×Ó.\n",
+        "æ³•æ‹‰ç¬¬è¢«"+player->query("name")+"çµ¦æ‰é€²äº†ç“¶å­.\n",
         player );
      box->set("quest_action/bottle_lock","falady");   
      }
    else {
-     tell_object(player,"·¨À­µÚÎªÁËÌÓ±ÜÄãµÄÄ§·¨¶øÏûÊ§ÁË.\n");
+     tell_object(player,"æ³•æ‹‰ç¬¬ç‚ºäº†é€ƒé¿ä½ çš„é­”æ³•è€Œæ¶ˆå¤±äº†.\n");
      tell_room(environment(player),
-     "·¨À­µÚÎªÁËÌÓ±Ü"+player->query("name")+"µÄÄ§·¨¶øÏûÊ§ÁË.\n",player);
+     "æ³•æ‹‰ç¬¬ç‚ºäº†é€ƒé¿"+player->query("name")+"çš„é­”æ³•è€Œæ¶ˆå¤±äº†.\n",player);
      }  
    return ;
 }

@@ -91,8 +91,8 @@ int enter_world (object player)
 	player->delete_temp("be_clawed");
 	player->delete_temp("be_hoofed");
 	player->set_heart_beat(1);
-	tell_room(environment(player),"ÌìÉÏ´«À´Ò»ÕóºêÁÁµÄÉùÒô: "+
-	          player->query("c_name")+" ¸ÃÄãÏÂÈ¥ÍæÁË.¡¡\n");
+	tell_room(environment(player),"å¤©ä¸Šå‚³ä¾†ä¸€é™£å®äº®çš„è²éŸ³: "+
+	          player->query("c_name")+" è©²ä½ ä¸‹å»ç©äº†.ã€€\n");
 	player->move("/d/adventurer/hall/adv_guild");
-	tell_object(player,"Äã¸Ğµ½Ò»ÕóÔÎÑ£, Ò»ÕÅ¿ªÑÛËÄÖÜµÄ¾°É«ÒÑ¾­±äÁË.¡¡\n");
+	tell_object(player,"ä½ æ„Ÿåˆ°ä¸€é™£æšˆçœ©, ä¸€å¼µé–‹çœ¼å››å‘¨çš„æ™¯è‰²å·²ç¶“è®Šäº†.ã€€\n");
 }                                                

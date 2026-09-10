@@ -7,16 +7,16 @@ void create()
 	
 	::create();
 	set_level(3);
-	set_name( "Gnome little girl", "µØ¾«Ğ¡Å®º¢" );
+	set_name( "Gnome little girl", "åœ°ç²¾å°å¥³å­©" );
 	add ("id", ({ "girl", "gnome","little girl" }) );
-   set_short( "µØ¾«Ğ¡Å®º¢" );
+   set_short( "åœ°ç²¾å°å¥³å­©" );
 	set_long(
-                 "Ò»¸öµØ¾«Ğ¡Å®º¢.¿´ËıºÃÏñÕı×¨×¢ì¶ÑĞ¶ÁÊÖÉÏµÄÊé¡£\n");
+                 "ä¸€å€‹åœ°ç²¾å°å¥³å­©.çœ‹å¥¹å¥½åƒæ­£å°ˆæ³¨æ–¼ç ”è®€æ‰‹ä¸Šçš„æ›¸ã€‚\n");
 
     set ("alignment",200 );
     set( "gender", "female" );
     set( "race", "gnome" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "dex", 6 );
 	set ("wealth", ([ "silver": 5 ]) );
 	set_natural_weapon(3,1,5);

@@ -11,15 +11,15 @@ void init()
 
 void create()
 {
-	set_name("dry meat","ÏÌÈâÇ¬");
+	set_name("dry meat","é¹¹è‚‰ä¹¾");
 	add( "id" , ({ "meat" }) );
-	set_short("dry meat" , "ÏÌÈâÇ¬");
+	set_short("dry meat" , "é¹¹è‚‰ä¹¾");
 	set_long( 
-		"ÕâÊÇÒ»¿é²»ÖªÊ²÷á¶«Î÷×÷³ÉµÄÈâÇ¬£¬ÉÏÃæÓÐÖøÒ»Á£Ò»Á£µÄÊ³ÑÎ½á\n"
-		"¾§£¬¿ÉÏë¶øÖª×ÌÎ¶²¢²»ÊÇºÜºÃ£¬µ«¿ÉÄÜ¿ÉÒÔ±£´æºÜ¾Ã¡£\n"
+		"é€™æ˜¯ä¸€å¡Šä¸çŸ¥ä»€éº¼æ±è¥¿ä½œæˆçš„è‚‰ä¹¾ï¼Œä¸Šé¢æœ‰è‘—ä¸€ç²’ä¸€ç²’çš„é£Ÿé¹½çµ\n"
+		"æ™¶ï¼Œå¯æƒ³è€ŒçŸ¥æ»‹å‘³ä¸¦ä¸æ˜¯å¾ˆå¥½ï¼Œä½†å¯èƒ½å¯ä»¥ä¿å­˜å¾ˆä¹…ã€‚\n"
 	);
    	set("heal",1);
-   	set("unit","¿é");
+   	set("unit","å¡Š");
    	set("weight", 10);
    	set("value",({ 1, "silver" }) );
 }
@@ -28,11 +28,11 @@ int eat_food(string arg)
      object me;
      int num1,num2;
 		me = this_player();
-		if( !arg || arg != "meat" ) return notify_fail("³ÔÊ²÷á?\n");
-		write( "ÄãÂýÂý¿ÐÖøÕâ¿éÈâÇ¬£¬ÍÛ£¬ÕæÏÌ£¬µ«ÊÇÖÁÉÙ»¹ÄÜÓÃÀ´Ìî¶Ç×Ó..\n" );
+		if( !arg || arg != "meat" ) return notify_fail("åƒä»€éº¼?\n");
+		write( "ä½ æ…¢æ…¢å•ƒè‘—é€™å¡Šè‚‰ä¹¾ï¼Œå“‡ï¼ŒçœŸé¹¹ï¼Œä½†æ˜¯è‡³å°‘é‚„èƒ½ç”¨ä¾†å¡«è‚šå­..\n" );
                 tell_room( environment(me),
-                "Äã¿´µ½"+me->query("c_name")+"ÓÃÁ¦µÄ¿ÐÖøÒ»¿éÈâÇ¬"
-                "£¬Ò»±ßÂ¶³öÆæ¹ÖµÄ±íÇé...\n" , this_player());
+                "ä½ çœ‹åˆ°"+me->query("c_name")+"ç”¨åŠ›çš„å•ƒè‘—ä¸€å¡Šè‚‰ä¹¾"
+                "ï¼Œä¸€é‚Šéœ²å‡ºå¥‡æ€ªçš„è¡¨æƒ…...\n" , this_player());
                 num1 = query("heal");
                 num2 = num1/2+10;
 		me->receive_healing(num1);
@@ -40,14 +40,14 @@ int eat_food(string arg)
 // Eat too much meat tp <0 will sick
 // add by Iris@ES Feb 6 1996	        
 	if (me->query("talk_points")<0) {
-		write("»òÐíÊÇÈâÇ¬³Ô¶à»ðÆø´ó, Äã¾õµÃÉíÌå²»Ì«Êæ·þ...\n");
+		write("æˆ–è¨±æ˜¯è‚‰ä¹¾åƒå¤šç«æ°£å¤§, ä½ è¦ºå¾—èº«é«”ä¸å¤ªèˆ’æœ...\n");
 		(CONDITION_PREFIX+"sick")->apply_effect(me,3,2,2);
 	}		        
        if ( query("rotten") != 1 ) {
         remove();
         return 1;
         }
-       write( "Ææ¹Ö£¬¿ÉÄÜÊÇ×öµÄÊ±ºò²»Ì«ÎÀÉú£¬Äã¸Ð¾õÓÐµã²»Êæ·þ...\n");
+       write( "å¥‡æ€ªï¼Œå¯èƒ½æ˜¯åšçš„æ™‚å€™ä¸å¤ªè¡›ç”Ÿï¼Œä½ æ„Ÿè¦ºæœ‰é»žä¸èˆ’æœ...\n");
        (CONDITION_PREFIX + "weak")->apply_effect(me,6,5);
 	remove();
 	return 1;

@@ -75,12 +75,12 @@ protected object create_ghost()
 		ghost->move(START);
 
 	tell_room( old,
-		"Äã¿´µ½Ò»ÂÆ°×É«µÄÓ°×Ó´Ó" + (string)ghost->query("c_name")
-		+ "µÄ¡õÌåÖĞÆ®Æğ¡£\n" );
+		"ä½ çœ‹åˆ°ä¸€ç¸·ç™½è‰²çš„å½±å­å¾" + (string)ghost->query("c_name")
+		+ "çš„â–¡é«”ä¸­é£„èµ·ã€‚\n" );
 
 	if(environment(ghost) != old) {
-		tell_room(old, "°×Ó°»º»ºÆ®ÏòÌì¿Õ£¬È»ááÏûÊ§ÁË¡£\n" );
-		tell_room(environment(ghost), "Äã¿´µ½Ò»ÂÆ°×É«µÄÓ°×Ó´Ó¿ÕÆøÖĞ³öÏÖ¡£\n" ,	ghost );
+		tell_room(old, "ç™½å½±ç·©ç·©é£„å‘å¤©ç©ºï¼Œç„¶å¾Œæ¶ˆå¤±äº†ã€‚\n" );
+		tell_room(environment(ghost), "ä½ çœ‹åˆ°ä¸€ç¸·ç™½è‰²çš„å½±å­å¾ç©ºæ°£ä¸­å‡ºç¾ã€‚\n" ,	ghost );
 	}
 
 	return ghost;
@@ -92,7 +92,7 @@ protected object create_ghost()
 nomask  string process_input(string cmdline)
 {
 	if( query_temp("block_command") ) {
-		receive( "( ÄãÏÖÔÚÎŞ·¨×öÆäËû¶¯×÷¡£ )\n" );
+		receive( "( ä½ ç¾åœ¨ç„¡æ³•åšå…¶ä»–å‹•ä½œã€‚ )\n" );
 		return "";
 	}
 	if( query("user") ) {

@@ -7,18 +7,18 @@ void create ()
 
 	::create();
  set_level(7);
- set_name("servant","ÆÍÈË");
- set_short("a servant","ÆÍÈË");
+ set_name("servant","åƒ•äºº");
+ set_short("a servant","åƒ•äºº");
  set_long(@LONG
 A servant is busy.
 LONG
     ,@C_LONG
-Ò»¸öÃ¦Ã¦ÂµÂµµÄÆÍÈË.
+ä¸€å€‹å¿™å¿™ç¢Œç¢Œçš„åƒ•äºº.
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",6);
     set_perm_stat( "str",12);
     set_perm_stat( "int",4);

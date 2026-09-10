@@ -50,7 +50,7 @@ int connect()
 	}
 
 	if( !exec(body_ob, this_object()) ) {
-		write("ÎŞ·¨Á¬ÉÏÄãµÄÉíÌå!!\n");
+		write("ç„¡æ³•é€£ä¸Šä½ çš„èº«é«”!!\n");
 		body_ob->remove();
 		remove();
 		return 0;
@@ -137,8 +137,8 @@ int restore_body()
 // Do this check for compatiblility to old user body. By Annihilator.
 //	if( sscanf(body, VALID_BODY_FILE, race) != 1 ) {
 //		write( @TEXT
-// **Çë×¢Òâ**
-//    ÓÉì¶ÄãµÄÉíÌåµµ°¸(body file)²»¶Ô, ÏµÍ³³¢ÊÔĞŞÕı¡£Èç·¢ÏÖ´íÎó, Çë mail ÖÁ
+// **è«‹æ³¨æ„**
+//    ç”±æ–¼ä½ çš„èº«é«”æª”æ¡ˆ(body file)ä¸å°, ç³»çµ±å˜—è©¦ä¿®æ­£ã€‚å¦‚ç™¼ç¾éŒ¯èª¤, è«‹ mail è‡³
 //           indra@coral.cis.nmctu.edu.tw ( indra@140.113.166.36 )
 // TEXT
 //		);
@@ -148,7 +148,7 @@ int restore_body()
 	if( catch( body_ob = new(body) ) )  return 0;
 	export_uid(body_ob);
 	if( !body_ob ) {
-		write("ÉíÌåµµ°¸ÓĞ´íÎó, ÎŞ·¨Ôì³öÉíÌå, Á¬½ÓÊ§°Ü!!");
+		write("èº«é«”æª”æ¡ˆæœ‰éŒ¯èª¤, ç„¡æ³•é€ å‡ºèº«é«”, é€£æ¥å¤±æ•—!!");
 		return 0;
 	}
 
@@ -163,7 +163,7 @@ int restore_body()
 		body_ob = new(body);
 		export_uid(body_ob);
 		if( !body_ob ) {
-			write("ÉíÌåµµ°¸ÓĞ´íÎó, ÎŞ·¨Ôì³öÉíÌå, Á¬½ÓÊ§°Ü!!");
+			write("èº«é«”æª”æ¡ˆæœ‰éŒ¯èª¤, ç„¡æ³•é€ å‡ºèº«é«”, é€£æ¥å¤±æ•—!!");
 			return 0;
 		}
 		return body_ob->restore_body_file(old_save_file);
@@ -197,7 +197,7 @@ nomask mixed query(string what)
 	if( !what ) return 0;
 	switch( what ) {
 		case "name": return (name? name : "logon");
-		case "c_name": return (c_name? c_name : "ÎŞÃûÊÏ");
+		case "c_name": return (c_name? c_name : "ç„¡åæ°");
 		case "cap_name": return (name ? capitalize(name) :"Logon");
 		case "gender": return gender;
 		case "password": return password;

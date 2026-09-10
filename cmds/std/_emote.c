@@ -13,8 +13,8 @@ int cmd_emote(string str) {
     string first,tail,insert;
 
     if(!str) {
-      write("Äã¿´ÆğÀ´±íÇé·á¸».\n");
-      say(this_player()->query("c_name")+"×÷³ö·á¸»µÄ±íÇé.\n");
+      write("ä½ çœ‹èµ·ä¾†è¡¨æƒ…è±å¯Œ.\n");
+      say(this_player()->query("c_name")+"ä½œå‡ºè±å¯Œçš„è¡¨æƒ….\n");
       return 1;
     }
     if (!wizardp(previous_object())) first = "-> ";
@@ -22,7 +22,7 @@ int cmd_emote(string str) {
     if (sscanf(str," %s",tail)==1) insert = "";
     else if (sscanf(str,"'%s",tail) == 1) insert = "";
     else insert = " ";
-    write(wrap("Äã±í´ï : " + first + this_player()->query("c_name") +
+    write(wrap("ä½ è¡¨é” : " + first + this_player()->query("c_name") +
 	 insert + str));
     say(wrap(first + this_player()->query("c_name") + insert + str));
     return 1;
@@ -31,14 +31,14 @@ int cmd_emote(string str) {
 int
 help() {
   write(@HELP
-Ö¸Áî¸ñÊ½: emote <¶¯×÷´Ê>
-ÕâÌõÖ¸Áî¿ÉÒÔÈÃÄã±í´ïÒ»¸öÏµÍ³Ã»ÓĞÔ¤ÉèµÄ¶¯×÷´Ê¡£
-ÏµÍ³»á½«ÄãÊäÈëµÄÎÄ×Öºó¼ÓÉÏÄãµÄĞÕÃûºóÏÔÊ¾¸øÍ¬Ò»¸öµØÇøµÄÉúÎï¿´¡£
+æŒ‡ä»¤æ ¼å¼: emote <å‹•ä½œè©>
+é€™æ¢æŒ‡ä»¤å¯ä»¥è®“ä½ è¡¨é”ä¸€å€‹ç³»çµ±æ²’æœ‰é è¨­çš„å‹•ä½œè©ã€‚
+ç³»çµ±æœƒå°‡ä½ è¼¸å…¥çš„æ–‡å­—å¾ŒåŠ ä¸Šä½ çš„å§“åå¾Œé¡¯ç¤ºçµ¦åŒä¸€å€‹åœ°å€çš„ç”Ÿç‰©çœ‹ã€‚
 
-Àı£ºemote ´óĞ¦
-    ÔÚÍ¬Ò»µØÇøµÄÉúÎï¶¼»á¿´µ½£º->x´óĞ¦ (x=Ê¹ÓÃÖ¸ÁîÈËÃû)
+ä¾‹ï¼šemote å¤§ç¬‘
+    åœ¨åŒä¸€åœ°å€çš„ç”Ÿç‰©éƒ½æœƒçœ‹åˆ°ï¼š->xå¤§ç¬‘ (x=ä½¿ç”¨æŒ‡ä»¤äººå)
 
-Ïà¹ØÖ¸ÁîÓĞ£ºsemote
+ç›¸é—œæŒ‡ä»¤æœ‰ï¼šsemote
 HELP
 );
   return 1;

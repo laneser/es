@@ -3,14 +3,14 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "Long Axe","³¤±úÕ½¸«" );
+	set_name( "Long Axe","é•·æŸ„æˆ°æ–§" );
 	add( "id",({ "axe" }) );
-	set_short( "³¤±úÕ½¸«" );
+	set_short( "é•·æŸ„æˆ°æ–§" );
 	set_long(@LONG
-	Ò»°Ñ³¤±úÕ½¸«¡£
+	ä¸€æŠŠé•·æŸ„æˆ°æ–§ã€‚
 LONG
 	);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","axe" );
 	set( "weapon_class",32 );
 	set( "min_damage",22 );

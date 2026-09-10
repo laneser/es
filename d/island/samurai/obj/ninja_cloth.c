@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "ninja clothes", "ÈÌÕßÒÂ");
+        set_name( "ninja clothes", "å¿è€…è¡£");
         add( "id", ({ "ninja","clothes"}) );
-        set_short("ninja clothes", "ÈÌÕßÒÂ");
+        set_short("ninja clothes", "å¿è€…è¡£");
         set_long(@AAA
-Ò»¼şÈÌÕßÃÇ´©µÄ·À»¤ÒÂ£¬ÊÊÓÃ¼«ÇáµÄ²ÄÖÊ×ö³ÉµÄ£¬ÒÔ·½±ãÈËµÄĞĞ¶¯£¬Ö»
-ÊÇÒò´ËÒ²¼õÉÙÁË·À»¤Á¦        
+ä¸€ä»¶å¿è€…å€‘ç©¿çš„é˜²è­·è¡£ï¼Œé©ç”¨æ¥µè¼•çš„æè³ªåšæˆçš„ï¼Œä»¥æ–¹ä¾¿äººçš„è¡Œå‹•ï¼Œåª
+æ˜¯å› æ­¤ä¹Ÿæ¸›å°‘äº†é˜²è­·åŠ›        
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 16 );
         set( "defense_bonus", 2 );

@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "diamond key", "钻石钥匙" );
+	set_name( "diamond key", "閼界煶閼板寵" );
 	add( "id", ({ "key" }) );
-	set_short( "钻石钥匙" );
+	set_short( "閼界煶閼板寵" );
 	set_long(
-		"这是用钻石琢磨出来的钥匙。\n"
+		"閫欐槸鐢ㄩ懡鐭崇悽纾ㄥ嚭渚嗙殑閼板寵銆俓n"
 	);
 	set( "to_lock", "DIAMONDKEY" );
 	set( "weight", 3 );

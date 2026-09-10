@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "alloyed platemail", "ºÏ½ğ¿ø¼×" );
+	set_name( "alloyed platemail", "åˆé‡‘ç›”ç”²" );
 	add( "id", ({ "plate", "platemail", "mail" }) );
-	set_short( "a suit of alloyed playemail", "ºÏ½ğ¿ø¼×" );
+	set_short( "a suit of alloyed playemail", "åˆé‡‘ç›”ç”²" );
 	set_long(
 		"You see a suit of alloyed platemail. It looks pretty heavy and\n"
 		"can supply good protection.\n",
-		"ÕâÊÇÒ»Ì×ÓÃÄ³ÖÖ²»ÖªÃûºÏ½ğ´òÔìµÄ¿ø¼×£¬¿´ÆğÀ´Ïàµ±ÖØ¡£\n"
+		"é€™æ˜¯ä¸€å¥—ç”¨æŸç¨®ä¸çŸ¥ååˆé‡‘æ‰“é€ çš„ç›”ç”²ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶é‡ã€‚\n"
 	);
-	set( "unit", "¸±" );
+	set( "unit", "å‰¯" );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );
 	set( "armor_class", 25 );

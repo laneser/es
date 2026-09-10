@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "snake skin", "ÉßÆ¤¸²¼×" );
+	set_name( "snake skin", "è›‡çš®è¦†ç”²" );
 	add( "id", ({ "skin" }) );
-   set_short( "ÉßÆ¤¸²¼×" );
+   set_short( "è›‡çš®è¦†ç”²" );
 	set_long(
-		"ÕâÊÇÒ»¸±ÓÃÉßÆ¤×ö³ÉµÄÆæ¹Ö»¤¼×£¬¿´ÆğÀ´ÊÇÎªÓĞÎ²°ÍµÄÈËÉè¼ÆµÄ¡£\n"
+		"é€™æ˜¯ä¸€å‰¯ç”¨è›‡çš®åšæˆçš„å¥‡æ€ªè­·ç”²ï¼Œçœ‹èµ·ä¾†æ˜¯ç‚ºæœ‰å°¾å·´çš„äººè¨­è¨ˆçš„ã€‚\n"
 	);
-	set( "unit", "¸±" );
+	set( "unit", "å‰¯" );
 	set( "type", "tail" );
 	set( "material", "leather");
 	set( "armor_class", 3 );

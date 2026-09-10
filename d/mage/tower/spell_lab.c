@@ -11,12 +11,12 @@ void create()
 	::create();
 	seteuid( getuid() );
 	set_spell_level_exp();
-	set_short("Spell Lab", "Ä§·¨ÑĞ¾¿ÊÒ");
+	set_short("Spell Lab", "é­”æ³•ç ”ç©¶å®¤");
 	set_long(@C_LONG_DESCRIPTION
-ÕâÊÇÒøÉ«Ö®ËşÖĞ×¨ÃÅÑĞ¾¿Ä§·¨µÄÑĞ¾¿ÊÒ, ÔÚÕâÀïÄã¿ÉÒÔ½«ÄãÊ¹ÓÃ·¨ÊõµÄĞÄµÃ×ö
-Ò»·¬ÕûÀí¡£Äã¿´µ½Ò»ÕûÅÅµÄÊé×À, Ò»Ğ©³õ¼¶Ä§·¨Ê¦ÕıÒ»±ßà«à«×ÔÓï²¢½«×Ô¼ºµÄĞÄµÃ
-Ğ´ÔÚ×Ô¼ºµÄÄ§·¨ÊéÉÏ¡£Äã¿ÉÒÔÔÚÕâÀïÕûÀíÄã¶ÔÄ§·¨µÄĞÄµÃ, ÌáÉı(advance) ÄãµÄÄ§
-·¨ÊìÁ·¶È¡£
+é€™æ˜¯éŠ€è‰²ä¹‹å¡”ä¸­å°ˆé–€ç ”ç©¶é­”æ³•çš„ç ”ç©¶å®¤, åœ¨é€™è£¡ä½ å¯ä»¥å°‡ä½ ä½¿ç”¨æ³•è¡“çš„å¿ƒå¾—åš
+ä¸€ç•ªæ•´ç†ã€‚ä½ çœ‹åˆ°ä¸€æ•´æ’çš„æ›¸æ¡Œ, ä¸€äº›åˆç´šé­”æ³•å¸«æ­£ä¸€é‚Šå–ƒå–ƒè‡ªèªä¸¦å°‡è‡ªå·±çš„å¿ƒå¾—
+å¯«åœ¨è‡ªå·±çš„é­”æ³•æ›¸ä¸Šã€‚ä½ å¯ä»¥åœ¨é€™è£¡æ•´ç†ä½ å°é­”æ³•çš„å¿ƒå¾—, æå‡(advance) ä½ çš„é­”
+æ³•ç†Ÿç·´åº¦ã€‚
 C_LONG_DESCRIPTION
 	);
     set( "no_monster", 1);
@@ -63,16 +63,16 @@ int do_advance(string arg)
 	
 	if( !arg ) return do_help("advance");
 	if( member_array(arg, MAGIC_TYPES) == -1 ) 
-		return notify_fail("Ã»ÓĞÕâÖÖÄ§·¨ÖÖÀà¡£\n");
+		return notify_fail("æ²’æœ‰é€™ç¨®é­”æ³•ç¨®é¡ã€‚\n");
 	lvl = (int)this_player()->query("spell_levels/"+arg);
 	exp = (int)this_player()->query("spell_exps/"+arg);
 	if( lvl >= MAX_GUILD_LVL ) {
-		write(sprintf("ÄãÒÑ¾­ÍêÈ«ÁË½â%sµÄ°ÂÒåÁË¡£\n",to_chinese(arg)));
+		write(sprintf("ä½ å·²ç¶“å®Œå…¨ç­è§£%sçš„å¥§ç¾©äº†ã€‚\n",to_chinese(arg)));
 		return 1;
 	}
 	need_exp = spell_level_exp[lvl];
 	if( exp < need_exp ) {
-		write(sprintf("Äã»¹ĞèÒª %d µã%s¾­Ñé²ÅÄÜÌáÉı%sµÄÊìÁ·µÈ¼¶¡£\n" ,
+		write(sprintf("ä½ é‚„éœ€è¦ %d é»%sç¶“é©—æ‰èƒ½æå‡%sçš„ç†Ÿç·´ç­‰ç´šã€‚\n" ,
 			(need_exp-exp),to_chinese(arg),to_chinese(arg)));
 		return 1;
 	} else {
@@ -82,7 +82,7 @@ int do_advance(string arg)
 			lvl += this_player()->query("spell_levels/"+MAGIC_TYPES[i]);
 		lvl /= (sizeof(MAGIC_TYPES));
 		this_player()->set("spell_levels/guild", lvl);
-		write(sprintf("¾­¹ıÒ»·¬ÕûÀí, Äã½«Äã¶Ô%sµÄĞÄµÃ×ĞÏ¸µØĞ´ÔÚÄ§·¨ÊéÉÏ¡£\n",to_chinese(arg)));
+		write(sprintf("ç¶“éä¸€ç•ªæ•´ç†, ä½ å°‡ä½ å°%sçš„å¿ƒå¾—ä»”ç´°åœ°å¯«åœ¨é­”æ³•æ›¸ä¸Šã€‚\n",to_chinese(arg)));
 		return 1;
 	}
 }
@@ -90,9 +90,9 @@ int do_advance(string arg)
 int do_cost()
 {
 	int i;
-	write("ÌáÉı¸÷ÀàÄ§·¨ÊìÁ·µÈ¼¶ËùĞèµÄÄ§·¨¾­Ñé...\n");
+	write("æå‡å„é¡é­”æ³•ç†Ÿç·´ç­‰ç´šæ‰€éœ€çš„é­”æ³•ç¶“é©—...\n");
 	for( i=0; i<MAX_GUILD_LVL; i++ ) {
-		printf("  Ä§·¨ÊìÁ·µÈ¼¶ %2d : %15d µãÄ§·¨¾­Ñé¡£\n",i+1,spell_level_exp[i]);
+		printf("  é­”æ³•ç†Ÿç·´ç­‰ç´š %2d : %15d é»é­”æ³•ç¶“é©—ã€‚\n",i+1,spell_level_exp[i]);
 	}
 	return 1;
 }

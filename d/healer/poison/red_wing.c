@@ -1,7 +1,7 @@
-// RedWing.c		ÕæºìÖ®ôè
+// RedWing.c		çœŸç´…ä¹‹ç¿³
 //
 //	Effect: blind
-//	ËùÒÔÖ»ÄÜÓÃÒ»´Î
+//	æ‰€ä»¥åªèƒ½ç”¨ä¸€æ¬¡
 //
 //			Lilia
 
@@ -12,15 +12,15 @@ inherit OBJECT;
 
 // default value
 int toxic = 1;
-int diff = 50;		// Ê¹ÓÃÄÑ¶È
+int diff = 50;		// ä½¿ç”¨é›£åº¦
 
 void create()
 {
-    set_name("red_wing", "ÕæºìÖ®ôè");
+    set_name("red_wing", "çœŸç´…ä¹‹ç¿³");
     add("id", ({ "red_wing" }));
-    set_short("ÕæºìÖ®ôè");
-    set_long("ÕâÊÇÒ»°ü¶¾Ò©·Û£¬Èç¹ûÄãÒªÊ¹ÓÃÕâ°ü¶¾Ò©£¬ÓÃ poison <Ä³ÈË>¡£\n");
-    set("unit", "°ü");
+    set_short("çœŸç´…ä¹‹ç¿³");
+    set_long("é€™æ˜¯ä¸€åŒ…æ¯’è—¥ç²‰ï¼Œå¦‚æœä½ è¦ä½¿ç”¨é€™åŒ…æ¯’è—¥ï¼Œç”¨ poison <æŸäºº>ã€‚\n");
+    set("unit", "åŒ…");
 }
 
 void init()
@@ -29,7 +29,7 @@ void init()
 }
 
 // refer to poison.c
-// ÏÂ¶¾Ê§°Ü , return 1 else 0
+// ä¸‹æ¯’å¤±æ•— , return 1 else 0
 int checkfault(object me,object target )
 {
         int rate,level,iq,dex,skill,kar;
@@ -56,35 +56,35 @@ int do_poison(string arg)
 	env = environment(user);
 
         if( !arg || arg=="" || ! (dest = present(arg,env)) )
-                return notify_fail( "ÄãÒª¶ÔË­ÏÂ¶¾? \n" );
+                return notify_fail( "ä½ è¦å°èª°ä¸‹æ¯’? \n" );
         if( !living(dest) || dest == user )
-                return notify_fail( "Äã·èÀ² ? \n" );
+                return notify_fail( "ä½ ç˜‹å•¦ ? \n" );
         if ( dest->query("no_attack") )
-                return notify_fail( "Äã²»ÄÜ¶ÔÕâ¼Ò»ïÏÂ¶¾¡£\n");
+                return notify_fail( "ä½ ä¸èƒ½å°é€™å‚¢ä¼™ä¸‹æ¯’ã€‚\n");
         if ( checkfault(user,dest) ) {
-		tell_object(user, "Äã½«¶¾ÑÌÍµÍµµØ´µÏò"+dest->query("c_name")+"µÄÑÛ¾¦.... µ«ÊÇ±»·¢ÏÖÁË£¡\n\n");
-		tell_room(environment(user), user->query("c_name")+"°ÑÒ»Õó°×ÑÌ´µÏò"+dest->query("c_name")+"....\n\n", ({user,dest}));
-		tell_object(dest, user->query("c_name")+"°ÑÒ»Õó¶¾ÑÌ´µÏòÄã£¬ÄãÑ¸ËÙµØ±Ü¿ªÁËÕâÑÌÄ»£¡\n\n");
+		tell_object(user, "ä½ å°‡æ¯’ç…™å·å·åœ°å¹å‘"+dest->query("c_name")+"çš„çœ¼ç›.... ä½†æ˜¯è¢«ç™¼ç¾äº†ï¼\n\n");
+		tell_room(environment(user), user->query("c_name")+"æŠŠä¸€é™£ç™½ç…™å¹å‘"+dest->query("c_name")+"....\n\n", ({user,dest}));
+		tell_object(dest, user->query("c_name")+"æŠŠä¸€é™£æ¯’ç…™å¹å‘ä½ ï¼Œä½ è¿…é€Ÿåœ°é¿é–‹äº†é€™ç…™å¹•ï¼\n\n");
 
-// ÓÉì¶ÊÇÊ§Ã÷¶¾Ò©£¬Èç¹ûÊ©³É¹¦»¹±»¶Â×¡²»ºÏÀí¡£
+// ç”±æ–¼æ˜¯å¤±æ˜æ¯’è—¥ï¼Œå¦‚æœæ–½æˆåŠŸé‚„è¢«å µä½ä¸åˆç†ã€‚
 
 	user->block_attack(2);
 
         } else {
-		tell_object(user, "Äã½«¶¾ÑÌÍµÍµµØ´µÏò"+dest->query("c_name")+"µÄÑÛ¾¦.... ³É¹¦ÁË£¡\n\n");
-                tell_room(environment(user), user->query("c_name")+"²»ÖªµÀÓÃÊ²÷á·½·¨£¬ÈÃ"+dest->query("c_name")+"ÑÚÖøÑÛ¾¦²Ò½ĞÆğÀ´£¡\n\n", ({user,dest}));
-                tell_object(dest, user->query("c_name")+"°ÑÒ»Õó¶¾ÑÌ´µÏòÄã£¬ÄãµÄÑÛ¾¦ºöÈ»¸Ğµ½Ò»Õó¾ŞÍ´£¡\n\n");
+		tell_object(user, "ä½ å°‡æ¯’ç…™å·å·åœ°å¹å‘"+dest->query("c_name")+"çš„çœ¼ç›.... æˆåŠŸäº†ï¼\n\n");
+                tell_room(environment(user), user->query("c_name")+"ä¸çŸ¥é“ç”¨ä»€éº¼æ–¹æ³•ï¼Œè®“"+dest->query("c_name")+"æ©è‘—çœ¼ç›æ…˜å«èµ·ä¾†ï¼\n\n", ({user,dest}));
+                tell_object(dest, user->query("c_name")+"æŠŠä¸€é™£æ¯’ç…™å¹å‘ä½ ï¼Œä½ çš„çœ¼ç›å¿½ç„¶æ„Ÿåˆ°ä¸€é™£å·¨ç—›ï¼\n\n");
 
 	degree = dest->query("blind") + 1;
     	if (degree > 10) degree = 10;
     	dest->set("blind", degree);
 
-// ³ıÊ§Ã÷ÍâÁí¼Ó¼«ÇáÎ¢µÄ¶¾ĞÔ£¬²»È»Ã»ÓĞÒâÒå (Ê§Ã÷Òªµ½Ò»¶¨³Ì¶ÈÒÔÉÏ²ÅÓĞĞ§¹û)
+// é™¤å¤±æ˜å¤–å¦åŠ æ¥µè¼•å¾®çš„æ¯’æ€§ï¼Œä¸ç„¶æ²’æœ‰æ„ç¾© (å¤±æ˜è¦åˆ°ä¸€å®šç¨‹åº¦ä»¥ä¸Šæ‰æœ‰æ•ˆæœ)
 // duration 8 damage 1
 
 	(CONDITION_PREFIX + "simple_poison")->apply_effect(dest, 8, 1);
 
-// Ê©¶¾ÕßÕóÓª±ØĞë½µµÍ
+// æ–½æ¯’è€…é™£ç‡Ÿå¿…é ˆé™ä½
 
 	user->set("alignment",(int)user->query("alignment")-500);
         }

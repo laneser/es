@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "heart necklace","ĞÄĞÎÏîÁ´");
+        set_name( "heart necklace","å¿ƒå½¢é …éŠ");
         add( "id", ({ "necklace","amulet","heart" }) );
-        set_short("heart necklace","ĞÄĞÎÏîÁ´");
+        set_short("heart necklace","å¿ƒå½¢é …éŠ");
         set_long(@AAA
-Ò»¸öĞÄĞÎÏîÁ´,¾İ Íş ËµÕâÊÇËûÅ®ÓÑËÍËûµÄ¶¨ÇéÖ®Îï
+ä¸€å€‹å¿ƒå½¢é …éŠ,æ“š å¨ èªªé€™æ˜¯ä»–å¥³å‹é€ä»–çš„å®šæƒ…ä¹‹ç‰©
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "misc" );
         set( "armor_class", 0 );
         set( "defense_bonus", 5 );

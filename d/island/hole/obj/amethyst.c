@@ -6,20 +6,20 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "Amethyst","×ÏË®¾§" );
+	set_name( "Amethyst","ç´«æ°´æ™¶" );
 	add( "id",({ "amethyst" }) );
-	set_short( "×ÏË®¾§" );
+	set_short( "ç´«æ°´æ™¶" );
 	set_long(@LONG
-	Ò»¸ùÉÁÉÁ·¢ÁÁµÄ×ÏË®¾§£¬¾İËµËüÄÜÎüÊÕÔÂÁÁµÄ
-	¹âÃ¢£¬²úÉúÆÆÄ§µÄÁ¦Á¿¡£Äã¿ÉÒÔÊÔÖøÊ¹ÓÃÔÚÎï
-	Æ·ÉÏ¡£
+	ä¸€æ ¹é–ƒé–ƒç™¼äº®çš„ç´«æ°´æ™¶ï¼Œæ“šèªªå®ƒèƒ½å¸æ”¶æœˆäº®çš„
+	å…‰èŠ’ï¼Œç”¢ç”Ÿç ´é­”çš„åŠ›é‡ã€‚ä½ å¯ä»¥è©¦è‘—ä½¿ç”¨åœ¨ç‰©
+	å“ä¸Šã€‚
 LONG
 		);
 	set( "weight",5 );
 	set( "no_sale",1 );
 	set( "value",({ 320,"silver" }) );
 	set( "prevent_drop",1 );
-	set( "unit","¸ù");
+	set( "unit","æ ¹");
 	set( "light",1 );
 }           
 
@@ -34,23 +34,23 @@ int to_show( string arg )
     object ob;
     int year,day,j,k;
     
-    if( !arg ) return notify_fail( "É¶£¿\n" );
+    if( !arg ) return notify_fail( "å•¥ï¼Ÿ\n" );
     if( sscanf( arg, "amethyst to %s", who )!=1 )
       return notify_fail( "Usage : show what to whom\n" );
     ob = present( who, environment(this_player()) );
     if( !ob ) {
-      tell_object( this_player(),"ÕâÀïÃ»Õâ¸öÈË¡£\n");
+      tell_object( this_player(),"é€™è£¡æ²’é€™å€‹äººã€‚\n");
       return 1;
     }
-    sscanf(WEATHER_D->query_c_game_time(),"Íõ¹úÀú %d Äê£¬%s %d ÈÕ£¬%s %d Ê± %d ·Ö",
+    sscanf(WEATHER_D->query_c_game_time(),"ç‹åœ‹æ›† %d å¹´ï¼Œ%s %d æ—¥ï¼Œ%s %d æ™‚ %d åˆ†",
     year,month,day,msg,j,k );
-    if( msg=="Áè³¿" || msg=="ÉîÒ¹" || msg=="Ò¹Íí" ){
+    if( msg=="å‡Œæ™¨" || msg=="æ·±å¤œ" || msg=="å¤œæ™š" ){
     if( undefinedp(ob->change(ob, this_player())) )
     tell_object( this_player(),
-	ob->query("c_name")+"Ëµ£ºÄã¸ÉÊ²÷á?\n" );
+	ob->query("c_name")+"èªªï¼šä½ å¹¹ä»€éº¼?\n" );
     return 1;
     }
     else {
-    return notify_fail( "Ê±¼ä²»¶Ôà¸£¡Ö»ÓĞ½åÖøÔÂ¹â²ÅÄÜ·¢»ÓËüµÄ¹¦ÓÃ¡£\n" );
+    return notify_fail( "æ™‚é–“ä¸å°å–”ï¼åªæœ‰è—‰è‘—æœˆå…‰æ‰èƒ½ç™¼æ®å®ƒçš„åŠŸç”¨ã€‚\n" );
     }
 }

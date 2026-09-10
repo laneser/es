@@ -7,14 +7,14 @@ void create()
 {
     ::create();
     set_level(16);
-    set_name( "motorcycle", "ºÀÂõ125" );
+    set_name( "motorcycle", "è±ªé‚125" );
     add("id",({"motor","motorcycle"}) );
-   set_short( "ºÀÂõ125" );
+   set_short( "è±ªé‚125" );
     set_long(
-	    "Ò»Á¾À­·çµÄÖØĞÍËÙ¿Ë´ï,ÊÇÄĞº¢¿ÊÍûµÄ½»Í¨¹¤¾ß¡£"
+	    "ä¸€è¼›æ‹‰é¢¨çš„é‡å‹é€Ÿå…‹é”,æ˜¯ç”·å­©æ¸´æœ›çš„äº¤é€šå·¥å…·ã€‚"
 	);
     set( "gender", "neuter" );
-    set( "unit", "Á¾" ) ;
+    set( "unit", "è¼›" ) ;
     set( "alignment", 200 );
     set( "time_to_heal", 8 );
     set("max_hp",300);
@@ -32,10 +32,10 @@ void create()
     set("aim_difficulty",(["critical":10,"weakest":50,
                          "vascular":30,"ganglion":40 ]) ) ;
 
-    set( "c_extra_look", "$NÕıÆïÔÚÀ­·çµÄºÀÂõ125ÉÏ¡£\n");
+    set( "c_extra_look", "$Næ­£é¨åœ¨æ‹‰é¢¨çš„è±ªé‚125ä¸Šã€‚\n");
     
-    set_c_verbs(({"%s¼ÓËÙÏò%s³å×²¹ıÈ¥","%sÓÃÂÖÌ¥Íù%sÄë¹ıÈ¥"}));
-    set_c_limbs(({"³µÉí","°ÑÊÖ","ÂÖÌ¥",}));    
+    set_c_verbs(({"%såŠ é€Ÿå‘%sè¡æ’éå»","%sç”¨è¼ªèƒå¾€%sç¢¾éå»"}));
+    set_c_limbs(({"è»Šèº«","æŠŠæ‰‹","è¼ªèƒ",}));    
     
     set_skill("dodge",65)    ;
     set_skill("unarmed",50) ;

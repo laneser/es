@@ -81,40 +81,40 @@ varargs string finger_user(string who, int st)
   
 	link = restore_data(who);
 	player = find_player(who); 
-    if(!link) return "Finger: Ã»ÓĞÕâÎ»Ê¹ÓÃÕß.¡¡\n";
+    if(!link) return "Finger: æ²’æœ‰é€™ä½ä½¿ç”¨è€….ã€€\n";
 		
-    tmp1 = "Ê¹ÓÃÕßĞÕÃû:\t"+link->query("c_name")+"["+who+"]";
-    tmp2 = "ÕæÊµĞÕÃû:\t";
+    tmp1 = "ä½¿ç”¨è€…å§“å:\t"+link->query("c_name")+"["+who+"]";
+    tmp2 = "çœŸå¯¦å§“å:\t";
   	if ( tmp3 = (string)link->RNAME) 
 		tmp2 += extract(tmp3, 0, 22);
-    else tmp2 += "(²»Ïê)";
+    else tmp2 += "(ä¸è©³)";
  
 	msg = sprintf("%-40s%-30s\n", tmp1, tmp2);
  
 	tmp1 = user_path(who);
-    if(file_size(tmp1) == -1) tmp1 = "(Ã»ÓĞ)";
-    msg += "Ë½ÈËÄ¿Â¼:\t" + tmp1 + "\n";
+    if(file_size(tmp1) == -1) tmp1 = "(æ²’æœ‰)";
+    msg += "ç§äººç›®éŒ„:\t" + tmp1 + "\n";
  
 	tmp4 = DOMAIN_D->query_domain(link);
 	tmp5 = DOMAIN_D->query_domain_level(link);
-    if ((tmp4==0) || (tmp4=="")) tmp4 = "Ã»ÓĞ";
-    msg += "ËùÊôÁìÓò:\t" + tmp4 + " (" + to_chinese(tmp5) + ")\n";
+    if ((tmp4==0) || (tmp4=="")) tmp4 = "æ²’æœ‰";
+    msg += "æ‰€å±¬é ˜åŸŸ:\t" + tmp4 + " (" + to_chinese(tmp5) + ")\n";
  
-    msg += "È¨ÏŞµÈ¼¶:\t";
+    msg += "æ¬Šé™ç­‰ç´š:\t";
 	if(member_group((string)link->query("name"), "admin"))
-        msg += "Éñ\n";
-    else if(link->query("wizard"))  msg += "Î×Ê¦\n";
-    else msg += "Íæ¼Ò\n";
+        msg += "ç¥\n";
+    else if(link->query("wizard"))  msg += "å·«å¸«\n";
+    else msg += "ç©å®¶\n";
  
 	tmp1 = (string)link->query("email");
-    msg += "µç×ÓÓÊ¼şµØÖ·:\t" + tmp1 + "\n";
+    msg += "é›»å­éƒµä»¶åœ°å€:\t" + tmp1 + "\n";
  
 	tmp1 = find_player(who);
  
 	hibernate = (int)link->query("hibernate");
  
 	if( hibernate && time() < hibernate )
-        msg += "\n\t[Ğİ¼ÙÖĞ£¬·µ»ØÈÕÆÚ: "+ctime(hibernate) + "]\n\n";
+        msg += "\n\t[ä¼‘å‡ä¸­ï¼Œè¿”å›æ—¥æœŸ: "+ctime(hibernate) + "]\n\n";
  
 	if(tmp1) {
 		if(!this_player() && tmp1->query("invisible"))  tmp1 = 0;
@@ -122,12 +122,12 @@ varargs string finger_user(string who, int st)
 	}
  
 	if( !link->query("last_on") )
-        msg += (tmp1 ? "ÉÏÏßÊ±¼ä:\t" : "ÉÏ´ÎÉÏÏßÊ±¼ä:\t") + "<²»Ã÷>\n";
+        msg += (tmp1 ? "ä¸Šç·šæ™‚é–“:\t" : "ä¸Šæ¬¡ä¸Šç·šæ™‚é–“:\t") + "<ä¸æ˜>\n";
 	else
-        msg += ((tmp1 && !tmp1->query("npc")) ? "ÉÏÏßÊ±¼ä:\t" : "ÉÏ´ÎÉÏÏßÊ±¼ä:\t") +
+        msg += ((tmp1 && !tmp1->query("npc")) ? "ä¸Šç·šæ™‚é–“:\t" : "ä¸Šæ¬¡ä¸Šç·šæ™‚é–“:\t") +
         ctime((int)link->query("last_on"));
     if(st==1)
-        msg += " (À´×Ô " + (string)link->query("ip") + " )\n";
+        msg += " (ä¾†è‡ª " + (string)link->query("ip") + " )\n";
     else
         msg += "\n";
 //	if (tmp1) {
@@ -138,10 +138,10 @@ varargs string finger_user(string who, int st)
 	// add by Kyoko 4-9-94.
     if( player&&tmp1 ) {
       age = (int)player->query_age();
-        msg += sprintf("ÄêÁä:\t\t%dÌì %dĞ¡Ê± %d·Ö %dÃë\n",
+        msg += sprintf("å¹´é½¡:\t\t%då¤© %då°æ™‚ %dåˆ† %dç§’\n",
            age/86400, (age%86400)/3600, (age%3600)/60, age%60 );
  
-/* This section comment out by Elon, 12-23-94. ×ªÊÀ, ÑôÊÙÖÆ¶È»¹Ã»ºÃ
+/* This section comment out by Elon, 12-23-94. è½‰ä¸–, é™½å£½åˆ¶åº¦é‚„æ²’å¥½
       race = player->query("race");
       if( race ) {
         age = RACE_MASTER(race)->query_natural_life();
@@ -149,24 +149,24 @@ varargs string finger_user(string who, int st)
         age -= (int)player->query("natural_age");
         age -= (int)player->query_age() / 86400;
  
-          msg += (age > 0) ? sprintf(" »¹ÓĞ %d Äê¿É»î¡¡\n", age ) :
-                 " ÑôÊÙÒÑ¾¡¡¡\n";
+          msg += (age > 0) ? sprintf(" é‚„æœ‰ %d å¹´å¯æ´»ã€€\n", age ) :
+                 " é™½å£½å·²ç›¡ã€€\n";
       }
 */
     }
          
 	mail_stat = (mapping)MAILER_D->mail_status(who);
 	if (mail_stat["unread"])
-            msg += sprintf("\nĞÅ¼ş:\t%d ·â, ÉĞÎ´¶ÁÈ¡: %d ·â\n",
+            msg += sprintf("\nä¿¡ä»¶:\t%d å°, å°šæœªè®€å–: %d å°\n",
 			mail_stat["total"], mail_stat["unread"]);
-    else msg += "\n[ Ã»ÓĞÉĞÎ´¶ÁÈ¡µÄĞÅ¼ş ]\n";
+    else msg += "\n[ æ²’æœ‰å°šæœªè®€å–çš„ä¿¡ä»¶ ]\n";
 	tmp1 = user_path(who) + ".project";
-    if(file_size( tmp1 ) >= 0) msg += "\nÄ¿Ç°¼Æ»­:\t" + read_file(tmp1);
+    if(file_size( tmp1 ) >= 0) msg += "\nç›®å‰è¨ˆç•«:\t" + read_file(tmp1);
 	tmp1 = user_path(who) + ".plan";
 	if (file_size( tmp1 ) >= 0) {
-        msg += "\nÎ´À´¼Æ»­: \n" + read_file(tmp1);
+        msg += "\næœªä¾†è¨ˆç•«: \n" + read_file(tmp1);
 	}
-    else msg += "\n[ Ä¿Ç°Ã»ÓĞÌØÊâ¼Æ»­ ]\n";
+    else msg += "\n[ ç›®å‰æ²’æœ‰ç‰¹æ®Šè¨ˆç•« ]\n";
 	if (!find_player(who)) link->remove();
 	return "\n" + msg + "\n";
 }
@@ -186,15 +186,15 @@ varargs string finger_all(int st)
 	msg =
 "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
     if (j == 0)
-        msg += "[ ¶«·½¹ÊÊÂÏÖÔÚÃ»ÓĞÈÎºÎÈËÉÏÏßÖĞ, ÄÇÄãÒ»¶¨²»ÊÇÈË ]\n";
+        msg += "[ æ±æ–¹æ•…äº‹ç¾åœ¨æ²’æœ‰ä»»ä½•äººä¸Šç·šä¸­, é‚£ä½ ä¸€å®šä¸æ˜¯äºº ]\n";
 	else {
-        msg += "[ ¶«·½¹ÊÊÂ ] Ä¿Ç°ÓĞ " + j + " Î»Ê¹ÓÃÕß ( Ê±¼ä: "+
+        msg += "[ æ±æ–¹æ•…äº‹ ] ç›®å‰æœ‰ " + j + " ä½ä½¿ç”¨è€… ( æ™‚é–“: "+
                ctime(time()) + " )\n";
 		msg += 
 "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
-        msg += sprintf("%-15s%-15s%-15s%-8s%-6s%-16s","ÖĞÎÄĞÕÃû", "Ó¢ÎÄĞÕÃû",
-        "ÕæÊµĞÕÃû", (st == 1? "Éí·İ":"    "), "·¢´ô",
-        (st == 1? "Á¬ÏßÎ»ÖÃ\n":"\n"));
+        msg += sprintf("%-15s%-15s%-15s%-8s%-6s%-16s","ä¸­æ–‡å§“å", "è‹±æ–‡å§“å",
+        "çœŸå¯¦å§“å", (st == 1? "èº«ä»½":"    "), "ç™¼å‘†",
+        (st == 1? "é€£ç·šä½ç½®\n":"\n"));
 		msg += 
 "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
 	}

@@ -5,13 +5,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("fish-scale suit","ÓãÆ¤Õ½¼×");
+        set_name("fish-scale suit","é­šçš®æˆ°ç”²");
         add("id",({"suit"}) );
-         set_short("ÓãÆ¤Õ½¼×");
+         set_short("é­šçš®æˆ°ç”²");
         set_long(
-"ÕâÊÇÒ»Ì×ÓÉÌØÊâ´¦Àí¹ıµÄÓãÆ¤ÖÆ³ÉµÄ½ôÉíÕ½¼×£¬ÓĞÁ¼ºÃµÄ·ÀÓùÁ¦¡£\n"
+"é€™æ˜¯ä¸€å¥—ç”±ç‰¹æ®Šè™•ç†éçš„é­šçš®è£½æˆçš„ç·Šèº«æˆ°ç”²ï¼Œæœ‰è‰¯å¥½çš„é˜²ç¦¦åŠ›ã€‚\n"
         );
-        set( "unit", "Ì×" );
+        set( "unit", "å¥—" );
         set( "weight", 220 );
         set( "type", "body" );
         set( "material", "leather" );

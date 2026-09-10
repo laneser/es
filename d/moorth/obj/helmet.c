@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "alloyed visor helm", "ºÏ½ğ¸²ÃæÍ·¿ø" );
+	set_name( "alloyed visor helm", "åˆé‡‘è¦†é¢é ­ç›”" );
 	add( "id", ({ "visor helm", "visor", "helm" }) );
-	set_short( "an alloyed visor helm", "ºÏ½ğ¸²ÃæÍ·¿ø" );
+	set_short( "an alloyed visor helm", "åˆé‡‘è¦†é¢é ­ç›”" );
 	set_long(
 		"You see an alloyed visor helm. It looks pretty heavy and\n"
 		"can supply good protection.\n",
-		"ÕâÊÇÒ»ÃæÓÃÄ³ÖÖ²»ÖªÃûºÏ½ğ´òÔìµÄ¸²ÃæÍ·¿ø£¬¿´ÆğÀ´Ïàµ±ÖØ¡£\n"
+		"é€™æ˜¯ä¸€é¢ç”¨æŸç¨®ä¸çŸ¥ååˆé‡‘æ‰“é€ çš„è¦†é¢é ­ç›”ï¼Œçœ‹èµ·ä¾†ç›¸ç•¶é‡ã€‚\n"
 	);
-	set( "unit", "¾ß" );
+	set( "unit", "å…·" );
 	set( "type", "head" );
 	set( "material", "heavy_metal" );
 	set( "armor_class", 6 );

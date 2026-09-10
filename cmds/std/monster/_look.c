@@ -15,8 +15,8 @@
  
 		This code allows a user to "look" in a room, or at a specific
 object in the user's inventory or environment.
-11-16-94 Elon@Eastern.Stories - ÖĞÎÄ»¯³õ²½..
-02-10-95 Ruby@Eastern.Stories - ÖØĞÂÕûÀí ..
+11-16-94 Elon@Eastern.Stories - ä¸­æ–‡åŒ–åˆæ­¥..
+02-10-95 Ruby@Eastern.Stories - é‡æ–°æ•´ç† ..
 */
  
 #include <config.h>
@@ -51,13 +51,13 @@ int cmd_look (string str)
 
 //Check to see if the user is blind
 	if (viewingOb->query("blind"))
-    	return notify_fail("ÄãÒÑ¾­Ï¹ÁË£¬Ê²÷áÒ²¿´²»¼û¡£\n");
+    	return notify_fail("ä½ å·²ç¶“çäº†ï¼Œä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n");
 
 	// are we looking at our immediate environment?
 	if (!str || !stringp (str)) {
 		// do we have an environment?  If not, write the default message
 		if( !env ) 
-			return notify_fail("ÕâÀïÒ»Æ¬ĞéÎŞçÎÃì£¬¿´²»µ½ÈÎºÎ¶«Î÷¡£\n");
+			return notify_fail("é€™è£¡ä¸€ç‰‡è™›ç„¡ç¸¹æ¸ºï¼Œçœ‹ä¸åˆ°ä»»ä½•æ±è¥¿ã€‚\n");
 		viewingOb->quick_message(look_in_room(env,1));
 		return 1;
 	}
@@ -104,7 +104,7 @@ string living_description(object me,object ob)
 	race = ob->query("race");
 	raceat = to_chinese(race);
 	gender = (string)ob->query("gender");
-	genat = (me == ob)?"Äã":to_chinese(subjective(gender));
+	genat = (me == ob)?"ä½ ":to_chinese(subjective(gender));
  
 	i = sizeof(inv = all_inventory(ob));
 	while (i--) {
@@ -125,13 +125,13 @@ string living_description(object me,object ob)
 				   ((string)inv[i]->query("type") != "shield") )
 				  if( first ) {
 				    first = 0;
-				    reg = sprintf("%s%s%s%s",reg,genat,"ÉíÉÏ´©Öø : ",short);
+				    reg = sprintf("%s%s%s%s",reg,genat,"èº«ä¸Šç©¿è‘— : ",short);
                   } else
                     reg = sprintf("%s%s%s",reg,", ",short);
 			}
 		}
 		if( !first )
-		  reg += "¡£\n" ;
+		  reg += "ã€‚\n" ;
 		  
         for( i=0, first=1; i<sizeof(inv); i++ ) {
 			short = (string)inv[i]->query(SHORT_DESCRIPTION);
@@ -141,17 +141,17 @@ string living_description(object me,object ob)
 				     ((string)inv[i]->query("type") == "shield" )) )
 				  if( first ) {
 				    first = 0;
-				    reg = sprintf("%s%s%s%s",reg,genat,"ÊÖÉÏÄÃÖø : ",short);
+				    reg = sprintf("%s%s%s%s",reg,genat,"æ‰‹ä¸Šæ‹¿è‘— : ",short);
 				  } else
                     reg = sprintf("%s%s%s",reg,", ",short);
 			}
 		}
 		if( !first )
-          reg += "¡£\n";
+          reg += "ã€‚\n";
 	}
 		
 	if( stringp(race) && race != "" )
-		reg = sprintf("%s%sµÄÖÖ×åÊÇ%s¡£\n",reg,genat,raceat);
+		reg = sprintf("%s%sçš„ç¨®æ—æ˜¯%sã€‚\n",reg,genat,raceat);
  
 	reg = sprintf("%s%s%s\n",reg,genat,STATS_D->status_string(ob));
 	if (wizardp(me) || (ob == me) || me->query_temp("peeping"))
@@ -163,7 +163,7 @@ string living_description(object me,object ob)
 				if( inv[i]->query("wielded") || inv[i]->query("equipped") )
 				  continue;
 				if( first ) {
-				  reg += genat + "ÉíÉÏĞ¯´øÖø:\n";
+				  reg += genat + "èº«ä¸Šæ”œå¸¶è‘—:\n";
 					first = 0;
 				}
 				reg += "    " + short + ".\n";
@@ -192,7 +192,7 @@ string item_description (string str, object user)
 	if ( env2 ) { 
 		if ( door = env->query("doors/"+str) ) {
 			if ( (string)door["status"] !="open" )
-				return "Õâ±ßµÄÃÅÊÇ¹ØÖøµÄ¡£\n" ;
+				return "é€™é‚Šçš„é–€æ˜¯é—œè‘—çš„ã€‚\n" ;
 			else
 			return look_in_room( find_object_or_load(env2), 0);
 		}
@@ -219,7 +219,7 @@ string item_description (string str, object user)
 	if ( !it && wizardp(viewingOb) )
 		it = find_player(str) ;
 	if (it && !can_see (it,viewingOb))
-		return "ÕâÀïÃ»ÓĞÄÇÑù¶«Î÷¡£\n";
+		return "é€™è£¡æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n";
  
 	if (it) {
 		if (living (it))
@@ -247,11 +247,11 @@ string item_description (string str, object user)
 			}
 		}
 		else return
-            "ÕâÀïÃ»ÓĞÕâÑù¶«Î÷¡£\n";
+            "é€™è£¡æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n";
 	}
  
 	if (!ret || ret == "")
-		return "ÄãÏë¿´Ê²÷á£¿\n";
+		return "ä½ æƒ³çœ‹ä»€éº¼ï¼Ÿ\n";
  
 	if (it) {
 		if (it != viewingOb) {
@@ -259,15 +259,15 @@ string item_description (string str, object user)
 				!user->query_temp("peeping") )
 			if ( environment(viewingOb) == environment(it) )
 			tell_object( it, user->query("c_name")+
-			"Õı¶¢ÖøÄã¿´£¬²»ÖªµÀÓĞÊ²÷áÆóÍ¼....¡£\n" );
+			"æ­£ç›¯è‘—ä½ çœ‹ï¼Œä¸çŸ¥é“æœ‰ä»€éº¼ä¼åœ–....ã€‚\n" );
 //			foo = capitalize((string)it->query("name"));
 //			if (!foo) foo = it->query(SHORT_DESCRIPTION) ;
-//			if (!foo) foo = "Ä³Îï";
+//			if (!foo) foo = "æŸç‰©";
 		} 
 //		else foo = sprintf("%sself", objective((string)viewingOb->query("gender")));
 //		tell_room( env, ({
 //			sprintf("%s looks at %s.\n", user->query ("cap_name"), (living(it)? foo: lower_case(foo))),
-//			sprintf("%s×ĞÏ¸µÄ´òÁ¿Öø%s¡£\n", user->query("c_cap_name"), (living(it)? foo: lower_case(foo))) }),
+//			sprintf("%sä»”ç´°çš„æ‰“é‡è‘—%sã€‚\n", user->query("c_cap_name"), (living(it)? foo: lower_case(foo))) }),
 //			({ user, it }) );
 	} 
 //	else message ("say", sprintf ("%s looks at %s.\n", user->query ("cap_name"),
@@ -283,7 +283,7 @@ string look_at_item (string str, object user)
 			return item_description (str, user);
    
 //Guess there is no light here, then.
-    return "ÕâÀïÒ»Æ¬ÆáºÚ£¬ÉìÊÖ²»¼ûÎåÖ¸¡£\n";
+    return "é€™è£¡ä¸€ç‰‡æ¼†é»‘ï¼Œä¼¸æ‰‹ä¸è¦‹äº”æŒ‡ã€‚\n";
 }
  
 string lit_room_description(object room);
@@ -298,7 +298,7 @@ string look_in_room (object room,int if_here)
   	  if( room->query("no_vision_msg") )
     	return (string)room->query("no_vision_msg");
       else 
-        return "ÕâÀïÒ»Æ¬ÆáºÚ£¬ÉìÊÖ²»¼ûÎåÖ¸¡£\n";
+        return "é€™è£¡ä¸€ç‰‡æ¼†é»‘ï¼Œä¼¸æ‰‹ä¸è¦‹äº”æŒ‡ã€‚\n";
  
 //Check to see if the user can see within the room.
  
@@ -316,7 +316,7 @@ string look_in_room (object room,int if_here)
       }
 	}
 //Looks like there isn't any light here.
-  return (if_here?"Õâ":"ÄÇ")+"ÀïÒ»Æ¬ÆáºÚ£¬ÉìÊÖ²»¼ûÎåÖ¸¡£\n";
+  return (if_here?"é€™":"é‚£")+"è£¡ä¸€ç‰‡æ¼†é»‘ï¼Œä¼¸æ‰‹ä¸è¦‹äº”æŒ‡ã€‚\n";
 }
  
 int suppress_filt (string exit, string *suppress)
@@ -375,7 +375,7 @@ and their statuses will be displayed in the room. */
 			i = sizeof (doors);
 			while (i--)
 			{
-					long = sprintf( "%s    %s±ßµÄ%s(%s)ÊÇ%sµÄ¡£\n", long, to_chinese(dirs[i]),
+					long = sprintf( "%s    %sé‚Šçš„%s(%s)æ˜¯%sçš„ã€‚\n", long, to_chinese(dirs[i]),
 					doors[dirs[i]]["c_name"], doors[dirs[i]]["name"], 
 					to_chinese(doors[dirs[i]]["status"]) );
 			}
@@ -399,16 +399,16 @@ exits will be displayed or not. */
 	    i = sizeof (dirs);
 		switch (i) {
 		case 0:
-            long = sprintf("%s\tÕâ¡õÃ»ÓĞÈÎºÎÃ÷ÏÔµÄ³ö¿Ú¡£\n",long);
+            long = sprintf("%s\té€™â–¡æ²’æœ‰ä»»ä½•æ˜é¡¯çš„å‡ºå£ã€‚\n",long);
 			break;
 		case 1:
-            long = sprintf("%s\tÕâÀïÎ¨Ò»µÄ³ö¿ÚÊÇ: %s¡£\n",long,dirs[0]);
+            long = sprintf("%s\té€™è£¡å”¯ä¸€çš„å‡ºå£æ˜¯: %sã€‚\n",long,dirs[0]);
 			break;
 		case 2:
-            long = sprintf("%s\t´ÓÕâÀïÄã¿ÉÒÔÍù %s »òÍù %s¡£\n",long,dirs[0],dirs[1]);
+            long = sprintf("%s\tå¾é€™è£¡ä½ å¯ä»¥å¾€ %s æˆ–å¾€ %sã€‚\n",long,dirs[0],dirs[1]);
 			break;
 		default:
-				long = sprintf("%s\t´ÓÕâÀïÄã¿ÉÒÔÍù %s »òÍù %s¡£\n",long,implode(dirs[0..(i-2)], "¡¢") ,dirs[i-1] );
+				long = sprintf("%s\tå¾é€™è£¡ä½ å¯ä»¥å¾€ %s æˆ–å¾€ %sã€‚\n",long,implode(dirs[0..(i-2)], "ã€") ,dirs[i-1] );
 		}
 	}
  
@@ -437,7 +437,7 @@ exits will be displayed or not. */
 
 	if (count > 1) {
 		long = sprintf("%s  %s%s%s(%s).\n",long,convert_c_number(count),
-						(obj->query("unit") ? obj->query("unit") :"¸ö"),
+						(obj->query("unit") ? obj->query("unit") :"å€‹"),
 				      	obj->query(SHORT_DESCRIPTION),
         			    capitalize((string)obj->query("name")));
      } else {
@@ -450,7 +450,7 @@ exits will be displayed or not. */
 	}
 		if (count > 1) {
 		long = sprintf("%s  %s%s%s(%s).\n",long,convert_c_number(count),
-						(obj->query("unit") ? obj->query("unit"):"¸ö"),
+						(obj->query("unit") ? obj->query("unit"):"å€‹"),
 				      	obj->query(SHORT_DESCRIPTION),
         			    capitalize((string)obj->query("name")));
      } else {
@@ -466,10 +466,10 @@ exits will be displayed or not. */
 string convert_c_number(int num) {
   if (!c_number)
     c_number = ({
-"Ò»", "Á½", "Èı", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å", "Ê®", "Ê®Ò»", "Ê®¶ş",
-"Ê®Èı", "Ê®ËÄ", "Ê®Îå", "Ê®Áù", "Ê®Æß", "Ê®°Ë", "Ê®¾Å", "¶şÊ®" });
+"ä¸€", "å…©", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹", "å", "åä¸€", "åäºŒ",
+"åä¸‰", "åå››", "åäº”", "åå…­", "åä¸ƒ", "åå…«", "åä¹", "äºŒå" });
    
-  return ((num > 20) ? "Ğí\¶à" : c_number[num - 1]);
+  return ((num > 20) ? "è¨±å¤š" : c_number[num - 1]);
 }
 
 int help() {
@@ -480,8 +480,8 @@ Syntax: look
         look my <object>
         look <object> here
  
-Èç¹ûÃ»ÓĞÖ¸ÃûÎï¼ş, Õâ¸öÖ¸Áî»áÈÃÄã¿´ÄãËùÔÚµÄ»·¾³. Èç¹ûÓĞÖ¸¶¨
-Îï¼şÃû, ÔòÄã¿ÉÒÔ½Ï×ĞÏ¸µÄ¹Û²ìÕâ¸öÎï¼ş.
+å¦‚æœæ²’æœ‰æŒ‡åç‰©ä»¶, é€™å€‹æŒ‡ä»¤æœƒè®“ä½ çœ‹ä½ æ‰€åœ¨çš„ç’°å¢ƒ. å¦‚æœæœ‰æŒ‡å®š
+ç‰©ä»¶å, å‰‡ä½ å¯ä»¥è¼ƒä»”ç´°çš„è§€å¯Ÿé€™å€‹ç‰©ä»¶.
 Help
 );
   return 1;

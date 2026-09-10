@@ -28,7 +28,7 @@ int cmd_stat(string name)
 	ob = get_object(name);
 	if (!ob || !living(ob))
 		return notify_fail( chinese_mode?
-			"Ã»ÓÐÕâÖÖ¶«Î÷....¡£\n":
+			"æ²’æœ‰é€™ç¨®æ±è¥¿....ã€‚\n":
 			"No such living object exists.\n");
 
 	printf(inverse("[ %2d ]")+bold(" %s\n\n"), ob->query_level(),
@@ -39,7 +39,7 @@ int cmd_stat(string name)
 	tempstr = ob->query("race");
 	
 	if( tempstr ) write( chinese_mode?
-		"×´  Ì¬: "+to_chinese(tempstr)+to_chinese(ob->query("class"))+
+		"ç‹€  æ…‹: "+to_chinese(tempstr)+to_chinese(ob->query("class"))+
 			"(" + to_chinese(ob->query("gender")) + ")\n" :
 		capitalize(subj)+" is "+article(tempstr)+" "+tempstr+" "+
 			ob->query("class")+".\n" );
@@ -50,26 +50,26 @@ int cmd_stat(string name)
 	if( !exp_reward = ob->query("exp_reward") )
 		exp_reward = (int)ob->query_experience() / (ob->query_level() + 10);
 	write( chinese_mode?
-		"¾­  Ñé: "+ob->query_experience() + " (" + exp_reward + ")\n":
+		"ç¶“  é©—: "+ob->query_experience() + " (" + exp_reward + ")\n":
 		"Experience\t: "+ob->query_experience()+ " (" + exp_reward + ")\n");
 	write( chinese_mode?
-		"Ì½ÏÕ¶È: "+ob->query_explore_points()+" µã\n":
+		"æŽ¢éšªåº¦: "+ob->query_explore_points()+" é»ž\n":
 		"Explore\t\t: "+ob->query_explore_points()+" points\n");
 	write( chinese_mode?
-		"Õó  Óª: "+(int)ob->query("alignment") + " (" 
+		"é™£  ç‡Ÿ: "+(int)ob->query("alignment") + " (" 
 			+ STATS_D->c_alignment_string(ob->query("alignment"))+ ") \n":
 		"Alignment\t: "+(int)ob->query("alignment")+"\n");
 	if( ob->query("max_hp") ) write( chinese_mode?
-		"\nÌå  Á¦: "+ob->query("hit_points")+"/"+ ob->query("max_hp")+"\n":
+		"\né«”  åŠ›: "+ob->query("hit_points")+"/"+ ob->query("max_hp")+"\n":
 		"\nHit points\t: "+ob->query("hit_points")+" of "+ ob->query("max_hp")+"\n");
 	if( ob->query("max_sp") ) write( chinese_mode?
-		"·¨  Á¦: "+ob->query("spell_points")+"/"+ob->query("max_sp")+"\n":
+		"æ³•  åŠ›: "+ob->query("spell_points")+"/"+ob->query("max_sp")+"\n":
 		"Spell points\t: "+ob->query("spell_points")+" of "+ob->query("max_sp")+"\n") ;
 	if( ob->query("max_fp") ) write( chinese_mode?
-		"ÄÚ  Á¦: "+ob->query("force_points")+"/"+ob->query("max_fp")+"\n":
+		"å…§  åŠ›: "+ob->query("force_points")+"/"+ob->query("max_fp")+"\n":
 		"Force points\t: "+ob->query("force_points")+" of "+ob->query("max_fp")+"\n") ;
     if( ob->query("max_tp") ) write( chinese_mode?
-		"½»Ì¸ÄÜÁ¦: "+ob->query("talk_points")+"/"+ob->query("max_tp")+"\n":
+		"äº¤è«‡èƒ½åŠ›: "+ob->query("talk_points")+"/"+ob->query("max_tp")+"\n":
 		"Talk points\t: "+ob->query("talk_points")+" of "+ob->query("max_tp")+"\n") ;
 	write( "\n" );
 	statnames = STATS_D->query_stat_names();
@@ -84,17 +84,17 @@ int cmd_stat(string name)
 	ob->calc_weapon_class();
 	ob->calc_armor_class();
 	printf( chinese_mode?
-		"·À»¤µÈ¼¶: \t%d\t\t¶îÍâ·ÀÓù: \t%d\n":
+		"é˜²è­·ç­‰ç´š: \t%d\t\té¡å¤–é˜²ç¦¦: \t%d\n":
 		"Armor Class\t: %d\tDefense Bonus\t: %d\n",
 		ob->query("armor_class"), ob->query("defense_bonus") );
 	printf( chinese_mode?
-		"Ö÷ÒªÎäÆ÷µÈ¼¶: \t%d\t\tÉËº¦Á¦·¶Î§: \t%d - %d\n":
+		"ä¸»è¦æ­¦å™¨ç­‰ç´š: \t%d\t\tå‚·å®³åŠ›ç¯„åœ: \t%d - %d\n":
 		"Weapon Right\t: %d\tDamage range\t: %d to %d\n",
 		ob->query("weapon_class1"),
 		ob->query("min_damage1"),
 		ob->query("max_damage1") );
 	printf( chinese_mode?
-		"´ÎÒªÎäÆ÷µÈ¼¶: \t%d\t\tÉËº¦Á¦·¶Î§: \t%d - %d\n\n":
+		"æ¬¡è¦æ­¦å™¨ç­‰ç´š: \t%d\t\tå‚·å®³åŠ›ç¯„åœ: \t%d - %d\n\n":
 		"Weapon Left\t: %d\tDamage range\t: %d to %d\n\n",
 		ob->query("weapon_class2"),
 		ob->query("min_damage2"),
@@ -103,7 +103,7 @@ int cmd_stat(string name)
 	wealth = ob->query("wealth") ;
 	if (!wealth) {
 		write ( chinese_mode?
-			"ÉíÎÞ·ÖÎÄ¡£\n": subj+" doesn't have any coins in "+poss+" purse.\n") ;
+			"èº«ç„¡åˆ†æ–‡ã€‚\n": subj+" doesn't have any coins in "+poss+" purse.\n") ;
 	} else {
 		coins = keys(wealth) ;
 		list = sort_array(coins,"sort_coins",this_object()) ;
@@ -117,7 +117,7 @@ int cmd_stat(string name)
 			}
 		}
 		if (flag==0) 
-			write( chinese_mode? "ÉíÎÞ·ÖÎÄ¡£\n": subj+" has no coins at all in "+poss+" purse.\n") ;
+			write( chinese_mode? "èº«ç„¡åˆ†æ–‡ã€‚\n": subj+" has no coins at all in "+poss+" purse.\n") ;
 	}
 
 	skills = ob->query_skills() ;

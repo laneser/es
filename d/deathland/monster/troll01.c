@@ -8,12 +8,12 @@ void create()
 	
 	::create();
 	set_level(15);
-	set_name( "troll", "¾ŞÈË" );
+	set_name( "troll", "å·¨äºº" );
 //	add ("id", ({ "troll", }) );
-	set_short("¾ŞÈË" );
+	set_short("å·¨äºº" );
 	set_long(
 //	"A aggressive troll \n",
-    "Ò»¸öÕıÔÚÑ°ÕÒÊ³ÎïµÄ¾ŞÈË¡£\n"
+    "ä¸€å€‹æ­£åœ¨å°‹æ‰¾é£Ÿç‰©çš„å·¨äººã€‚\n"
         );
     set("special_defense",(["monk":10]));
     set("aggressive",1);
@@ -21,7 +21,7 @@ void create()
     set("time_to_heal",4);
     set( "gender", "male" );
     set( "race", "troll" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set("max_hp",650);
     set("hit_points",650);
 	set_perm_stat( "str", 26 );
@@ -33,7 +33,7 @@ void create()
     set ("chat_chance", 25);
     set ("chat_output",({
 //         "Giant yell and try to catch you!!\n",
-         "¾ŞÈË´óº°:Ê³Îï!!!!È»ááÊÔÖøÈ¥×¥×¡Äã !!\n"
+         "å·¨äººå¤§å–Š:é£Ÿç‰©!!!!ç„¶å¾Œè©¦è‘—å»æŠ“ä½ä½  !!\n"
         }) );
     set ("alignment",-400);
     set_skill("blunt",70);

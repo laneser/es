@@ -24,7 +24,7 @@ int do_train(string arg)
 
 	if( !arg || arg=="" || undefinedp(lessons[arg]) )
 		return notify_fail( can_read_chinese()?
-			"ÄãÒªÑµÁ·Ê²÷á¼¼ÄÜ£¿\n": "Train what?\n" );
+			"ä½ è¦è¨“ç·´ä»€éº¼æŠ€èƒ½ï¼Ÿ\n": "Train what?\n" );
 
 	if( !this_object()->check_trainee( this_player() ) )
 		return 0;
@@ -32,20 +32,20 @@ int do_train(string arg)
 	skill = (int)this_player()->query_skill(arg);
 	if( skill > lessons[arg][1] )
 		return notify_fail( can_read_chinese()?
-			"ÕâÏî¼¼ÄÜÔÚÕâÀïÄãÖ»ÄÜÑ§µ½ " + lessons[arg][1] + "¡£\n":
+			"é€™é …æŠ€èƒ½åœ¨é€™è£¡ä½ åªèƒ½å­¸åˆ° " + lessons[arg][1] + "ã€‚\n":
 			"You have learned all you can learn here.\n" );
 
 	exp = (int)STATS_D->query_skill_exp(skill) * lessons[arg][0] / 100;
 	if( exp > (int)this_player()->query_exp_stock() )
 		return notify_fail( can_read_chinese()?
-			"ÌáÉıÕâÏî¼¼ÄÜĞèÒª " + exp + " µã¾­Ñé£¬µ«ÊÇÄãµÄ¾­Ñé²»¹»¡£\n":
+			"æå‡é€™é …æŠ€èƒ½éœ€è¦ " + exp + " é»ç¶“é©—ï¼Œä½†æ˜¯ä½ çš„ç¶“é©—ä¸å¤ ã€‚\n":
 			"You need " + exp + " experience to train this skill.\n" );
 
 	this_player()->gain_experience( -exp );
 	STATS_D->train_skill( this_player(), arg );
 	write( can_read_chinese()?
-		"ÄãµÄ" + to_chinese(arg) + "¼¼ÄÜÏÖÔÚÌáÉıµ½ " + 
-		this_player()->query_skill(arg) + " ÁË¡£\n":
+		"ä½ çš„" + to_chinese(arg) + "æŠ€èƒ½ç¾åœ¨æå‡åˆ° " + 
+		this_player()->query_skill(arg) + " äº†ã€‚\n":
 		"Your " + arg + " skill is now " + this_player()->query_skill(arg) + ".\n" );
 	return 1;
 }

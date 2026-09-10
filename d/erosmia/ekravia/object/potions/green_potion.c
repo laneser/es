@@ -5,16 +5,16 @@ inherit POTION;
 void create()
 {
 	potion::create();
-	set_name( "green potion", "´äÂÌÒ©Ë®" );
+	set_name( "green potion", "ç¿ ç¶ è—¥æ°´" );
 	add( "id", ({ "potion", "green" }) );
-	set_short( "´äÂÌÒ©Ë®" );
+	set_short( "ç¿ ç¶ è—¥æ°´" );
 	set_long( @LONG
-ÕâÊÇ°®¿¨À­Î¬ÑÇÕòÉÏÀÏÁ¶½ğÊõÊ¦¾«ĞÄÌáÁ¶µÄÃÜÒ©, ÓµÓĞ¾ø¼ÑµÄÖÎÁÆĞ§¹û¡£
+é€™æ˜¯æ„›å¡æ‹‰ç¶­äºé®ä¸Šè€éŠé‡‘è¡“å¸«ç²¾å¿ƒæç…‰çš„å¯†è—¥, æ“æœ‰çµ•ä½³çš„æ²»ç™‚æ•ˆæœã€‚
 LONG
 	);
 	set_healing( 95 );
 	set( "no_sale", 1 );
-	set( "unit", "Æ¿" );
+	set( "unit", "ç“¶" );
 	set( "weight", 15 );
 	set( "value", ({ 750, "silver" }) );
 	set( "medication", 70 );

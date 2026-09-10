@@ -2,14 +2,14 @@ inherit WEAPON;
 
 void create()
 {
-    set_name( "icy","±ùÆÇ" );
-    set_short( "±ùÆÇ" );
+    set_name( "icy","å†°é­„" );
+    set_short( "å†°é­„" );
     set_long(@C_LONG
-ÕâÊÇÆ®Ñ©ÏÉ¼§ĞÄ°®µÄÍæ¾ß£¬Õ§¿´Ö»ÊÇÒ»Ã¶ÍòÄêº®±ù£¬¿ÉÒ»µ©ÓöÉÏÎ£ÏÕ£¬
-ÏÉ¼§¾Í»á°ÑËü»Ã»¯³ÉÇ¿Á¦µÄ¹¥»÷ÎäÆ÷¡£
+é€™æ˜¯é£„é›ªä»™å§¬å¿ƒæ„›çš„ç©å…·ï¼Œä¹çœ‹åªæ˜¯ä¸€æšè¬å¹´å¯’å†°ï¼Œå¯ä¸€æ—¦é‡ä¸Šå±éšªï¼Œ
+ä»™å§¬å°±æœƒæŠŠå®ƒå¹»åŒ–æˆå¼·åŠ›çš„æ”»æ“Šæ­¦å™¨ã€‚
 C_LONG
             );
-    set("unit","Ã¶");
+    set("unit","æš");
     set("weapon_class",50);
     set("type","longblade");
     set("max_damage",5);
@@ -30,15 +30,15 @@ void daemon_wield()
     set("max_damage",100);
     set("extra_look","@@color");
     tell_object( this_player(),set_color(
-       "\nº®¹âÒ»ÉÁ£¬¡º±ùÆÇº®¹â½£¡»ÒÑ³öÏÖÔÚÄãÊÖÉÏ£®\n\n"
+       "\nå¯’å…‰ä¸€é–ƒï¼Œã€å†°é­„å¯’å…‰åŠã€å·²å‡ºç¾åœ¨ä½ æ‰‹ä¸Šï¼\n\n"
        ,"HIW") );
     tell_room( environment(this_player()),set_color(
-       "\n"+"Í»È»¾íÆğÒ»Õóº®·ç£¬"+this_player()->query("c_name")+
-       "ÊÖÖĞÒÑ¶àÁËÒ»°Ñº®¹âÉÁÉÁµÄ±ù½££®\n\n"
+       "\n"+"çªç„¶æ²èµ·ä¸€é™£å¯’é¢¨ï¼Œ"+this_player()->query("c_name")+
+       "æ‰‹ä¸­å·²å¤šäº†ä¸€æŠŠå¯’å…‰é–ƒé–ƒçš„å†°åŠï¼\n\n"
        ,"HIW"),this_player() );
-    set_name("icy sword","±ùÆÇº®¹â½£");
+    set_name("icy sword","å†°é­„å¯’å…‰åŠ");
     add("id",({"icy","sword"}) );
-    set_short("±ùÆÇº®¹â½£");
+    set_short("å†°é­„å¯’å…‰åŠ");
     return;
     }
 }
@@ -48,9 +48,9 @@ void daemon_unwield()
         object holder ;
         if ( !holder = environment(this_object()) ) return;
     if( (int)this_object()->query("wc_damaged") ){
-         tell_object( this_player(),"Í»È»¼äÇ¿¹âÒ»ÉÁ,ÄãÊÖÖĞµÄ±ùÆÇº®¹â½£¾ÍÏûÊ§²»¼ûÁË....\n");
+         tell_object( this_player(),"çªç„¶é–“å¼·å…‰ä¸€é–ƒ,ä½ æ‰‹ä¸­çš„å†°é­„å¯’å…‰åŠå°±æ¶ˆå¤±ä¸è¦‹äº†....\n");
          tell_room( environment(this_player()),
-           "Í»È»´µ¹ıÒ»Õóº®·ç"+this_player()->query("c_name")+"ÊÖÖĞµÄ±ùÆÇº®¹â½£¾ÍÏûÊ§ÁË....\n",
+           "çªç„¶å¹éä¸€é™£å¯’é¢¨"+this_player()->query("c_name")+"æ‰‹ä¸­çš„å†°é­„å¯’å…‰åŠå°±æ¶ˆå¤±äº†....\n",
            this_player() );
            this_object()->remove();
            return;
@@ -60,8 +60,8 @@ void daemon_unwield()
     set("max_damage",5);
     set("prevent_drop",1);
     delete("extra_look");
-    set_name("icy","±ùÆÇ");
-    set_short("±ùÆÇ");
+    set_name("icy","å†°é­„");
+    set_short("å†°é­„");
     return ;
     }
 }
@@ -76,7 +76,7 @@ int weapon_hit( object victim, int damage )
    fp = owner->query("force_points");
    if (!((string)owner->query("name")=="snow")){
      tell_object( owner,
-     "\nÄãÊÖÖĞµÄ±ù½£·¢³öÒ»ÕóÇå´àµÄÉùÒô£º¹ş¹ş ! Äã²»Åä×öÎÒµÄÖ÷ÈË¡£\n\n");
+     "\nä½ æ‰‹ä¸­çš„å†°åŠç™¼å‡ºä¸€é™£æ¸…è„†çš„è²éŸ³ï¼šå“ˆå“ˆ ! ä½ ä¸é…åšæˆ‘çš„ä¸»äººã€‚\n\n");
      owner->receive_special_damage("energy",inte/2);
      return 0;
    }
@@ -84,14 +84,14 @@ int weapon_hit( object victim, int damage )
    intv = victim->query_stat("int");
    if( random(inte*3)>(intv*2) && fp >2 ) {
        tell_object( owner,
-       "\nÄã½«Ò»ÕóÄÚÁ¦¹áÊäì¶±ùÆÇº®¹â½£, ½£Í»È»·¢³öÒ»Õóº®ÆøÏò"+victim->query("c_name"
-)+"ÉäÈ¥\n\n" );
+       "\nä½ å°‡ä¸€é™£å…§åŠ›è²«è¼¸æ–¼å†°é­„å¯’å…‰åŠ, åŠçªç„¶ç™¼å‡ºä¸€é™£å¯’æ°£å‘"+victim->query("c_name"
+)+"å°„å»\n\n" );
        tell_object( victim, "\n" +
-          owner->query("c_name") + "µÄº®¹â½£Í»È»·¢³öÒ»Õóº®ÆøÏòÄãÏ®À´!\n\n" );
+          owner->query("c_name") + "çš„å¯’å…‰åŠçªç„¶ç™¼å‡ºä¸€é™£å¯’æ°£å‘ä½ è¥²ä¾†!\n\n" );
        tell_room( environment(owner),
      "\n" +
-         owner->query("c_name") + "µÄ±ù½£Í»È»Ïò" + victim->query("c_name") + "Éä
-³öÒ»Õóº®Æø!\n\n"
+         owner->query("c_name") + "çš„å†°åŠçªç„¶å‘" + victim->query("c_name") + "å°„
+å‡ºä¸€é™£å¯’æ°£!\n\n"
          , ({ victim, owner }) );
        victim->receive_damage(1000);
        victim->receive_special_damage( "energy", inte/2 );
@@ -104,5 +104,5 @@ int weapon_hit( object victim, int damage )
 
 string color()
 {
-    return set_color("$NµÄÓÒÊÖÖĞÎÕÖøÒ»±úÍòÄê±ùÆÇĞÎ³ÉµÄ°×É«³¤½£...\n","hiw");
+    return set_color("$Nçš„å³æ‰‹ä¸­æ¡è‘—ä¸€æŸ„è¬å¹´å†°é­„å½¢æˆçš„ç™½è‰²é•·åŠ...\n","hiw");
 }

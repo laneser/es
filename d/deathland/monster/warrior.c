@@ -8,16 +8,16 @@ void create()
 	
 	::create();
 	set_level(16);
-	set_name( "Dwarf warrior", "°«ÈËÕ½Ê¿" );
+	set_name( "Dwarf warrior", "çŸ®äººæˆ°å£«" );
 	add ("id", ({ "warrior", "dwarf", }) );
-	set_short( "a dwarf warrior", "°«ÈËÕ½Ê¿" );
+	set_short( "a dwarf warrior", "çŸ®äººæˆ°å£«" );
 	set_long(
 	"   \n",
-    "Ò»¸ö°«ÈËÕ½Ê¿,¸ºÔğ¿´ÊØÖøÊ¨ğÕÊŞ.\n");
+    "ä¸€å€‹çŸ®äººæˆ°å£«,è² è²¬çœ‹å®ˆè‘—ç…é·²ç¸.\n");
 
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "str", 20 );
 	set ("wealth", ([ "silver": 200 ]) );
 	set_natural_weapon(10,10,20);
@@ -27,7 +27,7 @@ void create()
     set ("chat_chance", 15);
     set("chat_output",({
 // "Warrior strikes you.\n",
-        "ÕâÕ½Ê¿»Ó¶¯ÖøËûµÄ¸«Í·,Ò»¸±Íş·çãÁãÁµÄÑù×Ó.\n"
+        "é€™æˆ°å£«æ®å‹•è‘—ä»–çš„æ–§é ­,ä¸€å‰¯å¨é¢¨æ‡æ‡çš„æ¨£å­.\n"
         }));
     set_skill("axe",90);
     set_skill("parry",80);

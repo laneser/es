@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Pick", "Ê®×Ö¸ä");
+	set_name("Pick", "åå­—é¬");
 	add ("id",({ "pick" }) );
-	set_short("Ê®×Ö¸ä");
+	set_short("åå­—é¬");
 	set_long(
-            "Ò»°ÑÊ®×Ö¸ä£¬¿ÉÓÃÀ´¿ªÔä(excavate)¡£\n"
+            "ä¸€æŠŠåå­—é¬ï¼Œå¯ç”¨ä¾†é–‹é‘¿(excavate)ã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "weapon_class", 5 );
 	set( "type", "thrusting" );
 	set( "min_damage", 5 );
@@ -29,7 +29,7 @@ int to_excavate(string str)
         object obj1, obj2;
         
         if ( !str || str=="" )
-          write("ÄãÒªÔäÊ²÷á ?\n");
+          write("ä½ è¦é‘¿ä»€éº¼ ?\n");
         else {
           obj1=environment(this_object());
           if (living(obj1)) {
@@ -37,9 +37,9 @@ int to_excavate(string str)
             if ((int)obj2->query("excavate")==1) 
               obj2->to_find_excavate(str);
             else
-              write("ÕâÀï²»ÄÜ¿ªÔä£¡\n");
+              write("é€™è£¡ä¸èƒ½é–‹é‘¿ï¼\n");
           }
-          else return notify_fail("ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");  
+          else return notify_fail("ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");  
         }
         return 1;
 }

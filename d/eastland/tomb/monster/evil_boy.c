@@ -6,16 +6,16 @@ void create()
 {
         ::create();
         set_level(17);
-        set_name( "evil boy", "Ð¡¶ñÍ¯" );
+        set_name( "evil boy", "å°æƒ¡ç«¥" );
         add ("id", ({ "evil", "boy" }) );
-        set_short( "Ð¡¶ñÍ¯");
-        set("unit","Î»");
+        set_short( "å°æƒ¡ç«¥");
+        set("unit","ä½");
         set("alignment",-2000);
         set("wealth/gold",200);
         set_long("",
-"Ò»Î»¿É°®µÄÐ¡Í¯×Ó£¬ËûÊÇ´ó¹úÊ¦µÄËæÊÌ¶þÍ¯Ö®Ò»¡£¾ÝËµËûÊÇ´ó¹úÊ¦ÔÚÒ»³¡´óÕ½ÖÐËùÊÕ
-·þµÄ£¬ÒòÎª¸Ð¼¤´ó¹úÊ¦ÈÄ¶ø²»É±Ö®¶÷£¬ì¶ÊÇ±ã´ýÔÚ´ó¹úÊ¦µÄÉíÅÔ£¬»¯ÉíÎªÒ»Í¯×ÓÀ´·þ
-ÊÌ´ó¹úÊ¦¡£\n"
+"ä¸€ä½å¯æ„›çš„å°ç«¥å­ï¼Œä»–æ˜¯å¤§åœ‹å¸«çš„éš¨ä¾äºŒç«¥ä¹‹ä¸€ã€‚æ“šèªªä»–æ˜¯å¤§åœ‹å¸«åœ¨ä¸€å ´å¤§æˆ°ä¸­æ‰€æ”¶
+æœçš„ï¼Œå› ç‚ºæ„Ÿæ¿€å¤§åœ‹å¸«é¥’è€Œä¸æ®ºä¹‹æ©ï¼Œæ–¼æ˜¯ä¾¿å¾…åœ¨å¤§åœ‹å¸«çš„èº«æ—ï¼ŒåŒ–èº«ç‚ºä¸€ç«¥å­ä¾†æœ
+ä¾å¤§åœ‹å¸«ã€‚\n"
         );
         set_perm_stat("int", 19);
         set_perm_stat("dex", 22);
@@ -30,7 +30,7 @@ void create()
         set("race", "daemon");
         set("tactic_func","evil_tactic");
         set("special_defense",(["all":40,"none":40]));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         wield_weapon(WEAPONS"/evil_dagger");
         equip_armor(ARMORS"/black_du_do");
 }
@@ -42,7 +42,7 @@ int evil_tactic()
   
   if ( !(victim=query_attacker()) || (random(10)>2)) return 0;
   tell_room(environment(),
-       "\n"+"¶ñÍ¯×Ó¿ÚÖÐÄîÄîÓÐ´Ê£¬Í»È»ËûµÄË«ÑÛ±¬Éä³öºì¹â£¬ÏòÄãÏ®À´!!\n",
+       "\n"+"æƒ¡ç«¥å­å£ä¸­å”¸å”¸æœ‰è©žï¼Œçªç„¶ä»–çš„é›™çœ¼çˆ†å°„å‡ºç´…å…‰ï¼Œå‘ä½ è¥²ä¾†!!\n",
        this_object() );
   dam = 45 + random(25);
   victim->receive_special_damage("evil",dam);

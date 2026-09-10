@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("quaspect robe","ËÄÏóĞşÅÛ");
+        set_name("quaspect robe","å››è±¡ç„è¢");
         add("id",({"robe"}) );
-        set_short("ËÄÏóĞşÅÛ");
+        set_short("å››è±¡ç„è¢");
         set_long(
-"ËÄÏóĞşÅÛ£¬ÊÇÖî¸ğ²»Ã÷×î°®´©µÄÒ»¼şµÀÅÛ¡£\n"
+"å››è±¡ç„è¢ï¼Œæ˜¯è«¸è‘›ä¸æ˜æœ€æ„›ç©¿çš„ä¸€ä»¶é“è¢ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight", 150 );
         set( "type", "body" );
         set( "material", "cloth" );

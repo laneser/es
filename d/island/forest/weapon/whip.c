@@ -4,20 +4,20 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Thunder Whip","À×Éñ±Ş");
+    set_name("Thunder Whip","é›·ç¥é­");
     add("id",({"whip"}) );
-    set_short("À×Éñ±Ş");
+    set_short("é›·ç¥é­");
     set_long(@C_LONG
-¾İËµÕâÊÇÉÏ¹ÅÀ×ÉñÂ³ÌØËù³ÖµÄÉñ±Ş¡£
+æ“šèªªé€™æ˜¯ä¸Šå¤é›·ç¥é­¯ç‰¹æ‰€æŒçš„ç¥é­ã€‚
 C_LONG
             );
-    set("unit","Ìõ");
+    set("unit","æ¢");
     set("type","whip");
     set("weapon_class",13);
     set("min_damage",5);
     set("max_damage",10);
     set("second",1);
     set("value",({ 350,"silver"}) );
-    set_c_verbs( ({"µÄ%sÈçÇçÌìÅùö¨°ãÏò%sÖ±»÷¶øÈ¥",
-       "½«%sË¦³ÉÁ¬Ãà²»¾øµÄÔ²È¦È¦¾íÏò%s","µÄ%sÔÚµØÉÏÓÎ×ß²»¶¨£¬Í»È»É¨Ïò%s"}) );
+    set_c_verbs( ({"çš„%så¦‚æ™´å¤©éœ¹é‚èˆ¬å‘%sç›´æ“Šè€Œå»",
+       "å°‡%sç”©æˆé€£ç¶¿ä¸çµ•çš„åœ“åœˆåœˆå·å‘%s","çš„%såœ¨åœ°ä¸Šæ¸¸èµ°ä¸å®šï¼Œçªç„¶æƒå‘%s"}) );
 }    

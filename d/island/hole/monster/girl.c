@@ -5,12 +5,12 @@ void create()
 {
         ::create();
         set_level(7);
-        set_name( "Lizardman Girl", "òáòæÈËĞ¡Å®º¢" );
+        set_name( "Lizardman Girl", "èœ¥èœ´äººå°å¥³å­©" );
         add("id",({"lizardman","girl" }) );
-        set_short( "òáòæÈËĞ¡Å®º¢" );
+        set_short( "èœ¥èœ´äººå°å¥³å­©" );
         set_long(@LONG
-Äã¿´¼ûÒ»Î»ÃÀÀöÌìÕæµÄĞ¡Å®º¢£¬ËıÕıÔÚ¹ã³¡ÉÏ
-ºÍâ·°éÃÇÍæ¹ı¼Ò¼Ò¡£
+ä½ çœ‹è¦‹ä¸€ä½ç¾éº—å¤©çœŸçš„å°å¥³å­©ï¼Œå¥¹æ­£åœ¨å»£å ´ä¸Š
+å’Œå¤¥ä¼´å€‘ç©éå®¶å®¶ã€‚
 LONG
         );
         set( "gender","female" );

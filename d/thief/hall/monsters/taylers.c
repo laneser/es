@@ -44,12 +44,12 @@ create()
 	object ob;
 	::create();
 	set_level(18);
-	set_name("taylers","̩��˹");
-	set_short("̩��˹");
+	set_name("taylers","泰勒斯");
+	set_short("泰勒斯");
 	set_long(@LONG
-̩��˹ԭ����Զ�����С͵���ŵĳ���֮һ, С͵���������, �Ͽ����ϵ�Ƹ��
-����С͵���ᵣ�θ��᳤, ����С͵���ɵ�ĥ�������������������ᵹ����ſ��
-���ϴ��, ���������Լ������ֶ����ǵ��ˣ���ܻ������ܹ���ʲ�᣿
+泰勒斯原本是遠風鎮的小偷集團的長老之一, 小偷公會成立後, 畢克林老爹聘請
+他到小偷公會擔任副會長, 負責小偷技巧的磨練。他現在正醉的歪歪倒倒的趴在
+地上打呼, 恐怕連他自己的名字都不記得了，你很懷疑他能夠做什麼？
 LONG
 	);
 	set( "race","halfling");
@@ -85,12 +85,12 @@ int do_cost()
 	max = ( lv > max ) ? lv : max;
 	}
 
-	printf("̩��˹˵�� : \n");
+	printf("泰勒斯說道 : \n");
 	for ( i = min ; i < max + 5 && i <= MAX_SKILL_LEVEL ; i ++ )
-		printf("�����ȼ� %2d : %10d ���������飬��Ҫ������ %6d ö���ҡ�\n",
+		printf("熟練等級 %2d : %10d 點熟練經驗，需要報名費 %6d 枚銀幣。\n",
 			i,skill_level_exp[i],i*MONEY_COST);
 	if ( i < MAX_SKILL_LEVEL )
-		printf("��������ȼ� %2d : %10d ���������飬��Ҫ������ %6d ö���ҡ�\n",
+		printf("最大熟練等級 %2d : %10d 點熟練經驗，需要報名費 %6d 枚銀幣。\n",
 			MAX_SKILL_LEVEL,skill_level_exp[MAX_SKILL_LEVEL],MAX_SKILL_LEVEL*MONEY_COST);
 	return 1;
 }
@@ -98,14 +98,14 @@ int do_cost()
 do_ask(string arg)
 {
 
-string *msg=({	"�� .... �� ������",
-		"�� �� ��Ҫ�� ... ",
-		"�� ... ����Ϻ���� ?",
-		"�� ?? Ҫѵ��(train) ??", 
-		"�� ..�� ..����ʲ�� ??",
-		"�Ǻ� ... ���벻������С̩�ɵ���",
-		"�� .... ������͵ ... ͵�� ...ZzzZ����",
-		"zZzz ... ��zZ��Z ������",
+string *msg=({	"啊 .... 啊 ～～～",
+		"酒 ～ 我要酒 ... ",
+		"啊 ... 你是蝦米郎 ?",
+		"啊 ?? 要訓練(train) ??", 
+		"背 ..背 ..背刺什麼 ??",
+		"呵呵 ... 你想不想試試小泰飛刀？",
+		"不 .... 不可以偷 ... 偷我 ...ZzzZｚＺ",
+		"zZzz ... ＺzZｚZ ～～～",
 	});
 string tmp1,tmp2;
 object *invs,paper;
@@ -114,9 +114,9 @@ int i;
 	if ( ! arg ) 
 		return 0;
 	if ( sscanf(arg,"%s about %s",tmp1,tmp2) == 2  && id(tmp1) ) {
-		if ( tmp2 == "equip" || tmp2 == "װ��") {
-//		    tell_object(this_player(),"̩��˹б������˵�� : ����У����ڵ����� ...\n");
-		    tell_object(this_player(),"̩��˹���ҰѶ������������ϡ�\n");
+		if ( tmp2 == "equip" || tmp2 == "裝備") {
+//		    tell_object(this_player(),"泰勒斯斜著醉眼說道 : 如果有，就在地上啦 ...\n");
+		    tell_object(this_player(),"泰勒斯胡亂把東西塞到你身上。\n");
 		    invs = all_inventory(find_object_or_load(EQ_ROOM));
 		    for ( i = sizeof(invs)-1 ; i >= 0 ; i -- )
 			if ( (string)invs[i]->query("owner") == (string)this_player()->query("name") ) {
@@ -127,7 +127,7 @@ int i;
 		    return 1;
 		}
 	    tell_object(this_player(),
-		sprintf("̩��˹б������������ : %s\n",msg[random(sizeof(msg))]));
+		sprintf("泰勒斯斜著醉眼喃喃自語 : %s\n",msg[random(sizeof(msg))]));
 	    return 1;
 	}
 	return 0;
@@ -137,11 +137,11 @@ int accept_item(object who,object item)
 {
 	if ( ! item->id("wine") ) {
 	    tell_object(who,
-		sprintf("̩��˹ãã�Ŀ�����, ˳�ְ�%s�������ϡ�\n",item->query("c_name")));
+		sprintf("泰勒斯茫茫的看著你, 順手把%s丟到地上。\n",item->query("c_name")));
 	    item->move(environment(this_object()));
 	} else	{
 	    tell_object(who,
-		"̩��˹���۾�����, �����������"+item->query("c_name")+"�������� !!\n");
+		"泰勒斯兩眼精光大熾, 拿起你給他的"+item->query("c_name")+"喝了起來 !!\n");
 		command("drink wine");
 		who->add_temp("taylers",1);
 	}
@@ -156,11 +156,11 @@ int do_train(string arg)
 
 
 	if ( ! arg || member_array(arg,skills)== -1) 
-		return notify_fail("��Ҫѵ��ʲ��?\n");
+		return notify_fail("你要訓練什麼?\n");
 	if ( arg == "steal" )
 		return notify_fail(@R1
-һ����������, ��ˮƿ����������ǰ��
-��ˮƿ��ü������˵��: ����һ��ʱ��� :~~~
+一陣煙霧過後, 汽水瓶出現在你面前。
+汽水瓶愁眉苦臉的說道: 給我一點時間吧 :~~~
 R1
 			);
 	trainee = this_player();
@@ -169,46 +169,46 @@ R1
 		trainee->delete_temp("pass_test/"+arg) ;
 		trainee->add("thief_level/"+arg,1);
 		tell_object(trainee,
-		"̩��˹������ļ��˵ : �㻹Ҫ��������ʲ�᣿���Լ���Ŭ����\n"
-		"�Ѿ������������������� !! ���������ߵļ���Ŭ���� !!\n"
+		"泰勒斯拍拍你的肩膀說 : 你還要我來幫你什麼？你自己的努力，\n"
+		"已經讓你的能力獲得提升了 !! 繼續朝更高的技術努力吧 !!\n"
 		);
 		return 1;
 	}
 */
 	if ( (int)trainee->query_temp("taylers") <= (int)trainee->query("thief_level/"+arg)/5)
-//		return notify_fail("̩��˹����һ���������������㡣\n");
-		return notify_fail("̩��˹���˷�����, ˵ : �þ��� !\n");
+//		return notify_fail("泰勒斯翻了一個身，理都不理你。\n");
+		return notify_fail("泰勒斯翻了翻白眼, 說 : 拿酒來 !\n");
 
 	//check exp
 	if ( (int)trainee->query("thief_level/"+arg) >= MAX_SKILL_LEVEL )
-		return notify_fail("̩��˹ҡҡͷЦЦ : ��Ǹ�� ! ���Ѿ�̫ǿ�� ... û���ܰ��㿼���� ...\n");
+		return notify_fail("泰勒斯搖搖頭笑笑 : 抱歉啦 ! 你已經太強啦 ... 沒人能幫你考試了 ...\n");
 	if ( (int)trainee->query("thief_exp/"+arg) < 
 		skill_level_exp[(int)trainee->query("thief_level/"+arg)+1] ) 
-		return notify_fail("̩��˹ãã�Ŀ����㣬ҡͷ�� : ��ľ��黹���� ...\n");
+		return notify_fail("泰勒斯茫茫的看著你，搖頭道 : 你的經驗還不夠 ...\n");
 
 	trainee->add("thief_level/"+arg,1);
 	tell_object(trainee,
-	"̩��˹˵��: Сƿ��˵�Ȳ��ò�����, ֱ��������!!\n"
-	"��ĵȼ������� "+ trainee->query("thief_level/"+arg) +"��.\n"
+	"泰勒斯說道: 小瓶子說先不用測驗了, 直接升級吧!!\n"
+	"你的等級升到第 "+ trainee->query("thief_level/"+arg) +"級.\n"
 	);
 	trainee->delete_temp("taylers");
 #if 0
 	cost = ((int) trainee->query("thief_level/"+arg)+1)* MONEY_COST;
 //	cost = ( cost < MONEY_COST ? MONEY_COST : cost );
 	if ( (int)trainee->query("wealth/silver") < cost ) {
-		return notify_fail("̩��˹����һ��, ˵��: ������С���ָ�����ѧ��, �����ѧɶ ?\n");
+		return notify_fail("泰勒斯瞪你一眼, 說道: 你這窮小子又付不起學費, 想跟我學啥 ?\n");
 	}
 	//check if someone else is trainning
 	if ( (int)("/d/thief/hall/"+arg+"_room")->query("using") || (int)("/d/thief/hall/"+arg+"_room")->query("begin_test") > time() )
-		return notify_fail("̩��˹˵�� : ��������ѵ��������ܿ���, �����������.\n");
+		return notify_fail("泰勒斯說道 : 有人正在訓練室裡接受考驗, 你改天再來吧.\n");
  
 	trainee->delete_temp("taylers");
 	trainee->add("wealth/silver",-cost);
 	tell_object(trainee,@P1
-̩��˹������������һ��, �㷢���Լ��Ѿ��������, ���ɵ�һ����...
+泰勒斯在你身上摸了一把, 你發現自己已經光溜溜的, 不由的一陣害臊...
 
-������������ǽ������һ��, ��ͻȻ���ý���һ��, ���һ������һ���󶴡�
-̩��˹��������ͷ�ϴ��� : ����, ֤����ļ����������Ұ� !!
+接著他伸手在牆上摸了一下, 你突然覺得腳下一空, 筐啷一聲跌進一個大洞。
+泰勒斯的聲音從頭上傳來 : 孩子, 證明你的技術再來見我吧 !!
 P1
 	);
 

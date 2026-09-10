@@ -3,15 +3,15 @@
 ## The length of the year in days and the number of months are defined in
 # weather_d.h. If you change this file, change those as well.
 
-Janaury Ò»ÔÂ 31
-February ¶şÔÂ 28
-March ÈıÔÂ 31
-April ËÄÔÂ 30
-May ÎåÔÂ 31
-June ÁùÔÂ 30
-July ÆßÔÂ 31
-August °ËÔÂ 31
-Septemper ¾ÅÔÂ 30
-October Ê®ÔÂ 31
-November Ê®Ò»ÔÂ 30
-December Ê®¶şÔÂ 31
+Janaury ä¸€æœˆ 31
+February äºŒæœˆ 28
+March ä¸‰æœˆ 31
+April å››æœˆ 30
+May äº”æœˆ 31
+June å…­æœˆ 30
+July ä¸ƒæœˆ 31
+August å…«æœˆ 31
+Septemper ä¹æœˆ 30
+October åæœˆ 31
+November åä¸€æœˆ 30
+December åäºŒæœˆ 31

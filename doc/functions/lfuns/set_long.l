@@ -16,7 +16,7 @@ DESCRIPTION
 EXAMPLE
      set_long( 
          "The orc grins evily at you, and points at your wallet.\n",
-         "这只半兽人向你扮个鬼脸，然後指一指你的钱包。\n"
+         "閫欓毣鍗婄嵏浜哄悜浣犳壆鍊嬮鑷夛紝鐒跺緦鎸囦竴鎸囦綘鐨勯將鍖呫�俓n"
      );
 
 SEE ALSO

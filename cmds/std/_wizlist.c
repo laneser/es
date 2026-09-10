@@ -23,7 +23,7 @@ void create()
 	}
 	if( !sizeof(wiz_names) ) list = "No wizards found, strange .... ";
 	else {
-		list = "¶«·½¹ÊÊÂÎ×Ê¦Èº ( ÒÀ´úºÅÓ¢ÎÄ×ÖÄ¸Ë³ĞòÅÅÁĞ ):";
+		list = "æ±æ–¹æ•…äº‹å·«å¸«ç¾¤ ( ä¾ä»£è™Ÿè‹±æ–‡å­—æ¯é †åºæ’åˆ— ):";
 		for(i=0; i<sizeof(wiz_names); i++) {
 			if( i%5 == 0 ) list += "\n  ";
 			list += sprintf("%-15s", capitalize(wiz_names[i]));
@@ -41,9 +41,9 @@ int cmd_wizlist(string arg)
 int help()
 {
 	write( @C_HELP
-Ö¸Áî¸ñÊ½: wizlist
+æŒ‡ä»¤æ ¼å¼: wizlist
 
-Õâ¸öÖ¸ÁîÁĞ³öËùÓĞ¶«·½¹ÊÊÂÖĞµÄÎ×Ê¦ÕóÈİ£¬ºÃºÃµØÏòËûÃÇÖÂ¾´°É¡£
+é€™å€‹æŒ‡ä»¤åˆ—å‡ºæ‰€æœ‰æ±æ–¹æ•…äº‹ä¸­çš„å·«å¸«é™£å®¹ï¼Œå¥½å¥½åœ°å‘ä»–å€‘è‡´æ•¬å§ã€‚
 C_HELP
 	);
 	return 1;

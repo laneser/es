@@ -4,12 +4,12 @@ void create(object ob)
 {
         if ( !ob ) return ;
         ob->set_level(4);
-        ob->set_name( "antelope", "÷çÂ¹" );
-        ob->set_short( "÷çÂ¹");
-        ob->set("unit","Ö»");
+        ob->set_name( "antelope", "éº‹é¹¿" );
+        ob->set_short( "éº‹é¹¿");
+        ob->set("unit","åª");
         ob->set_long(@C_LONG
-Äã¿´¼ûÒ»Ö»ÆæÌØµÄ¶¯Îï£¬Í·ÉÏ³¤ÖøÁ½Ö»·ÖÆçµÄ½Ç£¬ÓÐÖø×ØÉ«µÄÃ«Æ¤¡£
-´ËÊ±ËüÕýÔÚÉ­ÁÖÖÐÓÆÏÐµÄÂþ²½Öø
+ä½ çœ‹è¦‹ä¸€éš»å¥‡ç‰¹çš„å‹•ç‰©ï¼Œé ­ä¸Šé•·è‘—å…©éš»åˆ†æ­§çš„è§’ï¼Œæœ‰è‘—æ£•è‰²çš„æ¯›çš®ã€‚
+æ­¤æ™‚å®ƒæ­£åœ¨æ£®æž—ä¸­æ‚ é–’çš„æ¼«æ­¥è‘—
 C_LONG
         );
         ob->set_perm_stat("dex", 10);
@@ -18,6 +18,6 @@ C_LONG
         ob->set("hit_points",180);
         ob->set_natural_weapon(7,4,9);
         ob->set_natural_armor(25,0);
-        ob->set_c_verbs(({"%sÓÃËüµÄ½ÇÏò%s¹¥»÷","%sÓÃËüµÄ½ÅÏò%sÌßÈ¥"}));
-        ob->set_c_limbs(({"ÉíÌå","½Å²¿"}));
+        ob->set_c_verbs(({"%sç”¨å®ƒçš„è§’å‘%sæ”»æ“Š","%sç”¨å®ƒçš„è…³å‘%sè¸¢åŽ»"}));
+        ob->set_c_limbs(({"èº«é«”","è…³éƒ¨"}));
 }

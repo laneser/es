@@ -4,19 +4,19 @@ void create(object ob)
 {
 	if ( !ob ) return ;
 	ob->set_level(2);
-	ob->set_name( "hyaena", "ÍÁÀÇ" );
-	ob->set_short( "ÍÁÀÇ" );
+	ob->set_name( "hyaena", "åœŸç‹¼" );
+	ob->set_short( "åœŸç‹¼" );
 	ob->set_long(
-		"Äã¿´µ½Ò»Ö»Ð×¶ñµÄÍÁÀÇ£¬¶ÔÖøÄã·¢³ö¡¸ÎØÎØ¡¹µÄµÍºð¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»å…‡æƒ¡çš„åœŸç‹¼ï¼Œå°è‘—ä½ ç™¼å‡ºã€Œå—šå—šã€çš„ä½Žå¼ã€‚\n"
 	);
 	ob->set_perm_stat( "str", 4 );
 	ob->set_skill( "dodge", 20 );
 
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set_natural_weapon( 5, 3, 6 );
 	ob->set( "killer", 1 );
 	ob->set( "aggressive", 1 );
 
-	ob->set_c_verbs( ({ "%sÓÃÇ°×¦ÆËÏò%s", "%sÕÅ¿ªÂú¿ÚÀû³ÝµÄ×ì£¬Íù%sÒ§È¥" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í", "ÍÈ²¿" }) );
+	ob->set_c_verbs( ({ "%sç”¨å‰çˆªæ’²å‘%s", "%så¼µé–‹æ»¿å£åˆ©é½’çš„å˜´ï¼Œå¾€%så’¬åŽ»" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´", "è…¿éƒ¨" }) );
 }

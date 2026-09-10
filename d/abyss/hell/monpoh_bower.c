@@ -8,13 +8,13 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("Monpoh place", "����ͤ");
+	set_short("Monpoh place", "孟婆亭");
 	set_long( @LONG_DESCRIPTION
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-������һ������Ũ�������С��ͤ����ͤ�ԵĴ���������һ��ľ��(sign)������
-д��������ͤ��������С�֡���������ܣ�ȫ�ǰ�ãã��һƬ��ͷ���Ϻ�����ʮ����
-̫��������һ�㣬������ÿ����ѵ������ǽ�ͤ��ȥЪһ����ɡ�
+你來到一個有著濃綠樹蔭的小茶亭，涼亭旁的大樹垂掛著一塊木牌(sign)，上面
+寫著「孟婆亭」及幾行小字。你放眼四周，全是白茫茫的一片，頭頂上好像有十個大
+太陽在照著一般，令你覺得酷熱難當，還是進亭子去歇一會兒吧。
 C_LONG_DESCRIPTION
 	);
 
@@ -29,6 +29,6 @@ C_LONG_DESCRIPTION
 
 int look_sign()
 {
-    write("��ľ����д��:����д�������.\n");
+    write("這木牌上寫著:免費招待孟婆湯.\n");
     return 1;
 }

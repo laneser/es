@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("mahogany axe","ÅÌ¹ÅÖ®¸«");
+	set_name("mahogany axe","ç›¤å¤ä¹‹æ–§");
 	add ("id",({ "axe"}) );
-        set_short("ÅÌ¹ÅÖ®¸«");
+        set_short("ç›¤å¤ä¹‹æ–§");
 	set_long(@C_LONG
-Ò»°Ñ¹ÅÀÏµÄÇàÍ­ÖıÌÒÄ¾ÎÕ°ÑĞ¡¸«£¬¶Ô½µÑı·üÄ§ÓĞÆä¶ÀÌØÖ®´¦¡£	
+ä¸€æŠŠå¤è€çš„é’éŠ…é‘„æ¡ƒæœ¨æ¡æŠŠå°æ–§ï¼Œå°é™å¦–ä¼é­”æœ‰å…¶ç¨ç‰¹ä¹‹è™•ã€‚	
 C_LONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
         setup_weapon("axe", 25,18,25);
 	set( "weight", 150 );
 	set( "value", ({ 1430, "silver" }) );

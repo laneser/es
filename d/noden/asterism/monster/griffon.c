@@ -7,15 +7,15 @@ void create()
 {
     ::create();
     set_level(16);
-    set_name( "griffon", "Ê¨ğÕÊŞ" );
+    set_name( "griffon", "ç…é·²ç¸" );
     add("id",({"griffon"}) );
-   set_short( "Ê¨ğÕÊŞ" );
+   set_short( "ç…é·²ç¸" );
     set_long(
-	    "°«ÈËµÄ´«ËµÈÏÎªÊ¨ğÕÊŞÊÇÕıÒåµÄÏóáç¡£¶øËüÏÖÕı»îÉúÉúµÄÕ¾ÔÚÄãÑÛÇ°¡£\n"
+	    "çŸ®äººçš„å‚³èªªèªç‚ºç…é·²ç¸æ˜¯æ­£ç¾©çš„è±¡å¾µã€‚è€Œå®ƒç¾æ­£æ´»ç”Ÿç”Ÿçš„ç«™åœ¨ä½ çœ¼å‰ã€‚\n"
 	);
     set( "gender", "neuter" );
 //    set( "race", "griffon" );
-    set( "unit", "Ö»" ) ;
+    set( "unit", "åª" ) ;
     set( "alignment", 200 );
     set( "time_to_heal", 8 );
     set("max_hp",300);
@@ -33,10 +33,10 @@ void create()
     set("aim_difficulty",(["critical":10,"weakest":50,
                          "vascular":30,"ganglion":40 ]) ) ;
 
-    set( "c_extra_look", "$NÕıÆïÖøÒ»Ö»¸ß´óµÄÊ¨ğÕÊŞÉÏ¡£\n");
+    set( "c_extra_look", "$Næ­£é¨è‘—ä¸€éš»é«˜å¤§çš„ç…é·²ç¸ä¸Šã€‚\n");
     
-    set_c_verbs(({"%sÓÃËüµÄÀû×¦Ïò%s×¥È¥","%sÓÃËüµÄÑÀ³İÏò%sÒ§È¥"}));
-    set_c_limbs(({"ÉíÌå","Í·²¿","³á°ò","ÍÈ"}));    
+    set_c_verbs(({"%sç”¨å®ƒçš„åˆ©çˆªå‘%sæŠ“å»","%sç”¨å®ƒçš„ç‰™é½’å‘%så’¬å»"}));
+    set_c_limbs(({"èº«é«”","é ­éƒ¨","ç¿…è†€","è…¿"}));    
     
     set_skill("dodge",65)    ;
     set_skill("unarmed",50) ;

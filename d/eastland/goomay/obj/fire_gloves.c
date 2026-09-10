@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "fire gloves", "»ğÑæÊÖÌ×" );
+	set_name( "fire gloves", "ç«ç„°æ‰‹å¥—" );
 	add( "id", ({ "gloves" }) );
-	set_short( "a fire gloves", "»ğÑæÊÖÌ×" );
+	set_short( "a fire gloves", "ç«ç„°æ‰‹å¥—" );
 	set_long(
 		"You see a pair of red gloves with strange magic.\n",
-		"ÕâÊÇÒ»Ë«ºìÉ«µÄÊÖÌ×£¬¾İËµËüÊÇ»ğÉñµÄ×î°®£¬´÷ÉÏËü£¬»ğÉñ¶¼»á¶ÔÄãÈİÇéÈı·Ö¡£\n"
+		"é€™æ˜¯ä¸€é›™ç´…è‰²çš„æ‰‹å¥—ï¼Œæ“šèªªå®ƒæ˜¯ç«ç¥çš„æœ€æ„›ï¼Œæˆ´ä¸Šå®ƒï¼Œç«ç¥éƒ½æœƒå°ä½ å®¹æƒ…ä¸‰åˆ†ã€‚\n"
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "hands" );
 	set( "weight", 40 );
 	set( "no_sale",1);

@@ -6,11 +6,11 @@ inherit OBJECT;
 
 // This is inherit file for reagents.
 // reagents can set the following attributes:
-//  1. savour /Î¶µÀ/
-//       legal values are acidity    Ëá
-//                        bitter     ¿à 
-//                        acrimony   À±
-//                        sweet      Ìð
+//  1. savour /å‘³é“/
+//       legal values are acidity    é…¸
+//                        bitter     è‹¦ 
+//                        acrimony   è¾£
+//                        sweet      ç”œ
 //  2. effects => can be set to simple_poison, weak or slow
 //  3. if effect is set to simple_poison then the following 
 //     need to be setted
@@ -37,19 +37,19 @@ int do_taste(string str)
    
         seteuid(getuid());
 	if( !id(str) ) return notify_fail(
-		"ÄãÒª¡õÊÔÊ²÷á¶«Î÷£¿\n");
+		"ä½ è¦â–¡è©¦ä»€éº¼æ±è¥¿ï¼Ÿ\n");
 
         if ( query("savour")=="bitter") {
           write( 
-                 "Äã½«" + query("c_name") + "·ÅÔÚ×ì±ß³¢ÊÔ,ÍÛ!!¿àËÀÁË!!\n");
+                 "ä½ å°‡" + query("c_name") + "æ”¾åœ¨å˜´é‚Šå˜—è©¦,å“‡!!è‹¦æ­»äº†!!\n");
         }else if ( query("savour")=="acidity") {
-          write( "ÄãÐ¡ÐÄµÄÌòÁËÒ»ÏÂ"+query("c_name")+", ÍÛÀÕ, ºÃËá°¡!!\n");
+          write( "ä½ å°å¿ƒçš„èˆ”äº†ä¸€ä¸‹"+query("c_name")+", å“‡å‹’, å¥½é…¸å•Š!!\n");
         } else if ( query("savour")=="acrimony" ){
-          write( "ÄãÇáÇáµÄÌòÁË"+query("c_name")+"Ò»ÏÂ....ÍÛ!!¿ìÅç»ðÁË!!ÄÄ¡õÓÐË®??");
+          write( "ä½ è¼•è¼•çš„èˆ”äº†"+query("c_name")+"ä¸€ä¸‹....å“‡!!å¿«å™´ç«äº†!!å“ªâ–¡æœ‰æ°´??");
         } else if (query("savour")=="sweet") {
-          write ("ÄãÊÔÁËÊÔ"+query("c_name")+",ÒÉ,»¹ÂùÌðµÄÂï!Äª·ÇÊÇ¶¾Ò©Ìð×ì?\n");
+          write ("ä½ è©¦äº†è©¦"+query("c_name")+",ç–‘,é‚„è »ç”œçš„å˜›!èŽ«éžæ˜¯æ¯’è—¥ç”œå˜´?\n");
 	} else {
-	  write ( "Äã³¢ÁË³¢" + query("c_name") +",µ«¸Ð¾õ²»³öÌØ±ðµÄÎ¶µÀ¡£\n");
+	  write ( "ä½ åšäº†åš" + query("c_name") +",ä½†æ„Ÿè¦ºä¸å‡ºç‰¹åˆ¥çš„å‘³é“ã€‚\n");
 	}  
 	if ( query("effect")=="simple_poison") {
 	  duration=(int)query("duration");
@@ -68,11 +68,11 @@ int do_taste(string str)
         ("/std/conditions/slow")->apply_effect(me,duration,damage);
 	} else {	
 	write(
-		"Äã½«" + query("c_name") + "·ÅÔÚ×ì±ß¡õÊÔ£¬²¢Ã»ÓÐ¸Ð¾õÊ²÷áÌØÊâ×÷ÓÃ¡£\n");
+		"ä½ å°‡" + query("c_name") + "æ”¾åœ¨å˜´é‚Šâ–¡è©¦ï¼Œä¸¦æ²’æœ‰æ„Ÿè¦ºä»€éº¼ç‰¹æ®Šä½œç”¨ã€‚\n");
 	}
 	
 	tell_room( environment(this_player()),
-		this_player()->query("c_name") + "½«" + query("c_name") + "·ÅÔÚ×ì±ß¡õÊÔ¡£\n",
+		this_player()->query("c_name") + "å°‡" + query("c_name") + "æ”¾åœ¨å˜´é‚Šâ–¡è©¦ã€‚\n",
 		this_player() );
 	return 1;
 }

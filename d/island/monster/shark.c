@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level( 18 );
-        set_name( "shark", "´ó°×öè" );
+        set_name( "shark", "å¤§ç™½é¯Š" );
         add( "id", ({ "shark" }) );
-        set_short( "´ó°×öè" );
+        set_short( "å¤§ç™½é¯Š" );
         set_long(@LONG
-ÕâöèÓãÉíÉÏ²¼ÂúÁËÉËºÛ£¬Ïë±ØÊÇÓëÎÞÊýÁÔÉ±ËüµÄÈË²«¶·µÄºÛ¼££¬Óöµ½ËüÎÒÏë
-»¹ÊÇÌÓºÃÁË¡£
+é€™é¯Šé­šèº«ä¸Šä½ˆæ»¿äº†å‚·ç—•ï¼Œæƒ³å¿…æ˜¯èˆ‡ç„¡æ•¸çµæ®ºå®ƒçš„äººæé¬¥çš„ç—•è·¡ï¼Œé‡åˆ°å®ƒæˆ‘æƒ³
+é‚„æ˜¯é€ƒå¥½äº†ã€‚
 LONG
         );
-        set("unit","´óÎ²");
+        set("unit","å¤§å°¾");
         set_perm_stat( "str", 29 );
         set_perm_stat( "dex", 31 );
         set_perm_stat( "int", 13 );
@@ -30,13 +30,13 @@ LONG
         
         set( "killer", 1 );
         set( "pursuing", 1 );
-        set( "c_killer_msg","Í»È»öèÓãÑ¸ËÙµÄÓÉÄã±³ááÓÎÁË¹ýÀ´....");
+        set( "c_killer_msg","çªç„¶é¯Šé­šè¿…é€Ÿçš„ç”±ä½ èƒŒå¾ŒéŠäº†éŽä¾†....");
         set( "alignment", -600 );
         set_natural_weapon( 70,30,60 );
         set_natural_armor( 78,30 );
 
-        set_c_verbs( ({ "%sÕÅ¿ªËüµÄ´ó¿Ú£¬Ò»¿ÚÏò%sÒ§È¥", "%sÑ¸ËÙµØÒÔ±Ç×ÓÏò%s×²È¥" }) );
-        set_c_limbs( ({ "÷¢", "ÉíÌå", "Î²°Í" }) );
+        set_c_verbs( ({ "%så¼µé–‹å®ƒçš„å¤§å£ï¼Œä¸€å£å‘%så’¬åŽ»", "%sè¿…é€Ÿåœ°ä»¥é¼»å­å‘%sæ’žåŽ»" }) );
+        set_c_limbs( ({ "é°­", "èº«é«”", "å°¾å·´" }) );
 }
 
 void die(object killer)
@@ -45,9 +45,9 @@ void die(object killer)
         killer = query("last_attacker");
             ob = new(IOBJ"shark_wind");
           ob->move(killer);
-          tell_object( killer,"ÄãÒÔÊìÁ·µÄÊÖ·¨½«Óã³áÈ¡ÏÂ£¡\n");
+          tell_object( killer,"ä½ ä»¥ç†Ÿç·´çš„æ‰‹æ³•å°‡é­šç¿…å–ä¸‹ï¼\n");
           tell_room( environment(),
-          killer->query("c_name")+"Ñ¸ËÙµÄ´ÓÊ¬ÌåÉÏ¸îÏÂÓã³á£¬²¢Ð¡ÐÄÒíÒíµÄÊÕ½ø»³ÖÐ£¡\n"
+          killer->query("c_name")+"è¿…é€Ÿçš„å¾žå±é«”ä¸Šå‰²ä¸‹é­šç¿…ï¼Œä¸¦å°å¿ƒç¿¼ç¿¼çš„æ”¶é€²æ‡·ä¸­ï¼\n"
           ,killer);
          killer->set_explore("island#7");
          ::die();

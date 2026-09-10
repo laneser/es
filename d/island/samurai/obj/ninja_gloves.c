@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Ninja gloves", "ÈÌÕßÊÖÌ×");
+        set_name( "Ninja gloves", "å¿è€…æ‰‹å¥—");
         add( "id", ({ "ninja","gloves"}) );
-        set_short("Ninja Vest", "ÈÌÕßÊÖÌ×");
+        set_short("Ninja Vest", "å¿è€…æ‰‹å¥—");
         set_long(@AAA
-Ò»¼şÈÌÕßÃÇÊ¹ÓÃµÄÊÖÌ×£¬¾İËµÓĞ·À¶¾µÄ¹¦ÓÃ
+ä¸€ä»¶å¿è€…å€‘ä½¿ç”¨çš„æ‰‹å¥—ï¼Œæ“šèªªæœ‰é˜²æ¯’çš„åŠŸç”¨
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "hands" );
         set( "armor_class", 3 );
         set( "defense_bonus", 2 );

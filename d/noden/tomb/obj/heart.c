@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-   set_name( "golden heart", "�ƽ�֮��" );
+   set_name( "golden heart", "黃金之心" );
    add( "id", ({ "heart" }) );
-   set_short( "�ƽ�֮��" );
+   set_short( "黃金之心" );
 	set_long(
-   "����һ�Ŵ��������, ����ɢ��һ������Ĺ���, �����������ص�������\n"
+   "這是一顆純金的心臟, 它正散發一股奇異的光澤, 或許具有神秘的力量。\n"
 	);
 	set( "type", "misc" );
    set( "material", "healer" );
@@ -31,13 +31,13 @@ int equip_heart()
    if( op_times > 100 ) {
         set( "defense_bonus", 10 );
         tell_object( this_player(),
-          "�ƽ�֮����ҫ������ѣĿ�Ĺ��!\n" );
+          "黃金之心閃耀著令人眩目的光彩!\n" );
         return 1;
    }
    if( op_times < 100 && op_times > 50 ) {
         set( "defense_bonus", 8 );
         tell_object( this_player(),
-          "�ƽ�֮����ҫ��ʮ�ֲ��õĹ�â!\n" );
+          "黃金之心閃耀著十分燦爛的光芒!\n" );
         return 1;
    }
 }

@@ -8,7 +8,7 @@ void create()
         set_name( " ", "  ");
         add ("id",({ "dagger"}) );
         set_short( "  ");
-        set("unit", "°Ñ");
+        set("unit", "æŠŠ");
         set_long(
             
             " !!!!\n"
@@ -25,10 +25,10 @@ void create()
         set("unwield_func","unwield_dagger");
         set( "weight", 100 );
          
-   set("c_msg","\nÄãÕĞÑİ ***ÀË×Ó»ØÍ·*** Ò»µÀ±ùÎí»¯ÎªÁúĞÎÏòËû¶øÈ¥!!\n\n");
-   set("c_enemy_msg","\nµÄÓñ³ßÕĞÑİ ***ÀË×Ó»ØÍ·*** ÄãÖ»¼ûÒ»¹ÉÁúĞÎ±ùÎíÏòÄãÏ®À´!!\n\n");
-   set("c_fail_msg","\nÄãµÄÎäÆ÷Åç³öÒ»Æ¬ÆæÀäµÄº®Æø£¬È´±ùµ½Äã×Ô¼º ! \n\n");
-   set("c_fail_room_msg","µÄÎäÆ÷Åç³öÒ»Æ¬ÆæÀäµÄº®Æø£¬È´±ùµ½Ëû×Ô¼º ! \n\n");
+   set("c_msg","\nä½ æ‹›æ¼” ***æµªå­å›é ­*** ä¸€é“å†°éœ§åŒ–ç‚ºé¾å½¢å‘ä»–è€Œå»!!\n\n");
+   set("c_enemy_msg","\nçš„ç‰å°ºæ‹›æ¼” ***æµªå­å›é ­*** ä½ åªè¦‹ä¸€è‚¡é¾å½¢å†°éœ§å‘ä½ è¥²ä¾†!!\n\n");
+   set("c_fail_msg","\nä½ çš„æ­¦å™¨å™´å‡ºä¸€ç‰‡å¥‡å†·çš„å¯’æ°£ï¼Œå»å†°åˆ°ä½ è‡ªå·± ! \n\n");
+   set("c_fail_room_msg","çš„æ­¦å™¨å™´å‡ºä¸€ç‰‡å¥‡å†·çš„å¯’æ°£ï¼Œå»å†°åˆ°ä»–è‡ªå·± ! \n\n");
    }
 
  int fail_to_use()
@@ -47,14 +47,14 @@ void unwield_ferule()
         set( "min_damage", 10);
         set( "max_damage", 20);
         tell_room( environment(this_player()), ({
-        this_player()->query("c_name")+"µÄ±ùº®Óñ³ß¹âÃ¢ÍËÈ¥£¬±ä»ØÆ½·²µÄÒø³ß.......\n"
+        this_player()->query("c_name")+"çš„å†°å¯’ç‰å°ºå…‰èŠ’é€€å»ï¼Œè®Šå›å¹³å‡¡çš„éŠ€å°º.......\n"
         }), ({this_player()}) );
         tell_object( this_player(),
-         "ÄãµÄ±ùº®Óñ³ßÀä¹âÁ²È¥£¬±ä³ÉÆ½·²µÄÒø³ß............\n"
+         "ä½ çš„å†°å¯’ç‰å°ºå†·å…‰æ–‚å»ï¼Œè®Šæˆå¹³å‡¡çš„éŠ€å°º............\n"
                 );
 
-        set_name( "silver ferule", "Òø½ä³ß");
-        set_short( "silver ferule", "Òø½ä³ß");
+        set_name( "silver ferule", "éŠ€æˆ’å°º");
+        set_short( "silver ferule", "éŠ€æˆ’å°º");
         set("form",0);
                 return ;
         }
@@ -74,13 +74,13 @@ void wield_ferule()
         set("min_damage",15);
         set("max_damage", i );
         tell_room( environment(this_player()), ({
-         this_player()->query("c_cap_name")+"µÄÒø½ä³ß·¢³öÒ»Õó¹âÃ¢£¬ÓëËûµÄÊÖ½áºÏ£¬±ä³ÉËûÉíÌåµÄÒ»²¿·İ¡£\n"
+         this_player()->query("c_cap_name")+"çš„éŠ€æˆ’å°ºç™¼å‡ºä¸€é™£å…‰èŠ’ï¼Œèˆ‡ä»–çš„æ‰‹çµåˆï¼Œè®Šæˆä»–èº«é«”çš„ä¸€éƒ¨ä»½ã€‚\n"
         }), ({this_player()}) );
         tell_object( this_player(),
-         "ÄãµÄ½ä³ß·º³öÍòÕÉ¹âÃ¢£¬±ä³ÉÒ»°Ñ¾§Ó¨ÌŞÍ¸µÄÓñ³ß........¡£\n"
+         "ä½ çš„æˆ’å°ºæ³›å‡ºè¬ä¸ˆå…‰èŠ’ï¼Œè®Šæˆä¸€æŠŠæ™¶ç‘©å‰”é€çš„ç‰å°º........ã€‚\n"
                 );
-        set_name( "cold ferule", "±ùº®Óñ³ß");
-        set_short( "cold gerule", "±ùº®Óñ³ß");
+        set_name( "cold ferule", "å†°å¯’ç‰å°º");
+        set_short( "cold gerule", "å†°å¯’ç‰å°º");
         set("form",1);
                 return ;
         }

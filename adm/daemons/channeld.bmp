@@ -4,25 +4,25 @@
 #include <net/dns.h>
 
 mapping channels = ([
-	"sys":	([	"msg_speak": HIB "¡¾ÏµÍ³¡¿%s£º%s\n" NOR, "wiz_only": 1 ]),
-	"wiz":	([	"msg_speak": HIY "¡¾Î×Ê¦¡¿%s£º%s\n" NOR, "wiz_only": 1 ]),
-	"gwiz":	([	"msg_speak": HIG "¡¾Íø¼ÊÎ×Ê¦¡¿%s£º%s\n" NOR,
-				"msg_emote": HIG "¡¾Íø¼ÊÎ×Ê¦¡¿%s %s.\n" NOR,
+	"sys":	([	"msg_speak": HIB "ã€ç³»çµ±ã€‘%sï¼š%s\n" NOR, "wiz_only": 1 ]),
+	"wiz":	([	"msg_speak": HIY "ã€å·«å¸«ã€‘%sï¼š%s\n" NOR, "wiz_only": 1 ]),
+	"gwiz":	([	"msg_speak": HIG "ã€ç¶²éš›å·«å¸«ã€‘%sï¼š%s\n" NOR,
+				"msg_emote": HIG "ã€ç¶²éš›å·«å¸«ã€‘%s %s.\n" NOR,
 				"wiz_only": 1, "intermud": GWIZ, "channel": "CREATOR",
 				"filter": 1 ]),
-	"es":	([	"msg_speak": HIR "¡¾¶«·½¹ÊÊÂ¡¿%s£º%s\n" NOR,
-				"msg_emote": HIR "¡¾¶«·½¹ÊÊÂ¡¿%s %s.\n" NOR,
+	"es":	([	"msg_speak": HIR "ã€æ±æ–¹æ•…äº‹ã€‘%sï¼š%s\n" NOR,
+				"msg_emote": HIR "ã€æ±æ–¹æ•…äº‹ã€‘%s %s.\n" NOR,
 				"intermud": GCHANNEL, "channel": "es",
 				"lv_lim":8 , "tp_cost" : 40 ,
 				"filter": (: $1["MUDLIB"]=="Eastern Stories" :) ]),
- 	"twiz":	([	"msg_speak": HIW "¡¾Ì¨ÍåÎ×Ê¦¡¿%s£º%s\n" NOR,
-				"msg_emote": HIW "¡¾Ì¨ÍåÎ×Ê¦¡¿%s %s.\n" NOR,
+ 	"twiz":	([	"msg_speak": HIW "ã€è‡ºç£å·«å¸«ã€‘%sï¼š%s\n" NOR,
+				"msg_emote": HIW "ã€è‡ºç£å·«å¸«ã€‘%s %s.\n" NOR,
 				"wiz_only":1, "intermud": GCHANNEL, "channel": "twiz",
 				"filter": (: $1["HOSTADDRESS"][0..2]=="140" :) ]),
-//	"chat":	([	"msg_speak": HIC "¡¾ÏÐÁÄ¡¿%s£º%s\n" NOR , "lv_lim":4,"tp_cost":25 ]),
-// bmp ÔÝÊ±°Ñchat µÄµÈ¼¶ÏÂ·Åµ½1
-"chat": ([      "msg_speak": HIC "¡¾ÏÐÁÄ¡¿%s£º%s\n" NOR , "lv_lim":1,"tp_cost":25 ]),
-//	"rumor":([	"msg_speak": HIM "¡¾Ò¥ÑÔ¡¿%s£º%s\n" NOR,	"anonymous": "Ä³ÈË"	]),
+//	"chat":	([	"msg_speak": HIC "ã€é–’èŠã€‘%sï¼š%s\n" NOR , "lv_lim":4,"tp_cost":25 ]),
+// bmp æš«æ™‚æŠŠchat çš„ç­‰ç´šä¸‹æ”¾åˆ°1
+"chat": ([      "msg_speak": HIC "ã€é–’èŠã€‘%sï¼š%s\n" NOR , "lv_lim":1,"tp_cost":25 ]),
+//	"rumor":([	"msg_speak": HIM "ã€è¬ è¨€ã€‘%sï¼š%s\n" NOR,	"anonymous": "æŸäºº"	]),
 ]);
 
 void create()
@@ -45,15 +45,15 @@ varargs int do_channel(object me, string verb, string arg, int emote)
 			return 0;
 
 		if( arg==(string)me->query_temp("last_channel_msg")&& !wizardp(me) )
-			return notify_fail("ÓÃ½»Ì¸ÆµµÀËµ»°Çë²»ÒªÖØ¸´ÏàÍ¬µÄÑ¶Ï¢¡¡\n");
+			return notify_fail("ç”¨äº¤è«‡é »é“èªªè©±è«‹ä¸è¦é‡è¤‡ç›¸åŒçš„è¨Šæ¯ã€€\n");
 
              // limit for lv & talk point if not a wiz
             if(!wiz)
               {              
                 if(me->query_level() < channels[verb]["lv_lim"])
-                  {  return notify_fail("ÄãµÄµÈ¼¶Ì«µÍ,²»ÄÜÊ¹ÓÃÕâ¸öÆµµÀ¡¡\n") ; }
+                  {  return notify_fail("ä½ çš„ç­‰ç´šå¤ªä½Ž,ä¸èƒ½ä½¿ç”¨é€™å€‹é »é“ã€€\n") ; }
                 if(me->query("talk_points")<channels[verb]["tp_cost"])
-                  {  return notify_fail("ÄãÍ»È»·¢ÏÖÄãËµ²»³öÉùÒôÀ´¡¡\n") ; }
+                  {  return notify_fail("ä½ çªç„¶ç™¼ç¾ä½ èªªä¸å‡ºè²éŸ³ä¾†ã€€\n") ; }
 		me->set("talk_points",me->query("talk_points")-channels[verb]["tp_cost"]) ; 
 	       }
 

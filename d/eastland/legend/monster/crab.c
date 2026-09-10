@@ -6,23 +6,23 @@ void create ()
 {               
        ::create();
        set_level(6);
-       set_name( "huge crab", "´óó¦Ð·" );
+       set_name( "huge crab", "å¤§èžƒèŸ¹" );
        add("id",({"crab"}) );
-       set_short( "´óó¦Ð·" );
-       set("unit","Ö»");
+       set_short( "å¤§èžƒèŸ¹" );
+       set("unit","åª");
         set_long(
-       "           ¡È        ¡È
-           ¡õ ¡Ñ  ¡Ñ ¡õ
-           ¡¶\\©Ø¡ª©Ø/¡¶     ÕâÊÇÒ»Ö»ÌåÐÍË¶´óµÄ»ðÐ·£¬¿´À´Ê®·ÖÏÅÈË
-           ¡¶£ü    ¡õ¡¶
-            ¡õ¡ª¡ª¡ª¡õ\n");
+       "           âˆª        âˆª
+           â–¡ âŠ™  âŠ™ â–¡
+           ã€Š\\â”´â€”â”´/ã€Š     é€™æ˜¯ä¸€éš»é«”åž‹ç¢©å¤§çš„ç«èŸ¹ï¼Œçœ‹ä¾†ååˆ†åš‡äºº
+           ã€Šï½œ    â–¡ã€Š
+            â–¡â€”â€”â€”â–¡\n");
        set_perm_stat("dex", 4);
        set ("natural_weapon_class1", 10);
        set ("natural_min_damage1",5);
        set ("natural_max_damage1", 10);
        set ("natural_armor_class", 1);
-       set_c_verbs(({"%sÓÃËüµÄ¾ÞòüÏò%s¹¥»÷"}));
-       set_c_limbs(({"ÉíÌå","Í·²¿"}));
+       set_c_verbs(({"%sç”¨å®ƒçš„å·¨èž¯å‘%sæ”»æ“Š"}));
+       set_c_limbs(({"èº«é«”","é ­éƒ¨"}));
        set ("exp_reward", 200);
        set ("tactic_func", "fire_ball");
 }
@@ -32,9 +32,9 @@ void fire_ball()
     object victim;
     if( !(victim=query_attacker()) || random(8)> 1 ) return 0;
     tell_object( victim,
-      "»ðÐ·Í»È»ÕÅ¿ª´ó×ì£¬ÍÂ³öÒ»ÍÅ»ð¡õ¡£\n" );
+      "ç«èŸ¹çªç„¶å¼µé–‹å¤§å˜´ï¼Œåå‡ºä¸€åœ˜ç«â–¡ã€‚\n" );
     tell_room( environment(this_object()),sprintf(
-      "»ðÐ·Í»È»ÕÅ¿ª´ó×ì£¬¶Ô%sÍÂ³öÒ»ÍÅ»ð¡õ¡£\n",victim->query("c_name"))
+      "ç«èŸ¹çªç„¶å¼µé–‹å¤§å˜´ï¼Œå°%såå‡ºä¸€åœ˜ç«â–¡ã€‚\n",victim->query("c_name"))
      , ({ victim, this_object() })
     );
     victim->receive_special_damage("fire", 6, 1 );

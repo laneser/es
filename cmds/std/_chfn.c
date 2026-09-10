@@ -22,7 +22,7 @@ int cmd_chfn( string arg )
 {
 
 	if((string)this_player()->query("name") == "guest") {
-		write("ÇëÊäÈëÄãµÄÓ¢ÎÄÃû×Ö£º");
+		write("è«‹è¼¸å…¥ä½ çš„è‹±æ–‡åå­—ï¼š");
 		input_to( "guest_name" );
 		return 1;
 	}
@@ -30,14 +30,14 @@ int cmd_chfn( string arg )
 	link = this_player()->query_link();
 
 		write( @TEXT
-ĞŞ¸ÄÈËÎï±³¾°×ÊÁÏ:
+ä¿®æ”¹äººç‰©èƒŒæ™¯è³‡æ–™:
 ______________________________________________________________
-ÔÚ [] ÀïµÄÊÇÃ¿Ïî×ÊÁÏµÄÔ¤ÉèÖµ£¬Èç¹ûÄãÒªÊ¹ÓÃÔ¤ÉèÖµ£¬Ö±½Ó°´ ENTER
-¼ü¼´¿É¡£
+åœ¨ [] è£¡çš„æ˜¯æ¯é …è³‡æ–™çš„é è¨­å€¼ï¼Œå¦‚æœä½ è¦ä½¿ç”¨é è¨­å€¼ï¼Œç›´æ¥æŒ‰ ENTER
+éµå³å¯ã€‚
 
 TEXT
 		);
-		printf("%s [%s] : ","ÕæÊµĞÕÃû",(string)link->query("real_name"));
+		printf("%s [%s] : ","çœŸå¯¦å§“å",(string)link->query("real_name"));
 
 	input_to("new_name");
 	return 1;
@@ -50,7 +50,7 @@ protected void guest_name(string rname)
 		this_player()->set("guest_name", rname );
 //		this_player()->set("cap_name", "Guest, " + capitalize(rname) );
 	}
-	printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)this_player()->query("c_name"));
+	printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)this_player()->query("c_name"));
 	input_to("guest_chinese_name");
 }
 
@@ -61,7 +61,7 @@ protected void new_name(string rname)
           link->set("real_name", replace_string(rname,CSI,""));
 		link->save_data() ;
 	}
-	printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)link->query("c_name"));
+	printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)link->query("c_name"));
 	input_to("new_chinese_name");
 }
 
@@ -72,25 +72,25 @@ protected void new_chinese_name(string ncname)
 	if( ncname && strlen( ncname ) > 0 ) {
 	        if(this_player()->query("make-up"))
 	          {
-	                write("ÇëÏÈÍÑµôÃæ¾ßÔÙ¸ÄÃû×Öà¸\n") ;
+	                write("è«‹å…ˆè„«æ‰é¢å…·å†æ”¹åå­—å–”\n") ;
 	              return ;
 	           }
 		if( (member_array(ncname, PROTECT_C_NAME) != -1) &&
 			!member_group(geteuid(this_player()),"admin") ) {
-			write("¶Ô²»Æğ£¬ÒòÎªÄ³ÖÖÔ­Òò£¬Äã²»ÄÜÓÃÕâÃû×Ö£¬ÇëÁíÍâÏëÒ»¸ö°É¡£\n");
-			printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)link->query("c_name"));
+			write("å°ä¸èµ·ï¼Œå› ç‚ºæŸç¨®åŸå› ï¼Œä½ ä¸èƒ½ç”¨é€™åå­—ï¼Œè«‹å¦å¤–æƒ³ä¸€å€‹å§ã€‚\n");
+			printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)link->query("c_name"));
 			input_to("new_chinese_name");
 			return;
 		}
 		if( sscanf(ncname,"%s(%s",tmp1,tmp2)==2) {
-			write("¶Ô²»Æğ£¬Ãû×ÖÖĞ²»ÄÜº¬ÓĞÀ¨ºÅ¡£\n");
-			printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)link->query("c_name"));
+			write("å°ä¸èµ·ï¼Œåå­—ä¸­ä¸èƒ½å«æœ‰æ‹¬è™Ÿã€‚\n");
+			printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)link->query("c_name"));
 			input_to("new_chinese_name");
 			return;
 		}
 		if( strlen( ncname ) > 14 ) {
-			write( "¶Ô²»Æğ£¬ÄãµÄÖĞÎÄÃû×ÖÌ«³¤ÁË£¬Çë¿ØÖÆÔÚ 7 ÖĞÎÄ×ÖÒÔÄÚ¡£\n");
-			printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)link->query("c_name"));
+			write( "å°ä¸èµ·ï¼Œä½ çš„ä¸­æ–‡åå­—å¤ªé•·äº†ï¼Œè«‹æ§åˆ¶åœ¨ 7 ä¸­æ–‡å­—ä»¥å…§ã€‚\n");
+			printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)link->query("c_name"));
 			input_to("new_chinese_name");
 			return;
 		}
@@ -102,7 +102,7 @@ protected void new_chinese_name(string ncname)
 		this_player()->set("title",this_player()->query_title(this_player()));
 		link->save_data();
 	}
-        printf( "%s [%s] : ","µç×ÓÓÊ¼şµØÖ·",link->query("email"));
+        printf( "%s [%s] : ","é›»å­éƒµä»¶åœ°å€",link->query("email"));
 	input_to("new_email");
 }
 
@@ -112,20 +112,20 @@ protected void guest_chinese_name(string ncname)
 	if( ncname && strlen( ncname ) > 0 ) {
 	        if(this_player()->query("make-up"))
 	          {
-	                write("ÇëÏÈÍÑµôÃæ¾ßÔÙ¸ÄÃû×Öà¸\n") ;
+	                write("è«‹å…ˆè„«æ‰é¢å…·å†æ”¹åå­—å–”\n") ;
 	              return ;
 	           }
 		if( (member_array(ncname, PROTECT_C_NAME) != -1) &&
 			!member_group(geteuid(this_player()),"admin") ) {
 			write(
-				"¶Ô²»Æğ£¬ÒòÎªÄ³ÖÖÔ­Òò£¬Äã²»ÄÜÓÃÕâÃû×Ö£¬ÇëÁíÍâÏëÒ»¸ö°É¡£\n");
-			printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)link->query("c_name"));
+				"å°ä¸èµ·ï¼Œå› ç‚ºæŸç¨®åŸå› ï¼Œä½ ä¸èƒ½ç”¨é€™åå­—ï¼Œè«‹å¦å¤–æƒ³ä¸€å€‹å§ã€‚\n");
+			printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)link->query("c_name"));
 			input_to("new_chinese_name");
 			return;
 		}
 		if( strlen( ncname ) > 14 ) {
-			write("¶Ô²»Æğ£¬ÄãµÄÖĞÎÄÃû×ÖÌ«³¤ÁË£¬Çë¿ØÖÆÔÚ 7 ÖĞÎÄ×ÖÒÔÄÚ¡£\n");
-			printf( "%s [%s] : ","ÖĞÎÄĞÕÃû",(string)link->query("c_name"));
+			write("å°ä¸èµ·ï¼Œä½ çš„ä¸­æ–‡åå­—å¤ªé•·äº†ï¼Œè«‹æ§åˆ¶åœ¨ 7 ä¸­æ–‡å­—ä»¥å…§ã€‚\n");
+			printf( "%s [%s] : ","ä¸­æ–‡å§“å",(string)link->query("c_name"));
 			input_to("new_chinese_name");
 			return;
 		}
@@ -147,9 +147,9 @@ protected void new_email(string e)
 
 int help() {
 	write(@HELP
-Ö¸Áî¸ñÊ½: chfn
+æŒ‡ä»¤æ ¼å¼: chfn
 
-Õâ¸öÖ¸Áî¿ÉÒÔÈÃÄãÖØĞÂÉèÖÃ×Ô¼ºµÄ±³¾°×ÊÁÏ¡£
+é€™å€‹æŒ‡ä»¤å¯ä»¥è®“ä½ é‡æ–°è¨­ç½®è‡ªå·±çš„èƒŒæ™¯è³‡æ–™ã€‚
 
 HELP
 );

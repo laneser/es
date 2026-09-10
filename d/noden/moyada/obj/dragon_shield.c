@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "dragon shield", "ÁúÁÛ¶Ü" );
+	set_name( "dragon shield", "é¾é±—ç›¾" );
 	add( "id", ({ "shield" }) );
-	set_short(  "ÁúÁÛ¶Ü" );
+	set_short(  "é¾é±—ç›¾" );
 	set_long( @C_LONG
-Õû¸ö¶Ü¾ÍÏñÒ»¿ÅÁúÍ·, ÕÅÑÀÁÑ×ì, èòèòÈçÉú. ÉÁÖøÒ«ÑÛµÄ½ğ¹â, ¼ÛÖµÒ»¶¨²»µÍ.
+æ•´å€‹ç›¾å°±åƒä¸€é¡†é¾é ­, å¼µç‰™è£‚å˜´, æ ©æ ©å¦‚ç”Ÿ. é–ƒè‘—è€€çœ¼çš„é‡‘å…‰, åƒ¹å€¼ä¸€å®šä¸ä½.
 C_LONG
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "shield" );
 	set( "material", "heavy_metal");
 	set( "armor_class", 9 );

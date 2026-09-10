@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("iron plate","¹ü½ğÉúÌú¼×");
+    set_name("iron plate","è£¹é‡‘ç”Ÿéµç”²");
     add("id",({"plate","mail"}) );
-    set_short( "iron plate","¹ü½ğÉúÌú¼×");
+    set_short( "iron plate","è£¹é‡‘ç”Ÿéµç”²");
 	set_long(
 		"This is a suit of mail made of iron meterial.\n",
-		"ÕâÊÇÒ»¼ş¿´À´¾É¾ÉµÄ½ğ±ßÌú¼×ëĞ£¬ËäÈ»Äê´ú¾ÃÔ¶µ«±£´æÍêºÃ£¬\n"
-		"´©ÉÏËüÈÔÈ»¿ÉÒÔÉÏ³¡×÷Õ½£®\n"
+		"é€™æ˜¯ä¸€ä»¶çœ‹ä¾†èˆŠèˆŠçš„é‡‘é‚Šéµç”²å†‘ï¼Œé›–ç„¶å¹´ä»£ä¹…é ä½†ä¿å­˜å®Œå¥½ï¼Œ\n"
+		"ç©¿ä¸Šå®ƒä»ç„¶å¯ä»¥ä¸Šå ´ä½œæˆ°ï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 180 );
 	set( "type", "body" );
 	set( "armor_class", 25 );

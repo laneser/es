@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("highsteel scales","Çà¸ÖÁÛ¼×");
+        set_name("highsteel scales","é’é‹¼é±—ç”²");
         add("id",({"scales"}) );
-        set_short("Çà¸ÖÁÛ¼×");
+        set_short("é’é‹¼é±—ç”²");
         set_long(
-"ÕâÊÇÒ»¼şÁÛ¼×£¬ÉÏÃæÊÇÒ»Æ¬Ò»Æ¬ÇàÉ«µÄ¸ÖÌúÁÛÆ¬¡£\n"
+"é€™æ˜¯ä¸€ä»¶é±—ç”²ï¼Œä¸Šé¢æ˜¯ä¸€ç‰‡ä¸€ç‰‡é’è‰²çš„é‹¼éµé±—ç‰‡ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight", 200 );
         set( "type", "body" );
         set( "material", "heavy_metal" );

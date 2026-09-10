@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-      set_name("daoist's cloth","Ã©É½°ËØÔÅÛ");
+      set_name("daoist's cloth","èŒ…å±±å…«å¦è¢");
       add("id",({"cloth"}) );
-      set_short("Ã©É½°ËØÔÅÛ");
+      set_short("èŒ…å±±å…«å¦è¢");
       set_long(@C_LONG
-Ò»¼şÃ©É½µÀÊ¿Ëù´©µÄÒÂ·ş£¬ááÃæĞåÖøÒ»¸ö°ËØÔµÄÍ¼ĞÎ¡£
+ä¸€ä»¶èŒ…å±±é“å£«æ‰€ç©¿çš„è¡£æœï¼Œå¾Œé¢ç¹¡è‘—ä¸€å€‹å…«å¦çš„åœ–å½¢ã€‚
 C_LONG           );
-      set( "unit", "¼ş" );
+      set( "unit", "ä»¶" );
       set( "weight",100 );
       set( "type", "body" );
       set("material","mage");

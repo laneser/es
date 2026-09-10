@@ -8,13 +8,13 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name("taxman neo", "Å£Íò½ğ");
+	set_name("taxman neo", "ç‰›è¬é‡‘");
 	add( "id", ({"man", "neo"}) );
-	set_short("Ë°ÀôÅ£Íò½ğ");
+	set_short("ç¨…åç‰›è¬é‡‘");
 	set_long(@C_LONG
-Å£Íò½ğÊÇÈôá°³Ç×¨ÃÅ¸ºÔğÊÕË°µÄË°Àô£¬ËûÎªÈË²»µ«¾«Ã÷£¬¸üÓĞÒ»Éí
-¾«Õ¿µÄÎä¹¦\£¬Ã»ÓĞÈËÖªµÀËûµ½µ×Ê¦³ĞºÎÈË£¬Ö»ÖªµÀÅ£Íò½ğÊÖµ×ÏÂ´ÓÀ´Ã»
-ÓĞÈËÇ·¹ıË°¡£
+ç‰›è¬é‡‘æ˜¯è‹¥åµåŸå°ˆé–€è² è²¬æ”¶ç¨…çš„ç¨…åï¼Œä»–ç‚ºäººä¸ä½†ç²¾æ˜ï¼Œæ›´æœ‰ä¸€èº«
+ç²¾æ¹›çš„æ­¦åŠŸ\ï¼Œæ²’æœ‰äººçŸ¥é“ä»–åˆ°åº•å¸«æ‰¿ä½•äººï¼ŒåªçŸ¥é“ç‰›è¬é‡‘æ‰‹åº•ä¸‹å¾ä¾†æ²’
+æœ‰äººæ¬ éç¨…ã€‚
 C_LONG
 	);
 	set( "race", "human" );
@@ -45,9 +45,9 @@ void init()
 string c_call(object who)
 {
 	if ((string)who->query("gender") == "female")
-	return (!who->query("spouse")) ? "Ğ¡½ã" : "·òÈË" ;
+	return (!who->query("spouse")) ? "å°å§" : "å¤«äºº" ;
 	else
-	return (!who->query("spouse")) ? "´óÒ¯" : "ÀÏÒ¯" ;
+	return (!who->query("spouse")) ? "å¤§çˆº" : "è€çˆº" ;
 }
 
 void check_wealth(object ob)
@@ -62,7 +62,7 @@ void check_wealth(object ob)
 	if( !env || !present(ob, env) ) return;
 	if( member_group(geteuid(ob), "admin") ) {
 		tell_room( env, 
-			"Å£Íò½ğ¹§½÷µØËµµÀ: ĞÁ¿àÄúÁË, ´óÉñ "+ob->query("c_name")+"¡£\n\n" ,
+			"ç‰›è¬é‡‘æ­è¬¹åœ°èªªé“: è¾›è‹¦æ‚¨äº†, å¤§ç¥ "+ob->query("c_name")+"ã€‚\n\n" ,
 		this_object() );
 		return;
 	}
@@ -80,7 +80,7 @@ void check_wealth(object ob)
 
 	if( total > (int)ob->query_level() * MAX_MONEY_EACH_LEVEL ) {
 		tell_room( env, 
-			"Å£Íò½ğËµµÀ: ¿´À´ÕâÎ»"+c_call(ob)+"Í¦À«´ÂµÄ£¬ÌæÇî¿àµÄ°ÙĞÕÄÉÒ»Ğ©Ë°°É¡£\n\n" ,
+			"ç‰›è¬é‡‘èªªé“: çœ‹ä¾†é€™ä½"+c_call(ob)+"æŒºé—Šç¶½çš„ï¼Œæ›¿çª®è‹¦çš„ç™¾å§“ç´ä¸€äº›ç¨…å§ã€‚\n\n" ,
 		this_object() );
 		
 		types = keys(money);
@@ -93,10 +93,10 @@ void check_wealth(object ob)
 		ob->set( "bank_balance", bank );
 
 		tell_object( ob, 
-			"Å£Íò½ğ²»µÈÄã»Ø´ğ£¬Ö±½Ó´ÓÄãÉíÉÏºÍÇ®×¯µÄ»§Í·ÄÃ×ßÒ»°ëµÄÇ®¡£\n");
+			"ç‰›è¬é‡‘ä¸ç­‰ä½ å›ç­”ï¼Œç›´æ¥å¾ä½ èº«ä¸Šå’ŒéŒ¢èŠçš„æˆ¶é ­æ‹¿èµ°ä¸€åŠçš„éŒ¢ã€‚\n");
 	} else tell_room( env, 
-		"Å£Íò½ğËµµÀ: " + ((string)ob->query("c_name"))[0..1]+
-		c_call(ob)+"£¬½üÀ´¿ÉºÃ£¿\n",
+		"ç‰›è¬é‡‘èªªé“: " + ((string)ob->query("c_name"))[0..1]+
+		c_call(ob)+"ï¼Œè¿‘ä¾†å¯å¥½ï¼Ÿ\n",
 		this_object() );
 	return;
 }

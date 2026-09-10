@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "sword of Grey", "¸ğÀ×Ö®½£" );
+	set_name( "sword of Grey", "è‘›é›·ä¹‹åŠ" );
 	add( "id", ({ "sword", "longblade", "blade", }) );
-	set_short( "¸ğÀ×Ö®½£" );
+	set_short( "è‘›é›·ä¹‹åŠ" );
 	set_long( @C_LONG
-Ã°ÏÕ¼Ò¸ğÀ××î¹ßÓÃµÄÎäÆ÷, ½£±úÉÏ¿ÌÖøÒ»ÌõĞ¡Ğ¡µÄÇàÉß, Äª·ÇÊÇÉßµºµÄ¶«Î÷?
+å†’éšªå®¶è‘›é›·æœ€æ…£ç”¨çš„æ­¦å™¨, åŠæŸ„ä¸Šåˆ»è‘—ä¸€æ¢å°å°çš„é’è›‡, è«éæ˜¯è›‡å³¶çš„æ±è¥¿?
 C_LONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", 34 );
 	set( "type", "longblade" );
 	set( "min_damage", 18 );

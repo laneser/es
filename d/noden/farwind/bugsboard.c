@@ -9,7 +9,7 @@ void create()
 	set_save_file("bugs_board");
 	set_location(FARWIND"square") ;
 	set ("short.text", "ES bugs board");
-	set ("c_short.text", "ES BUGS ÁôÑÔ°å");
-	set ("c_long.text", "ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£\n"
-		"ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£\n");
+	set ("c_short.text", "ES BUGS ç•™è¨€æ¿");
+	set ("c_long.text", "é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚\n"
+		"ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚\n");
 }

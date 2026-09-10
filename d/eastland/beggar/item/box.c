@@ -7,11 +7,11 @@ inherit OBJECT;
 inherit DAEMON;
 void create()
 {
-	set_name("box", "Ğ¡ºĞ×Ó");
-	set_short("Ğ¡ºĞ×Ó");
+	set_name("box", "å°ç›’å­");
+	set_short("å°ç›’å­");
 	set_long(@C_LONG
-ÕâÊÇÒ»Ö»¾§Ó¨Èó»¬µÄ°×ÓñºĞ×Ó,ÀïÃæ×°ÖøÒ»Ğ©Ò©¸à¡£Äã¿ÉÒÔÊ¹ÓÃËü( use )»ò¼ì²é
-( checkup )Ëü¡£
+é€™æ˜¯ä¸€éš»æ™¶ç‘©æ½¤æ»‘çš„ç™½ç‰ç›’å­,è£¡é¢è£è‘—ä¸€äº›è—¥è†ã€‚ä½ å¯ä»¥ä½¿ç”¨å®ƒ( use )æˆ–æª¢æŸ¥
+( checkup )å®ƒã€‚
 C_LONG
 	);
 	set( "weight", 1);
@@ -33,21 +33,21 @@ int do_use(string arg)
    int heal,duration,frequency,times;
    
    if ( !arg ) return 
-      notify_fail("ÄãÒª use Ê²÷á¶«Î÷¡£\n");
+      notify_fail("ä½ è¦ use ä»€éº¼æ±è¥¿ã€‚\n");
    if (!boxes=present(arg,this_player()))
-      return notify_fail("ÄãÃ»ÓĞÄÇÑù¶«Î÷¡£\n");
+      return notify_fail("ä½ æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n");
    if (boxes->query("name")!="box")
       return notify_fail("Syntax <use box>\n");
    times=boxes->query("times");
    me=this_player();
    if (times<1)
-      return notify_fail("¡«ÎØ,ÓÃÍêÁËÀ²¡«¡«\n");
+      return notify_fail("ï½å—š,ç”¨å®Œäº†å•¦ï½ï½\n");
    if ( me->query_attacker() )
-      return notify_fail("Õ½¶·ÖĞ²»ÄÜ·óÒ©!!\n");
+      return notify_fail("æˆ°é¬¥ä¸­ä¸èƒ½æ•·è—¥!!\n");
    if ( (int)me->query("hit_points")>=(int)me->query("max_hp") )
-      return notify_fail("Ã»ÊÜÉË·ó¸öÊ²÷á¾¢??\n");
+      return notify_fail("æ²’å—å‚·æ•·å€‹ä»€éº¼å‹??\n");
    if( (int)me->query_temp("bandaged") ) 
-      return notify_fail("ÄãÒÑ¾­±»°üÔúÁË,ÇëÏÈ remove bandage !!\n");
+      return notify_fail("ä½ å·²ç¶“è¢«åŒ…ç´®äº†,è«‹å…ˆ remove bandage !!\n");
    my_name=me->query("c_name");
    class1=me->query("class");
    switch (class1) {
@@ -57,16 +57,16 @@ int do_use(string arg)
    case "scholar":
       times-=1;
       tell_object(me,
-         "ÄãÊìÁ·µØ´Ó»³ÖĞÈ¡³öÒ»Ö»Ğ¡ºĞ,´ò¿ªºĞ×Ó,ÉìÖ¸Õ´Ğ©Ò©¸àÍ¿ÔÚÉË¿Ú´¦!\n");
+         "ä½ ç†Ÿç·´åœ°å¾æ‡·ä¸­å–å‡ºä¸€éš»å°ç›’,æ‰“é–‹ç›’å­,ä¼¸æŒ‡æ²¾äº›è—¥è†å¡—åœ¨å‚·å£è™•!\n");
       tell_room(environment(me),my_name+
-         "ÊìÁ·µØ´Ó»³ÖĞÈ¡³öÒ»Ö»Ğ¡ºĞ,´ò¿ªºĞ×Ó,ÉìÖ¸Õ´Ğ©Ò©¸àÍ¿ÔÚÉË¿Ú´¦!\n",me);
+         "ç†Ÿç·´åœ°å¾æ‡·ä¸­å–å‡ºä¸€éš»å°ç›’,æ‰“é–‹ç›’å­,ä¼¸æŒ‡æ²¾äº›è—¥è†å¡—åœ¨å‚·å£è™•!\n",me);
       break;
    default:
       times-=2;                       
       tell_object(me,
-         "ÄãÊÖ¿ìÑÛÃ÷µØ´Ó»³ÖĞÈ¡³öÒ»Ö»Ğ¡ºĞ,´ò¿ªËüÉìÖ¸Õ´Ğ©Ò©¸àÍ¿ÔÚÉË¿Ú´¦!\n");
+         "ä½ æ‰‹å¿«çœ¼æ˜åœ°å¾æ‡·ä¸­å–å‡ºä¸€éš»å°ç›’,æ‰“é–‹å®ƒä¼¸æŒ‡æ²¾äº›è—¥è†å¡—åœ¨å‚·å£è™•!\n");
       tell_room(environment(me),my_name+
-         "ÊÖ¿ìÑÛÃ÷µØ´Ó»³ÖĞÈ¡³öÒ»Ö»Ğ¡ºĞ,´ò¿ªËüÉìÖ¸Õ´Ğ©Ò©¸àÍ¿ÔÚÉË¿Ú´¦!\n",me);
+         "æ‰‹å¿«çœ¼æ˜åœ°å¾æ‡·ä¸­å–å‡ºä¸€éš»å°ç›’,æ‰“é–‹å®ƒä¼¸æŒ‡æ²¾äº›è—¥è†å¡—åœ¨å‚·å£è™•!\n",me);
       break;
    }
    boxes->set("times",times);
@@ -84,17 +84,17 @@ int do_checkup(string arg)
    int left_times;
    object boxes;
    if( !arg )
-      return notify_fail("ÄãÒª checkup Ê²÷á¶«Î÷?\n");
+      return notify_fail("ä½ è¦ checkup ä»€éº¼æ±è¥¿?\n");
    if( !(boxes=present( arg, this_player() )) )
-      return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+      return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
    if (boxes->query("name")!="box")
       return notify_fail("Syntax <checkup box>\n");
    left_times=boxes->query("times");
    if (left_times<1)
-      return notify_fail("°¦,±»Í¿ÍêÁËÀ²!Ö»ÓĞ¿Õ¿ÕµÄÒ»¸öºĞ×Ó¡«\n");   
+      return notify_fail("å”‰,è¢«å¡—å®Œäº†å•¦!åªæœ‰ç©ºç©ºçš„ä¸€å€‹ç›’å­ï½\n");   
    if (left_times>8)
-      return notify_fail("¹ş,Ğ¡ºĞ×Ó»¹×°ÖøÂúÂúµÄÒ©¸à¡«¡«\n");
+      return notify_fail("å“ˆ,å°ç›’å­é‚„è£è‘—æ»¿æ»¿çš„è—¥è†ï½ï½\n");
    else if (left_times>3)
-      return notify_fail("àÅ,Ğ¡ºĞ×Ó»¹ÁôÏÂ²»ÉÙµÄÒ©¸à¡«¡«\n");
-   else return notify_fail("ÎØ,Ğ¡ºĞ×ÓÀïµÄÒ©¸àÒÑ¾­¿ì±»ÓÃÍêÁËÀ²¡«¡«\n");   
+      return notify_fail("å—¯,å°ç›’å­é‚„ç•™ä¸‹ä¸å°‘çš„è—¥è†ï½ï½\n");
+   else return notify_fail("å—š,å°ç›’å­è£¡çš„è—¥è†å·²ç¶“å¿«è¢«ç”¨å®Œäº†å•¦ï½ï½\n");   
 }

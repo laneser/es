@@ -1,18 +1,18 @@
 
 
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1.Íõ¹Ú (/d/noden/nodania/obj/crown)          mad
+1.ç‹å†  (/d/noden/nodania/obj/crown)          mad
    3    *5      40       ok      h_metal
-2.ºìÉ«Åû·ç (/d/noden/nodania/obj/red_cape)
+2.ç´…è‰²æŠ«é¢¨ (/d/noden/nodania/obj/red_cape)
  *10    *8      50       ok      knight      mad
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1.Õ÷·şÕßÖ®½£ (/d/noden/nodania/obj/king_sword)
+1.å¾æœè€…ä¹‹åŠ (/d/noden/nodania/obj/king_sword)
   *44    *27   *50      180        0         mad
 

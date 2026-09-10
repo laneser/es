@@ -17,21 +17,21 @@ int cmd_shout(string str)
 	
 	name = capitalize((string)me->query("name"));
 	c_name = (string)me->query("c_name");
-	c_you = ((string)me->query("gender")=="female"? "Äã":"Äã") ;
+	c_you = ((string)me->query("gender")=="female"? "ä½ ":"ä½ ") ;
 
 	if( me->query_level() < 3 ) return notify_fail( 
-		"ºÜ±§Ç¸£¬ÎªÁË±ÜÃâÓĞÈËĞîÒâÉ§ÈÅ£¬µÈ¼¶ÈıÒÔÏÂµÄÍæ¼Ò²»×¼Ê¹ÓÃ shout Ö¸Áî¡£\n");
+		"å¾ˆæŠ±æ­‰ï¼Œç‚ºäº†é¿å…æœ‰äººè“„æ„é¨·æ“¾ï¼Œç­‰ç´šä¸‰ä»¥ä¸‹çš„ç©å®¶ä¸æº–ä½¿ç”¨ shout æŒ‡ä»¤ã€‚\n");
 
 	if ( me->query_temp("shoutter")) return notify_fail ( 
-		"Äã¸Õ¸Õ²ÅÓÃÁ¦µÄ¼â½Ğ¹ı£¬àÅ .. »¹ÊÇ²»Òª¡¸½Ğ¡¹µÃÌ«Æµ·± ..\n");
+		"ä½ å‰›å‰›æ‰ç”¨åŠ›çš„å°–å«éï¼Œå—¯ .. é‚„æ˜¯ä¸è¦ã€Œå«ã€å¾—å¤ªé »ç¹ ..\n");
 
 	if( !str || str=="" ) return notify_fail( 
-		"ÄãÒª½ĞÊ²÷á£¿\n");
+		"ä½ è¦å«ä»€éº¼ï¼Ÿ\n");
 
 	tp = (int)me->query("talk_points");
 
 	if( !wizardp(me) && tp < 50 ) return notify_fail( 
-		"ÄãÒÑ¾­½ĞµÃÌ«³öÁ¦£¬ÏÖÒÑÎŞÁ¦ÔÙº°£¬ĞİÏ¢ÏÂ°É¡£\n");
+		"ä½ å·²ç¶“å«å¾—å¤ªå‡ºåŠ›ï¼Œç¾å·²ç„¡åŠ›å†å–Šï¼Œä¼‘æ¯ä¸‹å§ã€‚\n");
 
 	str = replace_string(str,ESC,"");
 	if( msg = me->query_env("C_MSHOUT") ) {
@@ -44,8 +44,8 @@ int cmd_shout(string str)
 //			msg_me = sprintf("%s%s : ",c_you,msg);
 		}
 	} else {
-		msg = sprintf("%s(%s)º°µÀ : ",c_name,name);
-//		msg_me = sprintf("%sº°µÀ : ",c_you);
+		msg = sprintf("%s(%s)å–Šé“ : ",c_name,name);
+//		msg_me = sprintf("%så–Šé“ : ",c_you);
 	}
 	
 	color = me->getenv("ENV_COLOR");
@@ -55,7 +55,7 @@ int cmd_shout(string str)
 		urs[i]->quick_message(sprintf("%s%s\n",set_color(
 			 msg , color, urs[i]),str) );
 	}
-	printf("%s%s\n",set_color(c_you+"º°µÀ : ", color),str);
+	printf("%s%s\n",set_color(c_you+"å–Šé“ : ", color),str);
 
 	if( !wizardp(me) ) {
 		me->add( "talk_points", -50 );
@@ -75,10 +75,10 @@ void recover_shout(object me)
 int help()
 {
    write(@HELP
-Ê¹ÓÃ¸ñÊ½: shout <ĞÅÏ¢>
+ä½¿ç”¨æ ¼å¼: shout <ä¿¡æ¯>
 
-ÊôÓÚ¹ã²¥ĞÔÖÊ£¬µ«¼¶±ğ3ÒÔÏÂµÄÍæ¼Ò²»ÄÜÊ¹ÓÃ.
-Í¬Ê±Ê¹ÓÃÊ±ÏûºÄ20µãÌ¸»°Öµ£¬Îª0Ê±½«ÎŞ·¨Ê¹ÓÃ.
+å±¬æ–¼å»£æ’­æ€§è³ªï¼Œä½†ç´šåˆ¥3ä»¥ä¸‹çš„ç©å®¶ä¸èƒ½ä½¿ç”¨.
+åŒæ™‚ä½¿ç”¨æ™‚æ¶ˆè€—20é»è«‡è©±å€¼ï¼Œç‚º0æ™‚å°‡ç„¡æ³•ä½¿ç”¨.
 HELP
 );
    return 1;

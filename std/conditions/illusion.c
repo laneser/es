@@ -27,18 +27,18 @@ void effect(object player)
     cond_data = player->query("conditions/" + EFFECT_NAME);
     if (!sizeof(cond_data) == 3) return;
 
-    tell_object(player, set_color("ÄãÀäµÄ²»×¡²ü¶¶...\n", "HIB", player));
-    tell_object(player, set_color("ÄãÈÈµÄº¹³öÈç½¬...\n", "HIY", player));
+    tell_object(player, set_color("ä½ å†·çš„ä¸ä½é¡«æŠ–...\n", "HIB", player));
+    tell_object(player, set_color("ä½ ç†±çš„æ±—å‡ºå¦‚æ¼¿...\n", "HIY", player));
     cond_data[1]--;
     player->set("conditions/" + EFFECT_NAME, cond_data);
     if (cond_data[1] < 1) remove_effect(player);
     player->receive_special_damage(cond_data[2]);
-    tell_room(environment(player), player->query("c_name") + "²»×¡µØ²ü¶¶£¬ËÆºõÔÚÈÌÊÜÖø¼«´óµÄÍ´¿à...\n", player);
+    tell_room(environment(player), player->query("c_name") + "ä¸ä½åœ°é¡«æŠ–ï¼Œä¼¼ä¹Žåœ¨å¿å—è‘—æ¥µå¤§çš„ç—›è‹¦...\n", player);
 }
 
 void remove_effect(object player)
 {
-    tell_object(player, set_color("ÄãµÄÄÔ×ÓÖÕì¶´Ó»Ã¾õÖÐÇåÐÑ¹ýÀ´...\n", "HIC", player));
+    tell_object(player, set_color("ä½ çš„è…¦å­çµ‚æ–¼å¾žå¹»è¦ºä¸­æ¸…é†’éŽä¾†...\n", "HIC", player));
     player->delete("conditions/" + EFFECT_NAME);
 }
 
@@ -49,7 +49,7 @@ varargs void apply_effect(object player, int duration, int damage)
     cond_data = player->query("conditions/" + EFFECT_NAME);
     if (!cond_data)
     {
-      	tell_object(player, set_color("Äã¾õµÃ×Ô¼º×ß½øÁËÒ»¸öÆæÃîµÄµØ·½£¬ÓÐÖø»ðÑæ×öµÄµØ°åºÍ±ù×öµÄÇ½...\n", "HIG", player));
+      	tell_object(player, set_color("ä½ è¦ºå¾—è‡ªå·±èµ°é€²äº†ä¸€å€‹å¥‡å¦™çš„åœ°æ–¹ï¼Œæœ‰è‘—ç«ç„°åšçš„åœ°æ¿å’Œå†°åšçš„ç‰†...\n", "HIG", player));
 	player->set("conditions/" + EFFECT_NAME, ({4, duration, damage}));
     }
     else
@@ -57,7 +57,7 @@ varargs void apply_effect(object player, int duration, int damage)
 	if (duration > cond_data[1]) cond_data[1] = duration;
 	if (damage > cond_data[2]) cond_data[2] = damage;
 	else cond_data[2]++;
-	tell_object(player, set_color("ÄãµÄ¸Ð¾õÔ½À´Ô½Ç¿ÁÒ£¬áÝ·ðÏñÕæµÄÒ»Ñù...\n", "HIG", player));
+	tell_object(player, set_color("ä½ çš„æ„Ÿè¦ºè¶Šä¾†è¶Šå¼·çƒˆï¼Œå½·ä½›åƒçœŸçš„ä¸€æ¨£...\n", "HIG", player));
 	player->set("conditions/" + EFFECT_NAME, cond_data);
     }
 }

@@ -17,14 +17,14 @@ int read_me(string str);
 void create() {
   seteuid(getuid());
   set("id",({"story2"}));
-  set_name("story2","Êé¡¸Ê§°ÜÌÆè«¡¹");
-  set_short("story2","Êé¡¸Ê§°ÜÌÆè«¡¹");
+  set_name("story2","æ›¸ã€Œå¤±æ•—å”ç’œã€");
+  set_short("story2","æ›¸ã€Œå¤±æ•—å”ç’œã€");
   set_long("This is a message reader, you were given this reader when\n"+
            "Elon wants you to read a document or something like that\n"+
-           "Just type read note to read the content.\n","ÕâÊÇÒ»±¾ºÃ¿´µÄÊé...\n");
+           "Just type read note to read the content.\n","é€™æ˜¯ä¸€æœ¬å¥½çœ‹çš„æ›¸...\n");
   set("mass",1);
   set("bulk",1);
-  set("unit","±¾");
+  set("unit","æœ¬");
   set("value",({10,"silver"}) );
 }
  
@@ -42,7 +42,7 @@ int read_me (string str)
         return 0;
     }
 this_player()->more("/u/w/wind/shops/story2.txt");
-say(this_player()->query("c_cap_name")+"ÕıÔÚ¶ÁÒ»±¾Êé£¬ÊéÃûÊÇ¡¸Ê§°ÜÌÆè«¡¹¡£\n");
+say(this_player()->query("c_cap_name")+"æ­£åœ¨è®€ä¸€æœ¬æ›¸ï¼Œæ›¸åæ˜¯ã€Œå¤±æ•—å”ç’œã€ã€‚\n");
     return 1;
 }
  

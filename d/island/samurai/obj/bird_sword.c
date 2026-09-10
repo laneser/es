@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "bird sword", "Ãûµ¶Ç§Äñ" );
+        set_name( "bird sword", "ååˆ€åƒé³¥" );
         add( "id",({ "bird","sword" }) );
-        set_short( "bird sword", "Ãûµ¶Ç§Äñ" );
+        set_short( "bird sword", "ååˆ€åƒé³¥" );
         set_long(@AAA
-ÕâÊÇÒ»°ÑÓĞÃûµÄ¹Åµ¶Ç§Äñ£¬ÔÚ½£ÉíÉÏ¿ÌÓĞÒ»¸ö·ÉÄñµÄÍ¼°¸
+é€™æ˜¯ä¸€æŠŠæœ‰åçš„å¤åˆ€åƒé³¥ï¼Œåœ¨åŠèº«ä¸Šåˆ»æœ‰ä¸€å€‹é£›é³¥çš„åœ–æ¡ˆ
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 26 );
         set( "type", "longblade" );
         set( "min_damage", 15 );

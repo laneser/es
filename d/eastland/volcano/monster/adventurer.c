@@ -2,7 +2,7 @@
 
 inherit MONSTER;
 
-string *str1=({ "ÈËÀà","¾«Áé","°«ÈË","°ëÊŞÈË","µØ¾«","°ëÉíÈË","òáòæÈË","Ñı¾«","Ä§×å"});
+string *str1=({ "äººé¡","ç²¾éˆ","çŸ®äºº","åŠç¸äºº","åœ°ç²¾","åŠèº«äºº","èœ¥èœ´äºº","å¦–ç²¾","é­”æ—"});
 string *str2=({ "human","elf","dwarf","orc","gnome","halfing","lizardman","imp","daemon"});
 
 void create()
@@ -12,11 +12,11 @@ void create()
 	::create();
 	set_level(12);
 	i=random(sizeof(str1));
-	set_name( str2[i] + " adventurer", str1[i] + "Ã°ÏÕÕß" );
+	set_name( str2[i] + " adventurer", str1[i] + "å†’éšªè€…" );
 	add( "id", ({ str2[i], "adventurer" }) );
-	set_short( str1[i]+ "Ã°ÏÕÕß" );
+	set_short( str1[i]+ "å†’éšªè€…" );
 	set_long(
-	  "Õâ¸ö²»ÅÂËÀµÄ"+str1[i]+"Ã°ÏÕÕßÕıÕ½Õ½¾¤¾¤µÄÌ½Ë÷Õâ¸öÎ£ÏÕµÄÇøÓò¡£\n"
+	  "é€™å€‹ä¸æ€•æ­»çš„"+str1[i]+"å†’éšªè€…æ­£æˆ°æˆ°å…¢å…¢çš„æ¢ç´¢é€™å€‹å±éšªçš„å€åŸŸã€‚\n"
 	);
 	set( "gender", ({"male", "female" })[random(2)] );
 	set( "race", str2[i] );

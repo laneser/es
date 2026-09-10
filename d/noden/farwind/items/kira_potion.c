@@ -5,15 +5,15 @@ inherit POTION;
 void create()
 {
 	potion::create();
-	set_name( "kira potion", "¼ªÀ­Ò©Ë®" );
+	set_name( "kira potion", "å‰æ‹‰è—¥æ°´" );
 	add( "id", ({ "potion", "kira" }) );
-	set_short( "¼ªÀ­Ò©Ë®" );
+	set_short( "å‰æ‹‰è—¥æ°´" );
 	set_long(
-		"ÕâÆ¿Ò©Ë®ÉÏÃæ±êÊ¾Öø: ¡¸¼ªÀ­¡¹£¬ÅÔ±ß×¢Ã÷: ·şÓÃdrink¡£\n"
+		"é€™ç“¶è—¥æ°´ä¸Šé¢æ¨™ç¤ºè‘—: ã€Œå‰æ‹‰ã€ï¼Œæ—é‚Šè¨»æ˜: æœç”¨drinkã€‚\n"
 	);
 	set_healing( 50 );
 	set( "no_sale", 1 );
-	set( "unit", "Æ¿" );
+	set( "unit", "ç“¶" );
 	set( "weight", 25 );
 	set( "value", ({ 250, "silver" }) );
     set( "medication", 40 );

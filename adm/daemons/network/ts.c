@@ -31,7 +31,7 @@
 #define IT 60
 //  If you change this IT define, please change it also in /cmds/std/_tell.c
 #define NH "%s is not on this mud.\n"
-#define C_NH "%s²¢Ã»ÓĞÔÚÏßÉÏ¡¡\n"
+#define C_NH "%sä¸¦æ²’æœ‰åœ¨ç·šä¸Šã€€\n"
 
 #define CHANNEL_FILE      "/adm/etc/intermud_channels"
 #define CHANNEL_INTERMUDS "/adm/etc/channel_intermuds"
@@ -307,10 +307,10 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 
 	if( !who_from || !who_to || !msg )
 		return (sndr_chinese ?
-			"Óï·¨: tell <Ä³ÈË> <Ñ¶Ï¢>":"Syntax: tell <who> <msg>");
+			"èªæ³•: tell <æŸäºº> <è¨Šæ¯>":"Syntax: tell <who> <msg>");
 
 	if( who_to == "" )
-		return (sndr_chinese?"ÄãÒªºÍË­Ëµ»°£¿":"Who do you want to tell?");
+		return (sndr_chinese?"ä½ è¦å’Œèª°èªªè©±ï¼Ÿ":"Who do you want to tell?");
 
 	who_to = lower_case(who_to);
 
@@ -329,7 +329,7 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 
 	if( !interactive(rcvr) )
 		return ( sndr_chinese ?
-			sprintf("%s(%s) ÏÖÔÚÕı¶ÏÏßÖĞ¡¡\n", c_who_to, capitalize(who_to)):
+			sprintf("%s(%s) ç¾åœ¨æ­£æ–·ç·šä¸­ã€€\n", c_who_to, capitalize(who_to)):
 			sprintf("%s is presently net-dead.\n", capitalize(who_to)) );
 
 	ignore = rcvr->query("ignore");
@@ -338,14 +338,14 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 			if( !member_group(lower_case(who_from),"admin") ) {
 				if( -1 != member_array(lower_case(who_from), ignore) )
 					return ( sndr_chinese ?
-						sprintf("%s(%s) ²»ÏëÌıÄãËµ»°¡¡\n", c_who_to,
+						sprintf("%s(%s) ä¸æƒ³è½ä½ èªªè©±ã€€\n", c_who_to,
 							capitalize(who_to)):
 						sprintf("%s is ignoring you.\n", capitalize(who_to)) );
 			}
 		} else {
 			if( - 1 != member_array( sprintf("@%s", lower_case(mud_from)), ignore ) ) {
 				return ( sndr_chinese ?
-						sprintf("%s(%s) ²»ÏëÌıÈÎºÎ´Ó%sÀ´µÄ»°¡¡\n", c_who_to,
+						sprintf("%s(%s) ä¸æƒ³è½ä»»ä½•å¾%sä¾†çš„è©±ã€€\n", c_who_to,
 							capitalize(who_to), capitalize(mud_from)):
 						sprintf("%s is ignoring everyone@%s.\n",
 							capitalize(who_to), capitalize(mud_from)) );
@@ -353,7 +353,7 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 				if( -1 != member_array(sprintf("%s@%s",
 					lower_case(who_from), lower_case(mud_from)), ignore) )
 					return ( sndr_chinese ?
-						sprintf("%s(%s) ²»ÏëÌıÄãËµ»°¡¡\n", c_who_to,
+						sprintf("%s(%s) ä¸æƒ³è½ä½ èªªè©±ã€€\n", c_who_to,
 							capitalize(who_to)):
 						sprintf("%s is ignoring you.\n", capitalize(who_to)) );
 			}
@@ -362,7 +362,7 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 
 	if( ps != 2 && rcvr->query("busy") )
 		return ( sndr_chinese ?
-			sprintf("%s(%s) ÏÖÔÚºÜÃ¦£¬ÓĞÊ²÷á»°´ı»á¶ùÔÙËµ¡¡\n", c_who_to,
+			sprintf("%s(%s) ç¾åœ¨å¾ˆå¿™ï¼Œæœ‰ä»€éº¼è©±å¾…æœƒå…’å†èªªã€€\n", c_who_to,
 				capitalize(who_to)):
 			sprintf("%s is busy right now, try again later.\n",
 				capitalize(who_to)) );
@@ -370,13 +370,13 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 	// If we got here, try to send the message to receiver.
 	// Check invisible first.
 	if( sndr && (int)sndr->query("invisible") > pr )
-		who_from = rcvr_chinese? "Ä³ÈË" : "someone";
+		who_from = rcvr_chinese? "æŸäºº" : "someone";
 
 	if( !mud_from ) {
 		if( rcvr_chinese )
 			tell_object( rcvr, set_color((emote?
-				sprintf("[´«»°]%s(%s): %s\n", c_who_from, who_from, msg):
-				sprintf("%s(%s)¸æËßÄã: %s\n", c_who_from, capitalize(who_from), msg)), "HIC", rcvr));
+				sprintf("[å‚³è©±]%s(%s): %s\n", c_who_from, who_from, msg):
+				sprintf("%s(%s)å‘Šè¨´ä½ : %s\n", c_who_from, capitalize(who_from), msg)), "HIC", rcvr));
 		else
 			tell_object( rcvr, set_color((emote?
 				sprintf("[Tell]%s %s\n", capitalize(who_from), msg):
@@ -384,8 +384,8 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 	} else {
 		if( rcvr_chinese )
 			tell_object( rcvr, set_color((emote?
-				sprintf("[´«»°]%s(%s)@%s: %s\n", c_who_from, who_from, mud_from, msg):
-				sprintf("%s(%s)@%s¸æËßÄã: %s\n", c_who_from, who_from, mud_from, msg)), "HIC", rcvr));
+				sprintf("[å‚³è©±]%s(%s)@%s: %s\n", c_who_from, who_from, mud_from, msg):
+				sprintf("%s(%s)@%så‘Šè¨´ä½ : %s\n", c_who_from, who_from, mud_from, msg)), "HIC", rcvr));
 		else
 			tell_object( rcvr, set_color((emote?
 				sprintf("[Tell]%s@s %s\n", capitalize(who_from), mud_from, msg):
@@ -396,18 +396,18 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 	// Information about the status of the receiver.
 	if( rcvr->query("ghost") ) {
 		pre_ret = ( sndr_chinese?
-			sprintf("%s(%s) ÏÖÔÚÊÇ¹í»ê¶øÎŞ·¨»Ø´ğÄã¡¡\n", c_who_to, capitalize(who_to)):
+			sprintf("%s(%s) ç¾åœ¨æ˜¯é¬¼é­‚è€Œç„¡æ³•å›ç­”ä½ ã€€\n", c_who_to, capitalize(who_to)):
 			sprintf("%s is a ghost and can't answer.\n", capitalize(who_to)) );
 	} else if( rcvr->query("inactive") )
 		pre_ret = ( sndr_chinese?
-			sprintf("%s(%s) ÏÖÔÚÍ£Ö¹»î¶¯ÖĞ¡¡\n", c_who_to, capitalize(who_to)):
+			sprintf("%s(%s) ç¾åœ¨åœæ­¢æ´»å‹•ä¸­ã€€\n", c_who_to, capitalize(who_to)):
 			sprintf("%s is presently inactive.\n", capitalize(who_to)) );
 	else if( rcvr->query_temp("block_message") )
-		pre_ret = sprintf("%s(%s) ÏÖÔÚÎŞ·¨Ìıµ½ÄãµÄ»°¡¡\n", c_who_to, capitalize(who_to));
+		pre_ret = sprintf("%s(%s) ç¾åœ¨ç„¡æ³•è½åˆ°ä½ çš„è©±ã€€\n", c_who_to, capitalize(who_to));
 	else if( query_idle(rcvr) > IT ) {
 		tmp = (string)rcvr->getenv("idlemsg");
 		pre_ret = ( sndr_chinese?
-			sprintf("%s(%s) ÒÑÓĞ %s Î´ÔøÒÆ¶¯ÁË¡¡\n", c_who_to,
+			sprintf("%s(%s) å·²æœ‰ %s æœªæ›¾ç§»å‹•äº†ã€€\n", c_who_to,
 				capitalize(who_to), format_c_time(query_idle(rcvr), 1)):
 			sprintf("%s has been idle for %s.\n", capitalize(who_to),
 				format_time(query_idle(rcvr))) ) +
@@ -422,20 +422,20 @@ varargs string tell_user(string who_from, string mud_from, string who_to,
 		// Extra information for local users
 		if( in_edit(rcvr) )
 			pre_ret = ( sndr_chinese?
-				sprintf("%s%s(%s) ÕıÔÚ±à¼­µµ°¸¡¡\n", pre_ret, c_who_to, capitalize(who_to)):
+				sprintf("%s%s(%s) æ­£åœ¨ç·¨è¼¯æª”æ¡ˆã€€\n", pre_ret, c_who_to, capitalize(who_to)):
 				sprintf("%s%s is editing a file.\n", pre_ret, capitalize(who_to)) );
 		else if( in_input(rcvr) )
 			pre_ret = ( sndr_chinese?
-				sprintf("%s%s(%s) ÏÖÔÚ´¦ì¶ÊäÈëÄ£Ê½¡¡\n", pre_ret, c_who_to, capitalize(who_to)):
+				sprintf("%s%s(%s) ç¾åœ¨è™•æ–¼è¼¸å…¥æ¨¡å¼ã€€\n", pre_ret, c_who_to, capitalize(who_to)):
 				sprintf("%s%s is in input mode.\n", pre_ret, capitalize(who_to)) );
 
 		ret = ( sndr_chinese?
-			iwrap(sprintf("Äã¸æËß%s(%s): %s\n", c_who_to, capitalize(who_to), msg)):
+			iwrap(sprintf("ä½ å‘Šè¨´%s(%s): %s\n", c_who_to, capitalize(who_to), msg)):
 			iwrap(sprintf("You tell %s: %s\n", capitalize(who_to), msg)) );
 	} else {
 		rcvr->set("reply", sprintf("%s@%s", who_from, mud_from));
 		ret = ( sndr_chinese?
-			sprintf("%s(%s) ÊÕµ½ÄãµÄÑ¶Ï¢ÁË¡¡\n", c_who_to, capitalize(who_to)):
+			sprintf("%s(%s) æ”¶åˆ°ä½ çš„è¨Šæ¯äº†ã€€\n", c_who_to, capitalize(who_to)):
 			sprintf("%s received your message.\n", capitalize(who_to)) );
 	}
 	return sprintf("%s%s", pre_ret, ret);

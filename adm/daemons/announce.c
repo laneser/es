@@ -24,7 +24,7 @@ inherit OBJECT;
 void create()
 {
 	seteuid(ROOT_UID);
-	set("channel_id", "Ê¹ÓÃÕß±ä¶¯");
+	set("channel_id", "ä½¿ç”¨è€…è®Šå‹•");
 }
  
 int announce_user(object who, int type)
@@ -40,14 +40,14 @@ int announce_user(object who, int type)
 	else
 		name = "NONAME";
 	if (!(c_name = (string)who->query("c_name")))
-	c_name = "ÎÞÃû";
+	c_name = "ç„¡å";
    
 	tmp = c_name + "(" + name + ") ";
 
 	switch (type) {
 		case 0:
 			CHANNELD_D->do_channel(this_object(), "sys",
-				tmp + "´Ó " + query_ip_name(who) + " Á¬Ïß½øÈë¶«·½¹ÊÊÂ¡¡");
+				tmp + "å¾ž " + query_ip_name(who) + " é€£ç·šé€²å…¥æ±æ–¹æ•…äº‹ã€€");
 #ifdef LOGIN_LOG
        if (wizardp(this_player()))
         log_file(LOGIN_LOG,this_player()->query("name") + ": logged in from " +
@@ -57,7 +57,7 @@ int announce_user(object who, int type)
 			break;
 		case 1:
 			CHANNELD_D->do_channel(this_object(), "sys",
-				tmp + "Àë¿ªÁË¶«·½¹ÊÊÂ¡¡");
+				tmp + "é›¢é–‹äº†æ±æ–¹æ•…äº‹ã€€");
 #ifdef QUIT_LOG
       if (this_player())
        if (wizardp(this_player()))
@@ -68,7 +68,7 @@ int announce_user(object who, int type)
 			break;
 		case 2:
 			CHANNELD_D->do_channel(this_object(), "sys",
-				tmp + "ÓÉ " + query_ip_name(who) + " ÖØÐÂÁ¬Ïß½øÈë¡¡");
+				tmp + "ç”± " + query_ip_name(who) + " é‡æ–°é€£ç·šé€²å…¥ã€€");
 #ifdef NETDEAD_LOG
         log_file(NETDEAD_LOG, tmp + ": reconnected from " +
                  query_ip_name(who) + " [" +
@@ -76,7 +76,7 @@ int announce_user(object who, int type)
 #endif
 			break;
 		case 3:
-			CHANNELD_D->do_channel(this_object(), "sys",	tmp + "¶ÏÏßÁË¡¡");
+			CHANNELD_D->do_channel(this_object(), "sys",	tmp + "æ–·ç·šäº†ã€€");
 #ifdef NETDEAD_LOG
         log_file(NETDEAD_LOG, tmp + ": disconnected from " +
                  query_ip_name(who) + " [" +

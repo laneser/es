@@ -3,15 +3,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "moon sword", "Ãûµ¶ÔÂ²Ğ" );
+        set_name( "moon sword", "ååˆ€æœˆæ®˜" );
         add( "id",({ "moon","sword" }) );
-        set_short( "moon sword", "Ãûµ¶ÔÂ²Ğ" );
+        set_short( "moon sword", "ååˆ€æœˆæ®˜" );
         set_long(@AAA
-            ÕâÊÇÒ»°ÑÓĞÃûµÄÔÂ²Ğµ¶£¬¾İËµÕâÊÇÒòÎªÖı½£Ê¦×öºÃÕâ°Ñ½£Ê±
-            ¸ÕºÃ¿´µ½ÔÂÊ´¶øÃüÃû£¬ºÍĞÇÂäµ¶ÊÇÒ»¶ÔË«½£
+            é€™æ˜¯ä¸€æŠŠæœ‰åçš„æœˆæ®˜åˆ€ï¼Œæ“šèªªé€™æ˜¯å› ç‚ºé‘„åŠå¸«åšå¥½é€™æŠŠåŠæ™‚
+            å‰›å¥½çœ‹åˆ°æœˆè•è€Œå‘½åï¼Œå’Œæ˜Ÿè½åˆ€æ˜¯ä¸€å°é›™åŠ
 AAA
 );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 35 );
 //        set( "bleeding", 15 );
         set( "type", "longblade" );

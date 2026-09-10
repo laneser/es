@@ -4,13 +4,13 @@ void create(object ob)
 {
 	if ( !ob ) return ;
 	ob->set_level(2);
-	ob->set_name( "swamp crab", "ÕÓÔóó¦Ð·" );
-	ob->set_short( "ÕÓÔóó¦Ð·" );
+	ob->set_name( "swamp crab", "æ²¼æ¾¤èžƒèŸ¹" );
+	ob->set_short( "æ²¼æ¾¤èžƒèŸ¹" );
 	ob->set_long(
-		"ÕâÊÇÒ»ÖÖÏ¡ÓÐµÄó¦Ð·£¬¾Ó×¡ÔÚÕÓÔóºÍº£ÑóµÄ½»½çµØ´ø¡£\n"
+		"é€™æ˜¯ä¸€ç¨®ç¨€æœ‰çš„èžƒèŸ¹ï¼Œå±…ä½åœ¨æ²¼æ¾¤å’Œæµ·æ´‹çš„äº¤ç•Œåœ°å¸¶ã€‚\n"
 	);
 	ob->set( "natural_armor_class", 20 );
-	ob->set( "unit", "Ö»" );
-	ob->set_c_verbs( ({ "%sÓÃËüµÄ´óòüÍù%sÒ»¼Ð" }) );
-	ob->set_c_limbs( ({ "ÉíÌå", "Ó²¿Ç" }) );
+	ob->set( "unit", "åª" );
+	ob->set_c_verbs( ({ "%sç”¨å®ƒçš„å¤§èž¯å¾€%sä¸€å¤¾" }) );
+	ob->set_c_limbs( ({ "èº«é«”", "ç¡¬æ®¼" }) );
 }

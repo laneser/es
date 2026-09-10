@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "White skirt","°×Á·Õ½È¹" );
+     set_name( "White skirt","ç™½ç·´æˆ°è£™" );
      add( "id",({ "skirt" }) );
-     set_short( "°×Á·Õ½È¹" );
+     set_short( "ç™½ç·´æˆ°è£™" );
      set_long(@C_LONG
-Ò»¼ş°×É«µÄÎ§È¹£¬²»ÂÛÄĞÅ®½Ô¿ÉÒÔ´©´÷¡£
+ä¸€ä»¶ç™½è‰²çš„åœè£™ï¼Œä¸è«–ç”·å¥³çš†å¯ä»¥ç©¿æˆ´ã€‚
 C_LONG
      );
      set( "weight",50 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "legs" );
      set( "material","cloth" );
      set( "armor_class",1 );

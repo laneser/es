@@ -6,12 +6,12 @@ void create()
 {
         ::create();
         set_level(13);
-        set_name( "gnome guard", "µØ¾«ÊØÎÀ" );
+        set_name( "gnome guard", "åœ°ç²¾å®ˆè¡›" );
         add("id",({"guard"}) );
-   set_short( "µØ¾«ÊØÎÀ" );
+   set_short( "åœ°ç²¾å®ˆè¡›" );
         set_long(
-                "Ò»¸öµØ¾«ÊØÎÀ,Õâ¸öÊØÎÀËäÈ»ÖåÎÆÂúÃæ,µ«¾ÙÖ¹È´Ò»µãÒ²Ã»ÓĞ"
-                "ÀÏÌ¬ÁúïñµÄÑù×Ó\n" );
+                "ä¸€å€‹åœ°ç²¾å®ˆè¡›,é€™å€‹å®ˆè¡›é›–ç„¶çšºç´‹æ»¿é¢,ä½†èˆ‰æ­¢å»ä¸€é»ä¹Ÿæ²’æœ‰"
+                "è€æ…‹é¾é¾çš„æ¨£å­\n" );
         set( "gender", "male" );
         set( "race", "gnome" );
         set( "alignment", 400 );
@@ -49,7 +49,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()), 
-      guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n",guard[i] );
+      guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n",guard[i] );
       guard[i]->kill_ob(victim);
     }
      return 0;
@@ -61,7 +61,7 @@ void relay_message(string class1, string msg)
      object obj;
      
      ::relay_message(class1, msg);
-     if( sscanf( msg, "%s(%s)×ßÁË¹ıÀ´¡£", str,who )==2 ) 
+     if( sscanf( msg, "%s(%s)èµ°äº†éä¾†ã€‚", str,who )==2 ) 
        {
          who = lower_case(who);
          if ( !obj = find_player(who)) return ;
@@ -84,10 +84,10 @@ void warning1(object obj)
 {
      if( !present( "guard", environment(obj) ) ) return;
      tell_object( obj,
-       "µØ¾«ÊØÎÀ³¯ÄãÒ»¿´áá,Á³É«Í»È»´ó±ä,²»Ê±³¯ÄãµÄ·½Ïò¿´À´¡£\n" );
+       "åœ°ç²¾å®ˆè¡›æœä½ ä¸€çœ‹å¾Œ,è‡‰è‰²çªç„¶å¤§è®Š,ä¸æ™‚æœä½ çš„æ–¹å‘çœ‹ä¾†ã€‚\n" );
      tell_room( environment( obj ),
-       "µØ¾«ÊØÎÀ³¯"+obj->query("c_name")+"Ò»¿´áá,Á³É«Í»È»´ó±ä"
-       ",²»Ê±³¯ËûµÄ·½Ïò¿´À´¡£\n", obj
+       "åœ°ç²¾å®ˆè¡›æœ"+obj->query("c_name")+"ä¸€çœ‹å¾Œ,è‡‰è‰²çªç„¶å¤§è®Š"
+       ",ä¸æ™‚æœä»–çš„æ–¹å‘çœ‹ä¾†ã€‚\n", obj
      );
 }
 
@@ -95,9 +95,9 @@ void warning2(object obj)
 {
      if( !present( "guard", environment(obj) ) ) return;
      tell_object( obj,
-        "ÊØÎÀÕûÀíÁËÏÂ·À¾ß,ÎÕ½ôÊÖÉÏµÄÎäÆ÷³¯Äã×ßÁË¹ıÀ´¡£\n" );
+        "å®ˆè¡›æ•´ç†äº†ä¸‹é˜²å…·,æ¡ç·Šæ‰‹ä¸Šçš„æ­¦å™¨æœä½ èµ°äº†éä¾†ã€‚\n" );
       tell_room( environment( obj ), 
-       "ÊØÎÀÕûÀíÁËÏÂ·À¾ß,ÎÕ½ôÊÖÉÏµÄÎäÆ÷³¯"+obj->query("c_name")+"×ßÁË¹ıÈ¥¡£\n"
+       "å®ˆè¡›æ•´ç†äº†ä¸‹é˜²å…·,æ¡ç·Šæ‰‹ä¸Šçš„æ­¦å™¨æœ"+obj->query("c_name")+"èµ°äº†éå»ã€‚\n"
        , obj
      );
 }

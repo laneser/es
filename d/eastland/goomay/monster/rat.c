@@ -6,19 +6,19 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name( "rat", "ÀÏÊó" );
-	set_short( "a rat", "ÀÏÊó" );
+	set_name( "rat", "è€é¼ " );
+	set_short( "a rat", "è€é¼ " );
 	set_long(
 		"A small rat. It looks pretty hungry.\n",
-		"Ò»Ö»ÊİĞ¡µÄÀÏÊó£¬¿´ÆğÀ´ºÃÏñ¶öÁËºÜ¾Ã¡£\n"
+		"ä¸€éš»ç˜¦å°çš„è€é¼ ï¼Œçœ‹èµ·ä¾†å¥½åƒé¤“äº†å¾ˆä¹…ã€‚\n"
 	);
 	set_perm_stat("dex", 3 );
 	set_perm_stat("str", 2 );
 
-	set_c_verbs( ({ "%sÓÃ×¦×ÓÂÒ×¥%s", "%sÕÅ×ìÍù%sÒ§ÏÂ" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ááÍÈ", "Î²°Í" }) );
+	set_c_verbs( ({ "%sç”¨çˆªå­äº‚æŠ“%s", "%så¼µå˜´å¾€%så’¬ä¸‹" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰çˆª", "å¾Œè…¿", "å°¾å·´" }) );
 
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "natural_armor_class", 8 );
 #include <replace_mob.h>
 }

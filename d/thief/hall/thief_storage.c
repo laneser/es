@@ -9,13 +9,13 @@ do_drop(string str)
 {
 	int tmp1,tmp2;
 	string stmp1,stmp2;
-	if ( ! wizardp(this_player()) ) return 0; 	// ²âÊÔÊ±ÓÃ
+	if ( ! wizardp(this_player()) ) return 0; 	// æ¸¬è©¦æ™‚ç”¨
 #if 0
 	if ( !str ) return 0;
 	if( sscanf(str, "%d %s %s", tmp1, stmp1, stmp2) == 3 ||
         	sscanf(str, "%d %s", tmp1, stmp1) == 2) return 0;
 	if ( str == "all" )
-		return notify_fail("ÇëÒ»ÑùÒ»Ñù·Å.\n");
+		return notify_fail("è«‹ä¸€æ¨£ä¸€æ¨£æ”¾.\n");
 #endif
 	
 }
@@ -23,10 +23,10 @@ do_drop(string str)
 void create()
 {
 	::create();
-	set_short( "Ğ¡Íµ¹«»á´¢²ØÊÒ");
+	set_short( "å°å·å…¬æœƒå„²è—å®¤");
 	set_long(	@C_LONG_DESCRIPTION
-ÕâÀïÊÇĞ¡Íµ¹«»áµÄ´¢²ØÊÒ¡£¼¸ÄêÇ°Ò»Ğ©ÓĞÇ®µÄĞ¡Íµ¾èÁËĞ©Ç®¸ÇÁËÕâ×ù´¢²ØÊÒ,
-¸ßµÈ¼¶µÄĞ¡Íµ°ÑÒ»Ğ©¶àâÅµÄ×°±¸ÁôÔÚÕâÀï, Ìá¹©ĞèÒªµÄÈËÈ¡ÓÃ¡£
+é€™è£¡æ˜¯å°å·å…¬æœƒçš„å„²è—å®¤ã€‚å¹¾å¹´å‰ä¸€äº›æœ‰éŒ¢çš„å°å·æäº†äº›éŒ¢è“‹äº†é€™åº§å„²è—å®¤,
+é«˜ç­‰ç´šçš„å°å·æŠŠä¸€äº›å¤šé¤˜çš„è£å‚™ç•™åœ¨é€™è£¡, æä¾›éœ€è¦çš„äººå–ç”¨ã€‚
 C_LONG_DESCRIPTION
 	);
 

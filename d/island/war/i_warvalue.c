@@ -12,6 +12,6 @@ void kill_reward(object killer)
 		war_score = (int)query("justice");
 		killer->add("justice", war_score );
 		tell_object( killer, 
-			"Äã±³ÉÏ¶àÁË " + war_score + " µÀÑªºÛ¡£\n");
+			"ä½ èƒŒä¸Šå¤šäº† " + war_score + " é“è¡€ç—•ã€‚\n");
 	::kill_reward(killer);
 }

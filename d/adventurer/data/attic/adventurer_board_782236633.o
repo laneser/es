@@ -1,41 +1,41 @@
 #d/adventurer/hall/adv_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Adventurer's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶Ã°ÏÕÕß¹«»áÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÈÎºÎÈË¶¼»¶Ó­ÔÚÕâÀïÁôÑÔ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"Ã°ÏÕÕßÁôÑÔ°å",])
-messages ({(["id":121,"body":"no1..... ¹ş¹ş¹ş
-","title":"< no title >","time":781540458,"poster":"Did",]),(["id":122,"title":"< no title >","body":"     Ï£ÍüÃ°ÏÕÖøÕßµÄÃ°Ò×¼¼ÄÜ100
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Adventurer's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼å†’éšªè€…å…¬æœƒæ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤ä»»ä½•äººéƒ½æ­¡è¿åœ¨é€™è£¡ç•™è¨€ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"å†’éšªè€…ç•™è¨€æ¿",])
+messages ({(["id":121,"body":"no1..... å“ˆå“ˆå“ˆ
+","title":"< no title >","time":781540458,"poster":"Did",]),(["id":122,"title":"< no title >","body":"     å¸Œå¿˜å†’éšªè‘—è€…çš„å†’æ˜“æŠ€èƒ½100
       ^_^    
 
-","time":781668046,"poster":"Barbarian",]),(["id":123,"body":"   ÊéÉúµ½µ×ËãÊ²÷áÄØ?Ö»ÄÜÓÃ³¤ÈĞ·Åunknow,lb skills ÓÖÖ»ÓĞ60!!
-Ôõ÷á»îÑ½??ÎÒÃÇÓÖ²»Ïñknight»òmonk¿ÉÒÔÆ´Ñª!
-Çë×ĞÏ¸¿¼ÂÇÒ»ÏÂºÃÂğ?
+","time":781668046,"poster":"Barbarian",]),(["id":123,"body":"   æ›¸ç”Ÿåˆ°åº•ç®—ä»€éº¼å‘¢?åªèƒ½ç”¨é•·åˆƒæ”¾unknow,lb skills åˆåªæœ‰60!!
+æ€éº¼æ´»å‘€??æˆ‘å€‘åˆä¸åƒknightæˆ–monkå¯ä»¥æ‹¼è¡€!
+è«‹ä»”ç´°è€ƒæ…®ä¸€ä¸‹å¥½å—?
 ","title":"< no title >","time":781800200,"poster":"Adad",]),(["id":125,"body":"On Mon Oct 10, Adad wrote:
->    ÊéÉúµ½µ×ËãÊ²÷áÄØ?Ö»ÄÜÓÃ³¤ÈĞ·Åunknow,lb skills ÓÖÖ»ÓĞ60!!
-> Ôõ÷á»îÑ½??ÎÒÃÇÓÖ²»Ïñknight»òmonk¿ÉÒÔÆ´Ñª!
-> Çë×ĞÏ¸¿¼ÂÇÒ»ÏÂºÃÂğ?
+>    æ›¸ç”Ÿåˆ°åº•ç®—ä»€éº¼å‘¢?åªèƒ½ç”¨é•·åˆƒæ”¾unknow,lb skills åˆåªæœ‰60!!
+> æ€éº¼æ´»å‘€??æˆ‘å€‘åˆä¸åƒknightæˆ–monkå¯ä»¥æ‹¼è¡€!
+> è«‹ä»”ç´°è€ƒæ…®ä¸€ä¸‹å¥½å—?
      Faint.......
      If scholars think themselves r weak still...
      I think all healers can go to suicide ....
      And all mages can suicide,2.....
 
      What u want to be?  A super man?
-","title":"Re: < no title >","time":781805819,"poster":"Ann",]),(["id":126,"body":"   ÎÒ²¢Ã»ÒÔÒªÇóËµÊéÉúÒª¶àÇ¿,Ò²Ã»ÓĞÒªÉ±¾¡ESÖĞmobµÄÄîÍ·.
-µ«ÖÁÉÙ¸Ã¸øÊéÉúµÄ¹¦\·òÒ»µãÌØÉ«°É?Èç½ñÊéÉúµÄÌØÉ«ÔÚÄÄÄØ?
-ÎÒÃÇÏÖÔÚÁ¬minaceus¶¼É±²»¶¯.....
-°¦....Ö»ÊÇÏë×Ü¸ÃÓĞÈËËµ»°,ËùÒÔ·¢·¢ÀÎÉ§°ÕÁË.....
-","title":"< no title >","time":781843215,"poster":"Adad",]),(["id":127,"body":"ÊéÉúÕæµÄ±äµÄÌ«ÈõÁË..godÒ»Ö±²»¶ÏµÄ¸ÄÈõÍæ¼Ò,ÎÒÏàĞÅesÒ»¶¨»áÔ½À´Ô½ÉÙÈËÍæ
-ÏÖÔÚÒÑ¾­ÓĞèÏÖÖÇ÷ÊÆÁË,Ï£Íûgod¿ÉÒÔÔö¼ÓĞÂmobµ«²»Òªweak us..²»È»¾õµÄÎŞÁ¦¸Ğ..
-Ï£ÍûÄÜ¶Ô²»¹ÜÊÇhealer or scholar ¶¼¸Ä»ØÔ­×´..thx,,
-","title":"< no title >","time":781845284,"poster":"Bigcat",]),(["id":128,"body":"ÎÒ×òÌì¿´µ½Ò»¸öÄ§·¨Ê¦,ÊÖÄÃÕ÷·şÕßÖ®¼û½£È¥Íê³ÉÁúÑ¨ÈÎÎñ??? mage ..... ÄÃÕ÷·şÕßÖ®½£....ÕâÌ«¿äÕÅÁË°É... ÎÒ¼ÇµÃ mage Ã»ÓĞ³¤ÈĞ¼¼ÇÉ°¡... ???
+","title":"Re: < no title >","time":781805819,"poster":"Ann",]),(["id":126,"body":"   æˆ‘ä¸¦æ²’ä»¥è¦æ±‚èªªæ›¸ç”Ÿè¦å¤šå¼·,ä¹Ÿæ²’æœ‰è¦æ®ºç›¡ESä¸­mobçš„å¿µé ­.
+ä½†è‡³å°‘è©²çµ¦æ›¸ç”Ÿçš„åŠŸå¤«ä¸€é»ç‰¹è‰²å§?å¦‚ä»Šæ›¸ç”Ÿçš„ç‰¹è‰²åœ¨å“ªå‘¢?
+æˆ‘å€‘ç¾åœ¨é€£minaceuséƒ½æ®ºä¸å‹•.....
+å”‰....åªæ˜¯æƒ³ç¸½è©²æœ‰äººèªªè©±,æ‰€ä»¥ç™¼ç™¼ç‰¢é¨·ç½·äº†.....
+","title":"< no title >","time":781843215,"poster":"Adad",]),(["id":127,"body":"æ›¸ç”ŸçœŸçš„è®Šçš„å¤ªå¼±äº†..godä¸€ç›´ä¸æ–·çš„æ”¹å¼±ç©å®¶,æˆ‘ç›¸ä¿¡esä¸€å®šæœƒè¶Šä¾†è¶Šå°‘äººç©
+ç¾åœ¨å·²ç¶“æœ‰æŸ˜ç¨®è¶¨å‹¢äº†,å¸Œæœ›godå¯ä»¥å¢åŠ æ–°mobä½†ä¸è¦weak us..ä¸ç„¶è¦ºçš„ç„¡åŠ›æ„Ÿ..
+å¸Œæœ›èƒ½å°ä¸ç®¡æ˜¯healer or scholar éƒ½æ”¹å›åŸç‹€..thx,,
+","title":"< no title >","time":781845284,"poster":"Bigcat",]),(["id":128,"body":"æˆ‘æ˜¨å¤©çœ‹åˆ°ä¸€å€‹é­”æ³•å¸«,æ‰‹æ‹¿å¾æœè€…ä¹‹è¦‹åŠå»å®Œæˆé¾ç©´ä»»å‹™??? mage ..... æ‹¿å¾æœè€…ä¹‹åŠ....é€™å¤ªèª‡å¼µäº†å§... æˆ‘è¨˜å¾— mage æ²’æœ‰é•·åˆƒæŠ€å·§å•Š... ???
 vivian
-","title":"about mage...","time":781874888,"poster":"Cool",]),(["id":129,"title":"²»Ï¡ÆæÑ½!!","body":"   heheheheh, ÎÒ×òÌìÒ²¿´µ½Ò»´úÉñÒ½ÊÖ³ÖÄõÁúº®Ø°ºÍÕ÷·şÕßÖ®½£ÔÚ´³Ò®!!
-Çë×¢ÒâÎÒµÄ´½,Ë«ÊÖÎäÆ÷Å¶!!!
+","title":"about mage...","time":781874888,"poster":"Cool",]),(["id":129,"title":"ä¸ç¨€å¥‡å‘€!!","body":"   heheheheh, æˆ‘æ˜¨å¤©ä¹Ÿçœ‹åˆ°ä¸€ä»£ç¥é†«æ‰‹æŒå­½é¾å¯’åŒ•å’Œå¾æœè€…ä¹‹åŠåœ¨é—–è€¶!!
+è«‹æ³¨æ„æˆ‘çš„å”‡,é›™æ‰‹æ­¦å™¨å“¦!!!
 ","time":781884864,"poster":"Adad",]),(["id":130,"title":"Re: about mage...","body":"On Tue Oct 11, Cool wrote:
-> ÎÒ×òÌì¿´µ½Ò»¸öÄ§·¨Ê¦,ÊÖÄÃÕ÷·şÕßÖ®¼û½£È¥Íê³ÉÁúÑ¨ÈÎÎñ??? mage ..... ÄÃÕ÷·şÕßÖ®½£....ÕâÌ«¿äÕÅÁË°É... ÎÒ¼ÇµÃ mage Ã»ÓĞ³¤ÈĞ¼¼ÇÉ°¡... ???
+> æˆ‘æ˜¨å¤©çœ‹åˆ°ä¸€å€‹é­”æ³•å¸«,æ‰‹æ‹¿å¾æœè€…ä¹‹è¦‹åŠå»å®Œæˆé¾ç©´ä»»å‹™??? mage ..... æ‹¿å¾æœè€…ä¹‹åŠ....é€™å¤ªèª‡å¼µäº†å§... æˆ‘è¨˜å¾— mage æ²’æœ‰é•·åˆƒæŠ€å·§å•Š... ???
 > vivian
 
-ÄÇ¸ö mage ÊÇ²»ÊÇ½Ğ Lucia Ñ½? *evil grin*
+é‚£å€‹ mage æ˜¯ä¸æ˜¯å« Lucia å‘€? *evil grin*
 
 -Elon was here.
 ","time":781917331,"poster":"Elon",]),(["id":131,"body":"hmm.......
@@ -43,50 +43,50 @@ vivian
             boop was here ...........
                                boop
 ","title":"boop","time":781961627,"poster":"Boop",]),(["id":132,"body":" ya!! add oil, add oil!!
-","title":"< no title >","time":782023950,"poster":"Adad",]),(["id":133,"title":"reply post 9","body":"ÊÇ°¡...ÄãÔõ÷áÖªµÀ...
+","title":"< no title >","time":782023950,"poster":"Adad",]),(["id":133,"title":"reply post 9","body":"æ˜¯å•Š...ä½ æ€éº¼çŸ¥é“...
 vivian
 ","time":782037859,"poster":"Vivian",]),(["id":134,"title":"Re: reply post 9","body":"On Thu Oct 13, Vivian wrote:
-> ÊÇ°¡...ÄãÔõ÷áÖªµÀ...
+> æ˜¯å•Š...ä½ æ€éº¼çŸ¥é“...
 > vivian
 
-Äãµ½ÏÖÔÚ»¹²»ÖªµÀÑ½? Hmm...
+ä½ åˆ°ç¾åœ¨é‚„ä¸çŸ¥é“å‘€? Hmm...
 
-Elf Lucia.. ES ÀïºÜÓĞÃûµÄ.. :)
+Elf Lucia.. ES è£¡å¾ˆæœ‰åçš„.. :)
 
 -Elon was here.
-","time":782038391,"poster":"Elon",]),(["id":135,"title":"< no title >","body":"Ë­ÊÇlucia°¡?
-¾ÓÈ»¿ÉÒÔÍê³ÉesÍæ¼Ò×îÎŞ·¨Íê³ÉµÄÈÎÎñ
+","time":782038391,"poster":"Elon",]),(["id":135,"title":"< no title >","body":"èª°æ˜¯luciaå•Š?
+å±…ç„¶å¯ä»¥å®Œæˆesç©å®¶æœ€ç„¡æ³•å®Œæˆçš„ä»»å‹™
 
 
 ","time":782043991,"poster":"Mercury",]),(["id":136,"title":"Re: < no title >","body":"On Thu Oct 13, Mercury wrote:
-> Ë­ÊÇlucia°¡?
-> ¾ÓÈ»¿ÉÒÔÍê³ÉesÍæ¼Ò×îÎŞ·¨Íê³ÉµÄÈÎÎñ
+> èª°æ˜¯luciaå•Š?
+> å±…ç„¶å¯ä»¥å®Œæˆesç©å®¶æœ€ç„¡æ³•å®Œæˆçš„ä»»å‹™
 > 
 > 
-  ºÇ....ÄãËµÄØ...??
-  ÓÃxxÏëÒ²ÖªµÀ...
-            °ËÔÆ
-","time":782047296,"poster":"Jschen",]),(["id":137,"title":"< no title >","body":"hmm....ÎÒ»¹¿´µ½ËûÉ±ÁËmoorth mage and knight and healer
-ËûÊÇ¨Õ¨ß¨è¨ß°¡????
+  å‘µ....ä½ èªªå‘¢...??
+  ç”¨xxæƒ³ä¹ŸçŸ¥é“...
+            å…«é›²
+","time":782047296,"poster":"Jschen",]),(["id":137,"title":"< no title >","body":"hmm....æˆ‘é‚„çœ‹åˆ°ä»–æ®ºäº†moorth mage and knight and healer
+ä»–æ˜¯ã„•ã„Ÿã„¨ã„Ÿå•Š????
 
              death
-","time":782058558,"poster":"Death",]),(["id":138,"title":"< no title >","body":"ÎÒ¾õµÃ×î½üµÄĞŞ¸ÄÓĞÎÊÌâ,
-ÎÒÒÔÇ°»ádefend 2 scholars k gnome healer
-µ«ÊÇÏÖÔÚÄØ???ºÙºÙºÙ.....ÎÒ¿É²»¸ÉÕâÖÖÊÂ.....
-ÒòÎªÄ¿Ç°µÄscholar ÍêÈ«Ã»ÓĞÕ½Á¦!!!!
-                                Death ¡«¡«grins evily
-ps.ÆÚ´ı 30 ¼¶µÄ unkonw ÓĞÒÔÇ°µÄË®×¼...
-","time":782058928,"poster":"Death",]),(["id":139,"title":"< no title >","body":"¾­¹ıÎÒÇ§ËÀÍòËÀµÄÊµÑéÖ¤Ã÷!!
-ËÀµôÊ±, Ç®²»¼ûÒ»¶¨ÊÇ±»ÈËÄÃ×ßÁË, ²»»álost,
-ÎÒÈÏÎªÓĞÈËaliasÉè¼ñÇ®µÄ¶øÒÔ, like alias gc get silver from corpse...
-ËùÒÔ³£³£·¢ÏÖ×°±¸»¹ÔÚ, ¡õÌåÄÚµÄÇ®È´²»¼ûÁË,....
+","time":782058558,"poster":"Death",]),(["id":138,"title":"< no title >","body":"æˆ‘è¦ºå¾—æœ€è¿‘çš„ä¿®æ”¹æœ‰å•é¡Œ,
+æˆ‘ä»¥å‰æœƒdefend 2 scholars k gnome healer
+ä½†æ˜¯ç¾åœ¨å‘¢???å˜¿å˜¿å˜¿.....æˆ‘å¯ä¸å¹¹é€™ç¨®äº‹.....
+å› ç‚ºç›®å‰çš„scholar å®Œå…¨æ²’æœ‰æˆ°åŠ›!!!!
+                                Death ï½ï½grins evily
+ps.æœŸå¾… 30 ç´šçš„ unkonw æœ‰ä»¥å‰çš„æ°´æº–...
+","time":782058928,"poster":"Death",]),(["id":139,"title":"< no title >","body":"ç¶“éæˆ‘åƒæ­»è¬æ­»çš„å¯¦é©—è­‰æ˜!!
+æ­»æ‰æ™‚, éŒ¢ä¸è¦‹ä¸€å®šæ˜¯è¢«äººæ‹¿èµ°äº†, ä¸æœƒlost,
+æˆ‘èªç‚ºæœ‰äººaliasè¨­æ’¿éŒ¢çš„è€Œä»¥, like alias gc get silver from corpse...
+æ‰€ä»¥å¸¸å¸¸ç™¼ç¾è£å‚™é‚„åœ¨, â–¡é«”å…§çš„éŒ¢å»ä¸è¦‹äº†,....
 ","time":782065975,"poster":"Owyn",]),(["id":140,"title":"Re: < no title >","body":"On Thu Oct 13, Death wrote:
-> hmm....ÎÒ»¹¿´µ½ËûÉ±ÁËmoorth mage and knight and healer
-> ËûÊÇ¨Õ¨ß¨è¨ß°¡????
+> hmm....æˆ‘é‚„çœ‹åˆ°ä»–æ®ºäº†moorth mage and knight and healer
+> ä»–æ˜¯ã„•ã„Ÿã„¨ã„Ÿå•Š????
 > 
 >              death
 
-    ¿´µ½ Lucia ¾Ï¸ö¹ª¾Í¶ÔÁË¡£ÄÇÖÖ¿äÕÅµÄ½ÇÉ«Ò»°ãµÄÎ×Ê¦»¹Õæ¸Ä²»³öÀ´ÄØ!
+    çœ‹åˆ° Lucia é å€‹èº¬å°±å°äº†ã€‚é‚£ç¨®èª‡å¼µçš„è§’è‰²ä¸€èˆ¬çš„å·«å¸«é‚„çœŸæ”¹ä¸å‡ºä¾†å‘¢!
 --
 EGA
 ","time":782078018,"poster":"Ega",]),(["id":141,"body":" Here is Boop ......

@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name( "Main key Luoko","Ê÷À×Ö÷Ô¿" );
+    set_name( "Main key Luoko","æ¨¹é›·ä¸»é‘°" );
     add("id",({"key","luoko"}) );
-    set_short( "Ê÷À×Ö÷Ô¿" );
+    set_short( "æ¨¹é›·ä¸»é‘°" );
     set_long(@C_LONG
-ÕâÊÇÊ÷À×Íõ¼ÒµÕ´«µÄÈı°ÑÖ÷Ô¿Ö®Ò»£¬Ò²ÊÇÑªÍ³µÄÖ¤Ã÷£¬Õ§¿´Ö»ÊÇÒ»°Ñµñ¹¤¾«Ï¸
-µÄĞ¡ÊÖÕÈ£¬Ò»µ©ºÍÓµÓĞÖÇ»ÛµÄÈËÏà¸ĞÓ¦£¬¾ÍÄÜ»»»¯³ÉÇ¿Á¦µÄ¹¥»÷ÎäÆ÷¡£
+é€™æ˜¯æ¨¹é›·ç‹å®¶å«¡å‚³çš„ä¸‰æŠŠä¸»é‘°ä¹‹ä¸€ï¼Œä¹Ÿæ˜¯è¡€çµ±çš„è­‰æ˜ï¼Œä¹çœ‹åªæ˜¯ä¸€æŠŠé›•å·¥ç²¾ç´°
+çš„å°æ‰‹æ–ï¼Œä¸€æ—¦å’Œæ“æœ‰æ™ºæ…§çš„äººç›¸æ„Ÿæ‡‰ï¼Œå°±èƒ½æ›åŒ–æˆå¼·åŠ›çš„æ”»æ“Šæ­¦å™¨ã€‚
 C_LONG
             );
-    set("unit","±ú");
+    set("unit","æŸ„");
     set("weapon_class",35);
     set("type","longblade");
     set("max_damage",5);
@@ -31,14 +31,14 @@ void daemon_wield()
     set("max_damage",35);
     set("extra_look","@@color");
     tell_object( this_player(),set_color(
-       "\n¡ºÁú»Ê¡»¸ĞÓ¦µ½Äã³ç¸ßµÄÖÇ»Û£¬¶ø·¢³öÒ«ÑÛµÄ½ğ¹â£¬»Ã»¯³ÉÒ»°Ñ³¤½£...\n\n"
+       "\nã€é¾çš‡ã€æ„Ÿæ‡‰åˆ°ä½ å´‡é«˜çš„æ™ºæ…§ï¼Œè€Œç™¼å‡ºè€€çœ¼çš„é‡‘å…‰ï¼Œå¹»åŒ–æˆä¸€æŠŠé•·åŠ...\n\n"
        ,"HIY") );
     tell_room( environment(this_player()),set_color(
        "\n"+this_player()->query("c_name")+
-       "ÊÖÖĞµÄÖ÷Ô¿Í»È»·¢³öÒ«ÑÛµÄ½ğ¹â£¬»¯³ÉÒ»°Ñ³¤½£...\n\n"
+       "æ‰‹ä¸­çš„ä¸»é‘°çªç„¶ç™¼å‡ºè€€çœ¼çš„é‡‘å…‰ï¼ŒåŒ–æˆä¸€æŠŠé•·åŠ...\n\n"
        ,"HIY"),this_player() );
-    set_name("Main key Luoko","Ê÷À×Ö÷Ô¿¡ºÁú»Ê¡»");
-    set_short("Ê÷À×Ö÷Ô¿¡ºÁú»Ê¡»");
+    set_name("Main key Luoko","æ¨¹é›·ä¸»é‘°ã€é¾çš‡ã€");
+    set_short("æ¨¹é›·ä¸»é‘°ã€é¾çš‡ã€");
     return;
     }
 }
@@ -48,9 +48,9 @@ void daemon_unwield()
 	object holder ;
 	if ( !holder = environment(this_object()) ) return;
     if( (int)this_object()->query("wc_damaged") ){
-         tell_object( this_player(),"ÄãÊÖÖĞµÄÊ÷À×Ö÷Ô¿Í»È»¼äÇ¿¹âÒ»ÉÁ¾ÍÏûÊ§²»¼ûÁË....\n");
+         tell_object( this_player(),"ä½ æ‰‹ä¸­çš„æ¨¹é›·ä¸»é‘°çªç„¶é–“å¼·å…‰ä¸€é–ƒå°±æ¶ˆå¤±ä¸è¦‹äº†....\n");
          tell_room( environment(this_player()),
-           this_player()->query("c_name")+"ÊÖÖĞµÄÊ÷À×Ö÷Ô¿Í»È»Ç¿¹âÒ»ÉÁ¾ÍÏûÊ§ÁË....\n",
+           this_player()->query("c_name")+"æ‰‹ä¸­çš„æ¨¹é›·ä¸»é‘°çªç„¶å¼·å…‰ä¸€é–ƒå°±æ¶ˆå¤±äº†....\n",
            this_player() );
            this_object()->remove();
            return;
@@ -62,19 +62,19 @@ void daemon_unwield()
     delete("extra_look");
     if( (string)holder->query("class")=="scholar") {
     tell_object( holder,set_color(
-       "\nÄãÍÑÊÖáá£¬¡ºÁú»Ê¡»ÉíÉÏµÄ½ğ¹âÖğ½¥É¢È¥£¬»Ö¸´³ÉÆ½·²µÄĞ¡Ä¾ÕÈ...\n\n"
+       "\nä½ è„«æ‰‹å¾Œï¼Œã€é¾çš‡ã€èº«ä¸Šçš„é‡‘å…‰é€æ¼¸æ•£å»ï¼Œæ¢å¾©æˆå¹³å‡¡çš„å°æœ¨æ–...\n\n"
        ,"HIY") );
     tell_room( environment(holder),set_color(
-       "\n"+holder->query("c_name")+"ÊÖÖĞÖ÷Ô¿µÄ½ğ¹âÖğ½¥É¢È¥...\n\n"
+       "\n"+holder->query("c_name")+"æ‰‹ä¸­ä¸»é‘°çš„é‡‘å…‰é€æ¼¸æ•£å»...\n\n"
        ,"HIY"),holder );
     };
-    set_name("Main key Luoko","Ê÷À×Ö÷Ô¿");
-    set_short("Ê÷À×Ö÷Ô¿"); 
+    set_name("Main key Luoko","æ¨¹é›·ä¸»é‘°");
+    set_short("æ¨¹é›·ä¸»é‘°"); 
     return ;
     }
 }                 
 
 string color()
 {
-    return set_color("$NµÄÓÒÊÖÖĞÎÕÖøÒ»±úÄı¾ÛÖÇÁ¦¶øĞÎ³ÉµÄ½ğÉ«³¤½£...\n","HIY");
+    return set_color("$Nçš„å³æ‰‹ä¸­æ¡è‘—ä¸€æŸ„å‡èšæ™ºåŠ›è€Œå½¢æˆçš„é‡‘è‰²é•·åŠ...\n","HIY");
 }

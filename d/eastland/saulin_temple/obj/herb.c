@@ -5,15 +5,15 @@ inherit OBJECT;
 void create()
 {
 	set("packked",0);
-	set_name( "Herb of re-live", "»ØÑô²Ý" );
+	set_name( "Herb of re-live", "å›žé™½è‰" );
 	add( "id", ({ "herb" }) );
-	set_short( "»ØÑô²Ý" );
+	set_short( "å›žé™½è‰" );
 	set_long(@C_LONG
-ÕâÊÇÒ»Öê»ØÑô²Ý£¬ËüÏÖÔÚ±»ÍÚÀëÄàÍÁÁË£¬ËùÒÔÏÔµÃÓÐÐ©¿Ý\Î®£¬Äã×î
-ºÃ¸Ï¿ì°ÑËü°üºÃ(pack)¡¢ÖÖ(plant)»ØÈ¥£¬ÔÙ½½(water)Ð©Ë®¡£
+é€™æ˜¯ä¸€æ ªå›žé™½è‰ï¼Œå®ƒç¾åœ¨è¢«æŒ–é›¢æ³¥åœŸäº†ï¼Œæ‰€ä»¥é¡¯å¾—æœ‰äº›æž¯èŽï¼Œä½ æœ€
+å¥½è¶•å¿«æŠŠå®ƒåŒ…å¥½(pack)ã€ç¨®(plant)å›žåŽ»ï¼Œå†æ¾†(water)äº›æ°´ã€‚
 C_LONG
 	);
-	set( "unit", "Öê" );
+	set( "unit", "æ ª" );
 	set( "weight", 5 );
 	set( "packked", 0 );
 	set( "value", ({ 1, "copper" }) );
@@ -32,12 +32,12 @@ int do_pack(string arg)
 {
     if( !arg || arg!="herb" )
     	return notify_fail( can_read_chinese() ?
-    		"°üÊ²÷á£¿\n" : "pack what?\n"
+    		"åŒ…ä»€éº¼ï¼Ÿ\n" : "pack what?\n"
     	);
     if( query("packked") )
-    	return notify_fail( "ÕâÖê»ØÑô²ÝÒÑ¾­°ü¹ýÁË¡£\n");
+    	return notify_fail( "é€™æ ªå›žé™½è‰å·²ç¶“åŒ…éŽäº†ã€‚\n");
     tell_object(this_player(),
-     	"Äã×ÐÏ¸µÄ°Ñ»ØÑô²ÝÁ¬ÍÁ°üºÃ£¬¿´À´Ëü¿ÉÒÔÎ¬³Ö³¤Ò»µãµÄÊ±¼ä¡£\n"
+     	"ä½ ä»”ç´°çš„æŠŠå›žé™½è‰é€£åœŸåŒ…å¥½ï¼Œçœ‹ä¾†å®ƒå¯ä»¥ç¶­æŒé•·ä¸€é»žçš„æ™‚é–“ã€‚\n"
     );
 	set("packked", 1);
     return 1;
@@ -49,21 +49,21 @@ int do_plant(string arg)
 
 	obj=environment( this_player() );
    	if( !arg || arg != "herb" )
-    	return notify_fail("ÖÖÊ²÷á£¿\n");
-	if( (string)obj->query("short")=="Ò©ÆÔ" ) {
+    	return notify_fail("ç¨®ä»€éº¼ï¼Ÿ\n");
+	if( (string)obj->query("short")=="è—¥åœƒ" ) {
 	  if( query("packked") ) {
         tell_object(this_player(),
-                    "Äã°Ñ»ØÑô²ÝÖÖÔÚÒ©ÆÔÉÏ£¬¿ÉÊÇËü»¹ÊÇ´¹Í·É¥ÆøµÄ¡£\n"
+                    "ä½ æŠŠå›žé™½è‰ç¨®åœ¨è—¥åœƒä¸Šï¼Œå¯æ˜¯å®ƒé‚„æ˜¯åž‚é ­å–ªæ°£çš„ã€‚\n"
 		);
 		this_player()->set_temp("herb_quest/step",1);
 	  } else
         tell_object(this_player(),
-            "ÓÉì¶ÄãÃ»ÓÐ°Ñ»ØÑô²Ý°üºÃ£¬ËüÒÑ¾­ÆßÁã°ËÂäµÄ»î²»³ÉÁË£¬ÄãÖ»ºÃ°ÑËü¶ªÁË¡£\n"
+            "ç”±æ–¼ä½ æ²’æœ‰æŠŠå›žé™½è‰åŒ…å¥½ï¼Œå®ƒå·²ç¶“ä¸ƒé›¶å…«è½çš„æ´»ä¸æˆäº†ï¼Œä½ åªå¥½æŠŠå®ƒä¸Ÿäº†ã€‚\n"
         );
       remove();
 	} else
        tell_object(this_player(),
-         "ÄãÒª°Ñ»ØÑô²ÝÖÖÔÚÕâÀï£¿ÄãÈ·¶¨£¿\n"
+         "ä½ è¦æŠŠå›žé™½è‰ç¨®åœ¨é€™è£¡ï¼Ÿä½ ç¢ºå®šï¼Ÿ\n"
        );
     return 1;
 }
@@ -79,7 +79,7 @@ void mess_up(object what, int first)
     }
     if( living(owner) )
       tell_object( owner,  
-		"°¡! »ØÑô²Ý¿Ý\ÁË£¬ÄãÖ»ºÃ°ÑËüÈÓÁË¡£\n" 
+		"å•Š! å›žé™½è‰æž¯äº†ï¼Œä½ åªå¥½æŠŠå®ƒæ‰”äº†ã€‚\n" 
       );
     what->remove();
 }

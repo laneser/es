@@ -4,16 +4,16 @@ inherit OBJECT;
 
 void create()
 {
-        set_name( "Dragon ball", "ÁúÖé" );
+        set_name( "Dragon ball", "é¾ç " );
         add( "id", ({ "ball" , "dragon ball" ,}) );
-        set_short( "Dragon ball", "ÁúÖé");
+        set_short( "Dragon ball", "é¾ç ");
         set_long(
             "This is the Dragon ball in old legend. \n",
-            "Õâ¾ÍÊÇ´«ËµÖĞµÄÁúÖé¡£ËüÉ¢·¢³öÎ¢ÈõµÄ¹âÃ¢£¬ºÜÏñÒ»¿ÅÒ¹Ã÷Öé¡£\n"
-            "ÔÚËüÀïÃæÒşÒşµÄ¿ÉÒÔ¿´µ½Ò»¿ÅĞ¡ĞÇ¡£\n");
+            "é€™å°±æ˜¯å‚³èªªä¸­çš„é¾ç ã€‚å®ƒæ•£ç™¼å‡ºå¾®å¼±çš„å…‰èŠ’ï¼Œå¾ˆåƒä¸€é¡†å¤œæ˜ç ã€‚\n"
+            "åœ¨å®ƒè£¡é¢éš±éš±çš„å¯ä»¥çœ‹åˆ°ä¸€é¡†å°æ˜Ÿã€‚\n");
         set("weight", 5 );
         set("prevent_insert",1);
         set("value", ({ 1 , "gold" }) );
         set("dgnball", 1);
-        set("unit", "¿Å");
+        set("unit", "é¡†");
 }           

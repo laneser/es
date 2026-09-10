@@ -1,6 +1,6 @@
 /*
- * Ô­×÷Õß£ºTsunami (1995.1)
- * ĞŞ¸ÄÕß£ºIshige (1995.12)
+ * åŸä½œè€…ï¼šTsunami (1995.1)
+ * ä¿®æ”¹è€…ï¼šIshige (1995.12)
  */
 
 #include "../tsunami.h"
@@ -10,15 +10,15 @@ inherit WEAPON  ;
 
 void create()
 {
-    set_name( "Main key Tsunami","Ê÷À×Ö÷Ô¿" );
+    set_name( "Main key Tsunami","æ¨¹é›·ä¸»é‘°" );
     add("id",({"key","tsunami"}));
-    set_short( "Ê÷À×Ö÷Ô¿" );
+    set_short( "æ¨¹é›·ä¸»é‘°" );
     set_long(@C_LONG
-ÕâÊÇÊ÷À×Íõ¼ÒµÕ´«µÄÈı°ÑÖ÷Ô¿Ö®Ò»£¬Ò²ÊÇÑªÍ³µÄÖ¤Ã÷£¬Õ§¿´Ö»ÊÇÒ»°Ñµñ¹¤¾«Ï¸
-µÄĞ¡ÊÖÕÈ£¬Ò»µ©ÓëÓµÓĞÓÂÆøµÄÈËÏà¸ĞÓ¦£¬¾ÍÄÜ»»»¯³ÉÇ¿Á¦µÄ¹¥»÷ÎäÆ÷¡£
+é€™æ˜¯æ¨¹é›·ç‹å®¶å«¡å‚³çš„ä¸‰æŠŠä¸»é‘°ä¹‹ä¸€ï¼Œä¹Ÿæ˜¯è¡€çµ±çš„è­‰æ˜ï¼Œä¹çœ‹åªæ˜¯ä¸€æŠŠé›•å·¥ç²¾ç´°
+çš„å°æ‰‹æ–ï¼Œä¸€æ—¦èˆ‡æ“æœ‰å‹‡æ°£çš„äººç›¸æ„Ÿæ‡‰ï¼Œå°±èƒ½æ›åŒ–æˆå¼·åŠ›çš„æ”»æ“Šæ­¦å™¨ã€‚
 C_LONG
             );
-    set("unit","±ú");
+    set("unit","æŸ„");
     set("weapon_class",45);
     set("type","jousting");
     set("second",1);
@@ -42,14 +42,14 @@ void knight_wield()
         set("max_damage",45);
         set("extra_look","@@color");
         tell_object(this_player(),  set_color(
-       "\n¡º½òÃû÷È¡»¸ĞÓ¦µ½ÄãµÄÓÂÆø£¬¶ø·¢³öÒ«ÑÛµÄÇà¹â£¬»Ã»¯³ÉÒ»°Ñ³¤Ç¹...\n\n",
+       "\nã€æ´¥åé­…ã€æ„Ÿæ‡‰åˆ°ä½ çš„å‹‡æ°£ï¼Œè€Œç™¼å‡ºè€€çœ¼çš„é’å…‰ï¼Œå¹»åŒ–æˆä¸€æŠŠé•·æ§...\n\n",
        "HIG") );
         tell_room( environment(this_player()),set_color(
        "\n"+this_player()->query("c_name")+
-       "ÊÖÖĞµÄÖ÷Ô¿Í»È»·¢³öÒ«ÑÛµÄÇà¹â£¬»¯³ÉÒ»°Ñ³¤Ç¹...\n\n"
+       "æ‰‹ä¸­çš„ä¸»é‘°çªç„¶ç™¼å‡ºè€€çœ¼çš„é’å…‰ï¼ŒåŒ–æˆä¸€æŠŠé•·æ§...\n\n"
        ,"HIG"),this_player() );
-        set_name("Main key Tsunami","Ê÷À×Ö÷Ô¿¡º½òÃû÷È¡»");
-        set_short("Ê÷À×Ö÷Ô¿¡º½òÃû÷È¡»");
+        set_name("Main key Tsunami","æ¨¹é›·ä¸»é‘°ã€æ´¥åé­…ã€");
+        set_short("æ¨¹é›·ä¸»é‘°ã€æ´¥åé­…ã€");
         return;
     }
 }
@@ -59,9 +59,9 @@ void knight_unwield()
 	object holder;
 	if ( !holder=environment(this_object())) return;
     if( (int)this_object()->query("wc_damaged") ){
-           tell_object( this_player(),"ÄãÊÖÖĞµÄÊ÷À×Ö÷Ô¿·¢³öÒ»ÕóÇ¿¹âáá¾ÍÏûÊ§²»¼ûÁË....\n");
+           tell_object( this_player(),"ä½ æ‰‹ä¸­çš„æ¨¹é›·ä¸»é‘°ç™¼å‡ºä¸€é™£å¼·å…‰å¾Œå°±æ¶ˆå¤±ä¸è¦‹äº†....\n");
            tell_room(environment(this_player()),
-         this_player()->query("c_name")+"ÊÖÖĞµÄÊ÷À×Ö÷Ô¿Í»È»Ç¿¹âÒ»ÉÁ£¬ÏûÊ§ÁË....\n",
+         this_player()->query("c_name")+"æ‰‹ä¸­çš„æ¨¹é›·ä¸»é‘°çªç„¶å¼·å…‰ä¸€é–ƒï¼Œæ¶ˆå¤±äº†....\n",
            this_player() );
            this_object()->remove();
            return;
@@ -74,14 +74,14 @@ void knight_unwield()
          delete("extra_look");
          if( (string)holder->query("class")=="knight") {
           tell_object(holder, set_color(
-           "\nÄãÍÑÊÖáá£¬¡º½òÃû÷È¡»ÉíÉÏµÄÇà¹âÖğ½¥É¢È¥£¬»Ö¸´³ÉÆ½·²µÄĞ¡Ä¾ÕÈ...\n\n"
+           "\nä½ è„«æ‰‹å¾Œï¼Œã€æ´¥åé­…ã€èº«ä¸Šçš„é’å…‰é€æ¼¸æ•£å»ï¼Œæ¢å¾©æˆå¹³å‡¡çš„å°æœ¨æ–...\n\n"
            ,"HIG") );
           tell_room( environment(holder), set_color(
-           "\n"+holder->query("c_name")+"ÊÖÖĞÖ÷Ô¿µÄÇà¹âÖğ½¥É¢È¥...\n\n"
+           "\n"+holder->query("c_name")+"æ‰‹ä¸­ä¸»é‘°çš„é’å…‰é€æ¼¸æ•£å»...\n\n"
            ,"HIG"),holder );
           };
-        set_name("Main key Tsunami","Ê÷À×Ö÷Ô¿");
-        set_short("Ê÷À×Ö÷Ô¿"); 
+        set_name("Main key Tsunami","æ¨¹é›·ä¸»é‘°");
+        set_short("æ¨¹é›·ä¸»é‘°"); 
         return;
         }
 }                 
@@ -99,16 +99,16 @@ int my_hit(object victim,int dis)
 	my_pie = (int)holder->query_stat("pie");
 	vi_pie = (int)victim->query_stat("pie");     
 	dis = (int)query("special_damage"); 
-	/* ¶ÔÒ»Ö» pie=20 µÄ¹ÖÎï¶øÑÔ£¬damage=30 */
+	/* å°ä¸€éš» pie=20 çš„æ€ªç‰©è€Œè¨€ï¼Œdamage=30 */
 	dam = (dis + my_pie) * 2 - vi_pie;
 	v_name = victim->query( "c_name" );
 	m_name = holder->query( "c_name" );
 
 	if( !holder->query_temp("mounting") ) return 0;
-	/* Ò»¸ö pie=20 µÄ knight Ê¹ÓÃÊ±£¬ÌØ¹¥»úÂÊÎª 1/5 */
+	/* ä¸€å€‹ pie=20 çš„ knight ä½¿ç”¨æ™‚ï¼Œç‰¹æ”»æ©Ÿç‡ç‚º 1/5 */
 	if( random(60) > my_pie ) return 0;
 	tell_room(environment(victim),set_color(
-	"\nÊ÷À×Ö÷Ô¿Í»È»É¢³öÒ»ÕóÇà¹â£¬ÈıÆ¬¹âÒí½ô½ôµÄÎ§ÔÚ "+v_name+" µÄÉíÅÔ.......\n\n","HIG") );
+	"\næ¨¹é›·ä¸»é‘°çªç„¶æ•£å‡ºä¸€é™£é’å…‰ï¼Œä¸‰ç‰‡å…‰ç¿¼ç·Šç·Šçš„åœåœ¨ "+v_name+" çš„èº«æ—.......\n\n","HIG") );
 	victim->receive_special_damage( "none", dam );
 	victim->set("last_attacker",holder);   
 	report(holder,victim);
@@ -117,5 +117,5 @@ int my_hit(object victim,int dis)
 
 string color()
 {
-return set_color("$NµÄÊÖÖĞÎÕÖøÒ»±ú¾Û¼¯ÓÂÆø¶øĞÎ³ÉµÄÇàÉ«³¤Ç¹...\n","HIG");
+return set_color("$Nçš„æ‰‹ä¸­æ¡è‘—ä¸€æŸ„èšé›†å‹‡æ°£è€Œå½¢æˆçš„é’è‰²é•·æ§...\n","HIG");
 }    

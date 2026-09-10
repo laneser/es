@@ -3,15 +3,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("Snow dagger","Ñ©¡õÑÕ");
+    set_name("Snow dagger","é›ªâ–¡é¡");
     add("id",({"snow","dagger"}) );
-    set_short("Snow dagger","Ñ©¡õÑÕ");
+    set_short("Snow dagger","é›ªâ–¡é¡");
     set_long(@AAA
-ÕâÊÇÒ»°Ñµñ¿Ì¾«ÃÀµÄØ°Ê×£¬ÈÃÄã¸Ð¾õµ½ÕâÓ¦¸ÃÊÇ°ÑÒÕÊõÆ·¶ø²»ÊÇÎäÆ÷£¬¶øÔÚÄã
-Ï¸Ï¸¹Û¿´Õâ°ÑØ°Ê×Ö®Ê±£¬ÄãáÝ·ð¿É¿´¼ûÒ»·ùÑ©¹úµÄ¾°É«£¡£¡£¡
+é€™æ˜¯ä¸€æŠŠé›•åˆ»ç²¾ç¾Žçš„åŒ•é¦–ï¼Œè®“ä½ æ„Ÿè¦ºåˆ°é€™æ‡‰è©²æ˜¯æŠŠè—è¡“å“è€Œä¸æ˜¯æ­¦å™¨ï¼Œè€Œåœ¨ä½ 
+ç´°ç´°è§€çœ‹é€™æŠŠåŒ•é¦–ä¹‹æ™‚ï¼Œä½ å½·ä½›å¯çœ‹è¦‹ä¸€å¹…é›ªåœ‹çš„æ™¯è‰²ï¼ï¼ï¼
 AAA
        );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     set("second",1);
     set("weapon_class",39);
     set("type","dagger");
@@ -21,8 +21,8 @@ AAA
     set("value",({120,"gold"}));
 //    set("hit_func","snow_damage");
     set("special_msg","  .\n\n");
-    set("special_c_msg"," É¢·¢³öÒ»ÕóÕóµÄº®Æø £¡£¡£¡\n\n"
-        "ÕâÒ»ÕóÕóµÄº®ÆøÄý½á³öÒ»Ö»Ö»µÄ±ùÈÐ£¬ÉäÈëµÐÈËµÄÐÄÔà£¡£¡£¡\n");
+    set("special_c_msg"," æ•£ç™¼å‡ºä¸€é™£é™£çš„å¯’æ°£ ï¼ï¼ï¼\n\n"
+        "é€™ä¸€é™£é™£çš„å¯’æ°£å‡çµå‡ºä¸€éš»åªçš„å†°åˆƒï¼Œå°„å…¥æ•µäººçš„å¿ƒè‡Ÿï¼ï¼ï¼\n");
 }
 
 int snow_damage(object victim,int damage)
@@ -47,10 +47,10 @@ int snow_damage(object victim,int damage)
                 if( !c_msg ) c_msg = msg;
                 if( !msg ) return 0;
                 tell_object( holder, can_read_chinese(holder)?
-                        "\nÄãµÄ"+query("c_name")+c_msg+"\n":
+                        "\nä½ çš„"+query("c_name")+c_msg+"\n":
                         "\nYour "+query("name")+msg+"\n" );
                 tell_room( environment(holder), 
-                        holder->query("c_name") + "µÄ"+query("c_name")+c_msg+"\n",
+                        holder->query("c_name") + "çš„"+query("c_name")+c_msg+"\n",
                         holder );
                 return dam;
      }

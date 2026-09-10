@@ -6,10 +6,10 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("�ӱ�");
+	ob->set_short("河邊");
 	ob->set_long( @LONG_DESCRIPTION
-�����������˺ӱߵ�ƽ���ϣ��������ݵ�׺�ںӰ�����������ʯƺ
-�ϣ���������ˮ��ʹ����ȴ�˷��ա�
+你現在來到了河邊的平地上，疏落的青草點綴在河岸數不盡的卵石坪
+上，潺潺的流水聲使人忘卻了煩惱。
 LONG_DESCRIPTION
 	);
 

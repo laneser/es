@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Silver steel Hammer","Òø¸Ö¾Ş¡õ");
+       set_name("Silver steel Hammer","éŠ€é‹¼å·¨â–¡");
        add("id",({"hammer",}) );
-       set_short("Òø¸Ö¾Ş¡õ");
+       set_short("éŠ€é‹¼å·¨â–¡");
        set_long(
-           "°«ÈËÓÃµÄÒø¸Ö¾Ş¡õ\n"
+           "çŸ®äººç”¨çš„éŠ€é‹¼å·¨â–¡\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 33 );
     set("type","blunt");
     set("nosecond",1);

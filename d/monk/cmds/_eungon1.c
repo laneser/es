@@ -24,29 +24,29 @@ int cmd_eungon(string str)
 
         me = this_player();
         if( (int)me->query("stop_attack")>0 )
-                return notify_fail ("( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨Ê©Õ¹ÕĞÊ½¡£ )\n");
+                return notify_fail ("( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•æ–½å±•æ‹›å¼ã€‚ )\n");
         if( me->query_temp("stop_eungon") || me->query("stop_eungon") )
-                        return notify_fail("ÄãÕı×¼±¸Ê¹ÓÃÕĞÊ½Ê±£¬¾¹È»·¢ÏÖÄãÍ»È»¹¦\Á¦È«Ê§ÁË¡£\n");
+                        return notify_fail("ä½ æ­£æº–å‚™ä½¿ç”¨æ‹›å¼æ™‚ï¼Œç«Ÿç„¶ç™¼ç¾ä½ çªç„¶åŠŸåŠ›å…¨å¤±äº†ã€‚\n");
 
         if( member_array(str, fist) != -1 )
-                return notify_fail("»ù´¡È­·¨¿ÉÓÃ fist Ö¸ÁîÊ¹ÓÃ, ²»ĞëÔË¹¦\¡£\n");
+                return notify_fail("åŸºç¤æ‹³æ³•å¯ç”¨ fist æŒ‡ä»¤ä½¿ç”¨, ä¸é ˆé‹åŠŸ\ã€‚\n");
 
         if( member_array(str, heals) != -1 ) heal = 1;
         else if( member_array(str, gonfus) != -1 ) heal = 0;
-        else return notify_fail("ÒÉ! ÕâÊÇÄÇÒ»ÖÖ¹¦·ò?\n");
+        else return notify_fail("ç–‘! é€™æ˜¯é‚£ä¸€ç¨®åŠŸå¤«?\n");
 
         if( (heal && member_array(str, me->query("monk_gonfu/heal"))==-1) ||
                 (!heal && undefinedp(level=(int)me->query("monk_gonfu/"+str))) )
-                return notify_fail("ÒÉ! Äã»áÕâÖÖ¹¦·ò?\n");
+                return notify_fail("ç–‘! ä½ æœƒé€™ç¨®åŠŸå¤«?\n");
 
         if ( (!heal) && 
              ( me->query("gonfu_busy") || me->query_temp("gonfu_busy") )  
            )
         if ( !me->query_temp("gonfu_top") )
-        return notify_fail("ÄãÄ¿Ç°ÕıÔË¹¦ËùÒÔÎŞ·¨ÁíÍâÔËÓÃÆäËüÎä¹¦\¡£\n");
+        return notify_fail("ä½ ç›®å‰æ­£é‹åŠŸæ‰€ä»¥ç„¡æ³•å¦å¤–é‹ç”¨å…¶å®ƒæ­¦åŠŸ\ã€‚\n");
         code = find_object_or_load(MONK_GONFU_DIR+(heal?"heal/":"general/")+str);
         if( !code )
-                return notify_fail("Ã»ÓĞÕâÖÖ¹¦·ò! ÇëÍ¨ÖªÎ×Ê¦»òÓÃ bug Ö¸Áî±¨¸æÕĞÊ½Ãû³Æ¡£\n");
+                return notify_fail("æ²’æœ‰é€™ç¨®åŠŸå¤«! è«‹é€šçŸ¥å·«å¸«æˆ–ç”¨ bug æŒ‡ä»¤å ±å‘Šæ‹›å¼åç¨±ã€‚\n");
         if( me->query_temp("gonfu_top") ) {
            me->delete("attack_skill");
            me->delete("defense_skill");
@@ -58,9 +58,9 @@ int cmd_eungon(string str)
 int help()
 {
                 write( @C_HELP
-Ö¸Áî¸ñÊ½: eungon <ÕĞÊ½Ãû³Æ>
+æŒ‡ä»¤æ ¼å¼: eungon <æ‹›å¼åç¨±>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹ÕĞÊ½¡£Äã¿ÉÒÔÓÃ gonfus Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§»áµÄÕĞÊ½ÁĞ±í¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•æ‹›å¼ã€‚ä½ å¯ä»¥ç”¨ gonfus æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸æœƒçš„æ‹›å¼åˆ—è¡¨ã€‚
 C_HELP
                 );
     return 1;

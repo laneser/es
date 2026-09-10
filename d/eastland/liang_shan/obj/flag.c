@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "small flag", "令旗" );
+	set_name( "small flag", "浠ゆ棗" );
 	add( "id", ({ "flag" }) );
-	set_short( "a small flag", "令旗" );
+	set_short( "a small flag", "浠ゆ棗" );
 	set_long(
 		"This is the flag of bandit trainer.\n",
-		"这是一面指挥山贼的令旗，上面绣著替天行道的金字，如果有了它便可在\n"
-		"梁山通行无阻。\n"
+		"閫欐槸涓�闈㈡寚鎻北璩婄殑浠ゆ棗锛屼笂闈㈢埂钁楁浛澶╄閬撶殑閲戝瓧锛屽鏋滄湁浜嗗畠渚垮彲鍦╘n"
+		"姊佸北閫氳鐒￠樆銆俓n"
 	);
 	set( "weight", 3 );
 	set( "value", ({ 3000, "silver" }) );

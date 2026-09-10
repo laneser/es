@@ -25,7 +25,7 @@ void kill_reward(object killer)
     switch ( class1 ) {
     case "knight": 
           killer->add("war_score",points);
-          tell_object(killer,sprintf("ÄãµÃµ½  %d  ¸öÕ½Ñ«¡£\n",points));  
+          tell_object(killer,sprintf("ä½ å¾—åˆ°  %d  å€‹æˆ°å‹³ã€‚\n",points));  
           break;
     case "mage" :    
         
@@ -44,7 +44,7 @@ void kill_reward(object killer)
            }  
         
        killer->add(type,points);
-       tell_object(killer,sprintf("ÄãÒò·ÜÁ¦¶Ô¿¹ò¿ÓÈ´ó¾ü£¬»ñµÃ¶îÍâ  %d  ¸öÄ§·¨¾­Ñé¡£\n",points));
+       tell_object(killer,sprintf("ä½ å› å¥®åŠ›å°æŠ—èš©å°¤å¤§è»ï¼Œç²å¾—é¡å¤–  %d  å€‹é­”æ³•ç¶“é©—ã€‚\n",points));
        break ;        
     default :
         break;

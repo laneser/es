@@ -12,10 +12,10 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_c_open_long("这个小布袋可以用来装一些小东西。\n");
+	set_c_open_long("閫欏�嬪皬甯冭鍙互鐢ㄤ締瑁濅竴浜涘皬鏉辫タ銆俓n");
 #include <compress_obj.h>
-	set_name("bag", "布袋");
-	set_short("布袋");
+	set_name("bag", "甯冭");
+	set_short("甯冭");
 	set( "weight_apply", 70 );
 	set( "weight", 10);
 	set( "weight_apply", 70 );

@@ -3,15 +3,15 @@
 inherit OBJECT;
 void create()
 {
-	set_name( "Holy Potion","Ê¥Ë®" );
+	set_name( "Holy Potion","è–æ°´" );
 	add( "id",({ "holy potion","potion" }) );
-	set_short( "Ê¥Ë®" );
+	set_short( "è–æ°´" );
 	set_long(@LONG
-	Ò»Æ¿Ê¥Ë®£¬×¨ÃÅÓÃÀ´¶Ô¸¶ÎüÑª¹íµÄ¡£
+	ä¸€ç“¶è–æ°´ï¼Œå°ˆé–€ç”¨ä¾†å°ä»˜å¸è¡€é¬¼çš„ã€‚
 LONG
 		);
 	set( "weight",5 );
-	set( "unit","¸ö");
+	set( "unit","å€‹");
 }           
 
 void init(){ add_action( "to_throw","throw" ); }
@@ -23,12 +23,12 @@ int to_throw(string arg)
 	if( !arg || sscanf(arg,"%s to %s",what,which)!=2 )
 		return notify_fail( "Usage: throw <item> to <target>\n" );
 	if( which!="vampire" )
-		return notify_fail( "Ê¥Ë®µÃÀ´²»Ò×£¬ÄãÉáµÃÂÒÓÃÂğ£¿\n" );
+		return notify_fail( "è–æ°´å¾—ä¾†ä¸æ˜“ï¼Œä½ æ¨å¾—äº‚ç”¨å—ï¼Ÿ\n" );
 	if( what!="potion" )
-		return notify_fail( "Õâ¶«Î÷²»ÄÜÄÃÀ´¶ªÈËà¸£¡\n" );
+		return notify_fail( "é€™æ±è¥¿ä¸èƒ½æ‹¿ä¾†ä¸Ÿäººå–”ï¼\n" );
 		
 	write( set_color(
-"ÄãË¦ÁËË¦ÊÖ±Û£¬·ÜÁ¦½«Ê¥Ë®ÍùÎüÑªòùòğÔÒÈ¥£¬²»Æ«²»ÒĞ´òÔÚÎüÑªòùòğÉíÉÏ¡£\n","HIY") );
+"ä½ ç”©äº†ç”©æ‰‹è‡‚ï¼Œå¥®åŠ›å°‡è–æ°´å¾€å¸è¡€è™è ç ¸å»ï¼Œä¸åä¸å€šæ‰“åœ¨å¸è¡€è™è èº«ä¸Šã€‚\n","HIY") );
 	this_object()->remove();
 	return 1;
 }

@@ -5,17 +5,17 @@
 #define EMBATTLE_FAIL_DAMAGE 30
 #define EMBATTLE_FAIL_RATE 25
 #define COST_SP 10
-#define EMBATTLE_NAME "°ËØÔÓÎÁúÕó"
+#define EMBATTLE_NAME "å…«å¦æ¸¸é¾é™£"
 
 int total_int=0,flag=1;
 
 string *c_message=({
-    "´øÁìÖø¶ÓÎé×ßÖø°ËØÔÓÎÁúÕóµÄÌØÊâ²½·¨\n",
-    "º°Öø£ºÈÃÎÒÃÇÍ¬ĞÄĞ­Á¦°ÑµĞÈË¼ßÃğµô°É\n",
-    "·¢ÏÖÁËµĞÈËµÄÆÆÕÀ£¬Á¬³öÈıÕĞ¹¥»÷µĞÈËµÄÆÆÕÀ\n",
-    "Ğ±ÍËÖ±½ø£¬Í»È»³öÕĞÖ±»÷µĞÈËµÄÒªº¦\n",
-    "¿ØÖÆÈ«ÕóÊàÅ¥Ê¹µĞÈËÉíÏİ°ËØÔÕóµÄµ¶¹â½£Ó°Ö®ÖĞ",
-    "·¢ÏÖÍ¬°éÎ£ÏÕ£¬»Ó¶¯ÊÖÉÏµÄÎäÆ÷¹¥µĞÖ®²»¿É²»ÊØ\n"
+    "å¸¶é ˜è‘—éšŠä¼èµ°è‘—å…«å¦æ¸¸é¾é™£çš„ç‰¹æ®Šæ­¥æ³•\n",
+    "å–Šè‘—ï¼šè®“æˆ‘å€‘åŒå¿ƒå”åŠ›æŠŠæ•µäººæ®²æ»…æ‰å§\n",
+    "ç™¼ç¾äº†æ•µäººçš„ç ´ç¶»ï¼Œé€£å‡ºä¸‰æ‹›æ”»æ“Šæ•µäººçš„ç ´ç¶»\n",
+    "æ–œé€€ç›´é€²ï¼Œçªç„¶å‡ºæ‹›ç›´æ“Šæ•µäººçš„è¦å®³\n",
+    "æ§åˆ¶å…¨é™£æ¨éˆ•ä½¿æ•µäººèº«é™·å…«å¦é™£çš„åˆ€å…‰åŠå½±ä¹‹ä¸­",
+    "ç™¼ç¾åŒä¼´å±éšªï¼Œæ®å‹•æ‰‹ä¸Šçš„æ­¦å™¨æ”»æ•µä¹‹ä¸å¯ä¸å®ˆ\n"
                   });
 
 int check_members(object *usr)
@@ -55,10 +55,10 @@ void setup_effect(object *usr,string why)
                 usr[i]->set_temp("embattle_ac",total_int/4);
                 usr[i]->set_temp("embattle_db",total_int/6);
                 usr[i]->set_temp("embattle_wc",total_int/6);
-//  ÕâÊÇ¶àâÅµÄ¹¤×÷£¬extra_wc »áÖØ¸Ä weapon_class1 £¬¶øÉè¶¨ weapon class2 »á
-//	Ôì³É²»´æÔÚµÄË«ÊÖÎäÆ÷£¬¶¼Ó¦È¥³ı¡£
-//  ÎÒ²»ÁË½âÔö¼ÓÕâÁ½¸öµÄÔ­Òò£¬ÇëÔÙ check Ò»ÏÂ
-//  ¹Øì¶Õ½¶·µÄÏêÏ¸ÇéĞÎÇë²Î¿¼ /std/body/attack.c
+//  é€™æ˜¯å¤šé¤˜çš„å·¥ä½œï¼Œextra_wc æœƒé‡æ”¹ weapon_class1 ï¼Œè€Œè¨­å®š weapon class2 æœƒ
+//	é€ æˆä¸å­˜åœ¨çš„é›™æ‰‹æ­¦å™¨ï¼Œéƒ½æ‡‰å»é™¤ã€‚
+//  æˆ‘ä¸ç­è§£å¢åŠ é€™å…©å€‹çš„åŸå› ï¼Œè«‹å† check ä¸€ä¸‹
+//  é—œæ–¼æˆ°é¬¥çš„è©³ç´°æƒ…å½¢è«‹åƒè€ƒ /std/body/attack.c
                 tell_object(usr[i],why);
 	}
 	return;
@@ -88,7 +88,7 @@ void embattle_fail(object *usr)
         for( i=0; i<sizeof(usr); i++ ) 
 	if (victim=usr[i]->query_attacker()) {
 		usr[i]->receive_damage(EMBATTLE_FAIL_DAMAGE);
-                tell_object(usr[i],set_color(victim->query("c_name")+"Í»È»´óºğÒ»Éù£¬¹¥ÏòÄãµÄÆÆÕÀ..\n(Äã"+
+                tell_object(usr[i],set_color(victim->query("c_name")+"çªç„¶å¤§å¼ä¸€è²ï¼Œæ”»å‘ä½ çš„ç ´ç¶»..\n(ä½ "+
 		"/adm/daemons/statsd"->status_string(usr[i])+")\n","HIY"));
 	}
 	return;
@@ -115,32 +115,32 @@ void check_embattle(object *usr,object place,object victim)
 
 	this_player()->add("spell_points",-COST_SP);
 	if ( !check_members(usr)) {
-		remove_effect(usr,"ÕóÖĞÈËÊı²»ÕıÈ·£¬ÕóĞÎÉ¢ÂÒÁË..\n");
+		remove_effect(usr,"é™£ä¸­äººæ•¸ä¸æ­£ç¢ºï¼Œé™£å½¢æ•£äº‚äº†..\n");
                 place->set("eight_zeng_ok",0);
 		return;
 	}
         else if ( ! this_player()->query_attacker()) {
-                remove_effect(usr,"Õ½¶·½áÊø£¬ÊÕÕóÁË..\n");
+                remove_effect(usr,"æˆ°é¬¥çµæŸï¼Œæ”¶é™£äº†..\n");
                 place->set("eight_zeng_ok",0);
                 return ;
 	}
 	else if ( is_embattle_fail() ) {
-		remove_effect(usr,"µĞÈËËÆºõ²ì¾õÁËÕóÊÆÔË×ªµÄÆÆÕÀ£¬Äã¾õµÃÇéĞÎ²»¶Ô ..\n");
+		remove_effect(usr,"æ•µäººä¼¼ä¹å¯Ÿè¦ºäº†é™£å‹¢é‹è½‰çš„ç ´ç¶»ï¼Œä½ è¦ºå¾—æƒ…å½¢ä¸å° ..\n");
                 place->set("eight_zeng_ok",0);
 		call_out("embattle_fail",3,usr);
 		return ;
 	}
 	else if ( (int)this_player()->query("spell_points") < COST_SP ) {
-                remove_effect(usr,this_player()->query("c_name")+"¾«Éñ²»¼ÃÁË£¬Õó·¨Ã»ÓĞ°ì·¨ÔÙÎ¬³ÖÏÂÈ¥ÁË..\n");
+                remove_effect(usr,this_player()->query("c_name")+"ç²¾ç¥ä¸æ¿Ÿäº†ï¼Œé™£æ³•æ²’æœ‰è¾¦æ³•å†ç¶­æŒä¸‹å»äº†..\n");
                 place->set("eight_zeng_ok",0);
                 return ;
 	}
         else if (!(int)place->query("eight_zeng_ok")) {
-                remove_effect(usr,"ÁíÒ»¶ÓÎé·¢ÉúÎÊÌâ£¬Õó·¨ÔË×÷Ê§°Ü..\n");
+                remove_effect(usr,"å¦ä¸€éšŠä¼ç™¼ç”Ÿå•é¡Œï¼Œé™£æ³•é‹ä½œå¤±æ•—..\n");
                 return;
         }
         else if ( member_array(victim,this_player()->query_attackers(),flag)==-1 ) {
-                remove_effect(usr,"Õ½¶·½áÊø£¬ÊÕÕóÁË..\n");
+                remove_effect(usr,"æˆ°é¬¥çµæŸï¼Œæ”¶é™£äº†..\n");
                 return ;
         }
 	else {
@@ -162,7 +162,7 @@ int start_embattle(object me,object victim)
         place=environment(me);
 
 	if ( !check_members(usr)) {
-		write("Ôã¸â !! ÈËÊı²»¶Ô£¬²»ÄÜ½á³ÉÕıÈ·µÄÕóÊÆ !!\n");
+		write("ç³Ÿç³• !! äººæ•¸ä¸å°ï¼Œä¸èƒ½çµæˆæ­£ç¢ºçš„é™£å‹¢ !!\n");
                 place->set("eight_zeng_ok",0);
                 place->delete("eight/"+me->query("cap_name"));
 		return 1;
@@ -171,7 +171,7 @@ int start_embattle(object me,object victim)
         flag=0;
 
 	if ( (int)me->query("spell_points") < COST_SP ) {
-		write("ÄãµÄ¾«Éñ²»¼ÃÁË£¬Ó¦¸ÃºÃºÃĞİÏ¢Ò»ÏÂ¡£\n");
+		write("ä½ çš„ç²¾ç¥ä¸æ¿Ÿäº†ï¼Œæ‡‰è©²å¥½å¥½ä¼‘æ¯ä¸€ä¸‹ã€‚\n");
                 place->set("eight_zeng_ok",0);
                 place->delete("eight/"+me->query("cap_name"));
 		return 1;
@@ -184,13 +184,13 @@ int start_embattle(object me,object victim)
 int check_party(object me,object victim,object *usr,object place)
 {
   if (place->query("eight_zeng_ok")==0)
-    write("ÁíÒ»¸ö¶ÓÎéÓĞÎÊÌâ£¬½áÕóÊ§°Ü !\n");
+    write("å¦ä¸€å€‹éšŠä¼æœ‰å•é¡Œï¼Œçµé™£å¤±æ•— !\n");
   else {
-    setup_effect(usr,me->query("c_name")+"´óº°£º´ó¼Ò×¢Òâ !! Ä¿±ê"+victim->query("c_name")+"£¬"+EMBATTLE_NAME+" -- ½áÕó !!\n");
+    setup_effect(usr,me->query("c_name")+"å¤§å–Šï¼šå¤§å®¶æ³¨æ„ !! ç›®æ¨™"+victim->query("c_name")+"ï¼Œ"+EMBATTLE_NAME+" -- çµé™£ !!\n");
     me->set_temp("embattle_victim",victim);
     me->set_temp("embattle_party",me->query_temp("party_members"));
     me->set_temp("embattle_busy_check","eight");
-    tell_room(environment(me),set_color(me->query("c_name")+"µÄ¶ÓÎéÍ»È»½á³ÉÒ»¸öÕóĞÎ£¬Î§×¡"+victim->query("c_name")+"·¢¶¯¹¥»÷¡£\n","HIY"),usr);
+    tell_room(environment(me),set_color(me->query("c_name")+"çš„éšŠä¼çªç„¶çµæˆä¸€å€‹é™£å½¢ï¼Œåœä½"+victim->query("c_name")+"ç™¼å‹•æ”»æ“Šã€‚\n","HIY"),usr);
     party_kill_ob(usr,victim);
   }
   me->delete_temp("embattle_ready_check");

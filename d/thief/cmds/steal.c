@@ -30,30 +30,30 @@ int steal_idle(object me,int succeed,object target,object item)
 	int coin,i;
 	me->set_temp("stealed",0);
 	if ( !target || nullp(target) || (int)target->query("hit_points") < 1 ) {
-		write("�治�ң��Ǽһ��Ѿ����� ...\n");
+		write("真不幸，那傢伙已經死了 ...\n");
 		return 1;
 	}
 	if ( !present(target,environment(me)) ) {
-		write("��Ҫ͵�Ķ����Ѿ����������� !!\n");
+		write("你要偷的對象已經不在這裡了 !!\n");
 		return 1;
 	}
 	tell_object(me,set_color(
-		sprintf("����%s�������ʱ����С�ĵİѵ���ֻ������%s ...\n",
+		sprintf("趁著%s不留意的時候，你小心的把第三隻手伸向%s ...\n",
 			target->query("c_name"),
 			( !item ? target->query("c_name") : item->query("c_name")) )
 			,"HIY") );
 	
 	if ( ! succeed ) {
 	tell_object(me,set_color(
-		sprintf("%sͻȻת��ͷ�ݺݵص�����һ�ۣ��޷޵��������� ...\n",
+		sprintf("%s突然轉過頭狠狠地瞪了你一眼，忿忿的向你衝過來 ...\n",
 			target->query("c_name")),"HIM") );
 	tell_object(target,set_color(
-		sprintf("��ͻȻ�е��ֵֹģ�ԭ����%s����������ı������������� ..\n"
+		sprintf("你突然感到怪怪的，原來是%s的手正在你的揹包中摸啊摸的 ..\n"
 			,me->query("c_name")),"HIY") );
-// announce ̫���ˣ���ˬ�����Լ����� :P)
+// announce 太吵了，不爽的人自己喊吧 :P)
 /*
 	if ( target->query("user") )
-		announce(sprintf("%s(%s)�� : С͵ !! С͵ !! %s(%s)��С͵ !!!\n",
+		announce(sprintf("%s(%s)大喊 : 小偷 !! 小偷 !! %s(%s)是小偷 !!!\n",
 					target->query("c_name"),capitalize(target->query("name")),
 					me->query("c_name"),capitalize(me->query("name"))) );
 */
@@ -63,29 +63,29 @@ int steal_idle(object me,int succeed,object target,object item)
         me->block_attack(4);
         me->set_temp("block_command",1);
         me->set_temp("msg_stop_attack",
-       		"( ��ѽ ! ͵�����������ˣ���һ����æ���ң� )\n" );
+       		"( 哎呀 ! 偷東西被發現了，你一陣手忙腳亂！ )\n" );
        	call_out("remove_block",3,me);
 		}
 	} else {
 		if ( item ) {
 			if ( !item->move(me))
-				tell_object(me,set_color("�ǺǺ� ... ������ ...\n","HIY"));
+				tell_object(me,set_color("呵呵呵 ... 得手了 ...\n","HIY"));
 			else
-				tell_object(me,set_color("�� .. ̫���ˣ��ò��� ...\n","HIC"));
+				tell_object(me,set_color("呃 .. 太重了，拿不動 ...\n","HIC"));
 		} else {
 		if ( !wealth = target->query("wealth") ) {
-			tell_object(me,"��Ŭ����������Ǯ�������� ... ������һëǮ���Ҳ��� ...\n");
+			tell_object(me,"你努力的在他的錢包摸啊摸 ... 可是連一毛錢都找不到 ...\n");
 			return 1;
 		}
 		coins = keys(wealth);
 		type = coins[random(sizeof(coins))];
 		coin = ( wealth[type] > 100 ? 100 - random(10) : random(wealth[type]+1) );
 		if ( coin ) {
-			tell_object(me,set_color("�� ! �̵��� ... ������ ... ��ݺݵ�����һ���Ǯ�� ...\n","HIY"));
+			tell_object(me,set_color("咦 ! 撈到了 ... 嘻嘻嘻 ... 你狠狠地撈了一大把錢幣 ...\n","HIY"));
 			me->add("wealth/"+type,coin);
 			target->add("wealth/"+type,-coin);
 		} else
-			tell_object(me,"� ~~ ���������ˣ���Ͽ������������û͵����ëǮ ...\n");
+			tell_object(me,"喔 ~~ 他好像發現了，你趕快把手縮回來，沒偷到半毛錢 ...\n");
 		}
 	}
 	return 1;
@@ -132,36 +132,36 @@ int cmd_steal(string arg)
 	object target,item;
 
 	if ( this_player()->query_temp("stealed") )
-		return notify_fail("��ֻ����ֻ�֣����ҵ���ֻ�Ѿ����ȥ�� ...\n");
+		return notify_fail("你只有三隻手，而且第三隻已經伸出去了 ...\n");
 	if ( ! arg )
-		return notify_fail("��Ҫ͵˭�Ķ�����\n");
+		return notify_fail("你要偷誰的東西？\n");
 
 	if ( sscanf( arg,"%s from %s",tmp1,tmp2) != 2 ) return help();
 		if ( ! target = present(tmp2,environment(this_player()) ) )
-			return notify_fail("����û�н�"+tmp2+"�����\n");
+			return notify_fail("這裡沒有叫"+tmp2+"的生物。\n");
 		if ( ! living(target) )
-			return notify_fail("����û�н�"+tmp2+"�����\n");
+			return notify_fail("這裡沒有叫"+tmp2+"的生物。\n");
 		if ( tmp1 != "money" && ! item = present(tmp1,target ) )
-			return notify_fail(target->query("c_name")+"û�д�����"+tmp1+"�Ķ�����\n");
+			return notify_fail(target->query("c_name")+"沒有帶著叫"+tmp1+"的東東。\n");
 
 	if ( target == this_player() )
-		return notify_fail("͵�Լ��Ķ�����ʲ�ᰡ?\n");
-// Ԥ������͵����ʧ�ܹ��� no_attack mob
+		return notify_fail("偷自己的東西做什麼啊?\n");
+// 預防利用偷東西失敗攻擊 no_attack mob
 	if ( target->query("no_attack") )
-		return notify_fail("�㲻��͵���Ķ�����\n");
-// ����͵ invisible �� player
+		return notify_fail("你不能偷他的東西。\n");
+// 不能偷 invisible 的 player
 	if ( !visible(target,this_player()) || target->query("invisible_player") ) 
-		return notify_fail("���뱳��˭��\n");
+		return notify_fail("你想背刺誰？\n");
 
 	if ( wizardp(target) ) {
-		write("��������͵�Ϳ๦\�ߵ���ʦ�أ�..*puke*\n");
+		write("你怎麼能偷勞苦功高的巫師呢？..*puke*\n");
 		return 1;
 	}
 
 	if ( item && (item->query("prevent_drop") || item->query("wielded") ||
 			item->query("equipped")) ) 
-	return notify_fail("��ɵ�� !! ���������͵���ߵ� ...\n");
-	write(set_color(sprintf("�㿪ʼ���۽ǵ��Ź�͵͵����%s��һ��һ�� ...\n",
+	return notify_fail("別傻了 !! 這件東西你偷不走的 ...\n");
+	write(set_color(sprintf("你開始用眼角的餘光偷偷留意%s的一舉一動 ...\n",
 			target->query("c_name") ),"HIY"));
 	this_player()->set_temp("stealed",1);
 	call_out("steal_idle",5+random(4),this_player(),
@@ -175,9 +175,9 @@ int help()
 Usage: steal <object> from <target>
 	   steal money from <target>
 
-���ָ����ʹ���ڱ��˺���֪���������͵����û��װ������Ʒ����Ǯ����
-��������Ĵ��ӡ�������"��"���˵Ķ���֮ǰ����������ȹ۲�۲�ĺ�ϰ
-�ߣ����������Ǻ����ױ����ֵġ�
+這個指令能使你在別人毫不知覺的情況下偷走他沒有裝備的物品、金錢甚至
+他揹包裡的袋子。在下手"借"別人的東西之前，最好養成先觀察觀察的好習
+慣，隨手亂摸是很容易被發現的。
 
 HELP
 );

@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "skeleton key", "¹ÇÔ¿³×" );
+	set_name( "skeleton key", "éª¨é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "a skeleton key", "¹ÇÔ¿³×" );
+	set_short( "a skeleton key", "éª¨é‘°åŒ™" );
 	set_long(
 		"A skelton key.\n",
-		"ÕâÊÇÒ»°Ñ¹ÇÍ·Ô¿³×,ÉÏÃæĞ´ÂúÁËÒ»¶Ñ·ûºÅ\n"
+		"é€™æ˜¯ä¸€æŠŠéª¨é ­é‘°åŒ™,ä¸Šé¢å¯«æ»¿äº†ä¸€å †ç¬¦è™Ÿ\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "ECHO_MINE_CHEST" );
 	set( "weight", 5 );
 	set( "value", ({ 120, "silver" }) );

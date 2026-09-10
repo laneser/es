@@ -1,13 +1,13 @@
 #d/mage/tower/mage_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"mage's bulletin board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"Ä§·¨Ê¦ÁôÑÔ°å",])
-messages ({(["id":78,"title":"yaramon ²»ÅÂelemental magic???","body":"yaramonÊÇ²»ÊÇ²»ÅÂelementalÁË...ÓÃsleet[4]ºÍfireball[6]´òËû
-¶¼Ã»ÊÜÉË, ¶øÇÒÃ¿´ÎÎÒcast¶¼»á³öÏÖ Oops, there are something wrong...
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"mage's bulletin board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"é­”æ³•å¸«ç•™è¨€æ¿",])
+messages ({(["id":78,"title":"yaramon ä¸æ€•elemental magic???","body":"yaramonæ˜¯ä¸æ˜¯ä¸æ€•elementaläº†...ç”¨sleet[4]å’Œfireball[6]æ‰“ä»–
+éƒ½æ²’å—å‚·, è€Œä¸”æ¯æ¬¡æˆ‘castéƒ½æœƒå‡ºç¾ Oops, there are something wrong...
 why??? bug???
 ","time":781801491,"poster":"Selis",]),(["id":79,"body":"suggest:
-Ï£ÍüÚ¤Ë¼µÃÊ±¼äÄÜËõ¶Ìor can hear mage chnnel when Ú¤Ë¾
-²»È»mages ¶¼²»ÄÜÁÇÌì...because ÓĞ¿Õ¾ÀÚ¤Ë¼...
+å¸Œå¿˜å†¥æ€å¾—æ™‚é–“èƒ½ç¸®çŸ­or can hear mage chnnel when å†¥å¸
+ä¸ç„¶mages éƒ½ä¸èƒ½ç‡å¤©...because æœ‰ç©ºç³¾å†¥æ€...
 ","title":"< no title >","time":782214617,"poster":"Ghost",]),(["id":80,"body":"
 ","title":"< no title >","time":782236719,"poster":"Sutanic",]),(["id":81,"body":"
 ","title":"< no title >","time":782236722,"poster":"Sutanic",]),(["id":82,"body":"

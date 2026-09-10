@@ -22,7 +22,7 @@ int check_money(object player)
 			player->set("wealth/silver",max_money/10);
 		} else 
 		player->set("wealth/silver",(max_money-bank_money)/10 ) ;
-		tell_object(player,"\n\nàÅ ! ÄãÇ®Ì«¶àà¸ !! \n");
+		tell_object(player,"\n\nå—¯ ! ä½ éŒ¢å¤ªå¤šå–” !! \n");
 	}
 	return 1;
 }
@@ -50,7 +50,7 @@ int compare_okip(object player)
 	if ( !player ) return 0;
     if( !((string)player->query("ok_ip")) ) {
 	  tell_object(player, 
-	  	"[OKIP]: ÄãÃ»ÓĞÉè¶¨ÈÎºÎ IP Address ¼ì²é£¡ÇëÓÃ okip Ö¸ÁîÉè¶¨¡¡\n");
+	  	"[OKIP]: ä½ æ²’æœ‰è¨­å®šä»»ä½• IP Address æª¢æŸ¥ï¼è«‹ç”¨ okip æŒ‡ä»¤è¨­å®šã€€\n");
 	  return 1;
 	}
 	ip_list = explode((string)player->query("ok_ip"),":");
@@ -81,7 +81,7 @@ int compare_okip(object player)
 	}
 	if( nothing ) {
 	  tell_object(player, 
-	  	"[OKIP]: ÎŞ IP Address ÏŞÖÆ¡¡\n");
+	  	"[OKIP]: ç„¡ IP Address é™åˆ¶ã€€\n");
 	  return 1;
 	} else return 0; 
 }
@@ -94,7 +94,7 @@ void check_okip(object player)
 		check_money(player);
     if( ENABLE_OKIP_CHECK ) {
       tell_object(player,
-      	"\n¼ì²é IP Address ÖĞ...  ");
+      	"\næª¢æŸ¥ IP Address ä¸­...  ");
       if( !compare_okip(player) ) {
       	if ( !player ) return;
       	player->set("okip_fail", ({ player->query("ip"), time() }) );
@@ -125,8 +125,8 @@ void check_spouse(object player)
     
     if(!spouse = find_player(lower_case(name)) ) return ;
     
-    tell_object(player,"\nÄãµÄÁíÒ»°ëÕıµÈÖøÄã,ÄãÃÇÁ©ÕæÊÇÓĞÄ¬Æõ.¡¡\n") ;
-    tell_object(spouse,"\nÄãµÄÁíÒ»°ë»Øµ½Õâ¸öÊÀ½çÁË, »¹²»¿ìÈ¥ÕÒËû.¡¡\n") ;
+    tell_object(player,"\nä½ çš„å¦ä¸€åŠæ­£ç­‰è‘—ä½ ,ä½ å€‘å€†çœŸæ˜¯æœ‰é»˜å¥‘.ã€€\n") ;
+    tell_object(spouse,"\nä½ çš„å¦ä¸€åŠå›åˆ°é€™å€‹ä¸–ç•Œäº†, é‚„ä¸å¿«å»æ‰¾ä»–.ã€€\n") ;
 
     return ;
 }
@@ -154,7 +154,7 @@ void check_stats(object player)
 	(string)player->query("name")+" : "+
 	(string)player->query("ip")+" @ "+
 	(string)ctime(time())+"\n");
-	tell_object(player,"ÄãµÄµµ°¸ÓĞÎÊÌâ... ÇëÍ¨ÖªÎ×Ê¦.....\n");
+	tell_object(player,"ä½ çš„æª”æ¡ˆæœ‰å•é¡Œ... è«‹é€šçŸ¥å·«å¸«.....\n");
 	player->quit();
 	return;
     }

@@ -6,21 +6,21 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name( "chicken", "¹«¼¦" );
+	set_name( "chicken", "å…¬é›" );
 	add( "id", ({ "chicken"}) );
-        set_short( "¹«¼¦" );
+        set_short( "å…¬é›" );
 	set_long(@C_LONG
-Ò»Ö»ÕıÔÚ´øÁìÒ»ÈºĞ¡¹«¼¦µÄ¹«¼¦¡£
+ä¸€éš»æ­£åœ¨å¸¶é ˜ä¸€ç¾¤å°å…¬é›çš„å…¬é›ã€‚
 C_LONG
 	);
         set_perm_stat("str",3);
         set_perm_stat("dex",2);
 	set( "natural_armor_class", 10 );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
         set( "race","monster");
 	set( "chicken",1);
-	set_c_verbs( ({ "%sÓÃËüµÄ¾×Ïò%sÒ»×Ä" }) );
-	set_c_limbs( ({ "·ï×¦","¼¦¹Ú","¼¦ĞØ" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒçš„å’€å‘%sä¸€å•„" }) );
+	set_c_limbs( ({ "é³³çˆª","é›å† ","é›èƒ¸" }) );
         set( "tactic_func", "my_attack" );
 }
 int my_attack()

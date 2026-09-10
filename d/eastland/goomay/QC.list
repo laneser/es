@@ -1,75 +1,75 @@
-¹ÅÃ·Õò£º (-)±íÓëÒ»°ãÉè¼ÆÆ½,(+)±í¸ßì¶Ò»°ãÉè¼Æ,(*)±í´ïÉÏÏŞ
+å¤æ¢…é®ï¼š (-)è¡¨èˆ‡ä¸€èˆ¬è¨­è¨ˆå¹³,(+)è¡¨é«˜æ–¼ä¸€èˆ¬è¨­è¨ˆ,(*)è¡¨é”ä¸Šé™
  
-ÎäÆ÷ÁĞ±í£º
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨åˆ—è¡¨ï¼š
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-ËãÅÌ     abacus.c     25    10    20    blt
-´ó¸Ë³Æ   balance.c    25    15    30    pol
-Ìú×¦     claws.c      10     8    16    una
-»Æ½ğ×¦                 ?     ?     ?    una               ÒÀ¼¼ÄÜÊôĞÔ¾ö¶¨Ç¿¶È
-èíÄ¾°ô   club.c       25     5    25    blt
-»ğÑæÖ®é³ fire_hammer  45(+) 25(*) 45(+) blt               no_second
-Ìúé³     hammer.c      6     4    11    blt
-´µÑ©½£   icey_sword.c 37(+) 20(+) 32    sbl
-Ğş±ù½£   icy_sword.c  30(-) 15    30    sbl
-´ó°å¸«   iron_axe.c   35(-) 15    30    axe               second
-Ìú¡õ     iron_chain.c 15     8    16    whip
-ÌúÊ®×Ö¸ä iron_pick.c  15     5    10    thu               for quest
-»ğ¸ÖÃ¬   iron_spear.c 25    10    36    thu
-³¤½£     longsword.c  22     9    20    lbl
-¶Ï»¹Çé½£ love_sword.c 40(+) 20(-) 40(-) lbl
-²Êºç½£   rainbow_swor 35(-) 15    32    lbl
-·ÛºìË¿´ø ribbon.c     20     9    18    whip
-¾«¸Ö¶Ì½£ shortsword01 25    11    22    sbl
-Ğ¡Òøµ¶   silvery_dagg 25    18    28    dag
-À×ÉñÖ®é³ thor_hammer  45(+) 25(*) 45(+) blu
-Ä¾½°     oar.c        25    10    25    blt
+ç®—ç›¤     abacus.c     25    10    20    blt
+å¤§æ†ç¨±   balance.c    25    15    30    pol
+éµçˆª     claws.c      10     8    16    una
+é»ƒé‡‘çˆª                 ?     ?     ?    una               ä¾æŠ€èƒ½å±¬æ€§æ±ºå®šå¼·åº¦
+æªœæœ¨æ£’   club.c       25     5    25    blt
+ç«ç„°ä¹‹æ§Œ fire_hammer  45(+) 25(*) 45(+) blt               no_second
+éµæ§Œ     hammer.c      6     4    11    blt
+å¹é›ªåŠ   icey_sword.c 37(+) 20(+) 32    sbl
+ç„å†°åŠ   icy_sword.c  30(-) 15    30    sbl
+å¤§æ¿æ–§   iron_axe.c   35(-) 15    30    axe               second
+éµâ–¡     iron_chain.c 15     8    16    whip
+éµåå­—é¬ iron_pick.c  15     5    10    thu               for quest
+ç«é‹¼çŸ›   iron_spear.c 25    10    36    thu
+é•·åŠ     longsword.c  22     9    20    lbl
+æ–·é‚„æƒ…åŠ love_sword.c 40(+) 20(-) 40(-) lbl
+å½©è™¹åŠ   rainbow_swor 35(-) 15    32    lbl
+ç²‰ç´…çµ²å¸¶ ribbon.c     20     9    18    whip
+ç²¾é‹¼çŸ­åŠ shortsword01 25    11    22    sbl
+å°éŠ€åˆ€   silvery_dagg 25    18    28    dag
+é›·ç¥ä¹‹æ§Œ thor_hammer  45(+) 25(*) 45(+) blu
+æœ¨æ§³     oar.c        25    10    25    blt
  
-Ãû³Æ     µµÃû         AC    DB    ÖÖÀà ÌØ·À                  ±¸×¢
+åç¨±     æª”å         AC    DB    ç¨®é¡ ç‰¹é˜²                  å‚™è¨»
 ======== ============ ===== ===== ==== ===================== ================
-Í·¿ø£º
-²¶¿ìÃ±   black_hat.c   3     0    clo
-Ä«¾µ     glasses.c*    2     0    ele
-¿ó¹¤Í·¿ø head_cap.c    2     0                               ÏŞÊ±·¢¹â
-¹ÏÆ¤Ğ¡Ã± round_cap.c   4     0    lea
-¸Ö¿ø     steel_helm.c  5     0    hvm
-±ØÊ¤Í·´ø win_head.c    6     0    lea  fire,cold1 electric-2
+é ­ç›”ï¼š
+æ•å¿«å¸½   black_hat.c   3     0    clo
+å¢¨é¡     glasses.c*    2     0    ele
+ç¤¦å·¥é ­ç›” head_cap.c    2     0                               é™æ™‚ç™¼å…‰
+ç“œçš®å°å¸½ round_cap.c   4     0    lea
+é‹¼ç›”     steel_helm.c  5     0    hvm
+å¿…å‹é ­å¸¶ win_head.c    6     0    lea  fire,cold1 electric-2
  
-îø¼×£º
-²¶¿ì·ş   black_robe.c 15     0    clo
-¸ÖĞØ¼×   braso_mail.c 20     0    hvm
-°ËØÔÅÛ   doshu_robe.c 15     0    clo
-Îä¶··ş   fighter_robe 15     7(+) clo  none 30  dex+1,con-1
-´äÑÌÂŞ   green_cloth  20    10(*) clo
-Ò½Ê¦ÕïÅÛ healer_robe  20     0    hea
-ºìîø¼×   iron_plate.c 30     3    hvm
-ÌìÀ¶³¤ÅÛ long_garb.c   8     0    clo
+é§ç”²ï¼š
+æ•å¿«æœ   black_robe.c 15     0    clo
+é‹¼èƒ¸ç”²   braso_mail.c 20     0    hvm
+å…«å¦è¢   doshu_robe.c 15     0    clo
+æ­¦é¬¥æœ   fighter_robe 15     7(+) clo  none 30  dex+1,con-1
+ç¿ ç…™ç¾…   green_cloth  20    10(*) clo
+é†«å¸«è¨ºè¢ healer_robe  20     0    hea
+ç´…é§ç”²   iron_plate.c 30     3    hvm
+å¤©è—é•·è¢ long_garb.c   8     0    clo
  
-±Û»·£º
-ÓÂÕß»¤±Û stone_armban  4(-)  0    sto
+è‡‚ç’°ï¼š
+å‹‡è€…è­·è‡‚ stone_armban  4(-)  0    sto
  
-»¤ÊÖ£º
-»ğÑæÊÖÌ× fire_gloves  -5     2    ltm  electric 30 blunt+10 str-1.con-2,dex-2
-À×ÉñÊÖÌ× thor_gloves   0     2    monk electric30,str-1,dex,con-2 blunt+20
+è­·æ‰‹ï¼š
+ç«ç„°æ‰‹å¥— fire_gloves  -5     2    ltm  electric 30 blunt+10 str-1.con-2,dex-2
+é›·ç¥æ‰‹å¥— thor_gloves   0     2    monk electric30,str-1,dex,con-2 blunt+20
  
-Ğ¬×Ó£º
-ºÚÑ¥     black_boots   6     2    lea
+é‹å­ï¼š
+é»‘é´     black_boots   6     2    lea
  
-¶ÜÅÆ£º
-»ğÑæ¶Ü   flame_shield  5     2    ele  cold 30 dex-1.con-2
+ç›¾ç‰Œï¼š
+ç«ç„°ç›¾   flame_shield  5     2    ele  cold 30 dex-1.con-2
  
-Åû·ç£º
-Æ¤ÍâÌ×   coat.c*       5     0    lea
-ÈáË¿ÇéÍø web.c         2     9(+) ele
+æŠ«é¢¨ï¼š
+çš®å¤–å¥—   coat.c*       5     0    lea
+æŸ”çµ²æƒ…ç¶² web.c         2     9(+) ele
  
-»¤·û£º
-Óñ×¹Ïî¡õ gold_necklac  0     8(+) ltm
-Çé¹ØÒâËø lovekey.c     0     6(-) ltm  mental30 con-1
+è­·ç¬¦ï¼š
+ç‰å¢œé …â–¡ gold_necklac  0     8(+) ltm
+æƒ…é—œæ„é– lovekey.c     0     6(-) ltm  mental30 con-1
  
-½äÖ¸£º
-ÂÌÓñ½äÖ¸ emerald_ring  0     2    ele  trading +15
-ÕäÖé½äÖ¸ pearl_ring.c  0     5    sto
-Ğ¡½ğÈ¦¶ù tang_ring.c   0     2    ltm
+æˆ’æŒ‡ï¼š
+ç¶ ç‰æˆ’æŒ‡ emerald_ring  0     2    ele  trading +15
+çç æˆ’æŒ‡ pearl_ring.c  0     5    sto
+å°é‡‘åœˆå…’ tang_ring.c   0     2    ltm
  
-Î²°Í£º
-¾«¸ÖÎ²¼× steel_tail.c  7     0    hvm
+å°¾å·´ï¼š
+ç²¾é‹¼å°¾ç”² steel_tail.c  7     0    hvm

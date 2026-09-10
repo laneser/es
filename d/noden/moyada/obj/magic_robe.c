@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "magical robe", "Ä§·¨³¤ÅÛ" );
+	set_name( "magical robe", "é­”æ³•é•·è¢" );
 	add( "id", ({ "robe" }) );
-	set_short( "Ä§·¨³¤ÅÛ" );
+	set_short( "é­”æ³•é•·è¢" );
 	set_long( @C_LONG
-    ÄªÑÇ´ïÕòÉÏµÄÄ§·¨Ê¦×îÏ²»¶´©µÄ³¤ÅÛ, ¾İËµ¸½ÓĞÒ»Ğ©Ä§Á¦¡£
+    è«äºé”é®ä¸Šçš„é­”æ³•å¸«æœ€å–œæ­¡ç©¿çš„é•·è¢, æ“šèªªé™„æœ‰ä¸€äº›é­”åŠ›ã€‚
 C_LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "material", "cloth" );
 	set( "armor_class", 10 );

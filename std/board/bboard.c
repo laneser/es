@@ -59,7 +59,7 @@
  *			in init().
  *	Zak, 930626	installed on TMI-2, removed kludge for prop bug.
  *			reformatted short ([x notes, y new]) now..
- *      Elon@ES 111894  ÖĞÎÄ»¯³õ²½...
+ *      Elon@ES 111894  ä¸­æ–‡åŒ–åˆæ­¥...
  */
 
 /*
@@ -266,9 +266,9 @@ string query_long()
 	if (query("c_long.text")) s1=query("c_long.text");
 	else s1=query("long.text");
 
-	return ( sprintf("%sÉÏÃæ%sÁôÑÔ£º\n%s",
+	return ( sprintf("%sä¸Šé¢%sç•™è¨€ï¼š\n%s",
 		s1,
-		(num_messages == 0 ? "Ã»ÓĞÈÎºÎ" : "¹²ÌùÁË " + num_messages + " ÕÅ"),
+		(num_messages == 0 ? "æ²’æœ‰ä»»ä½•" : "å…±è²¼äº† " + num_messages + " å¼µ"),
 		headers()
 		));
 } // query_long
@@ -292,10 +292,10 @@ string query_short()
 		c++;
 	}
 	if (c)
-		ns = sprintf("£¬ÆäÖĞ %d ÕÅÎ´¶Á", c);
+		ns = sprintf("ï¼Œå…¶ä¸­ %d å¼µæœªè®€", c);
 	else
 	ns = "";
-	return (sprintf("%s [ %d ÕÅÁôÑÔ%s]",
+	return (sprintf("%s [ %d å¼µç•™è¨€%s]",
 		s1, num_messages, ns));
 } // query_short
 
@@ -390,7 +390,7 @@ mixed query_save_file() {
 
 void set_default_long_text()
 {
-	set("long.text", "ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£\n"
+	set("long.text", "é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚\n"
 );
 	set("silent_look", 1);
 }
@@ -403,10 +403,10 @@ void create()
 	set_max_messages(query_max_msg());
 	set_carryover(query_min_msg());
 	set_attic_dir("/attic/boards");
-	set_name("board", "ÁôÑÔ°å");
+	set_name("board", "ç•™è¨€æ¿");
 	set("short", "@@query_short");
 	set("long", "@@query_long");
-	set("short.text", "ÁôÑÔ°å");
+	set("short.text", "ç•™è¨€æ¿");
 	set_default_long_text();
 	set("id",({"board","bulletin board"}));
 	set("silent_look", 1);

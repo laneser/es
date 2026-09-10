@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wizard's amulet", "Î×Ê¦»¤Éí·û" );
+	set_name( "wizard's amulet", "å·«å¸«è­·èº«ç¬¦" );
 	add( "id", ({ "amulet" }) );
-	set_short( "a wizard's amulet", "Î×Ê¦»¤Éí·û" );
+	set_short( "a wizard's amulet", "å·«å¸«è­·èº«ç¬¦" );
 	set_long(
 		"This is Rashudi's magical amulet. You can see many symbols\n"
 		"of magical shield on it.\n",
-		"Õâ¸ö»¤Éí·ûÊÇÀ­ĞŞµÛ×î³£´øÔÚÉí±ßµÄ£¬ÉÏÃæ»­ÂúÁË¸÷ÖÖÄ§·¨·ÀÓùµÄÖäÎÄ¡£\n"
+		"é€™å€‹è­·èº«ç¬¦æ˜¯æ‹‰ä¿®å¸æœ€å¸¸å¸¶åœ¨èº«é‚Šçš„ï¼Œä¸Šé¢ç•«æ»¿äº†å„ç¨®é­”æ³•é˜²ç¦¦çš„å’’æ–‡ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "misc" );
 	set( "material", "cloth" );
 	set( "defense_bonus", 10 );

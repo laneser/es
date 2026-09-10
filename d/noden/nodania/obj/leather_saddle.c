@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "leather saddle", "皮革马鞍" );
+	set_name( "leather saddle", "鐨潻棣瀺" );
 	add( "id", ({ "saddle" }) );
-	set_short( "皮革马鞍" );
+	set_short( "鐨潻棣瀺" );
 	set_long(
-	"这是一副普通的皮革制马鞍，骑士们都会为自己的爱马选择舒适的马鞍。\n" 
+	"閫欐槸涓�鍓櫘閫氱殑鐨潻鍒堕Μ闉嶏紝楱庡＋鍊戦兘鏈冪偤鑷繁鐨勬剾棣伕鎿囪垝閬╃殑棣瀺銆俓n" 
 	);
 	set( "type", "saddle" );
 	set( "material", "leather" );

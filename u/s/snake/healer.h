@@ -1,7 +1,7 @@
 #define GUILD_DATA       /u/s/snake/doc/
 #define GUILD_TOKEN      /u/s/snake/needle
 #define GUILD_LOCATION   /u/s/snake/building/healer_guild
-#define GUILD_MASTER     ({ Father Hsin, ĞÌÀÏµù })
+#define GUILD_MASTER     ({ Father Hsin, åˆ‘è€çˆ¹ })
 #define ALLOWED_MATERIAL ({ cloth, leather, wood, element })
 #define SECOND_MATERIAL  ({ light_metal, })
 // This is the data file of mixing. By Annihilator 09/26/94

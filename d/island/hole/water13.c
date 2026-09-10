@@ -7,11 +7,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short( "水底" );
+	set_short( "姘村簳" );
 	set_long(@LONG
-这是一处地下水汇集的的地层，蜥蜴人日常的饮用水
-就是由此处供应的。不过这里的水相当混浊，你甚至怀疑
-这种水真的可以喝吗？
+閫欐槸涓�铏曞湴涓嬫按褰欓泦鐨勭殑鍦板堡锛岃湧铚翠汉鏃ュ父鐨勯２鐢ㄦ按
+灏辨槸鐢辨铏曚緵鎳夌殑銆備笉閬庨�欒！鐨勬按鐩哥暥娣锋縼锛屼綘鐢氳嚦鎳风枒
+閫欑ó姘寸湡鐨勫彲浠ュ枬鍡庯紵
 LONG
 		);
 	set( "exits",([ 
@@ -38,10 +38,10 @@ int to_out()
 	
 	him=this_player()->query( "c_name" );
 	tell_room( environment(this_player()),set_color(
-	him+"受不了水底环境，决定先出去喘口气。\n","HIR"),this_player() );
+	him+"鍙椾笉浜嗘按搴曠挵澧冿紝姹哄畾鍏堝嚭鍘诲枠鍙ｆ埃銆俓n","HIR"),this_player() );
 	this_player()->move( HOLE"hole24","SNEAK" );
 	this_player()->force_me( "look" );
 	tell_room( environment(this_player()),set_color(
-	him+"忽然从你面前的池塘中冒了出来。\n","HIY"),this_player() );
+	him+"蹇界劧寰炰綘闈㈠墠鐨勬睜濉樹腑鍐掍簡鍑轰締銆俓n","HIY"),this_player() );
 	return 1;
 }

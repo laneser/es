@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wind helmet", "ÊøÔÆÍ·´ø");
+        set_name("wind helmet", "æŸé›²é ­å¸¶");
         add( "id", ({ "helmet" }) );
-        set_short( "ÊøÔÆÍ·´ø");
+        set_short( "æŸé›²é ­å¸¶");
         set_long(@C_LONG
-ÊøÔÆÍ·´øÊÇÓÉÕğ°Ë·½ÆŞ×ÓÓÉÌìÈ»²ÏË¿±àÖÆ¶ø³ÉµÄ¡£ÊÇÕğ°Ë·½×îĞÄ°®µÄÍ·´ø¡£
+æŸé›²é ­å¸¶æ˜¯ç”±éœ‡å…«æ–¹å¦»å­ç”±å¤©ç„¶è ¶çµ²ç·¨åˆ¶è€Œæˆçš„ã€‚æ˜¯éœ‡å…«æ–¹æœ€å¿ƒæ„›çš„é ­å¸¶ã€‚
 C_LONG
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set("material","cloth") ;
         set( "armor_class", 7 );

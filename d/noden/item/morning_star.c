@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "morning star", "Á÷ĞÇÇ¹" );
+	set_name( "morning star", "æµæ˜Ÿæ§" );
 	add( "id", ({ "star" }) );
-   set_short( "Á÷ĞÇÇ¹" );
+   set_short( "æµæ˜Ÿæ§" );
 	set_long(
 		"A huge heavy morning star.\n",
-		"Ò»¸öÓÖ´óÓÖÖØµÄÁ÷ĞÇÇ¹£¬±»Õâ¶«Î÷´òµ½¿É²»ÊÇºÃÍæµÄ¡£\n"
+		"ä¸€å€‹åˆå¤§åˆé‡çš„æµæ˜Ÿæ§ï¼Œè¢«é€™æ±è¥¿æ‰“åˆ°å¯ä¸æ˜¯å¥½ç©çš„ã€‚\n"
 	);
 	set( "type", "chain" );
 	set( "weapon_class", 19 );

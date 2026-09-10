@@ -8,5 +8,5 @@ void create()
 	set_save_file("mage_board");
 	set_location("/d/mage/tower/mage_guild");
 	set ("short.text", "mage's bulletin board");
-	set ("c_short.text", "Ä§·¨Ê¦ÁôÑÔ°å");
+	set ("c_short.text", "é­”æ³•å¸«ç•™è¨€æ¿");
 }

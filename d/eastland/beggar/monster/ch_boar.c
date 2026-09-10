@@ -6,11 +6,11 @@ void create()
 {
         ::create();
 	set_level(14);
-	set_name( "fat boar", "Ò°Öí" );
+	set_name( "fat boar", "é‡è±¬" );
         add ("id", ({ "boar","fat" }) );
-        set_short( "Ò°Öí" );
+        set_short( "é‡è±¬" );
 	set_long(@C_LONG
-ÕâÊÇÒ»Í·Ğ×ÃÍµÄÒ°Öí¡£
+é€™æ˜¯ä¸€é ­å…‡çŒ›çš„é‡è±¬ã€‚
 C_LONG
 	);
         set_perm_stat( "str", 22 );
@@ -26,13 +26,13 @@ C_LONG
         set( "natural_min_damage2", 15 );
         set( "natural_max_damage2", 25 );
         set( "race", "beast" );
-	set( "unit", "Í·" );
-	set_c_verbs( ({ "%sµÍÍ·ÃÍ³å£¬×²Ïò%s", "%sÔÚµØÉÏÒ»¹ö£¬ÓÃÑÀ³İÍù%s¶¥È¥" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "Æ¨¹É" }) );
+	set( "unit", "é ­" );
+	set_c_verbs( ({ "%sä½é ­çŒ›è¡ï¼Œæ’å‘%s", "%såœ¨åœ°ä¸Šä¸€æ»¾ï¼Œç”¨ç‰™é½’å¾€%sé ‚å»" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…¿éƒ¨", "å±è‚¡" }) );
 }
 void die()
 {
     set("alt_corpse",DITEM"bone");
-    set( "c_death_msg","%s±»´òËÀÁË,ÁôÏÂÒ»¸ù¹ÇÍ·....\n\n");
+    set( "c_death_msg","%sè¢«æ‰“æ­»äº†,ç•™ä¸‹ä¸€æ ¹éª¨é ­....\n\n");
     ::die();
 }

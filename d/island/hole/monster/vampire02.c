@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "Vampire","ÎüÑª¹í" );
+	set_name( "Vampire","å¸è¡€é¬¼" );
 	add("id",({ "kill_vampire1","vampire" }) );
-	set_short( "ÎüÑª¹í" );
+	set_short( "å¸è¡€é¬¼" );
 	set_long(@LONG
-    Ò»¸öÃæÎŞÑªÉ«µÄÎüÑª¹í¡£
+    ä¸€å€‹é¢ç„¡è¡€è‰²çš„å¸è¡€é¬¼ã€‚
 LONG
 		);
 	set( "alignment",-5000 );
@@ -26,8 +26,8 @@ LONG
 	set_natural_armor( 100,0 );
  	set_natural_weapon( 75,25,50 );
 //	set( "unbleeding",1 );
-	set_c_limbs( ({ "Í·²¿","ÉíÌå","³á°ò","×¦×Ó" }) );
-	set_c_verbs( ({ "%sÓÃËü³¤ÂúÀûÑÀµÄ×ìÒ§Ïò%s","%sÓÃËüµÄÀû×¦×¥Ïò%s","%sÓÃËüµÄ³á°òÅÄÏò%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨","èº«é«”","ç¿…è†€","çˆªå­" }) );
+	set_c_verbs( ({ "%sç”¨å®ƒé•·æ»¿åˆ©ç‰™çš„å˜´å’¬å‘%s","%sç”¨å®ƒçš„åˆ©çˆªæŠ“å‘%s","%sç”¨å®ƒçš„ç¿…è†€æ‹å‘%s" }) );
 	set( "tactic_func","my_tactic" );
 }
 
@@ -40,7 +40,7 @@ int my_tactic()
 	if( random(20)< 3 && !present( "kill_vampire2",environment(this_object()) ) )
 	{
 	him = victim->query( "c_name" );
-	tell_room( environment(this_object()),"\nÎü¹íÑªÕÙ»½³öÎüÑªòùòğ¹¥»÷µĞÈË¡£\n\n" );
+	tell_room( environment(this_object()),"\nå¸é¬¼è¡€å¬å–šå‡ºå¸è¡€è™è æ”»æ“Šæ•µäººã€‚\n\n" );
 	obj1=new( HMONSTER"vampire03" );
 	obj2=new( HMONSTER"vampire03" );
 //	obj3=new( HMONSTER"vampire03" );
@@ -58,15 +58,15 @@ void die()
 	killer=query( "last_attacker" );
 	tell_room(environment(),@ALONG
 
-ÎüÑª¹íÓĞÆøÎŞÁ¦µÄËµ£º²»¡«¡«ÕâÊÇ²»¿ÉÄÜµÄ¡«¡«Äã±ğµÃÒâµÄÌ«Ôç£¬
-		    ÎÒ»áÔÙ»ØÀ´µÄ±¨³ğµÄ¡£
+å¸è¡€é¬¼æœ‰æ°£ç„¡åŠ›çš„èªªï¼šä¸ï½ï½é€™æ˜¯ä¸å¯èƒ½çš„ï½ï½ä½ åˆ¥å¾—æ„çš„å¤ªæ—©ï¼Œ
+		    æˆ‘æœƒå†å›ä¾†çš„å ±ä»‡çš„ã€‚
 		    
-    ËµÍêÕâ¾ä»°£¬ÎüÑª¹í»¯×öÒ»Ö»Ğ¡òùòğ£¬Ñ¸ËÙÏûÊ§µØÎŞÓ°ÎŞ×Ù¡£
+    èªªå®Œé€™å¥è©±ï¼Œå¸è¡€é¬¼åŒ–åšä¸€éš»å°è™è ï¼Œè¿…é€Ÿæ¶ˆå¤±åœ°ç„¡å½±ç„¡è¹¤ã€‚
 
 ALONG
 		);
         if( (int)killer->query_quest_level("q_vampire")<1){
-        tell_object(killer,set_color("¹§Ï²ÄãÍê³ÉÁË¡²ÓÂÊ¿µÄ·³ÄÕ¡³ÈÎÎñ£¬Äã»ñµÃ20000µã¾­ÑéÖµ£¡\n","HIY",killer));
+        tell_object(killer,set_color("æ­å–œä½ å®Œæˆäº†ã€”å‹‡å£«çš„ç…©æƒ±ã€•ä»»å‹™ï¼Œä½ ç²å¾—20000é»ç¶“é©—å€¼ï¼\n","HIY",killer));
         killer->set_explore("island#10");
 	killer->gain_experience( 20000 );
 	killer->finish_quest("q_vampire",1);

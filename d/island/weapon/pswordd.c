@@ -3,14 +3,14 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "personal sword","ÊÔÓÃµÄÅä½£" );
+	set_name( "personal sword","è©¦ç”¨çš„é…åŠ" );
 	add( "id",({ "sword" }) );
-	set_short( "ÊÔÓÃµÄÅä½£" );
+	set_short( "è©¦ç”¨çš„é…åŠ" );
 	set_long(@LONG
-ÕâÊÇÎªÄã´òÔìµÄÅä½££¬²»¹ıÄãÒªÏÈÊÔÊÔ¿´³Æ²»³ÆÊÖ£¬¸Ï¿ì°ÑËûÅä´÷ÉÏÈ¥°É£¡	
+é€™æ˜¯ç‚ºä½ æ‰“é€ çš„é…åŠï¼Œä¸éä½ è¦å…ˆè©¦è©¦çœ‹ç¨±ä¸ç¨±æ‰‹ï¼Œè¶•å¿«æŠŠä»–é…æˆ´ä¸Šå»å§ï¼	
 LONG
 	);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","longblade" );
 	set( "weapon_class",1 );
 	set( "min_damage",1);
@@ -73,8 +73,8 @@ void wield_sword()
 	set( "no_sale",1 );
 	set( "prevent_drop",1 );
         tell_room( environment(this_player()),
-        name+"°ÑÅä½£ÓÃÁ¦»ÓÁËÒ»»Ó£¬Á³ÉÏÂ¶³öÂúÒâµÄÉñÇé¡£\n",this_player());
-        tell_object(this_player(),"Äã¶Ôì¶Õâ°Ñ½£ÂúÒâ¼«ÁË£¬ÄãÏëÕâÕæÊÇÒ»°ÑºÍÄãÏàÅäµÄ½£°¡£¡\n");
+        name+"æŠŠé…åŠç”¨åŠ›æ®äº†ä¸€æ®ï¼Œè‡‰ä¸Šéœ²å‡ºæ»¿æ„çš„ç¥æƒ…ã€‚\n",this_player());
+        tell_object(this_player(),"ä½ å°æ–¼é€™æŠŠåŠæ»¿æ„æ¥µäº†ï¼Œä½ æƒ³é€™çœŸæ˜¯ä¸€æŠŠå’Œä½ ç›¸é…çš„åŠå•Šï¼\n");
         set_name( "personal sword","@@short" );
 	return ;
 }
@@ -83,14 +83,14 @@ string short()
    string name;
    
    name = this_player() ->query( "c_name" );
-   return set_color( name+"µÄÅä½£", "HIY" );
+   return set_color( name+"çš„é…åŠ", "HIY" );
    
 }   
    
 string long()
 {   
    string str;
-   str = " \nÕâÊÇÄãµÄ×¨ÊôÅä½££¬ÒªºÃºÃ°®Ï§Ëü£¬±Ï¾¹Ëû´ú±íÁËÄãµÄÉí·İ°¡£¡\n";
+   str = " \né€™æ˜¯ä½ çš„å°ˆå±¬é…åŠï¼Œè¦å¥½å¥½æ„›æƒœå®ƒï¼Œç•¢ç«Ÿä»–ä»£è¡¨äº†ä½ çš„èº«ä»½å•Šï¼\n";
    return str;
 }   
     

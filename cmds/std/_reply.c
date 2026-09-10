@@ -28,11 +28,11 @@ int cmd_reply( string msg )
       
 	who = (string)this_player()-> query( "reply" );
  
-	if(!who) return notify_fail("ÄãÒª»Ø´ğË­£¿\n");
+	if(!who) return notify_fail("ä½ è¦å›ç­”èª°ï¼Ÿ\n");
  
     if( (int)this_player()->query("talk_points") < 5 )
       return notify_fail(
-		"Äã¼¸ºõÃ»ÓĞÁ¦Á¿³öÉù£¬ÈçºÎ»ØÓ¦? \n");
+		"ä½ å¹¾ä¹æ²’æœ‰åŠ›é‡å‡ºè²ï¼Œå¦‚ä½•å›æ‡‰? \n");
 	if( !msg ) {
 		input_to("got_reply", 0, who);
 		write("reply>");
@@ -49,7 +49,7 @@ void got_reply(string msg, mixed who)
 	string target, mud;
 
 	if( !msg || msg == "" ) {
-		write("²»»Ø´ğ¾ÍËãÁË.\n");
+		write("ä¸å›ç­”å°±ç®—äº†.\n");
 		return;
 	}
 
@@ -65,14 +65,14 @@ void got_reply(string msg, mixed who)
 		if(!user) user = find_living(who);
 	} else if( objectp(who) ) {
 		if( living(who) && who->query("npc") ) {
-			write( "Äã»Ø´ğ"+who->query("short")+": "+msg+"\n");
-			tell_object( who, this_player()->query("c_name") + "¸æËßÄã : "+msg+"\n" );
+			write( "ä½ å›ç­”"+who->query("short")+": "+msg+"\n");
+			tell_object( who, this_player()->query("c_name") + "å‘Šè¨´ä½  : "+msg+"\n" );
 		}
 		return;
 	}
 
 	if(!user) {
-		write(capitalize(who) + "ÒÑ¾­²»ÔÚÏßÉÏÁË.\n");
+		write(capitalize(who) + "å·²ç¶“ä¸åœ¨ç·šä¸Šäº†.\n");
 		return;
 	}
 
@@ -88,9 +88,9 @@ void got_reply(string msg, mixed who)
 int help() {
   write( 
 @HELP
-Ê¹ÓÃ¸ñÊ½: reply <ĞÅÏ¢>
+ä½¿ç”¨æ ¼å¼: reply <ä¿¡æ¯>
 
-»Ø´ğ¸Õ²ÅÓÃtellÓëÄã½»Ì¸µÄÍæ¼Ò£¬¿ÉÒÔÊ¡ÂÔÓÃ»§Ãû.
+å›ç­”å‰›æ‰ç”¨tellèˆ‡ä½ äº¤è«‡çš„ç©å®¶ï¼Œå¯ä»¥çœç•¥ç”¨æˆ¶å.
 HELP
 			       );
   return 1;

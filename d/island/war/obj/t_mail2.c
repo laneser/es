@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Sikoku chianmail","ºÚÃæÑª¼×");
+    set_name("Sikoku chianmail","é»‘éºµè¡€ç”²");
     add("id",({"sikoku","chainmail","mail"}) );
-    set_short("ºÚÃæÑª¼×");
+    set_short("é»‘éºµè¡€ç”²");
     set_long(@C_LONG
-ÎªÁËµÃµ½ºÚ°µµÄ¼Ó»¤£¬ÓÃºÚÑªÈ¾³ÉµÄîø¼×£¬ÊÇÕ½³¡µÄ²»ÏéÎïÖ®Ò»¡£
+ç‚ºäº†å¾—åˆ°é»‘æš—çš„åŠ è­·ï¼Œç”¨é»‘è¡€æŸ“æˆçš„é§ç”²ï¼Œæ˜¯æˆ°å ´çš„ä¸ç¥¥ç‰©ä¹‹ä¸€ã€‚
 C_LONG
     );
 
-    set("unit","¼ş");
+    set("unit","ä»¶");
     set("type","body");
     set("material","light_metal");
     set("weight",100);

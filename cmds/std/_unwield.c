@@ -15,17 +15,17 @@ int cmd_unwield(string str) {
 	int class1 ;
 
 	if (!str) {
-		notify_fail ("ÄãÒªÒÆ×ßÄÇÑùÎäÆ÷?\n") ;
+		notify_fail ("ä½ è¦ç§»èµ°é‚£æ¨£æ­¦å™¨?\n") ;
 		return 1 ;
 	}
 	obj = present (str,this_player()) ;
 	if (!obj) {
-		notify_fail ("ÄãÃ»ÓĞ "+str+".\n") ;
+		notify_fail ("ä½ æ²’æœ‰ "+str+".\n") ;
 		return 0 ;
 	}
 	class1 = obj->query("weapon_class") ;
 	if (!class1) {
-		notify_fail ("ÄÇ²»ÊÇÎäÆ÷.\n") ;
+		notify_fail ("é‚£ä¸æ˜¯æ­¦å™¨.\n") ;
 		return 0 ;
 	}
 	this_player()->block_attack(2) ;
@@ -41,17 +41,17 @@ int cmd_unwield(string str) {
 		this_player()->calc_weapon_class();
 		return 1 ;
 	}
-	notify_fail("Äã²¢Ã»ÓĞ×°±¸ÕâÑù¶«Î÷.\n") ;
+	notify_fail("ä½ ä¸¦æ²’æœ‰è£å‚™é€™æ¨£æ±è¥¿.\n") ;
 	return 0 ;
 }
 
 int help() {
 	write (@HELP
-Ê¹ÓÃ¸ñÊ½: unwield <ÎäÆ÷Ãû>
+ä½¿ç”¨æ ¼å¼: unwield <æ­¦å™¨å>
 
-½â³ıÒÑ×°±¸µÄÎäÆ÷.
+è§£é™¤å·²è£å‚™çš„æ­¦å™¨.
 
-Ïà¹ØÖ¸Áî: wield
+ç›¸é—œæŒ‡ä»¤: wield
 HELP
 );
 	return 1 ;

@@ -4,18 +4,18 @@ void create(object ob)
 {
 	if (!ob ) return ;
 	ob->set_level(1);
-	ob->set_name( "beetle", "¼×³æ" );
-   ob->set_short( "¼×³æ" );
+	ob->set_name( "beetle", "ç”²èŸ²" );
+   ob->set_short( "ç”²èŸ²" );
 	ob->set_long(
-		"Ò»Ö»³¤ÖøÓ²¿ÇµÄ³¤½Ç¼×³æ£¬ÈÃÄãÏëÆðÐ¡Ê±ºò ....¡£\n"
+		"ä¸€éš»é•·è‘—ç¡¬æ®¼çš„é•·è§’ç”²èŸ²ï¼Œè®“ä½ æƒ³èµ·å°æ™‚å€™ ....ã€‚\n"
 	);
 	ob->set_perm_stat( "str", 3 );
    ob->set( "race", "insect" );
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set( "alignment", -150 );
 	ob->set( "natural_weapon_class1", 3 );
 	ob->set( "natural_min_damage1", 2 );
 	ob->set( "natural_max_damage1", 4 );
-	ob->set_c_verbs( ({ "%sÓÃ½ÇÍù%sÒ»¶¥", "%sÕÅ¿ª´óÑÀ£¬Íù%sÒ§È¥" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "ÉíÌå", "½Å²¿", "¼×¿Ç" }) );
+	ob->set_c_verbs( ({ "%sç”¨è§’å¾€%sä¸€é ‚", "%så¼µé–‹å¤§ç‰™ï¼Œå¾€%så’¬åŽ»" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "è…³éƒ¨", "ç”²æ®¼" }) );
 }

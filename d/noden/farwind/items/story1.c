@@ -17,14 +17,14 @@ int read_me(string str);
 void create() {
   seteuid(getuid());
   set("id",({"story1"}));
-  set_name("story1","ֽ�ɻ�����");
-  set_short("story1","ֽ�ɻ�����");
+  set_name("story1","紙飛機天堂");
+  set_short("story1","紙飛機天堂");
   set_long("This is a message reader, you were given this reader when\n"+
            "Elon wants you to read a document or something like that\n"+
-           "Just type read note to read the content.\n","ֽ�ɻ�����\n");
+           "Just type read note to read the content.\n","紙飛機天堂\n");
   set("mass",1);
   set("bulk",1);
-  set("unit","��");
+  set("unit","本");
   set("value",({10,"silver"}) );
 }
  
@@ -42,7 +42,7 @@ int read_me (string str)
         return 0;
     }
 this_player()->more("/u/w/wind/shops/story1.txt");
-say(this_player()->query("c_cap_name")+"���ڶ�һ���飬�����ǡ�ֽ�ɻ����á���\n");
+say(this_player()->query("c_cap_name")+"正在讀一本書，書名是「紙飛機天堂」。\n");
     return 1;
 }
  

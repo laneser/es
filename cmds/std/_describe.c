@@ -16,7 +16,7 @@ int cmd_describe(string str)
 	int pid;
 	string file;
 
-		write( "ĞğÊö±à¼­:\n" );
+		write( "æ•˜è¿°ç·¨è¼¯:\n" );
 		file = temp_file( "c_desc" );
 		if ((string)this_player()->query("long"))
 			write_file(file,(string)this_player()->query("long"));
@@ -38,9 +38,9 @@ void postit(string header)
 
 int help() {
 	write (@HELP
-Ö¸Áî¸ñÊ½: describe
+æŒ‡ä»¤æ ¼å¼: describe
 
-Éè¶¨×Ô¼ºµÄÍâÃ²ÃèÊö.
+è¨­å®šè‡ªå·±çš„å¤–è²Œæè¿°.
 HELP
  );
 	return 1 ;

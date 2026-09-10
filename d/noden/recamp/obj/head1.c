@@ -7,14 +7,14 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-        set_name( "gold head","¹óÖØÍ·ÊÎ");
+        set_name( "gold head","è²´é‡é ­é£¾");
         add( "id", ({ "head" }) );
-        set_short("Gold head", "¹óÖØÍ·ÊÎ");
+        set_short("Gold head", "è²´é‡é ­é£¾");
         set_long(@AAA
-ÕâÊÇÒ»¼şÓÃ¹óÖØ½ğÊô´òÔì¶ø³ÉµÄÍ·´ø£¬Ìá¹©ÑÏÃÜµÄ±£»¤¡£
+é€™æ˜¯ä¸€ä»¶ç”¨è²´é‡é‡‘å±¬æ‰“é€ è€Œæˆçš„é ­å¸¶ï¼Œæä¾›åš´å¯†çš„ä¿è­·ã€‚
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "head" );
         set( "armor_class", 10 );
         set("material","heavy_metal");

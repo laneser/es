@@ -14,8 +14,8 @@
 // add by Kyoko, for set color in mud.
 // now only define 14 color can be set, don't let background color
 // be set will be better, defined colors are:
-// RED ºì GRN ÂÌ YEL »Æ BLU À¶ MAG ·Ûºì CYN µ­À¶
-// HIR    HIG    HIY    HIB    HIM      HIC -> ¼ÓÁÁ
+// RED ç´… GRN ç¶  YEL é»ƒ BLU è— MAG ç²‰ç´… CYN æ·¡è—
+// HIR    HIG    HIY    HIB    HIM      HIC -> åŠ äº®
 nosave string *colors = ({ "HIW", "HIC", "HIB", "HIG", "HIY", "HIM", "HIR",
 		"WHT", "CYN", "BLU", "GRN", "YEL", "MAG", "RED", "NOR", });
 nosave string *color_code = ({ HIW, HIC, HIB, HIG, HIY, HIM, HIR,

@@ -12,18 +12,18 @@ void create()
 {
 	::create();
 	set( "dig", 1);
-   set_short( "һƬɳ��" );
+   set_short( "一片沙地" );
 	set_long( @LONG_DESCRIPTION
-������һƬ����ɳ�أ���ǰ������һ���޴��ɳ���㿴����ֻ��������
-�����ģ�Ī����һ������(anthill)?
+你來到一片廣大的沙地，眼前矗立著一座巨大的沙丘，你看到幾隻螞蟻爬進
+爬出的，莫非是一座蟻窩(anthill)?
 LONG_DESCRIPTION
 	);
 	set( "exits", ([
 		"east" : MOYADA"mainrd7"
 	]) );
 	set( "c_item_desc", ([
-		"anthill" : "һ����Сɽ����ڣ������ò�Ҫ��̫���������ܵ�����Χ����\n"+
-		            "��������������С������Ⱥӵ���ϡ�\n",
+		"anthill" : "一座像小山的蟻冢，你最好不要靠太近，以免受到兵蟻圍攻。\n"+
+		            "更別想亂挖它，小心螞蟻群擁而上。\n",
 	]) );
 	set( "objects", ([
 	   "ant worker#1" : MOYADA"monster/ant_worker",
@@ -53,22 +53,22 @@ void to_find_dig(string arg)
 	int i;
 
 	if( arg != "anthill" ) {
-	write( "����û�����ֶ������ڣ�\n" );
+	write( "這裡沒有那種東西可挖！\n" );
 	  return;
 	}
 
 	if( ant ) {
-		write( "�����Ѩ�Ѿ����ڹ��ˣ�\n" );
+		write( "這個蟻穴已經被挖過了！\n" );
 		return;
 	}
 
    write(
-          "���ò���ȥ����ڣ�����һ����ڣ���ˣ�¶��һ����(hole)��\n" );
+          "你用鏟子去挖蟻冢，轟的一聲蟻冢垮了，露出一個大洞(hole)！\n" );
     tell_room( this_object(),
-	this_player()->query("c_name")+"�ò���ȥ����Ѩ�����һ����ڣ���ˣ�\n",
+	this_player()->query("c_name")+"用鏟子去挖蟻穴，轟的一聲蟻冢垮了！\n",
 		this_player() );
 	add( "c_item_desc", ([
-		"hole" : "��ڣ����ڣ�����ò�Ҫ���룬�����ܵ�����Χ����\n",
+		"hole" : "蟻冢的入口，你最好不要進入，以免受到兵蟻圍攻。\n",
 	]) );
 	ant = 1;
 	for( i=0; i<ant_number; i++ ) {
@@ -84,19 +84,19 @@ int do_enter( string str )
     object obj, player;
     int left, i;
     if( !str || str == "" )
-    return notify_fail( "��ȥ����?\n" );
+    return notify_fail( "進去哪裡?\n" );
     if( !ant )
-       return notify_fail( "����û�ж���\n" );
+       return notify_fail( "這裡沒有洞！\n" );
     player = this_player();
     if( obj=present("ant") ) {
        tell_object( player,
-          "���ڵ�������ֹ����벢��ʼ�����㡣\n" );
+          "洞口的螞蟻阻止你進入並開始攻擊你。\n" );
        obj->kill_ob( player );
        return 1;
      }
     if( (left=(int)this_object()->query("ant_left")) && (left>1) ) {
         tell_object( player, 
-           "��ֻ���ϴ���ڣ�����˳����������ȥ����ʼ�����㡣\n" );
+           "二隻工蟻從蟻冢內爬了出來不讓你進去並開始攻擊你。\n" );
        for( i==0; i<2; i++ ) {
          obj = new(MOYADA"monster/ant_worker");
          obj->move(this_object());
@@ -107,9 +107,9 @@ int do_enter( string str )
        return 1;
     }
      tell_room( MOYADA"anthill/cellar1", 
-        sprintf("%s���˽�����\n", player->query("c_name") ), player );
+        sprintf("%s爬了進來。\n", player->query("c_name") ), player );
      tell_room( this_object(),
-       sprintf("%s������ڣ��\n", player->query("c_name") ), player );
+       sprintf("%s爬進蟻冢。\n", player->query("c_name") ), player );
     player->move_player(MOYADA"anthill/entrance","SNEAK");
     return 1;
 }

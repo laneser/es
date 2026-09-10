@@ -6,22 +6,22 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name( "hole wolf", "Ñ¨ÀÇ" );
+	set_name( "hole wolf", "ç©´ç‹¼" );
 	add( "id", ({ "wolf" }) );
-	set_short( "Ñ¨ÀÇ" );
+	set_short( "ç©´ç‹¼" );
 	set_long(
-		"ÕâÊÇÒ»ÖÖ¾Ó×¡ì¶É½¶´Ö®ÖĞµÄÀÇ¡£ \n"
+		"é€™æ˜¯ä¸€ç¨®å±…ä½æ–¼å±±æ´ä¹‹ä¸­çš„ç‹¼ã€‚ \n"
 	);
 	set_perm_stat( "str", 10 );
 	set_skill( "dodge", 30 );
 
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "natural_weapon_class1", 10 );
 	set( "natural_min_damage1", 6 );
 	set( "natural_max_damage1", 9 );
 	set( "killer", 1 );
 
-	set_c_verbs( ({ "%sÓÃÇ°×¦ÆËÏò%s", "%sÕÅ¿ªÂú¿ÚÀû³İµÄ×ì£¬Íù%sÒ§È¥" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²°Í", "ÍÈ²¿" }) );
+	set_c_verbs( ({ "%sç”¨å‰çˆªæ’²å‘%s", "%så¼µé–‹æ»¿å£åˆ©é½’çš„å˜´ï¼Œå¾€%så’¬å»" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´", "è…¿éƒ¨" }) );
 #include <replace_mob.h>
 }

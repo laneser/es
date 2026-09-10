@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("halfling longsword", "°ëÉíÈË³¤½£");
+        set_name("halfling longsword", "åŠèº«äººé•·åŠ");
         add ("id",({ "sword" }) );
-        set_short("°ëÉíÈË³¤½£");
+        set_short("åŠèº«äººé•·åŠ");
         set_long(
-            "ÕâÊÇ°ëÉíÈËÊØÎÀËùÊ¹ÓÃµÄ³¤½£¡£\n"
+            "é€™æ˜¯åŠèº«äººå®ˆè¡›æ‰€ä½¿ç”¨çš„é•·åŠã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 22 );
         set( "type", "longblade" );
         set( "min_damage", 15);

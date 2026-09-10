@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("halberd", "³¤êª");
-	set_short("¸ÖÖÆ³¤êª");
+	set_name("halberd", "é•·æˆŸ");
+	set_short("é‹¼è£½é•·æˆŸ");
 	set_long(
-		"ÕâÖÖ³¤êªÍ¨³£ÊÇÅµ¶Ù»Ê¼ÒÆïÊ¿ÍÅµÄÆïÊ¿ËùÏ²°®µÄÎäÆ÷¡£\n"
+		"é€™ç¨®é•·æˆŸé€šå¸¸æ˜¯è«¾é “çš‡å®¶é¨å£«åœ˜çš„é¨å£«æ‰€å–œæ„›çš„æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 160 );
 	set( "type", "polearm" );
 	set( "weapon_class", 30 );

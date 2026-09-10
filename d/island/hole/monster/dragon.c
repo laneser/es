@@ -8,14 +8,14 @@ void create()
 {
 	::create();
 	set_level(17);
-	set_name( "Fire Dragon","»ğÁú" );
+	set_name( "Fire Dragon","ç«é¾" );
 	add( "id", ({ "dragon" }) );
-	set_short( "»ğÁú" );
+	set_short( "ç«é¾" );
 	set_long(@LONG
-ÕâÊÇÒ»Í·Åç»ğ¾ŞÁú£¬ÌıËµÖ»ÒªÄÜÑ±·şËü±ã¿ÉÒÔ½«Ëû±ä³É×øÆï¡£
+é€™æ˜¯ä¸€é ­å™´ç«å·¨é¾ï¼Œè½èªªåªè¦èƒ½é¦´æœå®ƒä¾¿å¯ä»¥å°‡ä»–è®Šæˆåé¨ã€‚
 LONG
 		);
-	set( "unit","Í·" );
+	set( "unit","é ­" );
 	set( "race","dragon" );
 	set_perm_stat( "str",30 );
 	set_perm_stat( "dex",20 );
@@ -23,7 +23,7 @@ LONG
 	set_natural_weapon( 45,40,60 );
 	set_natural_armor( 80,40 );
 	set( "alignment",300 );
-	set( "extra_look","$NÕıÆïÖøÒ»Í·¾Ş´óµÄ»ğÁú£¬¿´ÆğÀ´ÓÌÈçÌìÉñÒ»°ã¡£\n" );
+	set( "extra_look","$Næ­£é¨è‘—ä¸€é ­å·¨å¤§çš„ç«é¾ï¼Œçœ‹èµ·ä¾†çŒ¶å¦‚å¤©ç¥ä¸€èˆ¬ã€‚\n" );
 //	set( "mountable",1 );
 	set( "max_load", 2600 );
 }

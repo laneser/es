@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-      set_name("Royal amulet","ÍõÕß»¤Éí·û");
+      set_name("Royal amulet","ç‹è€…è­·èº«ç¬¦");
       add("id",({"amulet"}) );
-      set_short("ÍõÕß»¤Éí·û");
+      set_short("ç‹è€…è­·èº«ç¬¦");
       set_long(@LONG
-ÕâÊÇÊ÷À×Íõ×åÖĞ´ú±í×î¸ßÈ¨Á¦µÄÏóáçĞÅÎï£¬Ïà´«ÕâÊÇÊØ»¤Áé´Í¸øÍõ¼ÒµÕ³¤µÄĞÅÎï£¡
+é€™æ˜¯æ¨¹é›·ç‹æ—ä¸­ä»£è¡¨æœ€é«˜æ¬ŠåŠ›çš„è±¡å¾µä¿¡ç‰©ï¼Œç›¸å‚³é€™æ˜¯å®ˆè­·éˆè³œçµ¦ç‹å®¶å«¡é•·çš„ä¿¡ç‰©ï¼
 LONG
               );
-      set("unit","Ã¶");
+      set("unit","æš");
       set("type","misc");
       set("material","element");
       set("armor_class",0);

@@ -6,18 +6,18 @@ void create ()
 {
         ::create();
         set_level(15);
-        set_name("Hawkman Magician","ÄñÈË×åÄ§·¨Ê¦");
+        set_name("Hawkman Magician","é³¥äººæ—é­”æ³•å¸«");
         add("id",({"mage","hawkman","magician"}) );
-        set_short("ÄñÈË×åÄ§·¨Ê¦");
+        set_short("é³¥äººæ—é­”æ³•å¸«");
         set_long(@C_LONG
-ÄñÈËÔ­±¾²»ÉÃ³¤Ä§·¨£¬µ«ÔÚ´óÖ÷½Ì¡¡ôÃÀ­¸ùµÄÑµÁ·Ö®ÏÂÒ²ÂıÂıµÄÓĞĞ©Äñ
-ÈËÖğ½¥¶®µÃÄ§·¨µÄÊ¹ÓÃ¡£
+é³¥äººåŸæœ¬ä¸æ“…é•·é­”æ³•ï¼Œä½†åœ¨å¤§ä¸»æ•™ã€€è£˜æ‹‰æ ¹çš„è¨“ç·´ä¹‹ä¸‹ä¹Ÿæ…¢æ…¢çš„æœ‰äº›é³¥
+äººé€æ¼¸æ‡‚å¾—é­”æ³•çš„ä½¿ç”¨ã€‚
 C_LONG
         );
         set("alignment",-1000);
         set( "gender", "male" );
         set( "race", "hawkman");
-        set( "unit", "Î»" );
+        set( "unit", "ä½" );
         set_perm_stat( "dex",15);
         set_perm_stat( "int",30);
         set_perm_stat( "karma",21);
@@ -61,13 +61,13 @@ int my_tactic()
                         command("cast fireball on "+name);
                         break;
                 case 1:
-                        command("tell "+name+" ÄãÊÇÓ®²»ÁËµÄ£¬²»±ØÔÙÕõÔúÁË¡£");
+                        command("tell "+name+" ä½ æ˜¯è´ä¸äº†çš„ï¼Œä¸å¿…å†æ™æ‰äº†ã€‚");
                         break;
                 case 2:
                         command("cast lightning on "+name);
                         break;
                 default :
-                        command("say ÓĞ³æ³æ:~~\n");
+                        command("say æœ‰èŸ²èŸ²:~~\n");
                         break;
         }
 

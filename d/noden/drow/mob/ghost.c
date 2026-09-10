@@ -6,15 +6,15 @@ void create()
 {
        ::create();
        set_level(19);
-       set_name("dynasty ghost","¹Å´ú»ÃÁé");
-       set_short("dynasty ghost","¹Å´ú»ÃÁé");
+       set_name("dynasty ghost","å¤ä»£å¹»éˆ");
+       set_short("dynasty ghost","å¤ä»£å¹»éˆ");
        add("id",({"ghost"}));
        set_long(@C_LONG
-ÕâÊÇÓÉË¾ÄÈ¿ÉÅ®Éñ·âÓ¡µÄÉÏ¹Å³¯´úµÄÓÄÁé£¬ËäÈ»Ëü¿´À´
-²¢²»ÊÇĞ×ºİµÄ¶ñÁé£¬µ«Ğ°¶ñµÄË¾ÄÈ¿ÉÅ®ÉñÔÚÚ¤½çÖĞÈÔÕĞ
-»½Ëü¹ıÀ´£¬ÒâÍ¼Õ¼ÁìÕâÉñ¹¬¡£
+é€™æ˜¯ç”±å¸å¨œå¯å¥³ç¥å°å°çš„ä¸Šå¤æœä»£çš„å¹½éˆï¼Œé›–ç„¶å®ƒçœ‹ä¾†
+ä¸¦ä¸æ˜¯å…‡ç‹ çš„æƒ¡éˆï¼Œä½†é‚ªæƒ¡çš„å¸å¨œå¯å¥³ç¥åœ¨å†¥ç•Œä¸­ä»æ‹›
+å–šå®ƒéä¾†ï¼Œæ„åœ–ä½”é ˜é€™ç¥å®®ã€‚
 C_LONG
-       set("unit","Î»");
+       set("unit","ä½");
        set_natural_weapon(45,26,47);
        set_natural_armor(22,25,14);
        set("max_hp",1080);
@@ -35,7 +35,7 @@ int my_tactic
        if(!(victim=query_attackers())) return 0;
        if(random(20)<5){
         tell_room(environment(this_object()),
-        "»ÃÁé¿ÚÖĞÄîÖøÒ»ÕóÖäÓï£¬Ç§ÍòÖ»¶ñÄ§³åÏòÄãµÄËÄÖÜ£¬¿ñÂÒ·ÉÎè£¡£¡\n"
+        "å¹»éˆå£ä¸­å¿µè‘—ä¸€é™£å’’èªï¼Œåƒè¬åªæƒ¡é­”è¡å‘ä½ çš„å››å‘¨ï¼Œç‹‚äº‚é£›èˆï¼ï¼\n"
         ,this_object());
         victim->receive_special_damage("mental",140);
         return 1;

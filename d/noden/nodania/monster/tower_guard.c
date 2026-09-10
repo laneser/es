@@ -8,11 +8,11 @@ void create()
 {
 	::create();
 	set_level(13);
-	set_name("tower guard", "ÎÀ±ø" );
+	set_name("tower guard", "è¡›å…µ" );
 	add( "id", ({ "guard" }) );
-	set_short( "¿´ÊØËşÂ¥µÄÎÀ±ø" );
+	set_short( "çœ‹å®ˆå¡”æ¨“çš„è¡›å…µ" );
 	set_long(
-		"Õâ¸öÎÀ±øÕıÔÚËşÂ¥ÉÏµ£ÈÎ¾¯½äÈÎÎñ£¬Ëû¿´ÆğÀ´ÓĞĞ©Æ£¾ë¡£\n"
+		"é€™å€‹è¡›å…µæ­£åœ¨å¡”æ¨“ä¸Šæ“”ä»»è­¦æˆ’ä»»å‹™ï¼Œä»–çœ‹èµ·ä¾†æœ‰äº›ç–²å€¦ã€‚\n"
 	);
    set( "alignment", 500 );
 	set_perm_stat("str",16);

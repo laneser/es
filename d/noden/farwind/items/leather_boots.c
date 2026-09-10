@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name("leather boots", "Ƥѥ");
+	set_name("leather boots", "皮靴");
 	add( "id", ({ "boots" }) );
-	set_short("Ƥѥ");
+	set_short("皮靴");
 	set_long(
-		"��˫Ƥ�Ƶĳ�ѥ�ܱ��������ߵĽŲ���\n"
+		"這雙皮製的長靴能保護穿著者的腳部。\n"
 	);
-	set( "unit", "˫" );
+	set( "unit", "雙" );
 	set( "type", "feet" );
 	set( "material", "leather");
 	set( "armor_class", 6 );

@@ -5,15 +5,15 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "Lizardman Sergeant", "òáòæÈË°à³¤" );
+	set_name( "Lizardman Sergeant", "èœ¥èœ´äººç­é•·" );
 	add( "id", ({ "lizardman","sergeant" }) );
-	set_short( "òáòæÈË°à³¤" );
+	set_short( "èœ¥èœ´äººç­é•·" );
 	set_long(@LONG
-Äã¿´µ½µÄÊÇÒ»Î»Õ½³¡ÉÏµÄÀÏ±ø£¬ËûÕı´øÁìÖø°à
-±øËÄ´¦É±µĞ£¬ÆóÍ¼¼ßÃğµĞÈË
+ä½ çœ‹åˆ°çš„æ˜¯ä¸€ä½æˆ°å ´ä¸Šçš„è€å…µï¼Œä»–æ­£å¸¶é ˜è‘—ç­
+å…µå››è™•æ®ºæ•µï¼Œä¼åœ–æ®²æ»…æ•µäºº
 LONG
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "lizardman" );
 	set( "gender", "male" );
 	set( "alignment", -300 );
@@ -37,7 +37,7 @@ LONG
 	set_skill( "defend", 60 );
 	set( "chat_chance", 20 );
 	set( "att_chat_output", ({
-		"\nòáòæÈË°à³¤´ó½Ğ: Ğ¡×ÓÕæ´óµ¨£¬¸ÒÏòÎÒÌôÕ½£¡\n\n",
+		"\nèœ¥èœ´äººç­é•·å¤§å«: å°å­çœŸå¤§è†½ï¼Œæ•¢å‘æˆ‘æŒ‘æˆ°ï¼\n\n",
 	}) );
 	wield_weapon( HWEAPON"shortsword" );
 	

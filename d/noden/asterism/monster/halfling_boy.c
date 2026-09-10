@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(3);
-	set_name( "halfling boy", "°ëÉíÈËĞ¡ÄĞº¢" );
+	set_name( "halfling boy", "åŠèº«äººå°ç”·å­©" );
 	add("id",({"boy","halfling"}) );
-   set_short( "°ëÉíÈËĞ¡ÄĞº¢" );
+   set_short( "åŠèº«äººå°ç”·å­©" );
 	set_long(
-		"Äã¿´µ½´øÖøĞ¦Á³µÄ°ëÉíÈËÄĞº¢,ËûÕı¸ß¸ßĞËĞËµØÔØ¸èÔØÎè.\n"
+		"ä½ çœ‹åˆ°å¸¶è‘—ç¬‘è‡‰çš„åŠèº«äººç”·å­©,ä»–æ­£é«˜é«˜èˆˆèˆˆåœ°è¼‰æ­Œè¼‰èˆ.\n"
 	);
 	set( "gender", "male" );
 	set( "race", "halfling" );

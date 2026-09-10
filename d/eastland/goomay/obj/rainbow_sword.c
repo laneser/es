@@ -4,17 +4,17 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "rainbow sword", "²Êºç½£" );
+	set_name( "rainbow sword", "å½©è™¹åŠ" );
 	add( "id", ({ "sword", "rainbow" }) );
-	set_short( "the colorful sword of rainbow", "ÓñÅ®ÃÅ²Êºç½£" );
+	set_short( "the colorful sword of rainbow", "ç‰å¥³é–€å½©è™¹åŠ" );
 	set_long(
 		"This is the legendary weapon of Ju-nju ganger  . You\n"
 		"can see many jewels  on the sword, surrounded by seven\n"
 		"perfect pearl.\n",
-"Õâ°Ñ²Êºç½£ÊÇÎôÈÕÓñÅ®ÃÅÅ®ÏÀ²ÊºçµÄÅä½££¬½£±úÉÏÏâÖøÆß²Ê±¦Ê¯\n"
-"½£ÉíÇá¶øÏ¸³¤£¬¼«ÊÊºÏÅ®×ÓÊ¹ÓÃ£¬½£ÇÊÄ©ÉÒ»¹×ºÖøÆß¿ÅÕäÖé¡£\n" 
+"é€™æŠŠå½©è™¹åŠæ˜¯æ˜”æ—¥ç‰å¥³é–€å¥³ä¿ å½©è™¹çš„é…åŠï¼ŒåŠæŸ„ä¸Šé‘²è‘—ä¸ƒå½©å¯¶çŸ³\n"
+"åŠèº«è¼•è€Œç´°é•·ï¼Œæ¥µé©åˆå¥³å­ä½¿ç”¨ï¼ŒåŠé˜æœ«æ¢¢é‚„ç¶´è‘—ä¸ƒé¡†çç ã€‚\n" 
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weapon_class", 35 );
 	set( "min_damage", 15 );
@@ -24,6 +24,6 @@ void create()
 //	set( "bleeding", 13 );
 
 	set_verbs( ({  "slash", "thrust" }) );
-	set_c_verbs( ({ "ÓÃ%sÍù%sÒ»´Ì", "%s»®³öÒ»µÀÉÁÁÁµÄÒø¹â£¬¹¥Ïò%s",
-		"µÄ%s·É¿ìµÄÍù%s¿³È¥" }) );
+	set_c_verbs( ({ "ç”¨%så¾€%sä¸€åˆº", "%såŠƒå‡ºä¸€é“é–ƒäº®çš„éŠ€å…‰ï¼Œæ”»å‘%s",
+		"çš„%sé£›å¿«çš„å¾€%sç å»" }) );
 }

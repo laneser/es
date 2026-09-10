@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "thin blade", "ÁøÒ¶µ¶" );
+	set_name( "thin blade", "æŸ³è‘‰åˆ€" );
 	add( "id", ({ "blade" }) );
-   set_short( "ÁøÒ¶µ¶" );
+   set_short( "æŸ³è‘‰åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»ÖÖ½£ÈĞÍäÇúÈçÁøÒ¶µÄ¶Ì½££¬Ê¹ÓÃÆğÀ´Çá±ãÁé»î¡£\n"
+		"é€™æ˜¯ä¸€ç¨®åŠåˆƒå½æ›²å¦‚æŸ³è‘‰çš„çŸ­åŠï¼Œä½¿ç”¨èµ·ä¾†è¼•ä¾¿éˆæ´»ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 60 );
 	setup_weapon( "shortblade", 17, 6, 14 );
 	set( "bleeding", 5 );

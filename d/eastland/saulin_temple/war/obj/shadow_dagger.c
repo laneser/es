@@ -5,16 +5,16 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("shadow dagger","»ÃÓ°Ø°Ê×");
+       set_name("shadow dagger","å¹»å½±åŒ•é¦–");
        add("id",({"dagger",}) );
-       set_short("»ÃÓ°Ø°Ê×");
+       set_short("å¹»å½±åŒ•é¦–");
        set_long(@C_LONG
-ÕâÊÇÒ»°Ñ´Óµ¶ÈĞµ½µ¶±úÍ¨ÌåÎÚºÚµÄØ°Ê×£¬Í¨³£±»É±ÊÖÓÃÀ´½øĞĞÒşÃØ
-µÄ°µÉ±ĞĞ¶¯¡£
+é€™æ˜¯ä¸€æŠŠå¾åˆ€åˆƒåˆ°åˆ€æŸ„é€šé«”çƒé»‘çš„åŒ•é¦–ï¼Œé€šå¸¸è¢«æ®ºæ‰‹ç”¨ä¾†é€²è¡Œéš±ç§˜
+çš„æš—æ®ºè¡Œå‹•ã€‚
 C_LONG
         );
 
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
         set( "weapon_class", 19 );
 	set("type","dagger");
         set( "min_damage", 12 );

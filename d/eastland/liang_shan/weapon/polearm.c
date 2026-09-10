@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Chinese halbert","·½Ìì»­êª");
+       set_name("Chinese halbert","æ–¹å¤©ç•«æˆŸ");
        add("id",({"halbert"}) );
-       set_short("·½Ìì»­êª");
+       set_short("æ–¹å¤©ç•«æˆŸ");
 	   set_long(
-           "êªÊÇ×éºÏÇ¹ºÍ³¤µ¶¶ø³ÉµÄÎäÆ÷£¬¼æÓĞÁ½ÕßµÄÓÅµã£¬·½Ìì»­êªÊÇÆäÖĞ\n"
-	   "½ÏÓĞÍşÁ¦µÄÒ»ÖÖ£®\n"
+           "æˆŸæ˜¯çµ„åˆæ§å’Œé•·åˆ€è€Œæˆçš„æ­¦å™¨ï¼Œå…¼æœ‰å…©è€…çš„å„ªé»ï¼Œæ–¹å¤©ç•«æˆŸæ˜¯å…¶ä¸­\n"
+	   "è¼ƒæœ‰å¨åŠ›çš„ä¸€ç¨®ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 26 );
     set("type","polearm");
 	set( "min_damage", 16 );

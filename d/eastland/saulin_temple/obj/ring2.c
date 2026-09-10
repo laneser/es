@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name("king-kong ring","½ğ¸ÕÖ¸»·");
+	set_name("king-kong ring","é‡‘å‰›æŒ‡ç’°");
         add("id",({"ring"}) );
-	set_short("½ğ¸ÕÖ¸»·");
+	set_short("é‡‘å‰›æŒ‡ç’°");
 	set_long(
-"ÕâÊÇÓÉ½ğ¸Õ½ç--¶«·½½ğ¸Õ²¿µÚ¶ş½ğ¸ÕÍõËùÊ¹ÓÃ¹ıµÄÖ¸»·,¾ßÓĞ·Ç·²µÄ·ÀÓùÁ¦\n"
+"é€™æ˜¯ç”±é‡‘å‰›ç•Œ--æ±æ–¹é‡‘å‰›éƒ¨ç¬¬äºŒé‡‘å‰›ç‹æ‰€ä½¿ç”¨éçš„æŒ‡ç’°,å…·æœ‰éå‡¡çš„é˜²ç¦¦åŠ›\n"
 );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set("material","element");
 	set( "type", "finger" );

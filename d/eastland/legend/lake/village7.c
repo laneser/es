@@ -6,13 +6,13 @@ inherit ROOM;
 void create()
 {
         ::create();
-    set_short("¡¸±ÌË®º®Ì¶¡¹");
+    set_short("ã€Œç¢§æ°´å¯’æ½­ã€");
         set_long( 
 @LONG
-ì¬£¡Äã½øÈë¡¸±ÌË®º®Ì¶¡¹Àï£¬¼«º®ÀäµÄÌ¶Ë®²»¶ÏµØÓ¿ÏòÄãÈ«ÉíµÄÃ«Ï¸¿×£¬Ò»¹É
-±ùÀäµÄÆøÁ÷´ÓÄãÍ·¶¥¹àÈëÖ±´ï½Åµ×£¬ÄãáÝ·ðÉí´¦±ù½ÑÀï£¬²»½ûµ¹³éÁËÒ»¿ÚÆø¡£ÔÚÌ¶
-Àï£¬Äã²»×¡µØ¶¶¶¯ÉíÌå£¬²»Ê±¸¡³öË®Ãæ£¬È´·¢ÏÖÔ½À´Ô½ÄÑÊÜ£¬ÄãÉíÌåµÄ»úÄÜ¾¯¸æÖø
-Äã¿ìÀë¿ª¿ìÀë¿ª²»È»¾ÍÀ´²»¼°ÁË¡£
+é¢¼ï¼ä½ é€²å…¥ã€Œç¢§æ°´å¯’æ½­ã€è£¡ï¼Œæ¥µå¯’å†·çš„æ½­æ°´ä¸æ–·åœ°æ¹§å‘ä½ å…¨èº«çš„æ¯›ç´°å­”ï¼Œä¸€è‚¡
+å†°å†·çš„æ°£æµå¾žä½ é ­é ‚çŒå…¥ç›´é”è…³åº•ï¼Œä½ å½·ä½›èº«è™•å†°çª–è£¡ï¼Œä¸ç¦å€’æŠ½äº†ä¸€å£æ°£ã€‚åœ¨æ½­
+è£¡ï¼Œä½ ä¸ä½åœ°æŠ–å‹•èº«é«”ï¼Œä¸æ™‚æµ®å‡ºæ°´é¢ï¼Œå»ç™¼ç¾è¶Šä¾†è¶Šé›£å—ï¼Œä½ èº«é«”çš„æ©Ÿèƒ½è­¦å‘Šè‘—
+ä½ å¿«é›¢é–‹å¿«é›¢é–‹ä¸ç„¶å°±ä¾†ä¸åŠäº†ã€‚
 LONG);
     set( "light",1);
     set("underwater",1);
@@ -33,7 +33,7 @@ void init()
 int do_search()
 {
    tell_object(this_player(),
-     "ÕâÀïÃ»ÓÐÊ²÷á¶«Î÷£¬²»¹ýÄã¿ÉÒÔÊÔÖøÍùÏÂ(down)Ç±Ç±(dive)¿´¡£Èç¹ûÄãÓÎÓ¾µÄ¼¼ÄÜ²»¹»£¬ÄÇ»¹ÊÇÍùÉÏ(up)Àë¿ªºÃÁË¡£\n");
+     "é€™è£¡æ²’æœ‰ä»€éº¼æ±è¥¿ï¼Œä¸éŽä½ å¯ä»¥è©¦è‘—å¾€ä¸‹(down)æ½›æ½›(dive)çœ‹ã€‚å¦‚æžœä½ æ¸¸æ³³çš„æŠ€èƒ½ä¸å¤ ï¼Œé‚£é‚„æ˜¯å¾€ä¸Š(up)é›¢é–‹å¥½äº†ã€‚\n");
    return 1;
 }
 int do_dive_down(string arg)
@@ -45,22 +45,22 @@ int do_dive_down(string arg)
   
   player=this_player();
   if (!arg||arg!="down") {
-     tell_object(player,"ÄãÏëÇ±µ½ÄÄÀïÈ¥¡£\n");
+     tell_object(player,"ä½ æƒ³æ½›åˆ°å“ªè£¡åŽ»ã€‚\n");
      return 1;
   }
   if ( player->query_temp("have_dive") ) return 1;
   player->set_temp("have_dive",1);
   env=environment(player);
   name=player->query("c_name");
-  tell_object(player,"ÄãÉîÎüÒ»¿ÚÆø£¬Ç±ÏÂ¡¸±ÌË®º®Ì¶¡¹.......\n");
-  tell_room(env,sprintf("%sÉîÎüÒ»¿ÚÆø£¬Ç±ÏÂ¡¸Ë®Ì¶º®Ì¶¡¹.......\n",name),player);
+  tell_object(player,"ä½ æ·±å¸ä¸€å£æ°£ï¼Œæ½›ä¸‹ã€Œç¢§æ°´å¯’æ½­ã€.......\n");
+  tell_room(env,sprintf("%sæ·±å¸ä¸€å£æ°£ï¼Œæ½›ä¸‹ã€Œæ°´æ½­å¯’æ½­ã€.......\n",name),player);
   probability=(int)player->query_skill("swimming")/(int)player->query_level();
   if ( probability+random(5) >7 ) {
      player->set_temp("block_command",1);  
      call_out("recover1",7,player);
      return 1;
   }
-  tell_object(player,"ºöÈ»Ò»¹É¼«´óµÄÑ¹Á¦Ó­Ãæ¶øÀ´ÈÃÄã¼¸ºõÔÎÁË¹ýÈ¥..\n\n");
+  tell_object(player,"å¿½ç„¶ä¸€è‚¡æ¥µå¤§çš„å£“åŠ›è¿Žé¢è€Œä¾†è®“ä½ å¹¾ä¹Žæšˆäº†éŽåŽ»..\n\n");
   player->delete_temp("have_dive");
   player->receive_damage(10);
   return 1;
@@ -69,7 +69,7 @@ void recover1(object player)
 {
    player->delete_temp("block_command"); 
    player->delete_temp("have_dive");
-   tell_object(player,"\nðÍµØ£¡Ë®Ì¶ÀïÒ»¹ÉÎüÁ¦°ÑÄã¾íÏò....\n\n\n\n");
+   tell_object(player,"\né¶©åœ°ï¼æ°´æ½­è£¡ä¸€è‚¡å¸åŠ›æŠŠä½ å·å‘....\n\n\n\n");
    player->move(LAKE"village8","SNEAK");
 }  
 

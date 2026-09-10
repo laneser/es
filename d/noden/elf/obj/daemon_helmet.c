@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("daemonic helmet", "¶ñÄ§¿ø");
+        set_name("daemonic helmet", "æƒ¡é­”ç›”");
         add( "id", ({ "helmet" }) );
-        set_short( "¶ñÄ§¿ø" );
+        set_short( "æƒ¡é­”ç›”" );
         set_long(
-                "ÕâÊÇ¶ñÄ§Õ½Ê¿µÄ×¨ÓÃÍ·¿ø \n"
+                "é€™æ˜¯æƒ¡é­”æˆ°å£«çš„å°ˆç”¨é ­ç›” \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "heavy_metal");
         set( "armor_class", 6 );

@@ -10,14 +10,14 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name("spectral crow", "¹í÷ÈÎÚÑ»");
+	set_name("spectral crow", "é¬¼é­…çƒé´‰");
 	add( "id", ({ "crow" }) );
-   set_short("¹í÷ÈÎÚÑ»");
+   set_short("é¬¼é­…çƒé´‰");
 	set_long(
-		"Äã¿´µ½Ò»Ö»ÂÖÀªÊ®·ÖÄ£ºıµÄºÚÉ«ÎÚÑ»£¬Ò»ÖÖ²»ÏéµÄÔ¤¸Ğ¸æËßÄãÕâÊÇÖÖ\n"
-		"Ğ°¶ñµÄ»¯Éí¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»è¼ªå»“ååˆ†æ¨¡ç³Šçš„é»‘è‰²çƒé´‰ï¼Œä¸€ç¨®ä¸ç¥¥çš„é æ„Ÿå‘Šè¨´ä½ é€™æ˜¯ç¨®\n"
+		"é‚ªæƒ¡çš„åŒ–èº«ã€‚\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", -300 );
    set( "exp_reward", 320 );
    set( "max_hp", 220 );
@@ -29,8 +29,8 @@ void create()
 	set_perm_stat( "str", 5 );
 	set( "aggressive", 1 );
 	set( "tactic_func", "cry" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
-	set_c_verbs( ({ "%sÓÃ×ìÏò%sÓÃÁ¦Ò»×Ä", "%sÓÃ×¦×ÓÍù%s×¥È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
+	set_c_verbs( ({ "%sç”¨å˜´å‘%sç”¨åŠ›ä¸€å•„", "%sç”¨çˆªå­å¾€%sæŠ“å»" }) );
 }
 
 int cry()
@@ -39,7 +39,7 @@ int cry()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
   tell_room( environment(this_object()),
-            "¹í÷ÈÎÚÑ»·¢³öÒ»ÕóÆàÀ÷µÄ½ĞÉù£¬ºÃÏñ±ôËÀÉúÎïµÄ²Ò½ĞÉù ....\n",
+            "é¬¼é­…çƒé´‰ç™¼å‡ºä¸€é™£æ·’å²çš„å«è²ï¼Œå¥½åƒç€•æ­»ç”Ÿç‰©çš„æ…˜å«è² ....\n",
 		this_object() );
 	CONFUSED->apply_effect( victim, 10, 5 );
 	return 1;

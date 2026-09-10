@@ -10,13 +10,13 @@ void create()
 	::create();
 	seteuid(getuid());
 	set_level(15);
-	set_name("Snake","Ë¿¿ü");
+	set_name("Snake","çµ²å¥");
 	add("id",({"snake"}) );
-	set_short("¶¾Éß");
+	set_short("æ¯’è›‡");
 
 	set_long(@C_LONG
-ÕâÌõÉß½ĞË¿¿ü, Ìå³¤Èı´ç, É«²Ê°ßìµ, Á½ÑÛ¼äÍ»³öÒ»Ã¶Èñ´Ì, 
-¿´ÆğÀ´ÓĞµã¹îÒì¡£²»ÖªµÀÕâÌõÉßÎªÊ²÷á»á±»¹ØÔÚÕâÀï¡£
+é€™æ¢è›‡å«çµ²å¥, é«”é•·ä¸‰å¯¸, è‰²å½©æ–‘æ–•, å…©çœ¼é–“çªå‡ºä¸€æšéŠ³åˆº, 
+çœ‹èµ·ä¾†æœ‰é»è©­ç•°ã€‚ä¸çŸ¥é“é€™æ¢è›‡ç‚ºä»€éº¼æœƒè¢«é—œåœ¨é€™è£¡ã€‚
 C_LONG
 	);
 	set_perm_stat("dex",30);
@@ -35,7 +35,7 @@ C_LONG
 	set("alignment",-500);
 	set("tactic_func","my_tactic");
 	set_temp("rate",60);
-     	set_c_verbs( ({ "%s°ºÍ·ÕÅ×ì£¬Íù%sÒ§È¥" }) );
+     	set_c_verbs( ({ "%sæ˜‚é ­å¼µå˜´ï¼Œå¾€%så’¬å»" }) );
 }
 
 int my_tactic()
@@ -46,7 +46,7 @@ int my_tactic()
 	if ( random(sprate) < 15 || !(vic=query_attacker()) ) 
 		return 0;
 	tell_room( environment(this_object()),
-		sprintf( "Ë¿¿ü´Ó×ì°ÍÅç³öÒ»¹ÉÆøÌå, ¸ÕºÃÅçÔÚ%sÃæÇ°...\n",
+		sprintf( "çµ²å¥å¾å˜´å·´å™´å‡ºä¸€è‚¡æ°£é«”, å‰›å¥½å™´åœ¨%sé¢å‰...\n",
 			vic->query("c_cap_name")),
 	this_object() );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( vic, 20, 6 );

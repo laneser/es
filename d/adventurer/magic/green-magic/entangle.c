@@ -39,38 +39,38 @@ int cast(int level, string target)
 	chinese_mode = can_read_chinese(me);
 	
 	if( (int)me->query_skill("green-magic") < query_need_skill(level) ) {
-		tell_object(me,set_color("ÄãµÄÂÌÄ§·¨¼¼ÄÜ²»×ãÒÔÊ¹ÓÃÕâµÈ¼¶µÄÄ§·¨!\n","HIG"));
+		tell_object(me,set_color("ä½ çš„ç¶ é­”æ³•æŠ€èƒ½ä¸è¶³ä»¥ä½¿ç”¨é€™ç­‰ç´šçš„é­”æ³•!\n","HIG"));
 		return 0;
 	}
 	
 	  if( target=="NONE" && !(dest = me->query_attacker()) ) {
-	  write( "Òª¶ÔË­Ê©Õ¹Ç£°íÊõ£¿\n");
+	  write( "è¦å°èª°æ–½å±•ç‰½çµ†è¡“ï¼Ÿ\n");
 	  return 0;
 	  } else {
 	  if( !dest ) 
 	  dest = present( target, environment(me) );
 	  if( !dest ) {
-	         write("ÄãµÄÄ¿±ê²¢²»ÔÚÕâÀï£¡\n");
+	         write("ä½ çš„ç›®æ¨™ä¸¦ä¸åœ¨é€™è£¡ï¼\n");
 	         return 0;
 	              }}                                       
 	    if( !living(dest) ) {
-	              write( "Ç£°íÊõµÄÄ¿±ê±ØĞëÊÇÉúÎï£¡\n");
+	              write( "ç‰½çµ†è¡“çš„ç›®æ¨™å¿…é ˆæ˜¯ç”Ÿç‰©ï¼\n");
 	                    return 0;
 	                        }
 	          if( dest->query("no_attack") ) {
-	                    write("Õâ¼Ò»ï²»ÄÜÉ±¡£\n");
+	                    write("é€™å‚¢ä¼™ä¸èƒ½æ®ºã€‚\n");
 	                    return 0;
 	                    }
 	          if( dest==me ) {
-	                    write("Äã¿ÉÒÔ´òsuicide ±È½ÏºÃ¡£\n");
+	                    write("ä½ å¯ä»¥æ‰“suicide æ¯”è¼ƒå¥½ã€‚\n");
 	                    return 0; 
 	                    } 
 	          if( dest->query_level()<5 ) {
-	                    write("ĞÂÊÖ»áËµÄãÃ»ÓĞÈËÇéÎ¶...\n");
+	                    write("æ–°æ‰‹æœƒèªªä½ æ²’æœ‰äººæƒ…å‘³...\n");
 	                    return 0;
 	                    }                       
 	          if( (!environment(me)->query("outside")) ) {
-	                    write("Õâ¸ö·¨ÊõÖ»ÄÜÔÚÊÒÍâÊ©Õ¹...\n");
+	                    write("é€™å€‹æ³•è¡“åªèƒ½åœ¨å®¤å¤–æ–½å±•...\n");
 	                    return 0;
 	                    }
 	if( me->query("npc") && me->query("magic_delay") )
@@ -79,18 +79,18 @@ int cast(int level, string target)
 	    delay_time = 3;
 	me->set("stop_attack",delay_time);
 	me->set_temp("cast_busy", 1);
-	tell_object(me,set_color("Äã¿ªÊ¼Ò÷ËĞÂÌÄ§·¨ÖĞÇ£°íÊõµÄÖäÎÄ....¡£\n","HIG",me));
+	tell_object(me,set_color("ä½ é–‹å§‹åŸèª¦ç¶ é­”æ³•ä¸­ç‰½çµ†è¡“çš„å’’æ–‡....ã€‚\n","HIG",me));
 	tell_room( environment(me),
-		me->query("c_name") + "¿ªÊ¼Ò÷ËĞÂÌÄ§·¨ÖĞÇ£°íÊõµÄÖäÎÄ....¡£\n",
+		me->query("c_name") + "é–‹å§‹åŸèª¦ç¶ é­”æ³•ä¸­ç‰½çµ†è¡“çš„å’’æ–‡....ã€‚\n",
 		me );
 	call_out( "effect", delay_time+1, level, me, dest );
 	if( !dest->query_attackers() &&
 	      (random(find_rate)<query_find_rate(me,dest)) ) {
 	      tell_object( me, dest->query("c_name")+
-	      "·¢ÏÖÄã¶ÔËû²»»³ºÃÒâ¶ø¿ªÊ¼¹¥»÷Äã¡£\n" );
+	      "ç™¼ç¾ä½ å°ä»–ä¸æ‡·å¥½æ„è€Œé–‹å§‹æ”»æ“Šä½ ã€‚\n" );
 	      tell_room( environment(dest),
-	      dest->query("c_name")+"·¢ÏÖ"+me->query("c_name")+
-	      "¶ÔËû²»»³ºÃÒâ¶ø·¢¶¯¹¥»÷¡£\n", me
+	      dest->query("c_name")+"ç™¼ç¾"+me->query("c_name")+
+	      "å°ä»–ä¸æ‡·å¥½æ„è€Œç™¼å‹•æ”»æ“Šã€‚\n", me
 	      );
 	dest->kill_ob(me);
 	me->kill_ob(dest);
@@ -105,12 +105,12 @@ void effect(int level, object caster, object dest)
     
     caster->set_temp("cast_busy", 0);
     if( !dest ) {
-      tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­ËÀÁË¡£\n");
+      tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“æ­»äº†ã€‚\n");
       return;
     }
     env = environment(caster);
     if( !env || !present( dest, env ) ) {
-      tell_object( caster,"Äã·¢ÏÖÄãµÄÄ¿±êÒÑ¾­²»ÔÚÕâÀïÁË¡£\n");
+      tell_object( caster,"ä½ ç™¼ç¾ä½ çš„ç›®æ¨™å·²ç¶“ä¸åœ¨é€™è£¡äº†ã€‚\n");
       return;
     }
 
@@ -121,16 +121,16 @@ void effect(int level, object caster, object dest)
 		
 		if ( skill2 -5 < 20+level*3-random(5) ) {
                 tell_room( environment(dest),
-                "Í»È»¼äµØÃæÂ¡Æğ£¬µ«ºÜ¿ìÓÖ»Ö¸´Ô­×´\n");
+                "çªç„¶é–“åœ°é¢éš†èµ·ï¼Œä½†å¾ˆå¿«åˆæ¢å¾©åŸç‹€\n");
                 return;
                 }		
 		if ( skill1 -5 < 30+level*2-random(5) ) {
 		tell_room( environment(dest),
-		"Í»È»Ò»´ó¶ÑÊ÷¸ù´Ó½ÅÏÂÆÆÍÁ¶ø³ö£¬ÏÅÁËÄãÒ»Ìø\n");
+		"çªç„¶ä¸€å¤§å †æ¨¹æ ¹å¾è…³ä¸‹ç ´åœŸè€Œå‡ºï¼Œåš‡äº†ä½ ä¸€è·³\n");
 		return;
 		}
 		tell_object( dest,
-			"Í»È»Ò»´ó¶ÑÊ÷¸ù´ÓÄã½ÅÏÂÆÆÍÁ¶ø³ö£¬Äã±»ËüÃÇ½ô½ô²ø×¡¶ø¶¯µ¯²»µÃ....¡£\n"
+			"çªç„¶ä¸€å¤§å †æ¨¹æ ¹å¾ä½ è…³ä¸‹ç ´åœŸè€Œå‡ºï¼Œä½ è¢«å®ƒå€‘ç·Šç·Šçºä½è€Œå‹•å½ˆä¸å¾—....ã€‚\n"
 		);
 		time = level -1 + ((int)caster->query_stat("pie")/4);
 		if (time < 2) time = 2; 
@@ -138,7 +138,7 @@ void effect(int level, object caster, object dest)
                 dest->set_temp("block_defense", 1 );
                 dest->set_temp("block_command", 1 );
 	 tell_room( environment(dest),
-		"Í»È»Ò»´ó¶ÑÊ÷¸ù´Ó"+dest->query("c_name")+"½ÅÏÂÆÆÍÁ¶ø³ö£¬°ÑËû½ô½ô²ø×¡¡£\n",
+		"çªç„¶ä¸€å¤§å †æ¨¹æ ¹å¾"+dest->query("c_name")+"è…³ä¸‹ç ´åœŸè€Œå‡ºï¼ŒæŠŠä»–ç·Šç·Šçºä½ã€‚\n",
 		dest );
 		dest->kill_ob(caster);
 		caster->kill_ob(dest);
@@ -149,7 +149,7 @@ void expire( object dest )
 {
     if( !dest ) return;
 	tell_object( dest,
-		"ÄãÖÕì¶ÕõÍÑÁËÄÇĞ©¿É¶ñµÄÊ÷¸ù£¬»Ö¸´ĞĞ¶¯µÄ×ÔÓÉ¡£\n"
+		"ä½ çµ‚æ–¼æ™è„«äº†é‚£äº›å¯æƒ¡çš„æ¨¹æ ¹ï¼Œæ¢å¾©è¡Œå‹•çš„è‡ªç”±ã€‚\n"
     );
                  dest->delete_temp("block_defense");
                  dest->delete_temp("block_command");

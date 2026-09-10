@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-     set_name("Origin wand", "»ìãç¡õÕÈ");
+     set_name("Origin wand", "æ··æ²Œâ–¡æ–");
      add ("id",({ "wand",}) );
-     set_short("»ìãç¡õÕÈ");
+     set_short("æ··æ²Œâ–¡æ–");
      set_long(@LONG
-Ò»°Ñ»ÒÉ«µÄÄ§ÕÈ¡£¾İËµÕâ°ÑÕÈÓĞÖø¿ÉÒÔÁîÊÀ½ç»Øµ½Ô­Ê¼Ê±»ÄµÄÎ°´óÄ§Á¦£¬µ«ÒòÎªÇ°
-¶Ë±»¿³µôÒ»½ÇµÄ²»ÍêÕû¶øÊ§È¥ÁËÆäÊ®·ÖÖ®¾ÅµÄÁ¦Á¿£¬ËµËäÈç´Ë£¬ËüÊ£âÅµÄÁ¦Á¿ÈÔÊÇ
-²»¿ÉÇáÊÓ¡£
+ä¸€æŠŠç°è‰²çš„é­”æ–ã€‚æ“šèªªé€™æŠŠæ–æœ‰è‘—å¯ä»¥ä»¤ä¸–ç•Œå›åˆ°åŸå§‹æ™‚è’çš„å‰å¤§é­”åŠ›ï¼Œä½†å› ç‚ºå‰
+ç«¯è¢«ç æ‰ä¸€è§’çš„ä¸å®Œæ•´è€Œå¤±å»äº†å…¶ååˆ†ä¹‹ä¹çš„åŠ›é‡ï¼Œèªªé›–å¦‚æ­¤ï¼Œå®ƒå‰©é¤˜çš„åŠ›é‡ä»æ˜¯
+ä¸å¯è¼•è¦–ã€‚
 LONG
      );
-     set( "unit", "°Ñ" );
+     set( "unit", "æŠŠ" );
      set( "weapon_class", 35 );
      set( "type", "wand" );
      set( "min_damage", 20 );
@@ -26,8 +26,8 @@ LONG
 }
 void recoverwand()
 {
-    set("c_name","»ìãç¡õÕÈ");
-    set("short","»ìãç¡õÕÈ");
+    set("c_name","æ··æ²Œâ–¡æ–");
+    set("short","æ··æ²Œâ–¡æ–");
     setup_weapon("wand",35,20,30);
     set("left_times",10);
     set("damaged",0);
@@ -50,11 +50,11 @@ int wand_damage(object victim,int damage)
     if( (query("left_times")<1 ) && ( !query("damaged") ) ) {
        set("damaged",1);
        tell_object(holder,
-           sprintf("\nºöµØ£¬µĞÈËºİºİÍùÄãÊÖÖĞµÄ%sÒ»»÷£¬½á¹û%s±»µĞÈËÇÃ»µÁË!!!\n\n",my_name,my_name));
+           sprintf("\nå¿½åœ°ï¼Œæ•µäººç‹ ç‹ å¾€ä½ æ‰‹ä¸­çš„%sä¸€æ“Šï¼Œçµæœ%sè¢«æ•µäººæ•²å£äº†!!!\n\n",my_name,my_name));
        tell_room(environment(holder),
-           sprintf("%sÊÖÖĞµÄ%s±»µĞÈËÇÃ»µÁË¡«\n",ho_name,my_name),holder);
-       add("short"," (ÊÜËğ)") ;
-       add("c_name"," (ÊÜËğ)");
+           sprintf("%sæ‰‹ä¸­çš„%sè¢«æ•µäººæ•²å£äº†ï½\n",ho_name,my_name),holder);
+       add("short"," (å—æ)") ;
+       add("c_name"," (å—æ)");
        setup_weapon("wand",30,12,20);
        return 0;
     }
@@ -62,13 +62,13 @@ int wand_damage(object victim,int damage)
     if ( random(20) > holder_int/4 ) return 0;   
     dam=70+random(30);
     tell_object( holder,set_color(sprintf(
-       "\nÄãÊÖÖĞµÄ%s·¢³ö¡¸ºäÂ¡Â¡¡¹µÄÉùÏìĞ®´øÖøÑ¸À×ÅüÏò%sµÄÍ·ÉÏ£¡\n\n"
+       "\nä½ æ‰‹ä¸­çš„%sç™¼å‡ºã€Œè½Ÿéš†éš†ã€çš„è²éŸ¿æŒ¾å¸¶è‘—è¿…é›·åŠˆå‘%sçš„é ­ä¸Šï¼\n\n"
        ,my_name,vic_name),"HIB")); 
     tell_room( environment(holder),set_color(sprintf(
-       "\n%sÊÖÖĞµÄ%s·¢³ö¡¸ºäÂ¡Â¡¡¹µÄÉùÏìĞ®´øÖøÑ¸À×ÅüÏò%sµÄÍ·ÉÏ£¡\n\n"
+       "\n%sæ‰‹ä¸­çš„%sç™¼å‡ºã€Œè½Ÿéš†éš†ã€çš„è²éŸ¿æŒ¾å¸¶è‘—è¿…é›·åŠˆå‘%sçš„é ­ä¸Šï¼\n\n"
        ,ho_name,my_name,vic_name),"HIB"),({holder,victim}));
     tell_object( victim,set_color(sprintf(
-         "\n%sÊÖÖĞµÄ%s·¢³ö¡¸ºäÂ¡Â¡¡¹µÄÉùÏìĞ®´øÖøÑ¸À×ÅüÔÚÄãµÄÍ·ÉÏ£¡\n\n"
+         "\n%sæ‰‹ä¸­çš„%sç™¼å‡ºã€Œè½Ÿéš†éš†ã€çš„è²éŸ¿æŒ¾å¸¶è‘—è¿…é›·åŠˆåœ¨ä½ çš„é ­ä¸Šï¼\n\n"
        ,ho_name,my_name),"HIB"));
     if ( !holder->query("npc") ) {
        add("left_times",-1);

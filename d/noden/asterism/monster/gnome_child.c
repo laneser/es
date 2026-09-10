@@ -6,17 +6,17 @@ void create()
 {
 	::create();
 	set_level(4);
-	set_name( "Gnome child", "µØ¾«Ğ¡º¢" );
+	set_name( "Gnome child", "åœ°ç²¾å°å­©" );
 	add ("id", ({ "child", "gnome", }) );
-   set_short( "µØ¾«Ğ¡º¢" );
+   set_short( "åœ°ç²¾å°å­©" );
 	set_long(
-                 "ËäËµÊÇ¸öĞ¡º¢,µ«ËûÔõ÷á¿´¶¼±ÈÄãÀÏ¡£ËûÕı¿´ÖøÇ½ÉÏµÄ·ûºÅ£¬\n"
-                 "¿ÚÖĞÄîÄîÓĞ´Ê£¬ºÃÏñÔÚ±³ËĞÊ²÷áËÆµÄ¡£\n");
+                 "é›–èªªæ˜¯å€‹å°å­©,ä½†ä»–æ€éº¼çœ‹éƒ½æ¯”ä½ è€ã€‚ä»–æ­£çœ‹è‘—ç‰†ä¸Šçš„ç¬¦è™Ÿï¼Œ\n"
+                 "å£ä¸­å”¸å”¸æœ‰è©ï¼Œå¥½åƒåœ¨èƒŒèª¦ä»€éº¼ä¼¼çš„ã€‚\n");
 
         set( "alignment",-10);
         set( "gender", "male" );
         set( "race", "gnome" );
-        set( "unit", "¸ö" );
+        set( "unit", "å€‹" );
 	set_perm_stat( "str", 5 );
 	set ("wealth", ([ "gold": 3 ]) );
 	set_natural_weapon(3,1,4);

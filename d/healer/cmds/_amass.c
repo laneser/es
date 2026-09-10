@@ -1,4 +1,4 @@
-// Æø¶ÜÊõ
+// æ°£ç›¾è¡“
 //
 //		Lilia
 
@@ -27,19 +27,19 @@ int cmd_amass()
 
     skill = me->query("dou-in");
     if (!skill)
-	return notify_fail("Äã»¹Ã»Á·¹ýÆø¹¦£¬Ã»ÓÐ°ì·¨¾ÛÆø¡£\n");
+	return notify_fail("ä½ é‚„æ²’ç·´éŽæ°£åŠŸï¼Œæ²’æœ‰è¾¦æ³•èšæ°£ã€‚\n");
 
     if ((int)me->query("stop_attack") > 0)
-	return notify_fail("( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓÐÍê³É£¬ÎÞ·¨×¨ÐÄ¾ÛÆø¡£ )\n");
+	return notify_fail("( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•å°ˆå¿ƒèšæ°£ã€‚ )\n");
 
     if (!(!(me->query_current_attacker())))
-	return notify_fail("Äã»¹ÔÚÕ½¶·ÖÐ£¬Ã»Ê±¼äÍ£ÏÂÀ´¾ÛÆø¡£\n");
+	return notify_fail("ä½ é‚„åœ¨æˆ°é¬¥ä¸­ï¼Œæ²’æ™‚é–“åœä¸‹ä¾†èšæ°£ã€‚\n");
 
     if (me->query_temp("no_concentrate"))
-	return notify_fail("ÄãµÄ×¢ÒâÁ¦»¹²»ÄÜ¼¯ÖÐ£¬ÎÞ·¨¾ÛÆø¡£\n");
+	return notify_fail("ä½ çš„æ³¨æ„åŠ›é‚„ä¸èƒ½é›†ä¸­ï¼Œç„¡æ³•èšæ°£ã€‚\n");
 
     if (me->query("spell_points") < SP_COST)
-	return notify_fail("ÄãµÄÕæÆø²»×ã£¬ÎÞ·¨¾ÛÆø¡£\n");
+	return notify_fail("ä½ çš„çœŸæ°£ä¸è¶³ï¼Œç„¡æ³•èšæ°£ã€‚\n");
 
     if (me->query("npc"))
 	delay_time = 0;
@@ -47,9 +47,9 @@ int cmd_amass()
 	delay_time = 3;
 
     me->block_attack(delay_time);
-    me->set_temp("msg_stop_attack", "( ÄãÕýÔÚ×¨ÐÄ¾ÛÆø£¬Ã»°ì·¨×öÆäËûÊÂ! )\n");
-    tell_object(me, "Äã±ÕÄ¿ÄýÉñ£¬¿ªÊ¼¾ÛÆø ...\n");
-    tell_room(environment(me), me->query("c_name")+"±ÕÄ¿ÄýÉñ£¬¿ªÊ¼¾ÛÆø ...\n", me);
+    me->set_temp("msg_stop_attack", "( ä½ æ­£åœ¨å°ˆå¿ƒèšæ°£ï¼Œæ²’è¾¦æ³•åšå…¶ä»–äº‹! )\n");
+    tell_object(me, "ä½ é–‰ç›®å‡ç¥žï¼Œé–‹å§‹èšæ°£ ...\n");
+    tell_room(environment(me), me->query("c_name")+"é–‰ç›®å‡ç¥žï¼Œé–‹å§‹èšæ°£ ...\n", me);
     call_out("effect", delay_time, me);
     return 1;
 }
@@ -59,11 +59,11 @@ void effect(object me)
     int duration, sp;
 
     if (me->query_temp("effect/protect"))
-	tell_object(me, "Ò»ÕóÎ¢·çÇáÇáµØ·÷ÔÚÄãµÄÁ³ÉÏ£¬ÁîÄã¾õµÃÊ®·ÖÇåË¬ ...\n");
+	tell_object(me, "ä¸€é™£å¾®é¢¨è¼•è¼•åœ°æ‹‚åœ¨ä½ çš„è‡‰ä¸Šï¼Œä»¤ä½ è¦ºå¾—ååˆ†æ¸…çˆ½ ...\n");
     else
-	tell_object(me, "Ò»ÕóÐý·çºôÓ¦ÖøÄãÌåÄÚÕæÆøµÄÁ÷¶¯£¬Î§ÈÆÔÚÄãµÄËÄÖÜÐÎ³ÉÁËÆø¶Ü±£»¤ÖøÄã!\n");
+	tell_object(me, "ä¸€é™£æ—‹é¢¨å‘¼æ‡‰è‘—ä½ é«”å…§çœŸæ°£çš„æµå‹•ï¼Œåœç¹žåœ¨ä½ çš„å››å‘¨å½¢æˆäº†æ°£ç›¾ä¿è­·è‘—ä½ !\n");
 
-    tell_room(environment(me), "ËÆºõÓÐÒ»Õó·çÎ§ÈÆÔÚ"+me->query("c_name")+"µÄËÄÖÜ ... ¸Ã²»»áÊÇ´í¾õ°É? ...\n", me);
+    tell_room(environment(me), "ä¼¼ä¹Žæœ‰ä¸€é™£é¢¨åœç¹žåœ¨"+me->query("c_name")+"çš„å››å‘¨ ... è©²ä¸æœƒæ˜¯éŒ¯è¦ºå§? ...\n", me);
 
     duration = me->query_stat("pie") * 3 + 50;
     me->set_temp("extra_db/protect", (int)me->query("dou-in"));
@@ -81,7 +81,7 @@ void expire(object me)
 {
     if (!me) return;
 
-    tell_object(me, "Äã¾õµÃËÄÖÜµÄ·çÊÆÐ¡ÁËÏÂÀ´£¬Æø¶ÜÏûÊ§ÁË ...\n");
+    tell_object(me, "ä½ è¦ºå¾—å››å‘¨çš„é¢¨å‹¢å°äº†ä¸‹ä¾†ï¼Œæ°£ç›¾æ¶ˆå¤±äº† ...\n");
 
     me->delete_temp("extra_db/protect");
     me->delete_temp("extra_ac/protect");

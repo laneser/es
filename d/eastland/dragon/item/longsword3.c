@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "occult longsword", "ÉñÃØ³¤½£" );
+        set_name( "occult longsword", "ç¥ç§˜é•·åŠ" );
         add( "id",({ "sword", "longsword" }) );
-        set_short( "ÉñÃØ³¤½£" );
+        set_short( "ç¥ç§˜é•·åŠ" );
         set_long(
-            "ÕâÊÇ°ÑÉñÃØ³¤½£¡£\n"
+            "é€™æ˜¯æŠŠç¥ç§˜é•·åŠã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 25 );
         set( "type", "longblade" );
         set( "min_damage", 15 );

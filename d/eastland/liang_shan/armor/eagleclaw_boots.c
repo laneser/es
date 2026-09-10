@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("eagle boots", "ӥצƤ�ķ�Ǭ��ѥ");
+        set_name("eagle boots", "鷹爪皮四縫乾黃靴");
         add( "id", ({ "boots" }) );
-        set_short("eagle boots", "ӥצƤ�ķ�Ǭ��ѥ");
+        set_short("eagle boots", "鷹爪皮四縫乾黃靴");
         set_long(
                 "This is a pair of boots made of skin of eagle's claw .\n",
-                "���ǰ�����ӥ��צ�ϵ�ƤɹǬ�Ƴɵ�Ь�ӣ��������е��ζ��\n"
+                "這是剝下老鷹腳爪上的皮曬乾製成的鞋子，聞起來有點怪味．\n"
         );
-        set( "unit", "˫");
+        set( "unit", "雙");
         set( "type", "feet" );
         set( "material", "leather");
         set( "armor_class", 4 );

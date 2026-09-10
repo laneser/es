@@ -6,11 +6,11 @@ void create()
 {
         ::create();
         set_level(19);
-        set_name( "demogorgod", "星月" );
+        set_name( "demogorgod", "鏄熸湀" );
         add ("id", ({ "demogorgod" }) );
-        set_short("魔神战团团长  星月");
+        set_short("榄旂鎴板湗鍦橀暦  鏄熸湀");
         set_long(
-                "你杀了它一定变成世界上最邪恶的人。\n"
+                "浣犳浜嗗畠涓�瀹氳畩鎴愪笘鐣屼笂鏈�閭儭鐨勪汉銆俓n"
         );
         set_perm_stat("str", 30 );
         set_perm_stat("con", 25 );

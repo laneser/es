@@ -293,18 +293,18 @@ varargs void invoke_thunder(string who)
 	for( i=0; i<sizeof(usr); i++ )
 		if( !present(usr[0], environment(usr[i])) )
 			tell_object( usr[i], 
-				"\nÄã¿´µ½Ìì¿ÕÖĞÒ»µÀµç¹â£¬½ô½ÓÖø¡¸ºäÂ¡¡¹Ò»ÉùÕğ¶úÓûÁûµÄÀ×Éù£¡\n");
+				"\nä½ çœ‹åˆ°å¤©ç©ºä¸­ä¸€é“é›»å…‰ï¼Œç·Šæ¥è‘—ã€Œè½Ÿéš†ã€ä¸€è²éœ‡è€³æ¬²è¾çš„é›·è²ï¼\n");
 
 	// The possibility of being hit: align -400: 30%, align -5000: 100%, linear.
 	if( random(100) < 30 - 70 * ((int)usr[0]->query("alignment") + 400) / 4600 ) {
 		if( environment(usr[0])->query("outside") ) {
 			tell_room( environment(usr[0]), 
-				"\nÄã¿´µ½Ìì¿ÕÖĞÒ»µÀµç¹â£¬½ô½ÓÖø¡¸ºäÂ¡¡¹Ò»µÀÀ×µçĞ®Íò¾ûÖ®ÊÆÓÉÌì¶ø½µ£¬´òÔÚ\n"
-				"\nÄãÃæÇ°µÄ" + usr[0]->query("c_name") + "Í·ÉÏ£¡\n",
+				"\nä½ çœ‹åˆ°å¤©ç©ºä¸­ä¸€é“é›»å…‰ï¼Œç·Šæ¥è‘—ã€Œè½Ÿéš†ã€ä¸€é“é›·é›»æŒ¾è¬éˆä¹‹å‹¢ç”±å¤©è€Œé™ï¼Œæ‰“åœ¨\n"
+				"\nä½ é¢å‰çš„" + usr[0]->query("c_name") + "é ­ä¸Šï¼\n",
 				usr[0] );
 			tell_object( usr[0], 
-				"\nÍ»È»£¬Ò»µÀÉÁµçÓÉÌì¶ø½µ£¬ÕıÖĞÄãµÄÍ·¶¥£¬ÄãµÄÑÛÇ°Ò»Õó½ğĞÇÂÒÃ°£¬È»ááÊÇ\n"
-				"\nÈ«Éí¾çÍ´ºÍÒ»¹É½¹Î¶ ....\n");
+				"\nçªç„¶ï¼Œä¸€é“é–ƒé›»ç”±å¤©è€Œé™ï¼Œæ­£ä¸­ä½ çš„é ­é ‚ï¼Œä½ çš„çœ¼å‰ä¸€é™£é‡‘æ˜Ÿäº‚å†’ï¼Œç„¶å¾Œæ˜¯\n"
+				"\nå…¨èº«åŠ‡ç—›å’Œä¸€è‚¡ç„¦å‘³ ....\n");
 
 			if( (obj = usr[0]->query_attacker()) && obj->query("alignment") < 0 )
 				usr[0]->receive_special_damage( "electric", 70 );
@@ -312,26 +312,26 @@ varargs void invoke_thunder(string who)
 				usr[0]->receive_special_damage( "electric", 100 );
 			for( i=0; i<sizeof(usr); i++ )
 				tell_object( usr[i],
-					"\nÌì¿ÕÖĞÒ»¸öÉùÒôËµµÀ: ¶àĞĞ²»Òå£¬±ØÔâÌìÇ´£¬½ñÈÕ³Í´¦" + 
-					STATS_D->alignment_string(usr[0]->query("alignment"))+"Ö®Í½: " 
-					+ usr[0]->query("c_name") + "\n         Ò»Ãû£¬ÒÔ×÷ÊÀÈË¾¯Ìè ....¡¡\n\n");
+					"\nå¤©ç©ºä¸­ä¸€å€‹è²éŸ³èªªé“: å¤šè¡Œä¸ç¾©ï¼Œå¿…é­å¤©è­´ï¼Œä»Šæ—¥æ‡²è™•" + 
+					STATS_D->alignment_string(usr[0]->query("alignment"))+"ä¹‹å¾’: " 
+					+ usr[0]->query("c_name") + "\n         ä¸€åï¼Œä»¥ä½œä¸–äººè­¦æƒ• ....ã€€\n\n");
 		}
 	} else {
 	/* give more chance to aviod the thunder.     -EGA */
 		if( environment(usr[0])->query("outside") ) {
 			tell_room( environment(usr[0]), 
-				"\nÄã¿´µ½Ìì¿ÕÖĞÒ»µÀµç¹â£¬½ô½ÓÖø¡¸ºäÂ¡¡¹Ò»µÀÀ×µçĞ®Íò¾ûÖ®ÊÆÓÉÌì¶ø½µ£¬´òÔÚ\n"
-				"\nÄãÃæÇ°µÄ" + usr[0]->query("c_name") + "ÉíÅÔ£¡\n",
+				"\nä½ çœ‹åˆ°å¤©ç©ºä¸­ä¸€é“é›»å…‰ï¼Œç·Šæ¥è‘—ã€Œè½Ÿéš†ã€ä¸€é“é›·é›»æŒ¾è¬éˆä¹‹å‹¢ç”±å¤©è€Œé™ï¼Œæ‰“åœ¨\n"
+				"\nä½ é¢å‰çš„" + usr[0]->query("c_name") + "èº«æ—ï¼\n",
 				usr[0] );
 			tell_object( usr[0], 
-				"\nÍ»È»£¬Ò»µÀÉÁµçÓÉÌì¶ø½µ£¬´òÔÚÄãµÄÉíÅÔ£¬¾Ş´óµÄÏìÉùÔÚÄã¶úÖĞ»ØÏì²»ÒÑ£¬¹ı\n"
-				"\nÁËºÃÒ»Õó×Ó²ÅÂıÂıÉ¢È¥...\n");
+				"\nçªç„¶ï¼Œä¸€é“é–ƒé›»ç”±å¤©è€Œé™ï¼Œæ‰“åœ¨ä½ çš„èº«æ—ï¼Œå·¨å¤§çš„éŸ¿è²åœ¨ä½ è€³ä¸­è¿´éŸ¿ä¸å·²ï¼Œé\n"
+				"\näº†å¥½ä¸€é™£å­æ‰æ…¢æ…¢æ•£å»...\n");
 
 			for( i=0; i<sizeof(usr); i++ )
 				tell_object( usr[i], 
-					"\nÌì¿ÕÖĞÒ»¸öÉùÒôËµµÀ: ¶àĞĞ²»Òå£¬±ØÔâÌìÇ´£¬½ñÈÕ¾¯Ê¾" + 
-					STATS_D->alignment_string(usr[0]->query("alignment"))+"Ö®Í½: " 
-					+ usr[0]->query("c_name") + "\n         £¬Èô²»»Ú¸Ä£¬ËûÈÕ±Ø±¨£¡\n\n");
+					"\nå¤©ç©ºä¸­ä¸€å€‹è²éŸ³èªªé“: å¤šè¡Œä¸ç¾©ï¼Œå¿…é­å¤©è­´ï¼Œä»Šæ—¥è­¦ç¤º" + 
+					STATS_D->alignment_string(usr[0]->query("alignment"))+"ä¹‹å¾’: " 
+					+ usr[0]->query("c_name") + "\n         ï¼Œè‹¥ä¸æ‚”æ”¹ï¼Œä»–æ—¥å¿…å ±ï¼\n\n");
 
 		}	
 	}
@@ -346,15 +346,15 @@ varargs void call_thunder(string who)
 	if( !sizeof(usr) ) return;
 	for( i=0; i<sizeof(usr); i++ ) {
 		message( "weather", 
-			"\nÄã¿´µ½Ìì¿ÕÖĞµç¹âÉÁÉÁ£¬¼ĞÖøÒ»ÕóÕóÉòÃÆµÄÀ×Éù .....\n\n"
+			"\nä½ çœ‹åˆ°å¤©ç©ºä¸­é›»å…‰é–ƒé–ƒï¼Œå¤¾è‘—ä¸€é™£é™£æ²ˆæ‚¶çš„é›·è² .....\n\n"
 			,usr[i] );
 		if ( (string)usr[i]->query("race") == "beholder" ) {
-			tell_object(usr[i],"ÍÛ !! ÓÖ´òÀ×ÁË !! ¸Ï¿ìÕÒ¸öµØ·½¶ã¶ã¡¡\n");
-			tell_room(environment(usr[i]),sprintf("%sÌıµ½À×Éù¡¡ÏÅµÃÈ«Éí¶¼×ª³ÉÂÌÉ«¡¡\n",usr[i]->query("c_name")),usr[i]);
+			tell_object(usr[i],"å“‡ !! åˆæ‰“é›·äº† !! è¶•å¿«æ‰¾å€‹åœ°æ–¹èº²èº²ã€€\n");
+			tell_room(environment(usr[i]),sprintf("%sè½åˆ°é›·è²ã€€åš‡å¾—å…¨èº«éƒ½è½‰æˆç¶ è‰²ã€€\n",usr[i]->query("c_name")),usr[i]);
 		}
 		else if ( (string)usr[i]->query("race") == "shapeshifter" ) {
 			usr[i]->drop_eq();
-			tell_room(environment(usr[i]),sprintf("%sÏÅÁËÒ»´óÌø¡¡ÉíÉÏµÄ×°±¸¶£¶£µ±µ±µÄµôÁËÒ»µØ¡¡\n",usr[i]->query("c_name")),usr[i]);
+			tell_room(environment(usr[i]),sprintf("%såš‡äº†ä¸€å¤§è·³ã€€èº«ä¸Šçš„è£å‚™å®å®å™¹å™¹çš„æ‰äº†ä¸€åœ°ã€€\n",usr[i]->query("c_name")),usr[i]);
 		}
 	}
 	call_out( "invoke_thunder", 10, who );
@@ -520,14 +520,14 @@ varargs string query_weather_msg(int chinese_mode)
 
 	str = "" ;
 	if (!weather_states[current_state]["inclement"]) 
-		str = sprintf("%s%s£¬",str, day_phases[current_phase]["c_look_msg"] );
+		str = sprintf("%s%sï¼Œ",str, day_phases[current_phase]["c_look_msg"] );
 	
 	str += weather_states[current_state]["c_look_msg"];
 	if(!day_phases[current_phase]["daylight"] &&
 		!weather_states[current_state]["inclement"]) 
-		str = sprintf("%s£¬%s",str,moon_phases[current_moon_phase]["c_look_msg"]);
+		str = sprintf("%sï¼Œ%s",str,moon_phases[current_moon_phase]["c_look_msg"]);
 	else
-		str += "¡¡";
+		str += "ã€€";
 	if(strlen(str)>50)
 		return extract(str, 0, 59) + "\n" + extract(str, 60) + "\n";
 	else return wrap(str, 70);
@@ -559,16 +559,16 @@ string query_c_game_time() {
 	k = i % 3600 ;
 	k = k / 60 ;
 //	if( j > 23 ) j = 0;
-	if( j < 4 ) msg = "ÉîÒ¹";
-	else if( j < 6 ) msg = "Áè³¿";
-	else if( j < 9 ) msg = "ÔçÉÏ";
-	else if( j < 12 ) msg = "ÉÏÎç";
-	else if( j < 17 ) msg = "ÏÂÎç";
-	else if( j < 19 ) msg = "°øÍí";
-	else if( j < 23 ) msg = "ÍíÉÏ";
-	else msg = "Ò¹Íí";
+	if( j < 4 ) msg = "æ·±å¤œ";
+	else if( j < 6 ) msg = "å‡Œæ™¨";
+	else if( j < 9 ) msg = "æ—©ä¸Š";
+	else if( j < 12 ) msg = "ä¸Šåˆ";
+	else if( j < 17 ) msg = "ä¸‹åˆ";
+	else if( j < 19 ) msg = "å‚æ™š";
+	else if( j < 23 ) msg = "æ™šä¸Š";
+	else msg = "å¤œæ™š";
 	if( j > 12 ) j -= 12;
-	return sprintf("Íõ¹úÀú %d Äê£¬%s %d ÈÕ£¬%s %d Ê± %d ·Ö",current_year,
+	return sprintf("ç‹åœ‹æ›† %d å¹´ï¼Œ%s %d æ—¥ï¼Œ%s %d æ™‚ %d åˆ†",current_year,
 	months[current_month]["c_name"], current_day, msg, j, k );
 }
 

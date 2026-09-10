@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "demonic dagger", "¶ñÄ§Ø°Ê×" );
+        set_name( "demonic dagger", "æƒ¡é­”åŒ•é¦–" );
         add( "id",({ "dagger"}) );
-        set_short( "¶ñÄ§Ø°Ê×" );
+        set_short( "æƒ¡é­”åŒ•é¦–" );
         set_long(
-            "ÕâÊÇ¶ñÄ§Ğ¡ÍµµÄ×¨ÓÃÎäÆ÷¡£\n"
+            "é€™æ˜¯æƒ¡é­”å°å·çš„å°ˆç”¨æ­¦å™¨ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 17 );
         set( "type", "dagger" );
         set( "min_damage", 8 );

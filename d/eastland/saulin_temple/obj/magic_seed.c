@@ -4,15 +4,15 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "Relic of Damo", "´ïÄ¦ÉáÀû×Ó" );
+	set_name( "Relic of Damo", "é”æ‘©èˆåˆ©å­" );
 	add( "id", ({ "relic" }) );
-	set_short( "´ïÄ¦ÉáÀû×Ó" );
+	set_short( "é”æ‘©èˆåˆ©å­" );
 	set_long(@C_LONG
-ÕâËäÈ»Ö»ÊÇ¿ÅÐ¡Ð¡µÄÉáÀû×Ó£¬µ«ÉÏÃæ±¦¹âÁ÷¶¯£¬ÏÔµÃÊ®·Ö²»Æ½·²£¬¾ÝËµ
-Ëü¿ÉÒÔµÖÓùÈýÃÁÕæ»ð¡£ÒªÊ¹ÓÃÉáÀû×Ó£¬ÓÃ throw <someone>¡£
+é€™é›–ç„¶åªæ˜¯é¡†å°å°çš„èˆåˆ©å­ï¼Œä½†ä¸Šé¢å¯¶å…‰æµå‹•ï¼Œé¡¯å¾—ååˆ†ä¸å¹³å‡¡ï¼Œæ“šèªª
+å®ƒå¯ä»¥æŠµç¦¦ä¸‰æ˜§çœŸç«ã€‚è¦ä½¿ç”¨èˆåˆ©å­ï¼Œç”¨ throw <someone>ã€‚
 C_LONG
 	        );
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "weight", 5 );
 	set( "value", ({ 100, "silver" }) );
 	set( "no_sale", 1 );
@@ -28,28 +28,28 @@ int do_throw(string arg)
 	object obj;
 
 	if( !arg )
-		return notify_fail("ÒªÓÃÉáÀû×Ó¶ªË­£¿\n");
+		return notify_fail("è¦ç”¨èˆåˆ©å­ä¸Ÿèª°ï¼Ÿ\n");
 	if( !( obj = present(arg, environment(this_player())) ) )
-		return notify_fail( "ÕâÀïÃ»Õâ¸öÈË¡£\n");
+		return notify_fail( "é€™è£¡æ²’é€™å€‹äººã€‚\n");
 	if( undefinedp(obj->query("zapped")) ) {
 		write( 
-			"ÄãÄÃ³öÉáÀû×Ó¶ªÏò"+obj->query("c_short")+"£¬²»¹ý¶Ô·½ËÆºõ²»ÊÜÓ°Ïì¡£\n"
+			"ä½ æ‹¿å‡ºèˆåˆ©å­ä¸Ÿå‘"+obj->query("c_short")+"ï¼Œä¸éŽå°æ–¹ä¼¼ä¹Žä¸å—å½±éŸ¿ã€‚\n"
 		);
 		tell_room( environment(this_player()), 
 			this_player()->query("c_name")+
-			"ÄÃ³öÒ»¿ÅÐ¡Ð¡µÄ¶«Î÷¶ªÏò"+obj->query("c_short")+"¡£\n"
+			"æ‹¿å‡ºä¸€é¡†å°å°çš„æ±è¥¿ä¸Ÿå‘"+obj->query("c_short")+"ã€‚\n"
 			, this_player()
 		);
 	} else {
 		write( 
-			"ÄãÄÃ³öÉáÀû×Ó¶ªÏò"+obj->query("c_short")+".... \n" 
+			"ä½ æ‹¿å‡ºèˆåˆ©å­ä¸Ÿå‘"+obj->query("c_short")+".... \n" 
 		);
 		tell_room( environment(this_player()), 
 			 this_player()->query("c_name")+
-			"ÄÃ³öÒ»¿ÅÉáÀû×Ó¶ªÏò"+obj->query("c_short")+"¡£\n"
+			"æ‹¿å‡ºä¸€é¡†èˆåˆ©å­ä¸Ÿå‘"+obj->query("c_short")+"ã€‚\n"
 			, this_player()
 		);
-		write( "ÄãµÄÉáÀû×ÓÖ±Ö±µÄÏò"+obj->query("c_short")+"µÄÃæÃÅ´òÈ¥¡£\n");
+		write( "ä½ çš„èˆåˆ©å­ç›´ç›´çš„å‘"+obj->query("c_short")+"çš„é¢é–€æ‰“åŽ»ã€‚\n");
 		obj->zapped();
 		remove();
 	}

@@ -1,21 +1,21 @@
 #d/noden/farwind/bugsboard.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈË±¨¸æ BUGS ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£
-ÓÉì¶ ES ÊÇÊôì¶´ó¼ÒµÄ£¬Òò´ËÏ£ÍûÈÎºÎÈË¶¼ÔÚ´Ë±¨¸æËù·¢ÏÖµÄ BUGS ¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ÁôÑÔ°å",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"ES bugs board","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººå ±å‘Š BUGS ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚
+ç”±æ–¼ ES æ˜¯å±¬æ–¼å¤§å®¶çš„ï¼Œå› æ­¤å¸Œæœ›ä»»ä½•äººéƒ½åœ¨æ­¤å ±å‘Šæ‰€ç™¼ç¾çš„ BUGS ã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ES BUGS ç•™è¨€æ¿",])
 messages ({(["id":1,"title":"plaster problem","body":"There are one problem while we apply plaster.
 Please God add a alert show to us while plaster become no use like bandage.
 	Thanks!		My dear God & Wizard
-","time":765278734,"poster":"Pc",]),(["id":2,"title":"< no title >","body":"The book store location has a bug, book store go 2e is Â¶ÌìÓ¢ĞÛ¼ÍÄî¹İ, but Â¶ÌìÓ¢ĞÛ¼ÍÄî¹İ go 2w is wine shop.
-","time":765312260,"poster":"Rack",]),(["id":3,"title":"Concerning Plaster..","body":"»Ø´ğß÷ß÷µÄÎÊÌâ,
-ÎÒÏëÏÈ·´ÎÊÄã, ÄãÈ·¶¨Äã¶ªµô½şÂúÑªµÄ±Á´øÊ±, ÄÇ±Á´ø»¹ÓĞÓÃÂğ?
-Í¬ÑùµÄ, ÄãÈçºÎ²ÅÄÜÖªµÀ¸àÒ©Ê²÷áÊ±ºò»áÎŞĞ§?
-¸æÊöÄã°É, ÄÃÖ»ÊÖ±í, Ò»Ö±´òhp¶Ô°É :)
+","time":765278734,"poster":"Pc",]),(["id":2,"title":"< no title >","body":"The book store location has a bug, book store go 2e is éœ²å¤©è‹±é›„ç´€å¿µé¤¨, but éœ²å¤©è‹±é›„ç´€å¿µé¤¨ go 2w is wine shop.
+","time":765312260,"poster":"Rack",]),(["id":3,"title":"Concerning Plaster..","body":"å›ç­”å–µå–µçš„å•é¡Œ,
+æˆ‘æƒ³å…ˆåå•ä½ , ä½ ç¢ºå®šä½ ä¸Ÿæ‰æµ¸æ»¿è¡€çš„ç¹ƒå¸¶æ™‚, é‚£ç¹ƒå¸¶é‚„æœ‰ç”¨å—?
+åŒæ¨£çš„, ä½ å¦‚ä½•æ‰èƒ½çŸ¥é“è†è—¥ä»€éº¼æ™‚å€™æœƒç„¡æ•ˆ?
+å‘Šè¿°ä½ å§, æ‹¿éš»æ‰‹è¡¨, ä¸€ç›´æ‰“hpå°å§ :)
 Platino
-ps. ÎÒ»Ø´ğµÄºÃ²»ºÃ :P
+ps. æˆ‘å›ç­”çš„å¥½ä¸å¥½ :P
 ","time":765373391,"poster":"Platino",]),(["id":4,"title":"< no title >","body":"hi platino
-  ÄÇÎÊÌâÊÇpcÎÊµÄ²»ÊÇÎÒÀ²:p
-  ß÷ß÷
+  é‚£å•é¡Œæ˜¯pcå•çš„ä¸æ˜¯æˆ‘å•¦:p
+  å–µå–µ
 
 ","time":765376339,"poster":"Chameleon",]),(["id":5,"body":"as title .....
 pls fix it . thanks .
@@ -32,14 +32,14 @@ So, I type quit, But i just drop all things on my body and not quit
 And Daliford still k me ,..... to die....cry....
 God,plz fix this bug and recover my data before die
 Finger
-","title":"< no title >","time":765480023,"poster":"Finger",]),(["id":8,"title":"< no title >","body":"ÎØ~~~ ÎÒÌ«Ğ°¶ñÁË... Ä¦ÑÇ´ï³ÇµÄÊ×ÎÀ²»ÈÃÎÒ½øÈ¥...
-²»¸ø½øÒ²¾ÍËãÁË, »¹²»ÈÃÎÒ³öÀ´, Ö»ºÃ QUIT  :~~(
-ÕâÕâ...ÕâÊÇ¸ö BUG Âğ?
-¿´À´ÔÚ ES ²»ÄÜµ±»µÈË :(
+","title":"< no title >","time":765480023,"poster":"Finger",]),(["id":8,"title":"< no title >","body":"å—š~~~ æˆ‘å¤ªé‚ªæƒ¡äº†... æ‘©äºé”åŸçš„é¦–è¡›ä¸è®“æˆ‘é€²å»...
+ä¸çµ¦é€²ä¹Ÿå°±ç®—äº†, é‚„ä¸è®“æˆ‘å‡ºä¾†, åªå¥½ QUIT  :~~(
+é€™é€™...é€™æ˜¯å€‹ BUG å—?
+çœ‹ä¾†åœ¨ ES ä¸èƒ½ç•¶å£äºº :(
 ","time":765533672,"poster":"Kelvin",]),(["id":9,"title":"< no title >","body":"Dear Gods...
-     ÓĞÒ»´ÎÎÒÔÚ¾«Áé´åÍâ±»»ğ÷è÷ëÉ±ÁË....ÄÇÊ±¸ÕÂôÍêfighter£¬ËùÒÔÃ»´©ÈÎºÎµÄ¶«Î÷...Á½ÈıÏÂ¾ÍËÀÁË...
-ÕâÊÇ¹ÊÒâÈÃËü´Ó¾«Áé´å³öÀ´µÄÂğ£¿Èç¹ûÊÇ¾ÍÈÏÁË£¬Èç¹û²»ÊÇ...¿ÉÒÔ»Ö¸´ÒÔÇ°µÄÊôĞÔÂğ£¿
-ÎÒÆäËü¶¼²»Òª£¬Ö»Òªstr and con ¾ÍºÃÁË...Èç¹û¿ÉÒÔ...·½±ãµÄ»°...
+     æœ‰ä¸€æ¬¡æˆ‘åœ¨ç²¾éˆæ‘å¤–è¢«ç«éº’éºŸæ®ºäº†....é‚£æ™‚å‰›è³£å®Œfighterï¼Œæ‰€ä»¥æ²’ç©¿ä»»ä½•çš„æ±è¥¿...å…©ä¸‰ä¸‹å°±æ­»äº†...
+é€™æ˜¯æ•…æ„è®“å®ƒå¾ç²¾éˆæ‘å‡ºä¾†çš„å—ï¼Ÿå¦‚æœæ˜¯å°±èªäº†ï¼Œå¦‚æœä¸æ˜¯...å¯ä»¥æ¢å¾©ä»¥å‰çš„å±¬æ€§å—ï¼Ÿ
+æˆ‘å…¶å®ƒéƒ½ä¸è¦ï¼Œåªè¦str and con å°±å¥½äº†...å¦‚æœå¯ä»¥...æ–¹ä¾¿çš„è©±...
                          thanks god...:)
 ","time":765605546,"poster":"Phonix",]),(["id":12,"title":"< no title >","body":"Wa.....   BUG with advance pie
 Dear  Wiz:    when I advance pie, I type wrong, I type \"advance piee\", then I lost my exp!  :(  and pie not raise!
@@ -57,15 +57,15 @@ I think the introduction of \"cast\" should be modified too...:)
 ","title":"< no title >","time":766600778,"poster":"Linus",]),(["id":17,"body":"
 bug of defense?
  why can't I defense none?  :(
-","title":"< no title >","time":766605355,"poster":"Lady",]),(["id":18,"title":"< no title >","body":"'cost' Ö¸ÁîÖ»ÄÜ¿´µ½ train skills ËùĞè¾­ÑéµãÊı, ¿´²»µ½Éı¼¶ÒÔ¼° advance ¸öÖÖÊôĞÔËùĞèµãÊı....
+","title":"< no title >","time":766605355,"poster":"Lady",]),(["id":18,"title":"< no title >","body":"'cost' æŒ‡ä»¤åªèƒ½çœ‹åˆ° train skills æ‰€éœ€ç¶“é©—é»æ•¸, çœ‹ä¸åˆ°å‡ç´šä»¥åŠ advance å€‹ç¨®å±¬æ€§æ‰€éœ€é»æ•¸....
 ","time":766663923,"poster":"Kelvin",]),(["id":19,"title":"< no title >","body":"I can't use 'apply plaster 2(or 3 or 4...)', just can 'apply plaster'. Plz fix it :)
-","time":766665255,"poster":"Kelvin",]),(["id":20,"body":"Ã°ÏÕÕß¹«»áÏÂ·½µÄÇò²»ÄÜ¶Á£¬²»ÄÜ¿´
+","time":766665255,"poster":"Kelvin",]),(["id":20,"body":"å†’éšªè€…å…¬æœƒä¸‹æ–¹çš„çƒä¸èƒ½è®€ï¼Œä¸èƒ½çœ‹
 ","title":"< no title >","time":766692972,"poster":"Tung",]),(["id":21,"title":"Re: < no title >","body":"On Tue Apr 19, Tung wrote:
-> Ã°ÏÕÕß¹«»áÏÂ·½µÄÇò²»ÄÜ¶Á£¬²»ÄÜ¿´
+> å†’éšªè€…å…¬æœƒä¸‹æ–¹çš„çƒä¸èƒ½è®€ï¼Œä¸èƒ½çœ‹
 ok, It fixed, thanx
                      Kyoko.
-","time":766737908,"poster":"Kyoko",]),(["id":22,"body":"µ±ÆïÊ¿defend áá,disband and disconnect .
-µ±ÆäËûÈË¿ªÊ¼¹¥»÷,Ôòdisconnect µÄÆïÊ¿±»¹¥»÷²»»áËğÑª..
-","title":"< no title >","time":767023805,"poster":"Ra",]),(["id":23,"title":"< no title >","body":"BUG....ÎŞ·¨Ê¹ÓÃ¹«»á½»Ì¸Ö¸Áî chat...:~~~
+","time":766737908,"poster":"Kyoko",]),(["id":22,"body":"ç•¶é¨å£«defend å¾Œ,disband and disconnect .
+ç•¶å…¶ä»–äººé–‹å§‹æ”»æ“Š,å‰‡disconnect çš„é¨å£«è¢«æ”»æ“Šä¸æœƒæè¡€..
+","title":"< no title >","time":767023805,"poster":"Ra",]),(["id":23,"title":"< no title >","body":"BUG....ç„¡æ³•ä½¿ç”¨å…¬æœƒäº¤è«‡æŒ‡ä»¤ chat...:~~~
 ","time":767142011,"poster":"Jschen",]),})
 id_ref 33

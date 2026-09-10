@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "snow platemail", "Ñ©¿ø" );
+	set_name( "snow platemail", "é›ªç›”" );
 	add( "id", ({ "plate", "platemail" }) );
-	set_short(  "Ñ©¿ø" );
+	set_short(  "é›ªç›”" );
 	set_long( 
              @LONG
-Õâ¼ş¿ø¼×ÊÇÔÚ¼«±±Ö®µØÒÔ±ùÑ©Ö®¾«¼ÓÉÏ¾«¸Ö¡õ³É£¬¾İËµÍêÈ«²»¾åº®Àä»òÊÇ±ùÑ©¹¥»÷¡£
+é€™ä»¶ç›”ç”²æ˜¯åœ¨æ¥µåŒ—ä¹‹åœ°ä»¥å†°é›ªä¹‹ç²¾åŠ ä¸Šç²¾é‹¼â–¡æˆï¼Œæ“šèªªå®Œå…¨ä¸æ‡¼å¯’å†·æˆ–æ˜¯å†°é›ªæ”»æ“Šã€‚
 LONG
 	);
-	set( "unit", "Ì×" );
+	set( "unit", "å¥—" );
 	set( "type", "body" );
 	set( "material", "heavy_metal");
 	set( "armor_class", 28 );

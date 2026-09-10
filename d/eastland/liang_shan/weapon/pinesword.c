@@ -5,14 +5,14 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("pine sword","ËÉÎÄ¹Å¶¨½£");
+       set_name("pine sword","æ¾æ–‡å¤å®šåŠ");
        add("id",({"sword","pinesword",}) );
-       set_short("ËÉÎÄ¹Å¶¨½£");
+       set_short("æ¾æ–‡å¤å®šåŠ");
 	   set_long(
-           "Ò»°ÑÉÏÃæÓĞÖøËÉÊ÷»¨ÎÆµÄ¹Å´úÄ¾½££¬Äê´úËÆºõÏàµ±¾ÃÔ¶£®\n"
+           "ä¸€æŠŠä¸Šé¢æœ‰è‘—æ¾æ¨¹èŠ±ç´‹çš„å¤ä»£æœ¨åŠï¼Œå¹´ä»£ä¼¼ä¹ç›¸ç•¶ä¹…é ï¼\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 35 );
         set("type","longblade");
 	set( "min_damage", 20 );

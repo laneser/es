@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "fan", "ÆÑÉÈ" );
-	set_short( "ÆÑÉÈ" );
+	set_name( "fan", "è’²æ‰‡" );
+	set_short( "è’²æ‰‡" );
 	set_long(@LONG
-Ò»ÃæÔìĞÍÇáÇÉµÄ»¨ÉÈ£¬ÉÏĞåÖøôæôæ·ÉÎèµÄºû¡õ¡£
+ä¸€é¢é€ å‹è¼•å·§çš„èŠ±æ‰‡ï¼Œä¸Šç¹¡è‘—ç¿©ç¿©é£›èˆçš„è´â–¡ã€‚
 LONG
 	);
-	set( "unit","Ãæ");
+	set( "unit","é¢");
 	set( "type", "blunt" );
 	set( "weapon_class", 20 );
 	set( "min_damage", 15 );

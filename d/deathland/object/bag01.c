@@ -5,11 +5,11 @@ inherit CONTAINER;
 void create()
 {
 	::create();
-	set_name("shadow bag", "»ÃÓ°´ü");
+	set_name("shadow bag", "å¹»å½±è¢‹");
 	add( "id", ({ "bag" }) );
-	set_short("»ÃÓ°´ü");
-	set_c_open_long("ÕâÊÇÒ»¸ö»ÃÓ°´ü .µ±Äã´ò¿ªËüÏëÒª¿´ÇåËüµÄÈİÁ¿Ê± ,Äã·¢ÏÖÀïÃæÊÇÒ»ÍÅÆáºÚ,\n"
-	                "Éî²»¼ûµ×.\n"
+	set_short("å¹»å½±è¢‹");
+	set_c_open_long("é€™æ˜¯ä¸€å€‹å¹»å½±è¢‹ .ç•¶ä½ æ‰“é–‹å®ƒæƒ³è¦çœ‹æ¸…å®ƒçš„å®¹é‡æ™‚ ,ä½ ç™¼ç¾è£¡é¢æ˜¯ä¸€åœ˜æ¼†é»‘,\n"
+	                "æ·±ä¸è¦‹åº•.\n"
 	                );
 	set("weight", 15);
 	set("weight_apply", 40 );

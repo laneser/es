@@ -26,31 +26,31 @@ int cmd_enhant(string str)
 
         if( str == "stop" ) {
                 write( 
-                        "ÄãÍ£Ö¹ÔËÓÃÈÎºÎÎä¹¦\¡£\n");
+                        "ä½ åœæ­¢é‹ç”¨ä»»ä½•æ­¦åŠŸ\ã€‚\n");
                 me->delete("attack_skill");
                 me->delete("defense_skill");
                 return 1;
         }
 
         if( member_array(str, gonfus) == -1 )
-                return notify_fail("ÒÉ! ÕâÊÇÄÇÒ»ÖÖ¹¦\·ò ? \n");
+                return notify_fail("ç–‘! é€™æ˜¯é‚£ä¸€ç¨®åŠŸå¤« ? \n");
 
         if( (int)me->query("stop_attack")>0 )
                 return notify_fail (
-                        "( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨Ê©Õ¹ÕĞÊ½¡£ )\n");
+                        "( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•æ–½å±•æ‹›å¼ã€‚ )\n");
 
         if( me->query("gonfu_busy") || me->query_temp("gonfu_busy") )
-        return notify_fail("ÄãÄ¿Ç°ÕıÔË¹¦\ËùÒÔÎŞ·¨ÁíÍâÔËÓÃÆäËüÎä¹¦\¡£\n");
+        return notify_fail("ä½ ç›®å‰æ­£é‹åŠŸæ‰€ä»¥ç„¡æ³•å¦å¤–é‹ç”¨å…¶å®ƒæ­¦åŠŸ\ã€‚\n");
 
         if( me->query_temp("stop_enhant") || me->query("stop_enhant") )
-                return notify_fail("ÄãÕı×¼±¸Ê¹ÓÃÕĞÊ½Ê±£¬¾¹È»·¢ÏÖÄãÍ»È»¹¦\Á¦È«Ê§ÁË¡£\n");
+                return notify_fail("ä½ æ­£æº–å‚™ä½¿ç”¨æ‹›å¼æ™‚ï¼Œç«Ÿç„¶ç™¼ç¾ä½ çªç„¶åŠŸåŠ›å…¨å¤±äº†ã€‚\n");
         
         if( undefinedp(level=(int)me->query("scholar_gonfu/"+str)) )
-                return notify_fail("ÒÉ! Äã»áÕâÖÖ¹¦\·ò ? \n");
+                return notify_fail("ç–‘! ä½ æœƒé€™ç¨®åŠŸå¤« ? \n");
 
         code = find_object_or_load(SCHOLAR_GONFU_DIR+str);
         if( !code )
-                return notify_fail("Ã»ÓĞÕâÖÖ¹¦\·ò! ÇëÍ¨ÖªÎ×Ê¦»òÓÃ bug Ö¸Áî±¨¸æÕĞÊ½Ãû³Æ¡£\n");
+                return notify_fail("æ²’æœ‰é€™ç¨®åŠŸå¤«! è«‹é€šçŸ¥å·«å¸«æˆ–ç”¨ bug æŒ‡ä»¤å ±å‘Šæ‹›å¼åç¨±ã€‚\n");
 
         code->enhant(me, level);
         return 1;
@@ -59,9 +59,9 @@ int cmd_enhant(string str)
 int help()
 {
                 write( @C_HELP
-Ö¸Áî¸ñÊ½: enhant <ÕĞÊ½Ãû³Æ>
+æŒ‡ä»¤æ ¼å¼: enhant <æ‹›å¼åç¨±>
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹ÕĞÊ½¡£Äã¿ÉÒÔÓÃ gonfus Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§»áµÄÕĞÊ½ÁĞ±í¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•æ‹›å¼ã€‚ä½ å¯ä»¥ç”¨ gonfus æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸æœƒçš„æ‹›å¼åˆ—è¡¨ã€‚
 C_HELP
                 );
     return 1;

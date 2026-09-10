@@ -1,32 +1,32 @@
 #d/monk/guild/monk_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","spell_points":1,"c_cap_name":"ÁôÑÔ°å","force_points":1,"long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"talk_points":1,"short.text":"ÎäÉ®¹«»áÁôÑÔ°å","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÎäÉ®¹«»áÁôÑÔ°å","endurance_points":1,"hit_points":1,])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","spell_points":1,"c_cap_name":"ç•™è¨€æ¿","force_points":1,"long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"talk_points":1,"short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","endurance_points":1,"hit_points":1,])
 messages ({(["id":362,"title":"Re: < no title >","body":"On Mon Mar 20, Rogue wrote:
 >      Hi dear Angel and monks :
->             ÎÒÃÇ monk can'y pk µÄ rules ÎÒ¾õµÄËÆºöÒª¸ÄÒ»¸ÄÁË!
->          ÏàĞÅ×òÌìÓĞ login µÄ monk ¶¼ÖªµÀ....lzw all pk monk when ex..
->          ÎÒ¾ÍÊÇÔÚ ex Ê±±» pk µÄ, and die ... can't alt+x ...bcz i use 
->          workstation ..alt + z ²ÅÊÇ¶ÏÏß! modem ÓÃÏ°¹ßÁË!...so À´²»¼°!
->          monk ¶¼²»ÄÜ pk ,and be pk ºÃÍæµÄ! sigh ....ºÃĞÄÌÛà¸!
->          Òª¸ĞĞ»¸öÎ» monk help ±¨³ğ...so ¸Ğ¶¯ ..monk ºÜÍÅ½á....
->          ËäÈ» lzw ÊÇ±» karrimor cast 2 fireball 6 k ËÀµÄ........
->          µ«»¹ÊÇ¸ĞĞ»¸÷Î» waste time help to help rogue revenge ...!
->          ÎÒÕæµÄºÜ¸ßĞË play monk ...bcz all monks r good guys...
+>             æˆ‘å€‘ monk can'y pk çš„ rules æˆ‘è¦ºçš„ä¼¼å¿½è¦æ”¹ä¸€æ”¹äº†!
+>          ç›¸ä¿¡æ˜¨å¤©æœ‰ login çš„ monk éƒ½çŸ¥é“....lzw all pk monk when ex..
+>          æˆ‘å°±æ˜¯åœ¨ ex æ™‚è¢« pk çš„, and die ... can't alt+x ...bcz i use 
+>          workstation ..alt + z æ‰æ˜¯æ–·ç·š! modem ç”¨ç¿’æ…£äº†!...so ä¾†ä¸åŠ!
+>          monk éƒ½ä¸èƒ½ pk ,and be pk å¥½ç©çš„! sigh ....å¥½å¿ƒç–¼å–”!
+>          è¦æ„Ÿè¬å€‹ä½ monk help å ±ä»‡...so æ„Ÿå‹• ..monk å¾ˆåœ˜çµ....
+>          é›–ç„¶ lzw æ˜¯è¢« karrimor cast 2 fireball 6 k æ­»çš„........
+>          ä½†é‚„æ˜¯æ„Ÿè¬å„ä½ waste time help to help rogue revenge ...!
+>          æˆ‘çœŸçš„å¾ˆé«˜èˆˆ play monk ...bcz all monks r good guys...
 >          no pk other guilds and peace ... help who need help ...
->          ÀÖÉÆºÃÊ©...ĞĞÏÀÕÌÒå.....just rogue ...ccc ...
+>          æ¨‚å–„å¥½æ–½...è¡Œä¿ ä»—ç¾©.....just rogue ...ccc ...
 >                                          Rogue 
 
-   ºÙºÙºÙ.... karrimor = sapphire
-   and lzw pk sapphire in ´óÍ¨ºÅ ...»¹ºÃÎÒÃ»ÓĞ exercise...use alt-x ...hp leave 110
-   so i login karrimor, ¹ÜËû invisible...ÕÕÑùËÍËû»ØÔ¶·çÓ¢ĞÛ¹İ.
-   and lzw Ò²ÊÇÄÇ¸ö wave makara sword and no shout no clean µÄ ppls
-   ccc...´ó¼ÒÒ»ÆğÀ´ÍæËû..
+   å˜¿å˜¿å˜¿.... karrimor = sapphire
+   and lzw pk sapphire in å¤§é€šè™Ÿ ...é‚„å¥½æˆ‘æ²’æœ‰ exercise...use alt-x ...hp leave 110
+   so i login karrimor, ç®¡ä»– invisible...ç…§æ¨£é€ä»–å›é é¢¨è‹±é›„é¤¨.
+   and lzw ä¹Ÿæ˜¯é‚£å€‹ wave makara sword and no shout no clean çš„ ppls
+   ccc...å¤§å®¶ä¸€èµ·ä¾†ç©ä»–..
                                    Sapphire = karrimor
-","time":795637674,"poster":"Sapphire",]),(["id":364,"body":"ÎÒÒ²±» Àá\ÑÛÉ·ĞÇ k..ÔÚÁºÉ½²´
-","title":"< no title >","time":795660935,"poster":"Dogs",]),(["id":365,"body":"¶àÁ½¸öÊÜº¦Õß .. Zz & Paton !!
-µ«ÊÇÎÒÃ»ÓĞÉ±µ½È¥¼ûºÚÎŞ³£ ..
-ÎÒ»á¼ÓÓÍµÄ .. *grin*
+","time":795637674,"poster":"Sapphire",]),(["id":364,"body":"æˆ‘ä¹Ÿè¢« æ·šçœ¼ç…æ˜Ÿ k..åœ¨æ¢å±±æ³Š
+","title":"< no title >","time":795660935,"poster":"Dogs",]),(["id":365,"body":"å¤šå…©å€‹å—å®³è€… .. Zz & Paton !!
+ä½†æ˜¯æˆ‘æ²’æœ‰æ®ºåˆ°å»è¦‹é»‘ç„¡å¸¸ ..
+æˆ‘æœƒåŠ æ²¹çš„ .. *grin*
 ","title":"< no title >","time":795667737,"poster":"Lzw",]),(["id":366,"title":"about PK!","body":"Tjis is angel......
 
 I think player can do what he like in mud if doesn't violate Rules....
@@ -48,16 +48,16 @@ Monk need exercise, so.... plz be care la!!!!
 
 (and ... mud is mud la!... he can PK u, U can ask all Pk him!,
 but game is game.... dont be hurt too much :P)
-","time":795686177,"poster":"Angel",]),(["id":367,"title":"Ôİ±ğÁË...","body":"
-	àÅ...½ñÌìÊÇÎÒ 30 ÌìÄÚ×îááÒ»´ÎÉÏÏßÁË....
-	ÒªºÃºÃÄîÊéÁË...
-	²»ÄÜ¹¼¸º±ğÈËµÄĞÄÒâ....
-	but ÓÖºÃÏñ²»ÄÜ×ÔÖÆËµ....Ò²Ğí\Õâ¾ÍÊÇ mud µÄÄ§Á¦°É...
-	so..ÎÒ¾ö¶¨°ÑÎÒ×Ô¼º¶³ÆğÀ´...30 Ìì°É...
-	ËùÒÔÓĞ 30 Ìì²»ÄÜºÍ¸÷Î»Ïà¼û...
-	²»ÄÜÕÒ¸÷Î»°ïÃ¦...Ò²²»ÄÜ°ï¸÷Î»ÁË...
-	Ö»ºÃÈÃ leader...gin...sun...ÉÙÊÜÎÒµÄõåõïÁË...~~~
-	ok...ÁôÍê»°ÁË....ÒªÈ¥±ù¶³ÁË....~~~wa...30 Ìì..
+","time":795686177,"poster":"Angel",]),(["id":367,"title":"æš«åˆ¥äº†...","body":"
+	å—¯...ä»Šå¤©æ˜¯æˆ‘ 30 å¤©å…§æœ€å¾Œä¸€æ¬¡ä¸Šç·šäº†....
+	è¦å¥½å¥½å”¸æ›¸äº†...
+	ä¸èƒ½è¾œè² åˆ¥äººçš„å¿ƒæ„....
+	but åˆå¥½åƒä¸èƒ½è‡ªåˆ¶èªª....ä¹Ÿè¨±é€™å°±æ˜¯ mud çš„é­”åŠ›å§...
+	so..æˆ‘æ±ºå®šæŠŠæˆ‘è‡ªå·±å‡èµ·ä¾†...30 å¤©å§...
+	æ‰€ä»¥æœ‰ 30 å¤©ä¸èƒ½å’Œå„ä½ç›¸è¦‹...
+	ä¸èƒ½æ‰¾å„ä½å¹«å¿™...ä¹Ÿä¸èƒ½å¹«å„ä½äº†...
+	åªå¥½è®“ leader...gin...sun...å°‘å—æˆ‘çš„è¹‚èºªäº†...~~~
+	ok...ç•™å®Œè©±äº†....è¦å»å†°å‡äº†....~~~wa...30 å¤©..
 
 
 						poor Di...
@@ -68,26 +68,26 @@ but game is game.... dont be hurt too much :P)
 eye in red_monk ( guild w w)
 
 if has PKer, use it to see pker la!!!
-","title":"< no title >","time":795705216,"poster":"Angel",]),(["id":369,"title":"¹«¸æ!","body":"1. eye for detect invis É±µô!
-2. ½ñÌìÆğ¿ª·ÅMonk PK!!!
+","title":"< no title >","time":795705216,"poster":"Angel",]),(["id":369,"title":"å…¬å‘Š!","body":"1. eye for detect invis æ®ºæ‰!
+2. ä»Šå¤©èµ·é–‹æ”¾Monk PK!!!
 
 That is all thanks!
 angel
 ","time":795805525,"poster":"Angel",]),(["id":370,"body":"Dear all monks :
-	Ê®°ËÍ­ÈËÕó change to version 2...:P
+	åå…«éŠ…äººé™£ change to version 2...:P
 	can go to try try loh...
 	if any problem, plz post here....thx.
 
 						almuhara
 ","title":"< no title >","time":795866049,"poster":"Almuhara",]),(["id":371,"title":"< no title >","body":"dear Almuhara ~~~
-     Ê®°ËÍ­ÈËÕó...how to go in ah~~
+     åå…«éŠ…äººé™£...how to go in ah~~
       the elder in front of it say \"answer yes\" then can go in....
       but i type so ..and no use neh....
       try so a long time..can teach us how to go in there?...thx!
                                        chester-----
 ","time":795930755,"poster":"Chester",]),(["id":372,"body":"On Thu Mar 23, Chester wrote:
 > dear Almuhara ~~~
->      Ê®°ËÍ­ÈËÕó...how to go in ah~~
+>      åå…«éŠ…äººé™£...how to go in ah~~
 >       the elder in front of it say \"answer yes\" then can go in....
 >       but i type so ..and no use neh....
 >       try so a long time..can teach us how to go in there?...thx!
@@ -100,54 +100,54 @@ Ah..last night let clam,skywalker and cowboy test lah...
 	now enter brassman won't be killed if u fail.
 	but will reduce ur war score oh...so plz notice it.
 					almuhara
-","title":"< no title >","time":795944503,"poster":"Almuhara",]),(["id":374,"title":"< no title >","body":"ÎÒÔÚk»ªÉĞ(Hwa son).µÄÊ±áá..i type \"kill monster\"...but Ã»·´Ó¦Ò®...Ææ¹Ö..
-","time":796045282,"poster":"South",]),(["id":375,"body":"àÅ .. ÎÒÊÇÏëÒªÎÊºÇ :
-Í¨¹ıÒ»´Î18Í­ÈËÕóáá .. »¹¿ÉÒÔÔÚÍæÒ»´ÎÂğ ??
-Èç¹û¹ıÁË .. ÊÇ²»ÊÇÒ»Ñù·¢½±Æ·°¡ ???
-ÒòÎªÎÒ»¹Ë×ÁË .. µ«ÊÇÒ²ÏëÒªµÃµ½ÄÇ¹ø .. ºÃ¿´µÄ»¤±Û .. :)
-                    »¹Ë×ÖĞ . Skywalker .
+","title":"< no title >","time":795944503,"poster":"Almuhara",]),(["id":374,"title":"< no title >","body":"æˆ‘åœ¨kè¯å°š(Hwa son).çš„æ™‚å¾Œ..i type \"kill monster\"...but æ²’åæ‡‰è€¶...å¥‡æ€ª..
+","time":796045282,"poster":"South",]),(["id":375,"body":"å—¯ .. æˆ‘æ˜¯æƒ³è¦å•å‘µ :
+é€šéä¸€æ¬¡18éŠ…äººé™£å¾Œ .. é‚„å¯ä»¥åœ¨ç©ä¸€æ¬¡å— ??
+å¦‚æœéäº† .. æ˜¯ä¸æ˜¯ä¸€æ¨£ç™¼çå“å•Š ???
+å› ç‚ºæˆ‘é‚„ä¿—äº† .. ä½†æ˜¯ä¹Ÿæƒ³è¦å¾—åˆ°é‚£é‹ .. å¥½çœ‹çš„è­·è‡‚ .. :)
+                    é‚„ä¿—ä¸­ . Skywalker .
 ","title":"< no title >","time":796080742,"poster":"Skywalker",]),(["id":376,"title":"Re: < no title >","body":"On Sat Mar 25, Skywalker wrote:
-> àÅ .. ÎÒÊÇÏëÒªÎÊºÇ :
-> Í¨¹ıÒ»´Î18Í­ÈËÕóáá .. »¹¿ÉÒÔÔÚÍæÒ»´ÎÂğ ??
-> Èç¹û¹ıÁË .. ÊÇ²»ÊÇÒ»Ñù·¢½±Æ·°¡ ???
-> ÒòÎªÎÒ»¹Ë×ÁË .. µ«ÊÇÒ²ÏëÒªµÃµ½ÄÇ¹ø .. ºÃ¿´µÄ»¤±Û .. :)
->                     »¹Ë×ÖĞ . Skywalker .
+> å—¯ .. æˆ‘æ˜¯æƒ³è¦å•å‘µ :
+> é€šéä¸€æ¬¡18éŠ…äººé™£å¾Œ .. é‚„å¯ä»¥åœ¨ç©ä¸€æ¬¡å— ??
+> å¦‚æœéäº† .. æ˜¯ä¸æ˜¯ä¸€æ¨£ç™¼çå“å•Š ???
+> å› ç‚ºæˆ‘é‚„ä¿—äº† .. ä½†æ˜¯ä¹Ÿæƒ³è¦å¾—åˆ°é‚£é‹ .. å¥½çœ‹çš„è­·è‡‚ .. :)
+>                     é‚„ä¿—ä¸­ . Skywalker .
 ------------------------------------------------------------------
   i think cannot bah! 
 
   U can only choose one! :P....
 choose what u like bah! :P
-","time":796196021,"poster":"Angel",]),(["id":377,"body":"¼ÙÈçÓĞ´¢²ØÊÒ...1. ÄãÃÇÏ£ÍûÔÚÄÄ? 2. Ï£ÍûÏŞµÈ¼¶Âğ? 3.Ï£ÍûÔõÑùÏŞµÈ¼¶? 4. Ï£Íû°Ú\Ê²÷á?
+","time":796196021,"poster":"Angel",]),(["id":377,"body":"å‡å¦‚æœ‰å„²è—å®¤...1. ä½ å€‘å¸Œæœ›åœ¨å“ª? 2. å¸Œæœ›é™ç­‰ç´šå—? 3.å¸Œæœ›æ€æ¨£é™ç­‰ç´š? 4. å¸Œæœ›æ“ºä»€éº¼?
 
-ÖÁì¶µÈ¼¶ÏŞÖÆ.....ÓĞÈËÅÂµÍµÈ¼¶µÄÄÃÈ¥Âô....
-  µ«ÊÇÕâÑùºÏÀíÂğ?
-  »¹ÓĞ....ÊÇ·ñ¸ÃÉè³É¸ßµÈ¼¶Ö»ÄÜ ¶ª²»ÄÜÄÃ?
-  ¹Øì¶µÈ¼¶ÏŞÖÆ....ÉèÏŞÓĞÓÃÂğ?
+è‡³æ–¼ç­‰ç´šé™åˆ¶.....æœ‰äººæ€•ä½ç­‰ç´šçš„æ‹¿å»è³£....
+  ä½†æ˜¯é€™æ¨£åˆç†å—?
+  é‚„æœ‰....æ˜¯å¦è©²è¨­æˆé«˜ç­‰ç´šåªèƒ½ ä¸Ÿä¸èƒ½æ‹¿?
+  é—œæ–¼ç­‰ç´šé™åˆ¶....è¨­é™æœ‰ç”¨å—?
 
-  Çë·¢±íÒâ¼û.
+  è«‹ç™¼è¡¨æ„è¦‹.
 
-","title":"about hoard room","time":796218847,"poster":"Mate",]),(["id":378,"title":"about Ê®°ËÍ­ÈËÕó....","body":"½ñÌìÍæÊ®°ËÍ­ÈËÕó, µ½ÁË×îááÒ»¹ØÁËËµ....but.
-Ò»´Î±»Áù¸öÍ­ÈËÎ§Å¹, Ò»»ØºÏ¾Í±»Ì§³öÀ´ÁË, À´²»¼°³ÔÒ©
-Ç°ËÄ¹Ø´òµôÁË15¸öÍ­ÈËÁË...
-Ö»ÊÇÔÚ×îááÒ»¹ØÒòÎª reborn time, ²»Ğ¡ĞÄ´òÁËÁ½´Î songin
-½á¹ûÒ»´Î³öÀ´Áù¸öÍ­ÈË.....
-ÎØÎØÎØ......ÎÒ²»ÒªÍæ21Í­ÈËÕóÀ²
+","title":"about hoard room","time":796218847,"poster":"Mate",]),(["id":378,"title":"about åå…«éŠ…äººé™£....","body":"ä»Šå¤©ç©åå…«éŠ…äººé™£, åˆ°äº†æœ€å¾Œä¸€é—œäº†èªª....but.
+ä¸€æ¬¡è¢«å…­å€‹éŠ…äººåœæ¯†, ä¸€å›åˆå°±è¢«æŠ¬å‡ºä¾†äº†, ä¾†ä¸åŠåƒè—¥
+å‰å››é—œæ‰“æ‰äº†15å€‹éŠ…äººäº†...
+åªæ˜¯åœ¨æœ€å¾Œä¸€é—œå› ç‚º reborn time, ä¸å°å¿ƒæ‰“äº†å…©æ¬¡ songin
+çµæœä¸€æ¬¡å‡ºä¾†å…­å€‹éŠ…äºº.....
+å—šå—šå—š......æˆ‘ä¸è¦ç©21éŠ…äººé™£å•¦
 ","time":796234726,"poster":"Rutile",]),(["id":379,"body":" I am amdson. It seems that eqs drop in guild east will lost when reborn.
  So drop eqs in east of guild are not safe....
-","title":"< no title >","time":796256332,"poster":"Amdson",]),(["id":380,"title":"about ´¢²ØÊÒ","body":"´¢²ØÊÒÅªºÃÁË..Èç¹ûÓĞ¹ÒÉÏÀ´...
-Ò»Ó¦¸ÃÊÇÔÚ¹«»á(here)µÄ east east
-Èç¹û»¹Ã»¹ÒÉÏÀ´....¿´µ½angel or ruby ... ¾ÍÅÜÈ¥¸úËûÃÇÏÂ¹ò...
-ÎÒÊÇ´òËãĞ´Âú¶à¹¦\ÄÜµÄ....µ±È»³­Ï®³É·İ¾Ó¶à....
-But...ÏÖÔÚÎÒµÄÄÜÁ¦»¹²»×ãÒÔĞ´ÍêÈ«...ÓĞÒ»¶Ñ¹¦\ÄÜ»¹²»»á
-´ó¼Ò½«¾ÍÖøÓÃ°É
+","title":"< no title >","time":796256332,"poster":"Amdson",]),(["id":380,"title":"about å„²è—å®¤","body":"å„²è—å®¤å¼„å¥½äº†..å¦‚æœæœ‰æ›ä¸Šä¾†...
+ä¸€æ‡‰è©²æ˜¯åœ¨å…¬æœƒ(here)çš„ east east
+å¦‚æœé‚„æ²’æ›ä¸Šä¾†....çœ‹åˆ°angel or ruby ... å°±è·‘å»è·Ÿä»–å€‘ä¸‹è·ª...
+æˆ‘æ˜¯æ‰“ç®—å¯«æ»¿å¤šåŠŸèƒ½çš„....ç•¶ç„¶æŠ„è¥²æˆä»½å±…å¤š....
+But...ç¾åœ¨æˆ‘çš„èƒ½åŠ›é‚„ä¸è¶³ä»¥å¯«å®Œå…¨...æœ‰ä¸€å †åŠŸèƒ½é‚„ä¸æœƒ
+å¤§å®¶å°‡å°±è‘—ç”¨å§
 
-ÓĞÈÎºÎÒâ¼ûÖ±½Ó¸úÎÒËµ°É..
-","time":796323460,"poster":"Mate",]),(["id":381,"title":"Ï£Íû´ó¼Ò¶àÀûÓÃ´¢²ØÊÒÅ¶","body":"³¤ÕßÕÕ¹Ëáá½ø....áá½øĞÄ»³¸Ğ¶÷µÄĞÄ...
-´ó¼ÒºÃºÃÀûÓÃ´¢²ØÊÒ...
-Ç§Íò±ğÄÃÈ¥Âô.....thx....ÎÒÒ²¾Í²»ÉèµÈ¼¶ÏŞÖÆ...
+æœ‰ä»»ä½•æ„è¦‹ç›´æ¥è·Ÿæˆ‘èªªå§..
+","time":796323460,"poster":"Mate",]),(["id":381,"title":"å¸Œæœ›å¤§å®¶å¤šåˆ©ç”¨å„²è—å®¤å“¦","body":"é•·è€…ç…§é¡§å¾Œé€²....å¾Œé€²å¿ƒæ‡·æ„Ÿæ©çš„å¿ƒ...
+å¤§å®¶å¥½å¥½åˆ©ç”¨å„²è—å®¤...
+åƒè¬åˆ¥æ‹¿å»è³£.....thx....æˆ‘ä¹Ÿå°±ä¸è¨­ç­‰ç´šé™åˆ¶...
 thx
-","time":796332086,"poster":"Mate",]),(["id":382,"body":"ÇëÎÊÒ»ÏÂ....
-ÊìÁ·¶ÈÈıÊ®ÖØºÍÈıÊ®ÎåÖØ»á²îºÜ¶àÂğ?
+","time":796332086,"poster":"Mate",]),(["id":382,"body":"è«‹å•ä¸€ä¸‹....
+ç†Ÿç·´åº¦ä¸‰åé‡å’Œä¸‰åäº”é‡æœƒå·®å¾ˆå¤šå—?
            apolo
-","title":"ÊìÁ·¶È","time":796341159,"poster":"Apolo",]),})
+","title":"ç†Ÿç·´åº¦","time":796341159,"poster":"Apolo",]),})
 id_ref 394

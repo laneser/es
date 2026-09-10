@@ -4,16 +4,16 @@ void create(object ob)
 {
 	if ( !ob ) return ;
 	ob->set_level(3);
-	ob->set_name( "peacock", "¿×È¸" );
-	ob->set_short( "¿×È¸" );
+	ob->set_name( "peacock", "å­”é›€" );
+	ob->set_short( "å­”é›€" );
 	ob->set_long(
-		"ÕâÊÇÒ»Ö»·Ç³£Æ¯ÁÁµÄÄñ\n"
+		"é€™æ˜¯ä¸€éš»éžå¸¸æ¼‚äº®çš„é³¥\n"
 	);
 	ob->set_perm_stat( "str", 4 );
 	ob->set_skill( "dodge", 10 );
 
-	ob->set( "unit", "Ö»" );
+	ob->set( "unit", "åª" );
 	ob->set_natural_weapon( 2, 2, 4 );
-	ob->set_c_verbs( ({ "%sÓÃÇ°×¦×¥Ïò%s", "%sÓÃËüµÄ×ìÍù%s×ÄÈ¥" }) );
-	ob->set_c_limbs( ({ "Í·²¿", "Î²°Í", "ÍÈ²¿" }) );
+	ob->set_c_verbs( ({ "%sç”¨å‰çˆªæŠ“å‘%s", "%sç”¨å®ƒçš„å˜´å¾€%så•„åŽ»" }) );
+	ob->set_c_limbs( ({ "é ­éƒ¨", "å°¾å·´", "è…¿éƒ¨" }) );
 }

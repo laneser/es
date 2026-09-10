@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-     set_name( "Lu-Wu's ring","Â½ÎáÖ®½ä" );
+     set_name( "Lu-Wu's ring","é™¸å¾ä¹‹æˆ’" );
      add( "id",({ "ring" }) );
-     set_short( "Â½ÎáÖ®½ä" );
+     set_short( "é™¸å¾ä¹‹æˆ’" );
      set_long(@C_LONG
-Ò»Ö»»Æ³Î³ÎµÄ½äÖ¸£¬ÉÏÃæ¿ÌÖøÂ½ÎáµÄĞ¤Ïñ¡£
+ä¸€éš»é»ƒæ¾„æ¾„çš„æˆ’æŒ‡ï¼Œä¸Šé¢åˆ»è‘—é™¸å¾çš„è‚–åƒã€‚
 C_LONG
      );
      set( "weight",5 );
-     set( "unit", "Ö»");
+     set( "unit", "åª");
      set( "type", "finger" );
      set( "material","element" );
      set( "defense_bonus",5 );

@@ -3,7 +3,7 @@
 // cost    50
 // time    --
 // skill   80
-// G_LVL   --	ע: ħ�������ȶԱ��������κ�Ӱ��
+// G_LVL   --	注: 魔法熟練度對本法術無任何影響
 // G_EXP   30
 #include <mudlib.h>
 #define TYPE "misc"
@@ -28,13 +28,13 @@ int cast(int level, string dest)
 
 	if( (int)me->query_skill("misc") < query_need_skill(level) ) {
 	  tell_object( me, 
-		      "�������ħ�����ܲ�����ʹ�����ħ��! \n" 
+		      "你的雜項魔法技能不足以使用這個魔法! \n" 
 		      );
       return 0;
     }
 
 	if (!dest) {
-		tell_object( me, "����ѹ������ط��ļ���ķ���������?\n" );
+		tell_object( me, "你想把關於這個地方的記憶寄放在哪裡呢?\n" );
 		return 0;
 	}
 	switch (dest)
@@ -44,10 +44,10 @@ int cast(int level, string dest)
 		case "aero"		: break;
 		default	:	{
 			tell_object(me, @FAIL
-����֮�䡹���Խ����й�춴˵صĻ���ķ�����ϵ��ǳ�, ���ǽ���ˮ֮
-�� (Aqua) ��֮�� (Pyro) ���֮�� (Aero) ��ӵ���㹻�������������
-���˼����
-ָ���ʽ: cast star-memory [on|at] <�ǳ�>
+「星之憶」可以將所有關於此地的回憶寄放於天上的星辰, 但是僅有水之
+星 (Aqua) 火之星 (Pyro) 與風之星 (Aero) 才擁有足夠的能力存下如此
+多的思緒。
+指令格式: cast star-memory [on|at] <星辰>
 FAIL
 			);
 			return 0;
@@ -56,16 +56,16 @@ FAIL
 
 	if ( !environment(me)->query("outside") )
 	{
-		tell_object( me, "���￴��������, û�취ʹ����֮�䡣\n");
+		tell_object( me, "這裡看不到星星, 沒辦法使用星之憶。\n");
 		return 0;
 	}	
 	if ( environment(me)->query("no_teleport") )
 	{
-		tell_object( me, "�������޷����ܵ����ϵ�����, �޷����¼��䡣\n");
+		tell_object( me, "在這裡無法感受到天上的諸星, 無法留下記憶。\n");
 		return 0;
 	}
 	
-	emote( "$NS��ͷĬ������, �����й�춴˵صļ���ϵ������ϵ����ǡ�\n"
+	emote( "$NS低頭默唸咒文, 將所有關於此地的記憶繫結於天上的諸星。\n"
 		, me );
 
 	me->set("teleport_points/" + dest, base_name(environment(me)) );

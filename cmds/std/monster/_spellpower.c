@@ -13,7 +13,7 @@ int cmd_spellpower(string str)
 
 	if( !str ) {
 		sub = (int)this_player()->query("spell_power");
-		write( "Äã·¨ÊõµÄ³öÁ¦Ä¿Ç°Éè³É½µµÍ"+chinese_number(sub)+"¼¶¡£\n" );
+		write( "ä½ æ³•è¡“çš„å‡ºåŠ›ç›®å‰è¨­æˆé™ä½"+chinese_number(sub)+"ç´šã€‚\n" );
 		return 1;
 	} else if( sscanf( str, "%s", type )==1 ) {
 		switch(type) {
@@ -25,7 +25,7 @@ int cmd_spellpower(string str)
 			default : return help();
 		}
 		this_player()->set("spell_power",sub);
-		write( "Äã·¨ÊõµÄ³öÁ¦ÏÖÔÚÖØÉè³É½µµÍ"+chinese_number(sub)+"¼¶¡£\n" );
+		write( "ä½ æ³•è¡“çš„å‡ºåŠ›ç¾åœ¨é‡è¨­æˆé™ä½"+chinese_number(sub)+"ç´šã€‚\n" );
 		return 1;
 	} else
 		return help();
@@ -35,10 +35,10 @@ int help()
 {
 	if( can_read_chinese() )
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: spellpower [³öÁ¦]
+æŒ‡ä»¤æ ¼å¼: spellpower [å‡ºåŠ›]
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´¿ØÖÆ·¨Êõ³öÁ¦£¬¿ÉÉè¶¨Îª max, regular, normal, minor, mini
-·Ö±ğ´ú±íÊ©·¨¼¶ÊıÎªMax, Max-1, Max-2 ... Ğ¡ì¶ÁãÔòÒÔÁã¼¶¼ÆËã¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ§åˆ¶æ³•è¡“å‡ºåŠ›ï¼Œå¯è¨­å®šç‚º max, regular, normal, minor, mini
+åˆ†åˆ¥ä»£è¡¨æ–½æ³•ç´šæ•¸ç‚ºMax, Max-1, Max-2 ... å°æ–¼é›¶å‰‡ä»¥é›¶ç´šè¨ˆç®—ã€‚
 C_HELP
 		);
 	else write ( @HELP

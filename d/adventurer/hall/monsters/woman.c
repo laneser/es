@@ -4,9 +4,9 @@
 #define MAX_AC ({ 8,35,4,4,8,8,8,8,8,8 })
 #define MAX_DB ({ 3,6,4,4,3,3,6,6,3,3 })
 #define TYPES ({"head","body","arms","hands","legs","feet","shield","cloak","saddle","tail"})
-#define UNITS ({"¶¥","¼ş","Ìõ","Ë«","Ìõ","Ë«","Ãæ","Ìõ","¸ö","¸ö" })
-#define ADD_NAME1 ({"Æ¤Ã±","Æ¤¼×","Æ¤±Û»·","Æ¤ÊÖÌ×","Æ¤¿ã","Æ¤Ñ¥","Æ¤¶Ü","Æ¤Åû·ç","Æ¤Âí°°","°óÎ²"})
-#define ADD_NAME2 ({"Æ¤Í·½í","Æ¤Ì×Ìå","Æ¤»¤Öâ","Æ¤»¤ÊÖ","Æ¤È¹","Æ¤Ğ¬","Æ¤¶Ü","Æ¤Åû¼ç","Æ¤×øµæ","Æ¤Î²¼×"})
+#define UNITS ({"é ‚","ä»¶","æ¢","é›™","æ¢","é›™","é¢","æ¢","å€‹","å€‹" })
+#define ADD_NAME1 ({"çš®å¸½","çš®ç”²","çš®è‡‚ç’°","çš®æ‰‹å¥—","çš®è¤²","çš®é´","çš®ç›¾","çš®æŠ«é¢¨","çš®é¦¬é","ç¶å°¾"})
+#define ADD_NAME2 ({"çš®é ­å·¾","çš®å¥—é«”","çš®è­·è‚˜","çš®è­·æ‰‹","çš®è£™","çš®é‹","çš®ç›¾","çš®æŠ«è‚©","çš®åå¢Š","çš®å°¾ç”²"})
 #define WEIGHT ({50,150,50,40,80,70,130,100,110,50 })
 #define EXTRA_ID1 ({"hat","armor","armband","gloves","pants","boots","shield","cloak","saddle","tail"})
 #define EXTRA_ID2 ({"hood","cloth","sleeves","bracers","skirts","shoes","shield","hide","seat","tail armor"})       
@@ -15,12 +15,12 @@ inherit MONSTER ;
 void create ()
 {
         ::create();
-        set_name( "woman", "Å®²Ã·ìÊ¦" );
-        set_short("Å®²Ã·ìÊ¦");
-        set("unit","Î»");
+        set_name( "woman", "å¥³è£ç¸«å¸«" );
+        set_short("å¥³è£ç¸«å¸«");
+        set("unit","ä½");
         set_long(
 @C_LONG
-Ò»Î»ÕıÔÚĞÁ¿à¹¤×÷µÄÅ®²Ã·ì£¬ËıµÄÖ÷Òª¹¤×÷ÊÇ°ÑÃ«Æ¤ÏõÖÆ³É¸÷ÖÖ·À¾ß
+ä¸€ä½æ­£åœ¨è¾›è‹¦å·¥ä½œçš„å¥³è£ç¸«ï¼Œå¥¹çš„ä¸»è¦å·¥ä½œæ˜¯æŠŠæ¯›çš®ç¡è£½æˆå„ç¨®é˜²å…·
 C_LONG
 );
         set ("gender", "female");
@@ -38,12 +38,12 @@ int kill_me(string arg)
   if (arg=="woman")
 	{
 	tell_object(this_player(),
-		"Å®²Ã·ìÊ¦ÉúÆøµØµÀ £º ¡¸°×ÀÃ£¬Ã»¿´ÎÒÔÚÃ¦Âğ ?? ³öÈ¥³öÈ¥ !!¡¹\n"
-		"ËµÖø¾Í°ÑÄãÍÆ³öÃÅÍâ¡£\n" 
+		"å¥³è£ç¸«å¸«ç”Ÿæ°£åœ°é“ ï¼š ã€Œç™½çˆ›ï¼Œæ²’çœ‹æˆ‘åœ¨å¿™å— ?? å‡ºå»å‡ºå» !!ã€\n"
+		"èªªè‘—å°±æŠŠä½ æ¨å‡ºé–€å¤–ã€‚\n" 
 		);
       this_player()->move_player( "/d/adventurer/hall/adv_libra1", "SNEAK" );
         tell_room( "/d/adventurer/hall/adv_libra1", 
-         this_player()->query("c_name") + "±»ÈËºäÁË³öÀ´¡£\n"
+         this_player()->query("c_name") + "è¢«äººè½Ÿäº†å‡ºä¾†ã€‚\n"
         ,this_player() );
         return 1;
 	}
@@ -61,7 +61,7 @@ int do_choose(string arg)
  if (!(int)this_player()->query_temp("give_skin" )) {                                                                      
         
         tell_object(this_player(),
-        "Å®²Ã·ìÊ¦ËµµÀ: ÇëÏÈ°ÑÄãµÄÆ¤¸øÎÒ....\n"); 
+        "å¥³è£ç¸«å¸«èªªé“: è«‹å…ˆæŠŠä½ çš„çš®çµ¦æˆ‘....\n"); 
  return 1;
  }
  for( i=0; i<sizeof(allocate(10)); i++ ) {
@@ -76,7 +76,7 @@ int do_choose(string arg)
      num = AC*2+DB*5;
      if (this_player()->query("wealth/gold")<num+1) {
      tell_object(this_player(),
-     "Å®²Ã·ìÊ¦ËµµÀ: à¸£¬¶Ô²»Æğ£¬ÄãµÄÏÖ½ğ²»¹»à¸??\n"
+     "å¥³è£ç¸«å¸«èªªé“: å–”ï¼Œå°ä¸èµ·ï¼Œä½ çš„ç¾é‡‘ä¸å¤ å–”??\n"
           );
      command("give skin to " +(string)this_player()->query("name"));
      this_player()->delete_temp("give_skin");
@@ -104,8 +104,8 @@ int do_choose(string arg)
      }
      armor->set_short(c_skin_name + (string)armor->query("add_name"));
      tell_room(environment(this_player()),
-             "Å®²Ã·ìÊ¦¿ªÊ¼°ÑÆ¤¼ô³ÉĞí¶àĞ¡¿é£¬È»ááºÜ¿ìµÄ·ìºÏÆğÀ´¡£\n");
-     command("say Õâ¾ÍÊÇÄúÒªµÄ·À¾ß£¬»¶Ó­¹âÁÙ£¬ÏÂ´ÎÔÙÀ´¡£");
+             "å¥³è£ç¸«å¸«é–‹å§‹æŠŠçš®å‰ªæˆè¨±å¤šå°å¡Šï¼Œç„¶å¾Œå¾ˆå¿«çš„ç¸«åˆèµ·ä¾†ã€‚\n");
+     command("say é€™å°±æ˜¯æ‚¨è¦çš„é˜²å…·ï¼Œæ­¡è¿å…‰è‡¨ï¼Œä¸‹æ¬¡å†ä¾†ã€‚");
      if( (int)(armor->move(this_player())) != MOVE_OK )
      armor->move(environment(this_object()));
      this_player()->delete_temp("give_skin");
@@ -115,7 +115,7 @@ int do_choose(string arg)
         }
      tell_object(this_player(),
 @MISS
-Å®²Ã·ìÊ¦ËµµÀ: à¸£¬¶Ô²»Æğ£¬ÎÒÃ»ÓĞ×÷ÄãÒªµÄÄÇÖÖ·À¾ßà¸??
+å¥³è£ç¸«å¸«èªªé“: å–”ï¼Œå°ä¸èµ·ï¼Œæˆ‘æ²’æœ‰ä½œä½ è¦çš„é‚£ç¨®é˜²å…·å–”??
 MISS
      );
      return 1;
@@ -129,7 +129,7 @@ int accept_item(object me,object item)
         if ((string)this_player()->query("class") != "adventurer" ) {
         tell_object(me,
 @MISSION
-Å®²Ã·ìÊ¦ËµµÀ: ¶Ô²»Æğ£¬ÎÒÖ»°ïÖúÃ°ÏÕÕß...        
+å¥³è£ç¸«å¸«èªªé“: å°ä¸èµ·ï¼Œæˆ‘åªå¹«åŠ©å†’éšªè€…...        
 MISSION
                 );
         item->remove();
@@ -137,11 +137,11 @@ MISSION
         }
         tell_object(me,
 @MISSION
-Å®²Ã·ìÊ¦ËµµÀ: à¸£¬ÄãºÃ£¬ÄãÏëÒªÖÆ×÷Ğ©Ê²÷á·À¾ßÄØ??
-ÏÖÔÚÎÒÄÜÖÆ×÷µÄ·À¾ßÓĞÏÂÃæ¼¸ÖÖ:
-head(Í·²¿)£¬body(ÉíÌå)£¬arms(ÊÖ±Û)£¬hands(ÊÖ²¿)£¬legs(ÍÈ²¿)
-feet(½Å²¿)£¬shield(¶ÜÅÆ)£¬cloak(Åû·ç)£¬saddle(Âí°°)£¬tail(Î²°Í)
-Äã¿ÉÒÔÑ¡Ôñ(choose)ÆäÖĞµÄÈÎºÎÒ»ÖÖ¡£
+å¥³è£ç¸«å¸«èªªé“: å–”ï¼Œä½ å¥½ï¼Œä½ æƒ³è¦è£½ä½œäº›ä»€éº¼é˜²å…·å‘¢??
+ç¾åœ¨æˆ‘èƒ½è£½ä½œçš„é˜²å…·æœ‰ä¸‹é¢å¹¾ç¨®:
+head(é ­éƒ¨)ï¼Œbody(èº«é«”)ï¼Œarms(æ‰‹è‡‚)ï¼Œhands(æ‰‹éƒ¨)ï¼Œlegs(è…¿éƒ¨)
+feet(è…³éƒ¨)ï¼Œshield(ç›¾ç‰Œ)ï¼Œcloak(æŠ«é¢¨)ï¼Œsaddle(é¦¬é)ï¼Œtail(å°¾å·´)
+ä½ å¯ä»¥é¸æ“‡(choose)å…¶ä¸­çš„ä»»ä½•ä¸€ç¨®ã€‚
 MISSION
 	);
 		this_player()->set_temp("give_skin",1);

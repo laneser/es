@@ -5,17 +5,17 @@ int check_level();
 
 void create()
 {
-       set_name("angry of god","¡ºÖÚÉñÖ®Å­¡»");
-      set_short("angry of god","¡ºÖÚÉñÖ®Å­¡»");
+       set_name("angry of god","ã€Žçœ¾ç¥žä¹‹æ€’ã€");
+      set_short("angry of god","ã€Žçœ¾ç¥žä¹‹æ€’ã€");
        add("id",({"polearm","god"}));
        set_long(@C_LONG
-Õâ±ú·ºÖøºÚÎíµÄ³¤Ã¬ÊÇÊý°ÙÄêÇ°£¬ÓÉÐ°ÊõÊ¦ÑÅÂê£¬ÓÃË¾
-ÄÈ¿ÉÅ®ÉñÔÚÓëÈüÑÇ´ïÕ½¶·Ê±ËùÒÅÁôÏÂµÄÒ»±úÌ´Ä¾ÕÈ¼ÓÉÏ
-¡õÄ§·¨¾Û¼¯Ú¤½çÄÜÁ¿¼Óóß³ÉµÄ³¤Ã¬£¬ÓÉì¶¼ý±úÊÇÓÉÚ¤½ç
-ÄÜÁ¿ËùÈÚºÏ³É£¬¼ý·æ²»Í£µØÁ÷Â¶³öÒ»¹ÉºÚÆø£¬²øÈÆÔÚ³¤
-Ã¬µÄËÄÖÜ¡£
+é€™æŸ„æ³›è‘—é»‘éœ§çš„é•·çŸ›æ˜¯æ•¸ç™¾å¹´å‰ï¼Œç”±é‚ªè¡“å¸«é›…ç‘ªï¼Œç”¨å¸
+å¨œå¯å¥³ç¥žåœ¨èˆ‡è³½äºžé”æˆ°é¬¥æ™‚æ‰€éºç•™ä¸‹çš„ä¸€æŸ„æª€æœ¨æ–åŠ ä¸Š
+â–¡é­”æ³•èšé›†å†¥ç•Œèƒ½é‡åŠ ç­®æˆçš„é•·çŸ›ï¼Œç”±æ–¼ç®­æŸ„æ˜¯ç”±å†¥ç•Œ
+èƒ½é‡æ‰€èžåˆæˆï¼Œç®­é‹’ä¸åœåœ°æµéœ²å‡ºä¸€è‚¡é»‘æ°£ï¼Œçºç¹žåœ¨é•·
+çŸ›çš„å››å‘¨ã€‚
 C_LONG );
-      set("unit","±ú");
+      set("unit","æŸ„");
       set("weight",245);
       setup_weapon("polearm",50,30,40);
       set("bleeding",5);
@@ -24,20 +24,20 @@ C_LONG );
       set("value",({1000,"copper"}));
       set("hit_func","my_tactic");
       set("special_damage","@@check_level");
-      set("c_msg","\n¡ºÖÚÉñÖ®Å­¡»Óë¡ºÖîÉñµÄ»Æ»è¡»Í»È»¼¤Éä³ö±¬ÁÑ¼¤¹â£¬\n"
-              "\n ÕÐ»½Ç§ÍòÖ»Ú¤½çÖ®Áú³åÏòµÐÈË£¡£¡\n\n");
+      set("c_msg","\nã€Žçœ¾ç¥žä¹‹æ€’ã€èˆ‡ã€Žè«¸ç¥žçš„é»ƒæ˜ã€çªç„¶æ¿€å°„å‡ºçˆ†è£‚æ¿€å…‰ï¼Œ\n"
+              "\n æ‹›å–šåƒè¬åªå†¥ç•Œä¹‹é¾è¡å‘æ•µäººï¼ï¼\n\n");
 }
 void report(object attacker,object victim)
 {
   seteuid(getuid());
-  tell_object(victim,sprintf("Äã%s)\n","/adm/daemons/statsd"->status_string(victim)));
+  tell_object(victim,sprintf("ä½ %s)\n","/adm/daemons/statsd"->status_string(victim)));
   return ;
 }
 int fail_to_use(object holder) {
      object ob;
       if (!ob = (object)holder->query("weapon2"))
               return 1;
-    if ((string)ob->query("c_name")!="¡ºÖîÉñµÄ»Æ»è¡»")
+    if ((string)ob->query("c_name")!="ã€Žè«¸ç¥žçš„é»ƒæ˜ã€")
               return 1;
      return 0;
 }
@@ -71,10 +71,10 @@ int my_tactic()
   if(!victim = holder->query_attacker()) return 0;
   if(fail_to_use(holder)){
       tell_room(environment(holder),
-     holder->query("c_name")+"µÄ¡ºÖÚÉñÖ®Å­¡»Í»È»·¢³öÒ»Õó±¯Ãù£¬¼ý±úÍ»È»±¬ÁÑ¡£\n\n",holder);
-     tell_object(holder,"ÄãµÄ¡ºÖÚÉñÖ®Å­¡»Í»È»·¢³öÒ»Õó±¯Ãù£¬¼ý±úÍ»È»±¬ÁÑ¡£\n\n");
+     holder->query("c_name")+"çš„ã€Žçœ¾ç¥žä¹‹æ€’ã€çªç„¶ç™¼å‡ºä¸€é™£æ‚²é³´ï¼Œç®­æŸ„çªç„¶çˆ†è£‚ã€‚\n\n",holder);
+     tell_object(holder,"ä½ çš„ã€Žçœ¾ç¥žä¹‹æ€’ã€çªç„¶ç™¼å‡ºä¸€é™£æ‚²é³´ï¼Œç®­æŸ„çªç„¶çˆ†è£‚ã€‚\n\n");
       setup_weapon("polearm",30,14,28);
-               add("long","\t\tÈ´ÒÑ¾­Ö»Ê£ÏÂÄ¾±úÁË£¡£¡\n");
+               add("long","\t\tå»å·²ç¶“åªå‰©ä¸‹æœ¨æŸ„äº†ï¼ï¼\n");
       delete("hit_func");
       holder->calc_weapon_class();
       return 0;
@@ -84,9 +84,9 @@ int my_tactic()
       dam = (int)query("special_damage");
       victim->receive_special_damage(special_type(),dam);
       tell_object(holder,set_color(sprintf(c_msg,
-             "Äã",victim->query("c_name")),"HIM",holder));
+             "ä½ ",victim->query("c_name")),"HIM",holder));
           tell_object(victim,set_color(sprintf(c_msg,
-            holder->query("c_name"),"Äã"),"HIM",victim));
+            holder->query("c_name"),"ä½ "),"HIM",victim));
           tell_room(environment(holder),
             sprintf(c_msg,holder->query("c_name"),
           victim->query("c_name")),({holder,victim}));

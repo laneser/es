@@ -2,7 +2,7 @@
 
 inherit WEAPON;
 
-string C_NAME="[37;1mÆÆÉñ½£[37;0m";
+string C_NAME="[37;1mç ´ç¥åŠ[37;0m";
 
 void create()
 {
@@ -12,7 +12,7 @@ void create()
 	set_long(@LONG
 LONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weapon_class", 46 );
 	set( "min_damage", 34 );

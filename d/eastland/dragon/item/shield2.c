@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("jade shield", "ôä´ä¶ÜÅÆ");
+        set_name("jade shield", "ç¿¡ç¿ ç›¾ç‰Œ");
         add( "id", ({ "shield" }) );
-        set_short("ôä´ä¶ÜÅÆ");
+        set_short("ç¿¡ç¿ ç›¾ç‰Œ");
         set_long(
-                "ÕâÊÇÒ»ÃæÏâÂúôä´äµÄ¶ÜÅÆ\n"
+                "é€™æ˜¯ä¸€é¢é‘²æ»¿ç¿¡ç¿ çš„ç›¾ç‰Œ\n"
         );
-        set("unit","¿é");
+        set("unit","å¡Š");
         set( "type", "shield" );
         set( "material", "element" );
         set( "armor_class", 6 );

@@ -3,15 +3,15 @@
 inherit OBJECT;
 void create()
 {
-set_name("Incantation paper of Lock","½ûïÀÖäÎÄ");
+set_name("Incantation paper of Lock","ç¦éŒ®å’’æ–‡");
 add("id",({"paper","incantation paper",}) );
-set_short("Incantation paper of Lock","½ûïÀÖäÎÄ");
+set_short("Incantation paper of Lock","ç¦éŒ®å’’æ–‡");
 set("c_long",@LONG_D
-Ò»ÕÅĞ´ÖøÆæ¹Ö·ûºÅÖäÎÄ,Ö»¸Ğµ½Ò»ÖÖÆæÒìµÄÁ¦Á¿´ÓÖ½ÉÏ´«À´.
+ä¸€å¼µå¯«è‘—å¥‡æ€ªç¬¦è™Ÿå’’æ–‡,åªæ„Ÿåˆ°ä¸€ç¨®å¥‡ç•°çš„åŠ›é‡å¾ç´™ä¸Šå‚³ä¾†.
 LONG_D
 );
 
-set( "unit", "ÕÅ");
+set( "unit", "å¼µ");
 set("weight", 0);
 set("prevent_drop",1);
 }

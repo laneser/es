@@ -122,7 +122,7 @@ string display_news()
 	who = (string) this_player()->query("name");
 
 	if(!flag) output += chinese_mode?
-		"\n\t\t\t** Ã»ÓĞÉĞÎ´¶Á¹ıµÄĞÂÏûÏ¢ **\n\n":
+		"\n\t\t\t** æ²’æœ‰å°šæœªè®€éçš„æ–°æ¶ˆæ¯ **\n\n":
 		"\n\t\t\t** No new News to read **\n\n";
 
 	//  Clean up old news file names saved in user mapping

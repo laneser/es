@@ -34,11 +34,11 @@ void create()
 // when the bank creates a card for the player it also sets new descriptions.
 // See the assign function.
 	seteuid(getuid());
-	set_name( "credit card", "¶«·½¹ÊÊÂ½ğ¿¨" );
-	set_short( "an unowned credit card.\n", "Ò»ÕÅ¿Õ°×µÄĞÅÓÃ¿¨" );
+	set_name( "credit card", "æ±æ–¹æ•…äº‹é‡‘å¡" );
+	set_short( "an unowned credit card.\n", "ä¸€å¼µç©ºç™½çš„ä¿¡ç”¨å¡" );
 	set_long(
 		"This card lets you get money out of the bank in ES.\n",
-		"ÄãÖ»Òª³ÖÓĞÕâÕÅ¿¨Æ¬£¬¾Í¿ÉÒÔÈÃÄãÔÚ¶«·½¹ÊÊÂÄÚµÄÈÎºÎÒøĞĞ´æÇ®¡¢Ìá¿î¡£\n"
+		"ä½ åªè¦æŒæœ‰é€™å¼µå¡ç‰‡ï¼Œå°±å¯ä»¥è®“ä½ åœ¨æ±æ–¹æ•…äº‹å…§çš„ä»»ä½•éŠ€è¡Œå­˜éŒ¢ã€ææ¬¾ã€‚\n"
 	);
 	set ("id", ({ "credit card", "card" }) ) ;
 	set ("weight", 5);
@@ -84,14 +84,14 @@ void assign(object owner)
 {
 //	seteuid(geteuid(owner));
 	set_short( (string)owner->query("cap_name")+"'s golden credit card",
-		(string)owner->query("c_name")+"µÄ¶«·½¹ÊÊÂ½ğ¿¨");
+		(string)owner->query("c_name")+"çš„æ±æ–¹æ•…äº‹é‡‘å¡");
 	set_long(
 		"This golden credit card lets "+(string)owner->query("cap_name")
 		+" get money from the any bank in ES.\n"+
 		"Typing 'balance' will show your bank balance.\n",
-		"ÕâÊÇÒ»ÕÅÊôì¶"+(string)owner->query("c_name")
-		+"µÄ»Æ½ğĞÅÓÃ¿¨£¬Äã¿ÉÒÔÓÃËüÔÚ¶«·½¹ÊÊÂÖĞµÄÈÎºÎÒøĞĞ´æ¡¢Ìá¿î¡£\n"+
-		"ÓÃ balance Ö¸Áî¿ÉÒÔ²é¿´ÄãÄ¿Ç°µÄÕÊ»§½ğ¶î¡£\n") ;
+		"é€™æ˜¯ä¸€å¼µå±¬æ–¼"+(string)owner->query("c_name")
+		+"çš„é»ƒé‡‘ä¿¡ç”¨å¡ï¼Œä½ å¯ä»¥ç”¨å®ƒåœ¨æ±æ–¹æ•…äº‹ä¸­çš„ä»»ä½•éŠ€è¡Œå­˜ã€ææ¬¾ã€‚\n"+
+		"ç”¨ balance æŒ‡ä»¤å¯ä»¥æŸ¥çœ‹ä½ ç›®å‰çš„å¸³æˆ¶é‡‘é¡ã€‚\n") ;
 	::move(owner) ;
 	set ("owner", owner->query("name")) ;
 }
@@ -157,7 +157,7 @@ int balance()
 	wealth = find_player(query("owner"))->query("bank_balance") ;
 	if (!wealth || wealth==([])) {
 		write ( chinese_mode?
-			"ÄãÏÖÔÚÒøĞĞÀï°ëÃ«Ç®Ò²Ã»ÓĞ¡£\n":
+			"ä½ ç¾åœ¨éŠ€è¡Œè£¡åŠæ¯›éŒ¢ä¹Ÿæ²’æœ‰ã€‚\n":
 			"You have no money in your bank account.\n") ;
 		return 1 ;
 	}
@@ -166,7 +166,7 @@ int balance()
 	    if (wealth[types[i]]>0) {
 		if (flag==0) 
 		    write( chinese_mode?
-		    	"ÄãÄ¿Ç°ÔÚÒøĞĞÀïµÄ´æ¿îÓĞ:\n":
+		    	"ä½ ç›®å‰åœ¨éŠ€è¡Œè£¡çš„å­˜æ¬¾æœ‰:\n":
 		    	"Your bank account contains the following coins:\n");
 		write( chinese_mode?
 			sprintf("   %-12s : %d\n", to_chinese(types[i]+" coin"), wealth[types[i]]):
@@ -176,7 +176,7 @@ int balance()
 	}
 	if (flag==0)
 		write ( chinese_mode?
-			"ÄãÏÖÔÚÒøĞĞÀï°ëÃ«Ç®Ò²Ã»ÓĞ¡£\n":
+			"ä½ ç¾åœ¨éŠ€è¡Œè£¡åŠæ¯›éŒ¢ä¹Ÿæ²’æœ‰ã€‚\n":
 			"You have no money in your bank account.\n") ;
 	return 1 ;
 }

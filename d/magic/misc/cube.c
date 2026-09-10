@@ -13,11 +13,11 @@ string query_long();
 
 void create()
 {
-	set_name("magic cube", "Ä§·¨·½¿é");
+	set_name("magic cube", "é­”æ³•æ–¹å¡Š");
 	add( "id", ({ "cube" }) );
-	set_short("Ä§·¨·½¿é");
+	set_short("é­”æ³•æ–¹å¡Š");
 	set("long", "@@query_long");
-	set( "extra_look", "$NÉíÅÔÆ®¸¡ÖøÒ»¸ö·¢ÖøÆæÒì¹âÃ¢µÄÄ§·¨·½¿é¡£\n");
+	set( "extra_look", "$Nèº«æ—é£„æµ®è‘—ä¸€å€‹ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„é­”æ³•æ–¹å¡Šã€‚\n");
 	set("weight", 0);
 	set("weight_apply", 0 );
 	set("max_load", 400);
@@ -51,7 +51,7 @@ int release_object(object ob)
    
 int help ()
 {
-return notify_fail( "Ö¸Áî¸ñÊ½: transfer <¶«Î÷> into cube \nÖ¸Áî¸ñÊ½: transfer <¶«Î÷> from cube \n");
+return notify_fail( "æŒ‡ä»¤æ ¼å¼: transfer <æ±è¥¿> into cube \næŒ‡ä»¤æ ¼å¼: transfer <æ±è¥¿> from cube \n");
 }
 
 int query_sp_cost(object caster)
@@ -67,24 +67,24 @@ int transfer_into (string this)
  
 	sp = query_sp_cost(this_player());
 	if (this_player()->query("spell_points") < sp){
-		write ("ÄãµÄ·¨Á¦²»¹»£¡\n");
+		write ("ä½ çš„æ³•åŠ›ä¸å¤ ï¼\n");
 		return 1;
 	}
 
 	ths = present(this, this_player());
  
 	if(!ths) {
-		write( "ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		write( "ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 		return 1;
 	}
 
 	if((int)ths->query("prevent_drop")) {
-		write( "ÄãÃ»ÓĞ°ì·¨½«Õâ¸ö¶«Î÷×ªËÍ½øÈ¥¡£\n");
+		write( "ä½ æ²’æœ‰è¾¦æ³•å°‡é€™å€‹æ±è¥¿è½‰é€é€²å»ã€‚\n");
 		return 1;
 	}
  
 	if((int)ths->query("prevent_insert")) {
-		write( "Äã²»ÄÜ°ÑÕâÖÖ¶«Î÷×ª·Å½øÈ¥¡£\n");
+		write( "ä½ ä¸èƒ½æŠŠé€™ç¨®æ±è¥¿è½‰æ”¾é€²å»ã€‚\n");
 		return 1;
 	}
 
@@ -92,9 +92,9 @@ int transfer_into (string this)
 
 	if(res == MOVE_OK) {
 		c_word = ths->query("short");
-		write( "Äã¿ÚÖĞÄîÖøÖäÓï£¬ÄãÊÖÉÏµÄ" + c_word + "½¥½¥ÏûÊ§ÔÚÄ§·¨·½¿éÀï¡£\n");
+		write( "ä½ å£ä¸­å¿µè‘—å’’èªï¼Œä½ æ‰‹ä¸Šçš„" + c_word + "æ¼¸æ¼¸æ¶ˆå¤±åœ¨é­”æ³•æ–¹å¡Šè£¡ã€‚\n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name") + "¿ÚÖĞÄîÖøÖäÓï£¬ËûÊÖÉÏµÄ" + c_word + "½¥½¥ÏûÊ§ÔÚÄ§·¨·½¿éÀï¡£\n",
+			this_player()->query("c_name") + "å£ä¸­å¿µè‘—å’’èªï¼Œä»–æ‰‹ä¸Šçš„" + c_word + "æ¼¸æ¼¸æ¶ˆå¤±åœ¨é­”æ³•æ–¹å¡Šè£¡ã€‚\n",
 			this_player());
 		this_player()->add("spell_points", -sp );
 		gain_spell_experience(this_player(), TYPE, G_EXP);
@@ -102,13 +102,13 @@ int transfer_into (string this)
 	}
  
 	if(res == MOVE_NO_ROOM) 
-		write( "ÀïÃæ¿Õ¼ä²»¹»¡£\n");
+		write( "è£¡é¢ç©ºé–“ä¸å¤ ã€‚\n");
  
 	else if(res == MOVE_TOO_HEAVY) 
-		write( "ËüµÄÖØÁ¿Ì«ÖØÁË¡£\n");
+		write( "å®ƒçš„é‡é‡å¤ªé‡äº†ã€‚\n");
  
 	else if(res == MOVE_NOT_ALLOWED) 
-		write( "Äã²»ÄÜÔÚÀïÃæ·Å¶«Î÷¡£\n");
+		write( "ä½ ä¸èƒ½åœ¨è£¡é¢æ”¾æ±è¥¿ã€‚\n");
  
 	return 1;
 
@@ -124,7 +124,7 @@ int transfer_from(string this)
 
 	sp = query_sp_cost(this_player());
 	if (this_player()->query("spell_points") < sp){
-		write ("ÄãµÄ·¨Á¦²»¹»£¡\n");
+		write ("ä½ çš„æ³•åŠ›ä¸å¤ ï¼\n");
 		return 1;
 	}
 
@@ -133,28 +133,28 @@ int transfer_from(string this)
 	if (this != "all") {
 		ths = present(this, tht);
 		if(!ths) {
-			write( "ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+			write( "ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 			return 1;
 		}
 
 		c_word = ths->query("short");
 		res = (int)ths->move(this_player());
 		if( res == MOVE_OK ) {
-			write ( "Äã¿ÚÖĞÄîÖøÖäÓï£¬´ÓÄ§·¨·½¿éÖĞ·É³ö"+c_word+"½¥½¥³ÉĞÎÔÚÄãÊÖÀï¡£\n");
+			write ( "ä½ å£ä¸­å¿µè‘—å’’èªï¼Œå¾é­”æ³•æ–¹å¡Šä¸­é£›å‡º"+c_word+"æ¼¸æ¼¸æˆå½¢åœ¨ä½ æ‰‹è£¡ã€‚\n");
 			tell_room( environment(this_player()), 
-				this_player()->query("c_name")+"¿ÚÖĞÄîÖøÖäÓï£¬´ÓÄ§·¨·½¿éÖĞ·É³ö"+c_word+"½¥½¥³ÉĞÎÔÚËûÊÖÀï¡£\n",
+				this_player()->query("c_name")+"å£ä¸­å¿µè‘—å’’èªï¼Œå¾é­”æ³•æ–¹å¡Šä¸­é£›å‡º"+c_word+"æ¼¸æ¼¸æˆå½¢åœ¨ä»–æ‰‹è£¡ã€‚\n",
 					this_player() );
 			this_player()->add("spell_points", -sp );
 			gain_spell_experience(this_player(), TYPE, G_EXP);
 			return 1;
 		}
 		if( res == MOVE_NOT_ALLOWED ) 
-			notify_fail( "ÄãÃ»ÓĞ°ì·¨ÄÃÆğÕâÑù¶«Î÷¡£\n");
+			notify_fail( "ä½ æ²’æœ‰è¾¦æ³•æ‹¿èµ·é€™æ¨£æ±è¥¿ã€‚\n");
 		if( res == MOVE_NO_ROOM )
-			notify_fail( "ÄãÉíÉÏÃ»ÓĞ¶àâÅµÄ¿ÕÎ»¡£\n");
+			notify_fail( "ä½ èº«ä¸Šæ²’æœ‰å¤šé¤˜çš„ç©ºä½ã€‚\n");
 			// This should never happen.
 		if( res == MOVE_TOO_HEAVY )
-			notify_fail("Ì«ÖØÁË£¬ÄãÄÃ²»¶¯¡õn");
+			notify_fail("å¤ªé‡äº†ï¼Œä½ æ‹¿ä¸å‹•â–¡n");
 		return 0;
 	}
 
@@ -166,16 +166,16 @@ int transfer_from(string this)
 			ths = contents[i];
  
 			if((int)ths->query("prevent_get")) {
-				write( "Äã²»ÄÜÄÃ×ß" + ths->query("short") + "¡£\n");
+				write( "ä½ ä¸èƒ½æ‹¿èµ°" + ths->query("short") + "ã€‚\n");
 				continue;
 			}
  
 			c_word = ths->query("short");
 			res = (int)ths->move(this_player());
 			if (res == MOVE_OK) {
-			write ( "Äã¿ÚÖĞÄîÖøÖäÓï£¬´ÓÄ§·¨·½¿éÖĞ·É³ö"+c_word+"½¥½¥³ÉĞÎÔÚÄãÊÖÀï¡£\n");
+			write ( "ä½ å£ä¸­å¿µè‘—å’’èªï¼Œå¾é­”æ³•æ–¹å¡Šä¸­é£›å‡º"+c_word+"æ¼¸æ¼¸æˆå½¢åœ¨ä½ æ‰‹è£¡ã€‚\n");
 			tell_room( environment(this_player()), 
-				this_player()->query("c_name")+"¿ÚÖĞÄîÖøÖäÓï£¬´ÓÄ§·¨·½¿éÖĞ·É³ö"+c_word+"½¥½¥³ÉĞÎÔÚËûÊÖÀï¡£\n",
+				this_player()->query("c_name")+"å£ä¸­å¿µè‘—å’’èªï¼Œå¾é­”æ³•æ–¹å¡Šä¸­é£›å‡º"+c_word+"æ¼¸æ¼¸æˆå½¢åœ¨ä»–æ‰‹è£¡ã€‚\n",
 					this_player() );
 			this_player()->add("spell_points", -sp );
 			gain_spell_experience(this_player(), TYPE, G_EXP);
@@ -183,7 +183,7 @@ int transfer_from(string this)
 		}
 	}
 	else {
-		write( "ÄÇÀïÃæÊ²÷áÒ²Ã»ÓĞ¡£\n");
+		write( "é‚£è£¡é¢ä»€éº¼ä¹Ÿæ²’æœ‰ã€‚\n");
 		return 1;
 	}
 }
@@ -194,13 +194,13 @@ int do_transfer(string str)
 	string this;
 	if (!str) return help();
 	if(!this_player()->query("vision")) {
-		write( "ÄãÊ²÷áÒ²¿´²»¼û¡£\n");
+		write( "ä½ ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n");
 		return 1;
 	}
 	if(sscanf(str,"%d %s into cube",num, this)==2) {
 	if ((this == "platinum") || (this == "gold") || (this == "silver") || (this == "copper"))
 		{
-		write( "¶Ô²»Æğ, ÎÒ²»ÌæÈË±£¹ÜÇ®¡£\n");
+		write( "å°ä¸èµ·, æˆ‘ä¸æ›¿äººä¿ç®¡éŒ¢ã€‚\n");
 		return 1;
 		}
 	return help();
@@ -222,11 +222,11 @@ string query_long()
 	int i,j;
 	mixed desc;
 
-	desc = "ÕâÊÇÒ»¸öÆ®¸¡ÔÚ¿ÕÖĞ·¢ÖøÆæÒì¹âÃ¢µÄÄ§·¨·½¿é£¬ËÆºõ¿ÉÒÔ´¢´æ²»ÉÙ¶«Î÷¡£\n";
+	desc = "é€™æ˜¯ä¸€å€‹é£„æµ®åœ¨ç©ºä¸­ç™¼è‘—å¥‡ç•°å…‰èŠ’çš„é­”æ³•æ–¹å¡Šï¼Œä¼¼ä¹å¯ä»¥å„²å­˜ä¸å°‘æ±è¥¿ã€‚\n";
 		inv = all_inventory(this_object());
 		j = sizeof(inv);
 		if ( j > 0 ) {
-			desc += "ÀïÃæÓĞ:\n";
+			desc += "è£¡é¢æœ‰:\n";
 			for(i=0; i<j; i++)
 				desc += sprintf("  %s (%s).\n", (string)inv[i]->query("short"), (string)inv[i]->query("name"));
 		}
@@ -241,15 +241,15 @@ void disappear()
 	contents = all_inventory(me);
 	if (sizeof(contents) > 0 ) {
                 tell_room(find_object_or_load("/d/mage/tower/library"),
-			"Ò»Õó¹âÃ¢Ê¹ÄãÕö²»¿ªÑÛ¾¦¡£\n");
+			"ä¸€é™£å…‰èŠ’ä½¿ä½ çœä¸é–‹çœ¼ç›ã€‚\n");
 
 		tell_room(find_object("/d/mage/tower/library"),
-			"¹âÃ¢½¥½¥ÏûÊ§ÄãÓÖÄÜ¿´¼ûÁË¡£\n");
+			"å…‰èŠ’æ¼¸æ¼¸æ¶ˆå¤±ä½ åˆèƒ½çœ‹è¦‹äº†ã€‚\n");
 		
 		contents->move("/d/mage/tower/library");
 	}
     tell_room( environment(environment(me)),
-      "Ä§·¨·½¿éÉÁÁË¼¸ÏÂ£¬ÏûÊ§ÁË¡£\n");
+      "é­”æ³•æ–¹å¡Šé–ƒäº†å¹¾ä¸‹ï¼Œæ¶ˆå¤±äº†ã€‚\n");
 
     me->remove();
 }

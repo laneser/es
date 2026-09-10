@@ -10,19 +10,19 @@ int cmd_trace(string arg)
 
 	me = this_player();
 	if ( (int) me->query_temp("next_action") > time() )
-		return notify_fail("ÄãÕıÔÚ×¨ĞÄ×ö±ğµÄÊÂ!!");
+		return notify_fail("ä½ æ­£åœ¨å°ˆå¿ƒåšåˆ¥çš„äº‹!!");
 	if ( ! arg ) {
 		target = me->query_temp("trace_target");
 		if ( nullp(target) )
-			write("ÄãÏÖÔÚÃ»ÓĞ¸ú×ÙÈÎºÎÈË.");
+			write("ä½ ç¾åœ¨æ²’æœ‰è·Ÿè¹¤ä»»ä½•äºº.");
 		else
-			write("ÄãÕıÔÚ¸ú×Ù" + target->query("c_name")+"."); 
+			write("ä½ æ­£åœ¨è·Ÿè¹¤" + target->query("c_name")+"."); 
 		return 1;
 	}
 	if ( !(target=present(arg,environment(me))) )
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ " + arg + " µÄÉúÎï");
+		return notify_fail("é€™è£¡æ²’æœ‰å« " + arg + " çš„ç”Ÿç‰©");
 	if ( ! visible(target,me) )
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ " + arg + " µÄÉúÎï");
+		return notify_fail("é€™è£¡æ²’æœ‰å« " + arg + " çš„ç”Ÿç‰©");
 	if ( target == me ) {
 		stop_trace(me);
 		return 1;
@@ -40,11 +40,11 @@ stop_trace(object me)
 help()
 {
 	write(@C_HELP
-Usage : trace <Ä³ÈË>
-	¸ú×ÙÄ³ÈË, µÈµ½ÊÊµ±Ê±»úÔÙÍ»ÏÂÉ±ÊÖ.
-	trace <×Ô¼º>
-	Í£Ö¹¸ú×Ù
+Usage : trace <æŸäºº>
+	è·Ÿè¹¤æŸäºº, ç­‰åˆ°é©ç•¶æ™‚æ©Ÿå†çªä¸‹æ®ºæ‰‹.
+	trace <è‡ªå·±>
+	åœæ­¢è·Ÿè¹¤
 	trace 
-	ÕıÔÚ¸ú×ÙË­
+	æ­£åœ¨è·Ÿè¹¤èª°
 C_HELP);
 }

@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("fire wand", "µØ»ğÖ®ÕÈ");
+	set_name("fire wand", "åœ°ç«ä¹‹æ–");
 	add ("id",({ "wand",}) );
-	set_short("µØ»ğÖ®ÕÈ");
+	set_short("åœ°ç«ä¹‹æ–");
 	set_long(
-        "ÕâÊÇÒ»°ÑÄÜºô»½¡¸»ğÇò¡¹µÄÄ§ÕÈ£¬ÄãÒşÔ¼¿ÉÒÔ¿´¼ûÕÈÍ·ÉÁÖø¼¸Ë¿»ğ¹â¡£\n"
+        "é€™æ˜¯ä¸€æŠŠèƒ½å‘¼å–šã€Œç«çƒã€çš„é­”æ–ï¼Œä½ éš±ç´„å¯ä»¥çœ‹è¦‹æ–é ­é–ƒè‘—å¹¾çµ²ç«å…‰ã€‚\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 25 );
 	set( "type", "wand" );
 	set( "min_damage", 10 );
@@ -25,5 +25,5 @@ void create()
 	set( "special_damage_type", "fire" );
 	set( "special_damage", 15 );
 //	set( "special_msg", " launches a fireball, you are almost stunned!\n" );
-	set( "special_c_msg", "·¢³öÒ»ÍÅ»ğÇò,»÷ÏòÄãµÄÉíÌå¶øÈ¼ÉÕ\n" );
+	set( "special_c_msg", "ç™¼å‡ºä¸€åœ˜ç«çƒ,æ“Šå‘ä½ çš„èº«é«”è€Œç‡ƒç‡’\n" );
 }

@@ -5,12 +5,12 @@ int box_moved;
 void create()
 {
 	seteuid(getuid());
-	set_name( "baselard", "¶Ìµ¶" );
-   set_short( "¶Ìµ¶" );
+	set_name( "baselard", "çŸ­åˆ€" );
+   set_short( "çŸ­åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»°Ñ¶ÌÈĞµÄĞ¡ĞÍ¶Ìµ¶£¬µ¶±úÓÃ²¼Ìõ²øÖø¡£\n"
+		"é€™æ˜¯ä¸€æŠŠçŸ­åˆƒçš„å°å‹çŸ­åˆ€ï¼Œåˆ€æŸ„ç”¨å¸ƒæ¢çºè‘—ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "shortblade" );
 	set( "weapon_class", 5 );
 	set( "min_damage", 3 );
@@ -18,7 +18,7 @@ void create()
 	set( "weight", 30 );
 	set( "value", ({ 35, "silver" }) );
 }
-/*  bmp ²âÊÔÓÃ*/
+/*  bmp æ¸¬è©¦ç”¨*/
 void init()
 {
         add_action( "do_move", "move" );

@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("���˴�������");
+	ob->set_short("矮人村落的入口");
 	ob->set_long( @LONG_DESCRIPTION
-���߾��ǰ��˵Ĵ�ׯ.���ϱ߾��Ǳ������˵��Թ�.
+西邊就是矮人的村莊.而南邊就是保護矮人的迷宮.
 LONG_DESCRIPTION
 	);
 

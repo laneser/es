@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("beast-face", "ÊŞÃæÑÚĞÄ");
+        set_name("beast-face", "ç¸é¢æ©å¿ƒ");
         add( "id", ({ "face" }) );
-        set_short("ÊŞÃæÑÚĞÄ");
+        set_short("ç¸é¢æ©å¿ƒ");
         set_long(
-                "ËãÊÇÒ»ÖÖ»¤ĞÄ¾µ£¬µ«·ÀÓùÁ¦¸ü¼Ñ£¬ÊÇÁºÉ½²´Âí¾üÎå»¢½«µÄĞÅÎï£®\n"
+                "ç®—æ˜¯ä¸€ç¨®è­·å¿ƒé¡ï¼Œä½†é˜²ç¦¦åŠ›æ›´ä½³ï¼Œæ˜¯æ¢å±±æ³Šé¦¬è»äº”è™å°‡çš„ä¿¡ç‰©ï¼\n"
         );
-        set( "unit", "Ãæ");
+        set( "unit", "é¢");
         set( "type", "misc" );
         set( "material", "leather");
         set( "armor_class", 0);

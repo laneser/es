@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "miners' cap", "¿ó¹¤Í·¿ø" );
+	set_name( "miners' cap", "ç¤¦å·¥é ­ç›”" );
 	add("id",({"cap","helmet"}) );
-	set_short("¿ó¹¤Í·¿ø" );
+	set_short("ç¤¦å·¥é ­ç›”" );
 	set_long(
-		"ÕâÊÇÒ»¶¥¾É¾ÉµÄ¿ó¹¤Í·¿ø£¬ÉÏÃæÓĞÒ»¸öĞ¡Ğ¡µÄµÆÅİ£¬\n"
-		 "Äã¿ÉÒÔ°ÑËüµãÁÁ(light)µ±×÷ÕÕÃ÷ÓÃ¡£\n"
+		"é€™æ˜¯ä¸€é ‚èˆŠèˆŠçš„ç¤¦å·¥é ­ç›”ï¼Œä¸Šé¢æœ‰ä¸€å€‹å°å°çš„ç‡ˆæ³¡ï¼Œ\n"
+		 "ä½ å¯ä»¥æŠŠå®ƒé»äº®(light)ç•¶ä½œç…§æ˜ç”¨ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
         set("material","element");
 	set( "type", "head" );
 	set( "weight", 30 );
@@ -31,12 +31,12 @@ int light_t(string str)
 {
         if(!id(str)) return 0;
         if(!query("fuel"))
-                return notify_fail("ÄãÊÔÖøÁÁÆğÍ·¿øÉÏµÄµÆÅİ£¬µ«ÊÇºÜÏÔÈ»µÄ ... ËüÃ»µçÁË¡£\n");
+                return notify_fail("ä½ è©¦è‘—äº®èµ·é ­ç›”ä¸Šçš„ç‡ˆæ³¡ï¼Œä½†æ˜¯å¾ˆé¡¯ç„¶çš„ ... å®ƒæ²’é›»äº†ã€‚\n");
 
         if(query("light"))
-                return notify_fail("µÆÅİÒÑ¾­µãÖøÁË¡£\n");
+                return notify_fail("ç‡ˆæ³¡å·²ç¶“é»è‘—äº†ã€‚\n");
 
-        write("Äã½«Í·¿øÉÏµÄµÆÅİµãÁÁ¡£\n");
+        write("ä½ å°‡é ­ç›”ä¸Šçš„ç‡ˆæ³¡é»äº®ã€‚\n");
 
         set("light", 1);
         call_out("burn_out", query("fuel"));
@@ -48,13 +48,13 @@ int extinguish_t(string str)
         if(!id(str)) return 0;
         if(!query("fuel"))
                 return notify_fail( can_read_chinese()?
-                        "Ì«³ÙÁË£¬µçÒÑ¾­ÓÃÍêÁË¡£\n":
+                        "å¤ªé²äº†ï¼Œé›»å·²ç¶“ç”¨å®Œäº†ã€‚\n":
                         "What's the point, it's cashed.\n");
 
         if(!query("light"))
-                return notify_fail("Õâ¶¥Í·¿øµÄµÆÅİ¸ù±¾Ã»±»µãÁÁ !!\n");
+                return notify_fail("é€™é ‚é ­ç›”çš„ç‡ˆæ³¡æ ¹æœ¬æ²’è¢«é»äº® !!\n");
 
-        write("Äã½«µÆÅİ¿ª¹Ø¹Øµô¡£\n");
+        write("ä½ å°‡ç‡ˆæ³¡é–‹é—œé—œæ‰ã€‚\n");
         set("light", 0);
         set("fuel", remove_call_out("burn_out"));
         return 1;
@@ -67,7 +67,7 @@ void burn_out()
         owner = environment(this_object());
         if( living(owner) )
                 tell_object( owner, 
-                        "ÄãµÄÍ·¿øµÆÅİÉÁÁË¼¸ÏÂ£¬Ã»µçÁË¡£\n");
+                        "ä½ çš„é ­ç›”ç‡ˆæ³¡é–ƒäº†å¹¾ä¸‹ï¼Œæ²’é›»äº†ã€‚\n");
         set( "value", ({ 350, "silver" }));
         set( "fuel", 0 );
         set( "light", 0 );

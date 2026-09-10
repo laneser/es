@@ -7,15 +7,15 @@ inherit OBJECT;
  
 void create() {
   seteuid(getuid());
-  set_name("recycle bin","×ÊÔ´»ØÊÕÍ°");
+  set_name("recycle bin","è³‡æºå›æ”¶æ¡¶");
   set("id",({"bin","tube"}));
-  set_short("ÂÌÉ«Í°×Ó");
+  set_short("ç¶ è‰²æ¡¶å­");
   set("prevent_get",1);
   set_long(
 @CLONG
-Äã¿´µ½Ò»¸öÆá³ÉÂÌÉ«µÄÍ°×Ó. ÉÏÃæĞ´Öø [×ÊÔ´»ØÊÕÍ°], ÎªÁË±£³Ö ES µÄÇå½à
-ÇëËæÊÖ½«¿ÕÆ¿, ¿Õ¹ŞÖ®ÀàµÄ¿É»ØÊÕ×ÊÔ´ËÍµ½ÕâÀï (recycle).
-(¾ÍËãÄã²»ÊÇ»·±£Ğ¡¼â±ø, ¿´ÔÚÇ®µÄ·İÉÏÒ²À´»ØÊÕ°É.)
+ä½ çœ‹åˆ°ä¸€å€‹æ¼†æˆç¶ è‰²çš„æ¡¶å­. ä¸Šé¢å¯«è‘— [è³‡æºå›æ”¶æ¡¶], ç‚ºäº†ä¿æŒ ES çš„æ¸…æ½”
+è«‹éš¨æ‰‹å°‡ç©ºç“¶, ç©ºç½ä¹‹é¡çš„å¯å›æ”¶è³‡æºé€åˆ°é€™è£¡ (recycle).
+(å°±ç®—ä½ ä¸æ˜¯ç’°ä¿å°å°–å…µ, çœ‹åœ¨éŒ¢çš„ä»½ä¸Šä¹Ÿä¾†å›æ”¶å§.)
  
 CLONG
 );
@@ -40,18 +40,18 @@ int recycle_me(string str)
         if (sscanf(file_name(objs[i]),"%sempty#%d",tmps,tmpi)==2) {
 //            if (objs[i]->query("recycle")) {
                     mon=(int)objs[i]->query("recycle");
-                    write("Äã½«"+objs[i]->query("short")+"¶ª½ø»ØÊÕÍ²ÄÚ. µÃµ½ "+mon+" ¸öÍ­±Ò.\n");
+                    write("ä½ å°‡"+objs[i]->query("short")+"ä¸Ÿé€²å›æ”¶ç­’å…§. å¾—åˆ° "+mon+" å€‹éŠ…å¹£.\n");
                     this_player()->credit("copper",mon);
                     objs[i]->remove();
                     return 1;
                     }
                 else {
-                write("ÕâÑù¶«Î÷²»ÄÜ»ØÊÕ.\n");
+                write("é€™æ¨£æ±è¥¿ä¸èƒ½å›æ”¶.\n");
                 return 1;
                 }
             }
         }
-        write("ÄãÃ»ÓĞÕâÑù¶«Î÷.\n");
+        write("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿.\n");
         return 1;
 }
  

@@ -9,9 +9,9 @@ void create()
 {
 	::create();
 	set("cart_moving",0);
-//         set_name( "Cisklyph cart", "Ï£Ë¹¿ËÀû·òÔË¿ó³µ");
+//         set_name( "Cisklyph cart", "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Š");
 	add( "id", ({ "cart" }) );
-	set_short("Cisklyph cart", "Ï£Ë¹¿ËÀû·òÔË¿ó³µ");
+	set_short("Cisklyph cart", "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Š");
 	set_long( "\n", "@@query_c_long" );
 	set( "light", 1 );
 	set("exits",(["leave":Mine"/factory"]));
@@ -32,18 +32,18 @@ string query_c_long()
 	string long;
 
 	long = 
-"ÄãÏÖÔÚÕı×øÔÚÏ£Ë¹¿ËÀû·òÔË¿ó³µÀïÃæ.Õâ³µÒÑ¾­±»¸Ä×°³ÉÔØÈË×¨ÓÃ.\n"
-"³µ×ÓµÄÇ°ÃæÓĞÒ»¸ö°´Å¥(button),ËÆºõÊÇÆô¶¯µÄ¿ª¹Ø.Äã¿ÉÒÔÊÔÖøÈ¥\n"
-"°´(press)Ëü\n" ;	
+"ä½ ç¾åœ¨æ­£ååœ¨å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Šè£¡é¢.é€™è»Šå·²ç¶“è¢«æ”¹è£æˆè¼‰äººå°ˆç”¨.\n"
+"è»Šå­çš„å‰é¢æœ‰ä¸€å€‹æŒ‰éˆ•(button),ä¼¼ä¹æ˜¯å•Ÿå‹•çš„é–‹é—œ.ä½ å¯ä»¥è©¦è‘—å»\n"
+"æŒ‰(press)å®ƒ\n" ;	
 	switch( query("cart_moving") ) {
 		case 0:
-			long += "Ä¿Ç°Ï£Ë¹¿ËÀû·òÔË¿ó³µÕıÍ£ÔÚ¾«¡õ³§Àï.\n";
+			long += "ç›®å‰å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Šæ­£åœåœ¨ç²¾â–¡å» è£¡.\n";
 			break;
 		case 1:
-			long += "Ï£Ë¹¿ËÀû·òÔË¿ó³µ»º»ºµØÒÆ¶¯Öø.\n";
+			long += "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Šç·©ç·©åœ°ç§»å‹•è‘—.\n";
 			break;
 	    case 2:
-	        long += "Ï£Ë¹¿ËÀû·òÔË¿ó³µ·ÉËÙµØÒÆ¶¯Öø.\n";
+	        long += "å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Šé£›é€Ÿåœ°ç§»å‹•è‘—.\n";
 	} 
 	return long;
 }
@@ -52,8 +52,8 @@ int do_press(string button)
 {
     if (!button || button !="button") return 0;
     
-    write("ÄãÉìÊÖÈ¥°´ÄÇ¸ö°´Å¥.\n");
-    tell_room(this_object(),"Äã¿´µ½"+this_player()->query("c_name")+"ÉìÊÖÈ¥°´°´Å¥.\n"
+    write("ä½ ä¼¸æ‰‹å»æŒ‰é‚£å€‹æŒ‰éˆ•.\n");
+    tell_room(this_object(),"ä½ çœ‹åˆ°"+this_player()->query("c_name")+"ä¼¸æ‰‹å»æŒ‰æŒ‰éˆ•.\n"
               ,this_player());
     this_player()->set_explore("deathland#16");
     call_out("will_go",4);
@@ -66,7 +66,7 @@ int will_go()
     
     set("cart_moving",1);
     set("exits",([]));
-    tell_room(environment(this_object()),"Ò»ÕóÇáÎ¢µÄÕğ¶¯,Ï£Ë¹¿ËÀû·òÔË¿ó³µÊ»³ö¾«¡õ³§,¿ªÊ¼½øÈë°«ÈË¿ó¿Ó.\n");
+    tell_room(environment(this_object()),"ä¸€é™£è¼•å¾®çš„éœ‡å‹•,å¸Œæ–¯å…‹åˆ©å¤«é‹ç¤¦è»Šé§›å‡ºç²¾â–¡å» ,é–‹å§‹é€²å…¥çŸ®äººç¤¦å‘.\n");
     if( cartobj )
       cartobj->travel_mine();
 }

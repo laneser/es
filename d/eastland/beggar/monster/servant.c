@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(12);
-	set_name( "servant", "Ğ¡ÊÌÍ¯" );
+	set_name( "servant", "å°ä¾ç«¥" );
 	add( "id",({"servant"}) );
-	set_short( "Ğ¡ÊÌÍ¯" );
+	set_short( "å°ä¾ç«¥" );
 	set_long(@C_LONG
-Ğ¡ÊÌÍ¯ÔÚØ¤°ïÖĞÊÇ²»°´µØÎ»À´ÅÅµÄ,Ëû×¨ÃÅÊÌºò°ïÖ÷¡£ 
+å°ä¾ç«¥åœ¨ä¸å¹«ä¸­æ˜¯ä¸æŒ‰åœ°ä½ä¾†æ’çš„,ä»–å°ˆé–€ä¾å€™å¹«ä¸»ã€‚ 
 C_LONG	
         );
-        set( "unit", "Ãû" );
+        set( "unit", "å" );
 	set_perm_stat( "str", 16 );
 	set_perm_stat( "dex", 16 );
 	set_perm_stat( "kar", 15 );

@@ -7,14 +7,14 @@ int hole;
 void create()
 {
         ::create();
-        set_short("É½¹È");
+        set_short("å±±è°·");
         set_light(1);
         set_long( @LONG_DESCRIPTION
-ÄãÉí´¦ÔÚÒ»¸öÉìÊÖ²»¼ûÎåÖ¸µÄÒõ°µÉ½¹Èµ×£¬ÖÜÎ§Ò»Æ¬°µÃ£Ã£µÄ£¬Í·ÉÏ
-µÄÊ÷²»Í£µÄÔÚµÎË®£¬½ÅÏÂµÄ¸¯ÄàÒ²²»¶ÏµÄÉ¢·¢³ö¶ñÐÄµÄÕÓÆø£¬ËÄÖÜµÄÖ©Öë
-Íø¼áéíµÄÓÐÈçÄáÁúÉþ£¬ÍêÈ«·â×¡ÁËÄãµÄÈ¥Â·£¬Äã¿´ÁË°ëÌì£¬»¹ÊÇ²»ÖªµÀ¸Ã
-ÔõÑùÀë¿ªÕâ¸ö¿Ö²ÀµÄµØ·½£¬»òÐí"Quit"»áÊÇÄãÎ¨Ò»µÄÑ¡Ôñ£¬²»ÏëQuitµÄ»°
-»¹ÊÇ¸Ï¿ìÔÚ¡ºËÄÖÜ¡»ÕÒÕÒ£¬¿´¿´ÓÐÊ²÷á·½·¨¿ÉÒÔÀë¿ªÕâ¸ö¹íµØ·½¡£
+ä½ èº«è™•åœ¨ä¸€å€‹ä¼¸æ‰‹ä¸è¦‹äº”æŒ‡çš„é™°æš—å±±è°·åº•ï¼Œå‘¨åœä¸€ç‰‡æš—èŒ«èŒ«çš„ï¼Œé ­ä¸Š
+çš„æ¨¹ä¸åœçš„åœ¨æ»´æ°´ï¼Œè…³ä¸‹çš„è…æ³¥ä¹Ÿä¸æ–·çš„æ•£ç™¼å‡ºå™å¿ƒçš„æ²¼æ°£ï¼Œå››å‘¨çš„èœ˜è››
+ç¶²å …è»”çš„æœ‰å¦‚å°¼é¾ç¹©ï¼Œå®Œå…¨å°ä½äº†ä½ çš„åŽ»è·¯ï¼Œä½ çœ‹äº†åŠå¤©ï¼Œé‚„æ˜¯ä¸çŸ¥é“è©²
+æ€Žæ¨£é›¢é–‹é€™å€‹ææ€–çš„åœ°æ–¹ï¼Œæˆ–è¨±"Quit"æœƒæ˜¯ä½ å”¯ä¸€çš„é¸æ“‡ï¼Œä¸æƒ³Quitçš„è©±
+é‚„æ˜¯è¶•å¿«åœ¨ã€Žå››å‘¨ã€æ‰¾æ‰¾ï¼Œçœ‹çœ‹æœ‰ä»€éº¼æ–¹æ³•å¯ä»¥é›¢é–‹é€™å€‹é¬¼åœ°æ–¹ã€‚
 LONG_DESCRIPTION
 );
         set("c_item_desc",([
@@ -39,17 +39,17 @@ void report(object holder, object victim )
 {
    seteuid(getuid());
    tell_object( victim,
-   sprintf("( Äã%s )\n","/adm/daemons/statsd"->status_string(victim)));
+   sprintf("( ä½ %s )\n","/adm/daemons/statsd"->status_string(victim)));
 }
 
 int to_go()
 {
         if ( present("spider",this_object()) )
         {
-           tell_object(this_player(),"Ö©ÖëÕÅÑÀÎè×¦Öø£¬²»ÈÃÄã¹ýÈ¥¡£\n");
+           tell_object(this_player(),"èœ˜è››å¼µç‰™èˆžçˆªè‘—ï¼Œä¸è®“ä½ éŽåŽ»ã€‚\n");
            return 1;
         }
-        tell_object(this_player(),"ÕâÀïÃ»ÓÐÈÎºÎ³öÂ·¡£\n");
+        tell_object(this_player(),"é€™è£¡æ²’æœ‰ä»»ä½•å‡ºè·¯ã€‚\n");
         return 1;
 }
 
@@ -57,11 +57,11 @@ string to_tunnel()
 {
         if ((this_player()->query_temp("find_hole") == 1) && (hole == 1))
         {
-                return "Ò»¸öÒõÉ­³±ÊªµÄµØ¶´£¬ÄãÒª½øÈ¥(enter)Âð£¿\n";
+                return "ä¸€å€‹é™°æ£®æ½®æº¼çš„åœ°æ´žï¼Œä½ è¦é€²åŽ»(enter)å—Žï¼Ÿ\n";
         }
         else
         {
-                return "ÄãÏë¿´Ê²÷á£¿\n";
+                return "ä½ æƒ³çœ‹ä»€éº¼ï¼Ÿ\n";
         }
 }
 
@@ -70,21 +70,21 @@ int to_find(string s)
         if (present("spider"))
         {
                 tell_object(this_player(),
-                        "Ö©ÖëÕÅÑÀÎè×¦£¬ÄãÏÅµÃ²»¸ÒÂÒ¶¯¡£\n");
+                        "èœ˜è››å¼µç‰™èˆžçˆªï¼Œä½ åš‡å¾—ä¸æ•¢äº‚å‹•ã€‚\n");
                 return 1;
         }
 
         else if (s != "everywhere")
         {
                 tell_object(this_player(),
-                        "ÄãÕÒÁËÓÖÕÒ£¬²¢Ã»ÓÐ·¢ÏÖÈÎºÎ¶«Î÷¡£\n");
+                        "ä½ æ‰¾äº†åˆæ‰¾ï¼Œä¸¦æ²’æœ‰ç™¼ç¾ä»»ä½•æ±è¥¿ã€‚\n");
                 return 1;
         }
         else
         {
                 tell_object(this_player(),
-                        "Äãµ½´¦ÕÒÀ´ÕÒÈ¥£¬×îááÔÚ¶«±±½ÇµÄ´óÊ÷ÅÔ£¬ÕÒµ½"+
-                        "Ò»¸öÐ¡µØµÀ(tunnel)¡£\n");
+                        "ä½ åˆ°è™•æ‰¾ä¾†æ‰¾åŽ»ï¼Œæœ€å¾Œåœ¨æ±åŒ—è§’çš„å¤§æ¨¹æ—ï¼Œæ‰¾åˆ°"+
+                        "ä¸€å€‹å°åœ°é“(tunnel)ã€‚\n");
                 this_player()->set_temp("find_hole",1);
                 hole = 1;
 		this_player()->set_explore("noden#40");
@@ -97,15 +97,15 @@ int to_enter(string s)
 	if ((this_player()->query_temp("find_hole") == 1) && (hole == 1) && s == "tunnel")
         {
                 tell_room(environment(this_player()),
-                "Äã¿´µ½"+this_player()->query("c_name")+
-                "Ïñ¹·Ò»Ñù×êµ½¶´ÀïÈ¥ÁË¡£\n",
+                "ä½ çœ‹åˆ°"+this_player()->query("c_name")+
+                "åƒç‹—ä¸€æ¨£é‘½åˆ°æ´žè£¡åŽ»äº†ã€‚\n",
                 this_player() );
                 tell_object(this_player(),
-                        "ÄãÒ»Í·ÔÔ½ø¶´Àï£¬ÅÜµ½ÁíÒ»¸öµØ·½ÂÞ¡£\n");
+                        "ä½ ä¸€é ­æ ½é€²æ´žè£¡ï¼Œè·‘åˆ°å¦ä¸€å€‹åœ°æ–¹ç¾…ã€‚\n");
                 this_player()->move_player(HAWK"room1-1","SNEAK");
                 return 1;
         }
-        tell_object(this_player(),"ÄãÏë½øÈ¥ÄÇÀï£¿Ê«Ä¦¶ûµÄ¹ë·¿Âð£¿\n");
+        tell_object(this_player(),"ä½ æƒ³é€²åŽ»é‚£è£¡ï¼Ÿè©©æ‘©çˆ¾çš„é–¨æˆ¿å—Žï¼Ÿ\n");
         return 1;
 }
 

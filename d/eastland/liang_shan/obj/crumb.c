@@ -3,12 +3,12 @@ inherit OBJECT;
 
 void create()
 {
-     set_name("crumb","Ãæ°üÐ¼");
-     set_short("crumb","Ãæ°üÐ¼");
+     set_name("crumb","éºµåŒ…å±‘");
+     set_short("crumb","éºµåŒ…å±‘");
      set_long(
-      "Ò»Ð¡¿é³ÔÊ£µÄÃæ°üÐ¼£¬¸øÈË³ÔÊÇ¾ø¶Ô³Ô²»±¥µÄ¡£\n"
+      "ä¸€å°å¡Šåƒå‰©çš„éºµåŒ…å±‘ï¼Œçµ¦äººåƒæ˜¯çµ•å°åƒä¸é£½çš„ã€‚\n"
       );
-     set( "unit", "ÍÅ");
+     set( "unit", "åœ˜");
      set("weight",5);
 }
 void init()
@@ -19,10 +19,10 @@ int eat_food(string arg)
 {
 	if( !arg || arg != "crumb" ) return 0;
         write(
-                "Äã°ÑÕâÒ»Ð¡ÍÅÃæ°üÐ¼³ÔÏÂ¶Ç×Ó£¬¾ÍºÃÏñÔÚ´óº£ÖÐ¶ªÈëÒ»¿ÅÊ¯Í·¡£\n" );
-        tell_room( environment(this_player()),"Äã¿´µ½"+
-                     this_player()->query("c_name")+"ÀÇÍÌ»¢¡õµØ³ÔµôÁËÒ»¿éÃæ°üÐ¼£¬"
-                "ÄãµÄÍ¬ÇéÐÄÓÍÈ»¶øÉú...\n", this_player()
+                "ä½ æŠŠé€™ä¸€å°åœ˜éºµåŒ…å±‘åƒä¸‹è‚šå­ï¼Œå°±å¥½åƒåœ¨å¤§æµ·ä¸­ä¸Ÿå…¥ä¸€é¡†çŸ³é ­ã€‚\n" );
+        tell_room( environment(this_player()),"ä½ çœ‹åˆ°"+
+                     this_player()->query("c_name")+"ç‹¼åžè™Žâ–¡åœ°åƒæŽ‰äº†ä¸€å¡ŠéºµåŒ…å±‘ï¼Œ"
+                "ä½ çš„åŒæƒ…å¿ƒæ²¹ç„¶è€Œç”Ÿ...\n", this_player()
 		);
            this_player()->receive_healing( 1+random(1) );
 	remove();

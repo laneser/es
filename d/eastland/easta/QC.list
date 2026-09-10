@@ -1,14 +1,14 @@
-ÎäÆ÷:(Èôá°³Ç)
-Ãû³Æ     µµÃû         WC    MIN   MAX   ÖÖÀà ÌØ¹¥         ±¸×¢
+æ­¦å™¨:(è‹¥åµåŸ)
+åç¨±     æª”å         WC    MIN   MAX   ç¨®é¡ ç‰¹æ”»         å‚™è¨»
 ======== ============ ===== ===== ===== ==== ============ ====================
-³¤¸ê     halberd.c    30    17    34    pole bleed:10     nosecond
-³¤½£     longsword.c  22     9    20    lbl  bleed:5
+é•·æˆˆ     halberd.c    30    17    34    pole bleed:10     nosecond
+é•·åŠ     longsword.c  22     9    20    lbl  bleed:5
  
-·À¾ß:
-Ãû³Æ              µµÃû               AC  DB ÖÖÀà ²ÄÖÊ     ÌØ·À        ±¸×¢
+é˜²å…·:
+åç¨±              æª”å               AC  DB ç¨®é¡ æè³ª     ç‰¹é˜²        å‚™è¨»
 ================= ================== === == ==== ======== ==========  =========
-ºÚ²¼Ñ¥            black_boots.c       4   0 feet cloth
-ÇàÒÂÕ½¼×          blue_armor.c       24   4 body hv_met
-Í­¿øÃ±            brass_helm.c        4   0 head hv_met
-ÌúÁÛ¼×            scale_mail.c       18   0 body hv_met
+é»‘å¸ƒé´            black_boots.c       4   0 feet cloth
+é’è¡£æˆ°ç”²          blue_armor.c       24   4 body hv_met
+éŠ…ç›”å¸½            brass_helm.c        4   0 head hv_met
+éµé±—ç”²            scale_mail.c       18   0 body hv_met
  

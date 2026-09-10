@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "black hat", "²¶¿ìÃ±" );
+	set_name( "black hat", "æ•å¿«å¸½" );
 	add( "id", ({ "hat","cap" }) );
-	set_short( "a black hat", "²¶¿ìÃ±" );
+	set_short( "a black hat", "æ•å¿«å¸½" );
 	set_long(
 		"You see policeman's black hat.\n",
-		"ÕâÊÇÒ»¶¥²¶¿ìÃÇµÄÖÆÊ½Ã±×Ó£¬ÉÏÃæ»¹²åÁË¸ùÓğÃ«¡£\n"
+		"é€™æ˜¯ä¸€é ‚æ•å¿«å€‘çš„åˆ¶å¼å¸½å­ï¼Œä¸Šé¢é‚„æ’äº†æ ¹ç¾½æ¯›ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
 	set( "type", "head" );
         set("material","cloth");
 	set( "weight", 60 );

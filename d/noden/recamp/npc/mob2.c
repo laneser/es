@@ -6,12 +6,12 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name( "plesiosaurus statue", "Éß¾±ÁúµñÏñ" );
+	set_name( "plesiosaurus statue", "è›‡é ¸é¾é›•åƒ" );
 	add("id",({"statue"}));
-	set_short( "Éß¾±ÁúµñÏñ" );
+	set_short( "è›‡é ¸é¾é›•åƒ" );
 	set_long(
-         "¡¾Éß¾±Áú¡¿Ïà´«ÊÇ¹Å´úºşÀïµÄÊØ»¤ÊŞ£¬Õâ¸öµñÏñ¿´ÆğÀ´ºÜ¾É£¬È´ÁîÈË¸Ğ¾õ
-          èòèòÈçÉú¡£\n"
+         "ã€è›‡é ¸é¾ã€‘ç›¸å‚³æ˜¯å¤ä»£æ¹–è£¡çš„å®ˆè­·ç¸ï¼Œé€™å€‹é›•åƒçœ‹èµ·ä¾†å¾ˆèˆŠï¼Œå»ä»¤äººæ„Ÿè¦º
+          æ ©æ ©å¦‚ç”Ÿã€‚\n"
 	);
 	set( "alignment", 800 );
 	set_perm_stat( "dex", 15 );
@@ -32,11 +32,11 @@ int my_tactic()
 
     if( random(20)<15 || !(victim= query_attacker()) ) return 0;
       tell_object(victim,
-          "\nµñÏñ¿ÚÖĞÍÂ³öÒ»µÀÇ¿¾¢µÄË®Öù£¬ÈçÍ¬·É½£°ãÏòÄãÉäÀ´.\n"
+          "\né›•åƒå£ä¸­åå‡ºä¸€é“å¼·å‹çš„æ°´æŸ±ï¼Œå¦‚åŒé£›åŠèˆ¬å‘ä½ å°„ä¾†.\n"
           );
       tell_room(environment(this_object()),
-        "\nµñÏñ¿ÚÖĞÍÂ³öÒ»µÀÇ¿¾¢µÄË®Öù£¬ÈçÍ¬·É½£°ãÏò"
-        +victim->query("c_name")+"ÉäÈ¥.\n",this_object()) ;
+        "\né›•åƒå£ä¸­åå‡ºä¸€é“å¼·å‹çš„æ°´æŸ±ï¼Œå¦‚åŒé£›åŠèˆ¬å‘"
+        +victim->query("c_name")+"å°„å».\n",this_object()) ;
       victim->receive_special_damage("evil",5+random(2));
       "/d/magic/magic"->report(this_object(),victim);
       return 1;
@@ -51,11 +51,11 @@ int accept_item(object who,object item)
   if ( !(who->query_temp("lulu_active")))  return 1 ;  
 
     command("give paper to "+who->query("name"));
-    write("\nÍ»È»Ò»ÕóÒ«ÑÛµÄ¹âÃ¢ÕÕÁÁµÄÈÃÄã¼¸ºõ¿´²»Çå³şÑÛÇ°µÄ¶«Î÷......\n") ;
-    write("ß×£¿Äã²»½û»³ÒÉ×Ô¼ºÊÇ²»ÊÇÑÛ»¨ÁË...Ôõ÷áÑÛÇ°¶àÁË¸öÄ°ÉúµÄÄĞ×Ó£¿\n") ;
+    write("\nçªç„¶ä¸€é™£è€€çœ¼çš„å…‰èŠ’ç…§äº®çš„è®“ä½ å¹¾ä¹çœ‹ä¸æ¸…æ¥šçœ¼å‰çš„æ±è¥¿......\n") ;
+    write("å’¦ï¼Ÿä½ ä¸ç¦æ‡·ç–‘è‡ªå·±æ˜¯ä¸æ˜¯çœ¼èŠ±äº†...æ€éº¼çœ¼å‰å¤šäº†å€‹é™Œç”Ÿçš„ç”·å­ï¼Ÿ\n") ;
 
     tell_room( environment(), 
-       sprintf("Ä°ÉúÈËÏò%s(%s)µãÍ·Î¢Ğ¦£¬ËµµÀ: Ğ»Ğ»£¡\n",
+       sprintf("é™Œç”Ÿäººå‘%s(%s)é»é ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼\n",
        who->query("c_name"),who->query("name") ), who ) ;
 
     set("alt_corpse",CAMPMOB"mob2-1") ;
@@ -64,8 +64,8 @@ int accept_item(object who,object item)
       who->set_temp("lulu_mob2",1) ;
     }
     if ( (who->query_temp("lulu_mob3")) && (who->query_temp("lulu_mob4")) )  
-          tell_object( who,"Ä°ÉúÈËËµµÀ: Ğ»Ğ»£¡Çë°ÑËû½»¸øÂ¶Â¶°É!!\n");
-    else  tell_object( who,"Ä°ÉúÈËËµµÀ: Ğ»Ğ»£¡ÇëÔÙÑ°ÕÒÆäËû½«¾ü°É!!\n");
+          tell_object( who,"é™Œç”Ÿäººèªªé“: è¬è¬ï¼è«‹æŠŠä»–äº¤çµ¦éœ²éœ²å§!!\n");
+    else  tell_object( who,"é™Œç”Ÿäººèªªé“: è¬è¬ï¼è«‹å†å°‹æ‰¾å…¶ä»–å°‡è»å§!!\n");
 
     die() ;
     return 1;

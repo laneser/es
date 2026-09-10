@@ -4,19 +4,19 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wizard's cloak", "Î×Ê¦¶·Åî" );
+	set_name( "wizard's cloak", "å·«å¸«é¬¥è“¬" );
 	add( "id", ({ "cloak" }) );
-	set_short( "a wizard's cloak", "Î×Ê¦¶·Åî" );
+	set_short( "a wizard's cloak", "å·«å¸«é¬¥è“¬" );
 	set_long( @LONG
 	This cloak is used by wizard Rashudi. It is made by magical cloth and 
 spreads a wanderful power of magic.
 LONG
     , @C_LONG
-	Ä§µ¼Ê¿À­ĞŞµÛ¹ßì¶´©ÖøµÄ¶·Åî£¬ÓÉì¶ÓÃ±»¸½ÓëÄ§·¨µÄ²¼Ö¯³É£¬É¢·¢³öÒ»¹É²»¿ÉµÖ
-¿¹µÄÄ§Á¦£¬¾İËµÓµÓĞµÖ¿¹¸÷ÖÖÄ§·¨µÄÄÜÁ¦¡£
+	é­”å°å£«æ‹‰ä¿®å¸æ…£æ–¼ç©¿è‘—çš„é¬¥è“¬ï¼Œç”±æ–¼ç”¨è¢«é™„èˆ‡é­”æ³•çš„å¸ƒç¹”æˆï¼Œæ•£ç™¼å‡ºä¸€è‚¡ä¸å¯æŠµ
+æŠ—çš„é­”åŠ›ï¼Œæ“šèªªæ“æœ‰æŠµæŠ—å„ç¨®é­”æ³•çš„èƒ½åŠ›ã€‚
 C_LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "cloak" );
 	set( "material", "cloth");
 	set( "armor_class", 10 );

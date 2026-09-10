@@ -23,22 +23,22 @@ int cmd_sacrifice(string str)
 	else if ( ob = present(str,environment(this_player()))) 
 		inv += ({ ob });
 	if ( !sizeof(inv)) 
-		return notify_fail(sprintf("ÕâÀïÃ»ÓĞ %s ÕâÖÖ¶«Î÷¡£\n",str));
+		return notify_fail(sprintf("é€™è£¡æ²’æœ‰ %s é€™ç¨®æ±è¥¿ã€‚\n",str));
 	   for ( i =0 ; i < sizeof(inv) ; i++ )	{
 		if ( !inv[i] ) continue ;
 		if ( living(inv[i]) || inv[i]->query("herb_path")) { 
-			if ( str != "all" ) tell_object(this_player(),sprintf("Éñ²»½ÓÊÜÏñ%sÕâÖÖ»îÉúÉúµÄ¼ÀÆ·¡£\n",inv[i]->query("short")));
+			if ( str != "all" ) tell_object(this_player(),sprintf("ç¥ä¸æ¥å—åƒ%sé€™ç¨®æ´»ç”Ÿç”Ÿçš„ç¥­å“ã€‚\n",inv[i]->query("short")));
 				continue ;
 		}
 		if ( inv[i]->query("prevent_get") || inv[i]->query("name")=="board") {
-			tell_object(this_player(),sprintf("ÉñÒ¡Ò¡Í·£¬²»ÈÏÎª%sÊÇÃ»ÓĞÓÃµÄ·ÏÎï¡£\n",inv[i]->query("short")));
+			tell_object(this_player(),sprintf("ç¥æ–æ–é ­ï¼Œä¸èªç‚º%sæ˜¯æ²’æœ‰ç”¨çš„å»¢ç‰©ã€‚\n",inv[i]->query("short")));
 			continue;
 		}
 		if ( coins = inv[i]->query("value") ) {
 			cost = (int)coins[0]*( (coins[1] == "gold") ? 10 : 1)/20;
-			tell_object(this_player(),sprintf("Äã°Ñ%s(%s)·îÏ×¸øÉñ£¬",inv[i]->query("short"),inv[i]->query("name")));
+			tell_object(this_player(),sprintf("ä½ æŠŠ%s(%s)å¥‰ç»çµ¦ç¥ï¼Œ",inv[i]->query("short"),inv[i]->query("name")));
 			tell_room(environment(this_player()),
-				  sprintf("%s°Ñ%s(%s)·îÏ×¸øÉñ¡£\n",
+				  sprintf("%sæŠŠ%s(%s)å¥‰ç»çµ¦ç¥ã€‚\n",
 					  this_player()->query("c_name"),
 					  inv[i]->query("short"),inv[i]->query("name"))
 				,this_player());
@@ -46,23 +46,23 @@ int cmd_sacrifice(string str)
 			switch ( random(3) ) {
 				case 0 : 
 					cost++;
-					tell_object(this_player(),sprintf("ÉñºÜ¸ßĞËµÄ¸øÄã %d Ã¶Òø±Ò×ö½±Àø¡£\n",cost ));
+					tell_object(this_player(),sprintf("ç¥å¾ˆé«˜èˆˆçš„çµ¦ä½  %d æšéŠ€å¹£åšçå‹µã€‚\n",cost ));
 					this_player()->add("wealth/silver",cost);
 					break;
 				case 1 : 
 					cost = cost / 2 +1 ;
-					tell_object(this_player(),sprintf("Éñ½ÓÊÜÄãµÄ·îÏ×£¬´ÍÄã %d µã¾­Ñé¡£\n",cost));
+					tell_object(this_player(),sprintf("ç¥æ¥å—ä½ çš„å¥‰ç»ï¼Œè³œä½  %d é»ç¶“é©—ã€‚\n",cost));
 					this_player()->gain_experience(cost);
 					break;
 				case 2 : 
 					cost = cost / 10 +1;
-					tell_object(this_player(),sprintf("ÉñºÜĞÀÉÍÄãµÄ»·±£¸ÅÄî£¬»Ö¸´Äã %d µãÌåÁ¦¡£\n",cost));
+					tell_object(this_player(),sprintf("ç¥å¾ˆæ¬£è³ä½ çš„ç’°ä¿æ¦‚å¿µï¼Œæ¢å¾©ä½  %d é»é«”åŠ›ã€‚\n",cost));
 					this_player()->receive_healing(cost);
 					break;
 			}
 		} else {
 		tell_object(this_player(),
-			sprintf("Äã°Ñ%s(%s)·îÏ×¸øÉñ£¬µ«ÊÇÊ²÷áÊÂÒ²Ã»·¢Éú¡£\n",
+			sprintf("ä½ æŠŠ%s(%s)å¥‰ç»çµ¦ç¥ï¼Œä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n",
 				inv[i]->query("short"),inv[i]->query("name")));
 		inv[i]->remove();
 		}
@@ -77,8 +77,8 @@ int help()
 Usage:	sacrifice <item on the ground> 
 	sacrifice all
 
-    Ê¹ÓÃÕâ¸öÃüÁî¿ÉÒÔ°Ñ¶ªÆúÔÚµØÉÏµÄ¶«Î÷·îÏ×¸øÉñ£¬ÒÔÎ¬»¤»·¾³Çå½à¡£
-ÓÉì¶ÔŞĞíÄãµÄ»·±£¸ÅÄî£¬´óÉñ»á¸øÄãĞ¡Ğ¡µÄ½±Àø¡£
+    ä½¿ç”¨é€™å€‹å‘½ä»¤å¯ä»¥æŠŠä¸Ÿæ£„åœ¨åœ°ä¸Šçš„æ±è¥¿å¥‰ç»çµ¦ç¥ï¼Œä»¥ç¶­è­·ç’°å¢ƒæ¸…æ½”ã€‚
+ç”±æ–¼è®šè¨±ä½ çš„ç’°ä¿æ¦‚å¿µï¼Œå¤§ç¥æœƒçµ¦ä½ å°å°çš„çå‹µã€‚
 
 HELP
 );

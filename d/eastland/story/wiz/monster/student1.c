@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set_level(3);
-	set_name( "student", "Ñ§×Ó" );
-	set_short( "Ñ§×Ó" );
+	set_name( "student", "å­¸å­" );
+	set_short( "å­¸å­" );
 	set_long(@C_LONG
-Ò»¸ö°óÖøÁ½¸ö±è×Ó£¬ÅõÖø¿Î±¾×¨ĞÄì¶¿ÎÌÃÉÏµÄĞ¡Ñ§×Ó¡£
+ä¸€å€‹ç¶è‘—å…©å€‹è¾®å­ï¼Œæ§è‘—èª²æœ¬å°ˆå¿ƒæ–¼èª²å ‚ä¸Šçš„å°å­¸å­ã€‚
 C_LONG
         );
 	set( "gender", "male" );

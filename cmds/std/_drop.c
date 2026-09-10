@@ -32,14 +32,14 @@ int cmd_drop(string str)
 	
 	if( !str ) return help();
 	if( !env )
-		return notify_fail("ÄãÃ»ÓĞ°ì·¨ÔÚÕâÀï¶ªÈÎºÎ¶«Î÷¡£\n");
+		return notify_fail("ä½ æ²’æœ‰è¾¦æ³•åœ¨é€™è£¡ä¸Ÿä»»ä½•æ±è¥¿ã€‚\n");
 
 	player->block_attack(2);
 	if(sscanf(str, "%d %s %s", amount, type, tmp) == 3 ||	
 	sscanf(str, "%d %s", amount, type) == 2) {
 		if( !player->debit( type, amount) )
 			return notify_fail( 
-				"ÄãÃ»ÓĞÄÇ÷á¶à"+to_chinese(type+" coin")+"¡£\n"
+				"ä½ æ²’æœ‰é‚£éº¼å¤š"+to_chinese(type+" coin")+"ã€‚\n"
 				);
 		ob = clone_object(COINS);
 		ob->set_type(type);
@@ -49,16 +49,16 @@ int cmd_drop(string str)
 			player->credit( type, amount );
 			ob->remove();
 			return notify_fail( 
-				"Äã²»ÄÜÔÙ¶ª¶«Î÷ÁË¡£\n");
+				"ä½ ä¸èƒ½å†ä¸Ÿæ±è¥¿äº†ã€‚\n");
 		}
 		if(amount == 1) word = "coin"; else word = "coins";
-		write( "Äã¶ªÏÂ "+amount+" Ã¶"+to_chinese(type+" coin")+"¡£\n"
+		write( "ä½ ä¸Ÿä¸‹ "+amount+" æš"+to_chinese(type+" coin")+"ã€‚\n"
 			);
 		tell_room( env, 
-		c_name+"¶ªÏÂÒ»Ğ©"+to_chinese(type+" coin")+"¡£\n", player);
+		c_name+"ä¸Ÿä¸‹ä¸€äº›"+to_chinese(type+" coin")+"ã€‚\n", player);
 		if( is_wizard ) {
 		    tell_room( env, 
-			  "µ«ÊÇËüÒ»ÏÂ¾ÍÏûÊ§ÁË¡£\n"
+			  "ä½†æ˜¯å®ƒä¸€ä¸‹å°±æ¶ˆå¤±äº†ã€‚\n"
 		    );
 		    ob->remove();
 		}
@@ -69,7 +69,7 @@ int cmd_drop(string str)
 		inv = all_inventory(player);
 		if( !pointerp(inv) && sizeof(inv)<1 )
 			return notify_fail( 
-				"ÄãÉíÉÏÃ»ÓĞÈÎºÎ¶«Î÷¿É¶ª¡£\n");
+				"ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•æ±è¥¿å¯ä¸Ÿã€‚\n");
 		for( i=0; i<sizeof(inv); i++ ) {
 			if( !inv[i] || inv[i]->query("prevent_drop") ||
 				inv[i]->query("secure") ) continue;
@@ -77,32 +77,32 @@ int cmd_drop(string str)
 			if( !inv[i] || res != MOVE_OK ) continue;
 
 			short = (string)inv[i]->query("short");
-			if( !(unit = inv[i]->query("unit")) ) unit = "¸ö";
-			if( !short ) short = "Ä³Îï";
-			write( sprintf("Äã¶ªÏÂÒ»%s%s¡£\n",unit,short));
+			if( !(unit = inv[i]->query("unit")) ) unit = "å€‹";
+			if( !short ) short = "æŸç‰©";
+			write( sprintf("ä½ ä¸Ÿä¸‹ä¸€%s%sã€‚\n",unit,short));
 			tell_room( env, 
-				sprintf("%s¶ªÏÂÒ»%s%s¡£\n",c_name,unit,short), player
+				sprintf("%sä¸Ÿä¸‹ä¸€%s%sã€‚\n",c_name,unit,short), player
 			);
 			inv[i]->delete("on_mounted");
 			if( is_wizard ) {
 			  tell_room( env, 
-			    "µ«ÊÇËüÒ»ÏÂ¾ÍÏûÊ§ÁË¡£\n", player
+			    "ä½†æ˜¯å®ƒä¸€ä¸‹å°±æ¶ˆå¤±äº†ã€‚\n", player
 		      );
 			  inv[i]->remove();
 			}
 		}
-		write( "Äã½«ÉíÉÏËùÓĞÄÜ¶ªµÄ¶«Î÷¶ªÏÂ¡£\n");
+		write( "ä½ å°‡èº«ä¸Šæ‰€æœ‰èƒ½ä¸Ÿçš„æ±è¥¿ä¸Ÿä¸‹ã€‚\n");
 		return 1;
 	}
 	if(str == "all coins") {
 		coins = player->query("wealth");
 		if(!mapp(coins) || sizeof(coins) == 0)
 			return notify_fail(
-				"ÄãÉíÉÏÃ»ÓĞÈÎºÎÇ®±Ò¡£\n");
+				"ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•éŒ¢å¹£ã€‚\n");
 		types = keys(coins);
 		if(!pointerp(types) || sizeof(types) == 0) 
 			return notify_fail(
-			"ÄãÉíÉÏÃ»ÓĞÈÎºÎÇ®±Ò¡£\n");
+			"ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•éŒ¢å¹£ã€‚\n");
 
 		for(i = 0; i < sizeof(types); i++) {
 			money = coins[types[i]];
@@ -110,7 +110,7 @@ int cmd_drop(string str)
 			player->debit( types[i], money );
 			ob = clone_object(COINS);
 			if (!ob) { 
-				write("Ç®±Ò·¢Éú´íÎó,ÇëÍ¨ÖªÎ×Ê¦´¦Àí !!\n");
+				write("éŒ¢å¹£ç™¼ç”ŸéŒ¯èª¤,è«‹é€šçŸ¥å·«å¸«è™•ç† !!\n");
 			    continue;
 			}  
 			ob->set_type(types[i]);
@@ -125,13 +125,13 @@ int cmd_drop(string str)
 			}
 			if(money == 1) word = "coin"; else word = "coins";
 			write( 
-				"Äã¶ªÏÂ "+money+" Ã¶"+to_chinese(types[i]+" coin")+"¡£\n");
+				"ä½ ä¸Ÿä¸‹ "+money+" æš"+to_chinese(types[i]+" coin")+"ã€‚\n");
 			tell_room( env, 
-				c_name+"¶ªÏÂÒ»Ğ©"+to_chinese(types[i]+" coin")+"¡£\n",player
+				c_name+"ä¸Ÿä¸‹ä¸€äº›"+to_chinese(types[i]+" coin")+"ã€‚\n",player
 			);
 			if( is_wizard ) {
 			  tell_room( env, 
-			    "µ«ÊÇËüÒ»ÏÂ¾ÍÏûÊ§ÁË¡£\n"
+			    "ä½†æ˜¯å®ƒä¸€ä¸‹å°±æ¶ˆå¤±äº†ã€‚\n"
 		      );
 			  ob->remove();
 			}
@@ -143,7 +143,7 @@ int cmd_drop(string str)
 		money = player->query("wealth/"+type);
 		if(!money)
 			return notify_fail(
-				"ÄãÉíÉÏÃ»ÓĞÕâÖÖÇ®±Ò¡£\n");
+				"ä½ èº«ä¸Šæ²’æœ‰é€™ç¨®éŒ¢å¹£ã€‚\n");
 
 		player->debit( type, money );
 		ob = clone_object(COINS);
@@ -154,16 +154,16 @@ int cmd_drop(string str)
 			player->credit( type, money );
 			ob->remove();
 			return notify_fail(
-				"Äã²»ÄÜÔÙ¶ª¶«Î÷ÁË¡£\n");
+				"ä½ ä¸èƒ½å†ä¸Ÿæ±è¥¿äº†ã€‚\n");
 		}
-		write( "Äã°ÑÉíÉÏËùÓĞµÄ" + to_chinese(type+" coin")+"¶ªÏÂ¡£\n"
+		write( "ä½ æŠŠèº«ä¸Šæ‰€æœ‰çš„" + to_chinese(type+" coin")+"ä¸Ÿä¸‹ã€‚\n"
 			);
 		tell_room( env, 
-			c_name+"¶ªÏÂÒ»Ğ©"+to_chinese(type+" coin")+"¡£\n",player
+			c_name+"ä¸Ÿä¸‹ä¸€äº›"+to_chinese(type+" coin")+"ã€‚\n",player
 	    );
 	    if( is_wizard ) {
 		    tell_room( env,
-			    "µ«ÊÇËüÒ»ÏÂ¾ÍÏûÊ§ÁË¡£\n"
+			    "ä½†æ˜¯å®ƒä¸€ä¸‹å°±æ¶ˆå¤±äº†ã€‚\n"
 		    );
 			ob->remove();
 		}
@@ -172,24 +172,24 @@ int cmd_drop(string str)
 
 	ob = present(str, player);
 	if( !ob )
-		return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		return notify_fail("ä½ èº«ä¸Šæ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
  
     if( ob->query("prevent_drop") || ob->query("secure") )
- 		return notify_fail( "ÄãÃ»ÓĞ°ì·¨½«Ëü¶ªµô¡£\n");
+ 		return notify_fail( "ä½ æ²’æœ‰è¾¦æ³•å°‡å®ƒä¸Ÿæ‰ã€‚\n");
 
 	res = ob->move(env);
 	if(res != MOVE_OK)
-		return notify_fail( "ÄãÃ»ÓĞ°ì·¨°ÑËü¶ªÔÚÕâÀï¡£\n");
+		return notify_fail( "ä½ æ²’æœ‰è¾¦æ³•æŠŠå®ƒä¸Ÿåœ¨é€™è£¡ã€‚\n");
 
-	if( !(unit= ob->query("unit")) ) unit = "¸ö";
-	write( sprintf("Äã¶ªÏÂÒ»%s%s¡£\n",unit,ob->query("short")));
+	if( !(unit= ob->query("unit")) ) unit = "å€‹";
+	write( sprintf("ä½ ä¸Ÿä¸‹ä¸€%s%sã€‚\n",unit,ob->query("short")));
 	tell_room( environment(this_player()), 
-		sprintf("%s¶ªÏÂÒ»%s%s¡£\n",c_name,unit,ob->query("short")),player
+		sprintf("%sä¸Ÿä¸‹ä¸€%s%sã€‚\n",c_name,unit,ob->query("short")),player
     );
     ob->delete("on_mounted");
     if( is_wizard ) {
 		tell_room( env, 
-			"µ«ÊÇËüÒ»ÏÂ¾ÍÏûÊ§ÁË¡£\n");
+			"ä½†æ˜¯å®ƒä¸€ä¸‹å°±æ¶ˆå¤±äº†ã€‚\n");
         ob->remove();
 	}
 	return 1;
@@ -198,11 +198,11 @@ int cmd_drop(string str)
 int help()
 {
 	write(@HELP
-Ê¹ÓÃ¸ñÊ½: drop <ÎïÆ·Ãû»òall>
+ä½¿ç”¨æ ¼å¼: drop <ç‰©å“åæˆ–all>
 
-½«ÉíÉÏµÄÎïÆ·¶ªÔÚµØÉÏ£¬Ä³Ğ©ÎïÆ·½«»áÏûÊ§.
+å°‡èº«ä¸Šçš„ç‰©å“ä¸Ÿåœ¨åœ°ä¸Šï¼ŒæŸäº›ç‰©å“å°‡æœƒæ¶ˆå¤±.
 
-Ïà¹ØÖ¸Áî: get, put.
+ç›¸é—œæŒ‡ä»¤: get, put.
 HELP
 );
 	return 1;

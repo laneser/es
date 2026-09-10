@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "Moraz blade", "Ä¬À××È³¤µ¶" );
+	set_name( "Moraz blade", "é»˜é›·èŒ²é•·åˆ€" );
 	add( "id", ({ "blade", "sword" }) );
-	set_short( "Moraz Blade", "Ä¬À××È³¤µ¶" );
+	set_short( "Moraz Blade", "é»˜é›·èŒ²é•·åˆ€" );
 	set_long(
 		"You see a long sword with a long crane. The sword is well balanced\n"
 		"for those mastering usage of swords and lance.\n",
-		"ÕâÊÇÒ»°ÑÔìĞÍºÜÏñ³¤Ç¹µÄ³¤µ¶£¬ËüµÄµ¶±úºÜ³¤£¬²¢ÇÒ¸ÄÁ¼¹ıµ¶ÉíµÄÆ½ºâ£¬Ê¹µÃ\n"
-		"ÉÃì¶Ê¹ÓÃ³¤½£ºÍÇ¹ĞÍÎäÆ÷µÄÈËÄÜÊ®·Ö¿ìËÙµØ»Ó¶¯Õâ°Ñµ¶¡£\n"
+		"é€™æ˜¯ä¸€æŠŠé€ å‹å¾ˆåƒé•·æ§çš„é•·åˆ€ï¼Œå®ƒçš„åˆ€æŸ„å¾ˆé•·ï¼Œä¸¦ä¸”æ”¹è‰¯éåˆ€èº«çš„å¹³è¡¡ï¼Œä½¿å¾—\n"
+		"æ“…æ–¼ä½¿ç”¨é•·åŠå’Œæ§å‹æ­¦å™¨çš„äººèƒ½ååˆ†å¿«é€Ÿåœ°æ®å‹•é€™æŠŠåˆ€ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "weight", 110 );
 	set( "nosecond", 1 );

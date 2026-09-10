@@ -12,11 +12,11 @@ void create()
 {
         seteuid( getuid() ) ;
         
-	set_name("Herb Hoe","ҩ��");
+	set_name("Herb Hoe","藥鋤");
 	add( "id" , ({ "hoe" }) );
-	set_short("a set of herb how." , "ҩ��");
-	set_long("һ����ҽ�߲�ҩ�õ�ҩ����\n");
-   	set("unit","��");
+	set_short("a set of herb how." , "藥鋤");
+	set_long("一把行醫者採藥用的藥鋤。\n");
+   	set("unit","把");
    	set("weight", 15);
 	set( "type","blunt");
 	set( "second",1);
@@ -70,7 +70,7 @@ int dig_herb(string arg)
         if(sizeof(the_tree)==0) 
            {
             write(
-                "�����������ҵ�ʲ��??\n"
+                "你期望在這找到什麼??\n"
                 ) ;
             return 1 ;
             }
@@ -88,32 +88,32 @@ int dig_herb(string arg)
         }
         else ok = 0;
    
-        if ( ok == 0) { write("ι! û��ʶ���������, �ֳ����������?\n");
+        if ( ok == 0) { write("喂! 沒辨識清楚就亂挖, 鬧出人命怎麼辦?\n");
                         return 1;
                       }  
         purified= plant->query("purified");
         if (purified>0) plant->set("purified",(purified-1)) ;
-        else { write ( "�ܱ�Ǹ, ���ֲ�������õĲ��ݶ��ѱ������ˡ�\n"); 
+        else { write ( "很抱歉, 這棵植物上能用的部份都已被採完了。\n"); 
                return 1;
              }   
         new_herb=new(plant->query("herb_path")+plant->query("herb_file")) ;
         new_herb->move(this_player()) ;
 
-        write( "���"+plant->query("c_realname")+"����һ"+new_herb->query("unit")
-               +new_herb->query("c_name")+"����\n"
+        write( "你從"+plant->query("c_realname")+"磔下一"+new_herb->query("unit")
+               +new_herb->query("c_name")+"來。\n"
               ) ;
                
 	tell_room( environment(this_player()), 
-		dest->query("c_name")+"��"+plant->query("c_name")+
-		"����һ"+new_herb->query("unit")+new_herb->query("c_name")+
-		"����\n" 
+		dest->query("c_name")+"從"+plant->query("c_name")+
+		"磔下一"+new_herb->query("unit")+new_herb->query("c_name")+
+		"來。\n" 
 	  , this_player() );
 	if ( purified == 1 ) {
-	  write( "\n���ֲ�����㲻�ϵĴ߲�֮��, ��춿�ή�����ˡ�\n" );
+	  write( "\n這棵植物在你不斷的催殘之下, 終於枯萎而死了。\n" );
 	  tell_room( environment(this_player()) ,
 	             "\n"+ 
-	             plant->query("c_name")+"��"+dest->query("c_name")  
-                     +"���Ĳ�֮��, ��춿�ή�����ˡ�\n",
+	             plant->query("c_name")+"在"+dest->query("c_name")  
+                     +"的濫採之下, 終於枯萎而死了。\n",
                      this_player() );
           plant->remove();
           if (plant) destruct(plant);
@@ -127,11 +127,11 @@ int help(string arg)
         return 0 ;
 
      write( can_read_chinese(this_player())? 
-  " ҩ����ÿ���о��飬��������ҩ����ҽ�����ر��Ĺ��ߡ�\n"
-  " ������Ϊ�ܶ�ҩ���෴��ҩ�ݳ��ü�Ϊ���ƣ���ʱ������\n"
-  " Ҷ������Ĳ����ѡ�Ϊ�Ɐ�緢��������һ��Ҫ����\n"
-  " ��ʶ<verify>��ֲ����ܼ��Բɼ���\n\n"
-  "  �ɼ��ķ���Ϊ   dig <ֲ��ѧ��>\n"
+  " 藥鋤是每個有經驗，能自行製藥的行醫者所必備的工具。\n"
+  " 但是因為很多藥性相反的藥草長得極為相似，有時甚至是\n"
+  " 葉脈方向的差別而已。為免悲劇發生，所以一定要經過\n"
+  " 辨識<verify>的植物才能加以採集。\n\n"
+  "  採集的方法為   dig <植物學名>\n"
    : ""    
     );
     return 1 ;

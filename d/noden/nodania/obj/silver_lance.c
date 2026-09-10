@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "silver lance", "ÒøÇ¹" );
+	set_name( "silver lance", "éŠ€æ§" );
 	add( "id", ({ "lance" }) );
-	set_short( "ÒøÇ¹" );
+	set_short( "éŠ€æ§" );
 	set_long(@CLONG
-ÕâÊÇÒ»°ÑÉÁÁÁµÄÒøÉ«³¤Ç¹£¬´ó²¿·ÖÉÃì¶Ê¹ÓÃ´Á´ÌĞÍÎäÆ÷µÄÆïÊ¿ÃÇ¶¼Ï²»¶
-ÕâÑùµÄÎäÆ÷¡£
+é€™æ˜¯ä¸€æŠŠé–ƒäº®çš„éŠ€è‰²é•·æ§ï¼Œå¤§éƒ¨åˆ†æ“…æ–¼ä½¿ç”¨æˆ³åˆºå‹æ­¦å™¨çš„é¨å£«å€‘éƒ½å–œæ­¡
+é€™æ¨£çš„æ­¦å™¨ã€‚
 CLONG
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "type", "thrusting" );
 	set( "weapon_class", 30 );
 	set( "min_damage", 17 );

@@ -6,14 +6,14 @@ void create()
 {
         ::create();
         set_level(19);
-        set_name( "laice","创世者的保镖" );
+        set_name( "laice","鍓典笘鑰呯殑淇濋彚" );
         add ("id", ({ "captain", "knight", "royal knight" }) );
-        set_short( "Laice the Captain of Royal Knights","创世者的保镖");
+        set_short( "Laice the Captain of Royal Knights","鍓典笘鑰呯殑淇濋彚");
         set_long(
                 "Laice is the greatest knight Noden Kingdom. His duty is\n"
                 "to recurit more adventurers as fighters to defend Noden.\n",
-                "雷思是诺顿王国中最伟大的骑士，他目前被派来主持骑士公会，希望\n"
-                "能招募更多强壮的年青人参加保卫国家的行列。\n"
+                "闆锋�濇槸璜鹃爴鐜嬪湅涓渶鍋夊ぇ鐨勯◣澹紝浠栫洰鍓嶈娲句締涓绘寔楱庡＋鍏渻锛屽笇鏈沑n"
+                "鑳芥嫑鍕熸洿澶氬挤澹殑骞撮潚浜哄弮鍔犱繚琛涘湅瀹剁殑琛屽垪銆俓n"
         );
         set_perm_stat("str", 30 );
         set_perm_stat("con", 25 );

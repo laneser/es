@@ -8,7 +8,7 @@ void create()
 	set_save_file("thief_board");
 	set_location("/d/thief/hall/thief_guild");
 	set ("short.text", "Thief's bulletin board");
-	set ("c_short.text", "Ğ¡ÍµÁôÑÔ°å");
+	set ("c_short.text", "å°å·ç•™è¨€æ¿");
 	set ("c_long.text", 
-		"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë²Î¿´ help board¡£\n");
+		"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹åƒçœ‹ help boardã€‚\n");
 }

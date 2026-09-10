@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "golden key", "½ğÉ«Ô¿³×" );
+	set_name( "golden key", "é‡‘è‰²é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "an golden key", "½ğÉ«Ô¿³×" );
+	set_short( "an golden key", "é‡‘è‰²é‘°åŒ™" );
 	set_long(
 		"A golden key.\n",
-		"ÕâÊÇÒ»°Ñ½ğÉ«µÄÔ¿³×,ÉÏÃæÏâÂúÁË×êÊ¯\n"
+		"é€™æ˜¯ä¸€æŠŠé‡‘è‰²çš„é‘°åŒ™,ä¸Šé¢é‘²æ»¿äº†é‘½çŸ³\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "ECHO_DWARF_CITY_1" );
 	set( "weight", 3 );
 	set( "value", ({ 120, "silver" }) );

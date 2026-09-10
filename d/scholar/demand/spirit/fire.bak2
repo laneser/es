@@ -5,29 +5,29 @@
 inherit MONSTER;
 int life_time = 13;
 string name;
-string str1="»ğ¾«ÁéËµ£ºÎÒµÄÅóÓÑ¡¢ÎÒ±ØĞëÒª×ßÁË£¬¼ÙÈçĞëÒªÎÒ°ïÃ¦ÇëÔÙ½ĞÎÒ¡£\n";
-string str2="Äã¼ûµ½»ğ¾«Áé»¯³ÉÒ»ÍÅºìÔÆÏòÌì¿Õ·ÉÈ¥¡£\n";
+string str1="ç«ç²¾éˆèªªï¼šæˆ‘çš„æœ‹å‹ã€æˆ‘å¿…é ˆè¦èµ°äº†ï¼Œå‡å¦‚é ˆè¦æˆ‘å¹«å¿™è«‹å†å«æˆ‘ã€‚\n";
+string str2="ä½ è¦‹åˆ°ç«ç²¾éˆåŒ–æˆä¸€åœ˜ç´…é›²å‘å¤©ç©ºé£›å»ã€‚\n";
 string str3="HIR";
 
 void create()
 {
 	::create();
 	set_level(13);
-	set_name( "fire spirit", "»ğ¾«Áé" );
+	set_name( "fire spirit", "ç«ç²¾éˆ" );
 	add( "id", ({ "spirit" }) );
-	set_short( "»ğ¾«Áé" );
+	set_short( "ç«ç²¾éˆ" );
 	set_long(
-		"Ò»¸öÈ«ÉíÍ¨ºìÃ°Öø»ğ¡õÍ·ÉÏ°óÁË¸öºûµû½áµÄ¾«Áé¡£\n"
+		"ä¸€å€‹å…¨èº«é€šç´…å†’è‘—ç«â–¡é ­ä¸Šç¶äº†å€‹è´è¶çµçš„ç²¾éˆã€‚\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "race", "elf" );
 	set( "alignment",  800 );
         set( "tactic", "flank");
 	set( "tactic_func", "my_tactic" );
-        set_c_verbs( ({"%sÍ¨ºìµÄÊÖ±ÛÍ»È»±©³¤£¬×¥Ïò%s",
-                       "%sÓÃÊÖÒ»Ö¸£¬Ò»µã»ğ»¨ÉäÏò%s",
-                       "%sµÄË«ÑÛÍù%sÉä³öÁ½µÀºìÉ«µÄ¹âÃ¢"}) );
-// ¾«Áé²»ÔÙ»á±»¹¥»÷£¬²»ĞèÒªÕâ¸öÁË
+        set_c_verbs( ({"%sé€šç´…çš„æ‰‹è‡‚çªç„¶æš´é•·ï¼ŒæŠ“å‘%s",
+                       "%sç”¨æ‰‹ä¸€æŒ‡ï¼Œä¸€é»ç«èŠ±å°„å‘%s",
+                       "%sçš„é›™çœ¼å¾€%så°„å‡ºå…©é“ç´…è‰²çš„å…‰èŠ’"}) );
+// ç²¾éˆä¸å†æœƒè¢«æ”»æ“Šï¼Œä¸éœ€è¦é€™å€‹äº†
 //	set_skill( "dodge", 80 );
 }
 
@@ -36,7 +36,7 @@ int environment_check()
   return 1;
 }
 
-// Õâ¸öÒ²²»ĞèÒªÁË
+// é€™å€‹ä¹Ÿä¸éœ€è¦äº†
 /*
 int receive_damage(int damage)
 {
@@ -53,7 +53,7 @@ int receive_damage(int damage)
        master->set( "hit_points", hits );
        set( "hit_points", hits);
        seteuid(getuid());
-       tell_object(master," ( Äã"+(string)"/adm/daemons/statsd"->c_status_string(master)+" )\n");
+       tell_object(master," ( ä½ "+(string)"/adm/daemons/statsd"->c_status_string(master)+" )\n");
        return 1;
 }
 */
@@ -67,16 +67,16 @@ int my_action(object me)
 	if (life < life_time ) 
 		life_time = life ;
 	this_object()->move(environment(me));
-	tell_object(me,"»ğ¾«Áé¶ÔÄãËµ£ºÃ»ÎÊÌâ...ÎÒÂíÉÏÀ´°ïÄã»÷ÍËµĞÈË!\n");
-	tell_object(me,set_color("Í»È»ÇçÌìÒ»ÉùÅùö¨£¬»ğ¾«ÁéĞ®ÖøÀ×öªÖ®ÊÆ´ÓÌì¶ø½µºÍÄãÒ»Æğ¹¥»÷µĞÈË¡£\n","HIR"));
+	tell_object(me,"ç«ç²¾éˆå°ä½ èªªï¼šæ²’å•é¡Œ...æˆ‘é¦¬ä¸Šä¾†å¹«ä½ æ“Šé€€æ•µäºº!\n");
+	tell_object(me,set_color("çªç„¶æ™´å¤©ä¸€è²éœ¹é‚ï¼Œç«ç²¾éˆæŒ¾è‘—é›·éœ†ä¹‹å‹¢å¾å¤©è€Œé™å’Œä½ ä¸€èµ·æ”»æ“Šæ•µäººã€‚\n","HIR"));
 	tell_room(environment(me),
-	set_color("Äã¼ûµ½"+me->query("c_name")+
-	"ÄîÖøÒ»Ğ©ÖäÓï£¬Í»È»ÇçÌìÒ»ÉùÅùö¨£¬\nÒ»Ö»»ğ¾«ÁéĞ®ÖøÀ×öªÖ®ÊÆ´ÓÌì¶ø½µ¶Ô"+
-	me->query("c_name")+"µÄµĞÈË·¢¶¯¹¥»÷¡£\n","HIR"),me);
+	set_color("ä½ è¦‹åˆ°"+me->query("c_name")+
+	"å¿µè‘—ä¸€äº›å’’èªï¼Œçªç„¶æ™´å¤©ä¸€è²éœ¹é‚ï¼Œ\nä¸€éš»ç«ç²¾éˆæŒ¾è‘—é›·éœ†ä¹‹å‹¢å¾å¤©è€Œé™å°"+
+	me->query("c_name")+"çš„æ•µäººç™¼å‹•æ”»æ“Šã€‚\n","HIR"),me);
 	victim = me->query_attacker();
         if (victim) {
 	  kill_ob(victim);
-// ¼ÓÕâĞĞ£¬¾«Áé²»ÔÚµĞÈË¹¥»÷Ä¿±êÖ®ÄÚ£¬¾«ÁéÓÀÔ¶²»»á±»´ò
+// åŠ é€™è¡Œï¼Œç²¾éˆä¸åœ¨æ•µäººæ”»æ“Šç›®æ¨™ä¹‹å…§ï¼Œç²¾éˆæ°¸é ä¸æœƒè¢«æ‰“
 	  victim->remove_attacker(this_object());
         }
         name=me->query("name");
@@ -84,7 +84,7 @@ int my_action(object me)
 	return 1;
 }
 
-// ÓÃdelayµÄ·½Ê½µÈgain_exp×öÍê»¹ÊÇ»áÓĞÒ»Ğ©ÎÊÌâ.
+// ç”¨delayçš„æ–¹å¼ç­‰gain_expåšå®Œé‚„æ˜¯æœƒæœ‰ä¸€äº›å•é¡Œ.
 /*
 void wait_get_exp(object me,object mob)
 {
@@ -100,13 +100,13 @@ void check_battle(object me,object mob)
     return;
   if (!(tmp=find_living(name))||(tmp->query("npc"))) {
     tell_room(environment(mob),
-      "»ğ¾«ÁéÔÚÄãµÄÉíáá´ó½Ğ£º³ôĞ¡×Ó£¬¾ÓÈ»¸øÎÒQUITµôÁË...\n"
-      "ËµÍêÒ²¸úÖøÏûÊ§ÁË¡£\n");
+      "ç«ç²¾éˆåœ¨ä½ çš„èº«å¾Œå¤§å«ï¼šè‡­å°å­ï¼Œå±…ç„¶çµ¦æˆ‘QUITæ‰äº†...\n"
+      "èªªå®Œä¹Ÿè·Ÿè‘—æ¶ˆå¤±äº†ã€‚\n");
     mob->remove();
     return;
   }
   else if (!me->query_attacker()) {
-  //  Ö±½ÓÏûÊ§¼´¿É . player
+  //  ç›´æ¥æ¶ˆå¤±å³å¯ . player
   //  call_out("wait_get_exp",5,me,mob);
     END->bye_bye(me,mob,13,str1,str2,str3);
     return;
@@ -120,10 +120,10 @@ void check_battle(object me,object mob)
   }
   else
     call_out("check_battle",2,me,mob);
-// ÓĞ¶¨ÒåÒ»¸ö²ÎÊı : life time£¬ËüÊÇ¾«ÁéËùÄÜÎªÖ÷ÈË×÷Õ½µÄ×î´ó»ØºÏÊı
-// ÔÚÃ¿´Î call my_tactic Ê±¶¼»á¼õÒ» ( ÒòÎª my_tactic Ã¿»ØºÏ call Ò»´Î)
-// ÕâÑù£¬Ö»Òª¼ì²é life ¾Í¿ÉÒÔÁË£¬²»Ò»¶¨ÒªÊ¹ÓÃ call_out ...
-// ²»¹ıÎÒÏëÄãÒ»¶¨ÓĞÄãµÄ¿¼ÂÇ ..
+// æœ‰å®šç¾©ä¸€å€‹åƒæ•¸ : life timeï¼Œå®ƒæ˜¯ç²¾éˆæ‰€èƒ½ç‚ºä¸»äººä½œæˆ°çš„æœ€å¤§å›åˆæ•¸
+// åœ¨æ¯æ¬¡ call my_tactic æ™‚éƒ½æœƒæ¸›ä¸€ ( å› ç‚º my_tactic æ¯å›åˆ call ä¸€æ¬¡)
+// é€™æ¨£ï¼Œåªè¦æª¢æŸ¥ life å°±å¯ä»¥äº†ï¼Œä¸ä¸€å®šè¦ä½¿ç”¨ call_out ...
+// ä¸éæˆ‘æƒ³ä½ ä¸€å®šæœ‰ä½ çš„è€ƒæ…® ..
 }
 
 int my_tactic()
@@ -138,8 +138,8 @@ int my_tactic()
 	if ( life_time-- < 0 ) 
           return END->bye_bye(master,this_object(),13,str1,str2,str3);
 /*	if ( ! present(master,environment()) ) {
-	  tell_object(master,"»ğ¾«ÁéÔÚÄãµÄÉíáá´ó½Ğ£º³ôĞ¡×Ó£¬¶ªÏÂÎÒÀÓÅÜ£¿£¿Äã¸øÎÒ¼ÇÖ¾ ...\n");
-	  tell_room(environment(),"»ğ¾«Áé½ĞµÀ : °¥°¡ ! "+master->query("c_name")+"Õâ¸ö³ôĞ¡×Ó¶ªÏÂÎÒÅÜÁË£¿ÎÒÒ²ÒªÁïÁË ..\n");
+	  tell_object(master,"ç«ç²¾éˆåœ¨ä½ çš„èº«å¾Œå¤§å«ï¼šè‡­å°å­ï¼Œä¸Ÿä¸‹æˆ‘çƒ™è·‘ï¼Ÿï¼Ÿä½ çµ¦æˆ‘è¨˜å¿— ...\n");
+	  tell_room(environment(),"ç«ç²¾éˆå«é“ : å“å•Š ! "+master->query("c_name")+"é€™å€‹è‡­å°å­ä¸Ÿä¸‹æˆ‘è·‘äº†ï¼Ÿæˆ‘ä¹Ÿè¦æºœäº† ..\n");
 	  if ( !wizardp(master) )
   	    END->can_summon_again(master,13);
 	  else
@@ -154,14 +154,14 @@ int my_tactic()
 	if( random(20)<2 ) {
            dam = 10 + 2*random(13);
 
-// ¼ÓÕâĞĞÈ·±£ mob ²»»á±»¾«ÁéµÄÌØÊâ¹¥»÷´òËÀ ... Ö÷ÈË»áµÃ²»µ½¾­Ñé
+// åŠ é€™è¡Œç¢ºä¿ mob ä¸æœƒè¢«ç²¾éˆçš„ç‰¹æ®Šæ”»æ“Šæ‰“æ­» ... ä¸»äººæœƒå¾—ä¸åˆ°ç¶“é©—
 //           if ( (int)victim->query("hit_points") < dam ) return 0;
-// ÏÖÔÚÓ¦¸Ã²»»áÓĞÕâÖÖÎÊÌâÁË. player 
+// ç¾åœ¨æ‡‰è©²ä¸æœƒæœ‰é€™ç¨®å•é¡Œäº†. player 
 
-// set_color() Ê±£¬µÚÈı¸ö²ÎÊıÎªÅĞ¶ÏÑÕÉ«µÄ¶ÔÏó£¬Èç¹û²»Éè£¬¾ÍÊÇÕâÖ»¾«Áé
-// Õâ¾ÍÊÇÎªÊ²÷áÓĞÊ±ºò¿´²»µ½ÑÕÉ«µÄÔ­Òò£¬Éè³É master ¼´¿É 
+// set_color() æ™‚ï¼Œç¬¬ä¸‰å€‹åƒæ•¸ç‚ºåˆ¤æ–·é¡è‰²çš„å°è±¡ï¼Œå¦‚æœä¸è¨­ï¼Œå°±æ˜¯é€™éš»ç²¾éˆ
+// é€™å°±æ˜¯ç‚ºä»€éº¼æœ‰æ™‚å€™çœ‹ä¸åˆ°é¡è‰²çš„åŸå› ï¼Œè¨­æˆ master å³å¯ 
 	  tell_room( environment(this_object()),
-	    set_color("\n»ğ¾«Áé°Ñ¿ÚÒ»ÕÅ£¬´Ó×ìÀïÉä³öÒ»ÍÅ»ğ¡õ¹¥»÷µĞÈË !\n\n","HIR",master)
+	    set_color("\nç«ç²¾éˆæŠŠå£ä¸€å¼µï¼Œå¾å˜´è£¡å°„å‡ºä¸€åœ˜ç«â–¡æ”»æ“Šæ•µäºº !\n\n","HIR",master)
             , this_object()
 	    );
           victim->receive_special_damage("fire", dam);
@@ -171,7 +171,7 @@ int my_tactic()
 	return 1;
 }
 
-// ÏÖÔÚ²»»áÓÉspiritÖ´ĞĞgain_experience()ÁË
+// ç¾åœ¨ä¸æœƒç”±spiritåŸ·è¡Œgain_experience()äº†
 /*
 int gain_experience(int exp)
 {
@@ -185,7 +185,7 @@ int gain_experience(int exp)
 		PARTY_D->share_experience(master,exp ) ;
 	else {
 			master->gain_experience(exp);
-            tell_object(master,sprintf("ÄãµÃµ½ %d µã¾­ÑéÖµ¡£\n",exp));
+            tell_object(master,sprintf("ä½ å¾—åˆ° %d é»ç¶“é©—å€¼ã€‚\n",exp));
  			}
  	return END->bye_bye(master,this_object(),13,str1,str2,str3);
 }	

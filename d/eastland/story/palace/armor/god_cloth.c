@@ -4,15 +4,15 @@ inherit ARMOR;
 inherit SARM"OR";
 void create()
 {
-     set_name( "God-Dragon plate","½çÁúîø¼×" );
+     set_name( "God-Dragon plate","ç•Œé¾é§ç”²" );
      add( "id",({ "plate" }) );
-     set_short( "½çÁúîø¼×" );
+     set_short( "ç•Œé¾é§ç”²" );
      set_long(@C_LONG
-Ò»¼şÇ°Ãæ¿Ì»­Öø·ÉÁúµÄîø¼×£¬È«ÉíÁÁ¾§¾§£¬ÁîÈË°®²»ÊÍÊÖ¡£
+ä¸€ä»¶å‰é¢åˆ»ç•«è‘—é£›é¾çš„é§ç”²ï¼Œå…¨èº«äº®æ™¶æ™¶ï¼Œä»¤äººæ„›ä¸é‡‹æ‰‹ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","element" );
      set( "armor_class",26 );

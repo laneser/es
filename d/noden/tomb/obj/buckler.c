@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "buckler", "圆盾" );
-   set_short( "圆盾" );
+	set_name( "buckler", "鍦撶浘" );
+   set_short( "鍦撶浘" );
 	set_long(
-		"这个圆盾已经相当旧了，上面还被武器砍出几道缺口，不过看起来仍然\n"
-		"相当耐用。\n"
+		"閫欏�嬪湏鐩惧凡缍撶浉鐣惰垔浜嗭紝涓婇潰閭勮姝﹀櫒鐮嶅嚭骞鹃亾缂哄彛锛屼笉閬庣湅璧蜂締浠嶇劧\n"
+		"鐩哥暥鑰愮敤銆俓n"
 	);
 	set( "type", "shield" );
 	set( "material", "light_metal" );

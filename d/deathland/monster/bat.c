@@ -9,21 +9,21 @@ void create()
 {
 	::create();
 	set_level(11);
-	set_name("huge bat", "¾Þòùòð");
+	set_name("huge bat", "å·¨è™è ");
 	add("id",({"bat"}));
-	set_short("A huge bat", "¾Þòùòð");
+	set_short("A huge bat", "å·¨è™è ");
 	set_long(
 	    "A huge bat.",
-	    "Ò»Ö»¾Þ´óµÄòùòð.\n"
+	    "ä¸€éš»å·¨å¤§çš„è™è .\n"
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "alignment", -200 );
 	set("aggressive",1);
 	set_natural_weapon(30,20,25);
 	set_natural_armor(55,15);
 	set( "tactic_func", "bite_you" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå","³á°ò" }) );
-	set_c_verbs( ({ "%sÕÅ¿ªËüµÄ´ó¿Ú£¬ÓÃËüµÄÑÀ³ÝÏò%sÒ§È¥" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”","ç¿…è†€" }) );
+	set_c_verbs( ({ "%så¼µé–‹å®ƒçš„å¤§å£ï¼Œç”¨å®ƒçš„ç‰™é½’å‘%så’¬åŽ»" }) );
 }
 
 int bite_you()
@@ -33,7 +33,7 @@ int bite_you()
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
 	else {
 	  tell_room( environment(this_object()), 
-		  "Õâ¾Þ´óµÄòùòðÓÃËüµÄÑÀ³ÝÎüÄãµÄÑª.\n"
+		  "é€™å·¨å¤§çš„è™è ç”¨å®ƒçš„ç‰™é½’å¸ä½ çš„è¡€.\n"
 		  );
 	  victim->receive_damage(30+random(10));	
 	  report(this_object(),victim);

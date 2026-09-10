@@ -8,17 +8,17 @@ void create ()
 
         ::create();
     set_level(11);
-    set_name("believer of evil god","ĞşÒõ½ÌµÜ×Ó");
+    set_name("believer of evil god","ç„é™°æ•™å¼Ÿå­");
     add ("id", ({ "believer",}) );
-    set_short("ĞşÒõ½ÌµÜ×Ó");
+    set_short("ç„é™°æ•™å¼Ÿå­");
         set_long(@C_LONG
-ËûÊÇÒ»ÃûĞşÒõ½ÌµÜ×Ó£¬Ò»Éí¹¦\·òÉõÊÇÁËµÃ£¬ÊÇÒõĞş±ùµÄËÀÖÒ½ÌÍ½¡£
+ä»–æ˜¯ä¸€åç„é™°æ•™å¼Ÿå­ï¼Œä¸€èº«åŠŸå¤«ç”šæ˜¯äº†å¾—ï¼Œæ˜¯é™°ç„å†°çš„æ­»å¿ æ•™å¾’ã€‚
 C_LONG
  );
 	set("alignment",10);
 	set( "gender", "male" );
 	set( "race", "human");
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
         set( "moving", 1 );
         set( "speed", 20 );
 //	set( "wimpy", 40 );

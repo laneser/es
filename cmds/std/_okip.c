@@ -19,13 +19,13 @@ int cmd_okip(string str)
 
 	me = this_player();
 	if( (string)me->query("name") == "guest" )
-		return notify_fail("�㲻�ܰ� guest �� okip!!\n");
+		return notify_fail("你不能幫 guest 設 okip!!\n");
 
 	if( !str ) {
 		if(!me->query("ok_ip"))
- 			tell_object(me, "�㻹û�� ok-ip.\n");
+ 			tell_object(me, "你還沒設 ok-ip.\n");
  		else
-			tell_object(me, "��� ok-ip �����趨Ϊ :\n"+"  "+
+			tell_object(me, "你的 ok-ip 現在設定為 :\n"+"  "+
  				(string)me->query("ok_ip")+"\n" );
  		return 1;
 	}
@@ -69,10 +69,10 @@ int cmd_okip(string str)
 
 	act_ob->set("ok_ip", implode(ip_list,":"));
 	if( pname )
-		write(pname+" �� OK-IP �����趨Ϊ :\n"+
+		write(pname+" 的 OK-IP 現在設定為 :\n"+
 			"  "+act_ob->query("ok_ip")+"\n");
 	else
-		write("OK-IP �����趨Ϊ :\n"+"  "+act_ob->query("ok_ip")+"\n");
+		write("OK-IP 現在設定為 :\n"+"  "+act_ob->query("ok_ip")+"\n");
 	act_ob->save_data();
 	if( link ) link->clean_up();
 	return 1;
@@ -82,16 +82,16 @@ int help()
 {
 	write(@C_HELP
 
-ʹ�ø�ʽ: okip [-a|-d|-s] [IP:IP:...]
+使用格式: okip [-a|-d|-s] [IP:IP:...]
 
-    ��ָ����������趨���Լ��� okip LIST��ֻ�д���Щ IP address ������
-�����˲���ʹ��������� ��
+    這指令可以用來設定你自己的 okip LIST，只有從這些 IP address 上連過
+來的人才能使用這個人物 。
 
-����˵��: a - ���ӡ�d - ɾ����s - �����趨��
+參數說明: a - 增加、d - 刪除、s - 重新設定。
 
-    IP ��ʽ��Ϊ 140.113.23.32 �� 140* �� *23 �� cis* �� *pc �ȡ�
-������ʹ��"?"�����޸����κβ������ᴫ�����е� okip list��
-�� IP = now ����ΪĿǰ�� login IP��
+    IP 格式可為 140.113.23.32 或 140* 或 *23 或 cis* 或 *pc 等。
+但請勿使用"?"。若無給予任何參數將會傳回現有的 okip list。
+若 IP = now 則視為目前的 login IP。
 
 C_HELP
 	);

@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "crimson amulet", "�ʺ�ɫ������" );
+	set_name( "crimson amulet", "鮮紅色護身符" );
 	add( "id", ({ "amulet" }) );
-	set_short( "�ʺ�ɫ������" );
+	set_short( "鮮紅色護身符" );
 	set_long(
-		"����һ���ʺ�ɫ��Բ�θ��ң���������һ�������εı�ǡ�\n"
+		"這是一個鮮紅色的圓形革囊，上面烙著一個三角形的標記。\n"
 	);
 	set( "type", "misc" );
 	set( "material", "leather" );

@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("µØµÀ");
+	ob->set_short("åœ°é“");
 	ob->set_long( @LONG_DESCRIPTION
-Äã¿´µ½¿í¹ãµÄµØµÀÖÐÑë¾¹ÓÐÒ»¸öË®³Ø(pool)¡£Ë®³ØÇåÁ¹ÇßÐÂ£¬ÁîÈËÐÄ¿õÉñâù¡£
+ä½ çœ‹åˆ°å¯¬å»£çš„åœ°é“ä¸­å¤®ç«Ÿæœ‰ä¸€å€‹æ°´æ± (pool)ã€‚æ°´æ± æ¸…æ¶¼æ²æ–°ï¼Œä»¤äººå¿ƒæ› ç¥žæ€¡ã€‚
 LONG_DESCRIPTION
 	);
 
@@ -17,7 +17,7 @@ LONG_DESCRIPTION
 		"down" : "/d/noden/recamp/camp9", 
 		"up" : "/d/noden/recamp/camp8" ]) );
 	ob->set( "item_desc", ([ 
-		"pool" : "Õâ×ùË®³ØÉî²»¿É²â£¬É¢·¢Öø¹ÉÇåÁ¹µÄÆøÏ¢£¬ÁîÈËÐÄ¿õÉñâù¡£\n" ]) );
+		"pool" : "é€™åº§æ°´æ± æ·±ä¸å¯æ¸¬ï¼Œæ•£ç™¼è‘—è‚¡æ¸…æ¶¼çš„æ°£æ¯ï¼Œä»¤äººå¿ƒæ› ç¥žæ€¡ã€‚\n" ]) );
 	ob->set( "objects", ([ 
 		"frog#2" : "/d/noden/recamp/npc/frog", 
 		"frog#5" : "/d/noden/recamp/npc/frog", 

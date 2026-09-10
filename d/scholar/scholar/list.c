@@ -6,10 +6,10 @@ inherit OBJECT;
 void create()
 {
 	seteuid(getuid());
-        set_name( "list", "ÅÅĞĞ°ñ" );
-        set_short( "½£·¨µÈ¼¶ÅÅĞĞ°ñ" );
+        set_name( "list", "æ’è¡Œæ¦œ" );
+        set_short( "åŠæ³•ç­‰ç´šæ’è¡Œæ¦œ" );
         set_long( (string)find_object_or_load("/d/scholar/scholar/topscholar2")->get_list());
-        set( "unit", "¾í" );
+        set( "unit", "å·" );
         set( "weight", 2 );
         set( "value", ({ 1, "silver" }) );
         set( "useless", 1 );

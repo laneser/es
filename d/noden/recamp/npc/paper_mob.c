@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(2);
-	set_name( "sheet", "Ö½ÈË" );
+	set_name( "sheet", "ç´™äºº" );
 	add( "id", ({ "sheet" }) );
-	set_short( "Ö½ÈË" );
+	set_short( "ç´™äºº" );
 	set_long(
-		"Äã¿´µ½Ò»¸öÈ«Éí°×ÒÂ¡¢³¤·¢Åû¼ç£¬Îå¹Ù²»Çå¡¢ÃæÎŞ±íÇéµÄ¶«Î÷¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹å…¨èº«ç™½è¡£ã€é•·é«®æŠ«è‚©ï¼Œäº”å®˜ä¸æ¸…ã€é¢ç„¡è¡¨æƒ…çš„æ±è¥¿ã€‚\n"
 	);
    set( "race", "undead" );
    set( "unbleeding", 1);
@@ -27,13 +27,13 @@ void create()
 	set( "natural_min_damage1", 3 );
 	set( "natural_max_damage1", 5 );
 	set( "alt_corpse", CAMPOBJ"paper" );
-	set_c_verbs( ({"%sÎ§³ÉÈ¦È¦£¬Ñ¹Ïò%s"}) );
+	set_c_verbs( ({"%såœæˆåœˆåœˆï¼Œå£“å‘%s"}) );
 }
 
 void die()
 {
    tell_room( environment(this_object()), 
-   query("c_name") + "»¯³ÉÒ»¹É°×ÑÌ£¬ÏûÊ§ÁË....Äã¿´µ½Ä³¸ö¶«Î÷µôÔÚµØ°åÉÏ¡£\n",
+   query("c_name") + "åŒ–æˆä¸€è‚¡ç™½ç…™ï¼Œæ¶ˆå¤±äº†....ä½ çœ‹åˆ°æŸå€‹æ±è¥¿æ‰åœ¨åœ°æ¿ä¸Šã€‚\n",
       this_object() );
    ::die(1);
 }

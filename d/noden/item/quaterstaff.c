@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "oak quaterstaff", "ÏğÄ¾ÕÈ" );
+	set_name( "oak quaterstaff", "æ©¡æœ¨æ–" );
 	add( "id", ({ "quaterstaff", "staff" }) );
-   set_short( "ÏğÄ¾ÕÈ" );
+   set_short( "æ©¡æœ¨æ–" );
 	set_long(
-		"Ò»°ÑÓÃ¼áÓ²µÄÏğÄ¾×ö³ÉµÄÄ¾ÕÈ£¬ËüµÄ¼â¶Ë°üÖøÒ»¸öÌú¹¿¡£\n"
+		"ä¸€æŠŠç”¨å …ç¡¬çš„æ©¡æœ¨åšæˆçš„æœ¨æ–ï¼Œå®ƒçš„å°–ç«¯åŒ…è‘—ä¸€å€‹éµç®ã€‚\n"
 	);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	setup_weapon( "blunt", 15, 3, 10 );
 	set( "weight", 65 );
 	set( "value", ({ 120, "silver" }) );

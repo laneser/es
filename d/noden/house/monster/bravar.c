@@ -8,17 +8,17 @@ void create()
 {
 	::create();
    set_level(12);
-   set_name("Bravar","���𷥶�");
+   set_name("Bravar","布瑞伐爾");
    add("id", ({ "man" }));
-   set_short("���𷥶�");
+   set_short("布瑞伐爾");
 	set_long(
-          "���𷥶�����������ŵ�����ǵľ�ҽ, ��˵����������\n"
-          "������, �����˵ص��顣Ϊ�������ᱻ�������ؽ�?\n"
+          "布瑞伐爾先生本來是諾達尼亞的軍醫, 聽說這屋子死了\n"
+          "不少人, 而來此地調查。為何他竟會被困於這個地窖?\n"
 	);
    set("race","human");
    set("gender","male");
    set("alignment",700);
-   set("unit","λ");
+   set("unit","位");
    set_perm_stat("dex",16);
    set_perm_stat("int",16);
    set_perm_stat("pie",16);
@@ -30,8 +30,8 @@ void create()
    set_temp( "aiming_loc", "ganglion" );
    set("chat_chance",10);
    set("chat_output", ({
-           "���𷥶�������������: ʳ.....ʳ......\n"
-           "   (��������̫С��������������...)\n"
+           "布瑞伐爾無力地呻吟著: 食.....食......\n"
+           "   (他的聲音太小以致於你聽不清楚...)\n"
      }) );
    wield_weapon("/d/noden/house/obj/mace");
 }
@@ -51,6 +51,6 @@ int accept_item(object me,object item)
    ob->move(me);
    this_player()->set_explore("noden#26");
    tell_object( me,
-     "���𷥶�˵: лл...�Һܾ�û�Զ�����! ������а�����ǻر���!\n" );
+     "布瑞伐爾說: 謝謝...我很久沒吃東西了! 這張驅邪符算是回報吧!\n" );
    return 1;
 }

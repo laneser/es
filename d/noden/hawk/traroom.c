@@ -6,12 +6,12 @@ int mirror;
 void create()
 {
         ::create();
-        set_short("Æ¯ÁÁµÄ·¿×Ó");
+        set_short("æ¼‚äº®çš„æˆ¿å­");
         set_light(1);
         set_long( @LONG_DESCRIPTION
-ÕâÊÇÒ»¶°×°è«Ê®·ÖÀ«ÆøµÄ·¿×Ó£¬¿´ÆðÀ´ÏñÊÇÓÐÇ®ÈË¼Ò×¡µÄµØ·½¡£Ç½±ß°ÚÁËÒ»
-¸ö´ó´óµÄÊé¹ñ(closet)£¬×°ÁËÉÏ°Ù±¾µÄÊé£¬ÄÑµÀÕâ·¿×ÓµÄÖ÷ÈËÊÇÒ»¸ö±¥¶ÁÊ«ÊéµÄ
-¶ÁÊéÈËÂð£¿
+é€™æ˜¯ä¸€æ£Ÿè£ç’œååˆ†é—Šæ°£çš„æˆ¿å­ï¼Œçœ‹èµ·ä¾†åƒæ˜¯æœ‰éŒ¢äººå®¶ä½çš„åœ°æ–¹ã€‚ç‰†é‚Šæ“ºäº†ä¸€
+å€‹å¤§å¤§çš„æ›¸æ«ƒ(closet)ï¼Œè£äº†ä¸Šç™¾æœ¬çš„æ›¸ï¼Œé›£é“é€™æˆ¿å­çš„ä¸»äººæ˜¯ä¸€å€‹é£½è®€è©©æ›¸çš„
+è®€æ›¸äººå—Žï¼Ÿ
 LONG_DESCRIPTION
         );
         set( "exits", ([
@@ -29,8 +29,8 @@ LONG_DESCRIPTION
 
 string to_closet()
 {
-        return "ÕâÊÇÒ»¸öºÜ´óµÄÊé¹ñ£¬ÀïÃæ×°ÁËÉÏ°Ù±¾µÄÊé£¬²»¹ý¿´ÆðÀ´ÊéµÄááÃæ\n"
-                +"Ó¦¸Ã»¹ÓÐÒ»Ð©¿Õ¼ä£¬²»ÖªµÀ·ÅÁËÐ©Ê²÷á¶«Î÷¡£\n\n";
+        return "é€™æ˜¯ä¸€å€‹å¾ˆå¤§çš„æ›¸æ«ƒï¼Œè£¡é¢è£äº†ä¸Šç™¾æœ¬çš„æ›¸ï¼Œä¸éŽçœ‹èµ·ä¾†æ›¸çš„å¾Œé¢\n"
+                +"æ‡‰è©²é‚„æœ‰ä¸€äº›ç©ºé–“ï¼Œä¸çŸ¥é“æ”¾äº†äº›ä»€éº¼æ±è¥¿ã€‚\n\n";
 }
 
 void init()
@@ -46,18 +46,18 @@ int to_search(string str)
         {
                 if (this_player()->query_temp("smore_box") != 1)
                 {
-                        tell_object(this_player(),"ÄãÕÒÁËÓÖÕÒ£¬²¢Ã»ÓÐ·¢ÏÖÈÎºÎ¶«Î÷¡£\n");
+                        tell_object(this_player(),"ä½ æ‰¾äº†åˆæ‰¾ï¼Œä¸¦æ²’æœ‰ç™¼ç¾ä»»ä½•æ±è¥¿ã€‚\n");
                         return 1;
                 }
 
                 if ( present("traito",this_object()) )
                 {
-                        tell_object(this_player(),"À×¶àµÉÁËÄãÒ»ÑÛ¡£\n");
+                        tell_object(this_player(),"é›·å¤šçžªäº†ä½ ä¸€çœ¼ã€‚\n");
                         return 1;
                 }
                 else
                 {
-                        tell_object(this_player(),"ÄãÔÚÀ×¶àµÄÌúÏä×ÓÀïÕÒµ½Ò»Æ¿³ÈÉ«µÄÒ©Ë®¡£\n");
+                        tell_object(this_player(),"ä½ åœ¨é›·å¤šçš„éµç®±å­è£¡æ‰¾åˆ°ä¸€ç“¶æ©™è‰²çš„è—¥æ°´ã€‚\n");
                         obj = new(OBJ"potion");
                         obj->move(this_object());
                         potion = 0;
@@ -70,7 +70,7 @@ int to_search(string str)
         if (str == "closet")
         {
                 if (mirror == 0) return 0;
-                tell_object(this_player(),"ÄãÔÚÊé¹ñÖÐÕÒµ½Ò»Ãæ¾µ×Ó¡£\n");
+                tell_object(this_player(),"ä½ åœ¨æ›¸æ«ƒä¸­æ‰¾åˆ°ä¸€é¢é¡å­ã€‚\n");
                 obj2 = new(OBJ"mirror");
                 obj2->move(this_object());
                 mirror = 0;

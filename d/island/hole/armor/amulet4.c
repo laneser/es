@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Angel Wing","ÌìÊ¹³á°ò" );
+	set_name( "Angel Wing","å¤©ä½¿ç¿…è†€" );
 	add( "id", ({ "wing" }) );
-	set_short( "ÌìÊ¹³á°ò" );
+	set_short( "å¤©ä½¿ç¿…è†€" );
 	set_long(@LONG
-	¿É·¢»ÓÉñÊ¥Á¦Á¿µÄÌìÊ¹³á°ò£¬ÌìÊ¹»áÍ¸¹ıÕâ³á
-	°ò´«ËÍÁ¦Á¿¡£
+	å¯ç™¼æ®ç¥è–åŠ›é‡çš„å¤©ä½¿ç¿…è†€ï¼Œå¤©ä½¿æœƒé€éé€™ç¿…
+	è†€å‚³é€åŠ›é‡ã€‚
 LONG
 		);
-	set( "unit","¶Ô" );
+	set( "unit","å°" );
 	set( "weight",5 );
 	set( "type","misc" );
 	set( "material","element" );

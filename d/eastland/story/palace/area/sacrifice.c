@@ -7,8 +7,8 @@ inherit COINVALUE;
 void create()
 {
 	::create();
-	set_short( "·îÏ×Ì¨" );
-	set_long( "ÕâÀïÊÇ·îÏ×Ì¨¡£\n" );
+	set_short( "å¥‰ç»è‡º" );
+	set_long( "é€™è£¡æ˜¯å¥‰ç»è‡ºã€‚\n" );
 
 }
 
@@ -49,7 +49,7 @@ int sell_ob(object ob)
 	value = ob->query("value");
 	if( !value ) {
 		tell_object(this_player(),sprintf(
-		   "ÌìµÛËµµÀ:ÕâÃ»ÓĞ¼ÛÖµµÄ¶«Î÷(%s)Ò²¸Ò·îÏ×¸øÎÒ£¿Ã»³ÏÒâÂï¡£\n",
+		   "å¤©å¸èªªé“:é€™æ²’æœ‰åƒ¹å€¼çš„æ±è¥¿(%s)ä¹Ÿæ•¢å¥‰ç»çµ¦æˆ‘ï¼Ÿæ²’èª æ„å˜›ã€‚\n",
 		   ob->query("short")));
 		ob->remove();
 		return 1;
@@ -66,10 +66,10 @@ int sell_ob(object ob)
 
 	type = value[1];
 	ob->move(this_object());
-	if( !(unit = ob->query("unit")) ) unit = "¸ö";
-	write(sprintf("Äã°ÑÉíÉÏµÄ%s·îÏ×¸øÌìµÛ£¬ÌìµÛÁúĞÄ´óÔÃÉÍ¸øÄã %d ¿é%s¡£\n",
+	if( !(unit = ob->query("unit")) ) unit = "å€‹";
+	write(sprintf("ä½ æŠŠèº«ä¸Šçš„%så¥‰ç»çµ¦å¤©å¸ï¼Œå¤©å¸é¾å¿ƒå¤§æ‚…è³çµ¦ä½  %d å¡Š%sã€‚\n",
 	    ob->query("short"),number,to_chinese(type+" coin")));
-	tell_room( this_object(),sprintf("%s·îÏ×¸øÌìµÛÒ»%s%s¡£\n",
+	tell_room( this_object(),sprintf("%så¥‰ç»çµ¦å¤©å¸ä¸€%s%sã€‚\n",
 		this_player()->query("c_name"),unit,ob->query("short")),
 		this_player() );
         ob->remove();
@@ -81,7 +81,7 @@ int do_sacrifice(string str)
 	object ob, *obs ;
 
 	if (!str) 
-		return notify_fail("ÄãÒª·îÏ×ÄãÉíÉÏµÄÊ²÷á¶«Î÷¸øÌìµÛÄØ£¿\n");
+		return notify_fail("ä½ è¦å¥‰ç»ä½ èº«ä¸Šçš„ä»€éº¼æ±è¥¿çµ¦å¤©å¸å‘¢ï¼Ÿ\n");
 
 	if( str=="all" ) {
 		obs = all_inventory(this_player());
@@ -96,9 +96,9 @@ int do_sacrifice(string str)
 	} else {
 	ob = present(str, this_player());
 	if( !ob )
-		return notify_fail("ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		return notify_fail("ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 	if( ob->query("prevent_drop") || ob->query("secure") )
-		return notify_fail("ÉµĞ¡×Ó£¬ÕâÑù¶«Î÷ÒÑ¾­ÓĞ±ê¼Ç²»ÄÜ·îÏ×¸øÌìµÛ¡£\n");
+		return notify_fail("å‚»å°å­ï¼Œé€™æ¨£æ±è¥¿å·²ç¶“æœ‰æ¨™è¨˜ä¸èƒ½å¥‰ç»çµ¦å¤©å¸ã€‚\n");
 	sell_ob(ob);
 	}
 	return 1;

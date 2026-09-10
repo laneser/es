@@ -28,10 +28,10 @@ void pseudo_hunt(object me, object player)
    if( environment() && present(player, environment()) ) 
       if( this_object()==me )
           tell_room( environment(),sprintf(
-             "%s��е����ֵ��ǣ����������Ҳ��ˣ����ǿ쳭�һ��\n",name),this_object() );
+             "%s大叫道：兄弟們！有人上門找碴了，咱們快抄傢伙！！\n",name),this_object() );
       else {
 	 tell_room( environment(),sprintf( 
-            "%s�嵽����ǰ�����:���󵨵��񣬾�����������Ұ����\n",name),
+            "%s衝到你面前，大喝:「大膽刁民，竟敢來這裡撒野！」\n",name),
 	    this_object() );
 	 if( !pointerp(attackers) || member_array(player, attackers)==-1 )
 	    kill_ob(player);

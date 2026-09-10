@@ -10,5 +10,5 @@ void create()
 	set_save_file("idea_board");
 	set_location("/d/wiz/ideas");
 	set( "short.text", "Board of Ideas");
-	set( "c_short.text", "µã×ÓÁôÑÔ°å");
+	set( "c_short.text", "é»å­ç•™è¨€æ¿");
 }

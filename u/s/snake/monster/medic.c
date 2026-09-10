@@ -7,15 +7,15 @@ void create()
 {
 	::create();
 	set_level(19);
-	set_name( "Medic Wang", "ÍõÒ©Ê¦" );
+	set_name( "Medic Wang", "ç‹è—¥å¸«" );
 	add( "id", ({ "medic", "wang" }) );
-	set_short( "Medic Wang", "ÍõÒ©Ê¦" );
+	set_short( "Medic Wang", "ç‹è—¥å¸«" );
 	set_long(
 		"Medic Wang has just come back from a long trip in the mountains\n"
 		"for gathering rare herbs and record the places they grow.\n",
-		"ÍõÒ©Ê¦¸Õ´ÓÉîÉ½ÖĞ²ÉÒ©»ØÀ´£¬ËûÊÇĞĞÒ½Õß¹«ÈÏµÄ²İÒ©È¨Íş£¬¼¸ºõ\n"
-		"ËùÓĞÕä¹óÒ©²İÉú³¤µÄµØµã¶¼ÊÇËû·¢ÏÖµÄ¡£Äã¿ÉÒÔÏòËû¹ºÂòÒ»Ğ©Åä\n"
-		"Ò©ËùĞèµÄÓÃ¾ß»òÒ»Ğ©³£¼ûµÄÒ©²Ä£¬ÎÊËûÓĞ¹Ø²İÒ©(herb)µÄÊÂÇé¡£\n"
+		"ç‹è—¥å¸«å‰›å¾æ·±å±±ä¸­æ¡è—¥å›ä¾†ï¼Œä»–æ˜¯è¡Œé†«è€…å…¬èªçš„è‰è—¥æ¬Šå¨ï¼Œå¹¾ä¹\n"
+		"æ‰€æœ‰çè²´è—¥è‰ç”Ÿé•·çš„åœ°é»éƒ½æ˜¯ä»–ç™¼ç¾çš„ã€‚ä½ å¯ä»¥å‘ä»–è³¼è²·ä¸€äº›é…\n"
+		"è—¥æ‰€éœ€çš„ç”¨å…·æˆ–ä¸€äº›å¸¸è¦‹çš„è—¥æï¼Œå•ä»–æœ‰é—œè‰è—¥(herb)çš„äº‹æƒ…ã€‚\n"
 	);
 	set( "race", "human" );
 	set( "gender", "male" );

@@ -8,14 +8,14 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("A empty room", "ۺ���ǳ���");
+	set_short("A empty room", "酆都城城門");
 	set_long( @LONG_DESCRIPTION
 This is a simple room created by roommaker.
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
-������������һ���޴���ŵ��ſڣ������ϸ߸ߵ�������һ����ľ���ң�����
-д����ۺ���ǡ��������֣����Ŵ󿪣��������￴ȥ��ֻ����Ӱ������һ�Ѱ�ӰƮ
-��Ʈȥ���ϱ�һ����ʯ�����ɵľ޴��ţ���ͷ��ʯʨ�¿������κ��š���
+你現在來到了一座巨大城門的門口，城門上高高地懸掛著一幅烏木大匾，上面
+寫著「酆都城」三個大字，城門大開，你往城裡看去，只見鬼影幢幢，一堆白影飄
+來飄去，南邊一座青石板砌成的巨大拱橋，橋頭的石獅下刻著「奈何橋」。
 C_LONG_DESCRIPTION
 	);
 

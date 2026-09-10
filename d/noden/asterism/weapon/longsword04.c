@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Obsidian longsword", "ºÚê×Ê¯³¤½£");
+        set_name("Obsidian longsword", "é»‘æ›œçŸ³é•·åŠ");
         add ("id",({ "longsword" }) );
-        set_short( "ºÚê×Ê¯³¤½£" );
+        set_short( "é»‘æ›œçŸ³é•·åŠ" );
         set_long(
-            "ÕâÊÇÒ»°Ñ¾Ş´óµÄ³¤½£,ÒÔÕä¹óµÄ¿óÊ¯,ºÚê×Ê¯ËùÖÆ³ÉµÄ¡£\n"
+            "é€™æ˜¯ä¸€æŠŠå·¨å¤§çš„é•·åŠ,ä»¥çè²´çš„ç¤¦çŸ³,é»‘æ›œçŸ³æ‰€è£½æˆçš„ã€‚\n"
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 38 );
         set( "type", "longblade" );
         set( "min_damage", 28 );

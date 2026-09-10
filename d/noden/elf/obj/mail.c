@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("chainmail", "îø¼×");
+        set_name("chainmail", "é§ç”²");
         add( "id", ({ "mail","chainmail" }) );
-        set_short( "îø¼×" );
+        set_short( "é§ç”²" );
         set_long(
-                "ÓÃÌØÊâµÄ½ğÊôËùÖÆ³ÉµÄîø¼×¡£\n"
+                "ç”¨ç‰¹æ®Šçš„é‡‘å±¬æ‰€è£½æˆçš„é§ç”²ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "light_metal" );
         set( "armor_class", 13 );

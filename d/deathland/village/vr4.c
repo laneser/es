@@ -7,12 +7,12 @@ inherit DOORS;
 void create()
 {
 	::create();
-    set_short("The protect room","°«ÈË´åÂäµÄ±ÜÄÑËù");
+    set_short("The protect room","çŸ®äººæ‘è½çš„é¿é›£æ‰€");
     set_long(@Long
 Long
 ,@CLong
-Ò»¼äÎªÁË±£»¤°«ÈËµÄ°²È«¶ø×öµÄ±ÜÄÑËù.µ«ÊÇËÆºõ²¢Ã»ÓĞÊ¹ÓÃ¹ı,µ«ÊÇÕâ¸öµØ·½ÒÀ¾É±£
-³ÖÖøÒ»³¾²»È¾.
+ä¸€é–“ç‚ºäº†ä¿è­·çŸ®äººçš„å®‰å…¨è€Œåšçš„é¿é›£æ‰€.ä½†æ˜¯ä¼¼ä¹ä¸¦æ²’æœ‰ä½¿ç”¨é,ä½†æ˜¯é€™å€‹åœ°æ–¹ä¾èˆŠä¿
+æŒè‘—ä¸€å¡µä¸æŸ“.
 CLong
     );
     set("exits",([
@@ -21,8 +21,8 @@ CLong
     create_door("west","east",([
                "keyword":({"archdoor","door"}),
                "status":"locked",
-               "c_desc":"Ò»¸öÔ²ĞÎµÄ¹°ÃÅ",
-               "c_name":"¹°ÃÅ",
+               "c_desc":"ä¸€å€‹åœ“å½¢çš„æ‹±é–€",
+               "c_name":"æ‹±é–€",
                "name":"archdoor",
                "desc":"a archdoor",
                "lock":"ECHO_VILLAGE_ARCHDOOR",

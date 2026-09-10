@@ -11,17 +11,17 @@ int cmd_force(string str)
 {
 	if( !str ) return help();
 	if( !this_player()->query("max_fp") )
-		return notify_fail("ÄãÓÐÄÚÁ¦Âð ?\n");
+		return notify_fail("ä½ æœ‰å…§åŠ›å—Ž ?\n");
 
 	if( str == "on" ) {
 		this_player()->set_temp("enable_inner_force", 1);
-		write("Äã¾ö¶¨ÔÚÕ½¶·ÖÐÏûºÄÄÚÁ¦ÒÔÔö¼ÓÕ½¶·ÄÜÁ¦¡£\n");
+		write("ä½ æ±ºå®šåœ¨æˆ°é¬¥ä¸­æ¶ˆè€—å…§åŠ›ä»¥å¢žåŠ æˆ°é¬¥èƒ½åŠ›ã€‚\n");
 		return 1;
 	}   
 
 	if( str == "off" ) {
 		this_player()->delete_temp("enable_inner_force");
-		write("Äã¾ö¶¨ÔÚÕ½¶·ÖÐ²»Ê¹ÓÃÄÚÁ¦ÒÔ½ÚÊ¡ÄãµÄÄÚÁ¦ÏûºÄ¡£\n");
+		write("ä½ æ±ºå®šåœ¨æˆ°é¬¥ä¸­ä¸ä½¿ç”¨å…§åŠ›ä»¥ç¯€çœä½ çš„å…§åŠ›æ¶ˆè€—ã€‚\n");
 		return 1;
 	}
 	return help();
@@ -31,9 +31,9 @@ int help()
 {
 write( @C_HELP
 		
-Ö¸Áî¸ñÊ½: force [on|off]
+æŒ‡ä»¤æ ¼å¼: force [on|off]
  
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Éè¶¨ÔÚÕ½¶·ÖÐÊÇ·ñÏûºÄÄÚÁ¦ÒÔÔö¼ÓÕ½¶·ÄÜÁ¦¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†è¨­å®šåœ¨æˆ°é¬¥ä¸­æ˜¯å¦æ¶ˆè€—å…§åŠ›ä»¥å¢žåŠ æˆ°é¬¥èƒ½åŠ›ã€‚
 
 C_HELP
 		);

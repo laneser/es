@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "small cap", "¹ÏÆ¤Ğ¡Ã±" );
+	set_name( "small cap", "ç“œçš®å°å¸½" );
 	add( "id", ({ "cap" }) );
-	set_short( "a small cap", "¹ÏÆ¤Ğ¡Ã±" );
+	set_short( "a small cap", "ç“œçš®å°å¸½" );
 	set_long(
 		"You see a small round cap.\n",
-		"ÕâÊÇÒ»¶¥³ñ¶Ğ²¼ÃæµÄÔ²¶¥Ğ¡Ã±£¬¿´ÆğÀ´ÏñÊÇÓĞÇ®ÈËµÄÃ±×Ó¡£\n"
+		"é€™æ˜¯ä¸€é ‚ç¶¢ç·å¸ƒé¢çš„åœ“é ‚å°å¸½ï¼Œçœ‹èµ·ä¾†åƒæ˜¯æœ‰éŒ¢äººçš„å¸½å­ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
         set("material","leather");
 	set( "type", "head" );
 	set( "armor_class", 4 );

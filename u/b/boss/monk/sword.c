@@ -5,12 +5,12 @@ string color();
 void create()
 {
     seteuid(getuid());
-    set_name("Color Sword","ÆßÉ«Éñ½£");
+    set_name("Color Sword","ä¸ƒè‰²ç¥åŠ");
     set_short( "@@short" );
     add("id", ({"sword"}));
-    set_long("    ÕâÊÇÖÁ¸ßÎŞÉĞµÄÌìÉñ--"+set_color("ÔÂÉñ","HIR")+"µÄÆßÉ«Éñ½£, \n"+
-             "ÄÜËæ×ÅÊ±¼ä²»¶Ï±ä»»ÑÕÉ«£¬´«ËµæÏ¶ğ¾ÍÒş²ØÆäÖĞ¡£\n" );
-    set("unit","±ú");
+    set_long("    é€™æ˜¯è‡³é«˜ç„¡å°šçš„å¤©ç¥--"+set_color("æœˆç¥","HIR")+"çš„ä¸ƒè‰²ç¥åŠ, \n"+
+             "èƒ½éš¨è‘—æ™‚é–“ä¸æ–·è®Šæ›é¡è‰²ï¼Œå‚³èªªå«¦å¨¥å°±éš±è—å…¶ä¸­ã€‚\n" );
+    set("unit","æŸ„");
     set("weapon_class",10);
     set("type","longblade");
     set("max_damage",5);
@@ -42,63 +42,63 @@ void daemon_wield()
        || p->query("armor/arms") || p->query("armor/hands") 
        || p->query("armor/legs") || p->query("armor/feet"))
     {
-          tell_object(p, "Äã±ØĞëĞ¶ÏÂÓëÔÂÉñ»¤¾ß³åÍ»µÄ»¤¾ß²ÅÄÜ×°±¸ÆßÉ«Éñ½£¡£\n");
+          tell_object(p, "ä½ å¿…é ˆå¸ä¸‹èˆ‡æœˆç¥è­·å…·è¡çªçš„è­·å…·æ‰èƒ½è£å‚™ä¸ƒè‰²ç¥åŠã€‚\n");
           ::unwield(0);
           return;
     }
 
     tell_room(environment(p), set_color(
-    sprintf("\n%s½«ÆßÉ«Éñ½£¸ß¸ß¾ÙÆğ£¬´óºÈÒ»Éù£º¡¸ÎÒÊÇ²»¿ÉÕ½Ê¤µÄ £¡¡¹\n\n", 
+    sprintf("\n%så°‡ä¸ƒè‰²ç¥åŠé«˜é«˜èˆ‰èµ·ï¼Œå¤§å–ä¸€è²ï¼šã€Œæˆ‘æ˜¯ä¸å¯æˆ°å‹çš„ ï¼ã€\n\n", 
     p->query("c_name")), "HIR"), p);
     tell_object(p, set_color(
-    "\nÄã½«ÆßÉ«Éñ½£¸ß¸ß¾ÙÆğ£¬´óºÈÒ»Éù£º¡¸ÎÒÊÇ²»¿ÉÕ½Ê¤µÄ £¡¡¹\n\n", "HIR"));
+    "\nä½ å°‡ä¸ƒè‰²ç¥åŠé«˜é«˜èˆ‰èµ·ï¼Œå¤§å–ä¸€è²ï¼šã€Œæˆ‘æ˜¯ä¸å¯æˆ°å‹çš„ ï¼ã€\n\n", "HIR"));
 
     tell_room(environment(p), set_color(
-    sprintf("\nÆßÉ«Éñ½£ºôÓ¦Öø%sµÄÉñÁ¦£¬»Ã»¯³öÒ»Ì×¿ø¼×¡£\n\n", 
+    sprintf("\nä¸ƒè‰²ç¥åŠå‘¼æ‡‰è‘—%sçš„ç¥åŠ›ï¼Œå¹»åŒ–å‡ºä¸€å¥—ç›”ç”²ã€‚\n\n", 
     p->query("c_name")), "HIR"), p);
 
-    tell_object(p, set_color("ÆßÉ«Éñ½£ºôÓ¦ÖøÄãµÄÉñÁ¦£¬»Ã»¯³öÒ»Ì×¿ø¼×¡£\n\n", "HIR"));
+    tell_object(p, set_color("ä¸ƒè‰²ç¥åŠå‘¼æ‡‰è‘—ä½ çš„ç¥åŠ›ï¼Œå¹»åŒ–å‡ºä¸€å¥—ç›”ç”²ã€‚\n\n", "HIR"));
 
     plate = new(ARM"plate");
     plate->move(p);
     plate->equip(1);
-    tell_object(p, "ÄãË³ÀûµØ´©ÉÏÔÂÉñ¼×¡£\n");
-    tell_room(environment(p), s+"Ë³ÀûµØ´©ÉÏÔÂÉñ¼×¡£\n", p);
+    tell_object(p, "ä½ é †åˆ©åœ°ç©¿ä¸Šæœˆç¥ç”²ã€‚\n");
+    tell_room(environment(p), s+"é †åˆ©åœ°ç©¿ä¸Šæœˆç¥ç”²ã€‚\n", p);
     p->calc_armor_class();
 
     helm = new(ARM"helm");
     helm->move(p);
     helm->equip(1);
-    tell_object(p, "ÄãË³ÀûµØ´÷ÉÏÔÂÉñ¿ø¡£\n");
-    tell_room(environment(p), s+"Ë³ÀûµØ´÷ÉÏÔÂÉñ¿ø¡£\n", p);
+    tell_object(p, "ä½ é †åˆ©åœ°æˆ´ä¸Šæœˆç¥ç›”ã€‚\n");
+    tell_room(environment(p), s+"é †åˆ©åœ°æˆ´ä¸Šæœˆç¥ç›”ã€‚\n", p);
     p->calc_armor_class();
 
     arms = new(ARM"arms");
     arms->move(p);
     arms->equip(1);
-    tell_object(p, "ÄãË³ÀûµØ´÷ÉÏÔÂÉñ»¤±Û¡£\n");
-    tell_room(environment(p), s+"Ë³ÀûµØ´÷ÉÏÔÂÉñ»¤±Û¡£\n", p);
+    tell_object(p, "ä½ é †åˆ©åœ°æˆ´ä¸Šæœˆç¥è­·è‡‚ã€‚\n");
+    tell_room(environment(p), s+"é †åˆ©åœ°æˆ´ä¸Šæœˆç¥è­·è‡‚ã€‚\n", p);
     p->calc_armor_class();
 
     leggings = new(ARM"leggings");
     leggings->move(p);
     leggings->equip(1);
-    tell_object(p, "ÄãË³ÀûµØ´©ÉÏÔÂÉñ»¤¿è¡£\n");
-    tell_room(environment(p), s+"Ë³ÀûµØ´©ÉÏÔÂÉñ»¤¿è¡£\n", p);
+    tell_object(p, "ä½ é †åˆ©åœ°ç©¿ä¸Šæœˆç¥è­·èƒ¯ã€‚\n");
+    tell_room(environment(p), s+"é †åˆ©åœ°ç©¿ä¸Šæœˆç¥è­·èƒ¯ã€‚\n", p);
     p->calc_armor_class();
 
     hands = new(ARM"hands");
     hands->move(p);
     hands->equip(1);
-    tell_object(p, "ÄãË³ÀûµØ´÷ÉÏÔÂÉñÊÖ¡£\n");
-    tell_room(environment(p), s+"Ë³ÀûµØ´÷ÉÏÔÂÉñÊÖ¡£\n", p);
+    tell_object(p, "ä½ é †åˆ©åœ°æˆ´ä¸Šæœˆç¥æ‰‹ã€‚\n");
+    tell_room(environment(p), s+"é †åˆ©åœ°æˆ´ä¸Šæœˆç¥æ‰‹ã€‚\n", p);
     p->calc_armor_class();
 
     feet = new(ARM"feet");
     feet->move(p);
     feet->equip(1);
-    tell_object(p, "ÄãË³ÀûµØ´©ÉÏÔÂÉñĞ¬¡£\n");
-    tell_room(environment(p), s+"Ë³ÀûµØ´©ÉÏÔÂÉñĞ¬¡£\n", p);
+    tell_object(p, "ä½ é †åˆ©åœ°ç©¿ä¸Šæœˆç¥é‹ã€‚\n");
+    tell_room(environment(p), s+"é †åˆ©åœ°ç©¿ä¸Šæœˆç¥é‹ã€‚\n", p);
     p->calc_armor_class();
     set("prevent_drop",1);
 
@@ -111,9 +111,9 @@ void daemon_unwield()
         object holder ;
         if ( !holder = environment(this_object()) ) return;
     if( (int)this_object()->query("wc_damaged") ){
-         tell_object( this_player(),"Í»È», ÄãÊÖÖĞµÄ½£»Ã»¯³ÉæÏ¶ğÏÉ×ÓÈ½È½ÏòÌì¿ÕÉıÈ¥...\n");
+         tell_object( this_player(),"çªç„¶, ä½ æ‰‹ä¸­çš„åŠå¹»åŒ–æˆå«¦å¨¥ä»™å­å†‰å†‰å‘å¤©ç©ºå‡å»...\n");
          tell_room( environment(this_player()),
-           "Í»È»"+this_player()->query("c_name")+"ÊÖÖĞµÄ½£»Ã»¯³ÉæÏ¶ğÏÉ×ÓÈ½È½ÏòÌì¿ÕÉıÈ¥....\n",
+           "çªç„¶"+this_player()->query("c_name")+"æ‰‹ä¸­çš„åŠå¹»åŒ–æˆå«¦å¨¥ä»™å­å†‰å†‰å‘å¤©ç©ºå‡å»....\n",
            this_player() );
            this_object()->remove();
            return;
@@ -183,7 +183,7 @@ int weapon_hit( object victim, int damage )
    fp = owner->query("force_points");
 if (!((string)owner->query("name")=="moon")){
      tell_object( owner,
-     "\nÄãÊÖÖĞµÄ½£»Ã»¯³ÉæÏ¶ğÏÉ×Ó£¬¶ÔÄãÎÂÈáÒ»Ğ¦£ºÎû ! Äã¿É²»Åä×öÎÒµÄÖ÷ÈËÅ¶..\n\n");
+     "\nä½ æ‰‹ä¸­çš„åŠå¹»åŒ–æˆå«¦å¨¥ä»™å­ï¼Œå°ä½ æº«æŸ”ä¸€ç¬‘ï¼šå˜» ! ä½ å¯ä¸é…åšæˆ‘çš„ä¸»äººå“¦..\n\n");
      owner->receive_special_damage("energy",inte/2);
      return 0;
    }
@@ -191,15 +191,15 @@ if (!((string)owner->query("name")=="moon")){
    intv = victim->query_stat("int");
    if( random(inte*3)>(intv*2) && fp >2 ) {
        tell_object( owner,
-       "\nÄãÊÖÖĞµÄ½£»Ã»¯³ÉæÏ¶ğÏÉ×Ó£¬ Ïò"+victim->query("c_name")+"ÆËÈ¥\n\n" );
+       "\nä½ æ‰‹ä¸­çš„åŠå¹»åŒ–æˆå«¦å¨¥ä»™å­ï¼Œ å‘"+victim->query("c_name")+"æ’²å»\n\n" );
        tell_object( victim, "\n" +
-          owner->query("c_name") + "µÄÆß²ÊÉñ½£Í»È»»Ã»¯³É"+
-          set_color("æÏ¶ğÏÉ×Ó",color())+"¶ÔÄãæÌÈ»Ò»Ğ¦" +
-          ", Äã¾õµÃÍÈ½Å·¢Èí£¬»ëÉí·¦Á¦!\n\n" );
+          owner->query("c_name") + "çš„ä¸ƒå½©ç¥åŠçªç„¶å¹»åŒ–æˆ"+
+          set_color("å«¦å¨¥ä»™å­",color())+"å°ä½ å«£ç„¶ä¸€ç¬‘" +
+          ", ä½ è¦ºå¾—è…¿è…³ç™¼è»Ÿï¼Œæ¸¾èº«ä¹åŠ›!\n\n" );
        tell_room( environment(owner),
      "\n" + owner->query("c_name") + 
-    "µÄÆß²ÊÉñ½£Í»È»»Ã»¯³ÉæÏ¶ğÏÉ×ÓÏò" + victim->query("c_name") + 
-    "ÆËÈ¥!\n\n" , ({ victim, owner }) );
+    "çš„ä¸ƒå½©ç¥åŠçªç„¶å¹»åŒ–æˆå«¦å¨¥ä»™å­å‘" + victim->query("c_name") + 
+    "æ’²å»!\n\n" , ({ victim, owner }) );
        victim->receive_damage(250);
        victim->receive_special_damage( "energy", inte/2 );
           owner->add( "force_points", -3 );
@@ -246,9 +246,9 @@ string name()
 */         
 string short()
 {
-    return set_color("ÆßÉ«Éñ½£",color());
+    return set_color("ä¸ƒè‰²ç¥åŠ",color());
 }
 string change_color()
 {
-    return set_color("$NµÄÊÖÖĞÎÕÖøÒ»±úÆß²ÊµÄÉñ½£...\n",color());
+    return set_color("$Nçš„æ‰‹ä¸­æ¡è‘—ä¸€æŸ„ä¸ƒå½©çš„ç¥åŠ...\n",color());
 }

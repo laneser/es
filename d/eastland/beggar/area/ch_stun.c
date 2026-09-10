@@ -12,23 +12,23 @@ void init()
 int do_stun(string arg)
 {
    if (this_player()->query("class")!="monk"){
-       tell_object(this_player(),"ÄãÒª¸ÉÊ²÷á?\n");
+       tell_object(this_player(),"ä½ è¦å¹¹ä»€éº¼?\n");
        return 1;
    }
    if (!this_player()->query_attackers()){
-       tell_object(this_player(),"ÄãÃ»ÔÚÕ½¶·ÖĞ£¬ÕÒ²»µ½¶ÔÊÖÔÚÄÄÀï!\n");
+       tell_object(this_player(),"ä½ æ²’åœ¨æˆ°é¬¥ä¸­ï¼Œæ‰¾ä¸åˆ°å°æ‰‹åœ¨å“ªè£¡!\n");
        return 1;
    }
    tell_object(this_player(),set_color(
-        " *** ÄãÈ«Éñ¹á×¢£¬¿ªÊ¼ÒªÕÒ»ú»áÊ©Õ¹ÄãµãÑ¨µÄÉñ¼¼ ! *** \n","HIC"));
+        " *** ä½ å…¨ç¥è²«æ³¨ï¼Œé–‹å§‹è¦æ‰¾æ©Ÿæœƒæ–½å±•ä½ é»ç©´çš„ç¥æŠ€ ! *** \n","HIC"));
    call_out("recover",6,this_player());
    return 1;
 }
 void recover(object obj)
 {
    if (environment(obj)==this_object()) {
-      tell_object(obj,"¸ÃËÀ,ÄãÎóµãÁË×Ô¼ºµÄÑ¨µÀ!!!\n");
+      tell_object(obj,"è©²æ­»,ä½ èª¤é»äº†è‡ªå·±çš„ç©´é“!!!\n");
       obj->block_attack(10);
-      obj->set_temp("msg_stop_attack","(  Äã±»µã×¡ÁËÑ¨µÀ¶¯µ¯²»µÃ !!  )\n");
-   } else tell_object(obj,"ÄãµÄÕ½¶·½áÊøÁË£¬²»ĞèÒªµãÑ¨ÁË!\n");
+      obj->set_temp("msg_stop_attack","(  ä½ è¢«é»ä½äº†ç©´é“å‹•å½ˆä¸å¾— !!  )\n");
+   } else tell_object(obj,"ä½ çš„æˆ°é¬¥çµæŸäº†ï¼Œä¸éœ€è¦é»ç©´äº†!\n");
 }

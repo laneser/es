@@ -7,14 +7,14 @@ void create ()
 
         ::create();
         set_level(11);
-        set_name( "Final guard","½ûµØÊØÎÀ" );
+        set_name( "Final guard","ç¦åœ°å®ˆè¡›" );
         add ("id", ({ "drow", "guard" }) );
-        set_short( "Final guard","½ûµØÊØÎÀ" );
-        set("unit","Î»");
+        set_short( "Final guard","ç¦åœ°å®ˆè¡›" );
+        set("unit","ä½");
         set_long(
 @C_LONG
-ÕâÎ»ÊÇ¼àÊÓ½û¶ÏÖ®µØµÄÊØÎÀ£¬ÓÉì¶´Ë´¦Ö»ÓĞÃ¿Äê¼ÀÉñÊ±»áÓÉÉñ¹Ù¿ªÆô
-£¬Æ½Ê±ÔòÓÉ´óÌúÃÅ½ô½ôËøÉÏ£¬¶øËû¾ÍÊÇ¸ºÔğ¿´¹Ü´ËµØµÄÈË¡£¡¡¡¡
+é€™ä½æ˜¯ç›£è¦–ç¦æ–·ä¹‹åœ°çš„å®ˆè¡›ï¼Œç”±æ–¼æ­¤è™•åªæœ‰æ¯å¹´ç¥­ç¥æ™‚æœƒç”±ç¥å®˜é–‹å•Ÿ
+ï¼Œå¹³æ™‚å‰‡ç”±å¤§éµé–€ç·Šç·Šé–ä¸Šï¼Œè€Œä»–å°±æ˜¯è² è²¬çœ‹ç®¡æ­¤åœ°çš„äººã€‚ã€€ã€€
 C_LONG
         );
         set_perm_stat("str", 15);
@@ -30,8 +30,8 @@ C_LONG
         set("wealth/copper",2000);
    set ("weight" , 600 );
         set ("race", "drow");
-        set_c_verbs(({"%ÓÃ%sÏò%s¿³È¥","ÓÃ%sÏò%s´ÌÈ¥"}));
-        set_c_limbs(({"ÉíÌå","Í·²¿","½Å²¿","ÊÖ±Û"}));
+        set_c_verbs(({"%ç”¨%så‘%sç å»","ç”¨%så‘%såˆºå»"}));
+        set_c_limbs(({"èº«é«”","é ­éƒ¨","è…³éƒ¨","æ‰‹è‡‚"}));
         wield_weapon(OBJ"copper_lb");
         equip_armor(ARM"shield");
         equip_armor(ARM"plate");

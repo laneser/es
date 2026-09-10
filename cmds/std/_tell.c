@@ -10,10 +10,10 @@
 
 inherit DAEMON;
 
-#define SYNTAX "Ö¸Áî¸ñÊ½: tell <Ä³ÈË> <Ñ¶Ï¢>\n"
+#define SYNTAX "æŒ‡ä»¤æ ¼å¼: tell <æŸäºº> <è¨Šæ¯>\n"
 
 /* If you change this, please change it also in /adm/daemons/ts.c */
-#define NH "%s²¢Ã»ÓĞÔÚÏßÉÏ¡£\n"
+#define NH "%sä¸¦æ²’æœ‰åœ¨ç·šä¸Šã€‚\n"
  
 int cmd_tell(string str)
 {
@@ -41,9 +41,9 @@ int cmd_tell(string str)
 
 	if( !ob ) {
 		if( ob = find_living(who) ) {
-				tell_object(ob, sprintf("%s¸æËßÄã: %s\n",
+				tell_object(ob, sprintf("%så‘Šè¨´ä½ : %s\n",
 					act_ob->query("c_name"), msg) );
-				printf("Äã¸æËß%s(%s): %s",
+				printf("ä½ å‘Šè¨´%s(%s): %s",
 					ob->query("c_name"), capitalize(who), msg);
 			ob->set("reply", act_ob->link_data("name"));
 			return 1;
@@ -51,7 +51,7 @@ int cmd_tell(string str)
 		return 0;
 	}
 	if (!userp(act_ob)) {
-		tell_object(ob, sprintf("%s¸æËßÄã: %s\n",
+		tell_object(ob, sprintf("%så‘Šè¨´ä½ : %s\n",
 				act_ob->query("c_name"), msg) );
 		return 1;
 	}	
@@ -65,7 +65,7 @@ int help()
 {
 
 	write( SYNTAX + "\n" +
-                "ÕâÖ¸Áî¿ÉÒÔ½«ĞÅÏ¢´«¸øÌØ¶¨µÄÒ»¸öÓÃ»§»ònpc¡£\n");
+                "é€™æŒ‡ä»¤å¯ä»¥å°‡ä¿¡æ¯å‚³çµ¦ç‰¹å®šçš„ä¸€å€‹ç”¨æˆ¶æˆ–npcã€‚\n");
 
 	return 1;
 }

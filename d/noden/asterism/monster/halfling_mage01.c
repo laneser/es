@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "halfling red mage", "°ëÉíÈËºìÄ§·¨Ê¦" );
+	set_name( "halfling red mage", "åŠèº«äººç´…é­”æ³•å¸«" );
 	add("id",({"mage","halfling"}) );
-   set_short( "°ëÉíÈËºìÄ§·¨Ê¦" );
+   set_short( "åŠèº«äººç´…é­”æ³•å¸«" );
 	set_long(
-   "Äã¿´µ½´øÖøĞ¦Á³µ«±ÕÉÏÁËÑÛ¾¦µÄ°ëÉíÈËºìÄ§·¨Ê¦,Ò²ĞíËûÕıÔÚË¼¿¼Ò»Ğ©ÊÂÇé.\n"
+   "ä½ çœ‹åˆ°å¸¶è‘—ç¬‘è‡‰ä½†é–‰ä¸Šäº†çœ¼ç›çš„åŠèº«äººç´…é­”æ³•å¸«,ä¹Ÿè¨±ä»–æ­£åœ¨æ€è€ƒä¸€äº›äº‹æƒ….\n"
 	);
 	set( "gender", "male" );
 	set( "race", "halfling" );
@@ -55,7 +55,7 @@ int cast_help()
             "is_a_guard", this_object() );
     for( i=0; i<sizeof(guard); i++ ) {
       tell_room( environment(this_object()),
-         guard[i]->query("c_name")+"´óº°: ÈÃÎÒÃÇÒ»Æğ°ÑµĞÈË¸Ï×ß°É!\n", guard[i] );
+         guard[i]->query("c_name")+"å¤§å–Š: è®“æˆ‘å€‘ä¸€èµ·æŠŠæ•µäººè¶•èµ°å§!\n", guard[i] );
         guard[i]->kill_ob(victim);
       }
     if ( (int)this_object()->query("spell_points")< 300 )

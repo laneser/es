@@ -35,7 +35,7 @@ int cmd_inventory(string arg)
 	count = 0;
 	if( arg && wizardp(this_player()) ) {
 		me = find_living(arg);
-		if( !me ) return notify_fail("Ã»ÓĞÕâ¸öÈË....¡£\n");
+		if( !me ) return notify_fail("æ²’æœ‰é€™å€‹äºº....ã€‚\n");
 	} else me = this_player();
 
 	coin = me->coins_carried();
@@ -43,10 +43,10 @@ int cmd_inventory(string arg)
 	for (i = 0; i < sizeof(items); i++)
 		if(items[i]->query(SHORT_DESCRIPTION))
 			count++;
-	result = count? ("ÄãÏÖÔÚ×Ü¹²´øÖø "+count+" ÑùÎïÆ·" + (coin?("£¬Óë "+coin+" Ã¶Ç®±Ò: \n"):": \n"))
-			 : ("ÄãÏÖÔÚÉíÉÏÃ»ÓĞÈÎºÎ¶«Î÷"+(coin?"£¬µ«ÊÇÓĞ "+coin+" Ã¶Ç®±Ò¡£\n":"¡£\n"));
+	result = count? ("ä½ ç¾åœ¨ç¸½å…±å¸¶è‘— "+count+" æ¨£ç‰©å“" + (coin?("ï¼Œèˆ‡ "+coin+" æšéŒ¢å¹£: \n"):": \n"))
+			 : ("ä½ ç¾åœ¨èº«ä¸Šæ²’æœ‰ä»»ä½•æ±è¥¿"+(coin?"ï¼Œä½†æ˜¯æœ‰ "+coin+" æšéŒ¢å¹£ã€‚\n":"ã€‚\n"));
 
-	result += sprintf("(×ÜÖØÁ¿ %d.%d ¹«½ï, ÉÏÏŞ %d.%d ¹«½ï)\n",
+	result += sprintf("(ç¸½é‡é‡ %d.%d å…¬æ–¤, ä¸Šé™ %d.%d å…¬æ–¤)\n",
 		(int)me->query("load")/10,
 		(int)me->query("load")%10,
 		(int)me->query("max_load")/10,
@@ -54,8 +54,8 @@ int cmd_inventory(string arg)
 
 	ob = me->query_temp("mounting");
 	if( ob ) result += 
-		"ÄãÏÖÔÚÕıÆïÔÚÒ»" + ob->query("unit") + ob->query("c_name") + "ÉÏ£¬ÓĞ * ¼ÇºÅµÄÎïÆ·\n"
-		"±íÊ¾ÕıÍÔÔÚËüÉíÉÏ¡£\n";
+		"ä½ ç¾åœ¨æ­£é¨åœ¨ä¸€" + ob->query("unit") + ob->query("c_name") + "ä¸Šï¼Œæœ‰ * è¨˜è™Ÿçš„ç‰©å“\n"
+		"è¡¨ç¤ºæ­£é¦±åœ¨å®ƒèº«ä¸Šã€‚\n";
 
 // Always use compact mode. Compact mode is more convenient for players.
 // It also costs fewer eval cost when the user carry many objs of the same.
@@ -66,13 +66,13 @@ int cmd_inventory(string arg)
 		for (x=sizeof(names)-1; x > -1; x--) {
 			if(tmp=(string)inv[names[x]][0]->query(SHORT_DESCRIPTION)) {
 		tmp += " ("+inv[names[x]][0]->query("name")+")";
-		if( inv[names[x]][0]->query("wielded")) tmp += " (ÎäÆ÷)";
-		if( inv[names[x]][0]->query("equipped")) tmp += " (»¤¼×)";
-		if( inv[names[x]][0]->query("invisible")) tmp += " (ÒşĞÎ)";
-		if( inv[names[x]][0]->query("mounted")) tmp += " (×ùÆï)";
-		if( inv[names[x]][0]->query("secure")) tmp+= " [±ê¼ÇÉè¶¨]";
+		if( inv[names[x]][0]->query("wielded")) tmp += " (æ­¦å™¨)";
+		if( inv[names[x]][0]->query("equipped")) tmp += " (è­·ç”²)";
+		if( inv[names[x]][0]->query("invisible")) tmp += " (éš±å½¢)";
+		if( inv[names[x]][0]->query("mounted")) tmp += " (åº§é¨)";
+		if( inv[names[x]][0]->query("secure")) tmp+= " [æ¨™è¨˜è¨­å®š]";
 				if( sizeof(inv[names[x]]) > 1 ) {
-					if( !unit= inv[names[x]][0]->query("unit") ) unit = "¸ö";
+					if( !unit= inv[names[x]][0]->query("unit") ) unit = "å€‹";
 					tmp = chinese_number(sizeof(inv[names[x]])) + unit + tmp;
 				}
 				if( inv[names[x]][0]->query("on_mounted")) result += "* " + tmp + ".\n";
@@ -83,11 +83,11 @@ int cmd_inventory(string arg)
 /*	else for (x=0; x < sizeof(items); x++) {
 		if(tmp=(string)items[x]->query(SHORT_DESCRIPTION)) {
 		tmp += " ("+items[x]->query("name")+")";
-		if(items[x]->query("wielded")) tmp += " (ÎäÆ÷)";
-		if(items[x]->query("equipped")) tmp += " (»¤¼×)";
-		if(items[x]->query("invisible")) tmp += " (ÒşĞÎ)";
-		if(items[x]->query("mounted")) tmp += " (×ùÆï)";
-		if(items[x]->query("secure")) tmp += " [±ê¼ÇÉè¶¨]";
+		if(items[x]->query("wielded")) tmp += " (æ­¦å™¨)";
+		if(items[x]->query("equipped")) tmp += " (è­·ç”²)";
+		if(items[x]->query("invisible")) tmp += " (éš±å½¢)";
+		if(items[x]->query("mounted")) tmp += " (åº§é¨)";
+		if(items[x]->query("secure")) tmp += " [æ¨™è¨˜è¨­å®š]";
 		if(items[x]->query("on_mounted")) result += "* " + tmp + ".\n";
 			else result += "  " + tmp + ".\n" ;
 		}
@@ -100,9 +100,9 @@ int cmd_inventory(string arg)
 int help()
 {
 	write( @HELP
-Ö¸Áî¸ñÊ½: inventory
+æŒ‡ä»¤æ ¼å¼: inventory
 
-	Õâ¸öÖ¸Áî¿ÉÒÔÁĞ³öÄãÏÖÔÚÉíÉÏËùĞ¯´øµÄÎïÆ·¡£
+	é€™å€‹æŒ‡ä»¤å¯ä»¥åˆ—å‡ºä½ ç¾åœ¨èº«ä¸Šæ‰€æ”œå¸¶çš„ç‰©å“ã€‚
 HELP
 	);
 	return 1;

@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-   set_name( "copper key", "Í­Ô¿³×" );
+   set_name( "copper key", "éŠ…é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-   set_short( "Í­Ô¿³×" );
+   set_short( "éŠ…é‘°åŒ™" );
    set_long(
-            "Ò»°ÑÉúĞâµÄÍ­Ô¿³×¡£\n" );
-   set( "unit", "°Ñ" );
+            "ä¸€æŠŠç”Ÿé½çš„éŠ…é‘°åŒ™ã€‚\n" );
+   set( "unit", "æŠŠ" );
    set( "to_lock", "DBEGGAR_JAIL1" );
 	set( "weight", 3 );
 	set( "value", ({ 1, "silver" }) );

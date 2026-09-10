@@ -6,15 +6,15 @@ void create()
 {
         ::create();
         set_level(19);
-        set_name( "Shan chi", "������ɮ" );
+        set_name( "Shan chi", "玄慈神僧" );
         add ("id", ({ "monk","shan","chi" }) );
-        set_short( "Shan chi","������ɮ");
-        set("unit","λ");
+        set_short( "Shan chi","玄慈神僧");
+        set("unit","位");
         set_long("",@C_LONG
-�����������½�����λ���ֱ��ĳ���֮һ��Ҳ��ǰ���εķ��ɡ�����
-���ʱ��ϲ��ϰ�䣬�����͵ľ�����\���׽������Ȼ�������֡�����
-�������Ѿ����������ˣ�����ż�������������ش��ʵ�ʱ�������Σ
-���⣬ƽʱ������ָ�����ֹ��ᡣ
+玄慈是少林寺僅存數位玄字輩的長老之一，也是前兩任的方丈。他年
+輕的時候喜歡習武，所練就的九陽神功和易筋經至今仍然傲視武林。但是
+他現在已經不問世事了，除了偶爾少林寺遇到重大變故的時候會出面解危
+以外，平時都負責指導少林公會。
 C_LONG
         );
         set("exp_reward",50000);
@@ -57,13 +57,13 @@ int special_attack()
     if( !victim ) return 0;
     fp=(int)victim->query("force_points");
     tell_room(environment(victim),({" ",
-"\n�������������\��һ�����������Ե���ӿ��˫�֣���"+
-(string)victim->query("c_name")+"ֱ���ȥ��\n"}),victim
+"\n玄慈運起九陽神功\，一道渾厚的內力自丹田湧向雙手，向"+
+(string)victim->query("c_name")+"直衝而去。\n"}),victim
 	);
     tell_object(victim,can_read_chinese(victim)?@C_LONG
     
-�������������\����ʱ�㱻һ��ǿ���������������ͻȻ��ɾ���ֱ��
-��ĵ���������ľ����ƺ��Ѿ����ˡ�
+玄慈運起九陽神功\，霎時你被一股強大的內力籠罩著。突然這股勁力直衝
+你的丹田，你覺得你的經脈似乎已經斷了。
 
 C_LONG
         :" "

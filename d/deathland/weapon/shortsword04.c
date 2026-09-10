@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("horn shortsword","�ŽǶ̽�");
+        set_name("horn shortsword","號角短劍");
         add("id",({"shortsword","sword"}) );
-       set_short("�ŽǶ̽�");
+       set_short("號角短劍");
        set_long(
-         "һ����״����ŽǵĶ̽�\n"
+         "一把形狀很像號角的短劍\n"
                );
 	
 	set("no_sale",1);
-	set( "unit", "��" );
+	set( "unit", "把" );
  	set( "weapon_class", 30 );
  	//set("second",1);
     set("type","shortblade");

@@ -5,13 +5,13 @@ inherit WEAPON;
 void create()
 {
    // seteuid(getuid());
-	set_name("long spear of Wind", "·çÖ®³¤Ã¬");
+	set_name("long spear of Wind", "é¢¨ä¹‹é•·çŸ›");
 	add ("id",({ "spear" }) );
-	set_short("·çÖ®³¤Ã¬");
+	set_short("é¢¨ä¹‹é•·çŸ›");
 	set_long(
-            "Ò»°ÑÔøÔÚÕ½ÕùÖĞ·¢»Ó¼«´ó¹¦\ÄÜµÄ³¤Ã¬,ËüÄÜ¹»ËæÖø·çÏò´ÌÈëµĞÈËµÄĞÄÔà\n"
+            "ä¸€æŠŠæ›¾åœ¨æˆ°çˆ­ä¸­ç™¼æ®æ¥µå¤§åŠŸèƒ½çš„é•·çŸ›,å®ƒèƒ½å¤ éš¨è‘—é¢¨å‘åˆºå…¥æ•µäººçš„å¿ƒè‡Ÿ\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", 25 );
 	set( "type", "thrusting" );
 	set( "min_damage", 10 );

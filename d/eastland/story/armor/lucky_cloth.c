@@ -2,15 +2,15 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "red cloth","´óºìÒÂ·ş" );
+     set_name( "red cloth","å¤§ç´…è¡£æœ" );
      add( "id",({ "cloth" }) );
-     set_short( "´óºìÒÂ·ş" );
+     set_short( "å¤§ç´…è¡£æœ" );
      set_long(@C_LONG
-Ò»¼ş³àºìÉ«µÄ¿í´óÒÂ·ş£¬Á½¸ö¡õ¼ç¸ß¸ßµÄ£¬´©ÆğÀ´ÂùÓĞÍşÑÏ¡£
+ä¸€ä»¶èµ¤ç´…è‰²çš„å¯¬å¤§è¡£æœï¼Œå…©å€‹â–¡è‚©é«˜é«˜çš„ï¼Œç©¿èµ·ä¾†è »æœ‰å¨åš´ã€‚
 C_LONG
      );
      set( "weight",100 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "body" );
      set( "material","cloth" );
      set( "defense_bonus",1 );

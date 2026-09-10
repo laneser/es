@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("daemonic cloak", "¶ñÄ§Åû·ç");
+        set_name("daemonic cloak", "æƒ¡é­”æŠ«é¢¨");
         add( "id", ({ "cloak" }) );
-        set_short( "¶ñÄ§Åû·ç" );
+        set_short( "æƒ¡é­”æŠ«é¢¨" );
         set_long(
-                "ÕâÊÇ¹Å¶ñÄ§Õ½Ê¿Ëù×¨ÓÃµÄÅû·ç \n"
+                "é€™æ˜¯å¤æƒ¡é­”æˆ°å£«æ‰€å°ˆç”¨çš„æŠ«é¢¨ \n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "cloak" );
         set( "material", "heavy_metal" );
         set( "armor_class", 5 );

@@ -18,10 +18,10 @@ int cmd_killers()
 int help()
 {
         write( @HELP
-ÓÃ·¨ : killers
-Õâ¸öÖ¸Áî»áÁĞ³öÄ¿Ç°ÏßÉÏµÄÉ±ÊÖ¡£
+ç”¨æ³• : killers
+é€™å€‹æŒ‡ä»¤æœƒåˆ—å‡ºç›®å‰ç·šä¸Šçš„æ®ºæ‰‹ã€‚
 
-²Î¿¼: killer
+åƒè€ƒ: killer
 HELP
               );
         return 1;

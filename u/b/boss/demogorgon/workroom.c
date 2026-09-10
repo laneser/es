@@ -6,14 +6,14 @@ inherit ROOM;
 void create()
 {
         ::create() ;
-        set("short", HIG "°Ù»¨Ô°" NOR);
+        set("short", HIG "ç™¾èŠ±åœ’" NOR);
         set("long", 
 
-"ÕâÀïÊÇ"+BLINK HIM"ºûµû"NOR"µÄ¹¤×÷ÊÒ¡£Äã»¹Ã»ÓÐ×ß½ø»¨Ô°£¬»¨Ïã¾Í
-ÒÑ¾­ÆËÃæ¶øÀ´ÁË¡£ÔÚ»¨Ô°°Ú·Å×Å¸÷ÖÖ¸÷ÑùÕýÔÚÊ¢¿ªµÄÏÊ
-»¨£¬»¨Ô°µÄÕýÖÐ³¤×ÅÒ»¿ÃÖ­ÒºÃ¯Ê¢¶øÄã½Ð²»ÉÏÃû×ÖµÄ´ó
-Ê÷(tree)¡£ÔÚÊ÷ÏÂ°Ú·Å×ÅÒ»¶ÔÊ¯×ÀºÍÊ¯µÊ£¬Ê¯×ÀÉÏ·ÅÁË
-Ò»¶ä"+HIR"Ãµ¹å»¨"+NOR"(rose)ºÍÒ»¸ö"+HIW"ºØ¿¨"+NOR"(letter)¡£\n"
+"é€™è£¡æ˜¯"+BLINK HIM"è´è¶"NOR"çš„å·¥ä½œå®¤ã€‚ä½ é‚„æ²’æœ‰èµ°é€²èŠ±åœ’ï¼ŒèŠ±é¦™å°±
+å·²ç¶“æ’²é¢è€Œä¾†äº†ã€‚åœ¨èŠ±åœ’æ“ºæ”¾è‘—å„ç¨®å„æ¨£æ­£åœ¨ç››é–‹çš„é®®
+èŠ±ï¼ŒèŠ±åœ’çš„æ­£ä¸­é•·è‘—ä¸€æ£µæ±æ¶²èŒ‚ç››è€Œä½ å«ä¸ä¸Šåå­—çš„å¤§
+æ¨¹(tree)ã€‚åœ¨æ¨¹ä¸‹è¥¬æ”¾è‘—ä¸€å°çŸ³æ¡Œå’ŒçŸ³å‡³ï¼ŒçŸ³æ¡Œä¸Šæ”¾äº†
+ä¸€æœµ"+HIR"çŽ«ç‘°èŠ±"+NOR"(rose)å’Œä¸€å€‹"+HIW"è³€å¡"+NOR"(letter)ã€‚\n"
   NOR
   );
 
@@ -36,9 +36,9 @@ void create()
         ]) );
  
 set("item_desc", ([
-                "rose" : HIR "ÕâÊÇÒ»¶äÇéÈË»¥ÔùºÜÆÕÍ¨µÄºìÃµ¹å»¨¡£\n" NOR,
-                "letter" : HIG "Íµ¿´±ðÈËµÄÐÅ²»Ì«ºÃ°É£¡\n" NOR,
-                "tree" : CYN "²»ÖªµÀÄãÄÜ²»ÄÜÅÀ(climb)ÉÏÈ¥¡£\n" NOR
+                "rose" : HIR "é€™æ˜¯ä¸€æœµæƒ…äººäº’è´ˆå¾ˆæ™®é€šçš„ç´…çŽ«ç‘°èŠ±ã€‚\n" NOR,
+                "letter" : HIG "å·çœ‹åˆ¥äººçš„ä¿¡ä¸å¤ªå¥½å§ï¼\n" NOR,
+                "tree" : CYN "ä¸çŸ¥é“ä½ èƒ½ä¸èƒ½çˆ¬(climb)ä¸ŠåŽ»ã€‚\n" NOR
         ]));
 
         reset();
@@ -54,13 +54,13 @@ void init()
 int climb_tree( string arg )
 {
         if( !arg || arg!="tree" )
-                return notify_fail( "ÅÀÊ²÷á£¿\n" );
+                return notify_fail( "çˆ¬ä»€éº¼ï¼Ÿ\n" );
                 
         this_player()->move_player( "/u/b/bfly/tree", "SNEAK" );
- write( "ÄãÅÀµ½Ê÷ÉÏ¡£\n");
+ write( "ä½ çˆ¬åˆ°æ¨¹ä¸Šã€‚\n");
 
         tell_room( this_object(), 
-                this_player()->query("c_name") + "ÅÀµ½Ê÷ÉÏ¡£\n",
+                this_player()->query("c_name") + "çˆ¬åˆ°æ¨¹ä¸Šã€‚\n",
                 this_player() );
         return 1;
 }
@@ -69,12 +69,12 @@ int break_rose( string arg )
        object rose;
         rose = new(__DIR__"rose");
         if( !arg || arg!= "rose" )
-                return notify_fail( "ÄãÏë¸ÉÊ²Ã´£¿\n" );
+                return notify_fail( "ä½ æƒ³å¹¹ä»€éº¼ï¼Ÿ\n" );
            rose->move(this_player());
   write(              
-"Äã´Ó»¨Ô°ÖÐÕªÏÂÒ»¶ä"+HIR"ºìÃµ¹å"NOR"¡£\n");
+"ä½ å¾žèŠ±åœ’ä¸­æ‘˜ä¸‹ä¸€æœµ"+HIR"ç´…çŽ«ç‘°"NOR"ã€‚\n");
        tell_room( this_object(), 
-  this_player()->query("c_name") + "´Ó»¨Ô°ÖÐÕªÏÂÒ»¶ä"+HIR"ºìÃµ¹å"NOR"¡£\n",
+  this_player()->query("c_name") + "å¾žèŠ±åœ’ä¸­æ‘˜ä¸‹ä¸€æœµ"+HIR"ç´…çŽ«ç‘°"NOR"ã€‚\n",
                 this_player() );
         return 1;
 
@@ -83,7 +83,7 @@ int to_search(string arg)
 {
     object o;
 
-    write("Í»È»Äã·¢ÏÖÔÚ»¨´ÔÓÐÒ»¸ö"+HIY"ÊÖ¾î"NOR"£¡\n");
+    write("çªç„¶ä½ ç™¼ç¾åœ¨èŠ±å¢æœ‰ä¸€å€‹"+HIY"æ‰‹çµ¹"NOR"ï¼\n");
     o = new("/u/b/bfly/paper");
     o->move(this_object());
     return 1;

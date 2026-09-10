@@ -5,10 +5,10 @@ void create()
 {
         ::create();
         set_level( 6 );
-        set_name( "artisan", "¹¤½³" );
-        set_short("¹¤½³" );
+        set_name( "artisan", "å·¥åŒ " );
+        set_short("å·¥åŒ " );
         set_long(
-                "Õâ¹¤½³ÕıµÍÍ·×¨×¢µØ¹¤×÷£¬Ã»×¢ÒâÄãµÄµ½À´¡£\n"
+                "é€™å·¥åŒ æ­£ä½é ­å°ˆæ³¨åœ°å·¥ä½œï¼Œæ²’æ³¨æ„ä½ çš„åˆ°ä¾†ã€‚\n"
         );
         set( "gender", "male" );
         set( "race", "dwarf" );
@@ -27,16 +27,16 @@ int my_tactic(int damage)
         object victim, armor;
         if( random(20)>10 && (armor=victim->query("armor/shield")) ) {
         tell_room( environment(), ({
-                "¹¤½³¼éĞ¦µØ¿´Öø" + victim->query("c_cap_name") + "µÄ" +
-                armor->query("c_name") + "£¬¡¸¿ïà¥¡¹Ò»ÉùÇÃÁËÏÂÈ¥¡£\n"}),
+                "å·¥åŒ å¥¸ç¬‘åœ°çœ‹è‘—" + victim->query("c_cap_name") + "çš„" +
+                armor->query("c_name") + "ï¼Œã€ŒåŒ¡å•·ã€ä¸€è²æ•²äº†ä¸‹å»ã€‚\n"}),
                 ({ environment(), victim }) );
         tell_object( victim,
-                "¹¤½³¼éĞ¦µØ¿´ÖøÄãµÄ" +
-                armor->query("c_name") +"£¬¡¸¿ïà¥¡¹Ò»ÉùÇÃÁËÏÂÈ¥¡£\n" );
+                "å·¥åŒ å¥¸ç¬‘åœ°çœ‹è‘—ä½ çš„" +
+                armor->query("c_name") +"ï¼Œã€ŒåŒ¡å•·ã€ä¸€è²æ•²äº†ä¸‹å»ã€‚\n" );
  
         if( !armor->query("ac_damaged") )
             armor->set_short((string)armor->query("short") + " (damage)",
-            (string)armor->query("c_short") + " (ÊÜËğ)" );
+            (string)armor->query("c_short") + " (å—æ)" );
  
         if( (int)armor->query("armor_class") > 1 )
                  armor->add( "ac_damaged", 1 );

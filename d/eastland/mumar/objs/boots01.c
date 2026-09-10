@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("Octrophet Shoes","°ËØÔĞşĞ¬");
+        set_name("Octrophet Shoes","å…«å¦ç„é‹");
         add("id",({"shoes","boots"}) );
-        set_short("°ËØÔĞşĞ¬");
+        set_short("å…«å¦ç„é‹");
         set_long(
-"ÕâÊÇÒ»Ë«Ğ¬Í·ÉÏ°²ÖøÒ»·ù°ËØÔµÄĞ¬×Ó¡£\n"
+"é€™æ˜¯ä¸€é›™é‹é ­ä¸Šå®‰è‘—ä¸€å¹…å…«å¦çš„é‹å­ã€‚\n"
         );
-        set( "unit", "Ë«" );
+        set( "unit", "é›™" );
         set( "weight",80 );
         set( "type", "feet" );
         set( "material", "cloth" );

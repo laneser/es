@@ -29,58 +29,58 @@
 360 0
 60 30 10 0 0 0
 This message shouldn't ever get printed since this is the first state.
-<Èç¹ûÄã¿´µ½Õâ¶ÎÑ¶Ï¢£¬Çë report bug>
+<å¦‚æœä½ çœ‹åˆ°é€™æ®µè¨Šæ¯ï¼Œè«‹ report bug>
 The clouds vanish and the sky is completely clear.
-ËùÓĞµÄÔÆ¶¼ÏûÊ§ÁË£¬Ìì¿ÕÒ»Æ¬ÇåÀÊ¡¡
+æ‰€æœ‰çš„é›²éƒ½æ¶ˆå¤±äº†ï¼Œå¤©ç©ºä¸€ç‰‡æ¸…æœ—ã€€
 The sky is completely clear.
-Ìì¿ÕÖĞÍòÀïÎŞÔÆ
+å¤©ç©ºä¸­è¬é‡Œç„¡é›²
 
 # Light clouds
 240 0
 30 40 30 0 0 0
 A few small clouds appear in the sky.
-Ò»Ğ©Ğ¡Ğ¡µÄÔÆ¶ä³öÏÖÔÚÌì¿ÕÖĞ¡¡
+ä¸€äº›å°å°çš„é›²æœµå‡ºç¾åœ¨å¤©ç©ºä¸­ã€€
 The clouds thin out and almost vanish.
-¸¡ÔÆÖğ½¥É¢È¥£¬Ö»Ê£Ò»Ğ©Ğ¡Ğ¡µÄÔÆ¶ä¡¡
+æµ®é›²é€æ¼¸æ•£å»ï¼Œåªå‰©ä¸€äº›å°å°çš„é›²æœµã€€
 A few scattered clouds dot the sky.
-Ò»Ğ©Ğ¡Ğ¡µÄÔÆ¶äµã×ºÖøÒ»ÍûÎŞ¼ÊµÄÌì¿Õ
+ä¸€äº›å°å°çš„é›²æœµé»ç¶´è‘—ä¸€æœ›ç„¡éš›çš„å¤©ç©º
 
 # Partly cloudy
 360 0
 10 20 30 30 10 0
 Larger and thicker clouds begin to form.
-ÔÆ¶ä¿ªÊ¼¾Û¼¯³É½Ï´óµÄÔÆ¿é¡¡
+é›²æœµé–‹å§‹èšé›†æˆè¼ƒå¤§çš„é›²å¡Šã€€
 The clouds begin to break apart and the sky shows through.
-ÔÆ²ãÖğ½¥ÏûÉ¢ÁË¡¡
+é›²å±¤é€æ¼¸æ¶ˆæ•£äº†ã€€
 Fluffy white clouds drift lazily overhead.
-ÃŞ»¨°ãµÄ°×ÔÆÔÚÌì¿ÕÖĞÆ®À´Æ®È¥
+æ£‰èŠ±èˆ¬çš„ç™½é›²åœ¨å¤©ç©ºä¸­é£„ä¾†é£„å»
 
 # Cloudy
 240 1
 0 0 30 40 20 10
 Thick clouds cover the sky.
-ºñºñµÄÔÆ²ã²¼ÂúÕû¸öÌì¿Õ¡¡
+åšåšçš„é›²å±¤ä½ˆæ»¿æ•´å€‹å¤©ç©ºã€€
 The rain stops but clouds still cover the sky.
-ÓêÍ£ÁË£¬µ«ÊÇÌì¿ÕÈÔÈ»²¼ÂúÎÚÔÆ¡¡
+é›¨åœäº†ï¼Œä½†æ˜¯å¤©ç©ºä»ç„¶ä½ˆæ»¿çƒé›²ã€€
 The sky is overcast with dark clouds.
-Ìì¿ÕÖĞÎÚÔÆÃÜ²¼
+å¤©ç©ºä¸­çƒé›²å¯†ä½ˆ
 
 # Raining
 120 1
 0 0 0 40 30 30
 It begins to rain and you hear distant thunder.
-¿ªÊ¼ÏÂÓêÁË£¬Ô¶´¦´«À´ÕóÕóÀ×Éù¡¡
+é–‹å§‹ä¸‹é›¨äº†ï¼Œé è™•å‚³ä¾†é™£é™£é›·è²ã€€
 The rain thins out, but doesn't stop.
-ÓêÂıÂı×ªĞ¡ÁË£¬µ«Ò»Ê±»¹²»»áÍ£Ö¹¡¡
+é›¨æ…¢æ…¢è½‰å°äº†ï¼Œä½†ä¸€æ™‚é‚„ä¸æœƒåœæ­¢ã€€
 A light rain is falling from a cloudy sky.
-Ğ¡ÓêäÀÁ¤Á¤µØÏÂÖø
+å°é›¨æ·…ç€ç€åœ°ä¸‹è‘—
 
 # Heavier rain
 240 1
 0 0 0 20 20 60
 It begins to rain steadily, and there is nearby thunder.
-ÓêÔ½ÏÂÔ½´ó£¬»¹¼ĞÔÓÖøÉÁµçÓëÀ×Éù¡¡
+é›¨è¶Šä¸‹è¶Šå¤§ï¼Œé‚„å¤¾é›œè‘—é–ƒé›»èˆ‡é›·è²ã€€
 This message should never be seen since this is the last state.
-<Èç¹ûÄã¿´µ½Õâ¶ÎÑ¶Ï¢£¬Çë report bug>
+<å¦‚æœä½ çœ‹åˆ°é€™æ®µè¨Šæ¯ï¼Œè«‹ report bug>
 A steady rain is falling.
-´óÓêäèãû£¬ÍòÎï¶¼Ë®ÃÉÃÉµØÈÚ³ÉÒ»Æ¬
+å¤§é›¨æ»‚æ²±ï¼Œè¬ç‰©éƒ½æ°´æ¿›æ¿›åœ°èæˆä¸€ç‰‡

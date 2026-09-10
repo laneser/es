@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "wedding pants", "³¤¿ã");
+        set_name( "wedding pants", "é•·è¤²");
         add( "id", ({ "pants" }) );
-        set_short( "a pair of pants", "ĞÂÀÉÀñ·şµÄ³¤¿ã");
+        set_short( "a pair of pants", "æ–°éƒç¦®æœçš„é•·è¤²");
         set_long(
                 "A pair of wedding pants made of silk.\n",
-                "ÕâÊÇÒ»¼şÓÉÌìÉ½²ÏË¿Ö¯³ÉµÄ³¤¿ã¡£\n"
+                "é€™æ˜¯ä¸€ä»¶ç”±å¤©å±±è ¶çµ²ç¹”æˆçš„é•·è¤²ã€‚\n"
         );
-        set( "unit", "Ìõ");
+        set( "unit", "æ¢");
         set( "type", "legs" );
         set( "material","cloth" ) ;
         set( "armor_class", 8 );

@@ -38,12 +38,12 @@ void announce_guild_members(string type, object me)
         
         urs = users();
         master = this_guild->query_guild_master();
-        if( !master ) master = ({ "Master", "�����ϴ�" });
+        if( !master ) master = ({ "Master", "公會老大" });
         class = (string)me->query("organization");
         c_msg = "["+to_chinese(class)+"] "+master[1]+" : ";
         if( type == "join" ) {
-                c_msg += "��ӭ "+me->query("c_name")+"("+me->query("name")+") "+
-                  "��ʽ�������ǵ�����!\n";
+                c_msg += "歡迎 "+me->query("c_name")+"("+me->query("name")+") "+
+                  "正式加入我們的行列!\n";
         } else return;
         for( i=0; i<sizeof(urs); i++ )
                 if( this_guild->is_guild_member(urs[i]) )
@@ -87,9 +87,9 @@ int do_list(string arg)
         string msg, *skills;
 
         skills = this_guild->query_skill_list();
-        msg = "������������ѵ���ļ�����:\n";
+        msg = "在這裡你所能訓練的技能有:\n";
         for( i=0; i<sizeof(skills); i++)
-                        msg += sprintf("    %-30s ( ����ֵ���� = %3d%%, ���� = %3d )\n", 
+                        msg += sprintf("    %-30s ( 經驗值比例 = %3d%%, 上限 = %3d )\n", 
                                 to_chinese(skills[i]) + "("+skills[i]+")",
                                 this_guild->query_skill_cost(skills[i]),
                                 this_guild->query_skill_max(skills[i]) );
@@ -140,36 +140,36 @@ int do_cost(string arg)
 
         me = this_player();
         if( !this_guild->is_guild_member(me) )
-                return notify_fail("�ܱ�Ǹ���㲻���������ĳ�Ա��\n");
+                return notify_fail("很抱歉，你不是這個公會的成員。\n");
 
         lvl = me->query("level");
         exp = query_org_exp(lvl) - (int)me->query_experience();
 
-        if( lvl >= MAX_ORG_LEVEL ) msg ="���Ѿ�������߼��ˡ�\n";
-        else if( exp > 0 ) msg ="�㻹��Ҫ "+exp+" �㾭�����������\n";
-        else msg = "��ľ���ֵ�Ѿ��ﵽ������׼�ˡ�\n";
+        if( lvl >= MAX_ORG_LEVEL ) msg ="你已經升到最高級了。\n";
+        else if( exp > 0 ) msg ="你還需要 "+exp+" 點經驗才能升級。\n";
+        else msg = "你的經驗值已經達到升級標準了。\n";
                 
         stock = query_exp_train(me);
         if( stock < 1 ) 
-                msg +="��Ŀǰû���κζ���ľ�����������������ܡ�\n";
+                msg +="你目前沒有任何額外的經驗可以用來提升技能。\n";
         else 
 	{
-              msg +="�������� "+stock+" �㾭����������������ܡ�\n";
+              msg +="並且你有 "+stock+" 點經驗可以用來提升技能。\n";
 
               none = 1;
-                msg += "ѵ������ :";
+                msg += "訓練技能 :";
                 skills = this_guild->query_skill_list();
                 for( i=0; i<sizeof(skills); i++) {
                         s = (int)me->query_perm_skill(skills[i]);
                         exp = this_guild->query_skill_exp_cost(skills[i], s);
                         if( exp > 0 ) {
                             none = 0;
-                                msg +=sprintf("\n    %30-s -> %2d    %d �㾭�顣",
+                                msg +=sprintf("\n    %30-s -> %2d    %d 點經驗。",
                                               to_chinese(skills[i])+"("+skills[i]+")", s+1, exp) ;
                         }
                 }
                 if( none )
-          msg +=" ��ļ��ܾ��Ѵﱾ�������ֵ�ˡ�\n" ;
+          msg +=" 你的技能均已達本公會最大值了。\n" ;
         else msg += "\n";
         }
         write(msg);
@@ -188,10 +188,10 @@ int do_advance(string arg)
         chinese_mode = can_read_chinese();
 
       if( me->id("guest") )
-              return notify_fail("�ܱ�Ǹ, GUEST ���������κεȼ���\n") ;
+              return notify_fail("很抱歉, GUEST 不能提升任何等級。\n") ;
               
         if( !this_guild->is_guild_member(me) )
-                return notify_fail("�ܱ�Ǹ���㲻���������ĳ�Ա��\n");
+                return notify_fail("很抱歉，你不是這個公會的成員。\n");
 
         
         // prevent wrong keyin, added by Kyoko.
@@ -202,16 +202,16 @@ int do_advance(string arg)
         if( arg == "level" ) {
                 lvl = (int)me->query("level");
                 if( lvl >= MAX_ORG_LEVEL )
-                        return notify_fail("���Ѿ�������߼��ˡ�\n");
+                        return notify_fail("你已經升到最高級了。\n");
                         
                 // check exp...
                 exp =  query_org_exp(lvl);
                 if( exp > (int)me->query_experience() )
-                        return notify_fail("��ľ���ֵ������������׼��\n");
+                        return notify_fail("你的經驗值還不到升級標準。\n");
 
                 // check quest point, added by Kyoko.
                 if( query_org_quest(me)>me->query_quest_points())
-                        return notify_fail("��Ǹ, ����������������������׼��\n");
+                        return notify_fail("抱歉, 你的任務點數還不到升級標準。\n");
 
                 // check explored, add by Kyoko.
 
@@ -222,16 +222,16 @@ int do_advance(string arg)
                 if( expl > 1000 ) expl = 1000;
 
                 if( expl < query_org_explore(me) )
-                      return notify_fail("��Ǹ, ���̽�նȻ�δ�ﵽ������׼���ٶ�ȥ���ɡ�\n");
+                      return notify_fail("抱歉, 你的探險度還未達到升級標準，再多去逛逛吧。\n");
 
         }
 	lvl=me->query("level");
 	lvl++;
 	me->set("level",lvl);
-        write(sprintf("�������ǵ� %d ���ˡ�\n",lvl));
+        write(sprintf("你現在是第 %d 級了。\n",lvl));
         me->set("title",me->query_title());
         tell_room( environment(me), 
-                  sprintf("%s�����ǵ� %d ���ˡ�\n",
+                  sprintf("%s現在是第 %d 級了。\n",
                            me->query("c_name"),lvl) , me );
         return 1;
 }
@@ -243,26 +243,26 @@ int do_train(string arg)
 
         me = this_player();
         if( !this_guild->is_guild_member(me) )
-                return notify_fail("�ܱ�Ǹ���㲻�������֯�ĳ�Ա��\n");
+                return notify_fail("很抱歉，你不是這個組織的成員。\n");
 
         if( !arg || !this_guild->query_skill_exp_cost(arg,0) )
-                return notify_fail("���� list ָ��쿴���������ṩ��ѵ�����ݡ�\n");
+                return notify_fail("請用 list 指令察看這裡所能提供的訓練內容。\n");
 
         skill = (int)me->query_perm_skill(arg);
         exp = this_guild->query_skill_exp_cost(arg, skill);
 
         if( exp < 1 )
-                return notify_fail("���"+to_chinese(arg)+"�����Ѿ��ﵽ���ֵ�ˡ�\n");
+                return notify_fail("你的"+to_chinese(arg)+"技能已經達到最大值了。\n");
 
         if( exp > query_exp_train(me) )
-                return notify_fail("��ľ���ֵ������\n");
+                return notify_fail("你的經驗值不夠。\n");
 
         if( skill >= ((int)me->query("level") * LEVEL_UP_SKILL+LEVEL_UP_SKILL) )
-                return notify_fail("�ܱ�Ǹ����Ŀǰ�ĵȼ�ֻ��ѵ����Ŀǰ���ֵز���\n");
+                return notify_fail("很抱歉，你目前的等級只能訓練到目前這種地步。\n");
 
         me->gain_experience( -exp );
         STATS_D->train_skill( me, arg );
-                printf( "���%s�������������� %d �ˡ�\n", to_chinese(arg), me->query_perm_skill(arg));
+                printf( "你的%s技能現在提升到 %d 了。\n", to_chinese(arg), me->query_perm_skill(arg));
         return 1;
 }
 
@@ -275,10 +275,10 @@ int do_join(string arg)
 
         ob = this_player();
         if( this_guild->is_guild_member(ob) )
-                return notify_fail("���Ѿ��Ǳ�����ĳ�Ա�ˣ�\n");
+                return notify_fail("你已經是本公會的成員了！\n");
         
         if( ob->id("guest") )
-              return notify_fail("Guest ���ܼ����κι��ᡣ\n") ;
+              return notify_fail("Guest 不能加入任何公會。\n") ;
 
         // Check if the player is a wizard or didn't join other guilds yet.
         if( wizardp(ob) ) {
@@ -286,17 +286,17 @@ int do_join(string arg)
                 if( join_ok ) announce_guild_members("join", ob);
                 return join_ok;
         } else if(ob->query("level")>0)
-               return notify_fail( "���Ѿ����������������ˣ��������˳�ԭ���Ĺ��ᣡ\n");
+               return notify_fail( "你已經加入了其它公會了，請你先退出原來的公會！\n");
         else  {
 
 	        me=ob;   
                 exp =  query_org_exp(0);
                 if( exp > (int)me->query_experience() )
-                        return notify_fail("��ľ���ֵ̫�͡�\n");
+                        return notify_fail("你的經驗值太低。\n");
 
                 // check quest point, added by Kyoko.
                 if( query_org_quest(me)>me->query_quest_points())
-                        return notify_fail("����������̫�͡�\n");
+                        return notify_fail("你的任務點數太低。\n");
 
                 // check explored, add by Kyoko.
 
@@ -307,7 +307,7 @@ int do_join(string arg)
                 if( expl > 1000 ) expl = 1000;
 
                 if( expl < query_org_explore(me) )
-                      return notify_fail("���̽�ն�̫�ס�\n");
+                      return notify_fail("你的探險度太底。\n");
 
              }
              join_ok = (int)this_guild->join_player(ob);
@@ -330,7 +330,7 @@ int do_explore(string arg)
         need_exp = query_org_explore(me)/10 ;
         if( need_exp < 0 ) need_exp = 0;
         if( !this_guild->is_guild_member(me) )
-                return notify_fail("�ܱ�Ǹ�����ﲢû��������ϣ���ص��Լ��Ĺ����ѯ̽�նȡ�\n");
+                return notify_fail("很抱歉，這裡並沒有你的資料，請回到自己的公會查詢探險度。\n");
 
         for( i=0; i<sizeof(AREAS); i++ ) {
                 expl = (int)me->query_explore_points(AREAS[i]);
@@ -338,7 +338,7 @@ int do_explore(string arg)
                 if( max < 1 ) continue;
                 expl = expl * 1000 / max;
                 if( expl > 1000 ) expl = 1000;
-                printf("���� : "+set_color("%13s", "HIG")+"    ̽�ն� : "+
+                printf("區域 : "+set_color("%13s", "HIG")+"    探險度 : "+
                         set_color("%2d.%1-d%%\n", "HIY"),
                         to_chinese(AREAS[i]), expl/10, expl%10);
         }
@@ -347,7 +347,7 @@ int do_explore(string arg)
         if( max < 1 ) expl = 0;
         else expl = expl * 1000 / max;
         if( expl > 1000 ) expl = 1000;
-        printf(set_color("ƽ��̽�ն� : %2d.%1-d%%    ������׼��%d%%.\n","HIC"), 
+        printf(set_color("平均探險度 : %2d.%1-d%%    升級標準：%d%%.\n","HIC"), 
                          expl/10, expl%10,need_exp);
     return 1;
 }
@@ -360,16 +360,16 @@ int do_quests(string arg)
 
         me = this_player();
         if( !this_guild->is_guild_member(me) )
-                return notify_fail("�ܱ�Ǹ�����ﲢû��������ϣ���ص��Լ��Ĺ����ѯ��\n");
+                return notify_fail("很抱歉，這裡並沒有你的資料，請回到自己的公會查詢。\n");
 
         sloved = me->query_finish_quests();
         if( !sloved || !( size_quest=sizeof(sloved) ) )
-                write(set_color("��Ŀǰ��δ����κε�����, �ӵ��Ͱ�!\n", "HIR"));
+                write(set_color("你目前尚未完成任何的任務, 加點油吧!\n", "HIR"));
         else {
                 for( i=0; i<size_quest; i++ )
-                        printf("������� "+set_color("%s", "HIG")+
-                                   " ������\n", to_chinese( sloved[i] ) );
-                printf( "���õ� %3d ������������\n" ,(int)me->query_quest_points());
+                        printf("你完成了 "+set_color("%s", "HIG")+
+                                   " 的任務。\n", to_chinese( sloved[i] ) );
+                printf( "共得到 %3d 點的任務點數。\n" ,(int)me->query_quest_points());
         }
     return 1;
 }
@@ -384,68 +384,68 @@ int do_help(string arg)
 
         switch(arg) {
                 case "guild": write( @C_USAGE_GUILD
-�����������ʹ�����µ�ָ�ÿһ��ָ��и��꾡��˵��( ���� "help <ָ��>" ):
+在這裡你可以使用以下的指令，每一個指令都有更詳盡的說明( 請用 "help <指令>" ):
 
-  list        - �г������������ܽ���ѵ���ļ�����Ŀ��
-  cost        - �г��������������ԡ���ѵ����������ľ���ֵ��
-  advance     - �����ȼ�, ����ȼ������ԡ�
-  train       - ѵ�����ܡ�
-  join        - ����������ᣬ��ĵȼ�����С� 5 �����ܼ��빫�ᡣ
-  explore     - ��Ѱ��Ŀǰ��ð�նȡ�
-  quests      - �г�����ɵ���������
+  list        - 列出在這裡你所能接受訓練的技能項目。
+  cost        - 列出升級、提升屬性、或訓練技能所需的經驗值。
+  advance     - 提升等級, 公會等級或屬性。
+  train       - 訓練技能。
+  join        - 加入這個公會，你的等級必須小於 5 級才能加入公會。
+  explore     - 查尋你目前的冒險度。
+  quests      - 列出你完成的所有任務。
 
 C_USAGE_GUILD
                         ); break;
                 case "list": write( @USAGE_LIST
-ָ���ʽ: list
+指令格式: list
 
-    ���ָ�����г������������ܽ���ѵ���ļ�����Ŀ��
+    這個指令能列出在這裡你所能接受訓練的技能項目。
 USAGE_LIST
                         ); break;
                 case "cost": write( @USAGE_COST
-ָ���ʽ: cost
+指令格式: cost
 
-    ���ָ������ʾ�������������ԡ���ѵ����������ľ���ֵ��
+    這個指令能顯示升級、提升屬性、或訓練技能所需的經驗值。
 USAGE_COST
                         ); break;
                 case "advance" : write( @USAGE_ADVANCE
-ָ���ʽ: advance level 
+指令格式: advance level 
 
-    ����ľ���ֵ�㹻ʱ�����ָ����������ĵȼ������ǣ����
-���̽�նȼ��������δ���׼ʱ����ʹ����ֵ�㹻�಻��������
+    當你的經驗值足夠時，這個指令能提升你的等級。可是，如果
+你的探險度及任務點數未達標準時，即使經驗值足夠亦不能升級。
 USAGE_ADVANCE
                         ); break;
                 case "train": write( @USAGE_TRAIN
-ָ���ʽ: train <����>
+指令格式: train <技能>
 
-    ����ӵ���㹻�ľ���ֵʱ�����ָ����������ļ��ܡ�
+    當你擁有足夠的經驗值時，這個指令能提升你的技能。
 USAGE_TRAIN
                         ); break;
                 case "join": write( @USAGE_JOIN
-ָ���ʽ: join
+指令格式: join
 
-    ���ָ�����������������ᡣ����Ҫע����ǣ�ĳЩ�������ǰ��������Ҫ
-��߱�ĳЩ�ض���������������ָ�info�����õ��й���������һЩ��Ѷ��
+    這個指令能讓你加入這個公會。另外要注意的是：某些公會加入前，或許會要
+求具備某些特定條件；可以輸入指令「info」來得到有關這個公會的一些資訊。
 USAGE_JOIN
                         ); break;
                 case "info": write( @USAGE_INFO
-ָ���ʽ: info [<����>]
+指令格式: info [<主題>]
 
-    ���ָ���ܸ���һЩ�й�����������õ���Ѷ�����������������һ������ǰ
-��һ��Ҫ���Ķ���Щ��Ѷ������ָ�info������û��ָ������Ļ��������һ��
-����������б���
+    這個指令能給你一些有關這個公會有用的資訊，所以在你決定加入一個公會前
+，一定要先閱讀這些資訊。若在指令「info」後面沒有指定主題的話，會給你一張
+所有主題的列表。
 USAGE_INFO
                         ); break;
         case "explore": write( @USAGE_EXPLORE
-ָ���ʽ: explore
+指令格式: explore
 
-    ���ָ���ܲ�Ѱ��Ŀǰ��ð�նȡ�
+    這個指令能查尋你目前的冒險度。
 USAGE_EXPLORE
                         ); break;
         case "quests": write( @USAGE_QUESTS
-ָ���ʽ: quests
+指令格式: quests
 
-    ���ָ�����г�������ɵ���������
+    這個指令能列出你已完成的所有任務。
 USAGE_QUESTS
                         ); break;
                 default:

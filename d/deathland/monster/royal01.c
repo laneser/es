@@ -6,20 +6,20 @@ void create ()
 {
 	::create();
     set_level(15);
-    set_name("drawf royal guard","°«ÈË»ÊÊÒÊØÎÀ");
+    set_name("drawf royal guard","çŸ®äººçš‡å®¤å®ˆè¡›");
     add ("id", ({ "guard","dwarf"}) );
     set_short( "a drawf royal guard",
-           "°«ÈË»ÊÊÒÊØÎÀ");
+           "çŸ®äººçš‡å®¤å®ˆè¡›");
 	set_long(@LONG
 A drawf guard protects the dwarven palace.
 LONG
     ,@C_LONG
-Ò»¸ö°«ÈË»ÊÊÒÊØÎÀÕı±£ÎÀÖø°«ÈË»Ê¹¬.
+ä¸€å€‹çŸ®äººçš‡å®¤å®ˆè¡›æ­£ä¿è¡›è‘—çŸ®äººçš‡å®®.
 C_LONG
 	);
     set( "gender", "male" );
     set( "race", "dwarf");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",  18);
     set_perm_stat( "str",  25);
     set_perm_stat( "int",   8);
@@ -41,7 +41,7 @@ C_LONG
     set("chat_chance",15);
     set("chat_output",({
 //        "guard says:Be quiet,this is a peace place.\n",
-        "ÊØÎÀËµ:°²¾².Õâ»Ê¹¬ÊÇÒ»¸öºÍÆ½µÄµØ·½.\n"
+        "å®ˆè¡›èªª:å®‰éœ.é€™çš‡å®®æ˜¯ä¸€å€‹å’Œå¹³çš„åœ°æ–¹.\n"
        }) );
     equip_armor(Armour"/chainmail01");
     wield_weapon(Weapon"/sword01");

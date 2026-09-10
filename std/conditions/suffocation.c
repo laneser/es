@@ -34,9 +34,9 @@ void effect(object player)
 	if( !cond_data[3]%3 ) cond_data[1]++;
 	player->receive_damage( cond_data[1] );
 	tell_object(player, 
-	    set_color("Äã¸Ðµ½ºôÎüÀ§ÄÑ.....\n", "HIB", player) );
+	    set_color("ä½ æ„Ÿåˆ°å‘¼å¸å›°é›£.....\n", "HIB", player) );
 	tell_room( environment(player), 
-		player->query("c_name") + "ËÆºõ¿ìÒªÖÏÏ¢ÁË....\n",
+		player->query("c_name") + "ä¼¼ä¹Žå¿«è¦çª’æ¯äº†....\n",
 		player );
 	if( cond_data[3] > cond_data[2] ) special_effect(player, 1);
 	else if( cond_data[3]+WARNING > cond_data[2] ) special_effect(player, 0);
@@ -47,12 +47,12 @@ void special_effect(object player, int die)
 {
 	if( die ) {
         tell_object(player, 
-            set_color("ÄãÈ±·¦ÑõÆøÎ¬³ÖÄãµÄÉíÌå»úÄÜ, ÖÕì¶µ¼ÖÂËÀÍö!!\n",
+            set_color("ä½ ç¼ºä¹æ°§æ°£ç¶­æŒä½ çš„èº«é«”æ©Ÿèƒ½, çµ‚æ–¼å°Žè‡´æ­»äº¡!!\n",
             "HIR",player) );
         player->receive_damage(player->query("max_hp"), 0);
 	} else
 	    tell_object(player, 
-			set_color("×¢Òâ! Äã¿ìÒªÖÏÏ¢¶øËÀÁË!!\n","HIB",player) );
+			set_color("æ³¨æ„! ä½ å¿«è¦çª’æ¯è€Œæ­»äº†!!\n","HIB",player) );
 	return;
 }
 
@@ -60,7 +60,7 @@ varargs void remove_effect(object player, int silent)
 {
 	if( !silent )
 		tell_object(player, 
-			set_color("ÄãÖÕì¶ÉîÉîµÄÎüÁËÒ»¿ÚÆø, ¾õµÃÊæ·þ¶àÁË...\n","HIC",player)	
+			set_color("ä½ çµ‚æ–¼æ·±æ·±çš„å¸äº†ä¸€å£æ°£, è¦ºå¾—èˆ’æœå¤šäº†...\n","HIC",player)	
 			);
 	player->delete("conditions/" + EFFECT_NAME );
 }

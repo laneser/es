@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name("Nodania soldier", "诺达尼亚士兵");
+	set_name("Nodania soldier", "璜鹃仈灏间簽澹叺");
 	add( "id", ({ "soldier" }) );
-	set_short("诺达尼亚士兵");
+	set_short("璜鹃仈灏间簽澹叺");
 	set_long(
-		"你看到一个诺达尼亚城得正规军士兵，誓死保卫他的家园。\n"
+		"浣犵湅鍒颁竴鍊嬭閬斿凹浜炲煄寰楁瑕忚粛澹叺锛岃獡姝讳繚琛涗粬鐨勫鍦掋�俓n"
 	);
 	set_perm_stat("str", 10 );
 	set_skill("polearm", 40);

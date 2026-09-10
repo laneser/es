@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(18);
-	set_name( "hostress", "Ů����");
-        set_short("Ů����" );
+	set_name( "hostress", "女主人");
+        set_short("女主人" );
 	set_long(@C_LONG
-Ů����ԼĪ��ʮ������ͣ�ȴ����������֮ò���������˿�˵����������һ˫��
-�ڶ�ʮ����ǰ��Ů������λ�䶯���־�����̵���������˼��ٳ�ս�ۣ�ȴ��δ
-����ܹ������ü���Ϊһ������֮�С�Ů�����Դ���������������һʱ����Ϊ����
-�����ȴ�ĸ���Ը����������˫˫�������ӵ����һ�����˼�Ϊ���죬ȴ�����
-������������
+女主人約莫四十多歲年紀，卻有沈魚落雁之貌，和男主人可說是天造地設的一雙。
+在二十多年前，女主人是位轟動武林驚動萬教的人物，歷經了幾百場戰役，卻從未
+被打敗過，堂堂擠身為一流高手之列。女主人自從與男主人相遇，一時被驚為天人
+，如今卻心甘情願跟著男主人雙雙過著隱居的生活，一度令人極為詫異，卻因此佩
+服她的勇氣。
 C_LONG
 	);
 	set( "gender", "female" );
@@ -49,8 +49,8 @@ C_LONG
 void ask_third(object asker)
 {
 write(@C_LONG
-Ů���˵������๫Ҫ��������ร��Ǻðɣ��Ҹ���һ������������Ƥ���ϻ���
-���������������������Իظ�������ò��ϣ����Ϊ������취��
+女主人道：我相公要你來問我喔？那好吧，我給你一項工作，妾身近來皮膚老化，
+　　　　　苦無良方可以回復以往面貌，希望你為我想個辦法。
 C_LONG
       );
 }
@@ -61,21 +61,21 @@ int accept_item(object me, object item)
    name=item->query("name");
    if( name!="red fruit" ) {
       command("give "+name+" to "+pname);
-      tell_object(me,"Ů���˵����ף���������������ʲ�ᰡ��\n");
+      tell_object(me,"女主人道：咦，你給我這個東西是什麼啊？\n");
       return 1;
    }
    if( me->query_temp("third") ) {
       tell_object(me,@C_LONG
-Ů����˵����лл�����Ѿ��������ˡ�      
+女主人說道：謝謝，我已經很年輕了。      
 C_LONG
    );   
       command("give "+name+" to "+pname);
       return 1;
    }
    tell_object(me,@C_LONG
-Ů���˳�����������������˲�������˺ü�ʮ�ꡣ�ۣ��ȡ�ŷ�ס��������㣡
+女主人吃下你帶給她的朱果，瞬間年輕了好幾十歲。哇！比「歐雷」還好用咩！
 
-Ů���˸м�������˵лл ^_^
+女主人感激地向你說謝謝 ^_^
 
 C_LONG
     );     
@@ -103,7 +103,7 @@ int my_attack()
            "can_help", this_object() );
    for( i=0; i<sizeof(couples); i++ ) {
       tell_room( environment(this_object()), sprintf(
-          "%sŭ��:��������������۸���,�����µ���ȥ��!!\n",couples[i]->query("c_name"))
+          "%s怒道:我們豈是那麼好欺負的,給我下地獄去吧!!\n",couples[i]->query("c_name"))
           ,couples[i]);
       couples[i]->kill_ob(victim);
    }

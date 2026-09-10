@@ -6,17 +6,17 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("shadow Blade","Ò¹Ó°´óµ¶");
+       set_name("shadow Blade","å¤œå½±å¤§åˆ€");
        add("id",({"dagger","blade"}) );
-       set_short("Ò¹Ó°´óµ¶");
+       set_short("å¤œå½±å¤§åˆ€");
 	   set_long(@AAA
-ÕâÊÇÒ»°ÑÉ¢·¢³öÒ»¹ÉĞ°¶ñÆøÏ¢µÄµÄµ¶£¬ËäÈ»Ãû³ÆÊÇ´óµ¶µ«ÊÇÈ´ÊÇ
-Ò»°Ñ¶ÌÈçØ°Ê×µÄÎäÆ÷£¬Õæ²»ÖªÎªºÎÓĞ´ËÃû³Æ£®
+é€™æ˜¯ä¸€æŠŠæ•£ç™¼å‡ºä¸€è‚¡é‚ªæƒ¡æ°£æ¯çš„çš„åˆ€ï¼Œé›–ç„¶åç¨±æ˜¯å¤§åˆ€ä½†æ˜¯å»æ˜¯
+ä¸€æŠŠçŸ­å¦‚åŒ•é¦–çš„æ­¦å™¨ï¼ŒçœŸä¸çŸ¥ç‚ºä½•æœ‰æ­¤åç¨±ï¼
 AAA
 
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
         set("type","dagger");
 	set( "min_damage", 15 );
@@ -40,9 +40,9 @@ int dagger_damage(object victim,int damage)
 	else {
 		
      tell_object(holder,
-     "\nÄã½«ÊÖÉÏµÄÒ¹Ó°´óµ¶¸ĞÊÜµÄÄãÄÚĞÄÖĞµÄĞ°¶ñÆøÏ¢£¬·¢³öÒ»µÀ¾Ş´óµÄµ¶Ã¢ÉäÏòµĞÈË\n\n");
+     "\nä½ å°‡æ‰‹ä¸Šçš„å¤œå½±å¤§åˆ€æ„Ÿå—çš„ä½ å…§å¿ƒä¸­çš„é‚ªæƒ¡æ°£æ¯ï¼Œç™¼å‡ºä¸€é“å·¨å¤§çš„åˆ€èŠ’å°„å‘æ•µäºº\n\n");
      tell_room(environment(holder),
-      "\n"+holder->query("c_name")+"Á³ÉÏ¸¡³öÒ»¹ÉºÚÆø£¬ÊÖÉÏµÄÒ¹Ó°´óµ¶·¢³öÒ»µÀĞ°¶ñµÄ¹âÃ¢ÉèÏò"+victim->query("c_name")+"µÄÎäÆ÷¿Û×¡\n\n",
+      "\n"+holder->query("c_name")+"è‡‰ä¸Šæµ®å‡ºä¸€è‚¡é»‘æ°£ï¼Œæ‰‹ä¸Šçš„å¤œå½±å¤§åˆ€ç™¼å‡ºä¸€é“é‚ªæƒ¡çš„å…‰èŠ’è¨­å‘"+victim->query("c_name")+"çš„æ­¦å™¨æ‰£ä½\n\n",
       holder);
     victim->receive_damage(dam);
     victim->set("last_attacker",holder);

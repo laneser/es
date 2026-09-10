@@ -6,10 +6,10 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("troll ear","¾ÞÈË¶ú¶ä");
+    set_name("troll ear","å·¨äººè€³æœµ");
     add("id",({"ear",}));
-    set_short("a troll ear","¾ÞÈË¶ú¶ä");
-    set_long("a troll ear.\n","¾ÞÈË¶ú¶ä.\n");
+    set_short("a troll ear","å·¨äººè€³æœµ");
+    set_long("a troll ear.\n","å·¨äººè€³æœµ.\n");
     set("weight",20);
     set("no_sale",1);
     set("value",({ 0,"copper"}) );

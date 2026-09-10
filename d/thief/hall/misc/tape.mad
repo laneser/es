@@ -7,14 +7,14 @@ void create()
 {
      be_stick = 0;
      seteuid(getuid());
-     set_name("scotch tape","ÌØÖÆ½º´ø");
+     set_name("scotch tape","ç‰¹è£½è† å¸¶");
      add("id",({"tape"}));
      set("short","@@query_short");
      set_long(@LONG
-Ò»¾íÌØÖÆ½º´ø, ğ¤ĞÔ³¬Ç¿, ÓöË®²»ÍÑÂä, Ìù²»½ôÍËÇ®¡£ 
-Ê¹ÓÃ·½·¨ : stick tape on <something>." 
+ä¸€å·ç‰¹è£½è† å¸¶, é»æ€§è¶…å¼·, é‡æ°´ä¸è„«è½, è²¼ä¸ç·Šé€€éŒ¢ã€‚ 
+ä½¿ç”¨æ–¹æ³• : stick tape on <something>." 
 LONG );
-     set( "unit", "¾í");
+     set( "unit", "å·");
      set("weight",1);
      set("value", ({ 40, "silver" }));
 //     set("amount",1);
@@ -23,12 +23,12 @@ LONG );
 string query_short()
 {
     if ( be_stick == 0 ) {
-    	return "ÌØÖÆ½º´ø";
+    	return "ç‰¹è£½è† å¸¶";
     } else {
 	if ( this_player() == environment(this_object()) ) 
-		return "Ò»¾íÌùÔÚÄã×ìÉÏµÄÌØÖÆ½º´ø";
+		return "ä¸€å·è²¼åœ¨ä½ å˜´ä¸Šçš„ç‰¹è£½è† å¸¶";
 	else
-		return sprintf("Ò»¾íÌùÔÚ%s×ìÉÏµÄÌØÖÆ½º´ø",environment(this_object())->query("c_name")) ;
+		return sprintf("ä¸€å·è²¼åœ¨%så˜´ä¸Šçš„ç‰¹è£½è† å¸¶",environment(this_object())->query("c_name")) ;
     }	
 }
 
@@ -58,23 +58,23 @@ void init()
 int do_say(string arg)
 {
 	if ( ! be_stick ) return 0;
-	write("ÄãµÄ´ó×ì°Í±»½º´ø(tape)Ìù×¡ÁË, ÏÈ°Ñ½º´øËº(tear)ÏÂÀ´°É¡£\n");
-	tell_room(environment(previous_object()),sprintf("%sÖ§Ö§ÎáÎáµÄ²»ÖªµÀÔÚËµÊ²÷á¡£\n",previous_object()->query("c_name")),previous_object());
+	write("ä½ çš„å¤§å˜´å·´è¢«è† å¸¶(tape)è²¼ä½äº†, å…ˆæŠŠè† å¸¶æ’•(tear)ä¸‹ä¾†å§ã€‚\n");
+	tell_room(environment(previous_object()),sprintf("%sæ”¯æ”¯å¾å¾çš„ä¸çŸ¥é“åœ¨èªªä»€éº¼ã€‚\n",previous_object()->query("c_name")),previous_object());
 	return 1;
 }
 
 int do_tear(string arg)
 {
 	if ( ! id(arg) ) return 0;
-	write("ÄãËºÏÂ½º´ø¡£\n");
-	tell_room(environment(this_player()),this_player()->query("c_name")+"ËºÏÂ½º´ø¡£\n",this_player());
+	write("ä½ æ’•ä¸‹è† å¸¶ã€‚\n");
+	tell_room(environment(this_player()),this_player()->query("c_name")+"æ’•ä¸‹è† å¸¶ã€‚\n",this_player());
 	this_player()->delete_temp("silence");
 	return this_object()->remove();
 }
 
 int npc_do_tear(object me)
 {
-	tell_room(environment(me),me->query("c_name")+"ËºÏÂ½º´ø¡£\n");
+	tell_room(environment(me),me->query("c_name")+"æ’•ä¸‹è† å¸¶ã€‚\n");
 	me->delete_temp("silence");
 	return this_object()->remove();
 }
@@ -84,40 +84,40 @@ int do_put(string arg)
 	object env,dest,me;
 	int skill,succeed;
 	string name,ob_name;
-	if( be_stick==1 ) return notify_fail("Õâ½º´øÒÑ¾­ÔÚÊ¹ÓÃÖĞÁË¡£\n");
+	if( be_stick==1 ) return notify_fail("é€™è† å¸¶å·²ç¶“åœ¨ä½¿ç”¨ä¸­äº†ã€‚\n");
 	if ( sscanf(arg,"%s on %s",ob_name,name) != 2 ) return 0;
-	if ( ! id( ob_name ) ) return notify_fail("ÌùÊ²÷á ?\n");
+	if ( ! id( ob_name ) ) return notify_fail("è²¼ä»€éº¼ ?\n");
 	me = this_player();
 	env = environment(me);
 	dest = present(name,env);
 	if ( me->query_current_attacker() ) {
-		return notify_fail("ÄãÕıÃ¦ÖøÕ½¶·, ÄÄÓĞ¿ÕÌù½º´øÄØ?\n");
+		return notify_fail("ä½ æ­£å¿™è‘—æˆ°é¬¥, å“ªæœ‰ç©ºè²¼è† å¸¶å‘¢?\n");
 	}
-	if ( ! dest ) return notify_fail(name+"²»ÔÚÕâ±ß¡£\n");
+	if ( ! dest ) return notify_fail(name+"ä¸åœ¨é€™é‚Šã€‚\n");
 	if ( ! living(dest) ) {
-		write("ÄãÓÃ½º´ø°Ñ"+dest->query("c_name")+"ÌùµÄÃÜ²»Í¨·ç¡£\n");
-		tell_room(env,sprintf("%sÄÃÖø½º²¼, ½«%sºúÂÒÌùÒ»Í¨¡£\n",me->query("c_name"),dest->query("c_name") ),({me}));
+		write("ä½ ç”¨è† å¸¶æŠŠ"+dest->query("c_name")+"è²¼çš„å¯†ä¸é€šé¢¨ã€‚\n");
+		tell_room(env,sprintf("%sæ‹¿è‘—è† å¸ƒ, å°‡%sèƒ¡äº‚è²¼ä¸€é€šã€‚\n",me->query("c_name"),dest->query("c_name") ),({me}));
 		this_object()->remove();
 		return 1;
 	}
-/* 	since player ±»Ìù²»»á»¥ k, we don't have to check that ..
+/* 	since player è¢«è²¼ä¸æœƒäº’ k, we don't have to check that ..
 	if ( (int) me->query_level() < 5 ) {
-		return notify_fail("ÄãµÄµÈ¼¶Ì«µÍÁË, ×îºÃ²»ÒªÂÒÌù...\n");
+		return notify_fail("ä½ çš„ç­‰ç´šå¤ªä½äº†, æœ€å¥½ä¸è¦äº‚è²¼...\n");
 	}
 */
 	if ( userp(dest) && (int)dest->query_level() < 5 ) {
-		return notify_fail("Çë²»ÒªÆÛ¸ºÈõĞ¡..\n");
+		return notify_fail("è«‹ä¸è¦æ¬ºè² å¼±å°..\n");
 	}
 
 	if ( dest == me ) {
-		tell_room(env,sprintf("%sÓÃ½º´ø°Ñ×Ô¼ºµÄ×ì°ÍÌùÆğÀ´¡£\n",me->query("c_name")),me);
-		write("ÄãÓÃ½º´øÌù×¡×Ô¼ºµÄ×ì°Í¡£\n");
+		tell_room(env,sprintf("%sç”¨è† å¸¶æŠŠè‡ªå·±çš„å˜´å·´è²¼èµ·ä¾†ã€‚\n",me->query("c_name")),me);
+		write("ä½ ç”¨è† å¸¶è²¼ä½è‡ªå·±çš„å˜´å·´ã€‚\n");
 		be_stick = 1;
 		this_object()->move(dest);
-		this_object()->set("extra_look", "$NµÄ´ó×ì°ÍÉÏ²»ÖªµÀ±»Ë­ÌùÁË½º´ø¡£\n");
+		this_object()->set("extra_look", "$Nçš„å¤§å˜´å·´ä¸Šä¸çŸ¥é“è¢«èª°è²¼äº†è† å¸¶ã€‚\n");
 		this_object()->set("prevent_drop",1);
 		this_object()->set("prevent_insert",1);
-		this_object()->set("long","ÕâÌõ½º´øÌù×¡ÄãµÄ×ì°Í, ¿ì°ÑËüËºµô°É!(tear tape)\n");
+		this_object()->set("long","é€™æ¢è† å¸¶è²¼ä½ä½ çš„å˜´å·´, å¿«æŠŠå®ƒæ’•æ‰å§!(tear tape)\n");
 		return 1;
 	}
 
@@ -128,53 +128,53 @@ int do_put(string arg)
 	skill += (int)me->query_skill("trick");
 	succeed = ( skill > random(110) );
 
-	write("Äã´øÖø´¿ÕæÎŞĞ°µÄĞ¦Èİ, ¶ÔÖø"+dest->query("c_name")+"Ğ¦Ò»Ğ¦..\n");
-	tell_room(env,me->query("c_name")+"´øÖø´¿ÕæÎŞĞ°µÄĞ¦Èİ, ¶ÔÖø"+
-		dest->query("c_name")+"Ğ¦Ò»Ğ¦...\n",({me,dest}));
-	tell_object(dest,me->query("c_name")+"´øÖø´¿ÕæÎŞĞ°µÄĞ¦Èİ, ¶ÔÄãĞ¦Ò»Ğ¦..\n");
+	write("ä½ å¸¶è‘—ç´”çœŸç„¡é‚ªçš„ç¬‘å®¹, å°è‘—"+dest->query("c_name")+"ç¬‘ä¸€ç¬‘..\n");
+	tell_room(env,me->query("c_name")+"å¸¶è‘—ç´”çœŸç„¡é‚ªçš„ç¬‘å®¹, å°è‘—"+
+		dest->query("c_name")+"ç¬‘ä¸€ç¬‘...\n",({me,dest}));
+	tell_object(dest,me->query("c_name")+"å¸¶è‘—ç´”çœŸç„¡é‚ªçš„ç¬‘å®¹, å°ä½ ç¬‘ä¸€ç¬‘..\n");
 
 	if ( dest->query("no_attack") ) 
-		return notify_fail( dest->query("c_name")+"¶ÔÄãĞ¦Ò»Ğ¦ËµµÀ : Ğ¡ÅóÓÑ, ÕâÑù²»¿ÉÒÔà¸!\n");
+		return notify_fail( dest->query("c_name")+"å°ä½ ç¬‘ä¸€ç¬‘èªªé“ : å°æœ‹å‹, é€™æ¨£ä¸å¯ä»¥å–”!\n");
 
 	
 	if ( succeed ) {
-		write(sprintf("%s¶ÔÖøÄãÓä¿ìµØĞ¦Öø¡£\n",dest->query("c_name")));
-		tell_room(env,sprintf("%s¶ÔÖø%sÓä¿ìµÄµØÎ¢Ğ¦Öø¡£\n",dest->query("c_name"),me->query("c_name")),({dest,me}));
-		tell_object(dest,sprintf("Äã¶ÔÖø%sÓä¿ìµØĞ¦Öø¡£\n",me->query("c_name")));
+		write(sprintf("%så°è‘—ä½ æ„‰å¿«åœ°ç¬‘è‘—ã€‚\n",dest->query("c_name")));
+		tell_room(env,sprintf("%så°è‘—%sæ„‰å¿«çš„åœ°å¾®ç¬‘è‘—ã€‚\n",dest->query("c_name"),me->query("c_name")),({dest,me}));
+		tell_object(dest,sprintf("ä½ å°è‘—%sæ„‰å¿«åœ°ç¬‘è‘—ã€‚\n",me->query("c_name")));
 		be_stick = 1;
-		tell_room(env, set_color(sprintf("\nÍ»È»%sÒÔÑ¸À×²»¼±ÑÚ¶úµÄËÙ¶ÈÌÍ³öÒ»¾í½º´ø,¶ş»°²»ËµÌùÏò%s!!\n",me->query("c_name"),dest->query("c_name")),"HIY"),({me,dest}));
-		write(set_color("\nÄãÒÔÑ¸À×²»¼±ÑÚ¶úµÄËÙ¶ÈÌÍ³öÒ»¾í½º´ø,¶ş»°²»ËµÌùÏò"+dest->query("c_name")+"\n","HIY"),me);
-		tell_object(dest,set_color("\n"+me->query("c_name")+"ÒÔÑ¸À×²»¼±ÑÚ¶úµÄËÙ¶ÈÌÍ³öÒ»¾í½º´ø,¶ş»°²»ËµÌùÔÚÄã×ìÉÏ!!\n","HIY"));
+		tell_room(env, set_color(sprintf("\nçªç„¶%sä»¥è¿…é›·ä¸æ€¥æ©è€³çš„é€Ÿåº¦æå‡ºä¸€å·è† å¸¶,äºŒè©±ä¸èªªè²¼å‘%s!!\n",me->query("c_name"),dest->query("c_name")),"HIY"),({me,dest}));
+		write(set_color("\nä½ ä»¥è¿…é›·ä¸æ€¥æ©è€³çš„é€Ÿåº¦æå‡ºä¸€å·è† å¸¶,äºŒè©±ä¸èªªè²¼å‘"+dest->query("c_name")+"\n","HIY"),me);
+		tell_object(dest,set_color("\n"+me->query("c_name")+"ä»¥è¿…é›·ä¸æ€¥æ©è€³çš„é€Ÿåº¦æå‡ºä¸€å·è† å¸¶,äºŒè©±ä¸èªªè²¼åœ¨ä½ å˜´ä¸Š!!\n","HIY"));
 
 		this_object()->move(dest);
-		this_object()->set("extra_look", "$NµÄ´ó×ì°ÍÉÏ²»ÖªµÀ±»Ë­ÌùÁË½º´ø¡£\n");
+		this_object()->set("extra_look", "$Nçš„å¤§å˜´å·´ä¸Šä¸çŸ¥é“è¢«èª°è²¼äº†è† å¸¶ã€‚\n");
 		this_object()->set("prevent_drop",1);
 		this_object()->set("prevent_insert",1);
-//		this_object()->set("short","Ò»ÌõÕıÌùÔÚÄ³ÈË×ì°ÍÉÏµÄ½º´ø");
-		this_object()->set("long","ÕâÌõ½º´øÌù×¡ÄãµÄ×ì°Í, ¿ì°ÑËüËºµô°É!(tear tape)\n");
+//		this_object()->set("short","ä¸€æ¢æ­£è²¼åœ¨æŸäººå˜´å·´ä¸Šçš„è† å¸¶");
+		this_object()->set("long","é€™æ¢è† å¸¶è²¼ä½ä½ çš„å˜´å·´, å¿«æŠŠå®ƒæ’•æ‰å§!(tear tape)\n");
 		if ( ! userp(dest) ) {
 			me->kill_ob(dest);
 			dest->kill_ob(me);
 		}
 		dest->block_attack( (skill > 60 ? 4 : 2) );
 		dest->set_temp("msg_stop_attack",
-			"( Äã¼±ÖøËºµô½º´ø, Ã»°ì·¨³öÊÖ ! )\n");
+			"( ä½ æ€¥è‘—æ’•æ‰è† å¸¶, æ²’è¾¦æ³•å‡ºæ‰‹ ! )\n");
 		dest->set_temp("silence");
-		if ( ! userp(dest) )  // npc ×Ô¶¯Ëºµô, player ×Ô¼ºÊÖ¶¯Ëº°É !
+		if ( ! userp(dest) )  // npc è‡ªå‹•æ’•æ‰, player è‡ªå·±æ‰‹å‹•æ’•å§ !
 //			call_out("npc_do_tear",6,dest );
 			call_out("npc_do_tear",4 + skill/20 ,dest );
 	} else {
 	    if ( ! userp(dest) ) {
-		tell_room(env,sprintf("%sÍ»È»´óºÈÒ»Éù: ¸ãÕâÖÖµñ³æĞ¡¼¼, È¥ËÀ°É !!\n",dest->query("c_name"),me->query("c_name")),({me,dest}));
-		write(sprintf("%sÍ»È»´óºÈÒ»Éù: ¸ãÕâÖÖµñ³æĞ¡¼¼, È¥ËÀ°É !!\n",dest->query("c_name")));
-		tell_object(dest,sprintf("Äã·¢ÏÖ%s¶ÔÄã²»»³ºÃÒâ, ì¶ÊÇ·¢¶¯¹¥»÷¡£\n",me->query("c_name")));
+		tell_room(env,sprintf("%sçªç„¶å¤§å–ä¸€è²: æé€™ç¨®é›•èŸ²å°æŠ€, å»æ­»å§ !!\n",dest->query("c_name"),me->query("c_name")),({me,dest}));
+		write(sprintf("%sçªç„¶å¤§å–ä¸€è²: æé€™ç¨®é›•èŸ²å°æŠ€, å»æ­»å§ !!\n",dest->query("c_name")));
+		tell_object(dest,sprintf("ä½ ç™¼ç¾%så°ä½ ä¸æ‡·å¥½æ„, æ–¼æ˜¯ç™¼å‹•æ”»æ“Šã€‚\n",me->query("c_name")));
 		me->kill_ob(dest);
 		dest->kill_ob(me);
-		me->set_temp("msg_stop_attack","( ÄãÒ»ÕóÊÖÃ¦½ÅÂÒ, Ã»°ì·¨³öÊÖ! )\n");
+		me->set_temp("msg_stop_attack","( ä½ ä¸€é™£æ‰‹å¿™è…³äº‚, æ²’è¾¦æ³•å‡ºæ‰‹! )\n");
 		me->block_attack( 2 );
 	   } else {
-		write( sprintf("ÄãµÄÆóÍ¼±»Ê¶ÆÆÁË,%s¶ÔÄãĞ¦Ò»Ğ¦ËµµÀ : Ğ¡ÅóÓÑ, ÕâÑù²»¿ÉÒÔà¸!\n",dest->query("c_name")) );
-		tell_object(dest, sprintf("%sËÆºõÓĞÊ²÷áÆóÍ¼¡£\n",me->query("c_name")) );
+		write( sprintf("ä½ çš„ä¼åœ–è¢«è­˜ç ´äº†,%så°ä½ ç¬‘ä¸€ç¬‘èªªé“ : å°æœ‹å‹, é€™æ¨£ä¸å¯ä»¥å–”!\n",dest->query("c_name")) );
+		tell_object(dest, sprintf("%sä¼¼ä¹æœ‰ä»€éº¼ä¼åœ–ã€‚\n",me->query("c_name")) );
 	   }
 	}
 	return 1;

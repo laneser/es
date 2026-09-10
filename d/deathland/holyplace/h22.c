@@ -7,11 +7,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-  set_short(" A very cold place","¼«º®µÄµØ·½");
+  set_short(" A very cold place","æ¥µå¯’çš„åœ°æ–¹");
   set_long(@Long
 Long
 ,@CLong
-Ò»¸ö·Ç³£º®ÀäµÄµØ·½, ÀäµÄÈÃÈËÊÜ²»ÁË. 
+ä¸€å€‹éå¸¸å¯’å†·çš„åœ°æ–¹, å†·çš„è®“äººå—ä¸äº†. 
 CLong
 );
 

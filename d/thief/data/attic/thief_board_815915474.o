@@ -1,12 +1,12 @@
 #d/thief/hall/thief_board.c
-ob_data (["last_location":0,"silent_look":1,"c_short.text":"С͵���԰�","cap_name":"Board","id":({"board","bulletin board",}),"c_name":"���԰�","long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷��뿴 help board��
-","c_cap_name":"���԰�","name":"board","short":"@@query_short","short.text":"Thief's bulletin board","c_long.text":"����һ�����԰壬ר�������Լ��¡���ϸ�÷���ο� help board��
+ob_data (["last_location":0,"silent_look":1,"c_short.text":"小偷留言板","cap_name":"Board","id":({"board","bulletin board",}),"c_name":"留言板","long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
+","c_cap_name":"留言板","name":"board","short":"@@query_short","short.text":"Thief's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請參看 help board。
 ","long":"@@query_long",])
 messages ({(["poster":"Coin","time":804230523,"title":"Re: < no title >","body":"On Tue Jun 27, Jaguar wrote:
 >  to odie:
->  ������Լ30 mins laice die....laice ���ô�...
->  �����Ҳ����� k laice ������ԭ��
->  ���Ͱ�!!
+>  你走後約30 mins laice die....laice 不好打...
+>  所以我不大想 k laice 就是這原因
+>  加油吧!!
 >   .
 > 
 > 
@@ -14,25 +14,25 @@ and eqs bad no k it lalala..
 ","id":278,]),(["poster":"Odie","time":804236197,"title":"Re: Re: < no title >","body":"On Tue Jun 27, Coin wrote:
 > On Tue Jun 27, Jaguar wrote:
 > >  to odie:
-> >  ������Լ30 mins laice die....laice ���ô�...
-> >  �����Ҳ����� k laice ������ԭ��
-> >  ���Ͱ�!!
+> >  你走後約30 mins laice die....laice 不好打...
+> >  所以我不大想 k laice 就是這原因
+> >  加油吧!!
 > >   .
 > > 
 > > 
 > and eqs bad no k it lalala..
-��...����������˯����...һ����С�ı����ɵ���...
-�Ű����ǿ����Լ��ж�������
-������Ƿ���С͵��bs ���Ǻ����˵
-�� ��֪����ʱ���ܱ�ǿ˵
-������ �����....
+嗯...我想是我想睡覺吧...一個不小心被他幹掉了...
+嗯凹他是看看自己有多少能力
+結果就是發現小偷的bs 還是很肉的說
+唉 不知道何時才能變強說
+嗚嗚嗚 經驗點....
 
-","id":279,]),(["poster":"Elf","time":804243427,"title":"< no title >","body":"�뵽һ����ơ�
-    (ָ��·��) ..���������ذ���һ��·��...ֻҪ ppl �߹���..
+","id":279,]),(["poster":"Elf","time":804243427,"title":"< no title >","body":"想到一個詭計～
+    (指向路標) ..就是在這塊地安置一個路標...只要 ppl 走過來..
     
-�����������ߵĻ�..�����ߵ�·���ߵ��Ǳ�...
-    ��Ȼ·����ָ�� mobs ��....
-     ��..���������....cc
+往其他方像走的話..都會走到路標走的那邊...
+    當然路標是指像 mobs 羅....
+     嗯..無聊隨便掰....cc
 ","id":280,]),(["poster":"Lithos","time":804249759,"title":"< no title >","body":"now cant use chinese....,i thought a trick.
 Thunder dodge: tie a string on universal dagger,then 
                throw out universal dagger to sky,finally...
@@ -55,87 +55,87 @@ Thunder dodge: tie a string on universal dagger,then
 >         I think that is a bug ba..:)
 > 
 >         Please check it.., Thx. 
-�Ե�...��ʱ��쵽 reboot ��ʱ��...Ҫ������������
-����ѶϢ˵�����ٶ�������...Ȼ�ᶪ�������������ĵĻ�
-����ᱻ���...����С͵���᳣����û��װ��������...
-�����....^o^
+對的...有時候快到 reboot 的時候...要丟東西在裡面
+會有訊息說不能再丟東西了...然後丟在贓物銷售中心的話
+好像會被清掉...所以小偷公會常常都沒有裝備可以用...
+真可憐....^o^
 
-","title":"Re: about store room","id":283,]),(["poster":"Fw","time":812866862,"title":"��...","body":"��... �Һü�į
-ÿ��������ֻ����һ��thief... :~~~(
-","id":284,]),(["poster":"Fw","time":812877458,"body":"ÿ�ζ�͵�Ǹ���һ��Ǯ����...
-Ҫ������skilllevel��?
+","title":"Re: about store room","id":283,]),(["poster":"Fw","time":812866862,"title":"嗚...","body":"嗚... 我好寂寞
+每次上來都只有我一個thief... :~~~(
+","id":284,]),(["poster":"Fw","time":812877458,"body":"每次都偷那個「一塊錢」的...
+要怎麼練skilllevel啊?
 
-","title":"��... ����Ū��???","id":285,]),(["poster":"Fw","time":812887593,"body":"> train steal
+","title":"這... 怎麼弄啊???","id":285,]),(["poster":"Fw","time":812887593,"body":"> train steal
 
-һ����������, ��ˮƿ����������ǰ��
-��ˮƿ��ü������˵��: ����һ��ʱ��� :~~~
+一陣煙霧過後, 汽水瓶出現在你面前。
+汽水瓶愁眉苦臉的說道: 給我一點時間吧 :~~~
 
 
-��������... 
-������ɶ��˼��?
-","title":"��... ������ʲ����˼��?? :~~~","id":286,]),(["poster":"Auo","time":813360220,"title":"< no title >","body":"fw, �Ҽ���һ���Ÿ��㣬��������ϵ�����
-�������㲻֪��ο��ţ�so post here....
-���ȵ�Զ������ʾ�ȥ��Ȼ��type mail , then press enter
-֮��ֱ���ٰ�enter���Ϳ��Կ����ŵ����ģ������ᣬ����ʾ�����´��q
-��Ϳ��Գ����ˣ�hmm....Ӧ�ó���û�Ǵ��Ŷ�...��
-�Ǻǣ��øж�ร�������thiefӴ :P
+這這這這... 
+到底是啥意思啊?
+","title":"這... 到底是什麼意思啊?? :~~~","id":286,]),(["poster":"Auo","time":813360220,"title":"< no title >","body":"fw, 我寄了一封信給你，解答你以上的問題
+不過怕你不知如何看信，so post here....
+首先到遠風鎮的郵局去，然後type mail , then press enter
+之後直接再按enter，就可以看到信的內文，看完後，在提示符號下打個q
+你就可以出來了（hmm....應該程序沒記錯才對...）
+呵呵，好感動喔，有人玩thief喲 :P
 ","id":287,]),(["poster":"Lala","time":813850315,"body":"
             elf ..odie.......
-            ���ǻ�����?����ŷ��˹.........
-            ʵ�ں�����old es...
-            ��ʿ����ܺ���..�ܶ��˶�����ɱ.....
-           �뵽Ҫ����С͵�ֺ�û��.......
+            你們還好嗎?我是歐文斯.........
+            實在很想念old es...
+            騎士不會很好玩..很多人都不能殺.....
+           想到要重練小偷又很沒力.......
            sigh..........
 ","title":"< no title >","id":288,]),(["poster":"Odie","time":814177902,"title":"Re: < no title >","body":"On Mon Oct 16, Lala wrote:
 >             elf ..odie.......
->             ���ǻ�����?����ŷ��˹.........
->             ʵ�ں�����old es...
->             ��ʿ����ܺ���..�ܶ��˶�����ɱ.....
->            �뵽Ҫ����С͵�ֺ�û��.......
+>             你們還好嗎?我是歐文斯.........
+>             實在很想念old es...
+>             騎士不會很好玩..很多人都不能殺.....
+>            想到要重練小偷又很沒力.......
 >            sigh..........
 
-�Ǻ� ��ʿ�Ǵ����ѽ Ҫ��ħ��ʦ��ȥ���˵
-�� û������װ�� ��ʿ��ĺ���˵
-�Ǻ� �ҵļӷ�è Ҳ�Ǻܿ���˵ �Ǻ�
+呵呵 騎士是大肉盾呀 要跟魔法師出去玩的說
+嗯 沒有武器裝備 騎士真的很爛說
+呵呵 我的加菲貓 也是很可憐說 呵呵
 
-","id":289,]),(["poster":"Elfii","time":814339360,"body":"��..˭�з����հ治����...
-    ����ֻ�ܷ���...
+","id":289,]),(["poster":"Elfii","time":814339360,"body":"唉..誰叫瘋狂假日版不想玩...
+    現在只能發呆...
     ....
-","title":"< no title >","id":290,]),(["poster":"Pkerv","time":814409986,"title":"< no title >","body":"�м�����esreopen   ��Ҵ�ҵΪ��
-pker���������伣һ����
+","title":"< no title >","id":290,]),(["poster":"Pkerv","time":814409986,"title":"< no title >","body":"有鑑於最近esreopen   大家創業為艱
+pker決定消生匿跡一陣子
 
-��es�ֻص����˽���Į..������æ��ʱ��ʱ
-pker�������ֽ���
-����Ѫ��
+當es又回到人人皆冷漠..互不幫忙的時代時
+pker將再重現江湖
+再啟血雨
 
                pker ..
 ","id":291,]),(["poster":"Elfii","time":814448404,"body":"On Mon Oct 23, Pkerv wrote:
-> �м�����esreopen   ��Ҵ�ҵΪ��
-> pker���������伣һ����
+> 有鑑於最近esreopen   大家創業為艱
+> pker決定消生匿跡一陣子
 > 
-> ��es�ֻص����˽���Į..������æ��ʱ��ʱ
-> pker�������ֽ���
-> ����Ѫ��
+> 當es又回到人人皆冷漠..互不幫忙的時代時
+> pker將再重現江湖
+> 再啟血雨
 > 
 >                pker ..
-�첻��ȥ�ͻ첻��ȥ..���н��...
-�ǰ׳� pker lv 19 �۸��� lv 9 ��������...
-�� pk ��û�ֵ�..
+混不下去就混不下去..還有藉口...
+那白痴 pker lv 19 欺負我 lv 9 還先逃跑...
+愛 pk 又沒種的..
 ","title":"Re: < no title >","id":293,]),(["poster":"Owens","time":814468399,"body":" 
-�װ���С͵ͬ����,�����������һ��pker
-a level 19 knight lcl ���pk ����,����ʱ�ǵ�ҪС��
-���Ӯ�Ͳ�Ҫ����,��Ӯ�Ϳ���.....
-","title":"< no title >","id":294,]),(["poster":"Aquarius","time":814766794,"title":"< no title >","body":"	�����һ��������� ?
+親愛的小偷同胞們,最近出現了另一個pker
+a level 19 knight lcl 隨便pk 別人,遇到時記得要小心
+打的贏就不要客氣,打不贏就快跑.....
+","title":"< no title >","id":294,]),(["poster":"Aquarius","time":814766794,"title":"< no title >","body":"	儲藏室還有問題嗎 ?
 ","id":295,]),(["poster":"Sin","time":814767476,"title":"< no title >","body":"  
 
-     hmm.....�����һ��ǲ��ܶ�������....
-     ��Ҫ�����һ��...:>
-    ���������������....:>
-","id":296,]),(["poster":"Elfii","time":814983551,"body":"��..ϣ��ÿ�� login �����а���...��������..:P
-�����ǵ�Ҫ�Ŵ�����..�Ŷ��߻᲻��..
+     hmm.....儲藏室還是不能丟東西ㄟ....
+     還要我清掉一點...:>
+    可能有是有問題吧....:>
+","id":296,]),(["poster":"Elfii","time":814983551,"body":"嗯..希望每次 login 都能有矮靈...嘻嘻嘻嘻..:P
+不過記得要放儲藏室..放東邊會不見..
 ","title":"< no title >","id":297,]),(["poster":"Owens","time":815033046,"body":" 
-��������һЩ����....
-�����궪����ȥ....�������....
-��Сƿ�Ӽ����...thx
+儲藏室有一些問題....
+鑲金扁鑽丟不下去....真是奇怪....
+請小瓶子檢查下...thx
 ","title":"< no title >","id":298,]),})
 id_ref 308

@@ -9,16 +9,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "cele ball", "ÉáÀû×Ó" );
+        set_name( "cele ball", "èˆåˆ©å­" );
         add( "id", ({ "ball" }) );
-        set_short( "ÉáÀû×Ó" );
+        set_short( "èˆåˆ©å­" );
         set_long(@C_LONG
-ÕâÊÇÒ»¿Å°×É«µÄĞ¡Ğ¡Ô²Çò¡£¾İËµÉáÀû×ÓÊÇĞŞĞĞ¸ßÉîµÄÓĞµÀºÍÉĞËÀáá»ğ»¯²Å»áÒÅÁô
-ÏÂÀ´µÄ¶«Î÷¡£Ò»°ã¶øÑÔ, ÉáÀû×Óº¬ÓĞËÀÕßÒ»ÉúµÄ¾«»ªĞŞÎª,Èç¹ûÄÜµÃµ½¸öÖĞÃØÃÜ, 
-»òĞíÄÜÔöÇ¿ÄãµÄĞŞÎªÒ²Ëµ²»¶¨à¸!!Äã¿ÉÒÔÊÔÖø³ÖÓĞËü( hold )¿´ÊÇ·ñÓĞÊ²÷áÊÕ»ñ¡£
+é€™æ˜¯ä¸€é¡†ç™½è‰²çš„å°å°åœ“çƒã€‚æ“šèªªèˆåˆ©å­æ˜¯ä¿®è¡Œé«˜æ·±çš„æœ‰é“å’Œå°šæ­»å¾Œç«åŒ–æ‰æœƒéºç•™
+ä¸‹ä¾†çš„æ±è¥¿ã€‚ä¸€èˆ¬è€Œè¨€, èˆåˆ©å­å«æœ‰æ­»è€…ä¸€ç”Ÿçš„ç²¾è¯ä¿®ç‚º,å¦‚æœèƒ½å¾—åˆ°ç®‡ä¸­ç§˜å¯†, 
+æˆ–è¨±èƒ½å¢å¼·ä½ çš„ä¿®ç‚ºä¹Ÿèªªä¸å®šå–”!!ä½ å¯ä»¥è©¦è‘—æŒæœ‰å®ƒ( hold )çœ‹æ˜¯å¦æœ‰ä»€éº¼æ”¶ç©«ã€‚
 C_LONG        
         );
-        set( "unit","¸ö" );
+        set( "unit","å€‹" );
         set( "weight", 5 );
         set( "prevent_drop", 1 );
         set( "prevent_get", 1 );
@@ -40,16 +40,16 @@ int hold_ball(string str)
    my_int=(int)this_player()->query("spell_points");
    my_hp=(int)this_player()->query("hit_points");
    if( !str || !id(str) )
-        return notify_fail( "ÄãÒª×öÊ²÷á?\n" );
+        return notify_fail( "ä½ è¦åšä»€éº¼?\n" );
   
    if ( ( my_int < INT ) && ( my_fp < FP ) )
-        return notify_fail( "\n°¦,ÄãÎŞ·¨¿ú¾¿ÉáÀû×ÓµÄÃØÃÜ!!\n\n" );
+        return notify_fail( "\nå”‰,ä½ ç„¡æ³•çªºç©¶èˆåˆ©å­çš„ç§˜å¯†!!\n\n" );
    
    if ( my_hp < HP )
-        return notify_fail( "\n°¦,ÄãµÄÉúÃüÁ¦Ì«µÍÁËÀ²!!\n\n" );
+        return notify_fail( "\nå”‰,ä½ çš„ç”Ÿå‘½åŠ›å¤ªä½äº†å•¦!!\n\n" );
         
    if( this_player()->query_temp("acup_effect/"+EFFECT_ID) ){
-      return notify_fail("\nß×,ÄãµÄĞŞÎªÒÑ¾­µ½´ïÁË¼«ÏŞ!!\n\n");
+      return notify_fail("\nå’¦,ä½ çš„ä¿®ç‚ºå·²ç¶“åˆ°é”äº†æ¥µé™!!\n\n");
    }
    else{
        this_player()->set_temp("acup_effect/"+EFFECT_ID,1);
@@ -63,7 +63,7 @@ int hold_ball(string str)
            this_player()->modify_skill( skill_name[i] , mod ) ;
            skills[skill_name[i]] = mod ;
        }
-       write( "\nÏÅ!!Ò»¹ÉÕæÆøÔÚÄãÌåÄÚÁ÷¶¯,²»Öª²»¾õÄãËùÓĞµÄ¼¼ÄÜ¶¼Ôö¼ÓÁË!!\n\n" );
+       write( "\nåš‡!!ä¸€è‚¡çœŸæ°£åœ¨ä½ é«”å…§æµå‹•,ä¸çŸ¥ä¸è¦ºä½ æ‰€æœ‰çš„æŠ€èƒ½éƒ½å¢åŠ äº†!!\n\n" );
        if ( my_fp < FP )
          this_player()->add( "spell_points", -INT );
        else this_player()->add( "force_points", -FP);
@@ -88,10 +88,10 @@ void run_out()
          mod_val = skills[skill_name[i]] ;
          mod_val=(mod_val/20);
      if(!(mod_val))
-       tell_object(owner,"ÄãµÄ¼¼ÄÜµµ°¸ËÆºõ²»Õı³£,ÇëËÙÇ¢Î×Ê¦½â¾ö¡£\n") ;
+       tell_object(owner,"ä½ çš„æŠ€èƒ½æª”æ¡ˆä¼¼ä¹ä¸æ­£å¸¸,è«‹é€Ÿæ´½å·«å¸«è§£æ±ºã€‚\n") ;
      else
        owner->modify_skill(skill_name[i],  -mod_val );
      }
-     tell_object( owner, "\nÄãµÄÕæÆø½¥½¥¿ªÊ¼ÏûÊ§ÁË ...\n\n" );
+     tell_object( owner, "\nä½ çš„çœŸæ°£æ¼¸æ¼¸é–‹å§‹æ¶ˆå¤±äº† ...\n\n" );
      owner->delete_temp("acup_effect/"+EFFECT_ID);
 }

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("chainmail of elf", "¾«Áéîø¼×");
+        set_name("chainmail of elf", "ç²¾éˆé§ç”²");
         add( "id", ({ "mail","chainmail" }) );
-        set_short( "¾«Áéîø¼×" );
+        set_short( "ç²¾éˆé§ç”²" );
         set_long(
-                "ÕâÊÇ¾«ÁéÍõÓÃÌØÊâµÄ½ğÊô¼ÓÉÏ´óÉñÑïĞ¡Ğ°µÄ×£¸£ËùÖÆ³ÉµÄîø¼×£¬¼×\n"
-                "ÉÏÓĞÖø¾«ÁéµÄµÄ±êÖÄ¡£\n"
+                "é€™æ˜¯ç²¾éˆç‹ç”¨ç‰¹æ®Šçš„é‡‘å±¬åŠ ä¸Šå¤§ç¥æšå°é‚ªçš„ç¥ç¦æ‰€è£½æˆçš„é§ç”²ï¼Œç”²\n"
+                "ä¸Šæœ‰è‘—ç²¾éˆçš„çš„æ¨™å¹Ÿã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "light_metal");
         set( "armor_class", 30 );

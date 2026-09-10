@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Phenix Robe","·ï»Ë³¤ÅÛ" );
+	set_name( "Phenix Robe","é³³å‡°é•·è¢" );
 	add( "id",({ "robe" }) );
-	set_short( "·ï»Ë³¤ÅÛ" );
+	set_short( "é³³å‡°é•·è¢" );
 	set_long(@LONG
-	ÓÉ²»ËÀÉñÊŞ·ï»ËµÄ³á°òËù±àÖ¯µÄ³¤ÅÛ¡£
+	ç”±ä¸æ­»ç¥ç¸é³³å‡°çš„ç¿…è†€æ‰€ç·¨ç¹”çš„é•·è¢ã€‚
 LONG
            );
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "weight",50 );
 	set( "type","body" );
 	set( "material","leather" );

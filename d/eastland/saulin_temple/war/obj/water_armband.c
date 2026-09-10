@@ -5,13 +5,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("shell armband", "¹ê¼×±Û»·");
+        set_name("shell armband", "é¾œç”²è‡‚ç’°");
         add( "id", ({"armband" }) );
-        set_short("¹ê¼×±Û»·");
+        set_short("é¾œç”²è‡‚ç’°");
         set_long(
-                "ÕâÊÇÒ»¸öÓÃÎÚ¹ê¼×¿Ç×ö³ÉµÄ±Û»·£¬»¨»¨ÂÌÂÌµÄÂúºÃ¿´µÄ¡£\n"
+                "é€™æ˜¯ä¸€å€‹ç”¨çƒé¾œç”²æ®¼åšæˆçš„è‡‚ç’°ï¼ŒèŠ±èŠ±ç¶ ç¶ çš„æ»¿å¥½çœ‹çš„ã€‚\n"
         );
-        set( "unit", "¸ö");
+        set( "unit", "å€‹");
         set( "type", "arms" );
         set( "material", "stone" );
         set( "defense_bonus", 1 );

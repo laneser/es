@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level(11);
-	set_name( "The right_temple enforcer", "�ҵ�ִ��" );
+	set_name( "The right_temple enforcer", "右殿執事" );
 	add( "id", ({ "enforcer" }) );
-	set_short( "�ҵ�ִ��" );
+	set_short( "右殿執事" );
 	set_long(
-                "һλ����ҵ�ִ�£�������������ҵ�ļ������顣\n"
+                "一位神殿右殿執事，他付責神殿中右殿的祭祀事情。\n"
 	);
 	set( "race", "dwarf" );
 	set( "gender", "male" );
@@ -40,19 +40,19 @@ void create()
 void ask_box(object who)
 {
   tell_object(who,
-     "\n�Ҿ��ĺ������еĴ�˵�Ǽٵģ���Ҫȥ�����������Ļ���\n"
-         "��ֻ��Ҫ��ȥ�������ˡ�\n\n"
+     "\n我覺的黑龍寶盒的傳說是假的，不要去相信那條龍的話，\n"
+         "它只是要你去送死罷了。\n\n"
      ); 
 }
 
 void ask_tree(object who)
 {
   tell_object(who,
-    "\n�����˲ι�����ҪС�����(hit)���ӡ�\n\n" );
+    "\n欲得人參果，需要小棒槌敲(hit)果子。\n\n" );
 }
 
 void ask_dragon(object who)
 {
   tell_object(who,
-    "\nִ��˵���ഫ�����ǻ��������֮һ��ȫ��ð�����������Ҳ���³��һ�\n\n"  );
+    "\n執事說：相傳火龍是火神的坐騎之一，全身冒著火□，口中也能吐出烈火。\n\n"  );
 }

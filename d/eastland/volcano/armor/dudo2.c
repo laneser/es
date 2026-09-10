@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("blue du-do", "À¶É«¶Ç¶µ");
+        set_name("blue du-do", "è—è‰²è‚šå…œ");
         add( "id", ({ "du-do" }) );
-        set_short( "À¶É«¶Ç¶µ");
+        set_short( "è—è‰²è‚šå…œ");
         set_long(
-                "Õâ¼ş¶Ç¶µÊÇ°«Áé×åĞ¡ÄĞº¢ÔÚ´©µÄ¡£\n"
+                "é€™ä»¶è‚šå…œæ˜¯çŸ®éˆæ—å°ç”·å­©åœ¨ç©¿çš„ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "cloth");
         set( "armor_class", 8 );

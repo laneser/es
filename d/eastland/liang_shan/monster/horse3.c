@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "flower horse", "Ğ¡»¨Âí" );
+	set_name( "flower horse", "å°èŠ±é¦¬" );
 	add( "id", ({ "horse" }) );
-	set_short( "Ğ¡»¨Âí" );
+	set_short( "å°èŠ±é¦¬" );
 	set_long(
-		"Ò»Ö»É«²Ê°ßÀ½µÄĞ¡Âí£¬Á¦Á¿ºÃÏñ²»ÊÇºÜ´óµÄÑù×Ó¡£\n" );
-	set( "unit", "Ö»" );
+		"ä¸€éš»è‰²å½©æ–‘ç€¾çš„å°é¦¬ï¼ŒåŠ›é‡å¥½åƒä¸æ˜¯å¾ˆå¤§çš„æ¨£å­ã€‚\n" );
+	set( "unit", "åª" );
 	set( "value", ({ 100 , "silver" }));
 	set( "weight",60);
 	set_perm_stat( "str", 10 );
@@ -24,9 +24,9 @@ void create()
 	set( "alignment", 50 );
 	set( "max_load", 1550 );
 	set_limbs( ({ "head", "body", "feet", "tail" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ááÍÈ", "Î²°Í" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å¾Œè…¿", "å°¾å·´" }) );
 	set_verbs( ({ "kick" }) );
-	set_c_verbs( ({  "%sÆË¶¯Ğ¡Ñ©Ìã£¬Ö±»÷%s", "%sĞ¡»¨Î²Ò»Ë¦£¬É¨Íù%s" }) );
+	set_c_verbs( ({  "%sæ’²å‹•å°é›ªè¹„ï¼Œç›´æ“Š%s", "%så°èŠ±å°¾ä¸€ç”©ï¼Œæƒå¾€%s" }) );
 
 }
 

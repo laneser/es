@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("amaze root","ÆæÒì»¨µÄ¸ù");
+        set_name("amaze root","å¥‡ç•°èŠ±çš„æ ¹");
         add( "id" , ({ "root" }) );
-        set_short("ÆæÒì»¨µÄ¸ù");
-        set_long("ÕâÊÇÒ»¶ÎºÚºÚµÄ¡¢²»ÆğÑÛµÄÊ÷¸ù¡£\n");
-        set("unit","¶Î");
+        set_short("å¥‡ç•°èŠ±çš„æ ¹");
+        set_long("é€™æ˜¯ä¸€æ®µé»‘é»‘çš„ã€ä¸èµ·çœ¼çš„æ¨¹æ ¹ã€‚\n");
+        set("unit","æ®µ");
         set("weight", 10);
         set("value", ({20, "silver"}) );
 }

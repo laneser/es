@@ -49,12 +49,12 @@ int make_hurt(object me,object target,object weapon)
 	dam += ((int)target->query("hit_points")/25 - random(victim_db)/2);
 	dam = (dam < 5 ? 5 : dam ) + (int)me->query_level() ;
 	if ( wizardp(me) )
-		tell_room(environment(me),"ÕæÕıÉËº¦ :"+dam+"\n");
+		tell_room(environment(me),"çœŸæ­£å‚·å®³ :"+dam+"\n");
 	target->receive_damage(dam);
 	if(!environment(target)->query("PK_ZONE"))  me->gain_experience(dam+dam);
 	target->add_temp("bs",1);
 	msg = "/adm/daemons/statsd"->status_string(target) ;
-    	tell_object( target,sprintf("( Äã%s )\n",msg));
+    	tell_object( target,sprintf("( ä½ %s )\n",msg));
     	tell_object( me,sprintf("( %s%s )\n",target->query("c_name"),msg));
 	return dam;
 }
@@ -65,27 +65,27 @@ int backstab_idle(object me,object target,int succeed)
 	int dam = 0,kar;
 
 	if ( !target || nullp(target) || target->query("hit_points") < 1) {
-		write("ÄÇ¼Ò»ïÒÑ¾­ËÀÁË, ¾Í·Å¹ıËûµÄ¡õÌå°É ¡£\n");
+		write("é‚£å‚¢ä¼™å·²ç¶“æ­»äº†, å°±æ”¾éä»–çš„â–¡é«”å§ ã€‚\n");
 		return 1; 
 	}
 	if ( !present(target,environment(me))) {
-		write("°¥Ñ½ !! Ä¿±êÁï×ßÁË ..\n");
+		write("å“å‘€ !! ç›®æ¨™æºœèµ°äº† ..\n");
 		return 1;
 	}
 	// don't move the check to cmd_backstab
 	if ( target->query("no_attack") ) 
-		return notify_fail("Õâ¼Ò»ï£­²»ÄÜÉ±¡£\n");
+		return notify_fail("é€™å‚¢ä¼™ï¼ä¸èƒ½æ®ºã€‚\n");
 
 	/* Need we check weapon again ????? */
 	weapon = me->query("weapon1");
 	if ( !weapon )
-		return notify_fail("ÄãÃ»ÓĞÎäÆ÷£¬ÎŞ·¨±³´Ì !!\n");	
+		return notify_fail("ä½ æ²’æœ‰æ­¦å™¨ï¼Œç„¡æ³•èƒŒåˆº !!\n");	
 	tell_object(me,set_color(
-		sprintf("ºÃ»ú»á !! ÄãÎÕ½ô%sÏò%sµÄ±³ÓÃÁ¦´ÌÏÂ !!\n",
+		sprintf("å¥½æ©Ÿæœƒ !! ä½ æ¡ç·Š%så‘%sçš„èƒŒç”¨åŠ›åˆºä¸‹ !!\n",
 			weapon->query("c_name"),target->query("c_name")),"HIY"));
 			
 	tell_room(environment(me),set_color(
-		sprintf("%sµÄÉíÓ°Í»È»´Ó%s±³áá¸¡ÏÖ³öÀ´£¬ÑÛÖĞÉ±»úÖØÖØ ...\n",
+		sprintf("%sçš„èº«å½±çªç„¶å¾%sèƒŒå¾Œæµ®ç¾å‡ºä¾†ï¼Œçœ¼ä¸­æ®ºæ©Ÿé‡é‡ ...\n",
 				me->query("c_name"),target->query("c_name")),"HIR"),
 			({me,target}));
 
@@ -95,15 +95,15 @@ int backstab_idle(object me,object target,int succeed)
 	if ( !succeed ) {
 		kar = (int) me->query_stat("karma");
 		tell_room(environment(me),
-			sprintf("%s¾ÙÆğËûµÄ%s³¯Öø%sµÄ±³ÃÍÈ»´ÌÂä£¬°¥Ñ½ !! ¾¹È»Ê§ÊÖÁË ...\n",
+			sprintf("%sèˆ‰èµ·ä»–çš„%sæœè‘—%sçš„èƒŒçŒ›ç„¶åˆºè½ï¼Œå“å‘€ !! ç«Ÿç„¶å¤±æ‰‹äº† ...\n",
 		me->query("c_name"),weapon->query("c_name"),target->query("c_name")),
 		({ me,target}) );
 		tell_object(me,set_color(
-			sprintf("%sÍ»È»×ª¹ıÍ·À´£¬¶ÔÄã¹îÒìÒ»Ğ¦£¬°¥Ñ½ !! ²»Ãî ...\n",
+			sprintf("%sçªç„¶è½‰éé ­ä¾†ï¼Œå°ä½ è©­ç•°ä¸€ç¬‘ï¼Œå“å‘€ !! ä¸å¦™ ...\n",
 				target->query("c_name")),"HIR"));
 		tell_object(target,set_color(
-		sprintf("ÄãÍ»È»¸Ğµ½Çé¿ö²»¶Ô£¬¸Ï¿ìÏòÅÔÒ»ÉÁ£¬Ò»µÀÇà°×µÄ»¡¹â¿°¿°»®¹ı\n"
-					"ÄãµÄ±³£¬Äã¸Ğµ½Ò»ÕóÃ«¹Çã¤È»£¬¿É¶ñ !! ÊÇ%sµÄ±³´Ì ...\n",
+		sprintf("ä½ çªç„¶æ„Ÿåˆ°æƒ…æ³ä¸å°ï¼Œè¶•å¿«å‘æ—ä¸€é–ƒï¼Œä¸€é“é’ç™½çš„å¼§å…‰å ªå ªåŠƒé\n"
+					"ä½ çš„èƒŒï¼Œä½ æ„Ÿåˆ°ä¸€é™£æ¯›éª¨æ‚šç„¶ï¼Œå¯æƒ¡ !! æ˜¯%sçš„èƒŒåˆº ...\n",
 				me->query("c_name")),"HIM"));
 		me->kill_ob(target);
 		target->kill_ob(me);
@@ -115,20 +115,20 @@ int backstab_idle(object me,object target,int succeed)
         	me->block_attack(4);
 		me->delete_temp("doing_backstab");
         	me->set_temp("msg_stop_attack",
-                "( Äã¸Õ¸Õ±³´ÌÊ§ÊÖ£¬ÊÖÃ¦½ÅÂÒ£¬Ã»°ì·¨×öÆäËûÊÂ ! )\n" );
+                "( ä½ å‰›å‰›èƒŒåˆºå¤±æ‰‹ï¼Œæ‰‹å¿™è…³äº‚ï¼Œæ²’è¾¦æ³•åšå…¶ä»–äº‹ ! )\n" );
 	}	
 	else {
 	tell_room(environment(me),
-		sprintf("%s¾ÙÆğËûµÄ%s³¯Öø%sµÄ±³ÃÍÈ»´ÌÂä£¬ö®Ê±Ñª»¨ËÄ½¦ ...\n",
+		sprintf("%sèˆ‰èµ·ä»–çš„%sæœè‘—%sçš„èƒŒçŒ›ç„¶åˆºè½ï¼Œéœæ™‚è¡€èŠ±å››æ¿º ...\n",
 		me->query("c_name"),weapon->query("c_name"),target->query("c_name")),
 		({ me,target}) );
 		tell_object(me,set_color(
-			sprintf("%sÒ»ÉùË»ºğ£¬ËûµÄÏÊÑªËæÖøÄãµÄ%sÅçÁË³öÀ´¡£³É¹¦\ÁË !!\n"
-					"Ò»ÕóĞ°¶ñµÄ¿ìÒâ×ÔÄãĞÄÖĞÉıÆğ !! \n",
+			sprintf("%sä¸€è²å˜¶å¼ï¼Œä»–çš„é®®è¡€éš¨è‘—ä½ çš„%så™´äº†å‡ºä¾†ã€‚æˆåŠŸäº† !!\n"
+					"ä¸€é™£é‚ªæƒ¡çš„å¿«æ„è‡ªä½ å¿ƒä¸­å‡èµ· !! \n",
 				target->query("c_name"),weapon->query("c_name")),"HIY"));
 		tell_object(target,set_color(
-		sprintf("ÄãÍ»È»¸Ğµ½Ò»Õó¾çÍ´£¬Ò»½ØÑ©°×µÄµ¶ÈĞ´ÓÄãµÄĞØ¿ÚÃ°ÁË³öÀ´£¬\n"
-				"Äã²»ÖªËù´ëµÄ¿´ÖøËü£¬ÄÔÖĞÒ»ÕóÔÎÑ££¬¿É¶ñ !! ÊÇ%sµÄ±³´Ì ...\n",
+		sprintf("ä½ çªç„¶æ„Ÿåˆ°ä¸€é™£åŠ‡ç—›ï¼Œä¸€æˆªé›ªç™½çš„åˆ€åˆƒå¾ä½ çš„èƒ¸å£å†’äº†å‡ºä¾†ï¼Œ\n"
+				"ä½ ä¸çŸ¥æ‰€æªçš„çœ‹è‘—å®ƒï¼Œè…¦ä¸­ä¸€é™£æšˆçœ©ï¼Œå¯æƒ¡ !! æ˜¯%sçš„èƒŒåˆº ...\n",
 				me->query("c_name")),"HIR"));
 		dam = make_hurt(me,target,weapon);
 		me->kill_ob(target);
@@ -141,8 +141,8 @@ int backstab_idle(object me,object target,int succeed)
 }
 
 //
-// ³É¹¦ÂÊ¾ö¶¨ì¶ skill,ÊôĞÔ, ¼°ÊÇ·ñ hide ³É¹¦
-// ÁíÍâÈç¹û mob ÔÚÕ½¶·ÖĞ»ò block_attack, ³É¹¦ÂÊ»áÔö¼Ó
+// æˆåŠŸç‡æ±ºå®šæ–¼ skill,å±¬æ€§, åŠæ˜¯å¦ hide æˆåŠŸ
+// å¦å¤–å¦‚æœ mob åœ¨æˆ°é¬¥ä¸­æˆ– block_attack, æˆåŠŸç‡æœƒå¢åŠ 
 //
 int check_backstab(object me,object target)
 {
@@ -151,7 +151,7 @@ int check_backstab(object me,object target)
 	lv = target->query_level();
 	if( !(int)me->query_temp("hidding") || (sc = (int)me->query_temp("hide_score")) < lv*lv) 
 		return 0;
-	extra = sc/400; // hide ¶à´Î¸øÒ»µã bonus °É
+	extra = sc/400; // hide å¤šæ¬¡çµ¦ä¸€é» bonus å§
 	if ( (int) target->query("stop_attack") != 0 ) extra += 5;
 	if ( ! nullp(target->query_current_attacker() )) extra += 5;
 	skill = (int) me->query_perm_skill("backstab");
@@ -168,7 +168,7 @@ int check_backstab(object me,object target)
 
 	if ( rate > 105 ) rate = 105;
 	if ( wizardp(me) )
-		write( sprintf("³É¹¦ÂÊ = %d/130\n",rate) );
+		write( sprintf("æˆåŠŸç‡ = %d/130\n",rate) );
 	if ( random(130) < rate )
 		return 1;
 	else
@@ -181,37 +181,37 @@ int cmd_backstab(string arg)
 	int delay;
 	
 	if ( (int)this_player()->query_temp("next_action") > time() )
-		return notify_fail("( ÄãÏÖÔÚÕıÔÚ×¨ĞÄ×öÆäËûÊÂÇé £¡ )\n");
-	if ( ! arg ) return notify_fail("ÄãÏë±³´ÌË­£¿\n");
+		return notify_fail("( ä½ ç¾åœ¨æ­£åœ¨å°ˆå¿ƒåšå…¶ä»–äº‹æƒ… ï¼ )\n");
+	if ( ! arg ) return notify_fail("ä½ æƒ³èƒŒåˆºèª°ï¼Ÿ\n");
 	if ( !(target = present( arg,environment(this_player()))) )
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ"+arg+"µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+arg+"çš„ç”Ÿç‰©ã€‚\n");
 	if ( target == this_player() )
-		return notify_fail("±³´Ì×Ô¼º£¿Äã²»»áÆ´ suicide Âğ£¿\n");
+		return notify_fail("èƒŒåˆºè‡ªå·±ï¼Ÿä½ ä¸æœƒæ‹¼ suicide å—ï¼Ÿ\n");
 	if ( ! living(target) ) 
-		return notify_fail("ÄãÓÃÁ¦µÄ´ÁÁË"
-			+target->query("c_name")+"µ«ÊÇÊ²÷áÊÂÒ²Ã»·¢Éú¡£\n");
-//	¼ÈÈ» kill Ã»Õâ¼ì²é, ±³´ÌÒ²ÃâÁË°É
+		return notify_fail("ä½ ç”¨åŠ›çš„æˆ³äº†"
+			+target->query("c_name")+"ä½†æ˜¯ä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
+//	æ—¢ç„¶ kill æ²’é€™æª¢æŸ¥, èƒŒåˆºä¹Ÿå…äº†å§
 //	if ( !visible(target,this_player()) || target->query("invisible_player") )
-//		return notify_fail("ÄãÏë±³´ÌË­£¿\n");
+//		return notify_fail("ä½ æƒ³èƒŒåˆºèª°ï¼Ÿ\n");
 	if ( !this_player()->query_vision() )
-		return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+		return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
 	if ( userp(target) ) {
 		if ( (int)target->query_level()< 5 || 
 			 (int)this_player()->query_level()<5 )
-		return notify_fail("Äã²»ÄÜ PK Ëû !!\n");
+		return notify_fail("ä½ ä¸èƒ½ PK ä»– !!\n");
 	}
 	weapon = this_player()->query("weapon1");
 	if ( !weapon )
-		return notify_fail("ÄãÃ»ÓĞÎäÆ÷£¬ÎŞ·¨±³´Ì !!\n");	
+		return notify_fail("ä½ æ²’æœ‰æ­¦å™¨ï¼Œç„¡æ³•èƒŒåˆº !!\n");	
 	if ( (string)weapon->query("type") != "dagger" )
-		return notify_fail("ÄãµÄÎäÆ÷²»³ÃÊÖ£¬ÎŞ·¨±³´Ì !!\n");
+		return notify_fail("ä½ çš„æ­¦å™¨ä¸è¶æ‰‹ï¼Œç„¡æ³•èƒŒåˆº !!\n");
 	if ( (int)this_player()->query("alignment")>0 )
-		return notify_fail("Ò»ÕóÌìÈË½»Õ½£¬ÄãÊµÔÚÏÂ²»ÁËÊÖÀ´¸ÉÕâÖÖ¿ÉÅÂµÄÊÂ¡£\n");
-	write(set_color(sprintf("Äã¿ªÊ¼µÈ´ı±³´Ì%sµÄÊ±»ú ...\n",target->query("c_name")),"HIY"));
+		return notify_fail("ä¸€é™£å¤©äººäº¤æˆ°ï¼Œä½ å¯¦åœ¨ä¸‹ä¸äº†æ‰‹ä¾†å¹¹é€™ç¨®å¯æ€•çš„äº‹ã€‚\n");
+	write(set_color(sprintf("ä½ é–‹å§‹ç­‰å¾…èƒŒåˆº%sçš„æ™‚æ©Ÿ ...\n",target->query("c_name")),"HIY"));
 	this_player()->set_temp("doing_backstab",1);
         this_player()->block_attack(4);
         this_player()->set_temp("msg_stop_attack",
-                "( ÄãÏÖÔÚÕıÔÚ×¨ĞÄµÈ´ı±³´ÌµÄÊ±»ú£¬ÎŞ·¨×öÆäËûÊÂ£¡ )\n" );
+                "( ä½ ç¾åœ¨æ­£åœ¨å°ˆå¿ƒç­‰å¾…èƒŒåˆºçš„æ™‚æ©Ÿï¼Œç„¡æ³•åšå…¶ä»–äº‹ï¼ )\n" );
 	delay = 2 + random(3) ;
         this_player()->set_temp("next_action",time()+delay);
 	call_out("backstab_idle",delay,this_player(),target,
@@ -224,9 +224,9 @@ int help()
 	write (@HELP
 Usage: backstab <target>
 
-µ±ÄãµÄÄ¿±ê¶ÔÄãÍêÈ«Ã»ÓĞ½äĞÄµÄÒ»Ë²¼ä£¬Äã¿ÉÒÔÀûÓÃÕâ¸öÖ¸ÁîÀ´"±³´Ì"Ëû£¬
-Õâ¸ö¿ÉÅÂµÄÍ»Ï®»áÔì³É¼«´óµÄÉË¿Ú£¬¶Ôì¶±È½ÏÈõµÄµĞÈËÉõÖÁ¿ÉÄÜÒ»»÷ÖÂÃü£¬
-²»¹ı£¬Èç¹ûÄãµÄµĞÈËÊÂÏÈ²é¾õÄãµÄÆóÍ¼£¬Äã¾ÍµÃÒªµ±ĞÄËû½«¼Æ¾Í¼ÆÁË¡£
+ç•¶ä½ çš„ç›®æ¨™å°ä½ å®Œå…¨æ²’æœ‰æˆ’å¿ƒçš„ä¸€ç¬é–“ï¼Œä½ å¯ä»¥åˆ©ç”¨é€™å€‹æŒ‡ä»¤ä¾†"èƒŒåˆº"ä»–ï¼Œ
+é€™å€‹å¯æ€•çš„çªè¥²æœƒé€ æˆæ¥µå¤§çš„å‚·å£ï¼Œå°æ–¼æ¯”è¼ƒå¼±çš„æ•µäººç”šè‡³å¯èƒ½ä¸€æ“Šè‡´å‘½ï¼Œ
+ä¸éï¼Œå¦‚æœä½ çš„æ•µäººäº‹å…ˆæŸ¥è¦ºä½ çš„ä¼åœ–ï¼Œä½ å°±å¾—è¦ç•¶å¿ƒä»–å°‡è¨ˆå°±è¨ˆäº†ã€‚
 
 HELP
 );

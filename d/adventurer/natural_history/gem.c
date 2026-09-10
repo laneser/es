@@ -2,16 +2,16 @@
 
 #define SCHOLAR_SUMMON_DIR "/d/scholar/demand/"
 #define SCHOLAR_SUMMON_SKILL "demand/"
-// ÕâÐ©²ÎÊýÊÇËæ±ã¶¨µÄ£¬ÊýÄ¿Ò»Ñù¾Í¿ÉÒÔÁË
+// é€™äº›åƒæ•¸æ˜¯éš¨ä¾¿å®šçš„ï¼Œæ•¸ç›®ä¸€æ¨£å°±å¯ä»¥äº†
 #define spirits ({ "fire","water","dark","moon","wood","solid","grass" })
-#define names ({ "»ð¾«Áé","Ë®¾«Áé","ºÚ°µ¾«Áé","ÔÂ¹â¾«Áé","Ä¾¾«Áé","´óµØ¾«Áé","²Ý¾«Áé" })
+#define names ({ "ç«ç²¾éˆ","æ°´ç²¾éˆ","é»‘æš—ç²¾éˆ","æœˆå…‰ç²¾éˆ","æœ¨ç²¾éˆ","å¤§åœ°ç²¾éˆ","è‰ç²¾éˆ" })
 
 #define files ({ "fire","water","dark","moon","wood","solid","grass"})
 #define levels ({ 13,10,17,15,8,19,4 })
 #define combat ({ 1,0,1,0,1,1,0 })
 #define cost_sp ({ 13,15,17,23,8,19,6 })
 #define stone ({ "ruby","sapphire","obsidian","crystal","agate","diamond","emerald"})
-#define c_stone ({ "ºì±¦Ê¯","À¶±¦Ê¯","ºÚê×Ê¯","Ë®¾§","Âêè§","×êÊ¯","ôä´ä"})
+#define c_stone ({ "ç´…å¯¶çŸ³","è—å¯¶çŸ³","é»‘æ›œçŸ³","æ°´æ™¶","ç‘ªç‘™","é‘½çŸ³","ç¿¡ç¿ "})
 #define need_str ({ 15,12,17,11,9,19,10 })
 #define damage ({ 10,3,15,2,7,20,1 })
 
@@ -27,11 +27,11 @@ void create()
 	set_short(stone[i],c_stone[i]);
 	add( "id" , ({ stone[i] }) );
 	set_long( 
-		"ÕâÊÇÒ»¿ÅÃÀÀöµÄ"+c_stone[i]+"£¬Èç¹ûÄÃÈ¥µêÀï£¬Ó¦¸ÃÄÜÂô³ö²»´í\n"
-		"µÄ¼ÛÇ®¡£²»ÖªµÀÊÇÔõÑùµÄÒ»ÖÖÁ¦Á¿£¬¿ÉÒÔÔì³öÈç´ËÃÀÀöµÄ±¦Ê¯¡£\n"
-	        "Ö»ÓÐ°×³Õ²Å»á°ÑËüËæ´¦ÂÒ¶ª(throw)°É??\n"
+		"é€™æ˜¯ä¸€é¡†ç¾Žéº—çš„"+c_stone[i]+"ï¼Œå¦‚æžœæ‹¿åŽ»åº—è£¡ï¼Œæ‡‰è©²èƒ½è³£å‡ºä¸éŒ¯\n"
+		"çš„åƒ¹éŒ¢ã€‚ä¸çŸ¥é“æ˜¯æ€Žæ¨£çš„ä¸€ç¨®åŠ›é‡ï¼Œå¯ä»¥é€ å‡ºå¦‚æ­¤ç¾Žéº—çš„å¯¶çŸ³ã€‚\n"
+	        "åªæœ‰ç™½ç—´æ‰æœƒæŠŠå®ƒéš¨è™•äº‚ä¸Ÿ(throw)å§??\n"
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("no_sale",1);
    	set("weight", 20);
    	set("need_skill",(levels[i]+1)*4);
@@ -51,43 +51,43 @@ int cmd_throw(string arg)
 	type = this_object()->query("name");
 	i = member_array(type,stone) ;
 	me = this_player();
-	if ( ! arg ) return notify_fail("¶ªÊ²÷á? ¶ªµ½ÄÇ??\n");
+	if ( ! arg ) return notify_fail("ä¸Ÿä»€éº¼? ä¸Ÿåˆ°é‚£??\n");
 	if( sscanf( arg, "%s to %s",what,who )==2 ) {
 	if ( !(target = present( who,environment(this_player()))) )
-		return notify_fail("ÕâÀïÃ»ÓÐ½Ð"+who+"µÄ¶«Î÷¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+who+"çš„æ±è¥¿ã€‚\n");
 	if ( this_player()->query("class") != "adventurer" )
-	        return notify_fail("Õâ÷áÃÀÀöµÄ¶«Î÷£¬ÄãÕæµÄÒª°ÑËû¶ªµôÂð?\n");
+	        return notify_fail("é€™éº¼ç¾Žéº—çš„æ±è¥¿ï¼Œä½ çœŸçš„è¦æŠŠä»–ä¸ŸæŽ‰å—Ž?\n");
 	if ( what != stone[i] )
-	        return notify_fail("ÄãÈ·¶¨ÊÇ¶ª"+what+"Âð?\n");  
+	        return notify_fail("ä½ ç¢ºå®šæ˜¯ä¸Ÿ"+what+"å—Ž?\n");  
 	if ( ! living(target) ) { 
-		write("ÄãÓÃÁ¦µÄ°Ñ"+c_stone[i]+"¶ªÏò"
-			+target->query("c_name")+"£¬³ýÁË"+c_stone[i]+"ÆÆËéÒÔÍâ£¬Ê²÷áÊÂÒ²Ã»·¢Éú¡£\n");
+		write("ä½ ç”¨åŠ›çš„æŠŠ"+c_stone[i]+"ä¸Ÿå‘"
+			+target->query("c_name")+"ï¼Œé™¤äº†"+c_stone[i]+"ç ´ç¢Žä»¥å¤–ï¼Œä»€éº¼äº‹ä¹Ÿæ²’ç™¼ç”Ÿã€‚\n");
 	        remove();
 	        return 1;
 	        }
 	if ( !visible(target,this_player()) || target->query("invisible_player") )
-		return notify_fail("ÄãÏëÄÃ"+c_stone[i]+"¶ªÏòË­?\n");
+		return notify_fail("ä½ æƒ³æ‹¿"+c_stone[i]+"ä¸Ÿå‘èª°?\n");
 	if ( !this_player()->query_vision() )
-		return notify_fail("ÕâÀïÒ»Æ¬ÆáºÚ ! ÄãÊ²÷áÒ²¿´²»µ½ !!\n");
+		return notify_fail("é€™è£¡ä¸€ç‰‡æ¼†é»‘ ! ä½ ä»€éº¼ä¹Ÿçœ‹ä¸åˆ° !!\n");
 
 	if( (int)me->query("stop_attack")>0 )
 		return notify_fail (
-			"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓÐÍê³É£¬ÎÞ·¨¶¯×÷¡£ )\n");
+			"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•å‹•ä½œã€‚ )\n");
 
 	if( me->query_temp("aim_busy") )
-    	  return notify_fail("ÄãÄ¿Ç°ÕýÃ¦ÖøÃé×¼ÄãµÄÄ¿±ê£¬Ã»¿Õ×÷±ðµÄÊÂÇé¡£\n"); 
+    	  return notify_fail("ä½ ç›®å‰æ­£å¿™è‘—çž„æº–ä½ çš„ç›®æ¨™ï¼Œæ²’ç©ºä½œåˆ¥çš„äº‹æƒ…ã€‚\n"); 
 
 	if ( (int)me->query("spell_points") < cost_sp[i] ) {
-	  write("ÄãµÄ¾«Éñ×´¿ö²»×ãÒÔÊ¹ÄãÃé×¼Ä¿±ê¡£\n");
+	  write("ä½ çš„ç²¾ç¥žç‹€æ³ä¸è¶³ä»¥ä½¿ä½ çž„æº–ç›®æ¨™ã€‚\n");
 	  return 1;
 	}
         me->add("spell_points",-cost_sp[i]);
-        tell_object(me,set_color("Äã¼¯ÖÐ¾«Éñ¿ªÊ¼×¢Òâ"+target->query("c_name")+"µÄÒ»¾ÙÒ»¶¯¡£\n","HIR"));
+        tell_object(me,set_color("ä½ é›†ä¸­ç²¾ç¥žé–‹å§‹æ³¨æ„"+target->query("c_name")+"çš„ä¸€èˆ‰ä¸€å‹•ã€‚\n","HIR"));
         me->set_temp("aim_busy",1);
         call_out("check_demand",1,me,target,i);
         return 1;
         }
-        return notify_fail("¶ªÊ²÷á? ¶ªµ½ÄÇ??\n");
+        return notify_fail("ä¸Ÿä»€éº¼? ä¸Ÿåˆ°é‚£??\n");
 } 
 void check_demand(object me,object target,int i)
 {
@@ -95,32 +95,32 @@ void check_demand(object me,object target,int i)
 
   me->delete_temp("aim_busy");
         if( environment(me)->query("no_summon")) {
-        write("ÄãÓÃÁ¦µÄ°ÑÕâ¿Å"+c_stone[i]+"¶ª³öÈ¥£¬µ«³ýÁËÇå´àµÄÆÆËéÉùÍâ£¬Ê²÷áÊÂ¶¼Ã»·¢Éú¡£\n");
+        write("ä½ ç”¨åŠ›çš„æŠŠé€™é¡†"+c_stone[i]+"ä¸Ÿå‡ºåŽ»ï¼Œä½†é™¤äº†æ¸…è„†çš„ç ´ç¢Žè²å¤–ï¼Œä»€éº¼äº‹éƒ½æ²’ç™¼ç”Ÿã€‚\n");
         remove();
         return ;
         }
     if ( (int)me->query_perm_stat("str") < need_str[i]) {
-    write("Äã°Ñ"+c_stone[i]+"¶ª³öÈ¥£¬µ«ÊÇÊ²÷á¶¼Ã»·¢Éú£¬Äã¸Ï¿ì°ÑËü¼ñ»ØÀ´¡£\n");
+    write("ä½ æŠŠ"+c_stone[i]+"ä¸Ÿå‡ºåŽ»ï¼Œä½†æ˜¯ä»€éº¼éƒ½æ²’ç™¼ç”Ÿï¼Œä½ è¶•å¿«æŠŠå®ƒæ’¿å›žä¾†ã€‚\n");
     me->set("stop_attack",3);
     return ;
   }
     
     if ( !combat[i] && target->query_attacker()) {
-	write("Äã°Ñ"+c_stone[i]+"¶ª³öÈ¥£¬µ«³ýÁËÇå´àµÄÆÆËéÉùÍâ£¬Ê²÷á¶¼Ã»·¢Éú\n");
+	write("ä½ æŠŠ"+c_stone[i]+"ä¸Ÿå‡ºåŽ»ï¼Œä½†é™¤äº†æ¸…è„†çš„ç ´ç¢Žè²å¤–ï¼Œä»€éº¼éƒ½æ²’ç™¼ç”Ÿ\n");
         remove();
         return ;
         }
         if ( combat[i] && !target->query_attacker()) {
-        write("Äã°Ñ"+c_stone[i]+"¶ª³öÈ¥£¬µ«³ýÁËÇå´àµÄÆÆËéÉùÍâ£¬Ê²÷á¶¼Ã»·¢Éú\n");  
+        write("ä½ æŠŠ"+c_stone[i]+"ä¸Ÿå‡ºåŽ»ï¼Œä½†é™¤äº†æ¸…è„†çš„ç ´ç¢Žè²å¤–ï¼Œä»€éº¼éƒ½æ²’ç™¼ç”Ÿ\n");  
         remove();
         return ;
         }
   else {
     seteuid(getuid());
-    write("Äã°Ñ"+c_stone[i]+"¶ªÏò"+target->query("c_name")+"£¬Ò»ÉùÇå´àµÄÆÆËé"
-          "Éùáá£¬Ò»¸ö"+names[i]+"´ÓËéÆ¬ÖÐ³öÏÖ......\n");
+    write("ä½ æŠŠ"+c_stone[i]+"ä¸Ÿå‘"+target->query("c_name")+"ï¼Œä¸€è²æ¸…è„†çš„ç ´ç¢Ž"
+          "è²å¾Œï¼Œä¸€å€‹"+names[i]+"å¾žç¢Žç‰‡ä¸­å‡ºç¾......\n");
     mob = new("/d/scholar/demand/spirit/"+files[i]);
-// È¥³ýÓëÕ½¶·ÎÞ¹ØµÄÉè¶¨
+// åŽ»é™¤èˆ‡æˆ°é¬¥ç„¡é—œçš„è¨­å®š
     mob->set_perm_stat("str",random((int)me->query_perm_stat("str")*2/3)+levels[i]);
 //    mob->set_perm_stat("int",random((int)me->query_perm_stat("int")*2/3)+levels[i]);
     mob->set_perm_stat("kar",random((int)me->query_perm_stat("kar")*2/3)+levels[i]);

@@ -7,19 +7,19 @@ void create ()
         ::create();
         seteuid( getuid() );
         set_level(17);
-        set_name( "Advisor ZhuGe Not Bright", "¾üÊ¦" );
+        set_name( "Advisor ZhuGe Not Bright", "è»å¸«" );
         add ("id", ({ "advisor" , "mage" , "bright" }) );
-        set_short("ÄÁÂí¹Ø¾üÊ¦ Öî¸ð²»Ã÷" );
+        set_short("ç‰§é¦¬é—œè»å¸« è«¸è‘›ä¸æ˜Ž" );
         set_long( @C_LONG
-ÄÁÂí¹Ø¾üÊ¦Öî¸ð²»Ã÷Ô­ÊÇ¶«·½´ó¹úµÄË¾Ìì£¬ÕÆ¹Ü¹ÛÌìÏóÒÔ¼ÇÊÂµÄ¹¤×÷£¬ááÀ´ÒòÎª
-²»Âú³¯Õþ±»È¨³¼Ëù°Ñ³Ö£¬¾Í×Ô¼ºÇëµ÷µ½ÄÁÂí¹ØÀ´¡£¾ÝËµËûÓÐÖøºô·ç»½ÓêµÄ±¾Áì¡£ÏÖÔÚ
-ËûÕý´øÖø¼¸¸öÊ¿±øÔÚÕâ¶ùÇåµã×°±¸¡£
+ç‰§é¦¬é—œè»å¸«è«¸è‘›ä¸æ˜ŽåŽŸæ˜¯æ±æ–¹å¤§åœ‹çš„å¸å¤©ï¼ŒæŽŒç®¡è§€å¤©è±¡ä»¥è¨˜äº‹çš„å·¥ä½œï¼Œå¾Œä¾†å› ç‚º
+ä¸æ»¿æœæ”¿è¢«æ¬Šè‡£æ‰€æŠŠæŒï¼Œå°±è‡ªå·±è«‹èª¿åˆ°ç‰§é¦¬é—œä¾†ã€‚æ“šèªªä»–æœ‰è‘—å‘¼é¢¨å–šé›¨çš„æœ¬é ˜ã€‚ç¾åœ¨
+ä»–æ­£å¸¶è‘—å¹¾å€‹å£«å…µåœ¨é€™å…’æ¸…é»žè£å‚™ã€‚
 C_LONG
         );
     set( "alignment", 1000 );
     set( "gender", "male" );
     set( "race", "human" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex", 25 );
     set_perm_stat( "str", 15 );
     set_perm_stat( "int", 25 );
@@ -49,7 +49,7 @@ C_LONG
     set("magic_delay", 1);
     set("spells/sleet",3);
     set("spells/lightning",2);
-    set("c_death_msg","%s ÑÙÑÙÒ»Ï¢µØËµµÀ£º¡¸ºÍÆ½..·Ü¶·..¾È¶«¹ú..£¡¡¹È»áá¾Í¹ÒÁË...\n");
+    set("c_death_msg","%s å¥„å¥„ä¸€æ¯åœ°èªªé“ï¼šã€Œå’Œå¹³..å¥®é¬¥..æ•‘æ±åœ‹..ï¼ã€ç„¶å¾Œå°±æŽ›äº†...\n");
     set_temp("detect-hide");
     set_temp("bs",5);
  
@@ -70,7 +70,7 @@ int cast_spell()
       this_object()->set("spell_points", 2000);
     if( (random(10)<4) && !present("hercules", environment(this_object())) ) {
         tell_room( environment(this_object()), (
-          "Öî¸ð²»Ã÷´óº°£ºÀ´ÈË°¡£¡½ÓÖø£¬Ò»¸öÁ¦Ê¿ÅÜÁË³öÀ´¡£\n")
+          "è«¸è‘›ä¸æ˜Žå¤§å–Šï¼šä¾†äººå•Šï¼æŽ¥è‘—ï¼Œä¸€å€‹åŠ›å£«è·‘äº†å‡ºä¾†ã€‚\n")
         );
         monster = new( MOB"hercules" );
         monster->move(environment(this_object()));

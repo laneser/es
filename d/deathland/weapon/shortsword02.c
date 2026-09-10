@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Dwarven shortsword","°«ÈË¶Ì½£");
+        set_name("Dwarven shortsword","çŸ®äººçŸ­åŠ");
         add("id",({"shortsword","sword"}) );
-       set_short("°«ÈË¶Ì½£");
+       set_short("çŸ®äººçŸ­åŠ");
        set_long(
-         "ÕâÊÇ°«ÈËËùÓÃµÄ·æÀû¶Ì½£.\n"
+         "é€™æ˜¯çŸ®äººæ‰€ç”¨çš„é‹’åˆ©çŸ­åŠ.\n"
                );
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 14 );
        set("type","shortblade");
 	set( "min_damage", 8 );

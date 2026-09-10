@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("stone club","Ê¯ÖÆ¹÷°ô");
+       set_name("stone club","çŸ³åˆ¶æ£æ£’");
        add("id",({"club",}) );
-       set_short("Ê¯ÖÆ¹÷°ô");
+       set_short("çŸ³åˆ¶æ£æ£’");
        set_long(
-           "¾ŞÈËÓÃµÄÊ¯ÖÆ¹÷°ô\n"
+           "å·¨äººç”¨çš„çŸ³åˆ¶æ£æ£’\n"
      	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 15 );
     set("type","blunt");
 	set( "min_damage", 5 );

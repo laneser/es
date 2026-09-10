@@ -5,7 +5,7 @@
 #define KILLER           "/d/killer/guild/"
 #define DATA		 "/d/killer/data/"
 
-#define GUILD_MASTER     ({ "blowblood", "Œ˜√≈¥µ—©" })
+#define GUILD_MASTER     ({ "blowblood", "Ë•øÈñÄÂêπÈõ™" })
 #define ALLOWED_MATERIAL ({ "cloth", "leather", "wood", "stone",\
                                                         "element", "light_metal", "heavy_metal", })
 #define SECOND_MATERIAL  ({ })

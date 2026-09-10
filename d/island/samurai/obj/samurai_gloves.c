@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_gloves ", "ÎäÊ¿»¤ÊÖ ");
+        set_name( "samurai_gloves ", "æ­¦å£«è­·æ‰‹ ");
         add( "id", ({ "gloves" }) );
-        set_short("samurai_gloves ", "ÎäÊ¿»¤ÊÖ ");
+        set_short("samurai_gloves ", "æ­¦å£«è­·æ‰‹ ");
         set_long(@AAA
-Ò»¸öÎäÊ¿ÃÇ´©ÔÚÊÖÉÏµÄ·À¾ß
+ä¸€å€‹æ­¦å£«å€‘ç©¿åœ¨æ‰‹ä¸Šçš„é˜²å…·
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "hands" );
         set( "armor_class", 4 );
         set( "defense_bonus", 3 );

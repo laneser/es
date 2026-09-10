@@ -16,7 +16,7 @@ int cmd_save(string str)
 	link = this_player()->query_link() ;
 	if (link) link->save_data() ;
 	write( 
-		this_player()->query("c_name")+"资料存档....完毕。\n");
+		this_player()->query("c_name")+"璩囨枡瀛樻獢....瀹岀暍銆俓n");
 
 	return 1;
 }
@@ -25,8 +25,8 @@ int help() {
 	write(@HELP
 Syntax: save
 
-保存个人资料.
-这里有定时保存用户资料功能，但为安全起见，建议升级后及时save.
+淇濆瓨鍊嬩汉璩囨枡.
+閫欒！鏈夊畾鏅備繚瀛樼敤鎴惰硣鏂欏姛鑳斤紝浣嗙偤瀹夊叏璧疯锛屽缓璀板崌绱氬緦鍙婃檪save.
 HELP
 );
 	return 1;

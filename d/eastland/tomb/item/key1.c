@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "key", "Æß²ÊÔ¿³×" );
+	set_name( "key", "ä¸ƒå½©é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "Æß²ÊÔ¿³×" );
+	set_short( "ä¸ƒå½©é‘°åŒ™" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÆß²ÊµÄÔ¿³×¡£\n"
+		"é€™æ˜¯ä¸€æŠŠä¸ƒå½©çš„é‘°åŒ™ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "TOMBKEY_2" );
 	set( "weight", 5 );
 	set( "value", ({ 100, "copper" }) );

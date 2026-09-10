@@ -2,10 +2,10 @@
 inherit OBJECT;
 void create()
 {
-	set_name("cage key","ÖñÁıÔ¿³×");
+	set_name("cage key","ç«¹ç± é‘°åŒ™");
 	add("id",({"key"}));
-	set_short("ÖñÁıÔ¿³×");
-	set_long("ÕâÊÇÓÃÀ´¿ªÆôÖñÁı×ÓµÄÔ¿³×¡£\n");
+	set_short("ç«¹ç± é‘°åŒ™");
+	set_long("é€™æ˜¯ç”¨ä¾†é–‹å•Ÿç«¹ç± å­çš„é‘°åŒ™ã€‚\n");
 	set("to_lock","WANG");
 	set("weight",4);
 	set("value",({15,"silver"}));

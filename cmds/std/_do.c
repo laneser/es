@@ -36,12 +36,12 @@ int cmd_do(string str) {
    //	If multiple single commands are requested... ie: 5 smile
  
         if ((strsrch(cmds[loop],"!!",0)!=-1)||(strsrch(cmds[loop],"!d",0)!=-1)){
-            tell_object(me,"do Àï²»ÄÜÓĞ!! or !d ¡£\n");
+            tell_object(me,"do è£¡ä¸èƒ½æœ‰!! or !d ã€‚\n");
              return 1;
         }
 	if(sscanf(cmds[loop], "%d %s", num, what) == 2) {
 		if ( num > 10 ) {
-			tell_object(me,"ÖØ¸´Ö¸Áî´ÎÊı²»¿ÉÒÔ³¬¹ı 10 ´Î.\n");
+			tell_object(me,"é‡è¤‡æŒ‡ä»¤æ¬¡æ•¸ä¸å¯ä»¥è¶…é 10 æ¬¡.\n");
 			return 1;
 		}
 		what = me->parse_arg(what);
@@ -57,12 +57,12 @@ int cmd_do(string str) {
 int
 help() {
   write(@HELP
-Ö¸Áî¸ñÊ½: do <Á¬ĞøÖ¸Áî>
+æŒ‡ä»¤æ ¼å¼: do <é€£çºŒæŒ‡ä»¤>
 
-ÕâÌõÖ¸ÁîÔÊĞíÈÃÄãÔÚÍ¬Ò»Ê±¼äÖ´ĞĞ¶àÌõÖ¸Áî.
+é€™æ¢æŒ‡ä»¤å…è¨±è®“ä½ åœ¨åŒä¸€æ™‚é–“åŸ·è¡Œå¤šæ¢æŒ‡ä»¤.
 
-Àı£ºdo get sword,wield sword,kill balrog
-    (ÄãÄÃÆğ½£×°±¸ºókill brlrog)
+ä¾‹ï¼šdo get sword,wield sword,kill balrog
+    (ä½ æ‹¿èµ·åŠè£å‚™å¾Œkill brlrog)
 
 HELP
 );

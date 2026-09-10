@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "crystal of ice", "ÍòÄê±ù¾§" );
+	set_name( "crystal of ice", "è¬å¹´å†°æ™¶" );
 	add( "id", ({ "crystal","ice" }) );
-	set_short( "ÍòÄê±ù¾§" );
+	set_short( "è¬å¹´å†°æ™¶" );
 	set_long(
-		"ÕâÊÇÒ»¿Åº±¼ûµÄÍòÄê±ù¾§£¬ÊÇ»ğÑæ¾«ÁéµÄ¿ËĞÇ£¬ÒªÊ¹ÓÃËü\n"
-		"£¬ÓÃ ice <someone>¡£\n"
+		"é€™æ˜¯ä¸€é¡†ç½•è¦‹çš„è¬å¹´å†°æ™¶ï¼Œæ˜¯ç«ç„°ç²¾éˆçš„å‰‹æ˜Ÿï¼Œè¦ä½¿ç”¨å®ƒ\n"
+		"ï¼Œç”¨ ice <someone>ã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "weight", 5 );
 	set( "value", ({ 100, "silver" }) );
 	set( "no_sale", 1 );
@@ -27,23 +27,23 @@ int do_ice(string arg)
 	object obj;
 
 	if( !arg || arg=="" || !(obj= present(arg, environment(this_player()))) )
-		return notify_fail( "Òª¶ÔË­Ê¹ÓÃ±ù¾§£¿\n" );
+		return notify_fail( "è¦å°èª°ä½¿ç”¨å†°æ™¶ï¼Ÿ\n" );
 	if( base_name(obj) != Mob"fire_beast" ) {
 		write(
-			"ÄãÄÃ³ö±ù¾§´òÔÚ" + obj->query("short") + "µÄÉíÉÏ£¬²»¹ı¶Ô·½ËÆºõ²»ÊÜÓ°Ïì¡£\n");
+			"ä½ æ‹¿å‡ºå†°æ™¶æ‰“åœ¨" + obj->query("short") + "çš„èº«ä¸Šï¼Œä¸éå°æ–¹ä¼¼ä¹ä¸å—å½±éŸ¿ã€‚\n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name")+ "ÄÃ³öÒ»¿ÅĞ¡Ê¯Í·´òÔÚ"+obj->query("short")+"ÉíÉÏ¡£\n",
+			this_player()->query("c_name")+ "æ‹¿å‡ºä¸€é¡†å°çŸ³é ­æ‰“åœ¨"+obj->query("short")+"èº«ä¸Šã€‚\n",
 			this_player() );
 		return 1;
 	} else {
 		write( 
-			"ÄãÄÃ³ö±ù¾§´òÔÚ" + obj->query("short") + "ÉíÉÏ .... \n");
+			"ä½ æ‹¿å‡ºå†°æ™¶æ‰“åœ¨" + obj->query("short") + "èº«ä¸Š .... \n");
 		tell_room( environment(this_player()), 
-			this_player()->query("c_name")+ "ÄÃ³öÒ»¿Å±ù¾§´òÔÚ"+obj->query("short")+"ÉíÉÏ¡£\n",
+			this_player()->query("c_name")+ "æ‹¿å‡ºä¸€é¡†å†°æ™¶æ‰“åœ¨"+obj->query("short")+"èº«ä¸Šã€‚\n",
 			this_player() );
 		obj->iced();
 		write( 
-			"ÄãµÄ±ù¾§·ÉÁË³öÈ¥£¬½ô½ôÌùÔÚ" + obj->query("short") + "ÉíÉÏ£¡\n");
+			"ä½ çš„å†°æ™¶é£›äº†å‡ºå»ï¼Œç·Šç·Šè²¼åœ¨" + obj->query("short") + "èº«ä¸Šï¼\n");
 		remove();
 		return 1;
 	}

@@ -6,10 +6,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-set_short("The graveyard of Drawf city","°«ÈË¹ú¶ÈµÄÄ¹³¡");
+set_short("The graveyard of Drawf city","çŸ®äººåœ‹åº¦çš„å¢“å ´");
   set_long(
 @CLong
-ÕâÀïÊÇ°«ÈË¹ú¶ÈµÄÄ¹³¡,Âñ²ØÖøÒ»Ğ©Ó¢ÓÂÕ½ËÀµÄÊ¿±øµÄ¹Çº¡.
+é€™è£¡æ˜¯çŸ®äººåœ‹åº¦çš„å¢“å ´,åŸ‹è—è‘—ä¸€äº›è‹±å‹‡æˆ°æ­»çš„å£«å…µçš„éª¨éª¸.
 CLong
 );
 set("exits",([

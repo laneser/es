@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Hawk Shield","¹âÓ¥¶Ü");
+    set_name("Hawk Shield","å…‰é·¹ç›¾");
     add("id",({"shield"}));
-    set_short("¹âÓ¥¶Ü");
+    set_short("å…‰é·¹ç›¾");
     set_long(@LONG
-ÕâÊÇÊ÷À×Íõ¼Ò¸ßÉĞÑªÍ³µÄÖ¤Ã÷¡£Î¨ÓĞÓµÓĞÄ§·¨Õß£¬²ÅÄÜÓµÓĞÕâÎ°´óÉñÊ¥
-µÄÁ¦Á¿¡£ÓÉì¶Õâ·İÁ¦Á¿±ØĞëÓÃÇ¿´óµÄÄ§·¨Á¦Á¿²ÅÄÜÖ§Åä£¬ËùÒÔ²¢²»ÊÇÒ»
-°ãÈËËùÄÜËæÒâÖ§ÅäµÄ¡£
+é€™æ˜¯æ¨¹é›·ç‹å®¶é«˜å°šè¡€çµ±çš„è­‰æ˜ã€‚å”¯æœ‰æ“æœ‰é­”æ³•è€…ï¼Œæ‰èƒ½æ“æœ‰é€™å‰å¤§ç¥è–
+çš„åŠ›é‡ã€‚ç”±æ–¼é€™ä»½åŠ›é‡å¿…é ˆç”¨å¼·å¤§çš„é­”æ³•åŠ›é‡æ‰èƒ½æ”¯é…ï¼Œæ‰€ä»¥ä¸¦ä¸æ˜¯ä¸€
+èˆ¬äººæ‰€èƒ½éš¨æ„æ”¯é…çš„ã€‚
 LONG
             );
-    set("unit","Ãæ");
+    set("unit","é¢");
     set("no_clean",1) ; 
     set("type","shield");
     set("material","element");
@@ -36,7 +36,7 @@ void daemon_wear()
         (string)this_player()->query("class")=="healer"   ) {
       if( (int)this_player()->query_level() < 13){
         tell_object( this_player(),
-        "ÄãµÄÄ§Á¦Ì«Ğ¡£¬²»×ãÒÔÊ¹¶Ü½«¹âÒíÉìÕ¹³öÀ´....\n");
+        "ä½ çš„é­”åŠ›å¤ªå°ï¼Œä¸è¶³ä»¥ä½¿ç›¾å°‡å…‰ç¿¼ä¼¸å±•å‡ºä¾†....\n");
         }
         else{
     set("prevent_drop",1);
@@ -46,14 +46,14 @@ void daemon_wear()
     set("extra_look","@@color");
     set("special_defense",(["all":50,"none":30]) );
     write( set_color(
-       "\n¹âÓ¥¶ÜºôÓ¦ÖøÄãµÄÄ§Á¦£¬Öğ½¥ÉìÕ¹³öÈıÆ¬¾Ş´óµÄ¹âÒíÂ£ÕÖÔÚÄãµÄÇ°·½...\n\n"
+       "\nå…‰é·¹ç›¾å‘¼æ‡‰è‘—ä½ çš„é­”åŠ›ï¼Œé€æ¼¸ä¼¸å±•å‡ºä¸‰ç‰‡å·¨å¤§çš„å…‰ç¿¼æ”ç½©åœ¨ä½ çš„å‰æ–¹...\n\n"
        ,"HIW") );
     tell_room( environment(this_player()),set_color(
-       "\n¹âÓ¥¶Ü»º»ºµÄÔÚ"+this_player()->query("c_name")+
-       "µÄÉíÇ°ÉìÕ¹³öÈıÆ¬¾Ş´óµÄ¹âÒí.........\n\n"
+       "\nå…‰é·¹ç›¾ç·©ç·©çš„åœ¨"+this_player()->query("c_name")+
+       "çš„èº«å‰ä¼¸å±•å‡ºä¸‰ç‰‡å·¨å¤§çš„å…‰ç¿¼.........\n\n"
        ,"HIW"),this_player() );
-    set_name("Hawk Wind","¹âÓ¥Òí");
-    set_short("¹âÓ¥Òí");
+    set_name("Hawk Wind","å…‰é·¹ç¿¼");
+    set_short("å…‰é·¹ç¿¼");
         }
     return;
     } 
@@ -76,15 +76,15 @@ void daemon_unwear()
         (string)holder->query("class")=="mage"  ||
         (string)holder->query("class")=="healer" ) {
     tell_object( holder,set_color(
-       "\nÄãÍÑÊÖáá£¬ÈıÆ¬¾Ş´óµÄ¹âÒí»º»ºµÄÉ¢È¥£¬»Ö¸´³ÉÆ½·²µÄ¹âÓ¥¶Ü...\n\n"
+       "\nä½ è„«æ‰‹å¾Œï¼Œä¸‰ç‰‡å·¨å¤§çš„å…‰ç¿¼ç·©ç·©çš„æ•£å»ï¼Œæ¢å¾©æˆå¹³å‡¡çš„å…‰é·¹ç›¾...\n\n"
        ,"HIW") );
     tell_room( environment(holder),set_color(
        "\n"+holder->query("c_name")+
-       "ÉíÇ°µÄÈıÆ¬¹âÒí»º»ºµÄÉ¢È¥£¬»Ö¸´³ÉÆ½·²µÄ¶Ü...\n\n"
+       "èº«å‰çš„ä¸‰ç‰‡å…‰ç¿¼ç·©ç·©çš„æ•£å»ï¼Œæ¢å¾©æˆå¹³å‡¡çš„ç›¾...\n\n"
        ,"HIW"),holder );
     };
-    set_name("Hawk Shield","¹âÓ¥¶Ü");
-    set_short("¹âÓ¥¶Ü"); 
+    set_name("Hawk Shield","å…‰é·¹ç›¾");
+    set_short("å…‰é·¹ç›¾"); 
     return;
     }
     else return;
@@ -92,5 +92,5 @@ void daemon_unwear()
 
 string color()
 { 
-  return set_color("$NµÄÉíÇ°Â£ÕÖÖøÈıÆ¬¾Ş´ó¶øÃ÷ÁÁµÄ¹âÒí£¬¿´ÆğÀ´Ó¢Í¦¼«ÁË...\n","HIW");
+  return set_color("$Nçš„èº«å‰æ”ç½©è‘—ä¸‰ç‰‡å·¨å¤§è€Œæ˜äº®çš„å…‰ç¿¼ï¼Œçœ‹èµ·ä¾†è‹±æŒºæ¥µäº†...\n","HIW");
 }

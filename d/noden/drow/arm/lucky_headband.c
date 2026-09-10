@@ -3,16 +3,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("lucky headband", "ĞÒÔËÍ·½í");
+        set_name("lucky headband", "å¹¸é‹é ­å·¾");
    add( "id", ({ "headband" }) );
-        set_short( "ĞÒÔËÍ·½í" );
+        set_short( "å¹¸é‹é ­å·¾" );
         set_long(
 @C_LONG
-ÕâÊÇÕÅÈé°×É«µÄÍ·½í£¬ÔÚÔú·¢µÄÎ²¶ËÖ¯ÓĞĞ¡µ¶µÄ±ê¼Ç£¬¿´ÆğÀ´´ó·½
-¶ø×ÔÈ»£¬¿ÉÄÜÒ²ÊÇ±ÏÀÏµùÒÅÊ§µÄ¶«Î÷°É£¡
+é€™æ˜¯å¼µä¹³ç™½è‰²çš„é ­å·¾ï¼Œåœ¨æ‰ç™¼çš„å°¾ç«¯ç¹”æœ‰å°åˆ€çš„æ¨™è¨˜ï¼Œçœ‹èµ·ä¾†å¤§æ–¹
+è€Œè‡ªç„¶ï¼Œå¯èƒ½ä¹Ÿæ˜¯ç•¢è€çˆ¹éºå¤±çš„æ±è¥¿å§ï¼
 C_LONG
         );
-        set( "unit", "Ìõ");
+        set( "unit", "æ¢");
         set( "type", "head" );
         set( "material", "cloth" );
         set( "armor_class", 2 );
@@ -33,15 +33,15 @@ void equip_headband()
         cla=this_player()->query( "class" );
         if( cla!="thief" )
         {
-         tell_object(this_player(),"\nÖ»ÓĞĞ¡Íµ²ÅÄÜÒı·¢ËüµÄĞÒÔËÄ§Á¦À²£¡\n\n");
+         tell_object(this_player(),"\nåªæœ‰å°å·æ‰èƒ½å¼•ç™¼å®ƒçš„å¹¸é‹é­”åŠ›å•¦ï¼\n\n");
          tell_room(environment(this_player()),
-         "\nÄã¿´µ½"+him+"´÷ÉÏĞÒÔËÍ·½íáá£¬ÏñØÀÍ¯°ãµÄÌøÆğÎèÀ´£¬»¹Á÷Ò»µØ¿ÚË®£¬Ìì°¡¡£\n\n",this_player());
+         "\nä½ çœ‹åˆ°"+him+"æˆ´ä¸Šå¹¸é‹é ­å·¾å¾Œï¼Œåƒä¹©ç«¥èˆ¬çš„è·³èµ·èˆä¾†ï¼Œé‚„æµä¸€åœ°å£æ°´ï¼Œå¤©å•Šã€‚\n\n",this_player());
         }
         else
         {
-         tell_room(environment(this_player()),"\nÄã¿´¼û"+him+"´÷ÉÏĞÒÔËÍ·½íáá£¬¾ÙÆğÊÖ×÷£ÖÊÖÊÆ£¬Éñ¾­£¡\n\n"
+         tell_room(environment(this_player()),"\nä½ çœ‹è¦‹"+him+"æˆ´ä¸Šå¹¸é‹é ­å·¾å¾Œï¼Œèˆ‰èµ·æ‰‹ä½œï¼¶æ‰‹å‹¢ï¼Œç¥ç¶“ï¼\n\n"
          ,this_player());
-         tell_object(this_player(),"\nÄã´÷ÉÏÍ·½íáá£¬¸Ğ¾õ¾«ÉñÒ»Õğ£¡ËÆºõĞÒÔËÅ®Éñ¾ÍÔÚÄãÉí±ß£¡\n\n"
+         tell_object(this_player(),"\nä½ æˆ´ä¸Šé ­å·¾å¾Œï¼Œæ„Ÿè¦ºç²¾ç¥ä¸€éœ‡ï¼ä¼¼ä¹å¹¸é‹å¥³ç¥å°±åœ¨ä½ èº«é‚Šï¼\n\n"
          );    
    set( "armor_class", 6 );
    set("material","thief");

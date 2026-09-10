@@ -5,19 +5,19 @@ inherit "/d/healer/poison.c";
 void create()
 {
         seteuid(getuid());
-        set_name("messy_smell","°µÒ¹ÁôÏã");
+        set_name("messy_smell","æš—å¤œç•™é¦™");
         add("id",({"messy","smell"}));
-        set_short("°µÒ¹ÁôÏã");
+        set_short("æš—å¤œç•™é¦™");
         set_long(
-        "ÕâÊÇÒ»ÖÖ´øÓĞÅ¨ÓôÏãÆøµÄÒ©·Û\n"
-        "Äã¿ÉÒÔÓÃ poison <someone> ¶ÔÄ³ÈËÏÂ¶¾;ÓÃ check ¼ì²éÊ£âÅµÄ·İÁ¿¡£\n"
+        "é€™æ˜¯ä¸€ç¨®å¸¶æœ‰æ¿ƒéƒé¦™æ°£çš„è—¥ç²‰\n"
+        "ä½ å¯ä»¥ç”¨ poison <someone> å°æŸäººä¸‹æ¯’;ç”¨ check æª¢æŸ¥å‰©é¤˜çš„ä»½é‡ã€‚\n"
         );
-        set( "unit", "ºĞ" );
+        set( "unit", "ç›’" );
         set_duration(10);
         set_effect(5);
         set_type("confused");
         set_times(1);
         set_difficulty(40);
-        set("poison_method","%s´ÓºĞ×ÓÀïÕ´ÁËÒ»Ğ©$P, ´µÏò%s");
+        set("poison_method","%så¾ç›’å­è£¡æ²¾äº†ä¸€äº›$P, å¹å‘%s");
 }
 

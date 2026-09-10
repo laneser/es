@@ -25,24 +25,24 @@ int cmd_summon (string name) {
 	}
 	player = find_player(name) ;
 	if (!player) {
-		notify_fail ("Ã»ÓĞ½Ğ×öÕâ¸öÃû×ÖµÄÈË.\n") ;
+		notify_fail ("æ²’æœ‰å«åšé€™å€‹åå­—çš„äºº.\n") ;
 		return 0 ;
 	}
 	if (wizardp(player)) {
-		notify_fail("Äã²»ÄÜÕÙ»½ÆäËûÎ×Ê¦£¬ÓÃ¡¸Çë¡¹µÄ±È½ÏºÃ°É .\n") ;
+		notify_fail("ä½ ä¸èƒ½å¬å–šå…¶ä»–å·«å¸«ï¼Œç”¨ã€Œè«‹ã€çš„æ¯”è¼ƒå¥½å§ .\n") ;
 		return 0 ;
 	}
 	env = environment(player) ;
 	res = player->move(environment(this_player())) ;
 	if (res==MOVE_OK) {
-		write ("ÄãÕÙ»½ "+capitalize(name)+" µ½ÄãÕâÀï.\n") ;
+		write ("ä½ å¬å–š "+capitalize(name)+" åˆ°ä½ é€™è£¡.\n") ;
 		tell_room(env,(string)this_player()->query("c_name") +
-		          "ÕÙ»½"+name+"µ½ËûÉí±ß.\n");
+		          "å¬å–š"+name+"åˆ°ä»–èº«é‚Š.\n");
 		tell_object(player,(string)this_player()->query("c_name")+
-			"ÕÙ»½Äãµ½ËûÉí±ß !\n");
+			"å¬å–šä½ åˆ°ä»–èº«é‚Š !\n");
 		return 1 ;
 	}
-	write ("ÕÙ»½Ê§°Ü !\n") ;
+	write ("å¬å–šå¤±æ•— !\n") ;
 	return 1 ;
 }
 

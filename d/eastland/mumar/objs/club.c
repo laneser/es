@@ -3,13 +3,13 @@ inherit WEAPON;
  
 void create()
 {
-        set_name( "club", "¾¯¹÷" );
+        set_name( "club", "è­¦æ£" );
         add( "id", ({ "club" }) );
-        set_short("¾¯¹÷" );
+        set_short("è­¦æ£" );
         set_long(
-                "ÕâÊÇÒ»Ö§Ò»°ãÑ²Âß±øÓÃµÄÄ¾¹÷¡£\n"
+                "é€™æ˜¯ä¸€æ”¯ä¸€èˆ¬å·¡é‚å…µç”¨çš„æœ¨æ£ã€‚\n"
         );
-        set( "unit", "Ö§" );
+        set( "unit", "æ”¯" );
         setup_weapon( "blunt", 5, 3, 6 );
         set( "weight", 60 );
         set( "value", ({ 20, "silver" }) );

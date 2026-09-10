@@ -21,54 +21,54 @@ int cmd_close (string str)
 	mapping doors ;
 
 	if (!str || str == "")
-		return notify_fail("ÄãÒª¹ØÉÏÊ²÷á£¿\n");
+		return notify_fail("ä½ è¦é—œä¸Šä»€éº¼ï¼Ÿ\n");
 
 	if( str != "door" && !(dir=environment(this_player())->query_door(str))
 	&& sscanf(str, "%s door", dir) != 1 )
 		return notify_fail( 
-			"ÄãÒª¹ØÉÏÊ²÷á£¿\n");
+			"ä½ è¦é—œä¸Šä»€éº¼ï¼Ÿ\n");
 
 	env = environment(this_player()) ;
 	if (!env)
 		return notify_fail( 
-			"ÕâÀïÊ²÷áÒ²Ã»ÓĞ£¬ÄãÒª¹ØÉÏÊ²÷á£¿\n");
+			"é€™è£¡ä»€éº¼ä¹Ÿæ²’æœ‰ï¼Œä½ è¦é—œä¸Šä»€éº¼ï¼Ÿ\n");
 
 	doors = env->query("doors");
 	if (!doors)
 		return notify_fail( 
-			"ÕâÀïÃ»ÓĞÃÅ....¡£\n");
+			"é€™è£¡æ²’æœ‰é–€....ã€‚\n");
  
 	tmp = keys( doors );
  
 	//  If the player can't see ... pick a random door. <grin>
 	if(!this_player()->query("vision")) {
 		write( 
-			"ÄãÔÚºÚ°µÖĞÃşË÷£¬ÕÒÃÅ....¡£\n");
+			"ä½ åœ¨é»‘æš—ä¸­æ‘¸ç´¢ï¼Œæ‰¾é–€....ã€‚\n");
 		dir = tmp[ random(sizeof(tmp)) ];
 	}
  
 	if(!dir) {
 		if(sizeof(doors) > 1)
 			return notify_fail(
-				"ÕâÀïµÄÃÅ²»Ö»Ò»¸ö£¬ÄãÒª¹ØÄÄÒ»¸ö£¿\n");
+				"é€™è£¡çš„é–€ä¸åªä¸€å€‹ï¼Œä½ è¦é—œå“ªä¸€å€‹ï¼Ÿ\n");
 
 		dir = tmp[0];
 	}
 	if (!doors[dir])
 		notify_fail( 
-			"ÄÇ¸ö·½ÏòÃ»ÓĞÃÅ¡£\n");
+			"é‚£å€‹æ–¹å‘æ²’æœ‰é–€ã€‚\n");
 
 	if (doors[dir]["status"]!="open")
 		return notify_fail( 
-			"ËüÒÑ¾­ÊÇ¹ØÖøµÄÁË¡£\n");
+			"å®ƒå·²ç¶“æ˜¯é—œè‘—çš„äº†ã€‚\n");
 
 	env->set_status(dir,"closed");
 	env->update_link(dir);
 	write(
-		"Äã°Ñ" + doors[dir]["c_name"] + "¹ØÉÏ¡£\n");
+		"ä½ æŠŠ" + doors[dir]["c_name"] + "é—œä¸Šã€‚\n");
 
 	tell_room( env, 
-		this_player()->query("c_name")+"°Ñ" + doors[dir]["c_name"] + "¹ØÉÏ¡£\n" ,
+		this_player()->query("c_name")+"æŠŠ" + doors[dir]["c_name"] + "é—œä¸Šã€‚\n" ,
 		this_player() );
 	return 1 ;
 }
@@ -76,9 +76,9 @@ int cmd_close (string str)
 int help()
 {
   write( @HELP
-Ê¹ÓÃ¸ñÊ½: close <·½Ïò> door
+ä½¿ç”¨æ ¼å¼: close <æ–¹å‘> door
 
-¹Ø±Õ<·½Ïò>µÄÃÅ.
+é—œé–‰<æ–¹å‘>çš„é–€.
 HELP
 );
   return 1;

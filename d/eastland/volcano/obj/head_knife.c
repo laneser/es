@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "sharp knife", "ÈñÀûĞ¡µ¶" );
-	set_short( "ÈñÀûĞ¡µ¶" );
+	set_name( "sharp knife", "éŠ³åˆ©å°åˆ€" );
+	set_short( "éŠ³åˆ©å°åˆ€" );
 	set_long(
-		"ÕâÊÇÒ»°Ñ×¨ÃÅÓÃÀ´¸îÍ·Â­µÄĞ¡µ¶¡£\n"
+		"é€™æ˜¯ä¸€æŠŠå°ˆé–€ç”¨ä¾†å‰²é ­é¡±çš„å°åˆ€ã€‚\n"
 	);
         add("id", ({"knife"}));
 	set( "no_sale", 1 );
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weight", 3 );
 	set( "value", ({ 0, "silver" }) );
 }

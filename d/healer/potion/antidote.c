@@ -6,17 +6,17 @@ inherit MEDICINE;
 void create()
 {
 	medicine::create();
-	set_name("antidote pill", "½â¶¾Íè" );
+	set_name("antidote pill", "è§£æ¯’ä¸¸" );
 	add( "id", ({"pill"}) );
-	set_short("an antidote pill", "½â¶¾Íè");
+	set_short("an antidote pill", "è§£æ¯’ä¸¸");
 	set_long(
 		"You see an antidote mixture of healers. You can eat it to\n"
 		"cure poison.\n",
-		"ÕâÊÇÒ»·ÝÐÐÒ½ÕßËùµ÷ÅäµÄ½â¶¾Íè£¬³Ô(eat)ÏÂËü¿ÉÒÔ½â³ýÒ»°ã¶¾Éß¡¢¶¾\n"
-		"³æµÄ¶¾ÐÔ£¬¶Ôì¶±È½ÏÖØµÄ¶¾ÔòÓÐ¼õ¶ÌÖÐ¶¾Ê±¼äµÄÐ§¹û¡£\n"
+		"é€™æ˜¯ä¸€ä»½è¡Œé†«è€…æ‰€èª¿é…çš„è§£æ¯’ä¸¸ï¼Œåƒ(eat)ä¸‹å®ƒå¯ä»¥è§£é™¤ä¸€èˆ¬æ¯’è›‡ã€æ¯’\n"
+		"èŸ²çš„æ¯’æ€§ï¼Œå°æ–¼æ¯”è¼ƒé‡çš„æ¯’å‰‡æœ‰æ¸›çŸ­ä¸­æ¯’æ™‚é–“çš„æ•ˆæžœã€‚\n"
 	);
 	set( "can_eat", 1 );
-	set( "unit", "Á£" );
+	set( "unit", "ç²’" );
 	set( "weight", 15 );
 	set( "value", ({ 50, "silver" }) );
 	set( "medication", 50 );
@@ -34,11 +34,11 @@ void eat(object player)
 	{
 	    cond_data[1] /= 2;
 	    player->set("conditions/simple_poison", cond_data);
-	    tell_object(player, "Äã¾õµÃºÃÒ»µãÁË ....\n");
+	    tell_object(player, "ä½ è¦ºå¾—å¥½ä¸€é»žäº† ....\n");
 	}
 	else
 	{
-	    tell_object( player, "ÄãËùÖÐµÄ¶¾½â³ýÁË£¡\n" );
+	    tell_object( player, "ä½ æ‰€ä¸­çš„æ¯’è§£é™¤äº†ï¼\n" );
 	SIMPLE_POISON->remove_effect(player);
 	}
 }

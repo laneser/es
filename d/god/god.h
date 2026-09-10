@@ -5,7 +5,7 @@
 #define GOD           "/u/b/boss/god/guild/"
 #define DATA             "/u/b/boss/god/data/"
 
-#define GUILD_MASTER     ({ "demogorgon", "魔神战团团长  星月" })
+#define GUILD_MASTER     ({ "demogorgon", "榄旂鎴板湗鍦橀暦  鏄熸湀" })
 #define ALLOWED_MATERIAL ({ "cloth", "leather", "wood", "stone","cloak",\
                                                         "element", "light_metal", "heavy_metal", })
 #define SECOND_MATERIAL  ({ })

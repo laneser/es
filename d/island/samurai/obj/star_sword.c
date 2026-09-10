@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "star sword", "Ãûµ¶ĞÇÂä" );
+        set_name( "star sword", "ååˆ€æ˜Ÿè½" );
         add( "id",({ "star","sword" }) );
-        set_short( "star sword", "Ãûµ¶ĞÇÂä" );
+        set_short( "star sword", "ååˆ€æ˜Ÿè½" );
         set_long(@AAA
-            ÕâÊÇÒ»°ÑÓĞÃûµÄĞÇÂäµ¶£¬¾İËµÕâÊÇÒòÎªÖı½£Ê¦×öºÃÕâ°Ñ½£Ê±
-            ¸ÕºÃ¿´µ½Á÷ĞÇ¶øÃüÃû
+            é€™æ˜¯ä¸€æŠŠæœ‰åçš„æ˜Ÿè½åˆ€ï¼Œæ“šèªªé€™æ˜¯å› ç‚ºé‘„åŠå¸«åšå¥½é€™æŠŠåŠæ™‚
+            å‰›å¥½çœ‹åˆ°æµæ˜Ÿè€Œå‘½å
 AAA
 );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 30 );
 //        set( "bleeding", 15 );
         set( "type", "longblade" );

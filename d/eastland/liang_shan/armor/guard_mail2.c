@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Gurad mail","ºìĞ·¼×");
+    set_name("Gurad mail","ç´…èŸ¹ç”²");
     add("id",({"plate","mail"}) );
-    set_short( "guard mail","ºìĞ·¼×");
+    set_short( "guard mail","ç´…èŸ¹ç”²");
 	set_long(
 		"\n",
-		"Õâ¼şÕ½¼×ÓÉºìĞ·¿ÇÖÆ³É£¬¼áÓ²µÄ±íÆ¤Ó¦ÄÜµÖµ²Ò»°ãµÄ¹¥»÷£®\n"
+		"é€™ä»¶æˆ°ç”²ç”±ç´…èŸ¹æ®¼è£½æˆï¼Œå …ç¡¬çš„è¡¨çš®æ‡‰èƒ½æŠµæ“‹ä¸€èˆ¬çš„æ”»æ“Šï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 220 );
 	set( "type", "body" );
 	set( "armor_class", 33 );

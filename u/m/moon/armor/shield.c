@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("magic shield", "ÔÂÉñ¶Ü");
-    set_short("ÔÂÉñ¶Ü");
+    set_name("magic shield", "æœˆç¥ç›¾");
+    set_short("æœˆç¥ç›¾");
     add("id", ({ "shield" }));
-    set_long("ÓÉÉñÁ¦»Ã»¯¶ø³ÉµÄ¶ÜÅÆ¡£\n");
-    set("unit", "¼ş");
+    set_long("ç”±ç¥åŠ›å¹»åŒ–è€Œæˆçš„ç›¾ç‰Œã€‚\n");
+    set("unit", "ä»¶");
     set("weight", 0);
     set("type", "shield");
         set( "armor_class", 150 );
@@ -20,7 +20,7 @@ void create()
 
 void unequip(int silent)
 {
-    tell_object(this_player(), "ÔÂÉñ¶Ü¾Ü¾øÀë¿ªÄãµÄÉíÌå!\n");
+    tell_object(this_player(), "æœˆç¥ç›¾æ‹’çµ•é›¢é–‹ä½ çš„èº«é«”!\n");
 }
 
 int remove()

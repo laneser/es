@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "Spark Leggings","ÑÅµäÄÈÉÁÁÁëÖ¼×" );
+        set_name( "Spark Leggings","é›…å…¸å¨œé–ƒäº®è„›ç”²" );
         add( "id", ({ "leggings","spark leggings" }) );
-        set_short( "ÑÅµäÄÈÉÁÁÁëÖ¼×" );
+        set_short( "é›…å…¸å¨œé–ƒäº®è„›ç”²" );
         set_long(
-                "Ï£À°Õ½ÉñÑÅµäÄÈ×îÏ²°®µÄëÖ¼×£¬ÉÁÉÁ·¢¹â£¬¿´À´ËÆºõ²»´í¡£\n"
+                "å¸Œè‡˜æˆ°ç¥é›…å…¸å¨œæœ€å–œæ„›çš„è„›ç”²ï¼Œé–ƒé–ƒç™¼å…‰ï¼Œçœ‹ä¾†ä¼¼ä¹ä¸éŒ¯ã€‚\n"
         );
-        set( "unit", "Ö»" );
+        set( "unit", "åª" );
         set("material","knight");
         set( "type", "legs" );
         set( "armor_class", 1 );

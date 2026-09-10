@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("Snow Gloves","Ñ©»¤ÊÖ");
+    set_name("Snow Gloves","é›ªè­·æ‰‹");
     add("id",({"gloves"}) );
-    set_short("Ñ©»¤ÊÖ");
+    set_short("é›ªè­·æ‰‹");
     set_long(@C_LONG
-Ñ©ÉñÊŞ°×»¢µÄÆ¤Ã«ËùÖÆ³ÉµÄ»¤ÊÖ£¬¿ÉÒÔÔì³ÉÀäÆøÕÏ°­±ÚÀİ¡£
+é›ªç¥ç¸ç™½è™çš„çš®æ¯›æ‰€è£½æˆçš„è­·æ‰‹ï¼Œå¯ä»¥é€ æˆå†·æ°£éšœç¤™å£å£˜ã€‚
 C_LONG
     );
 
-    set("unit","Ë«");
+    set("unit","é›™");
     set("type","hands");
     set("material","light_metal");
     set("weight",30);

@@ -90,8 +90,8 @@ void set_desc( string dir )
 		query("doors/"+dir+"/status") +".\n" );
 */
 	set( "item_desc/" + dir + " door",
-		query("doors/"+dir+"/c_desc") + "£¬ËüÏÖÔÚÊÇ"+ 
-		to_chinese(query("doors/"+dir+"/status")) +"µÄ¡£\n" );
+		query("doors/"+dir+"/c_desc") + "ï¼Œå®ƒç¾åœ¨æ˜¯"+ 
+		to_chinese(query("doors/"+dir+"/status")) +"çš„ã€‚\n" );
 	return;
 }
 
@@ -141,18 +141,18 @@ void update_link (string dir)
 			ob->set_status(ob_dir, door_stat) ;
 			switch (door_stat) {
 				case "open" : {
-					tell_room (ob, to_chinese(ob_dir)+"±ßµÄÃÅÍ»È»¡¸Ë¢¡¹µÄÒ»ÉùÍÆ¿ª£¬²îµã×²µ½ÄãµÄ±Ç×Ó.\n") ;
+					tell_room (ob, to_chinese(ob_dir)+"é‚Šçš„é–€çªç„¶ã€Œåˆ·ã€çš„ä¸€è²æ¨é–‹ï¼Œå·®é»æ’åˆ°ä½ çš„é¼»å­.\n") ;
 					break ;
 				}
 				case "locked" : {
-					tell_room(ob,to_chinese(ob_dir)+"±ßµÄÃÅ¡¸¿¦À²¡¹µÄÒ»Éù£¬ºÃÏñ±»ËøÉÏÁË.\n") ;
+					tell_room(ob,to_chinese(ob_dir)+"é‚Šçš„é–€ã€Œå–€å•¦ã€çš„ä¸€è²ï¼Œå¥½åƒè¢«é–ä¸Šäº†.\n") ;
 					break ;
 				}
 				case "closed" : {
 					if (old_stat=="locked") {
-						tell_room (ob, to_chinese(ob_dir)+"±ßµÄÃÅ·¢³ö¡¸¿¦ß¿¡¹µÄÒ»Éù£¬ºÃÏñËø±»´ò¿ªÁË.\n") ;
+						tell_room (ob, to_chinese(ob_dir)+"é‚Šçš„é–€ç™¼å‡ºã€Œå–€åš¦ã€çš„ä¸€è²ï¼Œå¥½åƒé–è¢«æ‰“é–‹äº†.\n") ;
 					} else
-						tell_room (ob, to_chinese(ob_dir)+"±ßµÄÃÅÍ»È»¡¸Åö¡¹µÄÒ»Éù¹ØÉÏ£¬°ÑÄãÏÅÁËÒ»´óÌø .\n") ;
+						tell_room (ob, to_chinese(ob_dir)+"é‚Šçš„é–€çªç„¶ã€Œç¢°ã€çš„ä¸€è²é—œä¸Šï¼ŒæŠŠä½ åš‡äº†ä¸€å¤§è·³ .\n") ;
 					break ;
 				}
 			}

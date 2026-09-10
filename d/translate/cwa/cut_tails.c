@@ -6,13 +6,13 @@ int block_cut = 0;
 
 void create()  {
         seteuid(getuid());
-	set_name("cut-tail knife", "¸îÀÇÎ²°ÍĞ¡µ¶");
+	set_name("cut-tail knife", "å‰²ç‹¼å°¾å·´å°åˆ€");
 	add("id", ({"knife", "knife"}) );
-	set_short("cut-tail knife", "¸îÀÇÎ²°ÍĞ¡µ¶");
+	set_short("cut-tail knife", "å‰²ç‹¼å°¾å·´å°åˆ€");
 	set_long(
 "This is a very sharp knife,made for cutting color-wolves tail.\n",
-"ÕâÊÇÒ»°ÑÊ®·Ö·æÀûµÄĞ¡µ¶,×¨ÃÅÓÃÀ´¸î(cut)É«ÀÇÎ²°ÍµÄ.Í¬Ê±ÕâÒ²ÊÇÍÀÀÇ\n"
-"¾ãÀÖ²¿µÄĞÅÎï¡£Óû²é¿´ÈçºÎ¸îÀÇÎ²°ÍÇëÓÃ(help_cut)Ö¸Áî¡£\n"
+"é€™æ˜¯ä¸€æŠŠååˆ†é‹’åˆ©çš„å°åˆ€,å°ˆé–€ç”¨ä¾†å‰²(cut)è‰²ç‹¼å°¾å·´çš„.åŒæ™‚é€™ä¹Ÿæ˜¯å± ç‹¼\n"
+"ä¿±æ¨‚éƒ¨çš„ä¿¡ç‰©ã€‚æ¬²æŸ¥çœ‹å¦‚ä½•å‰²ç‹¼å°¾å·´è«‹ç”¨(help_cut)æŒ‡ä»¤ã€‚\n"
 	);
 	set("no_sell", 1);
 	set("prevent_drop",1);
@@ -30,7 +30,7 @@ void init()
 void help_cut()
 {
      write(can_read_chinese()?
-       "Ö¸ÁîÓÃ·¨: cut <player name> \n":
+       "æŒ‡ä»¤ç”¨æ³•: cut <player name> \n":
        "usage: cut <player name> \n");
      return 1;
 }
@@ -41,7 +41,7 @@ int cut_tail(string str)
      int i;
     
 	if(block_cut) return notify_fail(can_read_chinese()?
-"Äã±ØĞëÔÙµÈÒ»ÏÂ²Å¿ÉÔÙ¸î±ğÈËµÄÎ²°Í!\n" :
+"ä½ å¿…é ˆå†ç­‰ä¸€ä¸‹æ‰å¯å†å‰²åˆ¥äººçš„å°¾å·´!\n" :
 "You have to wait a moment more to perform next cut.\n");
 
 	block_cut = 1;
@@ -49,29 +49,29 @@ int cut_tail(string str)
  
      if(!dest=present(str,environment(this_player()))){
        tell_object(this_player(),(can_read_chinese()?
-       "Õâ¸öÈË²¢²»ÔÚÕâÀï¡£\n":
+       "é€™å€‹äººä¸¦ä¸åœ¨é€™è£¡ã€‚\n":
        "This guy is not here\n"));
        return 1;}
      if((int)dest->query("CWA") !=1){
        tell_object(this_player(),((can_read_chinese()?
-       "Õâ¸öÈË²¢²»ÊÇÉ«ÀÇ¹«»áµÄ»áÔ±¡£\n":
+       "é€™å€‹äººä¸¦ä¸æ˜¯è‰²ç‹¼å…¬æœƒçš„æœƒå“¡ã€‚\n":
        "This guy is not a member of CWA.\n")));
        return 1;}
 
 	if((int)dest->query_temp("tail_cut"))  {
 		write(can_read_chinese()?
-"Õâ¸öÈËµÄÎ²°ÍÔç±»¸îÁË!\n" :
+"é€™å€‹äººçš„å°¾å·´æ—©è¢«å‰²äº†!\n" :
 "This wolf's tail has been cut already!\n");
 		return 1;
 	}
 
 	if(random(100)<80) {
 		write(can_read_chinese()?
-"Äã»Ó¶¯¸îÎ²Ğ¡µ¶Ïë°Ñ"+dest->query("c_cap_name")+"µÄÎ²°Í¸îÏÂµ«ÊÇÊ§°ÜÁË\n" :
+"ä½ æ®å‹•å‰²å°¾å°åˆ€æƒ³æŠŠ"+dest->query("c_cap_name")+"çš„å°¾å·´å‰²ä¸‹ä½†æ˜¯å¤±æ•—äº†\n" :
 "You try to cut "+dest->query("cap_name")+"'s tail down but failed");
 
 		tell_object(dest,can_read_chinese(dest)?
-this_player()->query("c_cap_name")+"ÊÔÖø°ÑÄãµÄÎ²°Í¸îÏÂµ«ÊÇÊ§°ÜÁË.\n" :
+this_player()->query("c_cap_name")+"è©¦è‘—æŠŠä½ çš„å°¾å·´å‰²ä¸‹ä½†æ˜¯å¤±æ•—äº†.\n" :
 this_player()->query("cap_name")+ "tried to cut down your tail but failed.\n");
 		
 		return 1;
@@ -83,13 +83,13 @@ this_player()->query("cap_name")+ "tried to cut down your tail but failed.\n");
          {
            objs[i]->cut();
            tell_object(dest,(can_read_chinese(dest)?
-             this_player()->query("c_cap_name")+"°ÑÄãµÄÀÇÎ²°Í¸îÏÂÀ´ÁË¡£\n":
+             this_player()->query("c_cap_name")+"æŠŠä½ çš„ç‹¼å°¾å·´å‰²ä¸‹ä¾†äº†ã€‚\n":
              this_player()->query("cap_name")+" cut down your wolf tail.\n"));
            tell_object(this_player(),(can_read_chinese()?
-             "Äã°Ñ"+dest->query("c_cap_name")+"µÄÀÇÎ²°Í¸îÁËÏÂÀ´¡£\n":
+             "ä½ æŠŠ"+dest->query("c_cap_name")+"çš„ç‹¼å°¾å·´å‰²äº†ä¸‹ä¾†ã€‚\n":
              "You cut down"+dest->query("cap_name")+"'s wolf tail.\n"));
            tell_room(environment(this_player()),(can_read_chinese()?
-             this_player()->query("c_cap_name")+"°Ñ"+dest->query("c_cap_name")+"µÄÀÇÎ²°Í¸îÁËÏÂÀ´¡£\n":
+             this_player()->query("c_cap_name")+"æŠŠ"+dest->query("c_cap_name")+"çš„ç‹¼å°¾å·´å‰²äº†ä¸‹ä¾†ã€‚\n":
              this_player()->query("cap_name")+" cuts down "+dest->query("cap_name")+"'s wolf tail.\n")
              ,({this_player(),dest}));
            obj=new(MITEMS"tails");
@@ -108,7 +108,7 @@ void cuttable() {
 	block_cut = 0;
 	owner = environment(this_object()); 
 	tell_object(owner, can_read_chinese(owner)?
-"ÄãÓÖ¿É¼¯ÖĞ¾«ÉñÈ¥ÍÀÀÇÁË.\n" : "You can cut again.\n");
+"ä½ åˆå¯é›†ä¸­ç²¾ç¥å»å± ç‹¼äº†.\n" : "You can cut again.\n");
 }
 
 

@@ -3,12 +3,12 @@ inherit WEAPON;
  
 void create()
 {
-        set_name( "shining blade", "¹âµ¶" );
+        set_name( "shining blade", "å…‰åˆ€" );
         add( "id", ({ "blade" }) );
-        set_short( "¹âµ¶" );
+        set_short( "å…‰åˆ€" );
         set_long(
-                "ÕâÊÇÒ»°ÑÉ¢·¢Öøº®¹âµÄ³¤µ¶¡£\n" );
-        set( "unit", "°Ñ" );
+                "é€™æ˜¯ä¸€æŠŠæ•£ç™¼è‘—å¯’å…‰çš„é•·åˆ€ã€‚\n" );
+        set( "unit", "æŠŠ" );
         set( "type", "longblade" );
         set( "weight", 120 );
         set( "weapon_class", 23 );

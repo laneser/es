@@ -8,14 +8,14 @@ void create()
 {
   ::create();
   set_level(10);
-  set_name("poisonous mosquito", "»¨°ß¶¾ÎÃ");
+  set_name("poisonous mosquito", "èŠ±æ–‘æ¯’èšŠ");
   add( "id", ({ "mosquito" }) );
-  set_short("»¨°ß¶¾ÎÃ");
+  set_short("èŠ±æ–‘æ¯’èšŠ");
   set_long(
-    "°ÍÕÆ´óµÄºÚºÖÉ«¶¾ÎÃ£¬¸¹²¿ÓĞ¼¸´¦»ÆÉ«°ßµã£¬ÎË~~~~µÄÕı³¯Äã·ÉÁË¹ıÀ´¡£\n"
+    "å·´æŒå¤§çš„é»‘è¤è‰²æ¯’èšŠï¼Œè…¹éƒ¨æœ‰å¹¾è™•é»ƒè‰²æ–‘é»ï¼Œå—¡~~~~çš„æ­£æœä½ é£›äº†éä¾†ã€‚\n"
     );
   set( "race", "insect" );
-  set( "unit", "Ö»" );
+  set( "unit", "åª" );
   set( "exp_reward", 1200 );
   set( "alignment", -500 );
   set_natural_armor( 45, 10 );
@@ -27,9 +27,9 @@ void create()
   set( "killer", 1 );
   set( "time_to_heal", 5 );
   set( "tactic_func", "emit_poison" );
-  set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò", "¸¹²¿" }) );
-  set_c_verbs( ({ "%s·¢³öÎËÎË~~µÄÉùÏì³åÏò%s" ,
-                  "%sÓÃ¼âÈñµÄ¿ÚÆ÷¶£Ïò%s"
+  set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€", "è…¹éƒ¨" }) );
+  set_c_verbs( ({ "%sç™¼å‡ºå—¡å—¡~~çš„è²éŸ¿è¡å‘%s" ,
+                  "%sç”¨å°–éŠ³çš„å£å™¨å®å‘%s"
                   }) );
 }
 
@@ -39,7 +39,7 @@ int emit_poison()
 
   if( random(20)>7 || !(victim= query_attacker()) ) return 0;
   tell_object( environment(this_object()),
-    "¶¾ÎÃ³ÃÄã²»×¢ÒâµÄÊ±ºòÍµ¶£ÁËÄãÒ»¿Ú......\n"
+    "æ¯’èšŠè¶ä½ ä¸æ³¨æ„çš„æ™‚å€™å·å®äº†ä½ ä¸€å£......\n"
     );
   (CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 5, 15 );
   return 1;

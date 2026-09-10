@@ -98,12 +98,12 @@ varargs string get_list()
 	string msg;
 	int i,j,percentage,remainder,total_points;
 
-	if( !sizeof(top_list) ) return "ÃΩœ’∂»≈≈––∞Òƒø«∞ «ø’µƒ°£\n";
+	if( !sizeof(top_list) ) return "Êé¢Èö™Â∫¶ÊéíË°åÊ¶úÁõÆÂâçÊòØÁ©∫ÁöÑ„ÄÇ\n";
 	
 	total_points=EXPLORE_D->query_total_explore("noden");
-	if (total_points < 1) return "Abort program !!(œµÕ≥…–Œ¥…Ë∂®»Œ∫ŒÃΩœ’∂»ªÚ”–∆‰À˚¥ÌŒÛ∑¢…˙)\n";
-	msg ="\n≈µ∂Ÿ¥Û¬ΩÃΩœ’∂»≈≈––∞Ò«∞ " + sizeof(top_list) + " √˚:\n";
-	msg += sprintf(" √˚¥Œ  ÕÊº“–’√˚           µ»º∂          …œœﬂ ±º‰               ÃΩœ’∂»\n");
+	if (total_points < 1) return "Abort program !!(Á≥ªÁµ±Â∞öÊú™Ë®≠ÂÆö‰ªª‰ΩïÊé¢Èö™Â∫¶ÊàñÊúâÂÖ∂‰ªñÈåØË™§ÁôºÁîü)\n";
+	msg ="\nË´æÈ†ìÂ§ßÈô∏Êé¢Èö™Â∫¶ÊéíË°åÊ¶úÂâç " + sizeof(top_list) + " Âêç:\n";
+	msg += sprintf(" ÂêçÊ¨°  Áé©ÂÆ∂ÂßìÂêç           Á≠âÁ¥ö          ‰∏äÁ∑öÊôÇÈñì               Êé¢Èö™Â∫¶\n");
 	for(i=0; i<sizeof(top_list); i++) {
 		savedata = points[top_list[i]];
 		day = savedata[2]/86400;
@@ -111,14 +111,14 @@ varargs string get_list()
 		percentage=savedata[0]*10000/total_points;
 		remainder=percentage%100;
 		if (percentage > 10000) percentage=10000;
-		msg += sprintf("  %2d. %20-s %2d %10d ÃÏ %2d –° ± %13d.%1d%1d%%\n",i+1,
+		msg += sprintf("  %2d. %20-s %2d %10d Â§© %2d Â∞èÊôÇ %13d.%1d%1d%%\n",i+1,
 			top_list[i],savedata[1],day,hour,percentage/100,remainder/10,remainder%10 );
 	}
 	
 	total_points=EXPLORE_D->query_total_explore("eastland");
-	if (total_points < 1) return "Abort program !!(œµÕ≥…–Œ¥…Ë∂®»Œ∫ŒÃΩœ’∂»ªÚ”–∆‰À˚¥ÌŒÛ∑¢…˙)\n";
-	msg += "\n∂´∑Ω¥Û¬ΩÃΩœ’∂»≈≈––∞Ò«∞ " + sizeof(top_list1) + " √˚:\n";
-	msg += sprintf(" √˚¥Œ  ÕÊº“–’√˚           µ»º∂          …œœﬂ ±º‰               ÃΩœ’∂»\n");
+	if (total_points < 1) return "Abort program !!(Á≥ªÁµ±Â∞öÊú™Ë®≠ÂÆö‰ªª‰ΩïÊé¢Èö™Â∫¶ÊàñÊúâÂÖ∂‰ªñÈåØË™§ÁôºÁîü)\n";
+	msg += "\nÊù±ÊñπÂ§ßÈô∏Êé¢Èö™Â∫¶ÊéíË°åÊ¶úÂâç " + sizeof(top_list1) + " Âêç:\n";
+	msg += sprintf(" ÂêçÊ¨°  Áé©ÂÆ∂ÂßìÂêç           Á≠âÁ¥ö          ‰∏äÁ∑öÊôÇÈñì               Êé¢Èö™Â∫¶\n");
 	for(i=0; i<sizeof(top_list1); i++) {
 		savedata = points1[top_list1[i]];
 		day = savedata[2]/86400;
@@ -126,14 +126,14 @@ varargs string get_list()
 		percentage=savedata[0]*10000/total_points;
 		remainder=percentage%100;
 		if (percentage > 10000) percentage=10000;
-		msg += sprintf("  %2d. %20-s %2d %10d ÃÏ %2d –° ± %13d.%1d%1d%%\n",i+1,
+		msg += sprintf("  %2d. %20-s %2d %10d Â§© %2d Â∞èÊôÇ %13d.%1d%1d%%\n",i+1,
 			top_list1[i],savedata[1],day,hour,percentage/100,remainder/10,remainder%10 );
 	}
 	
 	total_points=EXPLORE_D->query_total_explore("deathland");
-	if (total_points < 1) return "Abort program !!(œµÕ≥…–Œ¥…Ë∂®»Œ∫ŒÃΩœ’∂»ªÚ”–∆‰À˚¥ÌŒÛ∑¢…˙)\n";
-	msg += "\nÀ¿Õˆ¥Û¬ΩÃΩœ’∂»≈≈––∞Ò«∞ " + sizeof(top_list2) + " √˚:\n";
-	msg += sprintf(" √˚¥Œ  ÕÊº“–’√˚           µ»º∂          …œœﬂ ±º‰               ÃΩœ’∂»\n");
+	if (total_points < 1) return "Abort program !!(Á≥ªÁµ±Â∞öÊú™Ë®≠ÂÆö‰ªª‰ΩïÊé¢Èö™Â∫¶ÊàñÊúâÂÖ∂‰ªñÈåØË™§ÁôºÁîü)\n";
+	msg += "\nÊ≠ª‰∫°Â§ßÈô∏Êé¢Èö™Â∫¶ÊéíË°åÊ¶úÂâç " + sizeof(top_list2) + " Âêç:\n";
+	msg += sprintf(" ÂêçÊ¨°  Áé©ÂÆ∂ÂßìÂêç           Á≠âÁ¥ö          ‰∏äÁ∑öÊôÇÈñì               Êé¢Èö™Â∫¶\n");
 	for(i=0; i<sizeof(top_list2); i++) {
 		savedata = points2[top_list2[i]];
 		day = savedata[2]/86400;
@@ -141,14 +141,14 @@ varargs string get_list()
 		percentage=savedata[0]*10000/total_points;
 		remainder=percentage%100;
 		if (percentage > 10000) percentage=10000;
-		msg += sprintf("  %2d. %20-s %2d %10d ÃÏ %2d –° ± %13d.%1d%1d%%\n",i+1, 
+		msg += sprintf("  %2d. %20-s %2d %10d Â§© %2d Â∞èÊôÇ %13d.%1d%1d%%\n",i+1, 
 			top_list2[i],savedata[1],day,hour,percentage/100,remainder/10,remainder%10 );
 	}
 
 	total_points=EXPLORE_D->query_total_explore();
-	if (total_points < 1) return "Abort program !!(œµÕ≥…–Œ¥…Ë∂®»Œ∫ŒÃΩœ’∂»ªÚ”–∆‰À˚¥ÌŒÛ∑¢…˙)\n";
-	msg += "\n∆Ωæ˘ÃΩœ’∂»≈≈––∞Ò«∞ " + sizeof(top_list3) + " √˚:\n";
-	msg += sprintf(" √˚¥Œ  ÕÊº“–’√˚           µ»º∂          …œœﬂ ±º‰               ÃΩœ’∂»\n");
+	if (total_points < 1) return "Abort program !!(Á≥ªÁµ±Â∞öÊú™Ë®≠ÂÆö‰ªª‰ΩïÊé¢Èö™Â∫¶ÊàñÊúâÂÖ∂‰ªñÈåØË™§ÁôºÁîü)\n";
+	msg += "\nÂπ≥ÂùáÊé¢Èö™Â∫¶ÊéíË°åÊ¶úÂâç " + sizeof(top_list3) + " Âêç:\n";
+	msg += sprintf(" ÂêçÊ¨°  Áé©ÂÆ∂ÂßìÂêç           Á≠âÁ¥ö          ‰∏äÁ∑öÊôÇÈñì               Êé¢Èö™Â∫¶\n");
 	for(i=0; i<sizeof(top_list3); i++) {
 		savedata = points3[top_list3[i]];
 		day = savedata[2]/86400;
@@ -156,7 +156,7 @@ varargs string get_list()
 		percentage=savedata[0]*10000/total_points;
 		remainder=percentage%100;
 		if (percentage > 10000) percentage=10000;
-		msg += sprintf("  %2d. %20-s %2d %10d ÃÏ %2d –° ± %13d.%1d%1d%%\n",i+1,
+		msg += sprintf("  %2d. %20-s %2d %10d Â§© %2d Â∞èÊôÇ %13d.%1d%1d%%\n",i+1,
 			top_list3[i], savedata[1], day, hour,percentage/100,remainder/10,remainder%10 );
 	}
 

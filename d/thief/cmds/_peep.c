@@ -13,12 +13,12 @@ int peep_idle(object me,int succeed,object target,object item)
 	
 	me->set_temp("peeped",0);
 	if ( nullp(target) )
-		return notify_fail("ÄãÒªÍµ¿úµÄ¶ÔÏóÒÑ¾­²»ÔÚÕâÀïÁË !!\n");
+		return notify_fail("ä½ è¦å·çªºçš„å°è±¡å·²ç¶“ä¸åœ¨é€™è£¡äº† !!\n");
 	if ( target && !present(target,environment(me)) ) 
-		return notify_fail("ÄãÒªÍµ¿úµÄ¶ÔÏóÒÑ¾­²»ÔÚÕâÀïÁË !!\n");
+		return notify_fail("ä½ è¦å·çªºçš„å°è±¡å·²ç¶“ä¸åœ¨é€™è£¡äº† !!\n");
 	if ( succeed ) {
 		tell_object(me,set_color(
-		sprintf("³ÃÖø%s²»ÁôÒâµÄÊ±ºò£¬Äã¾¡ÇéµÄ´òÁ¿%s ...\n",
+		sprintf("è¶è‘—%sä¸ç•™æ„çš„æ™‚å€™ï¼Œä½ ç›¡æƒ…çš„æ‰“é‡%s ...\n",
 			target->query("c_name"),
 			( !item ? target->query("c_name") : item->query("c_name") ))
 			,"HIY") );
@@ -26,10 +26,10 @@ int peep_idle(object me,int succeed,object target,object item)
 	} else
 	{
 	tell_object(me,set_color(
-		sprintf("%sÍ»È»×ª¹ıÍ·ºİºİµØµÉÁËÄãÒ»ÑÛ£¬ºÃÏñ·¢ÏÖÁËÄãµÄÒâÍ¼ ...\n",
+		sprintf("%sçªç„¶è½‰éé ­ç‹ ç‹ åœ°çªäº†ä½ ä¸€çœ¼ï¼Œå¥½åƒç™¼ç¾äº†ä½ çš„æ„åœ– ...\n",
 			target->query("c_name")),"HIM") );
 	tell_object(target,set_color(
-		sprintf("ÄãÍ»È»¸Ğµ½±³ÉÏÁ¹ì¬ì¬µÄ£¬ºÃÏñÓĞÈËÔÚÍµ¿úÄã ...\n"),"HIY") );
+		sprintf("ä½ çªç„¶æ„Ÿåˆ°èƒŒä¸Šæ¶¼é¢¼é¢¼çš„ï¼Œå¥½åƒæœ‰äººåœ¨å·çªºä½  ...\n"),"HIY") );
 	me->delete_temp("peeping");
 	return 1;
 	}
@@ -44,9 +44,9 @@ int peep_idle(object me,int succeed,object target,object item)
 			for ( i=0 ,coin = 0; i < sizeof(coins) ; i++ )
 				coin += wealth[coins[i]] ;
 			if ( coin ) 
-				printf("\n%sµÄ±³°üÀï»¹ÓĞ %d Ã¶Ç®±Ò¡£\n",target->query("c_name"),coin);	
+				printf("\n%sçš„æ¹åŒ…è£¡é‚„æœ‰ %d æšéŒ¢å¹£ã€‚\n",target->query("c_name"),coin);	
 			else
-				printf("\n%sÉíÎŞ·ÖÎÄ¡£\n",target->query("c_name"));
+				printf("\n%sèº«ç„¡åˆ†æ–‡ã€‚\n",target->query("c_name"));
 		}
 		return 1;
 	}
@@ -78,29 +78,29 @@ int cmd_peep(string arg)
 	object target,item;
 
 	if ( this_player()->query_temp("peeped") )
-		return notify_fail("ÄãÕıÔÚÅ¬Á¦Íµ¿úÖĞ ...\n");
+		return notify_fail("ä½ æ­£åœ¨åŠªåŠ›å·çªºä¸­ ...\n");
 	if ( ! arg )
-		return notify_fail("ÄãÒªÍµ¿úÊ²÷á£¿\n");
+		return notify_fail("ä½ è¦å·çªºä»€éº¼ï¼Ÿ\n");
 
 	item = 0;
 	if ( sscanf( arg,"%s of %s",tmp1,tmp2) == 2 ) {
 		if ( ! target = present(tmp2,environment(this_player()) ) )
-			return notify_fail("ÕâÀïÃ»ÓĞ½Ğ"+tmp2+"µÄÉúÎï¡£\n");
+			return notify_fail("é€™è£¡æ²’æœ‰å«"+tmp2+"çš„ç”Ÿç‰©ã€‚\n");
 		if ( ! living(target) )
-			return notify_fail("ÕâÀïÃ»ÓĞ½Ğ"+tmp2+"µÄÉúÎï¡£\n");
+			return notify_fail("é€™è£¡æ²’æœ‰å«"+tmp2+"çš„ç”Ÿç‰©ã€‚\n");
 		if ( ! item = present(tmp1,target ) )
-			return notify_fail(target->query("c_name")+"Ã»ÓĞ´øÖø½Ğ"+tmp1+"µÄ¶«¶«¡£\n");
+			return notify_fail(target->query("c_name")+"æ²’æœ‰å¸¶è‘—å«"+tmp1+"çš„æ±æ±ã€‚\n");
 	}
 	else {
 	if ( ! target = present(arg,environment(this_player()) ))
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ"+arg+"µÄ¶«¶«¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+arg+"çš„æ±æ±ã€‚\n");
 	if ( ! living(target) )
-		return notify_fail("ÕâÀïÃ»ÓĞ½Ğ"+arg+"µÄÉúÎï¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰å«"+arg+"çš„ç”Ÿç‰©ã€‚\n");
 	}
 //	if ( target == this_player() )
-//		return notify_fail("ÄãÕæÎŞÁÄÒ®, peep ×Ô¼º, ±äÌ¬°¡?\n");
+//		return notify_fail("ä½ çœŸç„¡èŠè€¶, peep è‡ªå·±, è®Šæ…‹å•Š?\n");
 
-	write(set_color(sprintf("Äã¿ªÊ¼ÓÃÑÛ½ÇµÄâÅ¹âÍµÍµ´òÁ¿%sµÄÒ»¾ÙÒ»¶¯¡£\n",
+	write(set_color(sprintf("ä½ é–‹å§‹ç”¨çœ¼è§’çš„é¤˜å…‰å·å·æ‰“é‡%sçš„ä¸€èˆ‰ä¸€å‹•ã€‚\n",
 			target->query("c_name")),"HIY"));
 	this_player()->set_temp("peeped",1);
 	call_out("peep_idle",3,this_player(),check_peep(this_player(),target)
@@ -114,9 +114,9 @@ int help()
 Usage: peep <target>
        peep <object> of <target>
 
-Õâ¸öÖ¸ÁîÄÜÊ¹ÄãÔÚ±ğÈËºÁ²»Öª¾õµÄÇé¿öÏÂÍµ¿úËûµÄ×´¿ö¡¢Ğ¯´øµÄÎïÆ·¡¢½ğÇ®
-ÉõÖÁËû±³°üÀï´ü×ÓµÄÄÚÈİ¡£ÔÚÏÂÊÖ"½è"±ğÈËµÄ¶«Î÷Ö®Ç°£¬×îºÃÑø³ÉÏÈ¹Û²ì¹Û
-²ìµÄºÃÏ°¹ß£¬ËæÊÖÂÒÃşÊÇºÜÈİÒ×±»·¢ÏÖµÄ¡£
+é€™å€‹æŒ‡ä»¤èƒ½ä½¿ä½ åœ¨åˆ¥äººæ¯«ä¸çŸ¥è¦ºçš„æƒ…æ³ä¸‹å·çªºä»–çš„ç‹€æ³ã€æ”œå¸¶çš„ç‰©å“ã€é‡‘éŒ¢
+ç”šè‡³ä»–æ¹åŒ…è£¡è¢‹å­çš„å…§å®¹ã€‚åœ¨ä¸‹æ‰‹"å€Ÿ"åˆ¥äººçš„æ±è¥¿ä¹‹å‰ï¼Œæœ€å¥½é¤Šæˆå…ˆè§€å¯Ÿè§€
+å¯Ÿçš„å¥½ç¿’æ…£ï¼Œéš¨æ‰‹äº‚æ‘¸æ˜¯å¾ˆå®¹æ˜“è¢«ç™¼ç¾çš„ã€‚
 
 HELP
 );

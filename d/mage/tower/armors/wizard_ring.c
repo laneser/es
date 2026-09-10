@@ -4,19 +4,19 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wizard's ring", "Î×Ê¦Éñ½ä" );
+	set_name( "wizard's ring", "å·«å¸«ç¥æˆ’" );
 	add( "id", ({ "ring" }) );
-	set_short( "a wizard's ring", "Î×Ê¦Éñ½ä" );
+	set_short( "a wizard's ring", "å·«å¸«ç¥æˆ’" );
 	set_long( @LONG
 	This ring is used by wizard Rashudi. It is made by magical ruby and 
 spreads a wanderful power of magic.
 LONG
     , @C_LONG
-	Ä§µ¼Ê¿À­ĞŞµÛ×îÏ²»¶µÄ½äÖ¸£¬ÓÉì¶ÓÃ±»¸½ÓëÄ§·¨µÄºì±¦Ê¯ÖÆ³É£¬É¢·¢³öÒ»¹É²»¿ÉµÖ
-¿¹µÄÄ§Á¦£¬¾İËµÓµÓĞµÖ¿¹¸÷ÖÖÄ§·¨µÄÄÜÁ¦¡£
+	é­”å°å£«æ‹‰ä¿®å¸æœ€å–œæ­¡çš„æˆ’æŒ‡ï¼Œç”±æ–¼ç”¨è¢«é™„èˆ‡é­”æ³•çš„ç´…å¯¶çŸ³è£½æˆï¼Œæ•£ç™¼å‡ºä¸€è‚¡ä¸å¯æŠµ
+æŠ—çš„é­”åŠ›ï¼Œæ“šèªªæ“æœ‰æŠµæŠ—å„ç¨®é­”æ³•çš„èƒ½åŠ›ã€‚
 C_LONG
 	);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set( "type", "finger" );
 	set( "material", "element" );
 	set( "defense_bonus", 10 );

@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level(14);
-	set_name( "The soldier", "°«Áé×åÎÀ±ø" );
+	set_name( "The soldier", "çŸ®éˆæ—è¡›å…µ" );
 	add( "id", ({ "soldier" }) );
-	set_short( "°«Áé×åÎÀ±ø" );
+	set_short( "çŸ®éˆæ—è¡›å…µ" );
 	set_long(
-		"ËûÊØ»¤Öø°«Áé×å²¿Âä£¬¸ºÔğ²¿ÂäµÄ°²È«¡£\n"
+		"ä»–å®ˆè­·è‘—çŸ®éˆæ—éƒ¨è½ï¼Œè² è²¬éƒ¨è½çš„å®‰å…¨ã€‚\n"
 	);
 	set( "max_hp", 600 );
 	set( "hit_points", 600 );
@@ -42,7 +42,7 @@ void create()
 
 void ask_volcano(object who)
 {
-  tell_object(who,"ÊØÎÀ¶ÔÄãËµ£º»ğÉ½ËæÊ±¶¼ÓĞ±¬·¢µÄ¿ÉÄÜ£¬ÎÒÃÇÔÚÕâÀï×öÁËÍûµÄ¹¤×÷¡£\n");
+  tell_object(who,"å®ˆè¡›å°ä½ èªªï¼šç«å±±éš¨æ™‚éƒ½æœ‰çˆ†ç™¼çš„å¯èƒ½ï¼Œæˆ‘å€‘åœ¨é€™è£¡åšäº†æœ›çš„å·¥ä½œã€‚\n");
   return;
 }
 
@@ -54,16 +54,16 @@ void ask_head(object who)
   item=all_inventory(this_player());
   for(i=0;i<sizeof(item);i++) {
     if ((string)item[i]->query("name")=="sharp knife") {
-      write("ÊØÎÀËµ£ºÄãÒÑ¾­ÓĞÒ»°Ñ¸îÈËÍ·µÄÀûÆ÷ÁË¡£\n");
+      write("å®ˆè¡›èªªï¼šä½ å·²ç¶“æœ‰ä¸€æŠŠå‰²äººé ­çš„åˆ©å™¨äº†ã€‚\n");
       return;
     }
   }
   if (this_player()->query_temp("head_knife")) {
-     write("ÊØÎÀËµ£ºÎÒ¼ÇµÃÒÑ¾­¸ø¹ıÄãÄÇÈñÀûµÄµ¶×ÓÁË¡£\n");
+     write("å®ˆè¡›èªªï¼šæˆ‘è¨˜å¾—å·²ç¶“çµ¦éä½ é‚£éŠ³åˆ©çš„åˆ€å­äº†ã€‚\n");
      return;
   }
   tell_object(who,
-    "ÊØÎÀËµ£ºàÅ¡¢ÒªÏëË³ÀûµÄ°ÑÈËÍ·¸îÏÂÀ´£¬ĞëÒªÒ»°ÑÈñÀûµÄµ¶×Ó¡£\n");
+    "å®ˆè¡›èªªï¼šå—¯ã€è¦æƒ³é †åˆ©çš„æŠŠäººé ­å‰²ä¸‹ä¾†ï¼Œé ˆè¦ä¸€æŠŠéŠ³åˆ©çš„åˆ€å­ã€‚\n");
   ob=new(OOBJ"head_knife");
   ob->move(this_object());
   command("give "+(string)ob->query("name")+" to "+lower_case((string)this_player()->query("name")));

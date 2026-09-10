@@ -8,15 +8,15 @@ void create ()
 {
         ::create();
         set_level(19);
-        set_name( "lulu", "Â¶Â¶" );
+        set_name( "lulu", "éœ²éœ²" );
         add ("id",({ "lulu" }));
-        set_short( "Â¶Â¶");
-        set("unit","Î»");
+        set_short( "éœ²éœ²");
+        set("unit","ä½");
         set_long(
 @C_LONG
-ÍÛ£¡³¤µÄÕæÊÇÂÒÕıµãµÄ£¡³¤·¢Åû¼ç£¬ÁøÃ¼ĞÓÑÛ£¬´½ºì³İ°×£¬Ï¸Æ¤ÄÛÈâ£¬´©ÖøÃÔÈËµÄ
-ÈıµãÊ½Ä§·¨Ê¦Õ½¶··ş×°£¬¸ü½«ÁáççµÄÉí²ÄÇúÏß¼°»ëÔ²±¥ÂúµÄĞØ²¿£¬ÍêÈ«±íÏÖÎŞÒÅ£¬
-ÕæÊÇ³äÂúÖøÒ°ĞÔµÄÇà´ºÓëÃÀÀö£¡
+å“‡ï¼é•·çš„çœŸæ˜¯äº‚æ­£é»çš„ï¼é•·é«®æŠ«è‚©ï¼ŒæŸ³çœ‰æçœ¼ï¼Œå”‡ç´…é½’ç™½ï¼Œç´°çš®å«©è‚‰ï¼Œç©¿è‘—è¿·äººçš„
+ä¸‰é»å¼é­”æ³•å¸«æˆ°é¬¥æœè£ï¼Œæ›´å°‡ç²ç“çš„èº«ææ›²ç·šåŠæ¸¾åœ“é£½æ»¿çš„èƒ¸éƒ¨ï¼Œå®Œå…¨è¡¨ç¾ç„¡éºï¼Œ
+çœŸæ˜¯å……æ»¿è‘—é‡æ€§çš„é’æ˜¥èˆ‡ç¾éº—ï¼
 C_LONG
 );
         set ("gender", "female");
@@ -37,7 +37,7 @@ C_LONG
         set("aim_difficulty",
           (["critical":80,"vascular":50,"weakest":80,"ganglion":80])) ;
         set("weight",1000) ;
-        set("c_death_msg","%sËµ:Õæ²»¸ÊĞÄÑ½!!ÈË¼Ò»¹Ã»ÄÇ¸ö......!\n") ;
+        set("c_death_msg","%sèªª:çœŸä¸ç”˜å¿ƒå‘€!!äººå®¶é‚„æ²’é‚£å€‹......!\n") ;
         wield_weapon( CAMPOBJ"blunt1" );
         equip_armor( CAMPOBJ"head1" );
         equip_armor( CAMPOBJ"suit1" );
@@ -52,7 +52,7 @@ int accept_item(object who,object item)
 
   if ( !item->query_inked() ) {
     tell_room( environment(), 
-      "Â¶Â¶Î¢Ğ¦µØËµ: Äã¸øÎÒÒ»ÕÅ°×Ö½ÓĞºÎÆóÍ¼£¿ÏòÎÒ±í°×Âğ£¿\n");
+      "éœ²éœ²å¾®ç¬‘åœ°èªª: ä½ çµ¦æˆ‘ä¸€å¼µç™½ç´™æœ‰ä½•ä¼åœ–ï¼Ÿå‘æˆ‘è¡¨ç™½å—ï¼Ÿ\n");
       command("give paper to "+who->query("name"));
       return 1; 
   }
@@ -65,11 +65,11 @@ int accept_item(object who,object item)
 
   if (code==1)
      tell_room( environment(), 
-        sprintf("Â¶Â¶Ïò%s(%s)µãÍ·Î¢Ğ¦£¬ËµµÀ: Ğ»Ğ»£¡\n",
+        sprintf("éœ²éœ²å‘%s(%s)é»é ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼\n",
         who->query("c_name"),who->query("name") ), who ) ;
 
   if (code==3) 
-    tell_object( who,"Â¶Â¶µãÍ·Î¢Ğ¦£¬ËµµÀ: Ğ»Ğ»£¡ÇëÔÙÎªÎÒÑ°ÕÒÎÒµÄ½«¾ü°É!!\n");
+    tell_object( who,"éœ²éœ²é»é ­å¾®ç¬‘ï¼Œèªªé“: è¬è¬ï¼è«‹å†ç‚ºæˆ‘å°‹æ‰¾æˆ‘çš„å°‡è»å§!!\n");
 
   if (code==4) { 
     who->delete_temp("lulu_active") ;
@@ -78,12 +78,12 @@ int accept_item(object who,object item)
     who->delete_temp("lulu_mob4") ;
     who->finish_quest("lulu",1);
     tell_object( who, 
-       "[ÄãÖÕì¶Íê³ÉÁË Â¶Â¶(lulu) ÈÎÎñ£¬µÃµ½ 3000 µã¾­Ñé]\n"
+       "[ä½ çµ‚æ–¼å®Œæˆäº† éœ²éœ²(lulu) ä»»å‹™ï¼Œå¾—åˆ° 3000 é»ç¶“é©—]\n"
        );
     who ->gain_experience(3000);
     tell_object( who, 
-       "Â¶Â¶Ëµ£ºÎªÁË¸ĞĞ»ÄãµÄ¹¦\µÂ,ÎÒ½«½ÌÊÚÄãÂ¶Óª¼¼ÇÉ,À´¿ìËÙ»Ö¸´ÌåÁ¦Óë·¨Á¦!!\n"
-       "        Ö»ÒªÊäÈë train camp ¾Í¿ÉÒÔÁË!!\n"
+       "éœ²éœ²èªªï¼šç‚ºäº†æ„Ÿè¬ä½ çš„åŠŸå¾·,æˆ‘å°‡æ•™æˆä½ éœ²ç‡ŸæŠ€å·§,ä¾†å¿«é€Ÿæ¢å¾©é«”åŠ›èˆ‡æ³•åŠ›!!\n"
+       "        åªè¦è¼¸å…¥ train camp å°±å¯ä»¥äº†!!\n"
        );
    item->remove();
     return 1;
@@ -97,12 +97,12 @@ int check_trainee(object who)
    if( who->query_skill("camp") ) return 1;
    if( (int)who->query_quest_level("lulu") < 1 )
       return notify_fail(
-      "Â¶Â¶Ëµ: ±§Ç¸! Äã»¹Î´Íê³ÉÎÒµÄÈÎÎñ!!\n" );
+      "éœ²éœ²èªª: æŠ±æ­‰! ä½ é‚„æœªå®Œæˆæˆ‘çš„ä»»å‹™!!\n" );
    if( (string)who->query("class")=="adventurer" &&
        (int)who->query_level()> 4 )
    return 1;
    else return notify_fail(
-     "Â¶Â¶Ëµ: ÎÒÖ»½Ì¹»×Ê¸ñµÄÃ°ÏÕÕßÀ²!\n" );
+     "éœ²éœ²èªª: æˆ‘åªæ•™å¤ è³‡æ ¼çš„å†’éšªè€…å•¦!\n" );
 }
 
 void init()

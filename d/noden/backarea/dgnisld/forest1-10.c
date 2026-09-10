@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set( "outside" , "dgnisld" ) ;
-	set_short( "forest",  "É­ÁÖ" );
+	set_short( "forest",  "æ£®æž—" );
 	set_long(
 	    "A forest. \n", 
-	    "Ò»×ùÉ­ÁÖ¡£\n"
+	    "ä¸€åº§æ£®æž—ã€‚\n"
         ) ;
 	
 	set( "exits", ([

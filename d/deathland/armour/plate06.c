@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("evil plate","Ğ°Ä§îø¼×");
+        set_name("evil plate","é‚ªé­”é§ç”²");
         add("id",({"plate","platemail"}) );
-         set_short( "an evil plate","Ğ°Ä§îø¼×");
+         set_short( "an evil plate","é‚ªé­”é§ç”²");
 	set_long(
 "This plate seems heavy and enhanced with evil power.\n"	
-"ÕâÊÇÒ»¸±ºñÖØµÄîø¼×,ËÆºõÓĞÖøÄ§Á¦¸½ÔÚÆäÖĞ\n"
+"é€™æ˜¯ä¸€å‰¯åšé‡çš„é§ç”²,ä¼¼ä¹æœ‰è‘—é­”åŠ›é™„åœ¨å…¶ä¸­\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 350 );
 	set( "type", "body" );
 	set( "material", "heavy_metal" );

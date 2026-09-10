@@ -7,14 +7,14 @@ void create()
 {
 	::create() ;
 	set("light", 1) ;
-	set_short( "The Energy Room", "ÄÜÔ´ÊÒ" );
+	set_short( "The Energy Room", "èƒ½æºå®¤" );
 	set_long( @LONG
   NEED WORK HERE!
 LONG
             , @C_LONG
-ÕâÊÇ´¢´æÄ§·¨ÄÜÔ´µÄµØ·½£¬Äã¸Ğµ½Ò»¹ÉÇ¿´óµÄÄ§Á¦¡£ÔÚÕâÀï¿ÉÒÔÇë×¨ÈË°ï
-Äã²¹³ä(recharge)Ä§·¨ÎäÆ÷µÄÄÜÔ´£¬²»¹ıÇĞ¼ÇÎğ×Ô¼º¶¯ÊÖ£¬Ğ¡ĞÄ¿ØÖÆ²»µ±»ÙÁË
-×°±¸¡£
+é€™æ˜¯å„²å­˜é­”æ³•èƒ½æºçš„åœ°æ–¹ï¼Œä½ æ„Ÿåˆ°ä¸€è‚¡å¼·å¤§çš„é­”åŠ›ã€‚åœ¨é€™è£¡å¯ä»¥è«‹å°ˆäººå¹«
+ä½ è£œå……(recharge)é­”æ³•æ­¦å™¨çš„èƒ½æºï¼Œä¸éåˆ‡è¨˜å‹¿è‡ªå·±å‹•æ‰‹ï¼Œå°å¿ƒæ§åˆ¶ä¸ç•¶æ¯€äº†
+è£å‚™ã€‚
 C_LONG
 );
 	set( "exits", ([ "down" : MAGE"library", ]) );
@@ -39,16 +39,16 @@ int to_recharge(string str)
     
     if( !str ) 
       return notify_fail( 
-        "Ê¹ÓÃ¸ñÊ½: recharge <ÎïÆ·Ãû³Æ> \n" );
+        "ä½¿ç”¨æ ¼å¼: recharge <ç‰©å“åç¨±> \n" );
     if( !(item=present(str, who)) )
-      return notify_fail("ÄãÉíÉÏÃ»Õâ¸ö¶«Î÷¡£\n" );
+      return notify_fail("ä½ èº«ä¸Šæ²’é€™å€‹æ±è¥¿ã€‚\n" );
     if( !item->query("max_charge") )
-      return notify_fail( "Õâ²»ÊÇÄ§·¨ÎïÆ·£¬ÎŞ·¨²¹³äÄ§·¨ÄÜÔ´!\n" );
+      return notify_fail( "é€™ä¸æ˜¯é­”æ³•ç‰©å“ï¼Œç„¡æ³•è£œå……é­”æ³•èƒ½æº!\n" );
     wc = (int)item->query("weapon_class");
     damage = (int)item->query("special_damage");
     times = (int)(item->query("max_charge"))-(int)(item->query("charge_left"));
     if( !times ) 
-      return notify_fail("ÕâÎïÆ·ÒÑ³äÂúÁËÄ§·¨ÄÜÔ´£¬Äã»¹ÒªÀË·ÑÇ®Âğ?\n");
+      return notify_fail("é€™ç‰©å“å·²å……æ»¿äº†é­”æ³•èƒ½æºï¼Œä½ é‚„è¦æµªè²»éŒ¢å—?\n");
     skill = (int)who->query_skill("recharge");
     karma = (int)who->query_stat("karma");
     money = 200;
@@ -56,33 +56,33 @@ int to_recharge(string str)
     cost_money = wc*damage*times*(150-skill)/money;
     cost_exp = wc*damage*damage*(130-skill)/exp;
     if( (int)who->query_exp_stock() < cost_exp )
-      return notify_fail(sprintf("²¹³äÕâÎïÆ·µÄÄÜÔ´½«ËğÊ§Äã %d µã¾­ÑéÖµ£¬Äã¿ÉÓÃ¾­ÑéÖµ²»×ã¡£\n",cost_exp));
+      return notify_fail(sprintf("è£œå……é€™ç‰©å“çš„èƒ½æºå°‡æå¤±ä½  %d é»ç¶“é©—å€¼ï¼Œä½ å¯ç”¨ç¶“é©—å€¼ä¸è¶³ã€‚\n",cost_exp));
     if( present("cid") && !who->debit( "silver", cost_money ) )
-      return notify_fail(sprintf("²¹³äÕâÎïÆ·µÄÄÜÔ´ĞèÒª %d Òø±Ò¡£\n" ,cost_money));
+      return notify_fail(sprintf("è£œå……é€™ç‰©å“çš„èƒ½æºéœ€è¦ %d éŠ€å¹£ã€‚\n" ,cost_money));
     who->gain_experience( -cost_exp );
     if( !present( "cid" ) ) {
-      tell_room( this_object(), sprintf( "%s°Ñ%s·ÅÈëÄÜÔ´²¹³ä»úÀïÃæ¡£\n",who->query("c_name"),item->query("c_name")), who );
-      tell_object( who, sprintf("ÄãĞ¡ĞÄÒíÒíµÄ°Ñ%s·ÅÈëÄÜÔ´²¹³ä»úÀïÃæ¡£\n",item->query("c_name")));
+      tell_room( this_object(), sprintf( "%sæŠŠ%sæ”¾å…¥èƒ½æºè£œå……æ©Ÿè£¡é¢ã€‚\n",who->query("c_name"),item->query("c_name")), who );
+      tell_object( who, sprintf("ä½ å°å¿ƒç¿¼ç¿¼çš„æŠŠ%sæ”¾å…¥èƒ½æºè£œå……æ©Ÿè£¡é¢ã€‚\n",item->query("c_name")));
       if( random(125) > skill || random(30) > karma ) {
-        tell_room( this_object(), sprintf("µ«ÊÇÒ»²»Ğ¡ĞÄ%s»¯³É»Ò½ıÏûÊ§ÁË¡£\n",item->query("c_name")));
+        tell_room( this_object(), sprintf("ä½†æ˜¯ä¸€ä¸å°å¿ƒ%såŒ–æˆç°ç‡¼æ¶ˆå¤±äº†ã€‚\n",item->query("c_name")));
         item->remove();
       } else {
         tell_object( who, 
-          sprintf("Ò»¶ÎÊ±¼äÖ®áá£¬Äã°Ñ%sÄÃÁË³öÀ´£¬Ëü¿´ÆğÀ´³äÂúÁËÄ§·¨ÄÜÔ´¡£\n" ,
+          sprintf("ä¸€æ®µæ™‚é–“ä¹‹å¾Œï¼Œä½ æŠŠ%sæ‹¿äº†å‡ºä¾†ï¼Œå®ƒçœ‹èµ·ä¾†å……æ»¿äº†é­”æ³•èƒ½æºã€‚\n" ,
 	item->query("c_name")));
         tell_room( this_object(), 
-          sprintf("Ò»¶ÎÊ±¼äÖ®áá£¬%s°Ñ%sÄÃÁË³öÀ´£¬Ëü¿´ÆğÀ´³äÂúÁËÄ§·¨ÄÜÔ´¡£\n" ,
+          sprintf("ä¸€æ®µæ™‚é–“ä¹‹å¾Œï¼Œ%sæŠŠ%sæ‹¿äº†å‡ºä¾†ï¼Œå®ƒçœ‹èµ·ä¾†å……æ»¿äº†é­”æ³•èƒ½æºã€‚\n" ,
 	who->query("c_name"),item->query("c_name")), who);
         item->set("charge_left",(int)item->query("max_charge") );
       }
     } else {
       tell_object( who, 
-        sprintf("Äã°Ñ%s½»¸øÊ©µÃ£¬Ö»¼ûËû°ÑËü·ÅÈëÄÜÔ´²¹³ä»úÖĞ¡£\nÒ»¶ÎÊ±¼äÖ®áá£¬Ëû°ÑËüÄÃÁË³öÀ´²¢¹é»¹¸øÄã¡£\n" ,item->query("c_name")));
+        sprintf("ä½ æŠŠ%säº¤çµ¦æ–½å¾—ï¼Œåªè¦‹ä»–æŠŠå®ƒæ”¾å…¥èƒ½æºè£œå……æ©Ÿä¸­ã€‚\nä¸€æ®µæ™‚é–“ä¹‹å¾Œï¼Œä»–æŠŠå®ƒæ‹¿äº†å‡ºä¾†ä¸¦æ­¸é‚„çµ¦ä½ ã€‚\n" ,item->query("c_name")));
       tell_room( this_object(), 
-      sprintf("%s°Ñ%s½»¸øÊ©µÃ£¬Ö»¼ûËû°ÑËü·ÅÈëÄÜÔ´²¹³ä»úÖĞ¡£\nÒ»¶ÎÊ±¼äÖ®áá£¬Ëû°ÑËüÄÃÁË³öÀ´²¢¹é»¹¸ø%s¡£\n" ,
+      sprintf("%sæŠŠ%säº¤çµ¦æ–½å¾—ï¼Œåªè¦‹ä»–æŠŠå®ƒæ”¾å…¥èƒ½æºè£œå……æ©Ÿä¸­ã€‚\nä¸€æ®µæ™‚é–“ä¹‹å¾Œï¼Œä»–æŠŠå®ƒæ‹¿äº†å‡ºä¾†ä¸¦æ­¸é‚„çµ¦%sã€‚\n" ,
 	who->query("c_name"),item->query("c_name"),who->query("c_name")),who );
       item->set("charge_left",(int)item->query("max_charge") );
-      tell_room( this_object(), "Ê©µÃËµ: ³äºÃÁË¡£\n");  
+      tell_room( this_object(), "æ–½å¾—èªª: å……å¥½äº†ã€‚\n");  
     }
     return 1;
 }

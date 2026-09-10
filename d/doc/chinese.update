@@ -1,29 +1,29 @@
 rooms:
 
-set_name("English", "ÖĞÎÄ");
-	(ÕâÀïµÄ English ÊÇÎïÆ·Ãû³ÆááÃæÀ¨ºÅÀïµÄÃû×Ö.)
-set_short("ÖĞÎÄ");
-set_long("ÖĞÎÄĞğÊö\n");
+set_name("English", "ä¸­æ–‡");
+	(é€™è£¡çš„ English æ˜¯ç‰©å“åç¨±å¾Œé¢æ‹¬è™Ÿè£¡çš„åå­—.)
+set_short("ä¸­æ–‡");
+set_long("ä¸­æ–‡æ•˜è¿°\n");
 set("item_desc", ([
-	"Ä³Ñù¶«Î÷" : "Ä³Ñù¶«Î÷µÄĞğÊö.\n",
+	"æŸæ¨£æ±è¥¿" : "æŸæ¨£æ±è¥¿çš„æ•˜è¿°.\n",
 	]) );
 
 object:
 set_name(), set_short() & set_long() same as rooms.
-set("extra_look","ÖĞÎÄĞğÊö");
+set("extra_look","ä¸­æ–‡æ•˜è¿°");
 
 boards:
-set("long.text","ÕâÊÇÒ»¸öÁôÑÔ°æ..\n");
-set("short.text","ÁôÑÔ°æ");
+set("long.text","é€™æ˜¯ä¸€å€‹ç•™è¨€ç‰ˆ..\n");
+set("short.text","ç•™è¨€ç‰ˆ");
 
 doors:
 on create_door() --
-ÓÃ "desc" : "ÕâÊÇÒ»¸öÃÅ" ... ¾ÉÓĞ code ÀïµÄ c_desc »¹ÊÇ¿ÉÒÔÓÃ, µ«Çë
-´ÓÏÖÔÚ¿ªÊ¼ÓÃ desc.
-×¢: Äã»¹ÊÇÒª name, c_name.. name ÊÇÓÃÀ´ÏÔÊ¾ () ÀïµÄ keyword.
+ç”¨ "desc" : "é€™æ˜¯ä¸€å€‹é–€" ... èˆŠæœ‰ code è£¡çš„ c_desc é‚„æ˜¯å¯ä»¥ç”¨, ä½†è«‹
+å¾ç¾åœ¨é–‹å§‹ç”¨ desc.
+æ³¨: ä½ é‚„æ˜¯è¦ name, c_name.. name æ˜¯ç”¨ä¾†é¡¯ç¤º () è£¡çš„ keyword.
 
 virtual rooms:
-²Î¿¼ /d/noden/noden.map µÄ format. ½« short, long ÌîÈëÖĞÎÄ.
+åƒè€ƒ /d/noden/noden.map çš„ format. å°‡ short, long å¡«å…¥ä¸­æ–‡.
 
 
 command changed/updated:

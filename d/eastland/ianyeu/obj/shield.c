@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "topaz shield", "ÉÁ¾§¶Ü" );
+        set_name( "topaz shield", "é–ƒæ™¶ç›¾" );
         add( "id", ({ "shield" }) );
-        set_short( "ÉÁ¾§¶Ü" );
+        set_short( "é–ƒæ™¶ç›¾" );
         set_long(
-        "Äã¿´µ½Ò»¿éË¶´óÖÊ´¿µÄ¾Æ»Æ±¦Ê¯, µ±Äã×¢ÊÓËüÊ±,\n"
-        "áİ·ğ¿´µ½ÈçÏ¦Ñô°ãÃÀÀöµÄ¾°É«¡£ÄãÊÇ·ñÏëÒª²Á(rub)\n"
-        "È¥ÉÏÃæµÄ»Ò³¾, ÒÔ±ã¿´µÃÇå³şĞ©?\n"
+        "ä½ çœ‹åˆ°ä¸€å¡Šç¢©å¤§è³ªç´”çš„é…’é»ƒå¯¶çŸ³, ç•¶ä½ æ³¨è¦–å®ƒæ™‚,\n"
+        "å½·ä½›çœ‹åˆ°å¦‚å¤•é™½èˆ¬ç¾éº—çš„æ™¯è‰²ã€‚ä½ æ˜¯å¦æƒ³è¦æ“¦(rub)\n"
+        "å»ä¸Šé¢çš„ç°å¡µ, ä»¥ä¾¿çœ‹å¾—æ¸…æ¥šäº›?\n"
         );
-        set("unit","¿é");
+        set("unit","å¡Š");
         set( "type", "shield" );
         set( "material", "element" );
         set( "armor_class", 6 );
@@ -33,12 +33,12 @@ void init()
 int rub_shield(string str)
 {
    if( !str || !id(str) )
-        return notify_fail( "ÄãÒªÄ¦²ÁÊ²÷á?\n" );
+        return notify_fail( "ä½ è¦æ‘©æ“¦ä»€éº¼?\n" );
    if( (int)this_player()->query("spell_points")<50 )
-        return notify_fail( "ÄãµÄ¾«ÉñÌ«²îÁË, ÎŞ·¨ÓĞĞ§Ä¦²Á¶ÜÅÆ¡£\n" );
+        return notify_fail( "ä½ çš„ç²¾ç¥å¤ªå·®äº†, ç„¡æ³•æœ‰æ•ˆæ‘©æ“¦ç›¾ç‰Œã€‚\n" );
    if( query("light") )
-        return notify_fail( "ËüÒÑ¾­±»Ä¦²Á¹ıÁË¡£\n" );
-   write( "ÄãÓÃÁ¦µØÄ¦²Á¶ÜÅÆ, ¶ÜÅÆÖğ½¥µØ·¢³öÎ¢ÈõµÄ¹âÃ¢¡£\n" );
+        return notify_fail( "å®ƒå·²ç¶“è¢«æ‘©æ“¦éäº†ã€‚\n" );
+   write( "ä½ ç”¨åŠ›åœ°æ‘©æ“¦ç›¾ç‰Œ, ç›¾ç‰Œé€æ¼¸åœ°ç™¼å‡ºå¾®å¼±çš„å…‰èŠ’ã€‚\n" );
    this_player()->add( "spell_points", -50 );
    set( "light", 1 );
    call_out( "run_out", 240 );
@@ -52,6 +52,6 @@ void run_out()
 owner = environment(this_object());
 
    if( living(owner) )
-   tell_object( owner, "ÉÁ¾§¶ÜµÄµç¹â½¥½¥Î¢Èõ...×îááÖÕì¶Í£Ö¹·¢¹â...\n" );
+   tell_object( owner, "é–ƒæ™¶ç›¾çš„é›»å…‰æ¼¸æ¼¸å¾®å¼±...æœ€å¾Œçµ‚æ–¼åœæ­¢ç™¼å…‰...\n" );
    set( "light", 0 );
 }

@@ -8,10 +8,10 @@ void create()
         add ("id", ({"fork" }) );
         set_short("@@query_short");
         set_long(@LONG
-Ò»±ú´¿½ğ´òÔìµÄµÄÎäÆ÷£¬Ç°¶ËÓĞÈı¸ö´ó²æ£¬¼È¼âÓÖÀû¡£  
+ä¸€æŸ„ç´”é‡‘æ‰“é€ çš„çš„æ­¦å™¨ï¼Œå‰ç«¯æœ‰ä¸‰å€‹å¤§å‰ï¼Œæ—¢å°–åˆåˆ©ã€‚  
 LONG);
         set("type", "thrusting");
-        set("unit","±ú");
+        set("unit","æŸ„");
         set("weapon_class",30);
         set("min_damage", 18 );
         set("max_damage", 35);
@@ -20,5 +20,5 @@ LONG);
 }
 string query_short()
 {
-       return set_color("Èı²æ¡õ","HIY");
+       return set_color("ä¸‰å‰â–¡","HIY");
 }

@@ -5,15 +5,15 @@ inherit WEAPON;
 
 void create()
 {
-    set_name("hell's wand","Òµ»ğÖ®ÕÈ");
+    set_name("hell's wand","æ¥­ç«ä¹‹æ–");
     add("id",({"wand","hell's wand"}) );
-    set_short("Òµ»ğÖ®ÕÈ");
+    set_short("æ¥­ç«ä¹‹æ–");
     set_long(@C_LONG
-ÕâÊÇÒ»°ÑÓÉ»ğÉ½Åç³öÀ´µÄËéĞ¼¾­¹ı¼±ËÙÄı¹ÌËùĞÎ³ÉµÄÒ»°ÑÄ§ÕÈ¡£Õâ°ÑÄ§ÕÈÍşÁ¦¼«´ó
-£¬ÌÈÈôÊ§¿ØËùÔì³ÉµÄÉËº¦ÊÇÎŞ¿É¼ÆÁ¿µÄ¡£
+é€™æ˜¯ä¸€æŠŠç”±ç«å±±å™´å‡ºä¾†çš„ç¢å±‘ç¶“éæ€¥é€Ÿå‡å›ºæ‰€å½¢æˆçš„ä¸€æŠŠé­”æ–ã€‚é€™æŠŠé­”æ–å¨åŠ›æ¥µå¤§
+ï¼Œå€˜è‹¥å¤±æ§æ‰€é€ æˆçš„å‚·å®³æ˜¯ç„¡å¯è¨ˆé‡çš„ã€‚
 C_LONG           
            );
-    set("unit","°Ñ");
+    set("unit","æŠŠ");
     setup_weapon("wand",30,10,20);
     set("charge_left",10);
     set("damaged",0);
@@ -51,11 +51,11 @@ int wand_damage(object victim,int damage)
     if( (query("charge_left")<1 ) && ( !query("damaged") ) ) {
        set("damaged",1);
        tell_object(holder,
-           sprintf("\n°¦Ñ½,ÄãÊÖÖĞµÄ%s±»µĞÈËÇÃ»µÁË!!!\n\n",my_name));
+           sprintf("\nå”‰å‘€,ä½ æ‰‹ä¸­çš„%sè¢«æ•µäººæ•²å£äº†!!!\n\n",my_name));
        tell_room(environment(holder),
-           sprintf("%sÊÖÖĞµÄ%s±»µĞÈËÇÃ»µÁË¡«¡«\n",ho_name,my_name),holder);
-       add("short"," (ÊÜËğ)") ;
-       add("c_name"," (ÊÜËğ)");
+           sprintf("%sæ‰‹ä¸­çš„%sè¢«æ•µäººæ•²å£äº†ï½ï½\n",ho_name,my_name),holder);
+       add("short"," (å—æ)") ;
+       add("c_name"," (å—æ)");
        setup_weapon("wand",20,8,15);
        return 0;
     }
@@ -70,10 +70,10 @@ int wand_damage(object victim,int damage)
     delay=4; 
     set("wand_cast",1);
     tell_object( holder,set_color(sprintf(
-       "\nÄãÊÖÖĞµÄ%s¿ªÊ¼¾Û¼¯Ò»ÍÅ»ğÑæ£¬ Öğ½¥ĞÎ³ÉÒ»Ö»ÖËÈÈµÄ»ğÄñ £­ ¿­ÈöÖ®Ó¥¡£\n\n",my_name),
+       "\nä½ æ‰‹ä¸­çš„%sé–‹å§‹èšé›†ä¸€åœ˜ç«ç„°ï¼Œ é€æ¼¸å½¢æˆä¸€éš»ç‚™ç†±çš„ç«é³¥ ï¼ å‡±æ’’ä¹‹é·¹ã€‚\n\n",my_name),
          "HIR")); 
     tell_room( environment(holder),set_color(sprintf(
-       "\n%sÊÖÖĞµÄ%s¿ªÊ¼¾Û¼¯Ò»ÍÅ»ğÑæ£¬ Öğ½¥ĞÎ³ÉÒ»Ö»ÖËÈÈµÄ»ğÄñ £­ ¿­ÈöÖ®Ó¥¡£\n\n",ho_name,my_name),
+       "\n%sæ‰‹ä¸­çš„%sé–‹å§‹èšé›†ä¸€åœ˜ç«ç„°ï¼Œ é€æ¼¸å½¢æˆä¸€éš»ç‚™ç†±çš„ç«é³¥ ï¼ å‡±æ’’ä¹‹é·¹ã€‚\n\n",ho_name,my_name),
         "HIR"),holder);
     if ( !holder->query("npc") ) {
        delay=6;
@@ -81,7 +81,7 @@ int wand_damage(object victim,int damage)
        add("charge_left",-1);
        holder->add("spell_points",-5);
        holder->block_attack(6);
-       holder->set_temp("msg_stop_attack","(  ÄãÕıÔÚÊ©·¨ÎŞ·¨¹¥»÷!!  ) \n");
+       holder->set_temp("msg_stop_attack","(  ä½ æ­£åœ¨æ–½æ³•ç„¡æ³•æ”»æ“Š!!  ) \n");
     }
     call_out("recover",delay,holder,victim,dam);                      
     victim->set("last_attacker", holder );
@@ -95,28 +95,28 @@ void recover(object holder,object victim,int dam)
     delete("wand_cast");
     ho_name=holder->query("c_name");
     if ( !victim ) {
-       tell_object(holder,"\nÃ»ÓĞÄ¿±êÎï!!\n\n");
+       tell_object(holder,"\næ²’æœ‰ç›®æ¨™ç‰©!!\n\n");
        return ;
     }
     venv=environment(victim);
     henv=environment(holder);
     if ( (venv != henv)||!victim ) {
-       tell_object(holder,set_color("Äã½«ÊÖÉÏ»ğÇòÒ»¶ª, Õ¨³öÒ»¸ö´ó¶´¡£\n\n",
+       tell_object(holder,set_color("ä½ å°‡æ‰‹ä¸Šç«çƒä¸€ä¸Ÿ, ç‚¸å‡ºä¸€å€‹å¤§æ´ã€‚\n\n",
            "HIR"));	
        tell_room(henv,set_color(sprintf(
-         "%s½«ÊÖÉÏ»ğÇòÒ»¶ª, Õ¨³öÒ»¸ö´ó¶´¡£\n\n",ho_name),
+         "%så°‡æ‰‹ä¸Šç«çƒä¸€ä¸Ÿ, ç‚¸å‡ºä¸€å€‹å¤§æ´ã€‚\n\n",ho_name),
            "HIR"),holder);
        return;
     } 
     victim->receive_special_damage("fire",dam);    
     tell_object(holder,set_color(
-       "\nÄãÊÖÖ¸ÏòÇ°Ò»Ö¸, Ñ×Äñ¡¸¿­ÈøÖ®Ó¥¡¹³åÏò´ËµØÖĞĞÄ, ¡¸ºäÂ¡¡¹µÄÒ»Éù!\n\n\n",
+       "\nä½ æ‰‹æŒ‡å‘å‰ä¸€æŒ‡, ç‚é³¥ã€Œå‡±è–©ä¹‹é·¹ã€è¡å‘æ­¤åœ°ä¸­å¿ƒ, ã€Œè½Ÿéš†ã€çš„ä¸€è²!\n\n\n",
            "HIR"));
     tell_room(venv,set_color(sprintf(
-       "\n%sÊÖÖ¸ÏòÇ°Ò»Ö¸, Ñ×Äñ¡¸¿­ÈøÖ®Ó¥¡¹³åÏò´ËµØÖĞĞÄ, ¡¸ºäÂ¡¡¹µÄÒ»Éù!\n\n\n",ho_name),
+       "\n%sæ‰‹æŒ‡å‘å‰ä¸€æŒ‡, ç‚é³¥ã€Œå‡±è–©ä¹‹é·¹ã€è¡å‘æ­¤åœ°ä¸­å¿ƒ, ã€Œè½Ÿéš†ã€çš„ä¸€è²!\n\n\n",ho_name),
            "HIR"),holder);
     tell_room(venv,sprintf(
-        "( ÄãÒÑ¾­%sÁË¡£)\n",set_color("ÑÙÑÙÒ»Ï¢","HIR") ),holder);
+        "( ä½ å·²ç¶“%säº†ã€‚)\n",set_color("å¥„å¥„ä¸€æ¯","HIR") ),holder);
     victim->kill_ob(holder);
     victim->set("last_attacker", holder );
     return ;

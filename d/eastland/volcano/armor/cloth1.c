@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("prayer's robe", "Æíµ»ÕßÖ®ÅÛ");
+        set_name("prayer's robe", "ç¥ˆç¦±è€…ä¹‹è¢");
         add( "id", ({ "robe" }) );
-        set_short( "Æíµ»ÕßÖ®ÅÛ");
+        set_short( "ç¥ˆç¦±è€…ä¹‹è¢");
         set_long(
-                "Õâ¼ş³¤ÅÛÊÇÒ»°ãÆíµ»ÕßËù´©ÖøµÄ¡£\n"
+                "é€™ä»¶é•·è¢æ˜¯ä¸€èˆ¬ç¥ˆç¦±è€…æ‰€ç©¿è‘—çš„ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "cloth");
         set( "armor_class", 11 );

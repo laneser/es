@@ -6,9 +6,9 @@
 void create(object ob)
 {
 	if ( !ob ) return ;
-	ob->set_short("ʯ��С��");
+	ob->set_short("石階小道");
 	ob->set_long( @LONG_DESCRIPTION
-������һ������ʯ�����̳ɵ�ʯ��С���ϣ�ʯ���ϲ�����̦��
+你走在一條由青石板所鋪成的石階小徑上，石階上佈滿青苔。
 LONG_DESCRIPTION
 	);
 

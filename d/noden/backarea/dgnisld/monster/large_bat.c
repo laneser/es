@@ -6,13 +6,13 @@ void create ()
 {
 	::create();
 	set_level(6);
-	set_name( "Bats King", "´óòùòğ" );
+	set_name( "Bats King", "å¤§è™è " );
 	add ("id", ({ "bat", "bats", "bats_king", "king", "bats king" }) );
-	set_short( "a large bat", "´óòùòğ" );
+	set_short( "a large bat", "å¤§è™è " );
 	set_long(
            "A large bat, just like the king of bats. It has acuminate teeth,\n"
         "and larger body then normal bat.\n",
-           "Ò»Ö»´óòùòğ£¬¾ÍÏñÒ»Ö»òùòğÍõ¡£ËüÓĞ¾Ş´óµÄÉíÌåºÍ¼âÈñµÄÑÀ³İ¡£\n"
+           "ä¸€éš»å¤§è™è ï¼Œå°±åƒä¸€éš»è™è ç‹ã€‚å®ƒæœ‰å·¨å¤§çš„èº«é«”å’Œå°–éŠ³çš„ç‰™é½’ã€‚\n"
 	);
 	
 	set_perm_stat( "dex", 8 );
@@ -29,7 +29,7 @@ void create ()
     set ("natural_max_damage1", 15);
     set ("weight", 100);
     set ("exp_reward",300);
-    set ("unit", "Ö»");
-    set_c_verbs( ({ "%s×¥%s", "%sÒ§%s" }) );
-    set_c_limbs( ({ "Í·", "³á°ò", "ÉíÌå" }) );
+    set ("unit", "åª");
+    set_c_verbs( ({ "%sæŠ“%s", "%så’¬%s" }) );
+    set_c_limbs( ({ "é ­", "ç¿…è†€", "èº«é«”" }) );
 }

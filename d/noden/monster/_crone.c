@@ -4,11 +4,11 @@ void create(object ob)
 {
 	if ( !ob ) return ;
 	ob->set_level(8);
-	ob->set_name( "gnome crone", "µØ¾«ÀÏÌ«ÆÅ" );
+	ob->set_name( "gnome crone", "åœ°ç²¾è€å¤ªå©†" );
 	ob->add( "id", ({ "gnome", "crone" }) );
-   ob->set_short( "µØ¾«ÀÏÌ«ÆÅ" );
+   ob->set_short( "åœ°ç²¾è€å¤ªå©†" );
 	ob->set_long(
-		"Äã¿´µ½Ò»¸öÓÖÇ¬ÓÖ±ñµÄµØ¾«ÀÏÌ«ÆÅ£¬ÈÃÄãÏëÆð¼ÒÏçÃÅ¿ÚÉ¹µÄëçÈâ¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å€‹åˆä¹¾åˆç™Ÿçš„åœ°ç²¾è€å¤ªå©†ï¼Œè®“ä½ æƒ³èµ·å®¶é„‰é–€å£æ›¬çš„é†ƒè‚‰ã€‚\n"
 	);
 	ob->set( "alignment", 850 );
 	ob->set( "race", "gnome" );

@@ -3,15 +3,15 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Sapphire Necklace","À¶±¦Ê¯ÏîÁ´" );
+	set_name( "Sapphire Necklace","è—å¯¶çŸ³é …éŠ" );
 	add( "id", ({ "necklace" }) );
-	set_short( "À¶±¦Ê¯ÏîÁ´" );
+	set_short( "è—å¯¶çŸ³é …éŠ" );
 	set_long(@LONG
-	Ê¥ÆïÊ¿×¨ÓÃµÄÏîÁ´¡£»¹ÓĞÒ»¸öÀ¶±¦Ê¯×¹×Ó£¬¸üÏÔ³ö
-	ËüµÄ¸ß¹ó¡£
+	è–é¨å£«å°ˆç”¨çš„é …éŠã€‚é‚„æœ‰ä¸€å€‹è—å¯¶çŸ³å¢œå­ï¼Œæ›´é¡¯å‡º
+	å®ƒçš„é«˜è²´ã€‚
 LONG
            );
-	set( "unit","´®" );
+	set( "unit","ä¸²" );
 	set( "weight",5 );
 	set( "type","misc" );
 	set( "material","element" );

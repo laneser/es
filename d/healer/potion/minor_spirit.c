@@ -6,17 +6,17 @@ inherit MEDICINE;
 void create()
 {
 	medicine::create();
-	set_name("minor spirit pill", "ÌáÉñµ¤" );
+	set_name("minor spirit pill", "æç¥žä¸¹" );
 	add( "id", ({"spirit", "pill"}) );
-	set_short("a minor spirit pill", "ÌáÉñµ¤");
+	set_short("a minor spirit pill", "æç¥žä¸¹");
 	set_long(
 		"You see a small white pill with cool smell.\n",
-		"ÕâÊÇÒ»Á£É¢·¢ÖøÇåÁ¹Î¶µÀµÄ°×É«µ¤Ò©¡£\n"
+		"é€™æ˜¯ä¸€ç²’æ•£ç™¼è‘—æ¸…æ¶¼å‘³é“çš„ç™½è‰²ä¸¹è—¥ã€‚\n"
 	);
 	set( "medication", 20 );
 	set( "effect_critical",20);
 	set( "can_eat", 1 );
-	set( "unit", "Á£" );
+	set( "unit", "ç²’" );
 	set( "weight", 15 );
 	set( "value", ({ 250, "silver" }) );
 }
@@ -29,9 +29,9 @@ void eat(object player)
 	if( (sp=player->query("spell_points")) >= max ) return;
           if(this_player()->query("class")=="mage")
     {
-	tell_object( player, "Äã¾õµÃÄãµÄ·¨Á¦»Ö¸´ÁË£¡\n" );
+	tell_object( player, "ä½ è¦ºå¾—ä½ çš„æ³•åŠ›æ¢å¾©äº†ï¼\n" );
     }
-         else { tell_object(player, "Äã¾õµÃÄãµÄ¾«ÉñÁ¦»Ö¸´ÁË £¡\n" ); }
+         else { tell_object(player, "ä½ è¦ºå¾—ä½ çš„ç²¾ç¥žåŠ›æ¢å¾©äº† ï¼\n" ); }
 	if( sp + 50 > max ) player->set("spell_points", max);
 	else player->set("spell_points", sp+50 );
 }

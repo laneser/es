@@ -22,7 +22,7 @@ int handle_form()
 {
 	if((LEADER(this_player())))
 		return notify_fail( 
-			"ÄãÒÑ¾­ÊÇÄ³¸ö¶ÓÎéµÄ³ÉÔ±ÁË¡£\n");
+			"ä½ å·²ç¶“æ˜¯æŸå€‹éšŠä¼çš„æˆå“¡äº†ã€‚\n");
 	PARTY_D->form_party(this_player());
 	return 1;
 }
@@ -33,14 +33,14 @@ int handle_invite(string str)
 
 	if(!(LEADER(this_player())))
 		return notify_fail( 
-			"Äã²¢Ã»ÓĞ×éÖ¯ÈÎºÎÃ°ÏÕ¶ÓÎé¡£\n");
+			"ä½ ä¸¦æ²’æœ‰çµ„ç¹”ä»»ä½•å†’éšªéšŠä¼ã€‚\n");
 	if( (LEADER(this_player())) != (NAME(this_player())) )
 		return notify_fail(
-			"Äã²¢²»ÊÇÕâ¸öÃ°ÏÕ¶ÓÎéµÄÁìĞä¡£\n");
+			"ä½ ä¸¦ä¸æ˜¯é€™å€‹å†’éšªéšŠä¼çš„é ˜è¢–ã€‚\n");
 	ob = present(lower_case(str), environment(this_player()));
 	if(!ob)
 		return notify_fail( 
-			"Õâ¸öÈË²¢²»ÔÚÕâÀï¡£\n");
+			"é€™å€‹äººä¸¦ä¸åœ¨é€™è£¡ã€‚\n");
 	PARTY_D->invite_member(this_player(), ob);
 	return 1;
 }
@@ -51,18 +51,18 @@ int handle_join(string str)
 
 	if((LEADER(this_player())))
 		return notify_fail(
-			"ÄãÒÑ¾­²Î¼ÓÁËÒ»¸öÃ°ÏÕ¶ÓÎé¡£\n");
+			"ä½ å·²ç¶“åƒåŠ äº†ä¸€å€‹å†’éšªéšŠä¼ã€‚\n");
 	ob = present(lower_case(str), environment(this_player()));
 	if(!ob)
 		return notify_fail( 
-			"ÕâÀïÃ»ÓĞÕâ¸öÈË¡£\n");
+			"é€™è£¡æ²’æœ‰é€™å€‹äººã€‚\n");
 
 	if(!(LEADER(ob)))
 		return notify_fail( 
-			C_CAPNAME(ob) + "²¢²»Êôì¶ÈÎºÎÃ°ÏÕ¶ÓÎé¡£\n");
+			C_CAPNAME(ob) + "ä¸¦ä¸å±¬æ–¼ä»»ä½•å†’éšªéšŠä¼ã€‚\n");
 	if((LEADER(ob)) != (NAME(ob)))
 		return notify_fail(
-			C_CAPNAME(ob)+"²¢²»ÊÇ"+to_chinese(POSS(ob))+"Ã°ÏÕ¶ÓÎéµÄÁìĞä¡£\n");
+			C_CAPNAME(ob)+"ä¸¦ä¸æ˜¯"+to_chinese(POSS(ob))+"å†’éšªéšŠä¼çš„é ˜è¢–ã€‚\n");
 	PARTY_D->add_member(ob, this_player());
 	return 1;
 }
@@ -72,16 +72,16 @@ int handle_leave()
 	object ob;
 
 	if(!(LEADER(this_player()))) {
-		notify_fail("Äã²¢²»Êôì¶ÈÎºÎÒ»¸ö¶ÓÎé.\n");
+		notify_fail("ä½ ä¸¦ä¸å±¬æ–¼ä»»ä½•ä¸€å€‹éšŠä¼.\n");
 		return 0;
 	}
 	if((LEADER(this_player())) == (NAME(this_player()))) {
-		notify_fail("Î¹ ! ÄãÊÇÁìĞäÒ® !! ÓĞÖ¾ÆøÒ»µãºÃÂğ£¿\n");
+		notify_fail("å–‚ ! ä½ æ˜¯é ˜è¢–è€¶ !! æœ‰å¿—æ°£ä¸€é»å¥½å—ï¼Ÿ\n");
 		return 0;
 	}
 	ob = find_living(lower_case(LEADER(this_player())));
 	if(!ob) {
-		notify_fail("ÄãµÄÁìĞä²»¼ûÁË£¬Çë¸úÎ×Ê¦±¨¸æ.\n");
+		notify_fail("ä½ çš„é ˜è¢–ä¸è¦‹äº†ï¼Œè«‹è·Ÿå·«å¸«å ±å‘Š.\n");
 		return 0;
 	}
 	PARTY_D->disband_member(ob, this_player(), 0);
@@ -92,20 +92,20 @@ int handle_remove(string str) {
 	object ob;
 
 	if(!(LEADER(this_player()))) {
-		notify_fail("Äã²»Êôì¶ÈÎºÎ¶ÓÎé.\n");
+		notify_fail("ä½ ä¸å±¬æ–¼ä»»ä½•éšŠä¼.\n");
 		return 0;
 	}
 	if((LEADER(this_player())) != (NAME(this_player()))) {
-		notify_fail("ÄãÓÖ²»ÊÇÁìĞä£¬²»ÒªÂÒÀ´Âï !!\n");
+		notify_fail("ä½ åˆä¸æ˜¯é ˜è¢–ï¼Œä¸è¦äº‚ä¾†å˜› !!\n");
 		return 0;
 	}
 	ob = find_living(lower_case(str));
 	if(!ob) {
-		notify_fail("àÅ ¡« ÓĞÕâ¸öÈËÂğ£¿\n");
+		notify_fail("å—¯ ï½ æœ‰é€™å€‹äººå—ï¼Ÿ\n");
 		return 0;
 	}
 	if((LEADER(this_player())) != (LEADER(ob))) {
-		notify_fail(CAPNAME(ob)+"²»ÊÇÄãµÄ¶ÓÓÑ.\n");
+		notify_fail(CAPNAME(ob)+"ä¸æ˜¯ä½ çš„éšŠå‹.\n");
 		return 0;
 	}
 	PARTY_D->disband_member(this_player(), ob, 1);
@@ -114,11 +114,11 @@ int handle_remove(string str) {
 
 int handle_disband() {
 	if(!(LEADER(this_player()))) {
-		notify_fail("Äã²»Êôì¶ÈÎºÎÃ°ÏÕ¶ÓÎé.\n");
+		notify_fail("ä½ ä¸å±¬æ–¼ä»»ä½•å†’éšªéšŠä¼.\n");
 		return 0;
 	}
 	if((LEADER(this_player())) != (NAME(this_player()))) {
-		notify_fail("Äã²»ÊÇÁìĞä£¬²»ÒªÂÒÀ´ºÃÂğ£¿\n");
+		notify_fail("ä½ ä¸æ˜¯é ˜è¢–ï¼Œä¸è¦äº‚ä¾†å¥½å—ï¼Ÿ\n");
 		return 0;
 	}
 	PARTY_D->disband_party(this_player());
@@ -129,13 +129,13 @@ int handle_members() {
 	object ob;
 
 	if(!(LEADER(this_player()))) {
-		notify_fail("Äã²»Êôì¶ÈÎºÎ¶ÓÎé.\n");
+		notify_fail("ä½ ä¸å±¬æ–¼ä»»ä½•éšŠä¼.\n");
 		return 0;
 	}
 	if((LEADER(this_player())) == (NAME(this_player()))) ob = this_player();
 	else ob = find_living(lower_case(LEADER(this_player())));
 	if(!ob) {	
-		notify_fail("ÄãµÄÁìĞä²»¼ûÁË£¬Çë¸úÎ×Ê¦±¨¸æ.\n");
+		notify_fail("ä½ çš„é ˜è¢–ä¸è¦‹äº†ï¼Œè«‹è·Ÿå·«å¸«å ±å‘Š.\n");
 		return 0;
 	}
 	PARTY_D->party_list(ob);
@@ -146,20 +146,20 @@ int handle_leader(string str) {
 	object ob;
 
 	if(!(LEADER(this_player()))) {
-		notify_fail("Äã²»Êôì¶ÈÎºÎ¶ÓÎé.\n");
+		notify_fail("ä½ ä¸å±¬æ–¼ä»»ä½•éšŠä¼.\n");
 		return 0;
 	}
 	if((LEADER(this_player())) != (NAME(this_player()))) {
-		notify_fail("Ôõ÷á£¿ÄãÏë´ÛÎ»Âğ£¿\n");
+		notify_fail("æ€éº¼ï¼Ÿä½ æƒ³ç¯¡ä½å—ï¼Ÿ\n");
 		return 0;
 	}
 	ob = find_living(lower_case(str));
 	if(!ob) {
-		notify_fail("àÅ ¡« ÓĞÕâ¸öÈËÂğ£¿\n");
+		notify_fail("å—¯ ï½ æœ‰é€™å€‹äººå—ï¼Ÿ\n");
 		return 0;
 	}
 	if((LEADER(this_player())) != (LEADER(ob))) {
-		notify_fail(CAPNAME(ob)+"²»ÊÇÄãµÄ¶ÓÓÑ.\n");
+		notify_fail(CAPNAME(ob)+"ä¸æ˜¯ä½ çš„éšŠå‹.\n");
 		return 0;
 	}
 	PARTY_D->change_leader(this_player(), ob);
@@ -172,8 +172,8 @@ int cmd_party(string str)
 
 	if(!str) {
 		if((LEADER(this_player())))
-			write("ÄãÊÇ"+
-				capitalize(LEADER(this_player()))+"µÄÃ°ÏÕ¶ÓÎéµÄ¶ÓÔ±.\n");
+			write("ä½ æ˜¯"+
+				capitalize(LEADER(this_player()))+"çš„å†’éšªéšŠä¼çš„éšŠå“¡.\n");
 		else write("Usage: party <action> [<player>]\n");
 		return 1;
 	}
@@ -200,20 +200,20 @@ int cmd_party(string str)
 int help()
 {
 	write(@HELP
-ÓÃ·¨:
-	party form             ×é½¨Ò»¸ö¶ÓÎé£¬·¢³öÖ¸ÁîÕßÎª¶ÓÎéÊ×Áì¡£
-	party join <player>    ¼ÓÈëÒ»¸öÒÑ½¨Á¢µÄ¶ÓÎé£¬Ç°ÌáÊÇÊÕµ½ÑûÇë¡£
-	party leave            ÍÑÀë¶ÓÎé¡£
-	party members          ²é¿´×Ô¼º¶ÓÎéµÄ³ÉÔ±Ãûµ¥¡£
-	party invite <player>  ÑûÇëÄ³ÈË¼ÓÈëÄãµÄ¶ÓÎé¡£
-	party remove <player>  ÌßÄ³ÈË³öÄãµÄ¶ÓÎé¡£
-	party disband          ½âÉ¢¶ÓÎé£¬¶ÓÎéÊ×Áì×¨ÓÃ¡£
+ç”¨æ³•:
+	party form             çµ„å»ºä¸€å€‹éšŠä¼ï¼Œç™¼å‡ºæŒ‡ä»¤è€…ç‚ºéšŠä¼é¦–é ˜ã€‚
+	party join <player>    åŠ å…¥ä¸€å€‹å·²å»ºç«‹çš„éšŠä¼ï¼Œå‰ææ˜¯æ”¶åˆ°é‚€è«‹ã€‚
+	party leave            è„«é›¢éšŠä¼ã€‚
+	party members          æŸ¥çœ‹è‡ªå·±éšŠä¼çš„æˆå“¡åå–®ã€‚
+	party invite <player>  é‚€è«‹æŸäººåŠ å…¥ä½ çš„éšŠä¼ã€‚
+	party remove <player>  è¸¢æŸäººå‡ºä½ çš„éšŠä¼ã€‚
+	party disband          è§£æ•£éšŠä¼ï¼ŒéšŠä¼é¦–é ˜å°ˆç”¨ã€‚
 
-Õâ¸öÖ¸ÁîÔÊĞíÄãºÍÄãµÄ»ï°é×éÖ¯Ò»¸ö¶ÓÎé¹²Í¬ÓÎÏ·¡£
-Äã¿ÉÒÔÏÈ×é½¨Ò»¸ö¶ÓÎé£¬È»ºó¶ÔÄãµÄ»ï°é·¢³öÑûÇë£¬ÄãµÄ»ï°éÊÕµ½ÑûÇëºó
-ÓĞ60ÃëÊ±¼ä¿¼ÂÇÊÇ·ñ¼ÙÈçÄãµÄ¶ÓÎé.
-Èç¹ûÄãËÀÍö»òÍË³öÓÎÏ·£¬Äã¾Í»á×Ô¶¯ÍË³ö¶ÓÎé£¬Èç¹ûÄãÊÇ¶ÓÎéµÄÊ×Áì£¬¶ÓÎé
-½«»á±»½âÉ¢.
+é€™å€‹æŒ‡ä»¤å…è¨±ä½ å’Œä½ çš„å¤¥ä¼´çµ„ç¹”ä¸€å€‹éšŠä¼å…±åŒéŠæˆ²ã€‚
+ä½ å¯ä»¥å…ˆçµ„å»ºä¸€å€‹éšŠä¼ï¼Œç„¶å¾Œå°ä½ çš„å¤¥ä¼´ç™¼å‡ºé‚€è«‹ï¼Œä½ çš„å¤¥ä¼´æ”¶åˆ°é‚€è«‹å¾Œ
+æœ‰60ç§’æ™‚é–“è€ƒæ…®æ˜¯å¦å‡å¦‚ä½ çš„éšŠä¼.
+å¦‚æœä½ æ­»äº¡æˆ–é€€å‡ºéŠæˆ²ï¼Œä½ å°±æœƒè‡ªå‹•é€€å‡ºéšŠä¼ï¼Œå¦‚æœä½ æ˜¯éšŠä¼çš„é¦–é ˜ï¼ŒéšŠä¼
+å°‡æœƒè¢«è§£æ•£.
 HELP
 );
 	return 1;

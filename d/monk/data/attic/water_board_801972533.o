@@ -1,13 +1,13 @@
 #d/monk/guild/water_board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"���԰�","long.text":"��һ����Ϊ�� ���λ���Ӱ ��������� Ӧ�����ǹ� ��
-                                                   ��ղ����ܾ� 
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"『一切有為法 如夢幻泡影 如電亦如霧 應做如是觀 』
+                                                   金剛波羅密經 
  
-����һ�����԰壬��ʮ����·�������ˮ֮�á�ָ���÷���ο� help board��
-","c_name":"���԰�","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"��ɮ�����ˮ��","c_long.text":"��һ����Ϊ�� ���λ���Ӱ ��������� Ӧ�����ǹ� ��
-                                                   ��ղ����ܾ� 
+這是一個留言板，供十方大德發□，灌水之用。指令用法請參看 help board。
+","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"武僧公會灌水板","c_long.text":"『一切有為法 如夢幻泡影 如電亦如霧 應做如是觀 』
+                                                   金剛波羅密經 
  
-����һ�����԰壬��ʮ����·�������ˮ֮�á�ָ���÷���ο� help board��
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"��ɮ�����ˮ��",])
+這是一個留言板，供十方大德發□，灌水之用。指令用法請參看 help board。
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"武僧公會灌水板",])
 messages ({(["id":70,"title":"Re: poor bolo-fist","body":"On Thu Feb  2, Lyre wrote:
 >  my bolo-fist lv 24 but today i go to kill monk in waterfall ....
 >  at best case use fp 65 can kill it!!
@@ -21,87 +21,87 @@ messages ({(["id":70,"title":"Re: poor bolo-fist","body":"On Thu Feb  2, Lyre wr
 > 
 > 
 ===============================================
-ɫ���ǿ� ���԰����� ������� ��ؽԿ�
+色即是空 所以般若掌 萬象般若 天地皆空
 random la...
-","time":792160194,"poster":"Angel",]),(["id":71,"body":"�� .... Clam ... ��ļ�¼����ƽ�� ..
-һ�غϽ���޺� ... ��Ȼ�����ù�� ..
-���� ... ˬ ... ����������Ѩ��444[D[D[D[3~[3~[3~��Ӱ������ع�\���� .. ccc
-[����] 
+","time":792160194,"poster":"Angel",]),(["id":71,"body":"哈 .... Clam ... 你的記錄被我平了 ..
+一回合解決羅漢 ... 雖然內力用光光 ..
+不過 ... 爽 ... 被點中三次穴道444[D[D[D[3~[3~[3~外加安若的特功三次 .. ccc
+[般若] 
 ","title":"< no title >","time":793380302,"poster":"Skywalker",]),(["id":72,"title":"< no title >","body":"
-  ��!!Clam ��˭?����......
+  噫!!Clam 是誰?忘了......
  
        *grin*
-","time":793751244,"poster":"Pro",]),(["id":73,"body":"�Ǻ�....
+","time":793751244,"poster":"Pro",]),(["id":73,"body":"呵呵....
    bolo-fist,power-finger,dragon-claw lv20 keep-flower lv21...
     train body-def loh:P
 
    ps :all skills and attr full all:P
-   cowboy(�ش�һ��)...%_%
-","title":"< no title >","time":793958921,"poster":"Cowboy",]),(["id":74,"title":"��ù��һ��","body":"������.....................
-������ȥ���ؽ����ɴ��ȵĹ�ϵ��������ζ���û����.....:(
-����������.....
-��û�й�ϵ��֪����������ְ��������quit
-����:~~~~~~~~
+   cowboy(特此一書)...%_%
+","title":"< no title >","time":793958921,"poster":"Cowboy",]),(["id":74,"title":"倒黴的一天","body":"唉唉唉.....................
+今天跑去打守戒憎由大腿的關係打了四五次都還沒打死.....:(
+後來放棄啦.....
+還沒有關係不知到怎麼回是又按錯鍵結果quit
+嗚嗚:~~~~~~~~
 pk pk pk pk pk pk pk pk lag la.....
                                           poor today
-","time":794744437,"poster":"Beams",]),(["id":75,"body":"  ʦ��ʦ����
+","time":794744437,"poster":"Beams",]),(["id":75,"body":"  師兄師弟們
 
 
-   ��  ��  ��!!!
+   大  家  好!!!
 
-��Լ�����³���Ҫ�Ӿ�������!!!!
+大約在四月出就要從軍報國了!!!!
 
-ϣ���л��������Ҽ���!!!!!^_^_^_^_^_^
+希忘有機會在與大家見面!!!!!^_^_^_^_^_^
 
 
     bye dear Cowboy...Clouder...
   bye Mj  Clam...
-�졡�顡�졡��������
+ｌ　ｉ　ｌ　ｙ！！！
 bye all../......
 
 ","title":"< no title >","time":794843307,"poster":"Blue",]),(["id":76,"title":"< no title >","body":"
-   ������.. ������.. û��ս���ֳԵĺ�..:)
+   當兵好.. 當兵好.. 沒有戰爭又吃的好..:)
 
-","time":794862010,"poster":"Mj",]),(["id":77,"title":"< no title >","body":"������.. ������.. û��ս���ֳԵĺ�..:)
+","time":794862010,"poster":"Mj",]),(["id":77,"title":"< no title >","body":"當兵好.. 當兵好.. 沒有戰爭又吃的好..:)
 
 wa ley...funny mj
 ","time":794884493,"poster":"Zax",]),(["id":78,"title":"< no title >","body":"
-	��...������һ�ž����������....
-","time":794885503,"poster":"Di",]),(["id":79,"body":"ϣ���͵ȼ���������ù����װ��ʱ����֧��һ�� ..
-Ҳ��\ĳЩ��High lv�� .. 
-Ҫ��Ȼ .... �ٺ� ..
+	嗯...不是有一九九五潤八月嘛....
+","time":794885503,"poster":"Di",]),(["id":79,"body":"希望低等級的玩家在拿公會的裝備時都能支會一聲 ..
+也許某些是High lv的 .. 
+要不然 .... 嘿嘿 ..
 ","title":"< no title >","time":794961151,"poster":"Skywalker",]),(["id":80,"body":"On Sun Mar 12, Skywalker wrote:
-> ϣ���͵ȼ���������ù����װ��ʱ����֧��һ�� ..
-> Ҳ��\ĳЩ��High lv�� .. 
-> Ҫ��Ȼ .... �ٺ� ..
+> 希望低等級的玩家在拿公會的裝備時都能支會一聲 ..
+> 也許某些是High lv的 .. 
+> 要不然 .... 嘿嘿 ..
 
 	agree skywalker...
 	especially if u get eqs from guild..plz drop eqs in guild before u want quit..
 	but some monks seem sell them..:(
 	if the situstion not improve...may wont monk drop eqs loh..
-","title":"Re: < no title >","time":794990166,"poster":"Di",]),(["id":82,"body":"hoho....����͵͵�����..�����ι�ˮ..
-���Ǻ��кñ����!!�����ս��......
-�ѹ����ܽ��..����ͭ����..��һ�����鶨���Ĳ���
-��!!�������!!�ҹ�һͨ!!ԭ�����!!!...
+","title":"Re: < no title >","time":794990166,"poster":"Di",]),(["id":82,"body":"hoho....我是偷偷來玩的..第依次灌水..
+你們和尚好暴力喔!!天天打戰爭......
+難過不能結婚..建議銅人陣..設一個考驗定力的測試
+哇!!好無聊喔!!亂灌一通!!原諒我喔!!!...
 ","title":"< no title >","time":796231450,"poster":"Lith",]),(["id":83,"title":"Re: Re: < no title >","body":"On Sun Mar 12, Di wrote:
 > On Sun Mar 12, Skywalker wrote:
-> > ϣ���͵ȼ���������ù����װ��ʱ����֧��һ�� ..
-> > Ҳ��\ĳЩ��High lv�� .. 
-> > Ҫ��Ȼ .... �ٺ� ..
+> > 希望低等級的玩家在拿公會的裝備時都能支會一聲 ..
+> > 也許某些是High lv的 .. 
+> > 要不然 .... 嘿嘿 ..
 > 
 > 	agree skywalker...
 > 	especially if u get eqs from guild..plz drop eqs in guild before u want quit..
 > 	but some monks seem sell them..:(
 > 	if the situstion not improve...may wont monk drop eqs loh..
 
-��Ҫ��....��Ū�˸������ҳ�����...
-�������������....
-����....��Ҷ�๵ͨ....ҪǮ˵һ����...
-������׬����?
-����һ��װ��Ҫ��������������ȥ��˨�!!
-�����ص�װ����ʲ���ϵ? ��û�õ������
-��������....Ҫ��Ҫ���Զ����û�õ�װ��?
-�������Ҫ�㼼����˵����˵�ĵ�����һ�����õ�˵...
+不要啦....我弄了個儲藏室出來了...
+頂多我設點限制....
+不過....大家多多溝通....要錢說一聲嘛...
+賣掉能賺多少?
+但是一套裝備要花多少人力物力去籌ㄋㄟ!!
+看滿地的裝備有什麼關係? 把沒用的清掉嘛
+啊，對了....要不要我自動清掉沒用的裝備?
+這好像需要點技術的說，我說的到，不一定做得到說...
 ","time":796332420,"poster":"Mate",]),(["id":84,"body":" dear god :
      i am aph... my inner-force skills = 9
   but when i type \"score\" , i cant see inner-force number ,,, 
@@ -110,39 +110,39 @@ wa ley...funny mj
 ","title":"< no title >","time":796919987,"poster":"Aph",]),(["id":85,"body":"that's type [skills] lah ..
 So cute monk .. :)
 Add oil .. :)
-","title":"< no title >","time":796922807,"poster":"Skywalker",]),(["id":86,"title":"< no title >","body":"	��Ѫ����, ������try ������ 18
-	��һ��..���˸��ҽ�,�� 18 ����lily la.
-	���,������..���汻ͭ��k �����..
-	�ֱ�������һ����̧����..:(
-	�ڶ��ξͺܹԵ�ȥ������� lily ˵..
-	���..��..������ lag..
-	lily�����Ļ��ᶼû�о� @#$%^&*....
-	������˵��������10 �βųɹ�\˵..��try һ�����..
-	�����ӵ�..ս��\������...:~~~
+","title":"< no title >","time":796922807,"poster":"Skywalker",]),(["id":86,"title":"< no title >","body":"	心血來潮, 今天又try 了兩次 18
+	第一次..有人跟我講,闖 18 不用lily la.
+	結果,哇哩勒..後面被銅人k 好玩的..
+	又被人像豬一樣的抬出來..:(
+	第二次就很乖的去買的兩顆 lily 說..
+	結果..唉..又遇到 lag..
+	lily連塞的機會都沒有就 @#$%^&*....
+	本來想說國父革命10 次才成功說..再try 一遍好了..
+	格老子的..戰功不夠了...:~~~
 	
-	��..������..�˼�ҲҪ armband la...:(
-	����? �һ�ި�..
+	嗚..不管啦..人家也要 armband la...:(
+	不給? 我會哭ㄡ..
 
-	Ұ�г���..�������!!!
+	野中出手..不留活口!!!
 
 ~.
-","time":797115961,"poster":"Mj",]),(["id":87,"body":"˭˵����Lily�� ??
-����Mj������ !!
-��Ҳ������N�βŹ��� ..
-��ļ��� ..
-���� . Mj������ !!
-armband������ !!
-","title":"< no title >","time":797135483,"poster":"Skywalker",]),(["id":88,"title":"ע��..","body":"
-     cracker ������...
+","time":797115961,"poster":"Mj",]),(["id":87,"body":"誰說不用Lily的 ??
+還有Mj加油啦 !!
+我也是試了N次才過的 ..
+真的加油 ..
+還有 . Mj還俗啦 !!
+armband不好啦 !!
+","title":"< no title >","time":797135483,"poster":"Skywalker",]),(["id":88,"title":"注意..","body":"
+     cracker 又來了...
      
 WARNING: Login failure Fri Apr  7 14:24:26 1995 by OKIP check from
           IP address <140.129.100.15>.
 
-","time":797263313,"poster":"Mj",]),(["id":89,"body":"�ð��� lag....
-��������������Сʱ��Ŭ��˲�仯Ϊ��Ӱ....
-�������� quest ҪС��...
+","time":797263313,"poster":"Mj",]),(["id":89,"body":"好棒的 lag....
+輕鬆讓我六個多小時的努力瞬間化為泡影....
+大家以後解 quest 要小心...
 ","title":"lag~~","time":797917746,"poster":"Oda",]),(["id":90,"title":"< no title >","body":"
-	��porky..��Ӣ��������..
-	����ҽ�˵����la..
+	死porky..銀英傳不會玩..
+	快幫我借說明書la..
 ","time":801706244,"poster":"Nilson",]),})
 id_ref 101

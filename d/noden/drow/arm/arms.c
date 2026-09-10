@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("snake armbands", "Éß»¤±Û");
+        set_name("snake armbands", "è›‡è­·è‡‚");
    add( "id", ({ "armbands" }) );
-        set_short( "Éß»¤±Û" );
+        set_short( "è›‡è­·è‡‚" );
         set_long(
 @C_LONG
-ÕâÊÇÒ»¸öÓÉÉßÆ¤²ø¾í³ÉµÄ»¤±Û£¬±ßÔµ»¹ÓÃÍ­Æ¬½»Ö¯½ôÃÜµØ½áºÏ¡£
+é€™æ˜¯ä¸€å€‹ç”±è›‡çš®çºæ²æˆçš„è­·è‡‚ï¼Œé‚Šç·£é‚„ç”¨éŠ…ç‰‡äº¤ç¹”ç·Šå¯†åœ°çµåˆã€‚
 C_LONG
         );
-        set( "unit", "¶Ô");
+        set( "unit", "å°");
         set( "type", "arms" );
         set( "material", "leather" );
    set( "armor_class", 3 );

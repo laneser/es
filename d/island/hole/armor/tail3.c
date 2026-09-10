@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Dragon Scute Tail","ÁúÁÛÎ²¼×" );
+	set_name( "Dragon Scute Tail","é¾é±—å°¾ç”²" );
 	add( "id",({ "tail" }) );
-	set_short( "ÁúÁÛÎ²¼×" );
+	set_short( "é¾é±—å°¾ç”²" );
 	set_long(@LONG
-	ÕâÊÇÒ»Ì×ÓÃÁúµÄÁÛÆ¬´òÔìµÄÎ²¼×£¬ÓĞ¸ß¶ÈµÄ·ÀÓùÁ¦¡£
+	é€™æ˜¯ä¸€å¥—ç”¨é¾çš„é±—ç‰‡æ‰“é€ çš„å°¾ç”²ï¼Œæœ‰é«˜åº¦çš„é˜²ç¦¦åŠ›ã€‚
 LONG
 	);
-	set( "unit","Ì×" );
+	set( "unit","å¥—" );
 	set( "type","tail" );
         set( "material","leather" );
 	set( "weight",100 );

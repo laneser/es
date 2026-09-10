@@ -7,9 +7,9 @@ inherit OBJECT;
  
 void create() {
   seteuid(getuid());
-  set_name("recycle bin","×ÊÔ´»ØÊÕÍ°");
+  set_name("recycle bin","è³‡æºå›æ”¶æ¡¶");
   set("id",({"bin","tube"}));
-  set_short("A green tube","ÂÌÉ«Í°×Ó");
+  set_short("A green tube","ç¶ è‰²æ¡¶å­");
   set("prevent_get",1);
   set_long(
 @LONG
@@ -21,9 +21,9 @@ here.
 LONG
 ,
 @CLONG
-Äã¿´µ½Ò»¸öÆá³ÉÂÌÉ«µÄÍ°×Ó. ÉÏÃæĞ´Öø [×ÊÔ´»ØÊÕÍ°], ÎªÁË±£³Ö ES µÄÇå½à
-ÇëËæÊÖ½«¿ÕÆ¿, ¿Õ¹ŞÖ®ÀàµÄ¿É»ØÊÕ×ÊÔ´ËÍµ½ÕâÀï (recycle).
-(¾ÍËãÄã²»ÊÇ»·±£Ğ¡¼â±ø, ¿´ÔÚÇ®µÄ·İÉÏÒ²À´»ØÊÕ°É.)
+ä½ çœ‹åˆ°ä¸€å€‹æ¼†æˆç¶ è‰²çš„æ¡¶å­. ä¸Šé¢å¯«è‘— [è³‡æºå›æ”¶æ¡¶], ç‚ºäº†ä¿æŒ ES çš„æ¸…æ½”
+è«‹éš¨æ‰‹å°‡ç©ºç“¶, ç©ºç½ä¹‹é¡çš„å¯å›æ”¶è³‡æºé€åˆ°é€™è£¡ (recycle).
+(å°±ç®—ä½ ä¸æ˜¯ç’°ä¿å°å°–å…µ, çœ‹åœ¨éŒ¢çš„ä»½ä¸Šä¹Ÿä¾†å›æ”¶å§.)
  
 CLONG
 );
@@ -48,7 +48,7 @@ int recycle_me(string str)
 //            if (objs[i]->query("recycle")) {
                     mon=(int)objs[i]->query("recycle");
                     write(can_read_chinese()?
-                    "Äã½«"+objs[i]->query("c_short")+"¶ª½ø»ØÊÕÍ²ÄÚ. µÃµ½ "+mon+" ¸öÍ­±Ò.\n":
+                    "ä½ å°‡"+objs[i]->query("c_short")+"ä¸Ÿé€²å›æ”¶ç­’å…§. å¾—åˆ° "+mon+" å€‹éŠ…å¹£.\n":
                     "You deposit "+objs[i]->query("short")+" into the bin and"+
                     " got "+mon+" copper coins in return.\n");
                     this_player()->set("wealth/copper",mon);
@@ -57,14 +57,14 @@ int recycle_me(string str)
                     }
                 else {
                 write(can_read_chinese()?
-                "ÕâÑù¶«Î÷²»ÄÜ»ØÊÕ.\n":
+                "é€™æ¨£æ±è¥¿ä¸èƒ½å›æ”¶.\n":
                 "You can\'t recycle this.\n");
                 return 1;
                 }
             }
         }
         write(can_read_chinese()?
-        "ÄãÃ»ÓĞÕâÑù¶«Î÷.\n":
+        "ä½ æ²’æœ‰é€™æ¨£æ±è¥¿.\n":
         "You don\'t have this item.\n");
         return 1;
 }

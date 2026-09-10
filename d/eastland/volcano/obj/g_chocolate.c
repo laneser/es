@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "gold_chocolate", "½ğÉ«ÇÉ¿ËÁ¦" );
+	set_name( "gold_chocolate", "é‡‘è‰²å·§å…‹åŠ›" );
 	add( "id", ({ "chocolate" }) );
-	set_short( "gold_chocolate", "½ğÉ«ÇÉ¿ËÁ¦" );
+	set_short( "gold_chocolate", "é‡‘è‰²å·§å…‹åŠ›" );
 	set_long(
-		"ÕâÊÇÒ»¸ö°üÖøÌğ¾ÆµÄÇÉ¿ËÁ¦£¬Äã¿ÉÒÔ¡õ¡õ¿´(taste)¡£\n"
+		"é€™æ˜¯ä¸€å€‹åŒ…è‘—ç”œé…’çš„å·§å…‹åŠ›ï¼Œä½ å¯ä»¥â–¡â–¡çœ‹(taste)ã€‚\n"
 	);
 	set( "type", "misc" );
 	set( "weight", 10 );
@@ -24,12 +24,12 @@ void init()
 int do_eat(string arg)
 {
    if(!arg || arg!="chocolate")
-   { write("ÄãÒª³ÔÊ²÷á£¿\n");
+   { write("ä½ è¦åƒä»€éº¼ï¼Ÿ\n");
      return 1;
    };
 
-   write("Äã³ÔÁËÒ»¿é°üÖø¾ÆµÄÇÉ¿ËÁ¦£¬ËüÂıÂıµÄ»¯ÔÚ×ìÀï£¬Ìğ¾ÆÒ²¸úÖøÂıÂıµÄÁ÷³ö¡£\n");
-   write("Äã¸Ğµ½Ëµ²»³öµÄÊæ·ş£¬ÕæÏëÔÙ³ÔÒ»¿é¡£\n");
+   write("ä½ åƒäº†ä¸€å¡ŠåŒ…è‘—é…’çš„å·§å…‹åŠ›ï¼Œå®ƒæ…¢æ…¢çš„åŒ–åœ¨å˜´è£¡ï¼Œç”œé…’ä¹Ÿè·Ÿè‘—æ…¢æ…¢çš„æµå‡ºã€‚\n");
+   write("ä½ æ„Ÿåˆ°èªªä¸å‡ºçš„èˆ’æœï¼ŒçœŸæƒ³å†åƒä¸€å¡Šã€‚\n");
    this_player()->receive_healing(5);
    this_object()->remove();
    return 1;

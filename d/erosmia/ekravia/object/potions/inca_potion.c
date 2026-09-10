@@ -5,17 +5,17 @@ inherit POTION;
 void create()
 {
 	potion::create();
-	set_name( "inca potion", "Ó¡¿¨Ò©Ë®" );
+	set_name( "inca potion", "å°å¡è—¥æ°´" );
 	add( "id", ({ "potion", "inca" }) );
-	set_short( "Ó¡¿¨Ò©Ë®" );
+	set_short( "å°å¡è—¥æ°´" );
 	set_long( @LONG
-ÕâÊÇÓÉ°®¿¨À­Î¬ÑÇ¸½½üÌØ²úµÄÒ»ÖÖÀ¥³æ, ÓëÒ»Ğ©ÆäËûµÄÒ©²Ä¾­Ä§·¨µ÷Åä¶ø
-³ÉµÄÒ©Ë®, ¾ßÓĞÉÙĞíµÄÒ½ÁÆÄÜÁ¦¡£
+é€™æ˜¯ç”±æ„›å¡æ‹‰ç¶­äºé™„è¿‘ç‰¹ç”¢çš„ä¸€ç¨®æ˜†èŸ², èˆ‡ä¸€äº›å…¶ä»–çš„è—¥æç¶“é­”æ³•èª¿é…è€Œ
+æˆçš„è—¥æ°´, å…·æœ‰å°‘è¨±çš„é†«ç™‚èƒ½åŠ›ã€‚
 LONG
 	);
 	set_healing( 20 );
 	set( "no_sale", 1 );
-	set( "unit", "Æ¿" );
+	set( "unit", "ç“¶" );
 	set( "weight", 20 );
 	set( "value", ({ 100, "silver" }) );
 	set( "medication", 20 );

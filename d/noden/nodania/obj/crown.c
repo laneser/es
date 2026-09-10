@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name("crown", "Íõ¹Ú");
-	set_short("»Æ½ğÍõ¹Ú");
+	set_name("crown", "ç‹å† ");
+	set_short("é»ƒé‡‘ç‹å† ");
 	set_long(
-    "ÕâÊÇÒ»¶¥´¿½ğ´òÔìµÄÍõ¹Ú£¬ÉÏÃæÏâÖøĞí¶àÕäÖéÂêè§£¬¿´ÆğÀ´Ê®·ÖÃû¹ó¡£\n"
+    "é€™æ˜¯ä¸€é ‚ç´”é‡‘æ‰“é€ çš„ç‹å† ï¼Œä¸Šé¢é‘²è‘—è¨±å¤šçç ç‘ªç‘™ï¼Œçœ‹èµ·ä¾†ååˆ†åè²´ã€‚\n"
 	);
-	set( "unit", "¶¥" );
+	set( "unit", "é ‚" );
 	set( "type", "head" );
 	set( "material", "heavy_metal");
 	set( "armor_class", 3 );

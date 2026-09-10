@@ -8,11 +8,11 @@ inherit DAEMON;
 int eungon(object me, int level)
 {
 	tell_object(me,
-            sprintf( "\n¡ºÇ¿²»¿É¾Ã£¬ÇéÉî²»ÊÙ... °¦¡»ÄãÔËÉñ¹¦\»¤Ìå£¬×¼±¸Ê¹³ö¡¸%s¡¹!!\n"
+            sprintf( "\nã€Žå¼·ä¸å¯ä¹…ï¼Œæƒ…æ·±ä¸å£½... å”‰ã€ä½ é‹ç¥žåŠŸè­·é«”ï¼Œæº–å‚™ä½¿å‡ºã€Œ%sã€!!\n"
             ,to_chinese(GONFU_NAME) ) );
 
 	tell_room( environment(me), 
-	    sprintf("\n%s´óºÈÒ»Éù£¬È«ÉíÁýÕÖÔÚÕæÆøÖ®ÖÐ£¬×¼±¸Ê¹ÓÃ%s¡£\n" 
+	    sprintf("\n%så¤§å–ä¸€è²ï¼Œå…¨èº«ç± ç½©åœ¨çœŸæ°£ä¹‹ä¸­ï¼Œæº–å‚™ä½¿ç”¨%sã€‚\n" 
 	    ,me->query("c_name"),to_chinese(GONFU_NAME))
 	, me);
 
@@ -36,11 +36,11 @@ void release_gonfu(object me)
         if( me->query_temp("gonfu_top") ) 
             me->set_temp("gonfu_top",0);
 	tell_object(me,
-		"\n\n"+"ÄãÎüÁËÒ»¿ÚÆø, Í£Ö¹Ê¹ÓÃ"+to_chinese(GONFU_NAME)+"¡£\n");
+		"\n\n"+"ä½ å¸äº†ä¸€å£æ°£, åœæ­¢ä½¿ç”¨"+to_chinese(GONFU_NAME)+"ã€‚\n");
  
  	tell_room( environment(me),
  		me->query("c_name")+
- 		"ÇáÇáµÄÍÂ³öÒ»¿ÚÆø£¬ÊÕÊ½¶øÁ¢¡£\n" , me);
+ 		"è¼•è¼•çš„åå‡ºä¸€å£æ°£ï¼Œæ”¶å¼è€Œç«‹ã€‚\n" , me);
  
 	me->delete("defense_skill");
 	me->delete_temp("gonfu_busy");

@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wen-su robe", "ÎÄÊâ¡õÒÂ" );
+	set_name( "wen-su robe", "æ–‡æ®Šâ–¡è¡£" );
 	add( "id", ({ "robe" }) );
-	set_short( "ÎÄÊâ¡õÒÂ" );
+	set_short( "æ–‡æ®Šâ–¡è¡£" );
 	set_long(
-		"¡õÒÂÊÇ¼ÀìëÉñ·ğÊ±Ëù´©µÄÒÂ·ş¡£ÎÄÊâ¡õÒÂÊÇ¼À°İÎÄÊâÆĞÈøÊ±´©µÄ³¤ÅÛ¡£\n"
+		"â–¡è¡£æ˜¯ç¥­ç¥€ç¥ä½›æ™‚æ‰€ç©¿çš„è¡£æœã€‚æ–‡æ®Šâ–¡è¡£æ˜¯ç¥­æ‹œæ–‡æ®Šè©è–©æ™‚ç©¿çš„é•·è¢ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "armor_class", 20 );
         set("material","cloth");

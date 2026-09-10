@@ -4,15 +4,15 @@ inherit SARM"OR";
 
 void create()
 {
-        set_name("twelve-god amulet","Ê®¶şÌì¶¼·û¡õ");
+        set_name("twelve-god amulet","åäºŒå¤©éƒ½ç¬¦â–¡");
         add( "id", ({ "amulet" }) );
-        set_short( set_color("Ê®¶şÌì¶¼·û¡õ","HIC"));
+        set_short( set_color("åäºŒå¤©éƒ½ç¬¦â–¡","HIC"));
         set_long(@C_LONG
-Ò»¸ö»®ÖøèóÓïµÄ»¤·û¡£¡õ·ûÉÏÃæµÄ×ÖÁú·É·ïÎè£¬±ÊÁ¦²Ô¾¢£¬ÁîÄã¿´²»¶®Ğ´µÄÊÇÊ²÷á
-¡£
+ä¸€å€‹åŠƒè‘—æ¢µèªçš„è­·ç¬¦ã€‚â–¡ç¬¦ä¸Šé¢çš„å­—é¾é£›é³³èˆï¼Œç­†åŠ›è’¼å‹ï¼Œä»¤ä½ çœ‹ä¸æ‡‚å¯«çš„æ˜¯ä»€éº¼
+ã€‚
 C_LONG
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "misc" );
         set("material","cloth");
         set("the_one",1);

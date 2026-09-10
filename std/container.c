@@ -60,39 +60,39 @@ int put_into(string str)
 	string athis,that, word ;
 
 	if (!str)
-		return notify_fail( "Ö¸Áî¸ñÊ½: put <ÎïÆ·> in <ÈİÆ÷>\n") ;
+		return notify_fail( "æŒ‡ä»¤æ ¼å¼: put <ç‰©å“> in <å®¹å™¨>\n") ;
 
 	//  Check to make sure the person can see what they are doing.
 	if( !this_player()->query("vision") ) {
-		write( "ÄãÊ²÷áÒ²¿´²»¼û....¡£\n" );
+		write( "ä½ ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹....ã€‚\n" );
 		return 1;
 	}
 
 	//  Check for the form "put 10 gold in bag".
 	if(sscanf(str,"%d %s into %s",num, athis, that)==3) {
                 if( query("prevent_put_money") ) {
-			write( "¶Ô²»Æğ, ÎÒ²»ÌæÈË±£¹ÜÇ®¡£\n");
+			write( "å°ä¸èµ·, æˆ‘ä¸æ›¿äººä¿ç®¡éŒ¢ã€‚\n");
 			return 1;
 		}
 		if(num < 1) {
-			write( "Ç®±ÒµÄ¸öÊıÖÁÉÙ±ØĞëÊÇÒ»Ã¶¡£\n");
+			write( "éŒ¢å¹£çš„å€‹æ•¸è‡³å°‘å¿…é ˆæ˜¯ä¸€æšã€‚\n");
 			return 1;
 		}
 		tht = present(that, this_player()) ;
 		if( !tht ) tht = present(that,environment(this_player())) ;
 		if( !tht ) {
-			write( "Òª°ÑÇ®±Ò·Å½øÄÄÀï£¿\n");
+			write( "è¦æŠŠéŒ¢å¹£æ”¾é€²å“ªè£¡ï¼Ÿ\n");
 			return 1;
 		}
 		// Is the container open?
 		if( !receive_objects() ) {
-			write( "Äã±ØĞëÏÈ´ò¿ªËü¡£\n") ;
+			write( "ä½ å¿…é ˆå…ˆæ‰“é–‹å®ƒã€‚\n") ;
 			return 1;
 		}
 		if( tht!=this_object() ) return 0;
 
 		if( !this_player()->debit(athis, num) ) {
-			write( "ÄãÃ»ÓĞÄÇ÷á¶à" + to_chinese(athis+" coin") + "¡£\n") ;
+			write( "ä½ æ²’æœ‰é‚£éº¼å¤š" + to_chinese(athis+" coin") + "ã€‚\n") ;
 			return 1;
 		}
 		ob = clone_object(COINS);
@@ -102,15 +102,15 @@ int put_into(string str)
 
 		if(res!=MOVE_OK) {
 			ob->remove() ;
-			write( "ËüÒÑ¾­ÂúÁË£¬·Å²»½øÈ¥¡£\n");
+			write( "å®ƒå·²ç¶“æ»¿äº†ï¼Œæ”¾ä¸é€²å»ã€‚\n");
 			return 1;
 		}
 
 		if (num==1) word= "coin" ; else word="coins" ;
-		write( sprintf( "Äã°Ñ %d Ã¶%s·Å½ø%s¡£\n", num, to_chinese(athis+" coin"), query("c_name")) );
+		write( sprintf( "ä½ æŠŠ %d æš%sæ”¾é€²%sã€‚\n", num, to_chinese(athis+" coin"), query("c_name")) );
 		tell_room( environment(this_player()),
-			this_player()->query("c_name")+"°Ñ "+num+" Ã¶"+to_chinese(athis+" coin")+"·Å½ø"
-				+ tht->query("cap_name")+"¡£\n",
+			this_player()->query("c_name")+"æŠŠ "+num+" æš"+to_chinese(athis+" coin")+"æ”¾é€²"
+				+ tht->query("cap_name")+"ã€‚\n",
 			this_player());
 		return 1 ;
 	}
@@ -122,7 +122,7 @@ int put_into(string str)
 	ths = present(athis, this_player());
 
 	if(!ths) {
-		write( "ÄãÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		write( "ä½ æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 		return 1;
 	}
 
@@ -130,24 +130,24 @@ int put_into(string str)
 	if(!tht) tht = present(that, environment(this_player()));
 
 	if(!tht) {
-		write( "ÕâÀïÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		write( "é€™è£¡æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 		return 1;
 	}
 
 	if(tht != this_object())  return 0;	// Keep on looking ...
 
 	if((int)ths->query("prevent_drop")) {
-		write( "ÄãÃ»ÓĞ°ì·¨½«Õâ¸ö¶«Î÷·Å½øÈ¥¡£\n");
+		write( "ä½ æ²’æœ‰è¾¦æ³•å°‡é€™å€‹æ±è¥¿æ”¾é€²å»ã€‚\n");
 		return 1;
 	}
 
 	if((int)ths->query("prevent_insert")) {
-		write( "Äã²»ÄÜ°ÑÕâÖÖ¶«Î÷·Å½øÈ¥¡£\n");
+		write( "ä½ ä¸èƒ½æŠŠé€™ç¨®æ±è¥¿æ”¾é€²å»ã€‚\n");
 		return 1;
 	}
 
 	if(!tht->receive_objects()) {
-		write( "Äã±ØĞëÏÈ°ÑËü´ò¿ª¡£\n");
+		write( "ä½ å¿…é ˆå…ˆæŠŠå®ƒæ‰“é–‹ã€‚\n");
 		return 1;
 	}
 
@@ -169,21 +169,21 @@ int put_into(string str)
 
 		if(environment(this_object())==this_player())
 			this_player()->add("load", weight);
-		write( "Äã°Ñ" + ths->query("short") + "·Å½ø" +tht->query("short")+ "Àï¡£\n");
+		write( "ä½ æŠŠ" + ths->query("short") + "æ”¾é€²" +tht->query("short")+ "è£¡ã€‚\n");
 		tell_room( environment(this_player()),
-			this_player()->query("c_name") + "°Ñ" + ths->query("short") + "·Å½ø" + tht->query("short") + "¡£\n",
+			this_player()->query("c_name") + "æŠŠ" + ths->query("short") + "æ”¾é€²" + tht->query("short") + "ã€‚\n",
 			this_player());
 		return 1;
 	}
 
 	if(res == MOVE_NO_ROOM)
-		write( "ÀïÃæ¿Õ¼ä²»¹»¡£\n");
+		write( "è£¡é¢ç©ºé–“ä¸å¤ ã€‚\n");
 
 	else if(res == MOVE_TOO_HEAVY)
-		write( "ËüµÄÖØÁ¿Ì«ÖØÁË¡£\n");
+		write( "å®ƒçš„é‡é‡å¤ªé‡äº†ã€‚\n");
 
 	else if(res == MOVE_NOT_ALLOWED)
-		write( "Äã²»ÄÜÔÚÀïÃæ·Å¶«Î÷¡£\n");
+		write( "ä½ ä¸èƒ½åœ¨è£¡é¢æ”¾æ±è¥¿ã€‚\n");
 
 	return 1;
 }
@@ -196,7 +196,7 @@ int get_from(string str)
 	object ob2 ;
 	string this1, that, word, c_word;
 
-	if (!str) return notify_fail( "Ö¸Áî¸ñÊ½: get <¶«Î÷> from <ÈİÆ÷>\n");
+	if (!str) return notify_fail( "æŒ‡ä»¤æ ¼å¼: get <æ±è¥¿> from <å®¹å™¨>\n");
 
 	//  Check to see if the user can see what they are doing.
 	if(!this_player()->query("vision")) {
@@ -206,7 +206,7 @@ int get_from(string str)
 		for ( i = sizeof(contents)-1 ; i >=0 ; i-- )
 			if ( contents[i]->query("light") ) break ;
 		if ( i < 0 ) {
-			write( "ÄãÊ²÷áÒ²¿´²»¼û¡£\n");
+			write( "ä½ ä»€éº¼ä¹Ÿçœ‹ä¸è¦‹ã€‚\n");
 			return 1;
 		}
 	}
@@ -215,27 +215,27 @@ int get_from(string str)
 	if ( sscanf(str, "%d %s from %s", num, this1, that )==3 ) {
 		tht = present( that, this_player());
 		if(!tht) tht = present(that, environment(this_player()));
-		if(!tht) return notify_fail( "ÕâÀïÃ»ÓĞÈÎºÎ½Ğ×ö " + that + " µÄ¶«Î÷¡£\n");
+		if(!tht) return notify_fail( "é€™è£¡æ²’æœ‰ä»»ä½•å«åš " + that + " çš„æ±è¥¿ã€‚\n");
 		if( tht!=this_object() ) return 0;
 
 		// Is it closed?
-		if( !tht->receive_objects() ) return notify_fail( "Äã±ØĞëÏÈ½«Ëü´ò¿ª¡£\n");
+		if( !tht->receive_objects() ) return notify_fail( "ä½ å¿…é ˆå…ˆå°‡å®ƒæ‰“é–‹ã€‚\n");
 
-		if( tht->query("prevent_get") ) return notify_fail( "Äã²»ÄÜ´ÓÄÇÀïÃæÄÃ×ßÈÎºÎ¶«Î÷¡£\n");
+		if( tht->query("prevent_get") ) return notify_fail( "ä½ ä¸èƒ½å¾é‚£è£¡é¢æ‹¿èµ°ä»»ä½•æ±è¥¿ã€‚\n");
 
 		ths = present(this1, tht);
-		if (!ths) return notify_fail( "ÄÇÀïÃæÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+		if (!ths) return notify_fail( "é‚£è£¡é¢æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n");
 
 		if (ths->query_number()<num )
-			return notify_fail( "ÄÇÀïÃæÃ»ÓĞÕâ÷á¶à"+to_chinese(this1, " coin") +"¡£\n");
+			return notify_fail( "é‚£è£¡é¢æ²’æœ‰é€™éº¼å¤š"+to_chinese(this1, " coin") +"ã€‚\n");
 
 		this_player()->credit( ths->query_type(), num );
 		ths->set_number( (int)ths->query_number()-num );
 
 		if (num==1) word="coin"; else word = "coins";
-		write( "Äã´Ó"+tht->query("c_name")+"ÖĞÄÃ³ö "+num+" Ã¶"+to_chinese(this1+" coin")+"¡£\n" ) ;
+		write( "ä½ å¾"+tht->query("c_name")+"ä¸­æ‹¿å‡º "+num+" æš"+to_chinese(this1+" coin")+"ã€‚\n" ) ;
 		tell_room( environment(this_player()),
-			this_player()->query("c_name")+"´Ó"+tht->query("c_name")+"ÖĞÄÃ³ö "+num+" Ã¶"+to_chinese(this1+" coin")+"¡£\n",
+			this_player()->query("c_name")+"å¾"+tht->query("c_name")+"ä¸­æ‹¿å‡º "+num+" æš"+to_chinese(this1+" coin")+"ã€‚\n",
 			this_player() );
 		return 1;
 	}
@@ -249,10 +249,10 @@ int get_from(string str)
 			if (tht->receive_objects()) {
 				if (this1 != "all") {
 					ths = present(this1, tht);
-					if(!ths) return notify_fail( "ÄÇÀïÃæÃ»ÓĞÕâÑù¶«Î÷¡£\n") ;
+					if(!ths) return notify_fail( "é‚£è£¡é¢æ²’æœ‰é€™æ¨£æ±è¥¿ã€‚\n") ;
 
 					if((int)ths->query("prevent_get"))
-						return notify_fail( "Äã²»ÄÜ´ÓÄÇÀïÃæÄÃ×ßÈÎºÎ¶«Î÷¡£\n");
+						return notify_fail( "ä½ ä¸èƒ½å¾é‚£è£¡é¢æ‹¿èµ°ä»»ä½•æ±è¥¿ã€‚\n");
 
 					weight = ths->query("weight");
 					rate = (int)query( "weight_apply" );
@@ -268,17 +268,17 @@ int get_from(string str)
 						add ("weight", -weight);
 						if( environment(this_object()) )
 							environment(this_object())->add( "load", -weight );
-						write ( "Äã´Ó"+tht->query("short")+"ÖĞÄÃ³ö"+c_word+"¡£\n");
+						write ( "ä½ å¾"+tht->query("short")+"ä¸­æ‹¿å‡º"+c_word+"ã€‚\n");
 						tell_room( environment(this_player()),
-							this_player()->query("c_name")+"´Ó"+
-							tht->query("short") + "ÖĞÄÃ³ö"+c_word+"¡£\n",
+							this_player()->query("c_name")+"å¾"+
+							tht->query("short") + "ä¸­æ‹¿å‡º"+c_word+"ã€‚\n",
 							this_player() );
 						return 1;
 					}
 					if( res == MOVE_NOT_ALLOWED )
-						notify_fail( "ÄãÃ»ÓĞ°ì·¨ÄÃÆğÕâÑù¶«Î÷¡£\n");
+						notify_fail( "ä½ æ²’æœ‰è¾¦æ³•æ‹¿èµ·é€™æ¨£æ±è¥¿ã€‚\n");
 					if( res == MOVE_NO_ROOM )
-						notify_fail( "ÄãÉíÉÏÃ»ÓĞ¶àâÅµÄ¿ÕÎ»¡£\n");
+						notify_fail( "ä½ èº«ä¸Šæ²’æœ‰å¤šé¤˜çš„ç©ºä½ã€‚\n");
 					// This should never happen.
 					if( res == MOVE_TOO_HEAVY )
 						notify_fail("It is too heavy.\n");
@@ -295,7 +295,7 @@ int get_from(string str)
 						ths = contents[i];
 
 						if((int)ths->query("prevent_get")) {
-							write( "Äã²»ÄÜÄÃ×ß" + ths->query("short") + "¡£\n");
+							write( "ä½ ä¸èƒ½æ‹¿èµ°" + ths->query("short") + "ã€‚\n");
 							continue;
 						}
 
@@ -311,21 +311,21 @@ int get_from(string str)
 							add ("weight", -weight);
 							if( environment(this_object()) )
 								environment(this_object())->add( "load", -weight );
-							write( "Äã´Ó"+tht->query("short")+"ÖĞÄÃ³ö"+c_word+"¡£\n") ;
+							write( "ä½ å¾"+tht->query("short")+"ä¸­æ‹¿å‡º"+c_word+"ã€‚\n") ;
 							tell_room( environment(this_player()),
-								this_player()->query("c_name")+"´Ó"+
-								tht->query("short")+"ÖĞÄÃ³ö"+c_word+"¡£\n",
+								this_player()->query("c_name")+"å¾"+
+								tht->query("short")+"ä¸­æ‹¿å‡º"+c_word+"ã€‚\n",
 								this_player() );
 						}
 					}
 					return 1;
 				}
-				write( "ÄÇÀïÃæÊ²÷áÒ²Ã»ÓĞ¡£\n");
+				write( "é‚£è£¡é¢ä»€éº¼ä¹Ÿæ²’æœ‰ã€‚\n");
 			    return 1;
 			}
-			return notify_fail( "ÕâÀïÃ»ÓĞÄÇÑù¶«Î÷¡£\n");
+			return notify_fail( "é€™è£¡æ²’æœ‰é‚£æ¨£æ±è¥¿ã€‚\n");
 		}
-		return notify_fail( "ËüÊÇ¹ØÖøµÄ¡£\n");
+		return notify_fail( "å®ƒæ˜¯é—œè‘—çš„ã€‚\n");
 	}
 	return 0;
 }
@@ -349,13 +349,13 @@ string query_c_long(string str)
 	if (this_object()->receive_objects()) desc = c_open_long_desc;
 		else desc = c_closed_long_desc ;
 	if ((int)query("lock")>0)
-	    desc += "ËüÊÇËøÖøµÄ¡£\n" ;
+	    desc += "å®ƒæ˜¯é–è‘—çš„ã€‚\n" ;
 	else if  ( ! this_object()->receive_objects() )
-		desc += "ËüÊÇ¹ØÖøµÄ¡£\n" ;
+		desc += "å®ƒæ˜¯é—œè‘—çš„ã€‚\n" ;
 	if ((int)this_object()->receive_objects() || (int)this_object()->clear())	{
 		inv = all_inventory(this_object());
 		if (sizeof(inv) > 0 ) {
-			desc += "ÀïÃæÓĞ:\n";
+			desc += "è£¡é¢æœ‰:\n";
 			for(i=0; i<sizeof(inv); i++)
 				desc += sprintf("  %s (%s).\n", (string)inv[i]->query("short"), (string)inv[i]->query("name"));
 		}

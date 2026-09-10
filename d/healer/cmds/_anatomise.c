@@ -17,7 +17,7 @@ int cmd_anatomise(string str)
 	int difficulty;
 	mapping data;
     
-    	if (!str) return notify_fail("ÄãÒª½âÆÊÊ²÷á£¿\n");
+    	if (!str) return notify_fail("ä½ è¦è§£å‰–ä»€éº¼ï¼Ÿ\n");
 	seteuid(getuid());
 	data = ([]);
 	info = explode( read_file("/d/healer/cmds/anatomise.dat"), "\n" );
@@ -33,21 +33,21 @@ int cmd_anatomise(string str)
 	me = this_player();
 	weapon=(object) me->query("weapon1");
 	if (!weapon || (string)weapon->query("type")!="dagger") {
-	   tell_object(me,"ÄãÊÖÉÏÃ»ÓÐÊÊµ±µÄ¹¤¾ß, ÎÞ·¨½øÐÐ½âÆÊ¡£\n");
+	   tell_object(me,"ä½ æ‰‹ä¸Šæ²’æœ‰é©ç•¶çš„å·¥å…·, ç„¡æ³•é€²è¡Œè§£å‰–ã€‚\n");
            return 1;
 	}   
 	env = environment(me);
 	if( !env || !targ = present(str, env) )
-		return notify_fail("ÄãÒª½âÆÊµÄ¶«¶«²»ÔÚÕâÀï\n");
+		return notify_fail("ä½ è¦è§£å‰–çš„æ±æ±ä¸åœ¨é€™è£¡\n");
 
 	skill = (int)this_player()->query_skill("anatomlogy");
 	if( !skill ) 
-	    return notify_fail( "ÍÛÀÕ!Ã»Ñ§¹ý½âÆÊÑ§²»ÄÜÂÒ¸îÀ²!!\n");
+	    return notify_fail( "å“‡å‹’!æ²’å­¸éŽè§£å‰–å­¸ä¸èƒ½äº‚å‰²å•¦!!\n");
 
     if (! targ->id("corpse")) {    
-	  tell_object(me,"Äã·èÁËÂð?Õâ¸ö¶«¶«²»ÄÜ½âÆÊÀ²!!\n");
+	  tell_object(me,"ä½ ç˜‹äº†å—Ž?é€™å€‹æ±æ±ä¸èƒ½è§£å‰–å•¦!!\n");
 	  tell_room( env, 
-	        sprintf("%sºÃÏñ·èÁË,¾¹È»ÆóÍ¼½âÆÊ%s¡£\n",
+	        sprintf("%så¥½åƒç˜‹äº†,ç«Ÿç„¶ä¼åœ–è§£å‰–%sã€‚\n",
 		me->query("c_name"),targ->query("c_name")), me);
        return 1;	              
 	}
@@ -59,17 +59,17 @@ int cmd_anatomise(string str)
         targ->remove();
         bild=new(data[i][2]);
         bild->move(me);
-        tell_object(me,sprintf("¹§Ï²Äã,³É¹¦µÄÈ¡³öÒ»%s%sÁË¡£\n",
+        tell_object(me,sprintf("æ­å–œä½ ,æˆåŠŸçš„å–å‡ºä¸€%s%säº†ã€‚\n",
 	bild->query("unit"),bild->query("c_name")));
         tell_room(env,
-	sprintf("%s´ÓÊ¬ÌåÖÐÄÃ³öÒ»%s%s¡£\n",
+	sprintf("%så¾žå±é«”ä¸­æ‹¿å‡ºä¸€%s%sã€‚\n",
 		me->query("c_name"),bild->query("unit"),bild->query("c_name")),me);
         return 1;                      
       }
     }  
-	tell_object(me,"Äã°ÑÊ¬ÌåÈ«Éí¶¼·­±éÁË,ÈÔÈ»ÕÒ²»µ½ÓÐÓÃµÄ¶«¶«¡£\n");
+	tell_object(me,"ä½ æŠŠå±é«”å…¨èº«éƒ½ç¿»éäº†,ä»ç„¶æ‰¾ä¸åˆ°æœ‰ç”¨çš„æ±æ±ã€‚\n");
 	tell_room( env, 
-		sprintf("%sÓÃ%s½«Ê¬ÌåÂÒÇÐÒ»Í¨¡£\n" ,me->query("c_name"),weapon->query("c_name")),me );
+		sprintf("%sç”¨%så°‡å±é«”äº‚åˆ‡ä¸€é€šã€‚\n" ,me->query("c_name"),weapon->query("c_name")),me );
     targ->remove();
 	return 1;
 }
@@ -78,11 +78,11 @@ int help()
 {
   write(
   @C_HELP
-Ö¸Áî¸ñÊ½: anatomise <¶ÔÏó>
+æŒ‡ä»¤æ ¼å¼: anatomise <å°è±¡>
 
-Õâ¸öÖ¸ÁîÈÃÄã¶ÔÄ³¸öÌØ¶¨¶ÔÏó½âÆÊ¡£
-Èç¹ûÖ¸¶¨µÄ¶ÔÏóÊÇÊ¬Ìå, ÇÒÊ¬ÌåÖÐÓÐÓÐ¼ÛÖµµÄ¶«Î÷, Ôò»á×Ô¶¯
-È¡³ö¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ å°æŸå€‹ç‰¹å®šå°è±¡è§£å‰–ã€‚
+å¦‚æžœæŒ‡å®šçš„å°è±¡æ˜¯å±é«”, ä¸”å±é«”ä¸­æœ‰æœ‰åƒ¹å€¼çš„æ±è¥¿, å‰‡æœƒè‡ªå‹•
+å–å‡ºã€‚
 C_HELP
   );
   return 1;

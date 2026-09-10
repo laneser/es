@@ -5,13 +5,13 @@ inherit HERB;
 void create()
 {
 	herb::create();
-	set_name( "black plaster", "ºÚÓñ¶ÏĞø¸à" );
-	set_short( "ºÚÓñ¶ÏĞø¸à" );
+	set_name( "black plaster", "é»‘ç‰æ–·çºŒè†" );
+	set_short( "é»‘ç‰æ–·çºŒè†" );
 	add("id",({"plaster"}));
 	set_long(
-		"ÕâÊÇĞÌÀÏµù¶À´´µÄÁÆÉËÊ¥Æ·,²»¹ıÒ©²ÄÄÑÑ°¡£¿ÉÒÔ·ó(apply)ÔÚÉË¿ÚÉÏ¡£\n"
+		"é€™æ˜¯åˆ‘è€çˆ¹ç¨å‰µçš„ç™‚å‚·è–å“,ä¸éè—¥æé›£å°‹ã€‚å¯ä»¥æ•·(apply)åœ¨å‚·å£ä¸Šã€‚\n"
 	);
-	set( "unit", "ºĞ" );
+	set( "unit", "ç›’" );
 	set( "heal_apply", 9 );
 	set( "duration", 30 );
 	set( "weight", 10 );

@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Rain amulet","Óê·û");
+        set_name("Rain amulet","é›¨ç¬¦");
         add("id",({"amulet"}) );
-        set_short("Óê·û");
+        set_short("é›¨ç¬¦");
 	set_long(@C_LONG
-Ò»¸öÓêÊ¦¾«ÖÆµÄ»¤·û£¬ÉÏ»æË®µÎµÄĞÎ×´£¬Õû¸ö¿´ÉÏÈ¥ºÃËÆ½şÔÚË®ÀïÒ»Ñù¡£
+ä¸€å€‹é›¨å¸«ç²¾è£½çš„è­·ç¬¦ï¼Œä¸Šç¹ªæ°´æ»´çš„å½¢ç‹€ï¼Œæ•´å€‹çœ‹ä¸Šå»å¥½ä¼¼æµ¸åœ¨æ°´è£¡ä¸€æ¨£ã€‚
 C_LONG	         );
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight",6 );
 	set( "type", "misc" );
         set("material","cloth");

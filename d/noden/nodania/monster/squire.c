@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level(5);
-	set_name( "squire", "Ëæ´Ó" );
-	set_short( "Ëæ´Ó" );
+	set_name( "squire", "éš¨å¾" );
+	set_short( "éš¨å¾" );
 	set_long(@CLONG
-ÕâÃûËæ´ÓÕıÔÚµÈºòËûµÄÖ÷ÈËÁ·½££¬Äã¿ÉÒÔ¿´¼ûËû²»Ê±°ÑÅäÔÚÑü¼äµÄ
-¶Ì½£ÄÃ³öÀ´²ÁÊÃ¡£
+é€™åéš¨å¾æ­£åœ¨ç­‰å€™ä»–çš„ä¸»äººç·´åŠï¼Œä½ å¯ä»¥çœ‹è¦‹ä»–ä¸æ™‚æŠŠé…åœ¨è…°é–“çš„
+çŸ­åŠæ‹¿å‡ºä¾†æ“¦æ‹­ã€‚
 CLONG
 	);
 	set_perm_stat( "pie", 7 );
@@ -20,7 +20,7 @@ CLONG
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "wealth/silver", 20 );
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "alignment", 400 );
 
 	set_skill( "shortblade", 40 );

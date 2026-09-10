@@ -12,21 +12,21 @@ inherit DAEMON;
 
 int cmd_uptime()
 {
-	printf("¶«·½¹ÊÊÂÒÑ¾­Á¬ĞøÖ´ĞĞÁË %s£¬\n", format_c_time(uptime(), 1));
+	printf("æ±æ–¹æ•…äº‹å·²ç¶“é€£çºŒåŸ·è¡Œäº† %sï¼Œ\n", format_c_time(uptime(), 1));
 
 	if( REBOOT_DELAY-uptime() > 0 )
-	printf("Àë Reboot »¹ÓĞ %s¡£\n",format_c_time(REBOOT_DELAY-uptime(), 1) );
+	printf("é›¢ Reboot é‚„æœ‰ %sã€‚\n",format_c_time(REBOOT_DELAY-uptime(), 1) );
 	else
-	  this_player()->quick_message("ÒÑ¾­½øÈë Reboot µ¹Êı¼ÆÊ±ÁË¡£\n" );
+	  this_player()->quick_message("å·²ç¶“é€²å…¥ Reboot å€’æ•¸è¨ˆæ™‚äº†ã€‚\n" );
 	return 1;
 }
 
 int help()
 {
 	write (@HELP
-Ê¹ÓÃ¸ñÊ½: uptime
+ä½¿ç”¨æ ¼å¼: uptime
 
-ÏÔÊ¾ÓÎÏ·ÒÑ¾­ÔËĞĞ¶àÉÙÊ±¼ä.
+é¡¯ç¤ºéŠæˆ²å·²ç¶“é‹è¡Œå¤šå°‘æ™‚é–“.
 HELP
 );
 	return 1;

@@ -1,28 +1,28 @@
 
-»¤¾ß(armor):
+è­·å…·(armor):
 --------------------------------------------------
-  AC    DB    weight    S_DB    material    ÈÏÖ¤Õß
+  AC    DB    weight    S_DB    material    èªè­‰è€…
 --------------------------------------------------
-1. Õ½Éñîø¼×( /d/island/hole/armor/plate2.c ) 
+1. æˆ°ç¥é§ç”²( /d/island/hole/armor/plate2.c ) 
   *36    8     130       ok     heavy_metal tsunami
-2. ÁúÁÛÎ²¼×( /d/island/hole/armor/tail3.c )
+2. é¾é±—å°¾ç”²( /d/island/hole/armor/tail3.c )
   *10    3     100       ok     leather     tsunami
-3. ´óµØîø¼×( /d/island/hole/armor/plate5.c )
+3. å¤§åœ°é§ç”²( /d/island/hole/armor/plate5.c )
   *36    3     120       ok     heavy_metal tsunami
-4. ºÚÃæÑª¼×( /d/island/hole/armor/plate9.c )
+4. é»‘éºµè¡€ç”²( /d/island/hole/armor/plate9.c )
   *38    3     110       ok     heavy_metal tsunami
-5. Õ½Éñ¶Ü( /d/island/hole/armor/shield2.c )
+5. æˆ°ç¥ç›¾( /d/island/hole/armor/shield2.c )
     8   *8     100       ok     heavy_metal tsunami
  
 
-ÎäÆ÷(weapon):
+æ­¦å™¨(weapon):
 --------------------------------------------------
-  WC    min    max    weight    bleeding    ÈÏÖ¤Õß
+  WC    min    max    weight    bleeding    èªè­‰è€…
 --------------------------------------------------
-1. ÁúÆïÊ¿Ç¹( /d/island/hole/weapon/jousting2.c )
+1. é¾é¨å£«æ§( /d/island/hole/weapon/jousting2.c )
  *50     25    *60      200        0        tsunami
   ( for knight only)
-2. »ğ÷ë½£  ( /d/island/hole/weapon/scale_sword.c )
+2. ç«éºŸåŠ  ( /d/island/hole/weapon/scale_sword.c )
  *40     20    *45      150        0        tsunami 
   ( for scholar only)
 

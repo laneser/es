@@ -4,15 +4,15 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "warrior's cloak", "ÎäÕß¶·Åî" );
+	set_name( "warrior's cloak", "æ­¦è€…é¬¥è“¬" );
 	add( "id", ({ "cloak" }) );
-	set_short( "ÎäÕß¶·Åî" );
+	set_short( "æ­¦è€…é¬¥è“¬" );
 	set_long( 
     @LONG
-ÕâÊÇÒ»¼ş¹Å´úÎäÕßËù´©ÖøµÄ¶·Åî£¬¸úÖøÖ÷ÈËÄÏÕ÷±±ÌÖ£¬Õ´ÂúÁËµĞÈËµÄÑª¼£¡£
+é€™æ˜¯ä¸€ä»¶å¤ä»£æ­¦è€…æ‰€ç©¿è‘—çš„é¬¥è“¬ï¼Œè·Ÿè‘—ä¸»äººå—å¾åŒ—è¨ï¼Œæ²¾æ»¿äº†æ•µäººçš„è¡€è·¡ã€‚
 LONG
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "cloak" );
 	set( "material", "cloth");
 	set( "armor_class", 8 );

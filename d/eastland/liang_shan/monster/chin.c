@@ -7,18 +7,18 @@ void create ()
 
 	::create();
     set_level(19);
-    set_name("Chin Ming ","ÇØÃ÷");
+    set_name("Chin Ming ","ç§¦æ˜");
     add("id",({"chin","ming"}) );
-    set_short("ÇØÃ÷");
+    set_short("ç§¦æ˜");
 	set_long(@C_LONG
-ÍâºÅÅùö¨»ğ£¬¿ªÖİÈË£¬ĞÔ¸ñ¼±Ôï£¬ĞĞÎªÓÂÃÍ£¬Ê¹Ò»ÌõÌúİğŞ¼¹Ç¶ä£¬ÓĞÍò
-·ò²»µ±Ö®ÓÂ¡£ÏÖÎªÁºÉ½²´Âí¾üÎå»¢½«ÖĞµÚÈı´ó½«¡£
+å¤–è™Ÿéœ¹é‚ç«ï¼Œé–‹å·äººï¼Œæ€§æ ¼æ€¥ç‡¥ï¼Œè¡Œç‚ºå‹‡çŒ›ï¼Œä½¿ä¸€æ¢éµè’ºè—œéª¨æœµï¼Œæœ‰è¬
+å¤«ä¸ç•¶ä¹‹å‹‡ã€‚ç¾ç‚ºæ¢å±±æ³Šé¦¬è»äº”è™å°‡ä¸­ç¬¬ä¸‰å¤§å°‡ã€‚
 C_LONG
 	);
     set("alignment",500);
     set( "gender", "male" );
     set( "race", "human");
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
     set_perm_stat( "dex",20);
     set_perm_stat( "str",33);
     set_perm_stat( "int",15);

@@ -4,13 +4,13 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "green stick", "ÇàÖñ°ô" );
+	set_name( "green stick", "é’ç«¹æ£’" );
 	add( "id", ({ "stick" }) );
-   set_short( "ÇàÖñ°ô" );
+   set_short( "é’ç«¹æ£’" );
 	set_long(
-		"Äã¿´µ½Ò»¸ùÏ¸Ï¸³¤³¤µÄÄÛÂÌÉ«Öñ°ô¡£\n"
+		"ä½ çœ‹åˆ°ä¸€æ ¹ç´°ç´°é•·é•·çš„å«©ç¶ è‰²ç«¹æ£’ã€‚\n"
 	);
-	set( "unit", "¸ù" );
+	set( "unit", "æ ¹" );
 	set( "weight", 20 );
    setup_weapon( "bo", 3, 4, 6 );
 	set( "value", ({ 5, "silver" }) );

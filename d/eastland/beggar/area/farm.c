@@ -4,10 +4,10 @@ inherit ROOM;
 void create()
 {
 	::create();
-        set_short( "farm", "²ËÆÔ" );
+        set_short( "farm", "èœåœƒ" );
 	set_long(@C_LONG
-ÕâÊÇÒ»Ð¡Æ¬ÖÖÂú´ó°×²ËµÄÔ°ÆÔ¡£ÒòÎª¸Õ±»ÊÕ³É²»¾Ã,ì¶ÊÇµØÉÏ±äµÃ¿Ó¿Ó¶´¶´µÄ
-,ÓÐµã´ç²½ÄÑÐÐ¡£ÅÔ±ß»¹ÓÐÒ»¸ö´óÁý×Ó,ÊÇÓÃÀ´¹ØÐ¡¼¦ÓÃµÄ¡£
+é€™æ˜¯ä¸€å°ç‰‡ç¨®æ»¿å¤§ç™½èœçš„åœ’åœƒã€‚å› ç‚ºå‰›è¢«æ”¶æˆä¸ä¹…,æ–¼æ˜¯åœ°ä¸Šè®Šå¾—å‘å‘æ´žæ´žçš„
+,æœ‰é»žå¯¸æ­¥é›£è¡Œã€‚æ—é‚Šé‚„æœ‰ä¸€å€‹å¤§ç± å­,æ˜¯ç”¨ä¾†é—œå°é›žç”¨çš„ã€‚
 C_LONG
 	);
 	set("light",1);
@@ -15,7 +15,7 @@ C_LONG
                       "east":DBEGGAR"west6.c"
 	]) );
         set( "c_item_desc", ([
-                  "hole" :"Ò»¸öÐ¡¿Ó¶´¡£\n",
+                  "hole" :"ä¸€å€‹å°å‘æ´žã€‚\n",
         ]) );
         set( "objects",([
                       "little_chicken1":DMONSTER"little_chicken.c",
@@ -37,19 +37,19 @@ int do_search(string arg)
     object ob1;
     
     if ( !arg || arg != "hole" )
-        return notify_fail("ÄãÔÚÕÒÊ²÷á¶«Î÷£¿\n");
+        return notify_fail("ä½ åœ¨æ‰¾ä»€éº¼æ±è¥¿ï¼Ÿ\n");
     if ( (present("little chicken",this_object())) ||
          (present("peacock",this_object())) )
-        return notify_fail("ÄãÔÚÕÒÊ²÷á¶«Î÷£¿\n");
+        return notify_fail("ä½ åœ¨æ‰¾ä»€éº¼æ±è¥¿ï¼Ÿ\n");
     if ( ! this_player()->query_temp("old_asked") ) 
-        return notify_fail("ÄãÔÚÕÒÊ²÷á¶«Î÷£¿\n");
+        return notify_fail("ä½ åœ¨æ‰¾ä»€éº¼æ±è¥¿ï¼Ÿ\n");
     if ( this_object()->query("be_searched") )
-        return notify_fail("ÕâÀïËÆºõ±»±ðÈËÕÒ¹ýÁË¡£\n");
+        return notify_fail("é€™è£¡ä¼¼ä¹Žè¢«åˆ¥äººæ‰¾éŽäº†ã€‚\n");
               
     ob1=new(DITEM"sun_pill");
     ob1->set("master",this_player()->query("name"));
     tell_object( this_player(),
-       "Å¶,Äã·¢ÏÖÁËÒ»¿ÅÁùÑôÕýÆøµ¤!!\n");
+       "å“¦,ä½ ç™¼ç¾äº†ä¸€é¡†å…­é™½æ­£æ°£ä¸¹!!\n");
     ob1->move( this_player() );   
     this_object()->set("be_searched",1);
     call_out("recover1",1800,this_object());

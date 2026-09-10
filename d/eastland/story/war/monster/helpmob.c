@@ -12,7 +12,7 @@ void init()
      player=this_player();  
      if ( player->query("palace_war") ) {
         tell_room(environment(),sprintf(
-            "%s¶ÔÖø%sº°µÀ£º¿É¶ñµÄò¿ÓÈ¾ü£¬ÎáµÈ·îÃü¼ßÃðÄãÃÇ£¬¸øÎÒÏÂµØÓüÈ¥°É£¡£¡\n",
+            "%så°è‘—%så–Šé“ï¼šå¯æƒ¡çš„èš©å°¤è»ï¼Œå¾ç­‰å¥‰å‘½æ®²æ»…ä½ å€‘ï¼Œçµ¦æˆ‘ä¸‹åœ°ç„åŽ»å§ï¼ï¼\n",
             this_object()->query("c_name"),player->query("c_name")));
             this_object()->kill_ob(player);
      }
@@ -25,9 +25,9 @@ void die()
     killer=query("last_attacker");
     if ( killer) {
       if ( !killer->query("npc") ) {
-         tell_object(killer,"\n¿ÕÖÐ´«À´»ÆµÛ´óÅ­µÄÉùÒô£ºÔ­À´ÄãÊÇò¿ÓÈÅÉÀ´ÎÔµ×µÄ£¡\n\n");
-         tell_object(killer,"»ÆµÛÕÐÀ´Ò»µÀÉÁµçÅüÔÚÄãÍ·ÉÏ£¡£¡\n\n\n");
-         tell_room(environment(),sprintf("»ÆµÛÕÐÀ´Ò»µÀÉÁµçÅüÔÚ%sµÄÍ·ÉÏ£¡\n",
+         tell_object(killer,"\nç©ºä¸­å‚³ä¾†é»ƒå¸å¤§æ€’çš„è²éŸ³ï¼šåŽŸä¾†ä½ æ˜¯èš©å°¤æ´¾ä¾†è‡¥åº•çš„ï¼\n\n");
+         tell_object(killer,"é»ƒå¸æ‹›ä¾†ä¸€é“é–ƒé›»åŠˆåœ¨ä½ é ­ä¸Šï¼ï¼\n\n\n");
+         tell_room(environment(),sprintf("é»ƒå¸æ‹›ä¾†ä¸€é“é–ƒé›»åŠˆåœ¨%sçš„é ­ä¸Šï¼\n",
             killer->query("c_name")),killer);
          damage=killer->query("max_hp")*9/10;
          killer->add("hit_points",-damage);  

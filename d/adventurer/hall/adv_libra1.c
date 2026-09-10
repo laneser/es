@@ -14,28 +14,28 @@ void create()
 {
 	object shelter;
 	::create();
-        set_short("ð����������");
+        set_short("冒險者資料室");
 	set_long( @C_LONG_DESCRIPTION
-������ð����ר���������ң�ǽ�Ϲ����������ĵ�ͼ�����԰壬������м�
-��һ�ŷǳ����д��̨��д��̨�Ϸ���һ����������������(note)  �Լ�һ��ͼ��
-(book)������ð����Χ��д��̨�Խ�ͷ�Ӷ�����֪������Щʲ��?
+這裡是冒險者專屬的資料室，牆上掛著許許多多的地圖與留言板，房間的中間
+是一張非常大的寫字檯，寫字檯上放著一本「旅行者手札」(note)  以及一本圖鑑
+(book)。許多冒險者圍在寫字檯旁交頭接耳，不知在討論些什麼?
 C_LONG_DESCRIPTION
 	);
 
 	set( "item_desc", ([ 
 		"book" : @LONG_BOOK
-�Ȿ������ͼ������һλ�����������ð�ռ�����һ����׫����Ѫ�ᾧ��ͼ���м�
-���������ھ��󲿷ݵ������������飬ĳЩ���Ｋ�亱����ĳЩ��������࣬��
-�����������ɹ��Ľ��־���ֲ�����ĵס���ð�����ǲ�С���������ǣ�����������
-�ֲ���ͻȻ����������������ǰ�Ը�����������ʶ���Ϳ��Ա��ⲻ�ҵķ���������
-��֮ǰ��������ȴ��飬����(read)�Ȿ�������(index)��
+這本「生物圖鑑」是一位叫做塔卡達的冒險家窮其一生所撰的心血結晶，圖鑑中記
+載了王國內絕大部份的生物能力與簡介，某些生物極其罕見，某些則數量奇多，但
+它們往往都成功的將恐懼深植人們心底。當冒險者們不小心遇上它們，經常伴隨著
+恐怖且突然的死亡，但若是事前對該生物有所認識，就可以避免不幸的發生。在閱
+讀之前，你可以先打開書，看看(read)這本書的索引(index)。
 LONG_BOOK
 ,               "note" : @LONG_NOTE
-�Ȿ��������������������������������;���������ţ�������Щ����ʵ�ģ�Ҳ��
-һЩֻ��ҥ�Լ�����ʵ�ʵĻ��롣��ֻ���о����Ҵ����������߲��ֱܷ�����α��
-�����ʹ��readָ��������������ص����ݣ�Ҳ������write ���Լ��������ż���
-��ȥ������˵�Ȿ����Ү����������ϲ�������ж���������ˮ���˽����ܵ���
-�������Ĵ�����
+這本「旅行者手札」記載了旅行者們在旅途中所見所聞，其中有些是真實的，也有
+一些只是謠言及不切實際的幻想。但只有有經驗且聰明的旅行者才能分辯其真偽。
+你可以使用read指令來看看上面記載的內容，也可以用write 把自己所見所聞記載
+上去，但據說這本書是耶拉曼國王最喜歡的休閒讀物，在上面灌水的人將會受到皇
+室嚴厲的處罰。
 LONG_NOTE
  ]) );
  	set("light",1);
@@ -56,8 +56,8 @@ LONG_NOTE
         create_door("north","south",([
                "keyword":({"woodendoor","door"}),
                "status":"closed",
-               "c_desc":"һ��СС��ľ��",
-               "c_name":"Сľ��",
+               "c_desc":"一個小小的木門",
+               "c_name":"小木門",
                "name":"small wooden door",
                "desc":"a small wooden door",
                                 ]) );
@@ -81,10 +81,10 @@ int to_open(string str)
     if (!str||str!="book") return 0;
     can_look=query("book_status");
     if ( can_look=="open" ) 
-      write("�����Ѿ������ˡ�\n");
+      write("這書已經被打開了。\n");
     else {
       set("book_status","open");
-      write("����Ȿ����ͼ����\n");
+      write("你打開這本生物圖鑑。\n");
       }
     return 1;    
 }
@@ -96,11 +96,11 @@ int to_close(string str)
     if (!str||str!="book") return 0;
     can_look=query("book_status");
     if ( can_look=="close" ) 
-      write("�����Ѿ���������.\n");
+      write("這書已經被合上了.\n");
     else {
       set("book_status","close");
       set("book_page",0);
-      write("������Ȿ����ͼ����\n");
+      write("你合上這本生物圖鑑。\n");
       }
     return 1;    
 }
@@ -113,28 +113,28 @@ int to_turn(string str)
     else if ( str=="page" )
       {
           if ( (string)query("book_status")=="close" )
-            return notify_fail("���ȴ���.\n"); 
+            return notify_fail("請先打開書.\n"); 
           page=(int)query("book_page")+1;
           page=(page==LAST_PAGE)?0:page;
-          write("����鷭���˵�"+ page +"ҳ.\n");
+          write("你把書翻到了第"+ page +"頁.\n");
           set("book_page",page);
       }
     else if ( sscanf(str,"page to %d",page)==1 )
       {
          if ( (string)query("book_status")=="close" )
-            return notify_fail("���ȴ���.\n"); 
-         write("����鷭���˵�"+ page +"ҳ.\n");
+            return notify_fail("請先打開書.\n"); 
+         write("你把書翻到了第"+ page +"頁.\n");
          set("book_page",page);
       }
     else 
-      write("����ķ�������:turn page or turn page to <num>.\n");
+      write("翻書的方法如下:turn page or turn page to <num>.\n");
     return 1;  
 }
 int do_read( string str )
 {
 
 	if( !str || str=="" ) {
-	    write("��Ҫ��ʲ�᣿\n");
+	    write("你要讀什麼？\n");
 	    return 1;
 	    }
 	if( str=="index" ) {
@@ -146,7 +146,7 @@ int do_read( string str )
 	    return 1;
 	    }    
 	if ( (string)query("book_status")=="close" ) {
-	    write("���ȴ���.\n");
+	    write("請先打開書.\n");
 	    return 1;
 	    }
 	  if ( file_exists(MOB_INFO"c_page" + query("book_page") ) ){
@@ -159,10 +159,10 @@ int do_read( string str )
 }
 int write_note(string str)
 {
-	if (!str) return notify_fail("��Ҫд���ﰡ?\n");
-	if (str != "note") return notify_fail("��Ҫ�һ��... \n");
-    write("�벻Ҫ�ڴ�����quest���ˮ....\n");
-    write("��ʼ��������....\n");
+	if (!str) return notify_fail("你要寫那裡啊?\n");
+	if (str != "note") return notify_fail("不要亂畫喔... \n");
+    write("請不要在此討論quest或灌水....\n");
+    write("開始輸入文字....\n");
 	this_player()->edit(TMP_FILE, "process", this_object());
 	return 1;
 }
@@ -173,8 +173,8 @@ int process()
     seteuid(getuid());
     text = read_file(TMP_FILE);
     rm(TMP_FILE);
-    title = (string)this_player()->query("c_name")+" � "+
-        "/adm/daemons/weather_d"->query_c_game_time()+" д��:\n";
+    title = (string)this_player()->query("c_name")+" 於 "+
+        "/adm/daemons/weather_d"->query_c_game_time()+" 寫下:\n";
     write_file(NOTE_FILE, title+text+"\n");
     write("Ok.\n");
 	return 1;
@@ -184,7 +184,7 @@ int check_flag()
       if ( wizardp(this_player()) || !present("avery")) return 0;
       if ((string)this_player()->query("class") != "adventurer" ) {
         tell_object( this_player(),
-        "������˵��: �Ǳ�ֻ��ð�����ܽ�ȥ...\n");
+        "艾佛瑞說道: 那邊只有冒險者能進去...\n");
         return 1;
        }
        else return 0;                

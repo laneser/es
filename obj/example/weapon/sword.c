@@ -4,12 +4,12 @@ inherit WEAPON ;
 
 void create()
 {
-	set_name("long sword", "长剑");
+	set_name("long sword", "闀峰妽");
 	add ("id", ({ "sword" }) );
-	set_short( "a long sword", "长剑");
+	set_short( "a long sword", "闀峰妽");
 	set_long(
 		"It has a steel blade which is very sharp.\n",
-		"这把长剑有十分锋利的剑锋。\n"
+		"閫欐妸闀峰妽鏈夊崄鍒嗛嫆鍒╃殑鍔嶉嫆銆俓n"
 	);
 	set( "weight", 40 );
 	set( "weapon_class", 7 );

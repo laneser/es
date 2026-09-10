@@ -25,7 +25,7 @@ int cmd_go(string dir)
 
 	if (!env) { 
 		write( chinese_mode?
-			"这里一片虚无缥缈，没有任何出口。\n":
+			"閫欒！涓�鐗囪櫅鐒＄腹绶诧紝娌掓湁浠讳綍鍑哄彛銆俓n":
 			"You are in the void.  There's no way out!\n");
 		return 1;
 	}
@@ -33,7 +33,7 @@ int cmd_go(string dir)
 	exits = env->query("exits");
 	if (!mapp(exits) || member_array(dir, keys(exits)) == -1)
 		return notify_fail( chinese_mode?
-			"那里没有任何出路。\n":
+			"閭ｈ！娌掓湁浠讳綍鍑鸿矾銆俓n":
 			"You can't go that way!\n");
 
 	// let's see if it's ok to move -- is there a pre-exit function to call?

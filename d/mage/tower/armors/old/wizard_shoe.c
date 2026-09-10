@@ -4,18 +4,18 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wizard's shoes", "Î×Ê¦ÉñÑ¥" );
+	set_name( "wizard's shoes", "å·«å¸«ç¥é´" );
 	add( "id", ({ "shoes", "shoe", }) );
-	set_short( "a wizard's shoes", "Î×Ê¦ÉñÑ¥" );
+	set_short( "a wizard's shoes", "å·«å¸«ç¥é´" );
 	set_long( @TOPIC
 	The pair of shoes used by wizard Rashudi. It is made by normal cloth,
 but spreads a special power of magic.
 TOPIC
     , @C_TOPIC
-	À­ĞŞµÛ¹ßì¶´©ÖøµÄÑ¥×Ó£¬ËäÈ»Ö»ÊÇÓÃÆÕÍ¨µÄ²¼×öµÄ£¬µ«É¢·¢³öÒ»¹ÉÄ§Á¦¡£
+	æ‹‰ä¿®å¸æ…£æ–¼ç©¿è‘—çš„é´å­ï¼Œé›–ç„¶åªæ˜¯ç”¨æ™®é€šçš„å¸ƒåšçš„ï¼Œä½†æ•£ç™¼å‡ºä¸€è‚¡é­”åŠ›ã€‚
 C_TOPIC
 	);
-	set( "unit", "Ë«" );
+	set( "unit", "é›™" );
 	set( "type", "feet" );
 	set( "material", "cloth" );
 	set( "armor_class", 10 );

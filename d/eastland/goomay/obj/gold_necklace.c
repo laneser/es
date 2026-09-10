@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("gold necklace","Óñ×¹Ïî¡õ");
+        set_name("gold necklace","ç‰å¢œé …â–¡");
         add("id",({"gold","necklace",}) );
-         set_short( "a gold necklace","Óñ×¹Ïî¡õ");
+         set_short( "a gold necklace","ç‰å¢œé …â–¡");
 	set_long(
 "This is a gold necklace \n"
-"ÕâÊÇÒ»¸öÓÉ½ğ×Ó´òÔìµÄÏî¡õ£¬¡õÉÏÓĞ¸ö¹ÅÓñ×¹×Ó£¬¿´ÆğÀ´·Ç³£ÃÀÀö¡£\n" 
+"é€™æ˜¯ä¸€å€‹ç”±é‡‘å­æ‰“é€ çš„é …â–¡ï¼Œâ–¡ä¸Šæœ‰å€‹å¤ç‰å¢œå­ï¼Œçœ‹èµ·ä¾†éå¸¸ç¾éº—ã€‚\n" 
 	);
-	set( "unit", "´®" );
+	set( "unit", "ä¸²" );
 	set( "weight", 12 );
         set("material","light_metal");
 	set( "type", "misc" );

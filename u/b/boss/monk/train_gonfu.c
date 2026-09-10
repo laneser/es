@@ -70,7 +70,7 @@ void view_catalog()
 	int i, exp,chinese_mode;
 
 	chinese_mode = can_read_chinese();
-	printf( "%-31s  %-12s %-7s\n","ÎäÑ§Ãû³Æ", "ÎäÊõ·ÖÀà", "ËùĞè¼¼ÄÜÖµ" );
+	printf( "%-31s  %-12s %-7s\n","æ­¦å­¸åç¨±", "æ­¦è¡“åˆ†é¡", "æ‰€éœ€æŠ€èƒ½å€¼" );
 	write( "=====================================================================\n");
 	gonfus = query_gonfus();
 	s = keys(gonfus);
@@ -95,34 +95,34 @@ int do_train(string arg)
 	me = this_player();
 	chinese_mode = can_read_chinese();
 	if( !arg || arg=="" )
-		return notify_fail("Ö¸Áî¸ñÊ½: train <¹¦\·òÃû³Æ>\n" ); 
+		return notify_fail("æŒ‡ä»¤æ ¼å¼: train <åŠŸå¤«åç¨±>\n" ); 
 
 	if( type != "general" )
 		tmp2 = (string *)me->query("monk_gonfu/"+type);
 	if( (type == "general" && !undefinedp(me->query("monk_gonfu/"+arg))) ||
 		(tmp2 && member_array(arg, tmp2) != -1) ) {
-		write("Õâ¸ö¹¦\·òÄãÒÑ¾­Ñ§»áÁË£¬²»ĞèÒªÔÙÑ§Ò»´Î!\n");
+		write("é€™å€‹åŠŸå¤«ä½ å·²ç¶“å­¸æœƒäº†ï¼Œä¸éœ€è¦å†å­¸ä¸€æ¬¡!\n");
 		return 1;
 	}
 
 	if( !gonfu_exist(arg) ) {
-		write (	"±¾ÊÒ²¢²»´«ÊÚÄãËùÒªÑ§µÄÄÇÌ×¹¦\·ò! (´ò´í×ÖÁË°É) \n");
+		write (	"æœ¬å®¤ä¸¦ä¸å‚³æˆä½ æ‰€è¦å­¸çš„é‚£å¥—åŠŸå¤«! (æ‰“éŒ¯å­—äº†å§) \n");
 		return 1;
 	}
 	
 	if( !check_skill(me, arg) ) {
-		write( "ÄãµÄ¼¼ÄÜÔìÒè²»×ã£¬ÔÙÁ·¼¸ÄêÔÙÀ´°É! \n");
+		write( "ä½ çš„æŠ€èƒ½é€ è©£ä¸è¶³ï¼Œå†ç·´å¹¾å¹´å†ä¾†å§! \n");
 		return 1;
 	}	
 
 	exp = raise_cost(me, arg);
 	tmp = exp - (int)me->query_exp_stock();
 	if( tmp > 0 ) {
-		write("ÄãÏÖÔÚÒªÑ§´ËÎäÊõ£¬»¹ĞèÒª "+tmp+" µã¾­Ñé¡£\n");
+		write("ä½ ç¾åœ¨è¦å­¸æ­¤æ­¦è¡“ï¼Œé‚„éœ€è¦ "+tmp+" é»ç¶“é©—ã€‚\n");
 		return 1;
 	}
 
-	write( " *** ¾­¹ıÒ»·¬¿àÁ·£¬ÄãÖÕì¶Ñ§µ½ÁË "+ to_chinese(arg) + " *** \n");
+	write( " *** ç¶“éä¸€ç•ªè‹¦ç·´ï¼Œä½ çµ‚æ–¼å­¸åˆ°äº† "+ to_chinese(arg) + " *** \n");
 
 	if( type == "general" )
 		me->set("monk_gonfu/"+arg, 0);

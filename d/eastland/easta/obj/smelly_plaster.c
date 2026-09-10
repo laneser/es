@@ -6,11 +6,11 @@ void create()
 {
         herb::create();
 #include <compress_obj.h>
-	set_name( "smelly plaster", "¹·Æ¤¸àÒ©" );
+	set_name( "smelly plaster", "ç‹—çš®è†è—¥" );
         add( "id", ({"plaster"}) );
-	set_short( "¹·Æ¤¸àÒ©" );
-	set_long("ÕâÕÅ¹·Æ¤¸àÒ©ÉÏ±êÊ¾Öø: ×æ´«ÃØ·½£¬×¨ÖÎµø´òËğÉË¡£\n");
-	set( "unit", "ÕÅ" );
+	set_short( "ç‹—çš®è†è—¥" );
+	set_long("é€™å¼µç‹—çš®è†è—¥ä¸Šæ¨™ç¤ºè‘—: ç¥–å‚³ç§˜æ–¹ï¼Œå°ˆæ²»è·Œæ‰“æå‚·ã€‚\n");
+	set( "unit", "å¼µ" );
 	set( "heal_apply", 3 );
 	set( "duration", 15 );
 	set( "weight", 5 );

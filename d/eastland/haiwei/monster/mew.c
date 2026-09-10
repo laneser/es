@@ -6,14 +6,14 @@ void create()
 {
 	::create();
 	set_level(3);
-	set_name( "mew", "º£Å¸" );
+	set_name( "mew", "æµ·é·—" );
 	add( "id", ({ "mew" }) );
-	set_short( "º£Å¸" );
-	set_long("ÕâÊÇÒ»ÖÖº£Äñ\n");	
-	set("unit","Ö»");
+	set_short( "æµ·é·—" );
+	set_long("é€™æ˜¯ä¸€ç¨®æµ·é³¥\n");	
+	set("unit","åª");
     set( "alignment", -50 );
 	set_perm_stat( "dex", 4 );
-	set_c_verbs( ({ "%sÍùÏÂ¸©³å£¬ÓÃ×ì°Í×Ä%s", "%sÓÃ×¦×ÓÍù%s×¥ÏÂ" }) );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò" }) );
+	set_c_verbs( ({ "%så¾€ä¸‹ä¿¯è¡ï¼Œç”¨å˜´å·´å•„%s", "%sç”¨çˆªå­å¾€%sæŠ“ä¸‹" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€" }) );
 #include <replace_mob.h>
 }

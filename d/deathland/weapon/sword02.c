@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Longsword of Molader","ÄªÀ­µÂ³¤½£");
+        set_name("Longsword of Molader","è«æ‹‰å¾·é•·åŠ");
         add("id",({"sword","longsword",}) );
-        set_short("ÄªÀ­µÂ³¤½£");
+        set_short("è«æ‹‰å¾·é•·åŠ");
       	set_long(
-           "Ò»°ÑÄªÀ­µÂ»ÊÊÒ×¨ÓÃµÄ·æÀû³¤½£\n"
+           "ä¸€æŠŠè«æ‹‰å¾·çš‡å®¤å°ˆç”¨çš„é‹’åˆ©é•·åŠ\n"
 	);
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
     set("type","longblade");
 	set( "min_damage", 15 );

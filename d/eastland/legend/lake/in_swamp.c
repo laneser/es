@@ -5,7 +5,7 @@
 void init()
 {
   tell_object(this_player(),set_color(
-    "°¥Ñ½²»ºÃ£¡Ò»¹ÉÐÈ³ôµÄÕÓÆøÈÃÄãÒ»ÕóÍ·ÔÎÄ¿Ñ££¡\n","HIG"));
+    "å“Žå‘€ä¸å¥½ï¼ä¸€è‚¡è…¥è‡­çš„æ²¼æ°£è®“ä½ ä¸€é™£é ­æšˆç›®çœ©ï¼\n","HIG"));
   (CONDITION_PREFIX + "simple_poison")->apply_effect( this_player(), 10, 2 );
 }
     

@@ -4,18 +4,18 @@ void create()
 {
 	::create();
 	set_level(10);
-	set_name( "Hwa wan", "»ªÍı" );
+	set_name( "Hwa wan", "è¯å¦„" );
 	add ("id", ({ "wan", "Hwa","monk" }) );
-	set_short( "»ªÍı" );
+	set_short( "è¯å¦„" );
 	set_long(@C_LONG
-»ªÍıÔ­±¾ÊÇÒ»¸öÁÔ»§£¬ÉúÆ½É±ÉúÎŞÊı£¬Ò»ÈÕĞĞ¾­ÉÙÁÖ£¬ÎªÆäÖĞÄî¾­ÉùËùÕğº¶£¬ 
-¶ÙÊ±·ÅÏÂÍÀµ¶£¬Ï÷·¢ÎªÉ®¡£
+è¯å¦„åŸæœ¬æ˜¯ä¸€å€‹çµæˆ¶ï¼Œç”Ÿå¹³æ®ºç”Ÿç„¡æ•¸ï¼Œä¸€æ—¥è¡Œç¶“å°‘æ—ï¼Œç‚ºå…¶ä¸­å”¸ç¶“è²æ‰€éœ‡æ†¾ï¼Œ 
+é “æ™‚æ”¾ä¸‹å± åˆ€ï¼Œå‰Šé«®ç‚ºåƒ§ã€‚
 C_LONG
 	);
 	set( "alignment",1200);
 	set( "gender", "male" );
 	set( "race", "orc" );
-	set( "unit", "Î»" );
+	set( "unit", "ä½" );
 	set_perm_stat( "dex", 12 );
 	set_perm_stat( "str", 14 );
 	set_perm_stat( "int", 8 );

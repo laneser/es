@@ -4,13 +4,13 @@ inherit WEAPON;
 void create()
 {
  
-        set_name( "evil dagger", "а��ذ" );
+        set_name( "evil dagger", "邪皇匕" );
         add( "id", ({ "dagger" }) );
-        set_short( "а��ذ" );
+        set_short( "邪皇匕" );
         set_long(
-                "����һ�������ذ��,�հѵײ�����һ����­ͷ,���������в�ʱ��˸������Ĺ�â��\n"
+                "這是一把奇異的匕首,握把底部鑄了一顆骷顱頭,兩個窟窿中不時閃爍著妖異的光芒。\n"
         );
-        set( "unit", "��" );
+        set( "unit", "把" );
         set( "weapon_class", 30 );
         set("type","dagger");
         set( "min_damage", 20);
@@ -40,7 +40,7 @@ int stop_wield()
         my_ali = (int)holder->query("alignment");
         if (my_ali > 0) {
                 notify_fail( 
-                "ذ���ϴ���һ�����������,ʹ���ղ�ס��!!\n" 
+                "匕首上傳來一股奇異的力量,使你握不住它!!\n" 
                            );
         return 1;
 	}

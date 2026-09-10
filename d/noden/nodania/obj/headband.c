@@ -5,12 +5,12 @@ inherit ARMOR;
 void create()
 {
 	seteuid(getuid());
-	set_name("headband", "±ØÊ¤Í·½í");
-	set_short("±ØÊ¤Í·½í");
+	set_name("headband", "å¿…å‹é ­å·¾");
+	set_short("å¿…å‹é ­å·¾");
 	set_long(
-		"ÕâÊÇÒ»Ìõ°×É«Í·½í£¬ÉÏÃæĞ´Öø¡¸±ØÊ¤¡¹¡£\n"
+		"é€™æ˜¯ä¸€æ¢ç™½è‰²é ­å·¾ï¼Œä¸Šé¢å¯«è‘—ã€Œå¿…å‹ã€ã€‚\n"
 	);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "type", "head" );
 	set( "armor_class", 3 );
 	set( "defense_bonus", 5 );

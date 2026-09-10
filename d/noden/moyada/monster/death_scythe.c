@@ -7,16 +7,16 @@ void create ()
 	::create();
 	seteuid( getuid() );
 	set_level(19);
-	set_name( "Death scythe", "ËÀÉñÁ­µ¶" );
+	set_name( "Death scythe", "æ­»ç¥é®åˆ€" );
 	add ("id", ({ "scythe", }) );
-	set_short( "ËÀÉñÁ­µ¶" );
+	set_short( "æ­»ç¥é®åˆ€" );
 	set_long( @LONG
-Ò»°ÑËÀÉñ×îĞÄ°®µÄ±øÆ÷£¬ÕıÔÚÎªµÃµ½×ÔÓÉ¶ø¸ßĞËµÄ·ÉÎèÖø¡£
+ä¸€æŠŠæ­»ç¥æœ€å¿ƒæ„›çš„å…µå™¨ï¼Œæ­£åœ¨ç‚ºå¾—åˆ°è‡ªç”±è€Œé«˜èˆˆçš„é£›èˆè‘—ã€‚
 LONG
 	);
    set( "race", "undead" );
 	set( "alignment", -1000 );
-    set( "unit", "°Ñ" );
+    set( "unit", "æŠŠ" );
 	set_perm_stat( "dex", 20 );
 	set_perm_stat( "str", 25 );
 	set_perm_stat( "int", 10 );
@@ -25,7 +25,7 @@ LONG
 	set_perm_stat( "karma", 20 );
 	set ("chat_chance", 5);
 	set ("chat_output", ({
-	  "ËÀÉñÁ­µ¶Ëµ: ÎÒ×ÔÓÉÁË£¬ÎÒ×ÔÓÉÁË!\n", }) 
+	  "æ­»ç¥é®åˆ€èªª: æˆ‘è‡ªç”±äº†ï¼Œæˆ‘è‡ªç”±äº†!\n", }) 
 	);
 	set ("max_hp", 1200);
 	set ("hit_points", 1200);
@@ -40,8 +40,8 @@ LONG
     set ("special_defense", 
          ([ "all":50, "none" : 25 ]) );
     set_skill("dodge",85);
-    set_c_verbs( ({ "%sÖ±Ï÷%s", "%sºáÅü%s", "%sºáÉ¨%s"}) );
-    set_c_limbs( ({ "µ¶ÈĞ", "°ÑÊÖ", "µ¶±³", }) );
+    set_c_verbs( ({ "%sç›´å‰Š%s", "%sæ©«åŠˆ%s", "%sæ©«æƒ%s"}) );
+    set_c_limbs( ({ "åˆ€åˆƒ", "æŠŠæ‰‹", "åˆ€èƒŒ", }) );
     set( "alt_corpse", MOYADA"obj/death_scythe" );
-    set( "c_death_msg", "%sÎŞÁ¦µÄ·ÉÎè¼¸ÏÂ£¬µôµ½µØÉÏ²»¶¯ÁË!\n");
+    set( "c_death_msg", "%sç„¡åŠ›çš„é£›èˆå¹¾ä¸‹ï¼Œæ‰åˆ°åœ°ä¸Šä¸å‹•äº†!\n");
 }

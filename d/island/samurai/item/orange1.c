@@ -5,14 +5,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name("orange","Áø¶¡");
+	set_name("orange","æŸ³ä¸");
 	add( "id" , ({ "orange" }) );
-	set_short("orange" , "Áø¶¡");
+	set_short("orange" , "æŸ³ä¸");
 	set_long(@AAA
-	Ò»¸öÐÂÏÊµÄÁø¶¡£¬ÓÉì¶ÀÏ°åµÄ¼á³ÖÄã±ØÐëµ±³¡³ÔµôËü
+	ä¸€å€‹æ–°é®®çš„æŸ³ä¸ï¼Œç”±æ–¼è€é—†çš„å …æŒä½ å¿…é ˆç•¶å ´åƒæŽ‰å®ƒ
 AAA
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("weight", 2);
    	set("value",({ 15, "silver" }) );
 	call_out("eat_it", LIMIT_TIME, this_object());
@@ -22,13 +22,13 @@ void eat_it(object what)
 {
 	object owner;
 		tell_object(owner, can_read_chinese()?
-			"Äã³ÔÏÂÒ»¿ÅÐÂÏÊÁø¶¡£¬¸Ð¾õºÜÂú×ã¡£\n":
+			"ä½ åƒä¸‹ä¸€é¡†æ–°é®®æŸ³ä¸ï¼Œæ„Ÿè¦ºå¾ˆæ»¿è¶³ã€‚\n":
 			"You drink a cup of Special Wine....\n"
 		);
 		tell_room( environment(this_player()), ({
 			owner->query("cap_name")+" drink a cup of Special Wine....\n",
-			owner->query("c_name")+"³ÔÏÂÒ»¿ÅÁø¶¡¿´ÆðÀ´ºÃÏñ"
-			"ºÜÂú×ãµÄÑù×Ó\n"}), this_player()
+			owner->query("c_name")+"åƒä¸‹ä¸€é¡†æŸ³ä¸çœ‹èµ·ä¾†å¥½åƒ"
+			"å¾ˆæ»¿è¶³çš„æ¨£å­\n"}), this_player()
 		);
 		owner->receive_healing( 5+random(5) );
 	remove();

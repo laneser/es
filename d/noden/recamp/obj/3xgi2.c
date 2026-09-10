@@ -7,13 +7,13 @@ void create()
         set_default_ob(__FILE__);
         return;
 	}
-  set_name("3xgi", "Èı²æêª");
+  set_name("3xgi", "ä¸‰å‰æˆŸ");
   add("id", ({"3xgi"}) );
-  set_short("3xgi","Èı²æêª");
+  set_short("3xgi","ä¸‰å‰æˆŸ");
   set_long(
-   "Ò»°ÑÈı²æêª£¬¿´À´µÃĞèºÜ´óÁ¦Æø²ÅÓÃµÄË³ÊÖ¡£\n"
+   "ä¸€æŠŠä¸‰å‰æˆŸï¼Œçœ‹ä¾†å¾—éœ€å¾ˆå¤§åŠ›æ°£æ‰ç”¨çš„é †æ‰‹ã€‚\n"
   );
-  set( "unit", "°Ñ" );
+  set( "unit", "æŠŠ" );
   set( "weapon_class", 30 );
   set( "type","thrusting");
   set( "min_damage", 15 );

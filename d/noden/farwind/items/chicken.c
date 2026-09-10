@@ -9,11 +9,11 @@ void init()
 
 void create(){
 
-	set_name("chicken","¿¾¼¦");
+	set_name("chicken","çƒ¤é›");
 	add( "id" , ({ "chicken" }) );
-	set_short( "¿¾¼¦" );
-	set_long( "ĞÂÏÊµÄÍÁ¼¦£¬¼ÓÉÏ¡ºÔ¶·ç¾Æµê¡»×æ´«µÄ¿¾·¨£¬ÈÃÈË²»½ûÊ³Ö¸´ó¶¯...\n");
-   	set("unit","ÅÌ");
+	set_short( "çƒ¤é›" );
+	set_long( "æ–°é®®çš„åœŸé›ï¼ŒåŠ ä¸Šã€é é¢¨é…’åº—ã€ç¥–å‚³çš„çƒ¤æ³•ï¼Œè®“äººä¸ç¦é£ŸæŒ‡å¤§å‹•...\n");
+   	set("unit","ç›¤");
    	set("weight", 15);
    	set("value",({200, "silver"}) );
 	set("fresh",3600); // fresh is measured in seconds...
@@ -26,10 +26,10 @@ int eat_food(string arg)
 	if( arg != "chicken" ) return 0;
 
 	if(!query("is_fresh")){
-		write("Ò»¹É³ôÆø´«À´£¬Äã²»ÓÉµÃÄó×¡±Ç×Ó...Ìì°¡...Õæ¶ñĞÄ..!!\n");
-		write("Äã¶ªµôÒ»ÅÌâÈÁËµÄ¼¦Èâ¡£\n");
+		write("ä¸€è‚¡è‡­æ°£å‚³ä¾†ï¼Œä½ ä¸ç”±å¾—æä½é¼»å­...å¤©å•Š...çœŸå™å¿ƒ..!!\n");
+		write("ä½ ä¸Ÿæ‰ä¸€ç›¤é¤¿äº†çš„é›è‚‰ã€‚\n");
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"¶ªµôÒ»ÅÌ³ôµôÁËµÄ¿¾¼¦Èâ...\n",
+		this_player()->query("c_name")+"ä¸Ÿæ‰ä¸€ç›¤è‡­æ‰äº†çš„çƒ¤é›è‚‰...\n",
 		this_player() );
 	
 
@@ -37,9 +37,9 @@ int eat_food(string arg)
 		return 1;
 	}
 
-	write( 	"ÄãÓä¿ìµØ³ÔµôÁËÕâÒ»ÅÌ¿¾¼¦£¬ĞÄÖĞÓĞÒ»ÖÖÂú×ã¸Ğ...:)\n" );
+	write( 	"ä½ æ„‰å¿«åœ°åƒæ‰äº†é€™ä¸€ç›¤çƒ¤é›ï¼Œå¿ƒä¸­æœ‰ä¸€ç¨®æ»¿è¶³æ„Ÿ...:)\n" );
 	tell_room( environment(this_player()), 
-		this_player()->query("c_name")+"³ÔµôÁËÒ»ÅÌ¿¾¼¦£¬¿´ÆğÀ´¾«ÉñºÃÁËÒ»Ğ©...\n",
+		this_player()->query("c_name")+"åƒæ‰äº†ä¸€ç›¤çƒ¤é›ï¼Œçœ‹èµ·ä¾†ç²¾ç¥å¥½äº†ä¸€äº›...\n",
 		this_player() );
 		
 
@@ -55,11 +55,11 @@ void not_fresh(object who)
 	owner = environment(who);
         if( owner && living(owner) )
 	{
-		write("ÄãÎÅµ½Ò»¹É³ôÎ¶´«À´£¬ºÃÏñÊÇÊ²÷á¶«Î÷âÈÁËµÄÑù×Ó¡£\n" );
+		write("ä½ èåˆ°ä¸€è‚¡è‡­å‘³å‚³ä¾†ï¼Œå¥½åƒæ˜¯ä»€éº¼æ±è¥¿é¤¿äº†çš„æ¨£å­ã€‚\n" );
         }
 		set ("value", ({ 1, "silver" }));
-		set_short( "âÈÁËµÄ¿¾¼¦" );
-		set_long( "ÕâÅÌ¿¾¼¦ÒÑ¾­âÈÁË£¬²»ÄÜ³ÔÁË¡£\n");
+		set_short( "é¤¿äº†çš„çƒ¤é›" );
+		set_long( "é€™ç›¤çƒ¤é›å·²ç¶“é¤¿äº†ï¼Œä¸èƒ½åƒäº†ã€‚\n");
 		set("is_fresh",0);
 }
    	

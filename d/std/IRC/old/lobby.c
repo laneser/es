@@ -7,15 +7,15 @@ void create()
 {
     ::create();
     set("light", 1);
-    set_short( "Lobby","´óÌü" );
+    set_short( "Lobby","å¤§å»³" );
     set_long( @LONG
 You are in a square shaped, somewhat crude room. There are
 four identical archways to the north, west and east directions.
 You can hear some noise coming from those.
 LONG
 	, @C_LONG
-ÕâÊÇÒ»¼ä³ÂÉè¼òµ¥µÄ·½ĞÎ´óÌü¡£ÔÚÄÏ, ±±, ¶«, Î÷ËÄ¸ö·½Ïò¸÷ÓĞÒ»¸ö
-ÍêÈ«ÏàÍ¬µÄ¹°ÃÅ¡£¸÷¸ö·¿¼ä¾ùÒşÔ¼´«À´ÈËËµ»°µÄÉùÒô¡£
+é€™æ˜¯ä¸€é–“é™³è¨­ç°¡å–®çš„æ–¹å½¢å¤§å»³ã€‚åœ¨å—, åŒ—, æ±, è¥¿å››å€‹æ–¹å‘å„æœ‰ä¸€å€‹
+å®Œå…¨ç›¸åŒçš„æ‹±é–€ã€‚å„å€‹æˆ¿é–“å‡éš±ç´„å‚³ä¾†äººèªªè©±çš„è²éŸ³ã€‚
 C_LONG
     );
     set("exits", ([

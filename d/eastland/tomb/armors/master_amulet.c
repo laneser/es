@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "master amulet", "ÌìÊ¦»¤·û" );
+	set_name( "master amulet", "å¤©å¸«è­·ç¬¦" );
 	add( "id", ({ "amulet" }) );
-	set_short( "ÌìÊ¦»¤·û" );
+	set_short( "å¤©å¸«è­·ç¬¦" );
 	set_long(
-		"Ò»¸öÆ¯ÁÁµÄ»¤·û£¬ÉÏÃæÓĞÖøÒ»Ğ©ÍäÍäÇúÇúµÄÄ§·¨·ûºÅ£¬Äã¿´²»¶®\n"
-		"ÔÚ»­Ğ©Ê²÷á¡£\n"
+		"ä¸€å€‹æ¼‚äº®çš„è­·ç¬¦ï¼Œä¸Šé¢æœ‰è‘—ä¸€äº›å½å½æ›²æ›²çš„é­”æ³•ç¬¦è™Ÿï¼Œä½ çœ‹ä¸æ‡‚\n"
+		"åœ¨ç•«äº›ä»€éº¼ã€‚\n"
 	);
-	set( "unit", "Ãæ" );
+	set( "unit", "é¢" );
 	set( "type", "misc" );
 	set( "material", "cloth" );
 	set( "defense_bonus", 7 );

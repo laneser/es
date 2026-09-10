@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "living pill", "ĞøÃüÒ©Íè" );
-	set_short( "ĞøÃüÒ©Íè" );
+	set_name( "living pill", "çºŒå‘½è—¥ä¸¸" );
+	set_short( "çºŒå‘½è—¥ä¸¸" );
         add ( "id" , ({"pill"}) );
 	set_long(
-	  "ÕâÊÇÒ»¿ÅĞøÃüÒ©Íè£¬ÊÇÓÃÇ§ÖÖÆæÕäÒ©²ÄÁ¶³É£¬¾İËµ¿ÉÆğËÀ»ØÉú¡£\n"
+	  "é€™æ˜¯ä¸€é¡†çºŒå‘½è—¥ä¸¸ï¼Œæ˜¯ç”¨åƒç¨®å¥‡çè—¥æç…‰æˆï¼Œæ“šèªªå¯èµ·æ­»å›ç”Ÿã€‚\n"
 	);
 	set( "no_sale", 1 );
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "weight", 2 );
 	set( "value", ({ 1, "gold" }) );
 }

@@ -6,17 +6,17 @@ inherit ROOM;
 void create()
 {
 	::create();
-   set_short("Ğ¡Ïï");
+   set_short("å°å··");
 	set_long( @LONG_DESCRIPTION
-ÕâÌõĞ¡ÏïÏòÄÏ±±·½ÏòÑÓÉì£¬Î÷±ßµÄÇ½ÉÏËÆºõĞ´ÖøÊ²÷á¶«Î÷(writing)£¬ÔÚ
-ÄãµÄÄÏ±ßÓĞÒ»¼äĞ¡Ãí£¬¶«±ßÊÇÒ»¶°¶«·½Ê½µÄ½¨Öş£¬µñÁº»­¶°£¬¿´ÆğÀ´ºÃÏñÊÇÓĞ
-Ç®ÈËµÄ×¡Ëù£¬Äã¿ÉÒÔÇÃÃÅ(knock)¿´¿´Ö÷ÈËÊÇ·ñÔ¸ÒâÈÃÄã²Î¹ÛÒ»ÏÂ¡£
+é€™æ¢å°å··å‘å—åŒ—æ–¹å‘å»¶ä¼¸ï¼Œè¥¿é‚Šçš„ç‰†ä¸Šä¼¼ä¹å¯«è‘—ä»€éº¼æ±è¥¿(writing)ï¼Œåœ¨
+ä½ çš„å—é‚Šæœ‰ä¸€é–“å°å»Ÿï¼Œæ±é‚Šæ˜¯ä¸€æ£Ÿæ±æ–¹å¼çš„å»ºç¯‰ï¼Œé›•æ¨‘ç•«æ£Ÿï¼Œçœ‹èµ·ä¾†å¥½åƒæ˜¯æœ‰
+éŒ¢äººçš„ä½æ‰€ï¼Œä½ å¯ä»¥æ•²é–€(knock)çœ‹çœ‹ä¸»äººæ˜¯å¦é¡˜æ„è®“ä½ åƒè§€ä¸€ä¸‹ã€‚
 LONG_DESCRIPTION
 	);
 
 	set_outside( "bluesand" );
 	set( "item_desc", ([ 
-		"writing" : "¡¸áçÁÙÊ±¹¤£¬´ıÓÅ£¬ÇëÇÃÃÅÈıÏÂ¡£¡¹\n\n" ]) );
+		"writing" : "ã€Œå¾µè‡¨æ™‚å·¥ï¼Œå¾…å„ªï¼Œè«‹æ•²é–€ä¸‰ä¸‹ã€‚ã€\n\n" ]) );
     set( "exits", ([ 
 		"north" : "/d/noden/bluesand/alley1.c", 
 		"south" : "/d/noden/bluesand/temple.c", 
@@ -24,8 +24,8 @@ LONG_DESCRIPTION
 	create_door( "east", "west", ([
 		"keyword" : ({ "arch door", "door" }),
 		"name" : "arch door",
-		"c_name" : "¹°ÃÅ",
-            "c_desc" : "Ò»ÉÈºìÉ«µÄ¹°ÃÅ£¬ÉÏÃæ×°ÊÎÖøĞí¶àÍ­»·¡£\n",
+		"c_name" : "æ‹±é–€",
+            "c_desc" : "ä¸€æ‰‡ç´…è‰²çš„æ‹±é–€ï¼Œä¸Šé¢è£é£¾è‘—è¨±å¤šéŠ…ç’°ã€‚\n",
 		"status" : "closed"
 	]) );
 	reset();
@@ -39,15 +39,15 @@ void init()
 int do_knock(string arg)
 {
    if( !arg || arg != "door" )
-   return notify_fail( "ÄãÒªÇÃÉ¶?\n" );
+   return notify_fail( "ä½ è¦æ•²å•¥?\n" );
    if( (string)this_object()->query("doors/east/status")=="open" )
-   return notify_fail( "ÃÅÊÇ¿ªÖøµÄ, Ö±½Ó×ß½øÈ¥°É¡£\n" );
-   write( "ÄãÓÃÁ¦µØÀŞÃÅÈıÏÂ¡£\n" );
+   return notify_fail( "é–€æ˜¯é–‹è‘—çš„, ç›´æ¥èµ°é€²å»å§ã€‚\n" );
+   write( "ä½ ç”¨åŠ›åœ°æ“‚é–€ä¸‰ä¸‹ã€‚\n" );
    tell_room( this_object(),
-        this_player()->query("c_name")+"ÓÃÁ¦µØÀŞÃÅÈıÏÂ¡£\n",
+        this_player()->query("c_name")+"ç”¨åŠ›åœ°æ“‚é–€ä¸‰ä¸‹ã€‚\n",
         this_player() );
    message( "tell_room",
-        "Î÷±ßµÄÃÅÍâ´«À´¡¸ßË..ßË..ßË..¡¹µÄÇÃÃÅÉù¡£\n",
+        "è¥¿é‚Šçš„é–€å¤–å‚³ä¾†ã€Œå’š..å’š..å’š..ã€çš„æ•²é–€è²ã€‚\n",
         "/d/healer/building/healer_guild", this_player() );
    return 1;
 }

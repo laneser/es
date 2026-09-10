@@ -6,21 +6,21 @@ void create()
 {
     ::create();
     set_level(1);
-    set_name( "a white dog", "Ð¡°×¹·" );
-    set_short( "Ð¡°×¹·");
+    set_name( "a white dog", "å°ç™½ç‹—" );
+    set_short( "å°ç™½ç‹—");
     set("no_attack",1);
     set_long(@C_LONG
-Ò»Ö»¾íÃ«µÄÐ¡°×¹·¡£Æ½Ê±Ï²»¶ÂÒµð¶«Î÷,ËùÒÔÓÖ½Ð¡ºµðµð¹·¡»¡£
+ä¸€éš»æ²æ¯›çš„å°ç™½ç‹—ã€‚å¹³æ™‚å–œæ­¡äº‚å¼æ±è¥¿,æ‰€ä»¥åˆå«ã€Žå¼å¼ç‹—ã€ã€‚
 C_LONG
             );
-    set("unit","Î»");
+    set("unit","ä½");
     set("age",18);
     set("gender","man" );
     set("no_attack",1);
     set("weight",3100);
     set("chat_chance",5);
     set("chat_output",({
-         "Ð¡°×¹·¶ÔÄã¡ºÍôÍôÍô¡»µØ·ÍÖø¡£\n"
+         "å°ç™½ç‹—å°ä½ ã€Žæ±ªæ±ªæ±ªã€åœ°å è‘—ã€‚\n"
     }) );
 }        
 int accept_item(object me, object item)
@@ -31,21 +31,21 @@ int accept_item(object me, object item)
       if (this_object()->query_temp("feed")){
           item->remove();
           tell_object(me,this_object()->query("c_name")+
-                "°ÑÄã¸øËüµÄ¶«Î÷¸øÂñÔÚµØÏÂ¡«¡«\n");
+                "æŠŠä½ çµ¦å®ƒçš„æ±è¥¿çµ¦åŸ‹åœ¨åœ°ä¸‹ï½žï½ž\n");
           return 0;
       }
       if (name!="white bone") {
           item->remove();
           tell_object(me,this_object()->query("c_name")+
-                "°ÑÄã¸øËüµÄ¶«Î÷³ÔÏÂÈ¥¡«¡«\n");
+                "æŠŠä½ çµ¦å®ƒçš„æ±è¥¿åƒä¸‹åŽ»ï½žï½ž\n");
           return 0;
       }
       item->remove();
       this_object()->set_temp("feed",1);
       tell_room(environment(this_object()),this_object()->query("c_name")+
-          "Ò»ÁïÑÌµØµðÖøÄã¸øËûµÄ¶«Î÷ÅÜµ½±ðµÄµØ·½È¥ÁË¡«¡«\n");  
+          "ä¸€æºœç…™åœ°å¼è‘—ä½ çµ¦ä»–çš„æ±è¥¿è·‘åˆ°åˆ¥çš„åœ°æ–¹åŽ»äº†ï½žï½ž\n");  
       set_long(@C_LONG
-Ò»Ö»¾íÃ«µÄÐ¡°×¹·¡£ËüÕýÔÚÅ¬Á¦µØÀíÖø¶«Î÷¡£
+ä¸€éš»æ²æ¯›çš„å°ç™½ç‹—ã€‚å®ƒæ­£åœ¨åŠªåŠ›åœ°ç†è‘—æ±è¥¿ã€‚
 C_LONG
             );
       this_object()->move(DBEGGAR"forest6");
@@ -55,9 +55,9 @@ C_LONG
 void recover(object obj)
 {
     tell_room( environment(obj),obj->query("c_name")+
-         "ÔÚÂñÍê¶«Î÷Ö®áá¾ÍÓÖÅÜ×ßÁË¡«¡«\n");
+         "åœ¨åŸ‹å®Œæ±è¥¿ä¹‹å¾Œå°±åˆè·‘èµ°äº†ï½žï½ž\n");
     set_long(@C_LONG
-Ò»Ö»¾íÃ«µÄÐ¡°×¹·¡£Æ½Ê±Ï²»¶ÂÒµð¶«Î÷,ËùÒÔÓÖ½Ð¡ºµðµð¹·¡»¡£
+ä¸€éš»æ²æ¯›çš„å°ç™½ç‹—ã€‚å¹³æ™‚å–œæ­¡äº‚å¼æ±è¥¿,æ‰€ä»¥åˆå«ã€Žå¼å¼ç‹—ã€ã€‚
 C_LONG
     );
     environment(obj)->delete_temp("be_searched");

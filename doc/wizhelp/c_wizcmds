@@ -1,17 +1,17 @@
-ÒÔÏÂÊÇÒ»Ğ©³£ÓÃµÄÎ×Ê¦Ö¸Áî£¬ËùÓĞµÄÖ¸Áî¶¼¿ÉÒÔÓÃ help <Ö¸ÁîÃû> µÃµ½½øÒ»²½µÄËµÃ÷¡£
-´ËÍâ£¬Äã¿ÉÒÔÓÃ pathcmd (ÏµÍ³Ö¸Áî)¡¢localcmd (ÓÉÆäËüÎïÆ·»òÄãËùÔÚµØÌá¹©µÄÖ¸Áî)
-¼° semote (±í´ï¸Ğ¾õ¡¢¶¯×÷µÄÖ¸Áî) ÕâÈı¸öÖ¸ÁîÁĞ³öËùÓĞÄãÄÜÊ¹ÓÃµÄÃüÁî¡£ÕâĞ©ÃüÁî
-Äã¶¼¿ÉÒÔÓÃ alias »ò nickname ¼òĞ´¡£
+ä»¥ä¸‹æ˜¯ä¸€äº›å¸¸ç”¨çš„å·«å¸«æŒ‡ä»¤ï¼Œæ‰€æœ‰çš„æŒ‡ä»¤éƒ½å¯ä»¥ç”¨ help <æŒ‡ä»¤å> å¾—åˆ°é€²ä¸€æ­¥çš„èªªæ˜ã€‚
+æ­¤å¤–ï¼Œä½ å¯ä»¥ç”¨ pathcmd (ç³»çµ±æŒ‡ä»¤)ã€localcmd (ç”±å…¶å®ƒç‰©å“æˆ–ä½ æ‰€åœ¨åœ°æä¾›çš„æŒ‡ä»¤)
+åŠ semote (è¡¨é”æ„Ÿè¦ºã€å‹•ä½œçš„æŒ‡ä»¤) é€™ä¸‰å€‹æŒ‡ä»¤åˆ—å‡ºæ‰€æœ‰ä½ èƒ½ä½¿ç”¨çš„å‘½ä»¤ã€‚é€™äº›å‘½ä»¤
+ä½ éƒ½å¯ä»¥ç”¨ alias æˆ– nickname ç°¡å¯«ã€‚
 
-ÒÆ¶¯ÓÃÖ¸Áî:	goto, move, home, gate, summon
-Îï¼şÖ¸Áî:	dest, clone, load, update, renew, trace
-µµ°¸²Ù×÷Ö¸Áî:	pwd, cd, more, ls, rm, cp, mv
-Î×Ê¦µÄÌØÊâÄÜÁ¦:	snoop, mail, set, review, invis, echo, datacall, eval, from,
+ç§»å‹•ç”¨æŒ‡ä»¤:	goto, move, home, gate, summon
+ç‰©ä»¶æŒ‡ä»¤:	dest, clone, load, update, renew, trace
+æª”æ¡ˆæ“ä½œæŒ‡ä»¤:	pwd, cd, more, ls, rm, cp, mv
+å·«å¸«çš„ç‰¹æ®Šèƒ½åŠ›:	snoop, mail, set, review, invis, echo, datacall, eval, from,
 		light, gametime, busy, halt, learn, zap
-È¡µÃ×ÊÑ¶ÓÃÖ¸Áî:	data, people, finger, stat, makers, log, domains, announce,
+å–å¾—è³‡è¨Šç”¨æŒ‡ä»¤:	data, people, finger, stat, makers, log, domains, announce,
 		groups, users, gauge
-ÏµÍ³×´Ì¬Ö¸Áî:	makers, rusage, mudinfo, qload, status, graph, callouts
-ÁìÓòÖ¸Áî:	domains, sponsor, demote, primary
-µµ°¸Â·¾¶Ö¸Áî:	pathcmd, localcmd, which
-½»Ì¸ÆµµÀÖ¸Áî: 	show, tune, channels
-ÎÄ¼şËµÃ÷Ö¸Áî:	apropos
+ç³»çµ±ç‹€æ…‹æŒ‡ä»¤:	makers, rusage, mudinfo, qload, status, graph, callouts
+é ˜åŸŸæŒ‡ä»¤:	domains, sponsor, demote, primary
+æª”æ¡ˆè·¯å¾‘æŒ‡ä»¤:	pathcmd, localcmd, which
+äº¤è«‡é »é“æŒ‡ä»¤: 	show, tune, channels
+æ–‡ä»¶èªªæ˜æŒ‡ä»¤:	apropos

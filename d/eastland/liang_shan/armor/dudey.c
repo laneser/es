@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("License of monks","¶Èëº");
+        set_name("License of monks","åº¦ç‰’");
         add("id",({"license"}) );
-         set_short( "a license of monks","¶Èëº");
+         set_short( "a license of monks","åº¦ç‰’");
 	set_long(
-"¶ÈëºÊÇ¸÷ËÂÃíÔÚÉ®ÂÂÌê¶ÈÊ±£¬·¢¸øµÄÉí·İÖ¤Ã÷£¬Í¨³£¶¼¾­¹ı¸ßÉ®µÄ×£¸££®\n"
-"ÄÜ¼á¶¨É®ÂÂÏò·ğÖ®ĞÄ£®\n"
+"åº¦ç‰’æ˜¯å„å¯ºå»Ÿåœ¨åƒ§ä¾¶å‰ƒåº¦æ™‚ï¼Œç™¼çµ¦çš„èº«ä»½è­‰æ˜ï¼Œé€šå¸¸éƒ½ç¶“éé«˜åƒ§çš„ç¥ç¦ï¼\n"
+"èƒ½å …å®šåƒ§ä¾¶å‘ä½›ä¹‹å¿ƒï¼\n"
 );
-	set( "unit", "±¾" );
+	set( "unit", "æœ¬" );
 	set( "weight", 30 );
 	set( "type", "misc" );
 	set( "material","monk");

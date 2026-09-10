@@ -104,7 +104,7 @@ nomask int cmd_hook(string cmd)
 	mapping before, after;
 
 	if( query_temp("block_command") ) {
-		quick_message( "( ÄãÏÖÔÚÎÞ·¨×öÆäËû¶¯×÷¡£ )\n");
+		quick_message( "( ä½ ç¾åœ¨ç„¡æ³•åšå…¶ä»–å‹•ä½œã€‚ )\n");
 		return 1;
 	}
 
@@ -167,7 +167,7 @@ nomask  int stack_cmd_hook(string cmd)
 	mapping before, after;
 
 	if( query_temp("block_command") ) {
-		write( "( ÄãÏÖÔÚÎÞ·¨×öÆäËû¶¯×÷¡£ )\n");
+		write( "( ä½ ç¾åœ¨ç„¡æ³•åšå…¶ä»–å‹•ä½œã€‚ )\n");
 		return 1;
 	}
 	if (sscanf(cmd,"%s %s",verb,arg) != 2 ) {
@@ -224,14 +224,14 @@ varargs int move_player(mixed dest, mixed message, string dir)
 
 	prev = environment();
 	if( res = move(dest) != MOVE_OK ) {
-		tell_object(this_object(), "( ÄãÁôÔÚÔ­µØ.... )\n");
+		tell_object(this_object(), "( ä½ ç•™åœ¨åŽŸåœ°.... )\n");
 		return res;
 	}
 
 	if( query_attackers() && clean_up_attackers() == 0) {
 		set_temp("last_attack_skill", 0);
 		//write("combat test3!\n");
-		quick_message("Õ½¶·½áÊøÁË¡£\n");
+		quick_message("æˆ°é¬¥çµæŸäº†ã€‚\n");
 	}
 
 	if(message == "SLIENCE") return 0;
@@ -336,7 +336,7 @@ void create()
 //	Until the user's name and id is set ... give it a temporary one.
 
 	set("name", "noname", MASTER_ONLY);
-	set("c_name", "Ä°ÉúÈË", MASTER_ONLY);
+	set("c_name", "é™Œç”Ÿäºº", MASTER_ONLY);
 //	set("cap_name", capitalize(query("name")));
 //	set("c_cap_name", query("c_name"));
 	set("id", ({ "noname" }));
@@ -393,7 +393,7 @@ void remove()
 		if( (euid != ROOT_UID) && (euid != geteuid(this_object())) &&
 			!member_group(euid, "admin") && !member_group(euid, "arch") ) {
 			tell_object( previous_object(),
-				"Äã²»ÄÜÈÎÒâ´Ý»ÙÍæ¼ÒµÄÉíÌå¡£\n");
+				"ä½ ä¸èƒ½ä»»æ„æ‘§æ¯€çŽ©å®¶çš„èº«é«”ã€‚\n");
 			return;
 		}
 	}
@@ -429,9 +429,9 @@ int quit(string str)
 	int i, j,loop;
 
 	if( str )
-		return notify_fail( "ÒªÀë¿ªÓÎÏ·£¬´ò quit ¾ÍºÃÁË¡£\n");
+		return notify_fail( "è¦é›¢é–‹éŠæˆ²ï¼Œæ‰“ quit å°±å¥½äº†ã€‚\n");
 	if ( wizardp(this_object()) && !this_object()->query("ok_ip"))
-		return notify_fail( "ÉíÎªÎ×Ê¦£¬ÇëÏÈÉèºÃ OKIP ÔÙ quit ÒÔÈ·±£°²È« !!\n");
+		return notify_fail( "èº«ç‚ºå·«å¸«ï¼Œè«‹å…ˆè¨­å¥½ OKIP å† quit ä»¥ç¢ºä¿å®‰å…¨ !!\n");
 // If the #define is on, then save their location for starting next time.
 
 #ifdef REAPPEAR_AT_QUIT
@@ -451,7 +451,7 @@ int quit(string str)
 		quit_script = user_path( query( "name" ) ) + ".quit";
 		if( file_size( quit_script ) > 0 ) {
 			if (in_de_quit_script++)
-				write( "Î¹£¡±ðÔÚ .quit ÀïÃæ·Å \"quit\" Ö¸Áî£¬´ô×Ó¡£\n");
+				write( "å–‚ï¼åˆ¥åœ¨ .quit è£¡é¢æ”¾ \"quit\" æŒ‡ä»¤ï¼Œå‘†å­ã€‚\n");
 			else
 				call_other( this_object(), "tsh", quit_script );
 			in_de_quit_script = 0;
@@ -478,7 +478,7 @@ int quit(string str)
 	//	Announce the departure of the user.
 	if( this_object() && visible(this_object()) && environment() )
 		tell_room( environment(),
-			query("c_name") + "¾ö¶¨ÔÝÊ±Àë¿ª¶«·½¹ÊÊÂ£¬»Øµ½¿ÉÅÂµÄÏÖÊµÊÀ½çÈ¥ÁË¡£\n"
+			query("c_name") + "æ±ºå®šæš«æ™‚é›¢é–‹æ±æ–¹æ•…äº‹ï¼Œå›žåˆ°å¯æ€•çš„ç¾å¯¦ä¸–ç•ŒåŽ»äº†ã€‚\n"
 			, this_object()
 		);
 
@@ -609,7 +609,7 @@ void setup()
 	//	Display last logon and logon site
 	write("aadsaaaaaaaaaaaaaaaaaaaa\n\n");
 	if( link_data("last_on") )
-		write( "\nÉÏ´ÎÁ¬ÏßÊ±¼ä:  " + ctime(link_data("last_on")) + " (´Ó " +
+		write( "\nä¸Šæ¬¡é€£ç·šæ™‚é–“:  " + ctime(link_data("last_on")) + " (å¾ž " +
 			link_data("ip") + ")\n\n");
 
 	this_object()->consistency_check();  // A catch-all to upgrade old users
@@ -633,7 +633,7 @@ void setup()
 //	return;
 //#endif
 
-	write( "[Çë°´ RETURN ¼ü¼ÌÐø]  ");
+	write( "[è«‹æŒ‰ RETURN éµç¹¼çºŒ]  ");
 	input_to("complete_setup",2);
 
 	return;
@@ -667,7 +667,7 @@ and use the shutdown command anyway... ;)
              timetemp=stat(user_data_file(this_player())+".o",0)[1];
 	timetemp1=query("last_save");
 /*	if (!timetemp1){
-           tell_object(this_object(),"ÄãµÄÈËÎï×ÊÁÏÒÑ¾­Ëð»µ£¬ÇëÓÃÆäËûÈËÎïÍ¨Öª´óÉñ»òÎ×Ê¦ !!\n");
+           tell_object(this_object(),"ä½ çš„äººç‰©è³‡æ–™å·²ç¶“æå£žï¼Œè«‹ç”¨å…¶ä»–äººç‰©é€šçŸ¥å¤§ç¥žæˆ–å·«å¸« !!\n");
              ANNOUNCE->log_file1("BAD_MODIFY",query("name")+" be modified from "+link->query("ip")
                +" ["+extract(ctime(timetemp),4,15)+"] no save time\n");
 	link->set("hibernate", (time() +259200));
@@ -676,7 +676,7 @@ and use the shutdown command anyway... ;)
                return;
 	}
              if (timetemp > (timetemp1+20)){
-           tell_object(this_object(),"ÄãµÄÈËÎï×ÊÁÏÒÑ¾­Ëð»µ£¬ÇëÓÃÆäËûÈËÎïÍ¨Öª´óÉñ»òÎ×Ê¦ !!\n");
+           tell_object(this_object(),"ä½ çš„äººç‰©è³‡æ–™å·²ç¶“æå£žï¼Œè«‹ç”¨å…¶ä»–äººç‰©é€šçŸ¥å¤§ç¥žæˆ–å·«å¸« !!\n");
              ANNOUNCE->log_file1("BAD_MODIFY",query("name")+" be modified from "+link->query("ip")
                +" ["+extract(ctime(timetemp),4,15)+"] save ["+extract(ctime(timetemp1),4,15)+"]\n");
 	link->set("hibernate", (time() +259200));
@@ -700,7 +700,7 @@ and use the shutdown command anyway... ;)
 	if( !start_room || !stringp(start_room) ){
 		aclass = this_object()->query("class");
 		if ( member_array( aclass, CLASS_NAMES ) == -1 ) {
-			tell_object(this_object(),"ÄãµÄÈËÎï×ÊÁÏÒÑ¾­Ëð»µ£¬ÇëÓÃÆäËûÈËÎïÍ¨Öª´óÉñ»òÎ×Ê¦ !!\n");
+			tell_object(this_object(),"ä½ çš„äººç‰©è³‡æ–™å·²ç¶“æå£žï¼Œè«‹ç”¨å…¶ä»–äººç‰©é€šçŸ¥å¤§ç¥žæˆ–å·«å¸« !!\n");
 			remove();
 			return;
 		}
@@ -744,16 +744,16 @@ of users, or leave it commented out...
 		this_object()->move(START);
 		ghost->force_me("look");
 		tell_object(ghost,
-			"\nÄãÍ»È»ÏëÆð ... ²»¾ÃÇ°ÄãÒÑ¾­ËÀÁË¡£\n");
+			"\nä½ çªç„¶æƒ³èµ· ... ä¸ä¹…å‰ä½ å·²ç¶“æ­»äº†ã€‚\n");
 		tell_room(environment(ghost),
-			  "Ò»ÌõÔ©»êÁ¬Ïß½øÈëÁË¶«·½¹ÊÊÂ¡£\n", ghost );
+			  "ä¸€æ¢å†¤é­‚é€£ç·šé€²å…¥äº†æ±æ–¹æ•…äº‹ã€‚\n", ghost );
 		remove();
 		return;
 	}
 
 	if( visible(this_object()) )
 		tell_room( environment(),
-			   (string)this_object()->query("c_name") + "Á¬Ïß½øÈëÁË¶«·½¹ÊÊÂ¡£\n",
+			   (string)this_object()->query("c_name") + "é€£ç·šé€²å…¥äº†æ±æ–¹æ•…äº‹ã€‚\n",
 			  this_object() );
 
 #ifdef LOGIN_LOG
@@ -790,7 +790,7 @@ void autosave_user()
 //	call_out("autosave_user", AUTOSAVE);
 
 	if( !wizardp(this_object()) )
-		tell_object(this_object(), "×Ô¶¯´æµµ....Íê±Ï¡£\n");
+		tell_object(this_object(), "è‡ªå‹•å­˜æª”....å®Œç•¢ã€‚\n");
 	save_me();
 }
 */
@@ -872,7 +872,7 @@ void net_dead()
 	if( env )
 		tell_room( env,
 			this_object()->query("c_name")+
-			"ºÍÏÖÊµÉú»îµÄÁ¬ÏßËÆºõÓÐÐ©ÎÊÌâ .... ¶ÏÏßÁË¡£\n"
+			"å’Œç¾å¯¦ç”Ÿæ´»çš„é€£ç·šä¼¼ä¹Žæœ‰äº›å•é¡Œ .... æ–·ç·šäº†ã€‚\n"
 			, this_object());
 
         PARTY_D->check_party(this_object());
@@ -927,7 +927,7 @@ void restart_heart()
 	object linkroom, statue;
 
 	tell_room( environment(),
-		query("c_name")+"ÖØÐÂÁ¬Ïß´©¹ýÊ±¿ÕÃÅ½øÈëÃ°ÏÕÊÀ½ç¡£\n"
+		query("c_name")+"é‡æ–°é€£ç·šç©¿éŽæ™‚ç©ºé–€é€²å…¥å†’éšªä¸–ç•Œã€‚\n"
 		, this_object()
 	);
 
@@ -939,14 +939,14 @@ void restart_heart()
 	if( linkroom ) {
 		this_object()->move_player( linkroom, "SNEAK" );
 		tell_room( linkroom,
-			"Ò»¿Å·¢¹âµÄÇòÌå²»Öª´ÓºÎ´¦³öÏÖ²¢·É½ø"+
-			query("c_name")+"µÄµñÏñÄÚ¡£\n"
+			"ä¸€é¡†ç™¼å…‰çš„çƒé«”ä¸çŸ¥å¾žä½•è™•å‡ºç¾ä¸¦é£›é€²"+
+			query("c_name")+"çš„é›•åƒå…§ã€‚\n"
 			, this_object());
 	}
 
 	this_object()->delete("linkdead_room");
 	this_object()->delete("statue");
-	write( "ÖØÐÂÁ¬ÏßÍê±Ï¡£\n");
+	write( "é‡æ–°é€£ç·šå®Œç•¢ã€‚\n");
 	ANNOUNCE->announce_user(this_object(), 2);
 	USERID_D->query_userid();
 	set_heart_beat(1);
@@ -970,23 +970,23 @@ varargs call_user_dump(string type, object player)
 
 	tell_object(user, "");  		//  Beep'em
 	tell_object(user,
-		"ºÜ±§Ç¸£¡ÄãÒÑ¾­·¢´ôÌ«¾ÃÁË£¬»¶Ó­ÏÂ´ÎÔÙÀ´¡£\n");
+		"å¾ˆæŠ±æ­‰ï¼ä½ å·²ç¶“ç™¼å‘†å¤ªä¹…äº†ï¼Œæ­¡è¿Žä¸‹æ¬¡å†ä¾†ã€‚\n");
 
 	statue = (object)user->query("statue");
 	if( objectp(statue) && type == "linkdead" ) {
 		if( environment(statue) )
 			tell_room( environment( statue ),
 				user->query("c_name")+
-				"¶ÏÏßÌ«¾Ã£¬ÖÁ¸ßÎÞÉÏµÄÉñ¾ö¶¨°ÑÕâ¼Ò»ïÌß»ØÏÖÊµÊÀ½ç¡£\n"
-				"ÄãÌýµ½¡¸ºäÂ¡¡¹Ò»Éù£¬²»ÖªºÎ´¦ÂäÏÂÒ»µÀÉÁµç°Ñ"+statue->query("short")+
-				"»¯Îª»Ò½ý£¡\n"
+				"æ–·ç·šå¤ªä¹…ï¼Œè‡³é«˜ç„¡ä¸Šçš„ç¥žæ±ºå®šæŠŠé€™å‚¢ä¼™è¸¢å›žç¾å¯¦ä¸–ç•Œã€‚\n"
+				"ä½ è½åˆ°ã€Œè½Ÿéš†ã€ä¸€è²ï¼Œä¸çŸ¥ä½•è™•è½ä¸‹ä¸€é“é–ƒé›»æŠŠ"+statue->query("short")+
+				"åŒ–ç‚ºç°ç‡¼ï¼\n"
 				, statue
 			);
 			statue->remove();
 	} else
 		tell_room(environment(),
 			user->query("c_name")+
-			"·¢´ôÌ«¾ÃÁË£¬ÖÁ¸ßÎÞÉÏµÄÉñ¾ö¶¨°ÑÕâ¼Ò»ïÌß»ØÏÖÊµÊÀ½ç¡£\n"
+			"ç™¼å‘†å¤ªä¹…äº†ï¼Œè‡³é«˜ç„¡ä¸Šçš„ç¥žæ±ºå®šæŠŠé€™å‚¢ä¼™è¸¢å›žç¾å¯¦ä¸–ç•Œã€‚\n"
 			, user
 		);
 	user->quit();
@@ -1009,15 +1009,15 @@ void die()
 
 	// If a high lv killed a low lv (lv < 5) player, let him die!
         if( this_object()->query_level()<5 && userp(killer) && query("last_attacker") ) {
-		tell_room(killer,"¶«·½¹ÊÊÂµÄÖîÉñ·¢³öÒ»ÕóÅ­ºð:¿É¶ñµÄ"+
-			killer->query("c_name")+"¾¹¸ÒPKµÍµÈ¼¶Íæ¼Ò, È¥ËÀ°É!\n");
+		tell_room(killer,"æ±æ–¹æ•…äº‹çš„è«¸ç¥žç™¼å‡ºä¸€é™£æ€’å¼:å¯æƒ¡çš„"+
+			killer->query("c_name")+"ç«Ÿæ•¢PKä½Žç­‰ç´šçŽ©å®¶, åŽ»æ­»å§!\n");
 		killer->receive_damage(1000);
 	}
 
 	//	If the wizard has themself set to "immortal", then
 	//	they cannot die ... stop death call.
 	if( wizardp(this_object()) && query("immortal")) {
-		write("( ÄãµÄÎ×Ê¦Éí·Ý¼°²»ÐàµÄÄ§Á¦Ê¹ÄãÃâì¶ËÀÍö¡£ )\n");
+		write("( ä½ çš„å·«å¸«èº«ä»½åŠä¸æœ½çš„é­”åŠ›ä½¿ä½ å…æ–¼æ­»äº¡ã€‚ )\n");
 		set("hit_points", (int)query("max_hp"));
 		return;
 	}
@@ -1030,10 +1030,10 @@ void die()
 		&& killer)	{
 	   if ( !killer->query("npc") && !this_object()->query("npc") ) {
 		this_object()->set("hit_points",1);
-		write( "ÄãµÄÌåÁ¦ºÄ¾¡£¬ÔÚÕâ³¡Õ½¶·ÖÐÂä°Ü¡£\n");
+		write( "ä½ çš„é«”åŠ›è€—ç›¡ï¼Œåœ¨é€™å ´æˆ°é¬¥ä¸­è½æ•—ã€‚\n");
 
         tell_room( env,
-		sprintf("%sµÄÌåÁ¦ºÄ¾¡£¬ÊäÁËÕâ³¡Õ½¶·¡£\n",(string)this_object()->query("c_name")) ,
+		sprintf("%sçš„é«”åŠ›è€—ç›¡ï¼Œè¼¸äº†é€™å ´æˆ°é¬¥ã€‚\n",(string)this_object()->query("c_name")) ,
         	this_object()
         );
 		return;
@@ -1046,7 +1046,7 @@ void die()
 	add( "dead_count", 1 );
 
 	//	Announce the user's death
-	write( "ÄãËÀÁË¡£\n");
+	write( "ä½ æ­»äº†ã€‚\n");
 	COMBAT_D->report_death();
 
 
@@ -1121,13 +1121,13 @@ void die()
 	if(!ghost)  return;
 
 	tell_object(ghost,
-		"\nÄãÓÐÖÖÆæ¹ÖµÄ¸Ð¾õ....ÇáÆ®Æ®µÄ....\n\nÄã¿´µ½Äã×Ô¼ººÁÎÞÁ¦ÆøµØÌÉÔÚµØÉÏ....¡£\n\n");
+		"\nä½ æœ‰ç¨®å¥‡æ€ªçš„æ„Ÿè¦º....è¼•é£„é£„çš„....\n\nä½ çœ‹åˆ°ä½ è‡ªå·±æ¯«ç„¡åŠ›æ°£åœ°èººåœ¨åœ°ä¸Š....ã€‚\n\n");
 
 	if( killer ) {
 		ghost->set("killer_ob", killer);
 		ghost->set("killer_name", (string)killer->query("name"));
 		if ( !killer->query("npc") && killer->query("make-up") ) {
-			tell_object(ghost,set_color(sprintf("\nÄãÍ»È»Ã÷°×,É±ÄãµÄÈËÊÇ%s(%s) !!\n\n\n",
+			tell_object(ghost,set_color(sprintf("\nä½ çªç„¶æ˜Žç™½,æ®ºä½ çš„äººæ˜¯%s(%s) !!\n\n\n",
 				killer->query("c_org_name"),
 				capitalize(killer->query("org_name") ) ),"HIR",this_object()));
 		}
@@ -1144,28 +1144,28 @@ string query_short()
 {
 	object ob;
 
-	if( query("name") == "noname" )  return "ÎÞÃûÊÏ";
+	if( query("name") == "noname" )  return "ç„¡åæ°";
 
 	if( !interactive(this_object()) )
-		return (query("title") + " [¶ÏÏßÖÐ...]");
+		return (query("title") + " [æ–·ç·šä¸­...]");
 
 	if( query("inactive") )
-		return query("title") + " [Í£Ö¹»î¶¯]";
+		return query("title") + " [åœæ­¢æ´»å‹•]";
 /*
 	if( this_player() && attackers && sizeof(attackers) && attackers[0]
 		&& environment(this_player()) == environment(this_object()) )
-		return query("title") + " [ÕýÔÚºÍ" +
-			(string)attackers[0]->query("c_name") + "Õ½¶·]";
+		return query("title") + " [æ­£åœ¨å’Œ" +
+			(string)attackers[0]->query("c_name") + "æˆ°é¬¥]";
 */
 	if( query_temp("meditating") )
-		return query("title") + " [Ú¤Ë¼ÖÐ...]";
+		return query("title") + " [å†¥æ€ä¸­...]";
 
 	if( query_temp("exercising") )
-		return query("title") + " [´ò×øÔË¹¦ÖÐ...]";
+		return query("title") + " [æ‰“åé‹åŠŸä¸­...]";
 
 	if( ob=query_temp("mounting") )
-		return query("title") + " [ÆïÔÚÒ»" +
-			ob->query("unit") + ob->query("c_name") + "ÉÏ]";
+		return query("title") + " [é¨Žåœ¨ä¸€" +
+			ob->query("unit") + ob->query("c_name") + "ä¸Š]";
 
 	return query("title");
 }

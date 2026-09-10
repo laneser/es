@@ -13,11 +13,11 @@ string party_name;
 void create()
 {
 	seteuid( getuid() );
-	set_name("party_token","¶ÓÎéÐÅÎï");
+	set_name("party_token","éšŠä¼ä¿¡ç‰©");
 	add( "id", ({ "token" }) );
-	set_short("¶ÓÎéÐÅÎï");
+	set_short("éšŠä¼ä¿¡ç‰©");
 	set_long(
-	"ÕâÊÇ´ú±íÄãËùÔÚ¶ÓÎéµÄÐÅÎï£¬Äã¿ÉÒÔÀûÓÃ¶Ó³¤µÄÃû×Öµ±Ö¸ÁîºÍÆäËû¶ÓÓÑ½»Ì¸¡£\n"
+	"é€™æ˜¯ä»£è¡¨ä½ æ‰€åœ¨éšŠä¼çš„ä¿¡ç‰©ï¼Œä½ å¯ä»¥åˆ©ç”¨éšŠé•·çš„åå­—ç•¶æŒ‡ä»¤å’Œå…¶ä»–éšŠå‹äº¤è«‡ã€‚\n"
 	);
 	set("prevent_drop", 1);
 	set("prevent_insert", 1);
@@ -40,15 +40,15 @@ int do_chat(string arg)
     int i;
         
     if( !arg ) 
-    	return notify_fail("ÄãÏë¶Ô¶ÓÓÑËµÊ²÷á£¿\n");
+    	return notify_fail("ä½ æƒ³å°éšŠå‹èªªä»€éº¼ï¼Ÿ\n");
 
     leader_name = (string)this_player()->query_temp("leader");
     if( !leader_name || !(leader=find_player(leader_name)) ) 
-        return notify_fail("ÄãµÄ¶Ó³¤²»¼ûÁË !\n");
+        return notify_fail("ä½ çš„éšŠé•·ä¸è¦‹äº† !\n");
     usr = (mixed *)leader->query_temp("party_members");
     for( i=0; i<sizeof(usr); i++ )
     	message( "party_line", set_color(sprintf( 
-        	"[¶ÓÎé "+capitalize(leader_name)+"] %s£º%s\n",
+        	"[éšŠä¼ "+capitalize(leader_name)+"] %sï¼š%s\n",
             	this_player()->query("c_name"), arg),"HIG",usr[i]), usr[i] 
         );
     return 1;

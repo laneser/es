@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(15);
-	set_name( "zombie captain", "½©Ê¬´¬³¤" );
+	set_name( "zombie captain", "æ®­å±èˆ¹é•·" );
 	add( "id", ({ "zombie", "captain"}) );
-   set_short( "½©Ê¬´¬³¤" );
+   set_short( "æ®­å±èˆ¹é•·" );
 	set_long(
-		"Ò»¾ßÓÖ³óÓÖÐ×¶ñµÄ½©Ê¬¡£\n"
+		"ä¸€å…·åˆé†œåˆå…‡æƒ¡çš„æ®­å±ã€‚\n"
 	);
 	set( "gender", "male" );
 	set( "alignment", -800 );
@@ -18,8 +18,8 @@ void create()
    set( "unbleeding", 1 );
    set( "block_aim", ({ "vascular", "ganglion" }) );
 	set( "tactic_func", "my_tactic" );
-	set_c_verbs( ({"%sÓÃËûµÄ½©Ö±µÄ×¦×Ó×¥Ïò%s", "%sÕÅ¿ª×ìÍù%sÒ§È¥",
-		"%sÎåÖ¸ÕÅ¿ª£¬ÃÍÈ»Íù%s²åÏÂ" }) );
+	set_c_verbs( ({"%sç”¨ä»–çš„åƒµç›´çš„çˆªå­æŠ“å‘%s", "%så¼µé–‹å˜´å¾€%så’¬åŽ»",
+		"%säº”æŒ‡å¼µé–‹ï¼ŒçŒ›ç„¶å¾€%sæ’ä¸‹" }) );
 	set_perm_stat( "str", 30 );
 	set_perm_stat( "dex", 10 );
 	set( "hit_points", 900 );
@@ -34,7 +34,7 @@ int my_tactic()
 
 	if( !(victim= query_attacker()) || (random(20)>2) ) return 0;
     tell_room( environment(),
-           "½©Ê¬¿ÚÖÐ·¢³öÒ»Ð©¹ÖÉù£¬Ê¹Äã¾õµÃÒ»ÕóÔÎÑ£....ºÃÏñÁ¦Á¿±»Îü×ßÁË¡£\n",
+           "æ®­å±å£ä¸­ç™¼å‡ºä¸€äº›æ€ªè²ï¼Œä½¿ä½ è¦ºå¾—ä¸€é™£æšˆçœ©....å¥½åƒåŠ›é‡è¢«å¸èµ°äº†ã€‚\n",
 		this_object() );
 	dam = 30 + random(20);
 	victim->receive_special_damage( "evil", dam );

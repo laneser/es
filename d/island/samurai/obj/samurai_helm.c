@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_helm ", "ÎäÊ¿Í·¿ø");
+        set_name( "samurai_helm ", "æ­¦å£«é ­ç›”");
         add( "id", ({ "helm" }) );
-        set_short("samurai_helm", "ÎäÊ¿Í·¿ø");
+        set_short("samurai_helm", "æ­¦å£«é ­ç›”");
         set_long(@AAA
-Ò»¸öÎäÊ¿ÃÇÖÆÊ½´©µÄÍ·¿ø,ÓÃÀ´±£»¤Í·²¿ÓÃ
+ä¸€å€‹æ­¦å£«å€‘åˆ¶å¼ç©¿çš„é ­ç›”,ç”¨ä¾†ä¿è­·é ­éƒ¨ç”¨
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "head" );
         set( "armor_class", 7 );
         set( "defense_bonus", 1 );

@@ -8,12 +8,12 @@ void create()
     
 	::create();
 	set_level(15);
-	set_name( "swamp plant", "ÕÓÔóÖ²Îï" );
+	set_name( "swamp plant", "æ²¼æ¾¤æ¤ç‰©" );
 	add("id",({"plant"}));
-	set_short( "swamp plant", "ÕÓÔóÖ²Îï" );
+	set_short( "swamp plant", "æ²¼æ¾¤æ¤ç‰©" );
 	set_long(
 		"a strange black swamp plant.\n",
-		"Ò»ÖÖÉú³¤ÔÚ»Ò°µµºÕÓÔóµÄºÚÉ«Ö²Îï,Ëü»áÖ÷¶¯µØ¹¥»÷ÈÎºÎÉúÎï.\n"
+		"ä¸€ç¨®ç”Ÿé•·åœ¨ç°æš—å³¶æ²¼æ¾¤çš„é»‘è‰²æ¤ç‰©,å®ƒæœƒä¸»å‹•åœ°æ”»æ“Šä»»ä½•ç”Ÿç‰©.\n"
 	);
 	set( "alignment", 0 );
 	set_perm_stat( "dex", 20 );
@@ -28,8 +28,8 @@ void create()
     set ("unbleeding",1);
     set ("killer",1);
     set( "tactic_func", "my_tactic");
-    set_c_verbs( ({ "%sÉì³öÖ¦Ìõ¿ìËÙ»÷Ïò%s"}) );
-    set_c_limbs( ({ "Ö¦Ìõ", "Ö¦¸É" }) );
+    set_c_verbs( ({ "%sä¼¸å‡ºæžæ¢å¿«é€Ÿæ“Šå‘%s"}) );
+    set_c_limbs( ({ "æžæ¢", "æžå¹¹" }) );
     
 }
 
@@ -39,10 +39,10 @@ int my_tactic()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
     else {
-      tell_object(victim, "ÕâÖ²Îï°ÑÄã²ø×¡²¢ÎüÊÕÄãµÄ¾«Á¦.\n" );
+      tell_object(victim, "é€™æ¤ç‰©æŠŠä½ çºä½ä¸¦å¸æ”¶ä½ çš„ç²¾åŠ›.\n" );
       tell_room(environment(this_object()),
           "This plant drain the power of "+ victim->query("name")+".\n",
-          "ÕâÖ²Îï°Ñ"+victim->query("c_name")+"²ø×¡²¢ÎüÊÕËûµÄ¾«Á¦.\n"
+          "é€™æ¤ç‰©æŠŠ"+victim->query("c_name")+"çºä½ä¸¦å¸æ”¶ä»–çš„ç²¾åŠ›.\n"
           ,({victim,this_object(),}) );
       victim->receive_damage( 25 + random(30) );
       report(this_object(),victim);

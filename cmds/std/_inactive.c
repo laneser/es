@@ -14,9 +14,9 @@ int cmd_inactive()
 	object me;
 
 	me = this_player();
-	write("Äã¾ö¶¨ÔİÍ£»î¶¯. Çë°´ [ENTER] ÒÔ¼ÌĞø»î¶¯.\n");
+	write("ä½ æ±ºå®šæš«åœæ´»å‹•. è«‹æŒ‰ [ENTER] ä»¥ç¹¼çºŒæ´»å‹•.\n");
 	tell_room(environment(me), 
-		sprintf("%s(%s)¾ö¶¨ÔİÊ±Í£Ö¹»î¶¯¡£\n", me->query("c_name"),
+		sprintf("%s(%s)æ±ºå®šæš«æ™‚åœæ­¢æ´»å‹•ã€‚\n", me->query("c_name"),
 			me->query("name")) , me);
 
 	me->set("inactive", time());
@@ -31,10 +31,10 @@ int stop_inactive()
 	object me;
 
 	me = this_player();
-	printf("ÄãÔÚÍ£Ö¹»î¶¯ %s ááÓÖ¿ªÊ¼»î¶¯.\n",
+	printf("ä½ åœ¨åœæ­¢æ´»å‹• %s å¾Œåˆé–‹å§‹æ´»å‹•.\n",
 		format_time(time()-(int)me->query("inactive"), 1));
 	tell_room(environment(me), 
-		sprintf("%s(%s)ÓÖ¿ªÊ¼ÖØĞÂ»î¶¯ÁË¡£\n", me->query("c_name"),
+		sprintf("%s(%s)åˆé–‹å§‹é‡æ–°æ´»å‹•äº†ã€‚\n", me->query("c_name"),
 			me->query("name")) , me);
 	me->delete("inactive");
 	return 1;
@@ -44,7 +44,7 @@ int help()
 {
 	write(@HELP
 
-Õâ¸öÖ¸ÁîÊ¹Äã´¦ÓÚÍ£Ö¹²»¶¯×´Ì¬.
+é€™å€‹æŒ‡ä»¤ä½¿ä½ è™•æ–¼åœæ­¢ä¸å‹•ç‹€æ…‹.
 
 HELP
 );

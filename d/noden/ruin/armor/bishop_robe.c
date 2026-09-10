@@ -6,11 +6,11 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("bishop robe", "¼ÀË¾ÅÛ");
+    set_name("bishop robe", "ç¥­å¸è¢");
     add("id", ({ "robe" }));
-    set_short("¼ÀË¾ÅÛ");
-    set_long("ÕâÊÇ´ó¼ÀË¾¿¨ÅÁµÄÅÛ×Ó£¬ÉÏÃæÓÃ½ğÏßĞåÖøËûµÄÃû×Ö¡£\n");
-    set("unit", "¼ş");
+    set_short("ç¥­å¸è¢");
+    set_long("é€™æ˜¯å¤§ç¥­å¸å¡å¸•çš„è¢å­ï¼Œä¸Šé¢ç”¨é‡‘ç·šç¹¡è‘—ä»–çš„åå­—ã€‚\n");
+    set("unit", "ä»¶");
     set("weight", 80);
     set("type", "body");
     set("armor_class", 22);

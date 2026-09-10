@@ -7,16 +7,16 @@ inherit DOORS;
 void create()
 {
 	::create();
-    set_short("The serect room","ÒþÃÜµÄÐ¡·¿¼ä");
+    set_short("The serect room","éš±å¯†çš„å°æˆ¿é–“");
     set_long(@Long
 Long
 ,@CLong
-ÄãÄ¿Ç°Î»ì¶Ò»¸öÒþÃÜµÄÐ¡·¿¼äÀï,ÕâÀï³äÂú¹îÒìµÄÆø·Õ,ËÆºõÕâÀïÓÐÖøÒ»¹ÉÆæÒìµÄÁ¦Á¿.
-Î÷±ßµÄÇ½ÉÏÓÐÖøÒ»¸ö°´Å¥(button),Ã»ÓÐÈËÖªµÀ°´ÏÂÈ¥µÄáá¹û»áÈçºÎ?
+ä½ ç›®å‰ä½æ–¼ä¸€å€‹éš±å¯†çš„å°æˆ¿é–“è£¡,é€™è£¡å……æ»¿è©­ç•°çš„æ°£æ°›,ä¼¼ä¹Žé€™è£¡æœ‰è‘—ä¸€è‚¡å¥‡ç•°çš„åŠ›é‡.
+è¥¿é‚Šçš„ç‰†ä¸Šæœ‰è‘—ä¸€å€‹æŒ‰éˆ•(button),æ²’æœ‰äººçŸ¥é“æŒ‰ä¸‹åŽ»çš„å¾Œæžœæœƒå¦‚ä½•?
 CLong
     );
     set("c_item_desc",([
-        "button":"Ò»¸öÏÊºìÉ«µÄ°´Å¥,ËÆºõÌáÐÑÈËÃÇ²»ÒªÈ¥ÅöËü.\n",
+        "button":"ä¸€å€‹é®®ç´…è‰²çš„æŒ‰éˆ•,ä¼¼ä¹Žæé†’äººå€‘ä¸è¦åŽ»ç¢°å®ƒ.\n",
                 ]) ); 
     set("exits",([
                 "up":Deathland"/village/v24",
@@ -27,8 +27,8 @@ CLong
     create_door("up","down",([
                "keyword":({"woodendoor","door"}),
                "status":"closed",
-               "c_desc":"Ò»¸öÐ¡Ð¡µÄÄ¾ÃÅ",
-               "c_name":"Ð¡Ä¾ÃÅ",
+               "c_desc":"ä¸€å€‹å°å°çš„æœ¨é–€",
+               "c_name":"å°æœ¨é–€",
                "name":"small wooden door",
                "desc":"a small wooden door",
                ]) );
@@ -45,19 +45,19 @@ int do_push(string str)
    if (!str||str!="button") return 0;
    if (!present("guardian"))
       {
-       write("Ò»µÀÇ¿¹â±ÊÖ±µØ´©¹ýÄãµÄÉíÌå.\n\n\n\n"
-             "ÄãµÄÁé»êÀë¿ªÁËÄãµÄÉíÌå\n");
+       write("ä¸€é“å¼·å…‰ç­†ç›´åœ°ç©¿éŽä½ çš„èº«é«”.\n\n\n\n"
+             "ä½ çš„éˆé­‚é›¢é–‹äº†ä½ çš„èº«é«”\n");
        this_player()->set_temp("block_command",1);
        
        call_out("recover",15,this_player());        
-       say("µ±"+this_player()->query("short")+"°´ÏÂÁË°´Å¥áá,Ò»µÀÇ¿¹â´Ì´©ÁËËûµÄÉíÌå.\n"
-           "È»áá"+this_player()->query("short")+"¾Íµ¹µØ²»ÆðÁË.\n");       
+       say("ç•¶"+this_player()->query("short")+"æŒ‰ä¸‹äº†æŒ‰éˆ•å¾Œ,ä¸€é“å¼·å…‰åˆºç©¿äº†ä»–çš„èº«é«”.\n"
+           "ç„¶å¾Œ"+this_player()->query("short")+"å°±å€’åœ°ä¸èµ·äº†.\n");       
        return 1;
       }
    else 
       {
-      write("ÊØÎÀËµ:²»ÒªÅöÄÇ¸ö°´Å¥.\n");
-      say(this_player()->query("short")+"ÊÔÖø°´ÏÂ°´Å¥µ«±»ÊØÎÀ×èÖ¹\.n");
+      write("å®ˆè¡›èªª:ä¸è¦ç¢°é‚£å€‹æŒ‰éˆ•.\n");
+      say(this_player()->query("short")+"è©¦è‘—æŒ‰ä¸‹æŒ‰éˆ•ä½†è¢«å®ˆè¡›é˜»æ­¢\.n");
       return 1;   
       }
 }
@@ -65,8 +65,8 @@ int do_push(string str)
 int recover(object who)
 {
    who->set_temp("block_command",0);
-   tell_object(who,"ÂýÂýµØ,ÄãµÄÁé»êÒÑ¾­»Øµ½ÄãµÄÉíÌåÖ®ÖÐ.\n"
-                   "¶øÇÒËÆºõÒ»ÖÖÌØ±ðµÄÁ¦Á¿×¢ÈëÄãµÄÉíÌåÀïÃæ.\n"
+   tell_object(who,"æ…¢æ…¢åœ°,ä½ çš„éˆé­‚å·²ç¶“å›žåˆ°ä½ çš„èº«é«”ä¹‹ä¸­.\n"
+                   "è€Œä¸”ä¼¼ä¹Žä¸€ç¨®ç‰¹åˆ¥çš„åŠ›é‡æ³¨å…¥ä½ çš„èº«é«”è£¡é¢.\n"
                    );
    who->set_explore( "deathland#25" );
    who->set_temp("deathland_magicwall",1);                

@@ -31,31 +31,31 @@ int cmd_go(string dir)
 		ob->set_temp("hide_score",0);
 	}
 	if( !env ) { 
-		write("ÄãÏÖÔÚÉíÔÚĞéÎŞÆ®Ãì¼ä£¬²»ÖªºÎÈ¥ºÎ´Ó¡£\n");
+		write("ä½ ç¾åœ¨èº«åœ¨è™›ç„¡é£„æ¸ºé–“ï¼Œä¸çŸ¥ä½•å»ä½•å¾ã€‚\n");
 		return 1;
 	}
 	
 	exits = env->query("exits");
 	if( !mapp(exits) || !dirs = keys(exits) )
-		return notify_fail("ÕâÀïÃ»ÓĞÈÎºÎ³öÂ·¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰ä»»ä½•å‡ºè·¯ã€‚\n");
 
 	if( ob->query("confused") || ob->query_temp("confused") ) {
-		tell_object( ob,"ÄãµÄÄÔÖĞÒ»ÍÅ»ìÂÒ, ÎŞ·¨È·ÊµµÄ¿ØÖÆÉíÌå!!\n");
+		tell_object( ob,"ä½ çš„è…¦ä¸­ä¸€åœ˜æ··äº‚, ç„¡æ³•ç¢ºå¯¦çš„æ§åˆ¶èº«é«”!!\n");
 		dir = dirs[random(sizeof(dirs))];
 	}
 
 	if( member_array(dir, keys(exits)) == -1 )
-		return notify_fail("ÄÇÀïÃ»ÓĞÈÎºÎ³öÂ·¡£\n");
+		return notify_fail("é‚£è£¡æ²’æœ‰ä»»ä½•å‡ºè·¯ã€‚\n");
 
 	if( ob->query_temp("block_command") )
-		return notify_fail( "( ÄãÄ¿Ç°ÎŞ·¨ÒÆ¶¯¡£ )\n");
+		return notify_fail( "( ä½ ç›®å‰ç„¡æ³•ç§»å‹•ã€‚ )\n");
 
   // Modify to fix that foe be block_attack but still be block
   // Indra 95.5.29
 	if( obs=ob->query_attackers() ) {
 		if( (int)ob->query("stop_attack") > 1 )
 			return notify_fail( 
-				"( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨ÒÆ¶¯£¡)\n");
+				"( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•ç§»å‹•ï¼)\n");
 				
 		i = (int)ob->query_stat( "kar" );
 		sz= sizeof(obs) ;
@@ -67,7 +67,7 @@ int cmd_go(string dir)
 		       !ob1->query("stop_attack") ) {
 			  ob->block_attack(2);
 			  return notify_fail( 
-				  "( Äã±»µĞÈËµ²×¡ÁË£¬ÎŞ·¨ÒÆ¶¯£¡)\n");
+				  "( ä½ è¢«æ•µäººæ“‹ä½äº†ï¼Œç„¡æ³•ç§»å‹•ï¼)\n");
 		  }
 		}  
 	}
@@ -79,12 +79,12 @@ int cmd_go(string dir)
 		if( doors[dir]["status"] == "closed" ||
 			doors[dir]["status"] == "locked")
 			return notify_fail(
-			sprintf("ßÀ...ÄÇ±ßµÄ%sÊÇ¹ØÖøµÄ¡£\n",doors[dir]["c_name"]));
+			sprintf("å‘ƒ...é‚£é‚Šçš„%sæ˜¯é—œè‘—çš„ã€‚\n",doors[dir]["c_name"]));
 	}
 
 	// Now check if the room allows monster to enter. by Annihilator (1-7-94)
 	if( !userp(ob) && exits[dir]->query("no_monster") ) {
-		write( "( ¹ÖÎï²»×¼½øÈëÕâ¸ö·¿¼ä )\n");
+		write( "( æ€ªç‰©ä¸æº–é€²å…¥é€™å€‹æˆ¿é–“ )\n");
 		return 0;
 	}
 	
@@ -127,12 +127,12 @@ int cmd_go(string dir)
 				  obs[i]->force_me( "go "+dir );
 				  
             if( environment(obs[i])!=environment(ob) ) {
-                  tell_object(obs[i], "Äã¸úÄãµÄ¶ÓÎé×ßÉ¢ÁË.\n");
+                  tell_object(obs[i], "ä½ è·Ÿä½ çš„éšŠä¼èµ°æ•£äº†.\n");
   	              tell_object(ob,
-                    sprintf("ÄãµÄ¶ÓÓÑ : %s Ã»¸úÀ´.\n",obs[i]->query("c_name")) );
+                    sprintf("ä½ çš„éšŠå‹ : %s æ²’è·Ÿä¾†.\n",obs[i]->query("c_name")) );
  			} else flag++;
 		}
-		if( sz > 1 && flag== sz ) write("ÄãµÄ¶ÓÓÑ¸úÖøÄã×ß¹ıÀ´.\n");
+		if( sz > 1 && flag== sz ) write("ä½ çš„éšŠå‹è·Ÿè‘—ä½ èµ°éä¾†.\n");
 	}
 	
 	// Finally we are finished.

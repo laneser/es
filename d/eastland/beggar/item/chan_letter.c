@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("chan letter","¼ÒÊé");
+        set_name("chan letter","å®¶æ›¸");
         add( "id" , ({ "chan letter" }) );
-        set_short( "¼ÒÊé");
+        set_short( "å®¶æ›¸");
         set_long(@C_LONG
-ÕâÊÇÒ»·â»ÆÉ«µÄ¼ÒÊé¡£
+é€™æ˜¯ä¸€å°é»ƒè‰²çš„å®¶æ›¸ã€‚
 C_LONG  );      
-        set("unit","·â");
+        set("unit","å°");
         set("weight",5);
         set("no_sale",1);
         set("value", ({1, "silver"}) );

@@ -33,9 +33,9 @@ void setup_race_body()
 	if( userp(body) ) HEAL_BODY->apply_effect(body, 30, 3);
 
 	// These variables are used for /adm/daemons/combat_d.c
-	body->set_c_verbs( ({ "%s主眼发出黄光, 射向%s", "%s小眼发出绿光, 射向%s",
-		"%s用圆滚的身躯猛撞%s", "%s用占身体一半的大嘴, 咬住%s", }) );
-	body->set_c_limbs( ({ "身体", "主眼", "小眼", "触手", }) );
+	body->set_c_verbs( ({ "%s涓荤溂鐧煎嚭榛冨厜, 灏勫悜%s", "%s灏忕溂鐧煎嚭缍犲厜, 灏勫悜%s",
+		"%s鐢ㄥ湏婊剧殑韬粈鐚涙挒%s", "%s鐢ㄥ崰韬珨涓�鍗婄殑澶у槾, 鍜綇%s", }) );
+	body->set_c_limbs( ({ "韬珨", "涓荤溂", "灏忕溂", "瑙告墜", }) );
 }
 
 // These functions are used for race Beholder.

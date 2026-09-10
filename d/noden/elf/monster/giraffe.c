@@ -6,11 +6,11 @@ void create()
 {
         ::create();
         set_level(4);
-        set_name( "giraffe", "³¤¾±Â¹" );
-        set_short( "³¤¾±Â¹" );
-        set("unit","Ö»");
+        set_name( "giraffe", "é•·é ¸é¹¿" );
+        set_short( "é•·é ¸é¹¿" );
+        set("unit","åª");
         set_long(
-        "Äã¿´¼ûÒ»Ö»ÓĞºÜ³¤²±×ÓµÄ¶¯ÎïÔÚ²İÔ­ÉÏÓÆÏĞµÄ×ßÖø¡£\n"  
+        "ä½ çœ‹è¦‹ä¸€åªæœ‰å¾ˆé•·è„–å­çš„å‹•ç‰©åœ¨è‰åŸä¸Šæ‚ é–’çš„èµ°è‘—ã€‚\n"  
         );
         set_perm_stat("str", 4);
         set_perm_stat("dex", 8);
@@ -18,6 +18,6 @@ void create()
         set ("natural_min_damage1", 3);
         set ("natural_max_damage1", 8);
         set ("natural_armor_class", 20);
-        set_c_verbs(({"%sÓÃËüµÄÍÈÏò%sÌßÈ¥","%sÓÃËüµÄÍ·ÓÉÉÏ¶øÏÂÏò%s¹¥»÷"}));
-        set_c_limbs(({"ÉíÌå","½Å²¿","Í·²¿"}));      
+        set_c_verbs(({"%sç”¨å®ƒçš„è…¿å‘%sè¸¢å»","%sç”¨å®ƒçš„é ­ç”±ä¸Šè€Œä¸‹å‘%sæ”»æ“Š"}));
+        set_c_limbs(({"èº«é«”","è…³éƒ¨","é ­éƒ¨"}));      
 }

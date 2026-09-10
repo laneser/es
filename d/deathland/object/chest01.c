@@ -9,13 +9,13 @@ inherit LOCK ;
 
 void create() {
 	::create() ;
-	set_name("stone chest", "Ê¯Ïä×Ó");
-	set_short("Ê¯Ïä×Ó");
+	set_name("stone chest", "çŸ³ç®±å­");
+	set_short("çŸ³ç®±å­");
     add("id",({"chest"}));
 // Containers have two long descriptions, one for open and one for closed.
 	
-	set_c_open_long("Ò»¸ö·ÅÖø±¦ÎïµÄÊ¯Ïä×Ó.\n");
-	set_c_closed_long("Ò»¸ö·ÅÖø±¦ÎïµÄÊ¯Ïä×Ó.\n");
+	set_c_open_long("ä¸€å€‹æ”¾è‘—å¯¶ç‰©çš„çŸ³ç®±å­.\n");
+	set_c_closed_long("ä¸€å€‹æ”¾è‘—å¯¶ç‰©çš„çŸ³ç®±å­.\n");
 // Some containers are closeable: others are not. This controls it.
 //	set( "prevent_get" , 1 );
 	set_possible_to_close(1) ;

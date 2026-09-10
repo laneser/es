@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "crimsom longsword", "³¤½£" );
+	set_name( "crimsom longsword", "é•·åŠ" );
 	add( "id", ({ "longsword", "sword" }) );
-	set_short( "ÏÊºìÉ«³¤½£" );
+	set_short( "é®®ç´…è‰²é•·åŠ" );
 	set_long(
-		"ÕâÊÇÒ»°ÑÓÐÖøÆæÒìµÄÏÊºìÉ«½£ÈÐµÄ³¤½£¡£\n" );
-	set( "unit", "°Ñ" );
+		"é€™æ˜¯ä¸€æŠŠæœ‰è‘—å¥‡ç•°çš„é®®ç´…è‰²åŠåˆƒçš„é•·åŠã€‚\n" );
+	set( "unit", "æŠŠ" );
 	set( "type", "longblade" );
 	set( "hit_func", "weapon_hit" );
 	set( "weight", 100 );
@@ -29,10 +29,10 @@ int weapon_hit( object victim, int damage )
 	sp = owner->query("spell_points");
 	if( random(intelligence)>12 && sp > 5 ) {
 		tell_object( owner, 
-			"\nÄãµÄÏÊºìÉ«³¤½£Í»È»±¬³öÒ»¹ÉÐÜÐÜÁÒ»ð£¬½£Éí±»ÉÕµÃÍ¨ºì£¡\n\n"
+			"\nä½ çš„é®®ç´…è‰²é•·åŠçªç„¶çˆ†å‡ºä¸€è‚¡ç†Šç†Šçƒˆç«ï¼ŒåŠèº«è¢«ç‡’å¾—é€šç´…ï¼\n\n"
 		        ); 
 		tell_room( environment(owner), 
-			owner->query("c_name") + "µÄÏÊºìÉ«³¤½£Í»È»±¬³öÒ»¹ÉÐÜÐÜÁÒ»ð£¬½£Éí±»ÉÕµÃÍ¨ºì£¡\n",
+			owner->query("c_name") + "çš„é®®ç´…è‰²é•·åŠçªç„¶çˆ†å‡ºä¸€è‚¡ç†Šç†Šçƒˆç«ï¼ŒåŠèº«è¢«ç‡’å¾—é€šç´…ï¼\n",
 			owner );
 		victim->receive_special_damage( "fire", intelligence );
 		owner->add( "spell_points", -5 );

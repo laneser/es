@@ -12,11 +12,11 @@ void receive_message(string class1, string msg)
 	if( !who || !who->query_temp("saulin_killer") ) return;
 	tell_room( environment(who), ({
 		this_object()->query("cap_name")+" shouts: Killer!!\n",
-		this_object()->query("c_cap_name")+"¶ÔÖø"+who->query("c_name")+
-		"´ó½Ð: Äã¾¹¸ÒÔÚËÂÄÚÉ±ÈË!!\n" }), ({ this_object(), who })
+		this_object()->query("c_cap_name")+"å°è‘—"+who->query("c_name")+
+		"å¤§å«: ä½ ç«Ÿæ•¢åœ¨å¯ºå…§æ®ºäºº!!\n" }), ({ this_object(), who })
 	);
 	tell_object( who, can_read_chinese(who) ?
-		this_object()->query("c_cap_name")+"¶ÔÖøÄã´ó½Ð: Äã¾¹¸ÒÔÚËÂÄÚÉ±ÈË!!\n":
+		this_object()->query("c_cap_name")+"å°è‘—ä½ å¤§å«: ä½ ç«Ÿæ•¢åœ¨å¯ºå…§æ®ºäºº!!\n":
 		this_object()->query("cap_name")+" shouts: Killer!!\n"
 	);
 	this_object()->kill_ob(who);

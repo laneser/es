@@ -1,15 +1,15 @@
-ָ���ʽ: ignore <����>
+指令格式: ignore <名字>
 
-��������һ������ʱ, �㽫�����յ��й��Ǹ�������
-����(tell)����κ�ѶϢ. 
-һ�����ֿ�����һ�����, ����һ����Ʒ. ���˹�����
-�ⶼ���Ծ�����ѶϢ. �������ʦ��ѶϢ? �ٺٺ�... 
-���������?
-Ҫ������ָ��ֻ���ټ���һ��ָ���������.
-Ҫ�����ں���˭��ѶϢֻ����� 'ignore'.
-����: ignore eagle -> �㽫������ eagle ��������κ�ѶϢ
-      ignore       -> �㽫���� You are ignoreing: eagle ��ʾ��������Ե���
-      ignore eagle -> �㽫���� You are now no longer ignoring eagle ��ʾ
-                      eagle �������ѶϢ���ٱ������
-      ignore       -> �㽫���� You are ignoring no-one
-                      ��ʾ��û�к����κ��˵�ѶϢ
+當你輸入一個名字時, 你將不會收到有關那個名字所
+告訴(tell)你的任何訊息. 
+一個名字可以是一個玩家, 甚至一個物品. 除了管理者
+外都可以拒收其訊息. 想拒收巫師的訊息? 嘿嘿嘿... 
+不想活了嗎?
+要解除這個指令只需再鍵入一次指令加上名字.
+要看現在忽略誰的訊息只需鍵入 'ignore'.
+範例: ignore eagle -> 你將看不到 eagle 告訴你的任何訊息
+      ignore       -> 你將看到 You are ignoreing: eagle 表示正被你忽略的人
+      ignore eagle -> 你將看到 You are now no longer ignoring eagle 表示
+                      eagle 告訴你的訊息不再被你忽略
+      ignore       -> 你將看到 You are ignoring no-one
+                      表示你沒有忽略任何人的訊息

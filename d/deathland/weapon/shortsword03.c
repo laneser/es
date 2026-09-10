@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("break sword of Wind","·çÖ®¶Ï½£");
+        set_name("break sword of Wind","é¢¨ä¹‹æ–·åŠ");
         add("id",({"sword"}) );
-       set_short("·çÖ®¶Ï½£");
+       set_short("é¢¨ä¹‹æ–·åŠ");
        set_long(
-         "Ò»°Ñ¶ÏµôµÄÉñ½£,¾İËµËüÄÜËæÖø·ç¶ø·ÉÈëµĞÈËµÄĞÄÔà\n"
+         "ä¸€æŠŠæ–·æ‰çš„ç¥åŠ,æ“šèªªå®ƒèƒ½éš¨è‘—é¢¨è€Œé£›å…¥æ•µäººçš„å¿ƒè‡Ÿ\n"
                );
 	
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 23 );
  	set("second",1);
     set("type","shortblade");

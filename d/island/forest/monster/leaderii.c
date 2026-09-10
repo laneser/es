@@ -7,17 +7,17 @@ void create()
 {
     ::create();
     set_level(19);
-    set_name("Emperor Yuishu","Ò£ÕÕ");
+    set_name("Emperor Yuishu","é™ç…§");
     add("id",({"emperor","yuishu"}) );
-    set_short("Ò£ÕÕÌì»Ê");
+    set_short("é™ç…§å¤©çš‡");
     set_long(@C_LONG
-Ò£ÕÕÌì»ÊËäÈ»Äê¼ÍÒ»´ó°ÑÁË£¬¿ÉÊÇÈ´»¹ºÜÓĞ¾«Éñ£»Ö»¼ûËûÄÃÁË°ÑÄ¾µ¶£¬»º»º
-µÄ»ÓÎèÖø£¬×ËÊÆÊ®·ÖµÄÓÅÑÅ¡£ß×¡«¡«£¡×ĞÏ¸Ò»¿´£¬Õâµ¶·¨»¹ÕæÆÄÓĞ´ó¼Ò·ç·¶
-£¬Ö»¼ûËûÉíĞÎ²½·¥¾ùÊ®·ÖÁéÇÉ£¬¹¥ÊØÓĞ¶È£¬Ò»¹ÉÍõÕßµÄ·ç·¶Â£ÕÖÖøËûµÄÈ«Éí
-£¬ÄãµÄÖ±¾õ¸æËßÄã£ºËûÊÇÎ»²»Æ½·²µÄÈËÎï¡£
+é™ç…§å¤©çš‡é›–ç„¶å¹´ç´€ä¸€å¤§æŠŠäº†ï¼Œå¯æ˜¯å»é‚„å¾ˆæœ‰ç²¾ç¥ï¼›åªè¦‹ä»–æ‹¿äº†æŠŠæœ¨åˆ€ï¼Œç·©ç·©
+çš„æ®èˆè‘—ï¼Œå§¿å‹¢ååˆ†çš„å„ªé›…ã€‚å’¦ï½ï½ï¼ä»”ç´°ä¸€çœ‹ï¼Œé€™åˆ€æ³•é‚„çœŸé —æœ‰å¤§å®¶é¢¨ç¯„
+ï¼Œåªè¦‹ä»–èº«å½¢æ­¥ä¼å‡ååˆ†éˆå·§ï¼Œæ”»å®ˆæœ‰åº¦ï¼Œä¸€è‚¡ç‹è€…çš„é¢¨ç¯„æ”ç½©è‘—ä»–çš„å…¨èº«
+ï¼Œä½ çš„ç›´è¦ºå‘Šè¨´ä½ ï¼šä»–æ˜¯ä½ä¸å¹³å‡¡çš„äººç‰©ã€‚
 C_LONG
             );
-    set("unit","Î»");
+    set("unit","ä½");
     set("gender","male");
     set("race","daemon");
     set("alignment",-2000);
@@ -51,7 +51,7 @@ C_LONG
     set("exp_reward",37000);
     set("tactic_func","my_tactic");
     set("chat_chance",20);
-    set("att_chat_output",({"\nÒ£ÕÕ´óºÈ£ºĞ¡×Ó£¬Õâ¾ÍÊÇ¡¸ºº¸³½£·¨¡¹£¬ÑÛ¾¦Õö´óÁË£¡\n\n"}) );
+    set("att_chat_output",({"\né™ç…§å¤§å–ï¼šå°å­ï¼Œé€™å°±æ˜¯ã€Œæ¼¢è³¦åŠæ³•ã€ï¼Œçœ¼ç›çœå¤§äº†ï¼\n\n"}) );
     call_out("myskill01",25);
     
     wield_weapon(TWEP"sword2");
@@ -65,7 +65,7 @@ C_LONG
 void myskill01()
 { 
   delete("att_chat_output");
-  set("att_chat_output",({"\nÒ£ÕÕÉñĞÎÒ»×ª£¬¡¸¹ÅÊ«½£·¨¡¹Ò»ÕĞÒ»ÕĞµİ½«¹ıÀ´£¡\n\n"}));
+  set("att_chat_output",({"\né™ç…§ç¥å½¢ä¸€è½‰ï¼Œã€Œå¤è©©åŠæ³•ã€ä¸€æ‹›ä¸€æ‹›éå°‡éä¾†ï¼\n\n"}));
   delete("attack_skill");
   set("attack_skill",CLASS"poem");
       call_out("myskill02",25);
@@ -73,7 +73,7 @@ void myskill01()
  void myskill02()
  {
    delete("att_chat_output");
-   set("att_chat_output",({"\nÒ£ÕÕ¼éĞ¦Öø£º¼ûÊ¶¼ûÊ¶Ò»ÏÂ¡¸ËÎ´Ê½£·¨¡¹°É£¡\n\n"}));
+   set("att_chat_output",({"\né™ç…§å¥¸ç¬‘è‘—ï¼šè¦‹è­˜è¦‹è­˜ä¸€ä¸‹ã€Œå®‹è©åŠæ³•ã€å§ï¼\n\n"}));
    delete("attack_skill");
    set("attack_skill",CLASS"song");
    call_out("myskill03",25);
@@ -81,7 +81,7 @@ void myskill01()
 void myskill03()
 { 
     delete("att_chat_output");
-    set("att_chat_output",({"\nÒ£ÕÕÍ»È»¹§½÷µÄËµ£ºÈÃÎÒÓÃ¡¸ÌÆÊ«½£·¨¡¹À´ÕĞ´ı¸óÏÂµÄÇûÌå°É£¡\n\n"}));
+    set("att_chat_output",({"\né™ç…§çªç„¶æ­è¬¹çš„èªªï¼šè®“æˆ‘ç”¨ã€Œå”è©©åŠæ³•ã€ä¾†æ‹›å¾…é–£ä¸‹çš„è»€é«”å§ï¼\n\n"}));
     delete("attack_skill");
     set("attack_skill",CLASS"tang");
     call_out("myskill04",25);
@@ -90,7 +90,7 @@ void myskill03()
 void myskill04()
 {
     delete("att_chat_output");
-    set("att_chat_output",({"\nÒ£ÕÕ´óºÈ£ºĞ¡×Ó£¬Õâ¾ÍÊÇ¡¸ºº¸³½£·¨¡¹£¬ÑÛ¾¦Õö´óÁË£¡\n\n"})); 
+    set("att_chat_output",({"\né™ç…§å¤§å–ï¼šå°å­ï¼Œé€™å°±æ˜¯ã€Œæ¼¢è³¦åŠæ³•ã€ï¼Œçœ¼ç›çœå¤§äº†ï¼\n\n"})); 
     delete("attack_skill"); 
     set("attack_skill",CLASS"han");  
     call_out("myskill01",25);
@@ -105,13 +105,13 @@ int my_tactic()
     if( random(100)>5 || !victim = query_attackers() ) return 0;
     
     tell_room( environment(this_object()),
-        "\nÒ£ÕÕ´óºÈ£ºÃØ¡«¼¼£¬Ê÷¡«À×¡«Éı¡«Áú¡«°Ô!!Ò»¹ÉÇ¿¾¢½«ËùÓĞÈË¸øËÍÉÏÌìÈ¥ÁË..\n\n");
+        "\né™ç…§å¤§å–ï¼šç§˜ï½æŠ€ï¼Œæ¨¹ï½é›·ï½å‡ï½é¾ï½éœ¸!!ä¸€è‚¡å¼·å‹å°‡æ‰€æœ‰äººçµ¦é€ä¸Šå¤©å»äº†..\n\n");
        for( i=sizeof(victim)-1; i>=0; i--){
         victim[i]->receive_special_damage("evil",30);
         report(this_object(),victim[i]);
         victim[i]->move_player(CITY"star_room",
-        "Äã¿´µ½ËûÔ½·ÉÔ½¸ß£¬Ë²¼äÒ»ÉÁ£¬¾Í±ä³ÉÌìÉÏµÄĞÇĞÇÁË!"
-        , "ÌìÉÏµÄĞÇĞÇÍ»È»ÓÖÒ»ÉÁ£¬ÍÛ£¬±ä³ÉÁ÷ĞÇ×¹ÏÂÀ´ÁË!"); 
+        "ä½ çœ‹åˆ°ä»–è¶Šé£›è¶Šé«˜ï¼Œç¬é–“ä¸€é–ƒï¼Œå°±è®Šæˆå¤©ä¸Šçš„æ˜Ÿæ˜Ÿäº†!"
+        , "å¤©ä¸Šçš„æ˜Ÿæ˜Ÿçªç„¶åˆä¸€é–ƒï¼Œå“‡ï¼Œè®Šæˆæµæ˜Ÿå¢œä¸‹ä¾†äº†!"); 
         }
     call_out("call_back",30,victim);
     return 1;
@@ -123,7 +123,7 @@ int call_back(object *victim)
     
     for( i = sizeof(victim)-1; i >= 0; i--){
     tell_object( victim[i],
-        "\nµ±ÄãÕıÉò×íì¶²ÓÀÃµÄĞÇºÓÖĞÊ±£¬Ò»¹ÉÎüÁ¦Öğ½¥½«ÄãÀ­»ØµØÃæÉÏ....\n\n");
+        "\nç•¶ä½ æ­£æ²ˆé†‰æ–¼ç‡¦çˆ›çš„æ˜Ÿæ²³ä¸­æ™‚ï¼Œä¸€è‚¡å¸åŠ›é€æ¼¸å°‡ä½ æ‹‰å›åœ°é¢ä¸Š....\n\n");
         victim[i]->move_player(CITY"garden2");
         }
     return 1;

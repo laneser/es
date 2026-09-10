@@ -60,17 +60,17 @@ int check_token(object player)
 		obj = new( SOCIAL_GUILD_TOKEN );
 		if( obj->move(player) != MOVE_OK )
 			return notify_fail( can_read_chinese(player)?
-				"ÄãÉíÉÏ´øµÄ¶«Î÷Ì«ÖØÁË£¬ÄÃ²»¶¯±¾Ð­»áµÄÐÅÎï¡£\n":
+				"ä½ èº«ä¸Šå¸¶çš„æ±è¥¿å¤ªé‡äº†ï¼Œæ‹¿ä¸å‹•æœ¬å”æœƒçš„ä¿¡ç‰©ã€‚\n":
 				"You are carrying a bit too more things to carry our token.\n"
 		);
-		if( !(unit = obj->query("unit")) ) unit = "¸ö";
+		if( !(unit = obj->query("unit")) ) unit = "å€‹";
 		write( can_read_chinese(player)?
-			"Ð­»áÖØÐÂ·¢¸øÄãÒ»" + unit + obj->query("c_short") + "¡£\n":
+			"å”æœƒé‡æ–°ç™¼çµ¦ä½ ä¸€" + unit + obj->query("c_short") + "ã€‚\n":
 			"Now you have a new " + obj->query("name") );
 		return 1;
 	}
 	write( can_read_chinese(player)?
-		"ÄãµÄ" + obj->query("c_short") + "²¢Ã»ÓÐÒÅÊ§¡£\n":
+		"ä½ çš„" + obj->query("c_short") + "ä¸¦æ²’æœ‰éºå¤±ã€‚\n":
 		"You already have " + obj->query("short") + ".\n" );
 	return 1;
 }
@@ -85,24 +85,24 @@ int join_player(object player)
 
     if( is_guild_member(player) )
       return notify_fail( can_read_chinese() ?
-        "ÄãÔç¾ÍÊÇÍÀÀÇ¾ãÀÖ²¿µÄ»áÔ±ÁË.\n" :
+        "ä½ æ—©å°±æ˜¯å± ç‹¼ä¿±æ¨‚éƒ¨çš„æœƒå“¡äº†.\n" :
         "You are already WKA's member.\n"
       );
     if( check_guilds( this_player(), "CWA" )
       return notify_fail( can_read_chinese() ?
-        "ÎÒÃÇ²»»¶Ó­É«ÀÇÐ­»áµÄ³ÉÔ±¼ÓÈë!\n" :
+        "æˆ‘å€‘ä¸æ­¡è¿Žè‰²ç‹¼å”æœƒçš„æˆå“¡åŠ å…¥!\n" :
         "We don't allow CWA's member join WKA.\n" 
       );
 	token = new( SOCIAL_GUILD_TOKEN );
 	if( token->move(player) != MOVE_OK )
 		return notify_fail( can_read_chinese(player)?
-			"ÄãÉíÉÏ´øµÄ¶«Î÷Ì«ÖØÁË£¬ÄÃ²»¶¯±¾Ð­»áµÄÐÅÎï¡£\n":
+			"ä½ èº«ä¸Šå¸¶çš„æ±è¥¿å¤ªé‡äº†ï¼Œæ‹¿ä¸å‹•æœ¬å”æœƒçš„ä¿¡ç‰©ã€‚\n":
 			"You are carrying a bit too more things to carry our token.\n"
 		);
 	write( can_read_chinese(player)?
-	  "    ¹§Ï²Äã(Äã)×öÁË×îÕýÈ·µÄ¾ñÔñ£¬ÓÉì¶Äã(Äã)µÄ¼ÓÈëÕâ¸ö»ìÂÒµÄÊÀ½ç½«¶à\n"
-      "ÁËÒ»¹ÉÇåÁ÷¡£Õâ°Ñ¸îÀÇÎ²°ÍÐ¡µ¶´ú±íÖøÄã(Äã)ÎÞÉÏµÄÈÙÓþ£¬Ï£ÍûÄã(Äã)ºÃºÃ\n"
-      "µÄÕäÏ§Ëü¡£\n" :
+	  "    æ­å–œä½ (ä½ )åšäº†æœ€æ­£ç¢ºçš„æŠ‰æ“‡ï¼Œç”±æ–¼ä½ (ä½ )çš„åŠ å…¥é€™å€‹æ··äº‚çš„ä¸–ç•Œå°‡å¤š\n"
+      "äº†ä¸€è‚¡æ¸…æµã€‚é€™æŠŠå‰²ç‹¼å°¾å·´å°åˆ€ä»£è¡¨è‘—ä½ (ä½ )ç„¡ä¸Šçš„æ¦®è­½ï¼Œå¸Œæœ›ä½ (ä½ )å¥½å¥½\n"
+      "çš„çæƒœå®ƒã€‚\n" :
       "Welcome!\n"
 	);
 	return 1;

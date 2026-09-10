@@ -5,14 +5,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name("orange","Áø¶¡");
+	set_name("orange","æŸ³ä¸");
 	add( "id" , ({ "orange" }) );
-	set_short("Áø¶¡");
+	set_short("æŸ³ä¸");
 	set_long(@AAA
-	Ò»¸öÐÂÏÊµÄÁø¶¡£¬ÓÉì¶ÀÏ°åµÄ¼á³ÖÄã±ØÐëµ±³¡³ÔµôËü
+	ä¸€å€‹æ–°é®®çš„æŸ³ä¸ï¼Œç”±æ–¼è€é—†çš„å …æŒä½ å¿…é ˆç•¶å ´åƒæŽ‰å®ƒ
 AAA
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("weight", 2);
    	set("value",({ 15, "silver" }) );
 	call_out("eat_it", LIMIT_TIME, this_object());
@@ -24,10 +24,10 @@ void eat_it(object what)
 	if (owner = environment(what))
 	if( living(owner) ) {
 		tell_object(owner,
-			"Äã³ÔÏÂÒ»¿ÅÖ­¶à¸ÊÌðÁø¶¡£¬¸Ð¾õºÜÂú×ã¡£\n");
+			"ä½ åƒä¸‹ä¸€é¡†æ±å¤šç”˜ç”œæŸ³ä¸ï¼Œæ„Ÿè¦ºå¾ˆæ»¿è¶³ã€‚\n");
 		tell_room( environment(owner), 
-			owner->query("c_name")+"³ÔÏÂÒ»¿ÅÁø¶¡¿´ÆðÀ´ºÃÏñ"
-			"ºÜÂú×ãµÄÑù×Ó\n", owner
+			owner->query("c_name")+"åƒä¸‹ä¸€é¡†æŸ³ä¸çœ‹èµ·ä¾†å¥½åƒ"
+			"å¾ˆæ»¿è¶³çš„æ¨£å­\n", owner
 		);
 		owner->receive_healing( 5+random(5) );
 	}

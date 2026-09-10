@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "fire key", "»ğÑæÖ®Ô¿" );
+	set_name( "fire key", "ç«ç„°ä¹‹é‘°" );
 	add( "id", ({ "key" }) );
-	set_short( "a fire key", "»ğÑæÖ®Ô¿" );
+	set_short( "a fire key", "ç«ç„°ä¹‹é‘°" );
 	set_long(
 		"A magic key with fire shape.\n",
-		"ÕâÊÇÒ»¸öÖı³É»ğÑæĞÎµÄÔ¿³×¡£\n"
+		"é€™æ˜¯ä¸€å€‹é‘„æˆç«ç„°å½¢çš„é‘°åŒ™ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "FIRE_ELEMENT_KEY2" );
 	set( "weight", 15 );
 	set( "value", ({ 10, "silver" }) );

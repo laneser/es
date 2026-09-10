@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("wedding scarf", "Ë¿ÖÊÁì½í");
+        set_name("wedding scarf", "çµ²è³ªé ˜å·¾");
         add( "id", ({ "scarf" }) );
-   set_short("Ë¿ÖÊÁì½í");
+   set_short("çµ²è³ªé ˜å·¾");
         set_long(
-                "Ò»ÌõÄĞÊ¿ÔÚÕıÊ½³¡ºÏ½áµÄÁì½í¡£\n"
+                "ä¸€æ¢ç”·å£«åœ¨æ­£å¼å ´åˆçµçš„é ˜å·¾ã€‚\n"
         );
-        set("unit","Ìõ");
+        set("unit","æ¢");
         set( "type", "cloak" );
         set( "material","cloth" ) ;
         set( "armor_class", 6 );
@@ -25,7 +25,7 @@ stop_equip(object owner)
 {
         if ( (string)this_player()->query("gender") != "male") {
         printf(
-                  "±ğ¿ªÍæĞ¦ÁË, ÄãÏëµ±ÄĞÈËÆÅÂğ?\n" );
+                  "åˆ¥é–‹ç©ç¬‘äº†, ä½ æƒ³ç•¶ç”·äººå©†å—?\n" );
         return 1;
         }
 }

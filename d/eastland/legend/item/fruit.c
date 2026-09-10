@@ -10,14 +10,14 @@ void init()
 void create()
 {
         
-	set_name("red fruit","Öì¹û");
+	set_name("red fruit","æœ±æžœ");
 	add( "id" , ({ "fruit" }) );
-   set_short("Öì¹û");
+   set_short("æœ±æžœ");
    set_long(@C_LONG
-Ò»¿Å³àºìÉ«µÄ¹ûÊµ£¬É¢·¢³öÅ¨ÓôµÄ·¼Ïã£¬¿´ÆðÀ´ºÜºÃ³ÔµÄÑù×Ó¡£
+ä¸€é¡†èµ¤ç´…è‰²çš„æžœå¯¦ï¼Œæ•£ç™¼å‡ºæ¿ƒéƒçš„èŠ³é¦™ï¼Œçœ‹èµ·ä¾†å¾ˆå¥½åƒçš„æ¨£å­ã€‚
 C_LONG
 	);
-   	set("unit","¿Å");
+   	set("unit","é¡†");
    	set("weight", 30);
    	set("no_sale",1);
    	set("value",({ 500, "silver" }) );
@@ -26,9 +26,9 @@ C_LONG
 int eat_food(string arg)
 {
     if( !arg ||( arg != "fruit") ) 
-        return notify_fail("ÄãÒª³ÔÉ¶¶«Î÷ßã?\n");
+        return notify_fail("ä½ è¦åƒå•¥æ±è¥¿å’©?\n");
     tell_object( this_player(),
-        "Äã³ÔÏÂÁËÒ»¿ÅÖì¹û£¬¿ÚÖÐÂúÊÇ·¼Ïã¡£\n");
+        "ä½ åƒä¸‹äº†ä¸€é¡†æœ±æžœï¼Œå£ä¸­æ»¿æ˜¯èŠ³é¦™ã€‚\n");
     this_player()->receive_healing( 50 );
     this_player()->add("force_points",50);
     remove();

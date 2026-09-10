@@ -9,17 +9,17 @@ void create()
 {
   ::create();
   set_level(17);
-  set_name("poisonous moth", "¹íÃæ¶ê");
+  set_name("poisonous moth", "é¬¼é¢è›¾");
   add( "id", ({ "moth" }) );
-  set_short("¹íÃæ¶ê");
+  set_short("é¬¼é¢è›¾");
   set_long(@LONG
-ÏÅ£¡ºÃÒ»ÕÅ¿Ö²ÀµÄ¹íÁ³£¬×ÐÏ¸Ò»ÇÆ£¬¸üÊÇ²»µÃÁË£¬¾ÓÈ»ÊÇÐ×¶ñµÄ¹íÃæ¶ê¡£¾ÝËµ
-ÕâÖÖ¶êÀà×îÏ²»¶ÎüÊ³´óÐÐ¶¯ÎïµÄÄÔÖ­£¬ÈËÀàÒ²ÊÇËüµÄ×î°®Ö®Ò»£®»ëÉíÉÏÏÂµÄÁ×
-·Û¶¼ÊÇ¾ç¶¾£¬¶øÇÒ¹¥»÷ÐÔ¼«Ç¿£¬¼´Ê¹²»ÊÇÒª½øÊ³£¬Ò²»áÈÎÒâµÄ¶¾É±ÆäËü¶¯Îï£®
+åš‡ï¼å¥½ä¸€å¼µææ€–çš„é¬¼è‡‰ï¼Œä»”ç´°ä¸€çž§ï¼Œæ›´æ˜¯ä¸å¾—äº†ï¼Œå±…ç„¶æ˜¯å…‡æƒ¡çš„é¬¼é¢è›¾ã€‚æ“šèªª
+é€™ç¨®è›¾é¡žæœ€å–œæ­¡å¸é£Ÿå¤§è¡Œå‹•ç‰©çš„è…¦æ±ï¼Œäººé¡žä¹Ÿæ˜¯å®ƒçš„æœ€æ„›ä¹‹ä¸€ï¼Žæ¸¾èº«ä¸Šä¸‹çš„ç£·
+ç²‰éƒ½æ˜¯åŠ‡æ¯’ï¼Œè€Œä¸”æ”»æ“Šæ€§æ¥µå¼·ï¼Œå³ä½¿ä¸æ˜¯è¦é€²é£Ÿï¼Œä¹Ÿæœƒä»»æ„çš„æ¯’æ®ºå…¶å®ƒå‹•ç‰©ï¼Ž
 LONG
     );
   set( "race", "insect" );
-  set( "unit", "Ö»" );
+  set( "unit", "åª" );
   set( "alignment", -1000 );
   set_natural_armor( 10, 10 );
   set( "max_hp", 500 );
@@ -35,9 +35,9 @@ LONG
   set( "killer", 1 );
   set( "time_to_heal", 20 );
   set( "tactic_func", "emit_poison" );
-  set_c_limbs( ({ "Í·²¿", "ÉíÌå", "³á°ò", "¸¹²¿" }) );
-  set_c_verbs( ({ "%s¶Ô%sÉ¢ÏÂÎÞÊýµÄÁ×·Û" ,
-                  "%sÓÃ³á°ò»ÓÏò%s"
+  set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "ç¿…è†€", "è…¹éƒ¨" }) );
+  set_c_verbs( ({ "%så°%sæ•£ä¸‹ç„¡æ•¸çš„ç£·ç²‰" ,
+                  "%sç”¨ç¿…è†€æ®å‘%s"
                   }) );
 }
 
@@ -49,7 +49,7 @@ int emit_poison()
   if( random(20)>8 || !(victim= query_attacker()) ) return 0;
   if ((i=random(16))>10) {
     tell_object( environment(this_object()),
-      "Äã²»Ð¡ÐÄÎü½ø¹íÃæ¶êÉ¢ÏÂµÄ¶¾Á×£¬ÉñÖÇÖð½¥Ä£ºý......\n"
+      "ä½ ä¸å°å¿ƒå¸é€²é¬¼é¢è›¾æ•£ä¸‹çš„æ¯’ç£·ï¼Œç¥žæ™ºé€æ¼¸æ¨¡ç³Š......\n"
       );
     (CONDITION_PREFIX + "confused")->apply_effect( victim, 7, 25 );
     victim->receive_special_damage("poison",40); 
@@ -58,7 +58,7 @@ int emit_poison()
   }
   else if (i>5) {
     tell_object( environment(this_object()),
-      "¹íÃæ¶ê»Ó³öÒ»ÍÅÁ×·Û£¬ÄãÒ»¸öÊ§Éñ£¬ËÄÖ«´¥Åöµ½Á×·Û£¬ÊÖ½ÅÒ»Õó¡õÂé.....\n"
+      "é¬¼é¢è›¾æ®å‡ºä¸€åœ˜ç£·ç²‰ï¼Œä½ ä¸€å€‹å¤±ç¥žï¼Œå››è‚¢è§¸ç¢°åˆ°ç£·ç²‰ï¼Œæ‰‹è…³ä¸€é™£â–¡éº».....\n"
       ); 
     (CONDITION_PREFIX + "slow")->apply_effect(victim,20,10 );
     victim->receive_special_damage("poison",40); 
@@ -67,7 +67,7 @@ int emit_poison()
   }
   else {
     tell_object( environment(this_object()),
-      "¹íÃæ¶ê¶£ÁËÄãÒ»¿Ú.....\n"
+      "é¬¼é¢è›¾å®äº†ä½ ä¸€å£.....\n"
       );
     (CONDITION_PREFIX + "simple_poison")->apply_effect(victim,7,25 );
     victim->receive_special_damage("poison",25);

@@ -6,10 +6,10 @@ inherit OBJECT;
 
 void create()
 {
-    set_name("Canteen", "¹Ô¹Ôºø");
-    set_short( "¹Ô¹Ôºø" );
+    set_name("Canteen", "ä¹–ä¹–å£º");
+    set_short( "ä¹–ä¹–å£º" );
     set_long(@LONG
-ÕâÊÇÔìÐÍÐÂÓ±ÓÖ¿É°®µÄÐ¡Ë®ºø£¬Äã¿ÉÒÔÓÃËüÀ´×°Ë®Å¶£¡
+é€™æ˜¯é€ åž‹æ–°ç©Žåˆå¯æ„›çš„å°æ°´å£ºï¼Œä½ å¯ä»¥ç”¨å®ƒä¾†è£æ°´å“¦ï¼
 LONG
                 );
     set("weight", 3 );
@@ -31,46 +31,46 @@ int fill_water(string arg)
     
     sscanf(WEATHER_D->query_game_time(),"%d",hour);    
     if( !arg || arg!="canteen" )
-         return notify_fail("ÓÃÊ²÷á×°Ë®£¿\n");
+         return notify_fail("ç”¨ä»€éº¼è£æ°´ï¼Ÿ\n");
 
     env = environment(this_object());
     if( living(env) ) env = environment(env);
 
     if( this_object()->query("filled") >= 3){
       this_object()->add("filled",1);
-      this_object()->set_name("Broken Canteen","ÆÆµôµÄ¹Ô¹Ôºø");
-      this_object()->set_short("ÆÆµôµÄ¹Ô¹Ôºø");
-      this_object()->set_long("Õâ¸ö¹Ô¹ÔºøÒÑ¾­ÆÆµôÁË£¬ÔÙÒ²ÎÞ·¨×°Ë®ÁË£¡\n");
-      write("ÄãÏëÓÃÕâ¸ö¹Ô¹ÔºøÀ´×°Ë®£¬¿ÉÊÇËüÒÑ¾­ÆÆµôÁË£¡\n");
+      this_object()->set_name("Broken Canteen","ç ´æŽ‰çš„ä¹–ä¹–å£º");
+      this_object()->set_short("ç ´æŽ‰çš„ä¹–ä¹–å£º");
+      this_object()->set_long("é€™å€‹ä¹–ä¹–å£ºå·²ç¶“ç ´æŽ‰äº†ï¼Œå†ä¹Ÿç„¡æ³•è£æ°´äº†ï¼\n");
+      write("ä½ æƒ³ç”¨é€™å€‹ä¹–ä¹–å£ºä¾†è£æ°´ï¼Œå¯æ˜¯å®ƒå·²ç¶“ç ´æŽ‰äº†ï¼\n");
       this_player()->delete_temp("get_canteen");
       this_object()->set("useless");
       return 1;
       }
     if( (int)this_object()->query("times") == 0){
-       write("ÒÑ¾­×°ÂúË®ÁËÀ²!!\n");  
+       write("å·²ç¶“è£æ»¿æ°´äº†å•¦!!\n");  
        return 1;
        }
-    if( (string)env->query("short")=="Ïã½òÃÀÈª" ||
-    	(string)env->query("short")=="Ð¡Ë®³Ø" ||
-    	(string)env->query("short")=="Ç§´¨Â¥Ç°Í¥" ){
+    if( (string)env->query("short")=="é¦™æ´¥ç¾Žæ³‰" ||
+    	(string)env->query("short")=="å°æ°´æ± " ||
+    	(string)env->query("short")=="åƒå·æ¨“å‰åº­" ){
                if( hour >= 18 || hour <= 6 ){
-            write("ÄãÔÚ¹Ô¹ÔºøÖÐ×°ÂúÁËÇå¾»µÄÈªË®¡£\n");
+            write("ä½ åœ¨ä¹–ä¹–å£ºä¸­è£æ»¿äº†æ¸…æ·¨çš„æ³‰æ°´ã€‚\n");
             tell_room(environment(this_player()),
-              this_player()->query("c_name")+"ÌÍ³ö¹Ô¹ÔºøÀ´×°Ë®¡£\n"
+              this_player()->query("c_name")+"æŽå‡ºä¹–ä¹–å£ºä¾†è£æ°´ã€‚\n"
               ,this_player() );
             this_object()->set("times",0);
 	    this_object()->add("filled",1);
 	    return 1;
 	}
 	else {
-	  write("ÏÖÔÚÕýÖµÃ¿ÈÕµÄÇ¬¿ÝÆÚ£¬Ã»ÓÐË®¿ÉÒÔ×°£¬ÎØ¡«¡«¡«£¡\n");
+	  write("ç¾åœ¨æ­£å€¼æ¯æ—¥çš„ä¹¾æž¯æœŸï¼Œæ²’æœ‰æ°´å¯ä»¥è£ï¼Œå—šï½žï½žï½žï¼\n");
 	 tell_room( environment(this_player()),
-	  this_player()->query("c_name")+"Ì¾ÁË¿ÚÆø£¬°ÑÌÍ³öµÄºøÓÖÈû»Ø»³ÖÐ¡£\n"
+	  this_player()->query("c_name")+"å˜†äº†å£æ°£ï¼ŒæŠŠæŽå‡ºçš„å£ºåˆå¡žå›žæ‡·ä¸­ã€‚\n"
 	  ,this_player() );
 	  return 1;
 	    }
 	 } 
-	write("Äã×°ÕâÀïµÄË®ÓÐÊ²÷áÓÃ£¿£¿ÓÖ²»Ç¬¾»£¬×°ÁËÄã¸ÒºÈÂð£¿\n");
+	write("ä½ è£é€™è£¡çš„æ°´æœ‰ä»€éº¼ç”¨ï¼Ÿï¼Ÿåˆä¸ä¹¾æ·¨ï¼Œè£äº†ä½ æ•¢å–å—Žï¼Ÿ\n");
 	return 1;
 }
 
@@ -78,28 +78,28 @@ int drink_water(string arg)
 {
 
     if( !arg || arg!="canteen" )
-        return notify_fail("ÄãÏëºÈÊ²÷á£¿\n");
+        return notify_fail("ä½ æƒ³å–ä»€éº¼ï¼Ÿ\n");
     
     if( this_object()->query("filled") >= 4 )
-        return notify_fail("¹Ô¹ÔºøÒÑ¾­ÆÆÁË£¬²»ÄÜÔÙÊ¹ÓÃÁË...:P\n");    
+        return notify_fail("ä¹–ä¹–å£ºå·²ç¶“ç ´äº†ï¼Œä¸èƒ½å†ä½¿ç”¨äº†...:P\n");    
     
     if( this_object()->query("times") >= 10 )
-	return notify_fail("¹Ô¹ÔºøÊÇ¿ÕµÄ¡£\n");
+	return notify_fail("ä¹–ä¹–å£ºæ˜¯ç©ºçš„ã€‚\n");
     if( (int)this_player()->query("wealth/silver") <= 100){
-        write("ÄãÒÑ¾­¿ìÆÆ²úÁË£¬»¹ÏëºÈÕâÖÖÉÝ³ÞµÄÊ¥Ë®°¡£¿\n");
+        write("ä½ å·²ç¶“å¿«ç ´ç”¢äº†ï¼Œé‚„æƒ³å–é€™ç¨®å¥¢ä¾ˆçš„è–æ°´å•Šï¼Ÿ\n");
         return 1;
         }
 /*        
     if( this_object()->query("times") >= 9 ){
-      write("ÄãÌÍ³ö¹Ô¹Ôºø£¬ÏëÒ»¿ÚºÈÊ£ÏÂµÄË®¹â£¬½á¹û......\n");
+      write("ä½ æŽå‡ºä¹–ä¹–å£ºï¼Œæƒ³ä¸€å£å–å‰©ä¸‹çš„æ°´å…‰ï¼Œçµæžœ......\n");
       this_object()->add( "times",1 );
       WEAK->apply_effect( this_player(),5,10 );
       return 1;
       }
  */     
-    write("Äã´ó´ó¿ÚµÄºÈÁËÒ»¿ÚË®£¬¾«ÉñºÃ¶àÁË£¬¿ÉÊÇºÉ°üºÃÏñ±äÇáÁË£¬´ó¸ÅÊÇ´í¾õ°É!\n");
+    write("ä½ å¤§å¤§å£çš„å–äº†ä¸€å£æ°´ï¼Œç²¾ç¥žå¥½å¤šäº†ï¼Œå¯æ˜¯è·åŒ…å¥½åƒè®Šè¼•äº†ï¼Œå¤§æ¦‚æ˜¯éŒ¯è¦ºå§!\n");
     tell_room(environment(this_player()),
-       this_player()->query("c_name")+"ÄÃ³ö¹Ô¹ÔºøÀ´£¬Ïñ¹àó¬ó°ËÆµÄÃÍºÈ....\n"
+       this_player()->query("c_name")+"æ‹¿å‡ºä¹–ä¹–å£ºä¾†ï¼ŒåƒçŒèŸ‹èŸ€ä¼¼çš„çŒ›å–....\n"
        ,this_player() );
         this_object()->add( "times",1 );	
     

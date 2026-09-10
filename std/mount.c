@@ -16,9 +16,9 @@ int do_mount(string arg)
 //	if( ob= previous_object()->query_temp("mounting") )
 	if( ob= this_player()->query_temp("mounting") )	
 		return notify_fail(
-			"ÄãÒÑ¾­ÆïÔÚÒ»" + ob->query("unit") + ob->query("c_name") + "ÉÏÁË¡£\n");
+			"ä½ å·²ç¶“é¨Žåœ¨ä¸€" + ob->query("unit") + ob->query("c_name") + "ä¸Šäº†ã€‚\n");
 
-	if( !this_object()->id(arg) ) return notify_fail("ÄãÒªÆïÊ²÷á£¿\n");
+	if( !this_object()->id(arg) ) return notify_fail("ä½ è¦é¨Žä»€éº¼ï¼Ÿ\n");
 //	if( previous_object()->query("stop_attack") ) return 0;
 	if( this_player()->query("stop_attack") ) return 0;	
 	return "/adm/daemons/mount"->mount(this_object(), this_player());

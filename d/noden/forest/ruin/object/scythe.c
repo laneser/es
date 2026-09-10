@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("Scythe", "Á­µ¶");
+	set_name("Scythe", "é®åˆ€");
 	add ("id",({ "scythe", }) );
-	set_short("Á­µ¶");
-	set_long("Ò»°ÑºÜ·æÀûµÄÁ­µ¶£¬¿ÉÓÃÀ´¸î²İ(cropp)¡£\n");
+	set_short("é®åˆ€");
+	set_long("ä¸€æŠŠå¾ˆé‹’åˆ©çš„é®åˆ€ï¼Œå¯ç”¨ä¾†å‰²è‰(cropp)ã€‚\n");
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "weapon_class", 5 );
 	set( "type", "shortblade" );
 	set( "min_damage", 5 );
@@ -35,9 +35,9 @@ int to_cropp(string str)
             obj2=environment(obj1);
             if ((int)obj2->query("cropp")==1) 
               obj2->to_find_cropp(str);
-            else write("Äã²»ÄÜ¸îËü£¡\n");
+            else write("ä½ ä¸èƒ½å‰²å®ƒï¼\n");
           }
-          else return notify_fail("ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");  
+          else return notify_fail("ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");  
         }
         return 1;
 }

@@ -3,13 +3,13 @@
 inherit OBJECT;
 void create()
 {
-	set_name( "A Saw","Ò»°Ñ¾â×Ó" );
+	set_name( "A Saw","ä¸€æŠŠé‹¸å­" );
 	add( "id",({ "saw" }) );
-	set_short( "¾â×Ó" );
+	set_short( "é‹¸å­" );
 	set_long(@LONG
-	Ò»°Ñ·æÀûµÄ¾â×Ó¡£
+	ä¸€æŠŠé‹’åˆ©çš„é‹¸å­ã€‚
 LONG
 		);
 	set( "weight",5 );
-	set( "unit","°Ñ");
+	set( "unit","æŠŠ");
 }           

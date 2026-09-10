@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_boots ", "ÎäÊ¿³¤Ñ¥ ");
+        set_name( "samurai_boots ", "æ­¦å£«é•·é´ ");
         add( "id", ({ "boots" }) );
-        set_short("samurai_boots", "ÎäÊ¿³¤Ñ¥ ");
+        set_short("samurai_boots", "æ­¦å£«é•·é´ ");
         set_long(@AAA
-Ò»¸öÎäÊ¿ÃÇÖÆÊ½´©µÄ³¤Ñ¥
+ä¸€å€‹æ­¦å£«å€‘åˆ¶å¼ç©¿çš„é•·é´
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "feet" );
         set( "armor_class", 7 );
         set( "defense_bonus", 3 );

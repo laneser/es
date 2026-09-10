@@ -6,21 +6,21 @@ void create()
 {
 	::create();
 	set_level(7);
-	set_name("common carp", "ÀğÓã");
+	set_name("common carp", "é¯‰é­š");
 	add("id",({"fish","carp"}) );
-	set_short("ÀğÓã");
+	set_short("é¯‰é­š");
 	set_long(
-		"ÕâÊÇÒ»ÌõºÖ»ÆÉ«µÄÀğÓã£¬ÓĞĞëÁ½¶Ô£¬ÊÇ¶«·½´óÂ½ÈËÖ÷ÒªµÄµ­Ë®Ê³ÓÃ\n"
-		"Óã£¬Ïàµ±µÄÃÀÎ¶¡£\n"
+		"é€™æ˜¯ä¸€æ¢è¤é»ƒè‰²çš„é¯‰é­šï¼Œæœ‰é ˆå…©å°ï¼Œæ˜¯æ±æ–¹å¤§é™¸äººä¸»è¦çš„æ·¡æ°´é£Ÿç”¨\n"
+		"é­šï¼Œç›¸ç•¶çš„ç¾å‘³ã€‚\n"
 	);
 	set( "likefish",1);
-	set( "unit", "Ìõ" );
+	set( "unit", "æ¢" );
 	set( "alignment", 200 );
 	set( "natural_weapon_class1", 7 );
 	set( "natural_min_damage1", 4 );
 	set_skill("swimming",100);
 	set( "natural_max_damage1", 7 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Î²÷¢" }) );
-	set_c_verbs( ({ "%sÕÅ×ì£¬Íù%sÒ§È¥","%sÎ²÷¢ÓÃÁ¦Ò»Ë¦£¬Ë¦Ïò%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å°¾é°­" }) );
+	set_c_verbs( ({ "%så¼µå˜´ï¼Œå¾€%så’¬å»","%så°¾é°­ç”¨åŠ›ä¸€ç”©ï¼Œç”©å‘%s" }) );
 }
 

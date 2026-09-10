@@ -6,11 +6,11 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "white magic scroll", "°×É«Ä§·¨¾íÖá" );
+	set_name( "white magic scroll", "ç™½è‰²é­”æ³•å·è»¸" );
 	add( "id", ({ "scroll" }) );
-	set_short( "°×É«Ä§·¨¾íÖá" );
+	set_short( "ç™½è‰²é­”æ³•å·è»¸" );
 	set("long","@@desc");
-	set( "unit", "ÕÅ" );
+	set( "unit", "å¼µ" );
 	set( "weight", 5 );
 	set( "no_sale", 1 );
 
@@ -27,21 +27,21 @@ int study_scroll(string arg)
 	int points,total_points,percentage;
 	me=this_player();
         if( !arg || arg!="scroll" )
-                return notify_fail("ÏëÑĞ¾¿Ê²÷á£¿\n");
+                return notify_fail("æƒ³ç ”ç©¶ä»€éº¼ï¼Ÿ\n");
         if ((this_player()->query("spell_levels/misc")< 50))
-                return notify_fail("ÕâĞ©ĞÇ¿ÕÍ¼ºÃÏñ¼ÇÔØÁËÄ³ÖÖ·¨ÊõµÄÃØÃÜ£¬µ«ÊÇÄã²»ÖªµÀÕıÈ·µÄÊ¹ÓÃ·½Ê½\n£¬´ó¸ÅÊÇÄã¶ÔÔÓÏîÄ§·¨»¹²»¹»ÊìÁ·°É£¡\n");
+                return notify_fail("é€™äº›æ˜Ÿç©ºåœ–å¥½åƒè¨˜è¼‰äº†æŸç¨®æ³•è¡“çš„ç§˜å¯†ï¼Œä½†æ˜¯ä½ ä¸çŸ¥é“æ­£ç¢ºçš„ä½¿ç”¨æ–¹å¼\nï¼Œå¤§æ¦‚æ˜¯ä½ å°é›œé …é­”æ³•é‚„ä¸å¤ ç†Ÿç·´å§ï¼\n");
 	points=(int)me->query_explore_points();
 	total_points=EXPLORE_D->query_total_explore();
 	percentage=points*100/total_points;
 	if ( percentage < 60)
-return  notify_fail("ÕâĞ©ĞÇ¿ÕÍ¼ºÃÏñ¼ÇÔØÁËÄ³ÖÖ·¨ÊõµÄÃØÃÜ£¬ÄãÑĞ¾¿ÁË°ëÌì£¬»¹ÊÇ²»ÖªµÀÕâĞ©ĞÇ¿Õ\nÍ¼·Ö±ğÊÇ´ÓÄÄÀï¹Û²ìµÄ£¬´ó¸ÅÄãµÄÌ½ÏÕ¶È»¹²»¹»£¡\n");
+return  notify_fail("é€™äº›æ˜Ÿç©ºåœ–å¥½åƒè¨˜è¼‰äº†æŸç¨®æ³•è¡“çš„ç§˜å¯†ï¼Œä½ ç ”ç©¶äº†åŠå¤©ï¼Œé‚„æ˜¯ä¸çŸ¥é“é€™äº›æ˜Ÿç©º\nåœ–åˆ†åˆ¥æ˜¯å¾å“ªè£¡è§€å¯Ÿçš„ï¼Œå¤§æ¦‚ä½ çš„æ¢éšªåº¦é‚„ä¸å¤ ï¼\n");
 
 if (!undefinedp(this_player()->query("spells/astral-gate")))
-return notify_fail("Äã¿´¿´ÁËĞÇ¿ÕÍ¼£¬¶ÔÕâĞ©ĞÇ¿ÕµÄ·Ö²¼¼ÇµÃ¸üÇå³şÁË¡£\n");
-	write("Äã¿ªÊ¼×ĞÏ¸ÑĞ¾¿¾íÖáÉÏµÄĞÇ¿ÕÍ¼ .... \n\n");
-	tell_room( environment(me), sprintf("%s¿´Öø¾íÖá¿ªÊ¼·¢´ô¡£\n", me->query("c_name")), me);
-	printf("¾íÖá·¢³öÁË°×É«µÄ¹âÃ¢£¬»¯×÷ÁË¼¸°Ù¿ÅµÄ°×É«ĞÇĞÇµÄÓ°Ïñ£¬Î§ÈÆÖøÄã¿ìËÙµÄÒÆ¶¯Öø.... \n ...\n ...\n");
-	tell_room( environment(me),sprintf("\n%sÊÖÉÏµÄ¾íÖá·¢³öÁË°×É«µÄ¹âÃ¢£¬»¯×÷ÁË¼¸°Ù¿Å°×É«ĞÇĞÇµÄÓ°Ïñ£¬Î§ÈÆÖø%s¿ìËÙµÄÒÆ¶¯.... \n",me->query("c_name"),me->query("c_name")), me);
+return notify_fail("ä½ çœ‹çœ‹äº†æ˜Ÿç©ºåœ–ï¼Œå°é€™äº›æ˜Ÿç©ºçš„åˆ†ä½ˆè¨˜å¾—æ›´æ¸…æ¥šäº†ã€‚\n");
+	write("ä½ é–‹å§‹ä»”ç´°ç ”ç©¶å·è»¸ä¸Šçš„æ˜Ÿç©ºåœ– .... \n\n");
+	tell_room( environment(me), sprintf("%sçœ‹è‘—å·è»¸é–‹å§‹ç™¼å‘†ã€‚\n", me->query("c_name")), me);
+	printf("å·è»¸ç™¼å‡ºäº†ç™½è‰²çš„å…‰èŠ’ï¼ŒåŒ–ä½œäº†å¹¾ç™¾é¡†çš„ç™½è‰²æ˜Ÿæ˜Ÿçš„å½±åƒï¼Œåœç¹è‘—ä½ å¿«é€Ÿçš„ç§»å‹•è‘—.... \n ...\n ...\n");
+	tell_room( environment(me),sprintf("\n%sæ‰‹ä¸Šçš„å·è»¸ç™¼å‡ºäº†ç™½è‰²çš„å…‰èŠ’ï¼ŒåŒ–ä½œäº†å¹¾ç™¾é¡†ç™½è‰²æ˜Ÿæ˜Ÿçš„å½±åƒï¼Œåœç¹è‘—%så¿«é€Ÿçš„ç§»å‹•.... \n",me->query("c_name"),me->query("c_name")), me);
 
 	call_out("effect",1,me);
         return 1;
@@ -51,11 +51,11 @@ void effect(object reciter)
 string fame;
 seteuid(getuid());
 fame = "     "+(string)reciter->query("c_name")+"("+
-                (string)reciter->query("name")+")"+" ì¶ "+
-                "/adm/daemons/weather_d"->query_c_game_time()+" Ï°µÃĞÇ¿ÕÖ®ÃÅ !!\n";
+                (string)reciter->query("name")+")"+" æ–¼ "+
+                "/adm/daemons/weather_d"->query_c_game_time()+" ç¿’å¾—æ˜Ÿç©ºä¹‹é–€ !!\n";
                 write_file(SLAB_FILE, fame+"\n");
-write("´Ó¹Û²ìĞÇĞÇµÄ·Ö²¼ºÍÒÆ¶¯£¬ÄãÁìÂÔ³öÈçºÎÊ¹ÓÃĞÇ¿ÕÖ®ÃÅ£¡£¡\n> ");
-	tell_room( environment(reciter), sprintf("\n°×É«ĞÇĞÇµÄÓ°ÏñÓúÀ´ÓúÄ£ºı£¬½¥½¥µÄÏûÊ§²»¼ûÁË.... \n\n> " ));
+write("å¾è§€å¯Ÿæ˜Ÿæ˜Ÿçš„åˆ†ä½ˆå’Œç§»å‹•ï¼Œä½ é ˜ç•¥å‡ºå¦‚ä½•ä½¿ç”¨æ˜Ÿç©ºä¹‹é–€ï¼ï¼\n> ");
+	tell_room( environment(reciter), sprintf("\nç™½è‰²æ˜Ÿæ˜Ÿçš„å½±åƒæ„ˆä¾†æ„ˆæ¨¡ç³Šï¼Œæ¼¸æ¼¸çš„æ¶ˆå¤±ä¸è¦‹äº†.... \n\n> " ));
 	this_player()->set("spells/astral-gate",0);
 	this_player()->set("spells/star-memory",0);
 	remove();
@@ -64,8 +64,8 @@ write("´Ó¹Û²ìĞÇĞÇµÄ·Ö²¼ºÍÒÆ¶¯£¬ÄãÁìÂÔ³öÈçºÎÊ¹ÓÃĞÇ¿ÕÖ®ÃÅ£¡£¡\n> ");
 string desc()
 {
 if (undefinedp(this_player()->query("spells/astral-gate")))
-return("ÕâÕÅ°×É«¾íÖáÉÏÃæ»­ÁËºÜ¶àµÄĞÇ¿ÕÍ¼£¬Ïë×ĞÏ¸ÑĞ¾¿(study)Õâ¸ö¾íÖá(scroll)Âğ£¿\n");
+return("é€™å¼µç™½è‰²å·è»¸ä¸Šé¢ç•«äº†å¾ˆå¤šçš„æ˜Ÿç©ºåœ–ï¼Œæƒ³ä»”ç´°ç ”ç©¶(study)é€™å€‹å·è»¸(scroll)å—ï¼Ÿ\n");
 else
-return("ÕâÕÅ°×É«¾íÖáÉÏÃæ»­ÖøÑ§Ï°ĞÇ¿ÕÖ®ÃÅ±ØÖªµÄ¸÷µØĞÇ¿ÕÍ¼¡£\n");
+return("é€™å¼µç™½è‰²å·è»¸ä¸Šé¢ç•«è‘—å­¸ç¿’æ˜Ÿç©ºä¹‹é–€å¿…çŸ¥çš„å„åœ°æ˜Ÿç©ºåœ–ã€‚\n");
 }
 

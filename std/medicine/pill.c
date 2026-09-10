@@ -8,7 +8,7 @@ void create()
 {
 	medicine::create();
 	set("can_eat", 1);
-	set("unit", "Á£");
+	set("unit", "ç²’");
 }
 
 void set_healing(int heal)

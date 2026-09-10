@@ -8,11 +8,11 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("A empty room", "ÆïÊ¿¹«»á´¢²ØÊÒ");
+	set_short("A empty room", "é¨å£«å…¬æœƒå„²è—å®¤");
 	set_long( @C_LONG_DESCRIPTION
-ÄãÏÖÔÚÀ´µ½ÁËÒ»¼ä¹ÒÂúÁË¸÷Ê½ÎäÆ÷¡¢¿ø¼×µÄ´¢²ØÊÒ£¬¸ßµÈ¼¶µÄÆïÊ¿ÃÇÍùÍù
-ÀÖì¶½«ËûÃÇ¶àâÅµÄ×°±¸ÁôÔÚ´ËµØÈÃÆäËûĞèÒªµÄÈËÈ¡ÓÃ¡£Ç½½ÇÓĞ¸ö¹ñ×ÓÊÇÓÃÀ´·Å
-ÎäÆ÷µÄ¡£ÍùÄÏ±ßÊÇÒ»Ìõ×ßµÀÍ¨ÍùÆïÊ¿Ìü¡£
+ä½ ç¾åœ¨ä¾†åˆ°äº†ä¸€é–“æ›æ»¿äº†å„å¼æ­¦å™¨ã€ç›”ç”²çš„å„²è—å®¤ï¼Œé«˜ç­‰ç´šçš„é¨å£«å€‘å¾€å¾€
+æ¨‚æ–¼å°‡ä»–å€‘å¤šé¤˜çš„è£å‚™ç•™åœ¨æ­¤åœ°è®“å…¶ä»–éœ€è¦çš„äººå–ç”¨ã€‚ç‰†è§’æœ‰å€‹æ«ƒå­æ˜¯ç”¨ä¾†æ”¾
+æ­¦å™¨çš„ã€‚å¾€å—é‚Šæ˜¯ä¸€æ¢èµ°é“é€šå¾€é¨å£«å»³ã€‚
 C_LONG_DESCRIPTION
 		);
 
@@ -41,7 +41,7 @@ int get_item(string str)
 	lv = player->query_level();
 	if( !str || str=="" ) return 0;
 	if( str=="all" ) {
-		tell_object(player,"ÇëÖ¸Ã÷ÄãÒª¼ñµÄ¶«Î÷£¬±ğÌ«Ì°ĞÄà¸¡£\n" );
+		tell_object(player,"è«‹æŒ‡æ˜ä½ è¦æ’¿çš„æ±è¥¿ï¼Œåˆ¥å¤ªè²ªå¿ƒå–”ã€‚\n" );
 		return 1;
 		}
 	if( !(item = present(str,this_object())) ) return 0;
@@ -56,36 +56,36 @@ int get_item(string str)
 					p_wealth = player->query("wealth/"+type);
 					if( p_wealth < number ) {
 						tell_object( player,@A_LONG
-ÄãÃ»ÓĞÕ½¹¦ÓÖÃ»ÓĞÇ®£¬ÊµÔÚÎŞ·¨·ÅĞÄ°Ñ¶«Î÷½è¸øÄã¡£
+ä½ æ²’æœ‰æˆ°åŠŸåˆæ²’æœ‰éŒ¢ï¼Œå¯¦åœ¨ç„¡æ³•æ”¾å¿ƒæŠŠæ±è¥¿å€Ÿçµ¦ä½ ã€‚
 A_LONG
 						);
 						return 1;
 						}
 						res = (int)item->move( player );
 						if( res==MOVE_TOO_HEAVY ) {
-							write( "ÄãÄÃ²»¶¯" + item->query("c_name") + "£¬Ì«ÖØÁË¡£\n");
+							write( "ä½ æ‹¿ä¸å‹•" + item->query("c_name") + "ï¼Œå¤ªé‡äº†ã€‚\n");
 							return 1;
 						}
 						player->debit( type,number );
 						tell_object( player,@B_LONG
-Îª·ÀÖ¹Äã½«Ëü±äÂô£¬ÏÈ¿ÛÏÂÄãÓëÕâ¶«Î÷µÄ¼ÛÖµÏàµÈµÄÇ®£¬µ±Äã¹é»¹Ê±ÔÙÍËÇ®¸øÄã¡£
+ç‚ºé˜²æ­¢ä½ å°‡å®ƒè®Šè³£ï¼Œå…ˆæ‰£ä¸‹ä½ èˆ‡é€™æ±è¥¿çš„åƒ¹å€¼ç›¸ç­‰çš„éŒ¢ï¼Œç•¶ä½ æ­¸é‚„æ™‚å†é€€éŒ¢çµ¦ä½ ã€‚
 B_LONG
 						);
 						return 1;
 					}
 				tell_object(player,@C_LONG
-Äã·¢ÏÖ¸½½üµÄÆïÊ¿ÃÇ¶¼ÒÔ²»Ğ¼µÄÑÛÉñ¿´ÖøÄã£¬ĞßÀ¢Ö®ĞÄÊ¹Äã¸Ï¿ì°Ñ¶«Î÷·Å»ØÔ­Î»¡£
+ä½ ç™¼ç¾é™„è¿‘çš„é¨å£«å€‘éƒ½ä»¥ä¸å±‘çš„çœ¼ç¥çœ‹è‘—ä½ ï¼Œç¾æ„§ä¹‹å¿ƒä½¿ä½ è¶•å¿«æŠŠæ±è¥¿æ”¾å›åŸä½ã€‚
 C_LONG
 					);
 				return 1;
 			}
 			res = (int)item->move( player );
 			if( res==MOVE_TOO_HEAVY ) {
-				write( "ÄãÄÃ²»¶¯" + item->query("c_name") + "£¬Ì«ÖØÁË¡£\n");
+				write( "ä½ æ‹¿ä¸å‹•" + item->query("c_name") + "ï¼Œå¤ªé‡äº†ã€‚\n");
 				return 1;
 			}
 			tell_object( player,@D_LONG
-ÎªÈ·±£Äã»á½«Ëü¹é»¹£¬ÏÈ¿ÛÄãÒ»Ğ©Õ½¹¦×÷µÖÑº¡£
+ç‚ºç¢ºä¿ä½ æœƒå°‡å®ƒæ­¸é‚„ï¼Œå…ˆæ‰£ä½ ä¸€äº›æˆ°åŠŸä½œæŠµæŠ¼ã€‚
 D_LONG
 			);
 			this_player()->add( "war_score", -bonus );
@@ -112,25 +112,25 @@ int drop_item(string str)
 	if( !env ) return 0;
 	if( str == "all" ) {
 		if( player->query("wizard") ) {
-			tell_object( player,"Î×Ê¦²»¿ÉÒÔÔÚÕâÀï¶ª¶«Î÷à¸!!\n" );
+			tell_object( player,"å·«å¸«ä¸å¯ä»¥åœ¨é€™è£¡ä¸Ÿæ±è¥¿å–”!!\n" );
 			return 1;
 		}		
 		if( !pointerp(inv) && sizeof(inv)<1 )
 			return notify_fail( 
-				"ÄãÉíÉÏÃ»ÓĞÈÎºÎ¶«Î÷¿É¶ª¡£\n");
+				"ä½ èº«ä¸Šæ²’æœ‰ä»»ä½•æ±è¥¿å¯ä¸Ÿã€‚\n");
 		for( i=0; i<sizeof(inv); i++ ) {
 			if( !inv[i] || inv[i]->query("prevent_drop") ||
 				inv[i]->query("secure") ) continue;
 			short = (string)inv[i]->query("short");
-			if( !(unit = inv[i]->query("unit")) ) unit = "¸ö";
-			if( !short ) short = "Ä³Îï";
+			if( !(unit = inv[i]->query("unit")) ) unit = "å€‹";
+			if( !short ) short = "æŸç‰©";
 			if( (WC = inv[i]->query("weapon_class")) >= 40 ) {
 				bonus = WC/10;
 				if( !inv[i]->query("knight_guild") ) {
-					write("ÆäËûÈË»á¸ĞĞ»Äã¿¶¿®µÄ¾èÏ×µÄ¡£\n");
+					write("å…¶ä»–äººæœƒæ„Ÿè¬ä½ æ…·æ…¨çš„æç»çš„ã€‚\n");
 					inv[i]->set("knight_guild",1);
-					write( "Äã¶ªÏÂÒ»"+unit+short+"¡£\n");
-					tell_room( env,c_name+"¶ªÏÂÒ»"+unit+short+"¡£\n",player );
+					write( "ä½ ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n");
+					tell_room( env,c_name+"ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n",player );
 					inv[i]->delete( "on_mounted" );
 					inv[i]->move( env );
 					player->add("war_score",bonus);
@@ -140,40 +140,40 @@ int drop_item(string str)
 					value = inv[i]->query( "value" );
 					number = value[0];
 					type = value[1];
-					write("Äã¹ûÈ»ÊÇÊØĞÅÓÃµÄÈË£¬ÕâÊÇÄãµÄÑº½ğ£¬ÍË»¹¸øÄã¡£\n");
-					write( "Äã¶ªÏÂÒ»"+unit+short+"¡£\n");
-					tell_room( env,c_name+"¶ªÏÂÒ»"+unit+short+"¡£\n",player );
+					write("ä½ æœç„¶æ˜¯å®ˆä¿¡ç”¨çš„äººï¼Œé€™æ˜¯ä½ çš„æŠ¼é‡‘ï¼Œé€€é‚„çµ¦ä½ ã€‚\n");
+					write( "ä½ ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n");
+					tell_room( env,c_name+"ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n",player );
 					inv[i]->delete( "on_mounted" );
 					inv[i]->move( env );
 					player->credit( type,number );
 					continue;
 					}
-				write("Äã¹ûÈ»ÊÇÊØĞÅÓÃµÄÈË¡£\n");
-				write( "Äã¶ªÏÂÒ»"+unit+short+"¡£\n");
-				tell_room( env,c_name+"¶ªÏÂÒ»"+unit+short+"¡£\n",player );
+				write("ä½ æœç„¶æ˜¯å®ˆä¿¡ç”¨çš„äººã€‚\n");
+				write( "ä½ ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n");
+				tell_room( env,c_name+"ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n",player );
 				inv[i]->delete( "on_mounted" );
 				inv[i]->move( env );
 				player->add("war_score",bonus);
 				continue;
 				}
-			write( "Äã¶ªÏÂÒ»"+unit+short+"¡£\n");
-			tell_room( env,c_name+"¶ªÏÂÒ»"+unit+short+"¡£\n",player );
+			write( "ä½ ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n");
+			tell_room( env,c_name+"ä¸Ÿä¸‹ä¸€"+unit+short+"ã€‚\n",player );
 			inv[i]->delete( "on_mounted" );
 			inv[i]->move( env );
 			continue;
 			}
-		write( "Äã½«ÉíÉÏËùÓĞÄÜ¶ªµÄ¶«Î÷¶ªÏÂ¡£\n");
+		write( "ä½ å°‡èº«ä¸Šæ‰€æœ‰èƒ½ä¸Ÿçš„æ±è¥¿ä¸Ÿä¸‹ã€‚\n");
 		return 1;
 		}
 	if( !item=present(str,player) ) return 0;
 	if( item->query("prevent_drop") || item->query("secure") ) {
-		write( "ÄãÃ»ÓĞ°ì·¨½«Ëü¶ªµô!!\n" );
+		write( "ä½ æ²’æœ‰è¾¦æ³•å°‡å®ƒä¸Ÿæ‰!!\n" );
 		return 1;
 	}
 	if( (WC = item->query("weapon_class")) >=40 ) {
 		bonus = WC/10;
 		if( !item->query("knight_guild") ) {
-			tell_object(player,"ÆäËûÈË»á¸ĞĞ»Äã¿¶¿®µÄ¾èÏ×µÄ¡£\n");
+			tell_object(player,"å…¶ä»–äººæœƒæ„Ÿè¬ä½ æ…·æ…¨çš„æç»çš„ã€‚\n");
 			player->add("war_score",bonus);
 			item->set("knight_guild",1);
 			item->delete( "on_mounted" );
@@ -183,12 +183,12 @@ int drop_item(string str)
 			value = item->query("value");
 			number = value[0];
 			type = value[1];
-			tell_object(player,"Äã¹ûÈ»ÊÇÊØĞÅÓÃµÄÈË£¬ÕâÊÇÄãµÄÑº½ğ£¬ÍË»¹¸øÄã¡£\n");
+			tell_object(player,"ä½ æœç„¶æ˜¯å®ˆä¿¡ç”¨çš„äººï¼Œé€™æ˜¯ä½ çš„æŠ¼é‡‘ï¼Œé€€é‚„çµ¦ä½ ã€‚\n");
 			item->delete( "on_mounted" );
 			player->credit( type,number );
 			return 0;
 			}
-		tell_object(player,"Äã¹ûÈ»ÊÇÊØĞÅÓÃµÄÈË¡£\n");
+		tell_object(player,"ä½ æœç„¶æ˜¯å®ˆä¿¡ç”¨çš„äººã€‚\n");
 		item->delete( "on_mounted" );
 		player->add("war_score",bonus);
 		return 0;

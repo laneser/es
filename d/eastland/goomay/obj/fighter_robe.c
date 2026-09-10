@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "fighter's robe", "Îä¶··ş" );
+	set_name( "fighter's robe", "æ­¦é¬¥æœ" );
 	add( "id", ({ "robe" }) );
-	set_short( "an fighter's robe", "Îä¶··ş" );
+	set_short( "an fighter's robe", "æ­¦é¬¥æœ" );
 	set_long(
 		"You see a fighter's robe.\n",
-		"ÕâÊÇÒ»¼şÎäÊõĞŞĞĞÕß°®´©µÄÒÂ·ş£¬»òĞíËü²»ÄÜÌá¹©ºÜºÃµÄ±£»¤£¬µ«ÊÇ¿ÉÒÔÊ¹ÈË¸üÃô½İ¡£\n"
+		"é€™æ˜¯ä¸€ä»¶æ­¦è¡“ä¿®è¡Œè€…æ„›ç©¿çš„è¡£æœï¼Œæˆ–è¨±å®ƒä¸èƒ½æä¾›å¾ˆå¥½çš„ä¿è­·ï¼Œä½†æ˜¯å¯ä»¥ä½¿äººæ›´æ•æ·ã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
         set("material","cloth");
 	set( "type", "body" );
 	set( "weight", 80 );

@@ -3,14 +3,14 @@
 inherit WEAPON;
 void create()
 {
-	set_name( "Fun-Tain Halberd","·½ÌìÕ½êª" );
+	set_name( "Fun-Tain Halberd","æ–¹å¤©æˆ°æˆŸ" );
 	add( "id",({ "polearm","halberd" }) );
-	set_short( "·½ÌìÕ½êª" );
+	set_short( "æ–¹å¤©æˆ°æˆŸ" );
 	set_long(@LONG
-	ÕâÊÇòáòæÈËÕ½ÊÂÖ¸»Ó¹Ù²ÅÓĞ×Ê¸ñÊ¹ÓÃµÄÎäÆ÷¡£
+	é€™æ˜¯èœ¥èœ´äººæˆ°äº‹æŒ‡æ®å®˜æ‰æœ‰è³‡æ ¼ä½¿ç”¨çš„æ­¦å™¨ã€‚
 LONG
 		);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","polearm" );
 	set( "weapon_class",40 );
 	set( "min_damage",20 );

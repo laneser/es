@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("gold dauist hat", "×Ï½ğµÀ¹Ú");
+        set_name("gold dauist hat", "ç´«é‡‘é“å† ");
         add( "id", ({ "hat" }) );
-        set_short("×Ï½ğµÀ¹Ú");
+        set_short("ç´«é‡‘é“å† ");
         set_long(
-                "ÕâÊÇ´«ËµÖĞÉñÏÉËùÊ¹ÓÃµÄµÀ¹Ú£¬ÄÜµÃµ½ËüµÄÈËÍùÍùºÜÓĞÏÉÔµ£® \n"
+                "é€™æ˜¯å‚³èªªä¸­ç¥ä»™æ‰€ä½¿ç”¨çš„é“å† ï¼Œèƒ½å¾—åˆ°å®ƒçš„äººå¾€å¾€å¾ˆæœ‰ä»™ç·£ï¼ \n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "heavy_metal");
         set( "armor_class", 6 );

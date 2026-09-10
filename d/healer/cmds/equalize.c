@@ -12,10 +12,10 @@ void do_balance( object player, int bal_skill,int con_skill, int degree )
     if(!degree) {
 	  //if( (int)player->query_exp_stock() < (int)player->query_level()*15 )
 	  tell_object( player, can_read_chinese(player)?
-		"ÄãµÄÉíÌå¿ªÊ¼·¢¶¶²»ÒÑ.....\n": "You bodys are shivering ....\n" );
+		"ä½ çš„èº«é«”é–‹å§‹ç™¼æŠ–ä¸å·².....\n": "You bodys are shivering ....\n" );
       if( random(110) > bal_skill || random(100) > con_skill ) {
         tell_object(player,can_read_chinese(player)? 
-          "ÄãµÄÉíÌåÎÞ·¨³ÐÊÜÆ½ºâ´ó·¨µÄÑ¹Á¦,ÄãÊ§°ÜÁË.\n":
+          "ä½ çš„èº«é«”ç„¡æ³•æ‰¿å—å¹³è¡¡å¤§æ³•çš„å£“åŠ›,ä½ å¤±æ•—äº†.\n":
           "Your body cant get such strong power,you failed.\n"
         );
        	if( !wizardp( player ) ) {
@@ -40,11 +40,11 @@ void do_balance( object player, int bal_skill,int con_skill, int degree )
       player->set("hit_points",(hp+mana)/2>maxhp ? maxhp : (hp+mana)/2 );
       player->set("spell_points",(hp+mana)/2-(100-bal_skill)/10 );
       tell_object(player,can_read_chinese(player)?
-         "...Ò»ÕóµÄÍ´¿àÖÐ,ÄãÍê³ÉÁËÆ½ºâ.\n":
+         "...ä¸€é™£çš„ç—›è‹¦ä¸­,ä½ å®Œæˆäº†å¹³è¡¡.\n":
          "...You finish this aching process.\n");
       tell_room(environment(player),({
          player->query("name")+"seems wake up from the thinking.\n",
-         player->query("c_name")+"ËÆºõ´Ó³¤³¤µÄË¼¿¼ÖÐÐÑÀ´.\n"
+         player->query("c_name")+"ä¼¼ä¹Žå¾žé•·é•·çš„æ€è€ƒä¸­é†’ä¾†.\n"
          }) , player );
       cost_exp = ((int)this_player()->query_level()) * 10 +
 	             bal_skill + con_skill;
@@ -59,7 +59,7 @@ void re_balance(object player)
 {
      player->set_temp("balancing", 0);
      tell_object(player,can_read_chinese(player)?
-       "ÄãµÄË¼¿¼Á¦ÔÙ¶È¼¯ÖÐ,ÄãÏÖÔÚÓÖÄÜ¹»Ê©Õ¹Æ½ºâ´ó·¨ÁË.\n":
+       "ä½ çš„æ€è€ƒåŠ›å†åº¦é›†ä¸­,ä½ ç¾åœ¨åˆèƒ½å¤ æ–½å±•å¹³è¡¡å¤§æ³•äº†.\n":
        "your can use balance again now.\n"
      );
 }
@@ -72,27 +72,27 @@ int cmd_equalize()
 	con_skill = (int)this_player()->query_skill("concentrate");
 	if( !bal_skill || !con_skill ) 
 	   return notify_fail( can_read_chinese()?
-		"Äã²»ÁË½âÆ½ºâµÄ¼¼ÇÉ£¬Òò´ËÎÞ·¨È¡µÃÌåÁ¦Óë·¨Á¦µÄ¾ùºâµã.....¡£\n":
+		"ä½ ä¸çž­è§£å¹³è¡¡çš„æŠ€å·§ï¼Œå› æ­¤ç„¡æ³•å–å¾—é«”åŠ›èˆ‡æ³•åŠ›çš„å‡è¡¡é»ž.....ã€‚\n":
 		"You dont understand the skill of balance,so you can't balance your hitpoints and spellpoints...\n" );
 	cost_exp = ((int)this_player()->query_level()) * 10 +
 	           bal_skill + con_skill;
 	cost_exp *= 10;
 	if ( this_player()->query_temp("balancing") )
 	  return notify_fail(can_read_chinese()?
-	  "ÄãµÄ¾«ÉñÉÐÎ´»Ö¸´,Äã±ØÐëµÈÒ»»á¶ù.\n":
+	  "ä½ çš„ç²¾ç¥žå°šæœªæ¢å¾©,ä½ å¿…é ˆç­‰ä¸€æœƒå…’.\n":
 	  "You must wait a while to recover your concentrate.\n");
 
 	if( this_player()->query_exp_stock() < cost_exp ) 
 	    return notify_fail( can_read_chinese()?
-		"Æ½ºâ´ó·¨ÐèÒªÒ»Ð©¾­ÑéÖµ¸¨Öú,¶øÄãÈ±·¦Ëü......¡£\n":
+		"å¹³è¡¡å¤§æ³•éœ€è¦ä¸€äº›ç¶“é©—å€¼è¼”åŠ©,è€Œä½ ç¼ºä¹å®ƒ......ã€‚\n":
 		"You need some experience to use balance,but you lack it ...\n" );
     
 	write( can_read_chinese()?
-		"Äã±ÕÉÏÑÛ¾¦£¬¼¯ÖÐ¾«Éñ£¬¿ªÊ¼Ê©Õ¹Æ½ºâ´ó·¨....¡£\n":
+		"ä½ é–‰ä¸Šçœ¼ç›ï¼Œé›†ä¸­ç²¾ç¥žï¼Œé–‹å§‹æ–½å±•å¹³è¡¡å¤§æ³•....ã€‚\n":
 		"You close your eyes, try to concentrate on balancing ....\n" );
 	tell_room( environment(this_player()), ({
 		this_player()->query("cap_name")+ " close eyes,then concentrate on somthing.\n",
-		this_player()->query("c_name")+ "±ÕÉÏÁËÑÛ¾¦,È»áá×¨ÐÄì¶Ä³¼þÊÂÉÏ¡£\n"}),
+		this_player()->query("c_name")+ "é–‰ä¸Šäº†çœ¼ç›,ç„¶å¾Œå°ˆå¿ƒæ–¼æŸä»¶äº‹ä¸Šã€‚\n"}),
 		this_player() );
 	this_player()->set_temp("balancing", 1);
     if( !wizardp( this_player() ) ) {

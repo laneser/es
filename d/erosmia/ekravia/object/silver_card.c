@@ -8,11 +8,11 @@ void	create()
 {
 //	::create();
 	set_name("silver card");
-	set_short("Òø¿¨");
+	set_short("éŠ€å¡");
 	set( "long", "@@long_desc");
 	add( "id", ({"card", "silver card"}) );
 	set( "weight", 0);
-	set( "unit", "ÕÅ");
+	set( "unit", "å¼µ");
 	set( "value", 0);
 	set( "no_drop", 1);
 	charge = 10;
@@ -21,14 +21,14 @@ void	create()
 string	long_desc()
 {
 	string	s;
-	s = sprintf("%s\n%s%s%s\n", "ÕâÊÇÒ»ÕÅÒøÉ«µÄ¿¨Æ¬, ÉÏÃæÓ¡ÖøµÏÅµÂÃµêµÄ±êÖ¾",
-			 "ÕâÕÅÒø¿¨»¹¿ÉÒÔÊ¹ÓÃ", chinese_number(charge), "´Î¡£" );
+	s = sprintf("%s\n%s%s%s\n", "é€™æ˜¯ä¸€å¼µéŠ€è‰²çš„å¡ç‰‡, ä¸Šé¢å°è‘—è¿ªè«¾æ—…åº—çš„æ¨™èªŒ",
+			 "é€™å¼µéŠ€å¡é‚„å¯ä»¥ä½¿ç”¨", chinese_number(charge), "æ¬¡ã€‚" );
 	return s;
 }
 
 /*
-Ê¹ÓÃ¿¨Æ¬½øÈë·¿¼äÊ±±»ºô½Ð, Èç¹û¿¨ÉÏ»¹ÓÐ charge µÄ»°Ôò´«»Ø 1,
-·ñÔò´«»Ø 0¡£
+ä½¿ç”¨å¡ç‰‡é€²å…¥æˆ¿é–“æ™‚è¢«å‘¼å«, å¦‚æžœå¡ä¸Šé‚„æœ‰ charge çš„è©±å‰‡å‚³å›ž 1,
+å¦å‰‡å‚³å›ž 0ã€‚
 */
 int		use_card()
 {
@@ -40,6 +40,6 @@ int		use_card()
 
 void	remove_card( object player, object this_ob)
 {
-	tell_object(player, "Òø¿¨µÄ´ÎÊýÒÑ¾­ÓÃÍêÁË¡£\n");
+	tell_object(player, "éŠ€å¡çš„æ¬¡æ•¸å·²ç¶“ç”¨å®Œäº†ã€‚\n");
 	this_ob->remove();
 }

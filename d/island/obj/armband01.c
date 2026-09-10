@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("life armband", "ĞüÃüÖ®½í");
+        set_name("life armband", "æ‡¸å‘½ä¹‹å·¾");
         add( "id", ({"armband" }) );
-        set_short("ÃüĞüÖ®½í");
+        set_short("å‘½æ‡¸ä¹‹å·¾");
         set_long(@C_LONG
-ÕâÊÇÇ®ĞÎ´ÎÀÉÃ¿´Î×÷°¸Ê±×¨ÃÅ°óÔÚ±ÛÉÏµÄÊÖ½í£¬¡¸Ò»ÉúĞüÃü¡¹ÆäÊµ¾ÍÊÇÇ®ĞÎ´ÎÀÉµÄĞ´ÕÕ¡£        
+é€™æ˜¯éŒ¢å½¢æ¬¡éƒæ¯æ¬¡ä½œæ¡ˆæ™‚å°ˆé–€ç¶åœ¨è‡‚ä¸Šçš„æ‰‹å·¾ï¼Œã€Œä¸€ç”Ÿæ‡¸å‘½ã€å…¶å¯¦å°±æ˜¯éŒ¢å½¢æ¬¡éƒçš„å¯«ç…§ã€‚        
 C_LONG
         );
-        set( "unit", "Ìõ");
+        set( "unit", "æ¢");
         set( "type", "arms" );
         set( "armor_class", 6 );
         set( "defense_bonus", 2 );

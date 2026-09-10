@@ -9,20 +9,20 @@ inherit ROOM;
 void create()
 {
 	::create();
-	set_short("��Ѩ��ͷ");
+	set_short("洞穴盡頭");
 	set_long( @C_LONG_DESCRIPTION
-�����������˶�Ѩ��ײ��ľ�ͷ��������ǰ����һ��ʯͷ�Ƴɵ�����(table)��
-���������������ӵ�ʯͷ(rock)��һ�������������������߲�Զ������Ѩ�еķ�
-�ƺ����Ǵ����ᴵ�����ġ�
+你現在來到了洞穴最底部的盡頭，在你面前的是一張石頭製成的桌子(table)和
+幾塊用來當作椅子的石頭(rock)，一扇生鏽的鐵門在你的西邊不遠處，洞穴中的風
+似乎就是從門後吹出來的。
 C_LONG_DESCRIPTION
 	);
 
 	set( "item_desc", ([ 
-		"table" : "ʯ���Ϸ�������Բ�ε���Ƭ(card)������֮��������\n", 
-		"rock" : "��Щʯͷ��С���У����ÿ��Ե���������\n", 
+		"table" : "石桌上放著幾個圓形的鐵片(card)，除此之外別無他物。\n", 
+		"rock" : "這些石頭大小適中，正好可以當椅子坐。\n", 
 		"card" : @LONG_TEXT
-��Ƭһ������Ƭ��ÿƬ��С��һ������һƬ�������һ�������Σ���������
-Ƭ���ǿհ׵ġ�
+鐵片一共有六片，每片大小不一，最大的一片上面刻著一個三角形，其他的鐵
+片則是空白的。
 LONG_TEXT
  ]) );
 	set( "exits", ([ 
@@ -31,8 +31,8 @@ LONG_TEXT
 	create_door( "west", "east", ([
 		"keyword" : ({ "rusty iron door", "iron door", "door" }),
 		"name" : "rusty iron door",
-		"c_name" : "��������",
-		"c_desc" : "һ�Ⱥ��ص���������",
+		"c_name" : "生鏽鐵門",
+		"c_desc" : "一扇厚重的生鏽鐵門",
 		"status" : "locked",
 		"lock" : "HAWK_ALTAR_ENTRANCE"
 	]) );

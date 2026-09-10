@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "cellar key", "¾Æ½ÑÔ¿³×" );
+	set_name( "cellar key", "é…’çª–é‘°åŒ™" );
 	add( "id", ({ "key" }) );
-   set_short( "¾Æ½ÑÔ¿³×" );
+   set_short( "é…’çª–é‘°åŒ™" );
 	set_long(
-		"Ò»°Ñ»ÆÍ­×ö³ÉµÄÔ¿³×£¬ÉÏÃæ¹³ÖøÒ»¸öÌú»·¡£\n"
+		"ä¸€æŠŠé»ƒéŠ…åšæˆçš„é‘°åŒ™ï¼Œä¸Šé¢é‰¤è‘—ä¸€å€‹éµç’°ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "GHOST_HAROLD_CELLAR" );
 	set( "weight", 3 );
 	set( "value", ({ 10, "silver" }) );

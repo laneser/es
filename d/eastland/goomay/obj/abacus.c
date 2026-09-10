@@ -4,16 +4,16 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "abacus", "ËãÅÌ" );
+	set_name( "abacus", "ç®—ç›¤" );
 	add( "id", ({ "counter" }) );
-	set_short( "ËãÅÌ" );
+	set_short( "ç®—ç›¤" );
 	set_long(
-		"ÕâÊÇÒ»¸öÎÚºÚµÄËãÅÌ£¬Ö»ÊÇÒ»°ãÉÌÒµÓÃµÄ£¬¿´ÆğÀ´²»ÏñÊÇÎäÆ÷¡£\n"
+		"é€™æ˜¯ä¸€å€‹çƒé»‘çš„ç®—ç›¤ï¼Œåªæ˜¯ä¸€èˆ¬å•†æ¥­ç”¨çš„ï¼Œçœ‹èµ·ä¾†ä¸åƒæ˜¯æ­¦å™¨ã€‚\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 100 );
 	setup_weapon( "blunt", 25, 10, 20 );
 	set( "value", ({ 20, "gold" }) );
-        set_c_verbs(({"%sÔÒÏò%s","%sÍÆÏò%s","%s×²Ïò%s"}));
+        set_c_verbs(({"%sç ¸å‘%s","%sæ¨å‘%s","%sæ’å‘%s"}));
 
 }

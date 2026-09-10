@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Suntan","¾ü·ş" );
+	set_name( "Suntan","è»æœ" );
 	add( "id",({ "suntan" }) );
-	set_short( "¾ü·ş" );
+	set_short( "è»æœ" );
 	set_long(@LONG
-	Ò»¼ş¿¨ÆäÉ«µÄ¾ü·ş¡£
+	ä¸€ä»¶å¡å…¶è‰²çš„è»æœã€‚
 LONG
 		);
-	set( "unit","¼ş" );
+	set( "unit","ä»¶" );
 	set( "type","body" );
 	set( "material","cloth" );
 	set( "armor_class",20 );

@@ -1,26 +1,26 @@
 /*
- * Ô­×÷Õß£ºIshige (1995.1)
- * ÐÞ¸ÄÕß£ºIshige (1995.12)
+ * åŽŸä½œè€…ï¼šIshige (1995.1)
+ * ä¿®æ”¹è€…ï¼šIshige (1995.12)
  */
 
 #include <mudlib.h>
 
 inherit WEAPON;
 
-string C_NAME=("[36;1m¡õ[0;36m¡õ[36;1m¡õ[0;36m@[36;1m¡õ[0;36m¡õ[36;1m¡õ[0;36mu[37m");
+string C_NAME=("[36;1mâ–¡[0;36mâ–¡[36;1mâ–¡[0;36m@[36;1mâ–¡[0;36mâ–¡[36;1mâ–¡[0;36mu[37m");
 void create()
 {
 	set_name( "Ultima Trident",C_NAME );
 	add( "id",({ "jousting","trident" }) );
 	set_short( C_NAME );
 	set_long(@LONG
-	ÕâÊÇ°ÑÊÀ¼äº±¼ûµÄÉñ±øÀûÆ÷£¬ÓµÓÐÕâ°ÑÉñ±øÀû
-	Æ÷ÊÇÐí¶àÆïÊ¿ÖÕÉú×î´óµÄÔ¸Íû£¬Ö»¿ÉÏ§ÒÑ¾­²»
-	ÖªµÀÓÐ¶àÉÙÈËÎªÁËÕâ°ÑÉñ±øÀûÆ÷¶øÉ¥Ê§±¦¹óµÄ
-	ÐÔÃü¡£
+	é€™æ˜¯æŠŠä¸–é–“ç½•è¦‹çš„ç¥žå…µåˆ©å™¨ï¼Œæ“æœ‰é€™æŠŠç¥žå…µåˆ©
+	å™¨æ˜¯è¨±å¤šé¨Žå£«çµ‚ç”Ÿæœ€å¤§çš„é¡˜æœ›ï¼Œåªå¯æƒœå·²ç¶“ä¸
+	çŸ¥é“æœ‰å¤šå°‘äººç‚ºäº†é€™æŠŠç¥žå…µåˆ©å™¨è€Œå–ªå¤±å¯¶è²´çš„
+	æ€§å‘½ã€‚
 LONG
 		);
-	set( "unit","°Ñ" );
+	set( "unit","æŠŠ" );
 	set( "type","jousting" );
 	set( "weapon_class",45 );
         set( "min_damage",25 );
@@ -33,7 +33,7 @@ LONG
 }
 
 string ex_look(){
-return (set_color("$N","HIY")+"ÊÖÉÏµÄ"+C_NAME+"ÓÐ¹É[31;5m¿ªÌì±ÙµØ[37;0mµÄÆøÊÆ£¡\n$N¿´ÆðÀ´ÓÐÈç"+set_color("ÌìÉñ½µÊÀ","HIB")+"Ò»°ã¡£\n" );
+return (set_color("$N","HIY")+"æ‰‹ä¸Šçš„"+C_NAME+"æœ‰è‚¡[31;5mé–‹å¤©é—¢åœ°[37;0mçš„æ°£å‹¢ï¼\n$Nçœ‹èµ·ä¾†æœ‰å¦‚"+set_color("å¤©ç¥žé™ä¸–","HIB")+"ä¸€èˆ¬ã€‚\n" );
 }
 
 void wi_fun()
@@ -72,8 +72,8 @@ int hit_fun(object victim,int dis)
 	
 	if( random(100) > (15+(skill-100)) ) return 0;
 	
-	tell_room(environment(victim),"\n"+C_NAME+"µÄ"+set_color("ÉñÊ¥Á¦Á¿","HIW")+"£¬¼¤·¢ÁË"+name1+"µÄÁ¦Á¿£¬¶Ô"+name2+"Ôì³ÉÁË[34;1;5m¡¸ÄÑÒÔ¹À¼Æ¡¹[37;0mµÄÉËº¦¡£\n\n",holder);
-	tell_object(holder,"\n"+set_color("ÉñÊ¥µÄÁ¦Á¿","HIW")+"³äÂúÁËÄãµÄÉíÇû£¬Äã·¢³öÁË"+set_color("¡¸³¬ºõÏëÏñ¡¹","HIC")+"µÄÒ»»÷£¡\n\n" );
+	tell_room(environment(victim),"\n"+C_NAME+"çš„"+set_color("ç¥žè–åŠ›é‡","HIW")+"ï¼Œæ¿€ç™¼äº†"+name1+"çš„åŠ›é‡ï¼Œå°"+name2+"é€ æˆäº†[34;1;5mã€Œé›£ä»¥ä¼°è¨ˆã€[37;0mçš„å‚·å®³ã€‚\n\n",holder);
+	tell_object(holder,"\n"+set_color("ç¥žè–çš„åŠ›é‡","HIW")+"å……æ»¿äº†ä½ çš„èº«è»€ï¼Œä½ ç™¼å‡ºäº†"+set_color("ã€Œè¶…ä¹Žæƒ³åƒã€","HIC")+"çš„ä¸€æ“Šï¼\n\n" );
 	holder->add("justice",-4);
 	victim->receive_special_damage( "divine", dam );
 	victim->set("last_attacker",holder);

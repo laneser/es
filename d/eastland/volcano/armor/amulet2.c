@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("fire amulet", "»ğ»¤Éí·û");
+        set_name("fire amulet", "ç«è­·èº«ç¬¦");
         add( "id", ({ "amulet" }) );
-        set_short("»ğ»¤Éí·û");
+        set_short("ç«è­·èº«ç¬¦");
         set_long(
-                "Õâ¸ö»¤Éí·ûÌıËµÔø±»»ğÉñ´÷¹ı¡£\n"
+                "é€™å€‹è­·èº«ç¬¦è½èªªæ›¾è¢«ç«ç¥æˆ´éã€‚\n"
         );
-        set("unit","¸ö");
+        set("unit","å€‹");
         set( "type", "misc" );
         set( "material", "leather");
         set( "armor_class", 0 );

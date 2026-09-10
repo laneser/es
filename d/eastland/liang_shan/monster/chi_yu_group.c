@@ -1,4 +1,4 @@
- // chi_yu_group.c ÕâÊÇò¿ÓÈµÄÊÖÏÂÃÇ¹²Í¬inherit µÄµµ
+ // chi_yu_group.c é€™æ˜¯èš©å°¤çš„æ‰‹ä¸‹å€‘å…±åŒinherit çš„æª”
 
 #include <mudlib.h>
 #include <conditions.h>
@@ -32,11 +32,11 @@ void pseudo_hunt(object me, object player)
 	if( environment() && present(player, environment()) ) 
 		if( this_object()==me )
 			tell_room( environment(), 
-				query("c_name") + "·¢ÏÖÄãµÄÒâÍ¼£¬´ó½Ğ: ĞÖµÜÃÇ£¡¿´Çå³şÕâ¼Ò»ï£¬±ğÈÃËûÅÜÁË£¡\n",
+				query("c_name") + "ç™¼ç¾ä½ çš„æ„åœ–ï¼Œå¤§å«: å…„å¼Ÿå€‘ï¼çœ‹æ¸…æ¥šé€™å‚¢ä¼™ï¼Œåˆ¥è®“ä»–è·‘äº†ï¼\n",
 				this_object() );
 		else {
 			tell_room( environment(), 
-				query("c_name") + "Í»È»µ²ÔÚÄãÃæÇ°£¬¿ªÊ¼·¢¶¯¹¥»÷£¡\n",
+				query("c_name") + "çªç„¶æ“‹åœ¨ä½ é¢å‰ï¼Œé–‹å§‹ç™¼å‹•æ”»æ“Šï¼\n",
 				this_object() );
 			if( !pointerp(attackers) || member_array(player, attackers)==-1 )
 				kill_ob(player);

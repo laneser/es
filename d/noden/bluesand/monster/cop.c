@@ -6,10 +6,10 @@ void create()
 {
 	::create();
 	set_level(10);
-   set_name( "cop", "警备队员" );
-   set_short( "警备队员" );
+   set_name( "cop", "璀﹀倷闅婂摗" );
+   set_short( "璀﹀倷闅婂摗" );
 	set_long(
-        "他是蓝沙港的警卫队员, 专门清除不良份子。\n"
+        "浠栨槸钘嶆矙娓殑璀﹁闅婂摗, 灏堥杸娓呴櫎涓嶈壇浠藉瓙銆俓n"
 	);
 	set( "race", "lizardman" );
 	set( "gender", "male" );

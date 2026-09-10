@@ -6,10 +6,10 @@ inherit OBJECT;
 void create()
 {
         seteuid(getuid());
-        set_name( "list", "ÅÅĞĞ°ñ" );
-        set_short( "Ä§·¨µÈ¼¶ÅÅĞĞ°ñ" );
+        set_name( "list", "æ’è¡Œæ¦œ" );
+        set_short( "é­”æ³•ç­‰ç´šæ’è¡Œæ¦œ" );
         set_long( (string)find_object_or_load("/d/mage/tower/obj/topmages")->get_list(0));
-        set( "unit", "¾í" );
+        set( "unit", "å·" );
         set( "weight", 5 );
         set( "value", ({ 20, "silver" }) );
         set( "useless", 1 );

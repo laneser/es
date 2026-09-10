@@ -7,11 +7,11 @@ void create()
 {
 	::create();
 	set_level(9);
-	set_name( "Policeman", "捕快" );
+	set_name( "Policeman", "鎹曞揩" );
 	add( "id", ({ "cop" }) );
-	set_short( "捕快" );
+	set_short( "鎹曞揩" );
 	set_long(
-		"他是一个古梅镇的捕快，最擅长的不是打架抓贼，而是晃著铁□勒索商家。\n"
+		"浠栨槸涓�鍊嬪彜姊呴幃鐨勬崟蹇紝鏈�鎿呴暦鐨勪笉鏄墦鏋舵姄璩婏紝鑰屾槸鏅冭憲閻碘枴鍕掔储鍟嗗銆俓n"
 	);
 	set( "gender", "male" );
 	set( "race", "hawkman" );

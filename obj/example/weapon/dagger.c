@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-	set_name("dagger", "Ø°Ê×");
-	set_short("a short dagger", "¶ÌØ°Ê×");
+	set_name("dagger", "åŒ•é¦–");
+	set_short("a short dagger", "çŸ­åŒ•é¦–");
 	set_long(
 		"A fairly short dagger with sharp thin blade.\n",
-		"Ò»°ÑĞ¡ÇÉ¾«ÖÂµÄØ°Ê×¡£\n"
+		"ä¸€æŠŠå°å·§ç²¾ç·»çš„åŒ•é¦–ã€‚\n"
 	);
 	set( "weapon_class", 7 );
 	set( "type", "dagger" );

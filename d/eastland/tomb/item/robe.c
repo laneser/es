@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("emperor robe","ÁúÅÛ");
+        set_name("emperor robe","é¾è¢");
         add("id",({"robe"}) );
-        set_short("ÁúÅÛ");
+        set_short("é¾è¢");
 	set_long(
-"ÕâÊÇ¶«·½»ÊµÛµÄÁúÅÛ£¬ÉÏÃæĞåÓĞÒ»Ö»½ğÁú¡£\n");
-	set( "unit", "¼ş" );
+"é€™æ˜¯æ±æ–¹çš‡å¸çš„é¾è¢ï¼Œä¸Šé¢ç¹¡æœ‰ä¸€éš»é‡‘é¾ã€‚\n");
+	set( "unit", "ä»¶" );
 	set( "weight", 135 );
 	set( "type", "body" );
         set("material","cloth");

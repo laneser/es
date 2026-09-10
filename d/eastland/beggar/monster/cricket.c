@@ -6,18 +6,18 @@ void create()
 {
         ::create();
 	set_level(10);
-	set_name( "cricket", "ó¬ó°" );
+	set_name( "cricket", "èŸ‹èŸ€" );
         add ("id", ({ "cricket" }) );
-        set_short( "ó¬ó°" );
+        set_short( "èŸ‹èŸ€" );
 	set_long(@C_LONG
-Ò»Ö»ÕıÔÚÃù½ĞµÄÀ¥³æ¡£
+ä¸€éš»æ­£åœ¨é³´å«çš„æ˜†èŸ²ã€‚
 C_LONG
 	);
 	set_perm_stat( "str", 8 );
 	set_perm_stat( "dex", 8 );
 	set_natural_armor(10,4);
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
 	set_natural_weapon( 13,8,15 );
-	set_c_verbs( ({ "%sÓÃááÍÈÌßÏò%s"}) );
-	set_c_limbs( ({ "Í·²¿", "ĞØ²¿", "ááÍÈ" }) );
+	set_c_verbs( ({ "%sç”¨å¾Œè…¿è¸¢å‘%s"}) );
+	set_c_limbs( ({ "é ­éƒ¨", "èƒ¸éƒ¨", "å¾Œè…¿" }) );
 }

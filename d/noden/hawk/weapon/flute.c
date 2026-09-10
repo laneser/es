@@ -2,14 +2,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("gold flute","½ğÉ«³¤µÑ");
+        set_name("gold flute","é‡‘è‰²é•·ç¬›");
         add("id",({"flute",}) );
-        set_short("½ğÉ«³¤µÑ");
+        set_short("é‡‘è‰²é•·ç¬›");
         set_long(@C_LONG
-ÕâÊÇÒ»°Ñ·ºÖø½ğÉ«¹âÃ¢µÄÃÀÀö³¤µÑ¡£
+é€™æ˜¯ä¸€æŠŠæ³›è‘—é‡‘è‰²å…‰èŠ’çš„ç¾éº—é•·ç¬›ã€‚
 C_LONG
         );
-        set( "unit", "°Ñ" );
+        set( "unit", "æŠŠ" );
 	set( "weapon_class", 35 );
         set("type","blunt");
         set( "min_damage", 12 );

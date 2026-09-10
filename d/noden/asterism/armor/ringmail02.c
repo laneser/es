@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("bronze ringmail", "ÇàÍ­»·¼×");
+        set_name("bronze ringmail", "é’éŠ…ç’°ç”²");
         add( "id", ({ "ringmail","mail" }) );
-        set_short( "ÇàÍ­»·¼×");
+        set_short( "é’éŠ…ç’°ç”²");
         set_long(
-                "ÕâÊÇÒ»¼şÇàÍ­ÖÆµÄ»·¼×¡£\n"
+                "é€™æ˜¯ä¸€ä»¶é’éŠ…è£½çš„ç’°ç”²ã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set("material","light_metal");
         set( "armor_class", 26 );

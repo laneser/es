@@ -6,11 +6,11 @@ void create()
 {
 	::create();
 	set_level(5);
-	set_name( "ghostly face", "¹íÁ³" );
+	set_name( "ghostly face", "é¬¼è‡‰" );
 	add( "id", ({ "face" }) );
-	set_short("¹íÁ³" );
+	set_short("é¬¼è‡‰" );
 	set_long(
-		"Äã¿´µ½Ò»ÕÅ¹í÷È°ãµÄÁ³¸¡ÏÖÔÚÇ½±ÚÉÏ£¬Ëı¶ÔÖøÄãĞ°¶ñµØĞ¦Öø¡£\n"
+		"ä½ çœ‹åˆ°ä¸€å¼µé¬¼é­…èˆ¬çš„è‡‰æµ®ç¾åœ¨ç‰†å£ä¸Šï¼Œå¥¹å°è‘—ä½ é‚ªæƒ¡åœ°ç¬‘è‘—ã€‚\n"
 	);
    set( "race", "undead" );
 	set( "gender", "female" );
@@ -26,8 +26,8 @@ void create()
 	set( "natural_max_damage1", 5 );
 	set( "tactic_func", "my_tactic" );
 	set( "wealth/silver", 70 );
-	set_c_verbs( ({"%s´Ó¿ÕÆøÖĞÉì³öÒ»Ö»ÊÖ£¬×¥Ïò%s", "%s·¢³öÒ»Õó¼âÈñµÄ½ĞÉù£¬Íù%sÒ»×²"}) );
-	set_c_limbs( ({ "±Ç×Ó", "ÑÛ¾¦", "¶ú¶ä" }) );
+	set_c_verbs( ({"%så¾ç©ºæ°£ä¸­ä¼¸å‡ºä¸€éš»æ‰‹ï¼ŒæŠ“å‘%s", "%sç™¼å‡ºä¸€é™£å°–éŠ³çš„å«è²ï¼Œå¾€%sä¸€æ’"}) );
+	set_c_limbs( ({ "é¼»å­", "çœ¼ç›", "è€³æœµ" }) );
 }
 
 int my_tactic()
@@ -37,7 +37,7 @@ int my_tactic()
 
 	if( !(victim = query_attackers() ) || random(20)>5 ) return 0;
 	tell_room( environment(this_object()), 
-		"¹íÁ³Í»È»±ä´ó£¬ÕÅ¿ªËıµÄÑªÅè´ó¿Ú£¬·¢³öÒ»Õó¼«Æä´Ì¶úµÄ¼â½ĞÉù£¡\n" ,
+		"é¬¼è‡‰çªç„¶è®Šå¤§ï¼Œå¼µé–‹å¥¹çš„è¡€ç›†å¤§å£ï¼Œç™¼å‡ºä¸€é™£æ¥µå…¶åˆºè€³çš„å°–å«è²ï¼\n" ,
 		this_object() );
 	for( i=0; i<sizeof(victim); i++ )
 		victim[i]->receive_special_damage( "mental", 15 );

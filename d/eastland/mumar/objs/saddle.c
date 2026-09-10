@@ -3,11 +3,11 @@ inherit ARMOR;
  
 void create()
 {
-        set_name( "golden saddle", "金色马鞍" );
+        set_name( "golden saddle", "閲戣壊棣瀺" );
         add( "id", ({ "saddle" }) );
-        set_short( "金色马鞍" );
+        set_short( "閲戣壊棣瀺" );
         set_long(
-        "这是一副金色的皮革制马鞍，是牧马关骑兵威武的象徵。\n"
+        "閫欐槸涓�鍓噾鑹茬殑鐨潻鍒堕Μ闉嶏紝鏄墽棣棞楱庡叺濞佹鐨勮薄寰点�俓n"
         );
         set( "type", "saddle" );
         set( "material", "leather" );

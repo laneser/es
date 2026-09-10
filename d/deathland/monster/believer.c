@@ -7,17 +7,17 @@ void create()
 {
 	::create();
 	set_level(7);
-	set_name( "believer", "ĞÅÍ½" );
+	set_name( "believer", "ä¿¡å¾’" );
 	add ("id", ({ "dwarf", }) );
-	set_short( "Yang's believer", "Yang µÄĞÅÍ½" );
+	set_short( "Yang's believer", "Yang çš„ä¿¡å¾’" );
 	set_long(
 	"   \n",
-    "Ò»¸ö°²¾²µÄĞÅÍ½,ËÆºõËûÕıÆÚÍûµÃµ½¶ñÉñYangµÄ×£¸£\n");
+    "ä¸€å€‹å®‰éœçš„ä¿¡å¾’,ä¼¼ä¹ä»–æ­£æœŸæœ›å¾—åˆ°æƒ¡ç¥Yangçš„ç¥ç¦\n");
 
     set("alignment", 100 );
     set( "gender", "male" );
     set( "race", "dwarf" );
-    set( "unit", "¸ö" );
+    set( "unit", "å€‹" );
 	set_perm_stat( "str", 10 );
 	set_perm_stat( "int", 15 );
 	set_perm_stat( "kar", 10 );

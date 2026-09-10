@@ -8,5 +8,5 @@ void create()
 	set_save_file("monk_board");
     set_location("/d/monk/guild/monk_guild");
 	set ("short.text", "Monk's bulletin board");
-	set ("c_short.text", "ÎäÉ®¹«»áÁôÑÔ°å");
+	set ("c_short.text", "æ­¦åƒ§å…¬æœƒç•™è¨€æ¿");
 }

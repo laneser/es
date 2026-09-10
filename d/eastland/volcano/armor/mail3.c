@@ -3,13 +3,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("volcano-rocks chainmail", "»ğÉ½ÑÒËø×Ó¼×");
+        set_name("volcano-rocks chainmail", "ç«å±±å²©é–å­ç”²");
         add( "id", ({ "chainmail" }) );
-        set_short( "»ğÉ½ÑÒËø×Ó¼×");
+        set_short( "ç«å±±å²©é–å­ç”²");
         set_long(
-                "Õâ¼şËø×Ó¼×ÄËÊÇÓÃ»ğÉ½ÑÒÖÆ³É¡£\n"
+                "é€™ä»¶é–å­ç”²ä¹ƒæ˜¯ç”¨ç«å±±å²©è£½æˆã€‚\n"
         );
-        set("unit","¼ş");
+        set("unit","ä»¶");
         set( "type", "body" );
         set( "material", "stone");
         set( "armor_class", 18 );

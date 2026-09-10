@@ -10,7 +10,7 @@ init()
 
 do_auc()
 {
-	tell_object(this_player(),"Äã²»ÄÜÔÚÕâÀï½øĞĞ½»Ò×!!\n");
+	tell_object(this_player(),"ä½ ä¸èƒ½åœ¨é€™è£¡é€²è¡Œäº¤æ˜“!!\n");
 	return 1;
 }
 
@@ -20,8 +20,8 @@ do_quit()
 	TEST_ROOM->delete("tester");
 	TEST_ROOM->set("using",0);
         tell_object(this_player(),
-                "Ò»¸öÉùÒôËµµÀ : ·ÅÆúÀ²? ºÃ°É, ÏÂ´ÎÔÙÊÔÊÔ¿´¿ÉÄÜ±È½ÏºÃ¡£\n");
-//	TAYLERS->chat("²âÊÔÑ¶Ï¢\n");
+                "ä¸€å€‹è²éŸ³èªªé“ : æ”¾æ£„å•¦? å¥½å§, ä¸‹æ¬¡å†è©¦è©¦çœ‹å¯èƒ½æ¯”è¼ƒå¥½ã€‚\n");
+//	TAYLERS->chat("æ¸¬è©¦è¨Šæ¯\n");
 	return 1;
 }
 
@@ -30,10 +30,10 @@ void create()
 	::create();
 	
 	set("light", 1);
-	set_short( "±³´Ì²âÑéÊÒ" );
+	set_short( "èƒŒåˆºæ¸¬é©—å®¤" );
 	set_long( @LONG
-ÕâÊÇÒ»¼ä¿í³¨µÄ·¿¼ä£¬ÀïÃæ\°Ú\ÂúÁË´ó´óĞ¡Ğ¡µÄÏä×Ó£¬ºÜÊÊºÏ²ØÉí£¬
-ÊÇ×¨ÃÅÉè¼ÆÓÃÀ´×÷ÎªÑµÁ·³¡µÄ¡£
+é€™æ˜¯ä¸€é–“å¯¬æ•çš„æˆ¿é–“ï¼Œè£¡é¢æ“ºæ»¿äº†å¤§å¤§å°å°çš„ç®±å­ï¼Œå¾ˆé©åˆè—èº«ï¼Œ
+æ˜¯å°ˆé–€è¨­è¨ˆç”¨ä¾†ä½œç‚ºè¨“ç·´å ´çš„ã€‚
 LONG
 	);
 
@@ -49,8 +49,8 @@ LONG
 create_door("north","south",([
              "keyword" : ({"door" }),
              "status" : "locked",
-             "c_desc" : "Ò»ÉÈ½áÊµºñÖØµÄÌúÃÅ",
-             "c_name" : "ÌúÃÅ",
+             "c_desc" : "ä¸€æ‰‡çµå¯¦åšé‡çš„éµé–€",
+             "c_name" : "éµé–€",
              "name":"iron door",
              "desc":"an iron door",
              "lock" : "backstab_room2",
@@ -65,7 +65,7 @@ int pass_test()
 	int i;
 	if ( present("maskman",this_object()) ) {
 		tell_object(this_player(),
-		"ÃÉÃæÈËÉìÊÖ°ÑÄãÀ¹×¡£¬²»ÈÃÄãÍ¨¹ı¡£\n");
+		"è’™é¢äººä¼¸æ‰‹æŠŠä½ æ””ä½ï¼Œä¸è®“ä½ é€šéã€‚\n");
 		return 1;
 	}
 	if ( !this_player()->query_temp("pass_test") )	return 0;
@@ -78,9 +78,9 @@ int pass_test()
 	TEST_ROOM->set("using",0);
 
 	tell_object(this_player(),
-		"ÄãĞË·ÜµØ´©¹ıÌúÃÅ¡£\n"
-		"¾­¹ıÕâ´ÎµÄÕ½¶·ÑµÁ·£¬ÄãµÄ±³´ÌÄÜÁ¦ÌáÉıµ½ÁËµÚ "+this_player()->query("thief_level/backstab")+" ¼¶ !!\n");
-	TAYLERS->chat("¹§Ï²" + this_player()->query("c_name") + "Í¨¹ı±³´Ì²âÑé !!");
+		"ä½ èˆˆå¥®åœ°ç©¿ééµé–€ã€‚\n"
+		"ç¶“éé€™æ¬¡çš„æˆ°é¬¥è¨“ç·´ï¼Œä½ çš„èƒŒåˆºèƒ½åŠ›æå‡åˆ°äº†ç¬¬ "+this_player()->query("thief_level/backstab")+" ç´š !!\n");
+	TAYLERS->chat("æ­å–œ" + this_player()->query("c_name") + "é€šéèƒŒåˆºæ¸¬é©— !!");
 	return 0;
 }
 

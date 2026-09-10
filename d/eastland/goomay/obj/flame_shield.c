@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "flame shield", "»ğÑæ¶Ü");
+        set_name( "flame shield", "ç«ç„°ç›¾");
         add( "id", ({ "shield" }) );
-        set_short("a flame shield", "»ğÑæ¶Ü");
+        set_short("a flame shield", "ç«ç„°ç›¾");
         set_long(
            "This is a magic shield which made by element of fire .\n",
-           "ÕâÊÇÒ»ÃæÓÉ»ğÑæ¾«»ª´¸¡õ¶ø³ÉµÄÄ§¶Ü£¬¾İËµËüµÄÄ§·¨¿¹Á¦Ô¶Ô¶³¬¹ıÒ»°ãµÄÄ§·¨¶Ü¡£\n"
+           "é€™æ˜¯ä¸€é¢ç”±ç«ç„°ç²¾è¯éŒ˜â–¡è€Œæˆçš„é­”ç›¾ï¼Œæ“šèªªå®ƒçš„é­”æ³•æŠ—åŠ›é é è¶…éä¸€èˆ¬çš„é­”æ³•ç›¾ã€‚\n"
         );
-        set( "unit", "Ãæ"); 
+        set( "unit", "é¢"); 
         set( "type", "shield" );
         set( "armor_class", 5 );
         set( "defense_bonus", 2 );

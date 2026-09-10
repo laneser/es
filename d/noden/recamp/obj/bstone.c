@@ -5,18 +5,18 @@ int weted;
 string query_c_long()
 {
    if ( weted )
-  	return  "Õâ¸öÕ´ÁËË®µÄÊ¯Í·ËÆºõ¿ìÒªÈÜµôÁË£¬Èô²»¸Ï¿ì°ÑËüÅªÇ¬(dry)£¬\n"
-        	"Äã¿ÉµÃ×¼±¸»ØÈ¥°¤ÀÏÆÅµÄÒ»¶Ù³ôÂî»òÖ»µÃ½«ÒÂ·ş¶ªµô!!¡£\n";
+  	return  "é€™å€‹æ²¾äº†æ°´çš„çŸ³é ­ä¼¼ä¹å¿«è¦æº¶æ‰äº†ï¼Œè‹¥ä¸è¶•å¿«æŠŠå®ƒå¼„ä¹¾(dry)ï¼Œ\n"
+        	"ä½ å¯å¾—æº–å‚™å›å»æŒ¨è€å©†çš„ä¸€é “è‡­ç½µæˆ–åªå¾—å°‡è¡£æœä¸Ÿæ‰!!ã€‚\n";
 	else
-	return  "Õâ¸öºÚÉ«Ê¯Í·¿´À´ÔàÔàµÄ¡¢ÈíÈíµÄ£¬¸úÒ»°ãÊ¯Í·²»Ì«Ò»Ñù£¬ÉÏÃæ\n"
-		"ËÆºõĞ´ÖøÈı¸ö×Ö w?t£¬ÖĞ¼äµÄ×Ö±»Ò»¸ö´ó £Ø ¸ø¸Ç×¡¶ø¿´²»Çå³ş¡£\n";
+	return  "é€™å€‹é»‘è‰²çŸ³é ­çœ‹ä¾†é«’é«’çš„ã€è»Ÿè»Ÿçš„ï¼Œè·Ÿä¸€èˆ¬çŸ³é ­ä¸å¤ªä¸€æ¨£ï¼Œä¸Šé¢\n"
+		"ä¼¼ä¹å¯«è‘—ä¸‰å€‹å­— w?tï¼Œä¸­é–“çš„å­—è¢«ä¸€å€‹å¤§ ï¼¸ çµ¦è“‹ä½è€Œçœ‹ä¸æ¸…æ¥šã€‚\n";
 }
 
 void create()
 {
-	set_name("black stone", "ºÚÉ«Ê¯Í·");
+	set_name("black stone", "é»‘è‰²çŸ³é ­");
 	add( "id", ({ "blackstone","stone" }) );
-	set_short( "ºÚÉ«Ê¯Í·" );
+	set_short( "é»‘è‰²çŸ³é ­" );
 	set("long","@@query_c_long");
 	set( "weight", 3 );
 	weted = 0;
@@ -36,17 +36,17 @@ int wet_stone(string arg)
    object env;
 
    if( !arg || arg!="blackstone" && arg != "stone" )
-     return notify_fail("½«Ê²÷áÅªÊª£¿\n");
+     return notify_fail("å°‡ä»€éº¼å¼„æº¼ï¼Ÿ\n");
    if ( weted )
-     return notify_fail("ºÚÉ«Ê¯Í·ÒÑ¾­ÅªÊªÁË,ËÆºõÓÃÀ´ÓÃÀ´Í¿Ä«(apply)!!¡£\n");
+     return notify_fail("é»‘è‰²çŸ³é ­å·²ç¶“å¼„æº¼äº†,ä¼¼ä¹ç”¨ä¾†ç”¨ä¾†å¡—å¢¨(apply)!!ã€‚\n");
 
 	env = environment(this_object());
 	if( living(env) ) env = environment(env);
 	if( !env->query("water_source") )
-		return notify_fail("ÕâÀïÃ»ÓĞË®....¡£\n");
+		return notify_fail("é€™è£¡æ²’æœ‰æ°´....ã€‚\n");
 
 	weted = 1;
-	write("Äã°ÑºÚÉ«Ê¯Í·ÅªÊª£¬ËÆºõ¿ÉÒÔÓÃÀ´Í¿Ä«(apply)!!¡£\n");
+	write("ä½ æŠŠé»‘è‰²çŸ³é ­å¼„æº¼ï¼Œä¼¼ä¹å¯ä»¥ç”¨ä¾†å¡—å¢¨(apply)!!ã€‚\n");
 	call_out("mess_up", 200);
 	return 1;
 }
@@ -54,11 +54,11 @@ int wet_stone(string arg)
 int dry_stone(string arg)
 {
         if( !arg || arg!="blackstone" && arg != "stone" )
-		return notify_fail("ÅªÇ¬Ê²÷á£¿\n");
+		return notify_fail("å¼„ä¹¾ä»€éº¼ï¼Ÿ\n");
 	if( !weted )
-		return notify_fail("ÊÖÑ÷Âğ? ºÚÉ«Ê¯Í·ÒÑ¾­ÊÇÇ¬µÄÑ½!!¡£\n");
+		return notify_fail("æ‰‹ç™¢å—? é»‘è‰²çŸ³é ­å·²ç¶“æ˜¯ä¹¾çš„å‘€!!ã€‚\n");
 	weted = 0;
-	write("ÄãÕÅ¿ª´ó¿ÚÓÃÇ§ÄêŞ¹ÈËµÄ¹¦Á¦°ÑºÚÉ«Ê¯Í·ÅªÇ¬ÁË¡£\n");
+	write("ä½ å¼µé–‹å¤§å£ç”¨åƒå¹´è–°äººçš„åŠŸåŠ›æŠŠé»‘è‰²çŸ³é ­å¼„ä¹¾äº†ã€‚\n");
 	return 1;
 }
 
@@ -68,7 +68,7 @@ void mess_up()
         if (!weted) return ; 
 	owner = environment(this_object());
 	if( living(owner) ) {
-	tell_object(owner, "ºÚÉ«Ê¯Í·ÒÑ¾­ÅªÔàÁËÄãµÄÒÂ·ş£¬»ØÈ¥¿ÉµÃ°¤Âî£¬ÄãÖ»µÃËæÊÖ½«ËüÈÓÁË¡£\n");
+	tell_object(owner, "é»‘è‰²çŸ³é ­å·²ç¶“å¼„é«’äº†ä½ çš„è¡£æœï¼Œå›å»å¯å¾—æ±ç½µï¼Œä½ åªå¾—éš¨æ‰‹å°‡å®ƒæ‰”äº†ã€‚\n");
 	}
 	remove();
 	return;
@@ -78,11 +78,11 @@ int apply_wall(string str)
 {
         object obj1, obj2;
    if (!weted) {
-     write("Äã²»½ûÇÃÇÃ×Ô¼ºµÄÄÔ´üËµ£ºĞã¶ºÀ²£¬Ã»Ë®Ôõ÷áÍ¿Ä«ÄØ£¿\n") ;
+     write("ä½ ä¸ç¦æ•²æ•²è‡ªå·±çš„è…¦è¢‹èªªï¼šç§€é€—å•¦ï¼Œæ²’æ°´æ€éº¼å¡—å¢¨å‘¢ï¼Ÿ\n") ;
      return 1;
    } else {
         if ( !str || str=="" || str !="wall" )
-          write("Äã°Ñ×Ô¼ºÅªµÄÒ»ÉíÔàÙâÙâµÄ£¬ÕâÑù¿É×·²»µ½Ë§¸ç»òÃÀÅ®à¸ !!\n");
+          write("ä½ æŠŠè‡ªå·±å¼„çš„ä¸€èº«é«’å…®å…®çš„ï¼Œé€™æ¨£å¯è¿½ä¸åˆ°å¸¥å“¥æˆ–ç¾å¥³å–” !!\n");
         else {
           obj1=environment(this_object());
           if (living(obj1)) {
@@ -90,9 +90,9 @@ int apply_wall(string str)
             if ((int)obj2->query("apply")==1) 
               obj2->to_find_wall(str);
             else
-              write("ÕâÀï²»ÄÜËæ±ãÍ¿Ä«£¬µ±ĞÄ±»×¥µ½´òÆ¨¹É£¡\n");
+              write("é€™è£¡ä¸èƒ½éš¨ä¾¿å¡—å¢¨ï¼Œç•¶å¿ƒè¢«æŠ“åˆ°æ‰“å±è‚¡ï¼\n");
           }
-          else return notify_fail("ÄãÊÖÉÏ²¢Ã»ÓĞ¹¤¾ß¡£\n");  
+          else return notify_fail("ä½ æ‰‹ä¸Šä¸¦æ²’æœ‰å·¥å…·ã€‚\n");  
         }
         return 1;
   }

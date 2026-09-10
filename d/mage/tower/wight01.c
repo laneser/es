@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "evil wight", "Ð°¶ñÔ¹Áé" );
+	set_name( "evil wight", "é‚ªæƒ¡æ€¨éˆ" );
 	add("id",({"wight"}));
-	set_short( "evil shadow", "Ð°¶ñÔ¹Áé" );
+	set_short( "evil shadow", "é‚ªæƒ¡æ€¨éˆ" );
 	set_long(
 		"a terrible evil wight.\n"
-		"Ò»¸öÁîÈË¾åÅÂµÄÐ°¶ñÔ¹Áé,¾ÝËµÊÇÄÇÐ©²»¸ÊÐÄËÀÈ¥µÄÈËµÄÁé»êËùÐÎ³ÉµÄ .\n"
+		"ä¸€å€‹ä»¤äººæ‡¼æ€•çš„é‚ªæƒ¡æ€¨éˆ,æ“šèªªæ˜¯é‚£äº›ä¸ç”˜å¿ƒæ­»åŽ»çš„äººçš„éˆé­‚æ‰€å½¢æˆçš„ .\n"
 	);
 	//set( "gender", "natural" );
 	set( "alignment", -480 );
@@ -34,10 +34,10 @@ int my_tactic()
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
     else {
       tell_object(victim,
-          "Ð°¶ñÔ¹Áé·¢³ö¿ÉÅÂµÄÐ¦Éù,²¢ÇÒÒÔËüÈç·çµÄËÙ¶ÈÏòÄã·ÉÀ´ÎüÈ¡ÄãµÄÉúÃüÁ¦.\n"
+          "é‚ªæƒ¡æ€¨éˆç™¼å‡ºå¯æ€•çš„ç¬‘è²,ä¸¦ä¸”ä»¥å®ƒå¦‚é¢¨çš„é€Ÿåº¦å‘ä½ é£›ä¾†å¸å–ä½ çš„ç”Ÿå‘½åŠ›.\n"
           );
       tell_room(environment(this_object()),
-          "Ð°¶ñÔ¹Áé·¢³ö¿ÉÅÂµÄÐ¦Éù,²¢ÇÒÒÔËüÈç·çµÄËÙ¶ÈÏò"+victim->query("c_name")+"·ÉÈ¥.\n"
+          "é‚ªæƒ¡æ€¨éˆç™¼å‡ºå¯æ€•çš„ç¬‘è²,ä¸¦ä¸”ä»¥å®ƒå¦‚é¢¨çš„é€Ÿåº¦å‘"+victim->query("c_name")+"é£›åŽ».\n"
           ,({victim,this_object(),}) );
       victim->receive_special_damage("evil",10+random(17));
       report(this_object(),victim);

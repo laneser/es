@@ -7,12 +7,12 @@ void create()
 {
 	::create();
 	set_level(14);
-	set_name( "red_horse", "ºì××ÁÒÂí" );
+	set_name( "red_horse", "ç´…é¬ƒçƒˆé¦¬" );
 	add( "id", ({ "horse" }) );
-	set_short( "ºì××ÁÒÂí" );
+	set_short( "ç´…é¬ƒçƒˆé¦¬" );
 	set_long(
-		"Ò»Ö»ºìÉ«µÄĞ¡Âí£¬µ«ËüµÄÆ¢ÆøËÆºõ²»Ì«ºÃ¡£\n" );
-	set( "unit", "Ö»" );
+		"ä¸€éš»ç´…è‰²çš„å°é¦¬ï¼Œä½†å®ƒçš„è„¾æ°£ä¼¼ä¹ä¸å¤ªå¥½ã€‚\n" );
+	set( "unit", "åª" );
 	set_perm_stat( "str", 15 );
 	set_perm_stat( "dex", 15 );
 	set( "natural_armor_class", 45 );
@@ -21,8 +21,8 @@ void create()
 	set( "natural_max_damage1", 30 );
 	set( "alignment", 10 );
 	set( "max_load", 2300 );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "ááÍÈ", "Î²°Í" }) );
-	set_c_verbs( ({  "%sÆË¶¯Ç°Ìã£¬ÏòÇ°Ö±»÷%s", "%sºìÎ²°ÍÒ»Ë¦£¬Ò»ÍÅºìÔÆÉ¨Ïò%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å¾Œè…¿", "å°¾å·´" }) );
+	set_c_verbs( ({  "%sæ’²å‹•å‰è¹„ï¼Œå‘å‰ç›´æ“Š%s", "%sç´…å°¾å·´ä¸€ç”©ï¼Œä¸€åœ˜ç´…é›²æƒå‘%s" }) );
 
 }
 

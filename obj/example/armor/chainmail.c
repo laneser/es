@@ -9,12 +9,12 @@ inherit ARMOR ;
 
 void create()
 {
-	set_name( "chainmail", "Ëø×Ó¼×");
+	set_name( "chainmail", "é–å­ç”²");
 	add( "id", ({ "chain", "mail" }) );
-	set_short( "a suit of chainmail", "Ëø×Ó¼×");
+	set_short( "a suit of chainmail", "é–å­ç”²");
 	set_long(
 		"The mail mesh would cover your torso and upper arms.\n",
-		"ÕâÌ×Ëø×Ó¼×¿ÉÒÔ±£»¤ÄãµÄÉíÌåºÍÊÖ±Û¡£\n"
+		"é€™å¥—é–å­ç”²å¯ä»¥ä¿è­·ä½ çš„èº«é«”å’Œæ‰‹è‡‚ã€‚\n"
 	);
 	set( "type", "suit" );
 	set( "armor_class", 6 );

@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("iron cap", "³åÌì½ÇÌúÍ·ïä");
+        set_name("iron cap", "æ²–å¤©è§’éµé ­é·");
         add( "id", ({ "cap" }) );
-        set_short( "iron cap", "³åÌì½ÇÌúÍ·ïä");
+        set_short( "iron cap", "æ²–å¤©è§’éµé ­é·");
         set_long(
                 "A iron cap .\n",
-                "Ò»¶¥ºÜÆæ¹ÖµÄ½ğÊô¸ßÃ±×Ó£¬´÷ÆğÀ´ÓĞÒ»µã¹ÖÒì£®\n"
+                "ä¸€é ‚å¾ˆå¥‡æ€ªçš„é‡‘å±¬é«˜å¸½å­ï¼Œæˆ´èµ·ä¾†æœ‰ä¸€é»æ€ªç•°ï¼\n"
         );
-        set("unit","¶¥");
+        set("unit","é ‚");
         set( "type", "head" );
         set( "material", "adventurer");
         set( "armor_class", 6 );

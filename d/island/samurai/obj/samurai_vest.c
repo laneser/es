@@ -3,15 +3,15 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "samurai_vest", "ÎäÊ¿Õ½¼×");
+        set_name( "samurai_vest", "æ­¦å£«æˆ°ç”²");
         add( "id", ({ "samurai_vest","vest" }) );
-        set_short("samurai_vest", "ÎäÊ¿Õ½¼×");
+        set_short("samurai_vest", "æ­¦å£«æˆ°ç”²");
         set_long(@AAA
-ÕâÊÇÒ»¼şÒÔÖØ½ğÊôÖÆ³ÉÖ®Õ½¼×,ÄÜÌá¹©²»´íµÄ·À»¤,ÓÉì¶Ôì¼Û½Ï
-¸ß,ËùÒÔ²»ÊÇÆÕÍ¨ÎäÊ¿¿ÉÒÔ´©µÄ
+é€™æ˜¯ä¸€ä»¶ä»¥é‡é‡‘å±¬è£½æˆä¹‹æˆ°ç”²,èƒ½æä¾›ä¸éŒ¯çš„é˜²è­·,ç”±æ–¼é€ åƒ¹è¼ƒ
+é«˜,æ‰€ä»¥ä¸æ˜¯æ™®é€šæ­¦å£«å¯ä»¥ç©¿çš„
 AAA
         );
-        set( "unit", "¼ş"); 
+        set( "unit", "ä»¶"); 
         set( "type", "body" );
         set( "armor_class", 15 );
         set( "defense_bonus", 5 );

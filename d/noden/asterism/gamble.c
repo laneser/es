@@ -1,7 +1,7 @@
 //   This is std gamble lib for every thing that do anything to
 //   gambling               indra@Eastern_Story 95.3.1
 
-//   Íæ¼Ò²»ÄÜÍ¬Ê±ÉÏÁ½¸ö¶Ä×À
+//   ç©å®¶ä¸èƒ½åŒæ™‚ä¸Šå…©å€‹è³­æ¡Œ
 
 int check_gamble(object obj)
 {
@@ -11,7 +11,7 @@ int check_gamble(object obj)
       return 1 ;
 } 
 
-// ´¦ÀíÏÂ×¢µÄ¶¯×÷, ÔÚºô½ĞÇ°ÒªÏÈ½«Ç®µÄÖÖÀàÕûÀí³Éµ¥Ò»»õ±Ò
+// è™•ç†ä¸‹æ³¨çš„å‹•ä½œ, åœ¨å‘¼å«å‰è¦å…ˆå°‡éŒ¢çš„ç¨®é¡æ•´ç†æˆå–®ä¸€è²¨å¹£
 
 int check_bet(int number,object player,int bet_time_flag)
 {
@@ -25,20 +25,20 @@ int check_bet(int number,object player,int bet_time_flag)
    player->set_temp("gambling/bet",old_bet+number);
    return 1;
 }
-// ×öÉè¶¨ÍæÄÄ¸öÅÆ¾ÖµÄ¶¯×÷
+// åšè¨­å®šç©å“ªå€‹ç‰Œå±€çš„å‹•ä½œ
 
 int do_play_game(object player,string name,string play_msg,string play_msg1)
 {
     player->set_temp("gambling/"+name) ;
     
-    tell_object(player,sprintf("ÔÚ¶Ì¶ÌµÄË¼¿¼Ö®áá,Äã¾ö¶¨È¥Íæ%s¡£\n",cname) ) ;
+    tell_object(player,sprintf("åœ¨çŸ­çŸ­çš„æ€è€ƒä¹‹å¾Œ,ä½ æ±ºå®šå»ç©%sã€‚\n",cname) ) ;
 
     tell_room( environment(),play_msg1,player ) ;
                 
     return 1;
 
 }
-//  Ï´ÅÆµÄº¯Ê½,Ğë´«ÈëÓÃ¾ßµÄĞÍ±ğ,¼°ÖØ¸´µÄ¸±Êı(Òò¿ÉÄÜÍæ¼ÒÌ«¶à,ÒªÓÃ³¬¹ıÒ»¸±)
+//  æ´—ç‰Œçš„å‡½å¼,é ˆå‚³å…¥ç”¨å…·çš„å‹åˆ¥,åŠé‡è¤‡çš„å‰¯æ•¸(å› å¯èƒ½ç©å®¶å¤ªå¤š,è¦ç”¨è¶…éä¸€å‰¯)
 
 int *wash_cards(mapping card_style,int multi)
 {

@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "black cape", "ºÚÉ«Åû·ç" );
+	set_name( "black cape", "é»‘è‰²æŠ«é¢¨" );
 	add( "id", ({ "cape" }) );
-	set_short( "a black cape", "ºÚÉ«Åû·ç" );
+	set_short( "a black cape", "é»‘è‰²æŠ«é¢¨" );
 	set_long(
 		"You see a black cape with the symbol of Moorth Army on it.\n"
-		"ÕâÊÇÒ»¼şºÚÉ«µÄÅû·ç£¬ÉÏÃæÓĞÒ»¸öÄ¬¶ûË¹¾ü¶ÓµÄ±êÖ¾¡£\n"
+		"é€™æ˜¯ä¸€ä»¶é»‘è‰²çš„æŠ«é¢¨ï¼Œä¸Šé¢æœ‰ä¸€å€‹é»˜çˆ¾æ–¯è»éšŠçš„æ¨™èªŒã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "cloak" );
 	set( "material", "cloth" );
 	set( "armor_class", 4 );

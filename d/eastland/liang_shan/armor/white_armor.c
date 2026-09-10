@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-    set_name("white armor","°×¼×");
+    set_name("white armor","ç™½ç”²");
     add("id",({"armor"}) );
-    set_short( "white armor","°×¼×");
+    set_short( "white armor","ç™½ç”²");
 	set_long(
 		"This is a white armor for warriors. \n",
-		"Ò»¼şÑ©°×µÄÕ½¼×£¬¿´À´Æ·ÖÊ»¹²»´í£®\n"
+		"ä¸€ä»¶é›ªç™½çš„æˆ°ç”²ï¼Œçœ‹ä¾†å“è³ªé‚„ä¸éŒ¯ï¼\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "weight", 80 );
 	set( "type", "body" );
 	set( "armor_class", 18 );

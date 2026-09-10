@@ -4,14 +4,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("dark ring","ºÚ°µ½äÖ¸");
+        set_name("dark ring","é»‘æš—æˆ’æŒ‡");
         add("id",({"ring"}) );
-         set_short( "a dark ring","ºÚ°µ½äÖ¸");
+         set_short( "a dark ring","é»‘æš—æˆ’æŒ‡");
 	set_long(
 "This is a ring blessed by Evil God -- Yang. \n"
-"ÕâÊÇÒ»¸öÔø±»Ğ°Éñ Yang ×£¸£¹ıµÄ½äÖ¸,ËüµÄÄ§Á¦¿ÉÒÔ±£»¤Äã±ÜÃâµĞÈËµÄÖØ»÷\n"
+"é€™æ˜¯ä¸€å€‹æ›¾è¢«é‚ªç¥ Yang ç¥ç¦éçš„æˆ’æŒ‡,å®ƒçš„é­”åŠ›å¯ä»¥ä¿è­·ä½ é¿å…æ•µäººçš„é‡æ“Š\n"
 	);
-	set( "unit", "¸ö" );
+	set( "unit", "å€‹" );
 	set( "weight", 10 );
 	set( "type", "finger" );
 	set( "material" ,"element" );

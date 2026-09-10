@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-        set_name("pack of herbs","Ò©°ü");
+        set_name("pack of herbs","è—¥åŒ…");
         add( "id" , ({ "pack" }) );
-        set_short("a pack of herbs" , "Ò©°ü");
+        set_short("a pack of herbs" , "è—¥åŒ…");
         set_long("This is a pack of herbs .\n" ,
-		 "ÕâÊÇÒ»´ó°ü°üÖø¸÷ÖÖÒ©²ÄµÄÖ½°ü£¬ÎÅÆğÀ´ÓĞÅ¨ÓôµÄÒ©²İÏã¡£\n");
-        set("unit","°ü");
+		 "é€™æ˜¯ä¸€å¤§åŒ…åŒ…è‘—å„ç¨®è—¥æçš„ç´™åŒ…ï¼Œèèµ·ä¾†æœ‰æ¿ƒéƒçš„è—¥è‰é¦™ã€‚\n");
+        set("unit","åŒ…");
         set("weight", 10);
         set("value", ({20, "silver"}) );
 }

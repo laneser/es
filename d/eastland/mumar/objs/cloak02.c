@@ -3,13 +3,13 @@ inherit ARMOR;
  
 void create()
 {
-        set_name("sable skin","õõÆ¤");
+        set_name("sable skin","è²‚çš®");
         add("id",({"skin","cloak"}) );
-        set_short("õõÆ¤");
+        set_short("è²‚çš®");
         set_long(
-"ÕâÊÇÒ»¼şÆ¤²İ£¬¾İËµ¿ÉÒÔ·Àº®±ÜÓê¡£\n"
+"é€™æ˜¯ä¸€ä»¶çš®è‰ï¼Œæ“šèªªå¯ä»¥é˜²å¯’é¿é›¨ã€‚\n"
         );
-        set( "unit", "¼ş" );
+        set( "unit", "ä»¶" );
         set( "weight",70 );
         set( "type", "cloak" );
         set( "material", "leather" );

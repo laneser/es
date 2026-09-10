@@ -13,12 +13,12 @@ void create()
         set_level(5);
         set("exp_reward",0);
         set("race","human");
-        set_name("Nolen","ÅµÂ×");
-        set_short("ÄÁÊ¦ÅµÂ×");
+        set_name("Nolen","è«¾å€«");
+        set_short("ç‰§å¸«è«¾å€«");
         set_long(@TEXT
-ÔÚÄãÃæÇ°µÄÊÇÒ»¸öÉíĞÎ¸ß´ó, ¿´ÆğÀ´¸ú±¾²»ÏñÄÁÊ¦µÄÄÁÊ¦. ¶àÄêµÄÃ°
-ÏÕ¾­Ñé¸æËßÄã, ËûÊÇÒòÎªÒª¶ãÄ³ÈËµÄ×·É±²ÅÔÚÕâÀïµ±ÄÁÊ¦µÄ.
-²»¹ı»°ÓÖËµ»ØÀ´... ¼ÈÈ»ËûÔÚÕâÀïÁË, ÄãÒª½á»éÒ²¿ÉÒÔÕÒËûÖ÷³Ö.
+åœ¨ä½ é¢å‰çš„æ˜¯ä¸€å€‹èº«å½¢é«˜å¤§, çœ‹èµ·ä¾†è·Ÿæœ¬ä¸åƒç‰§å¸«çš„ç‰§å¸«. å¤šå¹´çš„å†’
+éšªç¶“é©—å‘Šè¨´ä½ , ä»–æ˜¯å› ç‚ºè¦èº²æŸäººçš„è¿½æ®ºæ‰åœ¨é€™è£¡ç•¶ç‰§å¸«çš„.
+ä¸éè©±åˆèªªå›ä¾†... æ—¢ç„¶ä»–åœ¨é€™è£¡äº†, ä½ è¦çµå©šä¹Ÿå¯ä»¥æ‰¾ä»–ä¸»æŒ.
 
 TEXT
         );
@@ -53,9 +53,9 @@ int perform_marriage()
     n2=capitalize((string)query("wife"));
     ob=present((string)query("husband"), environment(this_object()));
     if (!ob) {
-        command("say ¹ş... Ğ¦ËÀÈËÁË, ĞÂÀÉÁÙÕóÍÑÌÓ°¡?!?");
+        command("say å“ˆ... ç¬‘æ­»äººäº†, æ–°éƒè‡¨é™£è„«é€ƒå•Š?!?");
         command("shake");
-        command("say °ÕÁË°ÕÁË... ÏÂ´Î°É!\n");
+        command("say ç½·äº†ç½·äº†... ä¸‹æ¬¡å§!\n");
         set("husband");
         set("wife");
         set("witness");
@@ -63,10 +63,10 @@ int perform_marriage()
         set("step",1);
         return 1;
     }
-    command("say "+n1+", ÄãÔ¸ÒâÈ¢"+n2+"ÎªÆŞ, ²¢´ğÓ¦ÒªºÃºÃÕÕ¹ËËı,");
-        command("say ²»ÂÛ¾­Àú¶àÉÙ reboot, crash »ò lag, ²¢ÎŞÌõ¼şµØ°ïËı½ÓÀ×,"); 
-        command("say ×¬Ç®¹©Ëı»¨, ±£»¤Ëı²»ÊÜÉËº¦Âğ?");
-    tell_object(ob, "ÅµÂ×»ØÍ·¶ÔÄãËµ: Çë»Ø´ğ(answer) Yes »ò No.\n");
+    command("say "+n1+", ä½ é¡˜æ„å¨¶"+n2+"ç‚ºå¦», ä¸¦ç­”æ‡‰è¦å¥½å¥½ç…§é¡§å¥¹,");
+        command("say ä¸è«–ç¶“æ­·å¤šå°‘ reboot, crash æˆ– lag, ä¸¦ç„¡æ¢ä»¶åœ°å¹«å¥¹æ¥é›·,"); 
+        command("say è³ºéŒ¢ä¾›å¥¹èŠ±, ä¿è­·å¥¹ä¸å—å‚·å®³å—?");
+    tell_object(ob, "è«¾å€«å›é ­å°ä½ èªª: è«‹å›ç­”(answer) Yes æˆ– No.\n");
     set("wait",lower_case(n1));
         return 1;
 }
@@ -80,9 +80,9 @@ int perform_marriage2()
     ob=present((string)query("wife"), environment(this_object()));
     ob1=present((string)query("husband"), environment(this_object()));
     if (!ob1) {
-        command("say ¹ş... Ğ¦ËÀÈËÁË, ĞÂÀÉÁÙÕóÍÑÌÓ°¡?!?");
+        command("say å“ˆ... ç¬‘æ­»äººäº†, æ–°éƒè‡¨é™£è„«é€ƒå•Š?!?");
         command("shake");
-        command("say °ÕÁË°ÕÁË... ÏÂ´Î°É!\n");
+        command("say ç½·äº†ç½·äº†... ä¸‹æ¬¡å§!\n");
         set("husband");
         set("wife");
         set("witness");
@@ -90,9 +90,9 @@ int perform_marriage2()
         set("step",1);
         return 1;
     }
-    command("say "+n2+", ÄãÔ¸Òâ¼Ş¸ø"+n1+", ÅãËû¶É¹ı reboot, crash »ò lag.");
-    command("say °ïËû»¨Ç®, ÊÕ¼¯×°±¸Âğ?");
-    tell_object(ob, "ÅµÂ×»ØÍ·¶ÔÄãËµ: Çë»Ø´ğ(answer) Yes »ò No.\n");
+    command("say "+n2+", ä½ é¡˜æ„å«çµ¦"+n1+", é™ªä»–æ¸¡é reboot, crash æˆ– lag.");
+    command("say å¹«ä»–èŠ±éŒ¢, æ”¶é›†è£å‚™å—?");
+    tell_object(ob, "è«¾å€«å›é ­å°ä½ èªª: è«‹å›ç­”(answer) Yes æˆ– No.\n");
     set("wait",lower_case(n2));
         return 1;
 }
@@ -108,35 +108,35 @@ int perform_marriage3()
     ob1=present((string)query("husband"), environment(this_object()));
     ob2=present((string)query("wife"), environment(this_object()));
     if ((!ob) || (!ob1) || (!ob2)) { //anyone of them is missing
-        command("say ß×... ÈË²»¼ûÁË»¹½áÊ²÷á»é°¡.. °ÕÁË°ÕÁË..");
+        command("say å’¦... äººä¸è¦‹äº†é‚„çµä»€éº¼å©šå•Š.. ç½·äº†ç½·äº†..");
         return 1;
     }
     if (wizardp(ob)) { // witness is a wizard
     command("smile");
-    command("say ÄÇ÷áÔÚ¹«Ö¤ÈË"+n3+"¼°´ó¼ÒµÄÃæÇ°, ÎÒĞû²¼ÄãÃÇÕıÊ½³ÉÎª·òÆŞ!");
-    command("shout "+n1+" ¸ú "+n2+" ÔÚÎ×Ê¦µÄ×£¸£ÏÂ½áÎª·òÆŞÁË, ´ó¼Ò×£¸£ËûÃÇ!!!!!");
-    command("say "+n1+", Äã¿ÉÒÔÎÇĞÂÄïÁË!\n");
+    command("say é‚£éº¼åœ¨å…¬è­‰äºº"+n3+"åŠå¤§å®¶çš„é¢å‰, æˆ‘å®£ä½ˆä½ å€‘æ­£å¼æˆç‚ºå¤«å¦»!");
+    command("shout "+n1+" è·Ÿ "+n2+" åœ¨å·«å¸«çš„ç¥ç¦ä¸‹çµç‚ºå¤«å¦»äº†, å¤§å®¶ç¥ç¦ä»–å€‘!!!!!");
+    command("say "+n1+", ä½ å¯ä»¥å»æ–°å¨˜äº†!\n");
     command("grin");
     tell_room(environment(this_object()),
-    "ÅµÂ×Í»È»ÌøÆğÀ´, ±§ÆğĞÂÄïÃÍÇ×.\n",this_object());
+    "è«¾å€«çªç„¶è·³èµ·ä¾†, æŠ±èµ·æ–°å¨˜çŒ›è¦ª.\n",this_object());
     command("hold "+n2);
     command("kiss "+n2);
     command("kiss "+n2);
     command("lkiss "+n2);
-    command("say ¹ş.. ²»¹ıÎÒÏÈÁË.\n");
+    command("say å“ˆ.. ä¸éæˆ‘å…ˆäº†.\n");
     }
     else {
     command("grin");
-    command("say ÕÕ ES µÄ¹æ¾Ø, Ã»ÓĞÎ×Ê¦µ±¹«Ö¤ÈËµÄ»éÀñ¶¼ËãË½±¼.");
-    command("say ²»¹ıÄØ, ¼ÈÈ»ÄãÃÇÕâ÷áÏà°®, µÈ²»¼°ÁË...");
+    command("say ç…§ ES çš„è¦çŸ©, æ²’æœ‰å·«å¸«ç•¶å…¬è­‰äººçš„å©šç¦®éƒ½ç®—ç§å¥”.");
+    command("say ä¸éå‘¢, æ—¢ç„¶ä½ å€‘é€™éº¼ç›¸æ„›, ç­‰ä¸åŠäº†...");
     command("grin");
-    command("say ÄÇ÷áÔÚ¹«Ö¤ÈË"+n3+"¼°´ó¼ÒµÄÃæÇ°, ÎÒĞû²¼ÄãÃÇÕıÊ½³ÉÎª·òÆŞ!");
-    command("shout "+n1+" ¸ú "+n2+" Ë½±¼ÁËà¸!!!!!");
-    command("say "+n1+", Äã¿ÉÒÔÎÇĞÂÄïÁË!\n");
+    command("say é‚£éº¼åœ¨å…¬è­‰äºº"+n3+"åŠå¤§å®¶çš„é¢å‰, æˆ‘å®£ä½ˆä½ å€‘æ­£å¼æˆç‚ºå¤«å¦»!");
+    command("shout "+n1+" è·Ÿ "+n2+" ç§å¥”äº†å–”!!!!!");
+    command("say "+n1+", ä½ å¯ä»¥å»æ–°å¨˜äº†!\n");
     }
     command("grin");
-    command("say ×£ÄãÃÇĞÒ¸£!\n");
-    command("shout ÍÛ... »ğÀ±À±µÄ¾µÍ·!!!");
+    command("say ç¥ä½ å€‘å¹¸ç¦!\n");
+    command("shout å“‡... ç«è¾£è¾£çš„é¡é ­!!!");
     set("husband");
     set("wife");
     set("witness");
@@ -153,35 +153,35 @@ int wait_answer(string str)
 {
         if (!query("wait")) {
     tell_room(environment(this_player()),(string)this_player()->query("c_name")+
-    "àÖàÖ¹¾¹¾µØ²»ÖªµÀÔÚ¸úÄÁÊ¦ËµÊ²÷á.\n",({this_player(), this_object()}));
+    "å˜€å˜€å’•å’•åœ°ä¸çŸ¥é“åœ¨è·Ÿç‰§å¸«èªªä»€éº¼.\n",({this_player(), this_object()}));
     command("?");
         return 1;
         }
         if ((string)this_player()->query("name")!=query("wait"))
         {
-    tell_object(this_player(),"ÄãËµµÀ: ÎÒÔ¸Òâ!\n");
+    tell_object(this_player(),"ä½ èªªé“: æˆ‘é¡˜æ„!\n");
     tell_room(environment(this_player()),(string)this_player()->query("c_name")+
-    "ËµµÀ: "+"ÎÒÔ¸Òâ!\n",({this_player(), this_object()}));
+    "èªªé“: "+"æˆ‘é¡˜æ„!\n",({this_player(), this_object()}));
     command("slap "+(string)this_player()->query("name"));
-    command("say "+capitalize((string)this_player()->query("name"))+", ÎÒ²»ÊÇÎÊÄã!");
+    command("say "+capitalize((string)this_player()->query("name"))+", æˆ‘ä¸æ˜¯å•ä½ !");
         return 1;
         }
     if (!str || member_array(lower_case(str), ({"yes","y"})) == -1)
         {
-        tell_object(this_player(),"ÄãÏëÁËÒ»»á, »¹ÊÇ²»Òª°É.\n");
+        tell_object(this_player(),"ä½ æƒ³äº†ä¸€æœƒ, é‚„æ˜¯ä¸è¦å§.\n");
         tell_room(environment(this_player()),
-        (string)this_player()->query("c_name")+"ÃæÓĞÄÑÉ«, ËµµÀ: "+
-        "àÅ... Õâ¸ö... ÎÒÏë»¹ÊÇËãÁË.\n",({this_player(), this_object()}));
+        (string)this_player()->query("c_name")+"é¢æœ‰é›£è‰², èªªé“: "+
+        "å—¯... é€™å€‹... æˆ‘æƒ³é‚„æ˜¯ç®—äº†.\n",({this_player(), this_object()}));
         command("kick "+(string)this_player()->query("name"));
-        command("say ¾ö¶¨ºÃÔÙÀ´! Ã»ÊÂ²»Òª·³ÎÒ.. Ğ¡ĞÄÎÒ Z..A..P Äãà¸!");
+        command("say æ±ºå®šå¥½å†ä¾†! æ²’äº‹ä¸è¦ç…©æˆ‘.. å°å¿ƒæˆ‘ Z..A..P ä½ å–”!");
         command("grin");
     set("wait"); // clear wait stat
         return 1;
         }
     set("wait"); // clear wait stat
-    tell_object(this_player(),"ÄãËµµÀ: ÎÒÔ¸Òâ!\n");
+    tell_object(this_player(),"ä½ èªªé“: æˆ‘é¡˜æ„!\n");
     tell_room(environment(this_player()),(string)this_player()->query("c_name")+
-    "ËµµÀ: "+"ÎÒÔ¸Òâ!\n",({this_player(), this_object()}));
+    "èªªé“: "+"æˆ‘é¡˜æ„!\n",({this_player(), this_object()}));
     if ((int)query("step")==1) { // ask the girl
         perform_marriage2();
         set("step",2);
@@ -207,8 +207,8 @@ void divorce_end()
 
 int perform_divorce()
 {
-      command("say ÄãÃÇÕæµÄÒªÀë»éÂğ? ");
-      command("say ÄãÃÇÒªÉ÷ÖØ¿¼ÂÇÒ»ÏÂ, µ½µ×ÊÇÍ¬Òâ(agree),»¹ÊÇ¾Ü¾ø(refuse)?");
+      command("say ä½ å€‘çœŸçš„è¦é›¢å©šå—? ");
+      command("say ä½ å€‘è¦æ…é‡è€ƒæ…®ä¸€ä¸‹, åˆ°åº•æ˜¯åŒæ„(agree),é‚„æ˜¯æ‹’çµ•(refuse)?");
 
       return 1;
 }
@@ -224,20 +224,20 @@ int do_shake(string str)
     if(n1!=me->query("name") && n2!=me->query("name"))
     {
        command("slap "+(string)me->query("name"));
-       command("say "+(string)me->query("c_name")+", ÎÒ²»ÊÇÎÊÄã!");
+       command("say "+(string)me->query("c_name")+", æˆ‘ä¸æ˜¯å•ä½ !");
        return 1;        
     }
     if(n1==lower_case(me->query("name")) ) 
     {
-       command("say "+capitalize(n1)+" ²»Í¬ÒâÀë»é, Àë»éÊ§°Ü!");
+       command("say "+capitalize(n1)+" ä¸åŒæ„é›¢å©š, é›¢å©šå¤±æ•—!");
     }
     else
     {
-       command("say "+capitalize(n2)+" ²»Í¬ÒâÀë»é, Àë»éÊ§°Ü!\n");
+       command("say "+capitalize(n2)+" ä¸åŒæ„é›¢å©š, é›¢å©šå¤±æ•—!\n");
     }
     command("kick");
     command("spit");
-    command("say Ã»×¼±¸ºÃ¾Í±ğÀ´·³ÎÒ, ËûXXµÄ!");
+    command("say æ²’æº–å‚™å¥½å°±åˆ¥ä¾†ç…©æˆ‘, ä»–XXçš„!");
     divorce_end();
     return 1;
 }
@@ -253,21 +253,21 @@ int do_nod(string str)
     if(n1!=me->query("name") && n2!=me->query("name"))
     {
        command("slap "+(string)me->query("name"));
-       command("say "+(string)me->query("c_name")+", ÎÒ²»ÊÇÎÊÄã!");
+       command("say "+(string)me->query("c_name")+", æˆ‘ä¸æ˜¯å•ä½ !");
         return 1;        
     }
     if(n1==me->query("name") ) 
     {
-       command("say "+capitalize(n1)+"Í¬ÒâÁËÀë»é!");
+       command("say "+capitalize(n1)+"åŒæ„äº†é›¢å©š!");
        if( query("female_agree") <= 1 )
-         command("say ÄÇÃ´ÄãÄØ, "+capitalize(n2)+"?");
+         command("say é‚£éº¼ä½ å‘¢, "+capitalize(n2)+"?");
        set("male_agree",2);
     }
     if(n2==me->query("name") ) 
     {
-       command("say "+capitalize(n2)+"Í¬ÒâÁËÀë»é!");
+       command("say "+capitalize(n2)+"åŒæ„äº†é›¢å©š!");
        if( query("male_agree") <= 1)
-         command("say ÄÇÃ´ÄãÄØ, "+capitalize(n1)+"?");
+         command("say é‚£éº¼ä½ å‘¢, "+capitalize(n1)+"?");
        set("female_agree",2);
     }
     if(query("male_agree")>1 && query("female_agree")>1)
@@ -278,15 +278,15 @@ int do_nod(string str)
        ob2=present(n2,this_room);
        if(!ob1 || !ob2 || !wiz)
        {
-          command("say ÈË²»È«£¬ÎŞ·¨¼ÌĞøÏÂÈ¥!\n");
+          command("say äººä¸å…¨ï¼Œç„¡æ³•ç¹¼çºŒä¸‹å»!\n");
           divorce_end();
           return 1;
        }
-       command("shout "+capitalize(n1)+"ºÍ"+capitalize(n2)+"Àë»éÁË!");
+       command("shout "+capitalize(n1)+"å’Œ"+capitalize(n2)+"é›¢å©šäº†!");
        if((string)wiz->query("name")=="moon")
-command("shout "+"ÊÇ²»ÊÇ"+capitalize(n2)+"ÃÔÉÏÁË·çÁ÷ÙÃÙÎµÄ"+wiz->query("c_name"));
+command("shout "+"æ˜¯ä¸æ˜¯"+capitalize(n2)+"è¿·ä¸Šäº†é¢¨æµå€œå„»çš„"+wiz->query("c_name"));
        else
-command("shout "+wiz->query("c_name")+"ÎªÊ²Ã´ÕâÃ´Ö÷¶¯µÄ×ö¼ûÖ¤ÈË, ÊÇ²»ÊÇ×öÁËµÚÈıÕß!");
+command("shout "+wiz->query("c_name")+"ç‚ºä»€éº¼é€™éº¼ä¸»å‹•çš„åšè¦‹è­‰äºº, æ˜¯ä¸æ˜¯åšäº†ç¬¬ä¸‰è€…!");
       
        ob1->delete("spouse");
        ob2->delete("spouse");

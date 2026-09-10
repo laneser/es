@@ -32,7 +32,7 @@ int filter_cansee(object what)
 
 	if (count > 1) {
 		long = sprintf("%s  %s%s%s(%s).\n",long,convert_c_number(count),
-						(obj->query("unit") ? obj->query("unit") :"¸ö"),
+						(obj->query("unit") ? obj->query("unit") :"å€‹"),
 				      	obj->query(SHORT_DESCRIPTION),
         			    capitalize((string)obj->query("name")));
      } else {
@@ -45,7 +45,7 @@ int filter_cansee(object what)
 	}
 		if (count > 1) {
 		long = sprintf("%s  %s%s%s(%s).\n",long,convert_c_number(count),
-						(obj->query("unit") ? obj->query("unit"):"¸ö"),
+						(obj->query("unit") ? obj->query("unit"):"å€‹"),
 				      	obj->query(SHORT_DESCRIPTION),
         			    capitalize((string)obj->query("name")));
      } else {

@@ -5,15 +5,15 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("lightning morningstar","ÉÁµçÁ÷ÐÇ¡õ");
+       set_name("lightning morningstar","é–ƒé›»æµæ˜Ÿâ–¡");
        add("id",({"morningstar",}) );
-       set_short("ÉÁµçÁ÷ÐÇ¡õ");
+       set_short("é–ƒé›»æµæ˜Ÿâ–¡");
        set_long(
-           "Ò»°ÑÄÜ¹»ÕÙ»½ÉÁµç¹¥»÷µÐÈËµÄºÚÉ«Á÷ÐÇ¡õ\n"
+           "ä¸€æŠŠèƒ½å¤ å¬å–šé–ƒé›»æ”»æ“Šæ•µäººçš„é»‘è‰²æµæ˜Ÿâ–¡\n"
      	);
 	
 	set("no_sale",1);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 30 );
    set("type","chain");
 	set( "min_damage", 7 );
@@ -22,7 +22,7 @@ void create()
 	set( "value", ({ 300, "gold" }) );
 	set("hit_func","morningstar_damage");
     set("special_damage",14);
-    set("special_c_msg","·¢³öÒ»µÀÑ¸À×,¿ìËÙ¶ø×¼È·µÄ»÷ÖÐµÐÈËµÄÒªº¦.\n\n");
+    set("special_c_msg","ç™¼å‡ºä¸€é“è¿…é›·,å¿«é€Ÿè€Œæº–ç¢ºçš„æ“Šä¸­æ•µäººçš„è¦å®³.\n\n");
 }
 
 int morningstar_damage(object victim,int damage)
@@ -45,9 +45,9 @@ int morningstar_damage(object victim,int damage)
 		victim->receive_special_damage( "electric",dam+my_int-(vic_int/2) );
 		victim->set("last_attacker", holder );
 		tell_object( holder, 
-			"\nÄãµÄ"+query("c_name")+c_msg+"\n");
+			"\nä½ çš„"+query("c_name")+c_msg+"\n");
 		tell_room( environment(holder), 
-			holder->query("c_name") + "µÄ"+query("c_name")+c_msg+"\n",
+			holder->query("c_name") + "çš„"+query("c_name")+c_msg+"\n",
 			holder );
 		damage_count=0;
 		return dam;

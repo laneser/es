@@ -18,36 +18,36 @@ string cleaning_msg() ;
 void create()
 {
 	::create();
-        set_short("±ê×¼´¢²ØÊÒ");
+        set_short("æ¨™æº–å„²è—å®¤");
 	set_long(
 @C_LONG_DESCRIPTION
-ÓÃÀ´×÷·¶ÀıµÄ±ê×¼¹«»á´¢²ØÊÒ¡£Ç½ÉÏÓĞÕÅ¸æÊ¾(note)¡£
+ç”¨ä¾†ä½œç¯„ä¾‹çš„æ¨™æº–å…¬æœƒå„²è—å®¤ã€‚ç‰†ä¸Šæœ‰å¼µå‘Šç¤º(note)ã€‚
 C_LONG_DESCRIPTION
 	);
 
 	set( "light", 1 );
         set( "item_desc", ([
- 		"note": "´¢²ØÊÒÊÇÓÃÀ´·ÅÎäÆ÷·À¾ßÈİÆ÷µÈÖØÒªÎï×ÊµÄ,¿Õ¼äÓĞÏŞ\n"
- 		        "Çë²»Òªµ±À¬»ø¶Ñ°ãµÄ¶Ñ·ÅÎŞÓÃÍ¾µÄ¶«Î÷¡£\n" 
+ 		"note": "å„²è—å®¤æ˜¯ç”¨ä¾†æ”¾æ­¦å™¨é˜²å…·å®¹å™¨ç­‰é‡è¦ç‰©è³‡çš„,ç©ºé–“æœ‰é™\n"
+ 		        "è«‹ä¸è¦ç•¶åƒåœ¾å †èˆ¬çš„å †æ”¾ç„¡ç”¨é€”çš„æ±è¥¿ã€‚\n" 
  		           ]) );
 	set( "exits", ([ 
 		"out" : "/d/healer/building/healer_guild"
 		       ]) ) ;
 
 	//	     
-	//ÒÔÏÂ¸÷Éè¶¨Çë¸÷ arch ÊÓ×Ô¼ºĞèÒª¼°¹«»á×´¿ö×öĞŞ¸Ä...
+	//ä»¥ä¸‹å„è¨­å®šè«‹å„ arch è¦–è‡ªå·±éœ€è¦åŠå…¬æœƒç‹€æ³åšä¿®æ”¹...
         //
 		     
-        set("max_amount",50) ;	             //Õâ¸ö·¿¼äÇå¹ıááÎï¼ş´¢´æµÄ×î´óÖµ 
-	set("class_name","NONE") ;           //Õâ¸ö·¿¼äËùÔÚ¹«»áÃû³Æ, ÓÃÒÔÇå³ı
-	                                     //¸Ã¹«»á³ÉÔ±²»ÄÜÓÃµÄ×°±¸.
+        set("max_amount",50) ;	             //é€™å€‹æˆ¿é–“æ¸…éå¾Œç‰©ä»¶å„²å­˜çš„æœ€å¤§å€¼ 
+	set("class_name","NONE") ;           //é€™å€‹æˆ¿é–“æ‰€åœ¨å…¬æœƒåç¨±, ç”¨ä»¥æ¸…é™¤
+	                                     //è©²å…¬æœƒæˆå“¡ä¸èƒ½ç”¨çš„è£å‚™.
         
-        //Á½Êı·Ö±ğ´ú±í×îµÍÈİĞíÖ®WC,damÆ½¾ùÖµ
+        //å…©æ•¸åˆ†åˆ¥ä»£è¡¨æœ€ä½å®¹è¨±ä¹‹WC,damå¹³å‡å€¼
         
 	set("weapon_res",({23,17}) ) ; 
 
-	//Ã¿ÖÖĞÍ±ğ·À¾ßÖ®ac,db×îµÍÈİĞíÖµ,ÏŞÖÆÎª ac+db Ö®ºÏ 
-        //Èç¹ûÄÜ¸Ä±äAC DBµÄ,ÇëÔÚ·À¾ß set("no_clean",1)
+	//æ¯ç¨®å‹åˆ¥é˜²å…·ä¹‹ac,dbæœ€ä½å®¹è¨±å€¼,é™åˆ¶ç‚º ac+db ä¹‹åˆ 
+        //å¦‚æœèƒ½æ”¹è®ŠAC DBçš„,è«‹åœ¨é˜²å…· set("no_clean",1)
         
         set("armor_res",([                          
                          "body" : 20   , "legs"   : 9 ,
@@ -60,13 +60,13 @@ C_LONG_DESCRIPTION
  	                 "others" : 8,
  	                 ]) ) ;
 	
-	//ÈİÆ÷µÄÏŞÖÆ
+	//å®¹å™¨çš„é™åˆ¶
 	set("container_res",200) ;
 	
-        // ÒÔÏÂÊÇÇå³ıµÄÑ¶Ï¢, ÓĞ±ØÒªµÄ»°ÇëÖØĞ´ string cleaning_msg()
+        // ä»¥ä¸‹æ˜¯æ¸…é™¤çš„è¨Šæ¯, æœ‰å¿…è¦çš„è©±è«‹é‡å¯« string cleaning_msg()
 	set("clean_msg",
-	    "%s×ß½øÕâ¸ö·¿¼äÒ»¿´,Ò¡ÁËÒ¡Í·,ÕĞÀ´Ò»ÕóÉÁµç,°ÑÃ»ÓÃµÄ¶«¶«ÉÕ³É»Ò¡£\n") ;
-	set("msg_arg","À×ÉñÖ®×Ó") ;
+	    "%sèµ°é€²é€™å€‹æˆ¿é–“ä¸€çœ‹,æ–äº†æ–é ­,æ‹›ä¾†ä¸€é™£é–ƒé›»,æŠŠæ²’ç”¨çš„æ±æ±ç‡’æˆç°ã€‚\n") ;
+	set("msg_arg","é›·ç¥ä¹‹å­") ;
 	
 	reset();
 }
@@ -79,27 +79,27 @@ void init()
 
 int do_get(string arg)
 {
-    if(GET->cmd_get(arg)==0)              // Ö±½ÓÊ¹ÓÃÕı³£µÄget ÃüÁî(·¿¼äºô½Ğ)
-         return 0 ;                       // Èç¹ûÊ§°Ü(0), Ôò´«»Ø0.
-                                          // ÔÙÅÜÒ»´Îget µÄ¶¯×÷(Íæ¼Òºô½Ğ)
-    if(arg=="all")                        // Ò»´Îget all ÊÓÎªÎå´ÎgetµÄĞ§¹û
+    if(GET->cmd_get(arg)==0)              // ç›´æ¥ä½¿ç”¨æ­£å¸¸çš„get å‘½ä»¤(æˆ¿é–“å‘¼å«)
+         return 0 ;                       // å¦‚æœå¤±æ•—(0), å‰‡å‚³å›0.
+                                          // å†è·‘ä¸€æ¬¡get çš„å‹•ä½œ(ç©å®¶å‘¼å«)
+    if(arg=="all")                        // ä¸€æ¬¡get all è¦–ç‚ºäº”æ¬¡getçš„æ•ˆæœ
        AMOUNT -= 5 ;
     else 
        AMOUNT -- ;
        
-    ( AMOUNT < 0 )? 0 : AMOUNT ;          // ÊıÄ¿Ğ¡ì¶0 Ê±Éè»Ø 0
+    ( AMOUNT < 0 )? 0 : AMOUNT ;          // æ•¸ç›®å°æ–¼0 æ™‚è¨­å› 0
     
     return 1 ;
 }
 
 int do_drop(string arg)
 {
-    if(DROP->cmd_drop(arg)==0)            // Í¬get
+    if(DROP->cmd_drop(arg)==0)            // åŒget
          return 0 ;
  
-    if(arg=="all")                        // Ò»´Îdrop all ÊÓÎªÎå´Îdrop µÄĞ§¹û
-       {                                  // µ«ÁíÔöÒ»¸ö±äÊı COUNT
-          AMOUNT += 5 ;                   // ÒÔ·ÀÖ¹ÖØ¸²get all,drop allµÄÇéĞÎ
+    if(arg=="all")                        // ä¸€æ¬¡drop all è¦–ç‚ºäº”æ¬¡drop çš„æ•ˆæœ
+       {                                  // ä½†å¦å¢ä¸€å€‹è®Šæ•¸ COUNT
+          AMOUNT += 5 ;                   // ä»¥é˜²æ­¢é‡è¤‡get all,drop allçš„æƒ…å½¢
           COUNT++ ;
         }
     else
@@ -115,24 +115,24 @@ int do_drop(string arg)
 
 nomask int my_clean_func()
 {
-     object *inv,temp,it ;              // Ò»¶Ñ±äÊı..
+     object *inv,temp,it ;              // ä¸€å †è®Šæ•¸..
      int i,number,res1,res2,temp1,temp2,temp3,check_flag ;
      string type,inherit_from,ob_sort ;
 
-     inv = all_inventory(this_object()) ;          // Ê×ÏÈcheck·¿¼äÖĞµÄ¶«¶«
+     inv = all_inventory(this_object()) ;          // é¦–å…ˆcheckæˆ¿é–“ä¸­çš„æ±æ±
      number = sizeof(inv) ;
      
      for(i=0;i<number;i++)
         {
            it = inv[i] ;
-           check_flag = 0 ;                       // ÎïÆ·ÏŞÖÆ³õÊ¼»¯
-           res1=res2=temp1=temp2=temp3=0 ;        // ÔÙcheck ÎïÆ·µÄÖÖÀà.
-                                                  // ÓÃinherit list ÊÇÅÂ
-           inherit_from = inherit_list(it)[0] ;   // ÓÃÎïÆ·µÄÌØáçÉè¶¨¿ÉÄÜÎóÅĞ
+           check_flag = 0 ;                       // ç‰©å“é™åˆ¶åˆå§‹åŒ–
+           res1=res2=temp1=temp2=temp3=0 ;        // å†check ç‰©å“çš„ç¨®é¡.
+                                                  // ç”¨inherit list æ˜¯æ€•
+           inherit_from = inherit_list(it)[0] ;   // ç”¨ç‰©å“çš„ç‰¹å¾µè¨­å®šå¯èƒ½èª¤åˆ¤
            ob_sort = "/"+explode(inherit_from,".")[0] ;      
 
            // if that item have no_clean flag , then skip 
-           // Íæ¼ÒºÍÓĞ no_clean Éè¶¨µÄ¾ÍÖ±½ÓÌø¹ı..
+           // ç©å®¶å’Œæœ‰ no_clean è¨­å®šçš„å°±ç›´æ¥è·³é..
 
            if(it->query("no_clean")|| ob_sort==USER ) continue ;
            
@@ -175,7 +175,7 @@ nomask int my_clean_func()
            if(check_flag)
              {
 //               tell_room(this_object(),
-//                           it->query("c_name")+"¸Ã±»³ıÈ¥¡£\n",) ;
+//                           it->query("c_name")+"è©²è¢«é™¤å»ã€‚\n",) ;
                it->remove() ;
                }
         }
@@ -185,8 +185,8 @@ nomask int my_clean_func()
      res1=res2=temp1=temp2=temp3=0 ;     
      res1 = query("max_amount") ;
   
- // ¶«¶«ÕæµÄÌ«¶àÁË, ²»µÃ²»Çå .. Á¬ÓĞno_clean flag µÄÒ²»áÇåµô
- // Èç¹ûÏŞÖÆÎª50,Ôòµ±³¬¹ı 75 ¼şÊ±, Çåµô 75-50 = 25 ¼ş.Ê£50Ñù
+ // æ±æ±çœŸçš„å¤ªå¤šäº†, ä¸å¾—ä¸æ¸… .. é€£æœ‰no_clean flag çš„ä¹Ÿæœƒæ¸…æ‰
+ // å¦‚æœé™åˆ¶ç‚º50,å‰‡ç•¶è¶…é 75 ä»¶æ™‚, æ¸…æ‰ 75-50 = 25 ä»¶.å‰©50æ¨£
  
      if( number>(res1*3/2) )
         {  
@@ -201,7 +201,7 @@ nomask int my_clean_func()
                  temp1++ ;
               } 
          }
-//  ¸æËßÍæ¼ÒÀ¬»ø³µ¸Õ¸Õ¿ª×ß..
+//  å‘Šè¨´ç©å®¶åƒåœ¾è»Šå‰›å‰›é–‹èµ°..
                      
      tell_room(this_object(),cleaning_msg(),) ; 
      return 1 ;     

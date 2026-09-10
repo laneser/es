@@ -1,22 +1,22 @@
 #u/e/echobomber/board/board.c
-ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","c_name":"ÁôÑÔ°å","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Any idea about deathland,please post it","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ÈÎºÎÓĞ¹Øì¶ Deathland µÄÒâ¼û,Çë Post ÉÏÀ´",])
+ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","c_name":"ç•™è¨€æ¿","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Any idea about deathland,please post it","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"ä»»ä½•æœ‰é—œæ–¼ Deathland çš„æ„è¦‹,è«‹ Post ä¸Šä¾†",])
 messages ({(["id":2,"title":"Sorry,only Chinese message about my Deathland","body":"if you want translate my deathland to English message,please mail to me
 ","time":754581055,"poster":"Echobomber",]),(["id":10,"title":"newbie area","body":"i finish this newbie area in depth of deathland
 enjoy it
-","time":759873857,"poster":"Echobomber",]),(["id":11,"body":"ÎªÊ²÷á Desyer ²»¼ûÁË, ÎÊµÄÒ»Ğ©½ÌÍ½Ò²²»ÖªµÀ..
- ºÃ²»ÈİÒ×ÕÒµ½ Lawierda....
+","time":759873857,"poster":"Echobomber",]),(["id":11,"body":"ç‚ºä»€éº¼ Desyer ä¸è¦‹äº†, å•çš„ä¸€äº›æ•™å¾’ä¹Ÿä¸çŸ¥é“..
+ å¥½ä¸å®¹æ˜“æ‰¾åˆ° Lawierda....
 ","title":"< no title >","time":760243135,"poster":"Alix",]),(["id":13,"title":"< no title >","body":"I got it :)... Just ignore what I said in post 3 :)....
 But isn't it a good idea if the followers can tell you where Desyer went :)
 ","time":760277898,"poster":"Alix",]),(["id":14,"body":"for low level pplss, not easy to kill :(
-","title":"»µµÄ mob Ì«ÉÙ","time":763244067,"poster":"Cici",]),(["id":15,"title":"< no title >","body":"     ... ¿É²»¿ÉÒÔÔø¼ÓÒ»Ğ©»¯×±Æ·and Å®ĞÔÓÃÆ·...
-      ex:¿Úºì,¸ß¸úĞ¬
+","title":"å£çš„ mob å¤ªå°‘","time":763244067,"poster":"Cici",]),(["id":15,"title":"< no title >","body":"     ... å¯ä¸å¯ä»¥æ›¾åŠ ä¸€äº›åŒ–å¦å“and å¥³æ€§ç”¨å“...
+      ex:å£ç´…,é«˜è·Ÿé‹
 [A.
-","time":763758612,"poster":"Ticks",]),(["id":16,"title":"< no title >","body":"Ç§Íò²»ÒªÈ¥¹ä¾ŞÈËµÄµØÅÌ, ÎÒcon 18 , str 18 , full hp »¹ÊÇ±»¸ÉµôÁË, 
-Á¬ÌÓµÄ»ú»á¶¼Ã»ÓĞ :~~~~~
+","time":763758612,"poster":"Ticks",]),(["id":16,"title":"< no title >","body":"åƒè¬ä¸è¦å»é€›å·¨äººçš„åœ°ç›¤, æˆ‘con 18 , str 18 , full hp é‚„æ˜¯è¢«å¹¹æ‰äº†, 
+é€£é€ƒçš„æ©Ÿæœƒéƒ½æ²’æœ‰ :~~~~~
 ","time":763817224,"poster":"Tcm",]),(["id":17,"title":"< no title >","body":"to Tcm: your kar is too low la...
-","time":763839027,"poster":"Lady",]),(["id":18,"title":"< no title >","body":"¿É²»¿ÉÒÔÇëÉñ»òÎ×Ê¦¸óÏÂ¿ìÍê³É quest in death land?
+","time":763839027,"poster":"Lady",]),(["id":18,"title":"< no title >","body":"å¯ä¸å¯ä»¥è«‹ç¥æˆ–å·«å¸«é–£ä¸‹å¿«å®Œæˆ quest in death land?
 please!
 ","time":763867393,"poster":"Lion",]),(["id":19,"body":"black shop in deathland is finished!!
 enjoy it
@@ -24,20 +24,20 @@ enjoy it
 
 _Echobomber_
 ","title":"black shop","time":763925712,"poster":"Echobomber",]),(["id":20,"body":"the more black is the shop, then more rich is Echobomber?    :~~(  a poor player lady
-","title":"< no title >","time":763933993,"poster":"Lady",]),(["id":21,"title":"< no title >","body":"¿É²»¿ÉÒÔÔö¼Ópotion µÄÖÖÀà
+","title":"< no title >","time":763933993,"poster":"Lady",]),(["id":21,"title":"< no title >","body":"å¯ä¸å¯ä»¥å¢åŠ potion çš„ç¨®é¡
 like kira or small pill one recover 50 or 60 hp 
-i am a hp 170 mage .... use soup and juice and makira and big pill is ÀË·Ñ
-¶øÇÒÎ£ÏÕ
+i am a hp 170 mage .... use soup and juice and makira and big pill is æµªè²»
+è€Œä¸”å±éšª
 Dey !! 
 ","time":771136779,"poster":"Dey",]),(["id":22,"title":"< no title >","body":"when i can use those potion recover 90 or more 
 i am blooding.......
-but if i drink too fast ... that will  ÀË·Ñso.......
+but if i drink too fast ... that will  æµªè²»so.......
 if i drink when blooding ... like doctor can kill me easily in one attack..
 ***sigh***
-ËùÒÔÇëÖÚÉÌÈËÃÇÂôĞ¡Æ¿µÄ¼¦ÌÀ»òÊÇ¹ûÖ­ .....
-PS:ÒòÎÒÉÏÒ»ÆªpostÌ«²»Çå³ş,so i post again.......
+æ‰€ä»¥è«‹çœ¾å•†äººå€‘è³£å°ç“¶çš„é›æ¹¯æˆ–æ˜¯æœæ± .....
+PS:å› æˆ‘ä¸Šä¸€ç¯‡postå¤ªä¸æ¸…æ¥š,so i post again.......
 Dey 
-","time":771152550,"poster":"Dey",]),(["id":23,"body":"¿É²»¿ÉÒÔÔö¼Ó ËÀÍö´óµØ - ¶«·½´óÂ½µÄÖ±´ï´¬, ×øÁ½ÌËºÃ¾Ã
+","time":771152550,"poster":"Dey",]),(["id":23,"body":"å¯ä¸å¯ä»¥å¢åŠ  æ­»äº¡å¤§åœ° - æ±æ–¹å¤§é™¸çš„ç›´é”èˆ¹, åå…©è¶Ÿå¥½ä¹…
                   niceboy
 ","title":"< no title >","time":771403010,"poster":"Niceboy",]),(["id":24,"title":"< no title >","body":"Dear God :
          There are some wrong with me..
@@ -49,15 +49,15 @@ Dey
 [A[3~[3~[B[B[B[B[B[B[B
 
 [A[A[A[A[A[3~[3~      [C[C[C[C[C[C[C[C[C[C[C[Cer is no sell this kind of things..[B[B[B
-","time":771697026,"poster":"Jaker",]),(["id":25,"body":"Ç×°®µÄ¶«·½ÖîÉñ£¬¿É²»¿ÉÒÔ¼Ó¿ªºÚ°µ´óÂ½Óë¶«·½´óÂ½µÄÖ±´ï³µ£¿
-Ã¿´ÎÒªÂòÒ©¶¼µÃ×ª´¬£¬ºÜÂé·³ÄØ!!´¬Æ±¹óÒ»µãÒ²¿ÉÒÔ£¬
-Ï£Íû¿¼ÂÇ¿¼ÂÇ£¬Ğ»Ğ»!!
-","title":"Ö±´ï³µ","time":773055287,"poster":"Rong",]),(["id":26,"title":"ÕÕ¹ıÀ´ÕÕ¹ıÀ´","body":"Ã»ÊÂ....Ö»ÊÇ¾õµÃÁ½¸öÂô¼¦ÌÀ»ò¹ûÖ­ÉÌÈËÌ«¿ÉÁ¯ÁË
+","time":771697026,"poster":"Jaker",]),(["id":25,"body":"è¦ªæ„›çš„æ±æ–¹è«¸ç¥ï¼Œå¯ä¸å¯ä»¥åŠ é–‹é»‘æš—å¤§é™¸èˆ‡æ±æ–¹å¤§é™¸çš„ç›´é”è»Šï¼Ÿ
+æ¯æ¬¡è¦è²·è—¥éƒ½å¾—è½‰èˆ¹ï¼Œå¾ˆéº»ç…©å‘¢!!èˆ¹ç¥¨è²´ä¸€é»ä¹Ÿå¯ä»¥ï¼Œ
+å¸Œæœ›è€ƒæ…®è€ƒæ…®ï¼Œè¬è¬!!
+","title":"ç›´é”è»Š","time":773055287,"poster":"Rong",]),(["id":26,"title":"ç…§éä¾†ç…§éä¾†","body":"æ²’äº‹....åªæ˜¯è¦ºå¾—å…©å€‹è³£é›æ¹¯æˆ–æœæ±å•†äººå¤ªå¯æ†äº†
 ...
-","time":775417872,"poster":"Jinna",]),(["id":27,"title":"< no title >","body":"¶Ô!...¶Ô!....Ó¦¸ÃÈÃËûÃÇ×ß×ß....Ïñneo...
+","time":775417872,"poster":"Jinna",]),(["id":27,"title":"< no title >","body":"å°!...å°!....æ‡‰è©²è®“ä»–å€‘èµ°èµ°....åƒneo...
 
 ","time":775422398,"poster":"Tick",]),(["id":28,"body":"
-    ÎÒÏëÒªÒ»ËÒÔÚºÚ°µÓëÅµÍş¸ÛÖ®¼äÍ¨ĞĞµÄ´¬Ö»..·ñÔòÃ¿´Î¶¼µÃ»»´¬...´¬À´ÁË
+    æˆ‘æƒ³è¦ä¸€è‰˜åœ¨é»‘æš—èˆ‡è«¾å¨æ¸¯ä¹‹é–“é€šè¡Œçš„èˆ¹éš»..å¦å‰‡æ¯æ¬¡éƒ½å¾—æ›èˆ¹...èˆ¹ä¾†äº†
 ","title":"I want A ship..","time":778435126,"poster":"Maylin",]),(["id":30,"body":"Queen Smile....
 hint: ask king about queen..
 ","title":"new quest","time":778664148,"poster":"Echobomber",]),})

@@ -4,12 +4,12 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "jail key", "地牢钥匙" );
+	set_name( "jail key", "鍦扮墷閼板寵" );
 	add( "id", ({ "key" }) );
-	set_short( "a jail key", "地牢钥匙" );
+	set_short( "a jail key", "鍦扮墷閼板寵" );
 	set_long(
 		"This is the key of Liang Shan jail.\n",
-		"这是一把青石作成的钥匙，握在手上感到阵阵寒意。\n"
+		"閫欐槸涓�鎶婇潚鐭充綔鎴愮殑閼板寵锛屾彙鍦ㄦ墜涓婃劅鍒伴櫍闄ｅ瘨鎰忋�俓n"
 	);
 	set( "to_lock", "LiangShankey-1" );
 	set( "weight", 3 );

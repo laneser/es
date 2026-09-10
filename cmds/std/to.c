@@ -24,7 +24,7 @@ int cmd_to( string a )
 	a = ( a ? (a + " ") : "" );
 	strs[name] = a;
 	write( can_read_chinese()?
-		"ÇëÊäÈëÖ¸ÁîÁÐµÄÆäâÅ²¿·Ý: " + a + "...\n":
+		"è«‹è¼¸å…¥æŒ‡ä»¤åˆ—çš„å…¶é¤˜éƒ¨ä»½: " + a + "...\n":
 		"Input rest of command: " + a + "...\n" );
 	this_player()-> edit( TMP_FILE, "done", this_object() );
 	return 1;

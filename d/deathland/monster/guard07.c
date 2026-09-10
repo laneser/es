@@ -7,12 +7,12 @@ void create()
 	
 	::create();
 	set_level(15);
-	set_name( "holy place guard", "Ê¥µØÊØÎÀ" );
+	set_name( "holy place guard", "è–åœ°å®ˆè¡›" );
 	add("id",({"guard"}));
-	set_short( "a holy place guard", "Ê¥µØÊØÎÀ" );
+	set_short( "a holy place guard", "è–åœ°å®ˆè¡›" );
 	set_long(
 		"a holy guard.\n"
-		"Ò»¸öÊØ»¤Öø°«ÈËÊ¥µØµÄÊØÎÀÕß,ËûºÜ¾¡ÖÒì¶ËûµÄÈÎÎñ.\n"
+		"ä¸€å€‹å®ˆè­·è‘—çŸ®äººè–åœ°çš„å®ˆè¡›è€…,ä»–å¾ˆç›¡å¿ æ–¼ä»–çš„ä»»å‹™.\n"
 	);
 	set( "gender", "male" );
 	set( "alignment", 700 );

@@ -4,14 +4,14 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "iron key", "ÌúÔ¿³×" );
+	set_name( "iron key", "éµé‘°åŒ™" );
 	add( "id", ({ "key" }) );
-	set_short( "an iron key", "ÌúÔ¿³×" );
+	set_short( "an iron key", "éµé‘°åŒ™" );
 	set_long(
 		"A rusty iron key.\n",
-		"ÕâÊÇÒ»°ÑÓĞĞ©ÉúĞåµÄÌúÔ¿³×£¬¿´ÆğÀ´ºÃÏñÊÇËøÀÎÃÅµÄ¡£\n"
+		"é€™æ˜¯ä¸€æŠŠæœ‰äº›ç”Ÿç¹¡çš„éµé‘°åŒ™ï¼Œçœ‹èµ·ä¾†å¥½åƒæ˜¯é–ç‰¢é–€çš„ã€‚\n"
 	);
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
 	set( "to_lock", "JAIL_DOOR" );
 	set( "weight", 3 );
 	set( "value", ({ 10, "silver" }) );

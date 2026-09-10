@@ -1,68 +1,68 @@
 #d/monk/guild/monk_board.c
-ob_data (["hit_points":1,"endurance_points":1,"c_short.text":"ÎäÉ®¹«»áÁôÑÔ°å","id":({"board","bulletin board",}),"c_long":"@@query_c_long","c_long.text":"ÕâÊÇÒ»¸öÁôÑÔ°å£¬×¨¹©ÈËÁôÑÔ¼ÍÊÂ¡£ÏêÏ¸ÓÃ·¨Çë¿´ help board¡£
-","short.text":"ÎäÉ®¹«»áÁôÑÔ°å","talk_points":1,"last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ÁôÑÔ°å","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
-","force_points":1,"c_cap_name":"ÁôÑÔ°å","spell_points":1,"name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
-messages ({(["poster":"Clam","time":802957504,"body":"ºÃĞÄµÄ Kash ´óÉÆÈË²»ÒªÕâÑù 7-fu me la...
-Å¼¿ÚÆøÕâ÷áºÃËµ
-×îÖØÒªµÄÊÇ.....ÄÄÊ±ºòÒª cover me lalala  :P
-o.... no...²»Òª´òÅ¼ .....
+ob_data (["hit_points":1,"endurance_points":1,"c_short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","id":({"board","bulletin board",}),"c_long":"@@query_c_long","c_long.text":"é€™æ˜¯ä¸€å€‹ç•™è¨€æ¿ï¼Œå°ˆä¾›äººç•™è¨€ç´€äº‹ã€‚è©³ç´°ç”¨æ³•è«‹çœ‹ help boardã€‚
+","short.text":"æ­¦åƒ§å…¬æœƒç•™è¨€æ¿","talk_points":1,"last_location":0,"silent_look":1,"cap_name":"Board","c_name":"ç•™è¨€æ¿","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
+","force_points":1,"c_cap_name":"ç•™è¨€æ¿","spell_points":1,"name":"board","short":"@@query_short","c_short":"@@query_c_short","long":"@@query_long",])
+messages ({(["poster":"Clam","time":802957504,"body":"å¥½å¿ƒçš„ Kash å¤§å–„äººä¸è¦é€™æ¨£ 7-fu me la...
+å¶å£æ°£é€™éº¼å¥½èªª
+æœ€é‡è¦çš„æ˜¯.....å“ªæ™‚å€™è¦ cover me lalala  :P
+o.... no...ä¸è¦æ‰“å¶ .....
 ","title":"< no title >","id":497,]),(["poster":"Dbase","time":802966841,"body":"
-Ï£ÍûÑ§µ½35ÖØÊ±,¿ÉÒÔÔÙÕ½¶·Ê±½»»»¾ø¼¼...²»ÓÃ»ØÈ¥É¢¡õ..
-ÀıÈçËµ:ÏÈÓÃ°ãÈôÕÆ´ò....ÊÕÊ½¶øÁ¢áá,±ã¿ÉÒÔÑ¡ÔñÓÃÁíÍâµÄÆßÊ®¶ş¾ø¼¼...Èç
-Áú×¦ÊÖ.....
-²»È»,ºÃ²»ÈİÒ×Á·µ½¶¥¼¶µÄÄÌ¡õ...ÎªÁËÁ·ĞÂµÄ±ãÒªÉ¢¡õ...ÊµÔÚ...
-¾ÍÕâÑù×Ó...
-","title":"ÆßÊ®¶ş¾ø¼¼","id":498,]),(["poster":"Almuhara","time":803012770,"title":"< no title >","body":"hi all monks :
-	ÏÖÔÚÑ§µ½35ÖØµÄ¾ø¼¼²»»áÏûÊ§ÁË.....
+å¸Œæœ›å­¸åˆ°35é‡æ™‚,å¯ä»¥å†æˆ°é¬¥æ™‚äº¤æ›çµ•æŠ€...ä¸ç”¨å›å»æ•£â–¡..
+ä¾‹å¦‚èªª:å…ˆç”¨èˆ¬è‹¥æŒæ‰“....æ”¶å¼è€Œç«‹å¾Œ,ä¾¿å¯ä»¥é¸æ“‡ç”¨å¦å¤–çš„ä¸ƒåäºŒçµ•æŠ€...å¦‚
+é¾çˆªæ‰‹.....
+ä¸ç„¶,å¥½ä¸å®¹æ˜“ç·´åˆ°é ‚ç´šçš„å¥¶â–¡...ç‚ºäº†ç·´æ–°çš„ä¾¿è¦æ•£â–¡...å¯¦åœ¨...
+å°±é€™æ¨£å­...
+","title":"ä¸ƒåäºŒçµ•æŠ€","id":498,]),(["poster":"Almuhara","time":803012770,"title":"< no title >","body":"hi all monks :
+	ç¾åœ¨å­¸åˆ°35é‡çš„çµ•æŠ€ä¸æœƒæ¶ˆå¤±äº†.....
 
-	Ö»Òªµ½ÄãÊ¦¸µÄÇ¶ùÔÙÁ·Ï°Ò»´Î¾Í¿ÉÒÔ¸ÄÁ·±ğµÄ
+	åªè¦åˆ°ä½ å¸«å‚…é‚£å…’å†ç·´ç¿’ä¸€æ¬¡å°±å¯ä»¥æ”¹ç·´åˆ¥çš„
 
-	ËùÒÔ´ó¼Ò¼ÓÓÍ°É...
+	æ‰€ä»¥å¤§å®¶åŠ æ²¹å§...
 
 
 						almuhara
-","id":499,]),(["poster":"Sexboy","time":803049034,"body":"ÌıËµ¼ÓÁË explore Ö®áá....Áõ¹ãÓî¸ü¶àÈËÉ±ÁË.....:)P
-¸÷Î»Ê¦ĞÖµÜÃÇ...Ã»ÊÂ¾ÍÈ¥×°Ò»´ÎÆßĞıÕ¶¿´¿´°É£¡
-ps.µÚÒ»´Î post....ºÃË¬£¡
+","id":499,]),(["poster":"Sexboy","time":803049034,"body":"è½èªªåŠ äº† explore ä¹‹å¾Œ....åŠ‰å»£å®‡æ›´å¤šäººæ®ºäº†.....:)P
+å„ä½å¸«å…„å¼Ÿå€‘...æ²’äº‹å°±å»è£ä¸€æ¬¡ä¸ƒæ—‹æ–¬çœ‹çœ‹å§ï¼
+ps.ç¬¬ä¸€æ¬¡ post....å¥½çˆ½ï¼
                sexboy.
-","title":"explore ÕæºÃÍæ","id":500,]),(["poster":"Angel","time":803158931,"title":"< no title >","body":"almuhara is monk ´óÎ×Ê¦ now!!!
+","title":"explore çœŸå¥½ç©","id":500,]),(["poster":"Angel","time":803158931,"title":"< no title >","body":"almuhara is monk å¤§å·«å¸« now!!!
 
-¾ÅÑôÀ² ¿ÕÊÖÈë°×ÈĞÀ² 
-ÕÒËû×öÀ²!!!
-ĞÂMonk ´óÎ×Ê¦ almuhara...
+ä¹é™½å•¦ ç©ºæ‰‹å…¥ç™½åˆƒå•¦ 
+æ‰¾ä»–åšå•¦!!!
+æ–°Monk å¤§å·«å¸« almuhara...
 
-angelÉÏ
+angelä¸Š
 ","id":501,]),(["poster":"Almuhara","time":803221487,"body":"
 Hi all monks :
 
-	add a new skill : ¿ÕÊÖÈë°×ÈĞ ....
+	add a new skill : ç©ºæ‰‹å…¥ç™½åˆƒ ....
 
-	àÅ..  ¾Í½´×Ó
+	å—¯..  å°±é†¬å­
 
 					almuhara
-","title":"new skill : ¿ÕÊÖÈë°×ÈĞ","id":502,]),(["poster":"Lily","time":803225315,"body":"as title ...
+","title":"new skill : ç©ºæ‰‹å…¥ç™½åˆƒ","id":502,]),(["poster":"Lily","time":803225315,"body":"as title ...
 what's that? 
 how to use??
-","title":"what is unarmed-parry ah?","id":503,]),(["poster":"Hch","time":803266168,"title":"Re: new skill : ¿ÕÊÖÈë°×ÈĞ","body":"On Thu Jun 15, Almuhara wrote:
+","title":"what is unarmed-parry ah?","id":503,]),(["poster":"Hch","time":803266168,"title":"Re: new skill : ç©ºæ‰‹å…¥ç™½åˆƒ","body":"On Thu Jun 15, Almuhara wrote:
 > Hi all monks :
 > 
-> 	add a new skill : ¿ÕÊÖÈë°×ÈĞ ....
+> 	add a new skill : ç©ºæ‰‹å…¥ç™½åˆƒ ....
 > 
-> 	àÅ..  ¾Í½´×Ó
+> 	å—¯..  å°±é†¬å­
 > 
 > 					almuhara
-  hoho...monk ÏÖÔÚ·ÀÓùÁ¦¸ß¶àÁË¨á...:P
+  hoho...monk ç¾åœ¨é˜²ç¦¦åŠ›é«˜å¤šäº†ã„¡...:P
                      Hch smile here....
-","id":504,]),(["poster":"Apolo","time":803367293,"body":"ÏÖÔÚÎÒÃÇÊ¹ÓÃÎä¹¦\Ê±£¬±ğÈË¶¼¿´²»µ½Ñ¶Ï¢Ò®..
-»¹µÃÓÃ½²µÄÕæÂé·³..:~~
-¿É²»¿ÉÒÔ¸Ä»ØÀ´°¡???
-É¶Ê±±äµÄ...ÕæÆæ¹Ö...
+","id":504,]),(["poster":"Apolo","time":803367293,"body":"ç¾åœ¨æˆ‘å€‘ä½¿ç”¨æ­¦åŠŸæ™‚ï¼Œåˆ¥äººéƒ½çœ‹ä¸åˆ°è¨Šæ¯è€¶..
+é‚„å¾—ç”¨è¬›çš„çœŸéº»ç…©..:~~
+å¯ä¸å¯ä»¥æ”¹å›ä¾†å•Š???
+å•¥æ™‚è®Šçš„...çœŸå¥‡æ€ª...
                   apolo
-","title":"Ôõ÷áÃ»ÓĞÑ¶Ï¢","id":505,]),(["poster":"Angel","time":803416209,"title":"Re: Ôõ÷áÃ»ÓĞÑ¶Ï¢","body":"On Sat Jun 17, Apolo wrote:
-> ÏÖÔÚÎÒÃÇÊ¹ÓÃÎä¹¦\Ê±£¬±ğÈË¶¼¿´²»µ½Ñ¶Ï¢Ò®..
-> »¹µÃÓÃ½²µÄÕæÂé·³..:~~
-> ¿É²»¿ÉÒÔ¸Ä»ØÀ´°¡???
-> É¶Ê±±äµÄ...ÕæÆæ¹Ö...
+","title":"æ€éº¼æ²’æœ‰è¨Šæ¯","id":505,]),(["poster":"Angel","time":803416209,"title":"Re: æ€éº¼æ²’æœ‰è¨Šæ¯","body":"On Sat Jun 17, Apolo wrote:
+> ç¾åœ¨æˆ‘å€‘ä½¿ç”¨æ­¦åŠŸæ™‚ï¼Œåˆ¥äººéƒ½çœ‹ä¸åˆ°è¨Šæ¯è€¶..
+> é‚„å¾—ç”¨è¬›çš„çœŸéº»ç…©..:~~
+> å¯ä¸å¯ä»¥æ”¹å›ä¾†å•Š???
+> å•¥æ™‚è®Šçš„...çœŸå¥‡æ€ª...
 >                   apolo
 ========================================
 ????
@@ -74,10 +74,10 @@ so???
 and i had not modify anything la
 ","id":506,]),(["poster":"Almuhara","time":803441632,"body":"On Sun Jun 18, Angel wrote:
 > On Sat Jun 17, Apolo wrote:
-> > ÏÖÔÚÎÒÃÇÊ¹ÓÃÎä¹¦\Ê±£¬±ğÈË¶¼¿´²»µ½Ñ¶Ï¢Ò®..
-> > »¹µÃÓÃ½²µÄÕæÂé·³..:~~
-> > ¿É²»¿ÉÒÔ¸Ä»ØÀ´°¡???
-> > É¶Ê±±äµÄ...ÕæÆæ¹Ö...
+> > ç¾åœ¨æˆ‘å€‘ä½¿ç”¨æ­¦åŠŸæ™‚ï¼Œåˆ¥äººéƒ½çœ‹ä¸åˆ°è¨Šæ¯è€¶..
+> > é‚„å¾—ç”¨è¬›çš„çœŸéº»ç…©..:~~
+> > å¯ä¸å¯ä»¥æ”¹å›ä¾†å•Š???
+> > å•¥æ™‚è®Šçš„...çœŸå¥‡æ€ª...
 > >                   apolo
 > ========================================
 > ????
@@ -90,13 +90,13 @@ and i had not modify anything la
 Because I fix it lah....ha ha ....:P
 
 						almuhara
-","title":"Re: Re: Ôõ÷áÃ»ÓĞÑ¶Ï¢","id":507,]),(["poster":"Ruby","time":803489001,"title":"Re: Re: Re: Ôõ÷áÃ»ÓĞÑ¶Ï¢","body":"On Sun Jun 18, Almuhara wrote:
+","title":"Re: Re: æ€éº¼æ²’æœ‰è¨Šæ¯","id":507,]),(["poster":"Ruby","time":803489001,"title":"Re: Re: Re: æ€éº¼æ²’æœ‰è¨Šæ¯","body":"On Sun Jun 18, Almuhara wrote:
 > On Sun Jun 18, Angel wrote:
 > > On Sat Jun 17, Apolo wrote:
-> > > ÏÖÔÚÎÒÃÇÊ¹ÓÃÎä¹¦\Ê±£¬±ğÈË¶¼¿´²»µ½Ñ¶Ï¢Ò®..
-> > > »¹µÃÓÃ½²µÄÕæÂé·³..:~~
-> > > ¿É²»¿ÉÒÔ¸Ä»ØÀ´°¡???
-> > > É¶Ê±±äµÄ...ÕæÆæ¹Ö...
+> > > ç¾åœ¨æˆ‘å€‘ä½¿ç”¨æ­¦åŠŸæ™‚ï¼Œåˆ¥äººéƒ½çœ‹ä¸åˆ°è¨Šæ¯è€¶..
+> > > é‚„å¾—ç”¨è¬›çš„çœŸéº»ç…©..:~~
+> > > å¯ä¸å¯ä»¥æ”¹å›ä¾†å•Š???
+> > > å•¥æ™‚è®Šçš„...çœŸå¥‡æ€ª...
 > > >                   apolo
 > > ========================================
 > > ????
@@ -120,10 +120,10 @@ Because I fix it lah....ha ha ....:P
 > On Sun Jun 18, Almuhara wrote:
 > > On Sun Jun 18, Angel wrote:
 > > > On Sat Jun 17, Apolo wrote:
-> > > > ÏÖÔÚÎÒÃÇÊ¹ÓÃÎä¹¦\Ê±£¬±ğÈË¶¼¿´²»µ½Ñ¶Ï¢Ò®..
-> > > > »¹µÃÓÃ½²µÄÕæÂé·³..:~~
-> > > > ¿É²»¿ÉÒÔ¸Ä»ØÀ´°¡???
-> > > > É¶Ê±±äµÄ...ÕæÆæ¹Ö...
+> > > > ç¾åœ¨æˆ‘å€‘ä½¿ç”¨æ­¦åŠŸæ™‚ï¼Œåˆ¥äººéƒ½çœ‹ä¸åˆ°è¨Šæ¯è€¶..
+> > > > é‚„å¾—ç”¨è¬›çš„çœŸéº»ç…©..:~~
+> > > > å¯ä¸å¯ä»¥æ”¹å›ä¾†å•Š???
+> > > > å•¥æ™‚è®Šçš„...çœŸå¥‡æ€ª...
 > > > >                   apolo
 > > > ========================================
 > > > ????
@@ -145,20 +145,20 @@ Because I fix it lah....ha ha ....:P
 ???...
 
 						almuhara
-","title":"Re: Re: Re: Re: Ôõ÷áÃ»ÓĞÑ¶Ï¢","id":512,]),(["poster":"Ndd","time":803641545,"title":"< no title >","body":"
+","title":"Re: Re: Re: Re: æ€éº¼æ²’æœ‰è¨Šæ¯","id":512,]),(["poster":"Ndd","time":803641545,"title":"< no title >","body":"
 ","id":513,]),(["poster":"Catt","time":803642973,"title":"chi...","body":"  today hear chi have bug,so k chi..haha
 
   chi can't attack me:)
   plz check...:D
    
-","id":514,]),(["poster":"Duo","time":803646035,"title":"< no title >","body":"Ä¹µØÊØÎÀ´ò²»ËÀ...
+","id":514,]),(["poster":"Duo","time":803646035,"title":"< no title >","body":"å¢“åœ°å®ˆè¡›æ‰“ä¸æ­»...
 
-            ¾ÍÕâÑù...ÄÌ²è
-","id":515,]),(["poster":"Cowboy","time":803772083,"body":"Ò»À´·¢ÏÖÓĞĞÂ¼¼ÄÜ...exp10596580--->10097771...´Ó0Á·µ½100...ºÇºÇºÃ¹óà¸...
+            å°±é€™æ¨£...å¥¶èŒ¶
+","id":515,]),(["poster":"Cowboy","time":803772083,"body":"ä¸€ä¾†ç™¼ç¾æœ‰æ–°æŠ€èƒ½...exp10596580--->10097771...å¾0ç·´åˆ°100...å‘µå‘µå¥½è²´å–”...
 498809exp neh...
-²»¹ıÃ»ÊÔ...²»ÖªºÃ²»ºÃÓÃ...:P
-","title":"ºÇºÇĞÂ¼¼ÄÜ...","id":516,]),(["poster":"Lily","time":803796897,"body":"ÉÙÁÖËÂµÄµµ°¸±¸·İ (worsship) ºÃÏñ»µÁË
-Çëcheck .. thx :)
+ä¸éæ²’è©¦...ä¸çŸ¥å¥½ä¸å¥½ç”¨...:P
+","title":"å‘µå‘µæ–°æŠ€èƒ½...","id":516,]),(["poster":"Lily","time":803796897,"body":"å°‘æ—å¯ºçš„æª”æ¡ˆå‚™ä»½ (worsship) å¥½åƒå£äº†
+è«‹check .. thx :)
 ","title":"< no title >","id":517,]),(["poster":"Csw","time":803968352,"title":"< no title >","body":"     Dear all monks:
        $j.aYTYTEo!!!7G3F%h7m'L$F
      7|Ch)@$j.a*:........

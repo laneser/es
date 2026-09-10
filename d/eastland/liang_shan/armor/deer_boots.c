@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("deer boots", "â¯Æ¤Õ­¹³Ñ¥");
+        set_name("deer boots", "ççš®çª„é‰¤é´");
         add( "id", ({ "boots" }) );
-        set_short("deer boots", "â¯Æ¤Õ­¹³Ñ¥");
+        set_short("deer boots", "ççš®çª„é‰¤é´");
         set_long(
                 "This is a pair of boots made of skin of deer .\n",
-                "ÕâÊÇÓÃÂ¹Æ¤×÷³ÉµÄÕ­Ñ¥£¬Ã»ÓĞÅ£Æ¤ÈáÈí£¬µ«È´¸ü¼Ó¼áÈÍ£®\n"
+                "é€™æ˜¯ç”¨é¹¿çš®ä½œæˆçš„çª„é´ï¼Œæ²’æœ‰ç‰›çš®æŸ”è»Ÿï¼Œä½†å»æ›´åŠ å …éŸŒï¼\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "leather");
         set( "armor_class", 7 );

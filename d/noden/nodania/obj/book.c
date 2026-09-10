@@ -2,14 +2,14 @@
 inherit OBJECT;
 int             create()
 {
-        set_name("book", "Ê¥¾­");
-        set_short("Ê¥¾­");
+        set_name("book", "è–ç¶“");
+        set_short("è–ç¶“");
         set_long(@CLONG
-ÕâÊÇÒ»±¾Ê¥¾­¡£
+é€™æ˜¯ä¸€æœ¬è–ç¶“ã€‚
 CLONG
         );
         set("id", ({"book", "holy book"}));
-        set("unit", "±¾");
+        set("unit", "æœ¬");
         set( "weight", 0 );
         set ("value", ({ 1, "silver" }) );
         seteuid( getuid() );

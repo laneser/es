@@ -3,14 +3,14 @@
 inherit ARMOR;
 void create()
 {
-	set_name( "Platinum Visor","°×½ğÃæÕÖ" );
+	set_name( "Platinum Visor","ç™½é‡‘é¢ç½©" );
 	add( "id", ({ "visor" }) );
-	set_short( "°×½ğÃæÕÖ" );
+	set_short( "ç™½é‡‘é¢ç½©" );
 	set_long(@LONG
-	Ò»¶¥ÓÃ°×½ğ´òÔìµÄÃæÕÖ¡£
+	ä¸€é ‚ç”¨ç™½é‡‘æ‰“é€ çš„é¢ç½©ã€‚
 LONG
            );
-	set( "unit","¶¥" );
+	set( "unit","é ‚" );
 	set( "weight",50 );
 	set( "type","head" );
 	set( "material","knight" );

@@ -10,14 +10,14 @@ void create()
 {
 	::create();
 	set_level(6);
-	set_name("poisonus toad", "¶¾ó¸òÜ");
+	set_name("poisonus toad", "æ¯’èŸ¾èœ");
 	add( "id", ({ "toad" }) );
-   set_short("¶¾ó¸òÜ");
+   set_short("æ¯’èŸ¾èœ");
 	set_long(
-		"Äã¿´µ½Ò»Ö»¾Ş´óµÄó¸òÜ£¬±³ÉÏ³¤ÖøÏÊºìÉ«µÄ´ó°ßµã¡£\n"
+		"ä½ çœ‹åˆ°ä¸€éš»å·¨å¤§çš„èŸ¾èœï¼ŒèƒŒä¸Šé•·è‘—é®®ç´…è‰²çš„å¤§æ–‘é»ã€‚\n"
 	);
    set( "race", "amphibia" );
-	set( "unit", "Ö»" );
+	set( "unit", "åª" );
    set( "exp_reward", 933 );
 	set( "alignment", -600 );
    set_natural_armor( 15, 6 );
@@ -30,8 +30,8 @@ void create()
 	set( "forgetful", 1 );
 	set( "time_to_heal", 5 );
 	set( "tactic_func", "emit_poison" );
-	set_c_limbs( ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å" }) );
-	set_c_verbs( ({ "%sÉì³öÌµÂÌÉ«µÄÉàÍ·£¬»ÓÏò%s" }) );
+	set_c_limbs( ({ "é ­éƒ¨", "èº«é«”", "å‰è…³", "å¾Œè…³" }) );
+	set_c_verbs( ({ "%sä¼¸å‡ºç—°ç¶ è‰²çš„èˆŒé ­ï¼Œæ®å‘%s" }) );
 }
 
 int emit_poison()
@@ -40,7 +40,7 @@ int emit_poison()
 
 	if( random(20)>4 || !(victim= query_attacker()) ) return 0;
     tell_room( environment(this_object()),
-            "¶¾ó¸òÜ´Ó×ì°ÍÅç³öÒ»¹ÉºÚÉ«µÄÆøÌå£¬¸ÕºÃÅçÔÚÄãµÄÃæÇ° ....\n",
+            "æ¯’èŸ¾èœå¾å˜´å·´å™´å‡ºä¸€è‚¡é»‘è‰²çš„æ°£é«”ï¼Œå‰›å¥½å™´åœ¨ä½ çš„é¢å‰ ....\n",
 		this_object() );
 	(CONDITION_PREFIX + "simple_poison")->apply_effect( victim, 8, 8 );
 	return 1;

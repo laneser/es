@@ -2,15 +2,15 @@
 inherit ARMOR;
 void create()
 {
-     set_name( "medicine gloves","Ò©Ê¦ÊÖÌ×" );
+     set_name( "medicine gloves","è—¥å¸«æ‰‹å¥—" );
      add( "id",({ "gloves"}) );
-     set_short( "Ò©Ê¦ÊÖÌ×" );
+     set_short( "è—¥å¸«æ‰‹å¥—" );
      set_long(@C_LONG
-Ò»¼şÒÔ´¿ÃŞÖÆ³ÉµÄÊÖÌ×¡£ÕâÒ©Ê¦ÊÖÌ×ÉÏÓĞÌØ±ğÍ¿ÉÏ·À¶¾·ÀËáµÄÒ©²Ä£¬µ«È´²»ÄÍÉÕ¡£
+ä¸€ä»¶ä»¥ç´”æ£‰è£½æˆçš„æ‰‹å¥—ã€‚é€™è—¥å¸«æ‰‹å¥—ä¸Šæœ‰ç‰¹åˆ¥å¡—ä¸Šé˜²æ¯’é˜²é…¸çš„è—¥æï¼Œä½†å»ä¸è€ç‡’ã€‚
 C_LONG
      );
      set( "weight",40 );
-     set( "unit", "¼ş");
+     set( "unit", "ä»¶");
      set( "type", "hands" );
      set( "material","healer" );
      set( "armor_class",4 );

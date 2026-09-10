@@ -8,12 +8,12 @@ void create()
 {
 	::create();
 	set_level(1);
-	set_name("Bikabal", "Ë°Îñ¹Ù");
+	set_name("Bikabal", "ç¨…å‹™å®˜");
 	add( "id", ({"taxman", "man"}) );
-	set_short("Ë°Îñ¹Ù±Ï¿¨²©");
+	set_short("ç¨…å‹™å®˜ç•¢å¡åš");
 	set_long(@C_LONG
-±Ï¿¨²©ÊÇ¸öºÃÈË¡ª¡ªÄã±ØĞë³ĞÈÏÕâÒ»µã£¬Ëû²»ÏñÆäËûµÄË°Îñ¹Ù»áÄÃ×ßÄã
-ÉíÉÏÈ«²¿µÄÇ®£¬±Ï¿¨²©Ö»ÓĞÔÚÄãÊµÔÚÌ«ÓĞÇ®Ê±²Å»áÏòÄãÊÕË°¡£
+ç•¢å¡åšæ˜¯å€‹å¥½äººâ€”â€”ä½ å¿…é ˆæ‰¿èªé€™ä¸€é»ï¼Œä»–ä¸åƒå…¶ä»–çš„ç¨…å‹™å®˜æœƒæ‹¿èµ°ä½ 
+èº«ä¸Šå…¨éƒ¨çš„éŒ¢ï¼Œç•¢å¡åšåªæœ‰åœ¨ä½ å¯¦åœ¨å¤ªæœ‰éŒ¢æ™‚æ‰æœƒå‘ä½ æ”¶ç¨…ã€‚
 C_LONG
 	);
 	set( "race", "halfling" );
@@ -39,10 +39,10 @@ void check_wealth(object ob)
 	if( !ob || !this_object() ) return;
 	if( member_group(geteuid(ob), "admin") ) {
 		command("bow "+(string)ob->query("name"));
-		command("say Ç×°®µÄ´óÉñ, »¶Ó­¹âÁÙ!!\n");
+		command("say è¦ªæ„›çš„å¤§ç¥, æ­¡è¿å…‰è‡¨!!\n");
 		command("bow "+(string)ob->query("name"));
 		return;
-	} else command( "say àË! "+ob->query("c_name") + ".\n" );
+	} else command( "say å—¨! "+ob->query("c_name") + ".\n" );
 	money = (mapping)ob->query("wealth");
 	if( !money ) money = ([]);
 	bank = (mapping)ob->query("bank_balance");
@@ -56,8 +56,8 @@ void check_wealth(object ob)
 		total += bank[types[i]] * coinvalue( types[i] );
 
 	if( total > (int)ob->query_level() * MAX_MONEY_EACH_LEVEL ) {
-		command( "say Å¶¡«¡«!!¸óÏÂÔ­À´ÊÇ½ğÅ£¼¶µÄ´óÈËÎïÑ½!!!!\n" );
-		command( "say À´, ¾èÏ×Ò»Ğ©À´Ëõ¶ÌÆ¶¸»²î¾à°É!!!!!\n" );
+		command( "say å“¦ï½ï½!!é–£ä¸‹åŸä¾†æ˜¯é‡‘ç‰›ç´šçš„å¤§äººç‰©å‘€!!!!\n" );
+		command( "say ä¾†, æç»ä¸€äº›ä¾†ç¸®çŸ­è²§å¯Œå·®è·å§!!!!!\n" );
 		
 		types = keys(money);
 		for( i=0; i<sizeof(types); i++ ) 
@@ -68,7 +68,7 @@ void check_wealth(object ob)
 			bank[types[i]] /= 2;
 		ob->set( "bank_balance", bank );
 
-		tell_object( ob, "Ë°Îñ¹Ù´ÓÄãÉíÉÏºÍÒøĞĞÕÊ»§¸÷ÄÃ×ßÒ»°ëµÄÇ®¡£\n");
+		tell_object( ob, "ç¨…å‹™å®˜å¾ä½ èº«ä¸Šå’ŒéŠ€è¡Œå¸³æˆ¶å„æ‹¿èµ°ä¸€åŠçš„éŒ¢ã€‚\n");
 	}
 }
 

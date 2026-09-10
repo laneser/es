@@ -8,11 +8,11 @@ void create()
 
 	::create();
 	set_level(5);
-	set_name( "The boy", "������С�к�" );
+	set_name( "The boy", "矮靈族小男孩" );
 	add( "id", ({ "boy" }) );
-	set_short( "������С�к�" );
+	set_short( "矮靈族小男孩" );
 	set_long(
-          "һ���������С�к���������������͡�\n"
+          "一個矮靈族的小男孩，正在這裡玩泥巴。\n"
 	);
 	set( "race", "dwarf" );
 	set( "gender", "male" );
@@ -25,7 +25,7 @@ void create()
         set("natural_defense_bonus",5);
         set("chat_chance",15);
         set("chat_output",({
-        "С�к�˵�����ĵ����尢���Ǹ����ǳ԰ɡ�\n" }) );
+        "小男孩說：好心的叔叔阿姨們給個糖吃吧。\n" }) );
 
         ob1=new(OWEAPON"wgun");
         ob1->move( this_object() ); 
@@ -43,55 +43,55 @@ int accept_item(object me,object item)
    item->remove();
    if (this_player()->query_temp("ohio")>=2) {
      tell_object(me,
-        "\n������һ�����ܣ���һ�죬�����������ʱ��������һ����Ҫ�����ˡ�\n"
-        "�Һܺ��¾ͼ���ææ���ܻ����ˡ�\n");
+        "\n告訴你一個秘密：有一天，我在外面玩的時候，碰到過一個快要死的人。\n"
+        "我很害怕就急急忙忙的跑回來了。\n");
      return 1; }
 
    switch(name) {
    case "gold_chocolate" :
          if (this_player()->query_temp("gold_chocolate"))
             tell_object(me,
-              "С�к�˵�������ǹ����Ѿ��Թ��ˣ���û�б��?\n");
+              "小男孩說：這種糖果我已經吃過了，有沒有別的?\n");
          else {
             this_player()->set_temp("gold_chocolate",1);
             tell_object(me,
-              "С�к�˵���úóԣ�лл��\n"); }
+              "小男孩說：好好吃，謝謝。\n"); }
          break;
    case "silver_chocolate" :
          if (this_player()->query_temp("silver_chocolate"))
             tell_object(me,
-              "С�к�˵�������ǹ����Ѿ��Թ��ˣ���û�б��?\n");
+              "小男孩說：這種糖果我已經吃過了，有沒有別的?\n");
          else {
             this_player()->set_temp("silver_chocolate",1);
             tell_object(me,
-              "С�к�˵���úóԣ�лл��\n"); }
+              "小男孩說：好好吃，謝謝。\n"); }
          break;
    case "red_chocolate" :
          if (this_player()->query_temp("red_chocolate"))
             tell_object(me,
-              "С�к�˵�������ǹ����Ѿ��Թ��ˣ���û�б��?\n");
+              "小男孩說：這種糖果我已經吃過了，有沒有別的?\n");
          else {
             this_player()->set_temp("red_chocolate",1);
             tell_object(me,
-              "С�к�˵���úóԣ�лл��\n"); }
+              "小男孩說：好好吃，謝謝。\n"); }
          break;
    case "blue_chocolate" :
          if (this_player()->query_temp("blue_chocolate"))
             tell_object(me,
-              "С�к�˵�������ǹ����Ѿ��Թ��ˣ���û�б��?\n");
+              "小男孩說：這種糖果我已經吃過了，有沒有別的?\n");
          else {
             this_player()->set_temp("blue_chocolate",1);
             tell_object(me,
-              "С�к�˵���úóԣ�лл��\n"); }
+              "小男孩說：好好吃，謝謝。\n"); }
          break;
    case "yellow_chocolate" :
          if (this_player()->query_temp("yellow_chocolate"))
             tell_object(me,
-              "С�к�˵�������ǹ����Ѿ��Թ��ˣ���û�б��?\n");
+              "小男孩說：這種糖果我已經吃過了，有沒有別的?\n");
          else {
             this_player()->set_temp("yellow_chocolate",1);
             tell_object(me,
-              "С�к�˵���úóԣ�лл��\n"); }
+              "小男孩說：好好吃，謝謝。\n"); }
          break;
    default :
              return 1;
@@ -112,8 +112,8 @@ int accept_item(object me,object item)
    if (candy==5 && this_player()->query_temp("ohio")) {
       this_player()->set_temp("ohio",2);
       tell_object(me,
-          "\n������һ�����ܣ���һ�죬�����������ʱ�ᣬ����һ����Ҫ�����ˡ�\n"
-          "�Һܺ��¾ͼ���ææ���ܻ����ˡ�\n"); }
+          "\n告訴你一個秘密：有一天，我在外面玩的時後，碰到一個快要死的人。\n"
+          "我很害怕就急急忙忙的跑回來了。\n"); }
    return 1;
 
 }

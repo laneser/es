@@ -121,7 +121,7 @@ int check_explore(object user)
 			continue ;
 		}
 		else {
-			tell_object(user,"ÄãÔÚ"+to_chinese(AREAS[i])+"µÄÀúÁ·»¹²»¹»¡¡È¥×ß×ß°É !!\n"); 
+			tell_object(user,"ä½ åœ¨"+to_chinese(AREAS[i])+"çš„æ­·ç·´é‚„ä¸å¤ ã€€å»èµ°èµ°å§ !!\n"); 
 			return 0;
 		}
 	}
@@ -130,10 +130,10 @@ int check_explore(object user)
 //	if( explore < explore_limit[lvl+1] ) return 0;
 	if ( mark < sizeof(AREAS) ) {
 		tell_object(user,
-			"Äã¿ÉÒÔÔÚ¹«»áÊ¹ÓÃ explore Ö¸ÁîÖªµÀÄãÄ¿Ç°Ì½ÏÕ¶ÈµÄ×´¿ö¡¡\n");
+			"ä½ å¯ä»¥åœ¨å…¬æœƒä½¿ç”¨ explore æŒ‡ä»¤çŸ¥é“ä½ ç›®å‰æ¢éšªåº¦çš„ç‹€æ³ã€€\n");
 		if ( exp_mark >= (lvl-4)*3*sizeof(AREAS) ) {
 			tell_object(user,
-				"àÅ ! ÄãµÄÌ½ÏÕ¶È×ÜºÏ¹»×Ê¸ñÉı¼¶ÁË¡¡¿ÉÊÇÆäËûÇøÓòÒ²¼ÇµÃÒªÈ¥×ß×ßà¸¡¡\n");
+				"å—¯ ! ä½ çš„æ¢éšªåº¦ç¸½åˆå¤ è³‡æ ¼å‡ç´šäº†ã€€å¯æ˜¯å…¶ä»–å€åŸŸä¹Ÿè¨˜å¾—è¦å»èµ°èµ°å–”ã€€\n");
 			return 1;
 		}
 		return 0;

@@ -20,19 +20,19 @@ int cmd_eungon(string str)
 if( !str ) return help();
 
 if( (int)this_player()->query("stop_attack")>0 )
-		return notify_fail ("( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬ÎŞ·¨Ê©Õ¹ÕĞÊ½¡£ )\n");
+		return notify_fail ("( ä½ ä¸Šä¸€å€‹å‹•ä½œé‚„æ²’æœ‰å®Œæˆï¼Œç„¡æ³•æ–½å±•æ‹›å¼ã€‚ )\n");
  // if (this_player()->query_temp("gonfu_busy") )
         
 if( this_player()->query_temp("no_enhant") ||
         this_player()->query("no_enhant") )
-               return notify_fail( "ÄãÕı×¼±¸Ê¹ÓÃÕĞÊ½Ê±£¬¾¹È»·¢ÏÖÄãÍ»È»¹¦Á¦È«Ê§ÁË¡£\n" );
+               return notify_fail( "ä½ æ­£æº–å‚™ä½¿ç”¨æ‹›å¼æ™‚ï¼Œç«Ÿç„¶ç™¼ç¾ä½ çªç„¶åŠŸåŠ›å…¨å¤±äº†ã€‚\n" );
 if( environment(this_player())->query_temp("no_enhant") ||
          environment(this_player())->query("no_enhant") )
-              return notify_fail( "ÕâÀï²»ÄÜÊ¹ÓÃÈÎºÎÕĞÊ½¡£\n" );
+              return notify_fail( "é€™è£¡ä¸èƒ½ä½¿ç”¨ä»»ä½•æ‹›å¼ã€‚\n" );
 if (sscanf(str,"%s at %s", gonfu,targname)==2) 
    {
          if( undefinedp(this_player()->query("gonfus/"+gonfu)) )
-	     return notify_fail( "°×³Õ!!! Äã¸ú±¾²»»áÕâÖÖ\¹¦\·òÀ²¡£\n");
+	     return notify_fail( "ç™½ç—´!!! ä½ è·Ÿæœ¬ä¸æœƒé€™ç¨®åŠŸå¤«å•¦ã€‚\n");
 	
    }
         
@@ -40,30 +40,30 @@ else{
         gonfu=str;
         targname= "NONE";
         if( undefinedp(this_player()->query("gonfus/"+gonfu)) ) 
-            return notify_fail( "ÄãÏëÁ·¹¦\Ïë·èÁËÂğ? Äã¸ú±¾¾Í²»»áÕâÖÖ¹¦\·òÀ²! \n");
+            return notify_fail( "ä½ æƒ³ç·´åŠŸæƒ³ç˜‹äº†å—? ä½ è·Ÿæœ¬å°±ä¸æœƒé€™ç¨®åŠŸå¤«å•¦! \n");
 
      }
 code = GONFU_D->find_gonfu( gonfu );
         	       if( !code )
 	        	return notify_fail( 
-        	"Ã»ÓĞÕâÖÖ¹¦\·ò .... ÇëÍ¨ÖªÎ×Ê¦»òÓÃ bug Ö¸Áî±¨¸æÕĞÊ½Ãû³Æ¡£\n");
+        	"æ²’æœ‰é€™ç¨®åŠŸå¤« .... è«‹é€šçŸ¥å·«å¸«æˆ–ç”¨ bug æŒ‡ä»¤å ±å‘Šæ‹›å¼åç¨±ã€‚\n");
 
 
 	fp_cost = (int)code->query_fp_cost();
 	delay_time = (int)code->query_delay_time();
 	if( !fp_cost || (int)this_player()->query("force_points") < fp_cost )
-		return notify_fail( "ÄãµÄÄÚÁ¦²»¹»£¡\n");
+		return notify_fail( "ä½ çš„å…§åŠ›ä¸å¤ ï¼\n");
 
         if ( (string)this_player()->query_temp("gonfu_now")==gonfu)
-        return notify_fail( "ÄãÄ¿Ç°ÕıÔÚÊ©Õ¹ÕâÖÖ¹¦\·ò  "); 
+        return notify_fail( "ä½ ç›®å‰æ­£åœ¨æ–½å±•é€™ç¨®åŠŸå¤«  "); 
 
 
 skill=this_player()->query_skill("inner-control");
 if (random( fp_cost>100?100:fp_cost)  >  skill) {
-      write ("ÄãÊÔÍ¼ÔËÆø·¢¹¦\... µ«Ê§°ÜÁË..... \n");
+      write ("ä½ è©¦åœ–é‹æ°£ç™¼åŠŸ\... ä½†å¤±æ•—äº†..... \n");
 
       tell_room(environment(this_player()), 
-        this_player()->query("c_name")+"Í»È»´ó½ĞÒ»Éù... ËÆºöÔË¹¦²íÁËÆøÁË \n",
+        this_player()->query("c_name")+"çªç„¶å¤§å«ä¸€è²... ä¼¼å¿½é‹åŠŸå²”äº†æ°£äº† \n",
         this_player() );
         this_player()->add("force_points", -fp_cost);
         return 1;
@@ -82,10 +82,10 @@ int help()
 {
 	if( can_read_chinese() )
 		write( @C_HELP
-Ö¸Áî¸ñÊ½: eungon <ÕĞÊ½Ãû³Æ> at <µĞÈË>
-      »ò  eungon <ÕĞÊ½Ãû³Æ>  // ¼´»á×öÓÃì¶×Ô¼ºÉíÉÏ.... 
+æŒ‡ä»¤æ ¼å¼: eungon <æ‹›å¼åç¨±> at <æ•µäºº>
+      æˆ–  eungon <æ‹›å¼åç¨±>  // å³æœƒåšç”¨æ–¼è‡ªå·±èº«ä¸Š.... 
 
-Õâ¸öÖ¸ÁîÈÃÄãÓÃÀ´Ê©Õ¹ÕĞÊ½¡£Äã¿ÉÒÔÓÃ gonfus Ö¸Áî¿´ÄãÄ¿Ç°ÒÑ¾­Ñ§»áµÄÕĞÊ½ÁĞ±í¡£
+é€™å€‹æŒ‡ä»¤è®“ä½ ç”¨ä¾†æ–½å±•æ‹›å¼ã€‚ä½ å¯ä»¥ç”¨ gonfus æŒ‡ä»¤çœ‹ä½ ç›®å‰å·²ç¶“å­¸æœƒçš„æ‹›å¼åˆ—è¡¨ã€‚
 C_HELP
 		);
 	else write ( @HELP

@@ -4,11 +4,11 @@ inherit OBJECT;
 
 void create(){
 
-	set_name("special","ÌØµ÷´ó²¹¾Æ");
+	set_name("special","ç‰¹èª¿å¤§è£œé…’");
 	add( "id" , ({ "special" }) );
-	set_short( "ÌØµ÷´ó²¹¾Æ" );
-	set_long( "ÌØµ÷´ó²¹¾Æ£¬ÏÞµ±³¡ºÈ£¡\n" );
-   	set("unit","±­");
+	set_short( "ç‰¹èª¿å¤§è£œé…’" );
+	set_long( "ç‰¹èª¿å¤§è£œé…’ï¼Œé™ç•¶å ´å–ï¼\n" );
+   	set("unit","æ¯");
    	set("weight", 15);
    	set("value",({100, "silver"}) );
 	set("drink",10);
@@ -22,10 +22,10 @@ void drink_it(object who)
 	if( owner && living(owner) ) 
 	{
 		tell_object(owner,
-			"ÄãºÈÏÂÒ»±­ÌØµ÷´ó²¹¾Æ¡£¸Ðµ½¾«ÉñºÃÁËÒ»Ð©¡£\n"
+			"ä½ å–ä¸‹ä¸€æ¯ç‰¹èª¿å¤§è£œé…’ã€‚æ„Ÿåˆ°ç²¾ç¥žå¥½äº†ä¸€äº›ã€‚\n"
 		);
 		tell_room( environment(owner), 
-			owner->query("c_name")+"ºÈÏÂÒ»±­ÌØµ÷´ó²¹¾Æ£¬¾«Éñ¿´ÆðÀ´ºÃÁËÒ»Ð©!!\n",
+			owner->query("c_name")+"å–ä¸‹ä¸€æ¯ç‰¹èª¿å¤§è£œé…’ï¼Œç²¾ç¥žçœ‹èµ·ä¾†å¥½äº†ä¸€äº›!!\n",
 			owner );
 
 		owner->receive_healing(15);

@@ -6,16 +6,16 @@ void create()
 {
 	::create();
 	set_level(8);
-	set_name( "Yan san", "ÑÏ²Î" );
+	set_name( "Yan san", "åš´åƒ" );
 	add( "id", ({ "monk","san","yan" }) );
-	set_short( "ÑÏ²Î" );
+	set_short( "åš´åƒ" );
 	set_long(@C_LONG
-»ªÑÏ»Þ¾²ÊÇÉÙÁÖÅÅÐÐÖÐµÄ×îáá¼¸¼¶, ÑÏ²Î½ñÄê¶þÊ®ÎåËê, ÌýËµÔ­±¾ÊÇ
-¸öÂäµÚÊéÉú, ÒòÎª²»ºÃºÃÄîÊé, ÂÅÊÔ²»µÚ, Ö»ºÃ³ö¼Ò¡£³ÉÌìÖ»»áÄÃÖø
-µ¶¶«ÅÜÎ÷ÅÜ, Æ¢ÆøÒ²²»Ì«ºÃ¡£
+è¯åš´æ™¦éœæ˜¯å°‘æž—æŽ’è¡Œä¸­çš„æœ€å¾Œå¹¾ç´š, åš´åƒä»Šå¹´äºŒåäº”æ­², è½èªªåŽŸæœ¬æ˜¯
+å€‹è½ç¬¬æ›¸ç”Ÿ, å› ç‚ºä¸å¥½å¥½å”¸æ›¸, å±¢è©¦ä¸ç¬¬, åªå¥½å‡ºå®¶ã€‚æˆå¤©åªæœƒæ‹¿è‘—
+åˆ€æ±è·‘è¥¿è·‘, è„¾æ°£ä¹Ÿä¸å¤ªå¥½ã€‚
 C_LONG
 	);
-	set( "unit", "Ãû" );
+	set( "unit", "å" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set( "alignment",  300 );
@@ -47,6 +47,6 @@ void help_me_saulin(object who, object victim)
 	if( !attackers || member_array(victim, attackers)==-1 )
 		kill_ob(victim);
 	tell_room( environment(), 
-		"ÑÏ²ÎÍ¦Éí±£»¤" + who->query("c_name") + "¡£\n",
+		"åš´åƒæŒºèº«ä¿è­·" + who->query("c_name") + "ã€‚\n",
 		this_object() );
 }

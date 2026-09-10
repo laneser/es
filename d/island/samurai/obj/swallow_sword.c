@@ -4,15 +4,15 @@ inherit WEAPON;
 
 void create()
 {
-        set_name( "Swallow Sword", "·ÉÑàÖ®½£" );
+        set_name( "Swallow Sword", "é£›ç‡•ä¹‹åŠ" );
         add( "id",({ "swallow","sword" }) );
-        set_short( "Swallow Sword", "·ÉÑàÖ®½£" );
+        set_short( "Swallow Sword", "é£›ç‡•ä¹‹åŠ" );
         set_long(@AAA
-ÕâÒ»ÉñÆéÃÎÏëÁ÷ÊÂ½£Ê¿ éÙÓÒ¾© µÄÅä½££¬¾İËµÓÒ¾©ÔøÓÃ´Ë½£
-Õ¶Âä¿ÕÖĞµÄ·ÉÑà£¬¹Ê´Ë½£ÓĞ´ËÃû£¡
+é€™ä¸€ç¥å´å¤¢æƒ³æµäº‹åŠå£« æ©˜å³äº¬ çš„é…åŠï¼Œæ“šèªªå³äº¬æ›¾ç”¨æ­¤åŠ
+æ–¬è½ç©ºä¸­çš„é£›ç‡•ï¼Œæ•…æ­¤åŠæœ‰æ­¤åï¼
 AAA
         );
-        set( "unit", "°Ñ");
+        set( "unit", "æŠŠ");
         set( "weapon_class", 38 );
         set( "type", "longblade" );
         set( "min_damage", 15 );

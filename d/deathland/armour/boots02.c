@@ -3,14 +3,14 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("mithril boots", "Ã×ËÕÀïÕ½Ñ¥");
+        set_name("mithril boots", "ç±³è˜‡é‡Œæˆ°é´");
         add( "id", ({ "boots" }) );
-        set_short("a pair of mithril boots", "Ã×ËÕÀïÕ½Ñ¥");
+        set_short("a pair of mithril boots", "ç±³è˜‡é‡Œæˆ°é´");
         set_long(
                 "A pair of boots made of mithril .\n",
-                "Ò»Ë«ÓÉÃ×ËÕÀï½ğÊôÔì³ÉµÄÕ½Ñ¥\n"
+                "ä¸€é›™ç”±ç±³è˜‡é‡Œé‡‘å±¬é€ æˆçš„æˆ°é´\n"
         );
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "material", "light_metal" );
         set( "armor_class", 5 );

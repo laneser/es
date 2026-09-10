@@ -6,15 +6,15 @@ void create()
 {
 	::create();
 	set_level(18);
-	set_name( "uyko", "���Ҿ�" );
+	set_name( "uyko", "橘右京" );
 //	add( "id", ({ "uyko" }) );
-	set_short( "uyko", "���Ҿ�" );
+	set_short( "uyko", "橘右京" );
 	set_long(@AAA
-����ǰ��һλ����Ľ��ͣ�����һ��ʮ��ò����������ף��������Ե�����ɫ
-�����ã�һֱ����������ʱ����ȳ���Ѫ�����㻳�������ܺ���ս����
+你眼前是一位年輕的劍客，有著一張十分貌美清秀的臉孔，但是明顯的他氣色
+並不好，一直咳嗽著，有時還會咳出鮮血，讓你懷疑他還能和人戰鬥嗎？
 AAA
  );
-	set( "unit", "λ" );
+	set( "unit", "位" );
 	set( "race", "human" );
 	set( "gender", "male" );
 	set_perm_stat( "str", 25 );
@@ -34,7 +34,7 @@ AAA
                                  "vascular":35 ]));
         set( "stun_difficulty/ma",15);  
 	set( "alignment", 1000 );
-	set_c_limbs( ({ "ͷ��", "����", "����", "�ʺ�" }) );
+	set_c_limbs( ({ "頭部", "身體", "手腕", "咽喉" }) );
         set_skill( "parry",100 );
         set_skill( "longblade",100 );
         set_skill( "dodge",80);
@@ -55,8 +55,8 @@ int att_gonfus()
      
      if( !(victim = query_attacker()) || (random(20)>2) ) return 0;
      tell_room(environment(this_object()), 
-     "\n\n�Ҿ�ͻȻԾ����У��콣һ�ӣ��ӽ����Ͼ�Ȼ�ɳ�һֻ����\n"+
-     "\n��ֻ������һ������"+victim->query("c_name")+"\n\n"
+     "\n\n右京突然躍向空中，快劍一揮，從劍身上居然飛出一隻火鳥\n"+
+     "\n那隻火鳥休一聲飛向"+victim->query("c_name")+"\n\n"
       );
       dam = 20 + random(25);
       victim->receive_special_damage("fire", dam );
@@ -68,23 +68,23 @@ int give_ob(object ob)
    if( this_player()->query_temp("have_get_statue") )
    {
        write(@CCC
-���Ҿ�˵���������̰�ĵļһȥ���� !!! 
-˵���콣һ�ӣ��������������������˺���
+橘右京說道：你這個貪心的傢伙，去死吧 !!! 
+說著快劍一揮，對你造成了難以想像的傷害。
 CCC);
      this_player()->set("hit_points",0);
      return 1;
    }    
    if( !this_player()->query_temp("calford") )
-      return notify_fail("���Ҿ�������˵:С�ӣ��к�ָ�̣����������\n");
+      return notify_fail("橘右京瞪著你說:小子，有何指教？想和我挑嗎？\n");
    ob=new(MIT"statue");
    this_player()->set_temp("have_get_statue",1);
    write(@AAA
-���Ҿ�˵�������ǼӶ����ؽ���������İɣ���������ҿ̺��Ѿ��ܾ��ˣ���
-�������������ǵ������ö��ѣ������ȿ��贵�����Ҳ�쵽�ˣ���͸Ͽ���ȥ
-������������������������һ�°ɣ�
+橘右京說道：你是加爾福特叫來拿禮物的吧，這個雕像我刻好已經很久了，就
+　　　　　　是等你來拿而已，算算娜考璐璐的生日也快到了，你就趕快拿去
+　　　　　　給她讓她高興一下吧！
 
 
-���Ҿ�˵�������Ĵ������ó�һ�����񣬷�����űߣ���
+橘右京說完從身後的大樹下拿出一個雕像，放在你腳邊．．
 
 
 AAA

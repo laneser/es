@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "The statue of Goddess", "ÔÂÉñÏñ" );
+	set_name( "The statue of Goddess", "æœˆç¥åƒ" );
 	add( "id", ({ "statue" }) );
-	set_short( "ÔÂÉñÏñ" );
+	set_short( "æœˆç¥åƒ" );
 	set_long(
-		"ÕâÊÇÒ»×ğ´äÓñ¾«µñµÄÅ®ÉñÏñ¡£\n"
+		"é€™æ˜¯ä¸€å°Šç¿ ç‰ç²¾é›•çš„å¥³ç¥åƒã€‚\n"
 	);
-	set( "unit", "×ğ" );
+	set( "unit", "å°Š" );
 	set( "weight", 5 );
 	set( "value", ({ 100, "silver" }) );
 	set( "no_sale", 1 );

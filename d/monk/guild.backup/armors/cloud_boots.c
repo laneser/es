@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("cloud boots", "ÌìµÛÔÆĞ¬");
+        set_name("cloud boots", "å¤©å¸é›²é‹");
         add( "id", ({ "boots","boot" }) );
-        set_short("a pair of cloud boots", "ÌìµÛÔÆĞ¬");
+        set_short("a pair of cloud boots", "å¤©å¸é›²é‹");
         set_long(
 "A pair of boots made of clouds  .\n",
-"ÔÆÓÎÉ®´©Ö®Ğ¬×Ó³ÆÎªÔÆĞ¬, ¼´É®Ğ¬Ò²¡£\n"
-"ÕâÊÇÓñ»Ê´óµÛ´Í¸øÌ«ÉÏÀÏ¾ıµÄĞ¬×Ó, Ïà´«ËüËäÈ»ÖØµ«·ÀÓùÁ¦¾ªÈË¡£\n"
+"é›²éŠåƒ§ç©¿ä¹‹é‹å­ç¨±ç‚ºé›²é‹, å³åƒ§é‹ä¹Ÿã€‚\n"
+"é€™æ˜¯ç‰çš‡å¤§å¸è³œçµ¦å¤ªä¸Šè€å›çš„é‹å­, ç›¸å‚³å®ƒé›–ç„¶é‡ä½†é˜²ç¦¦åŠ›é©šäººã€‚\n"
         );
         set("material","cloth");
-        set( "unit", "Ë«");
+        set( "unit", "é›™");
         set( "type", "feet" );
         set( "armor_class", 8 );
         set( "defense_bonus", 2 );

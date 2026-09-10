@@ -15,13 +15,13 @@ int cmd_orglv(string arg)
         string *c_titles;
      seteuid(getuid());
 	if(this_player()->query("level")<1)
-		return notify_fail("ÄãÃ»ÓĞ¼ÓÈëÈÎºÎ×éÖ¯!\n");
+		return notify_fail("ä½ æ²’æœ‰åŠ å…¥ä»»ä½•çµ„ç¹”!\n");
      guild = (object)GUILD_MASTER ( (string)this_player()->query("organization") );
         c_titles = (string *)guild->query_c_titles();
 
         for( i=1; i<=MAX_ORG_LEVEL; i++ ) {
                 write( 
-                        sprintf( "µÈ¼¶ %2d : %30-s %8d µã¾­Ñé\n", i, c_titles[i-1], NEW_GUILD->query_org_exp(i-1) ) 
+                        sprintf( "ç­‰ç´š %2d : %30-s %8d é»ç¶“é©—\n", i, c_titles[i-1], NEW_GUILD->query_org_exp(i-1) ) 
                 );
         }
         return 1;
@@ -30,9 +30,9 @@ int cmd_orglv(string arg)
 int help()
 {
                 write( @C_HELP
-Ö¸Áî¸ñÊ½: levels
+æŒ‡ä»¤æ ¼å¼: levels
 
-Õâ¸öÖ¸Áî»áÁĞ³öÒ»·İÄã¼ÓÈëµÄ×éÖ¯µÈ¼¶¼°¸÷Ğè¶àÉÙ¾­ÑéÖµµÄÁĞ±í¡£
+é€™å€‹æŒ‡ä»¤æœƒåˆ—å‡ºä¸€ä»½ä½ åŠ å…¥çš„çµ„ç¹”ç­‰ç´šåŠå„éœ€å¤šå°‘ç¶“é©—å€¼çš„åˆ—è¡¨ã€‚
 C_HELP
                 );
         return 1;

@@ -4,16 +4,16 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "padded robe", "Èí¼×»¤ÅÛ" );
+	set_name( "padded robe", "è»Ÿç”²è­·è¢" );
 	add( "id", ({ "robe" }) );
-	set_short( "a padded robe", "Èí¼×»¤ÅÛ" );
+	set_short( "a padded robe", "è»Ÿç”²è­·è¢" );
 	set_long(
 		"You see a long robe with padded metal pieces. It looks light and\n"
 		"protective.\n",
-		"ÕâÊÇÒ»¼ş³¤ĞÍ»¤ÅÛ£¬ÉÏÃæÓÃ½ğÊôÆ¬ÏâÔÚ¼ç²¿¡¢Ç°ĞØÓëáá±³£¬¿´ÆğÀ´Ïàµ±Çá±ã\n"
-		"¶øÇÒ¾ß²»´íµÄ±£»¤Ğ§¹û¡£\n"
+		"é€™æ˜¯ä¸€ä»¶é•·å‹è­·è¢ï¼Œä¸Šé¢ç”¨é‡‘å±¬ç‰‡é‘²åœ¨è‚©éƒ¨ã€å‰èƒ¸èˆ‡å¾ŒèƒŒï¼Œçœ‹èµ·ä¾†ç›¸ç•¶è¼•ä¾¿\n"
+		"è€Œä¸”å…·ä¸éŒ¯çš„ä¿è­·æ•ˆæœã€‚\n"
 	);
-	set( "unit", "¼ş" );
+	set( "unit", "ä»¶" );
 	set( "type", "body" );
 	set( "material", "leather" );
 	set( "armor_class", 15 );

@@ -39,7 +39,7 @@ int cmd_halt(string str)
 		tell_room(environment(this_player()), ({
 			"There is a flash of lightning as " +
 			(string)this_player()->query("cap_name") + " ends the battle.\n",
-			(string)this_player()->query("c_cap_name") + "用巫师的神力制止了这场战斗。\n"}),
+			(string)this_player()->query("c_cap_name") + "鐢ㄥ帆甯殑绁炲姏鍒舵浜嗛�欏牬鎴伴銆俓n"}),
 			({ this_player() }));
 
 	return 1; }

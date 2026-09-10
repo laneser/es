@@ -8,20 +8,20 @@ int enhant(object me, int level)
 
 	if( me->query_temp("scholar_booyi") ) {
 		tell_object( me, 
-			"你最好休息一下再运功。\n");
+			"浣犳渶濂戒紤鎭竴涓嬪啀閬嬪姛銆俓n");
 		return 0;
 	}
 
 	if( me->query("force_points") < (fp=30-random(level/2)) ) {
 		tell_object( me,
-			"你内力似乎不足以运出布衣神功。\n");
+			"浣犲収鍔涗技涔庝笉瓒充互閬嬪嚭甯冭。绁炲姛銆俓n");
 		return 0;
 	}
 
 	tell_object( me, 
-		"你开始将内力聚於胸前并且开始运行护体布衣神功\。\n");
+		"浣犻枊濮嬪皣鍏у姏鑱氭柤鑳稿墠涓︿笖闁嬪閬嬭璀烽珨甯冭。绁炲姛\銆俓n");
 		
-	tell_room( environment(me),sprintf("%s将双手合十一副心无旁骛的样子。\n",me->query("c_name")), me);
+	tell_room( environment(me),sprintf("%s灏囬洐鎵嬪悎鍗佷竴鍓績鐒℃梺楱栫殑妯ｅ瓙銆俓n",me->query("c_name")), me);
 	db = 5 + level/3 + random(level/2);
 	me->add("force_points", -fp);
 	me->add("gonfus_exp/booyi", 2*level+1);
@@ -36,7 +36,7 @@ varargs void release_booyi(object me, int level, int silent)
 	if( !me ) return;
 	if( !silent )
 		tell_object( me,
-			"你停止布衣神功\的运行 .... 。\n");
+			"浣犲仠姝㈠竷琛ｇ鍔熺殑閬嬭 .... 銆俓n");
 			
 	me->delete_temp("extra_db/booyi");
 	call_out("booyi_again", 40-level, me);
@@ -46,7 +46,7 @@ void booyi_again(object me)
 {
 	if( !me ) return;
 	tell_object( me,		
-	"你的内力又渐渐的回到丹田....\n");
+	"浣犵殑鍏у姏鍙堟几婕哥殑鍥炲埌涓圭敯....\n");
 	
 	me->delete_temp("scholar_booyi");
 }

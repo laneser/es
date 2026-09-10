@@ -4,13 +4,13 @@ inherit OBJECT;
 
 void create()
 {
-	set_name( "great pill", "¾Å×ª½ðµ¤" );
+	set_name( "great pill", "ä¹è½‰é‡‘ä¸¹" );
 	add( "id", ({ "pill" }) );
-	set_short( "¾Å×ª½ðµ¤" );
+	set_short( "ä¹è½‰é‡‘ä¸¹" );
 	set_long(
-		"ÕâÊÇÒ»¿Å½ðÉ«µÄµ¤Ò©£¬ÓÐÒ»¹É·Ò·¼µÄÏãÎ¶¡£\n"
+		"é€™æ˜¯ä¸€é¡†é‡‘è‰²çš„ä¸¹è—¥ï¼Œæœ‰ä¸€è‚¡èŠ¬èŠ³çš„é¦™å‘³ã€‚\n"
 	);
-	set( "unit", "¿Å" );
+	set( "unit", "é¡†" );
 	set( "weight", 1 );
 	set( "value", ({ 1000, "silver" }) );
 	set( "no_sale", 1 );
@@ -34,7 +34,7 @@ int eat_pill(string str)
 	if ( str == "pill" && present( "great pill", player ) )
 	   {	   
 		write( 
-		"Äã³ÔÁËµ¤Ò©áá£¬¾õµÃÈ«ÉíÈýÍòÁùÇ§¸öÃ«¿×£¬ÎÞÒ»²»Êæ³©¡£\n"
+		"ä½ åƒäº†ä¸¹è—¥å¾Œï¼Œè¦ºå¾—å…¨èº«ä¸‰è¬å…­åƒå€‹æ¯›å­”ï¼Œç„¡ä¸€ä¸èˆ’æš¢ã€‚\n"
 		);
 		player->set("hit_points", (int)player->query("max_hp") );
 		player->set("spell_points", (int)player->query("max_sp") );

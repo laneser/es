@@ -4,14 +4,14 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Mithril Mace","Ã×ËÕÀï¶¤Í·é³");
+        set_name("Mithril Mace","ç±³è˜‡é‡Œé‡˜é ­æ§Œ");
         add("id",({"mace",}) );
-       set_short("Ã×ËÕÀï¶¤Í·é³");
+       set_short("ç±³è˜‡é‡Œé‡˜é ­æ§Œ");
        set_long(
-         "Ò»°ÑÃ×ËÕÀï¶¤Í·é³.\n"
+         "ä¸€æŠŠç±³è˜‡é‡Œé‡˜é ­æ§Œ.\n"
                );
 	
-	set( "unit", "°Ñ" );
+	set( "unit", "æŠŠ" );
  	set( "weapon_class", 24 );
        set("type","blunt");
 	set( "min_damage", 15 );

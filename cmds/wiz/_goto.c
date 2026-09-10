@@ -74,8 +74,8 @@ protected int goto_location(object where)
 	old = environment( this_player() );
 
 	if(old == where) {
-		write("你在原地跳了跳。\n");
-		say((string)this_player()->query("c_name") + "在原地跳了跳。\n",
+		write("浣犲湪鍘熷湴璺充簡璺炽�俓n");
+		say((string)this_player()->query("c_name") + "鍦ㄥ師鍦拌烦浜嗚烦銆俓n",
 			({ this_player() }));
 		return 1;
 	}

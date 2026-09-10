@@ -8,7 +8,7 @@
  
 //  Define LOGOUT_MSG to be the message displayed to users as they
 //  logout from the mud.
-#define LOGOUT_MSG 	"³©Íæ ES Ö®Óà, ÄîÒ»µãÊé°É! Ğ¡ĞÄÄãµÄ\¹¦\¿ÎÅ¶ ^_^ °İ°İ¡¡\n"
+#define LOGOUT_MSG 	"æš¢ç© ES ä¹‹é¤˜, å¿µä¸€é»æ›¸å§! å°å¿ƒä½ çš„åŠŸèª²å“¦ ^_^ æ‹œæ‹œã€€\n"
 
 //  Define IDLE_DUMP to equal the number of seconds a player 
 //  may be idle before call_idle_dump() is initiated within the player.

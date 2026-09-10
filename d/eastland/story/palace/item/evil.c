@@ -5,10 +5,10 @@ void trigger();
 void reset_duration();
 void create()
 {
-        set_name("evil damn","Ğ°Áé¸½Éí");
-        set_short("Ğ°Áé¸½Éí");
+        set_name("evil damn","é‚ªéˆé™„èº«");
+        set_short("é‚ªéˆé™„èº«");
         set_long(@LONG
-Ò»¸ö´øÓĞÉîÉòĞ°ÒâµÄ¶ñÁé£¬ËüÕı·¢³ö°§¶¾Ô¹ºŞµÄÉñÇé¶ñºİºİµØµÉÖøÄã£¡        
+ä¸€å€‹å¸¶æœ‰æ·±æ²ˆé‚ªæ„çš„æƒ¡éˆï¼Œå®ƒæ­£ç™¼å‡ºå“€æ¯’æ€¨æ¨çš„ç¥æƒ…æƒ¡ç‹ ç‹ åœ°çªè‘—ä½ ï¼        
 LONG
         );
         set("prevent_drop",1);
@@ -36,12 +36,12 @@ void init()
 }
 void do_quit(string arg)
 {
-   write("\nĞ°ÁéÅ­µÀ£ººß£¬Ïë Quit £¬ÓĞÄÇ÷á¼òµ¥Âğ ? \n\n");
+   write("\né‚ªéˆæ€’é“ï¼šå“¼ï¼Œæƒ³ Quit ï¼Œæœ‰é‚£éº¼ç°¡å–®å— ? \n\n");
    environment(this_object())->set("hit_points",1);
 }
 int do_block(string arg)
 {
-   write("\nÄã±»Ğ°Áé¸½ÉíÎŞ·¨×öÄÇÑùÊÂÇé !\n\n");
+   write("\nä½ è¢«é‚ªéˆé™„èº«ç„¡æ³•åšé‚£æ¨£äº‹æƒ… !\n\n");
    return 1; 
 }
 int damage(object victim)
@@ -66,7 +66,7 @@ void effect_damn()
    object statue,player;
    player=environment(this_object());
    if ( duration==0 ) {
-      tell_object(player,"\n¸½ÖøÔÚÄãÉíÉÏµÄĞ°Áé»³ÖøÉîÉòµÄÔ¹ºŞÏûÊ§ÁË!!\n\n");
+      tell_object(player,"\né™„è‘—åœ¨ä½ èº«ä¸Šçš„é‚ªéˆæ‡·è‘—æ·±æ²ˆçš„æ€¨æ¨æ¶ˆå¤±äº†!!\n\n");
       remove();
    }
    else {
@@ -81,7 +81,7 @@ void effect_damn()
          return ;
       }
       player->receive_damage(damage(player));
-      tell_object(player,"¸½ÖøÔÚÄãÉíÉÏµÄĞ°ÁéÖğ½¥µØ¿ĞÊ³ÄãµÄÈâÌå ...\n");
+      tell_object(player,"é™„è‘—åœ¨ä½ èº«ä¸Šçš„é‚ªéˆé€æ¼¸åœ°å•ƒé£Ÿä½ çš„è‚‰é«” ...\n");
       call_out("effect_damn",4);
    }
 }
