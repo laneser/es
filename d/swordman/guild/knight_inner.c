@@ -32,7 +32,7 @@ int look_book()
 	int ws;
 
 	ws = (int)this_player()->query("war_score");
-	if( !ws ) write( "你到目前為止還沒有建立任何戰功\。\n" );
+	if( !ws ) write( "你到目前為止還沒有建立任何戰功。\n" );
 	else write( "你目前累積的戰功共有 " + ws + " 點。\n" );
 
 	return 1;

@@ -73,7 +73,7 @@ int do_advance(string arg)
 	if( !arg ) return do_help("train");
 	lvl = (int)this_player()->query("monk_gonfu/"+arg);
 	if( member_array(arg, needed) != -1 && undefinedp(lvl) )
-		return notify_fail( "你還不會這武功\, 怎麼訓練?\n");
+		return notify_fail( "你還不會這武功, 怎麼訓練?\n");
 
 	if( member_array(arg, needed) == -1  ) {
 		write("沒有這個功夫!(只有少林武學和七十二絕技需要訓練哦!拳法和醫療武功不必) \n如果不是你打錯字了，請通知巫師。\n");

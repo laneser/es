@@ -30,7 +30,7 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL)
-    write("你和草精靈之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和草精靈之間的心靈傳遞沒有成功，召喚失敗。\n");
   else {
     write("草精靈對你說：沒問題...我馬上來幫你醫療!\n");
     tell_object(me,set_color("你見到遠處一個綠色的精靈站在一根草上飛了過來，草精靈將一片藥草敷在你的傷口上，\n你覺的一陣刺痛，草精靈又隨著風飛走了。\n","HIG"));

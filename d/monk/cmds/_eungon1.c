@@ -29,7 +29,7 @@ int cmd_eungon(string str)
                         return notify_fail("你正準備使用招式時，竟然發現你突然功力全失了。\n");
 
         if( member_array(str, fist) != -1 )
-                return notify_fail("基礎拳法可用 fist 指令使用, 不須運功\。\n");
+                return notify_fail("基礎拳法可用 fist 指令使用, 不須運功。\n");
 
         if( member_array(str, heals) != -1 ) heal = 1;
         else if( member_array(str, gonfus) != -1 ) heal = 0;
@@ -43,7 +43,7 @@ int cmd_eungon(string str)
              ( me->query("gonfu_busy") || me->query_temp("gonfu_busy") )  
            )
         if ( !me->query_temp("gonfu_top") )
-        return notify_fail("你目前正運功所以無法另外運用其它武功\。\n");
+        return notify_fail("你目前正運功所以無法另外運用其它武功。\n");
         code = find_object_or_load(MONK_GONFU_DIR+(heal?"heal/":"general/")+str);
         if( !code )
                 return notify_fail("沒有這種功夫! 請通知巫師或用 bug 指令報告招式名稱。\n");

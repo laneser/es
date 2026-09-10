@@ -32,7 +32,7 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL)
-    write("你和大地精靈之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和大地精靈之間的心靈傳遞沒有成功，召喚失敗。\n");
   else {
     write("大地精靈對你說：沒問題...我馬上來幫你擊退敵人!\n");
     tell_object(me,set_color("你見到地面突然裂開，大地精靈從中衝了出來和你一起攻擊敵人。\n","HIM"));

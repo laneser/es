@@ -14,7 +14,7 @@ void create()
         set("wealth/gold",100);
         set_long(
 "一位雷之護衛，是大國師用道家正統心法所招喚出來的，他負有守衛此地的神聖
-使命\。\n"
+使命。\n"
         );
         set_perm_stat("int", 25);
         set_perm_stat("str", 20);

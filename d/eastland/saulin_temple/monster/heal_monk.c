@@ -73,7 +73,7 @@ int check_tired()
         if ((int)this_object()->query("tired")==1)
         {
         tell_room( environment(), 
-        "天心大師正在運功\，你最好別吵他 !!\n" ,
+        "天心大師正在運功，你最好別吵他 !!\n" ,
         this_object() );
         return 0;
 	}
@@ -162,7 +162,7 @@ int report_master(string arg)
         tell_object( this_player(), @REPORT
         
 天心大師說: 阿彌陀佛! 善哉善哉! 施主此舉真乃是造福萬民，敝寺倘有濟世
-            微名全賴施主之功\。只是老納有一事不明，回陽草生長迅速，何
+            微名全賴施主之功。只是老納有一事不明，回陽草生長迅速，何
             以在數日之間枯死殆盡？又藥圃中之水井又何以一夜間乾涸見底
             ？種種疑問令人不解，施主有興可否前往一探(explore)？
 			

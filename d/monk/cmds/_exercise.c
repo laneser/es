@@ -67,12 +67,12 @@ int cmd_exercise( string arg )
         return notify_fail("你剛運功不久，體內充滿真氣，不適合操之過急馬上再練。\n");
 
     if( me->query_attackers() )
-         return notify_fail("你不能在戰鬥運功\，小心走火入魔 !!\n");
+         return notify_fail("你不能在戰鬥運功，小心走火入魔 !!\n");
     if(me->query("monk_songin") )
          return notify_fail("你正在集中精神誦經，無法運功!!\n");
 
 	if( me->query("stop_heal") )
-         return notify_fail("你現在不能運功\。\n");
+         return notify_fail("你現在不能運功。\n");
 
 	if( !arg || !sscanf(arg, "%d", max) ) max = exe_skill / 3;
         fe=(int)me->query("force_effect");

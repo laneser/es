@@ -13,7 +13,7 @@ int eungon(object me, int level)
 		return 0;
 	}
 	tell_object(me, 
-		"\n『身滅滅己，寂滅為樂』你全身運功\，準備使出「"+
+		"\n『身滅滅己，寂滅為樂』你全身運功，準備使出「"+
 		to_chinese(GONFU_NAME)+"」!!\n" );
 
 	tell_room( environment(me), 

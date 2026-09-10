@@ -13,7 +13,7 @@ LONG_DESCRIPTION
 這是一個寬闊的大房間，牆上龍飛鳳舞的寫著一個『龍』字，你發現牆壁和樑柱上有
 許多被強勁指力劃過的痕跡。
 角落坐著一個高大的僧人，地上放著幾塊破舊的蒲團，老僧似乎完全沒有注意到你的存在
- ，仍然在閉目打坐運功\。你發現牆邊貼了一張泛黃的紙片(paper)，上面似乎寫了一些字
+ ，仍然在閉目打坐運功。你發現牆邊貼了一張泛黃的紙片(paper)，上面似乎寫了一些字
 。老僧打坐的蒲團邊放著一本書，你隱約看到有個龍字。西邊回到七十二絕技房。 
 C_LONG_DESCRIPTION
 	);
@@ -28,7 +28,7 @@ C_LONG_DESCRIPTION
                        
        達到以上資格者，可在此習練龍爪手(practice dragon-claw)之少林絕技 
 
-       注: 如果你想改練別的絕技，可以用散功\ (sangon dragon-claw)，
+       注: 如果你想改練別的絕技，可以用散功 (sangon dragon-claw)，
            你的本絕技經驗點仍會被保留，只是不能用。  
 BOOK
 ]));         
@@ -75,7 +75,7 @@ int to_study(string arg)
     else if( (int)me->query_level() < 15 )
 		write("『空性說: 你的等級太低，沒資格學龍爪手』\n\n");
     else if( (int)me->query_perm_skill("inner-force") < 72 )
-		write("『空性說: 你的基本內功\(inner-force)技巧太差，沒資格學龍爪手』\n\n");
+		write("『空性說: 你的基本內功(inner-force)技巧太差，沒資格學龍爪手』\n\n");
     else if( ((int)me->query_perm_stat("str") < 16) ||
     		 ((int)me->query_perm_stat("dex") < 16) )
 		write("『空性說: 你的力量或敏捷不夠，沒資格學龍爪手』\n\n");

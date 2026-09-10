@@ -19,7 +19,7 @@ LONG_DESCRIPTION
 
 	ob->set( "c_item_desc", ([ 
 		"buildings" : @LONG_TEXT
-一些方方正正的建築,而這些建築似乎是一種碉堡,上面有著許許\ 
+一些方方正正的建築,而這些建築似乎是一種碉堡,上面有著許許 
 多多發射弓箭的地方.
 LONG_TEXT
  ]) );

@@ -22,9 +22,9 @@ LONG_DESCRIPTION
        2. 敏捷到達18。  
        3. 個性溫和，不喜濫造殺孽者。       
 
-       達到以上資格者，可在此習練金剛不壞體神功\(practice body-def)
+       達到以上資格者，可在此習練金剛不壞體神功(practice body-def)
 
-       注: 如果你想改練別的絕技，可以用散功\ (sangon body-def)，
+       注: 如果你想改練別的絕技，可以用散功 (sangon body-def)，
            你的本絕技經驗點仍會被保留，只是不能用。  
 BOOK
 	]) );
@@ -48,7 +48,7 @@ int to_delete(string arg)
 	if( !arg || arg != "body-def" ) return 0;
 	me = this_player();
 	if( undefinedp( me->query("monk_gonfu/body-def") ) )
-	     { write(" 你跟本不曾學過金剛不壞體神功\! \n");
+	     { write(" 你跟本不曾學過金剛不壞體神功! \n");
                return 1;
              }
         else {
@@ -67,13 +67,13 @@ int to_study(string arg)
 
 	me = this_player();	
   	if( !wizardp(me) && (string)me->query("class") != "monk" )
-  		write("你不是本公會的人所以不能學此功夫\。\n");
+  		write("你不是本公會的人所以不能學此功夫。\n");
   	else if( (int)me->query_level() < 15 )
-		write("空見搖頭說: 你的位階太低，不該練金剛不壞體神功\。\n\n");
+		write("空見搖頭說: 你的位階太低，不該練金剛不壞體神功。\n\n");
 	else if( (int)me->query_perm_stat("dex") < 18 )
 		write("空見說: 你的敏捷不夠，沒辦法教你。\n\n");
 	else if( (int)me->query("alignment") < 1000 )
-		write("空見合十道: 阿彌陀佛... 施主殺孽太重, 不宜習此武功\!。\n\n" );
+		write("空見合十道: 阿彌陀佛... 施主殺孽太重, 不宜習此武功!。\n\n" );
 	else if( !undefinedp(me->query("monk_gonfu/body-def")) ) {
 		if((int)me->query("monk_gonfu/body-def")==35) {
 			write("空見說道: 你已經完全瞭解金剛不壞體神功的精義了，可以再去鑽研另一種絕技。\n\n");

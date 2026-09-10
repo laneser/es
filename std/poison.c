@@ -157,7 +157,7 @@ int do_poison(string arg)
 		tell_object(dest, substr(message,"$P",query("short"))+",但是好像沒什麼作用。\n" );
 		message = sprintf( (string) query("poison_method"), user->query("c_name"),dest->query("c_name") );
 		tell_room(environment(this_player()),
-	    substr(message,"$P",query("short")) + "不過看起來沒有成功\。\n", ({user,dest}));
+	    substr(message,"$P",query("short")) + "不過看起來沒有成功。\n", ({user,dest}));
 
 		inv = all_inventory( env );
         	n = i = sizeof(inv);

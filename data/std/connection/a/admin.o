@@ -2,7 +2,7 @@
 name "admin"
 c_name "雪風"
 gender "male"
-password "ale`eakf!fkhecckjnjkn`k`nmggafnldg`hmmamh"
+password "$6$npB3eSzgXpblxJWQ$C1mAqpOV9N/fOlrmLRWLhlUwOINjE/oEWcmqi6VhFdfHTZsVaITpj5jOlH1tTbJsFsk6Dw2mChWQ3INoOuoDd."
 body "/std/user_ob/human"
 email "i@Mud.ren"
 real_name "admin"

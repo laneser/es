@@ -12,7 +12,7 @@ void create()
 	add( "id", ({ "officer" }) );
 	set_short("默爾斯軍官" );
 	set_long(
-		"你看到一個默爾斯的軍官，他正在尋找敵人——並且企圖建立戰功\。\n"
+		"你看到一個默爾斯的軍官，他正在尋找敵人——並且企圖建立戰功。\n"
 	);
 	set( "unit", "名" );
 	set( "race", "human" );

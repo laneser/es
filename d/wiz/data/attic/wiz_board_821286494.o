@@ -296,7 +296,7 @@ hibernate...
 當你在 exercise 之前有做過 songin ,當你 exercise 時看到
 又可以 songin 的訊息時,因為身上的 exercise_busy 的 temp 
 被 delete 掉,因此可以行動
-這個方法可百分之一百成功\...我想這是因為 songin 和 exercise 
+這個方法可百分之一百成功...我想這是因為 songin 和 exercise 
 所設的 busy temp 一樣所造成的....這是我的猜想...沒去看 code ,
 不知到是否正確..
 

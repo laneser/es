@@ -25,7 +25,7 @@ LONG_DESCRIPTION
        本室之空無大師出寺查案，需多日才可回此。                       
        達到以上資格者，可自行在此習練大力金剛指(practice power-finger) 
 
-       注: 如果你想改練別的絕技，可以散功\ (sangon power-finger)，
+       注: 如果你想改練別的絕技，可以散功 (sangon power-finger)，
            你的本絕技經驗點仍會被保留，只是不能用。  
 BOOK
 ]));         
@@ -70,7 +70,7 @@ int to_study(string arg)
 	else if( (int)me->query_level() < 15 )
 		write("『 你的職級太低，沒資格學。\n");
 	else if( (int)me->query_perm_skill("inner-force") < 72 )
-		write("『 你的基本內功\(inner-force)技巧太差，沒資格學。\n");
+		write("『 你的基本內功(inner-force)技巧太差，沒資格學。\n");
 	else if( ((int)me->query_perm_stat("str") < 17) 
 			  )
 		write(" 你的力量不夠，還沒資格學大力金剛指。\n");

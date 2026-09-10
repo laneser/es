@@ -65,7 +65,7 @@ int ask_staff()
    check_book_quest = me->query("book_quest_finish");
 
    if( !check_book_quest ) {
-      tell_object( me, "\n玄慈憂心地說道：唉！失去的楞枷經尚未尋回，目前我實在是難以靜下心來好好地傳授你武功\！\n");
+      tell_object( me, "\n玄慈憂心地說道：唉！失去的楞枷經尚未尋回，目前我實在是難以靜下心來好好地傳授你武功！\n");
       return 1;            }
 
    if( me->query("monk_gonfu/king-kong") ) {

@@ -67,11 +67,11 @@ int cmd_chutan()
 	int chu_skill, hp, dex, parry, block, dodge;
 
 	chu_skill = (int)this_player()->query_skill("chutan");
-	if( !chu_skill ) return notify_fail( "你沒有學過聚丹功\，你不能使用它來聚集內力....。\n");
+	if( !chu_skill ) return notify_fail( "你沒有學過聚丹功，你不能使用它來聚集內力....。\n");
 	hp = (int)this_player()->query("hit_points");
-	if( hp <35 ) return notify_fail( "你現在受傷過於嚴重，無法運功\.。\n" );
+	if( hp <35 ) return notify_fail( "你現在受傷過於嚴重，無法運功.。\n" );
     if( this_player()->query_temp( "layuter_chutan" ) )
-      return notify_fail( "你需要一段時間休息，才能有足夠真氣運功\..。\n");
+      return notify_fail( "你需要一段時間休息，才能有足夠真氣運功..。\n");
 	write( 
 "你坐了下來, 默頌內功心法, 將精神運至空靈之境... 你開始運功聚氣使真氣運行全身。\n");
 	tell_room( environment(this_player()), 

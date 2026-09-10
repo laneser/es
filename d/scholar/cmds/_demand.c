@@ -108,7 +108,7 @@ void check_demand(object me,int i)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic"))<=levels[i]) {
-    write("你和"+names[i]+"之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和"+names[i]+"之間的心靈傳遞沒有成功，召喚失敗。\n");
     return ;
   }
   else {

@@ -75,7 +75,7 @@ int do_advance(string arg)
 	lvl = (int)this_player()->query("monk_gonfu/"+arg);
 	if( member_array(arg, needed) != -1 && undefinedp(lvl) )
 		return notify_fail( can_read_chinese()?
-			"你還不會這武功\, 怎麼訓練?\n":
+			"你還不會這武功, 怎麼訓練?\n":
 			"You don't know such a gonfu!\n");
 
 	if( member_array(arg, needed) == -1  ) {

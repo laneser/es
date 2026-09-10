@@ -25,3 +25,21 @@ d/adventurer/hall/charch.c line 97: == always false because of incompatible type
 /include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
    17 | #define MONSTER   "/std/npc"
       |         ^
+/d/adventurer/hall/monsters/yamor.c:2:9: warning: Redeclaration of global variable 'alias'.
+    2 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+/d/adventurer/hall/monsters/yamor.c:2:9: warning: Redeclaration of global variable 'alias'.
+    2 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+/d/adventurer/hall/monsters/yamor.c:2:9: warning: Redeclaration of global variable 'alias'.
+    2 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^

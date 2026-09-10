@@ -30,7 +30,7 @@ int cmd_fist(string str)
 
 	me = this_player();
 	if( me->query("gonfu_busy") || me->query_temp("gonfu_busy") )
-    	return notify_fail("你目前正運功所以無法另外運用其它武功\。\n");
+    	return notify_fail("你目前正運功所以無法另外運用其它武功。\n");
 
 	if( str=="now") {
 		fist_now=(string)me->query("attack_skill");

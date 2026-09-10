@@ -49,7 +49,7 @@ C_LONG
 
 void point(object p)
 {
-    tell_object(p, "聖騎士似乎對你的問題沒有任何反應，不過你注意到他的槍尖指向西邊，也許\ ....\n");
+    tell_object(p, "聖騎士似乎對你的問題沒有任何反應，不過你注意到他的槍尖指向西邊，也許 ....\n");
     p->set_temp("lilia_direction", 1);
     return;
 }

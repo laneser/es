@@ -75,7 +75,7 @@ int cmd_chutan(string arg)
 
    if( me->query_temp("meditating")) return notify_fail("你正在打坐，無法聚丹...。\n");
 	if( me->query("stop_heal") )
-         return notify_fail("你現在不能運功\。\n");
+         return notify_fail("你現在不能運功。\n");
 
 	max = skill / 3;
     max = max/2 + random(max/2) + (int)me->query("force_effect");

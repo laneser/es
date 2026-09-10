@@ -2,7 +2,7 @@
 ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
 ","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Healer's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
 ","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"行醫者留言板",])
-messages ({(["id":775,"title":"< no title >","body":"Elon 請大家聚餐\,
+messages ({(["id":775,"title":"< no title >","body":"Elon 請大家聚餐,
 六月二日下午五點,
 在臺北車站西二門集合,
 Elon 會戴小紅帽, 很好認,
@@ -10,7 +10,7 @@ Elon 會戴小紅帽, 很好認,
 大概是自費吧.....:GRIN...:)
                           Digital 代 Elon
 ","time":802016102,"poster":"Digital",]),(["id":776,"title":"Re: < no title >","body":"On Thu Jun  1, Digital wrote:
-> Elon 請大家聚餐\,
+> Elon 請大家聚餐,
 > 六月二日下午五點,
 > 在臺北車站西二門集合,
 > Elon 會戴小紅帽, 很好認,
@@ -43,14 +43,14 @@ Elon 會戴小紅帽, 很好認,
 
 	剩15天畢業的 Jed
 ","title":"Re: Re: < no title >","time":802107366,"poster":"Arusa",]),(["id":778,"body":"On Thu Jun  1, Digital wrote:
-> Elon 請大家聚餐\,
+> Elon 請大家聚餐,
 > 六月二日下午五點,
 > 在臺北車站西二門集合,
 > Elon 會戴小紅帽, 很好認,
 > 請大家捧場,
 > 大概是自費吧.....:GRIN...:)
 >                           Digital 代 Elon
-  Elon 請大家聚餐\,
+  Elon 請大家聚餐,
 [C[C 大概是自費吧..
 奇怪....
 ","title":"Re: < no title >","time":802142471,"poster":"Dey",]),(["id":780,"body":"

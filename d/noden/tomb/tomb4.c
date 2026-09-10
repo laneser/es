@@ -25,7 +25,7 @@ LONG_DESCRIPTION
 LONG_TEXT
 ,
 		"corner" : @LONG_TEXT
-角落裡坐著一個骷髏\，你發現他的手上似乎抓著一張字條(note)。
+角落裡坐著一個骷髏，你發現他的手上似乎抓著一張字條(note)。
 LONG_TEXT
 ,
 		"note" : "「...	蜘蛛記號是貝塔爾人的傳送法術標記，只要用手觸摸(touch)...」\n",

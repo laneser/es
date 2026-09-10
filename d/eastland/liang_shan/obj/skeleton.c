@@ -8,7 +8,7 @@ int create()
 	seteuid(getuid());
 	set_name("skeleton", "\巨大的髑髏\");
 	set_short("\巨大的髑髏\");
-        set_long("這具巨大的髑髏\，看起來像是人類的遺骸，但是卻異常的巨大，\n"
+        set_long("這具巨大的髑髏，看起來像是人類的遺骸，但是卻異常的巨大，\n"
                  "更怪的是，在頭上竟然生了兩隻利角，你看了不禁倒吸一口涼氣。\n"
                  "不過不管怎麼說，一個死人是不會威脅到你的....\n"
                  "它看起來蠻重的，不知道是那個傢伙把它放(put) 在這?\n");
@@ -63,7 +63,7 @@ int to_get(string arg)
 	else if ( (string)me->query_temp("leader") != (string)me->query("name"))
 		return notify_fail("只有隊伍的領導者，才能下命令喔。\n"); 
 	else if ( !check_force(usr,num)) 
-		return notify_fail("你們好像搬不動這具巨大的髑髏\，丟掉一些裝備吧\n");
+		return notify_fail("你們好像搬不動這具巨大的髑髏，丟掉一些裝備吧\n");
         for( i=0; i<sizeof(usr); i++ ) 
 	{	usr[i]->set_temp("carry_skeleton",1); 
 		tell_object(usr[i],"一，二，三....你費盡吃奶的力氣把它拿起來\n");

@@ -19,7 +19,7 @@ int enhant(object me, int level)
 	}
 
 	tell_object( me, 
-		"你開始將內力聚於胸前並且開始運行護體布衣神功\。\n");
+		"你開始將內力聚於胸前並且開始運行護體布衣神功。\n");
 		
 	tell_room( environment(me),sprintf("%s將雙手合十一副心無旁騖的樣子。\n",me->query("c_name")), me);
 	db = 5 + level/3 + random(level/2);

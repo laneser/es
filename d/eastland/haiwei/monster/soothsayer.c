@@ -87,6 +87,6 @@ void my_special(object player)
 	if( !present(player, environment()) ) return;
    tell_object(player, 
 		"算命先生壓低聲音說道: 看來閣下與小弟頗有緣份 .... 如果閣下能再\n"
-             "        出 1000 塊金幣，也許\ ....\n" );
+             "        出 1000 塊金幣，也許 ....\n" );
 	this_player()->set_temp("payed_soothsayer", 1 );
 }

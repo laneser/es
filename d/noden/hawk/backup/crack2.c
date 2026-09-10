@@ -22,7 +22,7 @@ C_LONG_DESCRIPTION
 	set( "item_desc", ([ 
 		"hole" : @LONG_TEXT
 你將眼睛湊進那個小洞，發現外面是一個懸崖壁上的平臺，平臺上赫然躺著一具
-白色的骷髏\(skeleton)！
+白色的骷髏(skeleton)！
 LONG_TEXT
  ]) );
 	set( "exits", ([ 
@@ -38,7 +38,7 @@ void look_skeleton()
 
 	if( !key_present )
 		write(
-		    "一具早已被風沙侵蝕得脆弱不堪的骷髏\，似乎是個鳥人的骸骨。\n"
+		    "一具早已被風沙侵蝕得脆弱不堪的骷髏，似乎是個鳥人的骸骨。\n"
 		);
 	else {
 		write(@ALONG

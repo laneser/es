@@ -26,7 +26,7 @@ LONG_DESCRIPTION
          
        達到以上資格者，可在此習練拈花指(practice keep-flower)之少林絕技 
 
-       注: 如果你想改練別的絕技，可以用散功\ (sangon keep-flower)，
+       注: 如果你想改練別的絕技，可以用散功 (sangon keep-flower)，
            你的本絕技經驗點仍會被保留，只是不能用。  
 BOOK
 ]));         

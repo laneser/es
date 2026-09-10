@@ -94,8 +94,8 @@ skill named Fire_Ball for mage..
 soo..
  
 for skills.
-護體神功\ -> 外丹功\ - Exterior Endurance
-運功療傷 -> 內功\, 內丹功\ - Inner Control
+護體神功 -> 外丹功 - Exterior Endurance
+運功療傷 -> 內功, 內丹功 - Inner Control
 攻擊功夫 -> 攻守技巧 - Martial Art
  
 If you need the very 功夫(spell) , say ...
@@ -105,9 +105,9 @@ Heal Cycle, Cure Cycle,
 Platino.
 ","time":768811850,"poster":"Platino",]),(["id":9,"title":"Monk Guild. addition & modification","body":"Modifications to my last post.
  
-I see that 內丹功\ is same as Inner-Force..
+I see that 內丹功 is same as Inner-Force..
 So.. I guess you can use \"Heal Cycle\" for the skill 運功療傷
-\"Inner Control\" for the skill, 運功\, and
+\"Inner Control\" for the skill, 運功, and
 \"eungon\" for the verb, cast,. .. use \"eun\" for short id
  
 點穴 -> 用內功麻醉 -> \"Force Stun\"

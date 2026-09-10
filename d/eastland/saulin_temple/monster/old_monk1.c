@@ -57,11 +57,11 @@ int special_attack()
     if(!victim) return 0;
     if(random(20)>7) return 0;
     tell_room(environment(victim),
-"\n玄慈運起九陽神功\，一道渾厚的內力自丹田湧向雙手，向"+
+"\n玄慈運起九陽神功，一道渾厚的內力自丹田湧向雙手，向"+
 (string)victim->query("c_name")+"直衝而去。\n",victim);
     tell_object(victim,@C_LONG
     
-玄慈運起九陽神功\，霎時你被一股強大的內力籠罩著。突然這股勁力直衝
+玄慈運起九陽神功，霎時你被一股強大的內力籠罩著。突然這股勁力直衝
 你的丹田，你覺得你的經脈似乎已經斷了。
 
 C_LONG

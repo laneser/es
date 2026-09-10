@@ -57,7 +57,7 @@ int do_push(string str)
    else 
       {
       write("守衛說:不要碰那個按鈕.\n");
-      say(this_player()->query("short")+"試著按下按鈕但被守衛阻止\.n");
+      say(this_player()->query("short")+"試著按下按鈕但被守衛阻止.n");
       return 1;   
       }
 }

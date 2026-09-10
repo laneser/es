@@ -61,7 +61,7 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL)
-    write("你和黑暗精靈之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和黑暗精靈之間的心靈傳遞沒有成功，召喚失敗。\n");
   else {
     write("黑暗精靈對你說：沒問題...我馬上來幫你增加戰鬥潛能!\n");
     tell_object(me,set_color("一團黑霧飄了過來，你耳邊聽到黑暗精靈對你說:讓我用暗黑鬥氣來提升你的戰鬥力吧 ! 不知它向你施了什麼法術，你突然覺的自己的精力大增。\n","HIW"));

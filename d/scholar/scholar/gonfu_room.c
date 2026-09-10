@@ -19,8 +19,8 @@ C_LONG_DESCRIPTION
          "book":@BOOK
 書上有寫著一些武功心法如果你想學的話可以用 train <功夫名稱> 學得。
 
-護體神功\ ： 布衣神功\(booyi)
-輕功\     ： 天羅步(tanlo)
+護體神功 ： 布衣神功(booyi)
+輕功     ： 天羅步(tanlo)
 運功心法 ： 運功療傷(force-heal)    
 劍術     ： 無名劍法(unknow)
 

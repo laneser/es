@@ -8,7 +8,7 @@ inherit DAEMON;
 int eungon(object me, int level)
 {
 	tell_object(me, 
-		"\n『苦海無涯，回頭是岸』你全身運功\，準備使出「"+
+		"\n『苦海無涯，回頭是岸』你全身運功，準備使出「"+
 		to_chinese(GONFU_NAME)+"」!!\n" );
 
 	tell_room( environment(me), 

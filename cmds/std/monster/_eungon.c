@@ -60,7 +60,7 @@ code = GONFU_D->find_gonfu( gonfu );
 
 skill=this_player()->query_skill("inner-control");
 if (random( fp_cost>100?100:fp_cost)  >  skill) {
-      write ("你試圖運氣發功\... 但失敗了..... \n");
+      write ("你試圖運氣發功... 但失敗了..... \n");
 
       tell_room(environment(this_player()), 
         this_player()->query("c_name")+"突然大叫一聲... 似忽運功岔了氣了 \n",

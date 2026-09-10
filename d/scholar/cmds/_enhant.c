@@ -26,7 +26,7 @@ int cmd_enhant(string str)
 
         if( str == "stop" ) {
                 write( 
-                        "你停止運用任何武功\。\n");
+                        "你停止運用任何武功。\n");
                 me->delete("attack_skill");
                 me->delete("defense_skill");
                 return 1;
@@ -40,7 +40,7 @@ int cmd_enhant(string str)
                         "( 你上一個動作還沒有完成，無法施展招式。 )\n");
 
         if( me->query("gonfu_busy") || me->query_temp("gonfu_busy") )
-        return notify_fail("你目前正運功所以無法另外運用其它武功\。\n");
+        return notify_fail("你目前正運功所以無法另外運用其它武功。\n");
 
         if( me->query_temp("stop_enhant") || me->query("stop_enhant") )
                 return notify_fail("你正準備使用招式時，竟然發現你突然功力全失了。\n");

@@ -107,7 +107,7 @@ varargs string get_list ()
   if ( !sizeof(top_list0) && !sizeof(top_list1) && !sizeof(top_list2) )
     return  "對不起，少林僧侶功勳榜目前是空的。\n";
   msg = "少林僧侶功勳榜前 " + sizeof(top_list2) + " 名:\n";
-  msg += "##|  玩家姓名   七十二絕技 熟練度 | 玩家  姓名   功\ 勞 | 玩家  姓名  經驗總值\n";
+  msg += "##|  玩家姓名   七十二絕技 熟練度 | 玩家  姓名   功 勞 | 玩家  姓名  經驗總值\n";
   msg += "--+------------ ---------- -------+------------ -------+------------ --------\n";
 
   for (i=0; i<sizeof(top_list2); i++) {

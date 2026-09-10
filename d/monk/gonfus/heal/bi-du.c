@@ -47,7 +47,7 @@ varargs int eungon(object me, int level)
 		"你想清楚穴道運行和全身脈絡分佈，運起身上內力，企圖逼出所中之毒 ....\n");
 
 	tell_room( environment(me), 
-		me->query("c_name")+"運起神功\，企圖逼出身上的毒素。\n" , me );
+		me->query("c_name")+"運起神功，企圖逼出身上的毒素。\n" , me );
 
 	me->set_temp("block_command", 1);
 	me->set_temp("block_defense", 1);

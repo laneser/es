@@ -61,7 +61,7 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL)
-    write("你和木精靈之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和木精靈之間的心靈傳遞沒有成功，召喚失敗。\n");
   else {
     me->set("demand/wood",2);
     write("木精靈對你說：沒問題...我馬上來幫你增加戰鬥潛能!\n");

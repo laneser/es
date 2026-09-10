@@ -64,7 +64,7 @@ int do_advance(string arg)
 	if( !arg ) return do_help("train");
 	lvl = (int)this_player()->query("scholar_gonfu/"+arg);
 	if( undefinedp(lvl) )
-		return notify_fail("你還不會這武功\, 怎麼練習?\n" );
+		return notify_fail("你還不會這武功, 怎麼練習?\n" );
 
 	if( member_array(arg, needed) == -1 || lvl >= MAX_GONFU_LVL ) {
 		write("你已經完全瞭解"+to_chinese(arg)+"的奧義了。\n");

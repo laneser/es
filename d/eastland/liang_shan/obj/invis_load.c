@@ -16,7 +16,7 @@ int create()
         set("weight",200);
 	set("value",({ 0, "silver"}) );
 	set("prevent_drop",1);
-        set( "extra_look", "$N正和一些人，吃力的抬著一具巨大的髑髏\。\n" );
+        set( "extra_look", "$N正和一些人，吃力的抬著一具巨大的髑髏。\n" );
 }
 
 void init()
@@ -28,7 +28,7 @@ void init()
 
 string query_short()
 {
-  return query("Title")+"[抬著一具巨大髑髏\]" ;
+  return query("Title")+"[抬著一具巨大髑髏]" ;
 }
 int to_quit()
 {

@@ -9,7 +9,7 @@ void create()
 	set_short( "天師靴" );
 	set_long( 
 @C_TOPIC
-一雙據說是由龍虎山  張天師施術過的靴子，有著意想不到的功效\。
+一雙據說是由龍虎山  張天師施術過的靴子，有著意想不到的功效。
 C_TOPIC
 	);
 	set( "unit", "雙" );

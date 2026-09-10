@@ -10,7 +10,7 @@ void create()
 LONG_DESCRIPTION
 		, @C_LONG_DESCRIPTION
 一進入房間，你的目光首先被房中一個看起來很瘦的老僧所吸引，角落中用草書
-寫著『少林金剛不壞神功\』。你可以發現大部份的絕技都是攻擊用的，少數如金剛不
+寫著『少林金剛不壞神功』。你可以發現大部份的絕技都是攻擊用的，少數如金剛不
 壞體神功則是純粹防禦用的功夫。要學哪一種則完全是你的選擇了。 
 牆邊貼了一張的紙條(paper)，上面似乎寫了一些字，北邊可回七十二絕技房。
 C_LONG_DESCRIPTION
@@ -24,9 +24,9 @@ C_LONG_DESCRIPTION
        2. 敏捷到達18。  
        3. 個性溫和，不喜濫造殺孽者。       
 
-       達到以上資格者，可在此習練金剛不壞體神功\(practice body-def)
+       達到以上資格者，可在此習練金剛不壞體神功(practice body-def)
 
-       注: 如果你想改練別的絕技，可以用散功\ (sangon body-def)，
+       注: 如果你想改練別的絕技，可以用散功 (sangon body-def)，
            你的本絕技經驗點仍會被保留，只是不能用。  
 BOOK
 	]) );
@@ -50,7 +50,7 @@ int to_delete(string arg)
 	if( !arg || arg != "body-def" ) return 0;
 	me = this_player();
 	if( undefinedp( me->query("monk_gonfu/body-def") ) )
-	     { write(" 你跟本不曾學過金剛不壞體神功\! \n");
+	     { write(" 你跟本不曾學過金剛不壞體神功! \n");
                return 1;
              }
         else {
@@ -69,13 +69,13 @@ int to_study(string arg)
 
 	me = this_player();	
   	if( !wizardp(me) && (string)me->query("class") != "monk" )
-  		write("你不是本公會的人所以不能學此功夫\。\n");
+  		write("你不是本公會的人所以不能學此功夫。\n");
   	else if( (int)me->query_level() < 15 )
-		write("空見搖頭說: 你的位階太低，不該練金剛不壞體神功\。\n\n");
+		write("空見搖頭說: 你的位階太低，不該練金剛不壞體神功。\n\n");
 	else if( (int)me->query_perm_stat("dex") < 18 )
 		write("空見說: 你的敏捷不夠，沒辦法教你。\n\n");
 	else if( (int)me->query("alignment") < 1000 )
-		write("空見合十道: 阿彌陀佛... 施主殺孽太重, 不宜習此武功\!。\n\n" );
+		write("空見合十道: 阿彌陀佛... 施主殺孽太重, 不宜習此武功!。\n\n" );
 	else if( !undefinedp(me->query("monk_gonfu/body-def")) )
 		write("空見嘆了一口氣說: 你已經學過金剛不壞體神功了，要專精就快去練習!。\n\n" );
     else if( me->query("monk_learn/72") )

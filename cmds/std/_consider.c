@@ -51,7 +51,7 @@ int cmd_consider(string arg)
 	else if( diff < -2000 ) write( 
 		"別傻了，你大概有一半以上的機會在一回合內被殺。\n");
 	else if( diff < -1000 ) write( 
-		"如果你穿著全套最好的盔甲，手持稀世寶刀，外帶一大堆恢復藥劑，也許\....\n");
+		"如果你穿著全套最好的盔甲，手持稀世寶刀，外帶一大堆恢復藥劑，也許....\n");
 	else if( diff < -500 ) write( 
 		"你贏的機會很低，對方的各項能力都比你強很多。\n");
 	else if( diff < -200 ) write( 

@@ -17,7 +17,7 @@ C_LONG_DESCRIPTION
 	set( "exits", ([ 
 		"east" : TOMB"/room1",  ]) );
 	set( "item_desc" , ([
-		"skeleton" : "一具駭人的骷髏\，也許你可以搜索一下。\n" ]) );
+		"skeleton" : "一具駭人的骷髏，也許你可以搜索一下。\n" ]) );
 	reset();	
 }
 

@@ -26,7 +26,7 @@ LONG_DESCRIPTION
                        
        達到以上資格者，可在此習練般若掌(practice bolo-fist)之少林絕技 
 
-       注: 如果你想改練別的絕技，可以用散功\ (sangon bolo-fist)，
+       注: 如果你想改練別的絕技，可以用散功 (sangon bolo-fist)，
            你的本絕技經驗點仍會被保留，只是不能用。  
 BOOK
        ]));         
@@ -73,7 +73,7 @@ int to_study(string arg)
 	else if( (int)me->query_level() < 15 )
 		write("『虛合曰: 你的職級太低，沒資格學般若掌。\n");
 	else if( (int)me->query_perm_skill("inner-force") < 70 )
-		write("『虛合曰: 你的基本內功\(inner-force)技巧太差，沒資格學般若掌。\n");
+		write("『虛合曰: 你的基本內功(inner-force)技巧太差，沒資格學般若掌。\n");
 	else if( ((int)me->query_perm_stat("str") < 17) ||
 			 ((int)me->query_perm_stat("dex") < 16) )
 		write("虛合笑道: 你的力量或敏捷不夠，還沒資格學般若掌。\n");

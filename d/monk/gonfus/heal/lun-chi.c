@@ -55,7 +55,7 @@ int eungon(object me, int level)
 		BLEEDING->remove_effect(me);
 	else {
 		tell_object( me, 
-			"但是結果只是減緩了傷勢，並未完全成功\。\n");
+			"但是結果只是減緩了傷勢，並未完全成功。\n");
 		// make the result random case.
 		switch( random(3) ) {
 			case 1 : bleed[0] *= 2; break;

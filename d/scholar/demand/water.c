@@ -30,7 +30,7 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic")+LEVEL)<=LEVEL)
-    write("你和水精靈之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和水精靈之間的心靈傳遞沒有成功，召喚失敗。\n");
   else {
     write("水精靈對你說：沒問題...我馬上來幫你醫療!\n");
     tell_object(me,set_color("你見到天空一朵烏雲飄來，水精靈從中飄了出來，水精靈用手觸摸你的傷口，你覺的一陣\n冰涼，水精靈又隨著烏雲飄走了。\n","HIB"));

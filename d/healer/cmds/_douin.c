@@ -1,7 +1,7 @@
 //#pragma save_binary
 //   create by Indra@Eastern_Story
 //
-//  導引術(即氣功\) , 由spellpower 改成..
+//  導引術(即氣功) , 由spellpower 改成..
 //  
 #include <mudlib.h>
 #include "/d/healer/healer.h"

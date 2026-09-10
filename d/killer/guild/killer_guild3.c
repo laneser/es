@@ -78,7 +78,7 @@ int to_study(string arg)
 //        else if( (int)me->query_level() < 15 )
 //                write("『 你的職級太低，沒資格學。\n");
 //        else if( (int)me->query_perm_skill("inner-force") < 72 )
-//                write("『 你的基本內功\(inner-force)技巧太差，沒資格學。\n");
+//                write("『 你的基本內功(inner-force)技巧太差，沒資格學。\n");
 //        else if( ((int)me->query_perm_stat("str") < 17) 
 //                          )
 //                write(" 你的力量不夠，還沒資格學大力金剛指。\n");

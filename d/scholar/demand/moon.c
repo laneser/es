@@ -31,7 +31,7 @@ void check_demand(object me)
 
   me->delete_temp("summon_busy");
   if (random(me->query_skill("polemic"))<=LEVEL)
-    write("你和月光精靈之間的心靈傳遞沒有成功\，召喚失敗。\n");
+    write("你和月光精靈之間的心靈傳遞沒有成功，召喚失敗。\n");
   else {
     write("月光精靈對你說：沒問題...我馬上來幫你醫療!\n");
     tell_object(me,set_color("你見到一道黃光從天空直射而至，月光精靈從中走了出來，突然月光精靈全身放出一片\n金色光芒籠罩著你，你感覺一陣溫暖，月光精靈又消失在黃光之中。\n","HIY"));
