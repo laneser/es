@@ -2,261 +2,140 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## 專案概覽
+東方故事 MUD —— 繁體中文 LPMud，跑在 FluffOS 上。這個 repo 是 **mudlib**（用 LPC
+寫的遊戲世界），驅動本身由 `.devcontainer/` 從 source 建置，不在 repo 裡。
+mudlib 自稱 `ES_Lib`，血緣是 TMI-2 mudlib 的中文化分支，檔案多數寫於 1992–2001 年。
 
-這是「東方故事 MUD」的 mudlib（LPC 原始碼樹）。mudlib 自稱 `ES_Lib`（見 `include/config.h`），
-源流是 TMI-2 mudlib 的中文化分支，大量檔案仍保留 1992–1995 年的 TMI 原始檔頭與作者註解。
+**架構、設計決策、技術債請看 [`doc/arc42/`](doc/arc42/README.md)。**
+這份檔案只寫「現在要動手需要知道的」。
 
-這裡**沒有** build system、套件管理、linter 或測試框架。所有 `.c` 檔都是 LPC，
-由驅動在執行期即時編譯；「部署」等於在遊戲內用 `update` 重新載入物件。
+沒有 build system、套件管理或 linter。所有 `.c` 都是 LPC，由驅動在執行期即時編譯，
+「部署」等於在遊戲內 `update` 重新載入物件。
 
-## 執行方式
-
-驅動跑在 devcontainer 裡（**FluffOS v2026.0901.0**，自 source 建置）：
+## 啟動
 
 ```bash
-# 建立映像（第一次，約 3 分鐘）
 docker build -t es-mud-fluffos:2026.0901 -f .devcontainer/Dockerfile .devcontainer
-
-# 啟動 MUD
 docker run -d --name es-mud -p 8888:8888 -v "$PWD":/mudlib -w /mudlib \
   es-mud-fluffos:2026.0901 driver /mudlib/etc/fluffos.cfg
-
-docker logs -f es-mud     # 啟動與編譯錯誤
-tail -f log/debug.log     # 同上，mudlib 端的錯誤處理器輸出
-telnet localhost 8888     # 連進遊戲
-docker rm -f es-mud       # 停止
+docker exec -it es-mud telnet 127.0.0.1 8888    # 容器內已裝 telnet
 ```
 
-VS Code 直接開 `.devcontainer/devcontainer.json` 也可以，工作目錄掛在 `/mudlib`。
+- 設定檔是 **`etc/fluffos.cfg`**，不是根目錄的 `config.cfg`（後者是舊格式，留作對照）。
+  裡面標示「相容」的開關是為了讓 1990 年代的 LPC 照原本語意運作，**改動會改變既有程式行為**。
+- 帳號 `admin` / `12345`（另有 `mudren`）。
+- 用 `127.0.0.1` 而非 `localhost`：driver 只綁 IPv4。
+- `log/`、`tmp/`、`data/` 是執行期產物。`data/` 被 git 追蹤，
+  **跑過遊戲後 `git status` 一定不乾淨**，commit 前要確認沒把測試痕跡送出去。
 
-- **設定檔是 `etc/fluffos.cfg`**，不是根目錄的 `config.cfg`。後者是 MudOS 0.9.20 / FluffOS 2017
-  時代的舊格式，留著純供對照；`mudos.exe` 同理，是舊的 Windows 驅動執行檔，在現在的流程中用不到。
-- `etc/fluffos.cfg` 裡標示「相容」的開關（`sane explode string`、`old type behavior`、
-  `old range behavior`、`this_player in call_out` 等）是為了讓 1990 年代的 LPC 照原本語意運作。
-  FluffOS 2019 以後把這些原本的編譯期 `#define` 改成執行期設定，**改動它們會改變既有程式的行為**。
-- 管理員帳號 `admin`（另有 `mudren`），密碼 `12345`。
-- `log/`、`tmp/`、`data/`（玩家與物件存檔）是執行期產物，不是原始碼。
+## 遊戲內的開發迴圈
 
-### 遊戲內的開發迴圈
+指令都在 `/cmds/` 下、檔名為 `_<name>.c`：
 
-開發是在遊戲內進行的，命令都在 `/cmds/` 下、檔名為 `_<cmd>.c`：
+- `update <file>` 重新編譯載入單一物件；`update -r/-R` 連同 inherit 鏈深度更新
+  （改 `/std/user.c` 這類基底檔時需要）。不帶參數時用玩家的 `cwf`。
+- `clone` / `dest` / `load` / `goto` / `at` / `eval` —— 實例化與檢視。
+- `data` / `datatmp` / `sc` / `ss` —— 檢視物件的 `ob_data` / `tmp_ob_data`。
 
-- `update <file>`：重新編譯並載入單一物件；`update -r/-R` 連同 inherit 鏈深度更新
-  （改 `/std/user.c` 這類基底檔時需要）。不帶參數時用玩家的 `cwf`（current working file）。
-- `clone` / `dest` / `load` / `goto` / `at` / `eval`：實例化與檢視物件。
-- `data` / `datatmp` / `sc` / `ss`：檢視物件的 `ob_data` / `tmp_ob_data`。
+**改 simul_efun 或 master 之後要重啟 driver**，`update` 不夠。
 
-### lest：測試與全站掃描
-
-`lest`（LPC test）是這個 lib 的測試執行器，巫師指令，`help lest` 有完整說明。
-它分兩層：
-
-**第一層 — 每個 `.c` 都 `load_object()` 一遍**，抓編譯期錯誤。
-FluffOS 是 lazy 編譯，檔案沒被用到就不會編譯，壞掉的檔案可以潛伏很久，
-升級驅動之後尤其如此。
-
-**第二層 — `xxx.c` 旁邊若有 `xxx.spec.c`，就把裡面每個 `test_` 開頭的函式跑一遍。**
-spec 檔 `inherit SPEC`（`/std/lest/spec.c`），測試函式自動被 `functions()` 找出來，
-收到的參數是受測物件（預設 `clone_object()`，房間或 daemon 這種不該 clone 的
-就覆寫 `lest_subject()`）。跑完 `lest_cleanup()` 會把東西收掉。
+## 測試
 
 ```
-lest /obj        對目錄底下所有 .c 跑測試
+lest /obj        對目錄底下所有 .c 跑測試（load 一遍 + 跑 spec）
 lest             顯示上次的報告（含覆蓋率與失敗明細）
 lest -u          列出還沒有 spec 的檔案
+help lest        完整說明
 ```
 
-一個 spec 長這樣：
+`xxx.c` 旁邊放 `xxx.spec.c` 就會被執行，`test_` 開頭的函式自動被找出來：
 
 ```c
 #include <lest.h>
 inherit SPEC;
 
 void test_c_name(object ob) { expect_eq(ob->query("c_name"), "繃帶", "中文名"); }
-void test_weight(object ob) { expect_gt(ob->query("weight"), 0, "重量為正"); }
 ```
 
-斷言有 `expect_eq`、`expect_ne`、`expect_gt`、`expect_true`、`expect_object`、
-`expect_string`，以及自己給條件的 `expect`。
-**LPC 識別字只能用 ASCII**，函式名寫英文，中文放在斷言描述裡
-（`void test_中文名()` 會得到 `Illegal character 0xe4`）。
+細節與現有 spec 清單見 [`doc/arc42/10-quality-and-testing.md`](doc/arc42/10-quality-and-testing.md)。
 
-現成的例子在 `/obj/bandage.spec.c` 與 `/obj/torch.spec.c`。後者值得一讀：
-火把的 `light` 屬性要點燃後才有，所以測的是「點得起來」而不是「現在亮著」——
-測試失敗時第一件事是判斷錯的是程式還是測試。
+**執行期錯誤看 `log/debug.log`**（中文的「執行時段錯誤」，含完整呼叫堆疊與觸發者），
+**編譯錯誤看 `d/<領域>/log`**（依領域分類）。
+`lest` 只抓得到編譯期問題，執行期的型別錯誤要靠實際遊玩加上讀 log。
 
-掃描是有副作用的（daemon 會啟動、房間會 clone 出 NPC），請在測試環境跑。
-完整記錄在 `/log/lest`。
+⚠️ **driver 執行中不要 `rm log/debug.log`** —— driver 持有那個 handle，
+刪掉之後錯誤全部寫進虛空，要連帶重啟。mudlib 寫的 log（領域 log、`log/lest`）則沒事。
 
-### log 怎麼讀
+## 編碼：UTF-8 繁體中文
 
-錯誤散在三個地方，寫入者不同，行為也不同：
+全樹 UTF-8。從 Big5 → GBK → UTF-8 轉過兩次，留下三種痕跡：
 
-| 檔案 | 誰寫的 | 內容 |
+- 少數 `□`（U+25A1）缺字，例如 `cmds/std/_look.c:406`。無法自動修復。
+- 27 處行尾續行型、59 處雙反斜線型的殘留轉義反斜線未處理。
+- `data/attic/` 16 個檔含 U+FFFD。
+
+**LPC 識別字只能用 ASCII** —— 函式名寫英文，中文放字串與註解裡。
+`void test_中文名()` 會得到 `Illegal character 0xe4`。
+
+## 最容易踩的地雷
+
+### `_` 前綴的虛擬物件
+
+`/d/` 下約 970 個 `_foo.c` **不繼承任何東西**，只提供 `void create(object ob)`，
+由同目錄的 `virtual/server.c` 生成。
+
+**引用時寫不含底線的路徑**（`/d/eastland/easta/east_ent`），**編輯時改有底線的檔**。
+
+機制詳見 [`doc/arc42/08-crosscutting-concepts.md`](doc/arc42/08-crosscutting-concepts.md)。
+
+### simul_efun 必須在聚合檔裡
+
+新增 `/adm/simul_efun/xxx.c` 之後**一定要在 `/adm/obj/simul_efun.c` 加一行 include**，
+而且**順序有意義**（被依賴的排前面）。
+
+⚠️ 該目錄下有 5 個檔案**沒有被 include**：`message.c`、`help.c`、`lines.c`、
+`cat.1208.c`、`data.1208.c`。改它們不會有任何效果。動手前先確認它在聚合檔裡。
+
+### 一律用巨集，不要寫死路徑
+
+`include/mudlib.h`（`ROOM`、`NPC`、`WEAPON`、`DAEMON`…）、
+`include/daemons.h`、`include/config.h`、`include/domains.h`。
+
+### 樹裡混雜大量備份檔
+
+`*.mad`、`*.old`、`*~`、`*.new`、`*.before_stasia`、`guild-bak.c`、`test_master.c`…
+不會被載入，但會出現在 grep 結果裡。**改錯檔案是這個 repo 最常見的錯誤** ——
+以 `include/*.h` 的巨集所指的路徑為準。
+
+### 保留檔頭
+
+TMI/ES 原作者的檔頭與修改紀錄是這個 lib 的口述歷史。改檔時在底部續寫
+`// <date> <name> - <what>`，不要覆蓋。
+
+## FluffOS 2019+ 破壞性變更速查
+
+這個 mudlib 寫於 MudOS 0.9.20 時代。下列都已修，但**同類問題還散落在沒被執行到的
+程式碼裡**（例如約 178 個未檢查空值的 `userp()`/`wizardp()` 呼叫點）。
+
+| 變更 | 症狀 | 怎麼寫才對 |
 |---|---|---|
-| `log/debug.log` | **driver** | 執行期錯誤（master 的 `error_handler()` 回傳值）、編譯警告 |
-| `d/<領域>/log`、`/u/<巫師>/log` | mudlib（`master::log_error()`） | 編譯錯誤與警告，**按領域/巫師分類** |
-| `log/lest` | mudlib（`lest_d`） | 測試與掃描結果 |
+| `message()` 第 4 參數只收 object/array | `Bad argument 4 to EFUN message()` | 省略不傳是合法的，明確傳 `0` 才炸。`varargs` 函式要自己正規化 |
+| `ref` 是保留字（`new`、`array` 同理） | `syntax error, unexpected L_REF` | 改名 |
+| `userp()`/`wizardp()` 收到 0 會拋錯 | `Bad argument 1 to userp()` | `if( ob && userp(ob) )` |
+| `crypt()` 改走系統 crypt | 舊帳號全部登入失敗 | 一律走 `verify_password()` |
+| `#include <相對路徑>` 無效 | `Cannot #include ...` | 相對路徑與同目錄標頭用雙引號 |
+| `__FILE__` 指「當前檔案」 | include 檔裡會指到它自己 | 用 `base_name(this_object())` |
+| 巨集拼接浮點被拆開 | `AVERAGING_NUM.0` → `12 . 0` | 寫 `(float)MACRO` |
+| 執行期錯誤中斷整個呼叫鏈 | 被 `heart_beat` 週期呼叫的函式會不斷重跑 | 防重入旗標立在函式**最前面** |
 
-兩者都已加上時間戳（`error_handler()` 另外會標出觸發錯誤的玩家）。
+每一項的完整脈絡與取捨見
+[`doc/arc42/09-architecture-decisions.md`](doc/arc42/09-architecture-decisions.md)。
 
-**陷阱：driver 執行中不要 `rm log/debug.log`。** driver 持有那個檔案的 handle，
-刪掉之後它會繼續寫向已刪除的 inode，檔案不會重建，之後的錯誤全部看不到，
-一直到重啟為止。要清它必須連帶重啟 driver。
-mudlib 寫的那些（領域 log、`log/lint`）用的是 `write_file()`，每次開關檔案，
-執行中刪掉會自動重建，很安全。
+## LPC 不是 C
 
-比起清掉重看，更好的做法是**留著檔案比對差異**，這樣不會丟掉歷史：
+`mapping`（`([ ])`）、陣列（`({ })`）、`mixed`、`->`（`call_other`）、
+`varargs`、`nosave`、`nomask`。長文字用 heredoc（`@LONG_DESCRIPTION ... LONG_DESCRIPTION`）。
+語法參考在 `/doc/lpc/`，術語見 [`doc/arc42/12-glossary.md`](doc/arc42/12-glossary.md)。
 
-```
-cp d/adventurer/log /tmp/before
-# ...重現問題...
-diff /tmp/before d/adventurer/log
-```
-
-領域 log 特別值得翻，它把錯誤依領域分好了。實例：`d/adventurer/log` 指出
-`_yubi.c:58` 的 `if( !me->query_attacker(); )` 多了一個分號 —— 那個檔案
-從 1990 年代起就沒有編譯成功過。
-
-## FluffOS 2019+ 的破壞性變更
-
-這個 mudlib 是 MudOS 0.9.20 時代的產物，新驅動在好幾個地方變嚴格了。下列都已修好，
-但同類問題還散落在「還沒被執行到」的程式碼裡，改舊檔時要留意：
-
-- **`message()` 的第四個參數（排除名單）只接受 object 或 array**，不再接受 `0`。
-  注意分寸：**省略不傳是合法的**（`tell_object()` 就只傳三個參數），明確傳 `0` 才會炸。
-  會踩到的是 `varargs` 函式 —— 參數沒給時它是 `0`，卻照樣被當第四個參數傳下去。
-  已在 `/adm/simul_efun/tell_room.c` 規範化（全樹有 95 個只給兩個參數的呼叫點），
-  `say()` / `shout()` 本來就自己處理了。
-  **`/adm/simul_efun/message.c` 是陷阱**：它看起來是個覆寫 `message()` 的 simul_efun，
-  但它根本沒被 `/adm/obj/simul_efun.c` include，改它不會有任何效果。
-  同樣未被 include 的還有 `cat.1208.c`、`data.1208.c`、`help.c`、`lines.c`。
-  改 simul_efun 之前先確認它在聚合檔裡。
-- **`ref` 是保留字**（宣告傳參考的參數用），不能當變數或函式名；`new`、`array` 同理。
-  症狀是 `syntax error, unexpected L_REF`。
-- **`userp()` / `wizardp()` 收到 0 會拋錯**，不再靜靜回 0。凡是可能為空的物件
-  （`killer`、`previous_object()` 的結果）都要先 `if( ob && ... )` 擋一下。
-  全樹還有約 178 個這類呼叫點沒有逐一檢查過。
-- **`crypt()` 改走系統 crypt()**，舊存檔的密碼雜湊只有 `oldcrypt()` 認得，
-  見上面的 `verify_password()`。
-- **巨集拼接浮點數會被 lexer 拆開**：`AVERAGING_NUM.0` 解析成 `12 . 0`。
-  要浮點請寫 `(float)MACRO`。
-- **執行期錯誤會中斷整個呼叫流程**。舊碼常假設「出錯就算了」，但像 `die()` 這種被
-  `heart_beat` 每秒呼叫的函式，一旦中途拋錯就會不斷從頭重跑 —— 症狀是屍體每秒複製一具。
-  寫這類函式時，防重入旗標必須立在函式的**最前面**，而不是中段。
-
-## 檔案編碼：UTF-8
-
-整棵樹（原始碼、文件、設定）都是 **UTF-8**，內容為**繁體中文**。
-
-這是從 GBK + 簡體中文一次性轉換過來的，轉換過程留下幾個要知道的痕跡：
-
-- 少數檔案裡有 `□`（U+25A1）缺字，例如 `cmds/std/_look.c:406` 的「這□沒有任何明顯的出口」。
-  這是更早的 Big5→GBK 轉換就已經遺失的字，**不是**現在這輪轉換造成的，需要人工逐一補回。
-- `data/` 與各領域 `data/attic/` 下的舊留言板存檔有 16 個檔含 U+FFFD 替換字元，
-  來源是原檔本身就有的壞位元組。那些是執行期資料，不影響遊戲程式。
-- 中文字後面的殘留轉義反斜線（Big5 時代為了處理尾位元組 0x5C 而加的）已清除 3431 處，
-  但還留著兩種要人工判斷的：行尾續行型 27 處、雙反斜線型 59 處。搜尋方式：
-  `grep -rP '[\x{4e00}-\x{9fff}]\\\\$'` 與 `grep -rP '[\x{4e00}-\x{9fff}]\\\\\\\\'`。
-- 新增中文內容時直接寫 UTF-8 繁體即可，不需要任何轉義。
-
-## 架構
-
-### 開機順序與核心物件
-
-1. `/adm/obj/simul_efun.c` — 純聚合檔，用 `#include "/adm/simul_efun/<x>.c"` 把 69 個模組串起來。
-   **新增 simul_efun 必須同時在這裡加一行**，而且順序有意義：被依賴的要排在使用者前面。
-2. `/adm/obj/master.c` — driver 的 master object，`inherit` `/adm/obj/master/access.c` 與 `groups.c`。
-   負責 `valid_read`/`valid_write`（權限依 `/adm/etc/access`、`/adm/etc/groups`，可不重開機更新）、
-   `connect()`（clone `/std/connection`）、`compile_object()`（轉交 `VIRTUAL_D`）、
-   `error_handler()`、`epilog()`/`preload()`（預載清單在 `/adm/etc/preload`）。
-3. `/include/globals.h` 由驅動自動 include 進每個物件。
-
-### 路徑巨集：一律用巨集，不要寫死路徑
-
-- `include/mudlib.h`：`ROOM`、`NPC`、`WEAPON`、`ARMOR`、`DAEMON`、`LIVING`、`CONTAINER`、`SHOP`、`MEDICINE`… 等 inherit 目標。
-- `include/daemons.h`：所有 daemon 的位置（`COMBAT_D`、`QUEST_D`、`EXPLORE_D`、`WEATHER_D`、`VIRTUAL_D`、`CMD_D`…）。
-- `include/config.h`：目錄與命令搜尋路徑（`STD_CMDS`、`WIZ_CMDS`、`NEW_WIZ_PATH` 等）。
-- `include/domains.h`：`DOMAIN_LIST` / `DOMAIN_DIRS`（`/d/` 下的合法領域）與巫師階級 `LEVEL_LIST`。
-
-### 屬性系統（ob_data）
-
-`/std/object/ob.c` = `ob_logic.c` + `prop.c`，是幾乎所有東西的根。物件狀態不是散落的變數，
-而是集中在兩個 mapping：
-
-- `ob_data` — 會存檔的資料，透過 `set("a/b/c", v)` / `query("a/b")` / `delete()` 存取，支援用 `/` 描述巢狀路徑。
-- `tmp_ob_data` — `nosave` 的暫存旗標（例如房間 reset 時記錄已產生的物件）。
-
-`query_ob_data()` 這類直接取整份 mapping 的介面有權限檢查（admin / ROOT_UID / `valid_write`）。
-
-### 生物與玩家
-
-`/std/body.c`（`BODY_BASE`，含 `/std/body/attack.c`、`more.c`、`alias.c`）
-→ `/std/living.c`（再 inherit `/std/living/stats.c`、`edit.c`、`env.c`、`messages.c`、`/std/coinvalue.c`）
-→ 分岔為 `/std/user.c`（玩家）與 `/std/npc.c`（NPC）。
-
-**連線與身體是分離的**：`/std/connection.c` 是 interactive 物件，保存帳號、密碼、race、
-巫師旗標，登入完成後連結到一個 body —— body 是 `/std/user_ob/<race>.c`（human、elf、god…），
-NPC 對應 `/std/npc_ob/<race>.c`。存檔分別在 `/data/std/connection/` 與 `/data/std/user_ob/<race>/`。
-
-戰鬥由 `/std/body/attack.c` 發動，訊息與武器動詞資料庫集中在 `/adm/daemons/combat_d.c`，
-攻擊佇列與 tick 在 `/adm/daemons/attack_d.c`。
-
-**密碼驗證一律走 `verify_password(pass, stored)`**（`/adm/simul_efun/verify_password.c`），
-不要直接呼叫 `crypt()` 比對。舊存檔的密碼是 FluffOS 2017 以前驅動內建演算法的產物
-（41 個字元、不以 `$` 開頭），新版 `crypt()` 認不得，只有 `oldcrypt()` 能重現；
-`verify_password()` 兩種都試，回傳 2 代表「密碼正確但存的是舊格式」，
-`logind.c` 會據此把該帳號的密碼就地升級成 SHA512。
-
-### 命令系統
-
-- 命令檔位於 `/cmds/<group>/_<name>.c`（`std`、`open`、`object`、`file`、`wiz`、`xtra`、`adm`、`ghost`）。
-- 每個命令 `inherit DAEMON;`（`/std/cmd_m.c`），實作 `int cmd_<name>(string str)` 與 `int help()`；
-  回傳非 0 表示已處理。
-- `/adm/daemons/cmd_d.c` 掃描各目錄建立 `cmd -> path` 表（`rehash()`）。**新增命令檔後需要 rehash
-  該目錄**（重新載入 `cmd_d` 或用對應巫師命令），否則找不到。
-- 玩家能用哪些目錄由 `config.h` 的 `NEW_NEWBIE_PATH` / `NEW_WIZ_PATH` / `NEW_ADM_PATH` … 決定。
-
-### 虛擬物件：`_` 前綴檔案（本 lib 最容易踩雷的地方）
-
-`/d/` 下有兩種完全不同的寫法，看**檔名有沒有底線前綴**：
-
-1. **一般物件**（約 5000 檔）：`inherit WEAPON;` 之類，自己 `void create()`，用 `set_name()` / `set()` 設定。
-2. **虛擬物件**（約 970 檔，檔名 `_xxx.c`）：**不 inherit 任何東西**，只提供 `void create(object ob)`，
-   對傳進來的 `ob` 下設定。載入流程是：
-   driver 找不到 `foo.c` → `master::compile_object()` → `VIRTUAL_D`（`/adm/daemons/virtual_d.c`）
-   → 往上找**同目錄的 `virtual/server.c`**（找不到才 fallback `/adm/daemons/virtual/server`）
-   → server 把 `foo` 改寫成 `_foo`，`new(TEMPLATE)` 出一個 `ROOM` 或 `NPC`，
-   呼叫 `_foo->create(obj)`，然後 `destruct()` 掉樣板檔本身。
-
-   所以：**引用時寫沒有底線的路徑**（`"/d/eastland/easta/east_ent"`），編輯時改有底線的檔。
-   每個區域各自有 `virtual/server.c`（全 lib 有 20+ 個），要新增區域就複製一份，`TEMPLATE` 決定產出型別。
-
-3. **地圖式虛擬房間**：`*.east.c` 由 `/d/eastland/virtual/east_server.c` 依 `/d/eastland/eastland.map`
-   （legend / room / map 三種區段）動態生成；`_x,y.east.c` 是覆寫單格地形的例外檔。
-
-### 目錄配置
-
-- `/adm/` — master、simul_efun 模組、daemons、`etc/`（access、groups、channels、preload 等設定）。
-- `/std/` — 所有可繼承的基底類別。
-- `/cmds/` — 命令。
-- `/d/<domain>/` — 遊戲區域，領域清單見 `include/domains.h`；各領域有 `adm/d_master.c`、
-  多半還有 `virtual/`、`monster/`、`obj/`。`eastland`（2334 檔）與 `noden`（1433 檔）是主要區域。
-- `/u/<首字母>/<巫師名>/` — 巫師家目錄。
-- `/obj/`、`/open/` — 共用道具與開放給新手巫師的東西。
-- `/include/`、`/etc/`（新驅動設定）、`/doc/`（含 `help/`、`wizhelp/`、`lpc/` 教學）。
-
-## 慣例與地雷
-
-- **保留檔頭註解**：那些 TMI/ES 的作者與修改歷史是這個 lib 的慣例，改檔時在底部續寫
-  `// <date> <name> - <what>` 而不是覆蓋。
-- 長文字用 heredoc：`@LONG_DESCRIPTION ... LONG_DESCRIPTION` 或 `@C_LONG ... C_LONG`。
-- 樹裡混雜大量**備份檔**：`*.mad`、`*.old`、`*~`、`*.new`、`*.before_stasia`、`_ls.es2`、
-  `guild-bak.c`、`master.c` 旁的 `test_master.c` 等。這些不會被載入，改錯檔案是常見錯誤 ——
-  以 `include/*.h` 的巨集所指向的路徑為準來判斷哪個才是活的檔案。
-- 檔案開頭常見被註解掉的 `//#pragma save_binary`，維持原狀即可。
-- `.vscode/c_cpp_properties.json` 把 `.c` 當 C89 處理並強制 include `globals.h`，
-  `C_Cpp.errorSquiggles` 是關掉的 —— 編輯器的錯誤提示對 LPC 沒有參考價值。
-- LPC 不是 C：`mapping`、`mixed`、`([ ])`、`({ })`、`->`、`call_other`、`efun`/`simul_efun`、
-  `varargs`、`nosave`、`nomask`。語法參考在 `/doc/lpc/`。
+`.vscode/c_cpp_properties.json` 把 `.c` 當 C89 並關掉 `errorSquiggles` ——
+編輯器的紅線對 LPC 沒有參考價值。
