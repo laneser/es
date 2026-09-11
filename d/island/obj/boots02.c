@@ -1,4 +1,4 @@
-#include <../island.h>
+#include "../island.h"
 
 inherit ARMOR;
 void create()

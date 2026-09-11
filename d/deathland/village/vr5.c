@@ -25,5 +25,5 @@ CLong
         "baby#4" :Monster"/baby",
           ]) );
     ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }

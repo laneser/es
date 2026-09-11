@@ -1,7 +1,7 @@
 // hardcoded pub for IRC.. I'll make it more flexible when I finish
 // the vending machine....
 // Elon@Eastern.Stories Sat  08-13-94
-#include <irc.h>
+#include "irc.h"
 #include <move.h>
  
 inherit ROOM;

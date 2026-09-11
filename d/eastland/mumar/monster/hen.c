@@ -1,4 +1,4 @@
-#include <../mumar.h>
+#include "../mumar.h"
 inherit MONSTER;
  
 void create()

@@ -1,4 +1,4 @@
-#include <../zeus.h>
+#include "../zeus.h"
 
 inherit OBJECT;
 

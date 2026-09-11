@@ -21,5 +21,5 @@ CLong
                 "east":Deathland"/village/v55",
              ]));
     ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }

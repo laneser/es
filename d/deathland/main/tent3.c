@@ -18,6 +18,6 @@ Long
        set("objects",(["retal":Monster"/retal",
                       ]));
        reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 

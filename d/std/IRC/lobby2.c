@@ -1,4 +1,4 @@
-#include <irc.h>
+#include "irc.h"
 #define BOARD "/d/std/IRC/irc_board"
  
 inherit ROOM;

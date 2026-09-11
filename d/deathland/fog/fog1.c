@@ -17,5 +17,5 @@ Long
 你還須要大量的運氣.
 Clong
 	);
-#include <../replace_room.h>
+#include "../replace_room.h"
 }

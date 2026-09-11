@@ -1,5 +1,5 @@
 
-#include <../goomay.h>
+#include "../goomay.h"
 #include <stats.h>
 #include <conditions.h>
 

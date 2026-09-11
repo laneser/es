@@ -19,7 +19,7 @@ set("exits",([
    "east":Deathland"/troll/cave_06",
             ]) );
 ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 
 void init()

@@ -1,7 +1,7 @@
 // Recycle bin..  to clean up some empty containers.
 // Elon@eastern.Stories   Sun  08-21-94
  
-#include <irc.h>
+#include "irc.h"
  
 inherit OBJECT;
  

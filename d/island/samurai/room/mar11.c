@@ -1,6 +1,6 @@
 //#pragma save_binary
 
-#include <mercury.h>
+#include "mercury.h"
 #include <money.h>
 
 inherit SHOP;

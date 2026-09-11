@@ -1,5 +1,5 @@
 //key issue of lizard_quest, modify it more easy, by Tsunami '96/09/15
-#include <hole.h>
+#include "hole.h"
 
 inherit ROOM;
 

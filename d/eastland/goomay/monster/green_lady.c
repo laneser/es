@@ -1,4 +1,4 @@
-#include <../goomay.h>
+#include "../goomay.h"
 inherit Mob_special;
 
 void create ()

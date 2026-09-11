@@ -1,5 +1,5 @@
 
-#include <../goomay.h>
+#include "../goomay.h"
 
 #define HEADQUARTER Mob"army_d"
 

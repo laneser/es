@@ -30,5 +30,5 @@ void create()
 	set( "natural_max_damage1", 5 );
 	set( "max_hp", 160 );
 	set( "hit_points", 160 );
-#include <../replace_mob.h>
+#include "../replace_mob.h"
 }

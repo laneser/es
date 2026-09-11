@@ -1,5 +1,5 @@
 
-#include <goomay.h>
+#include "goomay.h"
 
 inherit DOORS;
 inherit ROOM;

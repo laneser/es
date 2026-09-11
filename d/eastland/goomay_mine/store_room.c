@@ -1,6 +1,6 @@
 
 
-#include <zeus.h>
+#include "zeus.h"
 
 inherit ROOM;
 int magic_metal;

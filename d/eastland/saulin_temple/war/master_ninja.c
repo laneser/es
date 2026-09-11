@@ -1,4 +1,4 @@
-#include <saulin_war.h>
+#include "saulin_war.h"
 
 inherit War;
 

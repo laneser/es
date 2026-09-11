@@ -1,5 +1,5 @@
 
-#include <../iigima.h>
+#include "../iigima.h"
 inherit MONSTER;
 
 void create()

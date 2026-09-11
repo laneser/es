@@ -1,5 +1,5 @@
 
-#include <hole.h>
+#include "hole.h"
 #include <conditions.h>
 
 inherit ROOM;

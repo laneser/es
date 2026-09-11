@@ -1,4 +1,4 @@
-#include <mercury.h>
+#include "mercury.h"
 inherit DOORS;
 inherit ROOM;
 

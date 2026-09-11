@@ -1,4 +1,4 @@
-#include <../hole.h>
+#include "../hole.h"
 
 inherit MONSTER;
 void create()

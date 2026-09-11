@@ -101,3 +101,21 @@ u/b/boss/demogorgon/mudlib.h line 72: Warning: redefinition of #define GUILD_OB
 
 u/b/boss/demogorgon/board.c line 8: Undefined variable 'DATA'
 u/b/boss/demogorgon/board.c line 8: parse error
+[Sep 11 01:00:25] In file included from /u/b/boss/god/guild/god_guild.c:4:
+/u/b/boss/god/god.h:8: warning: Macro 'GUILD_MASTER' redefined
+  note: previous definition of 'GUILD_MASTER' was at /include/org.h:21
+[Sep 11 01:00:25] /u/b/boss/god/guild/god_guild.c:47:1: warning: Unused local variable 'guild_master'
+   47 | }
+      | ^
+[Sep 11 01:04:48] In file included from /u/b/boss/god/guild/god_guild.c:4:
+/u/b/boss/god/god.h:8: warning: Macro 'GUILD_MASTER' redefined
+  note: previous definition of 'GUILD_MASTER' was at /include/org.h:21
+[Sep 11 01:04:48] /u/b/boss/god/guild/god_guild.c:47:1: warning: Unused local variable 'guild_master'
+   47 | }
+      | ^
+[Sep 11 01:15:24] In file included from /u/b/boss/god/guild/god_guild.c:4:
+/u/b/boss/god/god.h:8: warning: Macro 'GUILD_MASTER' redefined
+  note: previous definition of 'GUILD_MASTER' was at /include/org.h:21
+[Sep 11 01:15:24] /u/b/boss/god/guild/god_guild.c:47:1: warning: Unused local variable 'guild_master'
+   47 | }
+      | ^

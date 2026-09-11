@@ -18,5 +18,5 @@ set( "exits", ([
      "north" : OTEMP"temple14",
      ]) );
 reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }

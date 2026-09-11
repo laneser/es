@@ -1,4 +1,4 @@
-#include <../almuhara.h>
+#include "../almuhara.h"
 inherit MONSTER;
  
 void create()

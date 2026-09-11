@@ -1,5 +1,5 @@
 
-#include <../zeus.h>
+#include "../zeus.h"
 inherit MONSTER;
 
 void create()

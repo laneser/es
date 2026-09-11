@@ -1,0 +1,308 @@
+[Sep 11 01:00:47] /d/thief/cmds/_steal.c:74:1: warning: Unused local variable 'i'
+   74 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/_steal.c:109:1: warning: Unused local variable 'rate2'
+  109 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'iq'
+   51 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'dex'
+   51 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'kar'
+   51 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'rate'
+   51 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'level'
+   51 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/steal.c:92:1: warning: Unused local variable 'i'
+   92 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/steal.c:127:1: warning: Unused local variable 'rate2'
+  127 | }
+      | ^
+[Sep 11 01:00:47] /d/thief/cmds/throw.c:167:1: warning: Unused local variable 'message'
+  167 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/backstab_room2.c:85:1: warning: Unused local variable 'inv'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/backstab_room2.c:85:1: warning: Unused local variable 'i'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/bottle.c:74:1: warning: Unused local variable 'rate'
+   74 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/knife.c:36:1: warning: Unused local variable 'skill2'
+   36 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/knife.c:36:1: warning: Unused local variable 'rate'
+   36 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'args'
+   92 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'sz'
+   92 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'skill'
+   92 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'inv'
+   92 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'inv'
+   72 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'new_title'
+   72 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'tmp1'
+   72 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'tmp2'
+   72 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/mask.c:88:1: warning: Unused local variable 'ids'
+   88 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'obs'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'i'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'exits'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'dir'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'dirs'
+   85 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/pushpin.c:124:1: warning: Unused local variable 'skill'
+  124 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/misc/trace_object.c:79:1: warning: Unused local variable 'newenv'
+   79 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/bs_mob.c:5:9: warning: Redeclaration of global variable 'alias'.
+    5 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/bs_mob.c:66:1: warning: Unused local variable 'ob'
+   66 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/pickering.c:2:9: warning: Redeclaration of global variable 'alias'.
+    2 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/pickering.c:131:1: warning: Unused local variable 'env'
+  131 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:9:9: warning: Redeclaration of global variable 'alias'.
+    9 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:134:1: warning: Unused local variable 'paper'
+  134 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'invs'
+  236 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'obj'
+  236 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'obj2'
+  236 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'total'
+  236 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'cost'
+  236 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'i'
+  236 | }
+      | ^
+[Sep 11 01:00:48] /d/thief/hall/study.c:49:1: warning: Unused local variable 'extra'
+   49 | }
+      | ^
+  note: while loading '/d/thief/hall/study' inherited by '/d/thief/hall/plan_room1'
+[Sep 11 01:00:50] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'tmp1'
+   21 | }
+      | ^
+[Sep 11 01:00:50] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'tmp2'
+   21 | }
+      | ^
+[Sep 11 01:00:50] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'stmp1'
+   21 | }
+      | ^
+[Sep 11 01:00:50] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'stmp2'
+   21 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/_steal.c:74:1: warning: Unused local variable 'i'
+   74 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/_steal.c:109:1: warning: Unused local variable 'rate2'
+  109 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'iq'
+   51 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'dex'
+   51 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'kar'
+   51 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'rate'
+   51 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/hide.c:51:1: warning: Unused local variable 'level'
+   51 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/steal.c:92:1: warning: Unused local variable 'i'
+   92 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/steal.c:127:1: warning: Unused local variable 'rate2'
+  127 | }
+      | ^
+[Sep 11 01:05:12] /d/thief/cmds/throw.c:167:1: warning: Unused local variable 'message'
+  167 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/backstab_room2.c:85:1: warning: Unused local variable 'inv'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/backstab_room2.c:85:1: warning: Unused local variable 'i'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/bottle.c:74:1: warning: Unused local variable 'rate'
+   74 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/knife.c:36:1: warning: Unused local variable 'skill2'
+   36 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/knife.c:36:1: warning: Unused local variable 'rate'
+   36 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'args'
+   92 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'sz'
+   92 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'skill'
+   92 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/knife.c:92:1: warning: Unused local variable 'inv'
+   92 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'inv'
+   72 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'new_title'
+   72 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'tmp1'
+   72 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/mask.c:72:1: warning: Unused local variable 'tmp2'
+   72 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/mask.c:88:1: warning: Unused local variable 'ids'
+   88 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'obs'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'i'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'exits'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'dir'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/pushpin.c:85:1: warning: Unused local variable 'dirs'
+   85 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/pushpin.c:124:1: warning: Unused local variable 'skill'
+  124 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/misc/trace_object.c:79:1: warning: Unused local variable 'newenv'
+   79 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/bs_mob.c:5:9: warning: Redeclaration of global variable 'alias'.
+    5 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/bs_mob.c:66:1: warning: Unused local variable 'ob'
+   66 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/pickering.c:2:9: warning: Redeclaration of global variable 'alias'.
+    2 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/pickering.c:131:1: warning: Unused local variable 'env'
+  131 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:9:9: warning: Redeclaration of global variable 'alias'.
+    9 | inherit MONSTER;
+      |         ^
+/include/mudlib.h:17:9: note: expanded from macro 'MONSTER'
+   17 | #define MONSTER   "/std/npc"
+      |         ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:134:1: warning: Unused local variable 'paper'
+  134 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'invs'
+  236 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'obj'
+  236 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'obj2'
+  236 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'total'
+  236 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'cost'
+  236 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/monsters/taylers.c:236:1: warning: Unused local variable 'i'
+  236 | }
+      | ^
+[Sep 11 01:05:13] /d/thief/hall/study.c:49:1: warning: Unused local variable 'extra'
+   49 | }
+      | ^
+  note: while loading '/d/thief/hall/study' inherited by '/d/thief/hall/plan_room1'
+[Sep 11 01:05:14] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'tmp1'
+   21 | }
+      | ^
+[Sep 11 01:05:14] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'tmp2'
+   21 | }
+      | ^
+[Sep 11 01:05:14] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'stmp1'
+   21 | }
+      | ^
+[Sep 11 01:05:14] /d/thief/hall/thief_storage.c:21:1: warning: Unused local variable 'stmp2'
+   21 | }
+      | ^

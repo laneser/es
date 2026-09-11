@@ -1,4 +1,4 @@
-#include <../takeda.h>
+#include "../takeda.h"
 
 inherit SELLER;
 inherit MONSTER;

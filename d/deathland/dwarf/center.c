@@ -25,6 +25,6 @@ set("objects",([
     "newsoldier#3":Monster"/soldier04", 
     ]) );
 ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 

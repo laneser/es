@@ -22,6 +22,6 @@ set("exits",([
      "southup":Deathland"/dwarf/pass02.c",
      ]) );
  ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 

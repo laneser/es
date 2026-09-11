@@ -1,4 +1,4 @@
-#include <../saulin_temple.h>
+#include "../saulin_temple.h"
 
 inherit MONSTER;
 

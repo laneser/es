@@ -1,4 +1,4 @@
-#include <../mumar.h>
+#include "../mumar.h"
 inherit "/d/eastland/mumar/monster/mob_special";
  
 void create()

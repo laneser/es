@@ -1,4 +1,4 @@
-#include <../legend.h>
+#include "../legend.h"
 
 inherit MONSTER;
 void create ()

@@ -1,5 +1,5 @@
 
-#include <mercury.h>
+#include "mercury.h"
 
 inherit ROOM;
 

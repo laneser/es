@@ -24,5 +24,5 @@ set("c_item_desc",([
 set("exits",([
               "north":Deathland"/palace/pa_05",
              ]));
-#include <../replace_room.h>
+#include "../replace_room.h"
 }

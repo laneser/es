@@ -1,0 +1,48 @@
+[Sep 11 01:01:23] /d/martial/attack/monk/fist/drunk_fist.c:31:1: warning: Unused local variable 'i'
+   31 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/k_dragon.c:49:1: warning: Unused local variable 'i'
+   49 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/k_dragon.c:101:1: warning: Unused local variable 'delta_dex'
+  101 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/k_dragon.c:131:1: warning: Unused local variable 'ii'
+  131 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/k_dragon.c:131:1: warning: Unused local variable 'dam'
+  131 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/test_1.c:39:1: warning: Unused local variable 'i'
+   39 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/test_1.c:91:1: warning: Unused local variable 'delta_str'
+   91 | }
+      | ^
+[Sep 11 01:01:24] /d/martial/attack/monk/test/test_1.c:112:1: warning: Unused local variable 'extra_damage'
+  112 | }
+      | ^
+[Sep 11 01:05:48] /d/martial/attack/monk/fist/drunk_fist.c:31:1: warning: Unused local variable 'i'
+   31 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/k_dragon.c:49:1: warning: Unused local variable 'i'
+   49 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/k_dragon.c:101:1: warning: Unused local variable 'delta_dex'
+  101 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/k_dragon.c:131:1: warning: Unused local variable 'ii'
+  131 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/k_dragon.c:131:1: warning: Unused local variable 'dam'
+  131 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/test_1.c:39:1: warning: Unused local variable 'i'
+   39 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/test_1.c:91:1: warning: Unused local variable 'delta_str'
+   91 | }
+      | ^
+[Sep 11 01:05:49] /d/martial/attack/monk/test/test_1.c:112:1: warning: Unused local variable 'extra_damage'
+  112 | }
+      | ^

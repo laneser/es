@@ -1,7 +1,7 @@
 // File: /d/eastland/goomay/mroad1.c
 // create by : Ruby the little wizard from 5/6/1994
 
-#include <goomay.h>
+#include "goomay.h"
 inherit ROOM;
 string *c_msg = ({
 "牆上塗滿了亂七八糟的字，你根本分不清楚到底在寫些什麼。\n",

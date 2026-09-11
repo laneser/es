@@ -1,4 +1,4 @@
-#include <../hole.h>
+#include "../hole.h"
 
 inherit ARMOR;
 int no_pray;

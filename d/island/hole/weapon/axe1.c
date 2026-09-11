@@ -5,7 +5,7 @@
 
 #include <mudlib.h>
 #include <daemons.h>
-#include <../hole.h>
+#include "../hole.h"
 
 //inherit REPORT;
 inherit WEAPON;

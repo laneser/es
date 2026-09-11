@@ -1,4 +1,4 @@
-#include <../oldcat.h>
+#include "../oldcat.h"
 
 inherit MONSTER;
 

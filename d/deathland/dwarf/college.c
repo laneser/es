@@ -26,6 +26,6 @@ set("objects",([
     "general":Monster"/general",
     ]) );
 ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 

@@ -29,5 +29,5 @@ C_LONG_DESCRIPTION
 	]) );
 		
 	reset();
-#include <replace_shop.h>
+#include "replace_shop.h"
 }

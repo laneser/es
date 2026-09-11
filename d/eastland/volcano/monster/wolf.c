@@ -21,5 +21,5 @@ void create()
 
 	set_c_verbs( ({ "%s用前爪撲向%s", "%s張開滿口利齒的嘴，往%s咬去" }) );
 	set_c_limbs( ({ "頭部", "身體", "尾巴", "腿部" }) );
-#include <../replace_mob.h>
+#include "../replace_mob.h"
 }

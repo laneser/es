@@ -31,6 +31,6 @@ set("objects",([
 
 set("exit_suppress",({"northeast"}) );
  ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 

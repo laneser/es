@@ -1,4 +1,4 @@
-#include <mobs.h>
+#include "mobs.h"
 #include <races.h>
 
 inherit RACE_DAEMON;

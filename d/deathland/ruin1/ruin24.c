@@ -22,6 +22,6 @@ CLong
          "northwest":Deathland"/ruin1/ruin15",
          ]) );
      ::reset();
-#include <../replace_room.h>
+#include "../replace_room.h"
 }
 

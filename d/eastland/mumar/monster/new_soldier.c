@@ -1,4 +1,4 @@
-#include <../mumar.h>
+#include "../mumar.h"
 inherit "/d/eastland/mumar/mumar_army";
  
 void create()

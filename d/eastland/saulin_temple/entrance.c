@@ -1,4 +1,4 @@
-#include <saulin_temple.h>
+#include "saulin_temple.h"
 #define SLAB_FILE "/d/eastland/data/brassman.txt"
 
 inherit ROOM;
