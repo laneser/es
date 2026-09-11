@@ -127,6 +127,7 @@ TMI/ES 原作者的檔頭與修改紀錄是這個 lib 的口述歷史。改檔�
 | `__FILE__` 指「當前檔案」 | include 檔裡會指到它自己 | 用 `base_name(this_object())` |
 | 巨集拼接浮點被拆開 | `AVERAGING_NUM.0` → `12 . 0` | 寫 `(float)MACRO` |
 | 執行期錯誤中斷整個呼叫鏈 | 被 `heart_beat` 週期呼叫的函式會不斷重跑 | 防重入旗標立在函式**最前面** |
+| 部分 efun 改成回傳 `void` | `if (!ed(...))` 這種判斷永遠成立，印出假錯誤 | 查驅動的 `core.spec` 確認簽名，改用 `catch()` 偵測失敗 |
 
 每一項的完整脈絡與取捨見
 [`doc/arc42/09-architecture-decisions.md`](doc/arc42/09-architecture-decisions.md)。

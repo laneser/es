@@ -20,8 +20,9 @@ inherit DAEMON ;
 
 int cmd_ed(string file) {
     mixed *dir;
+    mixed err;
     int test;
-    string tmp, err;
+    string tmp;
    
     if (in_edit(this_player())) {  // get real! you can't do this!
         notify_fail("You are already editing a file.\n");
@@ -126,7 +127,13 @@ int cmd_ed(string file) {
 #endif
  
     // okay, let's invoke the editor, and have it go to the done function after.
-    if (!ed(file, "done_editing")) write("Failed to edit " + file + "\n");
+    //
+    //	FluffOS 2019 以後 ed() 的宣告是 void ed(...)（見驅動的 core.spec），
+    //	不再回傳成功與否。舊碼的 if (!ed(...)) 於是永遠成立 ——
+    //	每次開檔都會印出一句假的 "Failed to edit"，即使檔案已經好好地載進來了。
+    //	改用 catch() 偵測真正的失敗。
+    if( err = catch( ed(file, "done_editing") ) )
+        write("Failed to edit " + file + "\n" + err);
    
     return 1;
 }
