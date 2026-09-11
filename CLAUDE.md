@@ -47,25 +47,47 @@ VS Code 直接開 `.devcontainer/devcontainer.json` 也可以，工作目錄掛�
 - `clone` / `dest` / `load` / `goto` / `at` / `eval`：實例化與檢視物件。
 - `data` / `datatmp` / `sc` / `ss`：檢視物件的 `ob_data` / `tmp_ob_data`。
 
-### 全站編譯掃描
+### lest：測試與全站掃描
 
-FluffOS 是 lazy 編譯 —— 檔案要等到有人真的用到才會被編譯，所以壞掉的檔案可以潛伏很久，
-升級驅動之後尤其如此。`/adm/daemons/lint_d.c` 會把整棵樹逐一 `load_object()`，
-把編譯期錯誤收集到 `/log/lint`：
+`lest`（LPC test）是這個 lib 的測試執行器，巫師指令，`help lest` 有完整說明。
+它分兩層：
+
+**第一層 — 每個 `.c` 都 `load_object()` 一遍**，抓編譯期錯誤。
+FluffOS 是 lazy 編譯，檔案沒被用到就不會編譯，壞掉的檔案可以潛伏很久，
+升級驅動之後尤其如此。
+
+**第二層 — `xxx.c` 旁邊若有 `xxx.spec.c`，就把裡面每個 `test_` 開頭的函式跑一遍。**
+spec 檔 `inherit SPEC`（`/std/lest/spec.c`），測試函式自動被 `functions()` 找出來，
+收到的參數是受測物件（預設 `clone_object()`，房間或 daemon 這種不該 clone 的
+就覆寫 `lest_subject()`）。跑完 `lest_cleanup()` 會把東西收掉。
 
 ```
-eval return "/adm/daemons/lint_d"->scan("/std");
-eval return "/adm/daemons/lint_d"->status();
+lest /obj        對目錄底下所有 .c 跑測試
+lest             顯示上次的報告（含覆蓋率與失敗明細）
+lest -u          列出還沒有 spec 的檔案
 ```
 
-核心目錄（`/std`、`/cmds`、`/adm`、`/obj`，共 746 檔）目前有 32 個載入失敗，
-絕大多數是 inherit 早已不存在的檔案（`/std/body/wild_card`、`/cmds/std/_praise`、
-`/u/i/iris/races/iris`）的死檔殘骸，不是驅動升級造成的。
+一個 spec 長這樣：
 
-注意它只抓得到**編譯期**錯誤。執行期的型別錯誤要靠實際跑過再讀 `log/debug.log` ——
-mudlib 的錯誤處理器會把中文的「執行時段錯誤」連同完整呼叫堆疊寫進去，
-那是這個 lib 最有效的除錯入口。載入物件有副作用（daemon 會啟動、房間會 clone 出 NPC），
-所以掃描要在測試環境做。
+```c
+#include <lest.h>
+inherit SPEC;
+
+void test_c_name(object ob) { expect_eq(ob->query("c_name"), "繃帶", "中文名"); }
+void test_weight(object ob) { expect_gt(ob->query("weight"), 0, "重量為正"); }
+```
+
+斷言有 `expect_eq`、`expect_ne`、`expect_gt`、`expect_true`、`expect_object`、
+`expect_string`，以及自己給條件的 `expect`。
+**LPC 識別字只能用 ASCII**，函式名寫英文，中文放在斷言描述裡
+（`void test_中文名()` 會得到 `Illegal character 0xe4`）。
+
+現成的例子在 `/obj/bandage.spec.c` 與 `/obj/torch.spec.c`。後者值得一讀：
+火把的 `light` 屬性要點燃後才有，所以測的是「點得起來」而不是「現在亮著」——
+測試失敗時第一件事是判斷錯的是程式還是測試。
+
+掃描是有副作用的（daemon 會啟動、房間會 clone 出 NPC），請在測試環境跑。
+完整記錄在 `/log/lest`。
 
 ### log 怎麼讀
 
@@ -75,7 +97,7 @@ mudlib 的錯誤處理器會把中文的「執行時段錯誤」連同完整呼�
 |---|---|---|
 | `log/debug.log` | **driver** | 執行期錯誤（master 的 `error_handler()` 回傳值）、編譯警告 |
 | `d/<領域>/log`、`/u/<巫師>/log` | mudlib（`master::log_error()`） | 編譯錯誤與警告，**按領域/巫師分類** |
-| `log/lint` | mudlib（`lint_d`） | 全站掃描結果 |
+| `log/lest` | mudlib（`lest_d`） | 測試與掃描結果 |
 
 兩者都已加上時間戳（`error_handler()` 另外會標出觸發錯誤的玩家）。
 
