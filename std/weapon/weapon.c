@@ -19,6 +19,13 @@ void wield(int silent);
 
 void setup_weapon( string type, int wc, int min_dam, int max_dam )
 {
+	//	這裡是直接寫 ob_data 而不是走 set()（舊碼的效能考量），
+	//	所以得自己確保 mapping 已經建好 —— 否則武器檔的 create() 只要
+	//	先呼叫 setup_weapon() 再設其他屬性，就會 Illegal type of index。
+	//	現有的武器檔都是先 set_name() 才 setup_weapon()，剛好避開，
+	//	但基底類別不該依賴呼叫順序。
+	if( !ob_data ) init_ob();
+
 	ob_data["type"] = type;
 	ob_data["weapon_class"] = wc;
 	ob_data["min_damage"] = min_dam;
