@@ -70,6 +70,11 @@ sequenceDiagram
     F-->>P: 輸出
 ```
 
+**佇列空的時候會直接執行，不經過上面那條路。** `push_cmd()` 只在
+「前面還有指令排隊」時才推進佇列 —— 所以單一指令是即時的，
+連打時才會排隊並受「你同時下太多命令」的保護。見
+[ADR-09](09-architecture-decisions.md)。
+
 指令檔的慣例：`/cmds/<group>/_<name>.c`，`inherit DAEMON`（`/std/cmd_m.c`），
 實作 `int cmd_<name>(string)` 與 `int help()`，回傳非 0 表示已處理。
 
@@ -100,7 +105,7 @@ void heart_beat()
 心跳間隔由 `etc/fluffos.cfg` 的 `heartbeat interval msec` 決定（目前 1000ms）。
 所以：
 
-- **指令回應**：同一次心跳內清空佇列，約 0.04 秒
+- **指令回應**：佇列空時直接執行（0.00 秒）；連打時同一次心跳清空整個佇列
 - **戰鬥回合、治療、體力恢復**：8 次心跳 = 8 秒
 
 歷史註記：原本 `run_cmds()` 每次心跳只吐一個指令，指令延遲直接等於心跳間隔

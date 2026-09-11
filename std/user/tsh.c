@@ -180,6 +180,15 @@ int push_cmd(string arg)
 {
 	if ( strsrch(arg, "do ") != -1 )
 		return command(arg);
+
+	//	佇列空的時候直接執行，不必等下一次心跳。
+	//	原本每個指令都先進佇列、再由 heart_beat() 取出，所以單一指令
+	//	平均要等半個心跳週期（實測 0.84 秒，撞上跑戰鬥那一拍會到 1.9 秒）。
+	//	只在「前面還有指令排隊」時才進佇列，執行順序因此不受影響；
+	//	連打時一樣會塞滿佇列並觸發下面的過量保護，節流沒有消失。
+	if ( cmd_top == cmd_bottom )
+		return command(arg);
+
 	if ( (cmd_top+1) == cmd_bottom ) {
 		write("你同時下太多命令, 停止執行 !!\n");
 		cmd_top = 0;
