@@ -40,6 +40,7 @@ inherit STACK_ADT;       /* for pushd and popd */
 
 nosave string tsh_prompt;
 nosave int cmd_top, cmd_bottom ;
+nosave int direct_run ;      //  這一拍是否已經有指令直接執行過
 nosave string *cmd_stack ;
 nosave int cur, hist_size, pushd_size, custom_prompt;
 
@@ -181,13 +182,19 @@ int push_cmd(string arg)
 	if ( strsrch(arg, "do ") != -1 )
 		return command(arg);
 
-	//	佇列空的時候直接執行，不必等下一次心跳。
-	//	原本每個指令都先進佇列、再由 heart_beat() 取出，所以單一指令
-	//	平均要等半個心跳週期（實測 0.84 秒，撞上跑戰鬥那一拍會到 1.9 秒）。
-	//	只在「前面還有指令排隊」時才進佇列，執行順序因此不受影響；
-	//	連打時一樣會塞滿佇列並觸發下面的過量保護，節流沒有消失。
-	if ( cmd_top == cmd_bottom )
+	//	佇列空、而且這一拍還沒有指令直接執行過，就直接跑，不必等心跳。
+	//	原本每個指令都先進佇列再由 heart_beat() 取出，單一指令平均要等
+	//	半個心跳週期（實測 0.84 秒）。
+	//
+	//	「這一拍只放行一個」這個條件很重要：少了它，佇列會因為每次都被
+	//	直接執行而永遠保持空的，於是每個指令都走直接執行 —— 佇列與
+	//	「你同時下太多命令」的保護會一起形同虛設，玩家可以瞬間爆發
+	//	任意多動作（實測過：60 個指令 0.01 秒全部做完）。
+	//	direct_run 由 heart_beat() 每拍歸零。
+	if ( cmd_top == cmd_bottom && !direct_run ) {
+		direct_run = 1;
 		return command(arg);
+	}
 
 	if ( (cmd_top+1) == cmd_bottom ) {
 		write("你同時下太多命令, 停止執行 !!\n");

@@ -812,20 +812,19 @@ void heart_beat()
 {
 	int idle_dump, i;
 
+	//	指令佇列每一拍都要處理，而且要在 hb_tick 的分支之前。
+	//	原本這段放在 if (hb_tick < MAX_TICK) 裡面，於是每 MAX_TICK 次心跳
+	//	就有一次（輪到跑戰鬥的那一拍）完全不處理指令，排隊中的指令要多等
+	//	一個心跳週期 —— 實測會看到偶發的 1.9 秒延遲。
+	//
+	//	每拍消化 CMDS_PER_TICK 個而不是全部清空：全部清空等於沒有節流，
+	//	連打的人可以在一拍之內把所有動作做完。
+	direct_run = 0;
+	for( i = 0; i < CMDS_PER_TICK && cmd_top != cmd_bottom; i++ )
+		run_cmds();
+
 	if (hb_tick< MAX_TICK) {
 		hb_tick++;
-		//	一次把指令佇列清完，而不是每次心跳只吐一個。
-		//	心跳是一秒一次，只吐一個的話每個指令最多要等一秒才有反應。
-		//	上限取佇列大小，避免指令本身又推進新指令（alias 展開之類）時空轉。
-		for( i = 0; i < 32 && cmd_top != cmd_bottom; i++ )
-			run_cmds();
-		//else
-		//	cmd_buffer_mode = 0;
-		// run 2 cmds in 1 heart beat, add by Iris
-//		if ( cmd_top != cmd_bottom )
-//			run_cmds();
-//		else
-//			cmd_buffer_mode = 0;
 		return;
 	} else hb_tick = 0;
 	continue_attack();
