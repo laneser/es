@@ -7,7 +7,7 @@ void create(object ob)
         ob->set_name( "cheetah", "印度豹 " );
         ob->set_short( "印度豹 " );
         ob->set_long(@C_LONG
-這是一只有著漂亮毛皮，修長身驅的動物。它的動作非常地快，
+這是一隻有著漂亮毛皮，修長身驅的動物。它的動作非常地快，
 是一種具有危險性的肉食動物。
 C_LONG
         );

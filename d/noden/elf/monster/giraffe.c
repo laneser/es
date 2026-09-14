@@ -10,7 +10,7 @@ void create()
         set_short( "長頸鹿" );
         set("unit","只");
         set_long(
-        "你看見一只有很長脖子的動物在草原上悠閒的走著。\n"  
+        "你看見一隻有很長脖子的動物在草原上悠閒的走著。\n"  
         );
         set_perm_stat("str", 4);
         set_perm_stat("dex", 8);

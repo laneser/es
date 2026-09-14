@@ -9,7 +9,7 @@ void create()
         add( "id", ({ "squirrel" }) );
         set_short( "松鼠" );
         set_long(@LONG
-你看到一只有著長長尾巴，靈活大眼睛的小動物在枝頭間跑來跑去。
+你看到一隻有著長長尾巴，靈活大眼睛的小動物在枝頭間跑來跑去。
 LONG
 );
         set( "unit", "只" );

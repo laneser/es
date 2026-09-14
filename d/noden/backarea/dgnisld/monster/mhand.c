@@ -15,7 +15,7 @@ void create ()
            "A mired hand, the dusty mire will make it strong. It lies on\n"
         "the swamp, its favorite home.\n",
            "一隻泥手，躺在泥沼上。骯髒的泥巴它最喜歡，那會讓它更有力量。\n"
-        "小心它一但抓住了獵物就不會再放手。\n"
+        "小心它一旦抓住了獵物就不會再放手。\n"
 	);
 	
 	set_perm_stat( "dex", 5 );
