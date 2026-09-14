@@ -2,11 +2,11 @@
 ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"『一切有為法 如夢幻泡影 如電亦如霧 應做如是觀 』
                                                    金剛波羅密經 
  
-這是一個留言板，供十方大德發□，灌水之用。指令用法請參看 help board。
+這是一個留言板，供十方大德發表，灌水之用。指令用法請參看 help board。
 ","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"武僧公會灌水板","c_long.text":"『一切有為法 如夢幻泡影 如電亦如霧 應做如是觀 』
                                                    金剛波羅密經 
  
-這是一個留言板，供十方大德發□，灌水之用。指令用法請參看 help board。
+這是一個留言板，供十方大德發表，灌水之用。指令用法請參看 help board。
 ","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"武僧公會灌水板",])
 messages ({(["id":70,"title":"Re: poor bolo-fist","body":"On Thu Feb  2, Lyre wrote:
 >  my bolo-fist lv 24 but today i go to kill monk in waterfall ....

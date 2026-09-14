@@ -5,7 +5,7 @@ int ent;
 void create()
 {
         ::create();
-  set_short("李□的收藏室");
+  set_short("李芃的收藏室");
   set_long( @CLong
 走進這個房間，你幾乎懷疑自己是不是身處於一個軍事基地之中。這兒華麗的陳
 設不說，收藏的更都是各地的珍奇物品和古玩。耀眼的珠寶(gems)和瓷器(china) 以

@@ -3,7 +3,7 @@ ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_sho
 ","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"talking board","c_long.text":"『一切有為法 如夢幻泡影 如電亦如霧 應做如是觀 』
                                                    金剛波羅密經 
  
-這是一個留言板，供十方大德發□，灌水之用。指令用法請參看 help board。
+這是一個留言板，供十方大德發表，灌水之用。指令用法請參看 help board。
 ","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"武僧公會灌水板",])
 messages ({(["id":1,"body":"heheheh...
 灌水於此! suggest or bug report in 武僧板!

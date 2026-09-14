@@ -27,7 +27,7 @@ int do_plast(string arg)
         tell_object(this_player(),
                 "你想把這碎片貼在那兒？。\n" );
         return 0;}
-    if ((string)environment(this_player())->query("short")=="李□的收藏室" &&
+    if ((string)environment(this_player())->query("short")=="李芃的收藏室" &&
         this_player()->query_temp("look_mirror")) {
         tell_object(this_player(),
                 "你把碎片貼回鏡上的角落，鏡子發出一陣溫暖的光茫。\n" );

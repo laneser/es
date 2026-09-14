@@ -643,7 +643,7 @@ VI. PART ２ 防具： /story/wiz/armor/
 								 evil:-30
 雪魂凝指      ice_ring.c         fihger      element   0/6(+)       dex:-1
 							         meditate:10
-琉璃珠項□    p_amulet1.c         misc       element   0/8(++)
+琉璃珠項鍊    p_amulet1.c         misc       element   0/8(++)
 紅緞地彩繡肚兜 p_cloth1.c         body       cloth     20/10(+++)
 護國師□符□  wiz_amulet1.c       misc       cloth     0/10(+++)      magic:30
 								 cold:-60
