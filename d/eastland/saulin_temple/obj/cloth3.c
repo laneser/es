@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "wen-su robe", "文殊□衣" );
+	set_name( "wen-su robe", "文殊褋衣" );
 	add( "id", ({ "robe" }) );
-	set_short( "文殊□衣" );
+	set_short( "文殊褋衣" );
 	set_long(
-		"□衣是祭祀神佛時所穿的衣服。文殊□衣是祭拜文殊菩薩時穿的長袍。\n"
+		"褋衣是祭祀神佛時所穿的衣服。文殊褋衣是祭拜文殊菩薩時穿的長袍。\n"
 	);
 	set( "unit", "件" );
 	set( "type", "body" );

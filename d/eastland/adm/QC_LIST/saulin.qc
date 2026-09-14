@@ -72,7 +72,7 @@ IV. 生物列表
                                                           W)熟銅棍
 觀明        guan_ming   13   68/15      19       5-13     A)鹿皮衣形 韋陀掌
 掌藥僧      herb_monk   13   65/20      33      14-34     A)紫蘇診袍 瞄神經
-                                                          A)文殊牒衣 自我醫療
+                                                          A)文殊褋衣 自我醫療
                                                           W)蟬翼薄刃
                                                           I)玉靈散
 馬紀        monk_su1    13   60/25      34      15-30     W)如來索
@@ -97,7 +97,7 @@ IV. 生物列表
 
 狐狸精      fox         16   80/36      48      26-46     I)狐狸尾巴 專吸陽氣
 空慧        kon_hwei    16   65/41      48      23-41     A)菩提念珠 金剛不壞
-                                                          A)文殊牒衣 金剛禪唱
+                                                          A)文殊褋衣 金剛禪唱
 野蠻人戰士  barbarian   16   80/21      50      25-45	  W)大石棒
 							  A)巨石護膝
 							  A)大地之盔
@@ -135,7 +135,7 @@ IV. 生物列表
 * 四位絕技測試僧 *
 
 空凡	    kon-fan     14   70/21      12       1-6      A)菩提念珠 捻花指
-							  A)文殊牒衣 
+							  A)文殊褋衣 
 空見        kon-gem	14   25/10      98      16-46                金剛不壞
 								     
 空性        kon-shin    14   77/19      12       1-6      A)觀音臂環 龍爪手 
@@ -200,7 +200,7 @@ VII. 防具列表
 破摩聖甲  	cloth1a       	body    heavy    30/5
 紫羅袈裟  	cloth2        	body    monk     27/5
 如來甲冑  	cloth2a       	body    monk     32/6
-文殊牒衣  	cloth3        	body    cloth    20/3
+文殊褋衣  	cloth3        	body    cloth    20/3
 銀灰補衲  	cloth4        	body    monk     19/4
 灰補衲    	grey_pallium  	body    cloth    10/9
 鹿皮衣形  	cloth5a       	body    leather  28/0

@@ -27,7 +27,7 @@ driver 與 mudlib
     編譯、連結，所以在 mud 執行當中你隨時可以修改它的內容，並且可以在線上隨
     時將修改後的程式碼載入記憶體執行。這點和 Dikumud 的 area 資料檔作用方式
     不同，Dikumud 只在 mud 剛啟動時將所有資料讀進來，而 lpmud 的作法是只把
-    用到的資料讀進來，然後隨時視需要而載入不同的程式碼以結省空間。
+    用到的資料讀進來，然後隨時視需要而載入不同的程式碼以節省空間。
 
     lpmud 的 driver 通常為了效率與功能，寫得十分複雜而且用到的技巧與系統呼
     叫均十分艱深( driver 裡面包含一個 LPC 的 compiler、網路 socket 的處理，
@@ -41,7 +41,7 @@ driver 與 mudlib
 PS: 目前「東方故事」用的是 MudOS 0.9.18 的 driver，這個版本的 driver 可以算
     是第四代的 lpmud driver，目前國際上常見的 driver 還有 lpmud 3.1.2 和
     Amylaar driver。 MudOS 的特色是速度快，節省記憶體，而且是目前國際上新一
-    代 lpmud 採用最多的的 driver，不但新的 lpmud 「市場佔有率」最高，就連許
+    代 lpmud 採用最多的 driver，不但新的 lpmud 「市場佔有率」最高，就連許
     多舊有的 mud 大站也紛紛將它們的 driver 換成 MudOS，其中還包括有不少臺灣
     玩家的 Kingdoms、Genocide。
 

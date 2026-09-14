@@ -32,8 +32,8 @@ shake/t"時就能看到目標模式. 如此就能因目標的存在與否,而使
 就能輕易的偵錯.
 
     關於 "edemote", 其功能是用來創造新表情動作指令的資料庫. 輸入 "edemote
-thwack" 來幫助你創造一個叫 "thrack" 的新指令供玩家使用; 或輸入 "edemote
-thrack/t" 將其設定成目標模式的表情動作指令. 舉個例子, "kiss/t" 指令的條目是:
+thwack" 來幫助你創造一個叫 "thwack" 的新指令供玩家使用; 或輸入 "edemote
+thwack/t" 將其設定成目標模式的表情動作指令. 舉個例子, "kiss/t" 指令的條目是:
  
  .me
  $N $V $n $M
@@ -52,7 +52,7 @@ thrack/t" 將其設定成目標模式的表情動作指令. 舉個例子, "kiss/
 但如果使用者打 "kiss psyche passionately", 結果會變成:
  You kiss Psyche passionately.
 
-    如果 .others 和 .target 都沒有設定, 那系統就會自動使用 .me, 我們可以注意到
+    如果 .other 和 .target 都沒有設定, 那系統就會自動使用 .me, 我們可以注意到
 .me 中有 $N 和 $V 的設定.
     
     $[A-Z,a-z]是為了在表情指令中填入適當的名字(name)/代名詞(pronouns)/
