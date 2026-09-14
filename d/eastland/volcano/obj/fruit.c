@@ -60,7 +60,7 @@ int idle_time2(object who)
 
 void end(object ob1,object who)
 {
-  tell_object(who,"\n空中傳來巫師老貓的聲音：對不起、你修□還不夠，等你功德圓滿時，\n自然有人會來帶你成仙。\n\n");
+  tell_object(who,"\n空中傳來巫師老貓的聲音：對不起、你修煉還不夠，等你功德圓滿時，\n自然有人會來帶你成仙。\n\n");
   tell_room(place,"\n你見到"+who->query("c_name")+"從空中慢慢的飄了下來。\n\n",who);
   who->move_player(place,"SNEAK");
   ob1->remove();

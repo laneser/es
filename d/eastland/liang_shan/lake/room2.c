@@ -12,7 +12,7 @@ void create()
 	  );
         set("c_item_desc",(["cistern":
 "你走到水缸邊，仔細觀察這個水缸，你發現水缸中有許多美麗的小魚，正在\n"
-"缸中游來游去，好像很快樂的樣子。你突然有一種想拿東西□它們的衝動。\n"
+"缸中游來游去，好像很快樂的樣子。你突然有一種想拿東西餵它們的衝動。\n"
             ]));        
         set( "exits", ([
                 "east" : TROOM"village1"
@@ -46,7 +46,7 @@ object fisher;
 if ( !(int)this_player()->query_temp("feed_fish")==1 || present("fisher") ) return 0;
 write(
 "突然間，一個人急急忙忙的衝了進來，差點把你撞倒，於是你停下來準備跟他理論..\n"
-"這個冒失鬼忙陪笑道: 對不起，我只是趕回來□魚，不過看起來，你好像已經□了吧。\n"
+"這個冒失鬼忙陪笑道: 對不起，我只是趕回來釣魚，不過看起來，你好像已經釣了吧。\n"
 "真是謝謝你了...\n");
 fisher =new("/d/eastland/liang_shan/monster/fisher1");
 fisher->move(TROOM"room2");

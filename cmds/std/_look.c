@@ -403,7 +403,7 @@ exits will be displayed or not. */
 	    i = sizeof (dirs);
 		switch (i) {
 		case 0:
-            long = sprintf("%s\t這□沒有任何明顯的出口。\n",long);
+            long = sprintf("%s\t這裡沒有任何明顯的出口。\n",long);
 			break;
 		case 1:
             long = sprintf("%s\t這裡唯一的出口是: %s。\n",long,dirs[0]);

@@ -5,11 +5,11 @@ inherit WEAPON;
 int damage_count=0;
 void create()
 {
-       set_name("lightning morningstar","閃電流星□");
+       set_name("lightning morningstar","閃電流星槌");
        add("id",({"morningstar",}) );
-       set_short("閃電流星□");
+       set_short("閃電流星槌");
        set_long(
-           "一把能夠召喚閃電攻擊敵人的黑色流星□\n"
+           "一把能夠召喚閃電攻擊敵人的黑色流星槌\n"
      	);
 	
 	set("no_sale",1);

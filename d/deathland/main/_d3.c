@@ -10,7 +10,7 @@ void create(object ob)
 	ob->set_long( @LONG_DESCRIPTION
 這洞穴像是一直延申到地底去.而風從地底不停地吹上來.地上的足跡越來
 越多,也越來越零亂,仔細一看巖壁,似乎覆蓋著一層血跡,你瞭解到這裡一定曾
-經發生過一場非常大規模的□殺.
+經發生過一場非常大規模的廝殺.
 LONG_DESCRIPTION
 	);
 

@@ -20,8 +20,8 @@ Long_Description
  );
 set_outside( "deathland" );
  set("item_desc",(["cliff":@C_CLIFF
-很高的懸崖.有很多的蔓□植物依附在上面,你可以試試是否能爬上去,但
-是你不確定這蔓□是否能支撐你的重量.
+很高的懸崖.有很多的蔓藤植物依附在上面,你可以試試是否能爬上去,但
+是你不確定這蔓藤是否能支撐你的重量.
 C_CLIFF
 
 ,"plants":@C_PLANTS

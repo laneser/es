@@ -10,7 +10,7 @@ void create()
 	add("id",({"servant"}));
 	set_short( "宮女");
 	set_long(@C_LONG
-一色淺黃宮裝的女ㄚ□，正在服侍著公主。
+一色淺黃宮裝的女ㄚ頭，正在服侍著公主。
 C_LONG
         );
         set( "wealth/silver",80);

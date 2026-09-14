@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Silver steel Hammer","銀鋼巨□");
+       set_name("Silver steel Hammer","銀鋼巨槌");
        add("id",({"hammer",}) );
-       set_short("銀鋼巨□");
+       set_short("銀鋼巨槌");
        set_long(
-           "矮人用的銀鋼巨□\n"
+           "矮人用的銀鋼巨槌\n"
      	);
 	
 	set( "unit", "把" );

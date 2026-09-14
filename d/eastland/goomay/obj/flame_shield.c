@@ -8,7 +8,7 @@ void create()
         set_short("a flame shield", "火焰盾");
         set_long(
            "This is a magic shield which made by element of fire .\n",
-           "這是一面由火焰精華錘□而成的魔盾，據說它的魔法抗力遠遠超過一般的魔法盾。\n"
+           "這是一面由火焰精華錘煉而成的魔盾，據說它的魔法抗力遠遠超過一般的魔法盾。\n"
         );
         set( "unit", "面"); 
         set( "type", "shield" );

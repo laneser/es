@@ -4,12 +4,12 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("jewel necklace","寶石項□");
+        set_name("jewel necklace","寶石項鍊");
         add("id",({"necklace"}) );
-         set_short( "a pretty jewel necklace","漂亮的寶石項□");
+         set_short( "a pretty jewel necklace","漂亮的寶石項鍊");
 	set_long(
 	"a beautiful jewel necklace.\n",
-	"一串由許多珍貴的寶石鑲成的項□,似乎十分的昂貴\n"
+	"一串由許多珍貴的寶石鑲成的項鍊,似乎十分的昂貴\n"
 	);
 	//set( "no_sale",1);
 	set( "unit", "個" );

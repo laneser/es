@@ -70,7 +70,10 @@ void test_c_name(object ob) { expect_eq(ob->query("c_name"), "繃帶", "中文�
 
 全樹 UTF-8。從 Big5 → GBK → UTF-8 轉過兩次，留下三種痕跡：
 
-- 少數 `□`（U+25A1）缺字，例如 `cmds/std/_look.c:406`。無法自動修復。
+- `□`（U+25A1）缺字：原有 945 處，已補回 690 處，還剩 255 處。
+  待補清單與三種成因見 [`doc/arc42/missing-chars.md`](doc/arc42/missing-chars.md)。
+  **損壞是零星的**，同一個字在同一行可以一個壞一個好，所以「別處是好的」
+  不代表「這裡不是這個字」。缺的也**不一定是漢字**（有整組破折號被吃掉的例子）。
 - 27 處行尾續行型、59 處雙反斜線型的殘留轉義反斜線未處理。
 - `data/attic/` 16 個檔含 U+FFFD。
 
@@ -107,10 +110,12 @@ void test_c_name(object ob) { expect_eq(ob->query("c_name"), "繃帶", "中文�
 不會被載入，但會出現在 grep 結果裡。**改錯檔案是這個 repo 最常見的錯誤** ——
 以 `include/*.h` 的巨集所指的路徑為準。
 
-### 保留檔頭
+### 不要動既有的檔頭
 
-TMI/ES 原作者的檔頭與修改紀錄是這個 lib 的口述歷史。改檔時在底部續寫
-`// <date> <name> - <what>`，不要覆蓋。
+TMI/ES 原作者的檔頭與修改紀錄是這個 lib 唯一的口述歷史，**不要覆蓋或刪除**。
+
+但**不要再往底部續寫 `// <date> <name> - <what>`** —— 那是沒有版控年代的
+權宜之計，改動說明現在寫在 git commit message 裡。
 
 ## FluffOS 2019+ 破壞性變更速查
 

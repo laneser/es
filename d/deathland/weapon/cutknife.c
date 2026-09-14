@@ -8,7 +8,7 @@ void create()
 	set_name( "cutknife", "割耳小刀" );
 	set_short("割耳小刀");
 	set_long( 
-	   "一把很銳利的小刀,似乎它是被用來從□體上割下(cut)耳朵的好工具.\n"
+	   "一把很銳利的小刀,似乎它是被用來從屍體上割下(cut)耳朵的好工具.\n"
 	    );
 	add("id", ({ "knife", }));
 	set( "unit", "把" );
@@ -40,20 +40,20 @@ int cut_ear(string str)
       if ((int)(ob1->query("troll_ear"))==1) {   
          if (!(ob1->query("be_cut")))
            {
-           write("你從巨人的□體上割下了耳朵.\n");
+           write("你從巨人的屍體上割下了耳朵.\n");
            ob2=new(Object"/trollear");
            ob2->move(this_player());
            ob1->set("be_cut",1);
            }
          else 
-         write("這□體已經被割過耳朵了.\n");
+         write("這屍體已經被割過耳朵了.\n");
          }
       else
          {
          write("割耳朵??是一個好主意但是似乎對於死者不敬.\n");
          }
     else
-    write("這裡沒有任何□體.\n");
+    write("這裡沒有任何屍體.\n");
     
     return 1;
 

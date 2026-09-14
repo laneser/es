@@ -3,11 +3,11 @@ inherit WEAPON;
 
 void	create()
 {
-	set_name("staff", "□杖");
+	set_name("staff", "柺杖");
 	add( "id", ({ "staff" }) );
-	set_short("□杖");
+	set_short("柺杖");
 	set_long(
-		"一把普通的□杖\n"
+		"一把普通的柺杖\n"
 	);
 	set( "unit", "把" );
 	set( "weight", 30 );

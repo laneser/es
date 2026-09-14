@@ -84,7 +84,7 @@ void relay_message(string class1,string msg)
 void die()
 {
 	tell_room( environment(this_object()), 
-		"\n"+"劍魂的□首迅速地化成了灰燼。\n"+"\n" ,
+		"\n"+"劍魂的屍首迅速地化成了灰燼。\n"+"\n" ,
 		this_object() );
 	::die(1);	
 }

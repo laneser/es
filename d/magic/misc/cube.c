@@ -154,7 +154,7 @@ int transfer_from(string this)
 			notify_fail( "你身上沒有多餘的空位。\n");
 			// This should never happen.
 		if( res == MOVE_TOO_HEAVY )
-			notify_fail("太重了，你拿不動□n");
+			notify_fail("太重了，你拿不動。\n");
 		return 0;
 	}
 

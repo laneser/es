@@ -46,7 +46,7 @@ int do_open(string arg)
        write("這口棺材業已被人打開過了。\n");
        return 1;
     }
-    write("\n\n忽然，從棺材中蹦出一個僵□！\n\n\n");
+    write("\n\n忽然，從棺材中蹦出一個僵屍！\n\n\n");
     ob=new(SMOB"vampire1");
     ob->move(this_object());
     SAREA"vhole1"->set("have_vampire",1);

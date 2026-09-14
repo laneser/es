@@ -58,7 +58,7 @@ int emit_poison()
   }
   else if (i>5) {
     tell_object( environment(this_object()),
-      "鬼面蛾揮出一團磷粉，你一個失神，四肢觸碰到磷粉，手腳一陣□麻.....\n"
+      "鬼面蛾揮出一團磷粉，你一個失神，四肢觸碰到磷粉，手腳一陣痠麻.....\n"
       ); 
     (CONDITION_PREFIX + "slow")->apply_effect(victim,20,10 );
     victim->receive_special_damage("poison",40); 

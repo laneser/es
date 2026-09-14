@@ -170,7 +170,7 @@ C_LONG
 void recover2(object obj)
 {
       tell_object( obj,
-        "祠堂 老院長說道:我記得在□完雞以後就不見了,你可以去找找。\n");
+        "祠堂 老院長說道:我記得在餵完雞以後就不見了,你可以去找找。\n");
 }
 void ask_worship()
 {

@@ -65,7 +65,7 @@ int cook(object me)
         heal1 = 7*skill2+2*skill1+3*level-random(10);
         heal = heal1/20;
         if ( !random(skill1)>9 ) 
-                return notify_fail("你企圖用菜刀割下屍體的肉，卻把□體挖的面目全非..\n");
+                return notify_fail("你企圖用菜刀割下屍體的肉，卻把屍體挖的面目全非..\n");
         tell_object(me,
         "你掏出菜刀，切下屍體身上的上肉，再撒上一些鹽，把它做成乾肉。\n");
         tell_room(environment(me),"你看到" +me->query("c_name")+                

@@ -20,5 +20,5 @@ LONG);
 }
 string query_short()
 {
-       return set_color("三叉□","HIY");
+       return set_color("三叉戟","HIY");
 }

@@ -17,7 +17,7 @@ void create()
       set("unit","位");
       set("alignment",-1300);
       set("weight",400);
-      set_long(query("c_name")+"帶著一本魔法師們都有的魔法書□n");
+      set_long(query("c_name")+"帶著一本魔法師們都有的魔法書。\n");
       set( "alt_corpse", "NONE" );
       set( "moving", 1 );
       set( "speed", 40 );

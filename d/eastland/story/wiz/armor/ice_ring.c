@@ -7,7 +7,7 @@ void create()
         add( "id", ({ "ring" }) );
         set_short("雪魂凝指");
         set_long(@C_LONG
-一隻千年寒□結晶成的戒指，任多大烈焰終不能使之熔化。
+一隻千年寒冰結晶成的戒指，任多大烈焰終不能使之熔化。
 C_LONG
         );
         set( "unit","只");

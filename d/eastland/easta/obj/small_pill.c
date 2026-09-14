@@ -10,7 +10,7 @@ void create()
 	add( "id", ({ "pill" }) );
 	set_short( "小還丹" );
 	set_long(@C_LONG
-這是一粒用人□、靈芝等藥材煉製成的小還丹，服用(eat)後可以
+這是一粒用人參、靈芝等藥材煉製成的小還丹，服用(eat)後可以
 恢復一些體力。
 C_LONG
 	);

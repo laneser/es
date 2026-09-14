@@ -38,7 +38,7 @@ void start_death(object ghost)
 	tell_object(ghost, can_read_chinese(ghost)?
 		"\n你看到一個又高又瘦的黑色人影，無聲無息地走到你的身邊 ....\n"
 		"\n黑無常說道: 你已經死了，隨我赴陰司受審吧。\n"
-		"\n黑無常將一條又粗又重的鐵□往你頭上一套，很粗暴地拖著你向前走。\n"
+		"\n黑無常將一條又粗又重的鐵鏈往你頭上一套，很粗暴地拖著你向前走。\n"
 		"\n你只見眼前許多雲霧像刀一樣刮過你的臉，然後出現了一座石橋 ....\n":
 		"\nYou see a tall slim figure appears behind you silently ....\n"
 		"\nBlack Wuchang says: YOU HAVE DIED, MORTAL ONE.\n"

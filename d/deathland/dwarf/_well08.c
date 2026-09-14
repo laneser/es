@@ -8,7 +8,7 @@ void create(object ob)
 	if ( !ob ) return ;
 	ob->set_short("地下河道");
 	ob->set_long( @LONG_DESCRIPTION
-四周到處都是青苔和一些奇怪的小蟲,而且這裡的泥土十分潮□,似乎這裡是地下
+四周到處都是青苔和一些奇怪的小蟲,而且這裡的泥土十分潮溼,似乎這裡是地下
 河川的河道,但是目前這河道已經乾枯了.而在這裡你看到河道已經流入更深入地下的
 地方.
 LONG_DESCRIPTION

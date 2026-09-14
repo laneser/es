@@ -17,7 +17,7 @@ void create()
 	add( "id", ({ "spirit" }) );
 	set_short( "火精靈" );
 	set_long(
-		"一個全身通紅冒著火□頭上綁了個蝴蝶結的精靈。\n"
+		"一個全身通紅冒著火焰頭上綁了個蝴蝶結的精靈。\n"
 	);
 	set( "unit", "個" );
 	set( "race", "elf" );
@@ -152,7 +152,7 @@ int my_tactic()
 // set_color() 時，第三個參數為判斷顏色的對象，如果不設，就是這隻精靈
 // 這就是為什麼有時候看不到顏色的原因，設成 master 即可 
 	tell_room( environment(this_object()),
-	  set_color("\n火精靈把口一張，從嘴裡射出一團火□攻擊敵人 !\n\n","HIR",master)
+	  set_color("\n火精靈把口一張，從嘴裡射出一團火焰攻擊敵人 !\n\n","HIR",master)
 	, this_object()
 	);
 	victim->receive_special_damage("fire", dam);

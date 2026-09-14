@@ -10,7 +10,7 @@ void create()
 	::create();
    set_short( "巢穴" );
 	set_long( @LONG_DESCRIPTION
-你正在某種動物的巢穴之中。很意外地, 這□不但相當寬敞
+你正在某種動物的巢穴之中。很意外地, 這裡不但相當寬敞
 , 而且地上還鋪滿了潔淨柔軟的稻草, 空氣中似乎還散發出一股
 淡淡的馨香, 甚至令你昏昏欲睡!
 LONG_DESCRIPTION

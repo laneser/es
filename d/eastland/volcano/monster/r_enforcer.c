@@ -54,5 +54,5 @@ void ask_tree(object who)
 void ask_dragon(object who)
 {
   tell_object(who,
-    "\n執事說：相傳火龍是火神的坐騎之一，全身冒著火□，口中也能吐出烈火。\n\n"  );
+    "\n執事說：相傳火龍是火神的坐騎之一，全身冒著火焰，口中也能吐出烈火。\n\n"  );
 }

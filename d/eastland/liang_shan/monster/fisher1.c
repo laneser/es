@@ -37,7 +37,7 @@ void ask_fish()
 {
         if (!(int)this_player()->query_temp("feed_fish")==1) {
 write (
-"這位魚夫說道: " + c_call(this_player()) +"，對不起，我要□我的魚...\n");
+"這位魚夫說道: " + c_call(this_player()) +"，對不起，我要餵我的魚...\n");
 return ;
 }
 write (

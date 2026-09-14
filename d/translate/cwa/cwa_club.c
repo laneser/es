@@ -8,7 +8,7 @@ void create()
 	set_short("Color Wolf Association", "色狼俱樂部" );
 	set_long(
 "You are in Club of Color Wolf Association\n",
-"這□是色狼俱樂部\n"
+"這裡是色狼俱樂部\n"
 	);
 	set( "light",1 );
 	set( "exits", ([

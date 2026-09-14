@@ -37,7 +37,7 @@ void init()
 int do_search(string arg)
 {
     write(@LONG
-你發現了一口枯井(well)，深不見底，你最好不要□試跳下去(jump)，以免
+你發現了一口枯井(well)，深不見底，你最好不要嘗試跳下去(jump)，以免
 發生危險。  
 LONG
    );    

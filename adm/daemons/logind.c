@@ -451,7 +451,7 @@ protected void enter_world(object user)
     bad_pass = (mixed *)user->query("passwd_fail");
     if( bad_pass ) {
         tell_object( player,
-            "\nWARNING: 有人於 " + ctime(bad_pass[1]) + " 從 " + bad_pass[0] + " □試連線失敗。\n");
+            "\nWARNING: 有人於 " + ctime(bad_pass[1]) + " 從 " + bad_pass[0] + " 嘗試連線失敗。\n");
         user->set("passwd_fail",0);
     }
 

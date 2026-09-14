@@ -43,11 +43,11 @@ void ask_mistake(object asker)
    
    if ( ( !asker->query_temp("gonfu_asked") ) &&
         ( !asker->query_temp("jail_asked") ) ) {
-      tell_object( asker,"全執祥說道:阿□陀佛。\n");  
+      tell_object( asker,"全執祥說道:阿彌陀佛。\n");  
       return ;
    }
    if ( this_object()->query("be_asked") )
-     tell_object( asker,"全執祥說道:阿□陀佛。\n");
+     tell_object( asker,"全執祥說道:阿彌陀佛。\n");
    else {
      tell_object( asker ,
         "全執祥說道:唉,我所犯的錯?\n"

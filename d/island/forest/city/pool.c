@@ -33,7 +33,7 @@ int do_drink(string str)
    
    tell_object( this_player(),"你蹲下來喝了幾口甜美的泉水...........\n");
    tell_room(environment(this_player()),
-    this_player()->query("c_name")+"緩緩的蹲了下來，仔細的品□著池中的泉水！\n"
+    this_player()->query("c_name")+"緩緩的蹲了下來，仔細的品嚐著池中的泉水！\n"
    ,this_player() );
    
    if( (string)this_player()->query("class") != "knight") 

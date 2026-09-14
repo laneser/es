@@ -23,7 +23,7 @@ void create()
     set( "pursuing",1 );
     set ("chat_chance", 10);
     set( "att_chat_output", ({
-        "力士邊揮舞大□頭邊狂笑著：看我把你打成肉餅！\n"
+        "力士邊揮舞大槌頭邊狂笑著：看我把你打成肉餅！\n"
         }));
     set("c_death_msg","%s 龐大的身軀晃了一晃，噗通一聲倒在你身上，差點把你壓昏..\n");
     set_skill("blunt",60);

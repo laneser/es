@@ -42,7 +42,7 @@ string c_call(object who)
 void ask_fish()
 {
 write (
-"這位釣客說道: " + c_call(this_player()) +"，這□有很多魚呦...\n");
+"這位釣客說道: " + c_call(this_player()) +"，這裡有很多魚呦...\n");
 return ;
 }
 

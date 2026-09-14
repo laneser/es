@@ -12,12 +12,12 @@ void create()
 @C_LONG
 這是一間陳設簡單的方形大廳. 許多人正席地而坐, 靜靜排隊等待
 進入ES。左邊牆上有一個佈告欄(board), 上面貼了一張告示。右邊
-牆角有張展示櫃(closet), □面放著1996 mud workshop 的紀念品。
+牆角有張展示櫃(closet), 裡面放著1996 mud workshop 的紀念品。
 C_LONG
     );
     set("c_item_desc", ([
      "closet": @C_CLOSET 
-     這個展示櫃□放了個1996 mud workshop, ES 提供的虛擬紀念品 -- 精美可
+     這個展示櫃裡放了個1996 mud workshop, ES 提供的虛擬紀念品 -- 精美可
      儲存胸章(amulet) 一個, 聽說只要參加 workshop 的ES玩家, 就可以獲贈
      一枚。
 C_CLOSET,
@@ -77,7 +77,7 @@ void init()
 
 int do_drop()
 {
-	write("這□不準亂丟垃圾。\n");
+	write("這裡不準亂丟垃圾。\n");
 	return 1;
 }
 
@@ -85,13 +85,13 @@ int do_drop()
 
 int do_acupunct()
 {
-	write("這□不準針灸。\n");
+	write("這裡不準針灸。\n");
 	return 1;
 }
 
 int do_hang()
 {
-	write("這□不準絞殺。\n");
+	write("這裡不準絞殺。\n");
 	return 1;
 }
 
@@ -99,98 +99,98 @@ int do_hang()
 
 int do_aid()
 {
-	write("這□不準急救。\n");
+	write("這裡不準急救。\n");
 	return 1;
 }
 
 int do_clot()
 {
-	write("這□不準止血。\n");
+	write("這裡不準止血。\n");
 	return 1;
 }
 
 int do_demand()
 {
-	write("這□不準召喚。\n");
+	write("這裡不準召喚。\n");
 	return 1;
 }
 
 
 int do_embattle()
 {
-	write("這□不準結陣。\n");
+	write("這裡不準結陣。\n");
 	return 1;
 }
 
 
 int do_chutan()
 {
-	write("這□不準聚丹。\n");
+	write("這裡不準聚丹。\n");
 	return 1;
 }
 
 
 int do_brood()
 {
-	write("這□不準打坐。\n");
+	write("這裡不準打坐。\n");
 	return 1;
 }
 
 
 int do_eungon()
 {
-	write("這□不準運功。\n");
+	write("這裡不準運功。\n");
 	return 1;
 }
 
 
 int do_songin()
 {
-	write("這□不準誦經。\n");
+	write("這裡不準誦經。\n");
 	return 1;
 }
 
 
 int do_exercise()
 {
-	write("這□不準打坐。\n");
+	write("這裡不準打坐。\n");
 	return 1;
 }
 
 int do_meditate()
 {
-	write("這□不準冥思。\n");
+	write("這裡不準冥思。\n");
 	return 1;
 }
 
 int do_steal()
 {
-	write("這□不準偷竊。\n");
+	write("這裡不準偷竊。\n");
 	return 1;
 }
 
 
 int do_backstab()
 {
-	write("這□不準背刺。\n");
+	write("這裡不準背刺。\n");
 	return 1;
 }
 
 int do_cast()
 {
-	write("這□不準施法。\n");
+	write("這裡不準施法。\n");
 	return 1;
 }
 
 int do_auction()
 {
-	write("這□不準交易。\n");
+	write("這裡不準交易。\n");
 	return 1;
 }
 
 int do_kill()
 {
-	write("這□不準械鬥。\n");
+	write("這裡不準械鬥。\n");
 	return 1;
 }	
 

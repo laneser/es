@@ -9,7 +9,7 @@ void create()
     set_short( "green chainmail","點翠團花戰甲");
 	set_long(
 		"This is a suit of green chainmail \n",
-		"這是一件綠油油的□甲，不知道是用什麼金屬製成的，胸前有\n"
+		"這是一件綠油油的鎧甲，不知道是用什麼金屬製成的，胸前有\n"
 		"許多美麗的繡花圖案．\n"
 	);
     set( "no_sale",1);

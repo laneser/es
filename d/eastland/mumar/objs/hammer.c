@@ -4,10 +4,10 @@ inherit WEAPON;
  
 void create()
 {
-        set_name("hammer", "鐵□");
-        set_short("鐵□");
+        set_name("hammer", "鐵錘");
+        set_short("鐵錘");
         set_long(
-                "這把鐵□是一般工匠用來修復裝備用的工具。\n"
+                "這把鐵錘是一般工匠用來修復裝備用的工具。\n"
         );
         set( "unit", "把" );
         set( "weight", 80 );

@@ -88,7 +88,7 @@ int cmd_diagnose(string arg)
         if( dest != this_player())
           {
             tell_object(dest,
-                sprintf("%s繞著你晃了一圈, 嘴□不知道嘀咕些什麼東西。\n",
+                sprintf("%s繞著你晃了一圈, 嘴裡不知道嘀咕些什麼東西。\n",
                    this_player()->query("c_name"))
                    );
            }

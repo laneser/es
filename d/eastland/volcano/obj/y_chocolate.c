@@ -8,7 +8,7 @@ void create()
 	add( "id", ({ "chocolate" }) );
 	set_short( "黃色巧克力" );
 	set_long(
-		"這是一個慾望巧克力，你可以□□看(taste)。\n"
+		"這是一個慾望巧克力，你可以嚐嚐看(taste)。\n"
 	);
 	set( "type", "misc" );
 	set( "weight", 10 );
@@ -54,7 +54,7 @@ int idle_time2(object who)
 {
     tell_object(who,"突然你的眼前一片黑暗，你震了一下，你發覺你的周圍都是人，而且不知道用\n");
     tell_object(who,"手對著你指指點點的做什麼，臉上還帶著鄙視的笑容，\n");
-    tell_object(who,"你正覺得奇怪時，突然發現自己正流著口水，地上還□□的，糗死了\n");
+    tell_object(who,"你正覺得奇怪時，突然發現自己正流著口水，地上還溼溼的，糗死了\n");
     tell_object(who,"你恨不得地上有個洞可以馬上鑽進去。\n");
     who->set_temp("block_command",0);
     return 1;

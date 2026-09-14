@@ -58,7 +58,7 @@ do_cut(string arg)
 		return notify_fail("這裡一片漆黑 ! 你什麼也看不到 !!\n");
 	env = environment(this_player());
 	if ( ! (corpse = present(tmp,env)) ) 
-		return notify_fail("這裡沒有這種□體 。\n");
+		return notify_fail("這裡沒有這種屍體 。\n");
         if (sscanf((string)corpse->query("short"),"%s的屍體",tmp) < 1 || tmp =="腐爛") {
 		return notify_fail("這屍體已經發臭了, 你敢碰它嗎?? \n");
 	}

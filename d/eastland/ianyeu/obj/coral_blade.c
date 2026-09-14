@@ -4,9 +4,9 @@ inherit WEAPON;
 
 void create()
 {
-    set_name( "coral blade", "琅□寶刀" );
+    set_name( "coral blade", "琅玕寶刀" );
     add( "id", ({ "blade" }) );
-    set_short( "琅□寶刀" );
+    set_short( "琅玕寶刀" );
 	set_long(
         "這是一把用萬年金珊瑚打造而成的長刀, 通體金亮, 但刀刃中隱約透出\n"
         "一絲紅光, 似乎是因沾滿血腥所致。\n"

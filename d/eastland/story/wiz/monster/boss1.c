@@ -10,7 +10,7 @@ void create()
 	add( "id", ({ "boss" }) );
 	set_short( "旅館老闆" );
 	set_long(@C_LONG
-一位□著啤酒肚的中年人，他正笑嘻嘻地站在櫃檯旁招呼客人。
+一位挺著啤酒肚的中年人，他正笑嘻嘻地站在櫃檯旁招呼客人。
 C_LONG
         );
 	set( "gender", "male" );

@@ -54,7 +54,7 @@ int cmd_sneak(string arg)
 	if ( (int)this_player()->query_temp("next_action") > time() )
 		return notify_fail("你正在做其他事情 ...\n");
 	if ( this_player()->query("conditions/confused") )
-                return notify_fail(set_color("你覺得腦中一團混亂，好像有什麼不知名的東西在啃□著你...\n","HIM"));
+                return notify_fail(set_color("你覺得腦中一團混亂，好像有什麼不知名的東西在啃咬著你...\n","HIM"));
 	if ( ! arg ) return notify_fail("你要往哪裡潛行？\n");
 	if ( !exit = env->query("exits/"+arg) )
 		return notify_fail("那裡沒有任何出路。\n");

@@ -3,10 +3,10 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("occult chainmail", "神秘□甲");
+        set_name("occult chainmail", "神秘鎧甲");
         add( "id", ({ "mail","chainmail" }) );
-        set_short("神秘□甲");
-        set_long("神秘□甲\n");
+        set_short("神秘鎧甲");
+        set_long("神秘鎧甲\n");
         set("unit","件");
         set( "type", "body" );
         set( "material", "light_metal" );

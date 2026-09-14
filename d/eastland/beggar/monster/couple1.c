@@ -135,6 +135,6 @@ void die()
            ob1 = new( DITEM"ball" );
            ob1->move(last_hit);
            tell_object(last_hit,"\n嚇!!你眼明手快地從"
-               +this_object()->query("c_name")+"□體中取出舍利子\n\n");
+               +this_object()->query("c_name")+"屍體中取出舍利子\n\n");
         }::die(1);
  }

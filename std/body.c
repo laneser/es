@@ -114,7 +114,7 @@ protected object create_ghost()
 #endif
 
 	tell_room( old,
-		"你看到一縷白色的影子從"+(string)ghost->query("c_name") + "的□體中飄起。\n"
+		"你看到一縷白色的影子從"+(string)ghost->query("c_name") + "的屍體中飄起。\n"
 	);
 
 	if(environment(ghost) != old) {

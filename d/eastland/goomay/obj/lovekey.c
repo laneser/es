@@ -9,8 +9,8 @@ void create()
          set_short( "Necklace of love","情關意鎖");
 	set_long(
 "This is a magic necklace , it is growing and you feel you got a strong mind .\n",
-"這是一條系著一把金色鑰匙的項□，這把奇異的鑰匙散發出一種憾人心絃\n"+
-"的光芒，看到了它，你覺得在也不□徨了。\n"
+"這是一條系著一把金色鑰匙的項鍊，這把奇異的鑰匙散發出一種憾人心絃\n"+
+"的光芒，看到了它，你覺得在也不彷徨了。\n"
 	);
 	set( "no_sale",1);
 	set( "unit", "條" );

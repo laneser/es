@@ -7,7 +7,7 @@ void create()
         add ("id",({ "tuberose"}));
 	set_short("夜來香");
 	set_long(
-		 "這是一束芬芳□麗的夜來香。\n"
+		 "這是一束芬芳豔麗的夜來香。\n"
 		 "它的花語是：危險的快樂。\n"
 		 "這束花上還系著一張小卡片。\n");
 	set("unit", "束");

@@ -441,7 +441,7 @@ exits will be displayed or not. */
 	    i = sizeof (dirs);
 		switch (i) {
 		case 0:
-			long += (chinese_mode?"\t這□沒有任何明顯的出口。\n"
+			long += (chinese_mode?"\t這裡沒有任何明顯的出口。\n"
 								 :"\tThere are no obvious exits.\n");
 			break;
 		case 1:

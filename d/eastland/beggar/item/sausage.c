@@ -29,10 +29,10 @@ int eat_food(string arg)
     if( !arg ||( arg != "sausage") ) 
         return notify_fail("你要吃啥東東?\n");
     tell_room( environment(this_player()),this_player()->query("c_name")+
-        "狼吞虎□地吃下了一個『一口香腸』,好像三天沒吃東西的樣子...\n", 
+        "狼吞虎嚥地吃下了一個『一口香腸』,好像三天沒吃東西的樣子...\n", 
          this_player());
     tell_object( this_player(),
-        "你狼吞虎□地吃下了一個『一口香腸』,看來你是餓了～～\n");
+        "你狼吞虎嚥地吃下了一個『一口香腸』,看來你是餓了～～\n");
     this_player()->receive_healing( 15+random(5) );
     remove();
     return 1;

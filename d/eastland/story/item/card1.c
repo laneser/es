@@ -14,8 +14,8 @@ void create()
         add("id",({"amulet"}));
 	set_short("進財符");
 	set_long(@LONG
-一張大紅色的符□，上面印著泥金四個大字『招財進寶』。你可以嘗試去使用這張
-符□，不知道會有什麼事情發生。(use balance_amulet)。
+一張大紅色的符咒，上面印著泥金四個大字『招財進寶』。你可以嘗試去使用這張
+符咒，不知道會有什麼事情發生。(use balance_amulet)。
 LONG);
 	set("unit","張");
 }
@@ -79,11 +79,11 @@ int do_balance(string arg)
   }
     
   tell_object(this_player(),set_color(
-    "\n你輕輕地把符□撕了開來，只見五彩祥雲簇擁，天放異光罩住這裡的每一個人..\n\n","HIY")
+    "\n你輕輕地把符咒撕了開來，只見五彩祥雲簇擁，天放異光罩住這裡的每一個人..\n\n","HIY")
     );
       
   tell_room(environment(this_player()),set_color(sprintf(
-    "\n%s你輕輕地把符□撕了開來，只見五彩祥雲簇擁，天放異光罩住這裡的每一個人..\n\n",
+    "\n%s你輕輕地把符咒撕了開來，只見五彩祥雲簇擁，天放異光罩住這裡的每一個人..\n\n",
     this_player()->query("c_name")),"HIY"),this_player());
   this_player()->set_temp("block_command",1);     
   call_out("second_msg",3,this_player(),ob);

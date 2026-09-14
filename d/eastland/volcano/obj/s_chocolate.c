@@ -8,7 +8,7 @@ void create()
 	add( "id", ({ "chocolate" }) );
 	set_short( "銀色巧克力" );
 	set_long(
-		"這是一個包著火山豆的巧克力，你可以□□看(taste)。\n"
+		"這是一個包著火山豆的巧克力，你可以嚐嚐看(taste)。\n"
 	);
 	set( "type", "misc" );
 	set( "weight", 10 );

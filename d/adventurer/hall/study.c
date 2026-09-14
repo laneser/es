@@ -112,7 +112,7 @@ int do_study(string arg)
 			"指令格式: study <法術名稱>\n": "Syntax: study <spell>\n" );
 	if( !undefinedp( this_player()->query("spells/"+arg) ) )
 		return notify_fail( chinese_mode?
-			"這個法術你已經學會了，你可以□試用(raise)提升法術等級。\n":
+			"這個法術你已經學會了，你可以嘗試用(raise)提升法術等級。\n":
 			"You already learned this spell, you can try \"raise\" the spell level.\n" );
 	if( !can_learn_spell( this_player(), arg ) )
 		return notify_fail( chinese_mode?

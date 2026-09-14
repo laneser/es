@@ -269,26 +269,26 @@ void effect_one(int level, object caster, object victim)
 			victim->query("c_name")) );
 
 	  tell_object( victim, 
-		sprintf("%s將手中的黑暗球體「轟隆」的一聲, 在你面前炸開！高熱的火□重重地燒灼著你的皮膚。\n",
+		sprintf("%s將手中的黑暗球體「轟隆」的一聲, 在你面前炸開！高熱的火焰重重地燒灼著你的皮膚。\n",
 			caster->query("c_name") ));
 
 	  tell_room( environment(caster), 
-		sprintf("%s將手中的黑暗球體「轟隆」的一聲在%s身上炸開, 同時化成一團黑暗的火□焚燒著%s！\n",
+		sprintf("%s將手中的黑暗球體「轟隆」的一聲在%s身上炸開, 同時化成一團黑暗的火焰焚燒著%s！\n",
 			caster->query("c_name"), victim->query("c_name"), victim->query("c_name") )
 		    , ({ caster, victim })
 	  );
 	} else if( level < 3 ) {
 	  tell_object( victim, 
-		sprintf(bold("%s手中的黑暗球體突然擴大, 籠罩在你的四周。接著一隻黑色的火龍\n突然從天 而降，往你身上噴出灼熱火□！\n",caster)
+		sprintf(bold("%s手中的黑暗球體突然擴大, 籠罩在你的四周。接著一隻黑色的火龍\n突然從天 而降，往你身上噴出灼熱火焰！\n",caster)
 		  ,caster->query("c_name") ));
 
 	  tell_room( environment(victim), 
-		sprintf("%s手中的黑暗球體化成一個魔法陣圍繞著%s, 接著一隻黑色的火龍\n突然從天而降，往%s身上噴出灼熱火□！\n"
+		sprintf("%s手中的黑暗球體化成一個魔法陣圍繞著%s, 接著一隻黑色的火龍\n突然從天而降，往%s身上噴出灼熱火焰！\n"
 		  ,caster->query("c_name"), victim->query("c_name"), victim->query("c_name") )
 		, ({ caster, victim }));
 
 	  tell_object( caster, 
-		sprintf(bold("你手中的黑暗球體化成一個魔法陣圍繞著%s, 接著一隻黑色的火龍\n突然從天而降，往%s身上噴出灼熱火□！\n",caster)
+		sprintf(bold("你手中的黑暗球體化成一個魔法陣圍繞著%s, 接著一隻黑色的火龍\n突然從天而降，往%s身上噴出灼熱火焰！\n",caster)
 		  ,victim->query("c_name"), victim->query("c_name") ));
 	}
 	
@@ -323,10 +323,10 @@ void effect_all( int level, object caster, object targ )
     
     tell_object( caster,
       sprintf( bold(
-      "龍王「巴哈姆特」突然從天而降，往你身上噴出炙熱火□。\n 不過你周圍一股無形的力場擋住了火□，減低了傷害！\n",caster )));
+      "龍王「巴哈姆特」突然從天而降，往你身上噴出炙熱火焰。\n 不過你周圍一股無形的力場擋住了火焰，減低了傷害！\n",caster )));
 
     tell_room( environment(caster), 
-	  "龍王「巴哈姆特」突然從天而降，往你身上噴出炙熱火□。你覺得你\n 
+	  "龍王「巴哈姆特」突然從天而降，往你身上噴出炙熱火焰。你覺得你\n 
 的身體逐漸失去知覺，所有的細胞開始分解 ，像蒸發了一樣——氣化了！\n"
 	  ,caster
 	);

@@ -89,7 +89,7 @@ int do_hit(string arg)
     return 1;
   }
   
-  write ("你用小槌子往人□果輕輕敲去，只見人參果掉了下來，剛好落在你鋪的布上，你把它連布一起拿起來。\n");
+  write ("你用小槌子往人參果輕輕敲去，只見人參果掉了下來，剛好落在你鋪的布上，你把它連布一起拿起來。\n");
   ob=new(OOBJ"fruit");
   ob->set(this_player()->query("name"),1);
   ob->move(this_player());

@@ -95,7 +95,7 @@ int cast_spell()
     
     if( random(10) < 3 ) {
       tell_room( environment(this_object()), 
-        sprintf("大主教底斯宜爾大叫 : Yang 將摧毀你的靈魂\n\n一道強光忽然刺入%s的身體□.\n\n",c_name) );
+        sprintf("大主教底斯宜爾大叫 : Yang 將摧毀你的靈魂\n\n一道強光忽然刺入%s的身體裡.\n\n",c_name) );
       victim->receive_special_damage("divide", 40+random(25));
       report(this_object(),victim);
       return 1;

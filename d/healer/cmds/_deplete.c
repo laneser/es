@@ -21,7 +21,7 @@ int cmd_deplete(string arg)
 
     if (dest->query("npc")) return notify_fail("你不能替 NPC 放血。\n");
 
-    if (dest->query("ghost")) return notify_fail("要上大體解剖到醫學院去，不要拿死□開玩笑！\n");
+    if (dest->query("ghost")) return notify_fail("要上大體解剖到醫學院去，不要拿死屍開玩笑！\n");
     
     weapon = this_player()->query("weapon1");
     if ((!weapon) || (string)weapon->query("type") != "dagger")

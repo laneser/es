@@ -129,7 +129,7 @@ int do_study(string arg)
 			"指令格式: study <計策名稱>\n");
 	if( !undefinedp( this_player()->query("tricks/"+arg) ) )
 		return notify_fail(
-			"這個計策你已經學會了，你可以□試思考(thinking)更高級的運用方式。\n");
+			"這個計策你已經學會了，你可以嘗試思考(thinking)更高級的運用方式。\n");
 	if( !can_learn_trick( this_player(), arg ) )
 		return notify_fail(
 			"對不起，你現在對詭計學的認識還沒有辦法瞭解這種計策....。\n");

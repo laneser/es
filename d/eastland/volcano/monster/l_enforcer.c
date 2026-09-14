@@ -49,11 +49,11 @@ void ask_box(object who)
 void ask_tree(object who)
 {
   tell_object(who,
-    "\n執事說：人□果入土即化，需要有塊布攤開(spread)在下面接著。\n\n");
+    "\n執事說：人參果入土即化，需要有塊布攤開(spread)在下面接著。\n\n");
 }
 
 void ask_chilin(object who)
 {
   tell_object(who,
-    "\n執事說：相傳火麒麟是火神的坐騎之一，全身冒著火□，口中也能吐出烈火。\n\n");
+    "\n執事說：相傳火麒麟是火神的坐騎之一，全身冒著火焰，口中也能吐出烈火。\n\n");
 }

@@ -14,7 +14,7 @@ void create()
 Long_Description
  );
   set("item_desc",([
-      "cliff":"很高的懸崖.有很多的蔓□植物依附在上面.\n",
+      "cliff":"很高的懸崖.有很多的蔓藤植物依附在上面.\n",
       "hole":"一個很深的洞穴.\n",
       "plants":"一些奇怪的植物.\n",
                      ]) );

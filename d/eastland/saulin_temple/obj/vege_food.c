@@ -27,7 +27,7 @@ int eat_food(string arg)
 {
 	if( !id(arg) ) return 0;
 	write( 
-		"你狼吞虎□地吃掉了一份素食大餐，拍拍肚皮打了一聲飽嗝...:)\n"
+		"你狼吞虎嚥地吃掉了一份素食大餐，拍拍肚皮打了一聲飽嗝...:)\n"
 	);
 	tell_room( environment(this_player()),
 		this_player()->query("c__name")+"吃掉了一份素食大餐，"

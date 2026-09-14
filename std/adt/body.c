@@ -76,7 +76,7 @@ protected object create_ghost()
 
 	tell_room( old,
 		"你看到一縷白色的影子從" + (string)ghost->query("c_name")
-		+ "的□體中飄起。\n" );
+		+ "的屍體中飄起。\n" );
 
 	if(environment(ghost) != old) {
 		tell_room(old, "白影緩緩飄向天空，然後消失了。\n" );

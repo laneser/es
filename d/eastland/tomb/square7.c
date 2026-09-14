@@ -10,9 +10,9 @@ void create()
 	set_short("地下廣場");
 	set_long( 
 @C_LONG_DESCRIPTION
-這□是一個巨大的廣場，令你有豁然開朗的感覺。實在無法想像當年的工匠們是如何在
+這裡是一個巨大的廣場，令你有豁然開朗的感覺。實在無法想像當年的工匠們是如何在
 地底下建立如此大的廣場，你不禁對那些工匠起了分敬意。廣場邊有一根渾圓發亮的大石柱
-，上面貼了一張咒符(charm)。從符□上發出了青白色的光芒，映的滿室一片青白。
+，上面貼了一張咒符(charm)。從符咒上發出了青白色的光芒，映的滿室一片青白。
 C_LONG_DESCRIPTION
 	);
 
@@ -48,7 +48,7 @@ int get_amulet(string str)
 		tell_object( player, 
 			"當你試著拿下咒符時，突然起了一陣旋風....咒符竟化成了人形 !!\n");
 		tell_room( environment(player), 
-			"當" + player->query("c_cap_name") + "試著拿下咒符時，突然起了一陣旋風....符□竟化成了人形 !!\n",
+			"當" + player->query("c_cap_name") + "試著拿下咒符時，突然起了一陣旋風....符咒竟化成了人形 !!\n",
 			player );
 		new(MOB"/thunder_guard")->move(environment(player));
 		gua = 1;

@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("wraith morningstar","矮靈流星□");
+       set_name("wraith morningstar","矮靈流星錘");
        add("id",({"morningstar","star"}) );
-       set_short("矮靈流星□");
+       set_short("矮靈流星錘");
        set_long(
-           "一把矮靈流星□\n"
+           "一把矮靈流星錘\n"
      	);
 	
 	set( "unit", "把" );

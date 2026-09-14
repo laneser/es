@@ -3,7 +3,7 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("floral cape", "百花點翠□羅袍");
+        set_name("floral cape", "百花點翠皂羅袍");
         add( "id", ({ "cloak","cape" }) );
         set_short("floral cape","百花點翠皂羅袍");
         set_long(

@@ -3,11 +3,11 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("jade chainmail", "翡翠□甲");
+        set_name("jade chainmail", "翡翠鎧甲");
         add( "id", ({ "mail","chainmail" }) );
-        set_short("翡翠□甲");
+        set_short("翡翠鎧甲");
         set_long(
-                "這是一件以翡翠製成的□甲看起來十分華麗。\n"
+                "這是一件以翡翠製成的鎧甲看起來十分華麗。\n"
         );
         set("unit","件");
         set( "type", "body" );

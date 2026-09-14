@@ -21,7 +21,7 @@ int eat_food(string arg)
         write(
                 "你把這一小團麵包屑吃下肚子，就好像在大海中丟入一顆石頭。\n" );
         tell_room( environment(this_player()),"你看到"+
-                     this_player()->query("c_name")+"狼吞虎□地吃掉了一塊麵包屑，"
+                     this_player()->query("c_name")+"狼吞虎嚥地吃掉了一塊麵包屑，"
                 "你的同情心油然而生...\n", this_player()
 		);
            this_player()->receive_healing( 1+random(1) );

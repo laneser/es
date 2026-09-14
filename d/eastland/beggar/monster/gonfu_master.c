@@ -66,7 +66,7 @@ void ask_war( object asker )
 write(@C_LONG        
 項長老嘆道:唉,十多年前,本幫中有一位頗為聰明的弟子,由於他千方百計想得到幫主之位
            ,不惜以外面的力量,打擊本幫,頓時幫內遭到一場空前的活劫;那時,死傷無數
-           ,□骨堆積成山鮮血流成河,幫內精英消失殆盡,所幸在 幫主 震八方英明的領
+           ,骸骨堆積成山鮮血流成河,幫內精英消失殆盡,所幸在 幫主 震八方英明的領
            導之下,擊潰敵人無數,才能挽救現在的局面。但為了安撫不安的叛變的弟子,
            不得已委以那位弟子的遺孤重任,所幸,那遺孤也英雄了得,替幫內整頓得好生
            興旺。那遺弧也就是現在的全副幫主,那時的叛變弟子自是他父親--全執祥。
@@ -84,14 +84,14 @@ int my_attack()
 
     if( random(30) < 2 ) { 
       tell_room( environment(this_object()),
-          "項長老使出了『打狗棒法』之『□』字訣把"+
-          victim->query("c_name")+"□倒了!!\n",victim);
+          "項長老使出了『打狗棒法』之『絆』字訣把"+
+          victim->query("c_name")+"絆倒了!!\n",victim);
       tell_object( victim,
-          "項長老使出了『打狗棒法』之『□』字訣把你給□倒了!!\n");         
+          "項長老使出了『打狗棒法』之『絆』字訣把你給絆倒了!!\n");         
       victim->receive_damage(15);
       victim->block_attack(8);
       victim->set_temp("msg_stop_attack",
-          "(  你被□倒了,瞬間無法攻擊 !!  )\n");
+          "(  你被絆倒了,瞬間無法攻擊 !!  )\n");
       return 1;                     
     } else if ( random(30) < 4 ) {
         tell_room( environment(this_object()),

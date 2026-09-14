@@ -11,7 +11,7 @@ void create ()
         add("id",({"man"}));
 	set_long( 
              @LONG
-你看他倒在地上□□一息的樣子，想救他又恨自己沒這個能力，他能活到現在，完全
+你看他倒在地上奄奄一息的樣子，想救他又恨自己沒這個能力，他能活到現在，完全
 是為了要把一個秘密(secret)講出來。
 LONG
 	);
@@ -46,7 +46,7 @@ void ask_secret(object who)
     tell_object(who,
       "瀕臨死亡的人說：想要救人的話，就去摸山頂那個圖案。\n");
    }
-   tell_room(environment(),"他終於□下了最後一口氣，你看到□體化成一絲白煙向天飄去。\n");
+   tell_room(environment(),"他終於嚥下了最後一口氣，你看到屍體化成一絲白煙向天飄去。\n");
    this_object()->remove();
    return;
 }

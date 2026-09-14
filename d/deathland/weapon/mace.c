@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-        set_name("Black Mace","黑色釘頭□");
+        set_name("Black Mace","黑色釘頭槌");
         add("id",({"mace",}) );
-       set_short("黑色釘頭□");
+       set_short("黑色釘頭槌");
        set_long(
-         "由米蘇理和銀混合製成的黑色釘頭□.\n"
+         "由米蘇理和銀混合製成的黑色釘頭槌.\n"
                );
 	
 	set( "unit", "把" );

@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( "gem necklace","琉璃珠項□" );
+        set_name( "gem necklace","琉璃珠項鍊" );
         add( "id", ({ "necklace" }) );
-        set_short( "琉璃珠項□");
+        set_short( "琉璃珠項鍊");
         set_long(@long
-由一顆顆反覆燒製而成的琉璃珠所串成的項□，非常名貴。在這串項□上閃爍著一
+由一顆顆反覆燒製而成的琉璃珠所串成的項鍊，非常名貴。在這串項鍊上閃爍著一
 閃閃的光芒，把全室照著通亮。
 long    );
         set( "unit", "串" );

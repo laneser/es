@@ -18,7 +18,7 @@ void drink_muse(int color,object you)
     
     if ( correct!=color ) {
        tell_object(you,
-       "當你喝下這泉水時,你的喉嚨忽然一陣抽□\n"
+       "當你喝下這泉水時,你的喉嚨忽然一陣抽痛\n"
        );
        tell_room(environment(you),
        you->query("c_name")+"大叫一聲!!啊......\n");
@@ -78,7 +78,7 @@ void drink_bottle_muse(object you,object box)
     
     if ( correct!=color ) {
        tell_object(you,
-       "當你喝下這泉水時,你的喉嚨忽然一陣抽□\n"
+       "當你喝下這泉水時,你的喉嚨忽然一陣抽痛\n"
        );
        tell_room(environment(you),
        you->query("c_name")+"大叫一聲!!啊......\n");

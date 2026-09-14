@@ -102,7 +102,7 @@ void ask_air(object who)
            if (items[i]->query("quest_item/doctor_headband") &&
                items[i]->query("quest_action/good_poet") ) {
            tell_object(who,@MSG2
-我的二兒子艾爾, 你見過他嗎? 他是一個神奇的□金術士. 我已經很
+我的二兒子艾爾, 你見過他嗎? 他是一個神奇的鍊金術士. 我已經很
 久沒有見到他了.
 MSG2
            );

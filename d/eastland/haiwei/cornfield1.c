@@ -43,7 +43,7 @@ int do_search(string arg)
          }
     write("在你專注於找尋的時候,你突然失神滑了一跤,跌進田中。\n") ;
     tell_room(this_object(),player->query("c_name")+
-              "突然跌進田□,摔了個滿身泥巴。\n",player) ;     
+              "突然跌進田裡,摔了個滿身泥巴。\n",player) ;     
     if(!arg || ( arg != "茅草" && arg != "reed"))
            return notify_fail("你找了又找，並沒有發現任何東西。\n") ;
     player->set_temp("beggar_enter",1) ;

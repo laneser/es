@@ -8,7 +8,7 @@ void create()
      add( "id",({ "necklace" }) );
      set_short( "@@query_short" );
      set_long(@C_LONG
-一個純金打造，刻著龍的形狀的項□，價值不□。
+一個純金打造，刻著龍的形狀的項鍊，價值不菲。
 C_LONG
      );
      set( "weight",50 );
@@ -20,5 +20,5 @@ C_LONG
 }
 string query_short()
 {
-    return set_color("龍形項□","HIY");
+    return set_color("龍形項鍊","HIY");
 }

@@ -22,7 +22,7 @@ CLong
                 "奇異的光線從裡面射了出來.\n",
         "sign":"\nOSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSO\n"
                "O              飄扶之屋,閒人勿進                        O\n"
-               "O              回答(answer)密語,請君入□                O\n" 
+               "O              回答(answer)密語,請君入甕                O\n" 
                "O              ...........長老 安洛(Annow)              O\n"
                "OSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSCSO\n"
                 ]) ); 

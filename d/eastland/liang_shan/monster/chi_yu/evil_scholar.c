@@ -144,8 +144,8 @@ int my_tactic()
          victim->set_temp("msg_stop_attack", "（ 你現在被大地精靈扣住，動彈不得，無法攻擊 ）\n");
          return 0;
        case 1:
-         tell_object(victim,set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向你射出一團火□。\n","HIR",victim));
-         tell_room(environment(this_object()),set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向"+victim->query("c_name")+"射出一團火□。\n","HIR",victim),victim);
+         tell_object(victim,set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向你射出一團火焰。\n","HIR",victim));
+         tell_room(environment(this_object()),set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向"+victim->query("c_name")+"射出一團火焰。\n","HIR",victim),victim);
          victim->receive_special_damage("fire",20);
          return 0;
        case 2:

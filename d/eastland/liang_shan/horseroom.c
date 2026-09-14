@@ -139,7 +139,7 @@ int buy_horse(string arg)
       horse->set_master( this_player() );
 
     tell_object(this_player(), 
-        "老闆牽來一匹馬，邪惡地笑道：「下次記得再來喔 !!」邊說邊把□繩交給你\n");
+        "老闆牽來一匹馬，邪惡地笑道：「下次記得再來喔 !!」邊說邊把韁繩交給你\n");
     return 1;
 }
 

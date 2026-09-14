@@ -8,7 +8,7 @@ void create(object ob)
 	if ( !ob ) return ;
 	ob->set_short("『薪膽村』監牢");
 	ob->set_long( @LONG_DESCRIPTION
-你現在來到了監牢的地底下一層。這裡滿地都是白森森的□骨, 角落裡有一張
+你現在來到了監牢的地底下一層。這裡滿地都是白森森的骸骨, 角落裡有一張
 釘在牆壁上的木板床。
 LONG_DESCRIPTION
 	);

@@ -32,7 +32,7 @@ int do_search(string arg)
    object head; 
    if ( !have_head ) return 0;
    have_head=0;
-   write("你找了找，發現旁邊墳墓裡埋了一具□體！");
+   write("你找了找，發現旁邊墳墓裡埋了一具屍體！");
    if ( ( this_player()->query_perm_stat("str") ) < 10 ) {
      write("可惜你力量不夠，無法把它挖起來。\n");
      return 1;

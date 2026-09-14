@@ -9,7 +9,7 @@ void create()
 	set_short( "a highsteel shortsword", "精鋼短劍" );
 	set_long(
 		"You see an excellent shortsword made of highsteel.\n",
-		"這是一把千錘百□，純鋼鍛成的短劍，是本鎮劍廬的精品。\n"
+		"這是一把千錘百煉，純鋼鍛成的短劍，是本鎮劍廬的精品。\n"
 	);
 	set( "unit", "把" );
 	set( "weight", 90 );

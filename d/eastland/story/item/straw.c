@@ -10,7 +10,7 @@ void create()
         set_short( "奇妙吸管");
         set_long(@C_LONG
 一根長長的的吸管，它的一頭有個大圓球，圓球是中空的，或許，你可用它來攝取
-(suck)某些動物死後□體裡的液體。
+(suck)某些動物死後屍體裡的液體。
 C_LONG  );      
         set("unit","根");
         set("weight",10);

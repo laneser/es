@@ -7,7 +7,7 @@ void create()
 	set_name( "fan", "蒲扇" );
 	set_short( "蒲扇" );
 	set_long(@LONG
-一面造型輕巧的花扇，上繡著翩翩飛舞的蝴□。
+一面造型輕巧的花扇，上繡著翩翩飛舞的蝴蝶。
 LONG
 	);
 	set( "unit","面");

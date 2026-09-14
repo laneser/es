@@ -26,8 +26,8 @@ void create()
                                 "random_dam" : 5 , "hit_rate" : 20]));
         set( "tactic_func", "my_tactic" );
 set("c_enemy_msg",
-    "那女人揮出□衣服，拍的一聲重重的打在你身上，你感到一陣劇痛..\n\n");
-set("c_room_msg","那女人揮出□衣服，把");
+    "那女人揮出溼衣服，拍的一聲重重的打在你身上，你感到一陣劇痛..\n\n");
+set("c_room_msg","那女人揮出溼衣服，把");
 set("c_room_msg2", "打得暈頭轉向 ...\n");
 
 }

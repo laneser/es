@@ -32,9 +32,9 @@ void fire_ball()
     object victim;
     if( !(victim=query_attacker()) || random(8)> 1 ) return 0;
     tell_object( victim,
-      "火蟹突然張開大嘴，吐出一團火□。\n" );
+      "火蟹突然張開大嘴，吐出一團火焰。\n" );
     tell_room( environment(this_object()),sprintf(
-      "火蟹突然張開大嘴，對%s吐出一團火□。\n",victim->query("c_name"))
+      "火蟹突然張開大嘴，對%s吐出一團火焰。\n",victim->query("c_name"))
      , ({ victim, this_object() })
     );
     victim->receive_special_damage("fire", 6, 1 );

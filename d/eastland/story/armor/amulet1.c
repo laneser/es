@@ -4,11 +4,11 @@ inherit SARM"OR";
 
 void create()
 {
-        set_name("buddha amulet","□符");
+        set_name("buddha amulet","卍符");
         add( "id", ({ "amulet" }) );
-        set_short( "□符");
+        set_short( "卍符");
         set_long(@C_LONG
-一個繡著□字符號的護符。除此之外，護符上滿是些佛字梵號，不時閃爍著光芒，
+一個繡著卍字符號的護符。除此之外，護符上滿是些佛字梵號，不時閃爍著光芒，
 其光芒令你感到一陣陣的溫暖，相信是個很好的防具才對。
 C_LONG
         );

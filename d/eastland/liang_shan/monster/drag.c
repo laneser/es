@@ -34,7 +34,7 @@ C_LONG
 	set ("race", "monster");
 	set_c_limbs(({"堅硬的背部","前頸","粗大的長尾","頭部"}));
 	set_c_verbs( ({"%s揮舞龍爪抓向%s","%s龍吟一聲，龍尾狂掃向%s",
-	"%s張嘴，一道火□噴向%s"}));
+	"%s張嘴，一道火焰噴向%s"}));
         set ("tactic_func","special_attack");
         set( "inquiry", ([
               "laice" : "@@ask_laice",
@@ -154,7 +154,7 @@ void die()
       "/d/magic/magic"->report( this_object(), killer );
    tell_room(environment(this_object()),
       "盡力一擊後，戰龍終於不支，吐血倒地而亡....\n"+
-      killer->query("c_name")+"將插在戰龍□體上的"+ob1->query("c_name")+
+      killer->query("c_name")+"將插在戰龍屍體上的"+ob1->query("c_name")+
       "拔出，順手把上面的血跡擦拭乾淨。\n"      
       );
    ob1->add( "min_damage",5 );

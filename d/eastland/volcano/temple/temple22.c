@@ -10,7 +10,7 @@ void create()
 	set_long( 
 @LONG_DESCRIPTION
 這是一間神殿器物室，左邊的架子(shell)上盡是一些祭祀時所要穿戴的東西，
-右邊的櫃子(closet)裡放著一些香油蠟□之類的，還有一些碗盤碟子的器皿，地上另
+右邊的櫃子(closet)裡放著一些香油蠟燭之類的，還有一些碗盤碟子的器皿，地上另
 外還堆了一大堆雜七雜八的物品。
 LONG_DESCRIPTION
 	);

@@ -32,7 +32,7 @@ int cut_head(string arg)
    item=all_inventory(this_player());
    for (i=0;i<sizeof(item);i++)
      if ((string)item[i]->query("name")=="sharp knife") {
-       write("你用你手中的銳利小刀把冒險者的頭從□體上割了下來。\n");
+       write("你用你手中的銳利小刀把冒險者的頭從屍體上割了下來。\n");
        obj=new(OOBJ"head");
        obj->move(this_player());
        be_cut=1;

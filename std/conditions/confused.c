@@ -28,7 +28,7 @@ void effect(object player)
 	if( !sizeof(cond_data)==3 ) return;
 	player->receive_special_damage( "mental", cond_data[2] );
 	tell_object(player, can_read_chinese(player)?
-		set_color("你覺得腦中一團混亂，好像有什麼不知名的東西在啃□著你....\n","HIM",player):
+		set_color("你覺得腦中一團混亂，好像有什麼不知名的東西在啃咬著你....\n","HIM",player):
 		"You feel confused, with unknown pain ....\n");
 	cond_data[1]--;
 	player->set( "conditions/" + EFFECT_NAME, cond_data );

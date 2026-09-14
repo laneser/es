@@ -26,7 +26,7 @@ int eat_food(string arg)
 {
 	if( !arg || arg != "banana") return 0;
 	write( 
-		"你狼吞虎□地吃掉一條香蕉，覺得齒頰留香...:)\n"
+		"你狼吞虎嚥地吃掉一條香蕉，覺得齒頰留香...:)\n"
 	);
 	tell_room( environment(this_player()), 
 		this_player()->query("c_name")+"三兩下就吃掉一條香蕉，你都看呆了...\n"

@@ -8,7 +8,7 @@ void create()
     add( "id", ({ "wand" }) );
     set_short( "神禹令" );
     set_long(@LONG
-一面畫著許多符□的牌子，整塊黑溜溜的，有點像黑炭。
+一面畫著許多符咒的牌子，整塊黑溜溜的，有點像黑炭。
 LONG
     );
     set( "unit", "面" );

@@ -4,11 +4,11 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("Mithril Hammer","巨□");
+       set_name("Mithril Hammer","巨槌");
        add("id",({"hammer",}) );
-       set_short("米蘇里巨□");
+       set_short("米蘇里巨槌");
        set_long(
-           "矮人用的米蘇里巨□\n"
+           "矮人用的米蘇里巨槌\n"
      	);
 	
 	set( "unit", "把" );

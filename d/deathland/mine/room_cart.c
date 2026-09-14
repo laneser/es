@@ -37,7 +37,7 @@ string query_c_long()
 "按(press)它\n" ;	
 	switch( query("cart_moving") ) {
 		case 0:
-			long += "目前希斯克利夫運礦車正停在精□廠裡.\n";
+			long += "目前希斯克利夫運礦車正停在精煉廠裡.\n";
 			break;
 		case 1:
 			long += "希斯克利夫運礦車緩緩地移動著.\n";
@@ -66,7 +66,7 @@ int will_go()
     
     set("cart_moving",1);
     set("exits",([]));
-    tell_room(environment(this_object()),"一陣輕微的震動,希斯克利夫運礦車駛出精□廠,開始進入矮人礦坑.\n");
+    tell_room(environment(this_object()),"一陣輕微的震動,希斯克利夫運礦車駛出精煉廠,開始進入矮人礦坑.\n");
     if( cartobj )
       cartobj->travel_mine();
 }

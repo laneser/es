@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-	set_name( "regular chainmail", "□甲" );
+	set_name( "regular chainmail", "鎧甲" );
 	add( "id", ({ "chain", "mail", "regular" }) );
-	set_short( "制式□甲" );
+	set_short( "制式鎧甲" );
 	set_long(
-		"這件□甲看起來很重，但是相對地能提供相當不錯的保護。\n"
+		"這件鎧甲看起來很重，但是相對地能提供相當不錯的保護。\n"
 	);
 	set( "unit", "件" );
 	set( "weight", 180 );

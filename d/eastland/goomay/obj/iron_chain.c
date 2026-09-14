@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-	set_name( "iron chain", "鐵□" );
+	set_name( "iron chain", "鐵鏈" );
 	add( "id", ({ "chain","whip" }) );
-	set_short( "a iron chain", "鐵□" );
+	set_short( "a iron chain", "鐵鏈" );
 	set_long(
 		"You see an iron chain which used to lock felonries.\n",
-		"這是一條長長的鐵□，是公差們用來追拿犯人的武器。\n"
+		"這是一條長長的鐵鏈，是公差們用來追拿犯人的武器。\n"
 	);
 	set( "unit", "條" );
 	set( "weight", 70 );

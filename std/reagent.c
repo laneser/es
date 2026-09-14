@@ -37,7 +37,7 @@ int do_taste(string str)
    
         seteuid(getuid());
 	if( !id(str) ) return notify_fail(
-		"你要□試什麼東西？\n");
+		"你要嘗試什麼東西？\n");
 
         if ( query("savour")=="bitter") {
           write( 
@@ -45,7 +45,7 @@ int do_taste(string str)
         }else if ( query("savour")=="acidity") {
           write( "你小心的舔了一下"+query("c_name")+", 哇勒, 好酸啊!!\n");
         } else if ( query("savour")=="acrimony" ){
-          write( "你輕輕的舔了"+query("c_name")+"一下....哇!!快噴火了!!哪□有水??");
+          write( "你輕輕的舔了"+query("c_name")+"一下....哇!!快噴火了!!哪裡有水??");
         } else if (query("savour")=="sweet") {
           write ("你試了試"+query("c_name")+",疑,還蠻甜的嘛!莫非是毒藥甜嘴?\n");
 	} else {
@@ -68,11 +68,11 @@ int do_taste(string str)
         ("/std/conditions/slow")->apply_effect(me,duration,damage);
 	} else {	
 	write(
-		"你將" + query("c_name") + "放在嘴邊□試，並沒有感覺什麼特殊作用。\n");
+		"你將" + query("c_name") + "放在嘴邊嘗試，並沒有感覺什麼特殊作用。\n");
 	}
 	
 	tell_room( environment(this_player()),
-		this_player()->query("c_name") + "將" + query("c_name") + "放在嘴邊□試。\n",
+		this_player()->query("c_name") + "將" + query("c_name") + "放在嘴邊嘗試。\n",
 		this_player() );
 	return 1;
 }

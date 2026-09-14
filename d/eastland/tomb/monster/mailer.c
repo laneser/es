@@ -36,7 +36,7 @@ tell_object(this_player(),
  
 一塊玉佩從信差垂下的手中掉落。
  
-也許是身中劇毒，信差的□體迅速地化成血水......滲入地面......
+也許是身中劇毒，信差的屍體迅速地化成血水......滲入地面......
 ASK);
 obj=new("/d/eastland/tomb/item/break_jade1");
 obj->move(environment(this_object()));

@@ -12,7 +12,7 @@ void create ()
        set("unit","只");
        set_long(@LONG
     一隻只有指頭大小的蟾蜍。透明的身體外有一條條鮮紅色的細紋，看起來相當的
-□麗。
+豔麗。
 LONG    );
        set_skill("dodge",100);
        set_natural_weapon(35,10,12);

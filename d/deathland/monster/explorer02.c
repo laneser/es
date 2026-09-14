@@ -100,7 +100,7 @@ void ask_chain(object who)
         }
      else
        {
-        tell_object(who,"我的流星□技巧是一個東方武術家教的,你要學習嗎\n");  
+        tell_object(who,"我的流星錘技巧是一個東方武術家教的,你要學習嗎\n");  
         return ;
        }
 }
@@ -112,7 +112,7 @@ int accept_item(object who,object item )
         who->set_temp("echo_chain",1); 
         if((string)who->query("class")=="knight")
           tell_object(who,@MSG3
-謝謝你,假如你是個騎士的話,或許我可以教你流星□(chain)
+謝謝你,假如你是個騎士的話,或許我可以教你流星錘(chain)
 的技巧,但是你需要較高的經驗值去學習,因為我不是一個好老師.
 MSG3
           );

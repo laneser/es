@@ -4,12 +4,12 @@ inherit WEAPON;
 
 void create()
 {
-       set_name("steel whip","水磨八□鋼鞭");
+       set_name("steel whip","水磨八稜鋼鞭");
        add("id",({"whip","steel_whip",}) );
-       set_short("水磨八□鋼鞭");
+       set_short("水磨八稜鋼鞭");
 	   set_long(
            "這是一把用特殊金屬製成的鋼鞭，因為太過堅硬而不能鑄造，只好用\n"
-	   "水沙慢慢打磨．鞭身是八角形構造，□特別突出，被打到可能很痛．\n"
+	   "水沙慢慢打磨．鞭身是八角形構造，稜特別突出，被打到可能很痛．\n"
 	
 	);
 	

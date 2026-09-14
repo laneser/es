@@ -41,10 +41,10 @@ int emit_poison(object victim)
 		return 0;
         victim->set("last_attacker",holder);
         victim->receive_special_damage("none", 16+random(9) );
-        tell_object(holder,set_color( "你揮舞鐵蒺藜骨朵打向敵人，一片血光從敵人血肉□糊的傷口湧出.....\n"
+        tell_object(holder,set_color( "你揮舞鐵蒺藜骨朵打向敵人，一片血光從敵人血肉模糊的傷口湧出.....\n"
         ,"HIR",holder));
         tell_room(environment(holder),set_color(holder->query("c_name")+
-        "揮舞鐵蒺藜骨朵打向敵人，一片血光從敵人血肉□糊的傷口湧出.....\n","HIR",holder),holder);
+        "揮舞鐵蒺藜骨朵打向敵人，一片血光從敵人血肉模糊的傷口湧出.....\n","HIR",holder),holder);
     (CONDITION_PREFIX + "bleeding")->apply_effect(victim,6,8,8);
     holder->set("hit_points",(int)holder->query("hit_points")-5);
     damage_count=0;

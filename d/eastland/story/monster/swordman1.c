@@ -54,12 +54,12 @@ int my_tactic()
      case 0..8 :
         victim->receive_damage(40+random(30));
         tell_room(env,
-           "\n八門吹雪引起□天海水，水助劍勢狠狠往敵人面門一戳！\n\n\n");
+           "\n八門吹雪引起漫天海水，水助劍勢狠狠往敵人面門一戳！\n\n\n");
         return 1;
      case 9 :
         this_object()->receive_healing(60);
         tell_room(env,
-           "八門吹雪手中的「□符」發出一道藍光，瞬間，他的傷口癒合了！\n");
+           "八門吹雪手中的「咒符」發出一道藍光，瞬間，他的傷口癒合了！\n");
         return 1; 
      }
      return 0;          

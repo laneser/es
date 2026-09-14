@@ -3,12 +3,12 @@
 inherit WEAPON;
 void create()
 {
-       set_name("copper hammer","銅角□");
+       set_name("copper hammer","銅角槌");
    add("id",({"hammer"}));
-   set_short("銅角□");
+   set_short("銅角槌");
        set_long(
 @C_LONG
-這是把由銅片鑲在原木塊上的□子，握把的地方刻有蜘蛛的圖案。
+這是把由銅片鑲在原木塊上的槌子，握把的地方刻有蜘蛛的圖案。
 C_LONG
         );
 

@@ -25,7 +25,7 @@ C_LONG
 int eat_food(string arg)
 {
 	if( !arg || arg != "apple") return 0;
-	write( "你狼吞虎□地啃掉了一顆蘋果，覺得齒頰留香...:)\n"
+	write( "你狼吞虎嚥地啃掉了一顆蘋果，覺得齒頰留香...:)\n"
 	);
 	tell_room( environment(this_player()), 
 		this_player()->query("c_name")+"三兩下就啃掉了一顆蘋果，你都看呆了...\n"

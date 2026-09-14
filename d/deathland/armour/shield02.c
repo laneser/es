@@ -8,7 +8,7 @@ void create()
         set_short("an mithril shield", "米蘇里盾牌");
         set_long(
                 "mithril shield of protection .\n",
-           "這是用米蘇里金屬所製成的盾，盾上有著矮人軍的標幟--兩把交叉的巨□ \n"
+           "這是用米蘇里金屬所製成的盾，盾上有著矮人軍的標幟--兩把交叉的巨槌 \n"
         );
         set( "unit", "面"); 
         set( "type", "shield" );

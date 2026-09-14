@@ -203,7 +203,7 @@ void pre_effect(object caster, object target, int level)
 			c_msg = "\n%s的手中開始聚集一團熊熊的烈火，形成一個巨大的火球。\n\n";
 			break;
 		case 8:
-			c_msg = "\n%s的手中開始聚集一團火□, 逐漸形成一隻炙熱的火鳥 － 凱撒之鷹。\n\n";
+			c_msg = "\n%s的手中開始聚集一團火焰, 逐漸形成一隻炙熱的火鳥 － 凱撒之鷹。\n\n";
 			break;
 		default:
 			c_msg = "\n%s的手中開始聚集一團火球。\n\n";

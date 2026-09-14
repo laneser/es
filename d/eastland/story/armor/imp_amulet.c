@@ -8,7 +8,7 @@ void create()
         add( "id", ({ "amulet" }) );
         set_short( set_color("十二天都符□","HIC"));
         set_long(@C_LONG
-一個劃著梵語的護符。□符上面的字龍飛鳳舞，筆力蒼勁，令你看不懂寫的是什麼
+一個劃著梵語的護符。咒符上面的字龍飛鳳舞，筆力蒼勁，令你看不懂寫的是什麼
 。
 C_LONG
         );

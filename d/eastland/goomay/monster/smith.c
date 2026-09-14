@@ -42,11 +42,11 @@ int my_tactic()
 		weapon = victim->query("weapon2");
 	if( !weapon ) return 0;
 	tell_room( environment(), 
-		"鐵匠高舉鐵□，往" + victim->query("c_name") + "的" + 
+		"鐵匠高舉鐵錘，往" + victim->query("c_name") + "的" + 
 		weapon->query("c_name") + "的弱點「匡啷」一聲敲了下去。\n",
 		({ this_object(), victim }) );
 	tell_object( victim, 
-		"鐵匠高舉鐵□，往你的" + 
+		"鐵匠高舉鐵錘，往你的" + 
 		weapon->query("c_name") + "的弱點「匡啷」一聲敲了下去。\n");
 	wc = weapon->query("weapon_class");
 	if( !weapon->query("damaged") ) {

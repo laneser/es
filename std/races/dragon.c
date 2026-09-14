@@ -53,14 +53,14 @@ int fire_breath()
 	if( !victim = (object)me->query_attacker() ) return 0;
 	if( !present(victim, environment(me)) ) return 0;
 	tell_object(victim, can_read_chinese(victim)?
-		sprintf(set_color("\n%s突然張口往你身上噴出灼熱火□!!\n\n", "HIR", victim),
+		sprintf(set_color("\n%s突然張口往你身上噴出灼熱火焰!!\n\n", "HIR", victim),
 			me->query("c_name")):
 		sprintf(set_color("\n%s breathe at you!!\n\n", "HIR", victim),
 			me->query("cap_name")) );
 	tell_room(environment(me), ({
 		sprintf("\n%s breathe at %s!!\n\n", me->query("cap_name"),
 			victim->query("name")), 
-		sprintf("\n%s突然張口往%s身上噴出灼熱火□!!\n\n",
+		sprintf("\n%s突然張口往%s身上噴出灼熱火焰!!\n\n",
 			me->query("c_name"), victim->query("c_name")) }),
 		({ me, victim }) );
 	victim->receive_special_damage("fire", (int)me->query_level()*4);

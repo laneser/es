@@ -50,7 +50,7 @@ int do_roll(string arg)
 void recover1(object holder,object env)
 {
     tell_room(env,set_color(
-       "\n\n       忽然間！！湖面波浪□天、雷電交加，甚是險惡....\n\n"
+       "\n\n       忽然間！！湖面波浪滔天、雷電交加，甚是險惡....\n\n"
        "       你心裡閃過不好的預感！！\n\n"
        ,"HIC"));
     call_out("recover2",6,holder,env);

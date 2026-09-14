@@ -79,8 +79,8 @@ int my_tactic(string arg)
          command("scholar 可惡的"+(string)ob->query("c_name")+"竟敢跑到書生公會來撒野 !!\n");
          break;      
        case 1:
-         tell_object(ob,set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向你射出一團火□。\n","HIR",ob));
-         tell_room(environment(this_object()),set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向"+ob->query("c_name")+"射出一團火□。\n","HIR",ob),ob);
+         tell_object(ob,set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向你射出一團火焰。\n","HIR",ob));
+         tell_room(environment(this_object()),set_color("突然晴天一聲霹靂，火精靈挾著雷霆之勢從天而降，火精靈把口一張，從嘴裡向"+ob->query("c_name")+"射出一團火焰。\n","HIR",ob),ob);
          ob->receive_special_damage("fire",20);
          command("scholar 書生們 ! 等我把"+(string)ob->query("c_name")+"給宰了，你們就可以來分裝備了 !!\n");
          break;

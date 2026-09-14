@@ -33,7 +33,7 @@ int move(mixed ob)
 int eat_food(string arg)
 {
 		if( !arg || arg != "dumpling" ) return 0;
-		write( "你狼吞虎□的吃下這盤包子..咦? 怎麼有根奇怪的毛?\n" );
+		write( "你狼吞虎嚥的吃下這盤包子..咦? 怎麼有根奇怪的毛?\n" );
 		tell_room( environment(this_player()),
 		this_player()->query("c_name")+"飛快地吃掉了一盤包子，然後\n"     
 	        "一臉狐疑的從嘴角拉出一根毛...\n" , this_player());

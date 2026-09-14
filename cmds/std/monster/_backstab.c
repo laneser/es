@@ -66,7 +66,7 @@ int backstab_idle(object me,object target,int succeed)
 	int dam = 0;
 
 	if ( !target || nullp(target) || target->query("hit_points") < 1) {
-		write("那傢伙已經死了, 就放過他的□體吧 。\n");
+		write("那傢伙已經死了, 就放過他的屍體吧 。\n");
 		return 1; 
 	}
 	if ( !present(target,environment(me))) {

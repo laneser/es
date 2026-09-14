@@ -2,10 +2,10 @@
 #define EMBATTLE_FAIL_DAMAGE 25
 #define EMBATTLE_FAIL_RATE 20
 #define COST_SP 8
-#define EMBATTLE_NAME "四象□璣陣"
+#define EMBATTLE_NAME "四象璇璣陣"
 
 string *c_message=({
-    "帶領著隊伍走著四象□璣陣的特殊步法\n",
+    "帶領著隊伍走著四象璇璣陣的特殊步法\n",
     "喊著：讓我們同心協力把敵人殲滅掉吧\n",
     "發現了敵人的破綻，連出三招攻擊敵人的破綻\n",
     "斜退直進，突然出招直擊敵人的要害\n",

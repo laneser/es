@@ -13,7 +13,7 @@ void create()
 	add( "id", ({ "zombie", }) );
         set_short("鬼□");
         set_long(
-                "它是陰玄冰用邪術合成的殭屍，一身□毒令人聞之色變。\n"
+                "它是陰玄冰用邪術合成的殭屍，一身屍毒令人聞之色變。\n"
         );
         set( "unit", "具" );
 	set( "alignment", -600 );

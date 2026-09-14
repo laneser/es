@@ -4,13 +4,13 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("Ironsteel chainmail","鐵鋼□甲");
+        set_name("Ironsteel chainmail","鐵鋼鎧甲");
         add("id",({"chainmail"}) );
-         set_short( "a ironsteel chainmail","鐵鋼□甲");
+         set_short( "a ironsteel chainmail","鐵鋼鎧甲");
 	set_long(
 "This is a suit of chainmail made of iron steel,which can  \n"
 "protect your body against opponent's attacks.\n",
-"這是一副由鐵鋼造的□甲,可以保護你抵抗敵人的攻擊\n"
+"這是一副由鐵鋼造的鎧甲,可以保護你抵抗敵人的攻擊\n"
 	);
 	set( "unit", "件" );
 	set( "weight", 300 );

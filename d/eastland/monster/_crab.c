@@ -11,6 +11,6 @@ void create(object ob)
 	);
 	ob->set( "natural_armor_class", 10 );
 	ob->set( "unit", "只" );
-	ob->set_c_verbs( ({ "%s用它的大□往%s一夾" }) );
+	ob->set_c_verbs( ({ "%s用它的大鉗往%s一夾" }) );
 	ob->set_c_limbs( ({ "身體", "硬殼" }) );
 }

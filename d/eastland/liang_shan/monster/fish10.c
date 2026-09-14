@@ -43,7 +43,7 @@ void die()
    tell_room(environment(this_object()),
       "\n你的最後一擊終於打扁了這條不乖的鯉魚的頭，這世界上從此又少了一條\n"
       "夢幻黃金鯉魚了，為了紀念你釣上這種魚，於是你把它身上的肉割下來，做\n"
-      "成了生魚片，並且順手把剩下的□體埋在附近的地上，焚香祭拜。\n",
+      "成了生魚片，並且順手把剩下的屍體埋在附近的地上，焚香祭拜。\n",
       this_object());
    if( (int)(ob1->move(killer)) != MOVE_OK )
 		ob1->move(environment(this_object()));  

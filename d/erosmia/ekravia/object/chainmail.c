@@ -3,11 +3,11 @@ inherit ARMOR;
 
 void	create()
 {
-	set_name("chainmail", "□甲");
+	set_name("chainmail", "鎧甲");
 	add( "id", ({ "mail","chainmail" }) );
-	set_short( "□甲" );
+	set_short( "鎧甲" );
 	set_long(
-		"一件金屬製成的□甲。\n"
+		"一件金屬製成的鎧甲。\n"
 	);
 	set("unit","件");
 	set( "type", "body" );

@@ -18,7 +18,7 @@ string *c_illusion =({
 
 "從你的湧泉穴，通往照海穴。\n",
 
-"通過了神封、靈墟、神藏、□中、俞府，流向手少陽三焦經的觀衝穴。\n", });
+"通過了神封、靈墟、神藏、彧中、俞府，流向手少陽三焦經的觀衝穴。\n", });
 
 void do_heal(object player, int skill, int degree , int ok)
 {

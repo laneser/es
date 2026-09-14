@@ -4,11 +4,11 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("black bracers", "黑□手釧");
+        set_name("black bracers", "黑曜手釧");
         add( "id", ({"bracers","bracer" }) );
-        set_short("黑□手釧");
+        set_short("黑曜手釧");
         set_long(
-"一雙由黑□巖的石頭製作成的手環, 可以幫助你在戰鬥中奪得勝利。\n"
+"一雙由黑曜巖的石頭製作成的手環, 可以幫助你在戰鬥中奪得勝利。\n"
         );
         set( "unit", "雙");
         set( "type", "hands" );

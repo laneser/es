@@ -11,7 +11,7 @@ void create()
 	add( "id", ({ "cop" }) );
 	set_short( "捕快" );
 	set_long(
-		"他是一個古梅鎮的捕快，最擅長的不是打架抓賊，而是晃著鐵□勒索商家。\n"
+		"他是一個古梅鎮的捕快，最擅長的不是打架抓賊，而是晃著鐵鏈勒索商家。\n"
 	);
 	set( "gender", "male" );
 	set( "race", "hawkman" );

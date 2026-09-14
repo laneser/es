@@ -3,9 +3,9 @@ inherit ARMOR;
 
 void create()
 {
-        set_name("milky cape", "乳白□絲戰袍");
+        set_name("milky cape", "乳白紵絲戰袍");
         add( "id", ({ "cloak","cape" }) );
-        set_short("milky cape","乳白□絲護袍");
+        set_short("milky cape","乳白紵絲護袍");
         set_long(
                 "This is a milky cape for fighters\n",
                 "這是一件乳白色的戰袍，看起來平平凡凡．\n"

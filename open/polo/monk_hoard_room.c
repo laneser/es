@@ -11,12 +11,12 @@ void create()
   set_short("Monk's history room", "少林寺功德坊");
   set_long(
 @C_LONG_DESCRIPTION
-這□是記錄少林武僧歷代以來建立所立下的功德的地方。偌大的空曠房間
+這裡是記錄少林武僧歷代以來建立所立下的功德的地方。偌大的空曠房間
 左右兩邊都有名人排行榜(scroll)，你可以張大眼睛瞻仰瞻仰。房間的中央擺\
 著的據說是少林寺開派祖師爺--達摩--的雕像(statue)。由於傳說中，只要你
 誠心誠意撫摸它，功力會大增，所以這座雕像已經模糊不堪了。
-    你的眼光快速的掃瞄四周，在不顯眼的牆角擺著一張滿是灰塵的□□米，
-看來是前輩高僧們結跏趺坐的地方。□□米的上方有一卷紙畫(paper),上面到
+    你的眼光快速的掃瞄四周，在不顯眼的牆角擺著一張滿是灰塵的榻榻米，
+看來是前輩高僧們結跏趺坐的地方。榻榻米的上方有一卷紙畫(paper),上面到
 處都是斷斷續續的線條，你心裡想著：難道是武功心得所在?
 C_LONG_DESCRIPTION
   );
@@ -92,11 +92,11 @@ LONG
   }
   else if ( arg == "tatami" ) {
     tell_object ( player,
-      "你把注意力集中在□□米上面，心裡想著:\n" +
+      "你把注意力集中在榻榻米上面，心裡想著:\n" +
       "  也許在上面打坐(brood) 可以感召到前輩們的精神!!\n");
     tell_room (
       environment (player),
-      name + "盯著滿是灰塵的□□米看呀看的，不會是想睡一覺吧?!\n",
+      name + "盯著滿是灰塵的榻榻米看呀看的，不會是想睡一覺吧?!\n",
       player );
     return 1;
   }
@@ -122,13 +122,13 @@ int do_touch ( string arg )
   tell_object ( player, 
     "  你恭恭敬敬地摸了達摩尊者的雕像，突然醒悟到:\n" +
     "啊! 原來更加勤奮的唸經、超渡、學武才是武僧之道啊!!\n" +
-    "  於是你把眼光放到牆角的□□米(tatami)，看它陳舊的\n" +
-    "樣子，大概是前輩們結□打坐的地方吧!!\n"
+    "  於是你把眼光放到牆角的榻榻米(tatami)，看它陳舊的\n" +
+    "樣子，大概是前輩們結跏打坐的地方吧!!\n"
   );
   tell_room (
     environment (player),
     name+"恭敬地在達摩尊者的雕像上摸了摸，似乎領悟到至理而發出會心一笑 ^_^\n" +
-    name+"的眼光集中在放置在牆角的□□米上面。\n",
+    name+"的眼光集中在放置在牆角的榻榻米上面。\n",
     player );
   return 1;
 }
@@ -146,9 +146,9 @@ int do_brood (string arg)
     tell_object ( me, "隨處亂打坐怎麼對得起先聖先賢?\n");
     return 1;
   }
-  tell_object ( me, "你靜下心來在□□米上結□, 思想逐漸空明, 進入忘我無我之境...\n");
+  tell_object ( me, "你靜下心來在榻榻米上結跏, 思想逐漸空明, 進入忘我無我之境...\n");
   tell_room ( environment (me), "你發現"+
-    me->query ( "c_name" )+"不管三七二十一, 坐在□□米上面好像雕像一般。\n",
+    me->query ( "c_name" )+"不管三七二十一, 坐在榻榻米上面好像雕像一般。\n",
     me);
   me->set_temp ( "block_command", 1 );
   call_out ( "result", 2+random(2), me, 4+random(7), this_object() );
@@ -185,7 +185,7 @@ void result (object me, int count, object place)
   me->delete_temp ( "block_command" );
   tell_object ( me, "一陣沉思之後, 你的思想逐漸爽朗, 慢慢回到了現實。\n" );
   tell_room ( place,
-    me->query ( "c_name" )+"滿臉灰塵地從□□米上站了起來。\n",
+    me->query ( "c_name" )+"滿臉灰塵地從榻榻米上站了起來。\n",
     me
   );
   me->set_temp ( "brood_flag", 1 );

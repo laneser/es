@@ -93,13 +93,13 @@ int cast(int level)
     }
 
     if( me->query_temp("effect/flamming-shield") ) {
-      tell_object( me, "你上一個魔法火□盾還沒消失呢! 別浪費法力了。\n" );
+      tell_object( me, "你上一個魔法火焰盾還沒消失呢! 別浪費法力了。\n" );
       return 0;
     }
-	write( "你施展火□之盾咒文，一團火□逐漸在你的面前形成一層無形的魔法盾。\n"
+	write( "你施展火焰之盾咒文，一團火焰逐漸在你的面前形成一層無形的魔法盾。\n"
 	);
 	tell_room( environment(me), me->query("c_name") + 
-		"喃喃地念了一段咒文，一團火□逐漸在" + me->query("c_name") +
+		"喃喃地念了一段咒文，一團火焰逐漸在" + me->query("c_name") +
 		"的面前形成一層無形的魔法盾。\n", me );
 	me->set_temp("effect/flamming-shield", 1);
 	gain_spell_experience(me, TYPE, query_gain_spell_exp(level));

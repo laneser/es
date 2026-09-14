@@ -6,7 +6,7 @@ void create()
      add( "id",({ "cloth" }) );
      set_short( "大紅衣服" );
      set_long(@C_LONG
-一件赤紅色的寬大衣服，兩個□肩高高的，穿起來蠻有威嚴。
+一件赤紅色的寬大衣服，兩個墊肩高高的，穿起來蠻有威嚴。
 C_LONG
      );
      set( "weight",100 );
