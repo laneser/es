@@ -1,0 +1,4 @@
+# 玩家存檔的輪替快照（/adm/daemons/snapshotd.c 產生）。
+# 每個玩家 24 份以上、每次存檔都在動，不該進版控 ——
+# data/ 底下其他東西仍然是追蹤的。
+/data/snapshots/

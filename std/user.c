@@ -717,6 +717,7 @@ and use the shutdown command anyway... ;)
 	}
 
 	call_out("save_me", 1);
+	start_autosave();
 
 	ANNOUNCE->announce_user(this_object(), 0);
 
@@ -781,19 +782,42 @@ of users, or leave it commented out...
 */
 }
 
+void start_autosave();
+
 //  This function is called cyclically to save the user data
 //  periodically, if AUTOSAVE is defined.
-/*
+//
+//  存檔只有在登入、quit、斷線、關機與手動 save 時才會發生，中間玩到的東西
+//  都只在記憶體裡；driver 被硬砍（SIGKILL、OOM）就全部不見。這個 call_out
+//  鏈補上定期存檔，間隔見 <body.h> 的 AUTOSAVE。
 void autosave_user()
 {
-//	remove_call_out("autosave_user");
-//	call_out("autosave_user", AUTOSAVE);
+#ifdef AUTOSAVE
+	object link;
+
+	start_autosave();
+
+	//  斷線中的軀殼交給 linkdead 流程處理，不必在這裡反覆寫檔。
+	if( !interactive(this_object()) ) return;
+
+	save_me();
+	link = query_link();
+	if( link ) link->save_data();
 
 	if( !wizardp(this_object()) )
 		tell_object(this_object(), "自動存檔....完畢。\n");
-	save_me();
+#endif
 }
-*/
+
+//  重新上鏈。登入時與每次 autosave_user() 開頭各呼叫一次；先 remove 是因為
+//  重新連線會再跑一次登入流程，不然同一個軀殼會掛上兩條鏈。
+void start_autosave()
+{
+#ifdef AUTOSAVE
+	remove_call_out("autosave_user");
+	call_out("autosave_user", AUTOSAVE);
+#endif
+}
 
 void run_cmds()
 {

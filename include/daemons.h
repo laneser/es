@@ -47,6 +47,7 @@
 //#define RACE_D          "/adm/daemons/race_d"
 #define REF_D			"/adm/daemons/ref_d"
 #define SHUTDOWN_D		"/adm/daemons/shutdownd"
+#define SNAPSHOT_D		"/adm/daemons/snapshotd"
 #define STUDENT_D		"/adm/daemons/studentd"
 #define STATS_D			"/adm/daemons/statsd"
 #define TIME_D			"/adm/daemons/timezone"

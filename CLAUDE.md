@@ -14,6 +14,9 @@ mudlib 自稱 `ES_Lib`，血緣是 TMI-2 mudlib 的中文化分支，檔案多�
 
 ## 啟動
 
+`./run.sh` 包好了下面整串（`start` / `stop` / `restart` / `build` / `logs` /
+`debug` / `telnet` / `shell` / `status`，`./run.sh help` 看說明）。手動跑的話：
+
 ```bash
 docker build -t es-mud-fluffos:2026.0901 -f .devcontainer/Dockerfile .devcontainer
 docker run -d --name es-mud -p 8888:8888 -v "$PWD":/mudlib -w /mudlib \
@@ -27,6 +30,7 @@ docker exec -it es-mud telnet 127.0.0.1 8888    # 容器內已裝 telnet
 - 用 `127.0.0.1` 而非 `localhost`：driver 只綁 IPv4。
 - `log/`、`tmp/`、`data/` 是執行期產物。`data/` 被 git 追蹤，
   **跑過遊戲後 `git status` 一定不乾淨**，commit 前要確認沒把測試痕跡送出去。
+  （例外：`data/snapshots/` 是存檔快照，churn 太大，已被 `.gitignore` 排除。）
 
 ## 遊戲內的開發迴圈
 
@@ -36,8 +40,13 @@ docker exec -it es-mud telnet 127.0.0.1 8888    # 容器內已裝 telnet
   （改 `/std/user.c` 這類基底檔時需要）。不帶參數時用玩家的 `cwf`。
 - `clone` / `dest` / `load` / `goto` / `at` / `eval` —— 實例化與檢視。
 - `data` / `datatmp` / `sc` / `ss` —— 檢視物件的 `ob_data` / `tmp_ob_data`。
+- `snapshot <玩家>` 列出存檔快照，`snapshot <玩家> <時戳|d1|d7|d30>` 還原
+  （還原限 admin，且該玩家要不在線上）。存檔每 23 分鐘自動存一次，
+  快照機制見 [`doc/arc42/08-crosscutting-concepts.md`](doc/arc42/08-crosscutting-concepts.md)。
 
 **改 simul_efun 或 master 之後要重啟 driver**，`update` 不夠。
+**改過的檔要先 `update` 再 `lest`** —— lest 不會重新編譯已經載入的物件，
+不然你測到的是記憶體裡的舊版程式。
 
 ## 測試
 

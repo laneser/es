@@ -11,6 +11,7 @@
 
 #include <uid.h>
 #include <config.h>
+#include <daemons.h>
 
 // This one is called at login, to restore player data from saved file.
 // Return 0 for no save file, which means a new player.
@@ -68,7 +69,16 @@ void save_player(string name)
 }
 
 int save_me()
-{ 
+{
+	int ok;
+
         this_object()->set("last_save",time());
-	return save_data();
+	ok = save_data();
+
+	//  存完之後另外留一份可回溯的快照。SNAPSHOT_D 自己會節流，所以登入、
+	//  quit、定時存檔、關機一起呼叫也不會把歷史洗掉。用 catch() 包起來是
+	//  因為這裡是所有存檔路徑的必經之處 —— 快照壞掉不該連累存檔本身。
+	if( ok ) catch( SNAPSHOT_D->take_snapshot(this_object()) );
+
+	return ok;
 }
