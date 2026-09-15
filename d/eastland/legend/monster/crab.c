@@ -12,10 +12,10 @@ void create ()
        set("unit","只");
         set_long(
        "           ∪        ∪
-           □ ⊙  ⊙ □
-           《\\┴—┴/《     這是一隻體型碩大的火蟹，看來十分嚇人
-           《｜    □《
-            □———□\n");
+           ﹨ ⊙  ⊙ ∕
+           ︽\\┴─┴/︽     這是一隻體型碩大的火蟹，看來十分嚇人
+           ︽︳    ▕︽
+            ╰───╯\n");
        set_perm_stat("dex", 4);
        set ("natural_weapon_class1", 10);
        set ("natural_min_damage1",5);
