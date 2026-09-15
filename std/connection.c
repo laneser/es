@@ -116,8 +116,6 @@ int save_data()
 // saved file.
 int restore()
 {
-	int success;
-
 	if( !name ) return 0;
 	seteuid(name);
 	return restore_object(user_data_file(this_object()));
