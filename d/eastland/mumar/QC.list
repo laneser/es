@@ -6,7 +6,7 @@
 警棍     club.c        5     3     6    blu
 鈍匕首   dagger1.c    10     4    13    dag
 羽扇     fan.c        35(+) 18(+) 27(+) wan  electric60
-大□頭   hammer1.c    25    11    28    blu
+大槌頭   hammer1.c    25    11    28    blu
 長戈     javelin.c    10     5    13    thr
 尚方寶劍 king_sword.c 35(-) 20(-) 36    lbl  divine max 28
 長槍     lance.c      13     6    14    thr
@@ -45,7 +45,7 @@
 貂皮     cloak02.c     6     5    lea  cold15
  
 護符：
-金龍項□ amulet01.c    0     5    ltm  fire10
+金龍項鍊 amulet01.c    0     5    ltm  fire10
  
 戒指：
 兩儀指環 ring.c        0     9(+) ele

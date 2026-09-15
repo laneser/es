@@ -35,7 +35,7 @@ V.  動物列表
 巡邏兵      guard_soldier 4     20/6   9   4-9       W)警棍     自動攻擊
 馬伕        groom         5     26/12  15  5-17                 不能殺
 老兵        old_soldier   5     25/10  12  5-14      W)鈍匕首   團體攻擊
-工匠        artisan       6     38/10  13  7-15      W)鐵□     盾牌破壞
+工匠        artisan       6     38/10  13  7-15      W)鐵錘     盾牌破壞
 士兵        soldier       6     30/15  15  8-20      W)長戈     團體攻擊
                                                      A)青鋼鱗甲
 伙伕頭      cock_master   7     35/15  20  11-26     W)平底鍋   米包攻擊
@@ -45,7 +45,7 @@ V.  動物列表
                                                      A)青鋼鱗甲
 戰馬        horse         14    75/28  43  21-41                可騎乘
 大老鼠      rat           14    75/28  43  21-41                quest
-力士        hercules      15    75/35  42  25-45     W)大□頭
+力士        hercules      15    75/35  42  25-45     W)大槌頭
 哈將軍      ha            16    80/40  46  23-48     W)影劍
                                                      A)方盾
                                                      A)石棉網
@@ -60,7 +60,7 @@ V.  動物列表
                                                      A)四象道袍
                                                      A)八卦道鞋
 節度使      lee           18    100/50 75  43-65     W)尚方寶劍
-                                                     A)金項□
+                                                     A)金項鍊
                                                      A)金鏤玉衣
                                                      A)絲質手套
 VI. 武器列表
@@ -68,14 +68,14 @@ VI. 武器列表
 武器名稱     檔案名稱       武器類別     WC   傷害範圍     特殊攻擊
 ===========  =============  ===========  ===  ===========  ===========
 警棍         club           blunt        5    3-6
-鐵□         hammer         blunt        6    4-11
+鐵錘         hammer         blunt        6    4-11
 勺子         scoop          blunt        7    2-8
 木刀         wooden_blade   long_blade   8    4-8
 鈍匕首       dagger1        dagger       10   4-13
 平底鍋       pan            blunt        10   6-12
 長戈         javenlin       thrusting    10   5-13
 長槍         lance          thrusting    13   6-14
-大□頭       hammer1        blunt        25   11-28
+大槌頭       hammer1        blunt        25   11-28
 影劍         shadow_sword   long_blade   25   13-28        冰系
 光刀         shining_blade  long_blade   25   13-28        火系
 羽扇         fan            wand         35   18-27        雷系
@@ -85,7 +85,7 @@ VII. 防具列表
  
 防具名稱   檔名           形態     質料     AC/DB    特殊效果
 =========  =============  =======  =======  =======  =======================
-金項□     amulet01       misc     light_m  0/7      fire 10
+金項鍊     amulet01       misc     light_m  0/7      fire 10
 青鋼臂甲   armband01      arms     heavy_m  4/2
 八卦玄鞋   boots01        feet     cloth    5/3
 石棉網     cloak01        cloak    element  4/3      fire 15
