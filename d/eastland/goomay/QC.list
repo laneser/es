@@ -13,7 +13,7 @@
 吹雪劍   icey_sword.c 37(+) 20(+) 32    sbl
 玄冰劍   icy_sword.c  30(-) 15    30    sbl
 大板斧   iron_axe.c   35(-) 15    30    axe               second
-鐵□     iron_chain.c 15     8    16    whip
+鐵鏈     iron_chain.c 15     8    16    whip
 鐵十字鎬 iron_pick.c  15     5    10    thu               for quest
 火鋼矛   iron_spear.c 25    10    36    thu
 長劍     longsword.c  22     9    20    lbl
@@ -63,7 +63,7 @@
 柔絲情網 web.c         2     9(+) ele
  
 護符：
-玉墜項□ gold_necklac  0     8(+) ltm
+玉墜項鍊 gold_necklac  0     8(+) ltm
 情關意鎖 lovekey.c     0     6(-) ltm  mental30 con-1
  
 戒指：

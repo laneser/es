@@ -123,7 +123,7 @@ V.  動物列表
 							 A)醫生診袍
 靈兒        ling         17  89/36       44      21-39   W)彩虹劍    屠狼劍法
 							 A)翠煙羅
-							 A)玉墜項□
+							 A)玉墜項鍊
 修行武鬥家  traveller    17  85/27       90      64-74   W)黃金爪
 							 A)武鬥服
 							 I)旅行袋
@@ -133,7 +133,7 @@ V.  動物列表
                                                          A)情關意鎖
 方傲天	    master_fan   18  95/42      104      50-75   W)吹雪劍
 							 A)火焰盾
-趙堂主      master_jau   18  90/22       87      30-60   W)雷神之□
+趙堂主      master_jau   18  90/22       87      30-60   W)雷神之錘
 							 A)雷神手套
 
 VI. 物品列表
@@ -164,7 +164,7 @@ VII. 武器列表
 算盤        abacus      blunt         25        10-20
 木槳        oar         blunt         25        10-24
 鐵錘        hammer      blunt          6         4-11
-雷神之□    thor_hammer blunt         45        25-45      召喚雷電
+雷神之錘    thor_hammer blunt         45        25-45      召喚雷電
 
 精鋼短劍    shortsword01 shortblade   25        11-22
 玄冰劍      icy_sword   shortblade    30        15-30
@@ -206,7 +206,7 @@ VIII. 防具列表
 鋼盔      steel_helm    head    heavy       5/0
 墨鏡      glasses       head    element     2/0   抗強光
 
-玉墜金□  gold_necklace misc    light       0/8   
+玉墜金鍊  gold_necklace misc    light       0/8   
 情關意鎖  lovekey       misc    light       0/7  con-2 mental+30
 
 精鋼尾甲  steel_tail    tail    heavy      30/0 

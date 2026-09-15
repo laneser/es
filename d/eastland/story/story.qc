@@ -78,7 +78,7 @@ IV. PART ２ 防具： /story/armor/
 
 防具名稱      檔案名稱            型態       質料      AC/DB     特殊效果
 
-□符          amulet1.c           misc       cloth      0/1 
+卍符          amulet1.c           misc       cloth      0/1 
 亂環環        fisher_armband.c    arms     heavy_metal  3/3
 十二天都符□  imp_amulet.c        misc       cloth      0/1
 戰士□臂環    imp_armband.c       arms      element     3/4      energy:-20
@@ -91,7 +91,7 @@ IV. PART ２ 防具： /story/armor/
 戰士□鎧甲    imp_plate.c         body      element     27/4       
 七彩琉璃戒    imp_ring.c         finger     element     0/6
 大紅衣服      lucky_cloth.c       body      cloth       0/1      electric:50
-□戒          ring1.c            finger     element     0/7
+卍戒          ring1.c            finger     element     0/7
 九魔陰陽符    vampire_amulet.c    misc      cloth       0/6     evil:-50
 
 
@@ -103,7 +103,7 @@ IV. PART ３ 物品： /story/item/
        進財符          card1.c           
        飛翔之笛        flute1.c          
        大紅葫          gourd1.c
-   「蚩尤」的□體      head1.c
+   「蚩尤」的屍體      head1.c
     「文蛛」毒液       liquid.c
       奇妙吸管         straw.c
 
@@ -151,8 +151,8 @@ IV. PART ４ 怪物: /story/monster  PS * 表主動攻擊
 *[ 19 ] 文蛛     spider1.c   1/1    67   36/60                  poison
 								block
 [ 18 ] 劍客 八門吹雪         80/32  65   35/35     玄鐵重劍     special damage
-	        swordman1.c          		   □符
-						   □戒  
+	        swordman1.c          		   卍符
+						   卍戒  
 [  1 ] 旅行商人[騎在驢子上]  			   水晶玻璃球
 [ 10 ] 羽民媽媽  woman1.c    50/2   22   10/14
 
@@ -249,7 +249,7 @@ VI. PART ２ 防具： /story/wiz/armor/
 麻紗帽        captain_hat1.c      head       cloth     7/1       
 雪魂凝指      ice_ring.c         fihger      element   0/5       dex:-1
 							         meditate:10
-琉璃珠項□    p_amulet1.c         misc       element   0/5       light
+琉璃珠項鍊    p_amulet1.c         misc       element   0/5       light
  								 str:-1
 紅緞地彩繡肚兜 p_cloth1.c         body       cloth     20/5
 護國師□符□  wiz_amulet1.c       misc       cloth     0/8      evil:30
@@ -315,7 +315,7 @@ VI. PART ４ 怪物: /story/wiz/monster  PS * 表主動攻擊
 [  6 ] 老頭子  older1.c      30/0   13    4/12
 [  7 ] 患者    patient1.c    15/2   26    11/23
 [ 17 ] 鐵扇公主 princess1.c  75/35  76    35/55  紅緞地彩繡肚兜 forget 
- 						 琉璃珠項□
+ 						 琉璃珠項鍊
 						 芭蕉扇
 [ 13 ] 卜筮者 soothsayer1.c  65/0   29    10/28
 [  3 ] 學子   student1.c     25/0   6     2/6
@@ -377,7 +377,7 @@ VII. PART １ 武器： /story/palace/weapon/
 青狼鎖     chain.c          chain        30    15/23
 太乙青霜劍  sword1.c        shortblade   25    15/22
 太乙青霜劍  sword2.c        shortblade   28    16/32
-三叉□     westgod_fork.c   thrusting    30    18/35
+三叉戟     westgod_fork.c   thrusting    30    18/35
 
           
 VII. PART ２ 防具： /story/wiz/armor/
@@ -412,7 +412,7 @@ VII. PART ２ 防具： /story/wiz/armor/
 星天衣 	     westgod_cloth.c	  body     heavy_metal 33/5       magic:-20     
 						                  mental:25
 星天冠       westgod_helmet.c     head     heavy_metal 8/3       divine:10
-龍形項□     westgod_necklace.c   misc     heavy_metal 0/5        
+龍形項鍊     westgod_necklace.c   misc     heavy_metal 0/5        
 	
 
 VII. PART ３ 怪物: /story/wiz/monster  PS * 表主動攻擊
@@ -452,15 +452,15 @@ VII. PART ３ 怪物: /story/wiz/monster  PS * 表主動攻擊
 						 太乙青霜劍
 [ 19 ] 西方天帝少昊 westgod.c 71/39 50   31/48   星天衣         special_damage
 						 星天冠
-					         龍形項□
-					         三叉□
+					         龍形項鍊
+					         三叉戟
 
 
 
 
 PS.
      
-      關於這區□的怪物，多設為高 level 的，一來不想區域是所謂所有等級
+      關於這區域的怪物，多設為高 level 的，一來不想區域是所謂所有等級
 
 　　　 "皆宜" ，變得沒有什麼突顯的地方；二來是在進來這裡以前，必須經
 　　　

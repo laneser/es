@@ -20,8 +20,8 @@
 名稱     檔名         AC    DB    種類 特防                  備註
 ======== ============ ===== ===== ==== ===================== ================
 鎧甲：
-神秘□甲 chainmail.c  25    0     ltm
-翡翠□甲 chainmail1.c 28    4     ele  divine 5,magic -7
+神秘鎧甲 chainmail.c  25    0     ltm
+翡翠鎧甲 chainmail1.c 28    4     ele  divine 5,magic -7
 神秘鎧甲 plate.c      33    2     ltm
 神秘鎧甲 plate1.c     30    0     ltm
 神秘鎧甲 plate2.c     25    0     ltm

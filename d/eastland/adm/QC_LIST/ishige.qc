@@ -98,7 +98,7 @@ NPC 名稱      檔名        Lv  AC/DB   WC/MIN/MAX  武器裝備      特殊�
 
 哨兵          sentry      16  60/29   60/33/44    W)黑色長矛
 						  A)守衛識別臂環
-						  A)黑色□甲
+						  A)黑色鎧甲
 老工匠        old_feller  15  70/34   73/26/51
 
 鋸木工人      feller      16  70/34   77/26/51
@@ -189,7 +189,7 @@ VI. 武器列表
 
 VII. 防具列表
 防具名稱     檔案名稱   型態    質料		AC/DB	特殊效果
-藍寶石項□   amulet1	misc	element		0/6
+藍寶石項鍊   amulet1	misc	element		0/6
 白金徽章     amulet2	misc	element		0/4
 龍骨	     amulet3	misc	element		0/6
 天使翅膀     amulet4	misc	element		0/5
@@ -220,14 +220,14 @@ VII. 防具列表
 火龍鬚頭巾   helmet6	head	leather		6/2
 聖冠	     helmet7	head	light_metal	6/4	evil:20
 軍帽	     kepi	head	cloth		4/2
-藍寶石項□   necklace1	misc	element		0/8
-鈦合金□甲   plate	body	light_metal	35/5
+藍寶石項鍊   necklace1	misc	element		0/8
+鈦合金鎧甲   plate	body	light_metal	35/5
 青銅鎧甲     plate1	body	heavy_metal	30/3
 戰神鎧甲     plate2	body	light_metal	35/6
 火麟戰甲     plate3	body	cloth		25/0	evil:20,cold:30
 							騎士穿上時:AC=level*2
 						 	        DB=knighthood*2
-黑色□甲     plate4	body	light_metal	20/2
+黑色鎧甲     plate4	body	light_metal	20/2
 大地鎧甲     plate5	body	cloth		34/6
 白金鎖子甲   plate6	body	knight		32/4
 銀色鱗甲     plate7	body	light_metal	26/2

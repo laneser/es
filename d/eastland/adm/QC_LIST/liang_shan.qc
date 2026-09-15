@@ -10,7 +10,7 @@
 2. 歷史部份:
      由於此地物產豐富，又且易守難攻，因此從古到今，許多大規模的亂事都
 　　 發源於此，十年前，由於東方大國朝政腐敗，許多英雄豪傑嘯聚於此，圖
-　　 謀大舉，當時朝廷進□數次，互有勝敗，皇帝於是接納大軍師諸葛不明的
+　　 謀大舉，當時朝廷進剿數次，互有勝敗，皇帝於是接納大軍師諸葛不明的
      建議，將重兵屯聚少商谷口的幽國城內，由名將風起雲任指揮使，從此梁
      山泊和幽國城便成對峙之局，轉眼十年。　
 　　 由於山寨內人丁眾多，許多鉅商大賈基於市場考量，紛紛來此投資開業， 
@@ -68,7 +68,7 @@
 花榮        hua.c   17   89/36  75  33 - 59    特殊武器(泥金雕鵲細弓)
 公孫勝   wizard.c   17   63/43  76  36 - 54    黑暗魔法(flare 3)
                                                特殊武器(松文古定劍)
-楊志      yang2.c   18   85/36  80  38 - 65    特殊武器(渾鐵點鋼□)
+楊志      yang2.c   18   85/36  80  38 - 65    特殊武器(渾鐵點鋼槍)
 武松         wu.c   18   84/39  83  43 - 68    
 史進     shijin.c   18   80/36  80  33 - 58    特殊武器(水火風雷棍)
 李逵         li.c   18   97/37  88  51 - 81    
@@ -76,7 +76,7 @@
 秦明       chin.c   19  111/52  82  38 - 65    特殊武器(玄鐵狼牙棒)
 董平       dong.c   19   96/52  90  35 - 65    特殊武器(繡絲爛銀槍x2)
 關勝       guan.c   19  115/52 102  48 - 77    傷害性特殊攻擊50hp 
-呼延灼    huyang.c  19  110/57  84  38 - 65    特殊武器(水磨八□鋼鞭)
+呼延灼    huyang.c  19  110/57  84  38 - 65    特殊武器(水磨八稜鋼鞭)
 林沖         lin.c  19  111/62 102  44 - 72    特殊武器(丈八蛇矛)
     b.湖內的怪物
 大肚魚    fish2.c   2    10/ 4   6   2 -  6
@@ -90,14 +90,14 @@
 七星鱧    fish8.c  10    50/20  15   8 - 18
 千年老蚌  shell.c  19   140/65  79  36 - 67
 
-// 你的武器有特殊功能的太多，雖然不是不好，但太□濫了也不是好現象
+// 你的武器有特殊功能的太多，雖然不是不好，但太氾濫了也不是好現象
    如果想強調 mob 的能力，何不把特殊功能移到 mob 身上？
    否則太好的武器會打破 ES 原先的平衡，我不反對你幫武器加特殊能力
    ，但是不需要每把都有吧 !! 
 
 其實, 若有毒的不算, 這次修改後, 目前強力的特殊武器只有七把, 其中松文古定劍
 與水火風雷棍是由int 來決定, 可說是為scholar and healer 量身定做的武器
-水磨八□鋼鞭現在只有adv 可以用, 所以剩下的特殊武器, 只有四種而已
+水磨八稜鋼鞭現在只有adv 可以用, 所以剩下的特殊武器, 只有四種而已
 再談到平衡問題，最近一直有騎士抱怨，別的職業越調越強，騎士的武器卻越來越少
 或越變越弱，我不知道要怎麼對付他們，所以我寫了些不同的特殊武器。如果你認為
 種類太多的話，或許我可以將五虎大將全改成只有一隻，不知你認為呢?
@@ -108,20 +108,20 @@
 朴刀               poblade.c  longblade 17     9 - 18
 藥叉                  fork.c  thrusting 17     7 - 17   有毒 
 漁師短刀    fishman_dagger.c shortblade 17     8 - 16
-鐵瓜□          ironhammer.c      blunt 18    10 - 20
+鐵瓜錘          ironhammer.c      blunt 18    10 - 20
 盜賊匕首      thief_dagger.c     dagger 18     8 - 16   有毒
 分水蛾眉刺     waterdagger.c     dagger 18     9 - 18  
 棗木槊             woodoar.c      blunt 20    12 - 23 
 三尖兩刃刀      threeblade.c  longblade 25    13 - 26   bleeding 5 
                                                        + parry skill 10
-鉤鐮□           hooklance.c  thrusting 26    21 - 33
+鉤鐮槍           hooklance.c  thrusting 26    21 - 33
 喪門劍          deathsword.c  longblade 26    15 - 28   bleeding 6
 方天畫戟           polearm.c    polearm 26    16 - 30
 雁翎刀              yanlin.c  longblade 30    17 - 30   bleeding 5
 繡絲爛銀槍    silver_spear.c  thrusting 40    17 - 35   special attack(25)
                                                         only when use 2
-渾鐵點鋼□       ironlance.c  thrusting 35    20 - 35   block attack(2 or 3)
-水磨八□鋼鞭    steel_whip.c       whip 35    20 - 35   block attack(3)
+渾鐵點鋼槍       ironlance.c  thrusting 35    20 - 35   block attack(2 or 3)
+水磨八稜鋼鞭    steel_whip.c       whip 35    20 - 35   block attack(3)
                                                         +special attack(8)
 水磨禪杖        huge_staff.c      blunt 42    27 - 47  
 玄鐵狼牙棒       iron_club.c      blunt 35    20 - 35   
@@ -179,7 +179,7 @@ ps 因這件衣服點明為法衣, 所以我想屬性互衝的情形應該不要
 沖天角鐵頭鏷       iron_cap.c    6/ 2      adv                whipskill+10
 紅綴金束髮盔    gold_helmet.c    6/ 2 light_metal none 1 magic 2
 皂紗轉角簇花巾    silk_hood.c    6/ 2     cloth   fire 3 cold 5 acid 2
-麻羅□字頂巾    buddha_hood.c    6/ 3     cloth   evil 7 mental 5
+麻羅卍字頂巾    buddha_hood.c    6/ 3     cloth   evil 7 mental 5
 箍頭鐵戒尺    iron_headband.c    7/ 2     monk    mental 2  dodge +15 con -1
 鋪霜耀日鑌鐵盔  iron_helmet.c    9/ 4 heavy_metal fire 5 cold-2
 鳳翅紫金冠   phoenix_helmet.c   10/ 4 heavy_metal poison3 none 3 mental 2

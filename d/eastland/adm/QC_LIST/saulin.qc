@@ -109,7 +109,7 @@ IV. 生物列表
                                                           A)紫羅袈裟
                                                           W)金剛杵
 虛渡        shu_du      17   101/58     20      10-15     A)觀音臂環 無色刀法
-                                                          A)黑□手釧
+                                                          A)黑曜手釧
                                                           S)金剛波羅法輪
                                                           W)修羅刀
 虛竹        shu_ju      17   60/35      42      23-44     A)伏虎指套 金剛不壞
@@ -147,7 +147,7 @@ V. 物品列表
 
 物品名稱   檔名         形態    特殊用途
 
-□籃       basket       容器    無
+藤籃       basket       容器    無
 大塊靈芝   big_pill     藥品    +HP 50
 乾井	   dry_well     容器    for funny
 狐狸尾巴   fox_tail     物品    隱形 for quest
@@ -212,7 +212,7 @@ VII. 防具列表
 
 金剛環    	glove1        	hands   stone     5/3
 琉璃手鐲  	glove2        	hands   element   5/3
-黑□手鐲  	glove3        	hands   stone     3/4
+黑曜手鐲  	glove3        	hands   stone     3/4
 白雲石手釧	glove3a      	hands   stone     5/0
 
 觀音臂環        armband1        arms    leather   5/3

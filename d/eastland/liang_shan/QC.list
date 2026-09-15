@@ -14,7 +14,7 @@
                                              weaponhit
                                              none, 16+random(9)
                                              bleed(6,8,8) ,holderhp-5
-鐵瓜□   ironhammer.c 18    10    20    blt
+鐵瓜錘   ironhammer.c 18    10    20    blt
 渾鐵點鋼 ironlance.c  35(-) 25(*) 30    jou  block,dam:10  nosecond
 松定古文 pinesword.c  35(-) 20(-) 35    lbl
 朴刀     poblade.c    17     9    18    lbl  bleed:5
@@ -39,7 +39,7 @@
 山賊頭盔 bandit_armor  7     1    hvm
 皂巾     black_hood.c  3     1    clo
 黃銅道冠 brass_hat.c   4     1    ltm  evil5 divine-4 mental5
-麻羅□字 buddha_hood   6     3(-) clo  evil7 mental5
+麻羅卍字 buddha_hood   6     3(-) clo  evil7 mental5
 廚師帽   cook_hat.c    4     2    clo  fire4 mental1
 深簷暖帽 fur_hat.c     6     1    lea  cold:4 fire:-3
 紫金道冠 gold_hat.c    6     5(*) hvm  evil:7 divine:-5 mental:8
@@ -117,13 +117,13 @@
 百花點翠 floral_cape   6     4    clo
 緋紅團花 floral_cloak  5     1    clo
 挽絨金繡 golden_cloak  6     2    hvm
-鸚哥綠□ green_cloak   6     3    clo
+鸚哥綠紵 green_cloak   6     3    clo
 七星打釘 nail_cape.c   5     4    clo  none:3 dodge+10 divine:2
 貂鼠皮襖 sable_cloak   6     1    lea  evil:2 fire:-4 cold:2
 軍師護袍 scholar_cape  6    10(*) sch  evil:-3  cold:-10 fire:2 divine:4
                                        inn_force+10
 五雷天心 thunder_cape  7    10(*) mage electric:20
-乳白□絲 white_robe.c  4     2    clo  none:3 divine:2 dodge+10
+乳白紵絲 white_robe.c  4     2    clo  none:3 divine:2 dodge+10
                                                           
  
 護符：

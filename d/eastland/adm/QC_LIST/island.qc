@@ -33,10 +33,10 @@ NAME    FILE_NAME  LV  AC/DB  WC/MAX/MIN  WEAPON  ARMOR      備註
 聖騎士  holy_knight 19 130/47 105/68/36   ------  鈦合金覆面 .與戰爭有關 
                               85/25/50            鈦合金護手 .難度特高,exp
                                                   鈦合金臂環  5000 
-                                                  鈦合金□甲 .原則上,不希望被
+                                                  鈦合金鎧甲 .原則上,不希望被
                                                   鈦合金尾甲  殺,一次reboot一
                                                   鈦合金戰靴  只,被殺就沒戰爭!
-                                                  藍寶石項□
+                                                  藍寶石項鍊
                                                   藍寶石戒指
 
 小販    vendor      19 90/30  95/68/26    ------  ---------- .可殺 *grin* 
@@ -133,13 +133,13 @@ NAME       FILE_NAME  TYPE   MATERIAL    AC/DB  備註
 
 蜥蜴人短甲 plate01    body   leather     11/3   
 
-鈦合金□甲 plate02    body   light_metal 35/5
+鈦合金鎧甲 plate02    body   light_metal 35/5
 
 鈦合金覆面 helmet01   head   light_metal 8/3
 
 藍寶石戒指 ring01     finger element      0/5
 
-藍寶石項□ necklace01 misc   element      0/6
+藍寶石項鍊 necklace01 misc   element      0/6
 
 鈦合金尾甲 tail01     tail   light_metal  8/3
 

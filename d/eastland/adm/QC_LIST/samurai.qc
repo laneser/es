@@ -23,14 +23,14 @@
    
     青年士兵 soldier.c  7    35/14 10   5-12   鐵長刀 
     灰衣武士 guard.c    10   45/9  34  13-28   東方片羽劍
-                                               武士□甲
+                                               武士鎧甲
     紅衣武士 guard1.c   14   55/11 63  15-30   風刃劍
-                                               武士□甲
+                                               武士鎧甲
     白衣武士 guard2.c   15   64/16 68  26-44   拉克尼安劍
                                                武士護手
                                                武士戰甲
     武士守衛 guard3.c   14   55/11 63  20-46   武士短刃
-                                               武士□甲
+                                               武士鎧甲
     守衛武士 guard4.c   16   71/17 61  23-51   拉刻尼安劍
                                                武士護手
                                                武士戰甲
@@ -43,13 +43,13 @@
     雜貨商人 merchant    3   15/6  7   4-8
     市場守衛market_guard 12  40/8  45  7-20   木棍
     武士約克 yark        17  99/35 75  25-62  名刀龍光
-                                              武士護□
+                                              武士護腕
                                               武士披風
                                               武士戰甲
     武士 威  wei.c       17  93/45 66  32-63  龍鱗之劍
                                               武士護膝
                                               武士長靴
-                                              心形項□
+                                              心形項鍊
     武士安卡斯 ekars.c   18  99/34 83  35-73  十字槍
                                               黑色護手
                                               黑色戰甲
@@ -96,7 +96,7 @@
     守備隊長十兵衛 19      90/24   67 25-60   名刀星落
     juibei.c                       42 21-42   名刀月殘
                                               武士紋章 
-                                              武士護□
+                                              武士護腕
                                               武士披風
                                               武士之服
     黑衣武士 war1.c    16  65/13   70 20-63   精剛長劍
@@ -150,7 +150,7 @@
                                    evil 10
 飛龍之鎧  dragon_chainmail.c 35/4 +dodge 5 light_metal  170   1600  body
 劍術道服  fencing_cloth      20/2          cloth        130   600   body
-心形項□  heart_necklace.c    0/5          element      50    1000  misc
+心形項鍊  heart_necklace.c    0/5          element      50    1000  misc
 空手道服  karate.c           10/1          cloth        100   300   body
 菊形家徽  mark.c              0/6  fire 20 light_metal  30    800   misc
 夜影披風  night_cloak.c       5/4  cold 10 leather      70   1200  cloak
@@ -161,9 +161,9 @@
 忍者網甲  ninja_vest.c       30/3          light_metal  100   1160 body
 紅圍巾    red_scraf.c        0/4  fire 20  cloth        20    660  misc
 櫻之服    sakura.c           31/2          cloth        110   1160 body
-武士護□  samurai_armband.c  3/2           light_metal  100   650  arms
+武士護腕  samurai_armband.c  3/2           light_metal  100   650  arms
 武士長靴  samurai_boots.c    7/3           leather      100   600  feet
-武士□甲  samurai_chainmail.c 15/3         heavy_metal  200   450  body
+武士鎧甲  samurai_chainmail.c 15/3         heavy_metal  200   450  body
 武士披風  samurai_cloak.c     6/3          leather      70    800  cloak
 武士之服  samurai_cloth.c    33/5 energy 5 light_metal  120   900  body
 武士護手  samurai_gloves.c   4/3           leather      70    500  hands
