@@ -5,11 +5,11 @@ void create ()
 {
         ::create();
         set_level(19);
-        set_name( "General Lee", "牧馬節度使 李□" );
+        set_name( "General Lee", "牧馬節度使 李芃" );
         add ("id", ({ "general", "lee", }) );
-        set_short( "牧馬節度使 李□" );
+        set_short( "牧馬節度使 李芃" );
         set_long( @C_LONG
-牧馬關節度使李□，是當今皇上身邊某寵臣的女婿，靠著裙帶關係，平步青雲，現
+牧馬關節度使李芃，是當今皇上身邊某寵臣的女婿，靠著裙帶關係，平步青雲，現
 在已經做到節度使的職位了。不過，聽說他曾是少林的俗家子弟，功夫可能還不差。
 C_LONG
         );
@@ -88,7 +88,7 @@ void die()
    if( sizeof(sword)>1 ){
      empire_sword = present( "empire sword", this_object() );
      tell_room(environment(this_object()),
-  " 李□掙扎的說：真劍已經被奪.....這把仿造品不能給別人看到！\n\n李□硬是把劍吞了下去.....你看得目瞪口呆...\n\n",this_object() );
+  " 李芃掙扎的說：真劍已經被奪.....這把仿造品不能給別人看到！\n\n李芃硬是把劍吞了下去.....你看得目瞪口呆...\n\n",this_object() );
    empire_sword->remove();
    }
  ::die();

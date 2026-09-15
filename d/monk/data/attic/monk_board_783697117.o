@@ -2,7 +2,7 @@
 ob_data (["long":"@@query_long","c_short":"@@query_c_short","short":"@@query_short","name":"board","c_cap_name":"留言板","long.text":"This is a bulletin board. For information on how to use it, use `help board'.
 ","c_name":"留言板","cap_name":"Board","silent_look":1,"last_location":0,"short.text":"Monk's bulletin board","c_long.text":"這是一個留言板，專供人留言紀事。詳細用法請看 help board。
 ","c_long":"@@query_c_long","id":({"board","bulletin board",}),"c_short.text":"武僧公會留言板",])
-messages ({(["id":230,"title":"< no title >","body":"  今天天說和尚能使用雷神之□了,於是千辛
+messages ({(["id":230,"title":"< no title >","body":"  今天天說和尚能使用雷神之錘了,於是千辛
  萬苦去弄了一把來.....結果...hmm....被雷轟得真爽...^o^
  不知道blunt skills 100 做什麼用的......:~~~~~~~~~~
 ","time":783339693,"poster":"Strong",]),(["id":231,"body":"嗚嗚.:~~~死掉了...利害的 keeper and guardian...
@@ -20,7 +20,7 @@ hp from 270 -> 0.....:~~~~~~~
 好像只有hp more than 400 ~ 500 才不會死耶...好可怕...
 震一次加打一下就已經( 你渾身是血，受傷極重，有生命危險。 )
 喔..對了...my eq is...
-她身上穿著 : 精靈□甲, 伏虎指套, 觀音臂環, 精鋼尾甲, 銀鷹之翼, 玉墜項□,
+她身上穿著 : 精靈鎧甲, 伏虎指套, 觀音臂環, 精鋼尾甲, 銀鷹之翼, 玉墜項鍊,
 鋼頭盔, 鋼戰靴, 鋼手套。
 她手上拿著 : 精靈長劍 +4。
 □.
