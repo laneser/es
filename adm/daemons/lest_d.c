@@ -9,40 +9,49 @@
 //
 //  用法（巫師）：
 //      lest /obj              掃一個目錄
+//      lest -k /obj           同上，但沿用記憶體裡已載入的版本
 //      lest                   接續看上次的報告
 //  或直接呼叫：
 //      "/adm/daemons/lest_d"->run("/obj");
 //      "/adm/daemons/lest_d"->report();
 //
+//  預設會先把受測檔案（含它的 spec）從記憶體裡砍掉再 load，確保測到的是
+//  磁碟上最新的程式。細節與例外見下面的 refresh()。
+//
 //  注意：load_object() 是有副作用的（daemon 會啟動、房間會 clone 出 NPC），
-//  請在測試環境跑，不要對正式站整棵樹掃。
+//  而強制重編又多砍了一輪，請在測試環境跑，不要對正式站整棵樹掃。
 //
 //  06-09-11 建立，取代原本只做第一層的 lint_d
 
 #include <lest.h>
+#include <protects.h>
 
 #define BATCH   20
 #define LOGF    "lest"
 
 nosave string *queue;
-nosave int idx, running;
-nosave int n_load_ok, n_load_err, n_spec_files, n_pass, n_fail;
+nosave int idx, running, keep_loaded;
+nosave int n_load_ok, n_load_err, n_spec_files, n_pass, n_fail, n_refreshed;
 nosave string *fail_lines;
 nosave string scan_root;
 
 void collect(string dir);
 void step();
 int run_spec(string target, string spec_file);
+int refresh(string target);
 
 void create() { seteuid(getuid()); }
 
-int run(string root)
+//  keep 不為 0 時沿用記憶體裡已經載入的版本（原本的行為）。
+varargs int run(string root, int keep)
 {
 	if( running ) return -1;
 	if( !root || root == "" ) return -2;
 	queue = ({});
 	idx = 0;
 	n_load_ok = 0; n_load_err = 0; n_spec_files = 0; n_pass = 0; n_fail = 0;
+	n_refreshed = 0;
+	keep_loaded = keep;
 	fail_lines = ({});
 	scan_root = root;
 	collect(root);
@@ -86,7 +95,8 @@ void step()
 	for( n = 0; idx < sizeof(queue) && n < BATCH; idx++, n++ ) {
 		target = queue[idx];
 
-		//  第一層：載入
+		//  第一層：載入（預設先把記憶體裡的舊版本砍掉，強迫重新編譯）
+		if( !keep_loaded ) n_refreshed += refresh(target);
 		err = catch( load_object(target) );
 		if( err ) {
 			n_load_err++;
@@ -100,6 +110,8 @@ void step()
 		spec_file = target + SPEC_SUFFIX;
 		if( file_size(spec_file + ".c") > 0 ) {
 			n_spec_files++;
+			//  spec 自己也要重編，不然改了測試卻跑到舊的那份。
+			if( !keep_loaded ) n_refreshed += refresh(spec_file);
 			run_spec(target, spec_file);
 		}
 	}
@@ -107,6 +119,34 @@ void step()
 	running = 0;
 	log_file(LOGF, sprintf("==== done: %d loaded, %d load-failed, %d spec files, %d pass, %d fail ====\n",
 		n_load_ok, n_load_err, n_spec_files, n_pass, n_fail));
+}
+
+//  強制重編：load_object() 對已經載入的檔案不會重新編譯，直接沿用記憶體裡
+//  那一份。測試工具拿舊版程式跑出綠燈是最糟的情況（改完 daemon 直接 lest，
+//  測到的是改之前的程式），所以預設先把舊的砍掉，讓 load_object() 重編。
+//
+//  有三種不能砍：lest_d 自己（砍了測試會斷在半路）、master、PROTECT_FILES
+//  列的檔案，以及身上有互動中玩家的物件 —— 測試不該把人踢到虛空。
+//  砍之前先呼叫 remove()，讓有 set_persistent() 的 daemon 有機會存檔。
+//
+//  回傳有沒有真的砍掉一個，用來報告「重編了幾個」。
+int refresh(string target)
+{
+	object ob, *inv;
+	int i;
+
+	if( member_array(target, PROTECT_FILES) != -1 ) return 0;
+
+	ob = find_object(target);
+	if( !ob || ob == this_object() || ob == master() ) return 0;
+
+	inv = all_inventory(ob);
+	for( i = 0; i < sizeof(inv); i++ )
+		if( interactive(inv[i]) ) return 0;
+
+	catch( ob->remove() );
+	if( ob ) destruct(ob);
+	return ob ? 0 : 1;
 }
 
 //  跑一個 spec：clone 測試物件 → 取得受測對象 → 逐一執行 test_* → 收集 → 清理
@@ -177,7 +217,9 @@ string report()
 	cover = total ? n_spec_files * 1000 / total : 0;
 
 	out = sprintf("\n===== lest 報告：%s =====\n", scan_root);
-	out += sprintf("受測檔案      : %d\n", total);
+	out += sprintf("受測檔案      : %d%s\n", total,
+		keep_loaded ? "  (沿用已載入的版本)" :
+			sprintf("  (強制重編 %d 個)", n_refreshed));
 	out += sprintf("  載入成功    : %d\n", n_load_ok);
 	out += sprintf("  載入失敗    : %d\n", n_load_err);
 	out += sprintf("有 spec 的檔案: %d  (覆蓋率 %d.%d%%)\n",

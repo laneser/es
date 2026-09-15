@@ -11,7 +11,7 @@ int help();
 
 int cmd_lest(string arg)
 {
-	int n;
+	int n, keep;
 	string *un;
 
 	if( !arg || arg == "" ) {
@@ -27,11 +27,16 @@ int cmd_lest(string arg)
 		return 1;
 	}
 
+	//  預設會把記憶體裡已經載入的舊版本砍掉重編，-k 則沿用。
+	if( sscanf(arg, "-k %s", arg) == 1 || sscanf(arg, "--keep %s", arg) == 1 )
+		keep = 1;
+
 	arg = resolv_path((string)this_player()->query("cwd"), arg);
-	n = (int)LEST_D->run(arg);
+	n = (int)LEST_D->run(arg, keep);
 	if( n == -1 ) { write("lest 正在跑，請等它跑完。\n"); return 1; }
 	if( n == -2 ) { write("路徑不對。\n"); return 1; }
-	write(sprintf("開始測試 %s：%d 個檔案。跑完用 lest 看報告。\n", arg, n));
+	write(sprintf("開始測試 %s：%d 個檔案%s。跑完用 lest 看報告。\n",
+		arg, n, keep ? "（沿用已載入的版本）" : "（會強制重編）"));
 	return 1;
 }
 
@@ -39,8 +44,14 @@ int help()
 {
 	write( @TEXT
 指令：lest <目錄>       對目錄底下所有 .c 跑測試
+      lest -k <目錄>    同上，但沿用記憶體裡已經載入的版本
       lest              顯示上次的報告
       lest -u           列出還沒有 spec 的檔案
+
+lest 預設會先把要測的檔案（含它的 spec）從記憶體裡砍掉再 load，
+確保測到的是磁碟上最新的程式 —— 否則改完直接 lest，測到的會是改之前
+那一份，而且不會有任何跡象。身上有玩家的物件、master 與 PROTECT_FILES
+不會被砍。不想動到已載入的物件時用 -k。
 
 lest 分兩層檢查：
 

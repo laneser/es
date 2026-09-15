@@ -45,17 +45,19 @@ docker exec -it es-mud telnet 127.0.0.1 8888    # 容器內已裝 telnet
   快照機制見 [`doc/arc42/08-crosscutting-concepts.md`](doc/arc42/08-crosscutting-concepts.md)。
 
 **改 simul_efun 或 master 之後要重啟 driver**，`update` 不夠。
-**改過的檔要先 `update` 再 `lest`** —— lest 不會重新編譯已經載入的物件，
-不然你測到的是記憶體裡的舊版程式。
 
 ## 測試
 
 ```
 lest /obj        對目錄底下所有 .c 跑測試（load 一遍 + 跑 spec）
+lest -k /obj     同上，但沿用記憶體裡已經載入的版本
 lest             顯示上次的報告（含覆蓋率與失敗明細）
 lest -u          列出還沒有 spec 的檔案
 help lest        完整說明
 ```
+
+`lest` 預設會先把受測檔案（含它的 spec）從記憶體砍掉再 load，所以**改完直接跑
+就好，不用先 `update`**。身上有玩家的物件、master 與 `PROTECT_FILES` 不會被砍。
 
 `xxx.c` 旁邊放 `xxx.spec.c` 就會被執行，`test_` 開頭的函式自動被找出來：
 
